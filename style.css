@@ -454,3 +454,11 @@ img{display:block}
 .tchips{margin:4px 12px 0;display:flex;gap:4px}
 .chipr{background:#ffeef0;color:#e5484d;font-size:12px;font-weight:700;padding:4px 8px;border-radius:6px}
 .tim em{background:#a61e2d!important}
+
+.pgsub{margin:-2px 4px 4px;color:var(--sub);font-size:14px}
+.evgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.evc{display:flex;flex-direction:column;align-items:flex-start;gap:2px;background:var(--b);color:var(--ink);border:0;border-radius:18px;padding:14px;min-height:108px;text-align:left;font:inherit;cursor:pointer}
+.eve{font-size:26px;line-height:1;margin-bottom:6px}
+.evc b{font-size:16px;font-weight:900;color:var(--i)}
+.evc small{font-size:12.5px;color:#4a4a4a}
+.morebig{display:block;margin-top:16px;text-align:center;background:#fff0f0;color:#b42318;border-radius:14px;padding:14px;font-size:14px}

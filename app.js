@@ -341,27 +341,25 @@ function favView(){
 }
 
 /* ---------- 혜택 ---------- */
+function partnerRows(){
+  return (Array.isArray(seed.partners)?seed.partners:[]).filter(function(p){ return safeUrl(p.u); }).map(function(p){ return '<a class="lrow" '+ext(safeUrl(p.u))+'><span class="tg" style="background:'+esc(p.bg||"#f4f0ff")+';color:'+esc(p.ink||"#4b2a9e")+'">'+esc(p.tag||"특가")+'</span><span class="lt"><small>'+esc(p.sub||"")+'</small><b>'+esc(p.t)+'</b></span><span class="go">보기</span></a>'; }).join("");
+}
 function benefitView(){
-  var gold=null; DEALS.forEach(function(d){ if(!gold && /골드박스/.test(d.t||"")) gold=d; }); gold=gold||DEALS[0];
-  var rows=[];
-  if(gold&&safeUrl(gold.u)) rows.push({u:safeUrl(gold.u),tag:"🔥",bg:"#fff3c4",ink:"#7a5a00",sub:"매일 바뀌는 생활 특가",t:"오늘의 특가상품 보기"});
-  (Array.isArray(seed.partners)?seed.partners:[]).forEach(function(p){ if(safeUrl(p.u)) rows.push({u:safeUrl(p.u),tag:p.tag||"특가",bg:p.bg||"#f4f0ff",ink:p.ink||"#4b2a9e",sub:p.sub||"",t:p.t}); });
-  var h='<div class="pg"><h1>혜택 🎁</h1>'+slideBanners(true);
-  if(rows.length) h+='<div class="pane"><h2>⚡ 오늘의 특가 바로가기</h2>'+rows.map(function(r){ return '<a class="lrow" '+ext(r.u)+'><span class="tg" style="background:'+esc(r.bg)+';color:'+esc(r.ink)+'">'+esc(r.tag)+'</span><span class="lt"><small>'+esc(r.sub)+'</small><b>'+esc(r.t)+'</b></span><span class="go">보기</span></a>'; }).join("")+'</div>';
+  var h='<div class="pg"><h1>혜택 🎁</h1><p class="pgsub">룰렛 · 이벤트 · 기자단 모집을 한곳에 모았어요</p>'+slideBanners(true);
   if((seed.features||{}).roulette) h+=rouletteHtml();
-  var GOLD=(Array.isArray(seed.goldbox)?seed.goldbox:[]).filter(function(x){ return safeUrl(x.u); });
-  if(GOLD.length) h+='<section class="sec tossec"><div class="sh"><h2>⏰ 오늘의 골드박스</h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="cd" style="margin:-6px 4px 10px">⏳ 다음 오전 7시 교체까지 <b id="gbcd">'+clock(nextSeven())+'</b></p><p class="tdis">이 게시물은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p><div class="tgrid">'+GOLD.map(tossCard).join("")+'</div><p class="fine">가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p></section>';
-  var TOSS=(Array.isArray(seed.toss)?seed.toss:[]).filter(function(x){ return safeUrl(x.u) && !(x.endAt && Date.parse(x.endAt)<=Date.now()); });
-  (function(){ var mx=-1,bi=-1; TOSS.forEach(function(x,i){ x.best=false; var r=parseInt(x.rate,10); if(!x.soldOut&&r>mx){ mx=r; bi=i; } }); if(bi>=0) TOSS[bi].best=true; })();
-  if(TOSS.length) h+='<section class="sec tossec"><div class="sh"><h2>🛒 오늘의 하루특가</h2>'+(seed.tossUpdated?'<span class="upd">'+esc(String(seed.tossUpdated).slice(5).replace("-","."))+' 가격 기준</span>':'')+'</div><p class="tdis">[광고] 이 콘텐츠는 토스쇼핑 쉐어링크 활동의 일환으로, 링크를 통한 구매가 발생하면 일정 수수료를 지급받습니다.</p><div class="tgrid">'+TOSS.slice(0,10).map(tossCard).join("")+'</div><p class="fine">가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p></section>';
-  h+='<div class="duo"><a class="bigbtn" href="#/deals"><span class="gb">'+ico(I.gift)+'</span><span><b>더 큰 혜택 바로가기 🎉</b><small>하루만 열리는 특가 모음</small></span></a>'+
-     '<button class="sharebtn" data-share>'+ico(I.share)+'<span>친구에게 공유하기</span></button></div>';
+  var r=rep();
+  h+='<div class="evgrid">'+
+    (r?'<a class="evc" href="#/reporter" style="--b:#f1ecff;--i:#4b2a9e"><span class="eve">✍️</span><b>다꾸 기자단</b><small>후기 쓰고 1만원 상품권</small></a>':'')+
+    '<a class="evc" href="'+esc(safeUrl((seed.sns||{}).instagram)||"https://www.instagram.com/")+'" target="_blank" rel="noopener noreferrer" style="--b:#fff6dc;--i:#7a5a00"><span class="eve">📸</span><b>다꾸 태그 이벤트</b><small>선정되면 다꾸를 태그해요</small></a>'+
+    '<a class="evc" href="'+esc(kakaoUrl())+'" target="_blank" rel="noopener noreferrer" style="--b:#fff9c4;--i:#5a4a00"><span class="eve">💬</span><b>카톡 친구추가</b><small>새 체험단 알림 받기</small></a>'+
+    '<button class="evc" data-share style="--b:#eef6ff;--i:#1d4ed8"><span class="eve">🔗</span><b>친구에게 공유</b><small>다꾸를 알려주세요</small></button>'+
+  '</div>';
   h+='<div class="pane soonpane"><h2>🎈 곧 열리는 놀거리</h2>'+
      ((seed.features||{}).roulette?[]:[["행운 룰렛","하루 한 번 돌리고 간식 쿠폰 받기",I.wheel]]).concat([["🤔 숙소 가격 맞히기","하루 한 문제, 가격 감각 테스트",I.quiz],["📈 요즘 뜨는 검색어","많이 찾는 숙소 검색어 모아보기",I.trend]]).map(function(x){ return '<div class="srow"><span class="si">'+ico(x[2])+'</span><span class="lt"><b>'+x[0]+'</b><small>'+x[1]+'</small></span><span class="pill">준비 중</span></div>'; }).join("")+
      '<a class="b kakao" '+ext(kakaoUrl())+'>💬 열리면 카톡으로 알림 받기</a></div>';
+  h+='<a class="morebig" href="#/deals">🔥 특가 상품은 <b>특가 탭</b>에서 볼 수 있어요 ›</a>';
   return h+'</div>';
 }
-
 function endLeft(iso){ var ms=Date.parse(iso)-Date.now(); if(!(ms>0)) return "종료"; var d=Math.floor(ms/864e5); return (d>0?d+"일 ":"")+clock(ms%864e5)+" 남음"; }
 function nextSeven(){ var n=new Date(), t=new Date(n); t.setHours(7,0,0,0); if(t<=n) t.setDate(t.getDate()+1); return t-n; }
 function tossCard(x){
@@ -592,11 +590,17 @@ function dealsView(){
     h+='<section class="sec"><div class="sh"><h2>🛍️ 특가 모아보기</h2></div><div class="hs">'+
       ADS.map(function(a){ var u=safeUrl(a.u); if(!u) return ""; return '<a class="acard" '+ext(u)+'><span class="am" style="background:'+esc(a.c||"#f4f0ff")+'">'+esc(a.e||"🎁")+'</span><b>'+esc(a.t)+'</b><small>'+esc(a.d||"")+'</small></a>'; }).join("")+'</div></section>';
   }
-  h+='<a class="kakaobox sm" '+ext(kakaoUrl())+'><span><small>다꾸 <i>×</i> 카카오톡</small><b>🔔 새 특가 열리면 <em>가장 먼저 알려드려요!</em></b></span><span class="kg">알림 받기</span></a>';
+  var pr=partnerRows(); if(pr) h+='<div class="pane"><h2>⚡ 여행 특가 바로가기</h2>'+pr+'</div>';
+  var TOSS=(Array.isArray(seed.toss)?seed.toss:[]).filter(function(x){ return safeUrl(x.u) && !(x.endAt && Date.parse(x.endAt)<=Date.now()); });
+  (function(){ var mx=-1,bi=-1; TOSS.forEach(function(x,i){ x.best=false; var r=parseInt(x.rate,10); if(!x.soldOut&&r>mx){ mx=r; bi=i; } }); if(bi>=0) TOSS[bi].best=true; })();
+  if(TOSS.length) h+='<section class="sec tossec"><div class="sh"><h2>🛒 오늘의 하루특가</h2>'+(seed.tossUpdated?'<span class="upd">'+esc(String(seed.tossUpdated).slice(5).replace("-","."))+' 가격 기준</span>':'')+'</div><p class="tdis">[광고] 이 콘텐츠는 토스쇼핑 쉐어링크 활동의 일환으로, 링크를 통한 구매가 발생하면 일정 수수료를 지급받습니다.</p><div class="tgrid">'+TOSS.slice(0,10).map(tossCard).join("")+'</div></section>';
+  var GOLD=(Array.isArray(seed.goldbox)?seed.goldbox:[]).filter(function(x){ return safeUrl(x.u); });
+  if(GOLD.length) h+='<section class="sec tossec"><div class="sh"><h2>⏰ 오늘의 골드박스</h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="cd" style="margin:-6px 4px 10px">⏳ 다음 오전 7시 교체까지 <b id="gbcd">'+clock(nextSeven())+'</b></p><p class="tdis">이 게시물은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p><div class="tgrid">'+GOLD.map(tossCard).join("")+'</div></section>';
   if(DEALS.length){
     h+='<section class="sec"><div class="sh col"><h2>⚡ 오늘의 특가</h2><p class="cd">⏳ 종료까지 <b id="cd">'+hms(msToMidnight())+'</b> 남음</p></div><div class="deallist">'+
       DEALS.map(function(d){ var u=safeUrl(d.u); if(!u) return ""; return '<a class="drow" '+ext(u)+'><span class="dt" style="background:'+esc(d.c||"#f4f0ff")+'"><span>'+esc(d.e||"🎁")+'</span>'+(d.tag?'<em>'+esc(d.tag)+'</em>':'')+'</span><span class="dx"><b>'+esc(d.t)+'</b><small>'+esc(d.d||"")+'</small><span class="dg">👉 특가 보러가기'+ico(I.chev)+'</span></span></a>'; }).join("")+'</div></section>';
   }
+  h+='<a class="kakaobox sm" '+ext(kakaoUrl())+'><span><small>다꾸 <i>×</i> 카카오톡</small><b>🔔 새 특가 열리면 <em>가장 먼저 알려드려요!</em></b></span><span class="kg">알림 받기</span></a>';
   h+='<p class="fine">특가 링크는 제휴 링크로, 구매 시 다꾸가 수수료를 받을 수 있어요. 가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p>';
   return h+'</div>';
 }
