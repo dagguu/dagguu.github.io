@@ -447,7 +447,7 @@ function giftSvg(){
 function tagBanner(){
   var s=seed.sns||{}, ig=safeUrl(s.instagram), bl=safeUrl(s.blog);
   return '<div class="tagb"><span class="rx"><small>📸 다꾸 태그하기 이벤트</small><b>다꾸에서 발견한 체험단에<br>선정되면 다꾸를 태그해 주세요!</b><span class="tsub">🍀 태그해 주시면 다꾸 기자단 선정 확률 UP!</span>'+
-    ((ig||bl)?'<span class="tbtns">'+(ig?'<a href="'+esc(ig)+'" target="_blank" rel="noopener noreferrer">인스타그램 ›</a>':'')+(bl?'<a href="'+esc(bl)+'" target="_blank" rel="noopener noreferrer">블로그 바로가기 ›</a>':'')+'</span>':'')+
+    '<span class="tbtns"><a class="igbtn" href="'+esc(ig||"https://www.instagram.com/")+'" target="_blank" rel="noopener noreferrer">📸 인스타그램 바로가기 ›</a>'+(bl?'<a href="'+esc(bl)+'" target="_blank" rel="noopener noreferrer">블로그 ›</a>':'')+'</span>'+
     '</span>'+giftSvg()+'</div>';
 }
 function slideBanners(inPage){
