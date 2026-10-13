@@ -518,3 +518,6 @@ img{display:block}
 
 .orc.pcard{margin-top:10px;background:linear-gradient(120deg,#2f6bff 0%,#38b6ff 100%);box-shadow:0 8px 20px rgba(47,107,255,.28)}
 .orc.pcard .orgo{color:#2f6bff}
+
+.adtag{display:inline-block;vertical-align:middle;margin-left:4px;font-size:11px;font-weight:700;color:#8a8794;border:1px solid #d9d6e2;border-radius:6px;padding:1px 5px;line-height:1.4}
+.tossec .sh h2,.adtag,.tossec .upd{white-space:nowrap}
