@@ -369,7 +369,9 @@ function favView(){
 
 /* ---------- 혜택 ---------- */
 function partnerRows(){
-  return (Array.isArray(seed.partners)?seed.partners:[]).filter(function(p){ return safeUrl(p.u); }).map(function(p){ return '<a class="lrow" '+ext(safeUrl(p.u))+'><span class="tg" style="background:'+esc(p.bg||"#f4f0ff")+';color:'+esc(p.ink||"#4b2a9e")+'">'+esc(p.tag||"특가")+'</span><span class="lt"><small>'+esc(p.sub||"")+'</small><b>'+esc(p.t)+'</b></span><span class="go">보기</span></a>'; }).join("");
+  return (Array.isArray(seed.partners)?seed.partners:[]).filter(function(p){ return safeUrl(p.u); }).map(function(p){
+    return '<a class="orc pcard" '+ext(safeUrl(p.u))+'><span class="orh"><span class="orclk">'+esc(p.tag||"✈️")+'</span><span class="ort"><small>'+esc(p.top||"")+'</small><b>'+esc(p.t)+'</b></span><span class="orgo">'+esc(p.b||"보기")+' ›</span></span>'+(p.d?'<span class="ord">'+esc(p.d)+'</span>':'')+'</a>';
+  }).join("");
 }
 function orState(){
   var o=seed.openrun||{}, hr=+o.hour||10, n=new Date(), t=new Date(n); t.setHours(hr,0,0,0);
@@ -639,7 +641,7 @@ function dealsView(){
       ADS.map(function(a){ var u=safeUrl(a.u); if(!u) return ""; var im=safeUrl(a.img); return '<a class="acard" '+ext(u)+'><span class="am'+(im?' amp':'')+'" style="background:'+esc(a.c||"#f4f0ff")+'">'+(im?'<img src="'+esc(im)+'" alt="" loading="lazy" referrerpolicy="no-referrer"'+(a.pos&&/^[0-9% ]+$/.test(a.pos)?' style="object-position:'+a.pos+'"':'')+' onerror="this.remove()">':esc(a.e||"🎁"))+'</span><b>'+(im&&a.e?esc(a.e)+' ':'')+esc(a.t)+'</b><small>'+esc(a.d||"")+'</small></a>'; }).join("")+'</div></section>';
   }
   h+=openrunCard();
-  var pr=partnerRows(); if(pr) h+='<div class="pane"><h2>⚡ 여행 특가 바로가기</h2>'+pr+'</div>';
+  h+=partnerRows();
   var TOSS=(Array.isArray(seed.toss)?seed.toss:[]).filter(function(x){ return safeUrl(x.u) && !(x.endAt && Date.parse(x.endAt)<=Date.now()); });
   (function(){ var mx=-1,bi=-1; TOSS.forEach(function(x,i){ x.best=false; var r=parseInt(x.rate,10); if(!x.soldOut&&r>mx){ mx=r; bi=i; } }); if(bi>=0) TOSS[bi].best=true; })();
   if(TOSS.length) h+='<section class="sec tossec"><div class="sh"><h2>🛒 오늘의 하루특가</h2>'+(seed.tossUpdated?'<span class="upd">'+esc(String(seed.tossUpdated).slice(5).replace("-","."))+' 가격 기준</span>':'')+'</div><p class="tdis">[광고] 이 콘텐츠는 토스쇼핑 쉐어링크 활동의 일환으로, 링크를 통한 구매가 발생하면 일정 수수료를 지급받습니다.</p><div class="tgrid">'+TOSS.slice(0,10).map(tossCard).join("")+'</div></section>';
