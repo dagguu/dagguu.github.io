@@ -371,8 +371,17 @@ function favView(){
 function partnerRows(){
   return (Array.isArray(seed.partners)?seed.partners:[]).filter(function(p){ return safeUrl(p.u); }).map(function(p){ return '<a class="lrow" '+ext(safeUrl(p.u))+'><span class="tg" style="background:'+esc(p.bg||"#f4f0ff")+';color:'+esc(p.ink||"#4b2a9e")+'">'+esc(p.tag||"특가")+'</span><span class="lt"><small>'+esc(p.sub||"")+'</small><b>'+esc(p.t)+'</b></span><span class="go">보기</span></a>'; }).join("");
 }
+function couponCards(){
+  var list=(Array.isArray(seed.coupons)?seed.coupons:[]).filter(function(c){ return safeUrl(c.u); });
+  if(!list.length) return "";
+  return '<section class="cpsec"><h2>🎟️ 지금 받을 수 있는 쿠폰</h2>'+list.map(function(c){
+    return '<a class="cpn" '+ext(safeUrl(c.u))+'><span class="cpl"><small>'+esc(c.brand?c.brand+' · ':'')+esc(c.tag||"제휴 쿠폰")+'</small><b class="cpbig">'+esc(c.big||"")+'</b><b class="cpt">'+esc(c.t)+'</b><span class="cpd">'+esc(c.d||"")+'</span></span>'+
+      '<span class="cpr"><span class="cpdl">⬇</span><span>'+esc(c.b||"쿠폰 받기")+'</span></span></a>'+(c.note?'<p class="cpnote">'+esc(c.note)+'</p>':'');
+  }).join("")+'</section>';
+}
 function benefitView(){
   var h='<div class="pg"><h1>혜택 🎁</h1><p class="pgsub">룰렛 · 이벤트 · 기자단 모집을 한곳에 모았어요</p>'+slideBanners(true);
+  h+=couponCards();
   if((seed.features||{}).roulette) h+=rouletteHtml();
   var r=rep();
   h+='<div class="evgrid">'+
