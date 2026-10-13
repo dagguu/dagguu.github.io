@@ -142,7 +142,7 @@ function paintLogo(){ var l=document.getElementById("logo"); if(l) l.innerHTML=l
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
-  if(!/^(home|list|fav|benefit|deals)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|benefit|deals|reporter)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; saveUi(); }
   render(); window.scrollTo(0,0);
@@ -156,6 +156,7 @@ function render(){
   else if(state.tab==="fav") v.innerHTML=favView();
   else if(state.tab==="benefit") v.innerHTML=benefitView();
   else if(state.tab==="deals") v.innerHTML=dealsView();
+  else if(state.tab==="reporter") v.innerHTML=reporterView();
   tick();
 }
 
@@ -211,6 +212,7 @@ function homeView(){
   }
   var heroImg = safeUrl((openItems("stay").filter(isPick)[0]||openItems("stay")[0]||{}).image);
   h+='<a class="hero" href="#/deals"><span class="hx"><small>다꾸 <i>×</i> 특가</small><b>매일 바뀌는<br>여행·생활 특가 모음</b><span class="hb">특가 바로가기'+ico(I.chev)+'</span></span>'+(heroImg?'<img src="'+esc(heroImg)+'" alt="">':'')+'</a>';
+  h+=reporterBanner();
   var banners=featureBanners(), bi=0, adi=0;
   CAT_ORDER.forEach(function(m){
     if(isOpenCat(m.k)){
@@ -295,7 +297,7 @@ function benefitView(){
   var rows=[];
   if(gold&&safeUrl(gold.u)) rows.push({u:safeUrl(gold.u),tag:"특가",bg:"#fff3c4",ink:"#7a5a00",sub:"매일 바뀌는 생활 특가",t:"오늘의 특가상품 보기"});
   (Array.isArray(seed.partners)?seed.partners:[]).forEach(function(p){ if(safeUrl(p.u)) rows.push({u:safeUrl(p.u),tag:p.tag||"특가",bg:p.bg||"#f4f0ff",ink:p.ink||"#4b2a9e",sub:p.sub||"",t:p.t}); });
-  var h='<div class="pg"><h1>혜택</h1>';
+  var h='<div class="pg"><h1>혜택</h1>'+(rep()?'<div class="repwrap">'+reporterBanner()+'</div>':'');
   if(rows.length) h+='<div class="pane"><h2>오늘의 특가 바로가기</h2>'+rows.map(function(r){ return '<a class="lrow" '+ext(r.u)+'><span class="tg" style="background:'+esc(r.bg)+';color:'+esc(r.ink)+'">'+esc(r.tag)+'</span><span class="lt"><small>'+esc(r.sub)+'</small><b>'+esc(r.t)+'</b></span><span class="go">보기</span></a>'; }).join("")+'</div>';
   if((seed.features||{}).roulette) h+=rouletteHtml();
   var GOLD=(Array.isArray(seed.goldbox)?seed.goldbox:[]).filter(function(x){ return safeUrl(x.u); });
@@ -373,6 +375,51 @@ function doSpin(btn){
   var w=document.getElementById("wheel"); if(w){ w.style.transform="rotate("+rot+"deg)"; }
   var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   setTimeout(function(){ var r=document.getElementById("rres"); if(r) r.innerHTML=resultHtml(s); btn.textContent=s.code?"이번 달은 끝! "+nextMonthLabel()+"에 다시 돌려요":"오늘은 끝! 내일 또 돌려요"; }, reduce?100:3400);
+}
+
+
+/* ---------- 다꾸 기자단 (매달 1일~말일) ---------- */
+function rep(){ var r=seed.reporter; return (r&&r.on)?r:null; }
+function monthRange(){ var t=today(), y=t.getFullYear(), m=t.getMonth(), last=new Date(y,m+1,0).getDate(); return {m:m+1,last:last,left:last-t.getDate()}; }
+function reporterBanner(){
+  var r=rep(); if(!r) return '';
+  var mr=monthRange();
+  return '<a class="repb" href="#/reporter"><span class="rx"><small>다꾸 기자단 · '+mr.m+'월 모집중</small><b>다꾸 체험단 블로그에 올리면<br><em>1만원 상품권</em> 증정!</b><span class="rgo">지금 바로 신청하기'+ico(I.chev)+'</span></span><span class="rw"><i>10,000</i><span>원</span></span></a>';
+}
+function reporterView(){
+  var r=rep(); if(!r) return '<div class="empty"><b>지금은 모집 기간이 아니에요</b><a class="b pri" href="#/">홈으로</a></div>';
+  var mr=monthRange(), apply=safeUrl(r.applyUrl)||"http://pf.kakao.com/_xkqEFX/chat";
+  var kw=(r.keywords||["#다꾸체험단","#체험단모아보기"]);
+  return '<div class="pg rep">'+
+    '<a class="back" href="#/">'+ico(I.back)+'<span>홈</span></a>'+
+    '<div class="rephero"><small>다꾸 기자단 · 블로그 체험단</small><h1>다꾸 체험단 블로그에 올리면<br><em>1만원 상품권</em> 증정!</h1><p>체험단을 한곳에 모아보는 다꾸를 블로그로 소개해 주세요.</p><span class="rw big"><i>10,000</i><span>원</span></span></div>'+
+    '<div class="pane info">'+
+      '<div class="ir"><span>제공 내역</span><b>'+esc(r.reward||"1만원 모바일 상품권")+'</b></div>'+
+      '<div class="ir"><span>모집 기간</span><b>'+mr.m+'월 1일 ~ '+mr.m+'월 '+mr.last+'일 <em>'+(mr.left===0?'오늘 마감':'D-'+mr.left)+'</em></b></div>'+
+      '<div class="ir"><span>모집 일정</span><b>매달 1일부터 말일까지</b></div>'+
+      '<div class="ir"><span>신청 방법</span><b>블로그 주소로 신청</b></div>'+
+      (r.slots?'<div class="ir"><span>선정 인원</span><b>매달 '+esc(r.slots)+'명</b></div>':'')+
+    '</div>'+
+    '<section class="guide"><h2>포스팅 가이드</h2><ol>'+
+      '<li><b>필수 키워드</b> '+kw.map(function(k){ return '<span class="kw">'+esc(k)+'</span>'; }).join(" ")+'</li>'+
+      '<li><b>분량</b> 공백 제외 <b>1,000자 이상</b></li>'+
+      '<li><b>내용</b> 다꾸 체험단 모음 사이트를 소개해 주세요. 어떤 체험단을 볼 수 있는지, 써보니 어떤 점이 편했는지 솔직하게 써 주시면 돼요.</li>'+
+      '<li><b>사이트 링크</b> 글 안에 <b>dagguu.github.io</b> 링크를 꼭 넣어 주세요.</li>'+
+      '<li><b>사진</b> 사이트 화면 캡처를 3장 이상 넣어 주시면 좋아요.</li>'+
+      '<li><b>대가 표시 (필수)</b> 글 첫머리에 아래 문구를 넣어 주세요.<span class="disc">이 글은 다꾸 체험단 모음으로부터 1만원 상품권을 제공받아 작성했습니다.</span></li>'+
+    '</ol></section>'+
+    '<section class="guide"><h2>진행 순서</h2><ol class="steps">'+
+      '<li>아래 버튼으로 <b>블로그 주소</b>를 보내 신청해요.</li><li>선정되면 카톡으로 알려드려요.</li><li>선정 후 <b>7일 안에</b> 가이드대로 포스팅해요.</li><li>포스팅 주소를 보내주시면 확인 후 <b>7일 안에</b> 상품권을 보내드려요.</li>'+
+    '</ol></section>'+
+    '<section class="guide fineprint"><h2>유의사항</h2><ul>'+
+      '<li>대가 표시 문구가 없거나 가이드를 지키지 않은 글은 상품권이 지급되지 않아요.</li>'+
+      '<li>포스팅은 작성일로부터 6개월 이상 유지해 주세요.</li>'+
+      '<li>다른 사람의 글이나 사진을 허락 없이 쓰면 안 돼요.</li>'+
+      '<li>같은 블로그는 한 달에 1번만 참여할 수 있어요.</li>'+
+      '<li>모집 내용은 사정에 따라 바뀔 수 있어요.</li>'+
+    '</ul></section>'+
+    '<div class="repcta"><a class="b pri wide" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">블로그로 신청하기</a></div>'+
+  '</div>';
 }
 
 /* ---------- 특가 ---------- */
