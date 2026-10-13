@@ -309,8 +309,8 @@ function benefitView(){
 
 function tossCard(x){
   var img=safeUrl(x.img);
-  return '<a class="tcard" '+ext(safeUrl(x.u))+'><span class="tim">'+(img?'<img src="'+esc(img)+'" alt="'+esc(x.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">':'')+(x.badge?'<em>'+esc(x.badge)+'</em>':'')+'</span>'+
-    '<span class="tn">'+esc(x.name)+'</span><span class="tp">'+(x.rate?'<i>'+esc(x.rate)+'</i> ':'')+esc(x.price||"")+'</span>'+(x.ship?'<span class="tch">'+esc(x.ship)+'</span>':'')+'</a>';
+  return '<a class="tcard'+(img?'':' noimg')+'" '+ext(safeUrl(x.u))+'><span class="tim">'+(img?'<img src="'+esc(img)+'" alt="'+esc(x.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">':'<span class="tno">'+ico(I.gift)+'</span>')+(x.badge?'<em>'+esc(x.badge)+'</em>':'')+'</span>'+
+    '<span class="tn">'+esc(x.name)+'</span>'+(x.price?'<span class="tp">'+(x.rate?'<i>'+esc(x.rate)+'</i> ':'')+esc(x.price)+'</span>':'<span class="tgo">특가 확인하기 ›</span>')+(x.ship?'<span class="tch">'+esc(x.ship)+'</span>':'')+'</a>';
 }
 /* ---------- 특가 ---------- */
 function msToMidnight(){ var n=new Date(), m=new Date(n); m.setHours(24,0,0,0); return m-n; }
