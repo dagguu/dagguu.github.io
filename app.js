@@ -36,6 +36,8 @@ function isFav(id){ return FAV.indexOf(id)>=0; }
 function toggleFav(id){ var i=FAV.indexOf(id); if(i>=0) FAV.splice(i,1); else FAV.push(id); ls("dakku-fav",JSON.stringify(FAV)); }
 var PREF = ls("dakku-pref") || "";
 var WANT = {}; try{ WANT=JSON.parse(ls("dakku-want")||"{}")||{}; }catch(e){ WANT={}; }
+if(WANT.region){ WANT.regions=[WANT.region]; delete WANT.region; } if(WANT.age){ WANT.ages=[WANT.age]; delete WANT.age; }
+function wantRegs(){ return Array.isArray(WANT.regions)?WANT.regions:[]; }
 function saveWant(){ ls("dakku-want",JSON.stringify(WANT)); }
 var AGES=["임신 중","0~6개월","7~12개월","13~24개월","3~4세","5~7세","8세 이상"];
 
@@ -101,12 +103,12 @@ function prefOf(k){ for(var i=0;i<PREFS.length;i++) if(PREFS[i].k===k) return PR
 function prefHit(it){ var p=prefOf(PREF); return !!(p && p.re.test(String(it.name||"")+" "+String(it.benefit||""))); }
 function prefNote(k){
   if(k!=="stay") return "";
-  var parts=[]; if(WANT.region) parts.push("📍 "+WANT.region); if(PREF&&prefOf(PREF)) parts.push(prefOf(PREF).t);
+  var parts=[]; if(wantRegs().length) parts.push("📍 "+wantRegs().join("·")); if(PREF&&prefOf(PREF)) parts.push(prefOf(PREF).t);
   return parts.length?'<p class="prefnote">'+esc(parts.join(" · "))+' 체험단 먼저 보여드리는 중 · <button data-pref-clear>해제</button></p>':'';
 }
 function byDeadline(a,b){
   var ka=isPick(a)&&statusOf(a).key!=="closed", kb=isPick(b)&&statusOf(b).key!=="closed"; if(ka!==kb) return ka?-1:1;
-  if(WANT.region){ var ra=a.region===WANT.region, rb=b.region===WANT.region; if(ra!==rb) return ra?-1:1; }
+  var wr=wantRegs(); if(wr.length){ var ra=wr.indexOf(a.region)>=0, rb=wr.indexOf(b.region)>=0; if(ra!==rb) return ra?-1:1; }
   var pa=prefHit(a), pb=prefHit(b); if(pa!==pb) return pa?-1:1;
   return daysLeft(a)-daysLeft(b) || (b.createdAt||0)-(a.createdAt||0);
 }
@@ -686,7 +688,7 @@ function onClick(e){
   if(t.dataset.status){ state.status=t.dataset.status; saveUi(); [].forEach.call(document.querySelectorAll("[data-status]"),function(b){ b.classList.toggle("on",b===t); }); renderListGrid(); return; }
   if(t.dataset.view!==undefined){ state.view=state.view==="2"?"3":(state.view==="3"?"1":"2"); ls("dakku-view",state.view); var g=document.getElementById("grid"); if(g) g.className="grid v"+state.view; t.innerHTML=viewIcon(); t.setAttribute("aria-label","보기 방식 바꾸기 (지금 "+state.view+"단)"); renderListGrid(); return; }
   if(t.dataset.share!==undefined){ share(); return; }
-  if(t.dataset.prefClear!==undefined){ PREF=""; ls("dakku-pref",""); delete WANT.region; saveWant(); render(); return; }
+  if(t.dataset.prefClear!==undefined){ PREF=""; ls("dakku-pref",""); delete WANT.regions; saveWant(); render(); return; }
   if(t.dataset.focus){ setTimeout(function(){ var q=document.getElementById("q"); if(q) q.focus(); },60); }
 }
 function share(){
@@ -717,7 +719,7 @@ function prefPopup(){
   if(ls("dakku-want-asked") || WANT.cat) return;
   if(document.querySelector(".modal")) return;
   ls("dakku-want-asked","1");
-  var pick={}, step=1;
+  var pick={regions:[],ages:[]}, step=1;
   var CHOICES=[["stay","🏨","숙박 체험단"],["baby","👶","육아 체험단"],["life","🧺","생활용품"],["beauty","💄","뷰티제품"],["elec","🔌","가전"],["etc","🎁","기타"]];
   var wrap=document.createElement("div"); wrap.className="modal"; wrap.setAttribute("role","dialog"); wrap.setAttribute("aria-modal","true"); wrap.setAttribute("aria-label","기다리는 체험단 선택");
   function head(t,sub){ return '<button class="mx" data-m="x" aria-label="닫기">'+ico(I.x)+'</button><div class="mlogo">'+logoSvg(40)+'</div><h2>'+t+'</h2><p>'+sub+'</p>'; }
@@ -730,23 +732,23 @@ function prefPopup(){
       }).join("")+'</div><button class="b pri wide" data-m="next"'+(pick.cat?'':' disabled')+'>다음</button>';
     } else if(step===2 && pick.cat==="stay"){
       var cnt={}; openItems("stay").forEach(function(it){ cnt[it.region]=(cnt[it.region]||0)+1; });
-      h+=head("어느 지역 숙소를<br>찾고 계세요?","고른 지역 체험단을 맨 앞에 보여드려요")+'<div class="rgrid">'+["전국"].concat(REGIONS).map(function(r){
+      h+=head("어느 지역 숙소를<br>찾고 계세요?","여러 곳 골라도 돼요! 고른 지역을 맨 앞에 모아드려요")+'<div class="rgrid">'+["전국"].concat(REGIONS).map(function(r){
         var n=r==="전국"?openItems("stay").length:(cnt[r]||0);
-        return '<button class="ropt'+(pick.region===r?' on':'')+'" data-m="val" data-v="'+r+'"><b>'+(r==="전국"?"🇰🇷 전국":r)+'</b><small>'+n+'곳</small></button>';
-      }).join("")+'</div><div class="wbtns"><button class="b sec" data-m="back">이전</button><button class="b pri" data-m="ok"'+(pick.region?'':' disabled')+'>이걸로 모아주세요</button></div>';
+        return '<button class="ropt'+(pick.regions.indexOf(r)>=0?' on':'')+'" aria-pressed="'+(pick.regions.indexOf(r)>=0)+'" data-m="val" data-v="'+r+'"><b>'+(r==="전국"?"🇰🇷 전국":r)+'</b><small>'+n+'곳</small></button>';
+      }).join("")+'</div><div class="wbtns"><button class="b sec" data-m="back">이전</button><button class="b pri" data-m="ok"'+(pick.regions.length?'':' disabled')+'>이걸로 모아주세요</button></div>';
     } else if(step===2 && pick.cat==="baby"){
-      h+=head("아기가 몇 살이에요?","나이에 맞는 육아 체험단을 먼저 챙겨드릴게요 👶")+'<div class="rgrid">'+AGES.map(function(a){
-        return '<button class="ropt'+(pick.age===a?' on':'')+'" data-m="val" data-v="'+a+'"><b>'+a+'</b></button>';
-      }).join("")+'</div><div class="wbtns"><button class="b sec" data-m="back">이전</button><button class="b pri" data-m="ok"'+(pick.age?'':' disabled')+'>선택 완료</button></div>';
+      h+=head("아기가 몇 살이에요?","아이가 여럿이면 모두 골라주세요 👶")+'<div class="rgrid">'+AGES.map(function(a){
+        return '<button class="ropt'+(pick.ages.indexOf(a)>=0?' on':'')+'" aria-pressed="'+(pick.ages.indexOf(a)>=0)+'" data-m="val" data-v="'+a+'"><b>'+a+'</b></button>';
+      }).join("")+'</div><div class="wbtns"><button class="b sec" data-m="back">이전</button><button class="b pri" data-m="ok"'+(pick.ages.length?'':' disabled')+'>선택 완료</button></div>';
     } else {
       var c=CHOICES.filter(function(x){ return x[0]===pick.cat; })[0], open=isOpenCat(pick.cat);
-      h+=head(c[1]+' '+c[2]+(open?' 먼저 보여드릴게요!':'<br>열리면 알려드릴게요!'),open?'홈 맨 위에 모아뒀어요.':(pick.age?'아기 나이('+esc(pick.age)+')에 맞는 체험단부터 챙겨드릴게요.':'새 체험단이 열리면 카톡으로 가장 먼저 알려드려요.'))+
+      h+=head(c[1]+' '+c[2]+(open?' 먼저 보여드릴게요!':'<br>열리면 알려드릴게요!'),open?'홈 맨 위에 모아뒀어요.':(pick.ages.length?'아기 나이('+esc(pick.ages.join(", "))+')에 맞는 체험단부터 챙겨드릴게요.':'새 체험단이 열리면 카톡으로 가장 먼저 알려드려요.'))+
         (open?'':'<a class="b kakao wide" href="'+esc(kakaoUrl())+'" target="_blank" rel="noopener noreferrer" style="margin-bottom:8px">💬 카톡으로 알림 받기</a>')+'<button class="b '+(open?'pri':'sec')+' wide" data-m="x">확인</button>';
     }
     wrap.innerHTML=h+'</div>';
   }
   function finish(){
-    WANT={cat:pick.cat}; if(pick.cat==="stay" && pick.region && pick.region!=="전국") WANT.region=pick.region; if(pick.cat==="baby" && pick.age) WANT.age=pick.age;
+    WANT={cat:pick.cat}; if(pick.cat==="stay"){ var rs=pick.regions.filter(function(r){ return r!=="전국"; }); if(rs.length) WANT.regions=rs; } if(pick.cat==="baby" && pick.ages.length) WANT.ages=pick.ages.slice();
     saveWant(); render();
   }
   draw(); document.body.appendChild(wrap);
@@ -755,10 +757,12 @@ function prefPopup(){
     var m=b.dataset.m;
     if(m==="x"){ wrap.remove(); return; }
     if(m==="cat"){ pick.cat=b.dataset.v; draw(); return; }
-    if(m==="val"){ if(pick.cat==="stay") pick.region=b.dataset.v; else pick.age=b.dataset.v; draw(); return; }
+    if(m==="val"){ var v=b.dataset.v, arr=pick.cat==="stay"?pick.regions:pick.ages, i=arr.indexOf(v);
+      if(i>=0) arr.splice(i,1); else { if(v==="전국") arr.length=0; else { var j=arr.indexOf("전국"); if(j>=0) arr.splice(j,1); } arr.push(v); }
+      draw(); return; }
     if(m==="back"){ step=1; draw(); return; }
     if(m==="next"){ if(!pick.cat) return; if(pick.cat==="stay"||pick.cat==="baby"){ step=2; draw(); } else { finish(); step=3; draw(); } return; }
-    if(m==="ok"){ finish(); if(pick.cat==="stay"){ wrap.remove(); toast((WANT.region?"📍 "+WANT.region:"🏨 숙박")+" 체험단을 맨 앞에 모았어요"); window.scrollTo(0,0); } else { step=3; draw(); } return; }
+    if(m==="ok"){ finish(); if(pick.cat==="stay"){ wrap.remove(); toast((wantRegs().length?"📍 "+wantRegs().join("·"):"🏨 숙박")+" 체험단을 맨 앞에 모았어요"); window.scrollTo(0,0); } else { step=3; draw(); } return; }
   });
 }
 
