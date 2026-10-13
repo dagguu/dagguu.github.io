@@ -157,8 +157,15 @@ function route(){
   if(!/^(home|list|fav|benefit|deals|reporter|contact|item)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
+  state.focusT=(tab==="deals"&&qs.t)?qs.t:"";
   if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; saveUi(); }
   render(); window.scrollTo(0,0);
+  if(state.focusT) focusToss();
+}
+function focusToss(){
+  var el=document.getElementById("tk-"+state.focusT); if(!el){ if(state.loading) setTimeout(focusToss,300); return; }
+  var card=el.closest(".tcard"); card.classList.add("tfocus"); card.scrollIntoView({block:"center"});
+  setTimeout(function(){ card.classList.remove("tfocus"); },4000); state.focusT="";
 }
 function render(){
   [].forEach.call(document.querySelectorAll(".tabbar a"),function(a){ var on=a.dataset.tab===state.tab; a.classList.toggle("on",on); if(on) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
@@ -382,9 +389,10 @@ function benefitView(){
 }
 function endLeft(iso){ var ms=Date.parse(iso)-Date.now(); if(!(ms>0)) return "종료"; var d=Math.floor(ms/864e5); return (d>0?d+"일 ":"")+clock(ms%864e5)+" 남음"; }
 function nextSeven(){ var n=new Date(), t=new Date(n); t.setHours(7,0,0,0); if(t<=n) t.setDate(t.getDate()+1); return t-n; }
+function tossCode(x){ var m=/\/_m\/([A-Za-z0-9_-]+)/.exec(String(x.u||"")); return m?m[1]:""; }
 function tossCard(x){
-  var img=safeUrl(x.img);
-  return '<a class="tcard'+(img?'':' noimg')+(x.soldOut?' sold':'')+'" '+ext(safeUrl(x.u))+'><span class="tim">'+(img?'<img src="'+esc(img)+'" alt="'+esc(x.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">':'<span class="tno">'+ico(I.gift)+'</span>')+(x.badge?'<em>'+esc(x.badge)+'</em>':'')+(x.best?'<strong class="bestb">🔥 오늘 최대 할인</strong>':'')+(x.soldOut?'<span class="soldov"><b>품절</b><span>밤 12시에 새 특가가 열려요</span></span>':'')+'</span>'+
+  var img=safeUrl(x.img), tk=tossCode(x);
+  return '<a class="tcard'+(img?'':' noimg')+(x.soldOut?' sold':'')+'" '+ext(safeUrl(x.u))+'><span class="tim"'+(tk?' id="tk-'+esc(tk)+'"':'')+'>'+(tk?'<button class="shb tsh" data-tshare="'+esc(tk)+'" aria-label="'+esc(x.name)+' 공유하기">'+ico(I.send)+'</button>':'')+(img?'<img src="'+esc(img)+'" alt="'+esc(x.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">':'<span class="tno">'+ico(I.gift)+'</span>')+(x.badge?'<em>'+esc(x.badge)+'</em>':'')+(x.best?'<strong class="bestb">🔥 오늘 최대 할인</strong>':'')+(x.soldOut?'<span class="soldov"><b>품절</b><span>밤 12시에 새 특가가 열려요</span></span>':'')+'</span>'+
     (x.low30?'<span class="low30">지금 <b>30일 내 최저가</b>예요</span>':'')+'<span class="tn">'+esc(x.name)+'</span>'+(x.price?'<span class="tp">'+(x.rate?'<i>'+esc(x.rate)+'</i> ':'')+esc(x.price)+'</span>':'<span class="tgo">특가 확인하기 ›</span>')+(x.endAt?'<span class="tcd" data-end="'+esc(x.endAt)+'">'+endLeft(x.endAt)+'</span>':'')+(x.comp?'<span class="tchips"><span class="chipr">최저가보상</span></span>':'')+(x.ship?'<span class="tch">'+esc(x.ship)+'</span>':'')+'</a>';
 }
 
@@ -630,7 +638,8 @@ var tickT; function tick(){ clearInterval(tickT); tickT=setInterval(function(){ 
 /* ---------- 이벤트 ---------- */
 function onClick(e){
   var lk=e.target.closest("article a[target=_blank]"); if(lk){ var art=lk.closest("article"), fb=art&&art.querySelector("[data-fav]"); if(fb) markSeen(fb.dataset.fav); }
-  var t=e.target.closest("[data-fav],[data-cat],[data-status],[data-view],[data-share],[data-pref-clear],[data-focus],[data-spin],[data-copy],[data-ishare]"); if(!t) return;
+  var t=e.target.closest("[data-fav],[data-cat],[data-status],[data-view],[data-share],[data-pref-clear],[data-focus],[data-spin],[data-copy],[data-ishare],[data-tshare]"); if(!t) return;
+  if(t.dataset.tshare){ e.preventDefault(); e.stopPropagation(); shareToss(t.dataset.tshare); return; }
   if(t.dataset.ishare){ e.preventDefault(); shareItem(t.dataset.ishare); return; }
   if(t.dataset.spin!==undefined){ doSpin(t); return; }
   if(t.dataset.copy){ try{ navigator.clipboard.writeText(t.dataset.copy).then(function(){ toast("코드를 복사했어요"); }); }catch(err){ toast(t.dataset.copy); } return; }
@@ -649,11 +658,18 @@ function share(){
 }
 function shareItem(id){
   var it=seed.items.filter(function(x){ return String(x.id)===String(id); })[0]; if(!it) return;
-  var s=statusOf(it), url=location.origin+location.pathname+"#/item?id="+encodeURIComponent(id);
+  var s=statusOf(it), url=location.origin+"/s/"+encodeURIComponent(id)+".html";
   var text="🏨 "+it.name+(it.region?" ("+it.region+")":"")+(it.worth?"\n💰 "+it.worth+" 상당":"")+"\n🗓️ "+s.dday+" · 다꾸 체험단 모음에서 봤어요!";
   if(navigator.share){ navigator.share({title:it.name,text:text,url:url}).catch(function(){}); return; }
   var all=text+"\n"+url;
   try{ navigator.clipboard.writeText(all).then(function(){ toast("✈️ 링크를 복사했어요. 친구에게 붙여넣어 보내세요!"); }).catch(function(){ prompt("아래 링크를 복사해 친구에게 보내세요",url); }); }catch(e){ toast(url); }
+}
+function shareToss(code){
+  var x=(seed.toss||[]).filter(function(y){ return tossCode(y)===code; })[0]; if(!x) return;
+  var url=location.origin+"/t/"+encodeURIComponent(code)+".html";
+  var text="🛒 "+x.name+(x.price?"\n🔥 "+(x.rate?x.rate+" ":"")+x.price:"")+"\n⏰ 오늘의 하루특가 · 다꾸 체험단 모음에서 봤어요!";
+  if(navigator.share){ navigator.share({title:x.name,text:text,url:url}).catch(function(){}); return; }
+  try{ navigator.clipboard.writeText(text+"\n"+url).then(function(){ toast("✈️ 링크를 복사했어요. 친구에게 붙여넣어 보내세요!"); }).catch(function(){ prompt("아래 링크를 복사해 친구에게 보내세요",url); }); }catch(e){ toast(url); }
 }
 var toastT;
 function toast(msg){ var t=document.querySelector(".toast"); if(!t){ t=document.createElement("div"); t.className="toast"; t.setAttribute("role","status"); document.body.appendChild(t);} t.textContent=msg; clearTimeout(toastT); toastT=setTimeout(function(){ t.remove(); },2400); }
