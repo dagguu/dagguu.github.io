@@ -159,7 +159,7 @@ function render(){
   else if(state.tab==="deals") v.innerHTML=dealsView();
   else if(state.tab==="reporter") v.innerHTML=reporterView();
   else if(state.tab==="contact") v.innerHTML=contactView();
-  tick();
+  tick(); startSliders();
 }
 
 /* ---------- 공통 카드 ---------- */
@@ -212,7 +212,7 @@ function homeView(){
     var f=closingToday[0], img=safeUrl(f.image);
     h+='<a class="strip" href="#/list?s=todayClose">'+(img?'<img src="'+esc(img)+'" alt="">':'')+'<b>🚨 오늘 마감 '+closingToday.length+'곳! 자정 전에 신청하세요 ⏰</b>'+ico(I.chev)+'</a>';
   }
-  h+=reporterBanner();
+  h+=slideBanners(false);
   var banners=featureBanners(), bi=0, adi=0;
   CAT_ORDER.forEach(function(m){
     if(isOpenCat(m.k)){
@@ -298,7 +298,7 @@ function benefitView(){
   var rows=[];
   if(gold&&safeUrl(gold.u)) rows.push({u:safeUrl(gold.u),tag:"🔥",bg:"#fff3c4",ink:"#7a5a00",sub:"매일 바뀌는 생활 특가",t:"오늘의 특가상품 보기"});
   (Array.isArray(seed.partners)?seed.partners:[]).forEach(function(p){ if(safeUrl(p.u)) rows.push({u:safeUrl(p.u),tag:p.tag||"특가",bg:p.bg||"#f4f0ff",ink:p.ink||"#4b2a9e",sub:p.sub||"",t:p.t}); });
-  var h='<div class="pg"><h1>혜택 🎁</h1>'+(rep()?'<div class="repwrap">'+reporterBanner()+'</div>':'');
+  var h='<div class="pg"><h1>혜택 🎁</h1>'+slideBanners(true);
   if(rows.length) h+='<div class="pane"><h2>⚡ 오늘의 특가 바로가기</h2>'+rows.map(function(r){ return '<a class="lrow" '+ext(r.u)+'><span class="tg" style="background:'+esc(r.bg)+';color:'+esc(r.ink)+'">'+esc(r.tag)+'</span><span class="lt"><small>'+esc(r.sub)+'</small><b>'+esc(r.t)+'</b></span><span class="go">보기</span></a>'; }).join("")+'</div>';
   if((seed.features||{}).roulette) h+=rouletteHtml();
   var GOLD=(Array.isArray(seed.goldbox)?seed.goldbox:[]).filter(function(x){ return safeUrl(x.u); });
@@ -393,6 +393,44 @@ function voucherSvg(cls){
     '<text x="79" y="56" text-anchor="middle" font-size="17" font-weight="900" fill="#3d2e00" font-family="Noto Sans KR,sans-serif">1만원</text>'+
   '</svg>';
 }
+
+/* ---------- 슬라이드 배너 (기자단 · 태그 이벤트) ---------- */
+function giftSvg(){
+  return '<svg class="giftimg" viewBox="0 0 120 110" aria-hidden="true">'+
+    '<circle cx="18" cy="22" r="3" fill="#ffd84d"/><circle cx="104" cy="14" r="2.4" fill="#ff8fb1"/><path d="M100 40l2 5 5 2-5 2-2 5-2-5-5-2 5-2Z" fill="#ffd84d"/><path d="M14 58l1.6 4 4 1.6-4 1.6-1.6 4-1.6-4-4-1.6 4-1.6Z" fill="#c9b8ff"/>'+
+    '<rect x="24" y="52" width="72" height="50" rx="6" fill="#ff5a7a"/>'+
+    '<rect x="20" y="40" width="80" height="16" rx="5" fill="#ff7b95"/>'+
+    '<rect x="53" y="40" width="14" height="62" fill="#ffd84d"/>'+
+    '<path d="M60 40c-14-18-30-10-22-1 5 5 14 4 22 1Zm0 0c14-18 30-10 22-1-5 5-14 4-22 1Z" fill="#ffd84d" stroke="#e8b400" stroke-width="2"/>'+
+    '<rect x="24" y="56" width="72" height="4" fill="#e04565" opacity=".5"/>'+
+    '<g transform="translate(78 70) rotate(10)"><rect x="0" y="0" width="34" height="22" rx="11" fill="#fff"/><text x="17" y="15.5" text-anchor="middle" font-size="12" font-weight="900" fill="#6a3fc8" font-family="Noto Sans KR,sans-serif">@다꾸</text></g>'+
+  '</svg>';
+}
+function tagBanner(){
+  var s=seed.sns||{}, ig=safeUrl(s.instagram), bl=safeUrl(s.blog);
+  return '<div class="tagb"><span class="rx"><small>📸 다꾸 태그하기 이벤트</small><b>다꾸에서 발견한 체험단에<br>선정되면 다꾸를 태그해 주세요!</b><span class="tsub">🍀 태그해 주시면 다꾸 기자단 선정 확률 UP!</span>'+
+    ((ig||bl)?'<span class="tbtns">'+(ig?'<a href="'+esc(ig)+'" target="_blank" rel="noopener noreferrer">인스타그램 ›</a>':'')+(bl?'<a href="'+esc(bl)+'" target="_blank" rel="noopener noreferrer">블로그 바로가기 ›</a>':'')+'</span>':'')+
+    '</span>'+giftSvg()+'</div>';
+}
+function slideBanners(inPage){
+  var slides=[]; if(rep()) slides.push(reporterBanner()); slides.push(tagBanner());
+  return '<div class="slider'+(inPage?' inpage':'')+'" data-slider><div class="strack">'+slides.map(function(s){ return '<div class="slide">'+s+'</div>'; }).join("")+'</div>'+
+    (slides.length>1?'<div class="sdots">'+slides.map(function(_,i){ return '<button data-dot="'+i+'" aria-label="'+(i+1)+'번째 배너"'+(i===0?' class="on"':'')+'></button>'; }).join("")+'</div>':'')+'</div>';
+}
+var slideT;
+function startSliders(){
+  clearInterval(slideT);
+  var sl=document.querySelector("[data-slider]"); if(!sl) return;
+  var tr=sl.querySelector(".strack"), dots=sl.querySelectorAll("[data-dot]"), n=tr.children.length; if(n<2) return;
+  function idx(){ return Math.round(tr.scrollLeft/tr.clientWidth); }
+  function paint(){ var i=idx(); [].forEach.call(dots,function(d,k){ d.classList.toggle("on",k===i); }); }
+  tr.addEventListener("scroll",function(){ clearTimeout(tr._t); tr._t=setTimeout(paint,80); },{passive:true});
+  [].forEach.call(dots,function(d){ d.addEventListener("click",function(){ tr.scrollTo({left:tr.clientWidth*(+d.dataset.dot),behavior:"smooth"}); }); });
+  var hold=false; tr.addEventListener("pointerdown",function(){ hold=true; }); tr.addEventListener("pointerup",function(){ setTimeout(function(){ hold=false; },3000); });
+  if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  slideT=setInterval(function(){ if(hold||!document.body.contains(tr)) return; var i=(idx()+1)%n; tr.scrollTo({left:tr.clientWidth*i,behavior:"smooth"}); },4500);
+}
+
 function reporterBanner(){
   var r=rep(); if(!r) return '';
   var mr=monthRange();
