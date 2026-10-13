@@ -572,14 +572,14 @@ function msToMidnight(){ var n=new Date(), m=new Date(n); m.setHours(24,0,0,0); 
 function hms(ms){ var s=Math.max(0,Math.floor(ms/1000)), h=Math.floor(s/3600), mi=Math.floor(s%3600/60), se=s%60; return h+"시간 "+("0"+mi).slice(-2)+"분 "+("0"+se).slice(-2)+"초"; }
 function dealsView(){
   var h='<div class="pg"><h1>특가 🔥</h1>';
+  if(ADS.length){
+    h+='<section class="sec"><div class="sh"><h2>🛍️ 특가 모아보기</h2></div><div class="hs">'+
+      ADS.map(function(a){ var u=safeUrl(a.u); if(!u) return ""; return '<a class="acard" '+ext(u)+'><span class="am" style="background:'+esc(a.c||"#f4f0ff")+'">'+esc(a.e||"🎁")+'</span><b>'+esc(a.t)+'</b><small>'+esc(a.d||"")+'</small></a>'; }).join("")+'</div></section>';
+  }
   h+='<a class="kakaobox sm" '+ext(kakaoUrl())+'><span><small>다꾸 <i>×</i> 카카오톡</small><b>🔔 새 특가 열리면 <em>가장 먼저 알려드려요!</em></b></span><span class="kg">알림 받기</span></a>';
   if(DEALS.length){
     h+='<section class="sec"><div class="sh col"><h2>⚡ 오늘의 특가</h2><p class="cd">⏳ 종료까지 <b id="cd">'+hms(msToMidnight())+'</b> 남음</p></div><div class="deallist">'+
       DEALS.map(function(d){ var u=safeUrl(d.u); if(!u) return ""; return '<a class="drow" '+ext(u)+'><span class="dt" style="background:'+esc(d.c||"#f4f0ff")+'"><span>'+esc(d.e||"🎁")+'</span>'+(d.tag?'<em>'+esc(d.tag)+'</em>':'')+'</span><span class="dx"><b>'+esc(d.t)+'</b><small>'+esc(d.d||"")+'</small><span class="dg">👉 특가 보러가기'+ico(I.chev)+'</span></span></a>'; }).join("")+'</div></section>';
-  }
-  if(ADS.length){
-    h+='<section class="sec"><div class="sh"><h2>🛍️ 특가 모아보기</h2></div><div class="hs">'+
-      ADS.map(function(a){ var u=safeUrl(a.u); if(!u) return ""; return '<a class="acard" '+ext(u)+'><span class="am" style="background:'+esc(a.c||"#f4f0ff")+'">'+esc(a.e||"🎁")+'</span><b>'+esc(a.t)+'</b><small>'+esc(a.d||"")+'</small></a>'; }).join("")+'</div></section>';
   }
   h+='<p class="fine">특가 링크는 제휴 링크로, 구매 시 다꾸가 수수료를 받을 수 있어요. 가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p>';
   return h+'</div>';
