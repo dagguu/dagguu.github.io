@@ -169,24 +169,26 @@ function thumb(it,cls){
     (view?'<a '+ext(view)+' aria-label="'+esc(it.name)+' 보기">':'<div>')+
       '<span class="ph">'+esc(it.region||"")+'</span>'+(img?'<img src="'+esc(img)+'" alt="'+esc(it.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">':'')+
     (view?'</a>':'</div>')+
+    (it.region?'<span class="rgs">📍 '+esc(it.region)+'</span>':'')+
     '<span class="dd '+(s.key==="closed"?"off":(s.hot?"hot":""))+'">'+esc(s.dday)+'</span>'+
+    (isPick(it)&&s.key!=="closed"?'<span class="pks">💜 추천</span>':'')+
     '<button class="fv'+(isFav(it.id)?" on":"")+'" data-fav="'+esc(it.id)+'" aria-label="찜하기" aria-pressed="'+isFav(it.id)+'">'+ico(I.heart)+'</button>'+
   '</div>';
 }
 function miniCard(it,btns){
   var act='';
   if(btns){ var s=statusOf(it), view=safeUrl(it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
-    act='<div class="act3">'+(view?'<a class="b pri" '+ext(view)+'>'+esc(c.view||"보기")+'</a>':'')+(s.key==="closed"?'<span class="b dis">마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">신청</a>':''))+'</div>'; }
-  return '<article class="mini">'+thumb(it)+'<p class="rg">📍 '+esc(it.region)+'</p><h3>'+esc(it.name)+'</h3><p class="bn">🎁 '+esc(it.benefit)+'</p>'+act+'</article>';
+    act='<div class="act3">'+(view?'<a class="b pri" '+ext(view)+'>'+esc(c.view||"보기")+' ↗</a>':'')+(s.key==="closed"?'<span class="b dis">마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">신청하기</a>':''))+'</div>'; }
+  return '<article class="mini">'+thumb(it)+'<h3>'+esc(it.name)+'</h3><p class="bn">🎁 '+esc(it.benefit)+'</p>'+act+'</article>';
 }
 function fullCard(it){
   var s=statusOf(it), view=safeUrl(it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
   var closed=s.key==="closed";
   return '<article class="card'+(closed?" closed":"")+'">'+thumb(it)+
-    '<div class="body"><p class="rg">📍 '+esc(it.region)+(isPick(it)?' <span class="pk">💜 추천</span>':'')+'</p><h3>'+esc(it.name)+'</h3><p class="bn">🎁 '+esc(it.benefit)+'</p>'+
+    '<div class="body"><h3>'+esc(it.name)+'</h3><p class="bn">🎁 '+esc(it.benefit)+'</p>'+
     '<p class="pd">🗓️ '+(it.start?fmt(it.start)+' ':'')+'~ '+fmt(it.end)+' 모집 · '+esc(it.source||"")+'</p>'+
-    '<div class="act">'+(view?'<a class="b pri" '+ext(view)+'>'+(catOf(it)==="stay"?"🏨 ":"🛒 ")+esc(c.view||"보기")+'</a>':'')+
-      (closed?'<span class="b dis">🔒 마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">✍️ 신청</a>':''))+'</div></div></article>';
+    '<div class="act">'+(view?'<a class="b pri" '+ext(view)+'>'+esc(c.view||"보기")+' ↗</a>':'')+
+      (closed?'<span class="b dis">🔒 마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">신청하기</a>':''))+'</div></div></article>';
 }
 function adWide(a){
   return '<a class="adw" style="background:'+esc(a.c||"#f4f0ff")+';border-color:'+esc(a.k||"#e6dcff")+'" '+ext(safeUrl(a.u))+'><span class="ae">'+esc(a.e||"🎁")+'</span><span class="at"><b>'+esc(a.t)+'</b><small>'+esc(a.d||"")+'</small></span><span class="ag">'+esc(a.b||"보러가기")+' ›</span></a>';
