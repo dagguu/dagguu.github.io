@@ -355,3 +355,10 @@ img{display:block}
 
 .rsub{font-size:14px;font-weight:700;color:#ffd84d}
 .rephero p em{font-style:normal;color:#ffd84d;font-weight:700}
+
+/* 이모지 */
+.ci.em{font-size:18px;line-height:1}
+.ci.big.em{font-size:34px}
+.cat span.em{font-size:26px;line-height:1}
+.bem{font-size:30px;line-height:1}
+.tg{font-size:22px}

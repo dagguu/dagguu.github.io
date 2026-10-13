@@ -8,12 +8,12 @@ var SITE = "다꾸 체험단 모음";
 var REGIONS = ["서울","경기","인천","강원","충청","전라","경상","부산","제주"];
 /* 분야 순서와 아이콘. data.json 의 categories(열린 분야) / upcoming(곧 오픈) 으로 상태가 정해져요. */
 var CAT_ORDER = [
-  {k:"stay",  t:"숙박", icon:"M3 18V8m0 6h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5M7 11.5a1.5 1.5 0 1 0 0-.01"},
-  {k:"baby",  t:"육아", icon:"M9 3h6M10 3v3l-2 2.5V20a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V8.5L14 6V3M8 12h8"},
-  {k:"life",  t:"생활", icon:"M4 11 12 4l8 7M6 9.5V20h12V9.5M10 20v-5h4v5"},
-  {k:"beauty",t:"뷰티", icon:"M9 21h6V11H9ZM10 11V6l4-3v8"},
-  {k:"elec",  t:"가전", icon:"M4 5h16v11H4ZM9 20h6M12 16v4"},
-  {k:"etc",   t:"기타", icon:"M6 12h.01M12 12h.01M18 12h.01"}
+  {k:"stay",  t:"숙박", em:"🏨", icon:"M3 18V8m0 6h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5M7 11.5a1.5 1.5 0 1 0 0-.01"},
+  {k:"baby",  t:"육아", em:"👶", icon:"M9 3h6M10 3v3l-2 2.5V20a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V8.5L14 6V3M8 12h8"},
+  {k:"life",  t:"생활", em:"🧺", icon:"M4 11 12 4l8 7M6 9.5V20h12V9.5M10 20v-5h4v5"},
+  {k:"beauty",t:"뷰티", em:"💄", icon:"M9 21h6V11H9ZM10 11V6l4-3v8"},
+  {k:"elec",  t:"가전", em:"🔌", icon:"M4 5h16v11H4ZM9 20h6M12 16v4"},
+  {k:"etc",   t:"기타", em:"🎁", icon:"M6 12h.01M12 12h.01M18 12h.01"}
 ];
 var CATS = [{k:"stay",t:"숙박",region:true,unit:"숙소",view:"숙소보기",pick:["풀빌라"]}];
 var UPCOMING = [], ADS = [], DEALS = [], seed = {items:[]};
@@ -174,22 +174,22 @@ function thumb(it,cls){
   '</div>';
 }
 function miniCard(it){
-  return '<article class="mini">'+thumb(it)+'<p class="rg">'+esc(it.region)+'</p><h3>'+esc(it.name)+'</h3><p class="bn">'+esc(it.benefit)+'</p></article>';
+  return '<article class="mini">'+thumb(it)+'<p class="rg">📍 '+esc(it.region)+'</p><h3>'+esc(it.name)+'</h3><p class="bn">🎁 '+esc(it.benefit)+'</p></article>';
 }
 function fullCard(it){
   var s=statusOf(it), view=safeUrl(it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
   var closed=s.key==="closed";
   return '<article class="card'+(closed?" closed":"")+'">'+thumb(it)+
-    '<div class="body"><p class="rg">'+esc(it.region)+(isPick(it)?' <span class="pk">추천</span>':'')+'</p><h3>'+esc(it.name)+'</h3><p class="bn">'+esc(it.benefit)+'</p>'+
-    '<p class="pd">'+(it.start?fmt(it.start)+' ':'')+'~ '+fmt(it.end)+' 모집 · '+esc(it.source||"")+'</p>'+
-    '<div class="act">'+(view?'<a class="b pri" '+ext(view)+'>'+esc(c.view||"보기")+'</a>':'')+
-      (closed?'<span class="b dis">마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">신청</a>':''))+'</div></div></article>';
+    '<div class="body"><p class="rg">📍 '+esc(it.region)+(isPick(it)?' <span class="pk">💜 추천</span>':'')+'</p><h3>'+esc(it.name)+'</h3><p class="bn">🎁 '+esc(it.benefit)+'</p>'+
+    '<p class="pd">🗓️ '+(it.start?fmt(it.start)+' ':'')+'~ '+fmt(it.end)+' 모집 · '+esc(it.source||"")+'</p>'+
+    '<div class="act">'+(view?'<a class="b pri" '+ext(view)+'>'+(catOf(it)==="stay"?"🏨 ":"🛒 ")+esc(c.view||"보기")+'</a>':'')+
+      (closed?'<span class="b dis">🔒 마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">✍️ 신청</a>':''))+'</div></div></article>';
 }
 function adWide(a){
   return '<a class="adw" style="background:'+esc(a.c||"#f4f0ff")+';border-color:'+esc(a.k||"#e6dcff")+'" '+ext(safeUrl(a.u))+'><span class="ae">'+esc(a.e||"🎁")+'</span><span class="at"><b>'+esc(a.t)+'</b><small>'+esc(a.d||"")+'</small></span><span class="ag">'+esc(a.b||"보러가기")+' ›</span></a>';
 }
 function banner(b){
-  return '<a class="bnr" href="'+esc(b.href)+'"'+(b.ext?' target="_blank" rel="noopener noreferrer sponsored"':'')+' style="--bg:'+b.bg+';--tile:'+b.tile+';--ink:'+b.ink+'"><span class="bt">'+ico(b.icon)+'</span><span class="bx"><small>'+esc(b.kicker)+'</small><b>'+esc(b.title)+'</b></span>'+ico(I.chev,"bc")+'</a>';
+  return '<a class="bnr" href="'+esc(b.href)+'"'+(b.ext?' target="_blank" rel="noopener noreferrer sponsored"':'')+' style="--bg:'+b.bg+';--tile:'+b.tile+';--ink:'+b.ink+'"><span class="bt">'+(b.em?'<span class="bem">'+b.em+'</span>':ico(b.icon))+'</span><span class="bx"><small>'+esc(b.kicker)+'</small><b>'+esc(b.title)+'</b></span>'+ico(I.chev,"bc")+'</a>';
 }
 function openItems(k){ return seed.items.filter(function(it){ return catOf(it)===k && statusOf(it).key==="open"; }); }
 function kakaoUrl(){ return safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend"; }
@@ -197,11 +197,11 @@ function kakaoUrl(){ return safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/fr
 /* ---------- 홈 ---------- */
 function featureBanners(){
   var f=seed.features||{}, out=[];
-  out.push({href:"#/deals",kicker:"하루만 이 가격",title:"오늘의 특가 보기",bg:"#fff0f0",tile:"#e5484d",ink:"#b42318",icon:I.gift});
-  if(f.roulette) out.push({href:"#/benefit",kicker:"하루 한 번 무료",title:"룰렛 돌리고 선물 받아가기",bg:"#f4f0ff",tile:"#6a3fc8",ink:"#4b2a9e",icon:I.wheel});
-  if(f.quiz) out.push({href:"#/benefit",kicker:"하루 한 문제",title:"인기상품 가격 맞히기",bg:"#fff3e6",tile:"#e0782a",ink:"#9a4a0e",icon:I.quiz});
-  if(f.search) out.push({href:"#/benefit",kicker:"요즘 많이 찾는 숙소",title:"인기 검색어 보기",bg:"#eef3ff",tile:"#2f6bff",ink:"#1d4ed8",icon:I.trend});
-  out.push({href:"#/list?s=closing",kicker:"3일 안에 끝나요",title:"마감 임박 체험단 보기",bg:"#eef8f3",tile:"#1f7a5a",ink:"#14573f",icon:I.flame});
+  out.push({href:"#/deals",em:"🎁",kicker:"하루만 이 가격",title:"오늘의 특가 보기 🔥",bg:"#fff0f0",tile:"#e5484d",ink:"#b42318",icon:I.gift});
+  if(f.roulette) out.push({href:"#/benefit",em:"🎡",kicker:"하루 한 번 무료",title:"룰렛 돌리고 선물 받아가기 🎉",bg:"#f4f0ff",tile:"#6a3fc8",ink:"#4b2a9e",icon:I.wheel});
+  if(f.quiz) out.push({href:"#/benefit",em:"🤔",kicker:"하루 한 문제",title:"인기상품 가격 맞히기",bg:"#fff3e6",tile:"#e0782a",ink:"#9a4a0e",icon:I.quiz});
+  if(f.search) out.push({href:"#/benefit",em:"📈",kicker:"요즘 많이 찾는 숙소",title:"인기 검색어 보기",bg:"#eef3ff",tile:"#2f6bff",ink:"#1d4ed8",icon:I.trend});
+  out.push({href:"#/list?s=closing",em:"⏰",kicker:"3일 안에 끝나요",title:"마감 임박 체험단 보기 🏃",bg:"#eef8f3",tile:"#1f7a5a",ink:"#14573f",icon:I.flame});
   return out;
 }
 function homeView(){
@@ -210,35 +210,35 @@ function homeView(){
   var h='';
   if(closingToday.length){
     var f=closingToday[0], img=safeUrl(f.image);
-    h+='<a class="strip" href="#/list?s=todayClose">'+(img?'<img src="'+esc(img)+'" alt="">':'')+'<b>오늘 마감 '+closingToday.length+'곳! 자정 전에 신청하세요</b>'+ico(I.chev)+'</a>';
+    h+='<a class="strip" href="#/list?s=todayClose">'+(img?'<img src="'+esc(img)+'" alt="">':'')+'<b>🚨 오늘 마감 '+closingToday.length+'곳! 자정 전에 신청하세요 ⏰</b>'+ico(I.chev)+'</a>';
   }
   h+=reporterBanner();
   var banners=featureBanners(), bi=0, adi=0;
   CAT_ORDER.forEach(function(m){
     if(isOpenCat(m.k)){
       var list=openItems(m.k).sort(byDeadline), p=prefOf(PREF);
-      h+='<section class="sec"><div class="sh"><h2><span class="ci">'+ico(m.icon)+'</span>'+esc(m.t)+' 체험단 <em>'+list.length+'</em></h2><a class="more" href="#/list?cat='+m.k+'&s=open">더보기'+ico(I.chev)+'</a></div>'+
+      h+='<section class="sec"><div class="sh"><h2><span class="ci em">'+m.em+'</span>'+esc(m.t)+' 체험단 <em>'+list.length+'</em></h2><a class="more" href="#/list?cat='+m.k+'&s=open">더보기'+ico(I.chev)+'</a></div>'+
         (p?'<p class="prefnote">'+esc(p.t)+' 먼저 보여드리는 중 · <button data-pref-clear>해제</button></p>':'')+
         '<div class="hs">'+list.slice(0,12).map(miniCard).join("")+'<a class="minimore" href="#/list?cat='+m.k+'&s=open">'+ico(I.chev)+'<span>전체 보기</span></a></div></section>';
     } else if(UPCOMING.some(function(u){ return u.k===m.k || u.t===m.t; })){
-      h+='<section class="sec"><div class="sh"><h2><span class="ci">'+ico(m.icon)+'</span>'+esc(m.t)+' 체험단 <em class="soon">곧 오픈</em></h2></div>'+
-        '<a class="soonbox" '+ext(kakaoUrl())+'><span>지금 체험단을 모으고 있어요</span><b>오픈 알림 받기</b></a></section>';
+      h+='<section class="sec"><div class="sh"><h2><span class="ci em">'+m.em+'</span>'+esc(m.t)+' 체험단 <em class="soon">곧 오픈 ✨</em></h2></div>'+
+        '<a class="soonbox" '+ext(kakaoUrl())+'><span>🛠️ 지금 체험단을 모으고 있어요</span><b>🔔 오픈 알림</b></a></section>';
     } else return;
     if(bi<banners.length){ h+='<div class="bwrap">'+banner(banners[bi++])+'</div>'; }
     else if(ADS.length){ h+='<div class="bwrap">'+adWide(ADS[adi++%ADS.length])+'</div>'; }
   });
   h+=contactBanner();
-  h+='<a class="kakaobox" '+ext(kakaoUrl())+'><span><small>다꾸 <i>×</i> 카카오톡</small><b>매일 아침 새 체험단<br><em>카톡으로 먼저 받기</em></b></span><span class="kg">채널 추가</span></a>';
+  h+='<a class="kakaobox" '+ext(kakaoUrl())+'><span><small>다꾸 <i>×</i> 카카오톡</small><b>☀️ 매일 아침 새 체험단<br><em>카톡으로 먼저 받기 💬</em></b></span><span class="kg">채널 추가</span></a>';
   return h;
 }
 
 /* ---------- 체험단 목록 ---------- */
-var STATUSES=[["open","모집중"],["todayOpen","오늘 오픈"],["todayClose","오늘 마감"],["closing","마감 임박"],["pick","추천"],["closed","마감"]];
+var STATUSES=[["open","🔥 모집중"],["todayOpen","🆕 오늘 오픈"],["todayClose","🚨 오늘 마감"],["closing","⏰ 마감 임박"],["pick","💜 추천"],["closed","🔒 마감"]];
 function listView(){
   var c=catInfo(state.cat);
   return '<div class="lv">'+
     '<label class="search">'+ico(I.search)+'<input id="q" type="search" placeholder="지역·숙소 이름 검색" value="'+esc(state.q)+'" autocomplete="off" aria-label="체험단 검색"></label>'+
-    '<div class="catrow">'+CAT_ORDER.map(function(m){ var on=m.k===state.cat; return '<button class="cat'+(on?" on":"")+'" data-cat="'+m.k+'" aria-pressed="'+on+'"><span>'+ico(m.icon)+'</span>'+esc(m.t)+'</button>'; }).join("")+'</div>'+
+    '<div class="catrow">'+CAT_ORDER.map(function(m){ var on=m.k===state.cat; return '<button class="cat'+(on?" on":"")+'" data-cat="'+m.k+'" aria-pressed="'+on+'"><span class="em">'+m.em+'</span>'+esc(m.t)+'</button>'; }).join("")+'</div>'+
     (c?'<div class="chips hs">'+STATUSES.map(function(s){ return '<button class="chip'+(s[0]===state.status?" on":"")+'" data-status="'+s[0]+'">'+s[1]+'</button>'; }).join("")+'</div>'+
       '<div class="tools"><span id="count" class="count"></span><span class="tr">'+
         (c.region?'<label class="sel"><span class="sr">지역</span><select id="region">'+["전체"].concat(REGIONS).map(function(r){ return '<option'+(r===state.region?" selected":"")+'>'+r+'</option>'; }).join("")+'</select></label>':'')+
@@ -254,7 +254,7 @@ function viewIcon(){
   return '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg>';
 }
 function soonView(m){
-  return '<div class="soonbig"><span class="ci big">'+ico(m.icon)+'</span><b>'+esc(m.t)+' 체험단을 준비하고 있어요</b><p>열리는 날 카톡으로 가장 먼저 알려드릴게요.</p><a class="b kakao" '+ext(kakaoUrl())+'>카톡으로 오픈 알림 받기</a></div>';
+  return '<div class="soonbig"><span class="ci big em">'+m.em+'</span><b>'+esc(m.t)+' 체험단을 준비하고 있어요</b><p>열리는 날 카톡으로 가장 먼저 알려드릴게요.</p><a class="b kakao" '+ext(kakaoUrl())+'>💬 카톡으로 오픈 알림 받기</a></div>';
 }
 function filtered(){
   var q=state.q.trim().toLowerCase(), td=ymd(today()), c=catInfo(state.cat);
@@ -281,35 +281,35 @@ function renderListGrid(){
     var every=state.view==="3"?9:(state.view==="1"?5:6);
     if((i+1)%every===0 && ADS.length) out.push('<div class="span">'+adWide(ADS[n++%ADS.length])+'</div>');
   });
-  g.innerHTML=list.length?out.join(""):'<div class="empty span"><b>조건에 맞는 체험단이 없어요</b>다른 지역이나 상태를 골라 보세요.</div>';
+  g.innerHTML=list.length?out.join(""):'<div class="empty span"><b>🥲 조건에 맞는 체험단이 없어요</b>다른 지역이나 상태를 골라 보세요.</div>';
 }
 
 /* ---------- 찜 ---------- */
 function favView(){
   var list=seed.items.filter(function(it){ return isFav(it.id); }).sort(function(a,b){ var sa=statusOf(a).key==="closed", sb=statusOf(b).key==="closed"; if(sa!==sb) return sa?1:-1; return daysLeft(a)-daysLeft(b); });
   var soon=list.filter(function(it){ return statusOf(it).key==="open" && daysLeft(it)<=3; }).length;
-  return '<div class="pg"><h1>찜</h1>'+(soon?'<p class="note">찜한 체험단 중 <b>'+soon+'곳</b>이 3일 안에 마감돼요</p>':'')+
-    (list.length?'<div class="grid v1">'+list.map(fullCard).join("")+'</div>':'<div class="empty"><b>아직 찜한 체험단이 없어요</b>마음에 드는 체험단의 하트를 눌러 보세요.<a class="b pri" href="#/list">체험단 보러 가기</a></div>')+'</div>';
+  return '<div class="pg"><h1>찜 ❤️</h1>'+(soon?'<p class="note">⏰ 찜한 체험단 중 <b>'+soon+'곳</b>이 3일 안에 마감돼요</p>':'')+
+    (list.length?'<div class="grid v1">'+list.map(fullCard).join("")+'</div>':'<div class="empty"><b>🤍 아직 찜한 체험단이 없어요</b>마음에 드는 체험단의 하트를 눌러 보세요.<a class="b pri" href="#/list">체험단 보러 가기</a></div>')+'</div>';
 }
 
 /* ---------- 혜택 ---------- */
 function benefitView(){
   var gold=null; DEALS.forEach(function(d){ if(!gold && /골드박스/.test(d.t||"")) gold=d; }); gold=gold||DEALS[0];
   var rows=[];
-  if(gold&&safeUrl(gold.u)) rows.push({u:safeUrl(gold.u),tag:"특가",bg:"#fff3c4",ink:"#7a5a00",sub:"매일 바뀌는 생활 특가",t:"오늘의 특가상품 보기"});
+  if(gold&&safeUrl(gold.u)) rows.push({u:safeUrl(gold.u),tag:"🔥",bg:"#fff3c4",ink:"#7a5a00",sub:"매일 바뀌는 생활 특가",t:"오늘의 특가상품 보기"});
   (Array.isArray(seed.partners)?seed.partners:[]).forEach(function(p){ if(safeUrl(p.u)) rows.push({u:safeUrl(p.u),tag:p.tag||"특가",bg:p.bg||"#f4f0ff",ink:p.ink||"#4b2a9e",sub:p.sub||"",t:p.t}); });
-  var h='<div class="pg"><h1>혜택</h1>'+(rep()?'<div class="repwrap">'+reporterBanner()+'</div>':'');
-  if(rows.length) h+='<div class="pane"><h2>오늘의 특가 바로가기</h2>'+rows.map(function(r){ return '<a class="lrow" '+ext(r.u)+'><span class="tg" style="background:'+esc(r.bg)+';color:'+esc(r.ink)+'">'+esc(r.tag)+'</span><span class="lt"><small>'+esc(r.sub)+'</small><b>'+esc(r.t)+'</b></span><span class="go">보기</span></a>'; }).join("")+'</div>';
+  var h='<div class="pg"><h1>혜택 🎁</h1>'+(rep()?'<div class="repwrap">'+reporterBanner()+'</div>':'');
+  if(rows.length) h+='<div class="pane"><h2>⚡ 오늘의 특가 바로가기</h2>'+rows.map(function(r){ return '<a class="lrow" '+ext(r.u)+'><span class="tg" style="background:'+esc(r.bg)+';color:'+esc(r.ink)+'">'+esc(r.tag)+'</span><span class="lt"><small>'+esc(r.sub)+'</small><b>'+esc(r.t)+'</b></span><span class="go">보기</span></a>'; }).join("")+'</div>';
   if((seed.features||{}).roulette) h+=rouletteHtml();
   var GOLD=(Array.isArray(seed.goldbox)?seed.goldbox:[]).filter(function(x){ return safeUrl(x.u); });
-  if(GOLD.length) h+='<section class="sec tossec"><div class="sh"><h2>오늘의 골드박스</h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="tdis">이 게시물은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p><div class="tgrid">'+GOLD.map(tossCard).join("")+'</div><p class="fine">가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p></section>';
+  if(GOLD.length) h+='<section class="sec tossec"><div class="sh"><h2>⏰ 오늘의 골드박스</h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="tdis">이 게시물은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p><div class="tgrid">'+GOLD.map(tossCard).join("")+'</div><p class="fine">가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p></section>';
   var TOSS=(Array.isArray(seed.toss)?seed.toss:[]).filter(function(x){ return safeUrl(x.u); });
-  if(TOSS.length) h+='<section class="sec tossec"><div class="sh"><h2>오늘의 하루특가</h2>'+(seed.tossUpdated?'<span class="upd">'+esc(fmt(seed.tossUpdated))+' 기준</span>':'')+'</div><p class="tdis">[광고] 이 콘텐츠는 토스쇼핑 쉐어링크 활동의 일환으로, 링크를 통한 구매가 발생하면 일정 수수료를 지급받습니다.</p><div class="tgrid">'+TOSS.slice(0,10).map(tossCard).join("")+'</div><p class="fine">가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p></section>';
-  h+='<div class="duo"><a class="bigbtn" href="#/deals"><span class="gb">'+ico(I.gift)+'</span><span><b>더 큰 혜택 바로가기</b><small>하루만 열리는 특가 모음</small></span></a>'+
+  if(TOSS.length) h+='<section class="sec tossec"><div class="sh"><h2>🛒 오늘의 하루특가</h2>'+(seed.tossUpdated?'<span class="upd">'+esc(fmt(seed.tossUpdated))+' 기준</span>':'')+'</div><p class="tdis">[광고] 이 콘텐츠는 토스쇼핑 쉐어링크 활동의 일환으로, 링크를 통한 구매가 발생하면 일정 수수료를 지급받습니다.</p><div class="tgrid">'+TOSS.slice(0,10).map(tossCard).join("")+'</div><p class="fine">가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p></section>';
+  h+='<div class="duo"><a class="bigbtn" href="#/deals"><span class="gb">'+ico(I.gift)+'</span><span><b>더 큰 혜택 바로가기 🎉</b><small>하루만 열리는 특가 모음</small></span></a>'+
      '<button class="sharebtn" data-share>'+ico(I.share)+'<span>친구에게 공유하기</span></button></div>';
-  h+='<div class="pane soonpane"><h2>곧 열리는 놀거리</h2>'+
-     ((seed.features||{}).roulette?[]:[["행운 룰렛","하루 한 번 돌리고 간식 쿠폰 받기",I.wheel]]).concat([["숙소 가격 맞히기","하루 한 문제, 가격 감각 테스트",I.quiz],["요즘 뜨는 검색어","많이 찾는 숙소 검색어 모아보기",I.trend]]).map(function(x){ return '<div class="srow"><span class="si">'+ico(x[2])+'</span><span class="lt"><b>'+x[0]+'</b><small>'+x[1]+'</small></span><span class="pill">준비 중</span></div>'; }).join("")+
-     '<a class="b kakao" '+ext(kakaoUrl())+'>열리면 카톡으로 알림 받기</a></div>';
+  h+='<div class="pane soonpane"><h2>🎈 곧 열리는 놀거리</h2>'+
+     ((seed.features||{}).roulette?[]:[["행운 룰렛","하루 한 번 돌리고 간식 쿠폰 받기",I.wheel]]).concat([["🤔 숙소 가격 맞히기","하루 한 문제, 가격 감각 테스트",I.quiz],["📈 요즘 뜨는 검색어","많이 찾는 숙소 검색어 모아보기",I.trend]]).map(function(x){ return '<div class="srow"><span class="si">'+ico(x[2])+'</span><span class="lt"><b>'+x[0]+'</b><small>'+x[1]+'</small></span><span class="pill">준비 중</span></div>'; }).join("")+
+     '<a class="b kakao" '+ext(kakaoUrl())+'>💬 열리면 카톡으로 알림 받기</a></div>';
   return h+'</div>';
 }
 
@@ -332,8 +332,8 @@ function nextMonthLabel(){ var t=today(); return ((t.getMonth()+1)%12+1)+"월 1�
 function oddsList(){ var o=(seed.features&&seed.features.rouletteOdds)||null; return ROULETTE.map(function(r){ return {t:r.t,c:r.c,p:(o&&o[r.t]!=null)?+o[r.t]:r.p}; }); }
 function rouletteHtml(){
   var s=spinState(), w=wonThisMonth(), rot=s?s.rot:0, locked=!!(s||w);
-  var btnTxt=s&&ROULETTE[s.i].c||(!s&&w)?'이번 달은 끝! '+nextMonthLabel()+'에 다시 돌려요':(s?'오늘은 끝! 내일 또 돌려요':'룰렛 돌리기');
-  return '<section class="roul" id="roulette"><small>하루 한 번, 행운 룰렛</small><h2>오늘은 내가 주인공?</h2><p>룰렛 돌리고 간식 쿠폰 챙겨가세요</p>'+
+  var btnTxt=s&&ROULETTE[s.i].c||(!s&&w)?'이번 달은 끝! '+nextMonthLabel()+'에 다시 돌려요':(s?'오늘은 끝! 내일 또 돌려요 👋':'🎡 룰렛 돌리기');
+  return '<section class="roul" id="roulette"><small>🎡 하루 한 번, 행운 룰렛</small><h2>오늘은 내가 주인공? 👑</h2><p>룰렛 돌리고 간식 쿠폰 챙겨가세요 ☕🍭🥛</p>'+
     '<div class="wbox"><svg class="pin" viewBox="0 0 26 30" aria-hidden="true"><path d="M13 30 1 6a12 12 0 0 1 24 0Z" fill="#1c1b22"/><circle cx="13" cy="9" r="4" fill="#fff"/></svg>'+
     WHEEL_SVG.replace('id="wheel"','id="wheel" style="transform:rotate('+rot+'deg)"')+'<span class="hub">다꾸</span></div>'+
     '<div id="rres">'+(s?resultHtml(s):(w?'<div class="rres win"><b>이번 달 당첨을 축하해요!</b><span>당첨되면 다음 달에 다시 참여할 수 있어요.<br>'+nextMonthLabel()+'부터 다시 돌릴 수 있어요.</span></div>':''))+'</div>'+
@@ -343,9 +343,9 @@ function rouletteHtml(){
 }
 function resultHtml(s){
   var r=ROULETTE[s.i];
-  if(!r.c) return '<div class="rres lose"><b>아쉬워요, 다음 기회에!</b><span>내일 다시 돌릴 수 있어요.</span></div>';
-  return '<div class="rres win"><b>축하해요! '+esc(r.t)+' 당첨</b><span>오늘 경품은 <em>선착순 1명</em>이에요. 다음 참여는 '+nextMonthLabel()+'부터예요.<br>다꾸 카톡 채널로 아래 코드를 가장 먼저 보내주신 분께 쿠폰을 보내드려요.</span>'+
-    '<code>'+esc(s.code)+'</code><a class="b kakao" href="http://pf.kakao.com/_xkqEFX/chat" target="_blank" rel="noopener noreferrer">카톡으로 코드 보내고 쿠폰 받기</a><button class="copy" data-copy="'+esc(s.code)+'">코드 복사</button></div>';
+  if(!r.c) return '<div class="rres lose"><b>😢 아쉬워요, 다음 기회에!</b><span>내일 다시 돌릴 수 있어요.</span></div>';
+  return '<div class="rres win"><b>🎉 축하해요! '+esc(r.t)+' 당첨</b><span>오늘 경품은 <em>선착순 1명</em>이에요. 다음 참여는 '+nextMonthLabel()+'부터예요.<br>다꾸 카톡 채널로 아래 코드를 가장 먼저 보내주신 분께 쿠폰을 보내드려요.</span>'+
+    '<code>'+esc(s.code)+'</code><a class="b kakao" href="http://pf.kakao.com/_xkqEFX/chat" target="_blank" rel="noopener noreferrer">💬 카톡으로 코드 보내고 쿠폰 받기</a><button class="copy" data-copy="'+esc(s.code)+'">코드 복사</button></div>';
 }
 function rulesHtml(){
   var odds=oddsList(), lose=100-odds.reduce(function(a,r){ return a+(r.c?r.p:0); },0);
@@ -396,7 +396,7 @@ function voucherSvg(cls){
 function reporterBanner(){
   var r=rep(); if(!r) return '';
   var mr=monthRange();
-  return '<a class="repb" href="#/reporter"><span class="rx"><small>다꾸 기자단 · '+mr.m+'월 모집중</small><b>다꾸 체험단 후기를<br>블로그에 올려주세요!</b><span class="rsub">1만원 상품권 증정</span><span class="rgo">지금 바로 신청하기'+ico(I.chev)+'</span></span>'+voucherSvg("vch")+'</a>';
+  return '<a class="repb" href="#/reporter"><span class="rx"><small>✍️ 다꾸 기자단 · '+mr.m+'월 모집중</small><b>다꾸 체험단 후기를<br>블로그에 올려주세요!</b><span class="rsub">🎁 1만원 상품권 증정</span><span class="rgo">🙋 지금 바로 신청하기'+ico(I.chev)+'</span></span>'+voucherSvg("vch")+'</a>';
 }
 function reporterView(){
   var r=rep(); if(!r) return '<div class="empty"><b>지금은 모집 기간이 아니에요</b><a class="b pri" href="#/">홈으로</a></div>';
@@ -404,7 +404,7 @@ function reporterView(){
   var kw=(r.keywords||["#다꾸체험단","#체험단모아보기"]);
   return '<div class="pg rep">'+
     '<a class="back" href="#/">'+ico(I.back)+'<span>홈</span></a>'+
-    '<div class="rephero"><small>다꾸 기자단 · 블로그 체험단</small><h1>다꾸 체험단 후기를<br>블로그에 올려주세요!</h1><p>올려주신 분께 <em>1만원 상품권</em>을 드려요.</p>'+voucherSvg("vch big")+'</div>'+
+    '<div class="rephero"><small>✍️ 다꾸 기자단 · 블로그 체험단</small><h1>다꾸 체험단 후기를<br>블로그에 올려주세요!</h1><p>올려주신 분께 <em>1만원 상품권</em>을 드려요.</p>'+voucherSvg("vch big")+'</div>'+
     '<div class="pane info">'+
       '<div class="ir"><span>제공 내역</span><b>'+esc(r.reward||"1만원 모바일 상품권")+'</b></div>'+
       '<div class="ir"><span>모집 기간</span><b>'+mr.m+'월 1일 ~ '+mr.m+'월 '+mr.last+'일 <em>'+(mr.left===0?'오늘 마감':'D-'+mr.left)+'</em></b></div>'+
@@ -412,7 +412,7 @@ function reporterView(){
       '<div class="ir"><span>신청 방법</span><b>블로그 주소로 신청</b></div>'+
       (r.slots?'<div class="ir"><span>선정 인원</span><b>매달 '+esc(r.slots)+'명</b></div>':'')+
     '</div>'+
-    '<section class="guide"><h2>포스팅 가이드</h2><ol>'+
+    '<section class="guide"><h2>📝 포스팅 가이드</h2><ol>'+
       '<li><b>필수 키워드</b> '+kw.map(function(k){ return '<span class="kw">'+esc(k)+'</span>'; }).join(" ")+'</li>'+
       '<li><b>분량</b> 공백 제외 <b>1,000자 이상</b></li>'+
       '<li><b>내용</b> 다꾸 체험단 모음 사이트를 소개해 주세요. 어떤 체험단을 볼 수 있는지, 써보니 어떤 점이 편했는지 솔직하게 써 주시면 돼요.</li>'+
@@ -421,24 +421,24 @@ function reporterView(){
       '<li><b>동영상</b> <b>1개 이상</b> (사이트를 둘러보는 화면 녹화 등)</li>'+
       '<li><b>대가 표시 (필수)</b> 글 첫머리에 아래 문구를 넣어 주세요.<span class="disc">제품을 제공받아 작성된 후기입니다.</span></li>'+
     '</ol></section>'+
-    '<section class="guide"><h2>진행 순서</h2><ol class="steps">'+
+    '<section class="guide"><h2>🗓️ 진행 순서</h2><ol class="steps">'+
       '<li>아래 <b>지금 신청하기</b>로 다꾸 카톡 채널을 추가하고 <b>블로그 주소</b>를 보내 신청해요.</li><li>선정되면 카톡으로 알려드려요.</li><li>선정 후 <b>7일 안에</b> 가이드대로 포스팅해요.</li><li>포스팅 주소를 보내주시면 확인 후 <b>7일 안에</b> 상품권을 보내드려요.</li>'+
     '</ol></section>'+
-    '<section class="guide fineprint"><h2>유의사항</h2><ul>'+
+    '<section class="guide fineprint"><h2>⚠️ 유의사항</h2><ul>'+
       '<li>대가 표시 문구가 없거나 가이드를 지키지 않은 글은 상품권이 지급되지 않아요.</li>'+
       '<li>포스팅은 작성일로부터 6개월 이상 유지해 주세요.</li>'+
       '<li>다른 사람의 글이나 사진을 허락 없이 쓰면 안 돼요.</li>'+
       '<li>같은 블로그는 한 달에 1번만 참여할 수 있어요.</li>'+
       '<li>모집 내용은 사정에 따라 바뀔 수 있어요.</li>'+
     '</ul></section>'+
-    '<div class="repcta"><a class="b pri wide" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">지금 신청하기</a></div>'+
+    '<div class="repcta"><a class="b pri wide" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">🙋 지금 신청하기</a></div>'+
   '</div>';
 }
 
 
 /* ---------- 광고주 마케팅 상담 문의 ---------- */
 function contactBanner(){
-  return '<a class="adv" href="#/contact"><span class="ax"><small>광고주 · 사장님</small><b>체험단 마케팅, 다꾸와 상담해 보세요</b><span>무료 상담 신청하기 ›</span></span><span class="am2">'+ico(I.bell)+'</span></a>';
+  return '<a class="adv" href="#/contact"><span class="ax"><small>📣 광고주 · 사장님</small><b>체험단 마케팅, 다꾸와 상담해 보세요</b><span>💬 무료 상담 신청하기 ›</span></span><span class="am2">'+ico(I.bell)+'</span></a>';
 }
 function radios(name,opts){
   return '<div class="rgrid">'+opts.map(function(o){ return '<label class="rd2"><input type="radio" name="'+name+'" value="'+o+'"><span>'+o+'</span></label>'; }).join("")+
@@ -447,7 +447,7 @@ function radios(name,opts){
 function contactView(){
   return '<div class="pg cform">'+
     '<a class="back" href="#/">'+ico(I.back)+'<span>홈</span></a>'+
-    '<div class="advhero"><small>광고주 마케팅 상담</small><h1>체험단 마케팅,<br>무료로 상담받아 보세요</h1><p>숙소·매장·제품 체험단 모집과 블로그 홍보를 도와드려요.</p></div>'+
+    '<div class="advhero"><small>📣 광고주 마케팅 상담</small><h1>체험단 마케팅,<br>무료로 상담받아 보세요 🙌</h1><p>숙소·매장·제품 체험단 모집과 블로그 홍보를 도와드려요.</p></div>'+
     '<form id="cform" class="fbox" novalidate>'+
       '<label class="fl" for="f-name">업체명 혹은 성함 <i>*</i></label><input id="f-name" name="name" class="fi" placeholder="업체명을 입력해 주세요" required>'+
       '<label class="fl" for="f-area">지역 <i>*</i></label><input id="f-area" name="area" class="fi" placeholder="지역을 입력해 주세요" required>'+
@@ -495,14 +495,14 @@ function doneContact(text){
 function msToMidnight(){ var n=new Date(), m=new Date(n); m.setHours(24,0,0,0); return m-n; }
 function hms(ms){ var s=Math.max(0,Math.floor(ms/1000)), h=Math.floor(s/3600), mi=Math.floor(s%3600/60), se=s%60; return h+"시간 "+("0"+mi).slice(-2)+"분 "+("0"+se).slice(-2)+"초"; }
 function dealsView(){
-  var h='<div class="pg"><h1>특가</h1>';
-  h+='<a class="kakaobox sm" '+ext(kakaoUrl())+'><span><small>다꾸 <i>×</i> 카카오톡</small><b>새 특가 열리면 <em>가장 먼저 알려드려요!</em></b></span><span class="kg">알림 받기</span></a>';
+  var h='<div class="pg"><h1>특가 🔥</h1>';
+  h+='<a class="kakaobox sm" '+ext(kakaoUrl())+'><span><small>다꾸 <i>×</i> 카카오톡</small><b>🔔 새 특가 열리면 <em>가장 먼저 알려드려요!</em></b></span><span class="kg">알림 받기</span></a>';
   if(DEALS.length){
-    h+='<section class="sec"><div class="sh col"><h2>오늘의 특가</h2><p class="cd">종료까지 <b id="cd">'+hms(msToMidnight())+'</b> 남음</p></div><div class="deallist">'+
-      DEALS.map(function(d){ var u=safeUrl(d.u); if(!u) return ""; return '<a class="drow" '+ext(u)+'><span class="dt" style="background:'+esc(d.c||"#f4f0ff")+'"><span>'+esc(d.e||"🎁")+'</span>'+(d.tag?'<em>'+esc(d.tag)+'</em>':'')+'</span><span class="dx"><b>'+esc(d.t)+'</b><small>'+esc(d.d||"")+'</small><span class="dg">특가 보러가기'+ico(I.chev)+'</span></span></a>'; }).join("")+'</div></section>';
+    h+='<section class="sec"><div class="sh col"><h2>⚡ 오늘의 특가</h2><p class="cd">⏳ 종료까지 <b id="cd">'+hms(msToMidnight())+'</b> 남음</p></div><div class="deallist">'+
+      DEALS.map(function(d){ var u=safeUrl(d.u); if(!u) return ""; return '<a class="drow" '+ext(u)+'><span class="dt" style="background:'+esc(d.c||"#f4f0ff")+'"><span>'+esc(d.e||"🎁")+'</span>'+(d.tag?'<em>'+esc(d.tag)+'</em>':'')+'</span><span class="dx"><b>'+esc(d.t)+'</b><small>'+esc(d.d||"")+'</small><span class="dg">👉 특가 보러가기'+ico(I.chev)+'</span></span></a>'; }).join("")+'</div></section>';
   }
   if(ADS.length){
-    h+='<section class="sec"><div class="sh"><h2>특가 모아보기</h2></div><div class="hs">'+
+    h+='<section class="sec"><div class="sh"><h2>🛍️ 특가 모아보기</h2></div><div class="hs">'+
       ADS.map(function(a){ var u=safeUrl(a.u); if(!u) return ""; return '<a class="acard" '+ext(u)+'><span class="am" style="background:'+esc(a.c||"#f4f0ff")+'">'+esc(a.e||"🎁")+'</span><b>'+esc(a.t)+'</b><small>'+esc(a.d||"")+'</small></a>'; }).join("")+'</div></section>';
   }
   h+='<p class="fine">특가 링크는 제휴 링크로, 구매 시 다꾸가 수수료를 받을 수 있어요. 가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p>';
@@ -515,7 +515,7 @@ function onClick(e){
   var t=e.target.closest("[data-fav],[data-cat],[data-status],[data-view],[data-share],[data-pref-clear],[data-focus],[data-spin],[data-copy]"); if(!t) return;
   if(t.dataset.spin!==undefined){ doSpin(t); return; }
   if(t.dataset.copy){ try{ navigator.clipboard.writeText(t.dataset.copy).then(function(){ toast("코드를 복사했어요"); }); }catch(err){ toast(t.dataset.copy); } return; }
-  if(t.dataset.fav!==undefined){ e.preventDefault(); toggleFav(t.dataset.fav); var on=isFav(t.dataset.fav); [].forEach.call(document.querySelectorAll('[data-fav="'+t.dataset.fav+'"]'),function(b){ b.classList.toggle("on",on); b.setAttribute("aria-pressed",on); }); toast(on?"찜했어요":"찜을 해제했어요"); if(state.tab==="fav") render(); return; }
+  if(t.dataset.fav!==undefined){ e.preventDefault(); toggleFav(t.dataset.fav); var on=isFav(t.dataset.fav); [].forEach.call(document.querySelectorAll('[data-fav="'+t.dataset.fav+'"]'),function(b){ b.classList.toggle("on",on); b.setAttribute("aria-pressed",on); }); toast(on?"❤️ 찜했어요":"🤍 찜을 해제했어요"); if(state.tab==="fav") render(); return; }
   if(t.dataset.cat){ state.cat=t.dataset.cat; state.region="전체"; if(state.status==="closed") state.status="open"; saveUi(); render(); return; }
   if(t.dataset.status){ state.status=t.dataset.status; saveUi(); [].forEach.call(document.querySelectorAll("[data-status]"),function(b){ b.classList.toggle("on",b===t); }); renderListGrid(); return; }
   if(t.dataset.view!==undefined){ state.view=state.view==="2"?"3":(state.view==="3"?"1":"2"); ls("dakku-view",state.view); var g=document.getElementById("grid"); if(g) g.className="grid v"+state.view; t.innerHTML=viewIcon(); t.setAttribute("aria-label","보기 방식 바꾸기 (지금 "+state.view+"단)"); renderListGrid(); return; }
