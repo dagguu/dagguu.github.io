@@ -450,8 +450,11 @@ function tagBanner(){
     '<span class="tbtns"><a class="igbtn" href="'+esc(ig||"https://www.instagram.com/")+'" target="_blank" rel="noopener noreferrer">📸 인스타그램 바로가기 ›</a>'+(bl?'<a href="'+esc(bl)+'" target="_blank" rel="noopener noreferrer">블로그 ›</a>':'')+'</span>'+
     '</span>'+giftSvg()+'</div>';
 }
+function kakaoSlide(){
+  return '<a class="kkb" href="'+esc(kakaoUrl())+'" target="_blank" rel="noopener noreferrer"><span class="rx"><small>💬 다꾸 카카오톡 채널</small><b>카카오톡 채널 친구추가 하면<br>체험단 소식 알림받기!</b><span class="kbtn">친구추가하기 ›</span></span><span class="kbub"><svg viewBox="0 0 64 60" aria-hidden="true"><path d="M32 6C16.5 6 4 15.8 4 28c0 7.8 5.1 14.6 12.8 18.6L14 56l11-6.6c2.2.4 4.6.6 7 .6 15.5 0 28-9.8 28-22S47.5 6 32 6Z" fill="#3c1e1e"/><text x="32" y="33" text-anchor="middle" font-size="13" font-weight="900" fill="#fee500" font-family="Noto Sans KR,sans-serif">TALK</text></svg><em>🔔</em></span></a>';
+}
 function slideBanners(inPage){
-  var slides=[]; if(rep()) slides.push(reporterBanner()); slides.push(tagBanner());
+  var slides=[]; if(rep()) slides.push(reporterBanner()); slides.push(tagBanner()); slides.push(kakaoSlide());
   return '<div class="slider'+(inPage?' inpage':'')+'" data-slider><div class="strack">'+slides.map(function(s){ return '<div class="slide">'+s+'</div>'; }).join("")+'</div>'+
     (slides.length>1?'<div class="sdots">'+slides.map(function(_,i){ return '<button data-dot="'+i+'" aria-label="'+(i+1)+'번째 배너"'+(i===0?' class="on"':'')+'></button>'; }).join("")+'</div>':'')+'</div>';
 }
