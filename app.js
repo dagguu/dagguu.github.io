@@ -171,7 +171,7 @@ function thumb(it,cls){
       '<span class="ph">'+esc(it.region||"")+'</span>'+(img?'<img src="'+esc(img)+'" alt="'+esc(it.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">':'')+
     (view?'</a>':'</div>')+
     (it.region?'<span class="rgs">📍 '+esc(it.region)+'</span>':'')+
-    (s.dday==="오늘 마감"?'<span class="dd hot cdb" data-cd>⏰ '+clock(msToMidnight())+'</span>':'<span class="dd '+(s.key==="closed"?"off":(s.hot?"hot":""))+'">'+esc(s.dday)+'</span>')+
+    '<span class="dd '+(s.key==="closed"?"off":(s.hot?"hot":""))+'">'+esc(s.dday)+'</span>'+
     (isPick(it)&&s.key!=="closed"?'<span class="pks">💜 추천</span>':'')+
     '<button class="fv'+(isFav(it.id)?" on":"")+'" data-fav="'+esc(it.id)+'" aria-label="찜하기" aria-pressed="'+isFav(it.id)+'">'+ico(I.heart)+'</button>'+
   '</div>';
