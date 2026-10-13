@@ -222,7 +222,7 @@ function homeView(){
       var list=openItems(m.k).sort(byDeadline), p=prefOf(PREF);
       h+='<section class="sec"><div class="sh"><h2><span class="ci em">'+m.em+'</span>'+esc(m.t)+' 체험단 <em>'+list.length+'</em></h2><a class="more" href="#/list?cat='+m.k+'&s=open">더보기'+ico(I.chev)+'</a></div>'+
         (p?'<p class="prefnote">'+esc(p.t)+' 먼저 보여드리는 중 · <button data-pref-clear>해제</button></p>':'')+
-        '<div class="hs">'+list.slice(0,12).map(miniCard).join("")+'<a class="minimore" href="#/list?cat='+m.k+'&s=open">'+ico(I.chev)+'<span>전체 보기</span></a></div></section>';
+        '<div class="hs">'+list.slice(0,12).map(function(it){ return miniCard(it,true); }).join("")+'<a class="minimore" href="#/list?cat='+m.k+'&s=open">'+ico(I.chev)+'<span>전체 보기</span></a></div></section>';
     } else if(UPCOMING.some(function(u){ return u.k===m.k || u.t===m.t; })){
       h+='<section class="sec"><div class="sh"><h2><span class="ci em">'+m.em+'</span>'+esc(m.t)+' 체험단 <em class="soon">곧 오픈 ✨</em></h2></div>'+
         '<a class="soonbox" '+ext(kakaoUrl())+'><span>🛠️ 지금 체험단을 모으고 있어요</span><b>🔔 오픈 알림</b></a></section>';
