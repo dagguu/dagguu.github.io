@@ -35,6 +35,9 @@ var FAV=[]; try{ FAV=JSON.parse(ls("dakku-fav")||"[]")||[]; }catch(e){ FAV=[]; }
 function isFav(id){ return FAV.indexOf(id)>=0; }
 function toggleFav(id){ var i=FAV.indexOf(id); if(i>=0) FAV.splice(i,1); else FAV.push(id); ls("dakku-fav",JSON.stringify(FAV)); }
 var PREF = ls("dakku-pref") || "";
+var WANT = {}; try{ WANT=JSON.parse(ls("dakku-want")||"{}")||{}; }catch(e){ WANT={}; }
+function saveWant(){ ls("dakku-want",JSON.stringify(WANT)); }
+var AGES=["임신 중","0~6개월","7~12개월","13~24개월","3~4세","5~7세","8세 이상"];
 
 /* ---------- 로고: 클래식 D + 기념일 로고 ---------- */
 var D_PATH="M26 22H52C70 22 77 31.5 77 49.5C77 67.5 70 77 52 77H26Z M43 36H51.5C56 36 58 38 58 42.5V56.5C58 61 56 63 51.5 63H43Z";
@@ -96,8 +99,14 @@ function isOpenCat(k){ return !!catInfo(k); }
 function isPick(it){ if(it.pick===true) return true; var c=catInfo(catOf(it)); var kw=(c&&c.pick)||[]; for(var i=0;i<kw.length;i++) if(String(it.name||"").indexOf(kw[i])>=0) return true; return false; }
 function prefOf(k){ for(var i=0;i<PREFS.length;i++) if(PREFS[i].k===k) return PREFS[i]; return null; }
 function prefHit(it){ var p=prefOf(PREF); return !!(p && p.re.test(String(it.name||"")+" "+String(it.benefit||""))); }
+function prefNote(k){
+  if(k!=="stay") return "";
+  var parts=[]; if(WANT.region) parts.push("📍 "+WANT.region); if(PREF&&prefOf(PREF)) parts.push(prefOf(PREF).t);
+  return parts.length?'<p class="prefnote">'+esc(parts.join(" · "))+' 체험단 먼저 보여드리는 중 · <button data-pref-clear>해제</button></p>':'';
+}
 function byDeadline(a,b){
   var ka=isPick(a)&&statusOf(a).key!=="closed", kb=isPick(b)&&statusOf(b).key!=="closed"; if(ka!==kb) return ka?-1:1;
+  if(WANT.region){ var ra=a.region===WANT.region, rb=b.region===WANT.region; if(ra!==rb) return ra?-1:1; }
   var pa=prefHit(a), pb=prefHit(b); if(pa!==pb) return pa?-1:1;
   return daysLeft(a)-daysLeft(b) || (b.createdAt||0)-(a.createdAt||0);
 }
@@ -231,11 +240,12 @@ function homeView(){
   }
   h+=slideBanners(false);
   var banners=featureBanners(), bi=0, adi=0;
-  CAT_ORDER.forEach(function(m){
+  var order=CAT_ORDER.slice(); if(WANT.cat){ order.sort(function(x,y){ return (y.k===WANT.cat)-(x.k===WANT.cat); }); }
+  order.forEach(function(m){
     if(isOpenCat(m.k)){
-      var list=openItems(m.k).sort(byDeadline), p=prefOf(PREF);
+      var list=openItems(m.k).sort(byDeadline);
       h+='<section class="sec"><div class="sh"><h2><span class="ci em">'+m.em+'</span>'+esc(m.t)+' 체험단 <em>'+list.length+'</em></h2><a class="more" href="#/list?cat='+m.k+'&s=open">더보기'+ico(I.chev)+'</a></div>'+
-        (p?'<p class="prefnote">'+esc(p.t)+' 먼저 보여드리는 중 · <button data-pref-clear>해제</button></p>':'')+
+        prefNote(m.k)+
         '<div class="hs">'+list.slice(0,12).map(function(it){ return miniCard(it,true); }).join("")+'<a class="minimore" href="#/list?cat='+m.k+'&s=open">'+ico(I.chev)+'<span>전체 보기</span></a></div></section>';
     } else if(UPCOMING.some(function(u){ return u.k===m.k || u.t===m.t; })){
       h+='<section class="sec"><div class="sh"><h2><span class="ci em">'+m.em+'</span>'+esc(m.t)+' 체험단 <em class="soon">곧 오픈 ✨</em></h2></div>'+
@@ -260,7 +270,7 @@ function listView(){
       '<div class="tools"><span id="count" class="count"></span><span class="tr">'+
         (c.region?'<label class="sel"><span class="sr">지역</span><select id="region">'+["전체"].concat(REGIONS).map(function(r){ return '<option'+(r===state.region?" selected":"")+'>'+r+'</option>'; }).join("")+'</select></label>':'')+
         '<button class="viewbtn" data-view aria-label="보기 방식 바꾸기 (지금 '+state.view+'단)">'+viewIcon()+'</button></span></div>'+
-      (PREF&&prefOf(PREF)?'<p class="prefnote">'+esc(prefOf(PREF).t)+' 먼저 보여드리는 중 · <button data-pref-clear>해제</button></p>':'')+
+      prefNote(state.cat)+
       '<div id="grid" class="grid v'+state.view+'"></div>'
     : soonView(catMeta(state.cat)))+
   '</div>';
@@ -629,7 +639,7 @@ function onClick(e){
   if(t.dataset.status){ state.status=t.dataset.status; saveUi(); [].forEach.call(document.querySelectorAll("[data-status]"),function(b){ b.classList.toggle("on",b===t); }); renderListGrid(); return; }
   if(t.dataset.view!==undefined){ state.view=state.view==="2"?"3":(state.view==="3"?"1":"2"); ls("dakku-view",state.view); var g=document.getElementById("grid"); if(g) g.className="grid v"+state.view; t.innerHTML=viewIcon(); t.setAttribute("aria-label","보기 방식 바꾸기 (지금 "+state.view+"단)"); renderListGrid(); return; }
   if(t.dataset.share!==undefined){ share(); return; }
-  if(t.dataset.prefClear!==undefined){ PREF=""; ls("dakku-pref",""); render(); return; }
+  if(t.dataset.prefClear!==undefined){ PREF=""; ls("dakku-pref",""); delete WANT.region; saveWant(); render(); return; }
   if(t.dataset.focus){ setTimeout(function(){ var q=document.getElementById("q"); if(q) q.focus(); },60); }
 }
 function share(){
@@ -650,23 +660,51 @@ function toast(msg){ var t=document.querySelector(".toast"); if(!t){ t=document.
 
 /* ---------- 취향 묻기 (40초 머물면 한 번) ---------- */
 function prefPopup(){
-  if(ls("dakku-pref-asked")) return;
-  var stay=openItems("stay"); if(!stay.length) return;
-  var opts=PREFS.map(function(p){ return {p:p,n:stay.filter(function(it){ return p.re.test(String(it.name)+" "+String(it.benefit)); }).length}; }).filter(function(o){ return o.n>0; });
-  if(opts.length<2) return;
-  ls("dakku-pref-asked","1");
-  var sel="";
-  var wrap=document.createElement("div"); wrap.className="modal"; wrap.setAttribute("role","dialog"); wrap.setAttribute("aria-modal","true"); wrap.setAttribute("aria-label","취향 선택");
-  wrap.innerHTML='<div class="sheet"><button class="mx" data-m="x" aria-label="닫기">'+ico(I.x)+'</button><div class="mlogo">'+logoSvg(40)+'</div><h2>어떤 숙소 체험단<br>기다리고 계세요?</h2><p>골라주시면 다음부터 맨 앞에 모아드릴게요!</p>'+
-    '<div class="opts">'+opts.map(function(o){ return '<button class="opt" data-m="'+o.p.k+'"><span class="rd"></span><span class="ol">'+esc(o.p.t)+'</span><span class="oc">'+o.n+'곳</span></button>'; }).join("")+'</div>'+
-    '<button class="b pri wide" data-m="ok" disabled>이걸로 모아주세요</button></div>';
-  document.body.appendChild(wrap);
+  if(ls("dakku-want-asked") || WANT.cat) return;
+  if(document.querySelector(".modal")) return;
+  ls("dakku-want-asked","1");
+  var pick={}, step=1;
+  var CHOICES=[["stay","🏨","숙박 체험단"],["baby","👶","육아 체험단"],["life","🧺","생활용품"],["beauty","💄","뷰티제품"],["elec","🔌","가전"],["etc","🎁","기타"]];
+  var wrap=document.createElement("div"); wrap.className="modal"; wrap.setAttribute("role","dialog"); wrap.setAttribute("aria-modal","true"); wrap.setAttribute("aria-label","기다리는 체험단 선택");
+  function head(t,sub){ return '<button class="mx" data-m="x" aria-label="닫기">'+ico(I.x)+'</button><div class="mlogo">'+logoSvg(40)+'</div><h2>'+t+'</h2><p>'+sub+'</p>'; }
+  function draw(){
+    var h='<div class="sheet">';
+    if(step===1){
+      h+=head("어떤 체험단<br>기다리고 계세요?","골라주시면 다음부터 맨 앞에 모아드릴게요!")+'<div class="wgrid">'+CHOICES.map(function(c){
+        var n=isOpenCat(c[0])?openItems(c[0]).length:0;
+        return '<button class="wopt'+(pick.cat===c[0]?' on':'')+'" data-m="cat" data-v="'+c[0]+'"><span class="we">'+c[1]+'</span><b>'+c[2]+'</b><small>'+(n?n+'곳 모집 중':'곧 열려요')+'</small></button>';
+      }).join("")+'</div><button class="b pri wide" data-m="next"'+(pick.cat?'':' disabled')+'>다음</button>';
+    } else if(step===2 && pick.cat==="stay"){
+      var cnt={}; openItems("stay").forEach(function(it){ cnt[it.region]=(cnt[it.region]||0)+1; });
+      h+=head("어느 지역 숙소를<br>찾고 계세요?","고른 지역 체험단을 맨 앞에 보여드려요")+'<div class="rgrid">'+["전국"].concat(REGIONS).map(function(r){
+        var n=r==="전국"?openItems("stay").length:(cnt[r]||0);
+        return '<button class="ropt'+(pick.region===r?' on':'')+'" data-m="val" data-v="'+r+'"><b>'+(r==="전국"?"🇰🇷 전국":r)+'</b><small>'+n+'곳</small></button>';
+      }).join("")+'</div><div class="wbtns"><button class="b sec" data-m="back">이전</button><button class="b pri" data-m="ok"'+(pick.region?'':' disabled')+'>이걸로 모아주세요</button></div>';
+    } else if(step===2 && pick.cat==="baby"){
+      h+=head("아기가 몇 살이에요?","나이에 맞는 육아 체험단을 먼저 챙겨드릴게요 👶")+'<div class="rgrid">'+AGES.map(function(a){
+        return '<button class="ropt'+(pick.age===a?' on':'')+'" data-m="val" data-v="'+a+'"><b>'+a+'</b></button>';
+      }).join("")+'</div><div class="wbtns"><button class="b sec" data-m="back">이전</button><button class="b pri" data-m="ok"'+(pick.age?'':' disabled')+'>선택 완료</button></div>';
+    } else {
+      var c=CHOICES.filter(function(x){ return x[0]===pick.cat; })[0], open=isOpenCat(pick.cat);
+      h+=head(c[1]+' '+c[2]+(open?' 먼저 보여드릴게요!':'<br>열리면 알려드릴게요!'),open?'홈 맨 위에 모아뒀어요.':(pick.age?'아기 나이('+esc(pick.age)+')에 맞는 체험단부터 챙겨드릴게요.':'새 체험단이 열리면 카톡으로 가장 먼저 알려드려요.'))+
+        (open?'':'<a class="b kakao wide" href="'+esc(kakaoUrl())+'" target="_blank" rel="noopener noreferrer" style="margin-bottom:8px">💬 카톡으로 알림 받기</a>')+'<button class="b '+(open?'pri':'sec')+' wide" data-m="x">확인</button>';
+    }
+    wrap.innerHTML=h+'</div>';
+  }
+  function finish(){
+    WANT={cat:pick.cat}; if(pick.cat==="stay" && pick.region && pick.region!=="전국") WANT.region=pick.region; if(pick.cat==="baby" && pick.age) WANT.age=pick.age;
+    saveWant(); render();
+  }
+  draw(); document.body.appendChild(wrap);
   wrap.addEventListener("click",function(e){
     var b=e.target.closest("[data-m]"); if(!b){ if(e.target===wrap) wrap.remove(); return; }
     var m=b.dataset.m;
     if(m==="x"){ wrap.remove(); return; }
-    if(m==="ok"){ if(!sel) return; PREF=sel; ls("dakku-pref",sel); wrap.remove(); toast(prefOf(sel).t+" 체험단을 맨 앞에 모았어요"); render(); return; }
-    sel=m; [].forEach.call(wrap.querySelectorAll(".opt"),function(o){ o.classList.toggle("on",o===b); }); wrap.querySelector("[data-m=ok]").disabled=false;
+    if(m==="cat"){ pick.cat=b.dataset.v; draw(); return; }
+    if(m==="val"){ if(pick.cat==="stay") pick.region=b.dataset.v; else pick.age=b.dataset.v; draw(); return; }
+    if(m==="back"){ step=1; draw(); return; }
+    if(m==="next"){ if(!pick.cat) return; if(pick.cat==="stay"||pick.cat==="baby"){ step=2; draw(); } else { finish(); step=3; draw(); } return; }
+    if(m==="ok"){ finish(); if(pick.cat==="stay"){ wrap.remove(); toast((WANT.region?"📍 "+WANT.region:"🏨 숙박")+" 체험단을 맨 앞에 모았어요"); window.scrollTo(0,0); } else { step=3; draw(); } return; }
   });
 }
 
@@ -679,6 +717,6 @@ fetch("data.json?v="+Date.now().toString(36).slice(0,-3),{cache:"no-cache"}).the
   if(Array.isArray(seed.categories)&&seed.categories.length) CATS=seed.categories;
   UPCOMING=Array.isArray(seed.upcoming)?seed.upcoming:[]; ADS=Array.isArray(seed.ads)?seed.ads:[]; DEALS=Array.isArray(seed.deals)?seed.deals:[];
   state.loading=false; LOGO=pickLogo(); paintLogo(); setFavicon(); render();
-  if(!PREF) setTimeout(prefPopup,40000);
+  if(!WANT.cat) setTimeout(prefPopup,40000);
 }).catch(function(){ state.loading=false; var v=document.getElementById("view"); if(v) v.innerHTML='<div class="empty"><b>잠시 후 다시 시도해 주세요</b>목록을 불러오지 못했어요.</div>'; });
 })();
