@@ -647,3 +647,9 @@ img{display:block}
 .chmenu a:nth-child(3) .chi{background:#fdeef4}
 .chmenu a:nth-child(4) .chi{background:#efeaff}
 .hmenu{padding-top:16px}
+.hmenu{grid-template-columns:repeat(6,1fr);gap:14px 2px;padding:18px 8px 4px}
+.hmenu a{font-size:12px;gap:6px;letter-spacing:-.03em;white-space:nowrap}
+.hmi{width:50px;height:50px;border-radius:16px;font-size:26px}
+.hmenu a:nth-child(n+6) .hmi{background:var(--tint);box-shadow:inset 0 0 0 1px #ebe5fb}
+.hmenu a:nth-child(n+7) .hmi{background:#fff4ec;box-shadow:inset 0 0 0 1px #fde3d1}
+.logo .wm{margin-left:2px}
