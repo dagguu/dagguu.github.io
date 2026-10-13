@@ -119,6 +119,7 @@ var I={
   flame:"M12 2c1 3.5 5 5.5 5 11a5 5 0 0 1-10 0c0-2.4 1-3.9 2-5 .2 1.6 1 2.6 2 3 0-3.4-.5-6 1-9Z",
   x:"M6 6l12 12M18 6 6 18", trend:"M4 17l5-5 4 4 7-8M15 8h5v5",
   quiz:"M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17.5h.01M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z",
+  send:"M21 3 10.2 13.8M21 3l-6.6 18-4.2-7.2L3 9.6Z",
   wheel:"M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 0v9l6.4 6.4M12 12 3.5 9"
 };
 
@@ -144,8 +145,9 @@ function paintLogo(){ var l=document.getElementById("logo"); if(l) l.innerHTML=l
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
-  if(!/^(home|list|fav|benefit|deals|reporter|contact)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|benefit|deals|reporter|contact|item)$/.test(tab)) tab="home";
   state.tab=tab;
+  if(tab==="item") state.itemId=qs.id||"";
   if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; saveUi(); }
   render(); window.scrollTo(0,0);
 }
@@ -160,6 +162,7 @@ function render(){
   else if(state.tab==="deals") v.innerHTML=dealsView();
   else if(state.tab==="reporter") v.innerHTML=reporterView();
   else if(state.tab==="contact") v.innerHTML=contactView();
+  else if(state.tab==="item") v.innerHTML=itemView();
   tick(); startSliders();
 }
 
@@ -178,6 +181,7 @@ function thumb(it,cls){
     (isPick(it)&&s.key!=="closed"?'<span class="pks">💜 추천</span>':'')+
     (isNew?'<span class="nws">NEW</span>':'')+
     (s.key==="closed"?'<a class="closedov" href="'+esc(kakaoUrl())+'" target="_blank" rel="noopener noreferrer"><b>모집 마감</b><span>🔔 다음 모집 알림받기</span></a>':'')+
+    '<button class="shb" data-ishare="'+esc(it.id)+'" aria-label="'+esc(it.name)+' 공유하기">'+ico(I.send)+'</button>'+
     '<button class="fv'+(isFav(it.id)?" on":"")+'" data-fav="'+esc(it.id)+'" aria-label="찜하기" aria-pressed="'+isFav(it.id)+'">'+ico(I.heart)+'</button>'+
   '</div>';
 }
@@ -311,7 +315,7 @@ function recommend(limit){
   var topReg=Object.keys(reg).sort(function(x,y){ return reg[y]-reg[x]; })[0];
   var topTyp=Object.keys(typ).sort(function(x,y){ return typ[y]-typ[x]; })[0];
   var personal=!!(topReg||topTyp);
-  var pool=seed.items.filter(function(it){ return statusOf(it).key==="open" && !isFav(it.id); });
+  var pool=seed.items.filter(function(it){ return statusOf(it).key==="open" && !isFav(it.id) && !(state.tab==="item" && String(it.id)===String(state.itemId)); });
   pool.forEach(function(it){
     var s=0, why="";
     var tt=typesOf(it);
@@ -333,6 +337,12 @@ function recoSection(title){
 }
 
 /* ---------- 찜 ---------- */
+function itemView(){
+  var it=seed.items.filter(function(x){ return String(x.id)===String(state.itemId); })[0];
+  if(!it) return '<div class="pg"><div class="empty sm"><b>😢 이 체험단을 찾을 수 없어요</b>모집이 끝나 목록에서 내려갔을 수 있어요.</div><a class="morebig" href="#/list">🎟️ 지금 모집 중인 체험단 보기 ›</a></div>';
+  return '<div class="pg"><p class="pgsub" style="margin:4px 4px 10px">💌 친구가 공유한 체험단이에요</p><div class="grid v1">'+fullCard(it)+'</div>'+
+    '<a class="morebig" href="#/list">🎟️ 다른 체험단도 둘러보기 ›</a>'+recoSection("💜 이런 체험단은 어때요?")+'</div>';
+}
 function favView(){
   var list=seed.items.filter(function(it){ return isFav(it.id); }).sort(function(a,b){ var sa=statusOf(a).key==="closed", sb=statusOf(b).key==="closed"; if(sa!==sb) return sa?1:-1; return daysLeft(a)-daysLeft(b); });
   var soon=list.filter(function(it){ return statusOf(it).key==="open" && daysLeft(it)<=3; }).length;
@@ -610,7 +620,8 @@ var tickT; function tick(){ clearInterval(tickT); tickT=setInterval(function(){ 
 /* ---------- 이벤트 ---------- */
 function onClick(e){
   var lk=e.target.closest("article a[target=_blank]"); if(lk){ var art=lk.closest("article"), fb=art&&art.querySelector("[data-fav]"); if(fb) markSeen(fb.dataset.fav); }
-  var t=e.target.closest("[data-fav],[data-cat],[data-status],[data-view],[data-share],[data-pref-clear],[data-focus],[data-spin],[data-copy]"); if(!t) return;
+  var t=e.target.closest("[data-fav],[data-cat],[data-status],[data-view],[data-share],[data-pref-clear],[data-focus],[data-spin],[data-copy],[data-ishare]"); if(!t) return;
+  if(t.dataset.ishare){ e.preventDefault(); shareItem(t.dataset.ishare); return; }
   if(t.dataset.spin!==undefined){ doSpin(t); return; }
   if(t.dataset.copy){ try{ navigator.clipboard.writeText(t.dataset.copy).then(function(){ toast("코드를 복사했어요"); }); }catch(err){ toast(t.dataset.copy); } return; }
   if(t.dataset.fav!==undefined){ e.preventDefault(); toggleFav(t.dataset.fav); var on=isFav(t.dataset.fav); [].forEach.call(document.querySelectorAll('[data-fav="'+t.dataset.fav+'"]'),function(b){ b.classList.toggle("on",on); b.setAttribute("aria-pressed",on); }); toast(on?"❤️ 찜했어요":"🤍 찜을 해제했어요"); if(state.tab==="fav") render(); return; }
@@ -625,6 +636,14 @@ function share(){
   var data={title:SITE,text:"전국 숙박 체험단이랑 오늘의 특가를 한곳에서 봐요!",url:location.origin+location.pathname};
   if(navigator.share){ navigator.share(data).catch(function(){}); return; }
   try{ navigator.clipboard.writeText(data.url).then(function(){ toast("링크를 복사했어요. 친구에게 붙여넣어 보내세요!"); }); }catch(e){ toast(data.url); }
+}
+function shareItem(id){
+  var it=seed.items.filter(function(x){ return String(x.id)===String(id); })[0]; if(!it) return;
+  var s=statusOf(it), url=location.origin+location.pathname+"#/item?id="+encodeURIComponent(id);
+  var text="🏨 "+it.name+(it.region?" ("+it.region+")":"")+(it.worth?"\n💰 "+it.worth+" 상당":"")+"\n🗓️ "+s.dday+" · 다꾸 체험단 모음에서 봤어요!";
+  if(navigator.share){ navigator.share({title:it.name,text:text,url:url}).catch(function(){}); return; }
+  var all=text+"\n"+url;
+  try{ navigator.clipboard.writeText(all).then(function(){ toast("✈️ 링크를 복사했어요. 친구에게 붙여넣어 보내세요!"); }).catch(function(){ prompt("아래 링크를 복사해 친구에게 보내세요",url); }); }catch(e){ toast(url); }
 }
 var toastT;
 function toast(msg){ var t=document.querySelector(".toast"); if(!t){ t=document.createElement("div"); t.className="toast"; t.setAttribute("role","status"); document.body.appendChild(t);} t.textContent=msg; clearTimeout(toastT); toastT=setTimeout(function(){ t.remove(); },2400); }
