@@ -282,9 +282,9 @@ function homeView(){
   h+='<section class="hsec"><div class="hsh"><h2>다른 체험단도 둘러볼까요?</h2></div><div class="htool"><span>총 <b>'+open.length+'</b>개</span><a class="hflt" href="#/list?cat=stay&s=open">⚙️ 필터</a></div>'+
     '<div class="grid v2 hgrid">'+rest.slice(0,8).map(fullCard).join("")+'</div><a class="hall" href="#/list?cat=stay&s=open">체험단 전체 보기 ›</a></section>';
   var gb=[];
-  if(rep()) gb.push(['#/reporter','','#4f7fe0','#3b6ad0','✍️','다꾸 기자단 모집','후기 쓰고 1만원 상품권 받아요']);
-  gb.push([kakaoUrl(),'ext','#4caf6a','#3d9a5a','🔔','새로 나온 체험단 알림','매일 아침 카톡으로 먼저 받아요']);
-  gb.push(['#/benefit','','#e98a5e','#d9744a','🎁','오늘의 혜택 모음','룰렛 · 쿠폰 · 이벤트 한곳에']);
+  if(rep()) gb.push(['#/reporter','','#6aa8ff','#4338ca','✍️','다꾸 기자단 모집','후기 쓰고 1만원 상품권 받아요']);
+  gb.push([kakaoUrl(),'ext','#5eead4','#16a34a','🔔','새로 나온 체험단 알림','매일 아침 카톡으로 먼저 받아요']);
+  gb.push(['#/benefit','','#ffc46b','#f43f5e','🎁','오늘의 혜택 모음','룰렛 · 쿠폰 · 이벤트 한곳에']);
   h+='<div class="gbs">'+gb.map(function(g){ return '<a class="gb" '+(g[1]?ext(g[0]):'href="'+g[0]+'"')+' style="--g1:'+g[2]+';--g2:'+g[3]+'"><span class="gt"><b>'+g[5]+'</b><small>'+g[6]+'</small></span><span class="ge">'+g[4]+'</span></a>'; }).join("")+'</div>';
   h+='<section class="adbox"><h2>혹시, <em>체험단 모집</em>이나 <em>광고 상담</em>이<br>필요하신가요?</h2><p>간단히 문의만 남겨주시면 바로 안내해 드릴게요.</p><a class="b pri" href="#/contact">광고·제휴 문의하기 ›</a></section>';
   return h;
