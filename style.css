@@ -485,3 +485,6 @@ img{display:block}
 .tim .tsh{top:8px;right:8px;bottom:auto;background:rgba(255,255,255,.94)}
 .tcard.tfocus{box-shadow:0 0 0 3px var(--acc),0 8px 22px rgba(106,63,200,.3);animation:tpulse 1s ease-in-out 3}
 @keyframes tpulse{50%{transform:scale(1.02)}}
+
+.am.amp{overflow:hidden;border:0;position:relative}
+.am.amp img{width:100%;height:100%;object-fit:cover;display:block}
