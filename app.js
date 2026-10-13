@@ -51,6 +51,7 @@ function filtered(){
     if(state.status==="pick" && !isPick(it)) return false;
     if(state.status==="fav" && !isFav(it.id)) return false;
     if(state.status==="todayClose" && !(it.end===td && s==="open")) return false;
+    if(state.status==="closing"){ var en=parseDate(it.end); if(!(s==="open" && en && (en-today())/864e5<=3)) return false; }
     if(q){ var hay=(it.name+" "+it.region+" "+it.benefit).toLowerCase(); if(hay.indexOf(q)<0) return false; }
     return true;
   });
@@ -70,9 +71,9 @@ function shell(){
    '</div></header>'+
    '<main class="wrap">'+
      '<section class="hero" id="hero"></section>'+
-     '<section id="today" class="today"></section><section id="deals" class="deals"></section>'+
+     '<section id="entry" class="entry"></section><section id="today" class="today"></section><section id="deals" class="deals"></section>'+
      '<div class="toolbar"><div class="seg" id="seg">'+
-       '<button data-s="pick">추천 💜</button><button data-s="todayOpen">오늘오픈 🆕</button><button data-s="todayClose">오늘마감 🚨</button><button data-s="open">모집중 🔥</button><button data-s="closed">모집마감 🔒</button><button data-s="fav">찜 ❤️</button>'+
+       '<button data-s="pick">추천 💜</button><button data-s="todayOpen">오늘오픈 🆕</button><button data-s="todayClose">오늘마감 🚨</button><button data-s="closing">마감임박 ⏰</button><button data-s="open">모집중 🔥</button><button data-s="closed">모집마감 🔒</button><button data-s="fav">찜 ❤️</button>'+
      '</div><span class="count" id="count"></span></div>'+
      '<div class="grid" id="grid"></div>'+
    '</main>'+
@@ -91,6 +92,10 @@ function shell(){
   var qi=document.getElementById("q"); qi.addEventListener("input",function(){ state.q=qi.value; renderGrid(); });
   document.getElementById("home").addEventListener("click",function(e){ e.preventDefault(); state.q="";qi.value="";state.region="전체";state.status="open";saveUi();render();window.scrollTo({top:0,behavior:"smooth"}); });
   document.getElementById("grid").addEventListener("click",onGridClick);
+  document.getElementById("entry").addEventListener("click",function(e){ var b=e.target.closest("[data-ec]"); if(!b||b.disabled) return;
+    if(b.dataset.ec) { state.cat=b.dataset.ec; state.region="전체"; }
+    state.status=b.dataset.es||"open"; saveUi(); render();
+    var t=document.getElementById("seg"); if(t) t.scrollIntoView({behavior:"smooth",block:"center"}); });
   document.getElementById("today").addEventListener("click",function(e){ var b=e.target.closest("[data-go]"); if(!b) return; state.status=b.dataset.go; saveUi(); render(); var t=document.getElementById("seg"); if(t) t.scrollIntoView({behavior:"smooth",block:"center"}); });
 }
 
@@ -104,7 +109,7 @@ function render(){
   document.getElementById("q").placeholder=cc.ph||(cc.t+" 체험단 검색");
   [].forEach.call(document.querySelectorAll(".chip"),function(b){ b.classList.toggle("on",b.dataset.r===state.region); });
   [].forEach.call(document.querySelectorAll("#seg button"),function(b){ b.classList.toggle("on",b.dataset.s===state.status); });
-  renderToday(); renderDeals(); renderGrid();
+  renderEntry(); renderToday(); renderDeals(); renderGrid();
 }
 
 function card(it){
@@ -144,6 +149,21 @@ var FAV=[]; try{ FAV=JSON.parse(localStorage.getItem("dakku-fav")||"[]")||[]; }c
 function isFav(id){ return FAV.indexOf(id)>=0; }
 function toggleFav(id){ var i=FAV.indexOf(id); if(i>=0) FAV.splice(i,1); else FAV.push(id); try{ localStorage.setItem("dakku-fav",JSON.stringify(FAV)); }catch(e){} }
 var LAST=0; try{ LAST=+(localStorage.getItem("dakku-last")||0); localStorage.setItem("dakku-last",String(Date.now())); }catch(e){}
+/* ---------- 첫 화면 분야 입구 카드 ---------- */
+var UPCOMING=[];
+function renderEntry(){
+  var el=document.getElementById("entry"); if(!el) return;
+  var td=ymd(today()), t0=today();
+  function stat(list){ var o=0,op=0,cl=0; list.forEach(function(it){ var k=statusOf(it).key; if(k==="open") op++; if(it.start===td&&k!=="closed") o++; var en=parseDate(it.end); if(k==="open"&&en&&(en-t0)/864e5<=3) cl++; }); return {o:o,op:op,cl:cl}; }
+  var html=CATS.map(function(c){ var st=stat(state.items.filter(function(it){return catOf(it)===c.k;}));
+    var sub = st.o>0 ? '🆕 오늘 '+st.o+'곳' : '🔥 '+st.op+'곳 모집중';
+    return '<button class="ecard'+(c.k===state.cat&&state.status!=="pick"&&state.status!=="closing"?' on':'')+'" data-ec="'+esc(c.k)+'" data-es="open"><span class="ee">'+esc(c.e)+'</span><b>'+esc(c.t)+' 체험단</b><small>'+sub+'</small></button>'; });
+  UPCOMING.forEach(function(u){ html.push('<button class="ecard soon" disabled data-ec=""><span class="ee">'+esc(u.e)+'</span><b>'+esc(u.t)+' 체험단</b><small>곧 오픈 ✨</small></button>'); });
+  var all=stat(catItems()), pick=catItems().filter(function(it){return isPick(it)&&statusOf(it).key!=="closed";}).length;
+  html.push('<button class="ecard pickc'+(state.status==="pick"?' on':'')+'" data-ec="'+esc(state.cat)+'" data-es="pick"><span class="ee">💜</span><span class="et"><b>다꾸 추천</b><small>'+esc(curCat().t)+' 추천 '+pick+'곳</small></span></button>');
+  html.push('<button class="ecard hot'+(state.status==="closing"?' on':'')+'" data-ec="'+esc(state.cat)+'" data-es="closing"><span class="ee">⏰</span><span class="et"><b>마감 임박</b><small>3일 안에 마감 '+all.cl+'곳</small></span></button>');
+  el.innerHTML='<div class="egrid">'+html.join("")+'</div>';
+}
 function renderToday(){
   var el=document.getElementById("today"); if(!el) return;
   var td=ymd(today()), opened=0, closing=0, open=0, fresh=0, favSoon=0;
@@ -177,7 +197,7 @@ if("serviceWorker" in navigator){ window.addEventListener("load",function(){ nav
 
 shell(); render();
 fetch("data.json?v="+Date.now().toString(36).slice(0,-3),{cache:"no-cache"}).then(function(r){ return r.json(); }).then(function(d){
-  seed=d||seed; if(Array.isArray(seed.categories)&&seed.categories.length) CATS=seed.categories; state.items=Array.isArray(seed.items)?seed.items:[]; ADS=Array.isArray(seed.ads)?seed.ads:[]; DEALS=Array.isArray(seed.deals)?seed.deals:[];
+  seed=d||seed; if(Array.isArray(seed.categories)&&seed.categories.length) CATS=seed.categories; UPCOMING=Array.isArray(seed.upcoming)?seed.upcoming:[]; state.items=Array.isArray(seed.items)?seed.items:[]; ADS=Array.isArray(seed.ads)?seed.ads:[]; DEALS=Array.isArray(seed.deals)?seed.deals:[];
   state.loading=false; render();
 }).catch(function(){ state.loading=false; var g=document.getElementById("grid"); if(g) g.innerHTML='<div class="empty"><b>잠시 후 다시 시도해주세요</b>목록을 불러오지 못했어요.</div>'; });
 })();

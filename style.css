@@ -177,3 +177,31 @@ footer .wrap{padding-top:24px;padding-bottom:32px}
 .cats{display:flex;gap:4px;margin:0 0 10px;border-bottom:1px solid var(--line);flex-wrap:wrap}
 .cats button{border:0;background:none;padding:9px 10px 10px;font-size:15px;font-weight:700;color:var(--muted);cursor:pointer;border-bottom:2.5px solid transparent;margin-bottom:-1px;white-space:nowrap}
 .cats button.on{color:var(--ink);border-bottom-color:#6a3fc8}
+
+/* 첫 화면 분야 입구 카드 */
+.entry{margin:14px 0 2px}
+.egrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media(min-width:760px){.egrid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.ecard{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:3px;text-align:left;border:1px solid var(--line);background:#fff;border-radius:18px;padding:14px 14px 13px;cursor:pointer;min-height:96px;transition:transform .12s,box-shadow .15s,border-color .15s}
+.ecard:active{transform:scale(.98)}
+.ecard .ee{font-size:26px;line-height:1}
+.ecard b{margin-top:6px;font-size:15.5px;font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+.ecard small{font-size:12.5px;color:var(--ink-2);font-weight:600}
+.ecard.on{border-color:#cdbdf5;background:#f6f2ff;box-shadow:0 4px 14px rgba(106,63,200,.12)}
+.ecard.soon{cursor:default;background:var(--soft);border-style:dashed}
+.ecard.soon b,.ecard.soon small{color:var(--muted)}
+.ecard.soon .ee{filter:grayscale(.6);opacity:.7}
+.ecard.pickc{background:#f8f4ff}
+.ecard.hot{background:#fff5f2;border-color:#ffe0d6}
+.ecard.hot small{color:#b4401c}
+
+/* 입구 카드: 분야 3개씩 한 줄, 추천·마감임박 2개 한 줄 (작게) */
+.egrid{grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.ecard{grid-column:span 2;min-height:0;padding:11px 10px;gap:1px;border-radius:16px}
+.ecard .ee{font-size:22px}
+.ecard b{margin-top:4px;font-size:14px}
+.ecard small{font-size:11.5px}
+.ecard.pickc,.ecard.hot{grid-column:span 3;flex-direction:row;align-items:center;gap:9px;padding:11px 12px}
+.ecard.pickc b,.ecard.hot b{margin-top:0}
+.ecard.pickc .et,.ecard.hot .et{display:flex;flex-direction:column;gap:1px}
+@media(min-width:760px){.egrid{grid-template-columns:repeat(12,minmax(0,1fr))}.ecard{grid-column:span 2}.ecard.pickc,.ecard.hot{grid-column:span 3}.ecard b{font-size:15px}}
