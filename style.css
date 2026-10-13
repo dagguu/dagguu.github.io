@@ -386,3 +386,7 @@ img{display:block}
 .tbtns a{background:#fff;color:#d6335e;font-size:12.5px;font-weight:700;padding:7px 9px;border-radius:999px;white-space:nowrap}
 .giftimg{width:92px;height:auto;flex-shrink:0;filter:drop-shadow(0 8px 12px rgba(120,0,30,.25))}
 .repb{padding-bottom:26px}
+
+.grid.v3 .mini{display:flex;flex-direction:column}
+.act3{display:grid;grid-template-columns:1fr;gap:4px;margin-top:auto;padding-top:6px}
+.act3 .b{min-height:34px;font-size:12.5px;padding:0 4px;border-radius:10px}

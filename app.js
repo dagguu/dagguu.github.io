@@ -173,8 +173,11 @@ function thumb(it,cls){
     '<button class="fv'+(isFav(it.id)?" on":"")+'" data-fav="'+esc(it.id)+'" aria-label="찜하기" aria-pressed="'+isFav(it.id)+'">'+ico(I.heart)+'</button>'+
   '</div>';
 }
-function miniCard(it){
-  return '<article class="mini">'+thumb(it)+'<p class="rg">📍 '+esc(it.region)+'</p><h3>'+esc(it.name)+'</h3><p class="bn">🎁 '+esc(it.benefit)+'</p></article>';
+function miniCard(it,btns){
+  var act='';
+  if(btns){ var s=statusOf(it), view=safeUrl(it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
+    act='<div class="act3">'+(view?'<a class="b pri" '+ext(view)+'>'+esc(c.view||"보기")+'</a>':'')+(s.key==="closed"?'<span class="b dis">마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">신청</a>':''))+'</div>'; }
+  return '<article class="mini">'+thumb(it)+'<p class="rg">📍 '+esc(it.region)+'</p><h3>'+esc(it.name)+'</h3><p class="bn">🎁 '+esc(it.benefit)+'</p>'+act+'</article>';
 }
 function fullCard(it){
   var s=statusOf(it), view=safeUrl(it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
@@ -277,7 +280,7 @@ function renderListGrid(){
   var list=filtered(), n=0, out=[];
   var cnt=document.getElementById("count"); if(cnt) cnt.innerHTML='<b>'+list.length+'</b>곳';
   list.forEach(function(it,i){
-    out.push(state.view==="3"?miniCard(it):fullCard(it));
+    out.push(state.view==="3"?miniCard(it,true):fullCard(it));
     var every=state.view==="3"?9:(state.view==="1"?5:6);
     if((i+1)%every===0 && ADS.length) out.push('<div class="span">'+adWide(ADS[n++%ADS.length])+'</div>');
   });
