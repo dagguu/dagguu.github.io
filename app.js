@@ -76,7 +76,7 @@ function shell(){
 
   var chips=document.getElementById("chips");
   var EMO={"전체":"🌏","서울":"🏙️","경기":"🌳","인천":"✈️","강원":"⛰️","충청":"🌾","전라":"🍃","경상":"🌊","부산":"🎡","제주":"🍊"};
-  chips.innerHTML=["전체"].concat(REGIONS).map(function(r){return '<button class="chip" data-r="'+r+'"><span class="ring"><span>'+EMO[r]+'</span></span><span class="lb">'+r+'</span></button>';}).join("");
+  chips.innerHTML=["전체"].concat(REGIONS).map(function(r){return '<button class="chip" data-r="'+r+'">'+r+'</button>';}).join("");
   chips.addEventListener("click",function(e){ var b=e.target.closest(".chip"); if(!b) return; state.region=b.dataset.r; saveUi(); render(); });
   document.getElementById("seg").addEventListener("click",function(e){ var b=e.target.closest("button"); if(!b) return; state.status=b.dataset.s; saveUi(); render(); });
   var qi=document.getElementById("q"); qi.addEventListener("input",function(){ state.q=qi.value; renderGrid(); });
