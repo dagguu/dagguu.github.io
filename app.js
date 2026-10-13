@@ -130,11 +130,12 @@ function shell(){
     '<div class="frame">'+
       '<header class="appbar"><a class="logo" href="#/" id="logo"></a><a class="iconbtn" href="#/list" data-focus="q" aria-label="체험단 검색">'+ico(I.search)+'</a></header>'+
       '<main id="view" class="view"></main>'+
-      '<footer class="foot"><a '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>💬 카카오톡 채널 ‘다꾸 체험단’</a><p>'+SITE+' · 체험단 모집 정보는 각 모집처의 공지를 기준으로 하며, 신청 조건과 일정은 바뀔 수 있어요.</p></footer>'+
+      '<footer class="foot"><a class="flink" href="#/contact">광고주 마케팅 상담 문의</a><br><a '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>💬 카카오톡 채널 ‘다꾸 체험단’</a><p>'+SITE+' · 체험단 모집 정보는 각 모집처의 공지를 기준으로 하며, 신청 조건과 일정은 바뀔 수 있어요.</p></footer>'+
     '</div>'+
     '<nav class="tabbar" aria-label="하단 메뉴">'+TABS.map(function(t){ return '<a href="#/'+(t[0]==="home"?"":t[0])+'" data-tab="'+t[0]+'">'+ico(t[2],"ti")+'<span>'+t[1]+'</span></a>'; }).join("")+'</nav>';
   app.addEventListener("click",onClick);
-  app.addEventListener("input",function(e){ if(e.target.id==="q"){ state.q=e.target.value; renderListGrid(); } });
+  app.addEventListener("submit",function(e){ if(e.target.id==="cform"){ e.preventDefault(); submitContact(e.target); } });
+  app.addEventListener("input",function(e){ if(e.target.dataset&&e.target.dataset.etc){ var r=e.target.parentNode.querySelector("input[type=radio]"); if(r) r.checked=true; } if(e.target.id==="q"){ state.q=e.target.value; renderListGrid(); } });
   app.addEventListener("change",function(e){ if(e.target.id==="region"){ state.region=e.target.value; saveUi(); renderListGrid(); } });
 }
 function paintLogo(){ var l=document.getElementById("logo"); if(l) l.innerHTML=logoSvg(30)+'<b>'+SITE+'</b>'+(LOGO.name?'<em class="logo-ev">'+esc(LOGO.name)+'</em>':''); }
@@ -142,7 +143,7 @@ function paintLogo(){ var l=document.getElementById("logo"); if(l) l.innerHTML=l
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
-  if(!/^(home|list|fav|benefit|deals|reporter)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|benefit|deals|reporter|contact)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; saveUi(); }
   render(); window.scrollTo(0,0);
@@ -157,6 +158,7 @@ function render(){
   else if(state.tab==="benefit") v.innerHTML=benefitView();
   else if(state.tab==="deals") v.innerHTML=dealsView();
   else if(state.tab==="reporter") v.innerHTML=reporterView();
+  else if(state.tab==="contact") v.innerHTML=contactView();
   tick();
 }
 
@@ -227,6 +229,7 @@ function homeView(){
     if(bi<banners.length){ h+='<div class="bwrap">'+banner(banners[bi++])+'</div>'; }
     else if(ADS.length){ h+='<div class="bwrap">'+adWide(ADS[adi++%ADS.length])+'</div>'; }
   });
+  h+=contactBanner();
   h+='<a class="kakaobox" '+ext(kakaoUrl())+'><span><small>다꾸 <i>×</i> 카카오톡</small><b>매일 아침 새 체험단<br><em>카톡으로 먼저 받기</em></b></span><span class="kg">채널 추가</span></a>';
   return h;
 }
@@ -420,6 +423,62 @@ function reporterView(){
     '</ul></section>'+
     '<div class="repcta"><a class="b pri wide" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">블로그로 신청하기</a></div>'+
   '</div>';
+}
+
+
+/* ---------- 광고주 마케팅 상담 문의 ---------- */
+function contactBanner(){
+  return '<a class="adv" href="#/contact"><span class="ax"><small>광고주 · 사장님</small><b>체험단 마케팅, 다꾸와 상담해 보세요</b><span>무료 상담 신청하기 ›</span></span><span class="am2">'+ico(I.bell)+'</span></a>';
+}
+function radios(name,opts){
+  return '<div class="rgrid">'+opts.map(function(o){ return '<label class="rd2"><input type="radio" name="'+name+'" value="'+o+'"><span>'+o+'</span></label>'; }).join("")+
+    '<label class="rd2 etc"><input type="radio" name="'+name+'" value="기타"><span>기타 :</span><input type="text" class="etcin" data-etc="'+name+'" placeholder="직접 입력" aria-label="'+(name==="from"?"유입경로":"회신수단")+' 기타 입력"></label></div>';
+}
+function contactView(){
+  return '<div class="pg cform">'+
+    '<a class="back" href="#/">'+ico(I.back)+'<span>홈</span></a>'+
+    '<div class="advhero"><small>광고주 마케팅 상담</small><h1>체험단 마케팅,<br>무료로 상담받아 보세요</h1><p>숙소·매장·제품 체험단 모집과 블로그 홍보를 도와드려요.</p></div>'+
+    '<form id="cform" class="fbox" novalidate>'+
+      '<label class="fl" for="f-name">업체명 혹은 성함 <i>*</i></label><input id="f-name" name="name" class="fi" placeholder="업체명을 입력해 주세요" required>'+
+      '<label class="fl" for="f-area">지역 <i>*</i></label><input id="f-area" name="area" class="fi" placeholder="지역을 입력해 주세요" required>'+
+      '<label class="fl" for="f-biz">업종 <i>*</i></label><input id="f-biz" name="biz" class="fi" placeholder="업종을 입력해 주세요 (예: 펜션, 카페)" required>'+
+      '<span class="fl">전화번호 <i>*</i></span><div class="tel"><input name="t1" class="fi" inputmode="numeric" maxlength="4" aria-label="전화번호 앞자리" required><span>-</span><input name="t2" class="fi" inputmode="numeric" maxlength="4" aria-label="전화번호 가운데" required><span>-</span><input name="t3" class="fi" inputmode="numeric" maxlength="4" aria-label="전화번호 끝자리" required></div>'+
+      '<span class="fl">유입경로 <i>*</i></span>'+radios("from",["블로그","인스타","지인추천","검색"])+
+      '<span class="fl">회신수단 <i>*</i></span>'+radios("reply",["문자","카톡","유선"])+
+      '<label class="fl" for="f-msg">문의내용 <i>*</i></label><textarea id="f-msg" name="msg" class="fi ta" placeholder="운영하시는 서비스에 대한 사전정보, 원하는 마케팅, 구상하고 계신 목표치 등 간략한 정보를 남겨주세요." required></textarea>'+
+      '<div class="agree"><p>개인정보 보호를 위한 이용자 동의사항에 동의하십니까?</p>'+
+        '<details><summary>자세히보기</summary><ul><li>수집 항목: 업체명 또는 성함, 지역, 업종, 전화번호, 유입경로, 회신수단, 문의내용</li><li>이용 목적: 마케팅 상담 회신</li><li>보유 기간: 상담 완료 후 1년 뒤 파기 (요청 시 즉시 파기)</li><li>동의하지 않으실 수 있으며, 이 경우 상담 신청이 어려워요.</li></ul></details>'+
+        '<label class="ck"><input type="checkbox" name="agree" required><span>네, 동의합니다</span></label></div>'+
+      '<p class="ferr" id="ferr" role="alert"></p>'+
+      '<button class="b dark wide" type="submit">무료 상담 신청하기</button>'+
+    '</form></div>';
+}
+function submitContact(f){
+  var g=function(n){ var el=f.elements[n]; return el?String(el.value||"").trim():""; };
+  var pick=function(n){ var r=f.querySelector('input[name="'+n+'"]:checked'); if(!r) return ""; if(r.value==="기타"){ var t=f.querySelector('[data-etc="'+n+'"]'); return "기타: "+(t?t.value.trim():""); } return r.value; };
+  var tel=[g("t1"),g("t2"),g("t3")].join("-"), from=pick("from"), reply=pick("reply");
+  var miss=[];
+  if(!g("name")) miss.push("업체명 혹은 성함"); if(!g("area")) miss.push("지역"); if(!g("biz")) miss.push("업종");
+  if(!/^\d{2,4}-\d{3,4}-\d{4}$/.test(tel)) miss.push("전화번호"); if(!from) miss.push("유입경로"); if(!reply) miss.push("회신수단"); if(!g("msg")) miss.push("문의내용");
+  if(!f.elements.agree.checked) miss.push("개인정보 동의");
+  var err=document.getElementById("ferr");
+  if(miss.length){ err.textContent=miss.join(", ")+"을(를) 확인해 주세요."; return; }
+  err.textContent="";
+  var text="[다꾸 광고주 상담 신청]\n업체명/성함: "+g("name")+"\n지역: "+g("area")+"\n업종: "+g("biz")+"\n전화번호: "+tel+"\n유입경로: "+from+"\n회신수단: "+reply+"\n문의내용: "+g("msg")+"\n개인정보 수집 동의: 동의";
+  var ep=safeUrl((seed.contact||{}).endpoint);
+  if(ep){
+    fetch(ep,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({name:g("name"),area:g("area"),biz:g("biz"),tel:tel,from:from,reply:reply,msg:g("msg"),agree:true})})
+      .then(function(r){ if(!r.ok) throw 0; doneContact(null); }).catch(function(){ doneContact(text); });
+  } else doneContact(text);
+}
+function doneContact(text){
+  var v=document.getElementById("view");
+  if(!text){ v.innerHTML='<div class="pg"><div class="empty"><b>상담 신청이 접수됐어요</b>남겨주신 회신수단으로 연락드릴게요.<a class="b pri" href="#/">홈으로</a></div></div>'; window.scrollTo(0,0); return; }
+  try{ navigator.clipboard.writeText(text); }catch(e){}
+  v.innerHTML='<div class="pg"><div class="empty"><b>마지막 단계예요</b>신청 내용을 복사했어요.<br>다꾸 카톡 채널 대화창에 붙여넣어 보내주시면 접수돼요.'+
+    '<textarea class="fi ta copyta" readonly aria-label="신청 내용">'+esc(text)+'</textarea>'+
+    '<a class="b kakao" href="http://pf.kakao.com/_xkqEFX/chat" target="_blank" rel="noopener noreferrer">카톡 채널로 보내기</a><button class="copy" data-copy="'+esc(text)+'">내용 다시 복사</button></div></div>';
+  window.scrollTo(0,0);
 }
 
 /* ---------- 특가 ---------- */
