@@ -200,7 +200,7 @@ function kakaoUrl(){ return safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/fr
 /* ---------- 홈 ---------- */
 function featureBanners(){
   var f=seed.features||{}, out=[];
-  out.push({href:"#/deals",em:"🎁",kicker:"하루만 이 가격",title:"오늘의 특가 보기 🔥",bg:"#fff0f0",tile:"#e5484d",ink:"#b42318",icon:I.gift});
+  out.push({href:"#/deals",em:"🏃",kicker:"서두르세요!",title:"선착순 특가 보기 🔥",bg:"#fff0f0",tile:"#e5484d",ink:"#b42318",icon:I.gift});
   if(f.roulette) out.push({href:"#/benefit",em:"🎡",kicker:"하루 한 번 무료",title:"룰렛 돌리고 선물 받아가기 🎉",bg:"#f4f0ff",tile:"#6a3fc8",ink:"#4b2a9e",icon:I.wheel});
   if(f.quiz) out.push({href:"#/benefit",em:"🤔",kicker:"하루 한 문제",title:"인기상품 가격 맞히기",bg:"#fff3e6",tile:"#e0782a",ink:"#9a4a0e",icon:I.quiz});
   if(f.search) out.push({href:"#/benefit",em:"📈",kicker:"요즘 많이 찾는 숙소",title:"인기 검색어 보기",bg:"#eef3ff",tile:"#2f6bff",ink:"#1d4ed8",icon:I.trend});
