@@ -26,7 +26,7 @@ var PREFS = [
   {k:"hanok", t:"한옥 스테이",        re:/한옥/}
 ];
 
-var state = { tab:"home", cat:"stay", regions:[], status:"open", q:"", ch:"", view:"2", loading:true };
+var state = { tab:"home", cat:"stay", regions:[], status:"open", q:"", chs:[], view:"2", loading:true };
 function ls(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v); }catch(e){ return null; } }
 state.view = ls("dakku-view") || "2";
 try{ var su=JSON.parse(sessionStorage.getItem("dakku-ui")||"{}"); if(su.cat) state.cat=su.cat; if(Array.isArray(su.regions)) state.regions=su.regions.filter(function(r){ return REGIONS.indexOf(r)>=0; }); if(su.status) state.status=su.status; }catch(e){}
@@ -149,7 +149,7 @@ function shell(){
   app.addEventListener("click",onClick);
   app.addEventListener("submit",function(e){ if(e.target.id==="cform"){ e.preventDefault(); submitContact(e.target); } });
   app.addEventListener("input",function(e){ if(e.target.dataset&&e.target.dataset.etc){ var r=e.target.parentNode.querySelector("input[type=radio]"); if(r) r.checked=true; } if(e.target.id==="q"){ state.q=e.target.value; renderListGrid(); } });
-  app.addEventListener("change",function(e){ if(e.target.dataset && e.target.dataset.rg!==undefined){ var v=e.target.dataset.rg; if(v==="전체") state.regions=[]; else { var i=state.regions.indexOf(v); if(e.target.checked&&i<0) state.regions.push(v); if(!e.target.checked&&i>=0) state.regions.splice(i,1); } saveUi(); paintRegions(); renderListGrid(); } });
+  app.addEventListener("change",function(e){ if(e.target.dataset && e.target.dataset.chk!==undefined){ var v=e.target.dataset.chk; if(!v) state.chs=[]; else { var k=state.chs.indexOf(v); if(e.target.checked&&k<0) state.chs.push(v); if(!e.target.checked&&k>=0) state.chs.splice(k,1); } paintChs(); renderListGrid(); return; } if(e.target.dataset && e.target.dataset.rg!==undefined){ var v=e.target.dataset.rg; if(v==="전체") state.regions=[]; else { var i=state.regions.indexOf(v); if(e.target.checked&&i<0) state.regions.push(v); if(!e.target.checked&&i>=0) state.regions.splice(i,1); } saveUi(); paintRegions(); renderListGrid(); } });
 }
 function paintLogo(){ var l=document.getElementById("logo"); if(l) l.innerHTML=logoSvg(30)+'<b class="wm">Dagguu<i>.</i></b><span class="sr">'+SITE+'</span>'+(LOGO.name?'<em class="logo-ev">'+esc(LOGO.name)+'</em>':''); }
 
@@ -160,7 +160,7 @@ function route(){
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
   state.focusT=(tab==="deals"&&qs.t)?qs.t:"";
-  if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; if(!parts[1]){ state.q=""; state.ch=""; } if(qs.q!==undefined) state.q=qs.q; if(qs.ch!==undefined) state.ch=/^(blog|insta|short)$/.test(qs.ch)?qs.ch:""; if(qs.r!==undefined) state.regions=qs.r?qs.r.split(",").filter(function(r){ return REGIONS.indexOf(r)>=0; }):[]; saveUi(); }
+  if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; if(!parts[1]){ state.q=""; state.chs=[]; } if(qs.q!==undefined) state.q=qs.q; if(qs.ch!==undefined) state.chs=qs.ch.split(",").filter(function(c){ return /^(blog|insta|short)$/.test(c); }); if(qs.r!==undefined) state.regions=qs.r?qs.r.split(",").filter(function(r){ return REGIONS.indexOf(r)>=0; }):[]; saveUi(); }
   render(); window.scrollTo(0,0);
   if(state.focusT) focusToss();
 }
@@ -209,13 +209,13 @@ function miniCard(it,btns){
   var act='';
   if(btns){ var s=statusOf(it), view=safeUrl(it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
     act='<div class="act3">'+(view?'<a class="b pri" '+ext(view)+'>'+esc(c.view||"보기")+' ↗</a>':'')+(s.key==="closed"?'<span class="b dis">마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">신청하기</a>':''))+'</div>'; }
-  return '<article class="mini">'+thumb(it)+'<h3>'+esc(it.name)+'</h3>'+worthLine(it)+'<p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+act+'</article>';
+  return '<article class="mini">'+thumb(it)+'<h3>'+chBadges(it)+esc(it.name)+'</h3>'+worthLine(it)+'<p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+act+'</article>';
 }
 function fullCard(it){
   var s=statusOf(it), view=safeUrl(it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
   var closed=s.key==="closed";
   return '<article class="card'+(closed?" closed":"")+'">'+thumb(it)+
-    '<div class="body"><h3>'+esc(it.name)+'</h3>'+worthLine(it)+'<p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+
+    '<div class="body"><h3>'+chBadges(it)+esc(it.name)+'</h3>'+worthLine(it)+'<p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+
     '<p class="pd">🗓️ '+(it.start?fmt(it.start)+' ':'')+'~ '+fmt(it.end)+' 모집 · '+esc(it.source||"")+'</p>'+
     '<div class="act">'+(view?'<a class="b pri" '+ext(view)+'>'+esc(c.view||"보기")+' ↗</a>':'')+
       (closed?'<span class="b dis">🔒 마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">신청하기</a>':''))+'</div></div></article>';
@@ -246,7 +246,7 @@ function hcard(it){
   var t=view?'<a '+ext(view)+'>'+esc(it.name)+'</a>':esc(it.name);
   return '<article class="hc">'+thumb(it,"hth")+tags+
     '<p class="hl"><b class="'+(d<=1?'hot':'')+'">'+leftText(it)+'</b>'+(cdLine(it)?'<span class="hcd" data-cdl>'+clock(msToMidnight())+'</span>':'')+'</p>'+
-    '<h3>'+t+'</h3>'+(it.worth?'<p class="hw">💰 <b>'+esc(it.worth)+'</b> 상당</p>':'<p class="hbn">🎁 '+esc(it.benefit)+'</p>')+'</article>';
+    '<h3>'+chBadges(it)+t+'</h3>'+(it.worth?'<p class="hw">💰 <b>'+esc(it.worth)+'</b> 상당</p>':'<p class="hbn">🎁 '+esc(it.benefit)+'</p>')+'</article>';
 }
 function hrow(title,more,list,sub){
   if(!list.length) return "";
@@ -298,17 +298,26 @@ function listView(){
     '<label class="search">'+ico(I.search)+'<input id="q" type="search" placeholder="지역·숙소 이름 검색" value="'+esc(state.q)+'" autocomplete="off" aria-label="체험단 검색"></label>'+
     '<div class="catrow">'+CAT_ORDER.map(function(m){ var on=m.k===state.cat; return '<button class="cat'+(on?" on":"")+'" data-cat="'+m.k+'" aria-pressed="'+on+'"><span class="em">'+m.em+'</span>'+esc(m.t)+'</button>'; }).join("")+'</div>'+
     (c?'<div class="chips hs">'+STATUSES.map(function(s){ return '<button class="chip'+(s[0]===state.status?" on":"")+'" data-status="'+s[0]+'">'+s[1]+'</button>'; }).join("")+'</div>'+
-      (c.region?'<div class="rgbox" id="rgbox">'+regionChecks()+'</div>':'')+
+      (c.region?'<div class="rgbox" id="rgbox">'+regionChecks()+'</div>':'')+'<div class="rgbox" id="chbox">'+chChecks()+'</div>'+
       '<div class="tools"><span id="count" class="count"></span><span class="tr">'+
         '<button class="viewbtn" data-view aria-label="보기 방식 바꾸기 (지금 '+state.view+'단)">'+viewIcon()+'</button></span></div>'+
-      prefNote(state.cat)+chNote()+
+      prefNote(state.cat)+
       '<div id="grid" class="grid v'+state.view+'"></div>'
     : soonView(catMeta(state.cat)))+
   '</div>';
 }
 var CHN={blog:"📝 블로그",insta:"📸 인스타그램",short:"🎬 숏폼"};
 function chOf(it){ var c=it.ch; if(Array.isArray(c)&&c.length) return c; if(typeof c==="string"&&c) return [c]; return ["blog"]; }
-function chNote(){ if(!state.ch) return ""; return '<p class="prefnote">'+CHN[state.ch]+' 체험단만 보는 중 · <button data-ch-clear>전체 보기</button></p>'; }
+function chBadge(c){ return '<span class="chb chb-'+c+'">'+({blog:"블로그",insta:"인스타",short:"숏폼"})[c]+'</span>'; }
+function chBadges(it){ return '<span class="chbs">'+chOf(it).map(chBadge).join("")+'</span>'; }
+function chChecks(){
+  var all=!state.chs.length;
+  return '<span class="rgl">✍️ 종류</span>'+[["","전체"],["blog","블로그"],["insta","인스타"],["short","숏폼"]].map(function(c){
+    var on=c[0]?state.chs.indexOf(c[0])>=0:all;
+    return '<label class="rck'+(on?' on':'')+'"><input type="checkbox" data-chk="'+c[0]+'"'+(on?' checked':'')+'><span class="bx"></span>'+c[1]+'</label>';
+  }).join("");
+}
+function paintChs(){ var b=document.getElementById("chbox"); if(b) b.innerHTML=chChecks(); }
 function regionChecks(){
   var cnt={}; seed.items.forEach(function(it){ if(catOf(it)===state.cat && statusOf(it).key==="open") cnt[it.region]=(cnt[it.region]||0)+1; });
   var all=!state.regions.length;
@@ -331,7 +340,7 @@ function filtered(){
   return seed.items.filter(function(it){
     if(catOf(it)!==state.cat) return false;
     if(c&&c.region && state.regions.length && state.regions.indexOf(it.region)<0) return false;
-    if(state.ch && chOf(it).indexOf(state.ch)<0) return false;
+    if(state.chs.length && !chOf(it).some(function(c){ return state.chs.indexOf(c)>=0; })) return false;
     var s=statusOf(it).key;
     if(state.status==="open" && s!=="open") return false;
     if(state.status==="closed" && s!=="closed") return false;
@@ -352,7 +361,7 @@ function renderListGrid(){
     var every=state.view==="3"?9:(state.view==="1"?5:6);
     if((i+1)%every===0 && ADS.length) out.push('<div class="span">'+adWide(ADS[n++%ADS.length])+'</div>');
   });
-  g.innerHTML=list.length?out.join(""):(state.ch&&state.ch!=="blog"?'<div class="empty span"><b>'+CHN[state.ch]+' 체험단을 모으고 있어요</b>새로 올라오면 카톡으로 가장 먼저 알려드릴게요.<a class="b kakao" '+ext(kakaoUrl())+'>💬 카톡으로 알림 받기</a></div>':'<div class="empty span"><b>🥲 조건에 맞는 체험단이 없어요</b>다른 지역이나 상태를 골라 보세요.</div>');
+  g.innerHTML=list.length?out.join(""):(state.chs.length&&state.chs.indexOf("blog")<0?'<div class="empty span"><b>'+state.chs.map(function(c){ return CHN[c]; }).join(" · ")+' 체험단을 모으고 있어요</b>새로 올라오면 카톡으로 가장 먼저 알려드릴게요.<a class="b kakao" '+ext(kakaoUrl())+'>💬 카톡으로 알림 받기</a></div>':'<div class="empty span"><b>🥲 조건에 맞는 체험단이 없어요</b>다른 지역이나 상태를 골라 보세요.</div>');
 }
 
 
@@ -718,8 +727,7 @@ var tickT; function tick(){ clearInterval(tickT); tickT=setInterval(function(){ 
 /* ---------- 이벤트 ---------- */
 function onClick(e){
   var lk=e.target.closest("article a[target=_blank]"); if(lk){ var art=lk.closest("article"), fb=art&&art.querySelector("[data-fav]"); if(fb) markSeen(fb.dataset.fav); }
-  var t=e.target.closest("[data-fav],[data-cat],[data-status],[data-view],[data-share],[data-pref-clear],[data-focus],[data-spin],[data-copy],[data-ishare],[data-tshare],[data-ch-clear]"); if(!t) return;
-  if(t.dataset.chClear!==undefined){ state.ch=""; render(); return; }
+  var t=e.target.closest("[data-fav],[data-cat],[data-status],[data-view],[data-share],[data-pref-clear],[data-focus],[data-spin],[data-copy],[data-ishare],[data-tshare]"); if(!t) return;
   if(t.dataset.tshare){ e.preventDefault(); e.stopPropagation(); shareToss(t.dataset.tshare); return; }
   if(t.dataset.ishare){ e.preventDefault(); shareItem(t.dataset.ishare); return; }
   if(t.dataset.spin!==undefined){ doSpin(t); return; }
