@@ -523,3 +523,15 @@ img{display:block}
 .tossec .sh h2,.adtag,.tossec .upd{white-space:nowrap}
 .cpban{margin:6px 0 4px;border-radius:16px;overflow:hidden;background:#fff}
 .cpban iframe{width:100%;height:100%;border:0;display:block}
+
+.rgbox{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 16px 2px}
+.rgl{font-size:13px;font-weight:700;color:var(--sub);margin-right:2px}
+.rck{display:inline-flex;align-items:center;gap:5px;height:32px;padding:0 10px 0 8px;border:1.5px solid var(--line);border-radius:999px;background:#fff;font-size:13.5px;font-weight:600;color:var(--ink);cursor:pointer;user-select:none}
+.rck input{position:absolute;opacity:0;width:1px;height:1px}
+.rck .bx{width:16px;height:16px;border-radius:5px;border:1.5px solid #c9c6d4;display:grid;place-items:center;flex-shrink:0}
+.rck.on{border-color:var(--acc);background:#f4f0ff;color:#4b2a9e}
+.rck.on .bx{background:var(--acc);border-color:var(--acc)}
+.rck.on .bx::after{content:"";width:8px;height:4px;border:2px solid #fff;border-top:0;border-right:0;transform:rotate(-45deg) translate(1px,-1px)}
+.rck small{font-size:11.5px;color:var(--mute);font-weight:600}
+.rck.on small{color:#7b5fd0}
+.rck:has(input:focus-visible){outline:2px solid var(--acc);outline-offset:2px}
