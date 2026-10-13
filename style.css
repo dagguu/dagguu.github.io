@@ -390,3 +390,12 @@ img{display:block}
 .grid.v3 .mini{display:flex;flex-direction:column}
 .act3{display:grid;grid-template-columns:1fr;gap:4px;margin-top:auto;padding-top:6px}
 .act3 .b{min-height:34px;font-size:12.5px;padding:0 4px;border-radius:10px}
+
+/* 맞춤 추천 */
+.empty.sm{padding:30px 24px 10px}
+.reco{margin-top:18px;padding-top:6px}
+.reco h2{margin:0 4px;font-size:20px;font-weight:900;letter-spacing:-.03em}
+.recosub{margin:4px 4px 14px;font-size:14px;color:var(--sub)}
+.reco .grid{padding:0}
+.recocard{min-width:0;display:flex;flex-direction:column;gap:6px}
+.why{align-self:flex-start;font-size:12px;font-weight:700;color:var(--acc-d);background:var(--tint);padding:3px 9px;border-radius:999px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}

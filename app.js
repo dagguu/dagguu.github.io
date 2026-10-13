@@ -287,12 +287,47 @@ function renderListGrid(){
   g.innerHTML=list.length?out.join(""):'<div class="empty span"><b>🥲 조건에 맞는 체험단이 없어요</b>다른 지역이나 상태를 골라 보세요.</div>';
 }
 
+
+/* ---------- 맞춤 추천 (이 브라우저 안에서만 계산, 서버로 보내지 않음) ---------- */
+var SEEN=[]; try{ SEEN=JSON.parse(ls("dakku-seen")||"[]")||[]; }catch(e){ SEEN=[]; }
+function markSeen(id){ if(!id) return; var i=SEEN.indexOf(id); if(i>=0) SEEN.splice(i,1); SEEN.unshift(id); SEEN=SEEN.slice(0,30); ls("dakku-seen",JSON.stringify(SEEN)); }
+function typesOf(it){ var t=String(it.name||"")+" "+String(it.benefit||""); return PREFS.filter(function(p){ return p.re.test(t); }).map(function(p){ return p.k; }); }
+function recommend(limit){
+  var byId={}; seed.items.forEach(function(it){ byId[it.id]=it; });
+  var signal=FAV.concat(SEEN).map(function(id){ return byId[id]; }).filter(Boolean);
+  var reg={}, typ={};
+  signal.forEach(function(it){ reg[it.region]=(reg[it.region]||0)+1; typesOf(it).forEach(function(k){ typ[k]=(typ[k]||0)+1; }); });
+  if(PREF) typ[PREF]=(typ[PREF]||0)+3;
+  var topReg=Object.keys(reg).sort(function(x,y){ return reg[y]-reg[x]; })[0];
+  var topTyp=Object.keys(typ).sort(function(x,y){ return typ[y]-typ[x]; })[0];
+  var personal=!!(topReg||topTyp);
+  var pool=seed.items.filter(function(it){ return statusOf(it).key==="open" && !isFav(it.id); });
+  pool.forEach(function(it){
+    var s=0, why="";
+    var tt=typesOf(it);
+    if(topTyp && tt.indexOf(topTyp)>=0){ s+=5; why=(prefOf(topTyp)||{}).t.split(" ·")[0]+" 취향 맞춤"; }
+    if(topReg && it.region===topReg){ s+=3; if(!why) why=topReg+" 체험단을 자주 보셔서"; }
+    tt.forEach(function(k){ if(typ[k]) s+=Math.min(typ[k],3); });
+    if(isPick(it)){ s+=1.5; if(!why) why="다꾸 추천"; }
+    var d=daysLeft(it); if(d<=3){ s+=1; if(!why) why="곧 마감돼요"; }
+    if(SEEN.indexOf(it.id)>=0) s-=2;
+    it._score=s; it._why=why||"지금 모집중";
+  });
+  pool.sort(function(x,y){ return y._score-x._score || daysLeft(x)-daysLeft(y); });
+  return {personal:personal, list:pool.slice(0,limit||6)};
+}
+function recoSection(title){
+  var r=recommend(6); if(!r.list.length) return '';
+  return '<section class="reco"><h2>'+esc(title||(r.personal?"💜 이런 체험단은 어때요?":"💜 다꾸가 추천하는 체험단"))+'</h2><p class="recosub">'+(r.personal?'찜하고 둘러본 체험단을 바탕으로 골랐어요':'지금 인기 있는 체험단과 곧 마감되는 곳을 골랐어요')+'</p>'+
+    '<div class="grid v2">'+r.list.map(function(it){ return '<div class="recocard"><span class="why">'+esc(it._why)+'</span>'+fullCard(it)+'</div>'; }).join("")+'</div></section>';
+}
+
 /* ---------- 찜 ---------- */
 function favView(){
   var list=seed.items.filter(function(it){ return isFav(it.id); }).sort(function(a,b){ var sa=statusOf(a).key==="closed", sb=statusOf(b).key==="closed"; if(sa!==sb) return sa?1:-1; return daysLeft(a)-daysLeft(b); });
   var soon=list.filter(function(it){ return statusOf(it).key==="open" && daysLeft(it)<=3; }).length;
   return '<div class="pg"><h1>찜 ❤️</h1>'+(soon?'<p class="note">⏰ 찜한 체험단 중 <b>'+soon+'곳</b>이 3일 안에 마감돼요</p>':'')+
-    (list.length?'<div class="grid v1">'+list.map(fullCard).join("")+'</div>':'<div class="empty"><b>🤍 아직 찜한 체험단이 없어요</b>마음에 드는 체험단의 하트를 눌러 보세요.<a class="b pri" href="#/list">체험단 보러 가기</a></div>')+'</div>';
+    (list.length?'<div class="grid v1">'+list.map(fullCard).join("")+'</div>'+recoSection("💜 찜한 곳과 비슷한 체험단"):'<div class="empty sm"><b>🤍 아직 찜한 체험단이 없어요</b>마음에 드는 체험단의 하트를 눌러 보세요.</div>'+recoSection())+'</div>';
 }
 
 /* ---------- 혜택 ---------- */
@@ -553,6 +588,7 @@ var tickT; function tick(){ clearInterval(tickT); var el=document.getElementById
 
 /* ---------- 이벤트 ---------- */
 function onClick(e){
+  var lk=e.target.closest("article a[target=_blank]"); if(lk){ var art=lk.closest("article"), fb=art&&art.querySelector("[data-fav]"); if(fb) markSeen(fb.dataset.fav); }
   var t=e.target.closest("[data-fav],[data-cat],[data-status],[data-view],[data-share],[data-pref-clear],[data-focus],[data-spin],[data-copy]"); if(!t) return;
   if(t.dataset.spin!==undefined){ doSpin(t); return; }
   if(t.dataset.copy){ try{ navigator.clipboard.writeText(t.dataset.copy).then(function(){ toast("코드를 복사했어요"); }); }catch(err){ toast(t.dataset.copy); } return; }
