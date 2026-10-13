@@ -446,3 +446,11 @@ img{display:block}
 .bestb{position:absolute;left:10px;bottom:10px;background:#1c1b22;color:#fff;font-size:12px;font-weight:700;padding:4px 9px;border-radius:8px;animation:bestglow 2.2s ease-in-out infinite}
 @keyframes bestglow{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
 @media (prefers-reduced-motion:reduce){.th.hotth,.bestb{animation:none}.th.hotth{box-shadow:0 0 0 2px rgba(229,72,77,.7)}}
+
+.worth{margin:3px 0 0;font-size:14px;font-weight:900;color:#c2410c}
+.grid.v3 .worth{font-size:12px}
+.low30{margin:8px 10px 0;align-self:stretch;text-align:center;background:#fff0f0;color:#333;font-size:12.5px;padding:5px 6px;border-radius:8px}
+.low30 b{color:var(--red);font-weight:700}
+.tchips{margin:4px 12px 0;display:flex;gap:4px}
+.chipr{background:#ffeef0;color:#e5484d;font-size:12px;font-weight:700;padding:4px 8px;border-radius:6px}
+.tim em{background:#a61e2d!important}
