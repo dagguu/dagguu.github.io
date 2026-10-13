@@ -400,7 +400,7 @@ function reporterBanner(){
 }
 function reporterView(){
   var r=rep(); if(!r) return '<div class="empty"><b>지금은 모집 기간이 아니에요</b><a class="b pri" href="#/">홈으로</a></div>';
-  var mr=monthRange(), apply=safeUrl(r.applyUrl)||"http://pf.kakao.com/_xkqEFX/chat";
+  var mr=monthRange(), apply=safeUrl(r.applyUrl)||"http://pf.kakao.com/_xkqEFX/friend";
   var kw=(r.keywords||["#다꾸체험단","#체험단모아보기"]);
   return '<div class="pg rep">'+
     '<a class="back" href="#/">'+ico(I.back)+'<span>홈</span></a>'+
@@ -421,7 +421,7 @@ function reporterView(){
       '<li><b>대가 표시 (필수)</b> 글 첫머리에 아래 문구를 넣어 주세요.<span class="disc">이 글은 다꾸 체험단 모음으로부터 1만원 상품권을 제공받아 작성했습니다.</span></li>'+
     '</ol></section>'+
     '<section class="guide"><h2>진행 순서</h2><ol class="steps">'+
-      '<li>아래 버튼으로 <b>블로그 주소</b>를 보내 신청해요.</li><li>선정되면 카톡으로 알려드려요.</li><li>선정 후 <b>7일 안에</b> 가이드대로 포스팅해요.</li><li>포스팅 주소를 보내주시면 확인 후 <b>7일 안에</b> 상품권을 보내드려요.</li>'+
+      '<li>아래 <b>지금 신청하기</b>로 다꾸 카톡 채널을 추가하고 <b>블로그 주소</b>를 보내 신청해요.</li><li>선정되면 카톡으로 알려드려요.</li><li>선정 후 <b>7일 안에</b> 가이드대로 포스팅해요.</li><li>포스팅 주소를 보내주시면 확인 후 <b>7일 안에</b> 상품권을 보내드려요.</li>'+
     '</ol></section>'+
     '<section class="guide fineprint"><h2>유의사항</h2><ul>'+
       '<li>대가 표시 문구가 없거나 가이드를 지키지 않은 글은 상품권이 지급되지 않아요.</li>'+
@@ -430,7 +430,7 @@ function reporterView(){
       '<li>같은 블로그는 한 달에 1번만 참여할 수 있어요.</li>'+
       '<li>모집 내용은 사정에 따라 바뀔 수 있어요.</li>'+
     '</ul></section>'+
-    '<div class="repcta"><a class="b pri wide" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">블로그로 신청하기</a></div>'+
+    '<div class="repcta"><a class="b pri wide" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">지금 신청하기</a></div>'+
   '</div>';
 }
 
