@@ -352,3 +352,6 @@ img{display:block}
 
 .vch{width:108px;height:auto;flex-shrink:0;transform:rotate(-8deg);filter:drop-shadow(0 8px 14px rgba(0,0,0,.3))}
 .vch.big{display:block;width:150px;margin:18px auto 0}
+
+.rsub{font-size:14px;font-weight:700;color:#ffd84d}
+.rephero p em{font-style:normal;color:#ffd84d;font-weight:700}

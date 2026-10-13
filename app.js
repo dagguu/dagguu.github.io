@@ -396,7 +396,7 @@ function voucherSvg(cls){
 function reporterBanner(){
   var r=rep(); if(!r) return '';
   var mr=monthRange();
-  return '<a class="repb" href="#/reporter"><span class="rx"><small>다꾸 기자단 · '+mr.m+'월 모집중</small><b>다꾸 체험단 블로그에 올리면<br><em>1만원 상품권</em> 증정!</b><span class="rgo">지금 바로 신청하기'+ico(I.chev)+'</span></span>'+voucherSvg("vch")+'</a>';
+  return '<a class="repb" href="#/reporter"><span class="rx"><small>다꾸 기자단 · '+mr.m+'월 모집중</small><b>다꾸 체험단 후기를<br>블로그에 올려주세요!</b><span class="rsub">1만원 상품권 증정</span><span class="rgo">지금 바로 신청하기'+ico(I.chev)+'</span></span>'+voucherSvg("vch")+'</a>';
 }
 function reporterView(){
   var r=rep(); if(!r) return '<div class="empty"><b>지금은 모집 기간이 아니에요</b><a class="b pri" href="#/">홈으로</a></div>';
@@ -404,7 +404,7 @@ function reporterView(){
   var kw=(r.keywords||["#다꾸체험단","#체험단모아보기"]);
   return '<div class="pg rep">'+
     '<a class="back" href="#/">'+ico(I.back)+'<span>홈</span></a>'+
-    '<div class="rephero"><small>다꾸 기자단 · 블로그 체험단</small><h1>다꾸 체험단 블로그에 올리면<br><em>1만원 상품권</em> 증정!</h1><p>체험단을 한곳에 모아보는 다꾸를 블로그로 소개해 주세요.</p>'+voucherSvg("vch big")+'</div>'+
+    '<div class="rephero"><small>다꾸 기자단 · 블로그 체험단</small><h1>다꾸 체험단 후기를<br>블로그에 올려주세요!</h1><p>올려주신 분께 <em>1만원 상품권</em>을 드려요.</p>'+voucherSvg("vch big")+'</div>'+
     '<div class="pane info">'+
       '<div class="ir"><span>제공 내역</span><b>'+esc(r.reward||"1만원 모바일 상품권")+'</b></div>'+
       '<div class="ir"><span>모집 기간</span><b>'+mr.m+'월 1일 ~ '+mr.m+'월 '+mr.last+'일 <em>'+(mr.left===0?'오늘 마감':'D-'+mr.left)+'</em></b></div>'+
@@ -417,8 +417,9 @@ function reporterView(){
       '<li><b>분량</b> 공백 제외 <b>1,000자 이상</b></li>'+
       '<li><b>내용</b> 다꾸 체험단 모음 사이트를 소개해 주세요. 어떤 체험단을 볼 수 있는지, 써보니 어떤 점이 편했는지 솔직하게 써 주시면 돼요.</li>'+
       '<li><b>사이트 링크</b> 글 안에 <b>dagguu.github.io</b> 링크를 꼭 넣어 주세요.</li>'+
-      '<li><b>사진</b> 사이트 화면 캡처를 3장 이상 넣어 주시면 좋아요.</li>'+
-      '<li><b>대가 표시 (필수)</b> 글 첫머리에 아래 문구를 넣어 주세요.<span class="disc">이 글은 다꾸 체험단 모음으로부터 1만원 상품권을 제공받아 작성했습니다.</span></li>'+
+      '<li><b>사진</b> <b>10장 이상</b> (사이트 화면 캡처 포함)</li>'+
+      '<li><b>동영상</b> <b>1개 이상</b> (사이트를 둘러보는 화면 녹화 등)</li>'+
+      '<li><b>대가 표시 (필수)</b> 글 첫머리에 아래 문구를 넣어 주세요.<span class="disc">이 글은 다꾸체험단으로부터 원고료를 받아 작성되었습니다.</span></li>'+
     '</ol></section>'+
     '<section class="guide"><h2>진행 순서</h2><ol class="steps">'+
       '<li>아래 <b>지금 신청하기</b>로 다꾸 카톡 채널을 추가하고 <b>블로그 주소</b>를 보내 신청해요.</li><li>선정되면 카톡으로 알려드려요.</li><li>선정 후 <b>7일 안에</b> 가이드대로 포스팅해요.</li><li>포스팅 주소를 보내주시면 확인 후 <b>7일 안에</b> 상품권을 보내드려요.</li>'+
