@@ -425,3 +425,6 @@ img{display:block}
 .grid.v3 .dd.cdb{top:26px}
 .grid.v3 .cdb{font-size:10px!important;padding:2px 5px!important}
 .stcd{display:inline-block;background:rgba(0,0,0,.18);padding:1px 7px;border-radius:8px;font-variant-numeric:tabular-nums;margin-left:2px}
+
+.cdl{margin:3px 0 0;font-size:14px;font-weight:700;color:var(--red);font-variant-numeric:tabular-nums}
+.grid.v3 .cdl{font-size:12px}

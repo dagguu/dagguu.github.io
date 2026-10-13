@@ -176,17 +176,18 @@ function thumb(it,cls){
     '<button class="fv'+(isFav(it.id)?" on":"")+'" data-fav="'+esc(it.id)+'" aria-label="찜하기" aria-pressed="'+isFav(it.id)+'">'+ico(I.heart)+'</button>'+
   '</div>';
 }
+function cdLine(it){ return statusOf(it).dday==="오늘 마감"?'<p class="cdl" data-cdl>'+clock(msToMidnight())+' 남음</p>':''; }
 function miniCard(it,btns){
   var act='';
   if(btns){ var s=statusOf(it), view=safeUrl(it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
     act='<div class="act3">'+(view?'<a class="b pri" '+ext(view)+'>'+esc(c.view||"보기")+' ↗</a>':'')+(s.key==="closed"?'<span class="b dis">마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">신청하기</a>':''))+'</div>'; }
-  return '<article class="mini">'+thumb(it)+'<h3>'+esc(it.name)+'</h3><p class="bn">🎁 '+esc(it.benefit)+'</p>'+act+'</article>';
+  return '<article class="mini">'+thumb(it)+'<h3>'+esc(it.name)+'</h3><p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+act+'</article>';
 }
 function fullCard(it){
   var s=statusOf(it), view=safeUrl(it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
   var closed=s.key==="closed";
   return '<article class="card'+(closed?" closed":"")+'">'+thumb(it)+
-    '<div class="body"><h3>'+esc(it.name)+'</h3><p class="bn">🎁 '+esc(it.benefit)+'</p>'+
+    '<div class="body"><h3>'+esc(it.name)+'</h3><p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+
     '<p class="pd">🗓️ '+(it.start?fmt(it.start)+' ':'')+'~ '+fmt(it.end)+' 모집 · '+esc(it.source||"")+'</p>'+
     '<div class="act">'+(view?'<a class="b pri" '+ext(view)+'>'+esc(c.view||"보기")+' ↗</a>':'')+
       (closed?'<span class="b dis">🔒 마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">신청하기</a>':''))+'</div></div></article>';
@@ -591,7 +592,7 @@ function dealsView(){
   return h+'</div>';
 }
 function clock(ms){ var x=Math.max(0,Math.floor(ms/1000)); return ("0"+Math.floor(x/3600)).slice(-2)+":"+("0"+Math.floor(x%3600/60)).slice(-2)+":"+("0"+x%60).slice(-2); }
-var tickT; function tick(){ clearInterval(tickT); tickT=setInterval(function(){ var ms=msToMidnight(), e=document.getElementById("cd"); if(e) e.textContent=hms(ms); var c=clock(ms); [].forEach.call(document.querySelectorAll("[data-cd]"),function(el){ el.textContent="⏰ "+c; }); var st=document.getElementById("stripcd"); if(st) st.textContent=c; },1000); }
+var tickT; function tick(){ clearInterval(tickT); tickT=setInterval(function(){ var ms=msToMidnight(), e=document.getElementById("cd"); if(e) e.textContent=hms(ms); var c=clock(ms); [].forEach.call(document.querySelectorAll("[data-cd]"),function(el){ el.textContent="⏰ "+c; }); [].forEach.call(document.querySelectorAll("[data-cdl]"),function(el){ el.textContent=c+" 남음"; }); var st=document.getElementById("stripcd"); if(st) st.textContent=c; },1000); }
 
 /* ---------- 이벤트 ---------- */
 function onClick(e){
