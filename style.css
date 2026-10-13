@@ -172,3 +172,8 @@ footer .wrap{padding-top:24px;padding-bottom:32px}
 .card:nth-child(3n):not(.is-closed) .thumb img{animation-delay:-6s}
 .card:hover .thumb img{transform:none}
 @media (prefers-reduced-motion:reduce){.card .thumb img{animation:none!important}}
+
+/* 분야 탭 */
+.cats{display:flex;gap:4px;margin:0 0 10px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.cats button{border:0;background:none;padding:9px 10px 10px;font-size:15px;font-weight:700;color:var(--muted);cursor:pointer;border-bottom:2.5px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.cats button.on{color:var(--ink);border-bottom-color:#6a3fc8}

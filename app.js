@@ -2,21 +2,28 @@
 "use strict";
 var REGIONS = ["서울","경기","인천","강원","충청","전라","경상","부산","제주"];
 var SITE = "다꾸 체험단 모음";
+/* 분야(카테고리): data.json 의 categories 로 늘려갑니다. 2개 이상이면 상단에 분야 탭이 나타나요. */
+var CATS = [{k:"stay",t:"숙박",e:"🏨",region:true,unit:"숙소",view:"숙소보기",ve:"🏨",pick:["풀빌라"],
+  h1:"✨ 전국 숙박 체험단,",h2:"한곳에서 쏙쏙",h3:"골라봐요 🏝️",sub:"오늘도 공짜 호캉스 떠나볼까요? 🧳 모집이 끝나면 자동으로 마감돼요",ph:"어디로 떠나볼까요? 숙소·지역 검색"}];
+function catOf(it){ return it.cat||"stay"; }
+function catInfo(k){ for(var i=0;i<CATS.length;i++){ if(CATS[i].k===k) return CATS[i]; } return CATS[0]; }
+function curCat(){ return catInfo(state.cat); }
+function catItems(){ return state.items.filter(function(it){ return catOf(it)===curCat().k; }); }
 
 var seed = {items:[]};
 var state = {
   items: [],
-  q: "", region: "전체", status: "open",
+  q: "", cat: "stay", region: "전체", status: "open",
   loading: true
 };
-try{ var s = sessionStorage.getItem("dakku-ui"); if(s){ s = JSON.parse(s); state.region = s.region || "전체"; state.status = (s.status && s.status!=="all") ? s.status : "open"; } }catch(e){}
-function saveUi(){ try{ sessionStorage.setItem("dakku-ui", JSON.stringify({region:state.region,status:state.status})); }catch(e){} }
+try{ var s = sessionStorage.getItem("dakku-ui"); if(s){ s = JSON.parse(s); state.region = s.region || "전체"; state.cat = s.cat || "stay"; state.status = (s.status && s.status!=="all") ? s.status : "open"; } }catch(e){}
+function saveUi(){ try{ sessionStorage.setItem("dakku-ui", JSON.stringify({cat:state.cat,region:state.region,status:state.status})); }catch(e){} }
 
 /* ---------- date logic (자동 마감 계산) ---------- */
 function today(){ var d=new Date(); d.setHours(0,0,0,0); return d; }
 function parseDate(s){ if(!s) return null; var p=String(s).split("-"); if(p.length<3) return null; var d=new Date(+p[0],+p[1]-1,+p[2]); d.setHours(0,0,0,0); return isNaN(d)?null:d; }
 function ymd(d){ return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2); }
-function isPick(it){ return String(it.name||"").indexOf("풀빌라")>=0; }
+function isPick(it){ if(it.pick===true) return true; var kw=catInfo(catOf(it)).pick||[]; for(var i=0;i<kw.length;i++){ if(String(it.name||"").indexOf(kw[i])>=0) return true; } return false; }
 function fmt(s){ var d=parseDate(s); if(!d) return "-"; return (d.getMonth()+1)+"."+d.getDate(); }
 function statusOf(it){
   var t=today(), st=parseDate(it.start), en=parseDate(it.end);
@@ -34,8 +41,8 @@ function uid(){ return "h"+Date.now().toString(36)+Math.random().toString(36).sl
 
 function filtered(){
   var q=state.q.trim().toLowerCase();
-  return state.items.slice().sort(function(a,b){ var pa=isPick(a)&&statusOf(a).key!=="closed", pb=isPick(b)&&statusOf(b).key!=="closed"; if(pa!==pb) return pa?-1:1; return (b.createdAt||0)-(a.createdAt||0); }).filter(function(it){
-    if(state.region!=="전체" && it.region!==state.region) return false;
+  return catItems().sort(function(a,b){ var pa=isPick(a)&&statusOf(a).key!=="closed", pb=isPick(b)&&statusOf(b).key!=="closed"; if(pa!==pb) return pa?-1:1; return (b.createdAt||0)-(a.createdAt||0); }).filter(function(it){
+    if(curCat().region && state.region!=="전체" && it.region!==state.region) return false;
     var s=statusOf(it).key;
     var td=ymd(today());
     if(state.status==="open" && s!=="open") return false;
@@ -56,12 +63,13 @@ function shell(){
    '<div class="disclose">이 사이트는 쿠팡, 여기어때, 마이리얼트립, 토스 등으로부터 일정액의 수수료를 제공받습니다.</div>'+
       '<header class="top"><div class="wrap">'+
      '<div class="bar"><a class="logo" href="#" id="home"><i>다</i>'+SITE+'</a></div>'+
+     '<nav class="cats" id="cats" aria-label="분야" hidden></nav>'+
      '<label class="search"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>'+
-       '<input id="q" type="search" placeholder="어디로 떠나볼까요? 숙소·지역 검색" autocomplete="off" aria-label="숙소 검색"></label>'+
+       '<input id="q" type="search" placeholder="체험단 검색" autocomplete="off" aria-label="숙소 검색"></label>'+
      '<nav class="chips" id="chips" aria-label="지역 필터"></nav>'+
    '</div></header>'+
    '<main class="wrap">'+
-     '<section class="hero"><h1>✨ 전국 숙박 체험단,<br><span class="grad">한곳에서 쏙쏙</span> 골라봐요 🏝️</h1><p>오늘도 공짜 호캉스 떠나볼까요? 🧳 모집이 끝나면 자동으로 마감돼요</p></section>'+
+     '<section class="hero" id="hero"></section>'+
      '<section id="today" class="today"></section><section id="deals" class="deals"></section>'+
      '<div class="toolbar"><div class="seg" id="seg">'+
        '<button data-s="pick">추천 💜</button><button data-s="todayOpen">오늘오픈 🆕</button><button data-s="todayClose">오늘마감 🚨</button><button data-s="open">모집중 🔥</button><button data-s="closed">모집마감 🔒</button><button data-s="fav">찜 ❤️</button>'+
@@ -78,6 +86,7 @@ function shell(){
   var EMO={"전체":"🌏","서울":"🏙️","경기":"🌳","인천":"✈️","강원":"⛰️","충청":"🌾","전라":"🍃","경상":"🌊","부산":"🎡","제주":"🍊"};
   chips.innerHTML=["전체"].concat(REGIONS).map(function(r){return '<button class="chip" data-r="'+r+'">'+r+'</button>';}).join("");
   chips.addEventListener("click",function(e){ var b=e.target.closest(".chip"); if(!b) return; state.region=b.dataset.r; saveUi(); render(); });
+  document.getElementById("cats").addEventListener("click",function(e){ var b=e.target.closest("[data-c]"); if(!b||b.dataset.c===state.cat) return; state.cat=b.dataset.c; state.region="전체"; state.status="open"; state.q=""; document.getElementById("q").value=""; saveUi(); render(); });
   document.getElementById("seg").addEventListener("click",function(e){ var b=e.target.closest("button"); if(!b) return; state.status=b.dataset.s; saveUi(); render(); });
   var qi=document.getElementById("q"); qi.addEventListener("input",function(){ state.q=qi.value; renderGrid(); });
   document.getElementById("home").addEventListener("click",function(e){ e.preventDefault(); state.q="";qi.value="";state.region="전체";state.status="open";saveUi();render();window.scrollTo({top:0,behavior:"smooth"}); });
@@ -86,6 +95,13 @@ function shell(){
 }
 
 function render(){
+  if(!CATS.some(function(c){return c.k===state.cat;})) state.cat=CATS[0].k;
+  var cc=curCat(), cats=document.getElementById("cats");
+  cats.hidden=CATS.length<2;
+  cats.innerHTML=CATS.map(function(c){ return '<button data-c="'+esc(c.k)+'" class="'+(c.k===cc.k?'on':'')+'">'+esc(c.e)+' '+esc(c.t)+'</button>'; }).join("");
+  document.getElementById("chips").hidden=!cc.region;
+  document.getElementById("hero").innerHTML='<h1>'+esc(cc.h1||("✨ 전국 "+cc.t+" 체험단,"))+'<br><span class="grad">'+esc(cc.h2||"한곳에서 쏙쏙")+'</span> '+esc(cc.h3||"골라봐요")+'</h1><p>'+esc(cc.sub||"모집이 끝나면 자동으로 마감돼요")+'</p>';
+  document.getElementById("q").placeholder=cc.ph||(cc.t+" 체험단 검색");
   [].forEach.call(document.querySelectorAll(".chip"),function(b){ b.classList.toggle("on",b.dataset.r===state.region); });
   [].forEach.call(document.querySelectorAll("#seg button"),function(b){ b.classList.toggle("on",b.dataset.s===state.status); });
   renderToday(); renderDeals(); renderGrid();
@@ -96,7 +112,7 @@ function card(it){
   var closed=s.key==="closed";
   return '<article class="card'+(closed?' is-closed':'')+'">'+
     '<div class="thumb">'+
-      (view?'<a class="thumb-link" href="'+esc(view)+'" target="_blank" rel="noopener noreferrer sponsored" aria-label="'+esc(it.name)+' 숙소보기">':'<div class="thumb-link">')+
+      (view?'<a class="thumb-link" href="'+esc(view)+'" target="_blank" rel="noopener noreferrer sponsored" aria-label="'+esc(it.name)+' '+esc(catInfo(catOf(it)).view||"보기")+'">':'<div class="thumb-link">')+
       '<div class="ph">'+esc(it.region||"숙소")+'</div>'+
       (img?'<img src="'+esc(img)+'" alt="'+esc(it.name)+' 대표 사진" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">':'')+
       '<span class="badge '+s.key+'">'+s.label+'</span>'+(isPick(it)?'<span class="pick">💜 추천</span>':'')+
@@ -107,7 +123,7 @@ function card(it){
     '<p class="benefit">🎁 '+esc(it.benefit)+'</p>'+
     '<p class="period">🗓️ '+(it.start?fmt(it.start)+' ':'')+'~ '+fmt(it.end)+' 모집</p>'+
     '<div class="actions card-act">'+
-      (view?'<a class="btn view" href="'+esc(view)+'" target="_blank" rel="noopener noreferrer sponsored">🏨 숙소보기</a>':'<span class="btn disabled">숙소보기</span>')+
+      (view?'<a class="btn view" href="'+esc(view)+'" target="_blank" rel="noopener noreferrer sponsored">'+esc((catInfo(catOf(it)).ve||"🛒")+" "+(catInfo(catOf(it)).view||"보기"))+'</a>':'<span class="btn disabled">'+esc(catInfo(catOf(it)).view||"보기")+'</span>')+
       (closed?'<span class="btn disabled">마감</span>':(apply?'<a class="btn apply" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">✍️ 신청</a>':'<span class="btn disabled">준비중</span>'))+
     '</div>'+'</article>';
 }
@@ -115,8 +131,8 @@ function card(it){
 function renderGrid(){
   var g=document.getElementById("grid"); if(state.loading){ g.innerHTML='<div class="empty">불러오는 중… ✈️</div>'; return; }
   var list=filtered();
-  var openCount=state.items.filter(function(i){return statusOf(i).key!=="closed";}).length;
-  document.getElementById("count").innerHTML='<b>'+list.length+'</b>개 숙소 · 모집 중 '+openCount;
+  var openCount=catItems().filter(function(i){return statusOf(i).key!=="closed";}).length;
+  document.getElementById("count").innerHTML='<b>'+list.length+'</b>개 '+esc(curCat().unit||"체험단")+' · 모집 중 '+openCount;
   var cards=[], n=0; list.forEach(function(it,i){ cards.push(card(it)); if((i+1)%4===0){ cards.push(adBox(n++)); } }); if(list.length && list.length%4!==0 && n===0){ cards.push(adBox(0)); }
   g.innerHTML = list.length ? cards.join("") : '<div class="empty"><b>🥲 조건에 맞는 숙소가 없어요</b>다른 지역이나 검색어로 찾아보세요.</div>';
   mountAds();
@@ -131,7 +147,7 @@ var LAST=0; try{ LAST=+(localStorage.getItem("dakku-last")||0); localStorage.set
 function renderToday(){
   var el=document.getElementById("today"); if(!el) return;
   var td=ymd(today()), opened=0, closing=0, open=0, fresh=0, favSoon=0;
-  state.items.forEach(function(it){ var k=statusOf(it).key; if(k==="open") open++; if(it.start===td&&k!=="closed") opened++; if(it.end===td&&k==="open") closing++;
+  catItems().forEach(function(it){ var k=statusOf(it).key; if(k==="open") open++; if(it.start===td&&k!=="closed") opened++; if(it.end===td&&k==="open") closing++;
     if(LAST && (it.createdAt||0)>LAST && k!=="closed") fresh++;
     if(isFav(it.id)&&k==="open"){ var en=parseDate(it.end); if(en && (en-today())/864e5<=3) favSoon++; } });
   var d=today(), wk="일월화수목금토"[d.getDay()];
@@ -161,7 +177,7 @@ if("serviceWorker" in navigator){ window.addEventListener("load",function(){ nav
 
 shell(); render();
 fetch("data.json?v="+Date.now().toString(36).slice(0,-3),{cache:"no-cache"}).then(function(r){ return r.json(); }).then(function(d){
-  seed=d||seed; state.items=Array.isArray(seed.items)?seed.items:[]; ADS=Array.isArray(seed.ads)?seed.ads:[]; DEALS=Array.isArray(seed.deals)?seed.deals:[];
+  seed=d||seed; if(Array.isArray(seed.categories)&&seed.categories.length) CATS=seed.categories; state.items=Array.isArray(seed.items)?seed.items:[]; ADS=Array.isArray(seed.ads)?seed.ads:[]; DEALS=Array.isArray(seed.deals)?seed.deals:[];
   state.loading=false; render();
 }).catch(function(){ state.loading=false; var g=document.getElementById("grid"); if(g) g.innerHTML='<div class="empty"><b>잠시 후 다시 시도해주세요</b>목록을 불러오지 못했어요.</div>'; });
 })();
