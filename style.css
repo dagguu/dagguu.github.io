@@ -164,3 +164,11 @@ footer .wrap{padding-top:24px;padding-bottom:32px}
 .chip{flex:0 0 auto;width:auto;display:inline-flex;align-items:center;justify-content:center;gap:0;height:32px;padding:0 13px;border:1px solid var(--line);background:#fff;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--ink-2);cursor:pointer;transition:background .15s,color .15s,border-color .15s}
 .chip.on{background:var(--ig2);border-color:transparent;color:#fff;box-shadow:0 2px 8px rgba(106,63,200,.22)}
 @media(max-width:380px){.chip{padding:0 11px;font-size:13px;height:30px}}
+
+/* 사진이 천천히 앞으로 다가가는 효과 (Ken Burns) */
+@keyframes dakkuZoom{0%{transform:scale(1) translate3d(0,0,0)}100%{transform:scale(1.14) translate3d(0,-2%,0)}}
+.card:not(.is-closed) .thumb img{animation:dakkuZoom 9s ease-in-out infinite alternate;will-change:transform}
+.card:nth-child(3n+2):not(.is-closed) .thumb img{animation-delay:-3s}
+.card:nth-child(3n):not(.is-closed) .thumb img{animation-delay:-6s}
+.card:hover .thumb img{transform:none}
+@media (prefers-reduced-motion:reduce){.card .thumb img{animation:none!important}}
