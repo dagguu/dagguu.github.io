@@ -79,7 +79,7 @@ function shell(){
    '</main>'+
    '<footer><div class="wrap">'+
      
-     '<div class="foot-meta">'+SITE+' · 체험단 모집 정보는 각 모집처의 공지를 기준으로 하며, 신청 조건과 일정은 변경될 수 있습니다.</div>'+
+     '<div class="foot-meta"><a href="http://pf.kakao.com/_xkqEFX/friend" target="_blank" rel="noopener noreferrer" style="font-weight:700;color:#3c1e1e">💬 카카오톡 채널 ‘다꾸 체험단’</a><br>'+SITE+' · 체험단 모집 정보는 각 모집처의 공지를 기준으로 하며, 신청 조건과 일정은 변경될 수 있습니다.</div>'+
    '</div></footer>'+
    '<button class="fab" id="fab" hidden>➕ 숙소 등록</button>';
 
@@ -173,6 +173,7 @@ function renderToday(){
   var d=today(), wk="일월화수목금토"[d.getDay()];
   var html='<div class="upd">📅 '+(d.getMonth()+1)+'월 '+d.getDate()+'일 ('+wk+') · 매일 아침 새 체험단과 특가가 올라와요</div>'+
     '<div class="stats"><button data-go="todayOpen"><b>'+opened+'</b><span>🆕 오늘 오픈</span></button><button data-go="todayClose"><b>'+closing+'</b><span>🚨 오늘 마감</span></button><button data-go="open"><b>'+open+'</b><span>🔥 모집중</span></button></div>';
+  var kk=safeUrl(seed.kakao); if(kk) html+='<a class="kakao" href="'+esc(kk)+'" target="_blank" rel="noopener noreferrer"><span class="kb">💬</span><span class="kt"><b>카톡으로 매일 새 체험단 받기</b><small>오늘 오픈·마감 소식을 매일 아침에</small></span><span class="kg">채널 추가</span></a>';
   if(fresh>0) html+='<div class="note new">✨ 지난 방문 이후 새 체험단 <b>'+fresh+'곳</b>이 올라왔어요</div>';
   if(favSoon>0) html+='<button class="note fav" data-go="fav">❤️ 찜한 체험단 중 <b>'+favSoon+'곳</b>이 3일 안에 마감돼요 ›</button>';
   el.innerHTML=html;
