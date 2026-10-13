@@ -502,3 +502,16 @@ img{display:block}
 .cpr::before{top:-9px}.cpr::after{bottom:-9px}
 .cpdl{width:38px;height:38px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:18px;color:#e08a00}
 .cpnote{margin:6px 6px 0;font-size:12px;color:var(--mute)}
+
+.orc{display:flex;flex-direction:column;gap:6px;margin:18px 0 6px;padding:16px;border-radius:20px;background:linear-gradient(120deg,#ff3d5a 0%,#ff6a3d 100%);color:#fff;text-decoration:none;box-shadow:0 8px 20px rgba(255,61,90,.28);position:relative;overflow:hidden}
+.orc::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,255,255,.35),rgba(255,255,255,0));transform:skewX(-18deg);animation:shine 3.2s ease-in-out infinite}
+.orh{display:flex;align-items:center;gap:12px}
+.orclk{width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.22);display:grid;place-items:center;font-size:26px;flex-shrink:0}
+.ort{flex:1;display:flex;flex-direction:column;min-width:0}
+.ort small{font-size:12.5px;font-weight:700;opacity:.9}
+.ort b{font-size:19px;font-weight:800;letter-spacing:-.02em}
+.orgo{background:#fff;color:#e8344e;font-weight:800;font-size:13.5px;padding:7px 12px;border-radius:999px;white-space:nowrap}
+.ord{font-size:14px;font-weight:600;opacity:.95}
+.orcd{align-self:flex-start;background:rgba(0,0,0,.18);border-radius:10px;padding:5px 10px;font-size:13.5px;font-weight:700}
+.orcd b{font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.orc::after{display:none}}

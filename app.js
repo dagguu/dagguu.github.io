@@ -371,6 +371,17 @@ function favView(){
 function partnerRows(){
   return (Array.isArray(seed.partners)?seed.partners:[]).filter(function(p){ return safeUrl(p.u); }).map(function(p){ return '<a class="lrow" '+ext(safeUrl(p.u))+'><span class="tg" style="background:'+esc(p.bg||"#f4f0ff")+';color:'+esc(p.ink||"#4b2a9e")+'">'+esc(p.tag||"특가")+'</span><span class="lt"><small>'+esc(p.sub||"")+'</small><b>'+esc(p.t)+'</b></span><span class="go">보기</span></a>'; }).join("");
 }
+function orState(){
+  var o=seed.openrun||{}, hr=+o.hour||10, n=new Date(), t=new Date(n); t.setHours(hr,0,0,0);
+  if(n<t) return {open:false,ms:t-n,hr:hr};
+  return {open:true,hr:hr};
+}
+function orText(s){ return s.open?'🔥 오늘 '+s.hr+'시 오픈! 지금 바로 확인하세요':'⏳ 오늘 오픈까지 <b>'+clock(s.ms)+'</b>'; }
+function openrunCard(){
+  var o=seed.openrun, u=o&&safeUrl(o.u); if(!u) return "";
+  var s=orState();
+  return '<a class="orc" '+ext(u)+'><span class="orh"><span class="orclk">⏰</span><span class="ort"><small>매일 오전 '+s.hr+'시</small><b>'+esc(o.t)+'</b></span><span class="orgo">바로보기 ›</span></span><span class="ord">'+esc(o.d||"")+'</span><span class="orcd" data-or>'+orText(s)+'</span></a>';
+}
 function couponCards(){
   var list=(Array.isArray(seed.coupons)?seed.coupons:[]).filter(function(c){ return safeUrl(c.u); });
   if(!list.length) return "";
@@ -627,6 +638,7 @@ function dealsView(){
     h+='<section class="sec"><div class="sh"><h2>🛍️ 특가 모아보기</h2></div><div class="hs">'+
       ADS.map(function(a){ var u=safeUrl(a.u); if(!u) return ""; var im=safeUrl(a.img); return '<a class="acard" '+ext(u)+'><span class="am'+(im?' amp':'')+'" style="background:'+esc(a.c||"#f4f0ff")+'">'+(im?'<img src="'+esc(im)+'" alt="" loading="lazy" referrerpolicy="no-referrer"'+(a.pos&&/^[0-9% ]+$/.test(a.pos)?' style="object-position:'+a.pos+'"':'')+' onerror="this.remove()">':esc(a.e||"🎁"))+'</span><b>'+(im&&a.e?esc(a.e)+' ':'')+esc(a.t)+'</b><small>'+esc(a.d||"")+'</small></a>'; }).join("")+'</div></section>';
   }
+  h+=openrunCard();
   var pr=partnerRows(); if(pr) h+='<div class="pane"><h2>⚡ 여행 특가 바로가기</h2>'+pr+'</div>';
   var TOSS=(Array.isArray(seed.toss)?seed.toss:[]).filter(function(x){ return safeUrl(x.u) && !(x.endAt && Date.parse(x.endAt)<=Date.now()); });
   (function(){ var mx=-1,bi=-1; TOSS.forEach(function(x,i){ x.best=false; var r=parseInt(x.rate,10); if(!x.soldOut&&r>mx){ mx=r; bi=i; } }); if(bi>=0) TOSS[bi].best=true; })();
@@ -642,7 +654,7 @@ function dealsView(){
   return h+'</div>';
 }
 function clock(ms){ var x=Math.max(0,Math.floor(ms/1000)); return ("0"+Math.floor(x/3600)).slice(-2)+":"+("0"+Math.floor(x%3600/60)).slice(-2)+":"+("0"+x%60).slice(-2); }
-var tickT; function tick(){ clearInterval(tickT); tickT=setInterval(function(){ var ms=msToMidnight(), e=document.getElementById("cd"); if(e) e.textContent=hms(ms); var c=clock(ms); [].forEach.call(document.querySelectorAll("[data-cd]"),function(el){ el.textContent="⏰ "+c; }); [].forEach.call(document.querySelectorAll("[data-cdl]"),function(el){ el.textContent=c+" 남음"; }); [].forEach.call(document.querySelectorAll("[data-end]"),function(el){ el.textContent=endLeft(el.dataset.end); }); var g=document.getElementById("gbcd"); if(g) g.textContent=clock(nextSeven()); var st=document.getElementById("stripcd"); if(st) st.textContent=c; },1000); }
+var tickT; function tick(){ clearInterval(tickT); tickT=setInterval(function(){ var orE=document.querySelector("[data-or]"); if(orE) orE.innerHTML=orText(orState()); var ms=msToMidnight(), e=document.getElementById("cd"); if(e) e.textContent=hms(ms); var c=clock(ms); [].forEach.call(document.querySelectorAll("[data-cd]"),function(el){ el.textContent="⏰ "+c; }); [].forEach.call(document.querySelectorAll("[data-cdl]"),function(el){ el.textContent=c+" 남음"; }); [].forEach.call(document.querySelectorAll("[data-end]"),function(el){ el.textContent=endLeft(el.dataset.end); }); var g=document.getElementById("gbcd"); if(g) g.textContent=clock(nextSeven()); var st=document.getElementById("stripcd"); if(st) st.textContent=c; },1000); }
 
 /* ---------- 이벤트 ---------- */
 function onClick(e){
