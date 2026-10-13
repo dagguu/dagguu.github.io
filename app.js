@@ -212,8 +212,6 @@ function homeView(){
     var f=closingToday[0], img=safeUrl(f.image);
     h+='<a class="strip" href="#/list?s=todayClose">'+(img?'<img src="'+esc(img)+'" alt="">':'')+'<b>오늘 마감 '+closingToday.length+'곳! 자정 전에 신청하세요</b>'+ico(I.chev)+'</a>';
   }
-  var heroImg = safeUrl((openItems("stay").filter(isPick)[0]||openItems("stay")[0]||{}).image);
-  h+='<a class="hero" href="#/deals"><span class="hx"><small>다꾸 <i>×</i> 특가</small><b>매일 바뀌는<br>여행·생활 특가 모음</b><span class="hb">특가 바로가기'+ico(I.chev)+'</span></span>'+(heroImg?'<img src="'+esc(heroImg)+'" alt="">':'')+'</a>';
   h+=reporterBanner();
   var banners=featureBanners(), bi=0, adi=0;
   CAT_ORDER.forEach(function(m){
@@ -384,10 +382,21 @@ function doSpin(btn){
 /* ---------- 다꾸 기자단 (매달 1일~말일) ---------- */
 function rep(){ var r=seed.reporter; return (r&&r.on)?r:null; }
 function monthRange(){ var t=today(), y=t.getFullYear(), m=t.getMonth(), last=new Date(y,m+1,0).getDate(); return {m:m+1,last:last,left:last-t.getDate()}; }
+function voucherSvg(cls){
+  return '<svg class="'+cls+'" viewBox="0 0 120 84" aria-hidden="true">'+
+    '<path d="M10 6h100a6 6 0 0 1 6 6v18a12 12 0 0 0 0 24v18a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V54a12 12 0 0 0 0-24V12a6 6 0 0 1 6-6Z" fill="#ffd84d"/>'+
+    '<path d="M10 6h100a6 6 0 0 1 6 6v6H4v-6a6 6 0 0 1 6-6Z" fill="#ffe680"/>'+
+    '<path d="M40 8v68" stroke="#e8b400" stroke-width="2" stroke-dasharray="4 4"/>'+
+    '<rect x="16" y="6" width="10" height="72" fill="#6a3fc8"/>'+
+    '<path d="M21 32c-9-11-19-5-12 3 3 3 8 3 12-3Zm0 0c9-11 19-5 12 3-3 3-8 3-12-3Z" fill="#8b5cf6" stroke="#4b2a9e" stroke-width="1.6"/><circle cx="21" cy="33" r="3.4" fill="#4b2a9e"/>'+
+    '<text x="79" y="36" text-anchor="middle" font-size="10" font-weight="700" fill="#7a5a00" font-family="Noto Sans KR,sans-serif">상품권</text>'+
+    '<text x="79" y="56" text-anchor="middle" font-size="17" font-weight="900" fill="#3d2e00" font-family="Noto Sans KR,sans-serif">1만원</text>'+
+  '</svg>';
+}
 function reporterBanner(){
   var r=rep(); if(!r) return '';
   var mr=monthRange();
-  return '<a class="repb" href="#/reporter"><span class="rx"><small>다꾸 기자단 · '+mr.m+'월 모집중</small><b>다꾸 체험단 블로그에 올리면<br><em>1만원 상품권</em> 증정!</b><span class="rgo">지금 바로 신청하기'+ico(I.chev)+'</span></span><span class="rw"><i>10,000</i><span>원</span></span></a>';
+  return '<a class="repb" href="#/reporter"><span class="rx"><small>다꾸 기자단 · '+mr.m+'월 모집중</small><b>다꾸 체험단 블로그에 올리면<br><em>1만원 상품권</em> 증정!</b><span class="rgo">지금 바로 신청하기'+ico(I.chev)+'</span></span>'+voucherSvg("vch")+'</a>';
 }
 function reporterView(){
   var r=rep(); if(!r) return '<div class="empty"><b>지금은 모집 기간이 아니에요</b><a class="b pri" href="#/">홈으로</a></div>';
@@ -395,7 +404,7 @@ function reporterView(){
   var kw=(r.keywords||["#다꾸체험단","#체험단모아보기"]);
   return '<div class="pg rep">'+
     '<a class="back" href="#/">'+ico(I.back)+'<span>홈</span></a>'+
-    '<div class="rephero"><small>다꾸 기자단 · 블로그 체험단</small><h1>다꾸 체험단 블로그에 올리면<br><em>1만원 상품권</em> 증정!</h1><p>체험단을 한곳에 모아보는 다꾸를 블로그로 소개해 주세요.</p><span class="rw big"><i>10,000</i><span>원</span></span></div>'+
+    '<div class="rephero"><small>다꾸 기자단 · 블로그 체험단</small><h1>다꾸 체험단 블로그에 올리면<br><em>1만원 상품권</em> 증정!</h1><p>체험단을 한곳에 모아보는 다꾸를 블로그로 소개해 주세요.</p>'+voucherSvg("vch big")+'</div>'+
     '<div class="pane info">'+
       '<div class="ir"><span>제공 내역</span><b>'+esc(r.reward||"1만원 모바일 상품권")+'</b></div>'+
       '<div class="ir"><span>모집 기간</span><b>'+mr.m+'월 1일 ~ '+mr.m+'월 '+mr.last+'일 <em>'+(mr.left===0?'오늘 마감':'D-'+mr.left)+'</em></b></div>'+

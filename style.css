@@ -349,3 +349,6 @@ img{display:block}
 .ferr{min-height:20px;margin:10px 0 4px;color:var(--red);font-size:14px}
 .b.dark{background:#2b2e36;color:#fff;border-radius:999px}
 .copyta{margin-top:12px;height:180px;font-size:14px;text-align:left}
+
+.vch{width:108px;height:auto;flex-shrink:0;transform:rotate(-8deg);filter:drop-shadow(0 8px 14px rgba(0,0,0,.3))}
+.vch.big{display:block;width:150px;margin:18px auto 0}
