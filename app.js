@@ -171,7 +171,7 @@ function thumb(it,cls){
       '<span class="ph">'+esc(it.region||"")+'</span>'+(img?'<img src="'+esc(img)+'" alt="'+esc(it.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">':'')+
     (view?'</a>':'</div>')+
     (it.region?'<span class="rgs">📍 '+esc(it.region)+'</span>':'')+
-    '<span class="dd '+(s.key==="closed"?"off":(s.hot?"hot":""))+'">'+esc(s.dday)+'</span>'+
+    (s.dday==="오늘 마감"?'<span class="dd hot cdb" data-cd>⏰ '+clock(msToMidnight())+'</span>':'<span class="dd '+(s.key==="closed"?"off":(s.hot?"hot":""))+'">'+esc(s.dday)+'</span>')+
     (isPick(it)&&s.key!=="closed"?'<span class="pks">💜 추천</span>':'')+
     '<button class="fv'+(isFav(it.id)?" on":"")+'" data-fav="'+esc(it.id)+'" aria-label="찜하기" aria-pressed="'+isFav(it.id)+'">'+ico(I.heart)+'</button>'+
   '</div>';
@@ -216,7 +216,7 @@ function homeView(){
   var h='';
   if(closingToday.length){
     var f=closingToday[0], img=safeUrl(f.image);
-    h+='<a class="strip" href="#/list?s=todayClose">'+(img?'<img src="'+esc(img)+'" alt="">':'')+'<b>🚨 오늘 마감 '+closingToday.length+'곳! 자정 전에 신청하세요 ⏰</b>'+ico(I.chev)+'</a>';
+    h+='<a class="strip" href="#/list?s=todayClose">'+(img?'<img src="'+esc(img)+'" alt="">':'')+'<b>🚨 오늘 마감 '+closingToday.length+'곳! 마감까지 <span class="stcd" id="stripcd">'+clock(msToMidnight())+'</span></b>'+ico(I.chev)+'</a>';
   }
   h+=slideBanners(false);
   var banners=featureBanners(), bi=0, adi=0;
@@ -590,7 +590,8 @@ function dealsView(){
   h+='<p class="fine">특가 링크는 제휴 링크로, 구매 시 다꾸가 수수료를 받을 수 있어요. 가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p>';
   return h+'</div>';
 }
-var tickT; function tick(){ clearInterval(tickT); var el=document.getElementById("cd"); if(!el) return; tickT=setInterval(function(){ var e=document.getElementById("cd"); if(!e){ clearInterval(tickT); return; } e.textContent=hms(msToMidnight()); },1000); }
+function clock(ms){ var x=Math.max(0,Math.floor(ms/1000)); return ("0"+Math.floor(x/3600)).slice(-2)+":"+("0"+Math.floor(x%3600/60)).slice(-2)+":"+("0"+x%60).slice(-2); }
+var tickT; function tick(){ clearInterval(tickT); tickT=setInterval(function(){ var ms=msToMidnight(), e=document.getElementById("cd"); if(e) e.textContent=hms(ms); var c=clock(ms); [].forEach.call(document.querySelectorAll("[data-cd]"),function(el){ el.textContent="⏰ "+c; }); var st=document.getElementById("stripcd"); if(st) st.textContent=c; },1000); }
 
 /* ---------- 이벤트 ---------- */
 function onClick(e){
