@@ -42,10 +42,15 @@ img{display:block}
 .b:disabled{background:#c9c6d4;cursor:default}
 
 /* 홈 */
-.strip{margin:4px 16px 0;display:flex;align-items:center;gap:12px;background:#1c1b22;color:#fff;border-radius:18px;padding:12px 14px}
+.strip{position:relative;overflow:hidden;margin:4px 16px 0;display:flex;align-items:center;gap:12px;background:linear-gradient(110deg,#ff4d6d 0%,#ff7a3d 55%,#ffb347 100%);color:#fff;border-radius:18px;padding:12px 14px;box-shadow:0 6px 18px rgba(255,90,80,.28)}
+.strip::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.45) 50%,rgba(255,255,255,0) 100%);transform:skewX(-18deg);animation:shine 3.2s ease-in-out infinite}
+@keyframes shine{0%{left:-60%}55%,100%{left:130%}}
+.strip b,.strip img,.strip .i{position:relative;z-index:1}
+.strip b{text-shadow:0 1px 2px rgba(150,30,20,.25)}
+@media (prefers-reduced-motion:reduce){.strip::after{animation:none;display:none}}
 .strip img{width:48px;height:48px;border-radius:12px;object-fit:cover;flex-shrink:0}
 .strip b{flex:1;font-size:15px;line-height:1.35}
-.strip .i{color:#bdb6d6}
+.strip .i{color:#fff}
 .hero{margin:14px 16px 0;display:flex;align-items:center;gap:12px;background:#e9c66c;border-radius:22px;padding:18px}
 .hx{flex:1;display:flex;flex-direction:column;gap:6px;min-width:0}
 .hx small{font-size:13px;font-weight:700;color:#5a4310}
