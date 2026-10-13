@@ -297,6 +297,8 @@ function benefitView(){
   (Array.isArray(seed.partners)?seed.partners:[]).forEach(function(p){ if(safeUrl(p.u)) rows.push({u:safeUrl(p.u),tag:p.tag||"특가",bg:p.bg||"#f4f0ff",ink:p.ink||"#4b2a9e",sub:p.sub||"",t:p.t}); });
   var h='<div class="pg"><h1>혜택</h1>';
   if(rows.length) h+='<div class="pane"><h2>오늘의 특가 바로가기</h2>'+rows.map(function(r){ return '<a class="lrow" '+ext(r.u)+'><span class="tg" style="background:'+esc(r.bg)+';color:'+esc(r.ink)+'">'+esc(r.tag)+'</span><span class="lt"><small>'+esc(r.sub)+'</small><b>'+esc(r.t)+'</b></span><span class="go">보기</span></a>'; }).join("")+'</div>';
+  var TOSS=(Array.isArray(seed.toss)?seed.toss:[]).filter(function(x){ return safeUrl(x.u); });
+  if(TOSS.length) h+='<section class="sec tossec"><div class="sh"><h2>토스 특가</h2>'+(seed.tossUpdated?'<span class="upd">'+esc(fmt(seed.tossUpdated))+' 기준</span>':'')+'</div><div class="tgrid">'+TOSS.slice(0,10).map(tossCard).join("")+'</div><p class="fine">가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p></section>';
   h+='<div class="duo"><a class="bigbtn" href="#/deals"><span class="gb">'+ico(I.gift)+'</span><span><b>더 큰 혜택 바로가기</b><small>하루만 열리는 특가 모음</small></span></a>'+
      '<button class="sharebtn" data-share>'+ico(I.share)+'<span>친구에게 공유하기</span></button></div>';
   h+='<div class="pane soonpane"><h2>곧 열리는 놀거리</h2>'+
@@ -305,6 +307,11 @@ function benefitView(){
   return h+'</div>';
 }
 
+function tossCard(x){
+  var img=safeUrl(x.img);
+  return '<a class="tcard" '+ext(safeUrl(x.u))+'><span class="tim">'+(img?'<img src="'+esc(img)+'" alt="'+esc(x.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">':'')+(x.badge?'<em>'+esc(x.badge)+'</em>':'')+'</span>'+
+    '<span class="tn">'+esc(x.name)+'</span><span class="tp">'+(x.rate?'<i>'+esc(x.rate)+'</i> ':'')+esc(x.price||"")+'</span>'+(x.ship?'<span class="tch">'+esc(x.ship)+'</span>':'')+'</a>';
+}
 /* ---------- 특가 ---------- */
 function msToMidnight(){ var n=new Date(), m=new Date(n); m.setHours(24,0,0,0); return m-n; }
 function hms(ms){ var s=Math.max(0,Math.floor(ms/1000)), h=Math.floor(s/3600), mi=Math.floor(s%3600/60), se=s%60; return h+"시간 "+("0"+mi).slice(-2)+"분 "+("0"+se).slice(-2)+"초"; }

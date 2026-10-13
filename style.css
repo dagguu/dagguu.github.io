@@ -191,6 +191,19 @@ img{display:block}
 .srow .lt b{font-size:16px}
 .pill{flex-shrink:0;font-size:12px;font-weight:700;color:var(--sub);background:var(--soft);padding:5px 10px;border-radius:999px}
 
+/* 토스 특가 */
+.tossec{margin-top:6px}
+.tossec .sh{padding-left:4px;padding-right:4px}
+.upd{font-size:13px;color:var(--mute)}
+.tgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.tcard{display:flex;flex-direction:column;gap:4px;background:#f2f2f5;border-radius:20px;overflow:hidden;padding-bottom:14px;min-width:0}
+.tim{position:relative;aspect-ratio:1/1;background:#ebebef;display:block}
+.tim img{width:100%;height:100%;object-fit:cover}
+.tim em{position:absolute;left:10px;top:10px;font-style:normal;background:var(--red);color:#fff;font-size:13px;font-weight:700;padding:4px 9px;border-radius:8px}
+.tn{margin:8px 12px 0;font-size:15px;line-height:1.4;color:#333;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tp{margin:0 12px;font-size:19px;font-weight:900;letter-spacing:-.02em}
+.tp i{font-style:normal;color:#6b7bb8}
+.tch{align-self:flex-start;margin:4px 12px 0;background:#e4e4ea;color:#4a4a4a;font-size:13px;font-weight:700;padding:5px 10px;border-radius:8px}
 /* 특가 */
 .cd{margin:0;font-size:15px;color:var(--sub)}
 .cd b{color:var(--red);font-variant-numeric:tabular-nums}
