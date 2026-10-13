@@ -97,6 +97,7 @@ function isPick(it){ if(it.pick===true) return true; var c=catInfo(catOf(it)); v
 function prefOf(k){ for(var i=0;i<PREFS.length;i++) if(PREFS[i].k===k) return PREFS[i]; return null; }
 function prefHit(it){ var p=prefOf(PREF); return !!(p && p.re.test(String(it.name||"")+" "+String(it.benefit||""))); }
 function byDeadline(a,b){
+  var ka=isPick(a)&&statusOf(a).key!=="closed", kb=isPick(b)&&statusOf(b).key!=="closed"; if(ka!==kb) return ka?-1:1;
   var pa=prefHit(a), pb=prefHit(b); if(pa!==pb) return pa?-1:1;
   return daysLeft(a)-daysLeft(b) || (b.createdAt||0)-(a.createdAt||0);
 }
