@@ -298,7 +298,7 @@ function benefitView(){
   var h='<div class="pg"><h1>혜택</h1>';
   if(rows.length) h+='<div class="pane"><h2>오늘의 특가 바로가기</h2>'+rows.map(function(r){ return '<a class="lrow" '+ext(r.u)+'><span class="tg" style="background:'+esc(r.bg)+';color:'+esc(r.ink)+'">'+esc(r.tag)+'</span><span class="lt"><small>'+esc(r.sub)+'</small><b>'+esc(r.t)+'</b></span><span class="go">보기</span></a>'; }).join("")+'</div>';
   var TOSS=(Array.isArray(seed.toss)?seed.toss:[]).filter(function(x){ return safeUrl(x.u); });
-  if(TOSS.length) h+='<section class="sec tossec"><div class="sh"><h2>토스 특가</h2>'+(seed.tossUpdated?'<span class="upd">'+esc(fmt(seed.tossUpdated))+' 기준</span>':'')+'</div><div class="tgrid">'+TOSS.slice(0,10).map(tossCard).join("")+'</div><p class="fine">가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p></section>';
+  if(TOSS.length) h+='<section class="sec tossec"><div class="sh"><h2>오늘의 하루특가</h2>'+(seed.tossUpdated?'<span class="upd">'+esc(fmt(seed.tossUpdated))+' 기준</span>':'')+'</div><p class="tdis">[광고] 이 콘텐츠는 토스쇼핑 쉐어링크 활동의 일환으로, 링크를 통한 구매가 발생하면 일정 수수료를 지급받습니다.</p><div class="tgrid">'+TOSS.slice(0,10).map(tossCard).join("")+'</div><p class="fine">가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p></section>';
   h+='<div class="duo"><a class="bigbtn" href="#/deals"><span class="gb">'+ico(I.gift)+'</span><span><b>더 큰 혜택 바로가기</b><small>하루만 열리는 특가 모음</small></span></a>'+
      '<button class="sharebtn" data-share>'+ico(I.share)+'<span>친구에게 공유하기</span></button></div>';
   h+='<div class="pane soonpane"><h2>곧 열리는 놀거리</h2>'+
