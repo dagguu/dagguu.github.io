@@ -19,6 +19,48 @@ var state = {
 try{ var s = sessionStorage.getItem("dakku-ui"); if(s){ s = JSON.parse(s); state.region = s.region || "전체"; state.cat = s.cat || "stay"; state.status = (s.status && s.status!=="all") ? s.status : "open"; } }catch(e){}
 function saveUi(){ try{ sessionStorage.setItem("dakku-ui", JSON.stringify({cat:state.cat,region:state.region,status:state.status})); }catch(e){} }
 
+/* ---------- 로고: 클래식 D + 기념일 로고 ----------
+   기념일 기간에는 색과 장식이 바뀝니다. data.json 의 "logoEvents"(같은 모양) 로 추가·덮어쓰기 할 수 있어요.
+   m1/d1 ~ m2/d2 (양력, 매년 반복) 또는 from/to ("YYYY-MM-DD", 음력 명절 등 해마다 날짜가 바뀌는 날) */
+var D_PATH="M26 22H52C70 22 77 31.5 77 49.5C77 67.5 70 77 52 77H26Z M43 36H51.5C56 36 58 38 58 42.5V56.5C58 61 56 63 51.5 63H43Z";
+var LOGO_BASE={bg:"#6a3fc8",fg:"#ffffff",deco:"",name:""};
+var LOGO_EVENTS=[
+  {m1:1,d1:1,m2:1,d2:3,bg:"#111111",fg:"#ffd84d",deco:"spark",name:"Happy New Year ✨"},
+  {m1:2,d1:14,m2:2,d2:14,bg:"#8b4513",fg:"#ffffff",deco:"heart",name:"발렌타인데이 🍫"},
+  {m1:3,d1:14,m2:3,d2:14,bg:"#ffffff",fg:"#e8508a",deco:"heart",name:"화이트데이 🍬"},
+  {m1:5,d1:5,m2:5,d2:5,bg:"#ffd84d",fg:"#1d4ed8",deco:"balloon",name:"어린이날 🎈"},
+  {m1:10,d1:25,m2:10,d2:31,bg:"#ff7a1a",fg:"#1a1a1a",deco:"pumpkin",name:"Happy Halloween 🎃"},
+  {m1:11,d1:11,m2:11,d2:11,bg:"#7b4a2a",fg:"#f5d7a1",deco:"stick",name:"빼빼로데이 🍫"},
+  {m1:12,d1:18,m2:12,d2:25,bg:"#c62828",fg:"#ffffff",deco:"snow",name:"Merry Christmas 🎄"}
+];
+function pickLogo(){
+  var t=today(), md=(t.getMonth()+1)*100+t.getDate(), td=ymd(t), list=LOGO_EVENTS.concat(Array.isArray(seed.logoEvents)?seed.logoEvents:[]), hit=null;
+  list.forEach(function(e){
+    if(e.from&&e.to){ if(td>=e.from&&td<=e.to) hit=e; return; }
+    var a=e.m1*100+e.d1, b=e.m2*100+e.d2;
+    if(a<=b ? (md>=a&&md<=b) : (md>=a||md<=b)) hit=e;
+  });
+  var o={}; for(var k in LOGO_BASE) o[k]=LOGO_BASE[k]; if(hit) for(var k2 in hit) o[k2]=hit[k2]; return o;
+}
+var DECO={
+  spark:function(c){ return '<path fill="'+c+'" d="M83 10C83.8 15.5 85 17 90 18C85 19 83.8 20.5 83 26C82.2 20.5 81 19 76 18C81 17 82.2 15.5 83 10Z"/><circle cx="14" cy="84" r="3" fill="'+c+'"/>'; },
+  heart:function(c){ return '<path fill="'+c+'" d="M82 30C76 26 72 22 72 18C72 15 74.5 13 77 13C79 13 80.8 14.2 82 16C83.2 14.2 85 13 87 13C89.5 13 92 15 92 18C92 22 88 26 82 30Z"/>'; },
+  balloon:function(c){ return '<ellipse cx="84" cy="17" rx="7" ry="8.5" fill="#ef4444"/><path d="M84 25.5C83 29 86 31 84 35" stroke="'+c+'" stroke-width="1.4" fill="none" stroke-linecap="round"/>'; },
+  pumpkin:function(c){ return '<path d="M47 22C47 16 50 12 55 11" stroke="#2f6b2f" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M55 13C60 10 65 12 66 16C61 17 57 16 55 13Z" fill="#3f8f3f"/>'; },
+  stick:function(c){ return '<rect x="80" y="8" width="5" height="40" rx="2.5" fill="#e8c38a" transform="rotate(18 82 28)"/><rect x="80" y="8" width="5" height="24" rx="2.5" fill="#4a2615" transform="rotate(18 82 28)"/>'; },
+  snow:function(c){ return '<path fill="#ffffff" d="M24 25C24 17 33 13 41 15C47 9 58 10 62 16C70 15 78 19 78 26C70 28 34 29 24 25Z"/><circle cx="20" cy="84" r="2.6" fill="#ffffff" opacity=".9"/><circle cx="88" cy="82" r="2" fill="#ffffff" opacity=".85"/><circle cx="86" cy="14" r="2.4" fill="#ffffff" opacity=".9"/>'; }
+};
+var LOGO=LOGO_BASE;
+function logoSvg(size){
+  var L=LOGO, deco=(L.deco&&DECO[L.deco])?DECO[L.deco](L.fg):"";
+  var border=(String(L.bg).toLowerCase()==="#ffffff")?' stroke="#e5e5e5"':'';
+  return '<svg class="logo-mark" width="'+size+'" height="'+size+'" viewBox="0 0 100 100" aria-hidden="true"><rect x="0.5" y="0.5" width="99" height="99" rx="23" fill="'+L.bg+'"'+border+'/><path fill="'+L.fg+'" fill-rule="evenodd" d="'+D_PATH+'"/>'+deco+'</svg>';
+}
+function setFavicon(){
+  try{ var href="data:image/svg+xml,"+encodeURIComponent(logoSvg(64).replace(' class="logo-mark"','').replace('aria-hidden="true"','xmlns="http://www.w3.org/2000/svg"'));
+    var l=document.querySelector('link[rel="icon"]'); if(l) l.href=href; }catch(e){}
+}
+
 /* ---------- date logic (자동 마감 계산) ---------- */
 function today(){ var d=new Date(); d.setHours(0,0,0,0); return d; }
 function parseDate(s){ if(!s) return null; var p=String(s).split("-"); if(p.length<3) return null; var d=new Date(+p[0],+p[1]-1,+p[2]); d.setHours(0,0,0,0); return isNaN(d)?null:d; }
@@ -63,7 +105,7 @@ function shell(){
   app.innerHTML =
    '<div class="disclose">이 사이트는 쿠팡, 여기어때, 마이리얼트립, 토스 등으로부터 일정액의 수수료를 제공받습니다.</div>'+
       '<header class="top"><div class="wrap">'+
-     '<div class="bar"><a class="logo" href="#" id="home"><i>다</i>'+SITE+'</a></div>'+
+     '<div class="bar"><a class="logo" href="#" id="home" title="'+esc(LOGO.name||SITE)+'">'+logoSvg(30)+'<span>'+SITE+'</span>'+(LOGO.name?'<em class="logo-ev">'+esc(LOGO.name)+'</em>':'')+'</a></div>'+
      '<nav class="cats" id="cats" aria-label="분야" hidden></nav>'+
      '<label class="search"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>'+
        '<input id="q" type="search" placeholder="체험단 검색" autocomplete="off" aria-label="숙소 검색"></label>'+
@@ -199,6 +241,6 @@ if("serviceWorker" in navigator){ window.addEventListener("load",function(){ nav
 shell(); render();
 fetch("data.json?v="+Date.now().toString(36).slice(0,-3),{cache:"no-cache"}).then(function(r){ return r.json(); }).then(function(d){
   seed=d||seed; if(Array.isArray(seed.categories)&&seed.categories.length) CATS=seed.categories; UPCOMING=Array.isArray(seed.upcoming)?seed.upcoming:[]; state.items=Array.isArray(seed.items)?seed.items:[]; ADS=Array.isArray(seed.ads)?seed.ads:[]; DEALS=Array.isArray(seed.deals)?seed.deals:[];
-  state.loading=false; render();
+  state.loading=false; LOGO=pickLogo(); var hm=document.getElementById("home"); if(hm){ hm.title=LOGO.name||SITE; hm.innerHTML=logoSvg(30)+'<span>'+SITE+'</span>'+(LOGO.name?'<em class="logo-ev">'+esc(LOGO.name)+'</em>':''); } setFavicon(); render();
 }).catch(function(){ state.loading=false; var g=document.getElementById("grid"); if(g) g.innerHTML='<div class="empty"><b>잠시 후 다시 시도해주세요</b>목록을 불러오지 못했어요.</div>'; });
 })();
