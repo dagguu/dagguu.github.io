@@ -297,6 +297,7 @@ function benefitView(){
   (Array.isArray(seed.partners)?seed.partners:[]).forEach(function(p){ if(safeUrl(p.u)) rows.push({u:safeUrl(p.u),tag:p.tag||"특가",bg:p.bg||"#f4f0ff",ink:p.ink||"#4b2a9e",sub:p.sub||"",t:p.t}); });
   var h='<div class="pg"><h1>혜택</h1>';
   if(rows.length) h+='<div class="pane"><h2>오늘의 특가 바로가기</h2>'+rows.map(function(r){ return '<a class="lrow" '+ext(r.u)+'><span class="tg" style="background:'+esc(r.bg)+';color:'+esc(r.ink)+'">'+esc(r.tag)+'</span><span class="lt"><small>'+esc(r.sub)+'</small><b>'+esc(r.t)+'</b></span><span class="go">보기</span></a>'; }).join("")+'</div>';
+  if((seed.features||{}).roulette) h+=rouletteHtml();
   var GOLD=(Array.isArray(seed.goldbox)?seed.goldbox:[]).filter(function(x){ return safeUrl(x.u); });
   if(GOLD.length) h+='<section class="sec tossec"><div class="sh"><h2>오늘의 골드박스</h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="tdis">이 게시물은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p><div class="tgrid">'+GOLD.map(tossCard).join("")+'</div><p class="fine">가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p></section>';
   var TOSS=(Array.isArray(seed.toss)?seed.toss:[]).filter(function(x){ return safeUrl(x.u); });
@@ -304,7 +305,7 @@ function benefitView(){
   h+='<div class="duo"><a class="bigbtn" href="#/deals"><span class="gb">'+ico(I.gift)+'</span><span><b>더 큰 혜택 바로가기</b><small>하루만 열리는 특가 모음</small></span></a>'+
      '<button class="sharebtn" data-share>'+ico(I.share)+'<span>친구에게 공유하기</span></button></div>';
   h+='<div class="pane soonpane"><h2>곧 열리는 놀거리</h2>'+
-     [["행운 룰렛","하루 한 번 돌리고 간식 쿠폰 받기",I.wheel],["숙소 가격 맞히기","하루 한 문제, 가격 감각 테스트",I.quiz],["요즘 뜨는 검색어","많이 찾는 숙소 검색어 모아보기",I.trend]].map(function(x){ return '<div class="srow"><span class="si">'+ico(x[2])+'</span><span class="lt"><b>'+x[0]+'</b><small>'+x[1]+'</small></span><span class="pill">준비 중</span></div>'; }).join("")+
+     ((seed.features||{}).roulette?[]:[["행운 룰렛","하루 한 번 돌리고 간식 쿠폰 받기",I.wheel]]).concat([["숙소 가격 맞히기","하루 한 문제, 가격 감각 테스트",I.quiz],["요즘 뜨는 검색어","많이 찾는 숙소 검색어 모아보기",I.trend]]).map(function(x){ return '<div class="srow"><span class="si">'+ico(x[2])+'</span><span class="lt"><b>'+x[0]+'</b><small>'+x[1]+'</small></span><span class="pill">준비 중</span></div>'; }).join("")+
      '<a class="b kakao" '+ext(kakaoUrl())+'>열리면 카톡으로 알림 받기</a></div>';
   return h+'</div>';
 }
@@ -314,6 +315,60 @@ function tossCard(x){
   return '<a class="tcard'+(img?'':' noimg')+'" '+ext(safeUrl(x.u))+'><span class="tim">'+(img?'<img src="'+esc(img)+'" alt="'+esc(x.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">':'<span class="tno">'+ico(I.gift)+'</span>')+(x.badge?'<em>'+esc(x.badge)+'</em>':'')+'</span>'+
     '<span class="tn">'+esc(x.name)+'</span>'+(x.price?'<span class="tp">'+(x.rate?'<i>'+esc(x.rate)+'</i> ':'')+esc(x.price)+'</span>':'<span class="tgo">특가 확인하기 ›</span>')+(x.ship?'<span class="tch">'+esc(x.ship)+'</span>':'')+'</a>';
 }
+
+/* ---------- 간식 룰렛 (하루 1회, 하루 경품 총 1개 · 선착순 코드) ---------- */
+var WHEEL_SVG="<svg class=\"wheel\" id=\"wheel\" viewBox=\"0 0 300 300\" role=\"img\" aria-label=\"간식 룰렛: 아메리카노, 츄파춥스, 딸기우유, 카페라떼, 새콤달콤, 초코우유, 다음 기회에 2칸\"><circle cx=\"150\" cy=\"150\" r=\"148\" fill=\"#6a3fc8\"/><path d=\"M150 150L150.0 14.0A136 136 0 0 1 246.2 53.8Z\" fill=\"#f4f0ff\"/><g transform=\"rotate(22.5 150 150)\"><text x=\"150\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#4b2a9e\">아메리카노</text><g transform=\"translate(150 80)\"><path d=\"M3 -31 L1 -17\" stroke=\"#e5484d\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><path d=\"M-13 -16 H13 L10 21 H-10Z\" fill=\"#ffffff\" stroke=\"#c9b8f5\" stroke-width=\"1.2\"/><path d=\"M-12.2 -7 H12.2 L10 21 H-10Z\" fill=\"#4a2a14\"/><rect x=\"-8\" y=\"-4\" width=\"7\" height=\"7\" rx=\"1.6\" fill=\"#ffffff\" fill-opacity=\"0.5\"/><rect x=\"1.5\" y=\"1\" width=\"6.5\" height=\"6.5\" rx=\"1.6\" fill=\"#ffffff\" fill-opacity=\"0.4\"/><path d=\"M-15 -20 H15 V-16 H-15Z\" fill=\"#e6e0f5\"/></g></g><path d=\"M150 150L246.2 53.8A136 136 0 0 1 286.0 150.0Z\" fill=\"#ffffff\"/><g transform=\"rotate(67.5 150 150)\"><text x=\"150\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#4b2a9e\">츄파춥스</text><g transform=\"translate(150 80)\"><path d=\"M0 4 V25\" stroke=\"#d8d0c0\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><circle cx=\"0\" cy=\"-8\" r=\"14\" fill=\"#ff7a3d\"/><path d=\"M0 -8 m-10 0 a10 10 0 0 1 20 0 a6.5 6.5 0 0 1 -13 0 a3.2 3.2 0 0 1 6.4 0\" fill=\"none\" stroke=\"#ffd85a\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><circle cx=\"-6\" cy=\"-15\" r=\"3\" fill=\"#ffffff\" fill-opacity=\"0.55\"/></g></g><path d=\"M150 150L286.0 150.0A136 136 0 0 1 246.2 246.2Z\" fill=\"#f2f2f5\"/><g transform=\"rotate(112.5 150 150)\"><text x=\"150\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#9a98a6\">다음 기회에</text><g transform=\"translate(150 80)\"><rect x=\"-14\" y=\"-5\" width=\"28\" height=\"22\" rx=\"3\" fill=\"#dedce6\"/><rect x=\"-16\" y=\"-12\" width=\"32\" height=\"8\" rx=\"2\" fill=\"#cfccd9\"/><rect x=\"-2.5\" y=\"-12\" width=\"5\" height=\"29\" fill=\"#a9a6b4\"/></g></g><path d=\"M150 150L246.2 246.2A136 136 0 0 1 150.0 286.0Z\" fill=\"#ffffff\"/><g transform=\"rotate(157.5 150 150)\"><text x=\"150\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#4b2a9e\">딸기우유</text><g transform=\"translate(150 80)\"><path d=\"M-11 -11 L-6 -21 H6 L11 -11Z\" fill=\"#ffd6e0\"/><rect x=\"-11\" y=\"-11\" width=\"22\" height=\"32\" rx=\"2\" fill=\"#ff9fb8\"/><rect x=\"-11\" y=\"-2\" width=\"22\" height=\"16\" fill=\"#ffffff\"/><path d=\"M0 1 c4 0 6 3 4 8 c-1 3 -3 4 -4 4 c-1 0 -3 -1 -4 -4 c-2 -5 0 -8 4 -8Z\" fill=\"#e5484d\"/><path d=\"M-3 1 L0 3 L3 1 L0 -1Z\" fill=\"#2f9e5a\"/></g></g><path d=\"M150 150L150.0 286.0A136 136 0 0 1 53.8 246.2Z\" fill=\"#f4f0ff\"/><g transform=\"rotate(202.5 150 150)\"><text x=\"150\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#4b2a9e\">카페라떼</text><g transform=\"translate(150 80)\"><path d=\"M-13 -14 H13 L10 21 H-10Z\" fill=\"#ffffff\" stroke=\"#d9cffb\" stroke-width=\"1.2\"/><path d=\"M-12 -1 H12 L11 11 H-11Z\" fill=\"#b07a4a\"/><path d=\"M-16 -20 H16 L14 -14 H-14Z\" fill=\"#5b3b27\"/><rect x=\"-9\" y=\"-24\" width=\"18\" height=\"4.5\" rx=\"2\" fill=\"#5b3b27\"/></g></g><path d=\"M150 150L53.8 246.2A136 136 0 0 1 14.0 150.0Z\" fill=\"#ffffff\"/><g transform=\"rotate(247.5 150 150)\"><text x=\"150\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#4b2a9e\">새콤달콤</text><g transform=\"translate(150 80)\"><path d=\"M-9 -22 l3 3 l3 -3 l3 3 l3 -3 l3 3 l3 -3 V22 l-3 -3 l-3 3 l-3 -3 l-3 3 l-3 -3 l-3 3Z\" fill=\"#ffe14d\"/><rect x=\"-9\" y=\"-7\" width=\"18\" height=\"14\" fill=\"#ff5a7a\"/><circle cx=\"0\" cy=\"0\" r=\"4\" fill=\"#ffffff\"/></g></g><path d=\"M150 150L14.0 150.0A136 136 0 0 1 53.8 53.8Z\" fill=\"#f2f2f5\"/><g transform=\"rotate(292.5 150 150)\"><text x=\"150\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#9a98a6\">다음 기회에</text><g transform=\"translate(150 80)\"><rect x=\"-14\" y=\"-5\" width=\"28\" height=\"22\" rx=\"3\" fill=\"#dedce6\"/><rect x=\"-16\" y=\"-12\" width=\"32\" height=\"8\" rx=\"2\" fill=\"#cfccd9\"/><rect x=\"-2.5\" y=\"-12\" width=\"5\" height=\"29\" fill=\"#a9a6b4\"/></g></g><path d=\"M150 150L53.8 53.8A136 136 0 0 1 150.0 14.0Z\" fill=\"#ffffff\"/><g transform=\"rotate(337.5 150 150)\"><text x=\"150\" y=\"42\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#4b2a9e\">초코우유</text><g transform=\"translate(150 80)\"><path d=\"M-11 -11 L-6 -21 H6 L11 -11Z\" fill=\"#c9a07e\"/><rect x=\"-11\" y=\"-11\" width=\"22\" height=\"32\" rx=\"2\" fill=\"#7a4a2c\"/><rect x=\"-11\" y=\"-2\" width=\"22\" height=\"16\" fill=\"#f6ead9\"/><path d=\"M0 0 c3 4 5 6 5 8 a5 5 0 0 1 -10 0 c0 -2 2 -4 5 -8Z\" fill=\"#7a4a2c\"/></g></g><circle cx=\"150.0\" cy=\"8.0\" r=\"2.6\" fill=\"#ffffff\"/><circle cx=\"204.3\" cy=\"18.8\" r=\"2.6\" fill=\"#ffffff\"/><circle cx=\"250.4\" cy=\"49.6\" r=\"2.6\" fill=\"#ffffff\"/><circle cx=\"281.2\" cy=\"95.7\" r=\"2.6\" fill=\"#ffffff\"/><circle cx=\"292.0\" cy=\"150.0\" r=\"2.6\" fill=\"#ffffff\"/><circle cx=\"281.2\" cy=\"204.3\" r=\"2.6\" fill=\"#ffffff\"/><circle cx=\"250.4\" cy=\"250.4\" r=\"2.6\" fill=\"#ffffff\"/><circle cx=\"204.3\" cy=\"281.2\" r=\"2.6\" fill=\"#ffffff\"/><circle cx=\"150.0\" cy=\"292.0\" r=\"2.6\" fill=\"#ffffff\"/><circle cx=\"95.7\" cy=\"281.2\" r=\"2.6\" fill=\"#ffffff\"/><circle cx=\"49.6\" cy=\"250.4\" r=\"2.6\" fill=\"#ffffff\"/><circle cx=\"18.8\" cy=\"204.3\" r=\"2.6\" fill=\"#ffffff\"/><circle cx=\"8.0\" cy=\"150.0\" r=\"2.6\" fill=\"#ffffff\"/><circle cx=\"18.8\" cy=\"95.7\" r=\"2.6\" fill=\"#ffffff\"/><circle cx=\"49.6\" cy=\"49.6\" r=\"2.6\" fill=\"#ffffff\"/><circle cx=\"95.7\" cy=\"18.8\" r=\"2.6\" fill=\"#ffffff\"/></svg>";
+var ROULETTE=[
+  {t:"아메리카노",c:"A",p:0.2},{t:"츄파춥스",c:"C",p:0.4},{t:"다음 기회에",c:"",p:0},{t:"딸기우유",c:"B",p:0.4},
+  {t:"카페라떼",c:"L",p:0.2},{t:"새콤달콤",c:"S",p:0.4},{t:"다음 기회에",c:"",p:0},{t:"초코우유",c:"H",p:0.4}
+];
+function spinState(){ try{ var s=JSON.parse(ls("dakku-spin")||"null"); if(s&&s.d===ymd(today())) return s; }catch(e){} return null; }
+function oddsList(){ var o=(seed.features&&seed.features.rouletteOdds)||null; return ROULETTE.map(function(r){ return {t:r.t,c:r.c,p:(o&&o[r.t]!=null)?+o[r.t]:r.p}; }); }
+function rouletteHtml(){
+  var s=spinState(), rot=s?s.rot:0;
+  return '<section class="roul" id="roulette"><small>하루 한 번, 행운 룰렛</small><h2>오늘은 내가 주인공?</h2><p>룰렛 돌리고 간식 쿠폰 챙겨가세요</p>'+
+    '<div class="wbox"><svg class="pin" viewBox="0 0 26 30" aria-hidden="true"><path d="M13 30 1 6a12 12 0 0 1 24 0Z" fill="#1c1b22"/><circle cx="13" cy="9" r="4" fill="#fff"/></svg>'+
+    WHEEL_SVG.replace('id="wheel"','id="wheel" style="transform:rotate('+rot+'deg)"')+'<span class="hub">다꾸</span></div>'+
+    '<div id="rres">'+(s?resultHtml(s):'')+'</div>'+
+    '<button class="b pri wide" id="spin" data-spin'+(s?' disabled':'')+'>'+(s?'오늘은 끝! 내일 또 돌려요':'룰렛 돌리기')+'</button>'+
+    '<details class="rules"><summary>이벤트 유의사항</summary>'+rulesHtml()+'</details></section>';
+}
+function resultHtml(s){
+  var r=ROULETTE[s.i];
+  if(!r.c) return '<div class="rres lose"><b>아쉬워요, 다음 기회에!</b><span>내일 또 돌릴 수 있어요.</span></div>';
+  return '<div class="rres win"><b>축하해요! '+esc(r.t)+' 당첨</b><span>오늘 경품은 <em>선착순 1명</em>이에요.<br>다꾸 카톡 채널로 아래 코드를 가장 먼저 보내주신 분께 쿠폰을 보내드려요.</span>'+
+    '<code>'+esc(s.code)+'</code><a class="b kakao" href="http://pf.kakao.com/_xkqEFX/chat" target="_blank" rel="noopener noreferrer">카톡으로 코드 보내고 쿠폰 받기</a><button class="copy" data-copy="'+esc(s.code)+'">코드 복사</button></div>';
+}
+function rulesHtml(){
+  var odds=oddsList(), lose=100-odds.reduce(function(a,r){ return a+(r.c?r.p:0); },0);
+  return '<ul>'+
+    '<li><b>이벤트 기간</b> 오픈일부터 마감 공지 시까지</li>'+
+    '<li><b>참여 방법</b> 누구나 하루 1회 룰렛 참여 (쇼핑이나 링크 클릭과 관계없어요)</li>'+
+    '<li><b>경품</b> 아메리카노, 카페라떼, 츄파춥스, 새콤달콤, 딸기우유, 초코우유 모바일 쿠폰 중 당첨된 1개</li>'+
+    '<li><b>경품 수량</b> 모든 경품을 합쳐 <b>하루 총 1개</b>예요. 당일 당첨 코드를 다꾸 카카오톡 채널로 가장 먼저 보낸 1명에게만 지급되고, 그 뒤에 받은 코드는 당일 수량 소진으로 지급되지 않아요.</li>'+
+    '<li><b>당첨 확률 (1회 기준)</b> '+odds.filter(function(r){ return r.c; }).map(function(r){ return esc(r.t)+' '+r.p+'%'; }).join(', ')+', 다음 기회에 '+(Math.round(lose*10)/10)+'%</li>'+
+    '<li><b>코드 유효기간</b> 당첨된 날 23시 59분까지 보낸 코드만 인정돼요.</li>'+
+    '<li><b>중복 참여</b> 하루 한 번만 돌릴 수 있어요. 같은 사람이 여러 기기·브라우저로 참여하거나, 한 카카오톡 계정으로 하루 2개 이상 코드를 보내면 모두 무효예요. 코드를 바꾸거나 위조한 경우도 무효예요.</li>'+
+    '<li><b>경품 발송</b> 코드를 확인한 뒤 다꾸 카카오톡 채널로 7일 이내에 보내드려요. 사정에 따라 같은 가격대의 다른 상품으로 바뀔 수 있어요.</li>'+
+    '<li><b>개인정보</b> 사이트에서는 개인정보를 받지 않아요. 쿠폰 발송은 카카오톡 채널 대화로만 진행해요.</li>'+
+    '<li>이벤트 내용은 사전 공지 후 바뀌거나 끝날 수 있어요.</li></ul>';
+}
+function rid(){ var A="ABCDEFGHJKMNPQRSTUVWXYZ23456789", s=""; for(var i=0;i<4;i++) s+=A.charAt(Math.floor(Math.random()*A.length)); return s; }
+function doSpin(btn){
+  if(spinState()){ toast("오늘은 이미 돌렸어요. 내일 또 만나요!"); return; }
+  var odds=oddsList(), x=Math.random()*100, acc=0, pick=-1;
+  for(var i=0;i<odds.length;i++){ if(!odds[i].c) continue; acc+=odds[i].p; if(x<acc){ pick=i; break; } }
+  if(pick<0) pick=Math.random()<0.5?2:6;
+  var t=today(), md=("0"+(t.getMonth()+1)).slice(-2)+("0"+t.getDate()).slice(-2);
+  var center=pick*45+22.5+(Math.random()*24-12), rot=1800+(360-center);
+  var s={d:ymd(t),i:pick,rot:rot,code:ROULETTE[pick].c?("DAKKU-"+md+"-"+ROULETTE[pick].c+"-"+rid()):""};
+  ls("dakku-spin",JSON.stringify(s));
+  btn.disabled=true; btn.textContent="돌아가는 중…";
+  var w=document.getElementById("wheel"); if(w){ w.style.transform="rotate("+rot+"deg)"; }
+  var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  setTimeout(function(){ var r=document.getElementById("rres"); if(r) r.innerHTML=resultHtml(s); btn.textContent="오늘은 끝! 내일 또 돌려요"; }, reduce?100:3400);
+}
+
 /* ---------- 특가 ---------- */
 function msToMidnight(){ var n=new Date(), m=new Date(n); m.setHours(24,0,0,0); return m-n; }
 function hms(ms){ var s=Math.max(0,Math.floor(ms/1000)), h=Math.floor(s/3600), mi=Math.floor(s%3600/60), se=s%60; return h+"시간 "+("0"+mi).slice(-2)+"분 "+("0"+se).slice(-2)+"초"; }
@@ -335,7 +390,9 @@ var tickT; function tick(){ clearInterval(tickT); var el=document.getElementById
 
 /* ---------- 이벤트 ---------- */
 function onClick(e){
-  var t=e.target.closest("[data-fav],[data-cat],[data-status],[data-view],[data-share],[data-pref-clear],[data-focus]"); if(!t) return;
+  var t=e.target.closest("[data-fav],[data-cat],[data-status],[data-view],[data-share],[data-pref-clear],[data-focus],[data-spin],[data-copy]"); if(!t) return;
+  if(t.dataset.spin!==undefined){ doSpin(t); return; }
+  if(t.dataset.copy){ try{ navigator.clipboard.writeText(t.dataset.copy).then(function(){ toast("코드를 복사했어요"); }); }catch(err){ toast(t.dataset.copy); } return; }
   if(t.dataset.fav!==undefined){ e.preventDefault(); toggleFav(t.dataset.fav); var on=isFav(t.dataset.fav); [].forEach.call(document.querySelectorAll('[data-fav="'+t.dataset.fav+'"]'),function(b){ b.classList.toggle("on",on); b.setAttribute("aria-pressed",on); }); toast(on?"찜했어요":"찜을 해제했어요"); if(state.tab==="fav") render(); return; }
   if(t.dataset.cat){ state.cat=t.dataset.cat; state.region="전체"; if(state.status==="closed") state.status="open"; saveUi(); render(); return; }
   if(t.dataset.status){ state.status=t.dataset.status; saveUi(); [].forEach.call(document.querySelectorAll("[data-status]"),function(b){ b.classList.toggle("on",b===t); }); renderListGrid(); return; }
