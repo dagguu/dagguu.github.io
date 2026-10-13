@@ -272,6 +272,7 @@ img{display:block}
 .rres code{background:#fff;border:2px dashed #c9b8f5;border-radius:12px;padding:10px 16px;font-family:inherit;font-size:19px;font-weight:900;letter-spacing:.05em}
 .copy{border:0;background:none;color:var(--sub);text-decoration:underline;font-size:13px;min-height:36px}
 #spin{margin-top:14px}
+.rnote{margin:8px 0 0;font-size:13px;color:var(--sub)}
 #spin:disabled{background:var(--soft);color:var(--sub)}
 .rules{margin-top:12px;text-align:left;font-size:13px;color:#4a4a4a}
 .rules summary{cursor:pointer;min-height:40px;display:flex;align-items:center;justify-content:center;color:var(--sub);text-decoration:underline}

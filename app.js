@@ -323,38 +323,44 @@ var ROULETTE=[
   {t:"카페라떼",c:"L",p:0.2},{t:"새콤달콤",c:"S",p:0.4},{t:"다음 기회에",c:"",p:0},{t:"초코우유",c:"H",p:0.4}
 ];
 function spinState(){ try{ var s=JSON.parse(ls("dakku-spin")||"null"); if(s&&s.d===ymd(today())) return s; }catch(e){} return null; }
+function ym(d){ return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2); }
+function wonThisMonth(){ try{ var w=JSON.parse(ls("dakku-win")||"null"); if(w&&w.m===ym(today())) return w; }catch(e){} return null; }
+function nextMonthLabel(){ var t=today(); return ((t.getMonth()+1)%12+1)+"월 1일"; }
 function oddsList(){ var o=(seed.features&&seed.features.rouletteOdds)||null; return ROULETTE.map(function(r){ return {t:r.t,c:r.c,p:(o&&o[r.t]!=null)?+o[r.t]:r.p}; }); }
 function rouletteHtml(){
-  var s=spinState(), rot=s?s.rot:0;
+  var s=spinState(), w=wonThisMonth(), rot=s?s.rot:0, locked=!!(s||w);
+  var btnTxt=s&&ROULETTE[s.i].c||(!s&&w)?'이번 달은 끝! '+nextMonthLabel()+'에 다시 돌려요':(s?'오늘은 끝! 내일 또 돌려요':'룰렛 돌리기');
   return '<section class="roul" id="roulette"><small>하루 한 번, 행운 룰렛</small><h2>오늘은 내가 주인공?</h2><p>룰렛 돌리고 간식 쿠폰 챙겨가세요</p>'+
     '<div class="wbox"><svg class="pin" viewBox="0 0 26 30" aria-hidden="true"><path d="M13 30 1 6a12 12 0 0 1 24 0Z" fill="#1c1b22"/><circle cx="13" cy="9" r="4" fill="#fff"/></svg>'+
     WHEEL_SVG.replace('id="wheel"','id="wheel" style="transform:rotate('+rot+'deg)"')+'<span class="hub">다꾸</span></div>'+
-    '<div id="rres">'+(s?resultHtml(s):'')+'</div>'+
-    '<button class="b pri wide" id="spin" data-spin'+(s?' disabled':'')+'>'+(s?'오늘은 끝! 내일 또 돌려요':'룰렛 돌리기')+'</button>'+
+    '<div id="rres">'+(s?resultHtml(s):(w?'<div class="rres win"><b>이번 달 당첨을 축하해요!</b><span>당첨되면 다음 달에 다시 참여할 수 있어요.<br>'+nextMonthLabel()+'부터 다시 돌릴 수 있어요.</span></div>':''))+'</div>'+
+    '<button class="b pri wide" id="spin" data-spin'+(locked?' disabled':'')+'>'+btnTxt+'</button>'+
+    '<p class="rnote">하루 한 번 · 꽝이면 내일 다시, 당첨되면 다음 달에 다시 돌릴 수 있어요</p>'+
     '<details class="rules"><summary>이벤트 유의사항</summary>'+rulesHtml()+'</details></section>';
 }
 function resultHtml(s){
   var r=ROULETTE[s.i];
-  if(!r.c) return '<div class="rres lose"><b>아쉬워요, 다음 기회에!</b><span>내일 또 돌릴 수 있어요.</span></div>';
-  return '<div class="rres win"><b>축하해요! '+esc(r.t)+' 당첨</b><span>오늘 경품은 <em>선착순 1명</em>이에요.<br>다꾸 카톡 채널로 아래 코드를 가장 먼저 보내주신 분께 쿠폰을 보내드려요.</span>'+
+  if(!r.c) return '<div class="rres lose"><b>아쉬워요, 다음 기회에!</b><span>내일 다시 돌릴 수 있어요.</span></div>';
+  return '<div class="rres win"><b>축하해요! '+esc(r.t)+' 당첨</b><span>오늘 경품은 <em>선착순 1명</em>이에요. 다음 참여는 '+nextMonthLabel()+'부터예요.<br>다꾸 카톡 채널로 아래 코드를 가장 먼저 보내주신 분께 쿠폰을 보내드려요.</span>'+
     '<code>'+esc(s.code)+'</code><a class="b kakao" href="http://pf.kakao.com/_xkqEFX/chat" target="_blank" rel="noopener noreferrer">카톡으로 코드 보내고 쿠폰 받기</a><button class="copy" data-copy="'+esc(s.code)+'">코드 복사</button></div>';
 }
 function rulesHtml(){
   var odds=oddsList(), lose=100-odds.reduce(function(a,r){ return a+(r.c?r.p:0); },0);
   return '<ul>'+
     '<li><b>이벤트 기간</b> 오픈일부터 마감 공지 시까지</li>'+
-    '<li><b>참여 방법</b> 누구나 하루 1회 룰렛 참여 (쇼핑이나 링크 클릭과 관계없어요)</li>'+
+    '<li><b>참여 방법</b> 누구나 하루 1회 룰렛 참여 (쇼핑이나 링크 클릭과 관계없어요). 꽝이면 다음 날 다시, 당첨되면 다음 달 1일부터 다시 참여할 수 있어요.</li>'+
     '<li><b>경품</b> 아메리카노, 카페라떼, 츄파춥스, 새콤달콤, 딸기우유, 초코우유 모바일 쿠폰 중 당첨된 1개</li>'+
     '<li><b>경품 수량</b> 모든 경품을 합쳐 <b>하루 총 1개</b>예요. 당일 당첨 코드를 다꾸 카카오톡 채널로 가장 먼저 보낸 1명에게만 지급되고, 그 뒤에 받은 코드는 당일 수량 소진으로 지급되지 않아요.</li>'+
     '<li><b>당첨 확률 (1회 기준)</b> '+odds.filter(function(r){ return r.c; }).map(function(r){ return esc(r.t)+' '+r.p+'%'; }).join(', ')+', 다음 기회에 '+(Math.round(lose*10)/10)+'%</li>'+
     '<li><b>코드 유효기간</b> 당첨된 날 23시 59분까지 보낸 코드만 인정돼요.</li>'+
-    '<li><b>중복 참여</b> 하루 한 번만 돌릴 수 있어요. 같은 사람이 여러 기기·브라우저로 참여하거나, 한 카카오톡 계정으로 하루 2개 이상 코드를 보내면 모두 무효예요. 코드를 바꾸거나 위조한 경우도 무효예요.</li>'+
+    '<li><b>중복 참여</b> 하루 한 번만 돌릴 수 있어요. 같은 사람이 여러 기기·브라우저로 참여하거나, 한 카카오톡 계정으로 하루 2개 이상 코드를 보내면 모두 무효예요. 경품은 같은 카카오톡 계정 기준 한 달에 1번만 받을 수 있어요. 코드를 바꾸거나 위조한 경우도 무효예요.</li>'+
     '<li><b>경품 발송</b> 코드를 확인한 뒤 다꾸 카카오톡 채널로 7일 이내에 보내드려요. 사정에 따라 같은 가격대의 다른 상품으로 바뀔 수 있어요.</li>'+
     '<li><b>개인정보</b> 사이트에서는 개인정보를 받지 않아요. 쿠폰 발송은 카카오톡 채널 대화로만 진행해요.</li>'+
     '<li>이벤트 내용은 사전 공지 후 바뀌거나 끝날 수 있어요.</li></ul>';
 }
 function rid(){ var A="ABCDEFGHJKMNPQRSTUVWXYZ23456789", s=""; for(var i=0;i<4;i++) s+=A.charAt(Math.floor(Math.random()*A.length)); return s; }
 function doSpin(btn){
+  if(wonThisMonth()){ toast("이번 달은 이미 당첨됐어요. "+nextMonthLabel()+"에 다시 만나요!"); return; }
   if(spinState()){ toast("오늘은 이미 돌렸어요. 내일 또 만나요!"); return; }
   var odds=oddsList(), x=Math.random()*100, acc=0, pick=-1;
   for(var i=0;i<odds.length;i++){ if(!odds[i].c) continue; acc+=odds[i].p; if(x<acc){ pick=i; break; } }
@@ -362,11 +368,11 @@ function doSpin(btn){
   var t=today(), md=("0"+(t.getMonth()+1)).slice(-2)+("0"+t.getDate()).slice(-2);
   var center=pick*45+22.5+(Math.random()*24-12), rot=1800+(360-center);
   var s={d:ymd(t),i:pick,rot:rot,code:ROULETTE[pick].c?("DAKKU-"+md+"-"+ROULETTE[pick].c+"-"+rid()):""};
-  ls("dakku-spin",JSON.stringify(s));
+  ls("dakku-spin",JSON.stringify(s)); if(s.code) ls("dakku-win",JSON.stringify({m:ym(t),code:s.code}));
   btn.disabled=true; btn.textContent="돌아가는 중…";
   var w=document.getElementById("wheel"); if(w){ w.style.transform="rotate("+rot+"deg)"; }
   var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  setTimeout(function(){ var r=document.getElementById("rres"); if(r) r.innerHTML=resultHtml(s); btn.textContent="오늘은 끝! 내일 또 돌려요"; }, reduce?100:3400);
+  setTimeout(function(){ var r=document.getElementById("rres"); if(r) r.innerHTML=resultHtml(s); btn.textContent=s.code?"이번 달은 끝! "+nextMonthLabel()+"에 다시 돌려요":"오늘은 끝! 내일 또 돌려요"; }, reduce?100:3400);
 }
 
 /* ---------- 특가 ---------- */
