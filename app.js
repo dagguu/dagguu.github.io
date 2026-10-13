@@ -676,7 +676,7 @@ function cpBanner(){
 function dealsView(){
   var h='<div class="pg"><h1>특가 🔥</h1>'+cpBanner();
   if(DEALS.length){
-    h+='<section class="sec"><div class="sh col"><h2>⚡ 오늘의 특가</h2><p class="cd">⏳ 종료까지 <b id="cd">'+hms(msToMidnight())+'</b> 남음</p></div><div class="deallist">'+
+    h+='<section class="sec"><div class="sh col"><h2>⚡ 오늘의 특가</h2><p class="cd">⏳ 오전 7시 교체까지 <b id="cd">'+hms(nextSeven())+'</b> 남음</p></div><div class="deallist">'+
       DEALS.map(function(d){ var u=safeUrl(d.u); if(!u) return ""; return '<a class="drow" '+ext(u)+'><span class="dt" style="background:'+esc(d.c||"#f4f0ff")+'"><span>'+esc(d.e||"🎁")+'</span>'+(d.tag?'<em>'+esc(d.tag)+'</em>':'')+'</span><span class="dx"><b>'+esc(d.t)+'</b><small>'+esc(d.d||"")+'</small><span class="dg">👉 특가 보러가기'+ico(I.chev)+'</span></span></a>'; }).join("")+'</div></section>';
   }
   if(ADS.length){
@@ -687,7 +687,7 @@ function dealsView(){
   h+=partnerRows();
   var TOSS=(Array.isArray(seed.toss)?seed.toss:[]).filter(function(x){ return safeUrl(x.u) && !(x.endAt && Date.parse(x.endAt)<=Date.now()); });
   (function(){ var mx=-1,bi=-1; TOSS.forEach(function(x,i){ x.best=false; var r=parseInt(x.rate,10); if(!x.soldOut&&r>mx){ mx=r; bi=i; } }); if(bi>=0) TOSS[bi].best=true; })();
-  if(TOSS.length) h+='<section class="sec tossec"><div class="sh"><h2>🛒 오늘의 하루특가 <span class="adtag">광고</span></h2>'+(seed.tossUpdated?'<span class="upd">'+esc(String(seed.tossUpdated).slice(11))+' 기준</span>':'')+'</div><div class="tgrid">'+TOSS.slice(0,10).map(tossCard).join("")+'</div></section>';
+  if(TOSS.length) h+='<section class="sec tossec"><div class="sh"><h2>🛒 오늘의 하루특가 <span class="adtag">광고</span></h2>'+(seed.tossUpdated?'<span class="upd">'+esc(String(seed.tossUpdated).slice(11))+' 기준</span>':'')+'</div><p class="cd tcdh">⏳ 밤 12시 교체까지 <b id="tossd">'+hms(msToMidnight())+'</b> 남음</p><div class="tgrid">'+TOSS.slice(0,10).map(tossCard).join("")+'</div></section>';
   var GOLD=(Array.isArray(seed.goldbox)?seed.goldbox:[]).filter(function(x){ return safeUrl(x.u); });
   if(GOLD.length) h+='<section class="sec tossec"><div class="sh"><h2>⏰ 오늘의 골드박스</h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="cd" style="margin:-6px 4px 10px">⏳ 다음 오전 7시 교체까지 <b id="gbcd">'+clock(nextSeven())+'</b></p><div class="tgrid">'+GOLD.map(tossCard).join("")+'</div></section>';
   h+='<a class="kakaobox sm" '+ext(kakaoUrl())+'><span><small>다꾸 <i>×</i> 카카오톡</small><b>🔔 새 특가 열리면 <em>가장 먼저 알려드려요!</em></b></span><span class="kg">알림 받기</span></a>';
@@ -695,7 +695,7 @@ function dealsView(){
   return h+'</div>';
 }
 function clock(ms){ var x=Math.max(0,Math.floor(ms/1000)); return ("0"+Math.floor(x/3600)).slice(-2)+":"+("0"+Math.floor(x%3600/60)).slice(-2)+":"+("0"+x%60).slice(-2); }
-var tickT; function tick(){ clearInterval(tickT); tickT=setInterval(function(){ var orE=document.querySelector("[data-or]"); if(orE) orE.innerHTML=orText(orState()); var ms=msToMidnight(), e=document.getElementById("cd"); if(e) e.textContent=hms(ms); var c=clock(ms); [].forEach.call(document.querySelectorAll("[data-cd]"),function(el){ el.textContent="⏰ "+c; }); [].forEach.call(document.querySelectorAll("[data-cdl]"),function(el){ el.textContent=c+" 남음"; }); [].forEach.call(document.querySelectorAll("[data-end]"),function(el){ el.textContent=endLeft(el.dataset.end); }); var g=document.getElementById("gbcd"); if(g) g.textContent=clock(nextSeven()); var st=document.getElementById("stripcd"); if(st) st.textContent=c; },1000); }
+var tickT; function tick(){ clearInterval(tickT); tickT=setInterval(function(){ var orE=document.querySelector("[data-or]"); if(orE) orE.innerHTML=orText(orState()); var ms=msToMidnight(), e=document.getElementById("cd"); if(e) e.textContent=hms(nextSeven()); var c=clock(ms); [].forEach.call(document.querySelectorAll("[data-cd]"),function(el){ el.textContent="⏰ "+c; }); [].forEach.call(document.querySelectorAll("[data-cdl]"),function(el){ el.textContent=c+" 남음"; }); [].forEach.call(document.querySelectorAll("[data-end]"),function(el){ el.textContent=endLeft(el.dataset.end); }); var td2=document.getElementById("tossd"); if(td2) td2.textContent=hms(ms); var g=document.getElementById("gbcd"); if(g) g.textContent=clock(nextSeven()); var st=document.getElementById("stripcd"); if(st) st.textContent=c; },1000); }
 
 /* ---------- 이벤트 ---------- */
 function onClick(e){
