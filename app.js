@@ -26,7 +26,7 @@ var PREFS = [
   {k:"hanok", t:"한옥 스테이",        re:/한옥/}
 ];
 
-var state = { tab:"home", cat:"stay", regions:[], status:"open", q:"", view:"2", loading:true };
+var state = { tab:"home", cat:"stay", regions:[], status:"open", q:"", ch:"", view:"2", loading:true };
 function ls(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v); }catch(e){ return null; } }
 state.view = ls("dakku-view") || "2";
 try{ var su=JSON.parse(sessionStorage.getItem("dakku-ui")||"{}"); if(su.cat) state.cat=su.cat; if(Array.isArray(su.regions)) state.regions=su.regions.filter(function(r){ return REGIONS.indexOf(r)>=0; }); if(su.status) state.status=su.status; }catch(e){}
@@ -151,7 +151,7 @@ function shell(){
   app.addEventListener("input",function(e){ if(e.target.dataset&&e.target.dataset.etc){ var r=e.target.parentNode.querySelector("input[type=radio]"); if(r) r.checked=true; } if(e.target.id==="q"){ state.q=e.target.value; renderListGrid(); } });
   app.addEventListener("change",function(e){ if(e.target.dataset && e.target.dataset.rg!==undefined){ var v=e.target.dataset.rg; if(v==="전체") state.regions=[]; else { var i=state.regions.indexOf(v); if(e.target.checked&&i<0) state.regions.push(v); if(!e.target.checked&&i>=0) state.regions.splice(i,1); } saveUi(); paintRegions(); renderListGrid(); } });
 }
-function paintLogo(){ var l=document.getElementById("logo"); if(l) l.innerHTML=logoSvg(30)+'<b>'+SITE+'</b>'+(LOGO.name?'<em class="logo-ev">'+esc(LOGO.name)+'</em>':''); }
+function paintLogo(){ var l=document.getElementById("logo"); if(l) l.innerHTML='<b class="wm">Dagguu<i>.</i></b><span class="sr">'+SITE+'</span>'+(LOGO.name?'<em class="logo-ev">'+esc(LOGO.name)+'</em>':''); }
 
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
@@ -160,7 +160,7 @@ function route(){
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
   state.focusT=(tab==="deals"&&qs.t)?qs.t:"";
-  if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; if(qs.q!==undefined) state.q=qs.q; if(qs.r!==undefined) state.regions=qs.r?qs.r.split(",").filter(function(r){ return REGIONS.indexOf(r)>=0; }):[]; saveUi(); }
+  if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; if(!parts[1]){ state.q=""; state.ch=""; } if(qs.q!==undefined) state.q=qs.q; if(qs.ch!==undefined) state.ch=/^(blog|insta|short)$/.test(qs.ch)?qs.ch:""; if(qs.r!==undefined) state.regions=qs.r?qs.r.split(",").filter(function(r){ return REGIONS.indexOf(r)>=0; }):[]; saveUi(); }
   render(); window.scrollTo(0,0);
   if(state.focusT) focusToss();
 }
@@ -260,6 +260,7 @@ var HOME_MENU=[
 function homeView(){
   var td=ymd(today()), open=seed.items.filter(function(it){ return statusOf(it).key==="open"; });
   var h=slideBanners(false);
+  h+='<nav class="chmenu" aria-label="체험단 종류">'+[["🗂️","카테고리","#/list?cat=stay&s=open&ch="],["📝","블로그","#/list?cat=stay&s=open&ch=blog"],["📸","인스타그램","#/list?cat=stay&s=open&ch=insta"],["🎬","숏폼","#/list?cat=stay&s=open&ch=short"]].map(function(m){ return '<a href="'+m[2]+'"><span class="chi">'+m[0]+'</span><span>'+m[1]+'</span></a>'; }).join("")+'</nav>';
   h+='<nav class="hmenu" aria-label="바로가기">'+HOME_MENU.map(function(m){ return '<a href="'+m[2]+'"><span class="hmi">'+m[0]+'</span><span>'+m[1]+'</span></a>'; }).join("")+'</nav>';
   var closingToday=open.filter(function(it){ return it.end===td; });
   if(closingToday.length) h+='<a class="notice" href="#/list?cat=stay&s=todayClose"><span class="ntag">오늘 마감</span><b>'+closingToday.length+'곳이 오늘 끝나요</b><span class="ncd">⏳ <span id="stripcd">'+clock(msToMidnight())+'</span></span></a>';
@@ -301,11 +302,14 @@ function listView(){
       (c.region?'<div class="rgbox" id="rgbox">'+regionChecks()+'</div>':'')+
       '<div class="tools"><span id="count" class="count"></span><span class="tr">'+
         '<button class="viewbtn" data-view aria-label="보기 방식 바꾸기 (지금 '+state.view+'단)">'+viewIcon()+'</button></span></div>'+
-      prefNote(state.cat)+
+      prefNote(state.cat)+chNote()+
       '<div id="grid" class="grid v'+state.view+'"></div>'
     : soonView(catMeta(state.cat)))+
   '</div>';
 }
+var CHN={blog:"📝 블로그",insta:"📸 인스타그램",short:"🎬 숏폼"};
+function chOf(it){ var c=it.ch; if(Array.isArray(c)&&c.length) return c; if(typeof c==="string"&&c) return [c]; return ["blog"]; }
+function chNote(){ if(!state.ch) return ""; return '<p class="prefnote">'+CHN[state.ch]+' 체험단만 보는 중 · <button data-ch-clear>전체 보기</button></p>'; }
 function regionChecks(){
   var cnt={}; seed.items.forEach(function(it){ if(catOf(it)===state.cat && statusOf(it).key==="open") cnt[it.region]=(cnt[it.region]||0)+1; });
   var all=!state.regions.length;
@@ -328,6 +332,7 @@ function filtered(){
   return seed.items.filter(function(it){
     if(catOf(it)!==state.cat) return false;
     if(c&&c.region && state.regions.length && state.regions.indexOf(it.region)<0) return false;
+    if(state.ch && chOf(it).indexOf(state.ch)<0) return false;
     var s=statusOf(it).key;
     if(state.status==="open" && s!=="open") return false;
     if(state.status==="closed" && s!=="closed") return false;
@@ -348,7 +353,7 @@ function renderListGrid(){
     var every=state.view==="3"?9:(state.view==="1"?5:6);
     if((i+1)%every===0 && ADS.length) out.push('<div class="span">'+adWide(ADS[n++%ADS.length])+'</div>');
   });
-  g.innerHTML=list.length?out.join(""):'<div class="empty span"><b>🥲 조건에 맞는 체험단이 없어요</b>다른 지역이나 상태를 골라 보세요.</div>';
+  g.innerHTML=list.length?out.join(""):(state.ch&&state.ch!=="blog"?'<div class="empty span"><b>'+CHN[state.ch]+' 체험단을 모으고 있어요</b>새로 올라오면 카톡으로 가장 먼저 알려드릴게요.<a class="b kakao" '+ext(kakaoUrl())+'>💬 카톡으로 알림 받기</a></div>':'<div class="empty span"><b>🥲 조건에 맞는 체험단이 없어요</b>다른 지역이나 상태를 골라 보세요.</div>');
 }
 
 
@@ -547,9 +552,23 @@ function tagBanner(){
 function kakaoSlide(){
   return '<a class="kkb" href="'+esc(kakaoUrl())+'" target="_blank" rel="noopener noreferrer"><span class="rx"><small>💬 다꾸 카카오톡 채널</small><b>카카오톡 채널 친구추가 하면<br>체험단 소식 알림받기!</b><span class="kbtn">친구추가하기 ›</span></span><span class="kbub"><svg viewBox="0 0 64 60" aria-hidden="true"><path d="M32 6C16.5 6 4 15.8 4 28c0 7.8 5.1 14.6 12.8 18.6L14 56l11-6.6c2.2.4 4.6.6 7 .6 15.5 0 28-9.8 28-22S47.5 6 32 6Z" fill="#3c1e1e"/><text x="32" y="33" text-anchor="middle" font-size="13" font-weight="900" fill="#fee500" font-family="Pretendard Variable,Pretendard,sans-serif">TALK</text></svg><em>🔔</em></span></a>';
 }
+var SPARK='<svg class="spk" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0Z" fill="currentColor"/></svg>';
+function heroSlides(){
+  var s=[], ig=safeUrl((seed.sns||{}).instagram);
+  if(rep()) s.push({bg:"linear-gradient(120deg,#8b5cf6,#6a3fc8)",t:"다꾸 <span>#기자단</span> 모집",d:"체험단 후기를 블로그에 올리고<br>1만원 상품권 받아가세요~",b:"기자단 신청하기",h:"#/reporter",e:["✍️","🎁","📝"]});
+  s.push({bg:"linear-gradient(120deg,#16b9c9,#0ea5b7)",t:"당첨률 높은 <span>#풀빌라</span> 체험단",d:"물놀이 걱정 없는 풀빌라,<br>지금 신청하고 무료로 즐겨보세요~",b:"체험단 확인하기",h:"#/list?cat=stay&s=open&q=%ED%92%80%EB%B9%8C%EB%9D%BC",e:["🏝️","🛟","🍹"]});
+  s.push({bg:"linear-gradient(120deg,#ffe1e6,#ffd0d8)",dark:1,t:"#오직 #아이와 #함께",d:"아이랑 가기 좋은 키즈 숙소<br>체험단을 놓치지 마세요!",b:"체험단 확인하기",h:"#/list?cat=stay&s=open&q=%ED%82%A4%EC%A6%88",e:["👶","🧸","🎈"]});
+  s.push({bg:"linear-gradient(120deg,#3b82f6,#2563eb)",t:"새 체험단 알림 <span>100% 무료</span>",d:"카톡 친구추가하면<br>매일 아침 먼저 알려드려요~",b:"친구추가하기",h:kakaoUrl(),x:1,e:["🔔","💬","📱"]});
+  if(ig) s.push({bg:"linear-gradient(120deg,#ff8a4c,#ff5f6d)",t:"<span>#다꾸</span> 태그 이벤트",d:"다꾸에서 찾은 체험단에 선정되면<br>@다꾸를 태그해 주세요!",b:"인스타그램 바로가기",h:ig,x:1,e:["📸","💜","✨"]});
+  return s;
+}
+function heroSlide(o){
+  return '<a class="kv'+(o.dark?' dark':'')+'" style="background:'+o.bg+'" '+(o.x?ext(o.h):'href="'+esc(o.h)+'"')+'><span class="htx"><b>'+o.t+'</b><small>'+o.d+'</small><span class="hbtn">'+esc(o.b)+' ›</span></span>'+
+    '<span class="hart" aria-hidden="true"><span class="he1">'+o.e[0]+'</span><span class="he2">'+o.e[1]+'</span><span class="he3">'+o.e[2]+'</span>'+SPARK.replace('class="spk"','class="spk s1"')+SPARK.replace('class="spk"','class="spk s2"')+SPARK.replace('class="spk"','class="spk s3"')+'</span></a>';
+}
 function slideBanners(inPage){
-  var slides=[]; if(rep()) slides.push(reporterBanner()); slides.push(tagBanner()); slides.push(kakaoSlide());
-  return '<div class="slider'+(inPage?' inpage':'')+'" data-slider><div class="strack">'+slides.map(function(s){ return '<div class="slide">'+s+'</div>'; }).join("")+'</div>'+
+  var slides=heroSlides();
+  return '<div class="slider hslider'+(inPage?' inpage':'')+'" data-slider><div class="strack">'+slides.map(function(s){ return '<div class="slide">'+heroSlide(s)+'</div>'; }).join("")+'</div>'+
     (slides.length>1?'<div class="sdots">'+slides.map(function(_,i){ return '<button data-dot="'+i+'" aria-label="'+(i+1)+'번째 배너"'+(i===0?' class="on"':'')+'></button>'; }).join("")+'</div>':'')+'</div>';
 }
 var slideT;
@@ -700,7 +719,8 @@ var tickT; function tick(){ clearInterval(tickT); tickT=setInterval(function(){ 
 /* ---------- 이벤트 ---------- */
 function onClick(e){
   var lk=e.target.closest("article a[target=_blank]"); if(lk){ var art=lk.closest("article"), fb=art&&art.querySelector("[data-fav]"); if(fb) markSeen(fb.dataset.fav); }
-  var t=e.target.closest("[data-fav],[data-cat],[data-status],[data-view],[data-share],[data-pref-clear],[data-focus],[data-spin],[data-copy],[data-ishare],[data-tshare]"); if(!t) return;
+  var t=e.target.closest("[data-fav],[data-cat],[data-status],[data-view],[data-share],[data-pref-clear],[data-focus],[data-spin],[data-copy],[data-ishare],[data-tshare],[data-ch-clear]"); if(!t) return;
+  if(t.dataset.chClear!==undefined){ state.ch=""; render(); return; }
   if(t.dataset.tshare){ e.preventDefault(); e.stopPropagation(); shareToss(t.dataset.tshare); return; }
   if(t.dataset.ishare){ e.preventDefault(); shareItem(t.dataset.ishare); return; }
   if(t.dataset.spin!==undefined){ doSpin(t); return; }
