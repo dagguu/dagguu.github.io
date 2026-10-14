@@ -774,3 +774,5 @@ img{display:block}
 .pmart1{margin:8px 4px;font-size:14px}
 .sheet .apnote{word-break:keep-all;background:#f4efff;border-radius:14px;padding:10px 12px;font-size:14px;color:#4a3a78;margin:4px 0 14px}
 .sheet .apnote a{color:#6a3fc8;font-weight:800}
+.chb-premier{background:linear-gradient(135deg,#2b2350,#111);color:#ffd76a}
+.chb-ret{background:linear-gradient(135deg,#5b8def,#3a63c9)}

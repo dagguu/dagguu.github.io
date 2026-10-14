@@ -334,11 +334,11 @@ function listView(){
   '</div>';
 }
 var CHN={payback:"💰 페이백",review:"⭐ 구매평",blog:"📝 블로그",insta:"📸 인스타그램",clip:"🎬 클립",reels:"🎞️ 릴스",youtube:"▶️ 유튜브",tiktok:"🎵 틱톡",cafe:"👩‍👧 맘카페"};
-var CHL={blog:"블로그",insta:"인스타",clip:"클립",reels:"릴스",youtube:"유튜브",tiktok:"틱톡",cafe:"맘카페",short:"숏폼",payback:"페이백",review:"구매평"};
+var CHL={blog:"블로그",insta:"인스타",clip:"클립",reels:"릴스",youtube:"유튜브",tiktok:"틱톡",cafe:"맘카페",short:"숏폼",payback:"페이백",review:"구매평",premier:"프리미어 전용",ret:"회수형"};
 function chOf(it){ var c=it.ch; if(typeof c==="string") c=c?[c]:[]; if(!Array.isArray(c)) return ["blog"]; var o=c.filter(function(x){ return x!=="review"; }); return ((c.length||it.pay)&&!o.length)?[]:(o.length?o:["blog"]); }
-function payOf(it){ var p=(it.pay||[]).slice(), b=it.benefit||""; if(/페이백|선결제/.test(b)&&p.indexOf("payback")<0) p.push("payback"); if((/구매평/.test(b)||(it.ch||[]).indexOf("review")>=0)&&p.indexOf("review")<0) p.push("review"); return p; }
+function payOf(it){ var p=(it.pay||[]).slice(), b=it.benefit||""; if(/회수형/.test(b)&&p.indexOf("ret")<0) p.push("ret"); if(/페이백|선결제/.test(b)&&p.indexOf("payback")<0) p.push("payback"); if((/구매평/.test(b)||(it.ch||[]).indexOf("review")>=0)&&p.indexOf("review")<0) p.push("review"); return p; }
 function chBadge(c){ return '<span class="chb chb-'+c+'">'+(CHL[c]||c)+'</span>'; }
-function chBadges(it){ var b=payOf(it).concat(chOf(it)); return b.length?'<div class="chbs">'+b.map(chBadge).join("")+'</div>':''; }
+function chBadges(it){ var P=payOf(it), O=["premier","ret"], b=P.filter(function(x){ return O.indexOf(x)>=0; }).concat(P.filter(function(x){ return O.indexOf(x)<0; })).concat(chOf(it)); return b.length?'<div class="chbs">'+b.map(chBadge).join("")+'</div>':''; }
 function chChecks(){
   var all=!state.chs.length;
   return '<span class="rgl">✍️ 종류</span>'+[["","전체"],["blog","블로그"],["insta","인스타"],["clip","클립"],["reels","릴스"],["youtube","유튜브"],["payback","페이백"],["review","구매평"]].map(function(c){
