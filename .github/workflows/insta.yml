@@ -17,6 +17,11 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk fonts-noto-color-emoji >/dev/null
           pip install -q playwright && python -m playwright install --with-deps chromium >/dev/null
       - run: python scripts/gen_insta.py
+      - name: 네이버 메일로 보내기
+        env:
+          NAVER_MAIL_ID: ${{ secrets.NAVER_MAIL_ID }}
+          NAVER_MAIL_PW: ${{ secrets.NAVER_MAIL_PW }}
+        run: python scripts/mail_insta.py
       # 사진은 main 을 무겁게 하지 않도록 insta 브랜치에만 올린다
       - run: |
           git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
