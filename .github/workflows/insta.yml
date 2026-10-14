@@ -1,0 +1,27 @@
+name: 인스타 카드뉴스 만들기
+on:
+  push:
+    branches: [main]
+    paths: ['scripts/insta_queue.json']
+  workflow_dispatch:
+jobs:
+  make:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk fonts-noto-color-emoji >/dev/null
+          pip install -q playwright && python -m playwright install --with-deps chromium >/dev/null
+      - run: python scripts/gen_insta.py
+      # 사진은 main 을 무겁게 하지 않도록 insta 브랜치에만 올린다
+      - run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          mv insta_out /tmp/insta_out
+          git fetch origin insta || true
+          if git rev-parse --verify origin/insta >/dev/null 2>&1; then git checkout -q -B insta origin/insta; else git checkout -q --orphan insta && git rm -rfq . ; fi
+          cp -r /tmp/insta_out/* .
+          git add -A && git commit -qm "인스타 카드뉴스 $(date +%F)" || exit 0
+          for i in 1 2 3; do git push -q origin insta && break; git pull -q --rebase origin insta; done
