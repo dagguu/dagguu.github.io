@@ -28,11 +28,12 @@ var PREFS = [
   {k:"hanok", t:"한옥 스테이",        re:/한옥/}
 ];
 
-var state = { tab:"home", cat:"stay", regions:[], status:"open", q:"", chs:[], view:"2", loading:true };
+var SORTS=[["high","💎 고가제품순"],["popular","🔥 인기순"],["deadline","⏰ 마감임박순"],["low","🪙 저가제품순"]], SORTS_OK=["high","popular","deadline","low"];
+var state = { tab:"home", cat:"stay", regions:[], status:"open", q:"", chs:[], view:"2", sort:"high", loading:true };
 function ls(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v); }catch(e){ return null; } }
 state.view = ls("dakku-view") || "2";
-try{ var su=JSON.parse(sessionStorage.getItem("dakku-ui")||"{}"); if(su.cat) state.cat=su.cat; if(Array.isArray(su.regions)) state.regions=su.regions.filter(function(r){ return REGIONS.indexOf(r)>=0; }); if(su.status) state.status=su.status; }catch(e){}
-function saveUi(){ try{ sessionStorage.setItem("dakku-ui",JSON.stringify({cat:state.cat,regions:state.regions,status:state.status})); }catch(e){} }
+try{ var su=JSON.parse(sessionStorage.getItem("dakku-ui")||"{}"); if(su.cat) state.cat=su.cat; if(Array.isArray(su.regions)) state.regions=su.regions.filter(function(r){ return REGIONS.indexOf(r)>=0; }); if(su.status) state.status=su.status; if(SORTS_OK.indexOf(su.sort)>=0) state.sort=su.sort; }catch(e){}
+function saveUi(){ try{ sessionStorage.setItem("dakku-ui",JSON.stringify({cat:state.cat,regions:state.regions,status:state.status,sort:state.sort})); }catch(e){} }
 var FAV=[]; try{ FAV=JSON.parse(ls("dakku-fav")||"[]")||[]; }catch(e){ FAV=[]; }
 function isFav(id){ return FAV.indexOf(id)>=0; }
 function toggleFav(id){ var i=FAV.indexOf(id); if(i>=0) FAV.splice(i,1); else FAV.push(id); ls("dakku-fav",JSON.stringify(FAV)); mFav(id,FAV.indexOf(id)>=0); }
@@ -167,7 +168,7 @@ function route(){
   state.focusT=(tab==="deals"&&qs.t)?qs.t:"";
   state.dq=(tab==="deals"&&qs.q)?qs.q:"";
   state.pq=(tab==="price"&&qs.q)?qs.q:"";
-  if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; else if(qs.cat) state.status="open"; if(!parts[1]){ state.q=""; state.chs=[]; } if(qs.q!==undefined) state.q=qs.q; if(qs.ch!==undefined) state.chs=qs.ch.split(",").filter(function(c){ return /^(blog|insta|clip|reels|youtube|tiktok|cafe|payback|review)$/.test(c); }); if(qs.r!==undefined) state.regions=qs.r?qs.r.split(",").filter(function(r){ return REGIONS.indexOf(r)>=0; }):[]; saveUi(); }
+  if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; else if(qs.cat) state.status="open"; if(!parts[1]){ state.q=""; state.chs=[]; } if(qs.q!==undefined) state.q=qs.q; if(qs.ch!==undefined) state.chs=qs.ch.split(",").filter(function(c){ return /^(blog|insta|clip|reels|youtube|tiktok|cafe|payback|review)$/.test(c); }); if(qs.o&&SORTS_OK.indexOf(qs.o)>=0) state.sort=qs.o; if(qs.r!==undefined) state.regions=qs.r?qs.r.split(",").filter(function(r){ return REGIONS.indexOf(r)>=0; }):[]; saveUi(); }
   render(); window.scrollTo(0,0);
   if(state.focusT) focusToss();
   if(state.tab==="deals"&&state.dq){ setTimeout(function(){ var i=document.getElementById("dq"); if(i){ i.value=state.dq; filterDeals(state.dq); } },0); }
@@ -326,7 +327,9 @@ function listView(){
     '<div class="catrow">'+CAT_ORDER.map(function(m){ var on=m.k===state.cat; return '<button class="cat'+(on?" on":"")+'" data-cat="'+m.k+'" aria-pressed="'+on+'"><span class="em">'+m.em+'</span>'+esc(m.t)+'</button>'; }).join("")+'</div>'+
     (c?'<div class="chips hs">'+STATUSES.map(function(s){ return '<button class="chip'+(s[0]===state.status?" on":"")+'" data-status="'+s[0]+'">'+s[1]+'</button>'; }).join("")+'</div>'+
       (c.region?'<div class="rgbox" id="rgbox">'+regionChecks()+'</div>':'')+'<div class="rgbox" id="chbox">'+chChecks()+'</div>'+
+      '<div id="toprows"></div>'+
       '<div class="tools"><span id="count" class="count"></span><span class="tr">'+
+        '<label class="sortsel"><span class="sr">정렬</span><select id="sort" aria-label="정렬 순서">'+SORTS.map(function(o){ return '<option value="'+o[0]+'"'+(o[0]===state.sort?' selected':'')+'>'+o[1]+'</option>'; }).join("")+'</select></label>'+
         '<button class="viewbtn" data-view aria-label="보기 방식 바꾸기 (지금 '+state.view+'단)">'+viewIcon()+'</button></span></div>'+
       prefNote(state.cat)+
       '<div id="grid" class="grid v'+state.view+'"></div>'
@@ -379,11 +382,35 @@ function filtered(){
     if(state.status==="closing" && !(s==="open" && daysLeft(it)<=3)) return false;
     if(q){ var hay=(it.name+" "+it.region+" "+it.benefit).toLowerCase(); if(hay.indexOf(q)<0) return false; }
     return true;
-  }).sort(state.status==="closed"?function(a,b){ return (b.createdAt||0)-(a.createdAt||0); }:byDeadline);
+  }).sort(state.status==="closed"?function(a,b){ return (b.createdAt||0)-(a.createdAt||0); }:sorter());
+}
+/* 정렬: 금액(valOf)은 worth("N만원") → 쿠팡 판매가(cpPrice) → 제공내역 속 "N원/N만원" 중 가장 큰 값. 금액을 모르면 맨 뒤. */
+function valOf(it){ if(it._v!==undefined) return it._v; var v=0;
+  if(it.worth){ var m=String(it.worth).replace(/,/g,"").match(/\d+(\.\d+)?/g); if(m) v=Math.max.apply(null,m.map(Number))*(/만/.test(it.worth)?10000:1); }
+  if(!v&&it.cpPrice) v=+it.cpPrice||0;
+  if(!v){ var re=/(\d{1,3}(?:,\d{3})+|\d+)\s*(만\s*)?원/g, r, b=it.benefit||""; while((r=re.exec(b))){ var n=+r[1].replace(/,/g,"")*(r[2]?10000:1); if(n>v&&n<1e8) v=n; } }
+  return it._v=v; }
+function popScore(it){ var s=0; if(isPick(it)) s+=3; s+=Math.min(chOf(it).length,4); var v=valOf(it); if(v>=300000) s+=3; else if(v>=100000) s+=2; else if(v>=30000) s+=1; if(payOf(it).indexOf("payback")>=0) s+=1; if(isFav(it.id)) s+=1; if(Date.now()-(it.createdAt||0)<2*864e5) s+=1; return s; }
+function sorter(){
+  var o=state.sort;
+  if(o==="deadline") return function(a,b){ return daysLeft(a)-daysLeft(b) || valOf(b)-valOf(a); };
+  if(o==="popular") return function(a,b){ return popScore(b)-popScore(a) || daysLeft(a)-daysLeft(b); };
+  if(o==="low") return function(a,b){ var x=valOf(a), y=valOf(b); if(!x!==!y) return x?-1:1; return x-y || daysLeft(a)-daysLeft(b); };
+  return function(a,b){ var x=valOf(a), y=valOf(b); if(!x!==!y) return x?-1:1; return y-x || daysLeft(a)-daysLeft(b); };
+}
+function isNewToday(it){ var td=ymd(today()); return it.start===td || (it.createdAt && ymd(new Date(it.createdAt))===td); }
+function topRows(list){
+  if(state.status!=="open"||state.q.trim()) return "";
+  var td=ymd(today()), close=list.filter(function(it){ return it.end===td; }), fresh=list.filter(function(it){ return isNewToday(it)&&it.end!==td; });
+  var h="";
+  if(close.length) h+='<section class="hsec trow"><div class="hsh"><h2>🚨 <em>오늘 마감</em>이에요 <small class="tcnt">'+close.length+'</small></h2><span class="hmore" data-cdl>'+clock(msToMidnight())+' 남음</span></div><div class="hs">'+close.slice(0,15).map(hcard).join("")+'</div></section>';
+  if(fresh.length) h+='<section class="hsec trow"><div class="hsh"><h2>✨ <em>오늘 오픈</em>했어요 <small class="tcnt">'+fresh.length+'</small></h2></div><div class="hs">'+fresh.slice(0,15).map(hcard).join("")+'</div></section>';
+  return h;
 }
 function renderListGrid(){
   var g=document.getElementById("grid"); if(!g) return;
   var list=filtered(), n=0, out=[];
+  var tr=document.getElementById("toprows"); if(tr) tr.innerHTML=topRows(list);
   var cnt=document.getElementById("count"); if(cnt) cnt.innerHTML='<b>'+list.length+'</b>'+(state.cat==="stay"?'곳':'개');
   list.forEach(function(it,i){
     out.push(state.view==="3"?miniCard(it,true):fullCard(it));
@@ -845,6 +872,7 @@ function shareToss(code){
   if(navigator.share){ navigator.share({title:x.name,text:text,url:url}).catch(function(){}); return; }
   try{ navigator.clipboard.writeText(text+"\n"+url).then(function(){ toast("✈️ 링크를 복사했어요. 친구에게 붙여넣어 보내세요!"); }).catch(function(){ prompt("아래 링크를 복사해 친구에게 보내세요",url); }); }catch(e){ toast(url); }
 }
+document.addEventListener("change",function(e){ if(e.target&&e.target.id==="sort"){ state.sort=e.target.value; saveUi(); renderListGrid(); } });
 /* ---------- 신청하기 팝업 · 신청한 체험단 ---------- */
 var APPLIED=[]; try{ APPLIED=JSON.parse(ls("dakku-applied")||"[]")||[]; }catch(e){ APPLIED=[]; }
 function markApplied(id){ var i=APPLIED.indexOf(id); if(i>=0) APPLIED.splice(i,1); APPLIED.unshift(id); APPLIED=APPLIED.slice(0,50); ls("dakku-applied",JSON.stringify(APPLIED)); }
