@@ -664,6 +664,11 @@ img{display:block}
 .chb-blog{background:linear-gradient(135deg,#2fd06b,#03b350)}
 .chb-insta{background:linear-gradient(135deg,#feda75 0%,#fa7e1e 30%,#d62976 60%,#962fbf 85%,#4f5bd5 100%)}
 .chb-short{background:linear-gradient(135deg,#ff4d6d,#ff2d2d)}
+.chb-clip{background:linear-gradient(135deg,#00d27a,#00a8a8)}
+.chb-reels{background:linear-gradient(135deg,#f9426b,#a33ee0)}
+.chb-youtube{background:linear-gradient(135deg,#ff3b3b,#d40000)}
+.chb-tiktok{background:linear-gradient(135deg,#25f4ee,#111 55%,#fe2c55)}
+.chb-payback{background:linear-gradient(135deg,#ffb020,#ff7a00)}
 #chbox{margin-top:6px}
 .chb-review{background:linear-gradient(135deg,#8b8a96,#5f5d6b)}
 .chb-cafe{background:linear-gradient(135deg,#ff9a8b,#f0607a)}

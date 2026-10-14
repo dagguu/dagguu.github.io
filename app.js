@@ -161,7 +161,7 @@ function route(){
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
   state.focusT=(tab==="deals"&&qs.t)?qs.t:"";
-  if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; else if(qs.cat) state.status="open"; if(!parts[1]){ state.q=""; state.chs=[]; } if(qs.q!==undefined) state.q=qs.q; if(qs.ch!==undefined) state.chs=qs.ch.split(",").filter(function(c){ return /^(blog|insta|short)$/.test(c); }); if(qs.r!==undefined) state.regions=qs.r?qs.r.split(",").filter(function(r){ return REGIONS.indexOf(r)>=0; }):[]; saveUi(); }
+  if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; else if(qs.cat) state.status="open"; if(!parts[1]){ state.q=""; state.chs=[]; } if(qs.q!==undefined) state.q=qs.q; if(qs.ch!==undefined) state.chs=qs.ch.split(",").filter(function(c){ return /^(blog|insta|clip|reels|youtube|tiktok|cafe)$/.test(c); }); if(qs.r!==undefined) state.regions=qs.r?qs.r.split(",").filter(function(r){ return REGIONS.indexOf(r)>=0; }):[]; saveUi(); }
   render(); window.scrollTo(0,0);
   if(state.focusT) focusToss();
 }
@@ -255,7 +255,7 @@ function hrow(title,more,list,sub){
     '<div class="hs">'+list.slice(0,10).map(hcard).join("")+'</div></section>';
 }
 var HOME_MENU=[
-  ["🗂️","카테고리","#/list?cat=stay&s=open&ch="],["📝","블로그","#/list?cat=stay&s=open&ch=blog"],["📸","인스타그램","#/list?cat=stay&s=open&ch=insta"],["🎬","숏폼","#/list?cat=stay&s=open&ch=short"],["🎁","혜택","#/benefit"],["🔥","특가","#/deals"],
+  ["🗂️","카테고리","#/list?cat=stay&s=open&ch="],["📝","블로그","#/list?cat=stay&s=open&ch=blog"],["📸","인스타그램","#/list?cat=stay&s=open&ch=insta"],["🎬","숏폼","#/list?cat=stay&s=open&ch=clip,reels,youtube"],["🎁","혜택","#/benefit"],["🔥","특가","#/deals"],
   ["🏨","숙박","#/list?cat=stay&s=open"],["👶","육아","#/list?cat=baby"],["💄","뷰티","#/list?cat=beauty"],["🧺","생활","#/list?cat=life"],["🔌","가전","#/list?cat=elec"],["🚨","오늘 마감","#/list?cat=stay&s=todayClose"]
 ];
 function homeView(){
@@ -307,13 +307,15 @@ function listView(){
     : soonView(catMeta(state.cat)))+
   '</div>';
 }
-var CHN={blog:"📝 블로그",insta:"📸 인스타그램",short:"🎬 숏폼"};
-function chOf(it){ var c=it.ch; if(Array.isArray(c)&&c.length) return c; if(typeof c==="string"&&c) return [c]; return ["blog"]; }
-function chBadge(c){ return '<span class="chb chb-'+c+'">'+({blog:"블로그",insta:"인스타",short:"숏폼",review:"구매평",cafe:"맘카페"})[c]+'</span>'; }
-function chBadges(it){ return '<span class="chbs">'+chOf(it).map(chBadge).join("")+'</span>'; }
+var CHN={blog:"📝 블로그",insta:"📸 인스타그램",clip:"🎬 클립",reels:"🎞️ 릴스",youtube:"▶️ 유튜브",tiktok:"🎵 틱톡",cafe:"👩‍👧 맘카페"};
+var CHL={blog:"블로그",insta:"인스타",clip:"클립",reels:"릴스",youtube:"유튜브",tiktok:"틱톡",cafe:"맘카페",short:"숏폼",payback:"페이백",review:"구매평"};
+function chOf(it){ var c=it.ch; if(typeof c==="string") c=c?[c]:[]; if(!Array.isArray(c)) return ["blog"]; var o=c.filter(function(x){ return x!=="review"; }); return (c.length&&!o.length)?[]:(o.length?o:["blog"]); }
+function payOf(it){ var p=(it.pay||[]).slice(), b=it.benefit||""; if(/페이백|선결제/.test(b)&&p.indexOf("payback")<0) p.push("payback"); if((/구매평/.test(b)||(it.ch||[]).indexOf("review")>=0)&&p.indexOf("review")<0) p.push("review"); return p; }
+function chBadge(c){ return '<span class="chb chb-'+c+'">'+(CHL[c]||c)+'</span>'; }
+function chBadges(it){ return '<span class="chbs">'+payOf(it).concat(chOf(it)).map(chBadge).join("")+'</span>'; }
 function chChecks(){
   var all=!state.chs.length;
-  return '<span class="rgl">✍️ 종류</span>'+[["","전체"],["blog","블로그"],["insta","인스타"],["short","숏폼"]].map(function(c){
+  return '<span class="rgl">✍️ 종류</span>'+[["","전체"],["blog","블로그"],["insta","인스타"],["clip","클립"],["reels","릴스"],["youtube","유튜브"]].map(function(c){
     var on=c[0]?state.chs.indexOf(c[0])>=0:all;
     return '<label class="rck'+(on?' on':'')+'"><input type="checkbox" data-chk="'+c[0]+'"'+(on?' checked':'')+'><span class="bx"></span>'+c[1]+'</label>';
   }).join("");
@@ -362,7 +364,7 @@ function renderListGrid(){
     var every=state.view==="3"?9:(state.view==="1"?5:6);
     if((i+1)%every===0 && ADS.length) out.push('<div class="span">'+adWide(ADS[n++%ADS.length])+'</div>');
   });
-  g.innerHTML=list.length?out.join(""):(state.chs.length&&state.chs.indexOf("blog")<0?'<div class="empty span"><b>'+state.chs.map(function(c){ return CHN[c]; }).join(" · ")+' 체험단을 모으고 있어요</b>새로 올라오면 카톡으로 가장 먼저 알려드릴게요.<a class="b kakao" '+ext(kakaoUrl())+'>💬 카톡으로 알림 받기</a></div>':'<div class="empty span"><b>🥲 조건에 맞는 체험단이 없어요</b>다른 지역이나 상태를 골라 보세요.</div>');
+  g.innerHTML=list.length?out.join(""):(state.chs.length&&state.chs.indexOf("blog")<0?'<div class="empty span"><b>'+state.chs.map(function(c){ return CHN[c]||c; }).join(" · ")+' 체험단을 모으고 있어요</b>새로 올라오면 카톡으로 가장 먼저 알려드릴게요.<a class="b kakao" '+ext(kakaoUrl())+'>💬 카톡으로 알림 받기</a></div>':'<div class="empty span"><b>🥲 조건에 맞는 체험단이 없어요</b>다른 지역이나 상태를 골라 보세요.</div>');
 }
 
 
