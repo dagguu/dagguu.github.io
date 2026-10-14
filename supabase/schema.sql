@@ -53,6 +53,14 @@ create table if not exists public.spins (
   primary key (user_id, day)
 );
 
+-- 사이트(로그인한 회원)만 이 테이블에 접근할 수 있게 권한을 줘요 (비로그인 anon 은 접근 불가)
+revoke all on public.profiles, public.favorites, public.views, public.reporter_apps, public.spins from anon;
+grant select, update on public.profiles to authenticated;
+grant select, insert, update, delete on public.favorites to authenticated;
+grant select, insert, update, delete on public.views to authenticated;
+grant select, insert on public.reporter_apps to authenticated;
+grant select on public.spins to authenticated;
+
 -- 보안: 각 회원은 자기 데이터만 보고 고칠 수 있어요
 alter table public.profiles enable row level security;
 alter table public.favorites enable row level security;
