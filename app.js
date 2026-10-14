@@ -309,7 +309,7 @@ function listView(){
 }
 var CHN={blog:"📝 블로그",insta:"📸 인스타그램",short:"🎬 숏폼"};
 function chOf(it){ var c=it.ch; if(Array.isArray(c)&&c.length) return c; if(typeof c==="string"&&c) return [c]; return ["blog"]; }
-function chBadge(c){ return '<span class="chb chb-'+c+'">'+({blog:"블로그",insta:"인스타",short:"숏폼"})[c]+'</span>'; }
+function chBadge(c){ return '<span class="chb chb-'+c+'">'+({blog:"블로그",insta:"인스타",short:"숏폼",review:"구매평"})[c]+'</span>'; }
 function chBadges(it){ return '<span class="chbs">'+chOf(it).map(chBadge).join("")+'</span>'; }
 function chChecks(){
   var all=!state.chs.length;
