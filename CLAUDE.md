@@ -25,4 +25,5 @@
 - 채널 소식 초안: 매일 11:23 예약 작업이 newsletter/YYYY-MM-DD.txt 를 쓴다(규칙은 newsletter/README.md). 카카오 채널 발송은 시온님이 직접 한다.
 - 📷 최저가 확인(#/price, 2026-10-14 시온님 요청으로 숨김 — 특가 탭 입구 카드 제거, 주소로만 열림. Supabase 함수·키 설정은 안 함): 바코드(html5-qrcode)→Open Food Facts 로 상품명→Supabase Edge Function coupang-search(쿠팡 파트너스 검색 API, 12시간 캐시 price_cache)→쿠팡 결과·단위가격·마트가 비교. 함수 코드는 supabase/functions/coupang-search/index.ts, 쿠팡 키는 Supabase Secrets 에만(시온님이 직접). 네이버 쇼핑 검색 API 는 2026-07-31 종료라 못 씀.
 - 다음에 할 일(시온님 보류): 육아·생필품 50개 쿠팡 가격 기록 → 30일 최저가 배지·카톡 소식, 이후 회원 목표가 웹푸시 알림.
-- 가전(elec) 분야 오픈(2026-10-14). 인플렉서 category "가전/가구" 중 가전제품만(가구·매트리스·청소 서비스 제외), 쿠팡 브랜드·모델 정확히 일치만. 육아와 같은 item 형식, cat:"elec".
+- 가전/가구(elec) 분야(2026-10-14 오픈, 이름 "가전/가구"). 인플렉서 category "가전/가구" 의 제품 전부(가전+가구·매트리스·식탁 등). 출장 청소 같은 서비스, 포인트만 주는 캠페인, 오늘 마감은 제외. 쿠팡 브랜드·제품 정확히 일치만(호환품 X). 육아와 같은 item 형식, cat:"elec".
+- 쿠팡 매칭 검색은 브라우저 숨은 iframe 대신 공식 API 우선: scripts/match_queries.json(검색어 배열, 최대 30개)을 push 하면 Actions(coupang-match.yml)가 scripts/match_results.json 에 상품번호·이름·가격·이미지를 남긴다(1~2분). 브라우저 쿠팡 검색은 많이 하면 "사용권한이 없습니다"로 막히니 쓰지 않거나 아주 적게. cpUrl 은 https://www.coupang.com/vp/products/{pid} 로 넣으면 기존 deeplink 가 viewUrl 을 채운다.
