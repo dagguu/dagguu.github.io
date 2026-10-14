@@ -1,0 +1,17 @@
+name: 쿠팡 검색 API 시험
+on: { workflow_dispatch: {} }
+permissions: { contents: write }
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - env:
+          COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
+          COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
+        run: python3 scripts/coupang_search_test.py
+      - run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add scripts/coupang_search_test.json && git commit -m "쿠팡 검색 API 시험 결과" && git push || true
