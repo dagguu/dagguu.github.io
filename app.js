@@ -219,7 +219,7 @@ function cdLine(it){ return statusOf(it).dday==="오늘 마감"?'<p class="cdl" 
 function miniCard(it,btns){
   var act='';
   if(btns){ var s=statusOf(it), view=safeUrl(it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
-    act='<div class="act3">'+(view?'<a class="b pri" '+ext(view)+'>'+esc(c.view||"보기")+' ↗</a>':'')+(s.key==="closed"?'<span class="b dis">마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">신청하기</a>':''))+'</div>'; }
+    act='<div class="act3">'+(view?'<a class="b pri" '+ext(view)+'>'+esc(c.view||"보기")+' ↗</a>':'')+(s.key==="closed"?'<span class="b dis">마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer" data-apply="'+esc(it.id)+'">신청하기</a>':''))+'</div>'; }
   return '<article class="mini">'+thumb(it)+chBadges(it)+'<h3>'+esc(it.name)+'</h3>'+worthLine(it)+'<p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+act+'</article>';
 }
 function fullCard(it){
@@ -229,7 +229,7 @@ function fullCard(it){
     '<div class="body">'+chBadges(it)+'<h3>'+esc(it.name)+'</h3>'+worthLine(it)+'<p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+
     '<p class="pd">🗓️ '+(it.start?fmt(it.start)+' ':'')+'~ '+fmt(it.end)+' 모집 · '+esc(it.source||"")+'</p>'+
     '<div class="act">'+(view?'<a class="b pri" '+ext(view)+'>'+esc(c.view||"보기")+' ↗</a>':'')+
-      (closed?'<span class="b dis">🔒 마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">신청하기</a>':''))+'</div></div></article>';
+      (closed?'<span class="b dis">🔒 마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer" data-apply="'+esc(it.id)+'">신청하기</a>':''))+'</div></div></article>';
 }
 function babyDeals(){
   var now=Date.now(), seen={};
@@ -845,6 +845,42 @@ function shareToss(code){
   if(navigator.share){ navigator.share({title:x.name,text:text,url:url}).catch(function(){}); return; }
   try{ navigator.clipboard.writeText(text+"\n"+url).then(function(){ toast("✈️ 링크를 복사했어요. 친구에게 붙여넣어 보내세요!"); }).catch(function(){ prompt("아래 링크를 복사해 친구에게 보내세요",url); }); }catch(e){ toast(url); }
 }
+/* ---------- 신청하기 팝업 · 신청한 체험단 ---------- */
+var APPLIED=[]; try{ APPLIED=JSON.parse(ls("dakku-applied")||"[]")||[]; }catch(e){ APPLIED=[]; }
+function markApplied(id){ var i=APPLIED.indexOf(id); if(i>=0) APPLIED.splice(i,1); APPLIED.unshift(id); APPLIED=APPLIED.slice(0,50); ls("dakku-applied",JSON.stringify(APPLIED)); }
+function applyPopup(it){
+  var url=safeUrl(it.applyUrl); if(!url) return;
+  var old=document.querySelector(".modal.applym"); if(old) old.remove();
+  var src=it.source||"체험단";
+  var wrap=document.createElement("div"); wrap.className="modal applym"; wrap.setAttribute("role","dialog"); wrap.setAttribute("aria-modal","true"); wrap.setAttribute("aria-label",src+" 홈페이지로 이동");
+  wrap.innerHTML='<div class="sheet"><button class="mx" data-m="x" aria-label="닫기">'+ico(I.x)+'</button><div class="mlogo">'+logoSvg(40)+'</div>'+
+    '<h2>['+esc(src)+'] 홈페이지로<br>이동해요👀</h2><p>한번만 로그인 해두면<br>편하게 신청 가능해져요.</p>'+
+    '<p class="apnote">✅ 신청하신 체험단은<br><a href="#/my" data-m="x" data-jump="applied">다꾸체험단 마이페이지</a>에서 확인하실 수 있어요.</p>'+
+    '<a class="b pri wide" data-m="go" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(src)+'에서 신청하기 ↗</a>'+
+    '<button class="b sec wide" data-m="x" style="margin-top:8px">닫기</button></div>';
+  function close(){ wrap.remove(); document.removeEventListener("keydown",esck); }
+  function esck(e){ if(e.key==="Escape") close(); }
+  wrap.addEventListener("click",function(e){
+    if(e.target===wrap) return close();
+    var b=e.target.closest("[data-m]"); if(!b) return;
+    if(b.dataset.m==="go"){ markApplied(it.id); setTimeout(close,300); return; }
+    if(b.dataset.m==="x") close();
+  });
+  document.addEventListener("keydown",esck);
+  document.body.appendChild(wrap);
+  var g=wrap.querySelector('[data-m="go"]'); if(g) g.focus();
+}
+document.addEventListener("click",function(e){
+  var a=e.target.closest("a[data-apply]"); if(!a) return;
+  var it=seed.items.filter(function(x){ return x.id===a.dataset.apply; })[0]; if(!it) return;
+  e.preventDefault(); e.stopPropagation(); applyPopup(it);
+},true);
+function appliedSection(){
+  var byId={}; seed.items.forEach(function(it){ byId[it.id]=it; });
+  var list=APPLIED.map(function(id){ return byId[id]; }).filter(Boolean);
+  if(!list.length) return '<section class="hsec" id="applied"><div class="hsh"><h2>✅ <em>신청한</em> 체험단</h2></div><p class="mysub" style="padding:0 16px">체험단 \'신청하기\'로 이동하면 여기에 모아드려요. (이 기기 기준)</p></section>';
+  return '<section class="hsec" id="applied"><div class="hsh"><h2>✅ <em>신청한</em> 체험단</h2></div><div class="hs">'+list.slice(0,30).map(hcard).join("")+'</div></section>';
+}
 var toastT;
 function toast(msg){ var t=document.querySelector(".toast"); if(!t){ t=document.createElement("div"); t.className="toast"; t.setAttribute("role","status"); document.body.appendChild(t);} t.textContent=msg; clearTimeout(toastT); toastT=setTimeout(function(){ t.remove(); },2400); }
 
@@ -1111,14 +1147,14 @@ function myView(){
          ((a.naver)?'<button class="b naverlg wide" data-login="'+esc(a.naver)+'"><b>N</b>네이버로 시작하기</button>':'')+
          '<p class="lgnote">시작하면 <a href="#/privacy">개인정보처리방침</a>에 동의하는 것으로 봐요.</p>'
        :'<p class="lgsoon">🔧 회원 기능을 준비하고 있어요. 곧 카카오로 로그인할 수 있어요!</p>')+'</section>';
-    h+='<div class="mytiles"><a href="#/fav"><b>'+favN+'</b><span>찜</span></a><a href="#/fav"><b>'+SEEN.length+'</b><span>최근 본</span></a></div>';
-    h+=recentSection();
+    h+='<div class="mytiles"><a href="#/fav"><b>'+favN+'</b><span>찜</span></a><a href="#/my" data-jump="applied"><b>'+APPLIED.length+'</b><span>신청한</span></a><a href="#/fav"><b>'+SEEN.length+'</b><span>최근 본</span></a></div>';
+    h+=appliedSection()+recentSection();
     return h+'</div>';
   }
   var P=PROFILE||{}, mon=ym(today()), r=rep();
   var spinTxt=MYSPIN&&MYSPIN.won?'당첨 🎉':(MYSPIN&&MYSPIN.today?'오늘 완료':'참여 가능');
   h+='<div class="hello"><b>'+esc(nick())+'님, 반가워요 👋</b><button class="lnk" data-logout>로그아웃</button></div>';
-  h+='<div class="mytiles"><a href="#/fav"><b>'+favN+'</b><span>찜</span></a><a href="#/my" data-jump="recent"><b>'+SEEN.length+'</b><span>최근 본</span></a><a href="#/benefit"><b>'+spinTxt+'</b><span>룰렛</span></a>'+(r?'<a href="#/reporter"><b>'+(MYREP?esc(MYREP.status):'신청 전')+'</b><span>기자단</span></a>':'')+'</div>';
+  h+='<div class="mytiles"><a href="#/fav"><b>'+favN+'</b><span>찜</span></a><a href="#/my" data-jump="applied"><b>'+APPLIED.length+'</b><span>신청한</span></a><a href="#/my" data-jump="recent"><b>'+SEEN.length+'</b><span>최근 본</span></a><a href="#/benefit"><b>'+spinTxt+'</b><span>룰렛</span></a>'+(r?'<a href="#/reporter"><b>'+(MYREP?esc(MYREP.status):'신청 전')+'</b><span>기자단</span></a>':'')+'</div>';
   h+='<form class="pane mypref" id="prefform"><h2>🔔 맞춤 체험단 알림</h2><p class="mysub">고른 지역·아기 나이에 맞는 새 체험단을 먼저 보여드리고, 알림을 켜면 새로 올라올 때 알려드려요.</p>'+
     '<span class="fl">관심 분야</span>'+chipChecks("cat",[["stay","🏨 숙박"],["baby","👶 육아"],["life","🧺 생활"],["beauty","💄 뷰티"],["elec","🔌 가전/가구"],["health","💊 건강식품"],["pet","🐾 반려동물"]],WANT.cat?[WANT.cat]:[],true)+
     '<span class="fl">관심 지역</span>'+chipChecks("regions",REGIONS.map(function(x){ return [x,x]; }),WANT.regions)+
@@ -1128,7 +1164,7 @@ function myView(){
   if(r){
     h+='<section class="pane myrep"><h2>✍️ 다꾸 기자단 ('+(+mon.slice(5))+'월)</h2>'+(MYREP?'<p class="mysub">신청한 블로그: <a href="'+esc(safeUrl(MYREP.blog_url))+'" target="_blank" rel="noopener noreferrer">'+esc(MYREP.blog_url)+'</a></p><p class="repst">상태: <b>'+esc(MYREP.status)+'</b></p>':repForm())+'<a class="lnk" href="#/reporter">기자단 안내 보기 ›</a></section>';
   }
-  h+='<div id="recent">'+recentSection()+'</div>';
+  h+=appliedSection()+'<div id="recent">'+recentSection()+'</div>';
   h+='<div class="myfoot"><a href="#/privacy">개인정보처리방침</a> · <button class="lnk" data-unreg>회원 탈퇴</button></div>';
   return h+'</div>';
 }

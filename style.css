@@ -772,3 +772,5 @@ img{display:block}
 .pcmp{font-size:12.5px;font-weight:800;color:#555}.pcmp.win{color:#e5484d}.pcmp.lose{color:#16a34a}
 .pbuy{font-size:12.5px;font-weight:800;color:#6a3fc8}
 .pmart1{margin:8px 4px;font-size:14px}
+.sheet .apnote{word-break:keep-all;background:#f4efff;border-radius:14px;padding:10px 12px;font-size:14px;color:#4a3a78;margin:4px 0 14px}
+.sheet .apnote a{color:#6a3fc8;font-weight:800}
