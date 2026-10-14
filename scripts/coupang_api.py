@@ -48,13 +48,13 @@ def main():
 
     if "goldbox" in sys.argv[1:] or len(sys.argv) == 1:
         gb = call("GET", BASE + "/products/goldbox", "subId=dagguu") or []
-        travel = [g for g in gb if str(g.get("productName", "")).startswith("[")]
+        travel = [g for g in gb if "AFFTDP" in str(g.get("productUrl", "")) or "여행" in str(g.get("categoryName", "")) or str(g.get("productName", "")).startswith("[")]
         rest = [g for g in gb if g not in travel]
         pick = (travel + rest)[:10]
         end = next7()
         d["goldbox"] = [{
             "name": g.get("productName", ""), "u": g.get("productUrl", ""), "img": g.get("productImage", ""),
-            "rate": (f"{g['discountRate']}%" if g.get("discountRate") else ""), "price": won(g.get("productPrice")),
+            "rate": (f"{g['discountRate']}%" if g.get("discountRate") else ""), "rocket": bool(g.get("isRocket")), "price": won(g.get("productPrice")),
             "endAt": end} for g in pick if g.get("productUrl")]
         d["goldboxUpdated"] = datetime.now(KST).strftime("%H:%M")
         changed = True
