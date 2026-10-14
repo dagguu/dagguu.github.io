@@ -734,3 +734,5 @@ img{display:block}
 .drate{position:absolute;right:6%;top:8%;z-index:2;font-style:normal;background:#e5484d;color:#fff;border-radius:999px;width:58px;height:58px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:10.5px;font-weight:700;line-height:1.05;box-shadow:0 6px 14px rgba(229,72,77,.35);transform:rotate(8deg)}
 .drate b{font-size:18px;font-weight:900}
 .rdeal .hdr{padding:0}
+
+.cpbl{margin:10px 4px 6px;font-size:14px;font-weight:800;display:flex;align-items:center;gap:6px}
