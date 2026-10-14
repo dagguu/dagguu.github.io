@@ -585,11 +585,13 @@ function kakaoSlide(){
 }
 var SPARK='<svg class="spk" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0Z" fill="currentColor"/></svg>';
 function heroSlides(){
-  var s=[], ig=safeUrl((seed.sns||{}).instagram);
+  var s=[], ig=safeUrl((seed.sns||{}).instagram), oc=safeUrl(seed.openchat);
+  s.push({bg:"linear-gradient(120deg,#ffe94d,#fee500)",dark:1,t:"카톡 친구추가하고 <span>새 체험단</span> 받기",d:"채널 추가하면 매일 아침<br>새 체험단을 먼저 알려드려요!",b:"친구추가하기",h:kakaoUrl(),x:1,e:["💬","🔔","💛"]});
+  if(authCfg()&&!USER) s.push({bg:"linear-gradient(120deg,#a855f7,#ec4899)",t:"지금 가입하면 <span>이런 혜택</span>이!",d:"매일 룰렛 간식 쿠폰 · 기자단 신청<br>찜 저장 · 맞춤 체험단 알림",b:"카카오로 3초 가입",h:"#/my",e:["🎁","🎡","💜"]});
+  if(oc) s.push({bg:"linear-gradient(120deg,#22c55e,#0ea5e9)",t:"블로그 <span>서로이웃</span> · 인스타 <span>맞팔</span>해요",d:"체험단 하는 사람들끼리<br>단톡방에서 함께 소통해요!",b:"단톡방 들어가기",h:oc,x:1,e:["🤝","📝","📸"]});
   if(rep()) s.push({bg:"linear-gradient(120deg,#8b5cf6,#6a3fc8)",t:"다꾸 <span>#기자단</span> 모집",d:"체험단 후기를 블로그에 올리고<br>1만원 상품권 받아가세요~",b:"기자단 신청하기",h:"#/reporter",e:["✍️","🎁","📝"]});
   s.push({bg:"linear-gradient(120deg,#16b9c9,#0ea5b7)",t:"당첨률 높은 <span>#풀빌라</span> 체험단",d:"물놀이 걱정 없는 풀빌라,<br>지금 신청하고 무료로 즐겨보세요~",b:"체험단 확인하기",h:"#/list?cat=stay&s=open&q=%ED%92%80%EB%B9%8C%EB%9D%BC",e:["🏝️","🛟","🍹"]});
   s.push({bg:"linear-gradient(120deg,#ffe1e6,#ffd0d8)",dark:1,t:"#오직 #아이와 #함께",d:"아이랑 가기 좋은 키즈 숙소<br>체험단을 놓치지 마세요!",b:"체험단 확인하기",h:"#/list?cat=stay&s=open&q=%ED%82%A4%EC%A6%88",e:["👶","🧸","🎈"]});
-  s.push({bg:"linear-gradient(120deg,#3b82f6,#2563eb)",t:"새 체험단 알림 <span>100% 무료</span>",d:"카톡 친구추가하면<br>매일 아침 먼저 알려드려요~",b:"친구추가하기",h:kakaoUrl(),x:1,e:["🔔","💬","📱"]});
   if(ig) s.push({bg:"linear-gradient(120deg,#ff8a4c,#ff5f6d)",t:"<span>#다꾸</span> 태그 이벤트",d:"다꾸에서 찾은 체험단에 선정되면<br>@다꾸를 태그해 주세요!",b:"인스타그램 바로가기",h:ig,x:1,e:["📸","💜","✨"]});
   return s;
 }
