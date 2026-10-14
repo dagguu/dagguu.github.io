@@ -148,3 +148,12 @@ begin
 end $$;
 revoke all on function public.delete_me() from public, anon;
 grant execute on function public.delete_me() to authenticated;
+
+-- 최저가 확인: 쿠팡 검색 결과 저장소 (Edge Function 만 씀, 사이트에서 직접 접근 불가)
+create table if not exists public.price_cache (
+  q text primary key,
+  data jsonb not null default '[]',
+  updated_at timestamptz not null default now()
+);
+alter table public.price_cache enable row level security;
+revoke all on public.price_cache from anon, authenticated;

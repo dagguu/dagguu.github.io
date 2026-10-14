@@ -159,11 +159,12 @@ function paintLogo(){ var l=document.getElementById("logo"); if(l) l.innerHTML=l
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
-  if(!/^(home|list|fav|benefit|deals|reporter|contact|item|my|privacy)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|benefit|deals|reporter|contact|item|my|privacy|price)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
   state.focusT=(tab==="deals"&&qs.t)?qs.t:"";
   state.dq=(tab==="deals"&&qs.q)?qs.q:"";
+  state.pq=(tab==="price"&&qs.q)?qs.q:"";
   if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; else if(qs.cat) state.status="open"; if(!parts[1]){ state.q=""; state.chs=[]; } if(qs.q!==undefined) state.q=qs.q; if(qs.ch!==undefined) state.chs=qs.ch.split(",").filter(function(c){ return /^(blog|insta|clip|reels|youtube|tiktok|cafe|payback|review)$/.test(c); }); if(qs.r!==undefined) state.regions=qs.r?qs.r.split(",").filter(function(r){ return REGIONS.indexOf(r)>=0; }):[]; saveUi(); }
   render(); window.scrollTo(0,0);
   if(state.focusT) focusToss();
@@ -188,6 +189,7 @@ function render(){
   else if(state.tab==="item") v.innerHTML=itemView();
   else if(state.tab==="my") v.innerHTML=myView();
   else if(state.tab==="privacy") v.innerHTML=privacyView();
+  else if(state.tab==="price"){ v.innerHTML=priceView(); if(state.pq) priceSearch(state.pq); }
   tick(); startSliders();
 }
 
@@ -784,7 +786,7 @@ function filterDeals(q){
 document.addEventListener("input",function(e){ if(e.target&&e.target.id==="dq") filterDeals(e.target.value); });
 document.addEventListener("click",function(e){ var b=e.target.closest("[data-dqx]"); if(!b) return; var i=document.getElementById("dq"); if(i){ i.value=""; filterDeals(""); i.focus(); } });
 function dealsView(){
-  var h=slideBanners(false,dealSlides())+'<div class="pg"><h1>오늘의 특가 🔥</h1>'+dealSearch()+topDealsHtml()+recentDeals();
+  var h=slideBanners(false,dealSlides())+'<div class="pg"><h1>오늘의 특가 🔥</h1>'+priceEntry()+dealSearch()+topDealsHtml()+recentDeals();
   var GOLD=(Array.isArray(seed.goldbox)?seed.goldbox:[]).filter(function(x){ return safeUrl(x.u) && !(x.endAt && Date.parse(x.endAt)<=Date.now()); });
   if(GOLD.length) h+='<section class="sec tossec" id="gold"><div class="sh"><h2>⏰ 오늘의 골드박스 <span class="adtag">광고</span></h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="cd" style="margin:-6px 4px 10px">⏳ 다음 오전 7시 교체까지 <b id="gbcd">'+clock(nextSeven())+'</b></p><div class="tgrid">'+GOLD.map(tossCard).join("")+'</div></section>';
   h+=cpBanner();
@@ -914,6 +916,105 @@ document.addEventListener("click",function(e){
   DSEEN=DSEEN.filter(function(d){ return d.u!==u; }); DSEEN.unshift({u:u,n:q(".tn")||q(".hdn"),img:im?im.getAttribute("src"):""}); DSEEN=DSEEN.slice(0,20);
   ls("dakku-dseen",JSON.stringify(DSEEN));
 },true);
+
+/* ---------- 📷 최저가 확인 (마트 vs 쿠팡) ---------- */
+function priceEntry(){ return '<a class="pentry" href="#/price"><span class="pe1">📷</span><span class="pe2"><b>마트에서 쿠팡가 3초 확인</b><small>바코드 찍고 어디가 더 싼지 바로 비교해요</small></span><span class="pe3">›</span></a>'; }
+var PRICE={items:[],q:"",busy:false};
+function priceView(){
+  return '<div class="pg pricepg"><a class="back" href="#/deals">'+ico(I.back)+'<span>특가</span></a>'+
+    '<div class="phero"><small>마트 · 공구 가격 비교</small><h1>📷 최저가 확인</h1><p>바코드를 찍거나 상품명을 넣으면<br><b>쿠팡 가격</b>과 바로 비교해 드려요.</p></div>'+
+    '<div class="pbtns"><button class="b pri" data-pscan>📷 바코드 찍기</button><label class="b sec pfile">🖼️ 사진에서 찾기<input type="file" accept="image/*" capture="environment" data-pfile hidden></label></div>'+
+    '<div id="pcam" class="pcam" hidden><div id="pcamv"></div><button class="b sec wide" data-pstop>닫기</button></div>'+
+    '<form class="psearch" id="pform"><input id="pq" type="search" placeholder="상품명 예: 베베앙 물티슈 100매" autocomplete="off" value="'+esc(state.pq||"")+'"><button class="b pri" type="submit">검색</button></form>'+
+    '<p class="pmsg" id="pmsg" role="status"></p>'+
+    '<details class="pmart" id="pmart"><summary>🛒 마트·공구 가격도 넣으면 어디가 싼지 계산해요</summary>'+
+      '<div class="pmrow"><label>가격<input id="mprice" type="number" inputmode="numeric" placeholder="예: 12900">원</label></div>'+
+      '<div class="pmrow"><label>양<input id="mqty" type="number" inputmode="decimal" placeholder="예: 1000"></label><select id="munit"><option value="ea">개·매</option><option value="g">g</option><option value="ml">ml</option></select></div>'+
+      '<p class="pmhelp">예) 물티슈 100매×10팩이면 1000 / 개·매, 우유 900ml×2개면 1800 / ml</p></details>'+
+    '<div id="pres" class="pres"></div>'+
+    '<p class="fine">쿠팡 가격은 조회 시점 기준이며 옵션·쿠폰에 따라 달라질 수 있어요. 구매 링크는 쿠팡 파트너스 제휴 링크로, 구매 시 다꾸가 수수료를 받을 수 있어요.</p></div>';
+}
+function parseQty(name){
+  var t=String(name||"").replace(/,/g," ");
+  var sh=t.match(/(\d+)\s*매/), rl=t.match(/(\d+)\s*롤/), w=t.match(/(\d+(?:\.\d+)?)\s*(kg|g|ml|l|L)(?![a-zA-Z])/);
+  var pk=1; (t.match(/(\d+)\s*(개|팩|입|봉|캔|병|박스|세트)(?![가-힣])/g)||[]).forEach(function(x){ var k=parseInt(x,10); if(k>pk&&k<1000) pk=k; });
+  if(sh) return {total:+sh[1]*pk,unit:"ea"};
+  if(rl) return {total:+rl[1]*(/팩/.test(t)?pk:1),unit:"ea"};
+  if(w){ var v=parseFloat(w[1]), u=w[2].toLowerCase(); if(u==="kg"){ v*=1000; u="g"; } if(u==="l"){ v*=1000; u="ml"; } return {total:v*pk,unit:u}; }
+  if(pk>1) return {total:pk,unit:"ea"};
+  return null;
+}
+function unitLabel(u){ return u==="g"?"100g":(u==="ml"?"100ml":"1개·매"); }
+function perUnit(price,q){ if(!q||!q.total) return null; var k=q.unit==="ea"?1:100; return price/q.total*k; }
+function wonf(n){ return Math.round(n).toLocaleString("ko-KR")+"원"; }
+function priceMsg(t){ var m=document.getElementById("pmsg"); if(m) m.innerHTML=t||""; }
+function renderPrice(){
+  var box=document.getElementById("pres"); if(!box) return;
+  var L=PRICE.items||[]; if(!L.length){ box.innerHTML=""; return; }
+  var mp=+((document.getElementById("mprice")||{}).value||0), mq=+((document.getElementById("mqty")||{}).value||0), mu=(document.getElementById("munit")||{}).value||"ea";
+  var mart=(mp>0&&mq>0)?{price:mp,q:{total:mq,unit:mu}}:null, martPU=mart?perUnit(mart.price,mart.q):null;
+  var rows=L.map(function(x){ var q=parseQty(x.name), pu=perUnit(+x.price,q); return {x:x,q:q,pu:pu}; });
+  var best=null; rows.forEach(function(r){ if(r.pu!=null&&(!mart||r.q.unit===mart.q.unit)&&(best==null||r.pu<best)) best=r.pu; });
+  box.innerHTML='<h2 class="ph2">🛒 쿠팡 검색 결과 <span class="adtag">광고</span></h2>'+rows.map(function(r){
+    var x=r.x, cmp="";
+    if(mart&&r.pu!=null&&r.q.unit===mart.q.unit){ var d=(martPU-r.pu)/martPU*100; cmp=d>0.5?'<span class="pcmp win">쿠팡이 '+unitLabel(r.q.unit)+'당 '+Math.round(d)+'% 싸요</span>':(d<-0.5?'<span class="pcmp lose">마트가 '+Math.round(-d)+'% 더 싸요 👍</span>':'<span class="pcmp">가격이 거의 같아요</span>'); }
+    var img=safeUrl(x.img);
+    return '<a class="pitem" '+ext(safeUrl(x.url))+'>'+(img?'<img src="'+esc(img)+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'<span class="pnoimg">🛒</span>')+'<span class="pinfo"><span class="pname">'+esc(x.name)+'</span><span class="pprice"><b>'+wonf(+x.price)+'</b>'+(x.rocket?' <i class="prk">로켓</i>':'')+'</span>'+(r.pu!=null?'<span class="punit'+(best!=null&&Math.abs(r.pu-best)<0.01?' best':'')+'">'+unitLabel(r.q.unit)+'당 '+wonf(r.pu)+(best!=null&&Math.abs(r.pu-best)<0.01?' · 제일 싸요':'')+'</span>':'')+cmp+'<span class="pbuy">쿠팡에서 보기 ›</span></span></a>';
+  }).join("")+(mart&&martPU!=null?'<p class="pmart1">🛒 마트·공구: '+unitLabel(mu)+'당 <b>'+wonf(martPU)+'</b></p>':'');
+}
+function priceSearch(q){
+  q=String(q||"").trim(); if(q.length<2){ priceMsg("상품명을 2글자 이상 넣어 주세요."); return; }
+  var a=authCfg(); var i=document.getElementById("pq"); if(i) i.value=q;
+  PRICE.q=q; PRICE.items=[]; renderPrice();
+  var fallback=' <a href="https://www.coupang.com/np/search?q='+encodeURIComponent(q)+'" target="_blank" rel="noopener noreferrer">쿠팡에서 직접 보기 ›</a>';
+  if(!a){ priceMsg("가격 조회 준비 중이에요."+fallback); return; }
+  priceMsg("🔎 쿠팡 가격을 찾는 중…");
+  fetch(a.url.replace(/\/$/,"")+"/functions/v1/coupang-search",{method:"POST",headers:{"Content-Type":"application/json",apikey:a.key},body:JSON.stringify({q:q})})
+    .then(function(r){ return r.json().then(function(j){ return {ok:r.ok,j:j}; }); })
+    .then(function(o){ if(!o.ok||!o.j.items){ priceMsg("😢 지금은 가격을 불러오지 못했어요."+fallback); return; }
+      PRICE.items=o.j.items; priceMsg(o.j.items.length?'<b>"'+esc(q)+'"</b> 쿠팡 결과 '+o.j.items.length+'개 · 같은 상품을 골라 비교해 보세요':'검색 결과가 없어요. 이름을 짧게 바꿔 보세요.'+fallback); renderPrice(); })
+    .catch(function(){ priceMsg("😢 지금은 가격을 불러오지 못했어요."+fallback); });
+}
+function barcodeToName(code){
+  priceMsg("🔎 바코드 <b>"+esc(code)+"</b> 상품을 찾는 중…");
+  return fetch("https://world.openfoodfacts.org/api/v2/product/"+encodeURIComponent(code)+".json?fields=product_name,product_name_ko,brands,quantity")
+    .then(function(r){ return r.json(); }).then(function(j){ if(j&&j.status&&j.product){ var p=j.product; var n=[(p.brands||"").split(",")[0],p.product_name_ko||p.product_name,p.quantity].filter(Boolean).join(" ").trim(); if(n) return n; } return ""; }).catch(function(){ return ""; });
+}
+function gotBarcode(code){
+  stopScan();
+  barcodeToName(code).then(function(n){
+    if(n) priceSearch(n);
+    else { priceMsg("바코드 <b>"+esc(code)+"</b> 상품 정보가 아직 없어요 😢 포장에 적힌 <b>상품명</b>을 넣어 주세요."); var i=document.getElementById("pq"); if(i) i.focus(); }
+  });
+}
+var QR=null;
+function loadQr(cb){ if(window.Html5Qrcode){ cb(); return; } var s=document.createElement("script"); s.src="https://cdn.jsdelivr.net/npm/html5-qrcode@2.3.8/html5-qrcode.min.js"; s.onload=cb; s.onerror=function(){ priceMsg("카메라 도구를 불러오지 못했어요. 상품명으로 검색해 주세요."); }; document.head.appendChild(s); }
+function qrFormats(){ var F=window.Html5QrcodeSupportedFormats; return F?[F.EAN_13,F.EAN_8,F.UPC_A,F.UPC_E,F.CODE_128]:undefined; }
+function startScan(){
+  loadQr(function(){
+    var box=document.getElementById("pcam"); if(!box) return; box.hidden=false;
+    try{ QR=new Html5Qrcode("pcamv",{formatsToSupport:qrFormats(),verbose:false}); }catch(e){ QR=new Html5Qrcode("pcamv"); }
+    QR.start({facingMode:"environment"},{fps:10,qrbox:{width:260,height:140}},function(t){ gotBarcode(t); },function(){})
+      .catch(function(){ box.hidden=true; priceMsg("카메라를 열 수 없어요. 카메라 권한을 허용하거나 <b>사진에서 찾기</b>를 써 주세요."); });
+  });
+}
+function stopScan(){ var box=document.getElementById("pcam"); if(QR){ try{ QR.stop().then(function(){ QR.clear(); }).catch(function(){}); }catch(e){} QR=null; } if(box) box.hidden=true; }
+function scanFile(f){
+  loadQr(function(){
+    var tmp=document.getElementById("pcamv"); var q=new Html5Qrcode("pcamv");
+    priceMsg("🔎 사진에서 바코드를 찾는 중…");
+    q.scanFile(f,false).then(function(t){ gotBarcode(t); }).catch(function(){ priceMsg("사진에서 바코드를 못 찾았어요 😢 바코드가 잘 보이게 다시 찍거나 <b>상품명</b>을 넣어 주세요."); });
+  });
+}
+document.addEventListener("click",function(e){
+  if(e.target.closest("[data-pscan]")){ e.preventDefault(); startScan(); }
+  else if(e.target.closest("[data-pstop]")){ e.preventDefault(); stopScan(); }
+});
+document.addEventListener("change",function(e){ if(e.target.matches&&e.target.matches("[data-pfile]")&&e.target.files&&e.target.files[0]) scanFile(e.target.files[0]); });
+document.addEventListener("input",function(e){ if(e.target&&/^(mprice|mqty)$/.test(e.target.id)) renderPrice(); });
+document.addEventListener("change",function(e){ if(e.target&&e.target.id==="munit") renderPrice(); });
+document.addEventListener("submit",function(e){ if(e.target.id==="pform"){ e.preventDefault(); priceSearch(document.getElementById("pq").value); } });
+window.addEventListener("hashchange",function(){ if(state.tab!=="price") stopScan(); });
 
 /* ---------- 회원 (Supabase · 카카오 로그인) ---------- */
 var SB=null, USER=null, PROFILE=null, MYREP=null, MYSPIN=null, SBWAIT=[];
