@@ -659,8 +659,11 @@ img{display:block}
 @keyframes hotflow{to{background-position:300% 0}}
 
 /* 체험단 종류 배지 (블로그/인스타/숏폼) */
-.chbs{display:inline-flex;gap:3px;margin-right:5px;vertical-align:2px}
-.chb{display:inline-block;font-size:10.5px;font-weight:800;line-height:1;color:#fff;padding:4px 6px 3px;border-radius:5px;letter-spacing:-.02em}
+.chbs{display:flex;flex-wrap:wrap;gap:3px;margin:8px 0 0}
+.chbs+h3{margin-top:5px!important}
+.grid.v3 .chbs{gap:2px}.grid.v3 .chb{font-size:9.5px;padding:3px 4px 2px}
+.grid.v3 .mini h3{-webkit-line-clamp:3}
+.chb{display:inline-block;white-space:nowrap;font-size:10.5px;font-weight:800;line-height:1;color:#fff;padding:4px 6px 3px;border-radius:5px;letter-spacing:-.02em}
 .chb-blog{background:linear-gradient(135deg,#2fd06b,#03b350)}
 .chb-insta{background:linear-gradient(135deg,#feda75 0%,#fa7e1e 30%,#d62976 60%,#962fbf 85%,#4f5bd5 100%)}
 .chb-short{background:linear-gradient(135deg,#ff4d6d,#ff2d2d)}

@@ -220,13 +220,13 @@ function miniCard(it,btns){
   var act='';
   if(btns){ var s=statusOf(it), view=safeUrl(it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
     act='<div class="act3">'+(view?'<a class="b pri" '+ext(view)+'>'+esc(c.view||"보기")+' ↗</a>':'')+(s.key==="closed"?'<span class="b dis">마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">신청하기</a>':''))+'</div>'; }
-  return '<article class="mini">'+thumb(it)+'<h3>'+chBadges(it)+esc(it.name)+'</h3>'+worthLine(it)+'<p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+act+'</article>';
+  return '<article class="mini">'+thumb(it)+chBadges(it)+'<h3>'+esc(it.name)+'</h3>'+worthLine(it)+'<p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+act+'</article>';
 }
 function fullCard(it){
   var s=statusOf(it), view=safeUrl(it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
   var closed=s.key==="closed";
   return '<article class="card'+(closed?" closed":"")+'">'+thumb(it)+
-    '<div class="body"><h3>'+chBadges(it)+esc(it.name)+'</h3>'+worthLine(it)+'<p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+
+    '<div class="body">'+chBadges(it)+'<h3>'+esc(it.name)+'</h3>'+worthLine(it)+'<p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+
     '<p class="pd">🗓️ '+(it.start?fmt(it.start)+' ':'')+'~ '+fmt(it.end)+' 모집 · '+esc(it.source||"")+'</p>'+
     '<div class="act">'+(view?'<a class="b pri" '+ext(view)+'>'+esc(c.view||"보기")+' ↗</a>':'')+
       (closed?'<span class="b dis">🔒 마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">신청하기</a>':''))+'</div></div></article>';
@@ -268,7 +268,7 @@ function hcard(it){
   var t=view?'<a '+ext(view)+'>'+esc(it.name)+'</a>':esc(it.name);
   return '<article class="hc">'+thumb(it,"hth")+tags+
     '<p class="hl"><b class="'+(d<=1?'hot':'')+'">'+leftText(it)+'</b>'+(cdLine(it)?'<span class="hcd" data-cdl>'+clock(msToMidnight())+'</span>':'')+'</p>'+
-    '<h3>'+chBadges(it)+t+'</h3>'+(it.worth?'<p class="hw">💰 <b>'+esc(it.worth)+'</b> 상당</p>':'<p class="hbn">🎁 '+esc(it.benefit)+'</p>')+'</article>';
+    chBadges(it)+'<h3>'+t+'</h3>'+(it.worth?'<p class="hw">💰 <b>'+esc(it.worth)+'</b> 상당</p>':'<p class="hbn">🎁 '+esc(it.benefit)+'</p>')+'</article>';
 }
 function hrow(title,more,list,sub){
   if(!list.length) return "";
@@ -288,7 +288,7 @@ function homeView(){
   else h+='<a class="notice" href="#/list?cat=stay&s=open"><span class="ntag">모집 중</span><b>지금 '+open.length+'곳이 모집 중이에요</b><span class="ncd">보러가기 ›</span></a>';
   var byNew=function(a,b){ return (b.createdAt||0)-(a.createdAt||0); };
   var fresh=open.filter(function(it){ return (Date.now()-(it.createdAt||0))<3*864e5; }).sort(byNew);
-  h+=hrow('🆕 <em>새로 올라온</em> 체험단','#/list?cat=stay&s=open',fresh);
+  h+=hrow('✨ <em>새로 올라온</em> 체험단','#/list?cat=stay&s=open',fresh);
   var picks=open.filter(isPick).sort(byDeadline);
   h+=hrow('💜 지금 <em>인기 있는</em> 체험단','#/list?cat=stay&s=pick',picks);
   var soon=open.filter(function(it){ return daysLeft(it)<=3; }).sort(function(a,b){ return daysLeft(a)-daysLeft(b); });
@@ -318,7 +318,7 @@ function homeView(){
 }
 
 /* ---------- 체험단 목록 ---------- */
-var STATUSES=[["open","🔥 모집중"],["todayOpen","🆕 오늘 오픈"],["todayClose","🚨 오늘 마감"],["closing","⏰ 마감 임박"],["pick","💜 추천"],["closed","🔒 마감"]];
+var STATUSES=[["open","🔥 모집중"],["todayOpen","✨ 오늘 오픈"],["todayClose","🚨 오늘 마감"],["closing","⏰ 마감 임박"],["pick","💜 추천"],["closed","🔒 마감"]];
 function listView(){
   var c=catInfo(state.cat);
   return '<div class="lv">'+
@@ -338,7 +338,7 @@ var CHL={blog:"블로그",insta:"인스타",clip:"클립",reels:"릴스",youtube
 function chOf(it){ var c=it.ch; if(typeof c==="string") c=c?[c]:[]; if(!Array.isArray(c)) return ["blog"]; var o=c.filter(function(x){ return x!=="review"; }); return ((c.length||it.pay)&&!o.length)?[]:(o.length?o:["blog"]); }
 function payOf(it){ var p=(it.pay||[]).slice(), b=it.benefit||""; if(/페이백|선결제/.test(b)&&p.indexOf("payback")<0) p.push("payback"); if((/구매평/.test(b)||(it.ch||[]).indexOf("review")>=0)&&p.indexOf("review")<0) p.push("review"); return p; }
 function chBadge(c){ return '<span class="chb chb-'+c+'">'+(CHL[c]||c)+'</span>'; }
-function chBadges(it){ return '<span class="chbs">'+payOf(it).concat(chOf(it)).map(chBadge).join("")+'</span>'; }
+function chBadges(it){ var b=payOf(it).concat(chOf(it)); return b.length?'<div class="chbs">'+b.map(chBadge).join("")+'</div>':''; }
 function chChecks(){
   var all=!state.chs.length;
   return '<span class="rgl">✍️ 종류</span>'+[["","전체"],["blog","블로그"],["insta","인스타"],["clip","클립"],["reels","릴스"],["youtube","유튜브"],["payback","페이백"],["review","구매평"]].map(function(c){
