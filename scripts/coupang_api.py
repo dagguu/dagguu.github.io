@@ -78,6 +78,12 @@ def main():
         print(f"골드박스 {len(d['goldbox'])}개 갱신")
 
     if "deeplink" in sys.argv[1:] or len(sys.argv) == 1:
+        for x in d.get("babyDeals", []):
+            if x.get("cpUrl") and not x.get("u"):
+                try:
+                    r = call("POST", BASE + "/v1/deeplink", body={"coupangUrls": [x["cpUrl"]]}) or []
+                    if r and r[0].get("shortenUrl"): x["u"] = r[0]["shortenUrl"]; changed = True
+                except Exception as e: print("핫딜 변환 실패:", x.get("name"), e)
         todo = [it for it in d.get("items", []) if it.get("cpUrl") and not it.get("viewUrl")]
         for i in range(0, len(todo), 20):
             chunk = todo[i:i + 20]
