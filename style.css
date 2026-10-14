@@ -740,3 +740,4 @@ img{display:block}
 .hpad{padding:0 16px}
 .hpad>.sec:first-child{margin-top:26px}
 .kch{display:inline-flex;align-items:center;margin-right:4px;min-height:24px}.kch img{display:block;height:24px;width:auto}
+.kchat{position:fixed;z-index:29;bottom:calc(var(--tab) + 14px + env(safe-area-inset-bottom));right:max(14px,calc(50% - var(--frame)/2 + 14px));filter:drop-shadow(0 4px 10px rgba(0,0,0,.18))}.kchat img{display:block}
