@@ -75,7 +75,13 @@ def main():
         todo = [it for it in d.get("items", []) if it.get("cpUrl") and not it.get("viewUrl")]
         for i in range(0, len(todo), 20):
             chunk = todo[i:i + 20]
-            res = call("POST", BASE + "/v1/deeplink", body={"coupangUrls": [it["cpUrl"] for it in chunk]}) or []
+            try:
+                res = call("POST", BASE + "/v1/deeplink", body={"coupangUrls": [it["cpUrl"] for it in chunk]}) or []
+            except Exception as e:
+                print("묶음 변환 실패, 하나씩 다시:", e); res = []
+                for it in chunk:
+                    try: res += call("POST", BASE + "/v1/deeplink", body={"coupangUrls": [it["cpUrl"]]}) or []
+                    except Exception as e2: print("변환 실패:", it.get("name"), e2)
             by = {r.get("originalUrl"): r.get("shortenUrl") for r in res}
             for it in chunk:
                 if by.get(it["cpUrl"]):
