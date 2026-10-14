@@ -721,3 +721,16 @@ img{display:block}
 .mypref .rck:has(input:checked) .bx::after{content:"";width:8px;height:4px;border:2px solid #fff;border-top:0;border-right:0;transform:rotate(-45deg) translate(1px,-1px)}
 .mypref .rck:not(:has(input:checked)){border-color:var(--line);background:#fff;color:var(--ink)}
 .mypref .rck:not(:has(input:checked)) .bx{background:none;border-color:#c9c6d4}.mypref .rck:not(:has(input:checked)) .bx::after{content:none}
+
+/* 특가 슬라이드 */
+.hk{font-style:normal;font-size:12px;font-weight:800;opacity:.85;letter-spacing:-.02em}
+.hcd{font-size:12.5px;font-weight:700}.hcd em{color:inherit;font-style:normal;font-variant-numeric:tabular-nums;font-weight:900}
+.kv.dkv .htx{max-width:58%}
+.kv.dkv .htx b{font-size:22px}
+.dimg{width:48%}
+.dimg img{position:absolute;object-fit:cover;background:#fff;border-radius:16px;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.dimg .di1{width:58%;aspect-ratio:1;right:28%;top:14%;transform:rotate(-6deg)}
+.dimg .di2{width:46%;aspect-ratio:1;right:4%;top:36%;transform:rotate(7deg)}
+.drate{position:absolute;right:6%;top:8%;z-index:2;font-style:normal;background:#e5484d;color:#fff;border-radius:999px;width:58px;height:58px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:10.5px;font-weight:700;line-height:1.05;box-shadow:0 6px 14px rgba(229,72,77,.35);transform:rotate(8deg)}
+.drate b{font-size:18px;font-weight:900}
+.rdeal .hdr{padding:0}
