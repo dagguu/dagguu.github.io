@@ -276,6 +276,9 @@ function homeView(){
   var closingToday=open.filter(function(it){ return it.end===td; });
   if(closingToday.length) h+='<a class="notice" href="#/list?cat=stay&s=todayClose"><span class="ntag">오늘 마감</span><b>'+closingToday.length+'곳이 오늘 끝나요</b><span class="ncd">⏳ <span id="stripcd">'+clock(msToMidnight())+'</span></span></a>';
   else h+='<a class="notice" href="#/list?cat=stay&s=open"><span class="ntag">모집 중</span><b>지금 '+open.length+'곳이 모집 중이에요</b><span class="ncd">보러가기 ›</span></a>';
+  var byNew=function(a,b){ return (b.createdAt||0)-(a.createdAt||0); };
+  var fresh=open.filter(function(it){ return (Date.now()-(it.createdAt||0))<3*864e5; }).sort(byNew);
+  h+=hrow('🆕 <em>새로 올라온</em> 체험단','#/list?cat=stay&s=open',fresh);
   var picks=open.filter(isPick).sort(byDeadline);
   h+=hrow('💜 지금 <em>인기 있는</em> 체험단','#/list?cat=stay&s=pick',picks);
   var soon=open.filter(function(it){ return daysLeft(it)<=3; }).sort(function(a,b){ return daysLeft(a)-daysLeft(b); });
@@ -288,10 +291,9 @@ function homeView(){
   if(!regs.length){ var cnt={}; open.forEach(function(it){ if(it.region) cnt[it.region]=(cnt[it.region]||0)+1; }); var top=Object.keys(cnt).sort(function(x,y){ return cnt[y]-cnt[x]; })[0]; if(top) regs=[top]; regTitle='📍 지금 <em>'+esc(regs[0]||"")+'</em> 체험단이 많아요'; }
   else regTitle='📍 <em>관심 지역</em>의 체험단이에요';
   if(regs.length) h+=hrow(regTitle,'#/list?cat=stay&s=open&r='+encodeURIComponent(regs.join(",")),open.filter(function(it){ return regs.indexOf(it.region)>=0; }).sort(byDeadline));
-  if(newOk()){ var fresh=open.filter(function(it){ return (Date.now()-(it.createdAt||0))<3*864e5; }).sort(function(a,b){ return (b.createdAt||0)-(a.createdAt||0); }); h+=hrow('🆕 <em>새로 올라온</em> 체험단','#/list?cat=stay&s=open',fresh); }
   var up=CAT_ORDER.filter(function(m){ return !isOpenCat(m.k) && UPCOMING.some(function(u){ return u.k===m.k||u.t===m.t; }); });
   if(up.length) h+='<a class="upbox" '+ext(kakaoUrl())+'><span class="ul"><small>곧 열려요 ✨</small><b>'+up.map(function(m){ return m.em+' '+esc(m.t); }).join(" · ")+' 체험단</b></span><span class="ug">🔔 오픈 알림</span></a>';
-  var rest=open.slice().sort(byDeadline);
+  var rest=open.slice().sort(byNew);
   h+='<section class="hsec"><div class="hsh"><h2>다른 체험단도 둘러볼까요?</h2></div><div class="htool"><span>총 <b>'+open.length+'</b>개</span><a class="hflt" href="#/list?cat=stay&s=open">⚙️ 필터</a></div>'+
     '<div class="grid v2 hgrid">'+rest.slice(0,8).map(fullCard).join("")+'</div><a class="hall" href="#/list?cat=stay&s=open">체험단 전체 보기 ›</a></section>';
   var gb=[];
