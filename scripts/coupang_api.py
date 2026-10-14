@@ -6,7 +6,7 @@
   2) deeplink: 체험단(items) 중 cpUrl(쿠팡 원본 주소)만 있고 viewUrl 이 비어 있는 것 → 파트너스 링크로 변환
 요청 사이 3초 이상 쉰다.
 """
-import hmac, hashlib, json, os, sys, time, urllib.request
+import re, hmac, hashlib, json, os, sys, time, urllib.request
 from datetime import datetime, timedelta, timezone
 
 HOST = "https://api-gateway.coupang.com"
@@ -67,6 +67,12 @@ def main():
             "name": g.get("productName", ""), "u": g.get("productUrl", ""), "img": g.get("productImage", ""),
             "rate": (f"{g['discountRate']}%" if g.get("discountRate") else ""), "rocket": bool(g.get("isRocket")), "price": won(g.get("productPrice")),
             "endAt": end} for g in pick if g.get("productUrl")]
+        bk = re.compile(r"아기|유아|베이비|baby|키즈|kids|신생아|기저귀|분유|이유식|물티슈|젖병|젖꼭지|출산|유모차|카시트|아동|어린이|맘스|임산부", re.I)
+        baby = [g for g in gb if g.get("productUrl") and "AFFTDP" not in str(g.get("productUrl")) and (bk.search(str(g.get("productName", ""))) or bk.search(str(g.get("categoryName", ""))))]
+        d["babyGold"] = [{
+            "name": g.get("productName", ""), "u": g.get("productUrl", ""), "img": g.get("productImage", ""),
+            "price": won(g.get("productPrice")), "rocket": bool(g.get("isRocket")), "cat": str(g.get("categoryName") or ""), "endAt": end} for g in baby[:12]]
+        print(f"골드박스 전체 {len(gb)}개 중 아기용품 {len(d['babyGold'])}개")
         d["goldboxUpdated"] = datetime.now(KST).strftime("%H:%M")
         changed = True
         print(f"골드박스 {len(d['goldbox'])}개 갱신")
