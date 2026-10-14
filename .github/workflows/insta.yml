@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths: ['scripts/insta_queue.json']
   workflow_dispatch:
+permissions: { contents: write }
 jobs:
   make:
     if: github.actor != 'github-actions[bot]'
