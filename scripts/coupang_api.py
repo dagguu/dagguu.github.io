@@ -50,14 +50,19 @@ def main():
 
     if "goldbox" in sys.argv[1:] or len(sys.argv) == 1:
         gb = call("GET", BASE + "/products/goldbox", "subId=dagguu") or []
-        travel = [g for g in gb if "AFFTDP" in str(g.get("productUrl", "")) or "여행" in str(g.get("categoryName", "")) or str(g.get("productName", "")).startswith("[")]
+        travel = [g for g in gb if "AFFTDP" in str(g.get("productUrl", "")) or "여행" in str(g.get("categoryName", ""))]
         rest = [g for g in gb if g not in travel]
-        pick = (travel + rest)[:10]
+        pick = travel + rest
         end = next7()
         for g in pick:
             if "AFFTDP" in str(g.get("productUrl", "")) and g.get("productId"):
                 t = NAMES.get(str(g["productId"]))
                 g["productName"] = t if t else str(g.get("categoryName") or "여행") + " 골드박스 · " + str(g.get("productName", ""))
+        seen, uniq = set(), []
+        for g in pick:
+            if g["productName"] in seen: continue
+            seen.add(g["productName"]); uniq.append(g)
+        pick = uniq[:10]
         d["goldbox"] = [{
             "name": g.get("productName", ""), "u": g.get("productUrl", ""), "img": g.get("productImage", ""),
             "rate": (f"{g['discountRate']}%" if g.get("discountRate") else ""), "rocket": bool(g.get("isRocket")), "price": won(g.get("productPrice")),
