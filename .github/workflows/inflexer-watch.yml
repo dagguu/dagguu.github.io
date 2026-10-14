@@ -1,0 +1,16 @@
+name: 인플렉서 업데이트 시간 기록
+on:
+  schedule: [{ cron: "7 * * * *" }]
+  workflow_dispatch: {}
+permissions: { contents: write }
+concurrency: { group: inflexer-watch, cancel-in-progress: false }
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/inflexer_watch.py
+      - run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add scripts/inflexer_log.csv scripts/inflexer_seen.json && git commit -qm "인플렉서 기록" || exit 0
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
