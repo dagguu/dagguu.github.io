@@ -20,7 +20,6 @@ jobs:
         env:
           COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
           COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
-          CP_DEBUG: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
         run: |
           if [ "${{ github.event_name }}" = "push" ]; then python3 scripts/coupang_api.py deeplink; else python3 scripts/coupang_api.py; fi
           python3 scripts/gen_share.py
