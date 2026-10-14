@@ -739,3 +739,4 @@ img{display:block}
 .cpsrch{margin:0 0 8px;border-radius:12px;overflow:hidden;height:44px}.cpsrch iframe{display:block;border:0}
 .hpad{padding:0 16px}
 .hpad>.sec:first-child{margin-top:26px}
+.kch{display:inline-flex;align-items:center;margin-right:4px;min-height:24px}.kch img{display:block;height:24px;width:auto}

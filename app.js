@@ -143,7 +143,7 @@ function shell(){
   app.innerHTML=
     '<div class="disclose">이 사이트는 쿠팡 파트너스, 토스쇼핑 쉐어링크, 여기어때, 마이리얼트립, 트립닷컴 등 제휴 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.</div>'+
     '<div class="frame">'+
-      '<header class="appbar"><a class="logo" href="#/" id="logo"></a><span class="hbtns"><a class="iconbtn" href="#/list" data-focus="q" aria-label="체험단 검색">'+ico(I.search)+'</a><a class="iconbtn mebtn" href="#/my" id="mebtn" aria-label="마이 다꾸">'+ico(I.user)+'</a></span></header>'+
+      '<header class="appbar"><a class="logo" href="#/" id="logo"></a><span class="hbtns"><span class="kch" id="kakao-talk-channel-add-button" data-channel-public-id="_xkqEFX" data-size="small" data-support-multiple-densities="true"></span><a class="iconbtn" href="#/list" data-focus="q" aria-label="체험단 검색">'+ico(I.search)+'</a><a class="iconbtn mebtn" href="#/my" id="mebtn" aria-label="마이 다꾸">'+ico(I.user)+'</a></span></header>'+
       '<main id="view" class="view"></main>'+
       '<footer class="foot"><a class="flink" href="#/contact">광고주 마케팅 상담 문의</a><br><a '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>💬 카카오톡 채널 ‘다꾸 체험단’</a><p>'+SITE+' · 체험단 모집 정보는 각 모집처의 공지를 기준으로 하며, 신청 조건과 일정은 바뀔 수 있어요.</p></footer>'+
     '</div>'+
@@ -1045,6 +1045,8 @@ document.addEventListener("submit",function(e){
 if("serviceWorker" in navigator){ window.addEventListener("load",function(){ navigator.serviceWorker.register("sw.js").catch(function(){}); }); }
 
 shell(); paintLogo(); route();
+(function(){ window.kakaoAsyncInit=function(){ try{ Kakao.Channel.createAddChannelButton({container:"#kakao-talk-channel-add-button"}); }catch(e){} };
+  if(document.getElementById("kakao-js-sdk")) return; var js=document.createElement("script"); js.id="kakao-js-sdk"; js.src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.channel.min.js"; js.integrity="sha384-8oNFBbAHWVovcMLgR+mLbxqwoucixezSAzniBcjnEoumhfIbMIg4DrVsoiPEtlnt"; js.crossOrigin="anonymous"; js.async=true; document.head.appendChild(js); })();
 window.addEventListener("hashchange",route);
 fetch("data.json?v="+Date.now().toString(36).slice(0,-3),{cache:"no-cache"}).then(function(r){ return r.json(); }).then(function(d){
   seed=d||seed; if(!Array.isArray(seed.items)) seed.items=[];
