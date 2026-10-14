@@ -3,7 +3,7 @@
 
 scripts/insta_queue.json 의 각 항목을 읽어 insta_out/<날짜>/<id>/1~3.jpg 를 만든다.
 항목: {"id": data.json item id, "photos": [사진 주소 3개], "l1": "흰 글씨 줄", "l2": "색 글씨 줄",
-       "tags": "#감성숙소 #제주여행", "color": "#ffe14d"(선택)}
+       "tags": "#감성숙소 #제주여행", "color": "#ffe14d"(선택), "handle": "@dagguu.trip"(육아는 "@dagguu.home")}
 - 1장: 표지(사진 + 아래 그라데이션 + 해시태그 한 줄 + 큰 제목 두 줄 + 우상단 @dagguu.trip)
 - 2~3장: 사진 + 우상단 @dagguu.trip 만 (글씨 없음)
 표지 글씨에 금액·무료·제공·팔로우 같은 말은 쓰지 않는다(계정 제재 위험).
@@ -53,11 +53,11 @@ def build(q):
     ph = [data_uri(p) for p in q['photos']]
     slides = []
     slides.append(page(f"""<div class='s' style="background-image:url({ph[0]})"><div class='g'></div>
-<div class='wm'>@dagguu.trip</div><div class='box'><div class='tg'>{e(q.get('tags',''))}</div>
+<div class='wm'>{e(q.get('handle','@dagguu.trip'))}</div><div class='box'><div class='tg'>{e(q.get('tags',''))}</div>
 <div class='t'>{e(q['l1'])}<br><span style='color:{col}'>{e(q['l2'])}</span></div></div></div>"""))
     # 2~3장: 사진 + 우상단 @dagguu.trip 만 (글씨 없음, 시온님 요청 2026-10-15)
     for p in ph[1:3]:
-        slides.append(page(f"""<div class='s' style="background-image:url({p})"><div class='wm'>@dagguu.trip</div></div>"""))
+        slides.append(page(f"""<div class='s' style="background-image:url({p})"><div class='wm'>{e(q.get('handle','@dagguu.trip'))}</div></div>"""))
     return slides
 
 with sync_playwright() as pw:
