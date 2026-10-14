@@ -145,7 +145,7 @@ function shell(){
     '<div class="frame">'+
       '<header class="appbar"><a class="logo" href="#/" id="logo"></a><span class="hbtns"><span class="kch" id="kakao-talk-channel-add-button" data-channel-public-id="_ZeUTxl" data-size="small" data-support-multiple-densities="true"></span><a class="iconbtn" href="#/list" data-focus="q" aria-label="체험단 검색">'+ico(I.search)+'</a><a class="iconbtn mebtn" href="#/my" id="mebtn" aria-label="마이 다꾸">'+ico(I.user)+'</a></span></header>'+
       '<main id="view" class="view"></main>'+
-      '<footer class="foot"><a class="flink" href="#/contact">광고주 마케팅 상담 문의</a><br><a '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>💬 카카오톡 채널 ‘다꾸 체험단’</a><p>'+SITE+' · 체험단 모집 정보는 각 모집처의 공지를 기준으로 하며, 신청 조건과 일정은 바뀔 수 있어요.</p></footer>'+
+      '<footer class="foot"><a class="flink" href="#/contact">광고주 마케팅 상담 문의</a><br><a '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_ZeUTxl/friend")+'>💬 카카오톡 채널 ‘다꾸 체험단’</a><p>'+SITE+' · 체험단 모집 정보는 각 모집처의 공지를 기준으로 하며, 신청 조건과 일정은 바뀔 수 있어요.</p></footer>'+
     '</div>'+
     '<div class="kchat" id="kakao-talk-channel-chat-button" data-channel-public-id="_ZeUTxl" data-title="consult" data-size="small" data-color="yellow" data-shape="mobile" data-support-multiple-densities="true"></div>'+
     '<nav class="tabbar" aria-label="하단 메뉴">'+TABS.map(function(t){ var c=t[0]==="list"; return '<a href="#/'+(t[0]==="home"?"":t[0])+'" data-tab="'+t[0]+'"'+(c?' class="tc"':'')+'>'+(c?'<span class="tcb">'+ico(t[2],"ti")+'</span>':'<span class="tib">'+ico(t[2],"ti")+'</span>')+'<span>'+t[1]+'</span></a>'; }).join("")+'</nav>';
@@ -243,7 +243,7 @@ function banner(b){
   return '<a class="bnr" href="'+esc(b.href)+'"'+(b.ext?' target="_blank" rel="noopener noreferrer sponsored"':'')+' style="--bg:'+b.bg+';--tile:'+b.tile+';--ink:'+b.ink+'"><span class="bt">'+(b.em?'<span class="bem">'+b.em+'</span>':ico(b.icon))+'</span><span class="bx"><small>'+esc(b.kicker)+'</small><b>'+esc(b.title)+'</b></span>'+ico(I.chev,"bc")+'</a>';
 }
 function openItems(k){ return seed.items.filter(function(it){ return catOf(it)===k && statusOf(it).key==="open"; }); }
-function kakaoUrl(){ return safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend"; }
+function kakaoUrl(){ return safeUrl(seed.kakao)||"http://pf.kakao.com/_ZeUTxl/friend"; }
 
 /* ---------- 홈 ---------- */
 function featureBanners(){
@@ -513,7 +513,7 @@ function resultHtml(s){
   var r=ROULETTE[s.i];
   if(!r.c) return '<div class="rres lose"><b>😢 아쉬워요, 다음 기회에!</b><span>내일 다시 돌릴 수 있어요.</span></div>';
   return '<div class="rres win"><b>🎉 축하해요! '+esc(r.t)+' 당첨</b><span>오늘 경품은 <em>선착순 1명</em>이에요. 다음 참여는 '+nextMonthLabel()+'부터예요.<br>다꾸 카톡 채널로 아래 코드를 가장 먼저 보내주신 분께 쿠폰을 보내드려요.</span>'+
-    '<code>'+esc(s.code)+'</code><a class="b kakao" href="http://pf.kakao.com/_xkqEFX/chat" target="_blank" rel="noopener noreferrer">💬 카톡으로 코드 보내고 쿠폰 받기</a><button class="copy" data-copy="'+esc(s.code)+'">코드 복사</button></div>';
+    '<code>'+esc(s.code)+'</code><a class="b kakao" href="http://pf.kakao.com/_ZeUTxl/chat" target="_blank" rel="noopener noreferrer">💬 카톡으로 코드 보내고 쿠폰 받기</a><button class="copy" data-copy="'+esc(s.code)+'">코드 복사</button></div>';
 }
 function rulesHtml(){
   var odds=oddsList(), lose=100-odds.reduce(function(a,r){ return a+(r.c?r.p:0); },0);
@@ -644,7 +644,7 @@ function reporterBanner(){
 }
 function reporterView(){
   var r=rep(); if(!r) return '<div class="empty"><b>지금은 모집 기간이 아니에요</b><a class="b pri" href="#/">홈으로</a></div>';
-  var mr=monthRange(), apply=safeUrl(r.applyUrl)||"http://pf.kakao.com/_xkqEFX/friend";
+  var mr=monthRange(), apply=safeUrl(r.applyUrl)||"http://pf.kakao.com/_ZeUTxl/friend";
   var kw=(r.keywords||["#다꾸체험단","#체험단모아보기"]);
   return '<div class="pg rep">'+
     '<a class="back" href="#/">'+ico(I.back)+'<span>홈</span></a>'+
@@ -731,7 +731,7 @@ function doneContact(text){
   try{ navigator.clipboard.writeText(text); }catch(e){}
   v.innerHTML='<div class="pg"><div class="empty"><b>마지막 단계예요</b>신청 내용을 복사했어요.<br>다꾸 카톡 채널 대화창에 붙여넣어 보내주시면 접수돼요.'+
     '<textarea class="fi ta copyta" readonly aria-label="신청 내용">'+esc(text)+'</textarea>'+
-    '<a class="b kakao" href="http://pf.kakao.com/_xkqEFX/chat" target="_blank" rel="noopener noreferrer">카톡 채널로 보내기</a><button class="copy" data-copy="'+esc(text)+'">내용 다시 복사</button></div></div>';
+    '<a class="b kakao" href="http://pf.kakao.com/_ZeUTxl/chat" target="_blank" rel="noopener noreferrer">카톡 채널로 보내기</a><button class="copy" data-copy="'+esc(text)+'">내용 다시 복사</button></div></div>';
   window.scrollTo(0,0);
 }
 
