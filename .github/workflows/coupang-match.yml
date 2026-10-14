@@ -19,4 +19,5 @@ jobs:
         run: python3 scripts/coupang_match.py
       - run: |
           git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
-          git add scripts/match_results.json && git commit -m "쿠팡 매칭 검색 결과" && git push || true
+          git add scripts/match_results.json && git commit -m "쿠팡 매칭 검색 결과" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
