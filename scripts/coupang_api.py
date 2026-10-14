@@ -44,6 +44,19 @@ def trip_title(pid):
     except Exception as e:
         print("숙소 이름 읽기 실패", pid, e); return ""
 
+def dbg_fetch(gb):
+    out = []
+    for g in gb[:12]:
+        if "AFFTDP" in str(g.get("productUrl", "")):
+            try:
+                req = urllib.request.Request(f"https://trip.coupang.com/tp/products/{int(g['productId'])}", headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"})
+                with urllib.request.urlopen(req, timeout=20) as r:
+                    out.append(f"{g['productId']} {r.status} {r.read(3000)[:300]!r}")
+            except Exception as e:
+                out.append(f"{g['productId']} ERR {e}")
+            break
+    return "\n".join(out)
+
 def won(n):
     try: return f"{int(n):,}원"
     except Exception: return ""
@@ -62,6 +75,9 @@ def main():
 
     if "goldbox" in sys.argv[1:] or len(sys.argv) == 1:
         gb = call("GET", BASE + "/products/goldbox", "subId=dagguu") or []
+        if os.environ.get("CP_DEBUG"):
+            open(os.path.join(ROOT, "debug_gb.json"), "w", encoding="utf-8").write(json.dumps([{k: v for k, v in g.items() if k != "productUrl"} for g in gb[:12]], ensure_ascii=False, indent=1))
+            open(os.path.join(ROOT, "debug_title.txt"), "w", encoding="utf-8").write(dbg_fetch(gb))
         travel = [g for g in gb if "AFFTDP" in str(g.get("productUrl", "")) or "여행" in str(g.get("categoryName", "")) or str(g.get("productName", "")).startswith("[")]
         rest = [g for g in gb if g not in travel]
         pick = (travel + rest)[:10]
