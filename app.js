@@ -198,7 +198,7 @@ function thumb(it,cls){
     (it.region?'<span class="rgs">📍 '+esc(it.region)+'</span>':'')+
     '<span class="dd '+(s.key==="closed"?"off":(s.hot?"hot":""))+'">'+esc(s.dday)+'</span>'+
     (isPick(it)&&s.key!=="closed"?'<span class="pks">💜 추천</span>':'')+
-    (isNew?'<span class="nws">NEW</span>':'')+
+    (isNew?'<span class="nws" aria-label="새로 올라옴">🆕</span>':'')+
     (s.key==="closed"?'<a class="closedov" href="'+esc(kakaoUrl())+'" target="_blank" rel="noopener noreferrer"><b>모집 마감</b><span>🔔 다음 모집 알림받기</span></a>':'')+
     '<button class="shb" data-ishare="'+esc(it.id)+'" aria-label="'+esc(it.name)+' 공유하기">'+ico(I.send)+'</button>'+
     '<button class="fv'+(isFav(it.id)?" on":"")+'" data-fav="'+esc(it.id)+'" aria-label="찜하기" aria-pressed="'+isFav(it.id)+'">'+ico(I.heart)+'</button>'+
@@ -284,6 +284,8 @@ function homeView(){
   var soon=open.filter(function(it){ return daysLeft(it)<=3; }).sort(function(a,b){ return daysLeft(a)-daysLeft(b); });
   h+=hrow('⏰ <em>곧 마감!</em> 지금 신청하세요','#/list?cat=stay&s=closing',soon);
   h+=hotDeal();
+  var baby=open.filter(function(it){ return catOf(it)==="baby"; }).sort(function(a,b){ return (b.createdAt||0)-(a.createdAt||0); });
+  h+=hrow('👶 <em>육아</em> 체험단도 있어요','#/list?cat=baby&s=open',baby);
   var pool=open.filter(function(it){ return /풀빌라|풀 ?빌라/.test(it.name+" "+it.benefit); }).sort(byDeadline);
   if(pool.length>=2) h+='<section class="promo"><div class="pl"><small>물놀이 걱정 없는</small><b>풀빌라<br>체험단</b><a href="#/list?cat=stay&s=open&q=%ED%92%80%EB%B9%8C%EB%9D%BC">모두 보기 ›</a></div><div class="pr">'+pool.slice(0,6).map(function(it){ var img=safeUrl(it.image), v=safeUrl(it.viewUrl);
       return '<a class="pi" '+(v?ext(v):'href="#/list"')+'>'+(img?'<span class="pimg"><img src="'+esc(img)+'" alt="" loading="lazy" referrerpolicy="no-referrer"><em>'+esc(it.region||"")+'</em></span>':'')+'<span class="pt"><b>'+esc(it.name)+'</b><small>'+leftText(it)+'</small></span></a>'; }).join("")+'</div></section>';

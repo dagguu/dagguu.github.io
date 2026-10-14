@@ -432,8 +432,8 @@ img{display:block}
 .tcd{margin:2px 12px 0;font-size:14px;font-weight:700;color:var(--red);font-variant-numeric:tabular-nums}
 
 /* 클릭 유도 효과 */
-.nws{position:absolute;left:8px;top:34px;background:#ffd84d;color:#3d2e00;font-size:11px;font-weight:900;padding:2px 7px;border-radius:6px;letter-spacing:.04em;pointer-events:none}
-.grid.v3 .nws{top:26px;left:5px;font-size:9.5px;padding:1px 5px}
+.nws{position:absolute;left:7px;top:32px;font-size:20px;line-height:1;pointer-events:none;filter:drop-shadow(0 1px 2px rgba(0,0,0,.25))}
+.grid.v3 .nws{top:24px;left:4px;font-size:15px}
 .th.hotth{}
 @keyframes hotpulse{0%,100%{box-shadow:0 0 0 0 rgba(229,72,77,0)}50%{box-shadow:0 0 0 3px rgba(229,72,77,.75)}}
 .th>a.closedov,.closedov{position:absolute;inset:0;z-index:2;display:flex;background:rgba(28,27,34,.68);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:8px}
