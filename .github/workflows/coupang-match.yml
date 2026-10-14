@@ -1,0 +1,22 @@
+name: 쿠팡 체험단 매칭 검색
+on:
+  workflow_dispatch: {}
+  push:
+    paths: ["scripts/match_queries.json"]
+permissions: { contents: write }
+concurrency: { group: coupang, cancel-in-progress: false }
+jobs:
+  match:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - env:
+          COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
+          COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
+        run: python3 scripts/coupang_match.py
+      - run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add scripts/match_results.json && git commit -m "쿠팡 매칭 검색 결과" && git push || true

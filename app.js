@@ -12,7 +12,7 @@ var CAT_ORDER = [
   {k:"baby",  t:"육아", em:"👶", icon:"M9 3h6M10 3v3l-2 2.5V20a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V8.5L14 6V3M8 12h8"},
   {k:"life",  t:"생활", em:"🧺", icon:"M4 11 12 4l8 7M6 9.5V20h12V9.5M10 20v-5h4v5"},
   {k:"beauty",t:"뷰티", em:"💄", icon:"M9 21h6V11H9ZM10 11V6l4-3v8"},
-  {k:"elec",  t:"가전", em:"🔌", icon:"M4 5h16v11H4ZM9 20h6M12 16v4"},
+  {k:"elec",  t:"가전/가구", em:"🔌", icon:"M4 5h16v11H4ZM9 20h6M12 16v4"},
   {k:"etc",   t:"기타", em:"🎁", icon:"M6 12h.01M12 12h.01M18 12h.01"}
 ];
 var CATS = [{k:"stay",t:"숙박",region:true,unit:"숙소",view:"숙소보기",pick:["풀빌라"]}];
@@ -275,7 +275,7 @@ function hrow(title,more,list,sub){
 }
 var HOME_MENU=[
   ["🗂️","카테고리","#/list?cat=stay&s=open&ch="],["📝","블로그","#/list?cat=stay&s=open&ch=blog"],["📸","인스타그램","#/list?cat=stay&s=open&ch=insta"],["🎬","숏폼","#/list?cat=stay&s=open&ch=clip,reels,youtube"],["🎁","혜택","#/benefit"],["🔥","특가","#/deals"],
-  ["🏨","숙박","#/list?cat=stay&s=open"],["👶","육아","#/list?cat=baby"],["💄","뷰티","#/list?cat=beauty"],["🧺","생활","#/list?cat=life"],["🔌","가전","#/list?cat=elec"],["🚨","오늘 마감","#/list?cat=stay&s=todayClose"]
+  ["🏨","숙박","#/list?cat=stay&s=open"],["👶","육아","#/list?cat=baby"],["💄","뷰티","#/list?cat=beauty"],["🧺","생활","#/list?cat=life"],["🔌","가전/가구","#/list?cat=elec"],["🚨","오늘 마감","#/list?cat=stay&s=todayClose"]
 ];
 function homeView(){
   var td=ymd(today()), open=seed.items.filter(function(it){ return statusOf(it).key==="open"; });
@@ -852,7 +852,7 @@ function prefPopup(){
   if(document.querySelector(".modal")) return;
   ls("dakku-want-asked","1");
   var pick={regions:[],ages:[]}, step=1;
-  var CHOICES=[["stay","🏨","숙박 체험단"],["baby","👶","육아 체험단"],["life","🧺","생활용품"],["beauty","💄","뷰티제품"],["elec","🔌","가전"],["etc","🎁","기타"]];
+  var CHOICES=[["stay","🏨","숙박 체험단"],["baby","👶","육아 체험단"],["life","🧺","생활용품"],["beauty","💄","뷰티제품"],["elec","🔌","가전/가구"],["etc","🎁","기타"]];
   var wrap=document.createElement("div"); wrap.className="modal"; wrap.setAttribute("role","dialog"); wrap.setAttribute("aria-modal","true"); wrap.setAttribute("aria-label","기다리는 체험단 선택");
   function head(t,sub){ return '<button class="mx" data-m="x" aria-label="닫기">'+ico(I.x)+'</button><div class="mlogo">'+logoSvg(40)+'</div><h2>'+t+'</h2><p>'+sub+'</p>'; }
   function draw(){
@@ -1118,7 +1118,7 @@ function myView(){
   h+='<div class="hello"><b>'+esc(nick())+'님, 반가워요 👋</b><button class="lnk" data-logout>로그아웃</button></div>';
   h+='<div class="mytiles"><a href="#/fav"><b>'+favN+'</b><span>찜</span></a><a href="#/my" data-jump="recent"><b>'+SEEN.length+'</b><span>최근 본</span></a><a href="#/benefit"><b>'+spinTxt+'</b><span>룰렛</span></a>'+(r?'<a href="#/reporter"><b>'+(MYREP?esc(MYREP.status):'신청 전')+'</b><span>기자단</span></a>':'')+'</div>';
   h+='<form class="pane mypref" id="prefform"><h2>🔔 맞춤 체험단 알림</h2><p class="mysub">고른 지역·아기 나이에 맞는 새 체험단을 먼저 보여드리고, 알림을 켜면 새로 올라올 때 알려드려요.</p>'+
-    '<span class="fl">관심 분야</span>'+chipChecks("cat",[["stay","🏨 숙박"],["baby","👶 육아"],["life","🧺 생활"],["beauty","💄 뷰티"],["elec","🔌 가전"]],WANT.cat?[WANT.cat]:[],true)+
+    '<span class="fl">관심 분야</span>'+chipChecks("cat",[["stay","🏨 숙박"],["baby","👶 육아"],["life","🧺 생활"],["beauty","💄 뷰티"],["elec","🔌 가전/가구"]],WANT.cat?[WANT.cat]:[],true)+
     '<span class="fl">관심 지역</span>'+chipChecks("regions",REGIONS.map(function(x){ return [x,x]; }),WANT.regions)+
     '<span class="fl">아기 나이</span>'+chipChecks("ages",AGES.map(function(x){ return [x,x]; }),WANT.ages)+
     '<label class="ck ntf"><input type="checkbox" name="notify"'+(P.notify?' checked':'')+'><span><b>새 체험단 알림 받기</b><small>관심 분야·지역·아기 나이와 알림 동의 여부를 알림 목적으로만 써요. 언제든 끌 수 있어요.</small></span></label>'+
