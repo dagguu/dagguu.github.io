@@ -786,7 +786,7 @@ function filterDeals(q){
 document.addEventListener("input",function(e){ if(e.target&&e.target.id==="dq") filterDeals(e.target.value); });
 document.addEventListener("click",function(e){ var b=e.target.closest("[data-dqx]"); if(!b) return; var i=document.getElementById("dq"); if(i){ i.value=""; filterDeals(""); i.focus(); } });
 function dealsView(){
-  var h=slideBanners(false,dealSlides())+'<div class="pg"><h1>오늘의 특가 🔥</h1>'+priceEntry()+dealSearch()+topDealsHtml()+recentDeals();
+  var h=slideBanners(false,dealSlides())+'<div class="pg"><h1>오늘의 특가 🔥</h1>'+dealSearch()+topDealsHtml()+recentDeals();
   var GOLD=(Array.isArray(seed.goldbox)?seed.goldbox:[]).filter(function(x){ return safeUrl(x.u) && !(x.endAt && Date.parse(x.endAt)<=Date.now()); });
   if(GOLD.length) h+='<section class="sec tossec" id="gold"><div class="sh"><h2>⏰ 오늘의 골드박스 <span class="adtag">광고</span></h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="cd" style="margin:-6px 4px 10px">⏳ 다음 오전 7시 교체까지 <b id="gbcd">'+clock(nextSeven())+'</b></p><div class="tgrid">'+GOLD.map(tossCard).join("")+'</div></section>';
   h+=cpBanner();

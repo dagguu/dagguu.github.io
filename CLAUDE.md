@@ -23,4 +23,5 @@
 - 회원 기능: Supabase(로그인·DB) + 카카오 로그인. data.json 의 auth {url, key(publishable/anon 키만), naver(선택)} 가 있어야 로그인 버튼이 켜진다. service_role/secret 키는 절대 사이트나 저장소에 넣지 않는다. 테이블·보안 규칙·룰렛 spin() 함수는 supabase/schema.sql (시온님이 SQL Editor 에서 실행). 룰렛 확률을 바꾸면 app.js ROULETTE 와 schema.sql spin() 의 odds 를 함께 바꾼다. 개인정보처리방침은 #/privacy (data.json privacy {owner, email, date}).
 - 쿠팡 검색 위젯: data.json coupangSearch (coupa.ng 주소, 시온님이 파트너스에서 만들어 줌). 특가 탭 다이나믹 배너 위에 뜬다.
 - 채널 소식 초안: 매일 11:23 예약 작업이 newsletter/YYYY-MM-DD.txt 를 쓴다(규칙은 newsletter/README.md). 카카오 채널 발송은 시온님이 직접 한다.
-- 📷 최저가 확인(#/price): 바코드(html5-qrcode)→Open Food Facts 로 상품명→Supabase Edge Function coupang-search(쿠팡 파트너스 검색 API, 12시간 캐시 price_cache)→쿠팡 결과·단위가격·마트가 비교. 함수 코드는 supabase/functions/coupang-search/index.ts, 쿠팡 키는 Supabase Secrets 에만(시온님이 직접). 네이버 쇼핑 검색 API 는 2026-07-31 종료라 못 씀.
+- 📷 최저가 확인(#/price, 2026-10-14 시온님 요청으로 숨김 — 특가 탭 입구 카드 제거, 주소로만 열림. Supabase 함수·키 설정은 안 함): 바코드(html5-qrcode)→Open Food Facts 로 상품명→Supabase Edge Function coupang-search(쿠팡 파트너스 검색 API, 12시간 캐시 price_cache)→쿠팡 결과·단위가격·마트가 비교. 함수 코드는 supabase/functions/coupang-search/index.ts, 쿠팡 키는 Supabase Secrets 에만(시온님이 직접). 네이버 쇼핑 검색 API 는 2026-07-31 종료라 못 씀.
+- 다음에 할 일(시온님 보류): 육아·생필품 50개 쿠팡 가격 기록 → 30일 최저가 배지·카톡 소식, 이후 회원 목표가 웹푸시 알림.
