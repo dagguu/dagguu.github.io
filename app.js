@@ -193,6 +193,7 @@ function render(){
   else if(state.tab==="my") v.innerHTML=myView();
   else if(state.tab==="privacy") v.innerHTML=privacyView();
   else if(state.tab==="price"){ v.innerHTML=priceView(); if(state.pq) priceSearch(state.pq); }
+  if(state.tab==="home") initFeed(); else if(HOBS){ HOBS.disconnect(); HOBS=null; }
   tick(); startSliders();
 }
 
@@ -306,16 +307,52 @@ function homeView(){
   if(regs.length) h+=hrow(regTitle,'#/list?cat=stay&s=open&r='+encodeURIComponent(regs.join(",")),open.filter(function(it){ return regs.indexOf(it.region)>=0; }).sort(byDeadline));
   var up=CAT_ORDER.filter(function(m){ return !isOpenCat(m.k) && UPCOMING.some(function(u){ return u.k===m.k||u.t===m.t; }); });
   if(up.length) h+='<a class="upbox" '+ext(kakaoUrl())+'><span class="ul"><small>곧 열려요 ✨</small><b>'+up.map(function(m){ return m.em+' '+esc(m.t); }).join(" · ")+' 체험단</b></span><span class="ug">🔔 오픈 알림</span></a>';
-  var rest=open.slice().sort(byNew);
-  h+='<section class="hsec"><div class="hsh"><h2>다른 체험단도 둘러볼까요?</h2></div><div class="htool"><span>총 <b>'+open.length+'</b>개</span><a class="hflt" href="#/list?cat=stay&s=open">⚙️ 필터</a></div>'+
-    '<div class="grid v2 hgrid">'+rest.slice(0,8).map(fullCard).join("")+'</div><a class="hall" href="#/list?cat=stay&s=open">체험단 전체 보기 ›</a></section>';
   var gb=[];
   if(rep()) gb.push(['#/reporter','','#6aa8ff','#4338ca','✍️','다꾸 기자단 모집','후기 쓰고 1만원 상품권 받아요']);
   gb.push([kakaoUrl(),'ext','#5eead4','#16a34a','🔔','새로 나온 체험단 알림','매일 아침 카톡으로 먼저 받아요']);
   gb.push(['#/benefit','','#ffc46b','#f43f5e','🎁','오늘의 혜택 모음','룰렛 · 쿠폰 · 이벤트 한곳에']);
   h+='<div class="gbs">'+gb.map(function(g){ return '<a class="gb" '+(g[1]?ext(g[0]):'href="'+g[0]+'"')+' style="--g1:'+g[2]+';--g2:'+g[3]+'"><span class="gt"><b>'+g[5]+'</b><small>'+g[6]+'</small></span><span class="ge">'+g[4]+'</span></a>'; }).join("")+'</div>';
+  // 끝없는 스크롤: 모집 중 체험단 전부 → 이어서 특가 전부 (조금씩 이어 붙임)
+  HFEED.items=open.slice().sort(byNew); HFEED.deals=homeDeals(); HFEED.i=0; HFEED.j=0;
+  h+='<section class="hsec"><div class="hsh"><h2>다른 체험단도 둘러볼까요?</h2></div><div class="htool"><span>총 <b>'+open.length+'</b>개</span><a class="hflt" href="#/list?cat=stay&s=open">⚙️ 필터</a></div>'+
+    '<div class="grid v2 hgrid" id="hfeed"></div></section>';
+  if(HFEED.deals.length) h+='<section class="hsec hdeals" id="hdealsec" hidden><div class="hsh"><h2>🔥 오늘의 <em>특가</em> 모아보기 <span class="adtag">광고</span></h2><a class="hmore" href="#/deals">특가 탭 ›</a></div><div class="tgrid hgrid" id="hdfeed"></div><p class="fine">특가 링크는 제휴 링크로, 구매 시 다꾸가 수수료를 받을 수 있어요. 가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p></section>';
+  h+='<div id="hsent" class="hsent" aria-hidden="true"></div>';
   h+='<section class="adbox"><h2>혹시, <em>체험단 모집</em>이나 <em>광고 상담</em>이<br>필요하신가요?</h2><p>간단히 문의만 남겨주시면 바로 안내해 드릴게요.</p><a class="b pri" href="#/contact">광고·제휴 문의하기 ›</a></section>';
   return h;
+}
+
+/* ---------- 홈 끝없는 스크롤 ---------- */
+var HFEED={items:[],deals:[],i:0,j:0}, HOBS=null;
+function homeDeals(){
+  var seen={}, out=[];
+  function add(x){ var u=safeUrl(x.u); if(!u||seen[u]) return; seen[u]=1; out.push(x); }
+  liveToss().filter(function(x){ return !x.soldOut; }).forEach(add);
+  babyDeals().forEach(function(x){ add({name:x.name,u:x.u,img:safeUrl((x.img||"").replace("230x230ex","492x492ex")),price:x.price,rate:x.rate?String(x.rate).replace("%","")+"%":"",endAt:x.endAt}); });
+  liveGold().forEach(add);
+  return out;
+}
+function feedMore(){
+  var g=document.getElementById("hfeed"); if(!g) return false;
+  if(HFEED.i<HFEED.items.length){
+    var next=HFEED.items.slice(HFEED.i,HFEED.i+12); HFEED.i+=next.length;
+    g.insertAdjacentHTML("beforeend",next.map(fullCard).join("")); return true;
+  }
+  var d=document.getElementById("hdfeed"); if(!d) return false;
+  var sec=document.getElementById("hdealsec"); if(sec) sec.hidden=false;
+  if(HFEED.j<HFEED.deals.length){
+    var nd=HFEED.deals.slice(HFEED.j,HFEED.j+10); HFEED.j+=nd.length;
+    d.insertAdjacentHTML("beforeend",nd.map(tossCard).join("")); return true;
+  }
+  return false;
+}
+function initFeed(){
+  if(HOBS){ HOBS.disconnect(); HOBS=null; }
+  var s=document.getElementById("hsent"); if(!s) return;
+  feedMore(); feedMore();
+  if(!("IntersectionObserver" in window)){ while(feedMore()); return; }
+  HOBS=new IntersectionObserver(function(es){ if(es.some(function(e){ return e.isIntersecting; })){ if(!feedMore()){ HOBS.disconnect(); HOBS=null; } } },{rootMargin:"800px 0px"});
+  HOBS.observe(s);
 }
 
 /* ---------- 체험단 목록 ---------- */

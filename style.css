@@ -784,3 +784,7 @@ img{display:block}
 .trow .tcnt{display:inline-block;margin-left:4px;font-size:12px;font-weight:800;color:#fff;background:var(--acc);border-radius:999px;padding:2px 7px;vertical-align:3px}
 .trow .hmore{font-size:13px;font-weight:800;color:#e5484d}
 #toprows:not(:empty){margin-bottom:6px;border-bottom:8px solid #f6f4fb;padding-bottom:10px}
+
+.hsent{height:1px}
+.hdeals{margin-top:26px}
+.hdeals .fine{margin:14px 16px 0}
