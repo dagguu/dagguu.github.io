@@ -163,9 +163,11 @@ function route(){
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
   state.focusT=(tab==="deals"&&qs.t)?qs.t:"";
+  state.dq=(tab==="deals"&&qs.q)?qs.q:"";
   if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; else if(qs.cat) state.status="open"; if(!parts[1]){ state.q=""; state.chs=[]; } if(qs.q!==undefined) state.q=qs.q; if(qs.ch!==undefined) state.chs=qs.ch.split(",").filter(function(c){ return /^(blog|insta|clip|reels|youtube|tiktok|cafe|payback|review)$/.test(c); }); if(qs.r!==undefined) state.regions=qs.r?qs.r.split(",").filter(function(r){ return REGIONS.indexOf(r)>=0; }):[]; saveUi(); }
   render(); window.scrollTo(0,0);
   if(state.focusT) focusToss();
+  if(state.tab==="deals"&&state.dq){ setTimeout(function(){ var i=document.getElementById("dq"); if(i){ i.value=state.dq; filterDeals(state.dq); } },0); }
 }
 function focusToss(){
   var el=document.getElementById("tk-"+state.focusT); if(!el){ if(state.loading) setTimeout(focusToss,300); return; }
@@ -753,8 +755,36 @@ function todayDeals(){
   return '<section class="sec"><div class="sh col"><h2>⚡ 오늘의 특가</h2><p class="cd">⏳ 오전 7시 교체까지 <b id="cd">'+hms(nextSeven())+'</b> 남음</p></div><div class="deallist">'+
       DEALS.map(function(d){ var u=safeUrl(d.u); if(!u) return ""; return '<a class="drow" '+ext(u)+'><span class="dt" style="background:'+esc(d.c||"#f4f0ff")+'"><span>'+esc(d.e||"🎁")+'</span>'+(d.tag?'<em>'+esc(d.tag)+'</em>':'')+'</span><span class="dx"><b>'+esc(d.t)+'</b><small>'+esc(d.d||"")+'</small><span class="dg">👉 특가 보러가기'+ico(I.chev)+'</span></span></a>'; }).join("")+'</div></section>';
 }
+function topDeals(n){
+  var src=[];
+  liveToss().forEach(function(x){ if(!x.soldOut) src.push({x:x,end:"밤 12시까지"}); });
+  babyDeals().forEach(function(x){ src.push({x:{name:x.name,u:x.u,img:x.img,price:x.price,rate:String(x.rate).replace("%","")+"%",endAt:x.endAt},end:"내일 7시까지"}); });
+  liveGold().forEach(function(x){ if(x.rate) src.push({x:x,end:"내일 7시까지"}); });
+  src.forEach(function(o){ o.r=parseInt(String(o.x.rate||"").replace(/\D/g,""),10)||0; });
+  var all=src.filter(function(o){ return o.r>0; }).sort(function(a,b){ return b.r-a.r; }), L=all.slice(0,n||4);
+  var bb=all.filter(function(o){ return o.end==="내일 7시까지"&&babyDeals().some(function(b){ return b.u===o.x.u; }); })[0];
+  if(bb&&L.indexOf(bb)<0) L[L.length-1]=bb;
+  return L;
+}
+function topDealsHtml(){
+  var L=topDeals(4); if(!L.length) return "";
+  return '<section class="sec topdeal" id="topdeal"><div class="sh col"><h2>🏆 지금 할인율 TOP <span class="adtag">광고</span></h2><p class="cd">카톡 소식에서 본 특가도 여기 있어요</p></div><div class="tgrid">'+L.map(function(o){ return tossCard(o.x); }).join("")+'</div></section>';
+}
+function dealSearch(){ return '<div class="dsrch"><span class="dsi">🔍</span><input id="dq" type="search" placeholder="찾는 특가가 있나요? 예: 물티슈, 라면" aria-label="특가 상품 찾기" autocomplete="off"><button class="dsx" data-dqx aria-label="지우기" hidden>✕</button></div><p class="dsnone" id="dsnone" hidden>😢 오늘 특가에는 없어요. 아래 쿠팡 검색창에서 찾아보세요.</p>'; }
+function filterDeals(q){
+  q=String(q||"").trim().toLowerCase().replace(/\s+/g,"");
+  var v=document.getElementById("view"); if(!v) return;
+  var cards=v.querySelectorAll(".tcard,.hdi"), shown=0;
+  [].forEach.call(cards,function(c){ var t=(c.textContent||"").toLowerCase().replace(/\s+/g,""); var ok=!q||t.indexOf(q)>=0; c.style.display=ok?"":"none"; if(ok&&q) shown++; });
+  [].forEach.call(v.querySelectorAll(".sec,.hdl,.rdeal,.topdeal"),function(sec){ if(!q){ sec.style.display=""; return; } var has=[].some.call(sec.querySelectorAll(".tcard,.hdi"),function(c){ return c.style.display!=="none"; }); sec.style.display=has?"":"none"; });
+  [].forEach.call(document.querySelectorAll(".hslider,.cpban,.orc,.kakaobox"),function(e){ e.style.display=q?"none":""; });
+  var no=document.getElementById("dsnone"); if(no) no.hidden=!(q&&!shown);
+  var x=v.querySelector("[data-dqx]"); if(x) x.hidden=!q;
+}
+document.addEventListener("input",function(e){ if(e.target&&e.target.id==="dq") filterDeals(e.target.value); });
+document.addEventListener("click",function(e){ var b=e.target.closest("[data-dqx]"); if(!b) return; var i=document.getElementById("dq"); if(i){ i.value=""; filterDeals(""); i.focus(); } });
 function dealsView(){
-  var h=slideBanners(false,dealSlides())+'<div class="pg"><h1>오늘의 특가 🔥</h1>'+recentDeals();
+  var h=slideBanners(false,dealSlides())+'<div class="pg"><h1>오늘의 특가 🔥</h1>'+dealSearch()+topDealsHtml()+recentDeals();
   var GOLD=(Array.isArray(seed.goldbox)?seed.goldbox:[]).filter(function(x){ return safeUrl(x.u) && !(x.endAt && Date.parse(x.endAt)<=Date.now()); });
   if(GOLD.length) h+='<section class="sec tossec" id="gold"><div class="sh"><h2>⏰ 오늘의 골드박스 <span class="adtag">광고</span></h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="cd" style="margin:-6px 4px 10px">⏳ 다음 오전 7시 교체까지 <b id="gbcd">'+clock(nextSeven())+'</b></p><div class="tgrid">'+GOLD.map(tossCard).join("")+'</div></section>';
   h+=cpBanner();

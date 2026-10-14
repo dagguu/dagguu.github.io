@@ -741,3 +741,9 @@ img{display:block}
 .hpad>.sec:first-child{margin-top:26px}
 .kch{display:inline-flex;align-items:center;margin-right:4px;min-height:24px}.kch img{display:block;height:24px;width:auto}
 .kchat{position:fixed;z-index:29;bottom:calc(var(--tab) + 14px + env(safe-area-inset-bottom));right:max(14px,calc(50% - var(--frame)/2 + 14px));filter:drop-shadow(0 4px 10px rgba(0,0,0,.18))}.kchat img{display:block;height:36px;width:auto}
+
+.dsrch{display:flex;align-items:center;gap:8px;margin:8px 0 4px;height:48px;padding:0 14px;border:2px solid var(--acc);border-radius:14px;background:#fff}
+.dsrch input{flex:1;border:0;outline:0;font:inherit;font-size:16px;background:none;min-width:0}
+.dsi{font-size:16px}.dsx{border:0;background:#eee;border-radius:50%;width:24px;height:24px;font-size:12px;cursor:pointer}
+.dsnone{margin:10px 4px;font-size:14px;color:#666}
+.topdeal{margin-top:14px}
