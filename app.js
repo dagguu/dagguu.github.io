@@ -754,9 +754,10 @@ function todayDeals(){
       DEALS.map(function(d){ var u=safeUrl(d.u); if(!u) return ""; return '<a class="drow" '+ext(u)+'><span class="dt" style="background:'+esc(d.c||"#f4f0ff")+'"><span>'+esc(d.e||"🎁")+'</span>'+(d.tag?'<em>'+esc(d.tag)+'</em>':'')+'</span><span class="dx"><b>'+esc(d.t)+'</b><small>'+esc(d.d||"")+'</small><span class="dg">👉 특가 보러가기'+ico(I.chev)+'</span></span></a>'; }).join("")+'</div></section>';
 }
 function dealsView(){
-  var h=slideBanners(false,dealSlides())+'<div class="pg"><h1>특가 🔥</h1>'+cpBanner()+recentDeals();
+  var h=slideBanners(false,dealSlides())+'<div class="pg"><h1>오늘의 특가 🔥</h1>'+recentDeals();
   var GOLD=(Array.isArray(seed.goldbox)?seed.goldbox:[]).filter(function(x){ return safeUrl(x.u) && !(x.endAt && Date.parse(x.endAt)<=Date.now()); });
   if(GOLD.length) h+='<section class="sec tossec" id="gold"><div class="sh"><h2>⏰ 오늘의 골드박스 <span class="adtag">광고</span></h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="cd" style="margin:-6px 4px 10px">⏳ 다음 오전 7시 교체까지 <b id="gbcd">'+clock(nextSeven())+'</b></p><div class="tgrid">'+GOLD.map(tossCard).join("")+'</div></section>';
+  h+=cpBanner();
   if(ADS.length){
     h+='<section class="sec"><div class="sh"><h2>🛍️ 특가 모아보기</h2></div><div class="hs">'+
       ADS.map(function(a){ var u=safeUrl(a.u); if(!u) return ""; var im=safeUrl(a.img); return '<a class="acard" '+ext(u)+'><span class="am'+(im?' amp':'')+'" style="background:'+esc(a.c||"#f4f0ff")+'">'+(im?'<img src="'+esc(im)+'" alt="" loading="lazy" referrerpolicy="no-referrer"'+(a.pos&&/^[0-9% ]+$/.test(a.pos)?' style="object-position:'+a.pos+'"':'')+' onerror="this.remove()">':esc(a.e||"🎁"))+'</span><b>'+(im&&a.e?esc(a.e)+' ':'')+esc(a.t)+'</b><small>'+esc(a.d||"")+'</small></a>'; }).join("")+'</div></section>';
