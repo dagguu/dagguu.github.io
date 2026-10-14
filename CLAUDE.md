@@ -15,6 +15,6 @@
   1. inflexer API 를 query= (빈 값), type=SHP 로 호출하면 배송형 전체가 나온다. category==='육아' 이고 apl_due_dt>=오늘, data.json applyUrl 에 없는 것만 후보.
   2. 브랜드·제품명이 확실한 것만 쿠팡 일반 상품에서 찾는다(www.coupang.com 탭에서 숨은 iframe 으로 /np/search?q=브랜드+제품명, a[href*="/vp/products/"] 중 sourceType=search 인 링크의 productId·itemId·vendorItemId·이미지). 브랜드와 제품이 정확히 같은 것만 채택. 브랜드 없는 제품, 교육·세탁·사주 같은 서비스는 등록하지 않는다.
   3. item: cat:"baby", region:"", name(브랜드+제품명), benefit(제공내역), start:"", end, image(쿠팡 이미지), viewUrl:"", cpUrl:"https://www.coupang.com/vp/products/{pid}?itemId=..&vendorItemId=..", ch, ages(제공내역에 신생아/0개월/임산부/초등 등이 명시될 때만: "임신 중","0~6개월","7~12개월","13~24개월","3~4세","5~7세","8세 이상"), worth(원문에 "N만원 상당"이 있을 때만).
-  4. push 후 Actions 가 viewUrl 을 못 채운 것은 itemId 없이 /vp/products/{pid} 로 한 번 재시도, 그래도 안 되면 뺀다.
+  4. push 후 Actions 가 viewUrl 을 못 채운 것은 itemId 없이 /vp/products/{pid} 로 한 번 재시도, 그래도 안 되면 같은 브랜드의 비슷한 상품(세트 등)으로 바꾸고, 그것도 없으면 cpUrl 을 쿠팡 검색 주소(https://www.coupang.com/np/search?q=브랜드+제품명)로 넣어 API 가 검색결과 수익링크로 바꾸게 한다.
 - 스타일씨 육아 체험단 (육아 절차에 같이): 내장 브라우저로 https://www.stylec.co.kr 을 열고 같은 탭에서 fetch('https://api2.stylec.co.kr:6439/v1/trial?order=default&page=N&count=200&include_finish=false') 를 페이지 끝까지 읽는다(data.data, data.Total). tr_it_cate_id==105000(출산/유아동)만 후보. applyUrl=https://www.stylec.co.kr/trials/{wr_id}, end=tr_recruit_finish 날짜, source:"스타일씨". sns_type: naverblog→blog, instagram→insta, instagramreels→insta+short, tiktok→short, 빈 값(구매평)→review. 같은 제품의 여러 캠페인은 하나로 합치고 ch 를 합친다. 쿠팡 매칭 기준은 육아와 같다(브랜드·제품 정확히 일치만).
 - 맘카페(네이버 카페 10094499 메뉴 151)는 내장 브라우저 안전 정책상 열리지 않는다. 시도하지 않는다.
