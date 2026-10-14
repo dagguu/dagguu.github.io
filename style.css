@@ -737,3 +737,5 @@ img{display:block}
 
 .cpbl{margin:10px 4px 6px;font-size:14px;font-weight:800;display:flex;align-items:center;gap:6px}
 .cpsrch{margin:0 0 8px;border-radius:12px;overflow:hidden;height:44px}.cpsrch iframe{display:block;border:0}
+.hpad{padding:0 16px}
+.hpad>.sec:first-child{margin-top:26px}

@@ -286,7 +286,7 @@ function homeView(){
   h+=hrow('💜 지금 <em>인기 있는</em> 체험단','#/list?cat=stay&s=pick',picks);
   var soon=open.filter(function(it){ return daysLeft(it)<=3; }).sort(function(a,b){ return daysLeft(a)-daysLeft(b); });
   h+=hrow('⏰ <em>곧 마감!</em> 지금 신청하세요','#/list?cat=stay&s=closing',soon);
-  h+=hotDeal();
+  var td=todayDeals(), hd=hotDeal(); if(td||hd) h+='<div class="hpad">'+td+hd+'</div>';
   var baby=open.filter(function(it){ return catOf(it)==="baby"; }).sort(function(a,b){ return (b.createdAt||0)-(a.createdAt||0); });
   h+=hrow('👶 <em>육아</em> 체험단도 있어요','#/list?cat=baby&s=open',baby);
   var pool=open.filter(function(it){ return /풀빌라|풀 ?빌라/.test(it.name+" "+it.benefit); }).sort(byDeadline);
@@ -747,12 +747,13 @@ function cpBanner(){
   var src="https://ads-partners.coupang.com/widgets.html?id="+b.id+"&template="+encodeURIComponent(b.template||"carousel")+"&trackingCode="+b.trackingCode+"&subId=&width="+w+"&height="+hgt;
   return '<p class="cpbl">🛒 나를 위한 쿠팡 추천 <span class="adtag">광고</span></p>'+cpSearch()+'<div class="cpban" style="height:'+hgt+'px"><iframe src="'+esc(src)+'" title="오늘의 추천 특가" loading="lazy" referrerpolicy="unsafe-url" scrolling="no" frameborder="0"></iframe></div>';
 }
+function todayDeals(){
+  if(!DEALS.length) return "";
+  return '<section class="sec"><div class="sh col"><h2>⚡ 오늘의 특가</h2><p class="cd">⏳ 오전 7시 교체까지 <b id="cd">'+hms(nextSeven())+'</b> 남음</p></div><div class="deallist">'+
+      DEALS.map(function(d){ var u=safeUrl(d.u); if(!u) return ""; return '<a class="drow" '+ext(u)+'><span class="dt" style="background:'+esc(d.c||"#f4f0ff")+'"><span>'+esc(d.e||"🎁")+'</span>'+(d.tag?'<em>'+esc(d.tag)+'</em>':'')+'</span><span class="dx"><b>'+esc(d.t)+'</b><small>'+esc(d.d||"")+'</small><span class="dg">👉 특가 보러가기'+ico(I.chev)+'</span></span></a>'; }).join("")+'</div></section>';
+}
 function dealsView(){
   var h=slideBanners(false,dealSlides())+'<div class="pg"><h1>특가 🔥</h1>'+cpBanner()+recentDeals();
-  if(DEALS.length){
-    h+='<section class="sec"><div class="sh col"><h2>⚡ 오늘의 특가</h2><p class="cd">⏳ 오전 7시 교체까지 <b id="cd">'+hms(nextSeven())+'</b> 남음</p></div><div class="deallist">'+
-      DEALS.map(function(d){ var u=safeUrl(d.u); if(!u) return ""; return '<a class="drow" '+ext(u)+'><span class="dt" style="background:'+esc(d.c||"#f4f0ff")+'"><span>'+esc(d.e||"🎁")+'</span>'+(d.tag?'<em>'+esc(d.tag)+'</em>':'')+'</span><span class="dx"><b>'+esc(d.t)+'</b><small>'+esc(d.d||"")+'</small><span class="dg">👉 특가 보러가기'+ico(I.chev)+'</span></span></a>'; }).join("")+'</div></section>';
-  }
   var GOLD=(Array.isArray(seed.goldbox)?seed.goldbox:[]).filter(function(x){ return safeUrl(x.u) && !(x.endAt && Date.parse(x.endAt)<=Date.now()); });
   if(GOLD.length) h+='<section class="sec tossec" id="gold"><div class="sh"><h2>⏰ 오늘의 골드박스 <span class="adtag">광고</span></h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="cd" style="margin:-6px 4px 10px">⏳ 다음 오전 7시 교체까지 <b id="gbcd">'+clock(nextSeven())+'</b></p><div class="tgrid">'+GOLD.map(tossCard).join("")+'</div></section>';
   if(ADS.length){
