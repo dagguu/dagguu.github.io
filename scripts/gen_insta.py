@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """@dagguu.trip 인스타 카드뉴스(1080x1350) 만들기 — 숙소 사진 위에 글씨를 얹는 시온님 피드 형식.
 
-scripts/insta_queue.json 의 각 항목을 읽어 insta_out/<날짜>/<id>/ 에 PNG 를 만든다.
-항목: {"id": data.json item id, "photos": [사진 주소…], "l1": "흰 글씨 줄", "l2": "색 글씨 줄",
-       "tags": "#감성숙소 #제주여행", "color": "#ffe14d"(선택), "captions": [사진별 감성 문구]}
+scripts/insta_queue.json 의 각 항목을 읽어 insta_out/<날짜>/<id>/1~3.jpg 를 만든다.
+항목: {"id": data.json item id, "photos": [사진 주소 3개], "l1": "흰 글씨 줄", "l2": "색 글씨 줄",
+       "tags": "#감성숙소 #제주여행", "color": "#ffe14d"(선택)}
 - 1장: 표지(사진 + 아래 그라데이션 + 해시태그 한 줄 + 큰 제목 두 줄 + 우상단 @dagguu.trip)
-- 2~(n-1)장: 사진 + 아래 감성 문구 한 줄(captions). 금액·무료·제공 같은 말은 쓰지 않는다(계정 제재 위험)
-- 마지막: 사진(어둡게) + "댓글에 나도" 안내
-숫자·혜택·마감일은 data.json 그대로만 쓴다.
+- 2~3장: 사진 + 우상단 @dagguu.trip 만 (글씨 없음)
+표지 글씨에 금액·무료·제공·팔로우 같은 말은 쓰지 않는다(계정 제재 위험).
 """
 import json, os, re, sys, base64, html, urllib.request, datetime as dt
 from playwright.sync_api import sync_playwright
@@ -56,22 +55,9 @@ def build(q):
     slides.append(page(f"""<div class='s' style="background-image:url({ph[0]})"><div class='g'></div>
 <div class='wm'>@dagguu.trip</div><div class='box'><div class='tg'>{e(q.get('tags',''))}</div>
 <div class='t'>{e(q['l1'])}<br><span style='color:{col}'>{e(q['l2'])}</span></div></div></div>"""))
-    # 사진 속 글씨는 감성 문구만. 금액·"무료"·"제공" 같은 말은 넣지 않는다(인스타 계정 제재 위험, 시온님 요청).
-    caps = q.get('captions') or []
-    mids = ph[1:-1] if len(ph) > 2 else ph[1:2]
-    for i, p in enumerate(mids):
-        c = caps[i] if i < len(caps) else (f'📍 {city}' if city else '')
-        pill = f"<div class='info'><div class='pill' style='font-weight:600'>{e(c)}</div></div>" if c else ''
-        slides.append(page(f"""<div class='s' style="background-image:url({p})"><div class='g' style='background:linear-gradient(180deg,rgba(0,0,0,0) 60%,rgba(0,0,0,.45))'></div>
-<div class='wm'>@dagguu.trip</div>{pill}</div>"""))
-    last = ph[-1] if len(ph) > 1 else ph[0]
-    slides.append(page(f"""<div class='s' style="background-image:url({last})"><div class='g' style='background:rgba(10,8,25,.55)'></div>
-<div class='wm'>@dagguu.trip</div>
-<div style='position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center'>
-<div style='font-size:42px;font-weight:700;opacity:.9;margin-bottom:26px;text-shadow:0 2px 10px rgba(0,0,0,.5)'>{e(q.get('end_top', '📍 ' + city if city else name))}</div>
-<div style='font-size:86px;font-weight:900;line-height:1.25;text-shadow:0 3px 14px rgba(0,0,0,.5)'>이 숙소 궁금하다면<br>댓글에 <span style='color:{col}'>"나도"</span></div>
-<div style='font-size:40px;font-weight:600;margin-top:40px;line-height:1.5;opacity:.95'>자세한 이야기 DM으로 전해드릴게요 💌</div>
-<div style='position:absolute;bottom:80px;font-size:32px;font-weight:700;opacity:.85'>저장해두고 다음 여행 때 꺼내보세요 🤍</div></div></div>"""))
+    # 2~3장: 사진 + 우상단 @dagguu.trip 만 (글씨 없음, 시온님 요청 2026-10-15)
+    for p in ph[1:3]:
+        slides.append(page(f"""<div class='s' style="background-image:url({p})"><div class='wm'>@dagguu.trip</div></div>"""))
     return slides
 
 with sync_playwright() as pw:
