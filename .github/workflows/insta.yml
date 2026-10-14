@@ -23,6 +23,6 @@ jobs:
           mv insta_out /tmp/insta_out
           git fetch origin insta || true
           if git rev-parse --verify origin/insta >/dev/null 2>&1; then git checkout -q -B insta origin/insta; else git checkout -q --orphan insta && git rm -rfq . ; fi
-          cp -r /tmp/insta_out/* .
+          for dd in $(cd /tmp/insta_out && ls -d */*); do rm -rf "$dd"; mkdir -p "$dd"; cp /tmp/insta_out/$dd/* "$dd"/; done
           git add -A && git commit -qm "인스타 카드뉴스 $(date +%F)" || exit 0
           for i in 1 2 3; do git push -q origin insta && break; git pull -q --rebase origin insta; done
