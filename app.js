@@ -382,7 +382,7 @@ function filtered(){
 function renderListGrid(){
   var g=document.getElementById("grid"); if(!g) return;
   var list=filtered(), n=0, out=[];
-  var cnt=document.getElementById("count"); if(cnt) cnt.innerHTML='<b>'+list.length+'</b>곳';
+  var cnt=document.getElementById("count"); if(cnt) cnt.innerHTML='<b>'+list.length+'</b>'+(state.cat==="stay"?'곳':'개');
   list.forEach(function(it,i){
     out.push(state.view==="3"?miniCard(it,true):fullCard(it));
     var every=state.view==="3"?9:(state.view==="1"?5:6);
