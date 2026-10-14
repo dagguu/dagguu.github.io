@@ -108,6 +108,7 @@ function prefNote(k){
 }
 function byDeadline(a,b){
   var ka=isPick(a)&&statusOf(a).key!=="closed", kb=isPick(b)&&statusOf(b).key!=="closed"; if(ka!==kb) return ka?-1:1;
+  var wa=Array.isArray(WANT.ages)?WANT.ages:[]; if(wa.length){ var aa=(a.ages||[]).some(function(x){ return wa.indexOf(x)>=0; }), ab=(b.ages||[]).some(function(x){ return wa.indexOf(x)>=0; }); if(aa!==ab) return aa?-1:1; }
   var wr=wantRegs(); if(wr.length){ var ra=wr.indexOf(a.region)>=0, rb=wr.indexOf(b.region)>=0; if(ra!==rb) return ra?-1:1; }
   var pa=prefHit(a), pb=prefHit(b); if(pa!==pb) return pa?-1:1;
   return daysLeft(a)-daysLeft(b) || (b.createdAt||0)-(a.createdAt||0);
@@ -748,7 +749,7 @@ function share(){
 function shareItem(id){
   var it=seed.items.filter(function(x){ return String(x.id)===String(id); })[0]; if(!it) return;
   var s=statusOf(it), url=location.origin+"/s/"+encodeURIComponent(id)+".html";
-  var text="🏨 "+it.name+(it.region?" ("+it.region+")":"")+(it.worth?"\n💰 "+it.worth+" 상당":"")+"\n🗓️ "+s.dday+" · 다꾸 체험단 모음에서 봤어요!";
+  var text=((catMeta(catOf(it))||{}).em||"🎁")+" "+it.name+(it.region?" ("+it.region+")":"")+(it.worth?"\n💰 "+it.worth+" 상당":"")+"\n🗓️ "+s.dday+" · 다꾸 체험단 모음에서 봤어요!";
   if(navigator.share){ navigator.share({title:it.name,text:text,url:url}).catch(function(){}); return; }
   var all=text+"\n"+url;
   try{ navigator.clipboard.writeText(all).then(function(){ toast("✈️ 링크를 복사했어요. 친구에게 붙여넣어 보내세요!"); }).catch(function(){ prompt("아래 링크를 복사해 친구에게 보내세요",url); }); }catch(e){ toast(url); }
