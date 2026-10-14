@@ -33,12 +33,12 @@ try{ var su=JSON.parse(sessionStorage.getItem("dakku-ui")||"{}"); if(su.cat) sta
 function saveUi(){ try{ sessionStorage.setItem("dakku-ui",JSON.stringify({cat:state.cat,regions:state.regions,status:state.status})); }catch(e){} }
 var FAV=[]; try{ FAV=JSON.parse(ls("dakku-fav")||"[]")||[]; }catch(e){ FAV=[]; }
 function isFav(id){ return FAV.indexOf(id)>=0; }
-function toggleFav(id){ var i=FAV.indexOf(id); if(i>=0) FAV.splice(i,1); else FAV.push(id); ls("dakku-fav",JSON.stringify(FAV)); }
+function toggleFav(id){ var i=FAV.indexOf(id); if(i>=0) FAV.splice(i,1); else FAV.push(id); ls("dakku-fav",JSON.stringify(FAV)); mFav(id,FAV.indexOf(id)>=0); }
 var PREF = ls("dakku-pref") || "";
 var WANT = {}; try{ WANT=JSON.parse(ls("dakku-want")||"{}")||{}; }catch(e){ WANT={}; }
 if(WANT.region){ WANT.regions=[WANT.region]; delete WANT.region; } if(WANT.age){ WANT.ages=[WANT.age]; delete WANT.age; }
 function wantRegs(){ return Array.isArray(WANT.regions)?WANT.regions:[]; }
-function saveWant(){ ls("dakku-want",JSON.stringify(WANT)); }
+function saveWant(){ ls("dakku-want",JSON.stringify(WANT)); mWant(); }
 var AGES=["임신 중","0~6개월","7~12개월","13~24개월","3~4세","5~7세","8세 이상"];
 
 /* ---------- 로고: 클래식 D + 기념일 로고 ---------- */
@@ -120,6 +120,7 @@ function safeUrl(u){ u=String(u||"").trim(); if(!u) return ""; if(/^https?:\/\//
 function ext(u){ return 'href="'+esc(u)+'" target="_blank" rel="noopener noreferrer sponsored"'; }
 function ico(d,cls){ return '<svg class="'+(cls||"i")+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="'+d+'"/></svg>'; }
 var I={
+  user:"M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM4.5 20.5c.8-3.6 3.9-5.8 7.5-5.8s6.7 2.2 7.5 5.8",
   chev:"m9 6 6 6-6 6", back:"M15 5 8 12l7 7", search:"M11 4.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM16 16l4.5 4.5",
   heart:"M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z",
   gift:"M3.5 8h17v12.5h-17ZM2.5 8h19M12 8v12.5M12 8S10.5 3.5 8 4.2 8.5 8 12 8Zm0 0s1.5-4.5 4-3.8S15.5 8 12 8Z",
@@ -142,7 +143,7 @@ function shell(){
   app.innerHTML=
     '<div class="disclose">이 사이트는 쿠팡 파트너스, 토스쇼핑 쉐어링크, 여기어때, 마이리얼트립, 트립닷컴 등 제휴 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.</div>'+
     '<div class="frame">'+
-      '<header class="appbar"><a class="logo" href="#/" id="logo"></a><a class="iconbtn" href="#/list" data-focus="q" aria-label="체험단 검색">'+ico(I.search)+'</a></header>'+
+      '<header class="appbar"><a class="logo" href="#/" id="logo"></a><span class="hbtns"><a class="iconbtn" href="#/list" data-focus="q" aria-label="체험단 검색">'+ico(I.search)+'</a><a class="iconbtn mebtn" href="#/my" id="mebtn" aria-label="마이 다꾸">'+ico(I.user)+'</a></span></header>'+
       '<main id="view" class="view"></main>'+
       '<footer class="foot"><a class="flink" href="#/contact">광고주 마케팅 상담 문의</a><br><a '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>💬 카카오톡 채널 ‘다꾸 체험단’</a><p>'+SITE+' · 체험단 모집 정보는 각 모집처의 공지를 기준으로 하며, 신청 조건과 일정은 바뀔 수 있어요.</p></footer>'+
     '</div>'+
@@ -157,7 +158,7 @@ function paintLogo(){ var l=document.getElementById("logo"); if(l) l.innerHTML=l
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
-  if(!/^(home|list|fav|benefit|deals|reporter|contact|item)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|benefit|deals|reporter|contact|item|my|privacy)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
   state.focusT=(tab==="deals"&&qs.t)?qs.t:"";
@@ -182,6 +183,8 @@ function render(){
   else if(state.tab==="reporter") v.innerHTML=reporterView();
   else if(state.tab==="contact") v.innerHTML=contactView();
   else if(state.tab==="item") v.innerHTML=itemView();
+  else if(state.tab==="my") v.innerHTML=myView();
+  else if(state.tab==="privacy") v.innerHTML=privacyView();
   tick(); startSliders();
 }
 
@@ -386,7 +389,7 @@ function renderListGrid(){
 
 /* ---------- 맞춤 추천 (이 브라우저 안에서만 계산, 서버로 보내지 않음) ---------- */
 var SEEN=[]; try{ SEEN=JSON.parse(ls("dakku-seen")||"[]")||[]; }catch(e){ SEEN=[]; }
-function markSeen(id){ if(!id) return; var i=SEEN.indexOf(id); if(i>=0) SEEN.splice(i,1); SEEN.unshift(id); SEEN=SEEN.slice(0,30); ls("dakku-seen",JSON.stringify(SEEN)); }
+function markSeen(id){ if(!id) return; var i=SEEN.indexOf(id); if(i>=0) SEEN.splice(i,1); SEEN.unshift(id); SEEN=SEEN.slice(0,30); ls("dakku-seen",JSON.stringify(SEEN)); mSeen(id); }
 function typesOf(it){ var t=String(it.name||"")+" "+String(it.benefit||""); return PREFS.filter(function(p){ return p.re.test(t); }).map(function(p){ return p.k; }); }
 function recommend(limit){
   var byId={}; seed.items.forEach(function(it){ byId[it.id]=it; });
@@ -429,7 +432,7 @@ function favView(){
   var list=seed.items.filter(function(it){ return isFav(it.id); }).sort(function(a,b){ var sa=statusOf(a).key==="closed", sb=statusOf(b).key==="closed"; if(sa!==sb) return sa?1:-1; return daysLeft(a)-daysLeft(b); });
   var soon=list.filter(function(it){ return statusOf(it).key==="open" && daysLeft(it)<=3; }).length;
   return '<div class="pg"><h1>찜 ❤️</h1>'+(soon?'<p class="note">⏰ 찜한 체험단 중 <b>'+soon+'곳</b>이 3일 안에 마감돼요</p>':'')+
-    (list.length?'<div class="grid v1">'+list.map(fullCard).join("")+'</div>'+recoSection("💜 찜한 곳과 비슷한 체험단"):'<div class="empty sm"><b>🤍 아직 찜한 체험단이 없어요</b>마음에 드는 체험단의 하트를 눌러 보세요.</div>'+recoSection())+'</div>';
+    (list.length?'<div class="grid v1">'+list.map(fullCard).join("")+'</div>'+recoSection("💜 찜한 곳과 비슷한 체험단"):'<div class="empty sm"><b>🤍 아직 찜한 체험단이 없어요</b>마음에 드는 체험단의 하트를 눌러 보세요.</div>'+recoSection())+recentSection()+'</div>';
 }
 
 /* ---------- 혜택 ---------- */
@@ -527,6 +530,7 @@ function rulesHtml(){
 }
 function rid(){ var A="ABCDEFGHJKMNPQRSTUVWXYZ23456789", s=""; for(var i=0;i<4;i++) s+=A.charAt(Math.floor(Math.random()*A.length)); return s; }
 function doSpin(btn){
+  if(authCfg()){ if(!USER){ goLogin("룰렛은 로그인하고 참여할 수 있어요"); return; } serverSpin(btn); return; }
   if(wonThisMonth()){ toast("이번 달은 이미 당첨됐어요. "+nextMonthLabel()+"에 다시 만나요!"); return; }
   if(spinState()){ toast("오늘은 이미 돌렸어요. 내일 또 만나요!"); return; }
   var odds=oddsList(), x=Math.random()*100, acc=0, pick=-1;
@@ -641,7 +645,7 @@ function reporterView(){
       '<li><b>대가 표시 (필수)</b> 글 첫머리에 아래 문구를 넣어 주세요.<span class="disc">제품을 제공받아 작성된 후기입니다.</span></li>'+
     '</ol></section>'+
     '<section class="guide"><h2>🗓️ 진행 순서</h2><ol class="steps">'+
-      '<li>아래 <b>지금 신청하기</b>로 다꾸 카톡 채널을 추가하고 <b>블로그 주소</b>를 보내 신청해요.</li><li>선정되면 카톡으로 알려드려요.</li><li>선정 후 <b>7일 안에</b> 가이드대로 포스팅해요.</li><li>포스팅 주소를 보내주시면 확인 후 <b>7일 안에</b> 상품권을 보내드려요.</li>'+
+      (authCfg()?'<li>카카오로 로그인하고 아래에 <b>블로그 주소</b>를 넣어 신청해요.</li>':'<li>아래 <b>지금 신청하기</b>로 다꾸 카톡 채널을 추가하고 <b>블로그 주소</b>를 보내 신청해요.</li>')+'<li>선정되면 카톡으로 알려드려요.</li><li>선정 후 <b>7일 안에</b> 가이드대로 포스팅해요.</li><li>포스팅 주소를 보내주시면 확인 후 <b>7일 안에</b> 상품권을 보내드려요.</li>'+
     '</ol></section>'+
     '<section class="guide fineprint"><h2>⚠️ 유의사항</h2><ul>'+
       '<li>대가 표시 문구가 없거나 가이드를 지키지 않은 글은 상품권이 지급되지 않아요.</li>'+
@@ -650,7 +654,7 @@ function reporterView(){
       '<li>같은 블로그는 한 달에 1번만 참여할 수 있어요.</li>'+
       '<li>모집 내용은 사정에 따라 바뀔 수 있어요.</li>'+
     '</ul></section>'+
-    '<div class="repcta"><a class="b pri wide" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">🙋 지금 신청하기</a></div>'+
+    '<div class="repcta">'+(authCfg()?(USER?(MYREP?'<p class="repst">이번 달 신청 상태: <b>'+esc(MYREP.status)+'</b></p>':repForm()):'<button class="b kakaolg wide" data-login="kakao">카카오로 로그인하고 신청하기</button>'):'<a class="b pri wide" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer">🙋 지금 신청하기</a>')+'</div>'+
   '</div>';
 }
 
@@ -834,6 +838,165 @@ function prefPopup(){
   });
 }
 
+/* ---------- 회원 (Supabase · 카카오 로그인) ---------- */
+var SB=null, USER=null, PROFILE=null, MYREP=null, MYSPIN=null, SBWAIT=[];
+function authCfg(){ var a=seed.auth||{}; return (safeUrl(a.url)&&a.key)?a:null; }
+function loadSb(cb){
+  if(window.supabase&&window.supabase.createClient){ cb(); return; }
+  SBWAIT.push(cb); if(SBWAIT.length>1) return;
+  var sc=document.createElement("script"); sc.src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js";
+  sc.onload=function(){ var w=SBWAIT; SBWAIT=[]; w.forEach(function(f){ f(); }); };
+  sc.onerror=function(){ SBWAIT=[]; };
+  document.head.appendChild(sc);
+}
+function initAuth(){
+  var a=authCfg(); paintMe(); if(!a||SB) return;
+  loadSb(function(){
+    if(!window.supabase||!window.supabase.createClient) return;
+    SB=window.supabase.createClient(a.url,a.key,{auth:{flowType:"pkce",detectSessionInUrl:true,persistSession:true,autoRefreshToken:true}});
+    SB.auth.onAuthStateChange(function(ev,sess){
+      var u=sess&&sess.user||null, changed=(u&&u.id)!==(USER&&USER.id);
+      USER=u; paintMe();
+      if(/[?&]code=/.test(location.search)) history.replaceState(null,"",location.pathname+(location.hash||""));
+      if(!changed) return;
+      if(u){ syncDown().then(function(){ var go=ls("dakku-after-login"); if(go){ try{ localStorage.removeItem("dakku-after-login"); }catch(e){} if(location.hash!==go){ location.hash=go; return; } } render(); }); }
+      else { PROFILE=null; MYREP=null; MYSPIN=null; render(); }
+    });
+  });
+}
+function paintMe(){ var b=document.getElementById("mebtn"); if(!b) return; b.classList.toggle("in",!!USER); }
+function nick(){ return (PROFILE&&PROFILE.nickname)||(USER&&USER.user_metadata&&(USER.user_metadata.name||USER.user_metadata.nickname||USER.user_metadata.full_name))||"회원"; }
+function goLogin(msg){ if(msg) toast(msg); ls("dakku-after-login",location.hash||"#/"); location.hash="#/my"; }
+function login(provider){
+  if(!SB){ toast("잠시 후 다시 눌러 주세요"); initAuth(); return; }
+  if(!ls("dakku-after-login")) ls("dakku-after-login","#/my");
+  SB.auth.signInWithOAuth({provider:provider,options:{redirectTo:location.origin+location.pathname}}).then(function(r){ if(r.error) toast("로그인을 시작하지 못했어요. 잠시 후 다시 시도해 주세요."); });
+}
+function sbErr(r){ if(r&&r.error){ console.warn("[dakku]",r.error.message); return true; } return false; }
+function syncDown(){
+  if(!SB||!USER) return Promise.resolve();
+  var uid=USER.id, mon=ym(today()), day=ymd(today());
+  return Promise.all([
+    SB.from("profiles").select("*").eq("id",uid).maybeSingle(),
+    SB.from("favorites").select("item_id").eq("user_id",uid),
+    SB.from("views").select("item_id,viewed_at").eq("user_id",uid).order("viewed_at",{ascending:false}).limit(30),
+    SB.from("reporter_apps").select("*").eq("user_id",uid).eq("month",mon).maybeSingle(),
+    SB.from("spins").select("*").eq("user_id",uid).gte("day",mon+"-01").order("day",{ascending:false})
+  ]).then(function(R){
+    PROFILE=R[0].data||{id:uid};
+    var srv=(R[1].data||[]).map(function(x){ return x.item_id; }), up=FAV.filter(function(id){ return srv.indexOf(id)<0; });
+    if(up.length) SB.from("favorites").upsert(up.map(function(id){ return {user_id:uid,item_id:id}; })).then(sbErr);
+    srv.forEach(function(id){ if(FAV.indexOf(id)<0) FAV.push(id); }); ls("dakku-fav",JSON.stringify(FAV));
+    var sv=(R[2].data||[]).map(function(x){ return x.item_id; }), loc=SEEN.filter(function(id){ return sv.indexOf(id)<0; });
+    if(loc.length) SB.from("views").upsert(loc.map(function(id){ return {user_id:uid,item_id:id}; })).then(sbErr);
+    SEEN=SEEN.concat(sv.filter(function(id){ return SEEN.indexOf(id)<0; })).slice(0,30); ls("dakku-seen",JSON.stringify(SEEN));
+    var P=PROFILE;
+    if((P.regions&&P.regions.length)||(P.ages&&P.ages.length)||P.cat){ WANT.cat=P.cat||WANT.cat; WANT.regions=P.regions||[]; WANT.ages=P.ages||[]; ls("dakku-want",JSON.stringify(WANT)); }
+    else if(WANT.cat||(WANT.regions||[]).length||(WANT.ages||[]).length) mWant();
+    MYREP=R[3].data||null;
+    var sp=R[4].data||[]; MYSPIN={today:sp.filter(function(x){ return x.day===day; })[0]||null, won:sp.filter(function(x){ return x.code; })[0]||null};
+  }).catch(function(e){ console.warn("[dakku]",e); });
+}
+function mFav(id,on){ if(!SB||!USER||!id) return; if(on) SB.from("favorites").upsert({user_id:USER.id,item_id:id}).then(sbErr); else SB.from("favorites").delete().eq("user_id",USER.id).eq("item_id",id).then(sbErr); }
+function mSeen(id){ if(!SB||!USER||!id) return; SB.from("views").upsert({user_id:USER.id,item_id:id,viewed_at:new Date().toISOString()}).then(sbErr); }
+function mWant(){ if(!SB||!USER) return; var row={cat:WANT.cat||null,regions:WANT.regions||[],ages:WANT.ages||[],updated_at:new Date().toISOString()}; PROFILE=Object.assign(PROFILE||{},row); SB.from("profiles").update(row).eq("id",USER.id).then(sbErr); }
+function serverSpin(btn){
+  btn.disabled=true; btn.textContent="돌아가는 중…";
+  SB.rpc("spin").then(function(r){
+    if(r.error){ btn.disabled=false; btn.textContent="🎡 룰렛 돌리기"; toast(/won this month/.test(r.error.message)?"이번 달은 이미 당첨됐어요. "+nextMonthLabel()+"에 다시 만나요!":"잠시 후 다시 시도해 주세요"); return; }
+    var x=r.data||{}, pick=+x.i, t=today();
+    var center=pick*45+22.5+(Math.random()*24-12), rot=1800+(360-center);
+    var st={d:ymd(t),i:pick,rot:rot,code:x.code||""};
+    ls("dakku-spin",JSON.stringify(st)); if(st.code) ls("dakku-win",JSON.stringify({m:ym(t),code:st.code}));
+    MYSPIN=MYSPIN||{}; MYSPIN.today={day:st.d,prize:pick,code:st.code}; if(st.code) MYSPIN.won=MYSPIN.today;
+    var w=document.getElementById("wheel"); if(w) w.style.transform="rotate("+(x.again?rot%360:rot)+"deg)";
+    var reduce=x.again||(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    setTimeout(function(){ var rr=document.getElementById("rres"); if(rr) rr.innerHTML=resultHtml(st); btn.textContent=st.code?"이번 달은 끝! "+nextMonthLabel()+"에 다시 돌려요":"오늘은 끝! 내일 또 돌려요"; }, reduce?100:3400);
+  });
+}
+function recentSection(){
+  var byId={}; seed.items.forEach(function(it){ byId[it.id]=it; });
+  var list=SEEN.map(function(id){ return byId[id]; }).filter(Boolean);
+  if(!list.length) return "";
+  return '<section class="hsec"><div class="hsh"><h2>👀 <em>최근 본</em> 상품</h2></div><div class="hs">'+list.slice(0,15).map(hcard).join("")+'</div></section>';
+}
+function chipChecks(name,opts,sel,radio){ return '<div class="rgbox">'+opts.map(function(o){ var v=o[0], on=(sel||[]).indexOf(v)>=0; return '<label class="rck'+(on?' on':'')+'"><input type="'+(radio?'radio':'checkbox')+'" name="'+name+'" value="'+esc(v)+'"'+(on?' checked':'')+'><span class="bx"></span>'+esc(o[1])+'</label>'; }).join("")+'</div>'; }
+function myView(){
+  var a=authCfg(), favN=seed.items.filter(function(it){ return isFav(it.id); }).length;
+  var h='<div class="pg my"><h1>마이 다꾸 🙋</h1>';
+  if(!USER){
+    h+='<section class="lgcard"><div class="mlogo">'+logoSvg(44)+'</div><b>로그인하고 체험단을<br>더 편하게 챙기세요</b>'+
+      '<ul class="lgben"><li>❤️ 찜한 체험단을 휴대폰·PC 어디서나</li><li>👀 내가 눌러본 상품 다시 보기</li><li>📍 관심 지역 · 👶 아기 나이 맞춤 체험단 알림</li><li>✍️ 다꾸 기자단 신청 · 🎡 룰렛 이벤트 참여</li></ul>'+
+      (a?'<button class="b kakaolg wide" data-login="kakao"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#191600" d="M12 4C7 4 3 7.2 3 11.1c0 2.5 1.7 4.7 4.2 6l-.9 3.4c-.1.3.3.6.6.4l4-2.7h1.1c5 0 9-3.2 9-7.1S17 4 12 4Z"/></svg>카카오로 3초 만에 시작하기</button>'+
+         ((a.naver)?'<button class="b naverlg wide" data-login="'+esc(a.naver)+'"><b>N</b>네이버로 시작하기</button>':'')+
+         '<p class="lgnote">시작하면 <a href="#/privacy">개인정보처리방침</a>에 동의하는 것으로 봐요.</p>'
+       :'<p class="lgsoon">🔧 회원 기능을 준비하고 있어요. 곧 카카오로 로그인할 수 있어요!</p>')+'</section>';
+    h+='<div class="mytiles"><a href="#/fav"><b>'+favN+'</b><span>찜</span></a><a href="#/fav"><b>'+SEEN.length+'</b><span>최근 본</span></a></div>';
+    h+=recentSection();
+    return h+'</div>';
+  }
+  var P=PROFILE||{}, mon=ym(today()), r=rep();
+  var spinTxt=MYSPIN&&MYSPIN.won?'당첨 🎉':(MYSPIN&&MYSPIN.today?'오늘 완료':'참여 가능');
+  h+='<div class="hello"><b>'+esc(nick())+'님, 반가워요 👋</b><button class="lnk" data-logout>로그아웃</button></div>';
+  h+='<div class="mytiles"><a href="#/fav"><b>'+favN+'</b><span>찜</span></a><a href="#/my" data-jump="recent"><b>'+SEEN.length+'</b><span>최근 본</span></a><a href="#/benefit"><b>'+spinTxt+'</b><span>룰렛</span></a>'+(r?'<a href="#/reporter"><b>'+(MYREP?esc(MYREP.status):'신청 전')+'</b><span>기자단</span></a>':'')+'</div>';
+  h+='<form class="pane mypref" id="prefform"><h2>🔔 맞춤 체험단 알림</h2><p class="mysub">고른 지역·아기 나이에 맞는 새 체험단을 먼저 보여드리고, 알림을 켜면 새로 올라올 때 알려드려요.</p>'+
+    '<span class="fl">관심 분야</span>'+chipChecks("cat",[["stay","🏨 숙박"],["baby","👶 육아"],["life","🧺 생활"],["beauty","💄 뷰티"],["elec","🔌 가전"]],WANT.cat?[WANT.cat]:[],true)+
+    '<span class="fl">관심 지역</span>'+chipChecks("regions",REGIONS.map(function(x){ return [x,x]; }),WANT.regions)+
+    '<span class="fl">아기 나이</span>'+chipChecks("ages",AGES.map(function(x){ return [x,x]; }),WANT.ages)+
+    '<label class="ck ntf"><input type="checkbox" name="notify"'+(P.notify?' checked':'')+'><span><b>새 체험단 알림 받기</b><small>관심 분야·지역·아기 나이와 알림 동의 여부를 알림 목적으로만 써요. 언제든 끌 수 있어요.</small></span></label>'+
+    '<button class="b pri wide" type="submit">저장하기</button></form>';
+  if(r){
+    h+='<section class="pane myrep"><h2>✍️ 다꾸 기자단 ('+(+mon.slice(5))+'월)</h2>'+(MYREP?'<p class="mysub">신청한 블로그: <a href="'+esc(safeUrl(MYREP.blog_url))+'" target="_blank" rel="noopener noreferrer">'+esc(MYREP.blog_url)+'</a></p><p class="repst">상태: <b>'+esc(MYREP.status)+'</b></p>':repForm())+'<a class="lnk" href="#/reporter">기자단 안내 보기 ›</a></section>';
+  }
+  h+='<div id="recent">'+recentSection()+'</div>';
+  h+='<div class="myfoot"><a href="#/privacy">개인정보처리방침</a> · <button class="lnk" data-unreg>회원 탈퇴</button></div>';
+  return h+'</div>';
+}
+function repForm(){ return '<form id="repform" class="repf"><label class="fl" for="rp-blog">블로그 주소</label><input id="rp-blog" name="blog" class="fi" type="url" inputmode="url" placeholder="https://blog.naver.com/아이디" required><p class="ferr" id="rperr" role="alert"></p><button class="b pri wide" type="submit">이번 달 기자단 신청하기</button></form>'; }
+function privacyView(){
+  var a=seed.privacy||{}, owner=esc(a.owner||"다꾸 체험단 모음 운영자"), mail=esc(a.email||""), day=esc(a.date||"2026년 10월 14일");
+  return '<div class="pg privacy"><a class="back" href="#/my">'+ico(I.back)+'<span>마이</span></a><h1>개인정보처리방침</h1>'+
+  '<p>'+owner+'(이하 “다꾸”)는 회원의 개인정보를 소중히 다루며, 「개인정보 보호법」에 따라 아래와 같이 처리해요.</p>'+
+  '<h2>1. 수집하는 항목과 방법</h2><ul><li>카카오 로그인 시: 카카오 회원번호(식별자), 닉네임(프로필 이름). 이메일 등 추가 항목은 받지 않아요.</li><li>서비스 이용 시 회원이 직접 입력·선택: 관심 분야·지역·아기 나이, 알림 수신 동의 여부, 기자단 신청 블로그 주소</li><li>서비스 이용 기록: 찜한 체험단, 눌러본 상품, 룰렛 참여 결과</li></ul>'+
+  '<h2>2. 이용 목적</h2><ul><li>회원 식별과 로그인 유지</li><li>찜·최근 본 상품을 여러 기기에서 보여주기</li><li>관심 조건에 맞는 체험단 추천과(동의한 경우) 새 체험단 알림</li><li>다꾸 기자단 선정·안내와 상품권 지급</li><li>룰렛 이벤트 참여 확인(하루 1회)과 경품 지급</li></ul>'+
+  '<h2>3. 보유 기간</h2><ul><li>회원 탈퇴 시 바로 지워요. 마이 다꾸 &gt; 회원 탈퇴에서 직접 할 수 있어요.</li><li>1년 동안 로그인하지 않으면 미리 알린 뒤 지워요.</li><li>법령에 보관 의무가 있는 경우 그 기간만 보관해요.</li></ul>'+
+  '<h2>4. 처리 위탁과 국외 이전</h2><ul><li>회원 정보 저장: Supabase Inc.(데이터베이스·로그인 서비스). 저장 위치는 서비스 설정 지역에 따라요.</li><li>로그인: 주식회사 카카오(카카오 로그인)</li></ul>'+
+  '<h2>5. 제3자 제공</h2><p>회원 정보를 다른 곳에 제공하지 않아요. 체험단 신청은 각 모집처 사이트에서 회원이 직접 해요.</p>'+
+  '<h2>6. 회원의 권리</h2><p>언제든 내 정보를 보고, 고치고, 알림 동의를 끄고, 탈퇴할 수 있어요. 마이 다꾸에서 직접 하거나 아래 연락처로 요청해 주세요.</p>'+
+  '<h2>7. 쿠키와 브라우저 저장소</h2><p>로그인 유지와 찜·최근 본 기록을 위해 브라우저 저장소를 써요. 브라우저 설정에서 지울 수 있어요.</p>'+
+  '<h2>8. 개인정보 보호책임자</h2><p>'+owner+(mail?' · '+mail:'')+' · 카카오톡 채널 ‘다꾸 체험단’</p>'+
+  '<p class="pdate">시행일: '+day+'</p></div>';
+}
+document.addEventListener("click",function(e){
+  var t=e.target.closest("[data-login],[data-logout],[data-unreg],[data-unreg-yes]"); if(!t) return;
+  e.preventDefault();
+  if(t.dataset.login!==undefined){ login(t.dataset.login||"kakao"); return; }
+  if(t.dataset.logout!==undefined){ if(SB) SB.auth.signOut().then(function(){ toast("로그아웃했어요"); }); return; }
+  if(t.dataset.unreg!==undefined){ t.outerHTML='<span class="unreg">찜·최근 본·기자단·룰렛 기록이 모두 지워져요. <button class="lnk red" data-unreg-yes>정말 탈퇴할게요</button></span>'; return; }
+  if(t.dataset.unregYes!==undefined){ if(!SB) return; SB.rpc("delete_me").then(function(r){ if(sbErr(r)){ toast("탈퇴하지 못했어요. 카톡 채널로 알려주세요."); return; } SB.auth.signOut(); FAV=[]; SEEN=[]; ls("dakku-fav","[]"); ls("dakku-seen","[]"); toast("탈퇴했어요. 그동안 고마웠어요 🙏"); location.hash="#/"; }); }
+});
+document.addEventListener("submit",function(e){
+  var f=e.target;
+  if(f.id==="prefform"){ e.preventDefault();
+    var vals=function(n){ return [].map.call(f.querySelectorAll('input[name="'+n+'"]:checked'),function(x){ return x.value; }); };
+    var cats=vals("cat"); WANT.cat=cats[0]||""; WANT.regions=vals("regions"); WANT.ages=vals("ages"); ls("dakku-want",JSON.stringify(WANT)); ls("dakku-want-asked","1");
+    var on=f.elements.notify.checked, row={cat:WANT.cat||null,regions:WANT.regions,ages:WANT.ages,notify:on,updated_at:new Date().toISOString()};
+    if(on&&!(PROFILE&&PROFILE.notify)) row.notify_agreed_at=new Date().toISOString();
+    PROFILE=Object.assign(PROFILE||{},row);
+    if(SB&&USER) SB.from("profiles").update(row).eq("id",USER.id).then(function(r){ toast(sbErr(r)?"저장하지 못했어요. 잠시 후 다시 해 주세요":"✅ 저장했어요"); });
+    return;
+  }
+  if(f.id==="repform"){ e.preventDefault();
+    var u=String(f.elements.blog.value||"").trim(), err=document.getElementById("rperr");
+    if(!/^https?:\/\/\S+\.\S+/.test(u)){ err.textContent="블로그 주소를 https:// 부터 넣어 주세요."; return; }
+    if(!SB||!USER){ goLogin("로그인하고 신청할 수 있어요"); return; }
+    SB.from("reporter_apps").insert({user_id:USER.id,month:ym(today()),blog_url:u}).select().maybeSingle().then(function(r){
+      if(r.error){ err.textContent=/duplicate|unique/.test(r.error.message)?"이번 달은 이미 신청했어요.":"신청하지 못했어요. 잠시 후 다시 해 주세요."; return; }
+      MYREP=r.data; toast("🙌 기자단 신청 완료! 선정되면 카톡으로 알려드려요"); render();
+    });
+  }
+});
+
 if("serviceWorker" in navigator){ window.addEventListener("load",function(){ navigator.serviceWorker.register("sw.js").catch(function(){}); }); }
 
 shell(); paintLogo(); route();
@@ -844,5 +1007,6 @@ fetch("data.json?v="+Date.now().toString(36).slice(0,-3),{cache:"no-cache"}).the
   UPCOMING=Array.isArray(seed.upcoming)?seed.upcoming:[]; ADS=Array.isArray(seed.ads)?seed.ads:[]; DEALS=Array.isArray(seed.deals)?seed.deals:[];
   state.loading=false; LOGO=pickLogo(); paintLogo(); setFavicon(); render();
   if(!WANT.cat) setTimeout(prefPopup,40000);
+  initAuth();
 }).catch(function(){ state.loading=false; var v=document.getElementById("view"); if(v) v.innerHTML='<div class="empty"><b>잠시 후 다시 시도해 주세요</b>목록을 불러오지 못했어요.</div>'; });
 })();
