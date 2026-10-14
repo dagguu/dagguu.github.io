@@ -198,7 +198,7 @@ function thumb(it,cls){
     (it.region?'<span class="rgs">📍 '+esc(it.region)+'</span>':'')+
     '<span class="dd '+(s.key==="closed"?"off":(s.hot?"hot":""))+'">'+esc(s.dday)+'</span>'+
     (isPick(it)&&s.key!=="closed"?'<span class="pks">💜 추천</span>':'')+
-    (isNew?'<span class="nws" aria-label="새로 올라옴">🆕</span>':'')+
+    (isNew?'<span class="nws" aria-label="새로 올라옴">✨</span>':'')+
     (s.key==="closed"?'<a class="closedov" href="'+esc(kakaoUrl())+'" target="_blank" rel="noopener noreferrer"><b>모집 마감</b><span>🔔 다음 모집 알림받기</span></a>':'')+
     '<button class="shb" data-ishare="'+esc(it.id)+'" aria-label="'+esc(it.name)+' 공유하기">'+ico(I.send)+'</button>'+
     '<button class="fv'+(isFav(it.id)?" on":"")+'" data-fav="'+esc(it.id)+'" aria-label="찜하기" aria-pressed="'+isFav(it.id)+'">'+ico(I.heart)+'</button>'+
