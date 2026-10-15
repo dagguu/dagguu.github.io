@@ -78,7 +78,7 @@ def card(c):
     ml = max((len(x) for x in str(c.get('sticker', '')).split('\n')), default=0)
     nl = str(c.get('sticker', '')).count('\n') + 1
     sfs = min(64 if ml <= 3 else 50 if ml <= 4 else 40, 150 // nl)
-    st = f"<div class='st' style='top:{top-60}px;right:4px;background:{ac};font-size:{sfs}px'>{e(c['sticker'])}</div>" if c.get('sticker') else ''
+    st = f"<div class='st' style='top:{top-60}px;right:16px;background:{ac};font-size:{sfs}px'>{e(c['sticker'])}</div>" if c.get('sticker') else ''
     sub = f"<div class='sub'>{e(c['sub'])}</div>" if c.get('sub') else ''
     rays = f"<div class='rays' style='background:repeating-conic-gradient(from 0deg at 50% 50%,{bg} 0 9deg,#ffffff 9deg 18deg)'></div>"
     dots = ''.join(f"<div class='dot' style='left:{x}px;top:{y}px;width:{r}px;height:{r}px;background:{col}'></div>" for x, y, r, col in
