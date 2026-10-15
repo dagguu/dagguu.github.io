@@ -797,3 +797,5 @@ img{display:block}
 .kv .hbtn{border:0;border-radius:999px;background:#fff;color:#2a2340;padding:8px 16px 7px;font-size:13px;font-weight:800;opacity:1;box-shadow:0 4px 12px rgba(0,0,0,.14)}
 .kv.dark .hbtn{background:#3c1e1e;color:#fff}
 .hallw{padding:18px 16px 4px}
+.logo .wm{font-size:22px;letter-spacing:-.04em}
+.logo .wm i{margin-left:4px}
