@@ -302,7 +302,7 @@ function homeView(){
   h+=hrow('💜 지금 <em>인기 있는</em> 체험단','#/list?cat=stay&s=pick',picks);
   var soon=open.filter(function(it){ return daysLeft(it)<=3; }).sort(function(a,b){ return daysLeft(a)-daysLeft(b); });
   h+=hrow('⏰ <em>곧 마감!</em> 지금 신청하세요','#/list?cat=stay&s=closing',soon);
-  var hd=hotDeal(); if(hd) h+='<div class="hpad">'+hd+'</div>'; // 오늘의 특가(골드박스)는 홈에서 숨김 (2026-10-14 시온님 요청)
+  var hd=hotDeal(); if(hd) h+='<div class="hpad">'+hd+'</div>'; var cb=cheapBtn(); if(cb) h+='<div class="hpad">'+cb+'</div>'; // 오늘의 특가(골드박스)는 홈에서 숨김 (2026-10-14 시온님 요청)
   var baby=open.filter(function(it){ return catOf(it)==="baby"; }).sort(function(a,b){ return (b.createdAt||0)-(a.createdAt||0); });
   h+=hrow('👶 <em>육아</em> 체험단도 있어요','#/list?cat=baby&s=open',baby);
   var pool=open.filter(function(it){ return /풀빌라|풀 ?빌라/.test(it.name+" "+it.benefit); }).sort(byDeadline);
@@ -816,6 +816,10 @@ function doneContact(text){
 /* ---------- 특가 ---------- */
 function msToMidnight(){ var n=new Date(), m=new Date(n); m.setHours(24,0,0,0); return m-n; }
 function hms(ms){ var s=Math.max(0,Math.floor(ms/1000)), h=Math.floor(s/3600), mi=Math.floor(s%3600/60), se=s%60; return h+"시간 "+("0"+mi).slice(-2)+"분 "+("0"+se).slice(-2)+"초"; }
+function cheapBtn(cls){
+  var x=(seed.links||{}).goldbox||{}, u=safeUrl(x.u); if(!u) return "";
+  return '<a class="cheapb'+(cls?' '+cls:'')+'" '+ext(u)+'><span class="cbx"><small>어디가 더 싸지?</small><b>쿠팡에서 최저가 확인하기</b></span><span class="cbl" aria-hidden="true"><i style="color:#7a4a2a">cou</i><i style="color:#e74c3c">p</i><i style="color:#f2b33d">a</i><i style="color:#8cc63f">n</i><i style="color:#4aa8d8">g</i></span><em class="cbad">AD</em></a>';
+}
 function cpSearch(){
   var u=safeUrl(seed.coupangSearch); if(!/^https:\/\/coupa\.ng\/\w+$/.test(u)) return "";
   return '<div class="cpsrch"><iframe src="'+esc(u)+'" title="쿠팡 상품 검색" width="100%" height="44" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" loading="lazy"></iframe></div>';
@@ -860,7 +864,7 @@ function filterDeals(q){
 document.addEventListener("input",function(e){ if(e.target&&e.target.id==="dq") filterDeals(e.target.value); });
 document.addEventListener("click",function(e){ var b=e.target.closest("[data-dqx]"); if(!b) return; var i=document.getElementById("dq"); if(i){ i.value=""; filterDeals(""); i.focus(); } });
 function dealsView(){
-  var h=slideBanners(false,dealSlides())+'<div class="pg"><h1>오늘의 특가 🔥</h1>'+dealSearch()+topDealsHtml()+recentDeals();
+  var h=slideBanners(false,dealSlides())+'<div class="pg"><h1>오늘의 특가 🔥</h1>'+cheapBtn()+dealSearch()+topDealsHtml()+recentDeals();
   var GOLD=(Array.isArray(seed.goldbox)?seed.goldbox:[]).filter(function(x){ return safeUrl(x.u) && !(x.endAt && Date.parse(x.endAt)<=Date.now()); });
   if(GOLD.length) h+='<section class="sec tossec" id="gold"><div class="sh"><h2>⏰ 오늘의 골드박스 <span class="adtag">광고</span></h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="cd" style="margin:-6px 4px 10px">⏳ 다음 오전 7시 교체까지 <b id="gbcd">'+clock(nextSeven())+'</b></p><div class="tgrid">'+GOLD.map(tossCard).join("")+'</div></section>';
   h+=cpBanner();

@@ -798,3 +798,11 @@ img{display:block}
 .kv.dark .hbtn{background:#3c1e1e;color:#fff}
 .hallw{padding:18px 16px 4px}
 .logo .wm{font-size:22px;letter-spacing:-.04em}
+.cheapb{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;background:#f0f0f7;border-radius:18px;padding:16px 20px;margin:12px 0;color:#111;text-decoration:none}
+.cheapb .cbx{display:flex;flex-direction:column;gap:3px;min-width:0}
+.cheapb small{font-size:13px;color:#6b6b80}
+.cheapb b{font-size:17px;font-weight:800;letter-spacing:-.03em}
+.cheapb .cbl{font-size:23px;font-weight:800;letter-spacing:-.02em;white-space:nowrap}
+.cheapb .cbl i{font-style:normal}
+.cheapb .cbad{position:absolute;top:8px;right:12px;font-style:normal;font-size:9px;font-weight:700;color:#aaa;border:1px solid #ccc;border-radius:999px;padding:1px 5px}
+.hpad .cheapb{margin:4px 0}

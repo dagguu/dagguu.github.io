@@ -78,6 +78,12 @@ def main():
         print(f"골드박스 {len(d['goldbox'])}개 갱신")
 
     if "deeplink" in sys.argv[1:] or len(sys.argv) == 1:
+        for k, x in (d.get("links") or {}).items():  # 사이트 버튼용 쿠팡 링크 (예: 골드박스)
+            if isinstance(x, dict) and x.get("cpUrl") and not x.get("u"):
+                try:
+                    r = call("POST", BASE + "/v1/deeplink", body={"coupangUrls": [x["cpUrl"]]}) or []
+                    if r and r[0].get("shortenUrl"): x["u"] = r[0]["shortenUrl"]; changed = True; print("버튼 링크 변환:", k)
+                except Exception as e: print("버튼 링크 변환 실패:", k, e)
         for x in d.get("babyDeals", []):
             if x.get("cpUrl") and not x.get("u"):
                 try:
