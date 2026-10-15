@@ -788,3 +788,6 @@ img{display:block}
 .hsent{height:1px}
 .hdeals{margin-top:26px}
 .hdeals .fine{margin:14px 16px 0}
+.hc{display:flex;flex-direction:column}
+.hact{display:flex;gap:5px;margin-top:auto;padding-top:9px}
+.hact .b{flex:1;min-width:0;padding:8px 4px;font-size:12.5px;border-radius:10px;white-space:nowrap;text-align:center}

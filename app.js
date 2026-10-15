@@ -270,7 +270,12 @@ function hcard(it){
   var t=view?'<a '+ext(view)+'>'+esc(it.name)+'</a>':esc(it.name);
   return '<article class="hc">'+thumb(it,"hth")+tags+
     '<p class="hl"><b class="'+(d<=1?'hot':'')+'">'+leftText(it)+'</b>'+(cdLine(it)?'<span class="hcd" data-cdl>'+clock(msToMidnight())+'</span>':'')+'</p>'+
-    chBadges(it)+'<h3>'+t+'</h3>'+(it.worth?'<p class="hw">💰 <b>'+esc(it.worth)+'</b> 상당</p>':'<p class="hbn">🎁 '+esc(it.benefit)+'</p>')+'</article>';
+    chBadges(it)+'<h3>'+t+'</h3>'+(it.worth?'<p class="hw">💰 <b>'+esc(it.worth)+'</b> 상당</p>':'<p class="hbn">🎁 '+esc(it.benefit)+'</p>')+hact(it)+'</article>';
+}
+function hact(it){
+  var s=statusOf(it), view=safeUrl(it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
+  if(!view&&!apply) return "";
+  return '<div class="hact">'+(view?'<a class="b pri" '+ext(view)+'>'+esc(c.view||"보기")+' ↗</a>':'')+(s.key==="closed"?'<span class="b dis">마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer" data-apply="'+esc(it.id)+'">신청하기</a>':''))+'</div>';
 }
 function hrow(title,more,list,sub){
   if(!list.length) return "";
