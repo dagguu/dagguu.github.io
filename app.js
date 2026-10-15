@@ -320,11 +320,12 @@ function homeView(){
   gb.push(['#/benefit','','#ffc46b','#f43f5e','🎁','오늘의 혜택 모음','룰렛 · 쿠폰 · 이벤트 한곳에']);
   h+='<div class="gbs">'+gb.map(function(g){ return '<a class="gb" '+(g[1]?ext(g[0]):'href="'+g[0]+'"')+' style="--g1:'+g[2]+';--g2:'+g[3]+'"><span class="gt"><b>'+g[5]+'</b><small>'+g[6]+'</small></span><span class="ge">'+g[4]+'</span></a>'; }).join("")+'</div>';
   // 끝없는 스크롤: 모집 중 체험단 전부 → 이어서 특가 전부 (조금씩 이어 붙임)
-  HFEED.items=open.slice().sort(byNew); HFEED.deals=homeDeals(); HFEED.i=0; HFEED.j=0;
+  HFEED.items=open.slice().sort(byNew).slice(0,36); HFEED.deals=homeDeals().slice(0,20); HFEED.i=0; HFEED.j=0;
   h+='<section class="hsec"><div class="hsh"><h2>다른 체험단도 둘러볼까요?</h2></div><div class="htool"><span>총 <b>'+open.length+'</b>개</span><a class="hflt" href="#/list?cat=stay&s=open">⚙️ 필터</a></div>'+
     '<div class="grid v2 hgrid" id="hfeed"></div></section>';
   if(HFEED.deals.length) h+='<section class="hsec hdeals" id="hdealsec" hidden><div class="hsh"><h2>🔥 오늘의 <em>특가</em> 모아보기 <span class="adtag">광고</span></h2><a class="hmore" href="#/deals">특가 탭 ›</a></div><div class="tgrid hgrid" id="hdfeed"></div><p class="fine">특가 링크는 제휴 링크로, 구매 시 다꾸가 수수료를 받을 수 있어요. 가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p></section>';
   h+='<div id="hsent" class="hsent" aria-hidden="true"></div>';
+  h+='<div class="hallw"><a class="b pri wide" href="#/list?cat=stay&s=open">모집 중인 체험단 '+open.length+'개 전체 보기 ›</a></div>';
   h+='<section class="adbox"><h2>혹시, <em>체험단 모집</em>이나 <em>광고 상담</em>이<br>필요하신가요?</h2><p>간단히 문의만 남겨주시면 바로 안내해 드릴게요.</p><a class="b pri" href="#/contact">광고·제휴 문의하기 ›</a></section>';
   return h;
 }

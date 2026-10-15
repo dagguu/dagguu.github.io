@@ -796,3 +796,4 @@ img{display:block}
 /* 슬라이드 배너 버튼: 동그란 알약 모양 (2026-10-15) */
 .kv .hbtn{border:0;border-radius:999px;background:#fff;color:#2a2340;padding:8px 16px 7px;font-size:13px;font-weight:800;opacity:1;box-shadow:0 4px 12px rgba(0,0,0,.14)}
 .kv.dark .hbtn{background:#3c1e1e;color:#fff}
+.hallw{padding:18px 16px 4px}
