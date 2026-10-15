@@ -5,7 +5,8 @@ data.json 에서 오늘 올라온(createdAt 이 오늘) 숙박·육아 체험단
 시온님 단톡방 형식으로 chat/YYYY-MM-DD.txt 에 쓴다.
 숫자·혜택·날짜는 data.json 에 있는 그대로만 쓴다(지어내지 않음).
 
-사용: python3 scripts/gen_chat.py [YYYY-MM-DD] [--stay N] [--baby N]
+사용: python3 scripts/gen_chat.py [YYYY-MM-DD] [--stay N] [--baby N] [--add id1,id2]
+  --add: 오늘 올라온 것이 아니어도 모집중인 체험단을 골라 맨 앞에 더 넣는다(시온님 추천).
 """
 import json, os, re, sys, datetime as dt
 
@@ -17,6 +18,9 @@ def opt(name, default):
     return default
 N_STAY = opt('--stay', 3)
 N_BABY = opt('--baby', 3)
+ADD = []
+if '--add' in args:
+    i = args.index('--add'); ADD = [x for x in args[i + 1].split(',') if x]; del args[i:i + 2]
 day = args[0] if args else dt.datetime.now(KST).strftime('%Y-%m-%d')
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -115,7 +119,14 @@ def pick(cat, n):
     xs.sort(key=lambda i: (-won(i.get('worth')), -int((i.get('end') or '0').replace('-', ''))))
     return xs[:n]
 
+def added(cat):
+    by = {i['id']: i for i in d['items']}
+    return [by[x] for x in ADD if x in by and by[x].get('cat') == cat and not by[x].get('closed')
+            and by[x].get('end', '') >= day]
+
 stays, babies = pick('stay', N_STAY), pick('baby', N_BABY)
+stays = added('stay') + [i for i in stays if i['id'] not in ADD]
+babies = added('baby') + [i for i in babies if i['id'] not in ADD]
 if not stays and not babies:
     print('오늘 새로 올라온 숙박·육아 체험단이 없어요'); sys.exit(0)
 
