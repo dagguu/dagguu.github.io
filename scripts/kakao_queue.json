@@ -2,6 +2,22 @@
  "date": "2026-10-15",
  "cards": [
   {
+   "img": "images/i20261013-048.jpg",
+   "fit": "cover",
+   "bg": "#ffe9e6",
+   "accent": "#ff3b30",
+   "pill": "🚨 오늘 마감",
+   "l1": "청도477풀빌라",
+   "l2": "40만원 상당",
+   "sticker": "오늘\n마감",
+   "title": "[오늘종료⏰] 청도477풀빌라",
+   "desc": "40만원 상당 1박2일 숙박 체험권 (2인 기준)\n화월풀빌라·이도스테이 등 숙박 35곳도 오늘 마감\n✔기간 : ~10/15 오늘까지!",
+   "btn": "신청하러가기",
+   "url": "https://dagguu.github.io/s/i20261013-048.html",
+   "btn2": "마감 모아보기",
+   "url2": "https://dagguu.github.io/#/list?cat=stay&s=todayClose"
+  },
+  {
    "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/290c05b2-f8bb-4ebd-9c61-6e836c948898.jpg",
    "fit": "cover",
    "bg": "#fff0df",
@@ -68,20 +84,6 @@
    "sticker": "48%\n할인",
    "title": "[핫딜🔥] 궁중비책 유아크림",
    "desc": "베이비 모이스처 유아크림 180ml\n37,620원 → 19,300원 (48%↓)\n✔내일 아침 7시까지",
-   "btn": "특가 보러가기",
-   "url": "https://dagguu.github.io/#/deals"
-  },
-  {
-   "img": "https://shopping.toss.im/live/taca/ai/OTZkOTI5/TXpNem1aazVtWnZNek16UFpNeG1acHN6azJTWms5bVpUTXhrbTdKTW0yUT0.png",
-   "fit": "contain",
-   "bg": "#ece8ff",
-   "accent": "#6b4bd6",
-   "pill": "토스 하루특가",
-   "l1": "무선 온열 마사지기",
-   "l2": "19,500원",
-   "sticker": "86%\n할인",
-   "title": "[하루특가] 온열 허리 마사지기",
-   "desc": "굿핏 신수지 무선 온열 허리 마사지기\n19,500원 (86%↓)\n✔오늘 밤 12시까지",
    "btn": "특가 보러가기",
    "url": "https://dagguu.github.io/#/deals"
   }
