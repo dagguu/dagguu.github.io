@@ -2,9 +2,10 @@
 """카카오톡 채널 캐러셀(피드형) 카드 이미지 만들기.
 
 scripts/kakao_queue.json = {"date": "YYYY-MM-DD", "cards": [카드, ...]} (2~6장)
-카드: {"img": 사진 주소, "fit": "cover"(숙소 사진) | "contain"(제품 사진),
+카드: {"photos": [{"img", "fit": "cover"(숙소)|"contain"(제품), "name": 사진 위 작은 이름, "tag": 아래 가격·혜택 딱지}] (2~4장 콜라주, 3장이면 첫 장이 넓게),
+       (옛 형식 "img"+"fit" 한 장도 됨)
        "bg": 배경 파스텔색, "accent": 강조색, "pill": 맨 위 작은 꼬리표,
-       "l1": 큰 글씨 1줄, "l2": 강조색 큰 글씨 1줄, "sticker": 동그라미 스티커(짧게, 줄바꿈은 \n),
+       "l1": 큰 글씨 1줄, "l2": 강조색 큰 글씨 1줄, "sticker": 동그라미 스티커(짧게, 줄바꿈은 \n), "sub": 제목 아래 흰 띠 한 줄(선택),
        "title"/"desc"/"btn"/"url": 카카오 관리자센터에 넣을 글(이미지에는 안 들어감)}
 결과: kakao_out/<date>/1.jpg ... (900x1200, 3:4 — 카카오 캐러셀 피드형 허용 비율 2:1~3:4)
 """
@@ -37,31 +38,57 @@ def data_uri(src):
     return f'data:image/{kind};base64,' + base64.b64encode(b).decode()
 
 CSS = f"""*{{margin:0;box-sizing:border-box}}
-body{{width:{W}px;height:{H}px;overflow:hidden;font-family:'Noto Sans CJK KR','Noto Sans KR',sans-serif;letter-spacing:-.04em}}
-.c{{position:relative;width:{W}px;height:{H}px;padding:58px 54px 0;text-align:center}}
-.pill{{display:inline-block;padding:12px 30px;border-radius:40px;font-size:34px;font-weight:800;color:#fff;margin-bottom:22px}}
-.t{{font-size:84px;font-weight:900;line-height:1.14;color:#2b2140;-webkit-text-stroke:2px #fff;paint-order:stroke fill;text-shadow:0 4px 0 rgba(255,255,255,.9)}}
+body{{width:{W}px;height:{H}px;overflow:hidden;font-family:'Noto Sans CJK KR','Noto Sans KR',sans-serif;letter-spacing:-.045em}}
+.c{{position:relative;width:{W}px;height:{H}px;padding:50px 40px 0;text-align:center;overflow:hidden}}
+.rays{{position:absolute;left:-50%;top:-60%;width:200%;height:200%;opacity:.55}}
+.dot{{position:absolute;border-radius:50%}}
+.pill{{position:relative;display:inline-block;padding:10px 28px;border-radius:40px;font-size:34px;font-weight:900;color:#fff;margin-bottom:14px;box-shadow:0 4px 0 rgba(0,0,0,.12)}}
+.t{{position:relative;font-weight:900;line-height:1.08;color:#24193a;-webkit-text-stroke:14px #fff;paint-order:stroke fill;filter:drop-shadow(0 6px 0 rgba(0,0,0,.10))}}
 .t b{{display:block;font-weight:900}}
-.ph{{position:absolute;left:54px;right:54px;bottom:54px;top:{int(H*0.40)}px;border-radius:40px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(40,20,80,.16)}}
-.ph img{{width:100%;height:100%;object-fit:cover}}
-.ph.ct img{{object-fit:contain;padding:36px}}
-.st{{position:absolute;right:30px;top:{int(H*0.40)-70}px;width:220px;height:220px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-  color:#fff;font-size:44px;font-weight:900;line-height:1.08;transform:rotate(8deg);box-shadow:0 8px 20px rgba(0,0,0,.18);border:6px solid #fff;white-space:pre-line}}
-.wm{{position:absolute;left:84px;bottom:80px;background:rgba(255,255,255,.9);color:#6b4bd6;font-size:26px;font-weight:800;padding:8px 18px;border-radius:20px}}
+.sub{{position:relative;display:inline-block;margin-top:14px;font-size:32px;font-weight:800;color:#24193a;background:#fff;border-radius:14px;padding:6px 18px}}
+.g{{position:absolute;left:40px;right:40px;bottom:46px;top:{{TOP}}px;display:grid;grid-template-columns:1fr 1fr;gap:20px}}
+.tile{{position:relative;border-radius:30px;overflow:hidden;background:#fff;border:7px solid #fff;box-shadow:0 10px 24px rgba(40,20,80,.20)}}
+.tile:nth-child(odd){{transform:rotate(-1.6deg)}} .tile:nth-child(even){{transform:rotate(1.6deg)}}
+.tile.wide{{grid-column:1 / span 2}}
+.tile img{{width:100%;height:100%;object-fit:cover;display:block}}
+.tile.ct img{{object-fit:contain;padding:22px 22px 70px}}
+.nm{{position:absolute;left:0;right:0;top:0;padding:12px 16px 30px;text-align:left;color:#fff;font-size:27px;font-weight:800;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,0))}}
+.tile.ct .nm{{color:#3a3050;background:none;padding:10px 14px;font-size:24px}}
+.tag{{position:absolute;left:12px;bottom:12px;padding:8px 16px;border-radius:16px;font-size:30px;font-weight:900;color:#fff;white-space:nowrap}}
+.st{{position:absolute;right:22px;width:200px;height:200px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:5;
+  color:#fff;font-weight:900;line-height:1.02;transform:rotate(10deg);box-shadow:0 10px 24px rgba(0,0,0,.22);border:8px solid #fff;white-space:pre-line}}
+.wm{{position:absolute;right:46px;bottom:14px;color:rgba(36,25,58,.55);font-size:22px;font-weight:800}}
 """
 
 def card(c):
-    ac = c.get('accent', '#ff6b3d')
-    ph = data_uri(c['img'])
-    fit = ' ct' if c.get('fit') == 'contain' else ''
+    ac = c.get('accent', '#ff6b3d'); bg = c.get('bg', '#fff4d6')
+    photos = c.get('photos') or [{'img': c['img'], 'fit': c.get('fit', 'cover')}]
+    n = len(photos)
+    l1, l2 = c['l1'], c.get('l2', '')
+    fs = int(min(112, 800 / (max(len(l1), len(l2)) * 0.97)))
+    top = 50 + 64 + 2 * int(fs * 1.08) + (62 if c.get('sub') else 0) + 26
+    tiles = []
+    for i, p in enumerate(photos):
+        wide = ' wide' if (n == 3 and i == 0) or n == 1 else ''
+        ct = ' ct' if p.get('fit') == 'contain' else ''
+        nm = f"<div class='nm'>{e(p['name'])}</div>" if p.get('name') else ''
+        tg = f"<div class='tag' style='background:{p.get('tagc', ac)}'>{e(p['tag'])}</div>" if p.get('tag') else ''
+        tiles.append(f"<div class='tile{wide}{ct}'><img src=\"{data_uri(p['img'])}\">{nm}{tg}</div>")
+    rows = 1 if n <= 2 else 2
     ml = max((len(x) for x in str(c.get('sticker', '')).split('\n')), default=0)
-    fs = 50 if ml <= 3 else 42 if ml <= 5 else 34
-    st = f"<div class='st' style='background:{ac};font-size:{fs}px'>{e(c['sticker'])}</div>" if c.get('sticker') else ''
-    return f"""<html><head><meta charset='utf-8'><style>{CSS}</style></head><body>
-<div class='c' style='background:{c.get('bg', '#fff4d6')}'>
+    nl = str(c.get('sticker', '')).count('\n') + 1
+    sfs = min(64 if ml <= 3 else 50 if ml <= 4 else 40, 150 // nl)
+    st = f"<div class='st' style='top:{top-60}px;right:4px;background:{ac};font-size:{sfs}px'>{e(c['sticker'])}</div>" if c.get('sticker') else ''
+    sub = f"<div class='sub'>{e(c['sub'])}</div>" if c.get('sub') else ''
+    rays = f"<div class='rays' style='background:repeating-conic-gradient(from 0deg at 50% 50%,{bg} 0 9deg,#ffffff 9deg 18deg)'></div>"
+    dots = ''.join(f"<div class='dot' style='left:{x}px;top:{y}px;width:{r}px;height:{r}px;background:{col}'></div>" for x, y, r, col in
+                   ((40, 70, 26, ac), (820, 40, 18, '#ffd23f'), (70, 300, 14, '#4cc9f0'), (800, 300, 22, '#ff5c93'), (20, 200, 12, '#ffd23f')))
+    css = CSS.replace('{TOP}', str(top))
+    return f"""<html><head><meta charset='utf-8'><style>{css}.g{{grid-template-rows:repeat({rows},1fr)}}</style></head><body>
+<div class='c' style='background:{bg}'>{rays}{dots}
 <div class='pill' style='background:{ac}'>{e(c.get('pill', ''))}</div>
-<div class='t'><b>{e(c['l1'])}</b><b style='color:{ac}'>{e(c.get('l2', ''))}</b></div>
-<div class='ph{fit}'><img src="{ph}"></div>{st}<div class='wm'>다꾸 체험단</div>
+<div class='t' style='font-size:{fs}px'><b>{e(l1)}</b><b style='color:{ac}'>{e(l2)}</b></div>{sub}
+<div class='g'>{''.join(tiles)}</div>{st}<div class='wm'>다꾸 체험단</div>
 </div></body></html>"""
 
 def text():
