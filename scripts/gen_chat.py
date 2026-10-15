@@ -71,7 +71,7 @@ def stay_post(it):
     lines.append(f"{where}{josa_ro(where)} {k} 여행 가고 싶은 분들🤍" if where else f"{k} 여행 가고 싶은 분들🤍")
     lines.append(f"{w} 상당 숙박 체험 소식 가져왔어요!" if w else "숙박 체험 소식 가져왔어요!")
     lines.append("어떤 숙소인지 먼저 구경해보세요 :)")
-    lines += ["", "🎈 체험단 신청하기", it['applyUrl'], "", "🎈 숙소 먼저 확인하기", it['viewUrl'], "",
+    lines += ["", "🎈 체험단 신청하기", it['applyUrl'], "", "🎈 숙소 먼저 확인하기", (it.get('infUrl') or it['viewUrl']), "",
               "🎁 특별혜택 미리보기", f"🏡 {it.get('benefit','').strip()}"]
     if w: lines.append(f"✔️ {w} 상당 숙박 체험")
     lines += ["", "마음에 드셨다면 체험단에도 신청해보세요🤍", "", "",
@@ -97,7 +97,7 @@ def baby_post(it):
              "우리 아이 육아템 써보고 싶은 분들🤍"]
     lines.append(f"{w} 상당 제품 체험 소식 가져왔어요!" if w else "제품 체험 소식 가져왔어요!")
     lines.append("어떤 제품인지 먼저 구경해보세요 :)")
-    lines += ["", "🎈 체험단 신청하기", it['applyUrl'], "", "🎈 제품 먼저 확인하기", it['viewUrl'], "",
+    lines += ["", "🎈 체험단 신청하기", it['applyUrl'], "", "🎈 제품 먼저 확인하기", (it.get('infUrl') or it['viewUrl']), "",
               "🎁 특별혜택 미리보기", f"🎀 {it.get('benefit','').strip()}"]
     if w: lines.append(f"✔️ {w} 상당 제품 체험")
     if it.get('ages'): lines.append(f"✔️ 추천 월령 : {', '.join(it['ages'])}")
