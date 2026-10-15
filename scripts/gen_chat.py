@@ -121,8 +121,9 @@ if not stays and not babies:
 
 SEP = '\n\n' + '─' * 20 + '\n\n'
 out = []
-if stays: out.append('■ 여행협찬 단톡방\n\n' + SEP.join(stay_post(i) for i in stays))
-if babies: out.append('■ 육아협찬 단톡방\n\n' + SEP.join(baby_post(i) for i in babies))
+MORE = '\n\n📢 더 많은 체험단 소식은 다꾸체험단에서 확인하세요!\nhttps://dagguu.github.io'
+if stays: out.append('■ 여행협찬 단톡방\n\n' + SEP.join(stay_post(i) for i in stays) + MORE)
+if babies: out.append('■ 육아협찬 단톡방\n\n' + SEP.join(baby_post(i) for i in babies) + MORE)
 text = ('\n\n' + '═' * 20 + '\n\n').join(out) + '\n'
 os.makedirs(os.path.join(ROOT, 'chat'), exist_ok=True)
 path = os.path.join(ROOT, 'chat', f'{day}.txt')
