@@ -22,16 +22,16 @@ e = html.escape
 W, H = 1080, 1350
 _SR = None
 def _sr():
-    """OpenCV 초해상도(EDSR x2) 모델. 없으면 None → Lanczos 로 대신."""
+    """OpenCV 초해상도(FSRCNN x2, 빠름) 모델. 없으면 None → Lanczos 로 대신."""
     global _SR
     if _SR is None:
         _SR = False
         try:
             import cv2
-            mp = os.path.join(os.environ.get('RUNNER_TEMP', '/tmp'), 'EDSR_x2.pb')
+            mp = os.path.join(os.environ.get('RUNNER_TEMP', '/tmp'), 'FSRCNN_x2.pb')
             if not os.path.exists(mp):
-                urllib.request.urlretrieve('https://github.com/Saafke/EDSR_Tensorflow/raw/master/models/EDSR_x2.pb', mp)
-            m = cv2.dnn_superres.DnnSuperResImpl_create(); m.readModel(mp); m.setModel('edsr', 2); _SR = m
+                urllib.request.urlretrieve('https://github.com/Saafke/FSRCNN_Tensorflow/raw/master/models/FSRCNN_x2.pb', mp)
+            m = cv2.dnn_superres.DnnSuperResImpl_create(); m.readModel(mp); m.setModel('fsrcnn', 2); _SR = m
         except Exception as ex:
             print('초해상도 모델 못 씀, Lanczos 사용:', ex)
     return _SR or None
