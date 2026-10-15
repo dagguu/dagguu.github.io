@@ -10,7 +10,7 @@ import json, html, os, re, shutil
 from datetime import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = "https://dagguu.github.io"
+SITE = "https://www.dagguu.com"
 d = json.load(open(os.path.join(ROOT, "data.json"), encoding="utf-8"))
 
 def page(title, desc, img, target):

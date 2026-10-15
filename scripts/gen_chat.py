@@ -132,7 +132,7 @@ if not stays and not babies:
 
 SEP = '\n\n' + '─' * 20 + '\n\n'
 out = []
-MORE = '\n\n📢 더 많은 체험단 소식은 다꾸체험단에서 확인하세요!\nhttps://dagguu.github.io'
+MORE = '\n\n📢 더 많은 체험단 소식은 다꾸체험단에서 확인하세요!\nhttps://www.dagguu.com'
 if stays: out.append('■ 여행협찬 단톡방\n\n' + SEP.join(stay_post(i) for i in stays) + MORE)
 if babies: out.append('■ 육아협찬 단톡방\n\n' + SEP.join(baby_post(i) for i in babies) + MORE)
 text = ('\n\n' + '═' * 20 + '\n\n').join(out) + '\n'

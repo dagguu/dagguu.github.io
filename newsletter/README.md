@@ -12,7 +12,7 @@
 - 3줄 이후: 픽 3개(이모지 + [숙박]/[육아] + 이름 + 한 줄 혜택 + 마감) → "🔥 오늘의 특가" 두 줄(특가 탭 맨 위 "🏆 지금 할인율 TOP" 에 나오는 상품 중에서만 고른다 — app.js topDeals(4) 와 같은 규칙: toss(품절 제외)·babyDeals·goldbox 를 할인율 순으로 4개, 아기용품 1등은 꼭 포함. 상품 짧은 이름 + 할인율↓ + 가격 + 끝나는 시각: 쿠팡 골드박스·아기용품은 "내일 7시까지", 토스는 "밤 12시까지", 품절 제외) → 마무리 한 줄.
 - 사실만. 금액·개수·마감은 data.json 그대로. "당첨률 높은", "인기 많은", "80만원대" 같은 말은 데이터 근거(worth, 다꾸 추천 pick)가 있을 때만 쓴다. 이름(OOO님) 개인화는 채널 메시지에서 안 되므로 쓰지 않는다.
 - 본문에는 링크(URL)를 넣지 않는다. 링크는 맨 밑 버튼 2개로만: "버튼1: 이름 | 주소", "버튼2: 이름 | 주소".
-  기본 버튼1 "오늘 오픈 체험단 보기 | https://dagguu.github.io/#/list?cat=stay&s=open", 버튼2 "오늘의 특가 보기 | https://dagguu.github.io/#/deals".
+  기본 버튼1 "오늘 오픈 체험단 보기 | https://www.dagguu.com/#/list?cat=stay&s=open", 버튼2 "오늘의 특가 보기 | https://www.dagguu.com/#/deals".
 - 본문은 반드시 300자 이내(공백·줄바꿈 포함, 버튼 제외). 넘으면 픽을 줄인다. 맨 위에 "훅 후보" 2개를 따로 더 적어 시온님이 골라 쓸 수 있게 한다.
 
 캐러셀형(피드형) 카드 메시지 (2026-10-15 추가, 웅진마켓·마이리틀타이거 채널 같은 형식)
@@ -29,5 +29,5 @@
   · 사진은 작업 컨테이너에서 직접 못 보므로, 후보가 애매하면 먼저 date "pick-YYYY-MM-DD" 큐(카드당 사진 1장)로 push 해 insta 브랜치 kakao/pick-YYYY-MM-DD/N.jpg 를 git show 로 받아 보고 고른 뒤 진짜 큐를 push. 완성 카드도 git show 로 받아 직접 보고, 이상한 사진은 바꿔 다시 push.
 - 카드 형식: {"photos":[{img, fit(숙소 cover/제품 contain), name(사진 위 작은 이름: "지역 숙소"/"브랜드 제품" 13자 안팎), tag(아래 딱지: "40만원 상당"·"46,200원 환급"·"▼48% 19,300원", 특가는 tagc "#ff3b30")}×4], bg, accent, pill(예 "⏰ 단 하루! 오늘 마감"), l1/l2(큰 글씨 두 줄, 각 10자 안팎), sticker(2~3줄 짧게), title, desc, btn, url}.
 - 카드 글은 예시 채널(웅진마켓·마이리틀타이거)처럼: 제목 "[오늘종료⏰]"·"[NEW✨]"·"[핫딜🔥]" 꼬리표 + 주제. 설명 3줄 = 끌리는 한 줄(가장 센 숫자·이모지) / 구경하고 싶게 하는 한 줄 / "✔기간 : ~M/D" (특가는 "✔기간 : ~내일 아침 7시까지"·"~M/D 밤 12시까지"). 숫자는 data.json 그대로.
-- 버튼(8자 이내)은 사이트 목록으로: ① "오늘마감 보기 | https://dagguu.github.io/#/list?cat=stay&s=todayClose" ② "체험단 보러가기 | …#/list?cat=stay&s=todayOpen" ③ "풀빌라 보러가기 | …#/list?cat=stay&q=풀빌라" ④ "페이백 보러가기 | …#/list?cat=baby&ch=payback" ⑤ "핫딜 보러가기 | …#/deals" ⑥ "특가 보러가기 | …#/deals".
+- 버튼(8자 이내)은 사이트 목록으로: ① "오늘마감 보기 | https://www.dagguu.com/#/list?cat=stay&s=todayClose" ② "체험단 보러가기 | …#/list?cat=stay&s=todayOpen" ③ "풀빌라 보러가기 | …#/list?cat=stay&q=풀빌라" ④ "페이백 보러가기 | …#/list?cat=baby&ch=payback" ⑤ "핫딜 보러가기 | …#/deals" ⑥ "특가 보러가기 | …#/deals".
 - python3 scripts/gen_kakao.py --text 로 글자수를 검사하고 카드별 이미지 주소·제목·설명·버튼을 뽑아 newsletter/YYYY-MM-DD-carousel.txt 로 저장한다.
