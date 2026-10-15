@@ -15,7 +15,7 @@ jobs:
         with: { python-version: "3.12" }
       - run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk fonts-noto-color-emoji >/dev/null
-          pip install -q playwright && python -m playwright install --with-deps chromium >/dev/null
+          pip install -q playwright pillow numpy opencv-contrib-python-headless && python -m playwright install --with-deps chromium >/dev/null
       - run: python scripts/gen_insta.py
       - name: 네이버 메일로 보내기
         env:
