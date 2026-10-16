@@ -807,3 +807,5 @@ img{display:block}
 .cheapb .cbad{position:absolute;top:8px;right:12px;font-style:normal;font-size:9px;font-weight:700;color:#aaa;border:1px solid #ccc;border-radius:999px;padding:1px 5px}
 .hpad .cheapb{margin:4px 0}
 .shopb{background:#fff4ec}.shopb .cbl{font-size:30px}
+
+.sitebiz{max-width:720px;margin:0 auto;padding:16px 16px 96px;font-size:12px;color:#8a8794;line-height:1.7}.sitebiz span{margin-right:8px}

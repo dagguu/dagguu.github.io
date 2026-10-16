@@ -1320,7 +1320,7 @@ shell(); paintLogo(); route();
   if(document.getElementById("kakao-js-sdk")) return; var js=document.createElement("script"); js.id="kakao-js-sdk"; js.src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.channel.min.js"; js.integrity="sha384-8oNFBbAHWVovcMLgR+mLbxqwoucixezSAzniBcjnEoumhfIbMIg4DrVsoiPEtlnt"; js.crossOrigin="anonymous"; js.async=true; document.head.appendChild(js); })();
 window.addEventListener("hashchange",route);
 fetch("data.json?v="+Date.now().toString(36).slice(0,-3),{cache:"no-cache"}).then(function(r){ return r.json(); }).then(function(d){
-  seed=d||seed; if(!Array.isArray(seed.items)) seed.items=[]; var bz=document.getElementById("bizline"); if(bz) bz.innerHTML=bizLine();
+  seed=d||seed; if(!Array.isArray(seed.items)) seed.items=[]; /* 사업자 정보는 index.html 의 고정 footer(#sitebiz)에 있음: 네이버 검색광고 확인용, JS 없이도 보이게 */
   if(Array.isArray(seed.categories)&&seed.categories.length) CATS=seed.categories;
   UPCOMING=Array.isArray(seed.upcoming)?seed.upcoming:[]; ADS=Array.isArray(seed.ads)?seed.ads:[]; DEALS=Array.isArray(seed.deals)?seed.deals:[];
   state.loading=false; LOGO=pickLogo(); paintLogo(); setFavicon(); render();
