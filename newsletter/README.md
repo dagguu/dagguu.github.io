@@ -23,7 +23,7 @@
   · 체험단 3줄: "기간: ~M/D 오늘까지!" / "기간: ~M/D 내일까지!" / "기간: ~M/D"
   · 특가 3줄: "원가→가격 (N%↓)" 또는 "가격 (N%↓) · 내일 아침 7시까지"(골드박스) / "· 밤 12시까지"(토스)
   · 이모지는 카드당 1~2개만. 숫자·혜택·마감은 data.json 그대로, 원문에 없는 시설·효능은 쓰지 않는다. "인기"는 어제 이전에 올라온 숙소를 소개할 때만.
-- 버튼: 체험단 "신청하러가기 | https://dagguu.github.io/s/{id}.html", 특가 "특가 보러가기 | https://dagguu.github.io/#/deals".
+- 버튼: 체험단 "신청하러가기 | https://www.dagguu.com/s/{id}.html", 특가 "특가 보러가기 | https://www.dagguu.com/#/deals".
 - newsletter/YYYY-MM-DD-carousel.txt 에 아래 형식으로 쓴다(이미지 주소 없음):
 
 1.[오늘종료] 청도 477풀빌라
@@ -32,7 +32,7 @@
 1박2일 숙박 체험권 (2인 기준) 🏊
 기간: ~10/15 오늘까지!
 
-신청하러가기 | https://dagguu.github.io/s/i20261013-048.html
+신청하러가기 | https://www.dagguu.com/s/i20261013-048.html
 
 
 2.[핫딜] 궁중비책 베이비 유아크림
@@ -41,6 +41,6 @@
 베이비 모이스처 유아크림 180ml
 37,620원→19,300원 (48%↓) · 내일 아침 7시까지
 
-특가 보러가기 | https://dagguu.github.io/#/deals
+특가 보러가기 | https://www.dagguu.com/#/deals
 
 - (참고) 예전 이미지 카드 도구 scripts/gen_kakao.py·kakao.yml 은 남겨 두었지만 지금은 쓰지 않는다.

@@ -8,7 +8,7 @@ const SK = Deno.env.get("COUPANG_SECRET_KEY") ?? "";
 const HOST = "https://api-gateway.coupang.com";
 const PATH = "/v2/providers/affiliate_open_api/apis/openapi/products/search";
 const CORS = {
-  "Access-Control-Allow-Origin": "https://dagguu.github.io",
+  "Access-Control-Allow-Origin": "https://www.dagguu.com",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
   "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
