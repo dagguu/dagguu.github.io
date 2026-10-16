@@ -45,7 +45,7 @@ body{{width:{W}px;height:{H}px;overflow:hidden;font-family:'Jua','Noto Sans CJK 
 .dot{{position:absolute;border-radius:50%}}
 .pill{{position:relative;display:inline-block;padding:10px 28px;border-radius:40px;font-size:34px;font-weight:900;color:#fff;margin-bottom:14px;box-shadow:0 4px 0 rgba(0,0,0,.12)}}
 .t{{position:relative;font-weight:900;line-height:1.08;color:#24193a;-webkit-text-stroke:14px #fff;paint-order:stroke fill;filter:drop-shadow(0 6px 0 rgba(0,0,0,.10))}}
-.t b{{display:block;font-weight:400}}
+.t b{{display:block;font-weight:400;font-family:'Black Han Sans','Jua',sans-serif;letter-spacing:-.01em}}
 .t b.k{{font-family:'Black Han Sans','Jua',sans-serif;letter-spacing:-.01em}}
 .sub{{position:relative;display:inline-block;margin-top:14px;font-size:32px;font-weight:800;color:#24193a;background:#fff;border-radius:14px;padding:6px 18px}}
 .g{{position:absolute;left:40px;right:40px;bottom:46px;top:{{TOP}}px;display:grid;grid-template-columns:1fr 1fr;gap:20px}}
@@ -57,7 +57,7 @@ body{{width:{W}px;height:{H}px;overflow:hidden;font-family:'Jua','Noto Sans CJK 
 .nm{{position:absolute;left:0;right:0;top:0;padding:12px 16px 30px;text-align:left;color:#fff;font-size:27px;font-weight:800;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,0))}}
 .tile.ct .nm{{color:#3a3050;background:none;padding:10px 14px;font-size:24px}}
 .tag{{position:absolute;left:12px;bottom:12px;padding:8px 16px;border-radius:16px;font-size:30px;font-weight:900;color:#fff;white-space:nowrap}}
-.st{{font-family:'Black Han Sans','Jua',sans-serif !important;position:absolute;right:22px;width:200px;height:200px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:5;
+.st{{font-family:'Jua','Noto Sans CJK KR',sans-serif !important;position:absolute;right:22px;width:200px;height:200px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:5;
   color:#fff;font-weight:900;line-height:1.02;transform:rotate(10deg);box-shadow:0 10px 24px rgba(0,0,0,.22);border:8px solid #fff;white-space:pre-line}}
 .wm{{position:absolute;right:46px;bottom:14px;color:rgba(36,25,58,.55);font-size:22px;font-weight:800}}
 """
