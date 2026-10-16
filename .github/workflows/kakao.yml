@@ -16,6 +16,11 @@ jobs:
       - run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk fonts-noto-color-emoji >/dev/null
           pip install -q playwright && python -m playwright install --with-deps chromium >/dev/null
+          # 배달의민족 주아체(Jua)·검은고딕 간판체(Black Han Sans) — 구글 폰트(OFL)
+          mkdir -p ~/.local/share/fonts
+          curl -sSLf -o ~/.local/share/fonts/Jua-Regular.ttf https://github.com/google/fonts/raw/main/ofl/jua/Jua-Regular.ttf
+          curl -sSLf -o ~/.local/share/fonts/BlackHanSans-Regular.ttf https://github.com/google/fonts/raw/main/ofl/blackhansans/BlackHanSans-Regular.ttf
+          fc-cache -f >/dev/null; fc-list | grep -i -e jua -e "black han"
       - run: python scripts/gen_kakao.py
       # 이미지는 main 을 무겁게 하지 않도록 insta 브랜치 kakao/<날짜>/ 에 올린다
       - run: |

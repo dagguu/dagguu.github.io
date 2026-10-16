@@ -38,13 +38,15 @@ def data_uri(src):
     return f'data:image/{kind};base64,' + base64.b64encode(b).decode()
 
 CSS = f"""*{{margin:0;box-sizing:border-box}}
-body{{width:{W}px;height:{H}px;overflow:hidden;font-family:'Noto Sans CJK KR','Noto Sans KR',sans-serif;letter-spacing:-.045em}}
+body{{width:{W}px;height:{H}px;overflow:hidden;font-family:'Jua','Noto Sans CJK KR',sans-serif;letter-spacing:-.02em}}
+.pill,.t,.sub,.nm,.tag,.st,.wm{{font-family:'Jua','Noto Sans CJK KR',sans-serif;font-weight:400 !important}}
 .c{{position:relative;width:{W}px;height:{H}px;padding:50px 40px 0;text-align:center;overflow:hidden}}
 .rays{{position:absolute;left:-50%;top:-60%;width:200%;height:200%;opacity:.55}}
 .dot{{position:absolute;border-radius:50%}}
 .pill{{position:relative;display:inline-block;padding:10px 28px;border-radius:40px;font-size:34px;font-weight:900;color:#fff;margin-bottom:14px;box-shadow:0 4px 0 rgba(0,0,0,.12)}}
 .t{{position:relative;font-weight:900;line-height:1.08;color:#24193a;-webkit-text-stroke:14px #fff;paint-order:stroke fill;filter:drop-shadow(0 6px 0 rgba(0,0,0,.10))}}
-.t b{{display:block;font-weight:900}}
+.t b{{display:block;font-weight:400}}
+.t b.k{{font-family:'Black Han Sans','Jua',sans-serif;letter-spacing:-.01em}}
 .sub{{position:relative;display:inline-block;margin-top:14px;font-size:32px;font-weight:800;color:#24193a;background:#fff;border-radius:14px;padding:6px 18px}}
 .g{{position:absolute;left:40px;right:40px;bottom:46px;top:{{TOP}}px;display:grid;grid-template-columns:1fr 1fr;gap:20px}}
 .tile{{position:relative;border-radius:30px;overflow:hidden;background:#fff;border:7px solid #fff;box-shadow:0 10px 24px rgba(40,20,80,.20)}}
@@ -55,7 +57,7 @@ body{{width:{W}px;height:{H}px;overflow:hidden;font-family:'Noto Sans CJK KR','N
 .nm{{position:absolute;left:0;right:0;top:0;padding:12px 16px 30px;text-align:left;color:#fff;font-size:27px;font-weight:800;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,0))}}
 .tile.ct .nm{{color:#3a3050;background:none;padding:10px 14px;font-size:24px}}
 .tag{{position:absolute;left:12px;bottom:12px;padding:8px 16px;border-radius:16px;font-size:30px;font-weight:900;color:#fff;white-space:nowrap}}
-.st{{position:absolute;right:22px;width:200px;height:200px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:5;
+.st{{font-family:'Black Han Sans','Jua',sans-serif !important;position:absolute;right:22px;width:200px;height:200px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:5;
   color:#fff;font-weight:900;line-height:1.02;transform:rotate(10deg);box-shadow:0 10px 24px rgba(0,0,0,.22);border:8px solid #fff;white-space:pre-line}}
 .wm{{position:absolute;right:46px;bottom:14px;color:rgba(36,25,58,.55);font-size:22px;font-weight:800}}
 """
@@ -87,7 +89,7 @@ def card(c):
     return f"""<html><head><meta charset='utf-8'><style>{css}.g{{grid-template-rows:repeat({rows},1fr)}}</style></head><body>
 <div class='c' style='background:{bg}'>{rays}{dots}
 <div class='pill' style='background:{ac}'>{e(c.get('pill', ''))}</div>
-<div class='t' style='font-size:{fs}px'><b>{e(l1)}</b><b style='color:{ac}'>{e(l2)}</b></div>{sub}
+<div class='t' style='font-size:{fs}px'><b>{e(l1)}</b><b class='k' style='color:{ac}'>{e(l2)}</b></div>{sub}
 <div class='g'>{''.join(tiles)}</div>{st}<div class='wm'>다꾸 체험단</div>
 </div></body></html>"""
 
