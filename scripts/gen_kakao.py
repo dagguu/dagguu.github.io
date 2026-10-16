@@ -94,6 +94,69 @@ def card(c):
 <div class='g'>{''.join(tiles)}</div>{st}<div class='wm'>다꾸 체험단</div>
 </div></body></html>"""
 
+
+# ── v2: 연한 크림 배경 + 큰 제목 + 물결 스티커 + 2x2 카드(이름·짧은 문구·가격 버튼) + 아래 큰 버튼 (2026-10-16 시온님 예시) ──
+import math
+def wavy(r=100, n=14, amp=7):
+    pts = []
+    for k in range(360):
+        a = math.radians(k); rr = r + amp * math.cos(n * a)
+        pts.append(f"{120 + rr*math.cos(a):.1f},{120 + rr*math.sin(a):.1f}")
+    return "M" + " L".join(pts) + " Z"
+WAVY = wavy()
+CSS2 = f"""*{{margin:0;box-sizing:border-box}}
+body{{width:{W}px;height:{H}px;overflow:hidden;font-family:'Noto Sans CJK KR','Noto Sans KR',sans-serif;letter-spacing:-.03em}}
+.c{{position:relative;width:{W}px;height:{H}px;overflow:hidden;text-align:center;padding-top:44px}}
+.bub{{position:absolute;border-radius:50%}}
+.lab{{position:relative;display:inline-block;padding:12px 34px;border-radius:40px;font-size:30px;font-weight:700;color:#2a2a2a}}
+.h{{position:relative;font-family:'Black Han Sans','Jua',sans-serif;line-height:1.08;margin-top:16px}}
+.h b{{display:block;font-weight:400}}
+.sub{{position:relative;display:inline-block;margin-top:14px;font-size:29px;font-weight:600;color:#333;padding:0 6px 6px}}
+.st{{position:absolute;right:8px;width:190px;height:190px;z-index:6;transform:rotate(-6deg)}}
+.st svg{{position:absolute;inset:0;filter:drop-shadow(0 6px 10px rgba(0,0,0,.18))}}
+.st div{{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Jua',sans-serif;color:#fff;line-height:1.05;white-space:pre-line}}
+.g{{position:absolute;left:34px;right:34px;display:grid;grid-template-columns:1fr 1fr;gap:18px}}
+.tile{{position:relative;border-radius:26px;overflow:hidden;background:#fff;box-shadow:0 8px 22px rgba(60,50,30,.13)}}
+.tile img{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}}
+.tile.ct img{{left:42%;width:58%;object-fit:contain;padding:22px 14px 22px 0}}
+.tile .fd{{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.85) 38%,rgba(255,255,255,0) 66%)}}
+.tile.ct .fd{{background:none}}
+.tx{{position:absolute;left:24px;top:24px;right:20px;text-align:left}}
+.nm{{font-size:28px;font-weight:800;color:#1d1d1d;line-height:1.2;max-width:62%}}
+.tile.ct .nm{{max-width:60%}}
+.cp{{margin-top:12px;font-size:25px;font-weight:500;color:#444;line-height:1.38;white-space:pre-line}}
+.pr{{position:absolute;left:18px;bottom:20px;display:flex;align-items:center;gap:12px;padding:10px 12px 10px 22px;border-radius:40px;color:#fff;font-size:28px;font-weight:800;box-shadow:0 4px 10px rgba(0,0,0,.15)}}
+.pr i{{display:inline-flex;width:34px;height:34px;border-radius:50%;background:#fff;align-items:center;justify-content:center;font-style:normal;font-size:24px;font-weight:900}}
+.cta{{position:absolute;left:50%;transform:translateX(-50%);bottom:34px;padding:22px 56px;border-radius:60px;color:#fff;font-size:32px;font-weight:800;white-space:nowrap;box-shadow:0 8px 18px rgba(0,0,0,.2)}}
+"""
+def card_v2(c):
+    ac, lt, bg = c.get('accent', '#1f7a4a'), c.get('light', '#dcebd9'), c.get('bg', '#f5f3ea')
+    l1, l2 = c['l1'], c.get('l2', '')
+    fs = int(min(116, 720 / (max(len(l1), len(l2)) * 0.98)))
+    gtop = 44 + 62 + 16 + int(fs * 1.08) * 2 + 14 + 48 + 34
+    gbot = 34 + 86 + 30
+    tiles = []
+    for p in c['tiles']:
+        ct = ' ct' if p.get('fit') == 'contain' else ''
+        tiles.append(f"""<div class='tile{ct}'><img src="{data_uri(p['img'])}"><div class='fd'></div>
+<div class='tx'><div class='nm'>{e(p['name'])}</div><div class='cp'>{e(p.get('copy',''))}</div></div>
+<div class='pr' style='background:{ac}'>{e(p['price'])}<i style='color:{ac}'>›</i></div></div>""")
+    bubs = ''.join(f"<div class='bub' style='left:{x}px;top:{y}px;width:{r}px;height:{r}px;background:{lt};opacity:{o}'></div>"
+                   for x, y, r, o in ((-90, 140, 260, .7), (720, -90, 280, .6), (760, 1040, 260, .55), (-60, 980, 180, .45)))
+    sl = str(c.get('sticker', '')).split('\n')
+    sti = ''.join(f"<span style='font-size:{28 if k==0 and len(sl)>2 else 40}px;color:{'#fff' if k==0 and len(sl)>2 else '#ffe14d'}'>{e(t)}</span>" for k, t in enumerate(sl))
+    st = f"<div class='st' style='top:{44 + 62 + 16 + int(fs * 1.08) - 10}px'><svg viewBox='0 0 240 240'><path d='{WAVY}' fill='{ac}' stroke='#fff' stroke-width='6'/></svg><div>{sti}</div></div>" if c.get('sticker') else ''
+    return f"""<html><head><meta charset='utf-8'><style>{CSS2}</style></head><body>
+<div class='c' style='background:{bg}'>{bubs}
+<div class='lab' style='background:{lt}'>{e(c.get('label',''))}</div>
+<div class='h' style='font-size:{fs}px'><b style='color:#161616'>{e(l1)}</b><b style='color:{ac}'>{e(l2)}</b></div>
+<div class='sub' style='border-bottom:5px solid {lt}'>{e(c.get('sub',''))}</div>{st}
+<div class='g' style='top:{gtop}px;bottom:{gbot}px;grid-template-rows:1fr 1fr'>{''.join(tiles)}</div>
+<div class='cta' style='background:{ac}'>{e(c.get('cta','지금 보러가기 →'))}</div>
+</div></body></html>"""
+
+def render(c): return card_v2(c) if c.get('style') == 'v2' else card(c)
+
 def text():
     raw = f"https://raw.githubusercontent.com/dagguu/dagguu.github.io/insta/kakao/{Q['date']}"
     L = [f"카카오톡 채널 캐러셀(피드형) {Q['date']} — 카드 {len(Q['cards'])}장", "관리자센터 > 메시지 작성 > 캐러셀형 > 카드마다 아래 이미지·제목·설명·버튼을 넣어요.", ""]
@@ -117,7 +180,7 @@ with sync_playwright() as pw:
     b = pw.chromium.launch()
     pg = b.new_page(viewport={'width': W, 'height': H})
     for n, c in enumerate(Q['cards'], 1):
-        pg.set_content(card(c)); pg.wait_for_timeout(300)
+        pg.set_content(render(c)); pg.wait_for_timeout(300)
         pg.screenshot(path=os.path.join(out, f'{n}.jpg'), type='jpeg', quality=88)
         print(out, n)
     b.close()
