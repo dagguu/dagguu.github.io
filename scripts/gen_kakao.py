@@ -122,8 +122,7 @@ body{{width:{W}px;height:{H}px;overflow:hidden;font-family:'Noto Sans CJK KR','N
 .tile .fd{{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.85) 38%,rgba(255,255,255,0) 66%)}}
 .tile.ct .fd{{background:none}}
 .tx{{position:absolute;left:24px;top:24px;right:20px;text-align:left}}
-.nm{{font-size:28px;font-weight:800;color:#1d1d1d;line-height:1.2;max-width:62%}}
-.tile.ct .nm{{max-width:60%}}
+.nm{{font-weight:800;color:#1d1d1d;line-height:1.2;white-space:nowrap}}
 .cp{{margin-top:12px;font-size:25px;font-weight:500;color:#444;line-height:1.38;white-space:pre-line}}
 .pr{{position:absolute;left:18px;bottom:20px;display:flex;align-items:center;gap:12px;padding:10px 12px 10px 22px;border-radius:40px;color:#fff;font-size:28px;font-weight:800;box-shadow:0 4px 10px rgba(0,0,0,.15)}}
 .pr i{{display:inline-flex;width:34px;height:34px;border-radius:50%;background:#fff;align-items:center;justify-content:center;font-style:normal;font-size:24px;font-weight:900}}
@@ -132,14 +131,14 @@ body{{width:{W}px;height:{H}px;overflow:hidden;font-family:'Noto Sans CJK KR','N
 def card_v2(c):
     ac, lt, bg = c.get('accent', '#1f7a4a'), c.get('light', '#dcebd9'), c.get('bg', '#f5f3ea')
     l1, l2 = c['l1'], c.get('l2', '')
-    fs = int(min(116, 720 / (max(len(l1), len(l2)) * 0.98)))
+    fs = int(min(108, 680 / (max(len(l1), len(l2)) * 0.98)))
     gtop = 44 + 62 + 16 + int(fs * 1.08) * 2 + 14 + 48 + 34
     gbot = 34 + 86 + 30
     tiles = []
     for p in c['tiles']:
         ct = ' ct' if p.get('fit') == 'contain' else ''
         tiles.append(f"""<div class='tile{ct}'><img src="{data_uri(p['img'])}"><div class='fd'></div>
-<div class='tx'><div class='nm'>{e(p['name'])}</div><div class='cp'>{e(p.get('copy',''))}</div></div>
+<div class='tx'><div class='nm' style='font-size:{28 if len(p["name"])<=8 else 25 if len(p["name"])<=10 else 22}px'>{e(p['name'])}</div><div class='cp'>{e(p.get('copy',''))}</div></div>
 <div class='pr' style='background:{ac}'>{e(p['price'])}<i style='color:{ac}'>›</i></div></div>""")
     bubs = ''.join(f"<div class='bub' style='left:{x}px;top:{y}px;width:{r}px;height:{r}px;background:{lt};opacity:{o}'></div>"
                    for x, y, r, o in ((-90, 140, 260, .7), (720, -90, 280, .6), (760, 1040, 260, .55), (-60, 980, 180, .45)))
