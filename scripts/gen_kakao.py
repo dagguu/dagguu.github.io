@@ -46,6 +46,7 @@ body{{width:{W}px;height:{H}px;overflow:hidden;font-family:'Jua','Noto Sans CJK 
 .pill{{position:relative;display:inline-block;padding:10px 28px;border-radius:40px;font-size:34px;font-weight:900;color:#fff;margin-bottom:14px;box-shadow:0 4px 0 rgba(0,0,0,.12)}}
 .t{{position:relative;font-weight:900;line-height:1.08;color:#24193a;-webkit-text-stroke:14px #fff;paint-order:stroke fill;filter:drop-shadow(0 6px 0 rgba(0,0,0,.10))}}
 .t b{{display:block;font-weight:400;font-family:'Black Han Sans','Jua',sans-serif;letter-spacing:-.01em}}
+.t b.w{{color:#fff;-webkit-text-stroke:14px #111;paint-order:stroke fill}}
 .t b.k{{font-family:'Black Han Sans','Jua',sans-serif;letter-spacing:-.01em}}
 .sub{{position:relative;display:inline-block;margin-top:14px;font-size:32px;font-weight:800;color:#24193a;background:#fff;border-radius:14px;padding:6px 18px}}
 .g{{position:absolute;left:40px;right:40px;bottom:46px;top:{{TOP}}px;display:grid;grid-template-columns:1fr 1fr;gap:20px}}
@@ -89,7 +90,7 @@ def card(c):
     return f"""<html><head><meta charset='utf-8'><style>{css}.g{{grid-template-rows:repeat({rows},1fr)}}</style></head><body>
 <div class='c' style='background:{bg}'>{rays}{dots}
 <div class='pill' style='background:{ac}'>{e(c.get('pill', ''))}</div>
-<div class='t' style='font-size:{fs}px'><b>{e(l1)}</b><b class='k' style='color:{ac}'>{e(l2)}</b></div>{sub}
+<div class='t' style='font-size:{fs}px'><b class='w'>{e(l1)}</b><b class='k' style='color:{ac}'>{e(l2)}</b></div>{sub}
 <div class='g'>{''.join(tiles)}</div>{st}<div class='wm'>다꾸 체험단</div>
 </div></body></html>"""
 
