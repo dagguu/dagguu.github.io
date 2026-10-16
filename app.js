@@ -194,6 +194,7 @@ function render(){
   else if(state.tab==="privacy") v.innerHTML=privacyView();
   else if(state.tab==="price"){ v.innerHTML=priceView(); if(state.pq) priceSearch(state.pq); }
   if(state.tab==="home") initFeed(); else if(HOBS){ HOBS.disconnect(); HOBS=null; }
+  if(state.tab==="deals") initMoreDeals(); else if(MDEAL.obs){ MDEAL.obs.disconnect(); MDEAL.obs=null; }
   tick(); startSliders();
 }
 
@@ -882,9 +883,27 @@ function dealsView(){
   (function(){ var mx=-1,bi=-1; TOSS.forEach(function(x,i){ x.best=false; var r=parseInt(x.rate,10); if(!x.soldOut&&r>mx){ mx=r; bi=i; } }); if(bi>=0) TOSS[bi].best=true; })();
   h+='<div id="babyhd">'+hotDeal()+'</div>';
   if(TOSS.length) h+='<section class="sec tossec" id="toss"><div class="sh"><h2>🛒 오늘의 하루특가 <span class="adtag">광고</span></h2>'+(seed.tossUpdated?'<span class="upd">'+esc(String(seed.tossUpdated).slice(11))+' 기준</span>':'')+'</div><p class="cd tcdh">⏳ 밤 12시 교체까지 <b id="tossd">'+hms(msToMidnight())+'</b> 남음</p><div class="tgrid">'+TOSS.slice(0,10).map(tossCard).join("")+'</div></section>';
+  h+=moreDealsSec();
   h+='<a class="kakaobox sm" '+ext(kakaoUrl())+'><span><small>다꾸 <i>×</i> 카카오톡</small><b>🔔 새 특가 열리면 <em>가장 먼저 알려드려요!</em></b></span><span class="kg">알림 받기</span></a>';
   h+='<p class="fine">특가 링크는 제휴 링크로, 구매 시 다꾸가 수수료를 받을 수 있어요. 가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p>';
   return h+'</div>';
+}
+/* 특가 탭 끝없는 목록 (골드박스 나머지 + 카테고리 베스트, 쿠팡 공식 API) */
+var MDEAL={L:[],i:0,obs:null};
+function moreDealsSec(){
+  var shown={}; liveGold().concat(liveToss(),babyDeals()).forEach(function(x){ if(x.u) shown[x.u]=1; });
+  MDEAL.L=(Array.isArray(seed.moreDeals)?seed.moreDeals:[]).filter(function(x){ return safeUrl(x.u)&&!shown[x.u]&&!(x.endAt&&Date.parse(x.endAt)<=Date.now()); });
+  MDEAL.i=0; if(!MDEAL.L.length) return "";
+  return '<section class="sec tossec" id="moredeal"><div class="sh col"><h2>🛍️ 오늘 많이 사는 쿠팡 인기템 <span class="adtag">광고</span></h2><p class="cd">골드박스·카테고리 베스트를 계속 보여드려요</p></div><div class="tgrid" id="mdfeed"></div><div id="mdsent" style="height:1px"></div></section>';
+}
+function mdealCard(x){ var y={name:x.name,u:x.u,img:x.img,price:x.price,rate:x.rate,endAt:x.endAt,badge:x.k&&x.k!=="골드박스"?x.k+" 베스트":(x.k?"골드박스":"")}; return tossCard(y); }
+function mdealMore(){ var g=document.getElementById("mdfeed"); if(!g||MDEAL.i>=MDEAL.L.length) return false; var n=MDEAL.L.slice(MDEAL.i,MDEAL.i+12); MDEAL.i+=n.length; g.insertAdjacentHTML("beforeend",n.map(mdealCard).join("")); return true; }
+function initMoreDeals(){
+  if(MDEAL.obs){ MDEAL.obs.disconnect(); MDEAL.obs=null; }
+  var s=document.getElementById("mdsent"); if(!s) return; mdealMore();
+  if(!("IntersectionObserver" in window)){ while(mdealMore()); return; }
+  MDEAL.obs=new IntersectionObserver(function(es){ if(!es.some(function(e){ return e.isIntersecting; })) return; if(!mdealMore()){ MDEAL.obs.disconnect(); MDEAL.obs=null; return; } MDEAL.obs.unobserve(s); MDEAL.obs.observe(s); },{rootMargin:"900px 0px"});
+  MDEAL.obs.observe(s);
 }
 function clock(ms){ var x=Math.max(0,Math.floor(ms/1000)); return ("0"+Math.floor(x/3600)).slice(-2)+":"+("0"+Math.floor(x%3600/60)).slice(-2)+":"+("0"+x%60).slice(-2); }
 var tickT; function tick(){ clearInterval(tickT); tickT=setInterval(function(){ var orE=document.querySelector("[data-or]"); if(orE) orE.innerHTML=orText(orState()); var ms=msToMidnight(), e=document.getElementById("cd"); if(e) e.textContent=hms(nextSeven()); var c=clock(ms); [].forEach.call(document.querySelectorAll("[data-cd]"),function(el){ el.textContent="⏰ "+c; }); [].forEach.call(document.querySelectorAll("[data-cdl]"),function(el){ el.textContent=c+" 남음"; }); [].forEach.call(document.querySelectorAll("[data-end]"),function(el){ el.textContent=endLeft(el.dataset.end); }); var td2=document.getElementById("tossd"); if(td2) td2.textContent=hms(ms); var g=document.getElementById("gbcd"); if(g) g.textContent=clock(nextSeven()); var st=document.getElementById("stripcd"); if(st) st.textContent=c; [].forEach.call(document.querySelectorAll("[data-hd]"),function(el){ el.textContent=clock(nextSeven()); }); [].forEach.call(document.querySelectorAll("[data-mid]"),function(el){ el.textContent=c; }); },1000); }

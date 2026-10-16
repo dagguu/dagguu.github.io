@@ -73,6 +73,32 @@ def main():
             "name": g.get("productName", ""), "u": g.get("productUrl", ""), "img": g.get("productImage", ""),
             "price": won(g.get("productPrice")), "rocket": bool(g.get("isRocket")), "cat": str(g.get("categoryName") or ""), "endAt": end} for g in baby[:12]]
         print(f"골드박스 전체 {len(gb)}개 중 아기용품 {len(d['babyGold'])}개")
+        # 특가 탭 아래 끝없이 이어지는 목록: 나머지 골드박스 + 카테고리별 베스트
+        used = {x["u"] for x in d["goldbox"]}
+        more = [{"name": g.get("productName", ""), "u": g.get("productUrl", ""), "img": g.get("productImage", ""),
+                 "rate": (f"{g['discountRate']}%" if g.get("discountRate") else ""), "rocket": bool(g.get("isRocket")),
+                 "price": won(g.get("productPrice")), "endAt": end, "k": "골드박스"}
+                for g in gb if g.get("productUrl") and g.get("productUrl") not in used and "AFFTDP" not in str(g.get("productUrl"))]
+        BEST = [(1011, "출산/유아동"), (1012, "식품"), (1014, "생활용품"), (1016, "가전디지털"), (1010, "뷰티"),
+                (1013, "주방용품"), (1015, "홈인테리어"), (1024, "헬스/건강식품"), (1029, "반려동물"), (1017, "스포츠/레저")]
+        best = {}
+        for cid, nm in BEST:
+            try:
+                r = call("GET", BASE + f"/products/bestcategories/{cid}", "limit=50&subId=dagguu") or []
+            except Exception as e:
+                print("베스트 실패:", nm, e); continue
+            best[nm] = [{"name": g.get("productName", ""), "u": g.get("productUrl", ""), "img": g.get("productImage", ""),
+                         "rocket": bool(g.get("isRocket")), "price": won(g.get("productPrice")), "k": nm}
+                        for g in r if g.get("productUrl")]
+        mix, seen2, i = [], set(), 0
+        while any(i < len(v) for v in best.values()):  # 카테고리를 돌아가며 섞기
+            for v in best.values():
+                if i < len(v) and v[i]["name"] not in seen2:
+                    seen2.add(v[i]["name"]); mix.append(v[i])
+            i += 1
+        if more or mix:
+            d["moreDeals"] = more + mix
+            print(f"더보기 특가 골드박스 {len(more)} + 카테고리 베스트 {len(mix)}개")
         d["goldboxUpdated"] = datetime.now(KST).strftime("%H:%M")
         changed = True
         print(f"골드박스 {len(d['goldbox'])}개 갱신")
