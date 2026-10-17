@@ -1076,11 +1076,21 @@ function pushPrefSheet(){
 }
 /* 찜한 체험단 마감 알림용: 찜 목록을 알림 구독에 같이 저장(바뀌었을 때만, 2026-10-17) */
 var pushFavT=0;
+/* 찜한 숙소·제품이 체험단을 다시 열면 알리려고, 찜 id 와 함께 숙소·제품 열쇠("k:쿠팡상품번호" 또는 이름)를 보낸다(2026-10-18). 열쇠는 이 기기에 기억해 둬서 체험단이 목록에서 내려가도 남는다 */
+function favKey(it){ var m=String(it.cpUrl||"").match(/products\/(\d+)/); return it.coupangPid?String(it.coupangPid):(m?m[1]:String(it.name||"").replace(/\s*\([^)]*\)\s*$/,"").replace(/\s+/g,"")); }
+function favPayload(){
+  var K={}; try{ K=JSON.parse(ls("dakku-fav-keys")||"{}")||{}; }catch(e){ K={}; }
+  var by={}; (seed.items||[]).forEach(function(it){ by[it.id]=it; });
+  var ids=FAV.slice(-150), keep={}; ids.forEach(function(id){ var it=by[id]; var k=it?favKey(it):K[id]; if(k) keep[id]=k; });
+  ls("dakku-fav-keys",JSON.stringify(keep));
+  var ks=[]; ids.forEach(function(id){ var k="k:"+keep[id]; if(keep[id]&&ks.indexOf(k)<0) ks.push(k); });
+  return ids.concat(ks);
+}
 function pushFavSync(){
   clearTimeout(pushFavT); pushFavT=setTimeout(function(){
-    if(!pushOn()||!pushOk()) return; var v=JSON.stringify(FAV.slice(-300)); if(ls("dakku-push-favs")===v) return;
+    if(!pushOn()||!pushOk()) return; var P=favPayload(), v=JSON.stringify(P); if(ls("dakku-push-favs")===v) return;
     navigator.serviceWorker.ready.then(function(reg){ return reg.pushManager.getSubscription(); }).then(function(sub){
-      if(!sub) return; return pushRpc("push_favs",{p_endpoint:sub.endpoint,p_favs:FAV.slice(-300)}).then(function(r){ if(r.ok) ls("dakku-push-favs",v); });
+      if(!sub) return; return pushRpc("push_favs",{p_endpoint:sub.endpoint,p_favs:P}).then(function(r){ if(r.ok) ls("dakku-push-favs",v); });
     }).catch(function(){});
   },1200);
 }
@@ -1091,8 +1101,8 @@ function pushRefresh(){ // 알림 키가 바뀌었으면 조용히 다시 구독
 }
 function favPushBox(){ // 찜 화면: 찜 마감 알림 켜기(2026-10-17 시온님 요청)
   if(!pushKey()||!authCfg()) return "";
-  return pushOn()?'<div class="pushbox on"><span><b>🔔 찜 마감 알림 켜짐</b><small>마감 전날 낮 12시 · 마감 당일 저녁 6시에 알려드려요</small></span><span class="pbb"><button class="b sec" data-pushoff>끄기</button></span></div>'
-    :'<div class="pushbox"><span><b>⏰ 찜한 체험단 마감 알림</b><small>놓치지 않게 마감 전날·당일에 알려드려요</small></span><button class="b pri" data-pushon>알림 설정하기</button></div>';
+  return pushOn()?'<div class="pushbox on"><span><b>🔔 찜 알림 켜짐</b><small>마감 전날·당일, 같은 곳이 다시 모집하면 알려드려요</small></span><span class="pbb"><button class="b sec" data-pushoff>끄기</button></span></div>'
+    :'<div class="pushbox"><span><b>⏰ 찜한 체험단 알림</b><small>마감 전날·당일, 같은 곳이 다시 모집할 때 알려드려요</small></span><button class="b pri" data-pushon>알림 설정하기</button></div>';
 }
 function pushBox(){
   if(!pushKey()||!authCfg()) return "";

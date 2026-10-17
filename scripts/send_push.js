@@ -92,10 +92,22 @@ function favMsg(s) {
   return { title: `❤️ 찜한 체험단 ${day === today ? '오늘' : '내일'} 마감 ${F.length}곳`, body: line(best(F)[0]) + (F.length > 1 ? ` 외 ${F.length - 1}곳` : ''),
     url: F.length === 1 ? SITE + '#/item?id=' + encodeURIComponent(F[0].id) : SITE + '#/fav', tag: 'fav' };
 }
+// 찜한 숙소·제품의 체험단이 다시 열림(2026-10-18 시온님 요청): 찜 열쇠("k:…")와 같은 숙소·제품의 새 체험단(NEW)이 찜 안 된 새 id 로 올라오면
+const favKey = i => { const m = String(i.cpUrl || '').match(/products\/(\d+)/); return i.coupangPid ? String(i.coupangPid) : (m ? m[1] : String(i.name || '').replace(/\s*\([^)]*\)\s*$/, '').replace(/\s+/g, '')); };
+function favOpenMsg(s) {
+  if (!['morning', 'match', 'night'].includes(slot)) return null;
+  const f = s.favs || [], ks = new Set(f.filter(x => x.startsWith('k:')).map(x => x.slice(2)));
+  if (!ks.size || !NEW.length) return null;
+  const O = NEW.filter(i => !f.includes(i.id) && ks.has(favKey(i)));
+  if (!O.length) return null;
+  return { title: `❤️ 찜한 ${O.length === 1 && (O[0].cat || 'stay') === 'stay' ? '숙소' : '곳'}의 체험단이 새로 열렸어요`, body: line(best(O)[0]) + (O.length > 1 ? ` 외 ${O.length - 1}곳` : ''),
+    url: O.length === 1 ? SITE + '#/item?id=' + encodeURIComponent(O[0].id) : SITE + '#/list?s=todayOpen', tag: 'favopen' };
+}
 function personal(s) { // 사람마다 보낼 알림 목록: 기본 알림 + 관심 키워드 알림 + 찜 마감 알림(맞을 때 따로 한 번 더)
   const out = [];
   if (msg && !msg.personalOnly) out.push(msg);
   const fm = favMsg(s); if (fm) out.push(fm);
+  const fo = favOpenMsg(s); if (fo) out.push(fo);
   const M = ['morning', 'match', 'night'].includes(slot) ? matchOf(s) : [];
   if (M.length) {
     const why = whyOf(s, M);
