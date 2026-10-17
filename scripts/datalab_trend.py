@@ -55,14 +55,18 @@ def call(groups, start, end):
     return {x["title"]: x["data"] for x in out.get("results", [])}
 
 def main():
-    if not CID or not CSEC: print("NAVER_CLIENT_ID/SECRET 이 아직 없어서 건너뜀"); return
+    if not CID or not CSEC: print("::warning::NAVER_CLIENT_ID/SECRET 이 비어 있어서 건너뜀(Secrets 이름 확인)"); return
     now = datetime.now(KST).date(); end = now - timedelta(days=1); start = end - timedelta(days=59); mid = end - timedelta(days=29)
     K = [k for k in candidates() if k != BASE]
     res = {}
     for i in range(0, len(K), 4):
         grp = [BASE] + K[i:i + 4]
         try: data = call(grp, start.isoformat(), end.isoformat())
-        except Exception as e: print("요청 실패:", grp, e); continue
+        except Exception as e:
+            msg = getattr(e, "read", lambda: b"")()[:200]
+            print(f"::warning::요청 실패 {getattr(e, 'code', '')} {msg!r} {e}"); fails = globals().setdefault("FAILS", 0) + 1; globals()["FAILS"] = fails
+            if fails >= 3: print("::error::3번 연속 실패해서 멈춤"); return
+            continue
         def sums(name):
             pts = data.get(name) or []
             a = sum(p["ratio"] for p in pts if p["period"] >= mid.isoformat()); b = sum(p["ratio"] for p in pts if p["period"] < mid.isoformat())
