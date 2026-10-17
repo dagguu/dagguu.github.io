@@ -70,8 +70,7 @@ def stay_post(it):
     where = city or region
     lines.append(f"{where}{josa_ro(where)} {k} 여행 가고 싶은 분들🤍" if where else f"{k} 여행 가고 싶은 분들🤍")
     lines.append(f"{w} 상당 숙박 체험 소식 가져왔어요!" if w else "숙박 체험 소식 가져왔어요!")
-    lines.append("어떤 숙소인지 먼저 구경해보세요 :)")
-    lines += ["", "🎈 체험단 신청하기", it['applyUrl'], "", "🎈 숙소 먼저 확인하기", (it.get('infUrl') or it['viewUrl']), "",
+    lines += ["", "🎈 체험단 신청하기", it['applyUrl'], "", "🏡 숙소 정보 (쿠팡트래블)", (it.get('infUrl') or it['viewUrl']), "",
               "🎁 특별혜택 미리보기", f"🏡 {it.get('benefit','').strip()}"]
     if w: lines.append(f"✔️ {w} 상당 숙박 체험")
     lines += ["", "마음에 드셨다면 체험단에도 신청해보세요🤍", "", "",
@@ -80,6 +79,7 @@ def stay_post(it):
               "✔️ 기준 인원·체험 가능일·추가 비용은 신청 페이지에서 확인해주세요.",
               "✔️ 필수 리뷰 조건도 확인하고 신청해주세요 :)", "",
               f"📌 모집 : {period(it)}"]
+    lines += ["", "※ 이 글의 쿠팡 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."]  # 대가성 문구(공정위·파트너스), 2026-10-18
     return '\n'.join(lines)
 
 def pay_of(it):
@@ -96,8 +96,7 @@ def baby_post(it):
     lines = [f"@all 👶 [육아] {nm} 체험단 모집 소식!", "",
              "우리 아이 육아템 써보고 싶은 분들🤍"]
     lines.append(f"{w} 상당 제품 체험 소식 가져왔어요!" if w else "제품 체험 소식 가져왔어요!")
-    lines.append("어떤 제품인지 먼저 구경해보세요 :)")
-    lines += ["", "🎈 체험단 신청하기", it['applyUrl'], "", "🎈 제품 먼저 확인하기", (it.get('infUrl') or it['viewUrl']), "",
+    lines += ["", "🎈 체험단 신청하기", it['applyUrl'], "", "🛍️ 제품 정보 (쿠팡)", (it.get('infUrl') or it['viewUrl']), "",
               "🎁 특별혜택 미리보기", f"🎀 {it.get('benefit','').strip()}"]
     if w: lines.append(f"✔️ {w} 상당 제품 체험")
     if it.get('ages'): lines.append(f"✔️ 추천 월령 : {', '.join(it['ages'])}")
@@ -110,6 +109,7 @@ def baby_post(it):
         lines.append("✔️ 구매평 작성이 필요한 체험단이에요.")
     lines += ["✔️ 제공 내용·배송·필수 리뷰 조건은 신청 페이지에서 확인해주세요 :)", "",
               f"📌 모집 : {period(it)}"]
+    lines += ["", "※ 이 글의 쿠팡 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."]  # 대가성 문구(공정위·파트너스), 2026-10-18
     return '\n'.join(lines)
 
 def pick(cat, n):
