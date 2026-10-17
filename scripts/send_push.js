@@ -46,6 +46,12 @@ if (slot === 'morning') {
   const since = Date.parse(today + (slot === 'match' ? 'T08:37:00+09:00' : 'T15:07:00+09:00'));
   NEW = items.filter(i => (i.end || '9999') >= today && i.createdAt && i.createdAt >= since);
   if (NEW.length) msg = { title: '', body: '', url: SITE, tag: slot, personalOnly: true };
+} else if (slot === 'hotdeal') {
+  // 오전 9:37 오늘의 아기용품 핫딜(쿠팡 골드박스, 07:23 갱신) — 할인율 가장 큰 것
+  const live = x => x && x.u && !(x.endAt && Date.parse(x.endAt) <= Date.now());
+  const B = (d.babyDeals || []).filter(live), pct = x => parseInt(String(x.rate || '0'), 10) || 0;
+  const t = B.slice().sort((a, b) => pct(b) - pct(a))[0];
+  if (t) msg = { title: `👶 오늘의 아기용품 핫딜${pct(t) ? ` ${pct(t)}%` : ''}`, body: `(광고) ${String(t.name).slice(0, 40)}${t.price ? ` (${t.price})` : ''}${B.length > 1 ? ` 외 ${B.length - 1}개` : ''}`, url: SITE + '#/deals', tag: 'hotdeal', image: (t.img || '').replace('230x230ex', '492x492ex') };
 } else if (slot === 'toss') {
   // 저녁 8:07 토스 하루특가 마감 4시간 전 (오늘 갱신된 것만)
   const T = String(d.tossUpdated || '').slice(0, 10) === today ? (d.toss || []).filter(x => x.u && !x.soldOut && !(x.endAt && Date.parse(x.endAt) <= Date.now())) : [];
