@@ -162,10 +162,9 @@ function paintLogo(){ var l=document.getElementById("logo"); if(l) l.innerHTML=l
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
-  if(!/^(home|list|fav|benefit|deals|reporter|contact|item|my|privacy|price|save)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|benefit|deals|reporter|contact|item|my|privacy|price)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
-  if(tab==="save") state.saveT=qs.t==="baby"?"baby":"travel";
   state.focusT=(tab==="deals"&&qs.t)?qs.t:"";
   state.dq=(tab==="deals"&&qs.q)?qs.q:"";
   state.pq=(tab==="price"&&qs.q)?qs.q:"";
@@ -193,7 +192,6 @@ function render(){
   else if(state.tab==="item") v.innerHTML=itemView();
   else if(state.tab==="my") v.innerHTML=myView();
   else if(state.tab==="privacy") v.innerHTML=privacyView();
-  else if(state.tab==="save") v.innerHTML=saveView();
   else if(state.tab==="price"){ v.innerHTML=priceView(); if(state.pq) priceSearch(state.pq); }
   if(state.tab==="home") initFeed(); else if(HOBS){ HOBS.disconnect(); HOBS=null; }
   if(state.tab==="deals") initMoreDeals(); else if(MDEAL.obs){ MDEAL.obs.disconnect(); MDEAL.obs=null; }
@@ -307,7 +305,6 @@ function homeView(){
   h+=hrow('💜 지금 <em>인기 있는</em> 체험단','#/list?cat=stay&s=pick',picks);
   var soon=open.filter(function(it){ return daysLeft(it)<=3; }).sort(function(a,b){ return daysLeft(a)-daysLeft(b); });
   h+=hrow('⏰ <em>곧 마감!</em> 지금 신청하세요','#/list?cat=stay&s=closing',soon);
-  h+='<div class="hpad">'+saveEntry()+'</div>';
   var hd=hotDeal(); if(hd) h+='<div class="hpad">'+hd+'</div>'; var cb=cheapBtn(); if(cb) h+='<div class="hpad">'+cb+'</div>'; // 오늘의 특가(골드박스)는 홈에서 숨김 (2026-10-14 시온님 요청)
   var baby=open.filter(function(it){ return catOf(it)==="baby"; }).sort(function(a,b){ return (b.createdAt||0)-(a.createdAt||0); });
   h+=hrow('👶 <em>육아</em> 체험단도 있어요','#/list?cat=baby&s=open',baby);
@@ -549,38 +546,8 @@ function couponCards(){
       '<span class="cpr"><span class="cpdl">⬇</span><span>'+esc(c.b||"쿠폰 받기")+'</span></span></a>'+(c.note?'<p class="cpnote">'+esc(c.note)+'</p>':'');
   }).join("")+'</section>';
 }
-/* ---------- 알뜰 가이드: 여행 싸게 가는 방법 · 아기옷 싸게 사는 방법 (2026-10-17 시온님 요청) ---------- */
-function linkU(k){ var x=(seed.links||{})[k]; return x&&x.u?safeUrl(x.u):""; }
-function saveSteps(t){
-  var open=seed.items.filter(function(it){ return statusOf(it).key==="open"; }), S=[];
-  if(t==="baby"){
-    var nb=open.filter(function(it){ return catOf(it)==="baby"; }).length;
-    if(nb) S.push(["육아 체험단으로 받아보기","아기옷·육아용품을 써 보고 후기를 남기는 체험단이에요. 지금 "+nb+"곳이 모집 중이에요.","체험단 보기","#/list?cat=baby&s=open",0]);
-    var ks=seed.kidsShop; if(ks&&safeUrl(ks.u)) S.push([ks.name||"아동복 샵","다꾸가 운영하는 아동복·맘룩 쇼핑몰이에요. 엄마 옷까지 한 번에 맞춰 볼 수 있어요.","샵 구경하기",safeUrl(ks.u),1]);
-    var bw=linkU("babywear"); if(bw) S.push(["쿠팡에서 아기옷 비교하기","같은 옷도 판매처마다 가격이 달라요. 로켓배송·할인 상품을 한 화면에서 비교해 보세요.","쿠팡에서 보기",bw,2]);
-    if((seed.babyDeals||[]).some(function(x){ return x.u; })) S.push(["오늘의 아기용품 핫딜","매일 아침 쿠팡 골드박스에서 아기용품만 골라 모았어요. 다음 날 아침 7시에 바뀌어요.","핫딜 보기","#/deals",0]);
-    return {h:"아기옷 싸게 사는 방법",sub:"금방 크는 아이 옷, 알뜰하게 준비해요",steps:S,tips:["한 치수 크게 사서 오래 입혀요. 소매·밑단은 접어 입히면 돼요.","시즌이 끝날 때 다음 해 옷을 미리 사 두면 할인 폭이 커요.","내복·바디슈트처럼 매일 입는 옷은 묶음 상품이 개당 가격이 싸요.","외출복은 몇 번 안 입어서 물려받거나 중고 거래도 많이 해요."]};
-  }
-  var ns=open.filter(function(it){ return catOf(it)==="stay"; }).length;
-  if(ns) S.push(["숙박 체험단으로 묵어보기","숙소에 묵고 블로그·인스타 후기를 남기는 체험단이에요. 지금 "+ns+"곳이 모집 중이에요.","숙소 체험단 보기","#/list?cat=stay&s=open",0]);
-  if((seed.toss||[]).some(function(x){ return x.u&&!x.soldOut; })) S.push(["하루특가 확인하기","하루 동안만 싸게 파는 여행·생활 특가예요. 밤 12시에 바뀌어요.","하루특가 보기","#/deals",0]);
-  var tr=linkU("travel"); if(tr) S.push(["쿠팡트래블 특가","숙소·항공·여행상품을 쿠팡에서 비교해 보세요.","쿠팡트래블 보기",tr,2]);
-  (seed.partners||[]).forEach(function(p){ if(safeUrl(p.u)) S.push([p.t||"여행 특가",p.d||"","확인하기",safeUrl(p.u),2]); });
-  return {h:"여행 싸게 가는 방법",sub:"같은 여행도 알뜰하게 다녀와요",steps:S,tips:["주말보다 일요일~목요일 숙박이 싼 곳이 많아요.","성수기를 살짝 피하면 같은 숙소도 가격이 확 내려가요.","가고 싶은 숙소는 찜해 두고 체험단·특가가 뜨는지 지켜보세요.","숙소 정책에 따라 연박 할인이 있는 곳도 있으니 예약 전에 확인해요."]};
-}
-function saveView(){
-  var g=saveSteps(state.saveT||"travel");
-  return '<div class="pg save"><h1>'+esc(g.h)+'</h1><p class="pgsub">'+esc(g.sub)+'</p>'+
-    '<div class="savetab"><a href="#/save?t=travel"'+(g.h.indexOf("여행")>=0?' class="on"':'')+'>여행</a><a href="#/save?t=baby"'+(g.h.indexOf("아기")>=0?' class="on"':'')+'>아기옷</a></div>'+
-    '<ol class="savelist">'+g.steps.map(function(s){ var ad=s[4]===2, ex=s[4]>0;
-      return '<li><b>'+esc(s[0])+(ad?' <span class="adtag">광고</span>':'')+'</b><p>'+esc(s[1])+'</p><a class="b '+(ex?'sec':'pri')+'" '+(ex?ext(s[3]):'href="'+esc(s[3])+'"')+'>'+esc(s[2])+' ›</a></li>'; }).join("")+'</ol>'+
-    '<h2 class="savetiph">알아두면 좋은 팁</h2><ul class="savetips">'+g.tips.map(function(x){ return '<li>'+esc(x)+'</li>'; }).join("")+'</ul></div>';
-}
-function saveEntry(){
-  return '<section class="saveent"><a href="#/save?t=travel"><small>알뜰 가이드</small><b>여행 싸게 가는 방법</b></a><a href="#/save?t=baby"><small>알뜰 가이드</small><b>아기옷 싸게 사는 방법</b></a></section>';
-}
 function benefitView(){
-  var h='<div class="pg"><h1>혜택 🎁</h1><p class="pgsub">룰렛 · 이벤트 · 기자단 모집을 한곳에 모았어요</p>'+slideBanners(true)+saveEntry();
+  var h='<div class="pg"><h1>혜택 🎁</h1><p class="pgsub">룰렛 · 이벤트 · 기자단 모집을 한곳에 모았어요</p>'+slideBanners(true);
   h+=couponCards();
   if((seed.features||{}).roulette) h+=rouletteHtml();
   var r=rep();

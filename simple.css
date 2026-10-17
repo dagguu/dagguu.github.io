@@ -47,18 +47,3 @@ body{background:#fff}
 .spk{display:none}
 .hart>span{filter:none}
 
-/* 알뜰 가이드 (여행·아기옷 싸게) */
-.saveent{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0 4px}
-.saveent a{display:flex;flex-direction:column;gap:2px;padding:16px;border:1px solid var(--line);border-radius:14px;background:#fff}
-.saveent small{font-size:12px;color:var(--mute)}.saveent b{font-size:15px;font-weight:700;line-height:1.35;word-break:keep-all}
-.savetab{display:flex;gap:6px;margin:14px 4px 6px}
-.savetab a{padding:8px 16px;border-radius:999px;border:1px solid var(--line);font-size:14px;font-weight:600;color:#666}
-.savetab a.on{background:#111;border-color:#111;color:#fff}
-.savelist{list-style:none;margin:8px 0 0;padding:0;counter-reset:sv}
-.savelist li{counter-increment:sv;position:relative;padding:18px 4px 18px 40px;border-bottom:1px solid var(--line)}
-.savelist li::before{content:counter(sv);position:absolute;left:4px;top:18px;width:24px;height:24px;border-radius:50%;background:#111;color:#fff;font-size:13px;font-weight:700;display:grid;place-items:center}
-.savelist b{font-size:16px;font-weight:700}.savelist p{margin:4px 0 10px;font-size:14px;color:var(--sub);line-height:1.55;word-break:keep-all}
-.savelist .b{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font-size:14px}
-.savetiph{margin:26px 4px 8px;font-size:18px;font-weight:800}
-.savetips{margin:0;padding:14px 16px 14px 32px;background:#fafafa;border-radius:14px;font-size:14px;line-height:1.7;color:#444;word-break:keep-all}
-.savetips li+li{margin-top:6px}
