@@ -165,12 +165,12 @@ body{{width:{W}px;height:{H}px;overflow:hidden;font-family:'Noto Sans CJK KR','N
 .cf{{position:absolute;border-radius:3px}}
 .sp{{position:absolute;color:#fff;font-family:'Noto Sans CJK KR',sans-serif;line-height:1;text-shadow:0 0 12px rgba(255,255,255,.8)}}
 .lab{{position:relative;display:inline-block;padding:11px 34px;border-radius:40px;font-size:30px;font-weight:900;color:#1a1033;background:#ffe14d;border:4px solid #1a1033;box-shadow:0 5px 0 #1a1033;transform:rotate(-2deg)}}
-.h{{position:relative;font-family:'Black Han Sans','Jua','Noto Sans CJK KR',sans-serif;font-weight:900;line-height:1.06;margin-top:14px}}
-.h b{{display:block;font-weight:inherit;-webkit-text-stroke:16px #1a1033;paint-order:stroke fill;text-shadow:0 9px 0 #1a1033}}
+.h{{position:relative;font-family:'Black Han Sans','Jua','Noto Sans CJK KR',sans-serif;font-weight:400;line-height:1.06;margin-top:14px}}
+.h b{{display:block;font-weight:400;-webkit-text-stroke:8px #1a1033;paint-order:stroke fill;text-shadow:0 8px 0 #1a1033}}
 .sub{{position:relative;display:inline-block;margin-top:12px;font-size:29px;font-weight:800;background:#fff;border-radius:30px;padding:7px 26px;box-shadow:0 5px 0 rgba(26,16,51,.35)}}
 .st{{position:absolute;right:-4px;width:190px;height:190px;z-index:6;transform:rotate(10deg)}}
 .st svg{{position:absolute;inset:0;filter:drop-shadow(0 7px 0 #1a1033)}}
-.st div{{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Jua','Noto Sans CJK KR',sans-serif;font-weight:900;line-height:1.05;white-space:pre-line}}
+.st div{{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Jua','Noto Sans CJK KR',sans-serif;font-weight:400;line-height:1.05;white-space:pre-line}}
 .g{{position:absolute;left:34px;right:34px;display:grid;grid-template-columns:1fr 1fr;gap:22px}}
 .tile{{position:relative;border-radius:28px;overflow:hidden;background:#fff;border:6px solid #fff;box-shadow:0 8px 0 #1a1033,0 14px 26px rgba(0,0,0,.25)}}
 .tile:nth-child(1),.tile:nth-child(4){{transform:rotate(-1.4deg)}} .tile:nth-child(2),.tile:nth-child(3){{transform:rotate(1.4deg)}}
