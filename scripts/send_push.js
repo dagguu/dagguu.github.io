@@ -31,11 +31,14 @@ if (slot === 'morning') {
   const L = items.filter(i => (i.end || '9999') >= today && (i.start === today || (i.createdAt && kday(i.createdAt) === today)));
   NEW = L;
   if (L.length) msg = { title: `✨ 오늘 오픈 체험단 ${L.length}곳`, body: `${line(best(L)[0])}`, url: SITE + '#/list?s=todayOpen', tag: 'morning' };
-} else if (slot === 'noon') {
+} else if (slot === 'noon' || slot === 'mdeal') {
   const live = x => x && x.u && !(x.endAt && Date.parse(x.endAt) <= Date.now());
   const G = (d.goldbox || []).filter(live), T = (d.toss || []).filter(x => live(x) && !x.soldOut), B = (d.babyDeals || []).filter(x => live(x));
-  const all = G.concat(T, B); const pct = x => parseInt(String(x.rate || '0'), 10) || 0;
-  const top = all.slice().sort((a, b) => pct(b) - pct(a))[0];
+  const pct = x => parseInt(String(x.rate || '0'), 10) || 0, byPct = L => L.slice().sort((a, b) => pct(b) - pct(a));
+  // 같은 상품이 하루에 여러 번 오지 않게: 아침 8시=골드박스·토스 1위, 9:37=아기 핫딜 1위, 낮 12시=그 둘을 뺀 1위
+  const skip = new Set([byPct(G.concat(T))[0], byPct(B)[0]].filter(Boolean).map(x => x.u));
+  const all = slot === 'mdeal' ? G.concat(T) : G.concat(T, B).filter(x => !skip.has(x.u));
+  const top = byPct(all)[0];
   if (all.length) { const t = top && pct(top) ? top : all.slice().sort((a, b) => (parseInt(String(a.price).replace(/\D/g, '')) || 1e9) - (parseInt(String(b.price).replace(/\D/g, '')) || 1e9))[0];
     msg = { title: pct(t) ? `🔥 오늘만 ${pct(t)}% 특가` : '🔥 오늘만 특가', body: `(광고) ${String(t.name).slice(0, 40)}${t.price ? ` (${t.price})` : ''}`, url: SITE + '#/deals', tag: 'noon', image: t.img || '' }; }
 } else if (slot === 'test') {
@@ -57,11 +60,12 @@ if (slot === 'morning') {
   const T = String(d.tossUpdated || '').slice(0, 10) === today ? (d.toss || []).filter(x => x.u && !x.soldOut && !(x.endAt && Date.parse(x.endAt) <= Date.now())) : [];
   const pct = x => parseInt(String(x.rate || '0'), 10) || 0, t = T.slice().sort((a, b) => pct(b) - pct(a))[0];
   if (t) msg = { title: `⏳ 하루특가 마감 4시간 전${pct(t) ? ` · ${pct(t)}%` : ''}`, body: `(광고) ${String(t.name).slice(0, 40)}${t.price ? ` (${t.price})` : ''}`, url: SITE + '#/deals', tag: 'toss', image: t.img || '' };
-} else if (slot === 'evening') {
+} else if (slot === 'evening' || slot === 'evening2') {
   const L = items.filter(i => i.end === today);
-  if (L.length) msg = { title: `⏰ 오늘 마감 체험단 ${L.length}곳`, body: `${line(best(L)[0])}`, url: SITE + '#/list?s=todayClose', tag: 'evening' };
+  if (L.length) msg = { title: slot === 'evening2' ? `⏰ 오늘 밤 12시 마감 ${L.length}곳` : `⏰ 오늘 마감 체험단 ${L.length}곳`, body: `${line(best(L)[0])}`, url: SITE + '#/list?s=todayClose', tag: 'evening' };
 }
 if (!msg) { console.log(`${slot}: 보낼 내용이 없어서 건너뜀`); process.exit(0); }
+{ const h = now.getUTCHours(); if (slot !== 'test' && (h >= 21 || h < 8)) { console.log(`::notice::${slot}: 밤 9시~아침 8시라 광고 알림을 보내지 않음(예약 실행이 늦어짐)`); process.exit(0); } }
 const fail = m => { console.log('::error::' + m); process.exit(1); };
 try { webpush.setVapidDetails('mailto:eun901002@gmail.com', PUB, PRIV.trim()); } catch (e) { fail('VAPID 키 오류(비밀 키를 다시 확인): ' + e.message); }
 // 사람별 관심 지역·단어에 맞는 새 체험단
@@ -75,11 +79,7 @@ function whyOf(s, M) { return [...new Set(M.map(i => (s.regions || []).includes(
 function personal(s) {
   const M = matchOf(s);
   if (msg.personalOnly) {
-    if (!M.length) { // 관심 맞는 게 없으면 고가(30만원 이상) 새 체험단 1곳
-      const H = best(NEW).filter(i => val(i) >= 300000);
-      if (!H.length) return null;
-      return { title: `💎 새로 올라온 고가 체험단${H.length > 1 ? ` ${H.length}곳` : ''}`, body: line(H[0]), url: SITE + '#/item?id=' + encodeURIComponent(H[0].id), tag: slot };
-    }
+    if (!M.length) return null; // 2026-10-17 시온님 요청으로 고가 체험단 알림은 뺌(관심 맞는 사람만)
     const why = whyOf(s, M);
     return { title: `🔍 새로 올라온 ${why ? why + ' ' : '관심 '}체험단 ${M.length}곳`, body: `${line(best(M)[0])}`,
       url: M.length === 1 ? SITE + '#/item?id=' + encodeURIComponent(M[0].id) : SITE + '#/list?s=todayOpen', tag: 'match' };
