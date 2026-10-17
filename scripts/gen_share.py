@@ -253,6 +253,7 @@ for g in GUIDES:
     body += '<div class="tags">' + "".join(f'<a href="{e(u)}">{e(n)}</a>' for n, u in g.get("related", [])) + "</div>"
     open(os.path.join(gdir, g["slug"] + ".html"), "w", encoding="utf-8").write(shell(g["title"] + " | 다꾸체험단", g["desc"], SITE + p, body, "", "index,follow", [bld, art]))
     ghubs.append((g["title"], p, 0))
+json.dump([{"slug": g["slug"], "t": g["title"], "d": g["desc"]} for g in GUIDES], open(os.path.join(gdir, "list.json"), "w", encoding="utf-8"), ensure_ascii=False)  # 앱 안 "체험단 가이드" 목록용
 bc, bld = crumbs([("홈", "/"), ("체험단 가이드", None)])
 gi = bc + "<h1>체험단 가이드</h1><p class='sub'>블로그 협찬·체험단을 처음 시작하는 분을 위한 글을 모았어요.</p><ul class='list'>" + "".join(
     f'<li><a href="{e(p)}"><span><b>{e(g["title"])}</b><small>{e(g["desc"])}</small></span></a></li>' for g, (_, p, _) in zip(GUIDES, ghubs)) + "</ul>"

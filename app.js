@@ -197,7 +197,7 @@ function render(){
   else if(state.tab==="price"){ v.innerHTML=priceView(); if(state.pq) priceSearch(state.pq); }
   if(state.tab==="home") initFeed(); else if(HOBS){ HOBS.disconnect(); HOBS=null; }
   if(state.tab==="deals") initMoreDeals(); else if(MDEAL.obs){ MDEAL.obs.disconnect(); MDEAL.obs=null; }
-  tick(); startSliders(); plainHeads(v);
+  tick(); startSliders(); plainHeads(v); guideFill();
 }
 /* 모던&심플(2026-10-17): 섹션 제목 앞 이모지 빼기 */
 function plainHeads(v){ [].forEach.call(v.querySelectorAll("h1,h2"),function(h){ var n=h.firstChild; if(n&&n.nodeType===3) n.nodeValue=n.nodeValue.replace(/^[\s\u2600-\u27BF\uFE0F\u200D]*(?:[\uD83C-\uD83E][\uDC00-\uDFFF][\uFE0F\u200D]*)*\s*/,""); }); }
@@ -327,6 +327,7 @@ function homeView(){
   h+='<div class="gbs">'+gb.map(function(g){ return '<a class="gb" '+(g[1]?ext(g[0]):'href="'+g[0]+'"')+' style="--g1:'+g[2]+';--g2:'+g[3]+'"><span class="gt"><b>'+g[5]+'</b><small>'+g[6]+'</small></span><span class="ge">'+g[4]+'</span></a>'; }).join("")+'</div>';
   // 끝없는 스크롤: 모집 중 체험단 전부 → 이어서 특가 전부 (조금씩 이어 붙임)
   HFEED.items=open.slice().sort(byNew).slice(0,36); HFEED.deals=homeDeals().slice(0,20); HFEED.i=0; HFEED.j=0;
+  h+='<div class="hpad" data-guides></div>';
   h+='<section class="hsec"><div class="hsh"><h2>다른 체험단도 둘러볼까요?</h2></div><div class="htool"><span>총 <b>'+open.length+'</b>개</span><a class="hflt" href="#/list?cat=stay&s=open">⚙️ 필터</a></div>'+
     '<div class="grid v2 hgrid" id="hfeed"></div></section>';
   if(HFEED.deals.length) h+='<section class="hsec hdeals" id="hdealsec" hidden><div class="hsh"><h2>🔥 오늘의 <em>특가</em> 모아보기 <span class="adtag">광고</span></h2><a class="hmore" href="#/deals">특가 탭 ›</a></div><div class="tgrid hgrid" id="hdfeed"></div><p class="fine">특가 링크는 제휴 링크로, 구매 시 다꾸가 수수료를 받을 수 있어요. 가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p></section>';
@@ -571,11 +572,20 @@ function eventView(){
     '<p class="evfoot">이 페이지의 링크로 예약하면 다꾸가 마이리얼트립·여기어때에서 일정액의 수수료를 받을 수 있어요. 예약 조건·취소 규정은 마이리얼트립에서 꼭 확인해 주세요.</p></div>';
   return h;
 }
+/* 체험단 가이드 글(g/, gen_share.py 가 g/list.json 생성) — 홈·혜택 탭에 목록 (2026-10-18) */
+var GUIDES=null;
+function guideFill(){
+  var B=document.querySelectorAll("[data-guides]"); if(!B.length) return;
+  var paint=function(){ var h=GUIDES&&GUIDES.length?'<section class="gdbox"><div class="gdh"><b>체험단 가이드</b><a href="/g/">전체 ›</a></div>'+GUIDES.slice(0,4).map(function(g){ return '<a class="gdi" href="/g/'+esc(g.slug)+'.html"><b>'+esc(g.t)+'</b><small>'+esc(g.d)+'</small></a>'; }).join("")+'</section>':""; [].forEach.call(B,function(b){ b.innerHTML=h; }); };
+  if(GUIDES) return paint();
+  fetch("/g/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ GUIDES=L||[]; paint(); }).catch(function(){ GUIDES=[]; });
+}
 function benefitView(){
   var h='<div class="pg"><h1>혜택 🎁</h1><p class="pgsub">룰렛 · 이벤트 · 기자단 모집을 한곳에 모았어요</p>'+slideBanners(true);
   h+=couponCards();
   if((seed.features||{}).roulette) h+=rouletteHtml();
   var r=rep();
+  h+='<div data-guides></div>';
   h+='<div class="evgrid">'+
     (r?'<a class="evc" href="#/reporter" style="--b:#f1ecff;--i:#4b2a9e"><span class="eve">✍️</span><b>다꾸 기자단</b><small>후기 쓰고 1만원 상품권</small></a>':'')+
     '<a class="evc" href="'+esc(safeUrl((seed.sns||{}).instagram)||"https://www.instagram.com/")+'" target="_blank" rel="noopener noreferrer" style="--b:#fff6dc;--i:#7a5a00"><span class="eve">📸</span><b>다꾸 태그 이벤트</b><small>선정되면 다꾸를 태그해요</small></a>'+
