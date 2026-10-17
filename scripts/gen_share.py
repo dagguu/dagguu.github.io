@@ -209,8 +209,20 @@ for cat, cn in CATN.items():
         top = sorted(REG.items(), key=lambda kv: -len(kv[1]))
         extra = '<div class="tags">' + "".join(f'<a href="{e(rslug(k))}">{e(k)} {len(v)}</a>' for k, v in top) + "</div>"
     p = f"/c/{CATF[cat]}.html"
-    hub(p, f"{cn} 체험단 모음", f"지금 모집 중인 {cn} 체험단을 마감 빠른 순으로 모았어요. 매일 업데이트해요.", L, [("홈", "/"), (f"{cn} 체험단", None)], extra)
+    alt = {"stay": "숙박·숙소 체험단 모음", "baby": "육아·육아용품 체험단 모음", "beauty": "뷰티·화장품 체험단 모음", "pet": "반려동물·강아지·고양이 체험단 모음"}.get(cat, f"{cn} 체험단 모음")
+    hub(p, alt, f"지금 모집 중인 {cn} 체험단을 마감 빠른 순으로 모았어요. 매일 업데이트해요.", L, [("홈", "/"), (f"{cn} 체험단", None)], extra)
     hubs.append((f"{cn} 체험단", p, len(L)))
+# 매체·조건별 (2026-10-18 검색광고 키워드도구: 블로그 체험단 월 2만·인스타 540·구매평 540·릴스 230)
+def has_pay(it, w): return w in (it.get("pay") or []) or {"payback": "페이백", "review": "구매평"}[w] in str(it.get("benefit") or "")
+CHHUB = [("blog", "블로그 체험단 모음", "블로그 리뷰로 참여하는", lambda it: "blog" in (it.get("ch") or [])),
+         ("insta", "인스타 체험단 모음", "인스타그램 피드로 참여하는", lambda it: "insta" in (it.get("ch") or [])),
+         ("reels", "릴스·숏폼 체험단 모음", "릴스·클립·쇼츠로 참여하는", lambda it: bool({"reels", "clip", "youtube", "tiktok"} & set(it.get("ch") or []))),
+         ("review", "구매평·페이백 체험단 모음", "먼저 구매하고 구매평을 남기면 금액을 돌려받는", lambda it: has_pay(it, "payback") or has_pay(it, "review"))]
+chhubs = []
+for slug, h1, how, f in CHHUB:
+    L = sort_open([it for it in open_items if f(it)]); p = f"/c/{slug}.html"
+    hub(p, h1, f"{how} 체험단 중 지금 모집 중인 곳을 마감 빠른 순으로 모았어요. 숙박·육아·뷰티·생활·식품 전 분야.", L, [("홈", "/"), (h1.replace(" 모음", ""), None)])
+    chhubs.append((h1.replace(" 모음", ""), p, len(L)))
 for k, L in REG.items():
     L = sort_open(L); p = rslug(k)
     hub(p, f"{k} 숙박 체험단 모음", f"{k} 호텔·펜션·풀빌라 숙박 체험단 중 지금 모집 중인 곳을 마감 빠른 순으로 모았어요.", L,
@@ -219,12 +231,13 @@ for k, L in REG.items():
 bc, bld = crumbs([("홈", "/"), ("모아보기", None)])
 idx = bc + "<h1>체험단 모아보기</h1><p class='sub'>분야별·지역별로 지금 모집 중인 체험단을 모았어요.</p>"
 idx += "<h2>분야별</h2><div class='tags'>" + "".join(f'<a href="{e(p)}">{e(n)} {c}</a>' for n, p, c in hubs[:len(CATN)]) + "</div>"
+idx += "<h2>참여 방법별</h2><div class='tags'>" + "".join(f'<a href="{e(p)}">{e(n)} {c}</a>' for n, p, c in chhubs) + "</div>"
 idx += "<h2>지역별 숙박</h2><div class='tags'>" + "".join(f'<a href="{e(p)}">{e(n)} {c}</a>' for n, p, c in sorted(hubs[len(CATN):], key=lambda x: -x[2])) + "</div>"
 open(os.path.join(cdir, "index.html"), "w", encoding="utf-8").write(
-    shell("체험단 모아보기 · 분야별·지역별 | 다꾸체험단", "숙박·육아·뷰티·생활·가전·식품·반려동물 체험단과 지역별 숙박 체험단을 한곳에 모았어요.", SITE + "/c/", idx, "", "index,follow", [bld]))
+    shell("체험단 모음 사이트 · 분야별·지역별 체험단 모아보기 | 다꾸체험단", "블로그·인스타·릴스 체험단, 숙박·육아·뷰티·생활·가전·식품·반려동물 체험단과 지역별 숙박 체험단을 한곳에 모았어요. 매일 업데이트.", SITE + "/c/", idx, "", "index,follow", [bld]))
 
 # ---------- sitemap ----------
-urls = [(SITE + "/", "daily"), (SITE + "/c/", "daily")] + [(SITE + p, "daily") for _, p, _ in hubs] + [(f"{SITE}/s/{it['id']}.html", "weekly") for it in open_items]
+urls = [(SITE + "/", "daily"), (SITE + "/c/", "daily")] + [(SITE + p, "daily") for _, p, _ in hubs + chhubs] + [(f"{SITE}/s/{it['id']}.html", "weekly") for it in open_items]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
     f"<url><loc>{e(u)}</loc><lastmod>{TODAY}</lastmod><changefreq>{f}</changefreq></url>\n" for u, f in urls) + "</urlset>\n"
 open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(sm)
