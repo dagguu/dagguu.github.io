@@ -2,7 +2,9 @@ name: 네이버 데이터랩 키워드
 on:
   schedule:
     - cron: "20 21 * * 1"   # 매주 화요일 오전 6:20 (한국)
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      hints: { description: "수동 조회 키워드(쉼표로)", default: "" }
 permissions:
   contents: write
 jobs:
@@ -19,6 +21,7 @@ jobs:
           NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
           NAVER_AD_SECRET: ${{ secrets.NAVER_AD_SECRET }}
           NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
+          HINTS: ${{ github.event.inputs.hints }}
         run: python3 scripts/datalab_trend.py
       - name: 저장
         run: |

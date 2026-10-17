@@ -85,7 +85,22 @@ def sa_all(K):
     related = sorted(({"kw": k, **v} for k, v in rel.items() if v["vol"] >= 30), key=lambda r: -r["vol"])[:300]
     return vol, related
 
+def extra(hints):
+    """수동 조회: HINTS="협찬,숙박협찬,…" → scripts/kw_extra.json (연관 키워드까지 검색 수 순)"""
+    H = [h.strip().replace(" ", "") for h in hints.split(",") if h.strip()]
+    rows = {}
+    for i in range(0, len(H), 5):
+        try: L = sa_tool(H[i:i + 5])
+        except Exception as e: print(f"::warning::검색광고 API 실패 {getattr(e, 'code', '')} {getattr(e, 'read', lambda: b'')()[:200]!r}"); continue
+        for x in L:
+            k = x.get("relKeyword", "")
+            rows[k] = {"kw": k, "vol": num(x.get("monthlyPcQcCnt")) + num(x.get("monthlyMobileQcCnt")), "comp": x.get("compIdx", ""), "hint": k in H}
+    out = sorted(rows.values(), key=lambda r: -r["vol"])
+    json.dump({"updated": datetime.now(KST).strftime("%Y-%m-%d %H:%M"), "hints": H, "rows": out}, open(os.path.join(ROOT, "scripts", "kw_extra.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"::notice::수동 조회 {len(H)}개 → 결과 {len(out)}개")
+
 def main():
+    if os.environ.get("HINTS"): return extra(os.environ["HINTS"])
     K0 = [k for k in candidates() if k != BASE]
     vol, related = sa_all(K0)
     if not CID or not CSEC: print("::warning::NAVER_CLIENT_ID/SECRET 이 비어 있어서 데이터랩 비율은 건너뜀(Secrets 이름 확인)")
