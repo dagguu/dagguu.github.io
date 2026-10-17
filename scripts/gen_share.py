@@ -241,7 +241,7 @@ import sys; sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from guides import GUIDES
 gdir = reset("g"); ghubs = []
 blog_open = sort_open([it for it in open_items if "blog" in (it.get("ch") or [])])
-GCSS = "<style>.art p,.art li{font-size:16px;line-height:1.8;word-break:keep-all}.art h2{margin-top:34px}.art ol,.art ul{padding-left:22px}.art li{margin:8px 0}.meta{color:#999;font-size:12.5px}</style>"
+GCSS = "<style>.art p,.art li{font-size:16px;line-height:1.8;word-break:keep-all}.art h2{margin-top:34px}.art ol,.art ul{padding-left:22px}.art li{margin:8px 0}.meta{color:#999;font-size:12.5px}.art p.go{margin:4px 0 14px}.art a.go,.art p.go a{display:inline-block;margin:4px 12px 0 0;font-size:15px;font-weight:700;color:#5b3fd6;text-decoration:none}.art a.go:hover,.art p.go a:hover{text-decoration:underline}</style>"
 for g in GUIDES:
     p = f"/g/{g['slug']}.html"
     bc, bld = crumbs([("홈", "/"), ("체험단 가이드", "/g/"), (g["title"], None)])
