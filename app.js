@@ -162,9 +162,10 @@ function paintLogo(){ var l=document.getElementById("logo"); if(l) l.innerHTML=l
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
-  if(!/^(home|list|fav|benefit|deals|reporter|contact|item|my|privacy|price)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|benefit|deals|reporter|contact|item|my|privacy|price|event)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
+  if(tab==="event") state.evAbr=qs.t==="abroad";
   state.focusT=(tab==="deals"&&qs.t)?qs.t:"";
   state.dq=(tab==="deals"&&qs.q)?qs.q:"";
   state.pq=(tab==="price"&&qs.q)?qs.q:"";
@@ -192,6 +193,7 @@ function render(){
   else if(state.tab==="item") v.innerHTML=itemView();
   else if(state.tab==="my") v.innerHTML=myView();
   else if(state.tab==="privacy") v.innerHTML=privacyView();
+  else if(state.tab==="event") v.innerHTML=eventView();
   else if(state.tab==="price"){ v.innerHTML=priceView(); if(state.pq) priceSearch(state.pq); }
   if(state.tab==="home") initFeed(); else if(HOBS){ HOBS.disconnect(); HOBS=null; }
   if(state.tab==="deals") initMoreDeals(); else if(MDEAL.obs){ MDEAL.obs.disconnect(); MDEAL.obs=null; }
@@ -546,6 +548,23 @@ function couponCards(){
       '<span class="cpr"><span class="cpdl">⬇</span><span>'+esc(c.b||"쿠폰 받기")+'</span></span></a>'+(c.note?'<p class="cpnote">'+esc(c.note)+'</p>':'');
   }).join("")+'</section>';
 }
+/* ---------- 이벤트: 마이리얼트립 숙소 특가 (2026-10-17 시온님 요청, scripts/mrt_api.py 가 매일 6:40 채움) ---------- */
+function mrtList(){ return (seed.mrtDeals||[]).filter(function(x){ return safeUrl(x.u)&&x.price; }); }
+function eventView(){
+  var all=mrtList(), info=seed.mrtInfo||{}, abr=!!state.evAbr;
+  var L=all.filter(function(x){ return abr?!x.dom:x.dom; }).sort(function(a,b){ return b.rate-a.rate; });
+  var md=function(d){ var p=String(d||"").split("-"); return p.length===3?(+p[1])+"/"+(+p[2]):""; };
+  var h='<div class="pg ev"><h1>최저가 특가</h1><p class="pgsub">마이리얼트립 숙소 특가를 할인율 높은 순으로 모았어요 <span class="adtag">광고</span></p>'+
+    '<div class="evtab"><a href="#/event"'+(abr?'':' class="on"')+'>국내</a><a href="#/event?t=abroad"'+(abr?' class="on"':'')+'>해외</a></div>'+
+    (info.checkIn?'<p class="evnote">'+md(info.checkIn)+'(토) 1박 · 성인 '+(info.adults||2)+'명 기준 가격이에요. 날짜·인원에 따라 달라지고, 매일 아침 새로 모아요.</p>':'');
+  if(!L.length) return h+'<div class="empty sm"><b>특가를 준비 중이에요</b>내일 아침에 다시 확인해 주세요.</div></div>';
+  h+='<div class="evgrid2">'+L.map(function(x){
+    return '<a class="evd" '+ext(x.u)+'><span class="evi"><img src="'+esc(x.img)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><em>'+esc(x.region)+'</em></span>'+
+      '<b class="evn">'+esc(x.name)+'</b>'+(x.score?'<small class="evs">★ '+esc(x.score)+(x.reviews?' ('+Number(x.reviews).toLocaleString()+')':'')+'</small>':'')+
+      '<span class="evp"><i>'+x.rate+'%</i><b>'+Number(x.price).toLocaleString()+'원</b></span><s>'+Number(x.orig).toLocaleString()+'원</s></a>'; }).join("")+'</div>'+
+    '<p class="evfoot">이 페이지의 링크로 예약하면 다꾸가 마이리얼트립에서 일정액의 수수료를 받을 수 있어요. 예약 조건·취소 규정은 마이리얼트립에서 꼭 확인해 주세요.</p></div>';
+  return h;
+}
 function benefitView(){
   var h='<div class="pg"><h1>혜택 🎁</h1><p class="pgsub">룰렛 · 이벤트 · 기자단 모집을 한곳에 모았어요</p>'+slideBanners(true);
   h+=couponCards();
@@ -672,6 +691,8 @@ function kakaoSlide(){
 var SPARK='<svg class="spk" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0Z" fill="currentColor"/></svg>';
 function heroSlides(){
   var s=[], ig=safeUrl((seed.sns||{}).instagram), oc=safeUrl(seed.openchat);
+  var M=mrtList();
+  if(M.length){ var top=M.slice().sort(function(a,b){ return b.rate-a.rate; }); s.push({bg:"#111",t:"<span>최저가</span> 특가 보러가기!",d:"국내·해외 숙소 특가를<br>매일 아침 모아 드려요",b:"특가 보러가기",h:"#/event",imgs:top.slice(0,2).map(function(x){ return x.img; }),rate:top[0].rate}); }
   s.push({bg:"linear-gradient(120deg,#ffe94d,#fee500)",dark:1,t:"카카오톡 친구추가하고<br><span>NEW 체험단</span> 소식받아보세요!",d:"",b:"친구추가하기",h:kakaoUrl(),x:1,e:["💬","🔔","💛"]});
   if(authCfg()&&!USER) s.push({bg:"linear-gradient(120deg,#a855f7,#ec4899)",t:"지금 가입하면 <span>이런 혜택</span>이!",d:"매일 룰렛 간식 쿠폰 · 기자단 신청<br>찜 저장 · 맞춤 체험단 알림",b:"카카오로 3초 가입",h:"#/my",e:["🎁","🎡","💜"]});
   if(oc) s.push({bg:"linear-gradient(120deg,#22c55e,#0ea5e9)",t:"블로그 <span>서로이웃</span> · 인스타 <span>맞팔</span>해요",d:"체험단 하는 사람들끼리<br>단톡방에서 함께 소통해요!",b:"단톡방 들어가기",h:oc,x:1,e:["🤝","📝","📸"]});
