@@ -7,7 +7,7 @@ API: POST https://naverapihub.apigw.ntruss.com/search-trend/v1/search (헤더 X-
 후보: 기본·분야·지역(숙박)·숙소 종류·data.json 모집 중 브랜드 + '체험단'. 최근 30일 합계로 순위.
 결과: scripts/kw_trends.json (순위·지난 30일 점수·직전 30일 대비 증가율)
 """
-import json, os, re, sys, time, urllib.request, collections
+import json, os, re, sys, time, urllib.request, urllib.parse, collections, hmac, hashlib, base64
 from datetime import datetime, timedelta, timezone
 
 CID, CSEC = os.environ.get("NAVER_CLIENT_ID", "").strip(), os.environ.get("NAVER_CLIENT_SECRET", "").strip()
@@ -54,10 +54,43 @@ def call(groups, start, end):
     time.sleep(0.4)
     return {x["title"]: x["data"] for x in out.get("results", [])}
 
+# ---- 네이버 검색광고(SA) API 키워드도구: 월간 검색 수(실제 숫자)·경쟁도·연관 키워드 ----
+AK, AS, AC = (os.environ.get(k, "").strip() for k in ("NAVER_AD_API_KEY", "NAVER_AD_SECRET", "NAVER_AD_CUSTOMER_ID"))
+def num(v):
+    try: return int(v)
+    except Exception: return 5 if str(v).startswith("<") else 0
+def sa_tool(hints):
+    uri = "/keywordstool"; ts = str(int(time.time() * 1000))
+    sig = base64.b64encode(hmac.new(AS.encode(), f"{ts}.GET.{uri}".encode(), hashlib.sha256).digest()).decode()
+    q = urllib.parse.urlencode({"hintKeywords": ",".join(hints), "showDetail": "1"})
+    req = urllib.request.Request(f"https://api.searchad.naver.com{uri}?{q}", headers={"X-Timestamp": ts, "X-API-KEY": AK, "X-Customer": AC, "X-Signature": sig})
+    with urllib.request.urlopen(req, timeout=30) as r: out = json.loads(r.read().decode())
+    time.sleep(0.4)
+    return out.get("keywordList") or []
+def sa_all(K):
+    if not (AK and AS and AC): print("::warning::NAVER_AD_API_KEY/SECRET/CUSTOMER_ID 가 비어 있어서 검색 수는 건너뜀"); return {}, []
+    vol, rel, fails = {}, {}, 0
+    for i in range(0, len(K), 5):
+        hints = [k.replace(" ", "") for k in K[i:i + 5]]
+        try: L = sa_tool(hints)
+        except Exception as e:
+            fails += 1; print(f"::warning::검색광고 API 실패 {getattr(e, 'code', '')} {getattr(e, 'read', lambda: b'')()[:200]!r}")
+            if fails >= 3: print("::error::검색광고 API 3번 실패해서 멈춤"); break
+            continue
+        for x in L:
+            k = x.get("relKeyword", ""); v = num(x.get("monthlyPcQcCnt")) + num(x.get("monthlyMobileQcCnt"))
+            row = {"vol": v, "pc": num(x.get("monthlyPcQcCnt")), "mo": num(x.get("monthlyMobileQcCnt")), "comp": x.get("compIdx", ""), "clk": round(float(x.get("monthlyAveMobileClkCnt") or 0) + float(x.get("monthlyAvePcClkCnt") or 0), 1)}
+            if k in hints: vol[k] = row
+            else: rel[k] = row
+    related = sorted(({"kw": k, **v} for k, v in rel.items() if v["vol"] >= 30), key=lambda r: -r["vol"])[:300]
+    return vol, related
+
 def main():
-    if not CID or not CSEC: print("::warning::NAVER_CLIENT_ID/SECRET 이 비어 있어서 건너뜀(Secrets 이름 확인)"); return
+    K0 = [k for k in candidates() if k != BASE]
+    vol, related = sa_all(K0)
+    if not CID or not CSEC: print("::warning::NAVER_CLIENT_ID/SECRET 이 비어 있어서 데이터랩 비율은 건너뜀(Secrets 이름 확인)")
     now = datetime.now(KST).date(); end = now - timedelta(days=1); start = end - timedelta(days=59); mid = end - timedelta(days=29)
-    K = [k for k in candidates() if k != BASE]
+    K = K0 if CID and CSEC else []
     res = {}
     for i in range(0, len(K), 4):
         grp = [BASE] + K[i:i + 4]
@@ -76,11 +109,15 @@ def main():
         for k in grp[1:]:
             a, b = sums(k)
             res[k] = {"score": round(a / ba * 100, 1), "prev": round(b / (bb or ba) * 100, 1), "grow": (round((a - b) / b * 100) if b else None)}
-    rank = sorted(res.items(), key=lambda kv: -kv[1]["score"])
+    for k in K0:
+        v = vol.get(k.replace(" ", ""))
+        if v: res.setdefault(k, {"score": None, "prev": None, "grow": None}).update(v)
+    rank = sorted(res.items(), key=lambda kv: (-(kv[1].get("vol") or 0), -(kv[1].get("score") or 0)))
     out = {"updated": datetime.now(KST).strftime("%Y-%m-%d %H:%M"), "base": BASE, "period": f"{mid}~{end}",
-           "note": "score = 최근 30일 검색량을 '체험단'=100 으로 맞춘 상대값(절대 검색 수 아님). grow = 직전 30일 대비 %",
-           "rank": [{"kw": k, **v} for k, v in rank if v["score"] > 0], "zero": [k for k, v in rank if v["score"] == 0]}
+           "note": "vol = 검색광고 키워드도구 월간 검색 수(PC+모바일, '<10'은 5로), comp = 경쟁 정도, clk = 월 평균 클릭. score = 데이터랩 최근 30일 '체험단'=100 상대값, grow = 직전 30일 대비 %",
+           "rank": [{"kw": k, **v} for k, v in rank if (v.get("vol") or 0) > 0 or (v.get("score") or 0) > 0],
+           "zero": [k for k, v in rank if not (v.get("vol") or 0) and not (v.get("score") or 0)], "related": related}
     json.dump(out, open(os.path.join(ROOT, "scripts", "kw_trends.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print(f"::notice::키워드 {len(res)}개 중 검색 있는 것 {len(out['rank'])}개. 1위 {rank[0][0] if rank else '-'}")
+    print(f"::notice::키워드 {len(res)}개 중 검색 있는 것 {len(out['rank'])}개, 연관 키워드 {len(related)}개. 1위 {rank[0][0] if rank else '-'}")
 
 if __name__ == "__main__": main()
