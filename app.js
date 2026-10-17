@@ -226,6 +226,7 @@ function worthLine(it){ return it.worth?'<p class="worth">💰 '+esc(it.worth)+'
 function apOf(it){ var a=it.ap; return Array.isArray(a)&&a.length>=2&&+a[1]>0&&statusOf(it).key!=="closed"?[+a[0]||0,+a[1]]:null; }
 function apRatio(it){ var a=apOf(it); return a?a[0]/a[1]:Infinity; }
 function apLine(it){ var a=apOf(it); if(!a) return ''; var r=a[0]/a[1];
+  if(!a[0]) return '<p class="apl low">모집 '+a[1].toLocaleString()+' · <b>아직 지원자 없음</b></p>';
   return '<p class="apl'+(r<=1.5?' low':'')+'">지원 '+a[0].toLocaleString()+' · 모집 '+a[1].toLocaleString()+' <b>'+(r<10?r.toFixed(1):Math.round(r))+':1</b></p>'; }
 function cdLine(it){ return statusOf(it).dday==="오늘 마감"?'<p class="cdl" data-cdl>'+clock(msToMidnight())+' 남음</p>':''; }
 function miniCard(it,btns){
