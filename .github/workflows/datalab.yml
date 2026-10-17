@@ -1,0 +1,24 @@
+name: 네이버 데이터랩 키워드
+on:
+  schedule:
+    - cron: "20 21 * * 1"   # 매주 화요일 오전 6:20 (한국)
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  trend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: 검색어 트렌드
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        run: python3 scripts/datalab_trend.py
+      - name: 저장
+        run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add -A
+          git diff --cached --quiet || (git commit -m "데이터랩 키워드 $(TZ=Asia/Seoul date +%F)" && for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done)
