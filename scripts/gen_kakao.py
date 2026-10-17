@@ -154,7 +154,75 @@ def card_v2(c):
 <div class='cta' style='background:{ac}'>{e(c.get('cta','지금 보러가기 →'))}</div>
 </div></body></html>"""
 
-def render(c): return card_v2(c) if c.get('style') == 'v2' else card(c)
+# ── v3: 화려한 스타일 (2026-10-17 시온님 요청 "칙칙해, 화려하게") — 쨍한 그라데이션 배경 + 햇살 무늬 + 색종이 + 흰/노랑 외곽선 제목 + 노란 별 스티커 + 번호 배지 + 노란 가격·버튼 ──
+import random
+CSS3 = f"""*{{margin:0;box-sizing:border-box}}
+body{{width:{W}px;height:{H}px;overflow:hidden;font-family:'Noto Sans CJK KR','Noto Sans KR',sans-serif;letter-spacing:-.03em}}
+.c{{position:relative;width:{W}px;height:{H}px;overflow:hidden;text-align:center;padding-top:40px}}
+.ray{{position:absolute;left:50%;top:230px;width:2400px;height:2400px;margin:-1200px 0 0 -1200px;border-radius:50%;
+ background:repeating-conic-gradient(rgba(255,255,255,.16) 0 7deg,rgba(255,255,255,0) 7deg 15deg)}}
+.glow{{position:absolute;left:50%;top:230px;width:900px;height:900px;margin:-450px 0 0 -450px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.35),rgba(255,255,255,0) 65%)}}
+.cf{{position:absolute;border-radius:3px}}
+.sp{{position:absolute;color:#fff;font-family:'Noto Sans CJK KR',sans-serif;line-height:1;text-shadow:0 0 12px rgba(255,255,255,.8)}}
+.lab{{position:relative;display:inline-block;padding:11px 34px;border-radius:40px;font-size:30px;font-weight:900;color:#1a1033;background:#ffe14d;border:4px solid #1a1033;box-shadow:0 5px 0 #1a1033;transform:rotate(-2deg)}}
+.h{{position:relative;font-family:'Black Han Sans','Jua','Noto Sans CJK KR',sans-serif;font-weight:900;line-height:1.06;margin-top:14px}}
+.h b{{display:block;font-weight:inherit;-webkit-text-stroke:16px #1a1033;paint-order:stroke fill;text-shadow:0 9px 0 #1a1033}}
+.sub{{position:relative;display:inline-block;margin-top:12px;font-size:29px;font-weight:800;background:#fff;border-radius:30px;padding:7px 26px;box-shadow:0 5px 0 rgba(26,16,51,.35)}}
+.st{{position:absolute;right:-4px;width:190px;height:190px;z-index:6;transform:rotate(10deg)}}
+.st svg{{position:absolute;inset:0;filter:drop-shadow(0 7px 0 #1a1033)}}
+.st div{{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Jua','Noto Sans CJK KR',sans-serif;font-weight:900;line-height:1.05;white-space:pre-line}}
+.g{{position:absolute;left:34px;right:34px;display:grid;grid-template-columns:1fr 1fr;gap:22px}}
+.tile{{position:relative;border-radius:28px;overflow:hidden;background:#fff;border:6px solid #fff;box-shadow:0 8px 0 #1a1033,0 14px 26px rgba(0,0,0,.25)}}
+.tile:nth-child(1),.tile:nth-child(4){{transform:rotate(-1.4deg)}} .tile:nth-child(2),.tile:nth-child(3){{transform:rotate(1.4deg)}}
+.tile img{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}}
+.tile.ct img{{left:42%;width:58%;object-fit:contain;padding:22px 14px 22px 0}}
+.tile .fd{{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.88) 38%,rgba(255,255,255,0) 66%)}}
+.tile.ct .fd{{background:none}}
+.tx{{position:absolute;left:22px;top:22px;right:18px;text-align:left}}
+.nm{{font-weight:900;color:#1a1033;line-height:1.2;white-space:nowrap}}
+.cp{{margin-top:10px;font-size:25px;font-weight:600;color:#3d3550;line-height:1.36;white-space:pre-line}}
+.no{{position:absolute;right:12px;top:12px;width:50px;height:50px;border-radius:50%;color:#fff;font-size:27px;font-weight:900;display:flex;align-items:center;justify-content:center;border:3px solid #fff;box-shadow:0 3px 0 #1a1033}}
+.pr{{position:absolute;left:16px;bottom:18px;display:flex;align-items:center;gap:10px;padding:9px 11px 9px 20px;border-radius:40px;background:#ffe14d;color:#1a1033;font-size:28px;font-weight:900;border:3px solid #1a1033;box-shadow:0 4px 0 #1a1033}}
+.pr i{{display:inline-flex;width:32px;height:32px;border-radius:50%;color:#fff;align-items:center;justify-content:center;font-style:normal;font-size:23px;font-weight:900}}
+.cta{{position:absolute;left:50%;transform:translateX(-50%);bottom:30px;padding:20px 54px;border-radius:60px;background:#ffe14d;color:#1a1033;font-size:33px;font-weight:900;white-space:nowrap;border:5px solid #1a1033;box-shadow:0 8px 0 #1a1033}}
+"""
+def burst(n=16, r1=118, r2=92):
+    pts = []
+    for k in range(n * 2):
+        a = math.pi * k / n - math.pi / 2; r = r1 if k % 2 == 0 else r2
+        pts.append(f"{120 + r*math.cos(a):.1f},{120 + r*math.sin(a):.1f}")
+    return "M" + " L".join(pts) + " Z"
+BURST = burst()
+def card_v3(c):
+    ac = c.get('accent', '#ff3d7f'); a2 = c.get('accent2', '#ff9a3d')
+    l1, l2 = c['l1'], c.get('l2', '')
+    fs = int(min(108, 600 / (max(len(l1), len(l2)) * 0.98)))
+    gtop = 40 + 64 + 14 + int(fs * 1.06) * 2 + 12 + 52 + 34
+    gbot = 30 + 92 + 34
+    rnd = random.Random(l1 + l2)
+    cols = ['#ffe14d', '#ffffff', '#3dd6ff', '#7cff6b', '#ff7ad9', '#1a1033']
+    cf = ''.join(f"<div class='cf' style='left:{rnd.randint(0,W)}px;top:{rnd.randint(0,gtop+40)}px;width:{rnd.randint(10,22)}px;height:{rnd.randint(6,12)}px;background:{rnd.choice(cols)};transform:rotate({rnd.randint(0,180)}deg);opacity:.9'></div>" for _ in range(34))
+    cf += ''.join(f"<div class='sp' style='left:{x}px;top:{y}px;font-size:{s}px'>✦</div>" for x, y, s in ((60, 70, 46), (800, 40, 34), (40, 330, 30), (150, 210, 22), (720, 300, 26), (850, 1150, 30), (20, 1150, 26)))
+    tiles = []
+    for i, p in enumerate(c['tiles'], 1):
+        ct = ' ct' if p.get('fit') == 'contain' else ''
+        tiles.append(f"""<div class='tile{ct}'><img src="{data_uri(p['img'])}"><div class='fd'></div>
+<div class='no' style='background:{ac if i % 2 else a2}'>{i}</div>
+<div class='tx'><div class='nm' style='font-size:{28 if len(p["name"])<=8 else 25 if len(p["name"])<=10 else 22}px'>{e(p['name'])}</div><div class='cp'>{e(p.get('copy',''))}</div></div>
+<div class='pr'>{e(p['price'])}<i style='background:{ac}'>›</i></div></div>""")
+    sl = str(c.get('sticker', '')).split('\n')
+    sti = ''.join(f"<span style='font-size:{30 if k==0 and len(sl)>2 else 44}px;color:{'#1a1033' if k==0 and len(sl)>2 else ac}'>{e(t)}</span>" for k, t in enumerate(sl))
+    st = f"<div class='st' style='top:{40 + 64 + 14 + int(fs * 1.06) - 30}px'><svg viewBox='0 0 240 240'><path d='{BURST}' fill='#ffe14d' stroke='#1a1033' stroke-width='6' stroke-linejoin='round'/></svg><div>{sti}</div></div>" if c.get('sticker') else ''
+    return f"""<html><head><meta charset='utf-8'><style>{CSS3}</style></head><body>
+<div class='c' style='background:linear-gradient(160deg,{ac} 0%,{a2} 100%)'><div class='ray'></div><div class='glow'></div>{cf}
+<div class='lab'>{e(c.get('label',''))}</div>
+<div class='h' style='font-size:{fs}px'><b style='color:#fff'>{e(l1)}</b><b style='color:#ffe14d'>{e(l2)}</b></div>
+<div class='sub' style='color:{ac}'>{e(c.get('sub',''))}</div>{st}
+<div class='g' style='top:{gtop}px;bottom:{gbot}px;grid-template-rows:1fr 1fr'>{''.join(tiles)}</div>
+<div class='cta'>{e(c.get('cta','지금 보러가기 →'))}</div>
+</div></body></html>"""
+
+def render(c): return card_v3(c) if c.get('style') == 'v3' else card_v2(c) if c.get('style') == 'v2' else card(c)
 
 def text():
     raw = f"https://raw.githubusercontent.com/dagguu/dagguu.github.io/insta/kakao/{Q['date']}"

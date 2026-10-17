@@ -2,10 +2,8 @@
  "date": "2026-10-17",
  "cards": [
   {
-   "style": "v2",
-   "accent": "#d6336c",
-   "light": "#fcd6e4",
-   "bg": "#fff2f6",
+   "style": "v3",
+   "accent": "#ff2e88",
    "label": "🎉 오늘 아침 막 열렸어요",
    "l1": "오늘 오픈",
    "l2": "체험단 모음",
@@ -45,13 +43,12 @@
    "title": "[오늘오픈🎉] 오늘 오픈 체험단",
    "desc": "주말 아침 새로 열린 체험단🎉\n제주 숙소부터 육아템 페이백까지💸\n✅기간 : ~10/19부터 순차 마감",
    "btn": "체험단 보러가기",
-   "url": "https://www.dagguu.com/#/list?cat=stay&s=open"
+   "url": "https://www.dagguu.com/#/list?cat=stay&s=open",
+   "accent2": "#ff8a3d"
   },
   {
-   "style": "v2",
-   "accent": "#e0352b",
-   "light": "#fbd9d3",
-   "bg": "#fdf3ee",
+   "style": "v3",
+   "accent": "#ff3131",
    "label": "⏰ 단 하루! 오늘 마감",
    "l1": "오늘 마감",
    "l2": "체험단 모음",
@@ -91,13 +88,12 @@
    "title": "[오늘종료⏰] 오늘 마감 체험단",
    "desc": "신청 미뤄뒀다면 지금이 마지막⏰\n통영·보령·거제 숙소 체험단🌊\n✅기간 : ~10/17 오늘까지!",
    "btn": "오늘마감 보기",
-   "url": "https://www.dagguu.com/#/list?cat=stay&s=todayClose"
+   "url": "https://www.dagguu.com/#/list?cat=stay&s=todayClose",
+   "accent2": "#ff9f1c"
   },
   {
-   "style": "v2",
-   "accent": "#ef7313",
-   "light": "#fde2c8",
-   "bg": "#fdf6ec",
+   "style": "v3",
+   "accent": "#ff6a00",
    "label": "🧳 내일 마감 숙소",
    "l1": "내일 마감",
    "l2": "숙박 체험단",
@@ -137,13 +133,12 @@
    "title": "[내일종료⏰] 숙박 체험단 모음",
    "desc": "큰 금액 숙소일수록 서둘러요🙌\n고성·제주·하남·아산 숙박 체험단🏝️\n✅기간 : ~10/18 내일까지!",
    "btn": "마감임박 보기",
-   "url": "https://www.dagguu.com/#/list?cat=stay&s=closing"
+   "url": "https://www.dagguu.com/#/list?cat=stay&s=closing",
+   "accent2": "#ff2e63"
   },
   {
-   "style": "v2",
-   "accent": "#1f6fd6",
-   "light": "#d6e7fb",
-   "bg": "#f1f6fc",
+   "style": "v3",
+   "accent": "#2f6bff",
    "label": "✨ NEW 새로 올라왔어요",
    "l1": "감성 숙소",
    "l2": "체험단 오픈",
@@ -183,13 +178,12 @@
    "title": "[NEW✨] 새로 올라온 감성 숙소",
    "desc": "150만원 상당 독채 풀빌라가 떴어요✨\n거창·가평·강화·완주 숙소 체험단🌙\n✅기간 : ~10/20부터 순차 마감",
    "btn": "체험단 보러가기",
-   "url": "https://www.dagguu.com/#/list?cat=stay&s=open"
+   "url": "https://www.dagguu.com/#/list?cat=stay&s=open",
+   "accent2": "#00c2ff"
   },
   {
-   "style": "v2",
-   "accent": "#1f6b45",
-   "light": "#d8e8d4",
-   "bg": "#f5f3ea",
+   "style": "v3",
+   "accent": "#00a862",
    "label": "👶 써보고 돌려받는 육아템",
    "l1": "전액 페이백",
    "l2": "육아템 체험단",
@@ -229,13 +223,12 @@
    "title": "[전액페이백💸] 육아템 체험단",
    "desc": "써보고 리뷰하면 제품값 전액 환급👶\n로션·샴푸·칫솔까지 육아템 모음💸\n✅기간 : ~10/18부터 순차 마감",
    "btn": "페이백 보러가기",
-   "url": "https://www.dagguu.com/#/list?cat=baby&ch=payback"
+   "url": "https://www.dagguu.com/#/list?cat=baby&ch=payback",
+   "accent2": "#00c9b7"
   },
   {
-   "style": "v2",
-   "accent": "#e8352b",
-   "light": "#ffe9a8",
-   "bg": "#fffaea",
+   "style": "v3",
+   "accent": "#7b2ff7",
    "label": "🍼 쿠팡 골드박스 아기용품",
    "l1": "아기용품",
    "l2": "최대 36% 핫딜",
@@ -275,7 +268,8 @@
    "title": "[핫딜🔥] 아기용품 골드박스",
    "desc": "주말에 쟁여두기 좋은 타이밍👀\n카시트·분유·퍼즐까지 최대 36%↓🍼\n3만원대부터 핫딜로 만나요💚",
    "btn": "핫딜 보러가기",
-   "url": "https://www.dagguu.com/#/deals"
+   "url": "https://www.dagguu.com/#/deals",
+   "accent2": "#ff2e9a"
   }
  ]
 }
