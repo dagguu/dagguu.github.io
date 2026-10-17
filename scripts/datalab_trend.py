@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """네이버 데이터랩 검색어트렌드 API 로 '체험단' 관련 키워드 인기 비교 (GitHub Actions datalab.yml).
 
-키: 저장소 Secrets NAVER_CLIENT_ID / NAVER_CLIENT_SECRET (developers.naver.com 에서 시온님이 발급·직접 입력, Claude 는 보지 않음).
-API: POST https://openapi.naver.com/v1/datalab/search  (한 번에 키워드 그룹 5개, 결과는 그 요청 안에서 0~100 상대값)
+키: 저장소 Secrets NAVER_CLIENT_ID / NAVER_CLIENT_SECRET — 2026-07-31 부터 개발자센터 신규 발급이 막혀 NAVER API HUB(네이버 클라우드) 키를 쓴다(시온님이 발급·직접 입력, Claude 는 보지 않음).
+API: POST https://naverapihub.apigw.ntruss.com/search-trend/v1/search (헤더 X-NCP-APIGW-API-KEY-ID/KEY). 예전 개발자센터 키면 NAVER_API_LEGACY=1  (한 번에 키워드 그룹 5개, 결과는 그 요청 안에서 0~100 상대값)
 → 모든 요청에 기준 키워드 '체험단' 을 넣어서, 다른 요청끼리도 '체험단=100' 기준으로 비교되게 맞춘다.
 후보: 기본·분야·지역(숙박)·숙소 종류·data.json 모집 중 브랜드 + '체험단'. 최근 30일 합계로 순위.
 결과: scripts/kw_trends.json (순위·지난 30일 점수·직전 30일 대비 증가율)
@@ -45,8 +45,11 @@ def candidates():
 def call(groups, start, end):
     body = {"startDate": start, "endDate": end, "timeUnit": "date",
             "keywordGroups": [{"groupName": g, "keywords": [g]} for g in groups]}
-    req = urllib.request.Request("https://openapi.naver.com/v1/datalab/search", data=json.dumps(body).encode(), method="POST",
-        headers={"X-Naver-Client-Id": CID, "X-Naver-Client-Secret": CSEC, "Content-Type": "application/json"})
+    if os.environ.get("NAVER_API_LEGACY"):
+        u, h = "https://openapi.naver.com/v1/datalab/search", {"X-Naver-Client-Id": CID, "X-Naver-Client-Secret": CSEC}
+    else:
+        u, h = "https://naverapihub.apigw.ntruss.com/search-trend/v1/search", {"X-NCP-APIGW-API-KEY-ID": CID, "X-NCP-APIGW-API-KEY": CSEC}
+    req = urllib.request.Request(u, data=json.dumps(body).encode(), method="POST", headers={**h, "Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=30) as r: out = json.loads(r.read().decode())
     time.sleep(0.4)
     return {x["title"]: x["data"] for x in out.get("results", [])}
