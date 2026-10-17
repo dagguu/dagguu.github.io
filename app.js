@@ -469,6 +469,7 @@ function renderListGrid(){
     if((i+1)%every===0){ var hd=hotDeal(), B=ADS.map(function(a){ return adWide(a); }); if(hd){ if(state.cat==="baby") B.unshift(hd); else B.splice(1,0,hd); } if(B.length) out.push('<div class="span">'+B[n++%B.length]+'</div>'); }
   });
   g.innerHTML=list.length?out.join(""):(state.chs.length&&state.chs.indexOf("blog")<0?'<div class="empty span"><b>'+state.chs.map(function(c){ return CHN[c]||c; }).join(" · ")+' 체험단을 모으고 있어요</b>새로 올라오면 카톡으로 가장 먼저 알려드릴게요.<a class="b kakao" '+ext(kakaoUrl())+'>💬 카톡으로 알림 받기</a></div>':'<div class="empty span"><b>🥲 조건에 맞는 체험단이 없어요</b>다른 지역이나 상태를 골라 보세요.</div>');
+  plainHeads(document.getElementById("view"));
 }
 
 
