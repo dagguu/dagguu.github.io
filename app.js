@@ -315,6 +315,7 @@ function homeView(){
   if(regs.length) h+=hrow(regTitle,'#/list?cat=stay&s=open&r='+encodeURIComponent(regs.join(",")),open.filter(function(it){ return regs.indexOf(it.region)>=0; }).sort(byDeadline));
   var up=CAT_ORDER.filter(function(m){ return !isOpenCat(m.k) && UPCOMING.some(function(u){ return u.k===m.k||u.t===m.t; }); });
   if(up.length) h+='<a class="upbox" '+ext(kakaoUrl())+'><span class="ul"><small>곧 열려요 ✨</small><b>'+up.map(function(m){ return m.em+' '+esc(m.t); }).join(" · ")+' 체험단</b></span><span class="ug">🔔 오픈 알림</span></a>';
+  if(!pushOn()) h+=pushBox();
   var gb=[];
   if(rep()) gb.push(['#/reporter','','#6aa8ff','#4338ca','✍️','다꾸 기자단 모집','후기 쓰고 1만원 상품권 받아요']);
   gb.push([kakaoUrl(),'ext','#5eead4','#16a34a','🔔','새로 나온 체험단 알림','매일 아침 카톡으로 먼저 받아요']);
@@ -975,6 +976,52 @@ document.addEventListener("click",function(e){
   var it=seed.items.filter(function(x){ return x.id===a.dataset.apply; })[0]; if(!it) return;
   e.preventDefault(); e.stopPropagation(); applyPopup(it);
 },true);
+/* ---------- 웹 푸시 알림 (아침 오늘 오픈 · 점심 특가 · 저녁 오늘 마감) ---------- */
+function pushKey(){ return (seed.push||{}).vapid||""; }
+function pushOk(){ return !!(pushKey()&&authCfg()&&"serviceWorker" in navigator&&"PushManager" in window&&"Notification" in window); }
+function isIOS(){ return /iPhone|iPad|iPod/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1); }
+function isStandalone(){ return (window.matchMedia&&matchMedia("(display-mode: standalone)").matches)||navigator.standalone===true; }
+function pushOn(){ return ls("dakku-push")==="1"&&("Notification" in window)&&Notification.permission==="granted"; }
+function b64u(s){ var p="=".repeat((4-s.length%4)%4), r=atob((s+p).replace(/-/g,"+").replace(/_/g,"/")), a=new Uint8Array(r.length); for(var i=0;i<r.length;i++) a[i]=r.charCodeAt(i); return a; }
+function pushRpc(fn,body){ var a=authCfg(); return fetch(a.url+"/rest/v1/rpc/"+fn,{method:"POST",headers:{apikey:a.key,Authorization:"Bearer "+a.key,"Content-Type":"application/json"},body:JSON.stringify(body)}); }
+function pushSheet(html){
+  var old=document.querySelector(".modal.pushm"); if(old) old.remove();
+  var w=document.createElement("div"); w.className="modal pushm applym"; w.setAttribute("role","dialog"); w.setAttribute("aria-modal","true");
+  w.innerHTML='<div class="sheet"><button class="mx" data-m="x" aria-label="닫기">'+ico(I.x)+'</button><div class="mlogo">'+logoSvg(40)+'</div>'+html+'<button class="b sec wide" data-m="x" style="margin-top:8px">닫기</button></div>';
+  w.addEventListener("click",function(e){ if(e.target===w||e.target.closest('[data-m="x"]')) w.remove(); });
+  document.body.appendChild(w);
+}
+var PUSH_INFO='<ul class="lgben"><li>☀️ 아침: 오늘 오픈한 체험단</li><li>🍱 점심: 오늘의 특가</li><li>🌙 저녁: 오늘 마감 체험단</li></ul>';
+function enablePush(){
+  if(isIOS()&&!isStandalone()){ pushSheet('<h2>아이폰은 홈 화면에<br>추가해야 알림이 와요 📲</h2>'+PUSH_INFO+'<p class="apnote">① 사파리 아래 <b>공유 버튼(□↑)</b>을 누르고<br>② <b>홈 화면에 추가</b>를 누른 뒤<br>③ 홈 화면의 <b>다꾸</b> 아이콘으로 열어서 다시 <b>알림 받기</b>를 눌러 주세요.</p>'); return; }
+  if(!pushOk()){ pushSheet('<h2>이 브라우저는 알림을<br>지원하지 않아요 😢</h2><p>크롬이나 삼성 인터넷, 아이폰은 사파리에서 열어 주세요.</p>'); return; }
+  Notification.requestPermission().then(function(p){
+    if(p!=="granted"){ pushSheet('<h2>알림이 꺼져 있어요</h2><p>휴대폰 설정 → 알림에서 브라우저(또는 다꾸) 알림을 허용한 뒤 다시 눌러 주세요.</p>'); return; }
+    return navigator.serviceWorker.ready.then(function(reg){
+      return reg.pushManager.getSubscription().then(function(old){ return old||reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:b64u(pushKey())}); });
+    }).then(function(sub){
+      var j=sub.toJSON(); return pushRpc("push_subscribe",{p_endpoint:j.endpoint,p_p256dh:j.keys.p256dh,p_auth:j.keys.auth,p_ua:navigator.userAgent.slice(0,200)});
+    }).then(function(r){
+      if(!r||!r.ok) throw new Error("save");
+      ls("dakku-push","1"); render();
+      pushSheet('<h2>알림을 켰어요 🔔</h2>'+PUSH_INFO+'<p class="apnote">마이 다꾸에서 언제든 끌 수 있어요.</p>');
+    });
+  }).catch(function(){ pushSheet('<h2>알림 켜기에 실패했어요</h2><p>잠시 뒤 다시 눌러 주세요.</p>'); });
+}
+function disablePush(){
+  navigator.serviceWorker.ready.then(function(reg){ return reg.pushManager.getSubscription(); }).then(function(sub){
+    if(!sub) return; var ep=sub.endpoint; return sub.unsubscribe().then(function(){ return pushRpc("push_unsubscribe",{p_endpoint:ep}); });
+  }).catch(function(){}).then(function(){ try{ localStorage.removeItem("dakku-push"); }catch(e){} render(); });
+}
+function pushBox(){
+  if(!pushKey()||!authCfg()) return "";
+  return pushOn()?'<div class="pushbox on"><span><b>🔔 앱 알림 켜짐</b><small>아침 오늘 오픈 · 점심 특가 · 저녁 오늘 마감</small></span><button class="b sec" data-pushoff>끄기</button></div>'
+    :'<div class="pushbox"><span><b>📲 앱 알림 받기</b><small>아침 오늘 오픈 · 점심 특가 · 저녁 오늘 마감</small></span><button class="b pri" data-pushon>알림 받기</button></div>';
+}
+document.addEventListener("click",function(e){
+  var t=e.target.closest("[data-pushon],[data-pushoff]"); if(!t) return; e.preventDefault();
+  if(t.hasAttribute("data-pushon")) enablePush(); else disablePush();
+});
 function appliedSection(){
   var byId={}; seed.items.forEach(function(it){ byId[it.id]=it; });
   var list=APPLIED.map(function(id){ return byId[id]; }).filter(Boolean);
@@ -1248,13 +1295,14 @@ function myView(){
          '<p class="lgnote">시작하면 <a href="#/privacy">개인정보처리방침</a>에 동의하는 것으로 봐요.</p>'
        :'<p class="lgsoon">🔧 회원 기능을 준비하고 있어요. 곧 카카오로 로그인할 수 있어요!</p>')+'</section>';
     h+='<div class="mytiles"><a href="#/fav"><b>'+favN+'</b><span>찜</span></a><a href="#/my" data-jump="applied"><b>'+APPLIED.length+'</b><span>신청한</span></a><a href="#/fav"><b>'+SEEN.length+'</b><span>최근 본</span></a></div>';
-    h+=appliedSection()+recentSection();
+    h+=pushBox()+appliedSection()+recentSection();
     return h+'</div>';
   }
   var P=PROFILE||{}, mon=ym(today()), r=rep();
   var spinTxt=MYSPIN&&MYSPIN.won?'당첨 🎉':(MYSPIN&&MYSPIN.today?'오늘 완료':'참여 가능');
   h+='<div class="hello"><b>'+esc(nick())+'님, 반가워요 👋</b><button class="lnk" data-logout>로그아웃</button></div>';
   h+='<div class="mytiles"><a href="#/fav"><b>'+favN+'</b><span>찜</span></a><a href="#/my" data-jump="applied"><b>'+APPLIED.length+'</b><span>신청한</span></a><a href="#/my" data-jump="recent"><b>'+SEEN.length+'</b><span>최근 본</span></a><a href="#/benefit"><b>'+spinTxt+'</b><span>룰렛</span></a>'+(r?'<a href="#/reporter"><b>'+(MYREP?esc(MYREP.status):'신청 전')+'</b><span>기자단</span></a>':'')+'</div>';
+  h+=pushBox();
   h+='<form class="pane mypref" id="prefform"><h2>🔔 맞춤 체험단 알림</h2><p class="mysub">고른 지역·아기 나이에 맞는 새 체험단을 먼저 보여드리고, 알림을 켜면 새로 올라올 때 알려드려요.</p>'+
     '<span class="fl">관심 분야</span>'+chipChecks("cat",[["stay","🏨 숙박"],["baby","👶 육아"],["life","🧺 생활"],["beauty","💄 뷰티"],["elec","🔌 가전/가구"],["health","🍱 식품"],["pet","🐾 반려동물"]],WANT.cat?[WANT.cat]:[],true)+
     '<span class="fl">관심 지역</span>'+chipChecks("regions",REGIONS.map(function(x){ return [x,x]; }),WANT.regions)+

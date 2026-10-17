@@ -1,0 +1,26 @@
+name: 웹 푸시 알림
+on:
+  schedule:
+    - cron: "37 23 * * *"   # 오전 8:37 (한국) 오늘 오픈 체험단
+    - cron: "7 3 * * *"     # 낮 12:07 오늘의 특가
+    - cron: "7 9 * * *"     # 저녁 6:07 오늘 마감
+  workflow_dispatch:
+    inputs:
+      slot: { description: "morning / noon / evening", default: "morning" }
+permissions: { contents: read }
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - run: npm i --no-save web-push@3.6.7
+      - name: 보내기
+        env:
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+        run: |
+          S="${{ github.event.inputs.slot }}"
+          if [ -z "$S" ]; then H=$(TZ=Asia/Seoul date +%H); if [ "$H" -lt 11 ]; then S=morning; elif [ "$H" -lt 16 ]; then S=noon; else S=evening; fi; fi
+          node scripts/send_push.js "$S"
