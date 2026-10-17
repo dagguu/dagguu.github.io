@@ -25,7 +25,7 @@ const won = v => v >= 10000 ? `${Math.round(v / 1000) / 10}만원 상당`.replac
 const nm = i => (i.name || '').replace(/\s*\(([^)]*)\)$/, (a, b) => ` (${b})`).slice(0, 34);
 const line = i => `[${CATN[i.cat || 'stay'] || '기타'}] ${nm(i)}${won(val(i)) ? ' · ' + won(val(i)) : ''}`;
 const best = L => L.slice().sort((a, b) => val(b) - val(a));
-const UNSUB = '\n수신거부: 마이 다꾸 > 알림 끄기';
+const UNSUB = ''; // 2026-10-17 시온님 요청으로 알림 본문의 수신거부 문구는 뺌(끄기는 마이 다꾸에서)
 let msg = null, NEW = [];
 if (slot === 'morning') {
   const L = items.filter(i => (i.end || '9999') >= today && (i.start === today || (i.createdAt && kday(i.createdAt) === today)));
