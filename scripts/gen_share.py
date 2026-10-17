@@ -236,8 +236,33 @@ idx += "<h2>지역별 숙박</h2><div class='tags'>" + "".join(f'<a href="{e(p)}
 open(os.path.join(cdir, "index.html"), "w", encoding="utf-8").write(
     shell("체험단 모음 사이트 · 분야별·지역별 체험단 모아보기 | 다꾸체험단", "블로그·인스타·릴스 체험단, 숙박·육아·뷰티·생활·가전·식품·반려동물 체험단과 지역별 숙박 체험단을 한곳에 모았어요. 매일 업데이트.", SITE + "/c/", idx, "", "index,follow", [bld]))
 
+# ---------- g/ 가이드 글 (scripts/guides.py) ----------
+import sys; sys.path.insert(0, os.path.join(ROOT, "scripts"))
+from guides import GUIDES
+gdir = reset("g"); ghubs = []
+blog_open = sort_open([it for it in open_items if "blog" in (it.get("ch") or [])])
+GCSS = "<style>.art p,.art li{font-size:16px;line-height:1.8;word-break:keep-all}.art h2{margin-top:34px}.art ol,.art ul{padding-left:22px}.art li{margin:8px 0}.meta{color:#999;font-size:12.5px}</style>"
+for g in GUIDES:
+    p = f"/g/{g['slug']}.html"
+    bc, bld = crumbs([("홈", "/"), ("체험단 가이드", "/g/"), (g["title"], None)])
+    art = {"@context": "https://schema.org", "@type": "Article", "headline": g["title"], "description": g["desc"], "datePublished": g["date"], "dateModified": g["date"],
+           "author": {"@type": "Organization", "name": "다꾸체험단"}, "publisher": {"@type": "Organization", "name": "다꾸체험단"}, "mainEntityOfPage": SITE + p}
+    body = GCSS + bc + f"<h1>{e(g['title'])}</h1><p class='meta'>다꾸체험단 · {e(g['date'])}</p><div class='art'>{g['body']}</div>"
+    body += f"<h2>지금 모집 중인 블로그 체험단 ({len(blog_open)}곳)</h2><ul class='list'>" + "".join(li(x) for x in blog_open[:6]) + "</ul>"
+    body += f'<div class="btns"><a class="btn pri" href="/c/blog.html">블로그 체험단 전체 보기</a><a class="btn ghost" href="/">다꾸 앱에서 오늘 오픈 체험단 알림 받기</a></div>'
+    body += '<div class="tags">' + "".join(f'<a href="{e(u)}">{e(n)}</a>' for n, u in g.get("related", [])) + "</div>"
+    open(os.path.join(gdir, g["slug"] + ".html"), "w", encoding="utf-8").write(shell(g["title"] + " | 다꾸체험단", g["desc"], SITE + p, body, "", "index,follow", [bld, art]))
+    ghubs.append((g["title"], p, 0))
+bc, bld = crumbs([("홈", "/"), ("체험단 가이드", None)])
+gi = bc + "<h1>체험단 가이드</h1><p class='sub'>블로그 협찬·체험단을 처음 시작하는 분을 위한 글을 모았어요.</p><ul class='list'>" + "".join(
+    f'<li><a href="{e(p)}"><span><b>{e(g["title"])}</b><small>{e(g["desc"])}</small></span></a></li>' for g, (_, p, _) in zip(GUIDES, ghubs)) + "</ul>"
+open(os.path.join(gdir, "index.html"), "w", encoding="utf-8").write(shell("체험단 가이드 · 블로그 협찬 받는 법 | 다꾸체험단", "블로그 협찬 받는 법, 블로그 지수, 블로그 수익 내는 법 등 체험단을 시작하는 분을 위한 가이드.", SITE + "/g/", gi, "", "index,follow", [bld]))
+idx += "<h2>체험단 가이드</h2><div class='tags'>" + "".join(f'<a href="{e(p)}">{e(n)}</a>' for n, p, _ in ghubs) + "</div>"
+open(os.path.join(cdir, "index.html"), "w", encoding="utf-8").write(
+    shell("체험단 모음 사이트 · 분야별·지역별 체험단 모아보기 | 다꾸체험단", "블로그·인스타·릴스 체험단, 숙박·육아·뷰티·생활·가전·식품·반려동물 체험단과 지역별 숙박 체험단을 한곳에 모았어요. 매일 업데이트.", SITE + "/c/", idx, "", "index,follow", [crumbs([("홈", "/"), ("모아보기", None)])[1]]))
+
 # ---------- sitemap ----------
-urls = [(SITE + "/", "daily"), (SITE + "/c/", "daily")] + [(SITE + p, "daily") for _, p, _ in hubs + chhubs] + [(f"{SITE}/s/{it['id']}.html", "weekly") for it in open_items]
+urls = [(SITE + "/", "daily"), (SITE + "/c/", "daily")] + [(SITE + p, "daily") for _, p, _ in hubs + chhubs] + [(SITE + "/g/", "weekly")] + [(SITE + p, "weekly") for _, p, _ in ghubs] + [(f"{SITE}/s/{it['id']}.html", "weekly") for it in open_items]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
     f"<url><loc>{e(u)}</loc><lastmod>{TODAY}</lastmod><changefreq>{f}</changefreq></url>\n" for u, f in urls) + "</urlset>\n"
 open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(sm)
