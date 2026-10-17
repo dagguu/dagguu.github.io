@@ -28,19 +28,20 @@ if (slot === 'morning') {
   if (L.length) msg = { title: `⏰ 오늘 마감!! ${L.length}곳`, body: `${count(L)}\n오늘 밤 12시 전에 신청하세요!`, url: SITE + '#/list?s=todayClose', tag: 'evening' };
 }
 if (!msg) { console.log(`${slot}: 보낼 내용이 없어서 건너뜀`); process.exit(0); }
-webpush.setVapidDetails('mailto:eun901002@gmail.com', PUB, PRIV);
-const H = { apikey: KEY, Authorization: 'Bearer ' + KEY };
+const fail = m => { console.log('::error::' + m); process.exit(1); };
+try { webpush.setVapidDetails('mailto:eun901002@gmail.com', PUB, PRIV.trim()); } catch (e) { fail('VAPID 키 오류(비밀 키를 다시 확인): ' + e.message); }
+const H = { apikey: KEY.trim(), Authorization: 'Bearer ' + KEY.trim() };
 (async () => {
   const r = await fetch(URL0 + '/rest/v1/push_subs?select=endpoint,p256dh,auth', { headers: H });
-  if (!r.ok) { console.log('구독 목록을 못 읽음', r.status, await r.text()); process.exit(1); }
-  const subs = await r.json(); let ok = 0, gone = 0, fail = 0;
+  if (!r.ok) fail('구독 목록을 못 읽음 ' + r.status + ' ' + (await r.text()).slice(0, 150));
+  const subs = await r.json(); let ok = 0, gone = 0, nfail = 0;
   const payload = JSON.stringify({ ...msg, icon: SITE + 'icons/icon-192.png' });
   for (const s of subs) {
     try { await webpush.sendNotification({ endpoint: s.endpoint, keys: { p256dh: s.p256dh, auth: s.auth } }, payload, { TTL: 6 * 3600, urgency: 'normal' }); ok++; }
     catch (e) {
       if (e.statusCode === 404 || e.statusCode === 410) { gone++; await fetch(URL0 + '/rest/v1/push_subs?endpoint=eq.' + encodeURIComponent(s.endpoint), { method: 'DELETE', headers: H }); }
-      else { fail++; console.log('보내기 실패', e.statusCode || '', String(e.body || e.message).slice(0, 120)); }
+      else { nfail++; console.log('::warning::보내기 실패', e.statusCode || '', String(e.body || e.message).slice(0, 120)); }
     }
   }
-  console.log(`${slot}: "${msg.title}" 구독 ${subs.length}명 중 성공 ${ok}, 해지 정리 ${gone}, 실패 ${fail}`);
-})();
+  console.log(`::notice::${slot}: "${msg.title}" 구독 ${subs.length}명 중 성공 ${ok}, 해지 정리 ${gone}, 실패 ${nfail}`);
+})().catch(e => fail('보내기 중 오류: ' + e.message));
