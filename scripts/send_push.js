@@ -80,9 +80,11 @@ if (!K2.startsWith('sb_secret_') && !K2.startsWith('eyJ')) console.log('::warnin
   const subs = await r.json(); let ok = 0, gone = 0, nfail = 0;
   let skip = 0;
   for (const s of subs) {
-    const m = personal(s);
-    if (!m) { skip++; continue; }
-    const payload = JSON.stringify({ ...m, tag: (m.tag || slot) + '-' + Date.now(), icon: SITE + 'icons/icon-192.png' });
+    const m = { ...personal(s) };
+    if (!m.title) { skip++; continue; }
+    // 모든 알림 본문 앞에 (광고), 끝에 수신거부 안내 (2026-10-17 시온님 요청)
+  if (slot !== 'test') m.body = (m.body.startsWith('(광고)') ? m.body : '(광고) ' + m.body) + (m.body.includes('수신거부') ? '' : UNSUB);
+  const payload = JSON.stringify({ ...m, tag: (m.tag || slot) + '-' + Date.now(), icon: SITE + 'icons/icon-192.png' });
     try { await webpush.sendNotification({ endpoint: s.endpoint, keys: { p256dh: s.p256dh, auth: s.auth } }, payload, { TTL: 6 * 3600, urgency: 'normal' }); ok++; }
     catch (e) {
       if (e.statusCode === 404 || e.statusCode === 410 || /VapidPkHashMismatch/.test(String(e.body || ''))) { gone++; await fetch(URL0 + '/rest/v1/push_subs?endpoint=eq.' + encodeURIComponent(s.endpoint), { method: 'DELETE', headers: H }); }
