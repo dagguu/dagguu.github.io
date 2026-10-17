@@ -550,8 +550,8 @@ function couponCards(){
 }
 /* ---------- 이벤트: 마이리얼트립 숙소 특가 (2026-10-17 시온님 요청, scripts/mrt_api.py 가 매일 6:40 채움) ---------- */
 function mrtList(){ return (seed.mrtDeals||[]).filter(function(x){ return safeUrl(x.u)&&x.price; }); }
-function yeogiBox(){ // 여기어때 마케팅 파트너 링크(시온님이 파트너센터에서 발급, data.json yeogi). until 지나면 숨김
-  var td=ymd(today()), Y=(seed.yeogi||[]).filter(function(x){ return safeUrl(x.u)&&(!x.until||x.until>=td); });
+function yeogiBox(pos){ // 여기어때 마케팅 파트너 링크(시온님이 파트너센터에서 발급, data.json yeogi). until 지나면 숨김
+  var td=ymd(today()), Y=(seed.yeogi||[]).filter(function(x){ return safeUrl(x.u)&&(!x.until||x.until>=td)&&((x.pos||"top")===(pos||"top")); });
   return Y.map(function(x){ return '<a class="yeo" '+ext(x.u)+'><span><small>여기어때 · 광고</small><b>'+esc(x.t)+'</b>'+(x.d?'<em>'+esc(x.d)+'</em>':'')+'</span><i>'+esc(x.b||"보러가기")+' ›</i></a>'; }).join("");
 }
 function eventView(){
@@ -562,12 +562,12 @@ function eventView(){
     '<div class="evtab"><a href="#/event"'+(abr?'':' class="on"')+'>국내</a><a href="#/event?t=abroad"'+(abr?' class="on"':'')+'>해외</a></div>'+
     yeogiBox()+
     (info.checkIn?'<p class="evnote">'+md(info.checkIn)+'(토) 1박 · 성인 '+(info.adults||2)+'명 기준 가격이에요. 날짜·인원에 따라 달라지고, 매일 아침 새로 모아요.</p>':'');
-  if(!L.length) return h+'<div class="empty sm"><b>특가를 준비 중이에요</b>내일 아침에 다시 확인해 주세요.</div></div>';
+  if(!L.length) return h+'<div class="empty sm"><b>특가를 준비 중이에요</b>내일 아침에 다시 확인해 주세요.</div>'+yeogiBox("bottom")+'</div>';
   h+='<div class="evgrid2">'+L.map(function(x){
     return '<a class="evd" '+ext(x.u)+'><span class="evi"><img src="'+esc(x.img)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><em>'+esc(x.region)+'</em></span>'+
       '<b class="evn">'+esc(x.name)+'</b>'+(x.score?'<small class="evs">★ '+esc(x.score)+(x.reviews?' ('+Number(x.reviews).toLocaleString()+')':'')+'</small>':'')+
-      '<span class="evp"><i>'+x.rate+'%</i><b>'+Number(x.price).toLocaleString()+'원</b></span><s>'+Number(x.orig).toLocaleString()+'원</s></a>'; }).join("")+'</div>'+
-    '<p class="evfoot">이 페이지의 링크로 예약하면 다꾸가 마이리얼트립에서 일정액의 수수료를 받을 수 있어요. 예약 조건·취소 규정은 마이리얼트립에서 꼭 확인해 주세요.</p></div>';
+      '<span class="evp"><i>'+x.rate+'%</i><b>'+Number(x.price).toLocaleString()+'원</b></span><s>'+Number(x.orig).toLocaleString()+'원</s></a>'; }).join("")+'</div>'+yeogiBox("bottom")+
+    '<p class="evfoot">이 페이지의 링크로 예약하면 다꾸가 마이리얼트립·여기어때에서 일정액의 수수료를 받을 수 있어요. 예약 조건·취소 규정은 마이리얼트립에서 꼭 확인해 주세요.</p></div>';
   return h;
 }
 function benefitView(){
