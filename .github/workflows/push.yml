@@ -3,10 +3,11 @@ on:
   schedule:
     - cron: "37 23 * * *"   # 오전 8:37 (한국) 오늘 오픈 체험단
     - cron: "7 3 * * *"     # 낮 12:07 오늘의 특가
+    - cron: "7 6 * * *"     # 오후 3:07 관심 지역·단어 맞춤 (오후 등록 뒤)
     - cron: "7 9 * * *"     # 저녁 6:07 오늘 마감
   workflow_dispatch:
     inputs:
-      slot: { description: "morning / noon / evening", default: "morning" }
+      slot: { description: "morning / noon / match / evening", default: "morning" }
 permissions: { contents: read }
 jobs:
   send:
@@ -22,5 +23,5 @@ jobs:
           VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
         run: |
           S="${{ github.event.inputs.slot }}"
-          if [ -z "$S" ]; then H=$(TZ=Asia/Seoul date +%H); if [ "$H" -lt 11 ]; then S=morning; elif [ "$H" -lt 16 ]; then S=noon; else S=evening; fi; fi
+          if [ -z "$S" ]; then H=$(TZ=Asia/Seoul date +%H); if [ "$H" -lt 11 ]; then S=morning; elif [ "$H" -lt 14 ]; then S=noon; elif [ "$H" -lt 17 ]; then S=match; else S=evening; fi; fi
           node scripts/send_push.js "$S"

@@ -1006,7 +1006,7 @@ function enablePush(){
     }).then(function(r){
       if(!r||!r.ok) throw new Error("save");
       ls("dakku-push","1"); render();
-      pushSheet('<h2>알림을 켰어요 🔔</h2>'+PUSH_INFO+'<p class="apnote">마이 다꾸에서 언제든 끌 수 있어요.</p>');
+      pushSheet('<h2>알림을 켰어요 🔔</h2>'+PUSH_INFO+'<button class="b pri wide" data-pushpref>🔍 관심 지역·단어도 설정하기</button><p class="apnote">마이 다꾸에서 언제든 바꾸거나 끌 수 있어요.</p>');
     });
   }).catch(function(){ pushSheet('<h2>알림 켜기에 실패했어요</h2><p>잠시 뒤 다시 눌러 주세요.</p>'); });
 }
@@ -1015,14 +1015,38 @@ function disablePush(){
     if(!sub) return; var ep=sub.endpoint; return sub.unsubscribe().then(function(){ return pushRpc("push_unsubscribe",{p_endpoint:ep}); });
   }).catch(function(){}).then(function(){ try{ localStorage.removeItem("dakku-push"); }catch(e){} render(); });
 }
+function pushPref(){ try{ var p=JSON.parse(ls("dakku-push-pref")||"{}"); return {regions:p.regions||[],words:p.words||[]}; }catch(e){ return {regions:[],words:[]}; } }
+function pushPrefText(){ var p=pushPref(), t=p.regions.concat(p.words.map(function(w){ return "‘"+w+"’"; })); return t.length?t.join(" · "):"설정 안 함"; }
+function pushPrefSheet(){
+  var p=pushPref();
+  pushSheet('<h2>관심 지역·단어 알림 🔍</h2><p>새 체험단 중 고른 지역이나 단어가 들어간 게 올라오면 따로 알려드려요.</p>'+
+    '<form id="ppform" style="text-align:left"><span class="fl">관심 지역 (숙박)</span>'+chipChecks("pr",REGIONS.map(function(x){ return [x,x]; }),p.regions)+
+    '<span class="fl">관심 단어 <small>(쉼표로 구분, 최대 10개)</small></span><input class="ppw" name="pw" maxlength="120" placeholder="예: 풀빌라, 가평, 유모차, 카시트" value="'+esc(p.words.join(", "))+'">'+
+    '<button class="b pri wide" type="submit" style="margin-top:12px">저장하기</button></form>');
+  var f=document.getElementById("ppform"); if(!f) return;
+  f.addEventListener("change",function(e){ var l=e.target.closest&&e.target.closest(".rck"); if(l) l.classList.toggle("on",e.target.checked); });
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var regs=[].map.call(f.querySelectorAll('input[name=pr]:checked'),function(i){ return i.value; });
+    var words=f.pw.value.split(/[,，\n]/).map(function(w){ return w.trim(); }).filter(Boolean).slice(0,10);
+    navigator.serviceWorker.ready.then(function(reg){ return reg.pushManager.getSubscription(); }).then(function(sub){
+      if(!sub) throw new Error("nosub");
+      return pushRpc("push_prefs",{p_endpoint:sub.endpoint,p_regions:regs,p_words:words});
+    }).then(function(r){
+      if(!r||!r.ok) throw new Error("save");
+      ls("dakku-push-pref",JSON.stringify({regions:regs,words:words})); render();
+      pushSheet('<h2>저장했어요 ✅</h2><p>'+esc(regs.concat(words.map(function(w){ return "‘"+w+"’"; })).join(" · ")||"관심 지역·단어 없음")+'</p><p class="apnote">새 체험단에 맞는 게 올라오면 알려드려요.</p>');
+    }).catch(function(){ pushSheet('<h2>저장에 실패했어요</h2><p>알림을 먼저 켠 뒤 다시 저장해 주세요.</p>'); });
+  });
+}
 function pushBox(){
   if(!pushKey()||!authCfg()) return "";
-  return pushOn()?'<div class="pushbox on"><span><b>🔔 앱 알림 켜짐</b><small>아침 오늘 오픈 · 점심 특가 · 저녁 오늘 마감</small></span><button class="b sec" data-pushoff>끄기</button></div>'
+  return pushOn()?'<div class="pushbox on"><span><b>🔔 앱 알림 켜짐</b><small>아침 오늘 오픈 · 점심 특가 · 저녁 오늘 마감</small><small>🔍 관심: '+esc(pushPrefText())+'</small></span><span class="pbb"><button class="b pri" data-pushpref>관심 설정</button><button class="b sec" data-pushoff>끄기</button></span></div>'
     :'<div class="pushbox"><span><b>📲 앱 알림 받기</b><small>아침 오늘 오픈 · 점심 특가 · 저녁 오늘 마감</small></span><button class="b pri" data-pushon>알림 받기</button></div>';
 }
 document.addEventListener("click",function(e){
-  var t=e.target.closest("[data-pushon],[data-pushoff]"); if(!t) return; e.preventDefault();
-  if(t.hasAttribute("data-pushon")) enablePush(); else disablePush();
+  var t=e.target.closest("[data-pushon],[data-pushoff],[data-pushpref]"); if(!t) return; e.preventDefault();
+  if(t.hasAttribute("data-pushon")) enablePush(); else if(t.hasAttribute("data-pushpref")) pushPrefSheet(); else disablePush();
 });
 function appliedSection(){
   var byId={}; seed.items.forEach(function(it){ byId[it.id]=it; });
