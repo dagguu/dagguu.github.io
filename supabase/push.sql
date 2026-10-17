@@ -25,3 +25,5 @@ revoke all on function public.push_subscribe(text, text, text, text) from public
 revoke all on function public.push_unsubscribe(text) from public;
 grant execute on function public.push_subscribe(text, text, text, text) to anon, authenticated;
 grant execute on function public.push_unsubscribe(text) to anon, authenticated;
+-- 보내기(GitHub Actions, service_role)가 구독 목록을 읽고 끊긴 구독을 지울 수 있게
+grant select, delete on public.push_subs to service_role;
