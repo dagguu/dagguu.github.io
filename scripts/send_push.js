@@ -40,11 +40,17 @@ if (slot === 'morning') {
     msg = { title: pct(t) ? `🔥 오늘만 ${pct(t)}% 특가` : '🔥 오늘만 특가', body: `(광고) ${String(t.name).slice(0, 40)}${t.price ? ` (${t.price})` : ''}`, url: SITE + '#/deals', tag: 'noon', image: t.img || '' }; }
 } else if (slot === 'test') {
   msg = { title: '🔔 다꾸체험단 알림 테스트', body: '알림이 잘 와요! 아침·점심·저녁에 체험단 소식을 보내드릴게요.', url: SITE, tag: 'test' };
-} else if (slot === 'match') {
-  // 오후 등록 뒤: 오늘 9시 이후 새로 올라온 것 중 관심 지역·단어에 맞는 것만 사람별로
-  const since = Date.parse(today + 'T09:00:00+09:00');
+} else if (slot === 'match' || slot === 'night') {
+  // 등록 뒤 새로 올라온 것: 관심 지역·단어에 맞으면 맞춤 알림, 아니면 30만원 이상 고가 체험단 알림
+  // match(오후 3:07) = 오늘 8:37~지금, night(저녁 7:37) = 오후 3:07~지금 (아침 알림·앞 알림과 겹치지 않게)
+  const since = Date.parse(today + (slot === 'match' ? 'T08:37:00+09:00' : 'T15:07:00+09:00'));
   NEW = items.filter(i => (i.end || '9999') >= today && i.createdAt && i.createdAt >= since);
-  if (NEW.length) msg = { title: '', body: '', url: SITE, tag: 'match', personalOnly: true };
+  if (NEW.length) msg = { title: '', body: '', url: SITE, tag: slot, personalOnly: true };
+} else if (slot === 'toss') {
+  // 저녁 8:07 토스 하루특가 마감 4시간 전 (오늘 갱신된 것만)
+  const T = String(d.tossUpdated || '').slice(0, 10) === today ? (d.toss || []).filter(x => x.u && !x.soldOut && !(x.endAt && Date.parse(x.endAt) <= Date.now())) : [];
+  const pct = x => parseInt(String(x.rate || '0'), 10) || 0, t = T.slice().sort((a, b) => pct(b) - pct(a))[0];
+  if (t) msg = { title: `⏳ 하루특가 마감 4시간 전${pct(t) ? ` · ${pct(t)}%` : ''}`, body: `(광고) ${String(t.name).slice(0, 40)}${t.price ? ` (${t.price})` : ''}`, url: SITE + '#/deals', tag: 'toss', image: t.img || '' };
 } else if (slot === 'evening') {
   const L = items.filter(i => i.end === today);
   if (L.length) msg = { title: `⏰ 오늘 마감 체험단 ${L.length}곳`, body: `${line(best(L)[0])}`, url: SITE + '#/list?s=todayClose', tag: 'evening' };
@@ -59,15 +65,20 @@ function matchOf(s) {
   return NEW.filter(i => (i.region && regs.includes(i.region)) || words.some(w => ((i.name || '') + ' ' + (i.benefit || '')).toLowerCase().includes(w)));
 }
 const short = M => M.slice(0, 2).map(i => i.name.replace(/\s*\(.*\)$/, '')).join(', ') + (M.length > 2 ? ` 외 ${M.length - 2}곳` : '');
+function whyOf(s, M) { return [...new Set(M.map(i => (s.regions || []).includes(i.region) ? i.region : (s.words || []).find(w => ((i.name || '') + ' ' + (i.benefit || '')).toLowerCase().includes(w.toLowerCase()))).filter(Boolean))].slice(0, 2).join('·'); }
 function personal(s) {
   const M = matchOf(s);
   if (msg.personalOnly) {
-    if (!M.length) return null;
-    const why = [...new Set(M.map(i => (s.regions || []).includes(i.region) ? i.region : (s.words || []).find(w => ((i.name || '') + ' ' + (i.benefit || '')).toLowerCase().includes(w.toLowerCase()))).filter(Boolean))].slice(0, 2).join('·');
-    return { title: `🔍 맞춤 체험단 추천${why ? ` (${why})` : ''}`, body: `${line(best(M)[0])}`,
+    if (!M.length) { // 관심 맞는 게 없으면 고가(30만원 이상) 새 체험단 1곳
+      const H = best(NEW).filter(i => val(i) >= 300000);
+      if (!H.length) return null;
+      return { title: `💎 새로 올라온 고가 체험단${H.length > 1 ? ` ${H.length}곳` : ''}`, body: line(H[0]), url: SITE + '#/item?id=' + encodeURIComponent(H[0].id), tag: slot };
+    }
+    const why = whyOf(s, M);
+    return { title: `🔍 새로 올라온 ${why ? why + ' ' : '관심 '}체험단 ${M.length}곳`, body: `${line(best(M)[0])}`,
       url: M.length === 1 ? SITE + '#/item?id=' + encodeURIComponent(M[0].id) : SITE + '#/list?s=todayOpen', tag: 'match' };
   }
-  if (slot === 'morning' && M.length) return { ...msg, title: `✨ 오늘 오픈 · 관심 체험단 ${M.length}곳`, body: `${line(best(M)[0])}` };
+  if (slot === 'morning' && M.length) return { ...msg, title: `✨ 오늘 오픈 ${whyOf(s, M) || '관심'} 체험단 ${M.length}곳`, url: M.length === 1 ? SITE + '#/item?id=' + encodeURIComponent(M[0].id) : msg.url, body: `${line(best(M)[0])}` };
   return msg;
 }
 // 새 형식 키(sb_secret_…)는 apikey 헤더만, 예전 JWT(service_role)는 Authorization 도 같이
