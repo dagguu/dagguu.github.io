@@ -882,7 +882,7 @@ function msToMidnight(){ var n=new Date(), m=new Date(n); m.setHours(24,0,0,0); 
 function hms(ms){ var s=Math.max(0,Math.floor(ms/1000)), h=Math.floor(s/3600), mi=Math.floor(s%3600/60), se=s%60; return h+"시간 "+("0"+mi).slice(-2)+"분 "+("0"+se).slice(-2)+"초"; }
 function cheapBtn(cls){
   var x=(seed.links||{}).goldbox||{}, u=safeUrl(x.u); if(!u) return "";
-  return '<a class="cheapb'+(cls?' '+cls:'')+'" '+ext(u)+'><span class="cbx"><small>어디가 더 싸지?</small><b>쿠팡에서 최저가 확인하기</b></span><span class="cbl" aria-hidden="true"><i style="color:#7a4a2a">cou</i><i style="color:#e74c3c">p</i><i style="color:#f2b33d">a</i><i style="color:#8cc63f">n</i><i style="color:#4aa8d8">g</i></span><em class="cbad">AD</em></a>';
+  return '<a class="cheapb'+(cls?' '+cls:'')+'" '+ext(u)+'><span class="cbx"><small>어디가 더 싸지?</small><b>쿠팡에서 최저가 확인하기</b></span><span class="cbl cbi" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span><em class="cbad">AD</em></a>';
 }
 function shopBtn(){
   var u=safeUrl(((seed.links||{}).shop||{}).u); if(!u) return "";
