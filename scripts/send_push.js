@@ -23,7 +23,10 @@ function val(i) { // 금액(원) 추정: worth "N만원" → cpPrice → 제공�
 }
 const won = v => v >= 10000 ? `${Math.round(v / 1000) / 10}만원 상당`.replace('.0만', '만') : v ? `${v.toLocaleString()}원 상당` : '';
 const nm = i => (i.name || '').replace(/\s*\(([^)]*)\)$/, (a, b) => ` (${b})`).slice(0, 34);
-const line = i => `[${CATN[i.cat || 'stay'] || '기타'}] ${nm(i)}${won(val(i)) ? ' · ' + won(val(i)) : ''}`;
+const line = i => `[${CATN[i.cat || 'stay'] || '기타'}] ${nm(i)}${won(val(i)) ? ` (${won(val(i))})` : ''}`;
+// 특가 본문: 역대급 앱처럼 "상품명, 1개 (990원)" — 이름에 수량이 없을 때만 ", 1개"
+const QTY = /\d+\s*(개|매|입|팩|p|P|세트|박스|병|캔|롤|봉|포|정|ea|EA|구|장)(?![가-힣])/;
+const deal = t => `${String(t.name).slice(0, 44)}${QTY.test(t.name) ? '' : ', 1개'}${t.price ? ` (${t.price})` : ''}`;
 const best = L => L.slice().sort((a, b) => val(b) - val(a));
 const UNSUB = ''; // 2026-10-17 시온님 요청으로 알림 본문의 수신거부 문구는 뺌(끄기는 마이 다꾸에서)
 // 특가 알림: 할인율 제일 높은 것. 같은 날 앞 시간에 보낸 상품은 빼고 그다음 1위(같은 알림이 하루에 여러 번 가지 않게)
@@ -40,7 +43,7 @@ if (slot === 'morning') {
   if (L.length) msg = { title: `✨ 오늘 오픈 체험단 ${L.length}곳`, body: `${line(best(L)[0])}`, url: SITE + '#/list?s=todayOpen', tag: 'morning' };
 } else if (slot === 'noon' || slot === 'mdeal') {
   const t = pickDeal(slot);
-  if (t) msg = { title: DPCT(t) ? `🔥 오늘만 ${DPCT(t)}% 특가` : '🔥 오늘만 특가', body: `(광고) ${String(t.name).slice(0, 40)}${t.price ? ` (${t.price})` : ''}`, url: SITE + '#/deals', tag: slot, image: t.img || '' };
+  if (t) msg = { title: '🔥 오늘만 특가', body: `(광고) ${deal(t)}`, url: SITE + '#/deals', tag: slot, image: t.img || '' };
 } else if (slot === 'test') {
   msg = { title: '🔔 다꾸체험단 알림 테스트', body: '알림이 잘 와요! 아침·점심·저녁에 체험단 소식을 보내드릴게요.', url: SITE, tag: 'test' };
 } else if (slot === 'match' || slot === 'night') {
@@ -50,17 +53,17 @@ if (slot === 'morning') {
   NEW = items.filter(i => (i.end || '9999') >= today && i.createdAt && i.createdAt >= since);
   if (slot === 'match') { // 오후 3시는 모두에게 쿠팡 골드박스 "오늘이 제일 싸요!" (할인율 1위) + 관심 키워드 알림은 따로
     const t = pickDeal('match'), pct = DPCT;
-    if (t) msg = { title: `⏰ 오늘이 제일 싸요!${pct(t) ? ` ${pct(t)}%` : ''}`, body: `(광고) ${String(t.name).slice(0, 40)}${t.price ? ` (${t.price})` : ''}`, url: SITE + '#/deals', tag: 'gold', image: t.img || '' };
+    if (t) msg = { title: '⏰ 오늘이 제일 싸요!', body: `(광고) ${deal(t)}`, url: SITE + '#/deals', tag: 'gold', image: t.img || '' };
   }
   if (!msg && NEW.length) msg = { title: '', body: '', url: SITE, tag: slot, personalOnly: true };
 } else if (slot === 'hotdeal') {
   const t = pickDeal('hotdeal');
-  if (t) msg = { title: `👶 오늘의 아기용품 핫딜${DPCT(t) ? ` ${DPCT(t)}%` : ''}`, body: `(광고) ${String(t.name).slice(0, 40)}${t.price ? ` (${t.price})` : ''}`, url: SITE + '#/deals', tag: 'hotdeal', image: (t.img || '').replace('230x230ex', '492x492ex') };
+  if (t) msg = { title: '👶 오늘의 아기용품 핫딜', body: `(광고) ${deal(t)}`, url: SITE + '#/deals', tag: 'hotdeal', image: (t.img || '').replace('230x230ex', '492x492ex') };
 } else if (slot === 'toss') {
   // 저녁 8:07 토스 하루특가 마감 4시간 전 (오늘 갱신된 것만)
   const T = String(d.tossUpdated || '').slice(0, 10) === today ? (d.toss || []).filter(x => x.u && !x.soldOut && !(x.endAt && Date.parse(x.endAt) <= Date.now())) : [];
   const pct = x => parseInt(String(x.rate || '0'), 10) || 0, t = T.slice().sort((a, b) => pct(b) - pct(a))[0];
-  if (t) msg = { title: `⏳ 하루특가 마감 4시간 전${pct(t) ? ` · ${pct(t)}%` : ''}`, body: `(광고) ${String(t.name).slice(0, 40)}${t.price ? ` (${t.price})` : ''}`, url: SITE + '#/deals', tag: 'toss', image: t.img || '' };
+  if (t) msg = { title: '⏳ 하루특가 마감 4시간 전', body: `(광고) ${deal(t)}`, url: SITE + '#/deals', tag: 'toss', image: t.img || '' };
 } else if (slot === 'evening' || slot === 'evening2') {
   const L = items.filter(i => i.end === today);
   if (L.length) msg = { title: slot === 'evening2' ? `⏰ 오늘 밤 12시 마감 ${L.length}곳` : `⏰ 오늘 마감 체험단 ${L.length}곳`, body: `${line(best(L)[0])}`, url: SITE + '#/list?s=todayClose', tag: 'evening' };
