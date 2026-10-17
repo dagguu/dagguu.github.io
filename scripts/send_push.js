@@ -24,6 +24,8 @@ if (slot === 'morning') {
   const all = G.concat(T, B); const pct = x => parseInt(String(x.rate || '0'), 10) || 0;
   const top = all.slice().sort((a, b) => pct(b) - pct(a))[0];
   if (all.length) msg = { title: '🔥 오늘의 특가', body: top && pct(top) ? `${top.name.slice(0, 28)} ${pct(top)}% 할인 외 ${all.length - 1}개\n오늘만 이 가격이에요!` : `오늘만 열리는 특가 ${all.length}개가 모였어요!`, url: SITE + '#/deals', tag: 'noon' };
+} else if (slot === 'test') {
+  msg = { title: '🔔 다꾸체험단 알림 테스트', body: '알림이 잘 와요! 아침·점심·저녁에 체험단 소식을 보내드릴게요.', url: SITE, tag: 'test' };
 } else if (slot === 'match') {
   // 오후 등록 뒤: 오늘 9시 이후 새로 올라온 것 중 관심 지역·단어에 맞는 것만 사람별로
   const since = Date.parse(today + 'T09:00:00+09:00');
@@ -65,7 +67,7 @@ if (!K2.startsWith('sb_secret_') && !K2.startsWith('eyJ')) console.log('::warnin
   for (const s of subs) {
     const m = personal(s);
     if (!m) { skip++; continue; }
-    const payload = JSON.stringify({ ...m, icon: SITE + 'icons/icon-192.png' });
+    const payload = JSON.stringify({ ...m, tag: (m.tag || slot) + '-' + Date.now(), icon: SITE + 'icons/icon-192.png' });
     try { await webpush.sendNotification({ endpoint: s.endpoint, keys: { p256dh: s.p256dh, auth: s.auth } }, payload, { TTL: 6 * 3600, urgency: 'normal' }); ok++; }
     catch (e) {
       if (e.statusCode === 404 || e.statusCode === 410 || /VapidPkHashMismatch/.test(String(e.body || ''))) { gone++; await fetch(URL0 + '/rest/v1/push_subs?endpoint=eq.' + encodeURIComponent(s.endpoint), { method: 'DELETE', headers: H }); }

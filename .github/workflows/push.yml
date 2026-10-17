@@ -7,7 +7,7 @@ on:
     - cron: "7 9 * * *"     # 저녁 6:07 오늘 마감
   workflow_dispatch:
     inputs:
-      slot: { description: "morning / noon / match / evening", default: "morning" }
+      slot: { description: "morning / noon / match / evening / test", default: "morning" }
 permissions: { contents: read }
 jobs:
   send:
