@@ -1000,12 +1000,17 @@ function enablePush(){
   Notification.requestPermission().then(function(p){
     if(p!=="granted"){ pushSheet('<h2>알림이 꺼져 있어요</h2><p>휴대폰 설정 → 알림에서 브라우저(또는 다꾸) 알림을 허용한 뒤 다시 눌러 주세요.</p>'); return; }
     return navigator.serviceWorker.ready.then(function(reg){
-      return reg.pushManager.getSubscription().then(function(old){ return old||reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:b64u(pushKey())}); });
+      return reg.pushManager.getSubscription().then(function(old){
+        var nk=b64u(pushKey()), same=false;
+        try{ var ok=old&&old.options&&old.options.applicationServerKey; if(ok){ var a=new Uint8Array(ok); same=a.length===nk.length&&a.every(function(v,i){ return v===nk[i]; }); } }catch(e){}
+        if(old&&same) return old;
+        return (old?old.unsubscribe():Promise.resolve()).then(function(){ return reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:nk}); });
+      });
     }).then(function(sub){
       var j=sub.toJSON(); return pushRpc("push_subscribe",{p_endpoint:j.endpoint,p_p256dh:j.keys.p256dh,p_auth:j.keys.auth,p_ua:navigator.userAgent.slice(0,200)});
     }).then(function(r){
       if(!r||!r.ok) throw new Error("save");
-      ls("dakku-push","1"); render();
+      ls("dakku-push","1"); ls("dakku-push-key",pushKey()); render();
       pushSheet('<h2>알림을 켰어요 🔔</h2>'+PUSH_INFO+'<button class="b pri wide" data-pushpref>🔍 관심 지역·단어도 설정하기</button><p class="apnote">마이 다꾸에서 언제든 바꾸거나 끌 수 있어요.</p>');
     });
   }).catch(function(){ pushSheet('<h2>알림 켜기에 실패했어요</h2><p>잠시 뒤 다시 눌러 주세요.</p>'); });
@@ -1038,6 +1043,11 @@ function pushPrefSheet(){
       pushSheet('<h2>저장했어요 ✅</h2><p>'+esc(regs.concat(words.map(function(w){ return "‘"+w+"’"; })).join(" · ")||"관심 지역·단어 없음")+'</p><p class="apnote">새 체험단에 맞는 게 올라오면 알려드려요.</p>');
     }).catch(function(){ pushSheet('<h2>저장에 실패했어요</h2><p>알림을 먼저 켠 뒤 다시 저장해 주세요.</p>'); });
   });
+}
+function pushRefresh(){ // 알림 키가 바뀌었으면 조용히 다시 구독
+  if(!pushOn()||!pushOk()||ls("dakku-push-key")===pushKey()) return;
+  navigator.serviceWorker.ready.then(function(reg){ return reg.pushManager.getSubscription().then(function(old){ return (old?old.unsubscribe():Promise.resolve()).then(function(){ return reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:b64u(pushKey())}); }); }); })
+    .then(function(sub){ var j=sub.toJSON(), p=pushPref(); return pushRpc("push_subscribe",{p_endpoint:j.endpoint,p_p256dh:j.keys.p256dh,p_auth:j.keys.auth,p_ua:navigator.userAgent.slice(0,200)}).then(function(r){ if(r.ok){ ls("dakku-push-key",pushKey()); if(p.regions.length||p.words.length) pushRpc("push_prefs",{p_endpoint:j.endpoint,p_regions:p.regions,p_words:p.words}); } }); }).catch(function(){});
 }
 function pushBox(){
   if(!pushKey()||!authCfg()) return "";
@@ -1394,7 +1404,7 @@ shell(); paintLogo(); route();
   if(document.getElementById("kakao-js-sdk")) return; var js=document.createElement("script"); js.id="kakao-js-sdk"; js.src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.channel.min.js"; js.integrity="sha384-8oNFBbAHWVovcMLgR+mLbxqwoucixezSAzniBcjnEoumhfIbMIg4DrVsoiPEtlnt"; js.crossOrigin="anonymous"; js.async=true; document.head.appendChild(js); })();
 window.addEventListener("hashchange",route);
 fetch("data.json?v="+Date.now().toString(36).slice(0,-3),{cache:"no-cache"}).then(function(r){ return r.json(); }).then(function(d){
-  seed=d||seed; if(!Array.isArray(seed.items)) seed.items=[]; /* 사업자 정보는 index.html 의 고정 footer(#sitebiz)에 있음: 네이버 검색광고 확인용, JS 없이도 보이게 */
+  seed=d||seed; if(!Array.isArray(seed.items)) seed.items=[]; setTimeout(pushRefresh,1500); /* 사업자 정보는 index.html 의 고정 footer(#sitebiz)에 있음: 네이버 검색광고 확인용, JS 없이도 보이게 */
   if(Array.isArray(seed.categories)&&seed.categories.length) CATS=seed.categories;
   UPCOMING=Array.isArray(seed.upcoming)?seed.upcoming:[]; ADS=Array.isArray(seed.ads)?seed.ads:[]; DEALS=Array.isArray(seed.deals)?seed.deals:[];
   state.loading=false; LOGO=pickLogo(); paintLogo(); setFavicon(); render();
