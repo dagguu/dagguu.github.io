@@ -68,7 +68,7 @@ if (!K2.startsWith('sb_secret_') && !K2.startsWith('eyJ')) console.log('::warnin
     const payload = JSON.stringify({ ...m, icon: SITE + 'icons/icon-192.png' });
     try { await webpush.sendNotification({ endpoint: s.endpoint, keys: { p256dh: s.p256dh, auth: s.auth } }, payload, { TTL: 6 * 3600, urgency: 'normal' }); ok++; }
     catch (e) {
-      if (e.statusCode === 404 || e.statusCode === 410) { gone++; await fetch(URL0 + '/rest/v1/push_subs?endpoint=eq.' + encodeURIComponent(s.endpoint), { method: 'DELETE', headers: H }); }
+      if (e.statusCode === 404 || e.statusCode === 410 || /VapidPkHashMismatch/.test(String(e.body || ''))) { gone++; await fetch(URL0 + '/rest/v1/push_subs?endpoint=eq.' + encodeURIComponent(s.endpoint), { method: 'DELETE', headers: H }); }
       else { nfail++; console.log('::warning::보내기 실패', e.statusCode || '', String(e.body || e.message).slice(0, 120)); }
     }
   }
