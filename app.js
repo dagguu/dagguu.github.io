@@ -28,7 +28,7 @@ var PREFS = [
   {k:"hanok", t:"한옥 스테이",        re:/한옥/}
 ];
 
-var SORTS=[["high","💎 고가제품순"],["popular","🔥 인기순"],["deadline","⏰ 마감임박순"],["low","🪙 저가제품순"]], SORTS_OK=["high","popular","deadline","low"];
+var SORTS=[["high","💎 고가제품순"],["popular","🔥 인기순"],["comp","🙌 경쟁률 낮은순"],["deadline","⏰ 마감임박순"],["low","🪙 저가제품순"]], SORTS_OK=["high","popular","comp","deadline","low"];
 var state = { tab:"home", cat:"stay", regions:[], status:"open", q:"", chs:[], view:"2", sort:"high", loading:true };
 function ls(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v); }catch(e){ return null; } }
 state.view = ls("dakku-view") || "2";
@@ -222,18 +222,23 @@ function thumb(it,cls){
   '</div>';
 }
 function worthLine(it){ return it.worth?'<p class="worth">💰 '+esc(it.worth)+' 상당</p>':''; }
+/* 경쟁률: item.ap=[지원자, 모집인원] (각 체험단 사이트에서 직접 읽음, data.json apAt 기준 시각) */
+function apOf(it){ var a=it.ap; return Array.isArray(a)&&a.length>=2&&+a[1]>0&&statusOf(it).key!=="closed"?[+a[0]||0,+a[1]]:null; }
+function apRatio(it){ var a=apOf(it); return a?a[0]/a[1]:Infinity; }
+function apLine(it){ var a=apOf(it); if(!a) return ''; var r=a[0]/a[1];
+  return '<p class="apl'+(r<=1.5?' low':'')+'">지원 '+a[0].toLocaleString()+' · 모집 '+a[1].toLocaleString()+' <b>'+(r<10?r.toFixed(1):Math.round(r))+':1</b></p>'; }
 function cdLine(it){ return statusOf(it).dday==="오늘 마감"?'<p class="cdl" data-cdl>'+clock(msToMidnight())+' 남음</p>':''; }
 function miniCard(it,btns){
   var act='';
   if(btns){ var s=statusOf(it), view=safeUrl(it.infUrl||it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
     act='<div class="act3">'+(view?'<a class="b pri" '+ext(view)+'>'+esc(c.view||"보기")+' ↗</a>':'')+(s.key==="closed"?'<span class="b dis">마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer" data-apply="'+esc(it.id)+'">신청하기</a>':''))+'</div>'; }
-  return '<article class="mini">'+thumb(it)+chBadges(it)+'<h3>'+esc(it.name)+'</h3>'+worthLine(it)+'<p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+act+'</article>';
+  return '<article class="mini">'+thumb(it)+chBadges(it)+'<h3>'+esc(it.name)+'</h3>'+worthLine(it)+'<p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+apLine(it)+act+'</article>';
 }
 function fullCard(it){
   var s=statusOf(it), view=safeUrl(it.infUrl||it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
   var closed=s.key==="closed";
   return '<article class="card'+(closed?" closed":"")+'">'+thumb(it)+
-    '<div class="body">'+chBadges(it)+'<h3>'+esc(it.name)+'</h3>'+worthLine(it)+'<p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+
+    '<div class="body">'+chBadges(it)+'<h3>'+esc(it.name)+'</h3>'+worthLine(it)+'<p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+apLine(it)+
     '<p class="pd">🗓️ '+(it.start?fmt(it.start)+' ':'')+'~ '+fmt(it.end)+' 모집 · '+esc(it.source||"")+'</p>'+
     '<div class="act">'+(view?'<a class="b pri" '+ext(view)+'>'+esc(c.view||"보기")+' ↗</a>':'')+
       (closed?'<span class="b dis">🔒 마감</span>':(apply?'<a class="b sec" href="'+esc(apply)+'" target="_blank" rel="noopener noreferrer" data-apply="'+esc(it.id)+'">신청하기</a>':''))+'</div></div></article>';
@@ -275,7 +280,7 @@ function hcard(it){
   var t=view?'<a '+ext(view)+'>'+esc(it.name)+'</a>':esc(it.name);
   return '<article class="hc">'+thumb(it,"hth")+tags+
     '<p class="hl"><b class="'+(d<=1?'hot':'')+'">'+leftText(it)+'</b>'+(cdLine(it)?'<span class="hcd" data-cdl>'+clock(msToMidnight())+'</span>':'')+'</p>'+
-    chBadges(it)+'<h3>'+t+'</h3>'+(it.worth?'<p class="hw">💰 <b>'+esc(it.worth)+'</b> 상당</p>':'<p class="hbn">🎁 '+esc(it.benefit)+'</p>')+hact(it)+'</article>';
+    chBadges(it)+'<h3>'+t+'</h3>'+(it.worth?'<p class="hw">💰 <b>'+esc(it.worth)+'</b> 상당</p>':'<p class="hbn">🎁 '+esc(it.benefit)+'</p>')+apLine(it)+hact(it)+'</article>';
 }
 function bizLine(){ var b=seed.biz; if(!b||!b.name) return ""; var x=[["상호",b.name],["대표",b.ceo],["사업자등록번호",b.regNo],["통신판매업 신고",b.mailOrder],["주소",b.addr],["이메일",b.email],["전화",b.tel]].filter(function(r){ return r[1]; });
   return '<p class="biz"><b>다꾸체험단 · 운영 '+esc(b.name)+'</b><br>'+x.map(function(r){ return '<span>'+r[0]+' '+esc(r[1])+'</span>'; }).join("")+'</p>'; }
@@ -449,6 +454,7 @@ function sorter(){
   var o=state.sort;
   if(o==="deadline") return function(a,b){ return daysLeft(a)-daysLeft(b) || valOf(b)-valOf(a); };
   if(o==="popular") return function(a,b){ return popScore(b)-popScore(a) || daysLeft(a)-daysLeft(b); };
+  if(o==="comp") return function(a,b){ var x=apRatio(a), y=apRatio(b); if(x===y) return valOf(b)-valOf(a) || daysLeft(a)-daysLeft(b); return x===Infinity?1:y===Infinity?-1:x-y; };
   if(o==="low") return function(a,b){ var x=valOf(a), y=valOf(b); if(!x!==!y) return x?-1:1; return x-y || daysLeft(a)-daysLeft(b); };
   return function(a,b){ var x=valOf(a), y=valOf(b); if(!x!==!y) return x?-1:1; return y-x || daysLeft(a)-daysLeft(b); };
 }
@@ -459,12 +465,14 @@ function topRows(list){
   var h="";
   if(close.length) h+='<section class="hsec trow"><div class="hsh"><h2>🚨 <em>오늘 마감</em>이에요 <small class="tcnt">'+close.length+'</small></h2><span class="hmore" data-cdl>'+clock(msToMidnight())+' 남음</span></div><div class="hs">'+close.slice(0,15).map(hcard).join("")+'</div></section>';
   if(fresh.length) h+='<section class="hsec trow"><div class="hsh"><h2>✨ <em>오늘 오픈</em>했어요 <small class="tcnt">'+fresh.length+'</small></h2></div><div class="hs">'+fresh.slice(0,15).map(hcard).join("")+'</div></section>';
+  if(state.sort!=="comp"){ var easy=list.filter(function(it){ return apRatio(it)<=1.5 && !isNewToday(it) && it.end!==td; }).sort(function(a,b){ return apRatio(a)-apRatio(b) || valOf(b)-valOf(a); });
+    if(easy.length) h+='<section class="hsec trow"><div class="hsh"><h2>🙌 <em>경쟁률 낮은</em> 곳 <small class="tcnt">'+easy.length+'</small></h2><button class="hmore" data-sortcomp>모두 보기</button></div><div class="hs">'+easy.slice(0,15).map(hcard).join("")+'</div>'+apNote()+'</section>'; }
   return h;
 }
 function renderListGrid(){
   var g=document.getElementById("grid"); if(!g) return;
   var list=filtered(), n=0, out=[];
-  var tr=document.getElementById("toprows"); if(tr) tr.innerHTML=topRows(list);
+  var tr=document.getElementById("toprows"); if(tr) tr.innerHTML=topRows(list)+(state.sort==="comp"?apNote():'');
   var cnt=document.getElementById("count"); if(cnt) cnt.innerHTML='<b>'+list.length+'</b>'+(state.cat==="stay"?'곳':'개');
   list.forEach(function(it,i){
     out.push(state.view==="3"?miniCard(it,true):fullCard(it));
@@ -988,6 +996,9 @@ function shareToss(code){
   try{ navigator.clipboard.writeText(text+"\n"+url).then(function(){ toast("✈️ 링크를 복사했어요. 친구에게 붙여넣어 보내세요!"); }).catch(function(){ prompt("아래 링크를 복사해 친구에게 보내세요",url); }); }catch(e){ toast(url); }
 }
 document.addEventListener("change",function(e){ if(e.target&&e.target.id==="sort"){ state.sort=e.target.value; saveUi(); renderListGrid(); } });
+document.addEventListener("click",function(e){ var b=e.target&&e.target.closest&&e.target.closest("[data-sortcomp]"); if(!b) return; state.sort="comp"; saveUi(); var s=document.getElementById("sort"); if(s) s.value="comp"; renderListGrid(); var g=document.getElementById("grid"); if(g) g.scrollIntoView({behavior:"smooth",block:"start"}); });
+function apNote(){ if(!seed.apAt) return ''; var d=new Date(seed.apAt); if(isNaN(d)) return '';
+  return '<p class="apnote">경쟁률은 '+(d.getMonth()+1)+'/'+d.getDate()+' '+d.getHours()+'시 기준이에요. 각 체험단 사이트에서 직접 확인한 숫자이고, 지금은 더 늘었을 수 있어요.</p>'; }
 /* ---------- 신청하기 팝업 · 신청한 체험단 ---------- */
 var APPLIED=[]; try{ APPLIED=JSON.parse(ls("dakku-applied")||"[]")||[]; }catch(e){ APPLIED=[]; }
 function markApplied(id){ var i=APPLIED.indexOf(id); if(i>=0) APPLIED.splice(i,1); APPLIED.unshift(id); APPLIED=APPLIED.slice(0,50); ls("dakku-applied",JSON.stringify(APPLIED)); }

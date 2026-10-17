@@ -72,3 +72,11 @@ body{background:#fff}
 .gdbox{margin:22px 0 8px;border:1px solid var(--line);border-radius:14px;padding:6px 16px 4px}
 .gdh{display:flex;justify-content:space-between;align-items:center;padding:10px 0 6px}.gdh b{font-size:17px;font-weight:800}.gdh a{font-size:13px;color:var(--mute)}
 .gdi{display:block;padding:12px 0;border-top:1px solid var(--line)}.gdi b{display:block;font-size:15px;font-weight:600}.gdi small{display:block;font-size:12.5px;color:var(--mute);margin-top:2px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+/* 경쟁률 */
+.apl{margin:3px 0 0;font-size:13px;color:#666;font-variant-numeric:tabular-nums}
+.apl b{color:#111;font-weight:800;margin-left:2px}
+.apl.low b{color:var(--acc,#6d28d9)}
+.grid.v3 .apl,.hc .apl{font-size:12px}
+.apnote{margin:4px 20px 10px;font-size:12px;color:#888;line-height:1.5}
+button.hmore{background:none;border:0;padding:0;cursor:pointer;font:inherit;font-size:13px;font-weight:700;color:#666}
+.trow button.hmore{color:#666}
