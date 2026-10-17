@@ -68,6 +68,7 @@ if (slot === 'morning') {
   const L = items.filter(i => i.end === today);
   if (L.length) msg = { title: slot === 'evening2' ? `⏰ 오늘 밤 12시 마감 ${L.length}곳` : `⏰ 오늘 마감 체험단 ${L.length}곳`, body: `${line(best(L)[0])}`, url: SITE + '#/list?s=todayClose', tag: 'evening' };
 }
+if (!msg && (slot === 'noon' || slot === 'evening')) msg = { title: '', body: '', url: SITE, tag: slot, personalOnly: true }; // 찜 마감 알림만 있을 수 있음
 if (!msg) { console.log(`${slot}: 보낼 내용이 없어서 건너뜀`); process.exit(0); }
 { const h = now.getUTCHours(); if (slot !== 'test' && (h >= 21 || h < 8)) { console.log(`::notice::${slot}: 밤 9시~아침 8시라 광고 알림을 보내지 않음(예약 실행이 늦어짐)`); process.exit(0); } }
 const fail = m => { console.log('::error::' + m); process.exit(1); };
@@ -80,9 +81,21 @@ function matchOf(s) {
 }
 const short = M => M.slice(0, 2).map(i => i.name.replace(/\s*\(.*\)$/, '')).join(', ') + (M.length > 2 ? ` 외 ${M.length - 2}곳` : '');
 function whyOf(s, M) { return [...new Set(M.map(i => (s.regions || []).includes(i.region) ? i.region : (s.words || []).find(w => ((i.name || '') + ' ' + (i.benefit || '')).toLowerCase().includes(w.toLowerCase()))).filter(Boolean))].slice(0, 2).join('·'); }
-function personal(s) { // 사람마다 보낼 알림 목록: 기본 알림 + 관심 키워드 알림(맞을 때 따로 한 번 더)
+// 찜한 체험단 마감 알림(2026-10-17 시온님 요청): 점심 12:07 = 찜한 것 중 내일 마감, 저녁 6:07 = 오늘 마감 — 기본 알림과 따로 한 번 더
+const tomorrow = new Date(now.getTime() + 864e5).toISOString().slice(0, 10);
+const FAVDAY = { noon: tomorrow, evening: today };
+function favMsg(s) {
+  const day = FAVDAY[slot], ids = s.favs || [];
+  if (!day || !ids.length) return null;
+  const F = items.filter(i => ids.includes(i.id) && i.end === day);
+  if (!F.length) return null;
+  return { title: `❤️ 찜한 체험단 ${day === today ? '오늘' : '내일'} 마감 ${F.length}곳`, body: line(best(F)[0]) + (F.length > 1 ? ` 외 ${F.length - 1}곳` : ''),
+    url: F.length === 1 ? SITE + '#/item?id=' + encodeURIComponent(F[0].id) : SITE + '#/fav', tag: 'fav' };
+}
+function personal(s) { // 사람마다 보낼 알림 목록: 기본 알림 + 관심 키워드 알림 + 찜 마감 알림(맞을 때 따로 한 번 더)
   const out = [];
-  if (!msg.personalOnly) out.push(msg);
+  if (msg && !msg.personalOnly) out.push(msg);
+  const fm = favMsg(s); if (fm) out.push(fm);
   const M = ['morning', 'match', 'night'].includes(slot) ? matchOf(s) : [];
   if (M.length) {
     const why = whyOf(s, M);
@@ -95,7 +108,8 @@ function personal(s) { // 사람마다 보낼 알림 목록: 기본 알림 + 관
 const K2 = KEY.trim(), H = K2.startsWith('sb_') ? { apikey: K2 } : { apikey: K2, Authorization: 'Bearer ' + K2 };
 if (!K2.startsWith('sb_secret_') && !K2.startsWith('eyJ')) console.log('::warning::SUPABASE_SERVICE_KEY 모양이 sb_secret_ 나 eyJ 로 시작하지 않아요(공개 키를 넣었을 수 있음)');
 (async () => {
-  let r = await fetch(URL0 + '/rest/v1/push_subs?select=endpoint,p256dh,auth,regions,words', { headers: H });
+  let r = await fetch(URL0 + '/rest/v1/push_subs?select=endpoint,p256dh,auth,regions,words,favs', { headers: H });
+  if (r.status === 400) r = await fetch(URL0 + '/rest/v1/push_subs?select=endpoint,p256dh,auth,regions,words', { headers: H }); // 찜 칸 SQL 전
   if (r.status === 400) r = await fetch(URL0 + '/rest/v1/push_subs?select=endpoint,p256dh,auth', { headers: H }); // 관심 칸 SQL 전
   if (!r.ok) fail('구독 목록을 못 읽음 ' + r.status + ' ' + (await r.text()).slice(0, 150));
   const subs = await r.json(); let ok = 0, gone = 0, nfail = 0;
@@ -115,5 +129,5 @@ if (!K2.startsWith('sb_secret_') && !K2.startsWith('eyJ')) console.log('::warnin
     }
     }
   }
-  console.log(`::notice::${slot}: "${msg.title || "관심 알림"}" 구독 ${subs.length}명 중 성공 ${ok}, 해지 정리 ${gone}, 실패 ${nfail}, 맞는 게 없어 건너뜀 ${skip}`);
+  console.log(`::notice::${slot}: "${(msg && msg.title) || "관심·찜 알림"}" 구독 ${subs.length}명 중 성공 ${ok}, 해지 정리 ${gone}, 실패 ${nfail}, 맞는 게 없어 건너뜀 ${skip}`);
 })().catch(e => fail('보내기 중 오류: ' + e.message));

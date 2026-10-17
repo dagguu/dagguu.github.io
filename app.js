@@ -36,7 +36,7 @@ try{ var su=JSON.parse(sessionStorage.getItem("dakku-ui")||"{}"); if(su.cat) sta
 function saveUi(){ try{ sessionStorage.setItem("dakku-ui",JSON.stringify({cat:state.cat,regions:state.regions,status:state.status,sort:state.sort})); }catch(e){} }
 var FAV=[]; try{ FAV=JSON.parse(ls("dakku-fav")||"[]")||[]; }catch(e){ FAV=[]; }
 function isFav(id){ return FAV.indexOf(id)>=0; }
-function toggleFav(id){ var i=FAV.indexOf(id); if(i>=0) FAV.splice(i,1); else FAV.push(id); ls("dakku-fav",JSON.stringify(FAV)); mFav(id,FAV.indexOf(id)>=0); }
+function toggleFav(id){ var i=FAV.indexOf(id); if(i>=0) FAV.splice(i,1); else FAV.push(id); ls("dakku-fav",JSON.stringify(FAV)); mFav(id,FAV.indexOf(id)>=0); pushFavSync(); }
 var PREF = ls("dakku-pref") || "";
 var WANT = {}; try{ WANT=JSON.parse(ls("dakku-want")||"{}")||{}; }catch(e){ WANT={}; }
 if(WANT.region){ WANT.regions=[WANT.region]; delete WANT.region; } if(WANT.age){ WANT.ages=[WANT.age]; delete WANT.age; }
@@ -1010,7 +1010,7 @@ function enablePush(){
       var j=sub.toJSON(); return pushRpc("push_subscribe",{p_endpoint:j.endpoint,p_p256dh:j.keys.p256dh,p_auth:j.keys.auth,p_ua:navigator.userAgent.slice(0,200)});
     }).then(function(r){
       if(!r||!r.ok) throw new Error("save");
-      ls("dakku-push","1"); ls("dakku-push-key",pushKey()); render();
+      ls("dakku-push","1"); ls("dakku-push-key",pushKey()); try{ localStorage.removeItem("dakku-push-favs"); }catch(e){} pushFavSync(); render();
       pushSheet('<h2>알림을 켰어요 🔔</h2>'+PUSH_INFO+'<button class="b pri wide" data-pushpref>🔍 관심 지역·단어도 설정하기</button><p class="apnote">마이 다꾸에서 언제든 바꾸거나 끌 수 있어요.</p>');
     });
   }).catch(function(){ pushSheet('<h2>알림 켜기에 실패했어요</h2><p>잠시 뒤 다시 눌러 주세요.</p>'); });
@@ -1044,14 +1044,24 @@ function pushPrefSheet(){
     }).catch(function(){ pushSheet('<h2>저장에 실패했어요</h2><p>알림을 먼저 켠 뒤 다시 저장해 주세요.</p>'); });
   });
 }
+/* 찜한 체험단 마감 알림용: 찜 목록을 알림 구독에 같이 저장(바뀌었을 때만, 2026-10-17) */
+var pushFavT=0;
+function pushFavSync(){
+  clearTimeout(pushFavT); pushFavT=setTimeout(function(){
+    if(!pushOn()||!pushOk()) return; var v=JSON.stringify(FAV.slice(-300)); if(ls("dakku-push-favs")===v) return;
+    navigator.serviceWorker.ready.then(function(reg){ return reg.pushManager.getSubscription(); }).then(function(sub){
+      if(!sub) return; return pushRpc("push_favs",{p_endpoint:sub.endpoint,p_favs:FAV.slice(-300)}).then(function(r){ if(r.ok) ls("dakku-push-favs",v); });
+    }).catch(function(){});
+  },1200);
+}
 function pushRefresh(){ // 알림 키가 바뀌었으면 조용히 다시 구독
-  if(!pushOn()||!pushOk()||ls("dakku-push-key")===pushKey()) return;
+  if(!pushOn()||!pushOk()) return; if(ls("dakku-push-key")===pushKey()){ pushFavSync(); return; }
   navigator.serviceWorker.ready.then(function(reg){ return reg.pushManager.getSubscription().then(function(old){ return (old?old.unsubscribe():Promise.resolve()).then(function(){ return reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:b64u(pushKey())}); }); }); })
-    .then(function(sub){ var j=sub.toJSON(), p=pushPref(); return pushRpc("push_subscribe",{p_endpoint:j.endpoint,p_p256dh:j.keys.p256dh,p_auth:j.keys.auth,p_ua:navigator.userAgent.slice(0,200)}).then(function(r){ if(r.ok){ ls("dakku-push-key",pushKey()); if(p.regions.length||p.words.length) pushRpc("push_prefs",{p_endpoint:j.endpoint,p_regions:p.regions,p_words:p.words}); } }); }).catch(function(){});
+    .then(function(sub){ var j=sub.toJSON(), p=pushPref(); return pushRpc("push_subscribe",{p_endpoint:j.endpoint,p_p256dh:j.keys.p256dh,p_auth:j.keys.auth,p_ua:navigator.userAgent.slice(0,200)}).then(function(r){ if(r.ok){ ls("dakku-push-key",pushKey()); if(p.regions.length||p.words.length) pushRpc("push_prefs",{p_endpoint:j.endpoint,p_regions:p.regions,p_words:p.words}); try{ localStorage.removeItem("dakku-push-favs"); }catch(e){} pushFavSync(); } }); }).catch(function(){});
 }
 function pushBox(){
   if(!pushKey()||!authCfg()) return "";
-  return pushOn()?'<div class="pushbox on"><span><b>🔔 앱 알림 켜짐</b><small>아침 오늘 오픈 · 점심 특가 · 저녁 오늘 마감</small><small>🔍 관심: '+esc(pushPrefText())+'</small></span><span class="pbb"><button class="b pri" data-pushpref>관심 설정</button><button class="b sec" data-pushoff>끄기</button></span></div>'
+  return pushOn()?'<div class="pushbox on"><span><b>🔔 앱 알림 켜짐</b><small>아침 오늘 오픈 · 점심 특가 · 저녁 오늘 마감 · ❤️ 찜 마감</small><small>🔍 관심: '+esc(pushPrefText())+'</small></span><span class="pbb"><button class="b pri" data-pushpref>관심 설정</button><button class="b sec" data-pushoff>끄기</button></span></div>'
     :'<div class="pushbox"><span><b>📲 앱 알림 받기</b><small>아침 오늘 오픈 · 점심 특가 · 저녁 오늘 마감</small></span><button class="b pri" data-pushon>알림 받기</button></div>';
 }
 document.addEventListener("click",function(e){
@@ -1285,7 +1295,7 @@ function syncDown(){
     PROFILE=R[0].data||{id:uid};
     var srv=(R[1].data||[]).map(function(x){ return x.item_id; }), up=FAV.filter(function(id){ return srv.indexOf(id)<0; });
     if(up.length) SB.from("favorites").upsert(up.map(function(id){ return {user_id:uid,item_id:id}; })).then(sbErr);
-    srv.forEach(function(id){ if(FAV.indexOf(id)<0) FAV.push(id); }); ls("dakku-fav",JSON.stringify(FAV));
+    srv.forEach(function(id){ if(FAV.indexOf(id)<0) FAV.push(id); }); ls("dakku-fav",JSON.stringify(FAV)); pushFavSync();
     var sv=(R[2].data||[]).map(function(x){ return x.item_id; }), loc=SEEN.filter(function(id){ return sv.indexOf(id)<0; });
     if(loc.length) SB.from("views").upsert(loc.map(function(id){ return {user_id:uid,item_id:id}; })).then(sbErr);
     SEEN=SEEN.concat(sv.filter(function(id){ return SEEN.indexOf(id)<0; })).slice(0,30); ls("dakku-seen",JSON.stringify(SEEN));
