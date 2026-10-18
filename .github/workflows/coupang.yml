@@ -21,7 +21,7 @@ jobs:
           COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
           COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
         run: |
-          if [ "${{ github.event_name }}" = "push" ]; then python3 scripts/coupang_api.py deeplink; else python3 scripts/coupang_api.py; fi
+          if [ "${{ github.event_name }}" = "push" ]; then python3 scripts/coupang_api.py deeplink; else python3 scripts/weather.py; python3 scripts/coupang_api.py; fi
           python3 scripts/gen_share.py
       - name: 저장
         run: |

@@ -333,6 +333,7 @@ function homeView(){
   h+=hrow('💜 지금 <em>인기 있는</em> 체험단','#/list?cat=stay&s=pick',picks);
   var soon=open.filter(function(it){ return daysLeft(it)<=3; }).sort(function(a,b){ return daysLeft(a)-daysLeft(b); });
   h+=hrow('⏰ <em>곧 마감!</em> 지금 신청하세요','#/list?cat=stay&s=closing',soon);
+  var wx=wxSection(); if(wx) h+='<div class="hpad">'+wx+'</div>';
   var hd=hotDeal(); if(hd) h+='<div class="hpad">'+hd+'</div>'; var cb=cheapBtn(); if(cb) h+='<div class="hpad">'+cb+'</div>'; // 오늘의 특가(골드박스)는 홈에서 숨김 (2026-10-14 시온님 요청)
   var baby=open.filter(function(it){ return catOf(it)==="baby"; }).sort(function(a,b){ return (b.createdAt||0)-(a.createdAt||0); });
   h+=hrow('👶 <em>육아</em> 체험단도 있어요','#/list?cat=baby&s=open',baby);
@@ -1017,8 +1018,28 @@ function filterDeals(q){
 }
 document.addEventListener("input",function(e){ if(e.target&&e.target.id==="dq") filterDeals(e.target.value); });
 document.addEventListener("click",function(e){ var b=e.target.closest("[data-dqx]"); if(!b) return; var i=document.getElementById("dq"); if(i){ i.value=""; filterDeals(""); i.focus(); } });
+/* 날씨·계절 추천(2026-10-18 시온님 요청): data.json weather(서울, MET Norway, 매일 07:12) + 이번 달 → 테마 → seasonDeals[검색어](쿠팡 공식 검색 API 수익 링크) */
+var WX_TH=[
+  {k:"rain", ok:function(w){ return w&&w.rain>=1; }, ic:"☔", t:function(w){ return "오늘 "+w.city+" 비 소식"; }, d:"눅눅한 집엔 제습기", kw:["제습기"]},
+  {k:"dry", ok:function(w){ return w&&w.hum<45&&w.rain<1; }, ic:"💧", t:function(w){ return "오늘 "+w.city+" 습도 "+w.hum+"%"; }, d:"건조한 날엔 가습기", kw:["가습기"]},
+  {k:"cold", ok:function(w){ return w&&w.tmin<=5; }, ic:"🥶", t:function(w){ return "아침 최저 "+w.tmin+"°C"; }, d:"따뜻하게 전기요·핫팩", kw:["전기요","핫팩","온수매트"]},
+  {k:"hot", ok:function(w){ return w&&w.tmax>=29; }, ic:"☀️", t:function(w){ return "낮 최고 "+w.tmax+"°C"; }, d:"시원하게 선풍기·쿨매트", kw:["선풍기","쿨매트"]}];
+var SEASON_TH={1:["한겨울 따뜻하게","핫팩","온수매트"],2:["끝까지 따뜻하게","핫팩","전기요"],3:["황사·미세먼지 대비","황사마스크","공기청정기"],4:["봄맞이 침구 관리","침구청소기","공기청정기"],5:["여름 미리 준비","선풍기","모기퇴치기"],6:["장마 대비","제습기","선풍기"],7:["한여름 필수","선풍기","쿨매트"],8:["늦여름 모기 조심","모기퇴치기","선풍기"],9:["환절기 침구 관리","침구청소기","전기요"],10:["겨울이불 꺼낼 때","겨울이불","침구청소기"],11:["겨울 준비","겨울이불","전기요"],12:["연말 모임 시즌","숙취해소제","핫팩"]};
+function wxThemes(){
+  var S=seed.seasonDeals||{}, w=seed.weather; if(w&&w.date!==new Date(Date.now()+9*36e5).toISOString().slice(0,10)) w=null;
+  var out=[], used={}; function add(ic,t,d,kws){ var L=[]; kws.forEach(function(q){ if(used[q]) return; (S[q]||[]).forEach(function(x){ if(safeUrl(x.u)&&L.length<4) L.push(x); }); used[q]=1; }); if(L.length>=2) out.push({ic:ic,t:t,d:d,L:L}); }
+  WX_TH.forEach(function(th){ if(th.ok(w)) add(th.ic,th.t(w),th.d,th.kw); });
+  var m=new Date(Date.now()+9*36e5).getUTCMonth()+1, st=SEASON_TH[m]; if(st) add("🗓️",st[0],st.slice(1).join("·")+" 챙기세요",st.slice(1));
+  return out.slice(0,2);
+}
+function wxSection(){
+  var T=wxThemes(); if(!T.length) return "";
+  var w=seed.weather;
+  return '<section class="sec tossec wxsec"><div class="sh"><h2>오늘 같은 날 필요한 것 <span class="adtag">광고</span></h2></div>'+T.map(function(t){ return '<p class="wxt"><span>'+t.ic+'</span><b>'+esc(t.t)+'</b> · '+esc(t.d)+'</p><div class="tgrid">'+t.L.map(tossCard).join("")+'</div>'; }).join("")+
+    (w&&w.src?'<p class="wxsrc">날씨 정보: '+esc(w.src)+' · 쿠팡 검색 결과</p>':'')+'</section>';
+}
 function dealsView(){
-  var h=slideBanners(false,dealSlides())+'<div class="pg"><h1>오늘의 특가 🔥</h1>'+cheapBtn()+shopBtn()+dealSearch()+topDealsHtml()+recentDeals();
+  var h=slideBanners(false,dealSlides())+'<div class="pg"><h1>오늘의 특가 🔥</h1>'+cheapBtn()+shopBtn()+dealSearch()+topDealsHtml()+wxSection()+recentDeals();
   var GOLD=(Array.isArray(seed.goldbox)?seed.goldbox:[]).filter(function(x){ return safeUrl(x.u) && !(x.endAt && Date.parse(x.endAt)<=Date.now()); });
   if(GOLD.length) h+='<section class="sec tossec" id="gold"><div class="sh"><h2>⏰ 오늘이 제일 싸요! <span class="adtag">광고</span></h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="cd" style="margin:-6px 4px 10px">🔥마감임박🔥 서두르세요! <b id="gbcd">'+clock(nextSeven())+'</b></p><div class="tgrid">'+GOLD.slice().sort(byPrice).map(tossCard).join("")+'</div></section>';
   h+=cpBanner();

@@ -228,3 +228,9 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .dtl dt:has(.blink){color:#5b3fd6}
 @keyframes blink{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(91,63,214,.45)}50%{opacity:.35;box-shadow:0 0 0 5px rgba(91,63,214,0)}}
 @keyframes tipin{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* 날씨·계절 추천 */
+.wxsec .wxt{display:flex;align-items:center;gap:6px;margin:4px 2px 10px;font-size:14px;color:#555}
+.wxsec .wxt b{color:#222}.wxsec .wxt span{font-size:18px}
+.wxsec .tgrid+.wxt{margin-top:18px}
+.wxsec .wxsrc{margin:10px 2px 0;font-size:11px;color:#aaa}

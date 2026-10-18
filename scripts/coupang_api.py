@@ -103,6 +103,25 @@ def main():
         changed = True
         print(f"골드박스 {len(d['goldbox'])}개 갱신")
 
+    if "season" in sys.argv[1:] or len(sys.argv) == 1:  # 날씨·계절 추천(2026-10-18): 이번 달에 쓸 검색어만 공식 검색 API 로
+        import urllib.parse
+        m = datetime.now(KST).month
+        kws = ["제습기", "가습기", "공기청정기", "KF94 마스크"]  # 비·건조·미세먼지는 언제든
+        kws += {12: ["숙취해소제", "핫팩", "전기요"], 1: ["핫팩", "전기요", "온수매트"], 2: ["핫팩", "전기요"], 3: ["황사마스크", "침구청소기"],
+                4: ["침구청소기", "선크림"], 5: ["선풍기", "모기퇴치기"], 6: ["선풍기", "쿨매트", "모기퇴치기"], 7: ["선풍기", "쿨매트", "모기퇴치기"],
+                8: ["선풍기", "쿨매트", "모기퇴치기"], 9: ["침구청소기", "전기요"], 10: ["겨울이불", "침구청소기", "전기요"], 11: ["겨울이불", "전기요", "온수매트", "핫팩"]}.get(m, [])
+        sd = {}
+        for q in kws:
+            try:
+                r = call("GET", BASE + "/products/search", "keyword=" + urllib.parse.quote(q) + "&limit=10&subId=dagguu") or {}
+                sd[q] = [{"name": i.get("productName"), "price": won(i.get("productPrice")), "img": i.get("productImage"), "u": i.get("productUrl"),
+                          "rocket": bool(i.get("isRocket"))} for i in (r.get("productData") or []) if i.get("productUrl")][:8]
+            except Exception as e:
+                print("계절 추천 검색 실패:", q, e); break
+        if sd:
+            d["seasonDeals"] = sd; d["seasonAt"] = datetime.now(KST).strftime("%Y-%m-%d"); changed = True
+            print("계절 추천", {k: len(v) for k, v in sd.items()})
+
     if "deeplink" in sys.argv[1:] or len(sys.argv) == 1:
         for k, x in (d.get("links") or {}).items():  # 사이트 버튼용 쿠팡 링크 (예: 골드박스)
             if isinstance(x, dict) and x.get("cpUrl") and not x.get("u"):
