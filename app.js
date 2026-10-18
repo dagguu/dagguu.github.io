@@ -145,7 +145,7 @@ var TABS=[["home","홈",I.home],["fav","찜",I.heart],["list","체험단",I.tick
 /* TOP 버튼(2026-10-18 시온님 요청): 화면 1.5배 넘게 내려가면 톡상담 위에 보임 */
 (function(){ var raf=0; function upd(){ raf=0; var b=document.getElementById("totop"); if(b) b.hidden=window.scrollY<window.innerHeight*1.5; }
   window.addEventListener("scroll",function(){ if(!raf) raf=requestAnimationFrame(upd); },{passive:true}); window.addEventListener("hashchange",function(){ setTimeout(upd,50); });
-  document.addEventListener("click",function(e){ if(e.target.closest("#totop")){ e.preventDefault(); window.scrollTo({top:0,behavior:"smooth"}); } }); })();
+  document.addEventListener("click",function(e){ if(e.target.closest("#totop")){ e.preventDefault(); var y0=window.scrollY; window.scrollTo({top:0,behavior:"smooth"}); setTimeout(function(){ if(window.scrollY>=y0-5) window.scrollTo(0,0); },700); } }); })();
 /* 뒤로 가기 버튼(아이폰 홈 화면 앱엔 뒤로 버튼이 없음, 2026-10-18 시온님 요청): 사이트 안에서 이동한 기록이 있으면 history.back, 없으면 홈 */
 var NAVN=0; window.addEventListener("hashchange",function(){ NAVN++; });
 document.addEventListener("click",function(e){ if(!e.target.closest("#backbtn")) return; e.preventDefault(); if(NAVN>0){ NAVN=Math.max(0,NAVN-2); history.back(); } else location.hash="#/"; });
