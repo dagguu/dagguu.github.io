@@ -171,3 +171,10 @@ body:has(.dbar) .kchat{bottom:calc(var(--tab) + 84px + env(safe-area-inset-botto
 .applym .paynote{margin:12px 0 4px;padding:12px 14px;border-radius:12px;background:#fff6e5;text-align:left;display:flex;flex-direction:column;gap:4px}
 .applym .paynote b{font-size:14px;color:#8a5a00}
 .applym .paynote span{font-size:13px;line-height:1.55;color:#5c4a24}
+
+/* TOP 버튼: 톡상담 바로 위 */
+.totop{position:fixed;z-index:29;right:max(14px,calc(50% - var(--frame)/2 + 14px));bottom:calc(var(--tab) + 62px + env(safe-area-inset-bottom));width:44px;height:44px;border-radius:50%;border:1px solid #e6e6ea;background:rgba(255,255,255,.96);color:#333;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;box-shadow:0 2px 8px rgba(0,0,0,.12);cursor:pointer;padding:0;-webkit-tap-highlight-color:transparent}
+.totop[hidden]{display:none}
+.totop svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;margin-bottom:-2px}
+.totop span{font-size:9.5px;font-weight:800;letter-spacing:.02em}
+body:has(.dbar) .totop{bottom:calc(var(--tab) + 132px + env(safe-area-inset-bottom))}

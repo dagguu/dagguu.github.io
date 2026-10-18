@@ -142,6 +142,10 @@ var I={
 /* ---------- 셸 ---------- */
 var app=document.getElementById("app");
 var TABS=[["home","홈",I.home],["fav","찜",I.heart],["list","체험단",I.ticket],["benefit","혜택",I.check],["deals","특가",I.gift]];
+/* TOP 버튼(2026-10-18 시온님 요청): 화면 1.5배 넘게 내려가면 톡상담 위에 보임 */
+(function(){ var raf=0; function upd(){ raf=0; var b=document.getElementById("totop"); if(b) b.hidden=window.scrollY<window.innerHeight*1.5; }
+  window.addEventListener("scroll",function(){ if(!raf) raf=requestAnimationFrame(upd); },{passive:true}); window.addEventListener("hashchange",function(){ setTimeout(upd,50); });
+  document.addEventListener("click",function(e){ if(e.target.closest("#totop")){ e.preventDefault(); window.scrollTo({top:0,behavior:"smooth"}); } }); })();
 /* 뒤로 가기 버튼(아이폰 홈 화면 앱엔 뒤로 버튼이 없음, 2026-10-18 시온님 요청): 사이트 안에서 이동한 기록이 있으면 history.back, 없으면 홈 */
 var NAVN=0; window.addEventListener("hashchange",function(){ NAVN++; });
 document.addEventListener("click",function(e){ if(!e.target.closest("#backbtn")) return; e.preventDefault(); if(NAVN>0){ NAVN=Math.max(0,NAVN-2); history.back(); } else location.hash="#/"; });
@@ -153,6 +157,7 @@ function shell(){
       '<main id="view" class="view"></main>'+
       '<footer class="foot"><a class="flink" href="#/contact">광고주 마케팅 상담 문의</a><br><a '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>💬 카카오톡 채널 ‘다꾸체험단’</a><div id="bizline"></div><p>'+SITE+' · 체험단 모집 정보는 각 모집처의 공지를 기준으로 하며, 신청 조건과 일정은 바뀔 수 있어요.</p></footer>'+
     '</div>'+
+    '<button class="totop" id="totop" aria-label="맨 위로" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 14l6-6 6 6"/></svg><span>TOP</span></button>'+
     '<div class="kchat" id="kakao-talk-channel-chat-button" data-channel-public-id="_xkqEFX" data-title="consult" data-size="small" data-color="yellow" data-shape="mobile" data-support-multiple-densities="true"></div>'+
     '<nav class="tabbar" aria-label="하단 메뉴">'+TABS.map(function(t){ var c=t[0]==="list"; return '<a href="#/'+(t[0]==="home"?"":t[0])+'" data-tab="'+t[0]+'"'+(c?' class="tc"':'')+'>'+(c?'<span class="tcb">'+ico(t[2],"ti")+'</span>':'<span class="tib">'+ico(t[2],"ti")+'</span>')+'<span>'+t[1]+'</span></a>'; }).join("")+'</nav>';
   app.addEventListener("click",onClick);
