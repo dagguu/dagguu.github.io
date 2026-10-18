@@ -551,10 +551,12 @@ function itemView(){
     (it.region?'<dt>지역</dt><dd>'+esc(it.region)+'</dd>':'')+'</dl>';
   return '<div class="pg dpg">'+
     '<div class="dthimg">'+(img?'<img src="'+esc(img)+'" alt="'+esc(it.name)+'" referrerpolicy="no-referrer" onerror="this.remove()">':'')+'</div>'+
-    '<div class="dhd">'+chBadges(it)+'<h1>'+esc(it.name)+'</h1>'+'<div class="dico"><button class="shb" data-ishare="'+esc(it.id)+'" aria-label="공유하기">'+ico(I.send)+'</button><button class="fv'+(isFav(it.id)?" on":"")+'" data-fav="'+esc(it.id)+'" aria-label="찜하기" aria-pressed="'+isFav(it.id)+'">'+ico(I.heart)+'</button></div></div>'+
+    '<div class="dhd">'+chBadges(it)+'<h1>'+esc(it.name)+'</h1>'+'<div class="dico"><button class="shb" data-ishare="'+esc(it.id)+'" aria-label="공유하기">'+ico(I.send)+'</button></div></div>'+
     rows+
     (stay&&mapQ?'<a class="b sec wide dmap" href="https://map.naver.com/p/search/'+encodeURIComponent(mapQ)+'" target="_blank" rel="noopener noreferrer">📍 위치 보기 (네이버지도)</a>':'')+
-    '<div class="dapply">'+(priceUrl(it)?'<a class="b dlow wide" '+ext(priceUrl(it))+'>최저가 보기 <span class="via">'+(stay?'쿠팡트래블':'쿠팡')+' ↗</span></a>':'')+applyBtn(it,"wide")+'<p class="dnote">신청은 '+esc(src)+'에서 진행돼요. 리뷰 조건·체험 가능일을 꼭 확인해 주세요.</p></div>'+
+    '<p class="dnote">신청은 '+esc(src)+'에서 진행돼요. 리뷰 조건·체험 가능일을 꼭 확인해 주세요.</p>'+
+    '<div class="dbar"><button class="fv dbfav'+(isFav(it.id)?" on":"")+'" data-fav="'+esc(it.id)+'" aria-label="찜하기" aria-pressed="'+isFav(it.id)+'">'+ico(I.heart)+'</button>'+
+      (priceUrl(it)?'<a class="dbl" '+ext(priceUrl(it))+'>최저가 보기</a>':'')+applyBtn(it,"dbp")+'</div>'+
     '<a class="morebig" href="#/list">다른 체험단도 둘러보기 ›</a>'+recoSection("이런 체험단은 어때요?")+'</div>';
 }
 function favView(){
