@@ -225,7 +225,8 @@ function thumb(it,cls){
 function itemHref(it){ return '#/item?id='+encodeURIComponent(it.id); }
 function adOk(it){ return true; } /* 페이백·구매평도 쿠팡 링크 표시(2026-10-18 시온님 결정, 제재 오면 다시 막기) */
 function priceUrl(it){ return adOk(it)?safeUrl(it.infUrl||it.viewUrl):""; }
-function priceLink(it,big){ var u=priceUrl(it); if(!u) return ''; var c=catOf(it)==="stay";
+var CARD_PRICE=false; /* 카드의 가격보기 링크: 2026-10-18 시온님 요청으로 뺌(상세 페이지 아래 버튼에만). 다시 넣으려면 true */
+function priceLink(it,big){ if(!CARD_PRICE) return ''; var u=priceUrl(it); if(!u) return ''; var c=catOf(it)==="stay";
   return big?'<a class="b pbig" '+ext(u)+'>'+(c?'숙소 가격보기':'상품 가격보기')+' <span class="via">'+(c?'쿠팡트래블':'쿠팡')+' ↗</span></a>'
             :'<a class="pricel" '+ext(u)+'>'+(c?'숙소 가격보기':'상품 가격보기')+'<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>'; }
 function applyBtn(it,cls){ var s=statusOf(it), a=safeUrl(it.applyUrl); if(s.key==="closed") return '<span class="b dis'+(cls?' '+cls:'')+'">마감</span>'; return a?'<a class="b pri'+(cls?' '+cls:'')+'" href="'+esc(a)+'" target="_blank" rel="noopener noreferrer" data-apply="'+esc(it.id)+'">신청하기</a>':''; }
