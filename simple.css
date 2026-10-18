@@ -148,11 +148,11 @@ body:has(.dbar) .kchat{bottom:calc(var(--tab) + 128px + env(safe-area-inset-bott
 .drel{margin-top:22px}
 
 /* 오늘 마감 스티커(사진 위) */
-.th .cdst{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;background:rgba(0,0,0,.45);color:#fff;font-size:14px;font-weight:700;pointer-events:none;font-variant-numeric:tabular-nums;line-height:1.25;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.4)}
+.th .cdst{position:absolute;left:0;right:0;top:0;height:46%;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:9px;gap:0;background:linear-gradient(180deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.32) 55%,rgba(0,0,0,0) 100%);color:#fff;font-size:12.5px;font-weight:700;pointer-events:none;font-variant-numeric:tabular-nums;line-height:1.25;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.5)}
 .th .cdst em{font-style:normal}
-.th .cdst b{font-weight:800;font-size:20px;letter-spacing:.02em}
-.grid.v3 .th .cdst,.hc .th .cdst{font-size:12px}
-.grid.v3 .th .cdst b,.hc .th .cdst b{font-size:16px}
+.th .cdst b{font-weight:800;font-size:17px;letter-spacing:.02em}
+.grid.v3 .th .cdst,.hc .th .cdst{font-size:11px;padding-top:6px}
+.grid.v3 .th .cdst b,.hc .th .cdst b{font-size:14px}
 
 /* 뒤로 가기 */
 .appbar .abl{display:flex;align-items:center;gap:2px;min-width:0}
