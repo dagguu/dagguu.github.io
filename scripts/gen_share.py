@@ -26,6 +26,7 @@ CATF = {"stay": "stay", "baby": "baby", "beauty": "beauty", "life": "life", "ele
 CHN = {"blog": "블로그", "clip": "클립", "insta": "인스타그램", "reels": "릴스", "youtube": "유튜브", "tiktok": "틱톡"}
 BAD_SIGUN = {"중구", "동구", "서구", "남구", "북구", "부산진구"}
 
+def has_pay(it, w): return w in (it.get("pay") or []) or {"payback": "페이백", "review": "구매평"}[w] in str(it.get("benefit") or "")
 def reset(name):
     p = os.path.join(ROOT, name)
     shutil.rmtree(p, ignore_errors=True)
@@ -213,7 +214,6 @@ for cat, cn in CATN.items():
     hub(p, alt, f"지금 모집 중인 {cn} 체험단을 마감 빠른 순으로 모았어요. 매일 업데이트해요.", L, [("홈", "/"), (f"{cn} 체험단", None)], extra)
     hubs.append((f"{cn} 체험단", p, len(L)))
 # 매체·조건별 (2026-10-18 검색광고 키워드도구: 블로그 체험단 월 2만·인스타 540·구매평 540·릴스 230)
-def has_pay(it, w): return w in (it.get("pay") or []) or {"payback": "페이백", "review": "구매평"}[w] in str(it.get("benefit") or "")
 CHHUB = [("blog", "블로그 체험단 모음", "블로그 리뷰로 참여하는", lambda it: "blog" in (it.get("ch") or [])),
          ("insta", "인스타 체험단 모음", "인스타그램 피드로 참여하는", lambda it: "insta" in (it.get("ch") or [])),
          ("reels", "릴스·숏폼 체험단 모음", "릴스·클립·쇼츠로 참여하는", lambda it: bool({"reels", "clip", "youtube", "tiktok"} & set(it.get("ch") or []))),
