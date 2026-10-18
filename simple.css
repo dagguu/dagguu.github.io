@@ -156,4 +156,4 @@ body:has(.dbar) .kchat{bottom:calc(var(--tab) + 84px + env(safe-area-inset-botto
 .backbtn{display:grid;place-items:center;width:36px;height:44px;margin-left:-10px;border:0;background:none;color:#222;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .backbtn[hidden]{display:none}
 .backbtn svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
-.th:has(.cdst) .rgs,.th:has(.cdst) .pks{display:none}
+.th:has(.cdst) .rgs{display:none}
