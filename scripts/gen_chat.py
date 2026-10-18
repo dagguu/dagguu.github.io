@@ -70,7 +70,7 @@ def stay_post(it):
     where = city or region
     lines.append(f"{where}{josa_ro(where)} {k} 여행 가고 싶은 분들🤍" if where else f"{k} 여행 가고 싶은 분들🤍")
     lines.append(f"{w} 상당 숙박 체험 소식 가져왔어요!" if w else "숙박 체험 소식 가져왔어요!")
-    lines += ["", "🎈 체험단 신청하기", it['applyUrl'], "", "🏡 숙소 정보 (쿠팡트래블)", (it.get('infUrl') or it['viewUrl']), "",
+    lines += ["", "🎈 체험단 신청하기", share_url(it), "", "🏡 숙소 정보 (쿠팡트래블)", (it.get('infUrl') or it['viewUrl']), "",
               "🎁 특별혜택 미리보기", f"🏡 {it.get('benefit','').strip()}"]
     if w: lines.append(f"✔️ {w} 상당 숙박 체험")
     lines += ["", "마음에 드셨다면 체험단에도 신청해보세요🤍", "", "",
@@ -96,7 +96,7 @@ def baby_post(it):
     lines = [f"@all 👶 [육아] {nm} 체험단 모집 소식!", "",
              "우리 아이 육아템 써보고 싶은 분들🤍"]
     lines.append(f"{w} 상당 제품 체험 소식 가져왔어요!" if w else "제품 체험 소식 가져왔어요!")
-    lines += ["", "🎈 체험단 신청하기", it['applyUrl'], "", "🛍️ 제품 정보 (쿠팡)", (it.get('infUrl') or it['viewUrl']), "",
+    lines += ["", "🎈 체험단 신청하기", share_url(it), "", "🛍️ 제품 정보 (쿠팡)", (it.get('infUrl') or it['viewUrl']), "",
               "🎁 특별혜택 미리보기", f"🎀 {it.get('benefit','').strip()}"]
     if w: lines.append(f"✔️ {w} 상당 제품 체험")
     if it.get('ages'): lines.append(f"✔️ 추천 월령 : {', '.join(it['ages'])}")
@@ -132,6 +132,11 @@ if not stays and not babies:
 
 SEP = '\n\n' + '─' * 20 + '\n\n'
 out = []
+def share_url(it):
+    # 2026-10-18 시온님 요청: 신청 링크는 사이트 공유 페이지(s/<id>.html)
+    return 'https://www.dagguu.com/s/%s.html' % it['id']
+
+
 MORE = '\n\n📢 더 많은 체험단 소식은 다꾸체험단에서 확인하세요!\nhttps://www.dagguu.com'
 if stays: out.append('■ 여행협찬 단톡방\n\n' + SEP.join(stay_post(i) for i in stays) + MORE)
 if babies: out.append('■ 육아협찬 단톡방\n\n' + SEP.join(baby_post(i) for i in babies) + MORE)
