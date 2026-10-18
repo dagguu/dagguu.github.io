@@ -166,3 +166,8 @@ body:has(.dbar) .kchat{bottom:calc(var(--tab) + 84px + env(safe-area-inset-botto
 
 /* 로켓배송 표시(쿠팡 API isRocket, 2026-10-18) — 쿠팡 로고·아이콘은 쓰지 않고 글자만 */
 .tcard .rkt{display:inline-block;align-self:flex-start;margin-top:4px;font-size:11px;font-weight:700;color:#1f6fe5;background:#eef4ff;border-radius:4px;padding:2px 6px}
+
+/* 신청 팝업: 페이백 안내 */
+.applym .paynote{margin:12px 0 4px;padding:12px 14px;border-radius:12px;background:#fff6e5;text-align:left;display:flex;flex-direction:column;gap:4px}
+.applym .paynote b{font-size:14px;color:#8a5a00}
+.applym .paynote span{font-size:13px;line-height:1.55;color:#5c4a24}
