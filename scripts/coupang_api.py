@@ -17,6 +17,11 @@ KST = timezone(timedelta(hours=9))
 try: NAMES = json.load(open(os.path.join(ROOT, "scripts", "travel_names.json"), encoding="utf-8"))
 except Exception: NAMES = {}
 
+# 클릭 경로 구분(2026-10-18 시온님 요청): 파트너스 리포트에서 subId 별로 나눠 봄
+SUB_SITE = "dagguu"       # 사이트(상세 페이지·버튼·핫딜) — 골드박스 API 와 같은 값
+SUB_CHAT = "dagguuchat"   # 단톡방 공지 글 (item.chatUrl)
+
+
 def call(method, path, query="", body=None):
     signed = time.strftime("%y%m%dT%H%M%SZ", time.gmtime())
     msg = signed + method + path + query
@@ -127,30 +132,47 @@ def main():
         for k, x in (d.get("links") or {}).items():  # 사이트 버튼용 쿠팡 링크 (예: 골드박스)
             if isinstance(x, dict) and x.get("cpUrl") and not x.get("u"):
                 try:
-                    r = call("POST", BASE + "/v1/deeplink", body={"coupangUrls": [x["cpUrl"]]}) or []
+                    r = call("POST", BASE + "/v1/deeplink", body={"coupangUrls": [x["cpUrl"]], "subId": SUB_SITE}) or []
                     if r and r[0].get("shortenUrl"): x["u"] = r[0]["shortenUrl"]; changed = True; print("버튼 링크 변환:", k)
                 except Exception as e: print("버튼 링크 변환 실패:", k, e)
         for x in d.get("babyDeals", []):
             if x.get("cpUrl") and not x.get("u"):
                 try:
-                    r = call("POST", BASE + "/v1/deeplink", body={"coupangUrls": [x["cpUrl"]]}) or []
+                    r = call("POST", BASE + "/v1/deeplink", body={"coupangUrls": [x["cpUrl"]], "subId": SUB_SITE}) or []
                     if r and r[0].get("shortenUrl"): x["u"] = r[0]["shortenUrl"]; changed = True
                 except Exception as e: print("핫딜 변환 실패:", x.get("name"), e)
         todo = [it for it in d.get("items", []) if it.get("cpUrl") and not it.get("viewUrl")]
         for i in range(0, len(todo), 20):
             chunk = todo[i:i + 20]
             try:
-                res = call("POST", BASE + "/v1/deeplink", body={"coupangUrls": [it["cpUrl"] for it in chunk]}) or []
+                res = call("POST", BASE + "/v1/deeplink", body={"coupangUrls": [it["cpUrl"] for it in chunk], "subId": SUB_SITE}) or []
             except Exception as e:
                 print("묶음 변환 실패, 하나씩 다시:", e); res = []
                 for it in chunk:
-                    try: res += call("POST", BASE + "/v1/deeplink", body={"coupangUrls": [it["cpUrl"]]}) or []
+                    try: res += call("POST", BASE + "/v1/deeplink", body={"coupangUrls": [it["cpUrl"]], "subId": SUB_SITE}) or []
                     except Exception as e2: print("변환 실패:", it.get("name"), e2)
             by = {r.get("originalUrl"): r.get("shortenUrl") for r in res}
             for it in chunk:
                 if by.get(it["cpUrl"]):
                     it["viewUrl"] = by[it["cpUrl"]]; changed = True
         print(f"체험단 링크 변환 {sum(1 for it in todo if it.get('viewUrl'))}/{len(todo)}개")
+        # 단톡방용 링크(subId=dagguuchat): 최근 3일 안에 올라온 모집 중 숙박·육아만
+        since = (datetime.now(KST).timestamp() - 3 * 86400) * 1000
+        today = datetime.now(KST).strftime("%Y-%m-%d")
+        ct = [it for it in d.get("items", []) if it.get("cat") in ("stay", "baby") and it.get("cpUrl")
+              and it.get("viewUrl") and not it.get("chatUrl") and not it.get("closed")
+              and (it.get("end") or "") >= today and (it.get("createdAt") or 0) >= since]
+        for i in range(0, len(ct), 20):
+            chunk = ct[i:i + 20]
+            try:
+                res = call("POST", BASE + "/v1/deeplink", body={"coupangUrls": [it["cpUrl"] for it in chunk], "subId": SUB_CHAT}) or []
+            except Exception as e:
+                print("단톡방 링크 변환 실패:", e); res = []
+            by = {r.get("originalUrl"): r.get("shortenUrl") for r in res}
+            for it in chunk:
+                if by.get(it["cpUrl"]):
+                    it["chatUrl"] = by[it["cpUrl"]]; changed = True
+        print(f"단톡방 링크 변환 {sum(1 for it in ct if it.get('chatUrl'))}/{len(ct)}개")
 
     if changed:
         open(p, "w", encoding="utf-8").write(json.dumps(d, ensure_ascii=False, separators=(",", ":")))
