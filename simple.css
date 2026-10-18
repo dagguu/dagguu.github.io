@@ -178,3 +178,13 @@ body:has(.dbar) .kchat{bottom:calc(var(--tab) + 84px + env(safe-area-inset-botto
 .totop svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;margin-bottom:-2px}
 .totop span{font-size:9.5px;font-weight:800;letter-spacing:.02em}
 body:has(.dbar) .totop{bottom:calc(var(--tab) + 132px + env(safe-area-inset-bottom))}
+
+/* 인트로 화면 */
+#intro{position:fixed;inset:0;z-index:1000;background:#fff;display:flex;align-items:center;justify-content:center;transition:opacity .35s ease}
+#intro[hidden]{display:none}
+#intro.out{opacity:0;pointer-events:none}
+#intro .inbox{display:flex;flex-direction:column;align-items:center;gap:10px;animation:inpop .6s ease both}
+#intro img{width:88px;height:88px;border-radius:22px;box-shadow:0 8px 24px rgba(91,63,214,.25)}
+#intro b{margin-top:8px;font-size:24px;font-weight:800;color:#222;letter-spacing:-.02em}
+#intro span{font-size:14px;color:#888}
+@keyframes inpop{from{opacity:0;transform:translateY(10px) scale(.96)}to{opacity:1;transform:none}}

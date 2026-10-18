@@ -192,6 +192,7 @@ function render(){
   [].forEach.call(document.querySelectorAll(".tabbar a"),function(a){ var on=a.dataset.tab===state.tab; a.classList.toggle("on",on); if(on) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
   var v=document.getElementById("view");
   if(state.loading){ v.innerHTML='<div class="empty">불러오는 중…</div>'; return; }
+  if(window.introDone){ window.introDone(); window.introDone=null; }
   if(state.tab==="home") v.innerHTML=homeView();
   else if(state.tab==="list"){ v.innerHTML=listView(); renderListGrid(); }
   else if(state.tab==="fav") v.innerHTML=favView();
