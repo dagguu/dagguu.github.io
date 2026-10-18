@@ -273,3 +273,7 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .tkt{overflow:hidden;text-overflow:ellipsis}.tkt b{color:#e9f77b;font-weight:800}
 .tke{font-size:18px;flex:none}
 .tka{flex:none;color:#777;font-size:11px;line-height:9px;text-align:center}
+
+/* 곧 열려요 '오픈 알림' · 앱 알림 '알림 받기' 버튼 같은 모양(2026-10-19 시온님 요청) */
+.upbox .ug,.pushbox.hpb .b{flex:none;display:inline-flex;align-items:center;justify-content:center;gap:4px;min-width:104px;height:44px;min-height:44px;padding:0 16px;border-radius:999px;font-size:15px;font-weight:800;white-space:nowrap;box-sizing:border-box}
+.upbox,.pushbox.hpb{padding:14px 16px;border-radius:16px}
