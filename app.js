@@ -367,7 +367,7 @@ function homeView(){
   if(regs.length) h+=hrow(regTitle,'#/list?cat=stay&s=open&r='+encodeURIComponent(regs.join(",")),open.filter(function(it){ return regs.indexOf(it.region)>=0; }).sort(byDeadline));
   var up=CAT_ORDER.filter(function(m){ return !isOpenCat(m.k) && UPCOMING.some(function(u){ return u.k===m.k||u.t===m.t; }); });
   if(up.length) h+='<a class="upbox" '+ext(kakaoUrl())+'><span class="ul"><small>곧 열려요 ✨</small><b>'+up.map(function(m){ return m.em+' '+esc(m.t); }).join(" · ")+' 체험단</b></span><span class="ug">🔔 오픈 알림</span></a>';
-  if(!pushOn()) h+=pushBox();
+  if(!pushOn()) h+=pushBox().replace('class="pushbox"','class="pushbox hpb"');
   var gb=[];
   if(rep()) gb.push(['#/reporter','','#6aa8ff','#4338ca','✍️','다꾸 기자단 모집','후기 쓰고 1만원 상품권 받아요']);
   gb.push([kakaoUrl(),'ext','#5eead4','#16a34a','🔔','새로 나온 체험단 알림','매일 아침 카톡으로 먼저 받아요']);
