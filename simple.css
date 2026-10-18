@@ -123,3 +123,5 @@ article.card,article.mini,article.hc{cursor:pointer}
 .act3 .pricel,.hact .pricel{margin-top:3px}
 .act3{padding-top:0}
 .pricel svg{width:14px;height:14px}
+.b.dlow{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;min-height:48px;margin-bottom:8px;background:#f2f2f4;color:#333;font-size:15px;font-weight:700;border-radius:12px;text-decoration:none}
+.b.dlow .via{font-weight:500;color:#888;font-size:12.5px}
