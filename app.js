@@ -822,10 +822,11 @@ function kakaoSlide(){
 var SPARK='<svg class="spk" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0Z" fill="currentColor"/></svg>';
 /* 광고 프로모션(2026-10-18 시온님 요청 "이번 주말 어디가지?" → 쿠팡트래블 입장권 특가): data.json promo + links[promo.link].u(쿠팡 API 수익 링크). 1 인트로(index.html) → 2 아래 팝업(promoPopup) → 3 홈 배너 첫 장(heroSlides) */
 function promoOn(){ var P=seed.promo; if(!P||!P.on) return null; if(P.until&&new Date().toISOString().slice(0,10)>P.until) return null; var L=(seed.links||{})[P.link]||{}, u=safeUrl(L.u); if(!u) return null; var o={}; for(var k in P) o[k]=P[k]; o.u=u; return o; }
+var PM_NAMED=/아쿠아|롯데월드|에버랜드|스카이|플라넷|리움|워터파크|동물원|박물관|미술관|테마파크|랜드|월드|타워|케이블카|레일바이크|스파|온천/; // 입장권 이름에 장소가 들어간 것만(옵션명만 있는 '입장권 1인권' 같은 건 뺌)
 function promoPopup(){
   var P=promoOn(); if(!P||state.tab!=="home"||document.querySelector(".promom")) return;
   try{ if(sessionStorage.getItem("dakku-promo")) return; var td=new Date().toISOString().slice(0,10); if(localStorage.getItem("dakku-promo-hide")===td) return; sessionStorage.setItem("dakku-promo","1"); }catch(e){ return; }
-  var S=seed.seasonDeals||{}, L=[], seen={}; (P.items||[]).forEach(function(k){ (S[k]||[]).forEach(function(x){ var n=(x.name||"").slice(0,16); if(safeUrl(x.u)&&safeUrl(x.img)&&!seen[n]){ seen[n]=1; L.push(x); } }); }); L=L.slice(0,10);
+  var S=seed.seasonDeals||{}, L=[], seen={}; (P.items||[]).forEach(function(k){ (S[k]||[]).forEach(function(x){ var nm=x.name||"", n=nm.slice(0,16); if(safeUrl(x.u)&&safeUrl(x.img)&&!seen[n]&&PM_NAMED.test(nm)&&!/^\s*[A-Z]\d|^\[/.test(nm)){ seen[n]=1; L.push(x); } }); }); L=L.slice(0,10);
   function card(x){ return '<a class="pmc" '+ext(safeUrl(x.u))+'><span class="pmt"><b>'+esc(x.price||"")+'</b>'+(x.rocket?'<i>로켓배송</i>':'')+'</span><span class="pmn">'+esc(x.name||"")+'</span><img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></a>'; }
   var half=Math.ceil(L.length/2), r1=L.slice(0,half), r2=L.slice(half);
   function row(a,cls){ return a.length?'<div class="pmrow '+cls+'"><div class="pmtrack">'+a.map(card).join("")+a.map(card).join("")+'</div></div>':''; }
