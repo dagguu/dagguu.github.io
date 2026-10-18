@@ -261,7 +261,7 @@ var CARD_PRICE=false; /* 카드의 가격보기 링크: 2026-10-18 시온님 요
 function priceLink(it,big){ if(!CARD_PRICE) return ''; var u=priceUrl(it); if(!u) return ''; var c=catOf(it)==="stay";
   return big?'<a class="b pbig" '+ext(u)+'>'+(c?'숙소 가격보기':'상품 가격보기')+' <span class="via">'+(c?'쿠팡트래블':'쿠팡')+' ↗</span></a>'
             :'<a class="pricel" '+ext(u)+'>'+(c?'숙소 가격보기':'상품 가격보기')+'<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>'; }
-function applyBtn(it,cls){ var s=statusOf(it), a=safeUrl(it.applyUrl); if(s.key==="closed") return '<span class="b dis'+(cls?' '+cls:'')+'">마감</span>'; return a?'<a class="b pri'+(cls?' '+cls:'')+'" href="'+esc(a)+'" target="_blank" rel="noopener noreferrer" data-apply="'+esc(it.id)+'">신청하기</a>':''; }
+function applyBtn(it,cls){ var s=statusOf(it), a=safeUrl(it.refUrl||it.applyUrl); if(s.key==="closed") return '<span class="b dis'+(cls?' '+cls:'')+'">마감</span>'; return a?'<a class="b pri'+(cls?' '+cls:'')+'" href="'+esc(a)+'" target="_blank" rel="noopener noreferrer" data-apply="'+esc(it.id)+'">신청하기</a>':''; }
 function worthLine(it){ return it.worth?'<p class="worth">💰 '+esc(it.worth)+' 상당</p>':''; }
 /* 경쟁률: item.ap=[지원자, 모집인원] (각 체험단 사이트에서 직접 읽음, data.json apAt 기준 시각) */
 function apOf(it){ var a=it.ap; return Array.isArray(a)&&a.length>=2&&+a[1]>0&&statusOf(it).key!=="closed"?[+a[0]||0,+a[1]]:null; }
@@ -273,12 +273,12 @@ function cdLine(it){ return ''; } /* 오늘 마감 시계는 사진 위 스티�
 function isTodayEnd(it){ return statusOf(it).dday==="오늘 마감"; }
 function miniCard(it,btns){
   var act='';
-  if(btns){ var s=statusOf(it), view=safeUrl(it.infUrl||it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
+  if(btns){ var s=statusOf(it), view=safeUrl(it.infUrl||it.viewUrl), apply=safeUrl(it.refUrl||it.applyUrl), c=catInfo(catOf(it))||{};
     act=priceLink(it)?'<div class="act3">'+priceLink(it)+'</div>':''; }
   return '<article class="mini">'+thumb(it)+chBadges(it)+'<h3><a class="tl" href="'+itemHref(it)+'">'+esc(it.name)+'</a></h3>'+worthLine(it)+'<p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+apLine(it)+act+'</article>';
 }
 function fullCard(it){
-  var s=statusOf(it), view=safeUrl(it.infUrl||it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
+  var s=statusOf(it), view=safeUrl(it.infUrl||it.viewUrl), apply=safeUrl(it.refUrl||it.applyUrl), c=catInfo(catOf(it))||{};
   var closed=s.key==="closed";
   return '<article class="card'+(closed?" closed":"")+'">'+thumb(it)+
     '<div class="body">'+chBadges(it)+'<h3><a class="tl" href="'+itemHref(it)+'">'+esc(it.name)+'</a></h3>'+worthLine(it)+'<p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+apLine(it)+
@@ -327,7 +327,7 @@ function hcard(it){
 function bizLine(){ var b=seed.biz; if(!b||!b.name) return ""; var x=[["상호",b.name],["대표",b.ceo],["사업자등록번호",b.regNo],["통신판매업 신고",b.mailOrder],["주소",b.addr],["이메일",b.email],["전화",b.tel]].filter(function(r){ return r[1]; });
   return '<p class="biz"><b>다꾸체험단 · 운영 '+esc(b.name)+'</b><br>'+x.map(function(r){ return '<span>'+r[0]+' '+esc(r[1])+'</span>'; }).join("")+'</p>'; }
 function hact(it){
-  var s=statusOf(it), view=safeUrl(it.infUrl||it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
+  var s=statusOf(it), view=safeUrl(it.infUrl||it.viewUrl), apply=safeUrl(it.refUrl||it.applyUrl), c=catInfo(catOf(it))||{};
   if(!view&&!apply) return "";
   var pl=priceLink(it); return pl?'<div class="hact">'+pl+'</div>':'';
 }
@@ -1159,7 +1159,7 @@ function apNote(){ if(!seed.apAt) return ''; var d=new Date(seed.apAt); if(isNaN
 var APPLIED=[]; try{ APPLIED=JSON.parse(ls("dakku-applied")||"[]")||[]; }catch(e){ APPLIED=[]; }
 function markApplied(id){ var i=APPLIED.indexOf(id); if(i>=0) APPLIED.splice(i,1); APPLIED.unshift(id); APPLIED=APPLIED.slice(0,50); ls("dakku-applied",JSON.stringify(APPLIED)); }
 function applyPopup(it){
-  var url=safeUrl(it.applyUrl); if(!url) return;
+  var url=safeUrl(it.refUrl||it.applyUrl); if(!url) return;
   var old=document.querySelector(".modal.applym"); if(old) old.remove();
   var src=it.source||"체험단";
   var wrap=document.createElement("div"); wrap.className="modal applym"; wrap.setAttribute("role","dialog"); wrap.setAttribute("aria-modal","true"); wrap.setAttribute("aria-label",src+" 홈페이지로 이동");

@@ -145,7 +145,7 @@ n_s = 0
 for it in items:
     iid = it["id"]; cat = it.get("cat") or "stay"; cn = CATN.get(cat, "체험단"); op = is_open(it)
     name = it.get("name") or ""; sg = sigun(it); img = img_of(it)
-    view = url(it.get("infUrl")) or url(it.get("viewUrl")); apply_ = url(it.get("applyUrl"))
+    view = url(it.get("infUrl")) or url(it.get("viewUrl")); apply_ = url(it.get("refUrl")) or url(it.get("applyUrl"))
     ch = [CHN[c] for c in (it.get("ch") or []) if c in CHN]
     title = f"{name} {cn} 체험단" + (f" · {mmdd(it['end'])}까지 모집" if it.get("end") and op else (" (모집 마감)" if not op else "")) + " | 다꾸체험단"
     bits = []
