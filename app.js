@@ -558,7 +558,7 @@ function itemView(){
   return '<div class="pg dpg">'+
     '<div class="dthimg">'+(img?'<img src="'+esc(img)+'" alt="'+esc(it.name)+'" referrerpolicy="no-referrer" onerror="this.remove()">':'')+'</div>'+
     '<div class="dhd">'+chBadges(it)+'<h1>'+esc(it.name)+'</h1>'+'<div class="dico"><button class="shb" data-ishare="'+esc(it.id)+'" aria-label="공유하기">'+ico(I.send)+'</button></div></div>'+
-    rows+
+    rows+aiSum(it)+
     (closed?'<div class="dclosed"><b>모집이 끝난 체험단이에요</b><span>같은 '+(stay?'숙소':'제품')+'가 다시 모집하면 알림으로 알려드려요.'+(priceUrl(it)?' 지금 바로 이용하려면 아래 '+(stay?'숙소 정보 보기':'구매하러 가기')+'를 눌러 주세요.':'')+'</span></div>'
       :'<p class="dnote">신청은 '+esc(src)+'에서 진행돼요. 리뷰 조건·체험 가능일을 꼭 확인해 주세요.</p>')+
     '<div class="dbar"><button class="fv dbfav'+(isFav(it.id)?" on":"")+'" data-fav="'+esc(it.id)+'" aria-label="찜하기" aria-pressed="'+isFav(it.id)+'">'+ico(I.heart)+'</button>'+
@@ -587,6 +587,8 @@ function relDeals(it){
   var L=hit.concat(rest).slice(0,4); if(L.length<2) return "";
   return '<section class="sec tossec drel"><div class="sh"><h2>함께 보면 좋은 특가 <span class="adtag">광고</span></h2></div><div class="tgrid">'+L.map(tossCard).join("")+'</div></section>';
 }
+/* AI 요약(2026-10-18 시온님 요청): item.sum 이 있을 때만. 모집 정보(이름·제공 내역·조건)만 보고 Claude 가 쓴 1~2문장, 없는 사실은 쓰지 않음 */
+function aiSum(it){ var t=(it.sum||"").trim(); if(!t) return ""; return '<div class="aisum"><span class="aisl">✦ AI 요약</span><p>'+esc(t)+'</p><small>모집 정보를 바탕으로 AI가 정리했어요. 정확한 조건은 모집 페이지에서 확인해 주세요.</small></div>'; }
 function favView(){
   var list=seed.items.filter(function(it){ return isFav(it.id); }).sort(function(a,b){ var sa=statusOf(a).key==="closed", sb=statusOf(b).key==="closed"; if(sa!==sb) return sa?1:-1; return daysLeft(a)-daysLeft(b); });
   var soon=list.filter(function(it){ return statusOf(it).key==="open" && daysLeft(it)<=3; }).length;
