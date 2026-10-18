@@ -4,7 +4,9 @@ on:
     - cron: "12 22 * * *"   # 매일 오전 7시 12분(한국시간) 골드박스
   push:
     paths: ["data.json"]     # 새 체험단이 올라오면 쿠팡 링크 변환
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      mode: { description: "all 또는 season(날씨·계절 추천만)", default: "all" }
 permissions:
   contents: write
 concurrency: { group: coupang, cancel-in-progress: false }
@@ -21,7 +23,7 @@ jobs:
           COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
           COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
         run: |
-          if [ "${{ github.event_name }}" = "push" ]; then python3 scripts/coupang_api.py deeplink; else python3 scripts/weather.py; python3 scripts/coupang_api.py; fi
+          if [ "${{ github.event_name }}" = "push" ]; then python3 scripts/coupang_api.py deeplink; elif [ "${{ github.event.inputs.mode }}" = "season" ]; then python3 scripts/weather.py; python3 scripts/coupang_api.py season; else python3 scripts/weather.py; python3 scripts/coupang_api.py; fi
           python3 scripts/gen_share.py
       - name: 저장
         run: |
