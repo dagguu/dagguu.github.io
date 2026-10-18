@@ -259,3 +259,8 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .promom .psheet2 .pfoot{display:flex;justify-content:space-between;padding:14px 20px 16px}
 .promom .psheet2 .pfoot button{border:0;background:none;color:rgba(255,255,255,.85);font-size:14.5px;cursor:pointer;padding:4px 0}
 @media (prefers-reduced-motion:reduce){.promom .pmtrack{animation:none}}
+
+/* 하단 탭 '체험단' 강조 (2026-10-18 시온님 요청) */
+.tabbar a.tc,.tabbar a.tc.on{color:var(--acc);font-weight:800}
+.tcb,.tabbar a.tc.on .tcb{width:46px;height:46px;margin-top:-16px;border-radius:50%;background:var(--acc)!important;color:#fff;display:grid;place-items:center;box-shadow:0 4px 12px rgba(91,63,214,.35);border:3px solid #fff}
+.tcb .ti{width:24px;height:24px;stroke:#fff;stroke-width:2.2}

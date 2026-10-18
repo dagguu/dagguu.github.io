@@ -354,10 +354,14 @@ function homeView(){
   h+=hrow('💜 지금 <em>인기 있는</em> 체험단','#/list?cat=stay&s=pick',picks);
   var soon=open.filter(function(it){ return daysLeft(it)<=3; }).sort(function(a,b){ return daysLeft(a)-daysLeft(b); });
   h+=hrow('⏰ <em>곧 마감!</em> 지금 신청하세요','#/list?cat=stay&s=closing',soon);
-  var wx=wxSection(); if(wx) h+='<div class="hpad">'+wx+'</div>';
-  var hd=hotDeal(); if(hd) h+='<div class="hpad">'+hd+'</div>'; var cb=cheapBtn(); if(cb) h+='<div class="hpad">'+cb+'</div>'; // 오늘의 특가(골드박스)는 홈에서 숨김 (2026-10-14 시온님 요청)
   var baby=open.filter(function(it){ return catOf(it)==="baby"; }).sort(function(a,b){ return (b.createdAt||0)-(a.createdAt||0); });
   h+=hrow('👶 <em>육아</em> 체험단도 있어요','#/list?cat=baby&s=open',baby);
+  var tdy=ymd(today()), easy=open.filter(function(it){ return apRatio(it)<=1.5 && it.end!==tdy; }).sort(function(a,b){ return apRatio(a)-apRatio(b) || valOf(b)-valOf(a); });
+  h+=hrow('🙌 <em>경쟁률 낮은</em> 체험단','#/list?cat=stay&s=open&o=comp',easy);
+  [["beauty","💄 <em>뷰티</em> 체험단"],["health","🍱 <em>식품</em> 체험단"],["life","🧺 <em>생활</em> 체험단"],["elec","🔌 <em>가전/가구</em> 체험단"],["pet","🐾 <em>반려동물</em> 체험단"]].forEach(function(c){
+    var l=open.filter(function(it){ return catOf(it)===c[0]; }).sort(function(a,b){ return valOf(b)-valOf(a) || (b.createdAt||0)-(a.createdAt||0); });
+    if(l.length>=3) h+=hrow(c[1],'#/list?cat='+c[0]+'&s=open',l);
+  });
   var pool=open.filter(function(it){ return /풀빌라|풀 ?빌라/.test(it.name+" "+it.benefit); }).sort(byDeadline);
   if(pool.length>=2) h+='<section class="promo"><div class="pl"><small>물놀이 걱정 없는</small><b>풀빌라<br>체험단</b><a href="#/list?cat=stay&s=open&q=%ED%92%80%EB%B9%8C%EB%9D%BC">모두 보기 ›</a></div><div class="pr">'+pool.slice(0,6).map(function(it){ var img=safeUrl(it.image), v=safeUrl(it.infUrl||it.viewUrl);
       return '<a class="pi" '+(v?ext(v):'href="#/list"')+'>'+(img?'<span class="pimg"><img src="'+esc(img)+'" alt="" loading="lazy" referrerpolicy="no-referrer"><em>'+esc(it.region||"")+'</em></span>':'')+'<span class="pt"><b>'+esc(it.name)+'</b><small>'+leftText(it)+'</small></span></a>'; }).join("")+'</div></section>';
@@ -365,6 +369,8 @@ function homeView(){
   if(!regs.length){ var cnt={}; open.forEach(function(it){ if(it.region) cnt[it.region]=(cnt[it.region]||0)+1; }); var top=Object.keys(cnt).sort(function(x,y){ return cnt[y]-cnt[x]; })[0]; if(top) regs=[top]; regTitle='📍 지금 <em>'+esc(regs[0]||"")+'</em> 체험단이 많아요'; }
   else regTitle='📍 <em>관심 지역</em>의 체험단이에요';
   if(regs.length) h+=hrow(regTitle,'#/list?cat=stay&s=open&r='+encodeURIComponent(regs.join(",")),open.filter(function(it){ return regs.indexOf(it.region)>=0; }).sort(byDeadline));
+  var wx=wxSection(); if(wx) h+='<div class="hpad">'+wx+'</div>';
+  var hd=hotDeal(); if(hd) h+='<div class="hpad">'+hd+'</div>'; var cb=cheapBtn(); if(cb) h+='<div class="hpad">'+cb+'</div>'; // 오늘의 특가(골드박스)는 홈에서 숨김 (2026-10-14 시온님 요청)
   var up=CAT_ORDER.filter(function(m){ return !isOpenCat(m.k) && UPCOMING.some(function(u){ return u.k===m.k||u.t===m.t; }); });
   if(up.length) h+='<a class="upbox" '+ext(kakaoUrl())+'><span class="ul"><small>곧 열려요 ✨</small><b>'+up.map(function(m){ return m.em+' '+esc(m.t); }).join(" · ")+' 체험단</b></span><span class="ug">🔔 오픈 알림</span></a>';
   if(!pushOn()) h+=pushBox().replace('class="pushbox"','class="pushbox hpb"');
@@ -374,7 +380,7 @@ function homeView(){
   gb.push(['#/benefit','','#ffc46b','#f43f5e','🎁','오늘의 혜택 모음','룰렛 · 쿠폰 · 이벤트 한곳에']);
   h+='<div class="gbs">'+gb.map(function(g){ return '<a class="gb" '+(g[1]?ext(g[0]):'href="'+g[0]+'"')+' style="--g1:'+g[2]+';--g2:'+g[3]+'"><span class="gt"><b>'+g[5]+'</b><small>'+g[6]+'</small></span><span class="ge">'+g[4]+'</span></a>'; }).join("")+'</div>';
   // 끝없는 스크롤: 모집 중 체험단 전부 → 이어서 특가 전부 (조금씩 이어 붙임)
-  HFEED.items=open.slice().sort(byNew).slice(0,36); HFEED.deals=homeDeals().slice(0,20); HFEED.i=0; HFEED.j=0;
+  HFEED.items=open.slice().sort(byNew).slice(0,72); HFEED.deals=homeDeals().slice(0,20); HFEED.i=0; HFEED.j=0;
   h+='<div class="hpad" data-guides></div>';
   h+='<section class="hsec"><div class="hsh"><h2>다른 체험단도 둘러볼까요?</h2></div><div class="htool"><span>총 <b>'+open.length+'</b>개</span><a class="hflt" href="#/list?cat=stay&s=open">⚙️ 필터</a></div>'+
     '<div class="grid v2 hgrid" id="hfeed"></div></section>';
