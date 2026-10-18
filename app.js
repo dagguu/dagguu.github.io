@@ -229,7 +229,7 @@ function render(){
   else if(state.tab==="price"){ v.innerHTML=priceView(); if(state.pq) priceSearch(state.pq); }
   if(state.tab==="home") initFeed(); else if(HOBS){ HOBS.disconnect(); HOBS=null; }
   if(state.tab==="deals") initMoreDeals(); else if(MDEAL.obs){ MDEAL.obs.disconnect(); MDEAL.obs=null; }
-  tick(); startSliders(); plainHeads(v); guideFill(); if(state.tab==="item") dcdInit();
+  tick(); startSliders(); plainHeads(v); guideFill(); if(state.tab==="item") dcdInit(); tkInit();
 }
 /* 모던&심플(2026-10-17): 섹션 제목 앞 이모지 빼기 */
 function plainHeads(v){ [].forEach.call(v.querySelectorAll("h1,h2"),function(h){ var n=h.firstChild; if(n&&n.nodeType===3) n.nodeValue=n.nodeValue.replace(/^[\s\u2600-\u27BF\uFE0F\u200D]*(?:[\uD83C-\uD83E][\uDC00-\uDFFF][\uFE0F\u200D]*)*\s*/,""); }); }
@@ -340,9 +340,24 @@ var HOME_MENU=[
   ["📝","블로그","#/list?cat=stay&s=open&ch=blog"],["📸","인스타그램","#/list?cat=stay&s=open&ch=insta"],["🎬","숏폼","#/list?cat=stay&s=open&ch=clip,reels,youtube"],["🎁","혜택","#/benefit"],["🔥","특가","#/deals"],
   ["🏨","숙박","#/list?cat=stay&s=open"],["👶","육아","#/list?cat=baby"],["💄","뷰티","#/list?cat=beauty"],["🧺","생활","#/list?cat=life"],["🔌","가전/가구","#/list?cat=elec"],["🍱","식품","#/list?cat=health"],["🐾","반려동물","#/list?cat=pet"]
 ];
+/* 슬라이드 배너 위 한 줄 소식 (2026-10-18 시온님 요청). 지어낸 이용자 후기는 쓰지 않고 data.json 실제 숫자만 */
+function manW(v){ return v>=10000?Math.round(v/10000).toLocaleString()+"만원":v.toLocaleString()+"원"; }
+function tickerHtml(open){
+  var td=ymd(today()), L=[], cat=function(it){ var c=CAT_ORDER.filter(function(m){ return m.k===catOf(it); })[0]; return c?c.t:"체험단"; };
+  var sum=0, n=0; open.forEach(function(it){ var v=valOf(it); if(v>0&&v<5e6){ sum+=v; n++; } });
+  if(sum) L.push(['💰','지금 모집 중인 체험단 '+open.length+'곳, 제공 금액 합계 <b>약 '+manW(Math.round(sum/10000)*10000)+'</b> 상당이에요','#/list?cat=stay&s=open']);
+  var fr=open.filter(isNewToday).length; if(fr) L.push(['✨','오늘 새로 올라온 체험단 <b>'+fr+'곳</b>','#/list?cat=stay&s=open']);
+  var top=open.slice().sort(function(a,b){ return valOf(b)-valOf(a); }).filter(function(it){ return valOf(it)>0; }).slice(0,3);
+  top.forEach(function(it){ L.push(['🎁','['+cat(it)+'] '+esc(it.name.replace(/\s*\(.*?\)\s*$/,""))+' <b>'+manW(valOf(it))+' 상당</b> 모집 중','#/item?id='+encodeURIComponent(it.id)]); });
+  var ce=open.filter(function(it){ return it.end===td; }).length; if(ce) L.push(['⏰','오늘 마감 체험단 <b>'+ce+'곳</b>, 놓치지 마세요','#/list?cat=stay&s=todayClose']);
+  var easy=open.filter(function(it){ return apRatio(it)<=1.5; }).length; if(easy) L.push(['🙌','경쟁률 1.5:1 이하 체험단 <b>'+easy+'곳</b>','#/list?cat=stay&s=open&o=comp']);
+  if(!L.length) return "";
+  return '<div class="tkr" aria-live="off"><div class="tkw"><div class="tkl">'+L.map(function(x){ return '<a class="tki" href="'+x[2]+'"><span class="tke">'+x[0]+'</span><span class="tkt">'+x[1]+'</span></a>'; }).join("")+'</div></div><span class="tka" aria-hidden="true">⌃<br>⌄</span></div>';
+}
+var tkT; function tkInit(){ clearInterval(tkT); var l=document.querySelector(".tkl"); if(!l) return; var n=l.children.length, i=0; if(n<2) return; tkT=setInterval(function(){ if(!document.body.contains(l)){ clearInterval(tkT); return; } i=(i+1)%n; l.style.transform="translateY(-"+(i*44)+"px)"; },3200); }
 function homeView(){
   var td=ymd(today()), open=seed.items.filter(function(it){ return statusOf(it).key==="open"; });
-  var h=slideBanners(false);
+  var h=tickerHtml(open)+slideBanners(false);
   h+='<nav class="hmenu" aria-label="바로가기">'+HOME_MENU.map(function(m){ return '<a href="'+m[2]+'"><span class="hmi">'+m[0]+'</span><span>'+m[1]+'</span></a>'; }).join("")+'</nav>';
   var closingToday=open.filter(function(it){ return it.end===td; });
   if(closingToday.length) h+='<a class="notice" href="#/list?cat=stay&s=todayClose"><span class="ntag">오늘 마감</span><b>'+closingToday.length+'곳이 오늘 끝나요</b><span class="ncd">⏳ <span id="stripcd">'+clock(msToMidnight())+'</span></span></a>';
