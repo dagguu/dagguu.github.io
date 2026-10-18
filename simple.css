@@ -279,3 +279,4 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 /* 곧 열려요 '오픈 알림' · 앱 알림 '알림 받기' 버튼 같은 모양(2026-10-19 시온님 요청) */
 .upbox .ug,.pushbox.hpb .b{flex:none;display:inline-flex;align-items:center;justify-content:center;gap:4px;width:116px;height:44px;min-height:44px;padding:0 16px;border-radius:999px;font-size:15px;font-weight:800;white-space:nowrap;box-sizing:border-box}
 .upbox,.pushbox.hpb{padding:14px 16px;border-radius:16px}
+.pushbox.hpb small{font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pushbox.hpb span{min-width:0}
