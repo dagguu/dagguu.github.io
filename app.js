@@ -226,8 +226,8 @@ function itemHref(it){ return '#/item?id='+encodeURIComponent(it.id); }
 function adOk(it){ var p=payOf(it); return p.indexOf("payback")<0 && p.indexOf("review")<0; }
 function priceUrl(it){ return adOk(it)?safeUrl(it.infUrl||it.viewUrl):""; }
 function priceLink(it,big){ var u=priceUrl(it); if(!u) return ''; var c=catOf(it)==="stay";
-  return big?'<a class="b pbig" '+ext(u)+'>'+(c?'숙소 가격보기':'상품 가격보기')+' <span class="via">'+(c?'쿠팡트래블':'쿠팡')+' ↗</span><em class="adm">광고</em></a>'
-            :'<a class="pricel" '+ext(u)+'>가격보기 ↗<em class="adm">광고</em></a>'; }
+  return big?'<a class="b pbig" '+ext(u)+'>'+(c?'숙소 가격보기':'상품 가격보기')+' <span class="via">'+(c?'쿠팡트래블':'쿠팡')+' ↗</span></a>'
+            :'<a class="pricel" '+ext(u)+'>'+(c?'숙소 가격보기':'상품 가격보기')+' ↗</a>'; }
 function applyBtn(it,cls){ var s=statusOf(it), a=safeUrl(it.applyUrl); if(s.key==="closed") return '<span class="b dis'+(cls?' '+cls:'')+'">마감</span>'; return a?'<a class="b pri'+(cls?' '+cls:'')+'" href="'+esc(a)+'" target="_blank" rel="noopener noreferrer" data-apply="'+esc(it.id)+'">신청하기</a>':''; }
 function worthLine(it){ return it.worth?'<p class="worth">💰 '+esc(it.worth)+' 상당</p>':''; }
 /* 경쟁률: item.ap=[지원자, 모집인원] (각 체험단 사이트에서 직접 읽음, data.json apAt 기준 시각) */
@@ -240,7 +240,7 @@ function cdLine(it){ return statusOf(it).dday==="오늘 마감"?'<p class="cdl" 
 function miniCard(it,btns){
   var act='';
   if(btns){ var s=statusOf(it), view=safeUrl(it.infUrl||it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
-    act='<div class="act3">'+applyBtn(it)+priceLink(it)+'</div>'; }
+    act=priceLink(it)?'<div class="act3">'+priceLink(it)+'</div>':''; }
   return '<article class="mini">'+thumb(it)+chBadges(it)+'<h3><a class="tl" href="'+itemHref(it)+'">'+esc(it.name)+'</a></h3>'+worthLine(it)+'<p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+apLine(it)+act+'</article>';
 }
 function fullCard(it){
@@ -249,7 +249,7 @@ function fullCard(it){
   return '<article class="card'+(closed?" closed":"")+'">'+thumb(it)+
     '<div class="body">'+chBadges(it)+'<h3><a class="tl" href="'+itemHref(it)+'">'+esc(it.name)+'</a></h3>'+worthLine(it)+'<p class="bn">🎁 '+esc(it.benefit)+'</p>'+cdLine(it)+apLine(it)+
     '<p class="pd">🗓️ '+(it.start?fmt(it.start)+' ':'')+'~ '+fmt(it.end)+' 모집 · '+esc(it.source||"")+'</p>'+
-    '<div class="act act2"><a class="b sec" href="'+itemHref(it)+'">자세히 보기</a>'+applyBtn(it)+'</div>'+priceLink(it)+'</div></article>';
+    priceLink(it)+'</div></article>';
 }
 function babyDeals(){
   var now=Date.now(), seen={};
@@ -295,7 +295,7 @@ function bizLine(){ var b=seed.biz; if(!b||!b.name) return ""; var x=[["상호",
 function hact(it){
   var s=statusOf(it), view=safeUrl(it.infUrl||it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
   if(!view&&!apply) return "";
-  return '<div class="hact">'+applyBtn(it)+priceLink(it)+'</div>';
+  var pl=priceLink(it); return pl?'<div class="hact">'+pl+'</div>':'';
 }
 function hrow(title,more,list,sub){
   if(!list.length) return "";
@@ -1029,6 +1029,8 @@ function shareToss(code){
   try{ navigator.clipboard.writeText(text+"\n"+url).then(function(){ toast("✈️ 링크를 복사했어요. 친구에게 붙여넣어 보내세요!"); }).catch(function(){ prompt("아래 링크를 복사해 친구에게 보내세요",url); }); }catch(e){ toast(url); }
 }
 document.addEventListener("change",function(e){ if(e.target&&e.target.id==="sort"){ state.sort=e.target.value; saveUi(); renderListGrid(); } });
+/* 카드 아무 곳이나 누르면 상세 페이지(링크·버튼 제외) — 2026-10-18 */
+document.addEventListener("click",function(e){ var t=e.target; if(!t||!t.closest||t.closest("a,button,input,label,select")) return; var art=t.closest("article.card,article.mini,article.hc"); if(!art) return; var a=art.querySelector('a[href^="#/item?id="]'); if(a) location.hash=a.getAttribute("href").slice(1); });
 document.addEventListener("click",function(e){ var b=e.target&&e.target.closest&&e.target.closest("[data-sortcomp]"); if(!b) return; state.sort="comp"; saveUi(); var s=document.getElementById("sort"); if(s) s.value="comp"; renderListGrid(); var g=document.getElementById("grid"); if(g) g.scrollIntoView({behavior:"smooth",block:"start"}); });
 function apNote(){ if(!seed.apAt) return ''; var d=new Date(seed.apAt); if(isNaN(d)) return '';
   return '<p class="apnote">경쟁률은 '+(d.getMonth()+1)+'/'+d.getDate()+' '+d.getHours()+'시 기준이에요. 각 체험단 사이트에서 직접 확인한 숫자이고, 지금은 더 늘었을 수 있어요.</p>'; }
