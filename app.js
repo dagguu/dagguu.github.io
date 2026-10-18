@@ -556,7 +556,7 @@ function itemView(){
     (stay&&mapQ?'<a class="b sec wide dmap" href="https://map.naver.com/p/search/'+encodeURIComponent(mapQ)+'" target="_blank" rel="noopener noreferrer">📍 위치 보기 (네이버지도)</a>':'')+
     '<p class="dnote">신청은 '+esc(src)+'에서 진행돼요. 리뷰 조건·체험 가능일을 꼭 확인해 주세요.</p>'+
     '<div class="dbar"><button class="fv dbfav'+(isFav(it.id)?" on":"")+'" data-fav="'+esc(it.id)+'" aria-label="찜하기" aria-pressed="'+isFav(it.id)+'">'+ico(I.heart)+'</button>'+
-      (priceUrl(it)?'<a class="dbl" '+ext(priceUrl(it))+'>최저가 보기</a>':'')+applyBtn(it,"dbp")+'</div>'+
+      (priceUrl(it)?'<a class="dbl" '+ext(priceUrl(it))+'>구매하러 가기</a>':'')+applyBtn(it,"dbp")+'</div>'+
     '<a class="morebig" href="#/list">다른 체험단도 둘러보기 ›</a>'+recoSection("이런 체험단은 어때요?")+'</div>';
 }
 function favView(){

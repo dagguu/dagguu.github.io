@@ -132,7 +132,7 @@ article.card,article.mini,article.hc{cursor:pointer}
 .dbar .dbfav{position:static;flex:0 0 44px;width:44px;height:48px;border:0;background:none;color:#555;display:grid;place-items:center}
 .dbar .dbfav svg{width:26px;height:26px}
 .dbar .dbfav.on{color:#e5484d}
-.dbar .dbl,.dbar .b.dbp{flex:1;display:flex;align-items:center;justify-content:center;min-height:50px;border-radius:14px;font-size:16px;font-weight:700;text-decoration:none}
+.dbar .dbl,.dbar .b.dbp{flex:1 1 0;width:0;min-width:0;margin:0;padding:0 8px;box-sizing:border-box;height:50px;white-space:nowrap;display:flex;align-items:center;justify-content:center;min-height:50px;border-radius:14px;font-size:16px;font-weight:700;text-decoration:none}
 .dbar .dbl{background:#efeafd;color:#5b3fd6}
 .dbar .b.dbp{background:#5b3fd6;color:#fff}
 .dbar .b.dis{flex:1;min-height:50px;border-radius:14px}
