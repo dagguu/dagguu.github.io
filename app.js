@@ -213,7 +213,7 @@ function thumb(it,cls){
       '<span class="ph">'+esc(it.region||"")+'</span>'+(img?'<img src="'+esc(img)+'" alt="'+esc(it.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">':'')+
     '</a>'+
     (it.region?'<span class="rgs">📍 '+esc(it.region)+'</span>':'')+
-    '<span class="dd '+(s.key==="closed"?"off":(s.hot?"hot":""))+'">'+esc(s.dday)+'</span>'+
+    (isTodayEnd(it)?'<span class="cdst"><em>오늘 마감</em><b data-cdx>'+clock(msToMidnight())+'</b></span>':'<span class="dd '+(s.key==="closed"?"off":(s.hot?"hot":""))+'">'+esc(s.dday)+'</span>')+
     (isPick(it)&&s.key!=="closed"?'<span class="pks">💜 추천</span>':'')+
     (isNew?'<span class="nws" aria-label="새로 올라옴">✨</span>':'')+
     (s.key==="closed"?'<a class="closedov" href="'+esc(kakaoUrl())+'" target="_blank" rel="noopener noreferrer"><b>모집 마감</b><span>🔔 다음 모집 알림받기</span></a>':'')+
@@ -237,7 +237,8 @@ function apRatio(it){ var a=apOf(it); return a?a[0]/a[1]:Infinity; }
 function apLine(it){ var a=apOf(it); if(!a) return ''; var r=a[0]/a[1];
   if(!a[0]) return '<p class="apl low">모집 '+a[1].toLocaleString()+' · <b>아직 지원자 없음</b></p>';
   return '<p class="apl'+(r<=1.5?' low':'')+'">지원 '+a[0].toLocaleString()+' · 모집 '+a[1].toLocaleString()+' <b>'+(r<10?r.toFixed(1):Math.round(r))+':1</b></p>'; }
-function cdLine(it){ return statusOf(it).dday==="오늘 마감"?'<p class="cdl" data-cdl>'+clock(msToMidnight())+' 남음</p>':''; }
+function cdLine(it){ return ''; } /* 오늘 마감 시계는 사진 위 스티커(thumb, cdst)로 옮김 2026-10-18 시온님 요청 */
+function isTodayEnd(it){ return statusOf(it).dday==="오늘 마감"; }
 function miniCard(it,btns){
   var act='';
   if(btns){ var s=statusOf(it), view=safeUrl(it.infUrl||it.viewUrl), apply=safeUrl(it.applyUrl), c=catInfo(catOf(it))||{};
@@ -1014,7 +1015,7 @@ function initMoreDeals(){
   MDEAL.obs.observe(s);
 }
 function clock(ms){ var x=Math.max(0,Math.floor(ms/1000)); return ("0"+Math.floor(x/3600)).slice(-2)+":"+("0"+Math.floor(x%3600/60)).slice(-2)+":"+("0"+x%60).slice(-2); }
-var tickT; function tick(){ clearInterval(tickT); tickT=setInterval(function(){ var orE=document.querySelector("[data-or]"); if(orE) orE.innerHTML=orText(orState()); var ms=msToMidnight(), e=document.getElementById("cd"); if(e) e.textContent=hms(nextSeven()); var c=clock(ms); [].forEach.call(document.querySelectorAll("[data-cd]"),function(el){ el.textContent="⏰ "+c; }); [].forEach.call(document.querySelectorAll("[data-cdl]"),function(el){ el.textContent=c+" 남음"; }); [].forEach.call(document.querySelectorAll("[data-end]"),function(el){ el.textContent=endLeft(el.dataset.end); }); var td2=document.getElementById("tossd"); if(td2) td2.textContent=hms(ms); var g=document.getElementById("gbcd"); if(g) g.textContent=clock(nextSeven()); var st=document.getElementById("stripcd"); if(st) st.textContent=c; [].forEach.call(document.querySelectorAll("[data-hd]"),function(el){ el.textContent=clock(nextSeven()); }); [].forEach.call(document.querySelectorAll("[data-mid]"),function(el){ el.textContent=c; }); },1000); }
+var tickT; function tick(){ clearInterval(tickT); tickT=setInterval(function(){ var orE=document.querySelector("[data-or]"); if(orE) orE.innerHTML=orText(orState()); var ms=msToMidnight(), e=document.getElementById("cd"); if(e) e.textContent=hms(nextSeven()); var c=clock(ms); [].forEach.call(document.querySelectorAll("[data-cd]"),function(el){ el.textContent="⏰ "+c; }); [].forEach.call(document.querySelectorAll("[data-cdl]"),function(el){ el.textContent=c+" 남음"; }); [].forEach.call(document.querySelectorAll("[data-cdx]"),function(el){ el.textContent=c; }); [].forEach.call(document.querySelectorAll("[data-end]"),function(el){ el.textContent=endLeft(el.dataset.end); }); var td2=document.getElementById("tossd"); if(td2) td2.textContent=hms(ms); var g=document.getElementById("gbcd"); if(g) g.textContent=clock(nextSeven()); var st=document.getElementById("stripcd"); if(st) st.textContent=c; [].forEach.call(document.querySelectorAll("[data-hd]"),function(el){ el.textContent=clock(nextSeven()); }); [].forEach.call(document.querySelectorAll("[data-mid]"),function(el){ el.textContent=c; }); },1000); }
 
 /* ---------- 이벤트 ---------- */
 function onClick(e){
