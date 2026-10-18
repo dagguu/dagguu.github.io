@@ -345,11 +345,11 @@ function manW(v){ return v>=10000?Math.round(v/10000).toLocaleString()+"만원":
 function tickerHtml(open){
   var td=ymd(today()), L=[], cat=function(it){ var c=CAT_ORDER.filter(function(m){ return m.k===catOf(it); })[0]; return c?c.t:"체험단"; };
   var sum=0, n=0; open.forEach(function(it){ var v=valOf(it); if(v>0&&v<5e6){ sum+=v; n++; } });
-  if(sum) L.push(['💰','지금 모집 중인 체험단 '+open.length+'곳, 제공 금액 합계 <b>약 '+manW(Math.round(sum/10000)*10000)+'</b> 상당이에요','#/list?cat=stay&s=open']);
+  if(sum) L.push(['💰','모집 중 '+open.length+'곳 · 제공 금액 <b>'+manW(Math.floor(sum/10000)*10000)+' 이상</b>','#/list?cat=stay&s=open']);
   var fr=open.filter(isNewToday).length; if(fr) L.push(['✨','오늘 새로 올라온 체험단 <b>'+fr+'곳</b>','#/list?cat=stay&s=open']);
   var top=open.slice().sort(function(a,b){ return valOf(b)-valOf(a); }).filter(function(it){ return valOf(it)>0; }).slice(0,3);
   top.forEach(function(it){ L.push(['🎁','['+cat(it)+'] '+esc(it.name.replace(/\s*\(.*?\)\s*$/,""))+' <b>'+manW(valOf(it))+' 상당</b> 모집 중','#/item?id='+encodeURIComponent(it.id)]); });
-  var ce=open.filter(function(it){ return it.end===td; }).length; if(ce) L.push(['⏰','오늘 마감 체험단 <b>'+ce+'곳</b>, 놓치지 마세요','#/list?cat=stay&s=todayClose']);
+  var ce=open.filter(function(it){ return it.end===td; }).length; if(ce) L.push(['⏰','오늘 마감 체험단 <b>'+ce+'곳</b>','#/list?cat=stay&s=todayClose']);
   var easy=open.filter(function(it){ return apRatio(it)<=1.5; }).length; if(easy) L.push(['🙌','경쟁률 1.5:1 이하 체험단 <b>'+easy+'곳</b>','#/list?cat=stay&s=open&o=comp']);
   if(!L.length) return "";
   return '<div class="tkr" aria-live="off"><div class="tkw"><div class="tkl">'+L.map(function(x){ return '<a class="tki" href="'+x[2]+'"><span class="tke">'+x[0]+'</span><span class="tkt">'+x[1]+'</span></a>'; }).join("")+'</div></div><span class="tka" aria-hidden="true">⌃<br>⌄</span></div>';
