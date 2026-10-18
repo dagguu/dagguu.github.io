@@ -178,7 +178,8 @@ document.addEventListener("click",function(e){
   if((a=t.closest("[data-apply]"))) ga("apply_open",{item_id:a.getAttribute("data-apply")});
   else if((a=t.closest('.applym [data-m="go"]'))) ga("apply_go",{item_id:state.itemId||""});
   else if((a=t.closest(".dbar .dbl"))) ga("coupang_click",{place:"detail",item_id:state.itemId});
-  else if((a=t.closest(".promom .pcard"))) ga("promo_click",{place:"popup",promo:(seed.promo||{}).link||""});
+  else if((a=t.closest(".promom .phead,.promom .pmart"))) ga("promo_click",{place:"popup",promo:(seed.promo||{}).link||""});
+  else if((a=t.closest(".promom .pmc"))) ga("promo_click",{place:"popup_item",item_name:(a.querySelector(".pmn")||{}).textContent||""});
   else if((a=t.closest(".kv"))&&a.querySelector(".part")) ga("promo_click",{place:"banner",promo:(seed.promo||{}).link||""});
   else if((a=t.closest(".tcard"))){ var sec=a.closest(".wxsec")?"weather":a.closest(".drel")?"detail_related":a.closest("#gold")?"goldbox":a.closest("#babyhd,.hdl")?"babyhot":"deals"; ga("deal_click",{section:sec, item_name:(a.querySelector(".tn")||{}).textContent||""}); }
   else if((a=t.closest("[data-reopen]"))) ga("reopen_alert",{item_id:a.getAttribute("data-reopen")});
@@ -824,10 +825,16 @@ function promoOn(){ var P=seed.promo; if(!P||!P.on) return null; if(P.until&&new
 function promoPopup(){
   var P=promoOn(); if(!P||state.tab!=="home"||document.querySelector(".promom")) return;
   try{ if(sessionStorage.getItem("dakku-promo")) return; var td=new Date().toISOString().slice(0,10); if(localStorage.getItem("dakku-promo-hide")===td) return; sessionStorage.setItem("dakku-promo","1"); }catch(e){ return; }
+  var S=seed.seasonDeals||{}, L=[], seen={}; (P.items||[]).forEach(function(k){ (S[k]||[]).forEach(function(x){ var n=(x.name||"").slice(0,16); if(safeUrl(x.u)&&safeUrl(x.img)&&!seen[n]){ seen[n]=1; L.push(x); } }); }); L=L.slice(0,10);
+  function card(x){ return '<a class="pmc" '+ext(safeUrl(x.u))+'><span class="pmt"><b>'+esc(x.price||"")+'</b>'+(x.rocket?'<i>로켓배송</i>':'')+'</span><span class="pmn">'+esc(x.name||"")+'</span><img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></a>'; }
+  var half=Math.ceil(L.length/2), r1=L.slice(0,half), r2=L.slice(half);
+  function row(a,cls){ return a.length?'<div class="pmrow '+cls+'"><div class="pmtrack">'+a.map(card).join("")+a.map(card).join("")+'</div></div>':''; }
   var w=document.createElement("div"); w.className="modal promom"; w.setAttribute("role","dialog"); w.setAttribute("aria-modal","true"); w.setAttribute("aria-label","광고");
-  w.innerHTML='<div class="psheet"><a class="pcard" '+ext(P.u)+' style="background:'+esc(P.bg||"#f4e7d0")+'"><span class="ptx"><i>'+esc(P.k||"광고")+'</i><small>'+esc(P.small||"")+'</small><b>'+P.t+'</b><span class="pbtn">'+esc(P.b)+' ›</span></span><img src="'+esc(P.art)+'" alt=""></a><div class="pfoot"><button data-p="hide">오늘 그만보기</button><button data-p="x">닫기</button></div></div>';
+  w.innerHTML='<div class="psheet2"><span class="pad">광고</span><a class="phead" '+ext(P.u)+'><small>'+esc(P.small||"")+'</small><b>'+esc((P.t||"").replace(/<[^>]+>/g,""))+'</b><em>'+esc(P.t2||P.b||"")+' ›</em></a>'+
+    (L.length>=4?row(r1,"r1")+row(r2,"r2"):'<a class="pmart" '+ext(P.u)+'><img src="'+esc(P.art)+'" alt=""></a>')+
+    '<div class="pfoot"><button data-p="hide">오늘 그만보기</button><button data-p="x">닫기</button></div></div>';
   function close(){ w.classList.add("out"); setTimeout(function(){ w.remove(); },250); }
-  w.addEventListener("click",function(e){ if(e.target===w) return close(); var b=e.target.closest("[data-p]"); if(b){ if(b.dataset.p==="hide"){ try{ localStorage.setItem("dakku-promo-hide",new Date().toISOString().slice(0,10)); }catch(er){} } close(); } else if(e.target.closest(".pcard")) setTimeout(close,300); });
+  w.addEventListener("click",function(e){ if(e.target===w) return close(); var b=e.target.closest("[data-p]"); if(b){ if(b.dataset.p==="hide"){ try{ localStorage.setItem("dakku-promo-hide",new Date().toISOString().slice(0,10)); }catch(er){} } close(); } else if(e.target.closest("a")) setTimeout(close,300); });
   document.body.appendChild(w);
 }
 window.afterIntro=function(){ promoPopup(); };

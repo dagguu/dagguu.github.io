@@ -236,3 +236,25 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 /* 로켓배송 스티커(쿠팡 API isRocket, 사진 왼쪽 위) — 쿠팡 로켓 로고·디자인은 쓰지 않고 글자만 */
 .tim .rks{position:absolute;left:8px;top:8px;z-index:1;background:rgba(255,255,255,.95);color:#1f6fe5;font-size:11px;font-weight:800;padding:3px 7px;border-radius:6px;border:1px solid #d6e4ff;pointer-events:none;line-height:1.3}
 .tim em~.rks{top:42px}
+
+/* 광고 팝업 v2 (키즈노트 참고: 진한 남색 카드 + 가운데 큰 제목 + 흘러가는 상품 카드 2줄) */
+.promom{align-items:flex-end;padding:0 12px calc(12px + env(safe-area-inset-bottom))}
+.promom .psheet2{position:relative;width:100%;max-width:calc(var(--frame) - 24px);background:#0c1a6b;border-radius:22px;overflow:hidden;animation:pup .3s ease;color:#fff}
+.promom .pad{position:absolute;right:14px;top:12px;font-size:10.5px;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.35);border-radius:4px;padding:0 5px}
+.promom .phead{display:flex;flex-direction:column;align-items:center;text-align:center;padding:26px 16px 16px;color:#fff;text-decoration:none}
+.promom .phead small{font-size:14px;opacity:.9}
+.promom .phead b{margin-top:8px;font-size:30px;font-weight:900;letter-spacing:-.03em;line-height:1.2}
+.promom .phead em{margin-top:4px;font-style:normal;font-size:28px;font-weight:900;color:#ffe14d;letter-spacing:-.03em}
+.promom .pmrow{overflow:hidden;padding:5px 0}
+.promom .pmtrack{display:flex;gap:10px;width:max-content;animation:pmscroll 38s linear infinite}
+.promom .pmrow.r2 .pmtrack{animation-direction:reverse;animation-duration:44s}
+@keyframes pmscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.promom .pmc{position:relative;display:block;width:210px;height:82px;background:#fff;border-radius:12px;padding:10px 72px 10px 12px;color:#222;text-decoration:none;flex:0 0 auto;box-sizing:border-box}
+.promom .pmt{display:flex;align-items:center;gap:6px}.promom .pmt b{color:#1f6fe5;font-size:15px;font-weight:800}
+.promom .pmt i{font-style:normal;font-size:10px;color:#1f6fe5;background:#eef4ff;border-radius:4px;padding:1px 5px}
+.promom .pmn{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:4px;font-size:12.5px;line-height:1.35;color:#444}
+.promom .pmc img{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;object-fit:cover;background:#f2f2f4}
+.promom .pmart img{display:block;width:100%;height:150px;object-fit:cover;object-position:bottom}
+.promom .psheet2 .pfoot{display:flex;justify-content:space-between;padding:14px 20px 16px}
+.promom .psheet2 .pfoot button{border:0;background:none;color:rgba(255,255,255,.85);font-size:14.5px;cursor:pointer;padding:4px 0}
+@media (prefers-reduced-motion:reduce){.promom .pmtrack{animation:none}}
