@@ -162,6 +162,9 @@ for it in items:
     if cat == "stay": rows.append(("지역", " · ".join(x for x in (it.get("region"), sg) if x)))
     if it.get("benefit"): rows.append(("제공 내역", it["benefit"]))
     if it.get("worth"): rows.append(("금액", f"{it['worth']} 상당"))
+    if cat == "stay" and isinstance(it.get("fee"), dict):
+        for k, lab in (("p", "인원 추가"), ("b", "바베큐"), ("f", "불멍"), ("w", "온수·수영장"), ("j", "자쿠지·스파"), ("d", "반려동물")):
+            if it["fee"].get(k): rows.append((lab, it["fee"][k] + " (모집 글 기준, 예약 때 숙소에 확인)"))
     if it.get("end"): rows.append(("모집 마감", f"{mmdd(it['end'])} ({it['end']})"))
     if ch: rows.append(("활동 매체", " · ".join(ch)))
     if it.get("source"): rows.append(("신청 사이트", it["source"]))
@@ -172,7 +175,7 @@ for it in items:
     body += "<dl>" + "".join(f"<dt>{e(a)}</dt><dd>{e(b)}</dd>" for a, b in rows if b) + "</dl>"
     body += '<div class="btns">'
     if op and apply_: body += f'<a class="btn pri" href="{e(apply_)}" target="_blank" rel="nofollow noopener">{e(it.get("source") or "신청 사이트")}에서 신청하기</a>'
-    if view: body += f'<a class="btn sec" href="{e(view)}" target="_blank" rel="sponsored nofollow noopener">{"숙소" if cat=="stay" else "상품"} 가격보기 (광고)</a>'
+    if view: body += f'<a class="btn sec" href="{e(view)}" target="_blank" rel="sponsored nofollow noopener">{"숙소 사진 보기" if cat=="stay" else "상품 가격 보기"} (광고)</a>'
     body += f'<a class="btn ghost" href="/#/item?id={e(iid)}">다꾸 앱에서 찜하고 마감 알림 받기</a></div>'
     sim = [x for x in open_items if x["id"] != iid and (x.get("cat") or "stay") == cat and (cat != "stay" or (sg and sigun(x) == sg) or x.get("region") == it.get("region"))]
     if len(sim) < 6: sim += [x for x in open_items if x["id"] != iid and (x.get("cat") or "stay") == cat and x not in sim]
