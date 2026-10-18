@@ -227,7 +227,7 @@ function adOk(it){ var p=payOf(it); return p.indexOf("payback")<0 && p.indexOf("
 function priceUrl(it){ return adOk(it)?safeUrl(it.infUrl||it.viewUrl):""; }
 function priceLink(it,big){ var u=priceUrl(it); if(!u) return ''; var c=catOf(it)==="stay";
   return big?'<a class="b pbig" '+ext(u)+'>'+(c?'숙소 가격보기':'상품 가격보기')+' <span class="via">'+(c?'쿠팡트래블':'쿠팡')+' ↗</span></a>'
-            :'<a class="pricel" '+ext(u)+'>'+(c?'숙소 가격보기':'상품 가격보기')+'<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>'; }
+            :'<a class="pricel" '+ext(u)+'>'+(c?'숙소 가격보기':'상품 가격보기')+'<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>'; }
 function applyBtn(it,cls){ var s=statusOf(it), a=safeUrl(it.applyUrl); if(s.key==="closed") return '<span class="b dis'+(cls?' '+cls:'')+'">마감</span>'; return a?'<a class="b pri'+(cls?' '+cls:'')+'" href="'+esc(a)+'" target="_blank" rel="noopener noreferrer" data-apply="'+esc(it.id)+'">신청하기</a>':''; }
 function worthLine(it){ return it.worth?'<p class="worth">💰 '+esc(it.worth)+' 상당</p>':''; }
 /* 경쟁률: item.ap=[지원자, 모집인원] (각 체험단 사이트에서 직접 읽음, data.json apAt 기준 시각) */

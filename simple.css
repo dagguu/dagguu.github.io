@@ -118,3 +118,8 @@ article.card,article.mini,article.hc{cursor:pointer}
 .act3 .pricel,.hact .pricel{justify-content:flex-start;margin-top:8px}
 .hact{align-items:flex-start}
 .pricel svg{flex-shrink:0;color:#5b3fd6}
+/* 가격보기: 위 글줄에 붙여서 (2026-10-18) */
+.pricel{margin:3px 0 0;gap:2px;font-size:13px;line-height:1.4}
+.act3 .pricel,.hact .pricel{margin-top:3px}
+.act3{padding-top:0}
+.pricel svg{width:14px;height:14px}
