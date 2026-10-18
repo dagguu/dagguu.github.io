@@ -550,7 +550,7 @@ function itemView(){
     '<dt>모집 사이트</dt><dd>'+esc(src)+'</dd>'+
     (it.region?'<dt>지역</dt><dd>'+esc(it.region)+'</dd>':'')+'</dl>';
   return '<div class="pg dpg">'+
-    '<div class="dimg">'+(img?'<img src="'+esc(img)+'" alt="'+esc(it.name)+'" referrerpolicy="no-referrer" onerror="this.remove()">':'')+'</div>'+
+    '<div class="dthimg">'+(img?'<img src="'+esc(img)+'" alt="'+esc(it.name)+'" referrerpolicy="no-referrer" onerror="this.remove()">':'')+'</div>'+
     '<div class="dhd">'+chBadges(it)+'<h1>'+esc(it.name)+'</h1>'+'<div class="dico"><button class="shb" data-ishare="'+esc(it.id)+'" aria-label="공유하기">'+ico(I.send)+'</button><button class="fv'+(isFav(it.id)?" on":"")+'" data-fav="'+esc(it.id)+'" aria-label="찜하기" aria-pressed="'+isFav(it.id)+'">'+ico(I.heart)+'</button></div></div>'+
     rows+
     (stay&&mapQ?'<a class="b sec wide dmap" href="https://map.naver.com/p/search/'+encodeURIComponent(mapQ)+'" target="_blank" rel="noopener noreferrer">📍 위치 보기 (네이버지도)</a>':'')+
