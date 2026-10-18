@@ -193,6 +193,7 @@ function render(){
   var v=document.getElementById("view");
   if(state.loading){ v.innerHTML='<div class="empty">불러오는 중…</div>'; return; }
   if(window.introDone){ window.introDone(); window.introDone=null; }
+  if(!window.introOn) setTimeout(promoPopup,600);
   if(state.tab==="home") v.innerHTML=homeView();
   else if(state.tab==="list"){ v.innerHTML=listView(); renderListGrid(); }
   else if(state.tab==="fav") v.innerHTML=favView();
@@ -783,8 +784,21 @@ function kakaoSlide(){
   return '<a class="kkb" href="'+esc(kakaoUrl())+'" target="_blank" rel="noopener noreferrer"><span class="rx"><small>💬 다꾸 카카오톡 채널</small><b>카카오톡 채널 친구추가 하면<br>체험단 소식 알림받기!</b><span class="kbtn">친구추가하기 ›</span></span><span class="kbub"><svg viewBox="0 0 64 60" aria-hidden="true"><path d="M32 6C16.5 6 4 15.8 4 28c0 7.8 5.1 14.6 12.8 18.6L14 56l11-6.6c2.2.4 4.6.6 7 .6 15.5 0 28-9.8 28-22S47.5 6 32 6Z" fill="#3c1e1e"/><text x="32" y="33" text-anchor="middle" font-size="13" font-weight="900" fill="#fee500" font-family="Pretendard Variable,Pretendard,sans-serif">TALK</text></svg><em>🔔</em></span></a>';
 }
 var SPARK='<svg class="spk" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0Z" fill="currentColor"/></svg>';
+/* 광고 프로모션(2026-10-18 시온님 요청 "이번 주말 어디가지?" → 쿠팡트래블 입장권 특가): data.json promo + links[promo.link].u(쿠팡 API 수익 링크). 1 인트로(index.html) → 2 아래 팝업(promoPopup) → 3 홈 배너 첫 장(heroSlides) */
+function promoOn(){ var P=seed.promo; if(!P||!P.on) return null; if(P.until&&new Date().toISOString().slice(0,10)>P.until) return null; var L=(seed.links||{})[P.link]||{}, u=safeUrl(L.u); if(!u) return null; var o={}; for(var k in P) o[k]=P[k]; o.u=u; return o; }
+function promoPopup(){
+  var P=promoOn(); if(!P||state.tab!=="home"||document.querySelector(".promom")) return;
+  try{ if(sessionStorage.getItem("dakku-promo")) return; var td=new Date().toISOString().slice(0,10); if(localStorage.getItem("dakku-promo-hide")===td) return; sessionStorage.setItem("dakku-promo","1"); }catch(e){ return; }
+  var w=document.createElement("div"); w.className="modal promom"; w.setAttribute("role","dialog"); w.setAttribute("aria-modal","true"); w.setAttribute("aria-label","광고");
+  w.innerHTML='<div class="psheet"><a class="pcard" '+ext(P.u)+' style="background:'+esc(P.bg||"#f4e7d0")+'"><span class="ptx"><i>'+esc(P.k||"광고")+'</i><small>'+esc(P.small||"")+'</small><b>'+P.t+'</b><span class="pbtn">'+esc(P.b)+' ›</span></span><img src="'+esc(P.art)+'" alt=""></a><div class="pfoot"><button data-p="hide">오늘 그만보기</button><button data-p="x">닫기</button></div></div>';
+  function close(){ w.classList.add("out"); setTimeout(function(){ w.remove(); },250); }
+  w.addEventListener("click",function(e){ if(e.target===w) return close(); var b=e.target.closest("[data-p]"); if(b){ if(b.dataset.p==="hide"){ try{ localStorage.setItem("dakku-promo-hide",new Date().toISOString().slice(0,10)); }catch(er){} } close(); } else if(e.target.closest(".pcard")) setTimeout(close,300); });
+  document.body.appendChild(w);
+}
+window.afterIntro=function(){ promoPopup(); };
 function heroSlides(){
   var s=[], ig=safeUrl((seed.sns||{}).instagram), oc=safeUrl(seed.openchat);
+  var P=promoOn(); if(P) s.push({bg:P.bg||"#f4e7d0",dark:1,k:P.k,t:P.t,d:P.d,b:P.b,h:P.u,x:1,art:P.art});
   var M=mrtList();
   if(M.length){ var top=M.slice().sort(function(a,b){ return b.rate-a.rate; }); s.push({bg:"#111",t:"<span>최저가</span> 특가 보러가기!",d:"국내·해외 숙소 특가를<br>매일 아침 모아 드려요",b:"특가 보러가기",h:"#/event",imgs:top.slice(0,2).map(function(x){ return x.img; }),rate:top[0].rate}); }
   s.push({bg:"linear-gradient(120deg,#ffe94d,#fee500)",dark:1,t:"카카오톡 친구추가하고<br><span>NEW 체험단</span> 소식받아보세요!",d:"",b:"친구추가하기",h:kakaoUrl(),x:1,e:["💬","🔔","💛"]});
@@ -799,7 +813,7 @@ function heroSlides(){
 function heroSlide(o){
   var href=o.jump?'href="#/deals" data-jump="'+esc(o.jump)+'"':(o.x?ext(o.h):'href="'+esc(o.h)+'"');
   var cd=o.cd?'<span class="hcd">⏳ <em '+(o.cd==="mid"?'data-mid>'+clock(msToMidnight()):'data-hd>'+clock(nextSeven()))+'</em> 남음</span>':'';
-  var art=(o.imgs&&o.imgs.length)?'<span class="hart dimg" aria-hidden="true">'+o.imgs.slice(0,2).map(function(u,i){ return '<img class="di'+(i+1)+'" src="'+esc(u)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">'; }).join("")+(o.rate?'<em class="drate">최대<b>'+esc(o.rate)+'%</b></em>':'')+'</span>'
+  var art=o.art?'<span class="hart part" aria-hidden="true"><img src="'+esc(o.art)+'" alt=""></span>':(o.imgs&&o.imgs.length)?'<span class="hart dimg" aria-hidden="true">'+o.imgs.slice(0,2).map(function(u,i){ return '<img class="di'+(i+1)+'" src="'+esc(u)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">'; }).join("")+(o.rate?'<em class="drate">최대<b>'+esc(o.rate)+'%</b></em>':'')+'</span>'
     :'<span class="hart" aria-hidden="true"><span class="he1">'+o.e[0]+'</span><span class="he2">'+o.e[1]+'</span><span class="he3">'+o.e[2]+'</span>'+SPARK.replace('class="spk"','class="spk s1"')+SPARK.replace('class="spk"','class="spk s2"')+SPARK.replace('class="spk"','class="spk s3"')+'</span>';
   return '<a class="kv'+(o.dark?' dark':'')+(o.imgs?' dkv':'')+'" style="background:'+o.bg+'" '+href+'><span class="htx">'+(o.k?'<i class="hk">'+o.k+'</i>':'')+'<b>'+o.t+'</b>'+(o.d?'<small>'+o.d+'</small>':'')+cd+'<span class="hbtn">'+esc(o.b)+' ›</span></span>'+art+'</a>';
 }

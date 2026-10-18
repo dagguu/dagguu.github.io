@@ -179,12 +179,37 @@ body:has(.dbar) .kchat{bottom:calc(var(--tab) + 84px + env(safe-area-inset-botto
 .totop span{font-size:9.5px;font-weight:800;letter-spacing:.02em}
 body:has(.dbar) .totop{bottom:calc(var(--tab) + 132px + env(safe-area-inset-bottom))}
 
-/* 인트로 화면 */
-#intro{position:fixed;inset:0;z-index:1000;background:#fff;display:flex;align-items:center;justify-content:center;transition:opacity .35s ease}
+/* 인트로 = 광고 화면 */
+#intro{position:fixed;inset:0;z-index:1000;background:#f4e7d0;display:flex;justify-content:center;transition:opacity .35s ease}
 #intro[hidden]{display:none}
 #intro.out{opacity:0;pointer-events:none}
-#intro .inbox{display:flex;flex-direction:column;align-items:center;gap:10px;animation:inpop .6s ease both}
-#intro img{width:88px;height:88px;border-radius:22px;box-shadow:0 8px 24px rgba(91,63,214,.25)}
-#intro b{margin-top:8px;font-size:24px;font-weight:800;color:#222;letter-spacing:-.02em}
-#intro span{font-size:14px;color:#888}
+#intro .inad{position:relative;width:100%;max-width:520px;height:100%;display:flex;flex-direction:column;overflow:hidden}
+#intro .intop{display:flex;align-items:center;gap:8px;padding:calc(18px + env(safe-area-inset-top)) 20px 0}
+#intro .intop img{border-radius:8px}#intro .intop b{font-size:15px;font-weight:800;color:#2b2b2b}
+#intro .intop em{margin-left:auto;font-style:normal;font-size:11px;color:#7a6a50;border:1px solid #cdbb9a;border-radius:4px;padding:1px 6px}
+#intro .intx{padding:9vh 24px 0;text-align:center;animation:inpop .6s ease both}
+#intro .intx small{display:inline-block;font-size:14px;font-weight:700;color:#fff;background:#4f7a4d;border-radius:999px;padding:5px 12px}
+#intro .intx h1{margin:16px 0 10px;font-size:46px;line-height:1.12;font-weight:900;letter-spacing:-.04em;color:#23452c}
+#intro .intx h1 span{color:#d0582f}
+#intro .intx p{margin:0;font-size:15px;color:#6b5a3e}
+#intro .inart{position:absolute;left:0;right:0;bottom:0;width:100%;height:52%;object-fit:cover;object-position:bottom}
 @keyframes inpop{from{opacity:0;transform:translateY(10px) scale(.96)}to{opacity:1;transform:none}}
+
+/* 광고 팝업(아래에서 올라옴) */
+.promom{position:fixed;inset:0;z-index:900;background:rgba(0,0,0,.45);display:flex;align-items:flex-end;justify-content:center;animation:pfade .25s ease}
+.promom.out{opacity:0;transition:opacity .25s}
+.promom .psheet{width:100%;max-width:var(--frame);background:#fff;border-radius:20px 20px 0 0;overflow:hidden;animation:pup .3s ease;padding-bottom:env(safe-area-inset-bottom)}
+.promom .pcard{position:relative;display:block;height:300px;text-decoration:none;overflow:hidden}
+.promom .pcard img{position:absolute;left:0;right:0;bottom:0;width:100%;height:62%;object-fit:cover;object-position:bottom}
+.promom .ptx{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:22px 22px 0}
+.promom .ptx i{font-style:normal;font-size:11px;color:#7a6a50}
+.promom .ptx small{font-size:15px;font-weight:700;color:#3b3b3b}
+.promom .ptx b{font-size:30px;line-height:1.2;font-weight:900;color:#23452c;letter-spacing:-.03em}
+.promom .ptx b span{color:#d0582f}
+.promom .pbtn{margin-top:6px;background:#fff;color:#222;font-size:14px;font-weight:700;border-radius:999px;padding:9px 16px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.promom .pfoot{display:flex;justify-content:space-between;padding:14px 22px}
+.promom .pfoot button{border:0;background:none;font-size:15px;color:#333;padding:6px 0;cursor:pointer}
+@keyframes pup{from{transform:translateY(100%)}to{transform:none}}
+@keyframes pfade{from{opacity:0}to{opacity:1}}
+/* 배너용 그림 */
+.kv .hart.part{overflow:hidden}.kv .hart.part img{position:absolute;right:0;bottom:0;width:100%;height:100%;object-fit:cover;object-position:bottom}
