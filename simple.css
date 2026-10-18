@@ -333,3 +333,4 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .trchips a{flex:none;padding:7px 13px;border-radius:999px;border:1px solid #e3e0ef;font-size:13px;color:#333;text-decoration:none;background:#fff}
 .trchips a.on{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:700}
 .trlist .grid{padding:0 16px}
+.kv.ftkv .hart{width:40%}
