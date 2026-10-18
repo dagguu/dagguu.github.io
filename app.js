@@ -555,7 +555,7 @@ function itemView(){
     rows+
     (stay&&mapQ?'<a class="b sec wide dmap" href="https://map.naver.com/p/search/'+encodeURIComponent(mapQ)+'" target="_blank" rel="noopener noreferrer">📍 위치 보기 (네이버지도)</a>':'')+
     '<div class="dapply">'+applyBtn(it,"wide")+'<p class="dnote">신청은 '+esc(src)+'에서 진행돼요. 리뷰 조건·체험 가능일을 꼭 확인해 주세요.</p></div>'+
-    (priceUrl(it)?'<div class="dprice">'+priceLink(it,true)+'<p class="dnote">이 링크는 쿠팡 파트너스 활동의 일환으로, 구매·예약 시 다꾸가 일정액의 수수료를 제공받을 수 있어요.</p></div>':'')+
+    (priceUrl(it)?'<div class="dprice">'+priceLink(it,true)+'</div>':'')+
     '<a class="morebig" href="#/list">다른 체험단도 둘러보기 ›</a>'+recoSection("이런 체험단은 어때요?")+'</div>';
 }
 function favView(){
