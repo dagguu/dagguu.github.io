@@ -199,17 +199,17 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 /* 광고 팝업(아래에서 올라옴) */
 .promom{position:fixed;inset:0;z-index:900;background:rgba(0,0,0,.45);display:flex;align-items:flex-end;justify-content:center;animation:pfade .25s ease}
 .promom.out{opacity:0;transition:opacity .25s}
-.promom .psheet{width:100%;max-width:var(--frame);background:#fff;border-radius:20px 20px 0 0;overflow:hidden;animation:pup .3s ease;padding-bottom:env(safe-area-inset-bottom)}
-.promom .pcard{position:relative;display:block;height:300px;text-decoration:none;overflow:hidden}
-.promom .pcard img{position:absolute;left:0;right:0;bottom:0;width:100%;height:62%;object-fit:cover;object-position:bottom}
-.promom .ptx{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:22px 22px 0}
-.promom .ptx i{font-style:normal;font-size:11px;color:#7a6a50}
-.promom .ptx small{font-size:15px;font-weight:700;color:#3b3b3b}
-.promom .ptx b{font-size:30px;line-height:1.2;font-weight:900;color:#23452c;letter-spacing:-.03em}
-.promom .ptx b span{color:#d0582f}
-.promom .pbtn{margin-top:6px;background:#fff;color:#222;font-size:14px;font-weight:700;border-radius:999px;padding:9px 16px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-.promom .pfoot{display:flex;justify-content:space-between;padding:14px 22px}
-.promom .pfoot button{border:0;background:none;font-size:15px;color:#333;padding:6px 0;cursor:pointer}
+:is(.promom,.pmband) .psheet{width:100%;max-width:var(--frame);background:#fff;border-radius:20px 20px 0 0;overflow:hidden;animation:pup .3s ease;padding-bottom:env(safe-area-inset-bottom)}
+:is(.promom,.pmband) .pcard{position:relative;display:block;height:300px;text-decoration:none;overflow:hidden}
+:is(.promom,.pmband) .pcard img{position:absolute;left:0;right:0;bottom:0;width:100%;height:62%;object-fit:cover;object-position:bottom}
+:is(.promom,.pmband) .ptx{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:22px 22px 0}
+:is(.promom,.pmband) .ptx i{font-style:normal;font-size:11px;color:#7a6a50}
+:is(.promom,.pmband) .ptx small{font-size:15px;font-weight:700;color:#3b3b3b}
+:is(.promom,.pmband) .ptx b{font-size:30px;line-height:1.2;font-weight:900;color:#23452c;letter-spacing:-.03em}
+:is(.promom,.pmband) .ptx b span{color:#d0582f}
+:is(.promom,.pmband) .pbtn{margin-top:6px;background:#fff;color:#222;font-size:14px;font-weight:700;border-radius:999px;padding:9px 16px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+:is(.promom,.pmband) .pfoot{display:flex;justify-content:space-between;padding:14px 22px}
+:is(.promom,.pmband) .pfoot button{border:0;background:none;font-size:15px;color:#333;padding:6px 0;cursor:pointer}
 @keyframes pup{from{transform:translateY(100%)}to{transform:none}}
 @keyframes pfade{from{opacity:0}to{opacity:1}}
 /* 배너용 그림 */
@@ -243,24 +243,24 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 /* 광고 팝업 v2 (키즈노트 참고: 진한 남색 카드 + 가운데 큰 제목 + 흘러가는 상품 카드 2줄) */
 .promom{align-items:flex-end;padding:0 12px calc(12px + env(safe-area-inset-bottom))}
 .promom .psheet2{position:relative;width:100%;max-width:calc(var(--frame) - 24px);background:#0c1a6b;border-radius:22px;overflow:hidden;animation:pup .3s ease;color:#fff}
-.promom .pad{position:absolute;right:14px;top:12px;font-size:10.5px;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.35);border-radius:4px;padding:0 5px}
-.promom .phead{display:flex;flex-direction:column;align-items:center;text-align:center;padding:26px 16px 16px;color:#fff;text-decoration:none}
-.promom .phead small{font-size:14px;opacity:.9}
-.promom .phead b{margin-top:8px;font-size:30px;font-weight:900;letter-spacing:-.03em;line-height:1.2}
-.promom .phead em{margin-top:4px;font-style:normal;font-size:28px;font-weight:900;color:#ffe14d;letter-spacing:-.03em}
-.promom .pmrow{overflow:hidden;padding:5px 0}
-.promom .pmtrack{display:flex;gap:10px;width:max-content;animation:pmscroll 38s linear infinite}
-.promom .pmrow.r2 .pmtrack{animation-direction:reverse;animation-duration:44s}
+:is(.promom,.pmband) .pad{position:absolute;right:14px;top:12px;font-size:10.5px;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.35);border-radius:4px;padding:0 5px}
+:is(.promom,.pmband) .phead{display:flex;flex-direction:column;align-items:center;text-align:center;padding:26px 16px 16px;color:#fff;text-decoration:none}
+:is(.promom,.pmband) .phead small{font-size:14px;opacity:.9}
+:is(.promom,.pmband) .phead b{margin-top:8px;font-size:30px;font-weight:900;letter-spacing:-.03em;line-height:1.2}
+:is(.promom,.pmband) .phead em{margin-top:4px;font-style:normal;font-size:28px;font-weight:900;color:#ffe14d;letter-spacing:-.03em}
+:is(.promom,.pmband) .pmrow{overflow:hidden;padding:5px 0}
+:is(.promom,.pmband) .pmtrack{display:flex;gap:10px;width:max-content;animation:pmscroll 38s linear infinite}
+:is(.promom,.pmband) .pmrow.r2 .pmtrack{animation-direction:reverse;animation-duration:44s}
 @keyframes pmscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.promom .pmc{position:relative;display:block;width:210px;height:82px;background:#fff;border-radius:12px;padding:10px 72px 10px 12px;color:#222;text-decoration:none;flex:0 0 auto;box-sizing:border-box}
-.promom .pmt{display:flex;align-items:center;gap:6px}.promom .pmt b{color:#1f6fe5;font-size:15px;font-weight:800}
-.promom .pmt i{font-style:normal;font-size:10px;color:#1f6fe5;background:#eef4ff;border-radius:4px;padding:1px 5px}
-.promom .pmn{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:4px;font-size:12.5px;line-height:1.35;color:#444}
-.promom .pmc img{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;object-fit:cover;background:#f2f2f4}
+:is(.promom,.pmband) .pmc{position:relative;display:block;width:210px;height:82px;background:#fff;border-radius:12px;padding:10px 72px 10px 12px;color:#222;text-decoration:none;flex:0 0 auto;box-sizing:border-box}
+:is(.promom,.pmband) .pmt{display:flex;align-items:center;gap:6px}:is(.promom,.pmband) .pmt b{color:#1f6fe5;font-size:15px;font-weight:800}
+:is(.promom,.pmband) .pmt i{font-style:normal;font-size:10px;color:#1f6fe5;background:#eef4ff;border-radius:4px;padding:1px 5px}
+:is(.promom,.pmband) .pmn{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:4px;font-size:12.5px;line-height:1.35;color:#444}
+:is(.promom,.pmband) .pmc img{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;object-fit:cover;background:#f2f2f4}
 .promom .pmart img{display:block;width:100%;height:150px;object-fit:cover;object-position:bottom}
 .promom .psheet2 .pfoot{display:flex;justify-content:space-between;padding:14px 20px 16px}
 .promom .psheet2 .pfoot button{border:0;background:none;color:rgba(255,255,255,.85);font-size:14.5px;cursor:pointer;padding:4px 0}
-@media (prefers-reduced-motion:reduce){.promom .pmtrack{animation:none}}
+@media (prefers-reduced-motion:reduce){:is(.promom,.pmband) .pmtrack{animation:none}}
 
 /* 하단 탭 '체험단' 강조 (2026-10-18 시온님 요청) */
 .tabbar a.tc,.tabbar a.tc.on{color:var(--acc);font-weight:800}
@@ -287,3 +287,10 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .feebox dt{font-size:12.5px;color:#666;white-space:nowrap}
 .feebox dd{margin:0;font-size:13px;line-height:1.5;color:#222}
 .feebox small{display:block;margin-top:8px;font-size:11px;color:#999}
+
+.pmband{position:relative;margin:22px 16px 6px;background:#0c1a6b;border-radius:20px;overflow:hidden;color:#fff}
+.pmband .phead{padding:22px 16px 12px}
+.pmband .phead small{font-size:13px}
+.pmband .phead b{font-size:24px;margin-top:6px}
+.pmband .phead em{font-size:21px}
+.pmband .pmgap{height:12px}

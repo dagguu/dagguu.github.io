@@ -181,6 +181,8 @@ document.addEventListener("click",function(e){
   else if((a=t.closest(".dbar .dbl"))) ga("coupang_click",{place:"detail",item_id:state.itemId});
   else if((a=t.closest(".promom .phead,.promom .pmart"))) ga("promo_click",{place:"popup",promo:(seed.promo||{}).link||""});
   else if((a=t.closest(".promom .pmc"))) ga("promo_click",{place:"popup_item",item_name:(a.querySelector(".pmn")||{}).textContent||""});
+  else if((a=t.closest(".pmband .phead"))) ga("promo_click",{place:"mid_banner",promo:(seed.promo||{}).link||""});
+  else if((a=t.closest(".pmband .pmc"))) ga("promo_click",{place:"mid_banner_item",item_name:(a.querySelector(".pmn")||{}).textContent||""});
   else if((a=t.closest(".kv"))&&a.querySelector(".part")) ga("promo_click",{place:"banner",promo:(seed.promo||{}).link||""});
   else if((a=t.closest(".tcard"))){ var sec=a.closest(".wxsec")?"weather":a.closest(".drel")?"detail_related":a.closest("#gold")?"goldbox":a.closest("#babyhd,.hdl")?"babyhot":"deals"; ga("deal_click",{section:sec, item_name:(a.querySelector(".tn")||{}).textContent||""}); }
   else if((a=t.closest("[data-reopen]"))) ga("reopen_alert",{item_id:a.getAttribute("data-reopen")});
@@ -368,6 +370,7 @@ function homeView(){
   h+=hrow('✨ <em>새로 올라온</em> 체험단','#/list?cat=all&s=open',fresh);
   var picks=open.filter(isPick).sort(byDeadline);
   h+=hrow('💜 지금 <em>인기 있는</em> 체험단','#/list?cat=all&s=pick',picks);
+  h+=promoBand();
   var soon=open.filter(function(it){ return daysLeft(it)<=3; }).sort(function(a,b){ return daysLeft(a)-daysLeft(b); });
   h+=hrow('⏰ <em>곧 마감!</em> 지금 신청하세요','#/list?cat=all&s=closing',soon);
   var baby=open.filter(function(it){ return catOf(it)==="baby"; }).sort(function(a,b){ return (b.createdAt||0)-(a.createdAt||0); });
@@ -848,16 +851,22 @@ var SPARK='<svg class="spk" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 
 /* 광고 프로모션(2026-10-18 시온님 요청 "이번 주말 어디가지?" → 쿠팡트래블 입장권 특가): data.json promo + links[promo.link].u(쿠팡 API 수익 링크). 1 인트로(index.html) → 2 아래 팝업(promoPopup) → 3 홈 배너 첫 장(heroSlides) */
 function promoOn(){ var P=seed.promo; if(!P||!P.on) return null; if(P.until&&new Date().toISOString().slice(0,10)>P.until) return null; var L=(seed.links||{})[P.link]||{}, u=safeUrl(L.u); if(!u) return null; var o={}; for(var k in P) o[k]=P[k]; o.u=u; return o; }
 var PM_NAMED=/아쿠아|롯데월드|에버랜드|스카이|플라넷|리움|워터파크|동물원|박물관|미술관|테마파크|랜드|월드|타워|케이블카|레일바이크|스파|온천/; // 입장권 이름에 장소가 들어간 것만(옵션명만 있는 '입장권 1인권' 같은 건 뺌)
+function promoList(P){ var S=seed.seasonDeals||{}, L=[], seen={}; (P.items||[]).forEach(function(k){ (S[k]||[]).forEach(function(x){ var nm=x.name||"", n=nm.slice(0,16); if(safeUrl(x.u)&&safeUrl(x.img)&&!seen[n]&&PM_NAMED.test(nm)&&!/^\s*[A-Z]\d|^\[/.test(nm)){ seen[n]=1; L.push(x); } }); }); return L.slice(0,10); }
+function promoRows(L){
+  function card(x){ return '<a class="pmc" '+ext(safeUrl(x.u))+'><span class="pmt"><b>'+esc(x.price||"")+'</b>'+(x.rocket?'<i>로켓배송</i>':'')+'</span><span class="pmn">'+esc(x.name||"")+'</span><img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></a>'; }
+  var half=Math.ceil(L.length/2);
+  function row(a,cls){ return a.length?'<div class="pmrow '+cls+'"><div class="pmtrack">'+a.map(card).join("")+a.map(card).join("")+'</div></div>':''; }
+  return row(L.slice(0,half),"r1")+row(L.slice(half),"r2"); }
+/* 홈 중간 배너(2026-10-19 시온님 요청 "팝업이랑 비슷한 디자인"): 같은 promo·상품, 상품 4개 미만이면 안 보임 */
+function promoBand(){ var P=promoOn(); if(!P) return ""; var L=promoList(P); if(L.length<4) return "";
+  return '<section class="pmband" aria-label="광고"><span class="pad">광고</span><a class="phead" '+ext(P.u)+'><small>'+esc(P.small||"")+'</small><b>'+esc((P.t||"").replace(/<[^>]+>/g,""))+'</b><em>'+esc(P.t2||P.b||"")+' ›</em></a>'+promoRows(L)+'<div class="pmgap"></div></section>'; }
 function promoPopup(){
   var P=promoOn(); if(!P||state.tab!=="home"||document.querySelector(".promom")) return;
   try{ if(sessionStorage.getItem("dakku-promo")) return; var td=new Date().toISOString().slice(0,10); if(localStorage.getItem("dakku-promo-hide")===td) return; sessionStorage.setItem("dakku-promo","1"); }catch(e){ return; }
-  var S=seed.seasonDeals||{}, L=[], seen={}; (P.items||[]).forEach(function(k){ (S[k]||[]).forEach(function(x){ var nm=x.name||"", n=nm.slice(0,16); if(safeUrl(x.u)&&safeUrl(x.img)&&!seen[n]&&PM_NAMED.test(nm)&&!/^\s*[A-Z]\d|^\[/.test(nm)){ seen[n]=1; L.push(x); } }); }); L=L.slice(0,10);
-  function card(x){ return '<a class="pmc" '+ext(safeUrl(x.u))+'><span class="pmt"><b>'+esc(x.price||"")+'</b>'+(x.rocket?'<i>로켓배송</i>':'')+'</span><span class="pmn">'+esc(x.name||"")+'</span><img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></a>'; }
-  var half=Math.ceil(L.length/2), r1=L.slice(0,half), r2=L.slice(half);
-  function row(a,cls){ return a.length?'<div class="pmrow '+cls+'"><div class="pmtrack">'+a.map(card).join("")+a.map(card).join("")+'</div></div>':''; }
+  var L=promoList(P);
   var w=document.createElement("div"); w.className="modal promom"; w.setAttribute("role","dialog"); w.setAttribute("aria-modal","true"); w.setAttribute("aria-label","광고");
   w.innerHTML='<div class="psheet2"><span class="pad">광고</span><a class="phead" '+ext(P.u)+'><small>'+esc(P.small||"")+'</small><b>'+esc((P.t||"").replace(/<[^>]+>/g,""))+'</b><em>'+esc(P.t2||P.b||"")+' ›</em></a>'+
-    (L.length>=4?row(r1,"r1")+row(r2,"r2"):'<a class="pmart" '+ext(P.u)+'><img src="'+esc(P.art)+'" alt=""></a>')+
+    (L.length>=4?promoRows(L):'<a class="pmart" '+ext(P.u)+'><img src="'+esc(P.art)+'" alt=""></a>')+
     '<div class="pfoot"><button data-p="hide">오늘 그만보기</button><button data-p="x">닫기</button></div></div>';
   function close(){ w.classList.add("out"); setTimeout(function(){ w.remove(); },250); }
   w.addEventListener("click",function(e){ if(e.target===w) return close(); var b=e.target.closest("[data-p]"); if(b){ if(b.dataset.p==="hide"){ try{ localStorage.setItem("dakku-promo-hide",new Date().toISOString().slice(0,10)); }catch(er){} } close(); } else if(e.target.closest("a")) setTimeout(close,300); });
