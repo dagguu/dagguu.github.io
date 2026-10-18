@@ -223,7 +223,7 @@ function thumb(it,cls){
 }
 /* 상세 페이지·가격보기 (2026-10-18 시온님 요청): 사진·이름은 사이트 상세 페이지로, 쿠팡은 "가격보기 ↗ 광고" 작은 링크로만. 페이백·구매평 체험단은 쿠팡 링크 없음(파트너스 운영정책 2.2 회색지대). */
 function itemHref(it){ return '#/item?id='+encodeURIComponent(it.id); }
-function adOk(it){ var p=payOf(it); return p.indexOf("payback")<0 && p.indexOf("review")<0; }
+function adOk(it){ return true; } /* 페이백·구매평도 쿠팡 링크 표시(2026-10-18 시온님 결정, 제재 오면 다시 막기) */
 function priceUrl(it){ return adOk(it)?safeUrl(it.infUrl||it.viewUrl):""; }
 function priceLink(it,big){ var u=priceUrl(it); if(!u) return ''; var c=catOf(it)==="stay";
   return big?'<a class="b pbig" '+ext(u)+'>'+(c?'숙소 가격보기':'상품 가격보기')+' <span class="via">'+(c?'쿠팡트래블':'쿠팡')+' ↗</span></a>'
