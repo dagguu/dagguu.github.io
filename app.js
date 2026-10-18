@@ -587,8 +587,8 @@ function relDeals(it){
   var L=hit.concat(rest).slice(0,4); if(L.length<2) return "";
   return '<section class="sec tossec drel"><div class="sh"><h2>함께 보면 좋은 특가 <span class="adtag">광고</span></h2></div><div class="tgrid">'+L.map(tossCard).join("")+'</div></section>';
 }
-/* AI 요약(2026-10-18 시온님 요청): item.sum 이 있을 때만. 모집 정보(이름·제공 내역·조건)만 보고 Claude 가 쓴 1~2문장, 없는 사실은 쓰지 않음 */
-function aiSum(it){ var t=(it.sum||"").trim(); if(!t) return ""; return '<div class="aisum"><span class="aisl">✦ AI 요약</span><p>'+esc(t)+'</p><small>모집 정보를 바탕으로 AI가 정리했어요. 정확한 조건은 모집 페이지에서 확인해 주세요.</small></div>'; }
+/* AI 요약(2026-10-18 시온님 요청): item.sum 이 있을 때만. 숙소·제품 자체 소개(쇼핑으로도 사고 싶게), 원문에 있는 사실만 */
+function aiSum(it){ var t=(it.sum||"").trim(); if(!t) return ""; return '<div class="aisum"><span class="aisl">✦ AI 요약</span><p>'+esc(t)+'</p><small>숙소·제품 소개 자료를 바탕으로 AI가 정리했어요. 정확한 정보는 판매 페이지에서 확인해 주세요.</small></div>'; }
 function favView(){
   var list=seed.items.filter(function(it){ return isFav(it.id); }).sort(function(a,b){ var sa=statusOf(a).key==="closed", sb=statusOf(b).key==="closed"; if(sa!==sb) return sa?1:-1; return daysLeft(a)-daysLeft(b); });
   var soon=list.filter(function(it){ return statusOf(it).key==="open" && daysLeft(it)<=3; }).length;
