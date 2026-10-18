@@ -146,7 +146,7 @@ body:has(.dbar) .kchat{bottom:calc(var(--tab) + 128px + env(safe-area-inset-bott
 .drel{margin-top:22px}
 
 /* 오늘 마감 스티커(사진 위) */
-.th .cdst{position:absolute;left:8px;top:8px;z-index:1;display:inline-flex;align-items:center;gap:5px;background:#e5484d;color:#fff;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px;pointer-events:none;font-variant-numeric:tabular-nums;line-height:1.2}
+.th .cdst{position:absolute;left:8px;top:8px;z-index:1;display:inline-flex;align-items:center;gap:5px;background:#111;color:#fff;font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px;pointer-events:none;font-variant-numeric:tabular-nums;line-height:1.2}
 .th .cdst em{font-style:normal}
 .th .cdst b{font-weight:800;padding-left:5px;border-left:1px solid rgba(255,255,255,.45)}
 .grid.v3 .th .cdst,.hc .th .cdst{left:5px;top:5px;font-size:10.5px;padding:3px 6px;gap:4px}
