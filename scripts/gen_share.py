@@ -225,7 +225,12 @@ for slug, h1, how, f in CHHUB:
     chhubs.append((h1.replace(" 모음", ""), p, len(L)))
 for k, L in REG.items():
     L = sort_open(L); p = rslug(k)
-    hub(p, f"{k} 숙박 체험단 모음", f"{k} 호텔·펜션·풀빌라 숙박 체험단 중 지금 모집 중인 곳을 마감 빠른 순으로 모았어요.", L,
+    # 검색어에 맞게 그 지역에 실제 있는 숙소 유형을 제목에 (2026-10-18: 가평키즈풀빌라 1.4만·가평펜션 3.3만 등)
+    _txt = " ".join((it.get("name", "") + " " + it.get("benefit", "")) for it in L)
+    _ty = [t for t in ["키즈풀빌라", "키즈펜션", "애견동반펜션", "풀빌라", "독채펜션", "펜션", "글램핑", "카라반", "한옥", "호텔", "리조트"] if t.replace("애견동반", "애견") in _txt or t in _txt]
+    _ty = _ty[:3]
+    _tt = "·".join(_ty) if _ty else "숙박"
+    hub(p, f"{k} {_tt} 체험단 모음", f"{k} {_tt} 숙박 체험단 중 지금 모집 중인 곳을 마감 빠른 순으로 모았어요.", L,
         [("홈", "/"), ("숙박 체험단", "/c/stay.html"), (f"{k} 숙박 체험단", None)])
     hubs.append((f"{k} 숙박 체험단", p, len(L)))
 bc, bld = crumbs([("홈", "/"), ("모아보기", None)])
