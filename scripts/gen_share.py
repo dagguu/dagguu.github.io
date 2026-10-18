@@ -26,7 +26,7 @@ CATF = {"stay": "stay", "baby": "baby", "beauty": "beauty", "life": "life", "ele
 CHN = {"blog": "블로그", "clip": "클립", "insta": "인스타그램", "reels": "릴스", "youtube": "유튜브", "tiktok": "틱톡"}
 BAD_SIGUN = {"중구", "동구", "서구", "남구", "북구", "부산진구"}
 
-GA = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-NK2TCS1QHH"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NK2TCS1QHH");</script>'  # 구글 애널리틱스(2026-10-18)
+GA = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-NK2TCS1QHH"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NK2TCS1QHH");</script><script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","yzkdp7btul");</script>'  # 구글 애널리틱스(2026-10-18)
 def has_pay(it, w): return w in (it.get("pay") or []) or {"payback": "페이백", "review": "구매평"}[w] in str(it.get("benefit") or "")
 def reset(name):
     p = os.path.join(ROOT, name)

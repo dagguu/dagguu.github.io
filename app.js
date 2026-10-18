@@ -1582,7 +1582,7 @@ function privacyView(){
   '<h2>4. 처리 위탁과 국외 이전</h2><ul><li>회원 정보 저장: Supabase Inc.(데이터베이스·로그인 서비스). 저장 위치는 서비스 설정 지역에 따라요.</li><li>로그인: 주식회사 카카오(카카오 로그인)</li></ul>'+
   '<h2>5. 제3자 제공</h2><p>회원 정보를 다른 곳에 제공하지 않아요. 체험단 신청은 각 모집처 사이트에서 회원이 직접 해요.</p>'+
   '<h2>6. 회원의 권리</h2><p>언제든 내 정보를 보고, 고치고, 알림 동의를 끄고, 탈퇴할 수 있어요. 마이 다꾸에서 직접 하거나 아래 연락처로 요청해 주세요.</p>'+
-  '<h2>7. 쿠키와 브라우저 저장소, 이용 분석</h2><p>로그인 유지와 찜·최근 본 기록을 위해 브라우저 저장소를 써요. 서비스 개선을 위해 Google LLC의 Google 애널리틱스로 방문 화면·버튼 이용 같은 이용 기록을 개인을 알아볼 수 없는 형태로 분석해요(쿠키 사용, 국외 이전: 미국 등 Google 서버). 브라우저 설정에서 쿠키를 지우거나 막을 수 있고, <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google 애널리틱스 차단 부가기능</a>으로 거부할 수 있어요.</p>'+
+  '<h2>7. 쿠키와 브라우저 저장소, 이용 분석</h2><p>로그인 유지와 찜·최근 본 기록을 위해 브라우저 저장소를 써요. 서비스 개선을 위해 Google LLC의 Google 애널리틱스와 Microsoft Corporation의 Microsoft Clarity로 방문 화면·버튼 이용·스크롤 같은 이용 기록을 개인을 알아볼 수 없는 형태로 분석해요(쿠키 사용, 국외 이전: 미국 등 Google·Microsoft 서버). 브라우저 설정에서 쿠키를 지우거나 막을 수 있고, <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google 애널리틱스 차단 부가기능</a>으로 거부할 수 있어요.</p>'+
   '<h2>8. 개인정보 보호책임자</h2><p>'+owner+(mail?' · '+mail:'')+' · 카카오톡 채널 ‘다꾸체험단’</p>'+
   '<p class="pdate">시행일: '+day+'</p></div>';
 }
