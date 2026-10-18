@@ -106,19 +106,20 @@ def main():
     if "season" in sys.argv[1:] or len(sys.argv) == 1:  # 날씨·계절 추천(2026-10-18): 이번 달에 쓸 검색어만 공식 검색 API 로
         import urllib.parse
         m = datetime.now(KST).month
-        kws = ["제습기", "장우산", "우산", "랜턴", "입장권", "아쿠아리움 입장권", "롯데월드 입장권", "에버랜드 이용권"]  # 전국 비·장마·소나기·태풍 대비(날씨 문구는 전국적일 때만)
+        kws = ["제습기", "장우산", "랜턴", "아쿠아리움 입장권", "롯데월드 입장권", "에버랜드 이용권"]  # 검색 API 는 시간당 호출 수가 적어 한 번에 10개 이하로  # 전국 비·장마·소나기·태풍 대비(날씨 문구는 전국적일 때만)
         kws += {12: ["숙취해소제", "핫팩", "전기요"], 1: ["핫팩", "전기요", "온수매트"], 2: ["핫팩", "전기요"], 3: ["황사마스크", "침구청소기"],
                 4: ["침구청소기", "선크림"], 5: ["선풍기", "모기퇴치기"], 6: ["선풍기", "쿨매트", "모기퇴치기"], 7: ["선풍기", "쿨매트", "모기퇴치기"],
                 8: ["선풍기", "쿨매트", "모기퇴치기"], 9: ["침구청소기", "전기요"], 10: ["겨울이불", "침구청소기", "전기요"], 11: ["겨울이불", "전기요", "온수매트", "핫팩"]}.get(m, [])
-        sd = {}
+        sd = dict(d.get("seasonDeals") or {})  # 실패한 검색어는 예전 결과 유지
+        kws = kws[:10]; got = 0
         for q in kws:
             try:
                 r = call("GET", BASE + "/products/search", "keyword=" + urllib.parse.quote(q) + "&limit=10&subId=dagguu") or {}
                 sd[q] = [{"name": i.get("productName"), "price": won(i.get("productPrice")), "img": i.get("productImage"), "u": i.get("productUrl"),
-                          "rocket": bool(i.get("isRocket"))} for i in (r.get("productData") or []) if i.get("productUrl")][:8]
+                          "rocket": bool(i.get("isRocket"))} for i in (r.get("productData") or []) if i.get("productUrl")][:8]; got += 1
             except Exception as e:
                 print("계절 추천 검색 실패:", q, e); break
-        if sd:
+        if got:
             d["seasonDeals"] = sd; d["seasonAt"] = datetime.now(KST).strftime("%Y-%m-%d"); changed = True
             print("계절 추천", {k: len(v) for k, v in sd.items()})
 

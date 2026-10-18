@@ -1051,7 +1051,7 @@ var WX_TH=[ // 전국적인 날씨일 때만(2026-10-18 시온님 요청). w: 8�
   {k:"typhoon", ok:function(w,m){ return w.windCities>=3&&w.maxRain>=20; }, ic:"🌀", t:"태풍 영향권", d:"비바람 대비 랜턴·제습기", kw:["랜턴","제습기"]},
   {k:"monsoon", ok:function(w,m,md){ return md>="06-20"&&md<="07-31"&&w.rainCities>=5; }, ic:"☔", t:"장마철", d:"눅눅한 집엔 제습기", kw:["제습기","장우산"]},
   {k:"rain", ok:function(w){ return w.rainCities>=5; }, ic:"☔", t:"전국에 비 소식", d:"장우산·제습기 챙기세요", kw:["장우산","제습기"]},
-  {k:"shower", ok:function(w,m){ return m>=6&&m<=9&&w.rainCities>=4&&w.maxRain<10; }, ic:"🌦️", t:"곳곳에 소나기", d:"가방 속 우산 하나", kw:["우산"]}];
+  {k:"shower", ok:function(w,m){ return m>=6&&m<=9&&w.rainCities>=4&&w.maxRain<10; }, ic:"🌦️", t:"곳곳에 소나기", d:"가방 속 우산 하나", kw:["장우산"]}];
 var SEASON_TH={1:["한겨울 따뜻하게","핫팩","온수매트"],2:["끝까지 따뜻하게","핫팩","전기요"],3:["황사·미세먼지 대비","황사마스크","공기청정기"],4:["봄맞이 침구 관리","침구청소기","공기청정기"],5:["여름 미리 준비","선풍기","모기퇴치기"],6:["장마 대비","제습기","선풍기"],7:["한여름 필수","선풍기","쿨매트"],8:["늦여름 모기 조심","모기퇴치기","선풍기"],9:["환절기 침구 관리","침구청소기","전기요"],10:["겨울이불 꺼낼 때","겨울이불","침구청소기"],11:["겨울 준비","겨울이불","전기요"],12:["연말 모임 시즌","숙취해소제","핫팩"]};
 function wxThemes(){
   var S=seed.seasonDeals||{}, w=seed.weather, kst=new Date(Date.now()+9*36e5), today=kst.toISOString().slice(0,10), m=kst.getUTCMonth()+1, md=today.slice(5);
