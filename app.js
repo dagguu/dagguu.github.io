@@ -538,7 +538,7 @@ function topRows(list){
   if(state.status!=="open"||state.q.trim()) return "";
   var td=ymd(today()), close=list.filter(function(it){ return it.end===td; }), fresh=list.filter(function(it){ return isNewToday(it)&&it.end!==td; });
   var h="";
-  if(close.length) h+='<section class="hsec trow"><div class="hsh"><h2>🚨 <em>⏰ 오늘 마감</em>이에요 <small class="tcnt">'+close.length+'</small></h2><span class="hmore" data-cdl>'+clock(msToMidnight())+' 남음</span></div><div class="hs">'+close.slice(0,15).map(hcard).join("")+'</div></section>';
+  if(close.length) h+='<section class="hsec trow"><div class="hsh"><h2>🚨 <em>오늘 마감</em>이에요 <small class="tcnt">'+close.length+'</small></h2><span class="hmore" data-cdl>'+clock(msToMidnight())+' 남음</span></div><div class="hs">'+close.slice(0,15).map(hcard).join("")+'</div></section>';
   if(fresh.length) h+='<section class="hsec trow"><div class="hsh"><h2>✨ <em>오늘 오픈</em>했어요 <small class="tcnt">'+fresh.length+'</small></h2></div><div class="hs">'+fresh.slice(0,15).map(hcard).join("")+'</div></section>';
   if(state.sort!=="comp"){ var easy=list.filter(function(it){ return apRatio(it)<=1.5 && !isNewToday(it) && it.end!==td; }).sort(function(a,b){ return apRatio(a)-apRatio(b) || valOf(b)-valOf(a); });
     if(easy.length) h+='<section class="hsec trow"><div class="hsh"><h2>🙌 <em>경쟁률 낮은</em> 곳 <small class="tcnt">'+easy.length+'</small></h2><button class="hmore" data-sortcomp>모두 보기</button></div><div class="hs">'+easy.slice(0,15).map(hcard).join("")+'</div>'+apNote()+'</section>'; }
