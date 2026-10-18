@@ -563,7 +563,7 @@ function itemView(){
 }
 /* 마감 체험단: 재모집 알림 (찜 + 알림 켜기 → send_push.js 찜 오픈 알림이 같은 숙소·제품 재모집을 알려줌), 2026-10-18 시온님 요청 */
 function reopenOn(it){ return isFav(it.id)&&(!pushOk()||pushOn()); }
-function reopenBtn(it){ return reopenOn(it)?'<button class="b dbp dbon" data-reopen="'+esc(it.id)+'">🔔 재모집 알림 받는 중</button>':'<button class="b pri dbp" data-reopen="'+esc(it.id)+'">🔔 재모집 시 알림받기</button>'; }
+function reopenBtn(it){ return reopenOn(it)?'<button class="b dbp dbon" data-reopen="'+esc(it.id)+'">🔔 재모집 알림 받는 중</button>':'<button class="b pri dbp" data-reopen="'+esc(it.id)+'">🔔 재모집 알림받기</button>'; }
 document.addEventListener("click",function(e){
   var t=e.target.closest("[data-reopen]"); if(!t) return; e.preventDefault();
   var id=t.getAttribute("data-reopen"), it=seed.items.filter(function(x){ return String(x.id)===id; })[0]; if(!it) return;
