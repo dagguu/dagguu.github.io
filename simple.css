@@ -137,3 +137,9 @@ article.card,article.mini,article.hc{cursor:pointer}
 .dbar .b.dbp{background:#5b3fd6;color:#fff}
 .dbar .b.dis{flex:1;min-height:50px;border-radius:14px}
 body:has(.dbar) .kchat{bottom:calc(var(--tab) + 84px + env(safe-area-inset-bottom))}
+
+.dclosed{margin:14px 0 4px;padding:14px 16px;border-radius:14px;background:#f6f6f8;display:flex;flex-direction:column;gap:4px}
+.dclosed b{font-size:15px;color:#222}.dclosed span{font-size:13px;color:#666;line-height:1.5}
+.dbar button.b.dbp{flex:1 1 0;width:0;min-width:0;margin:0;padding:0 8px;height:50px;border:0;border-radius:14px;font-size:15px;font-weight:700;white-space:nowrap;background:#5b3fd6;color:#fff;cursor:pointer}
+.dbar button.b.dbp.dbon{background:#f0f0f3;color:#5b3fd6}
+.drel{margin-top:22px}

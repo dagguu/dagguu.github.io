@@ -541,7 +541,7 @@ function recoSection(title){
 function itemView(){
   var it=seed.items.filter(function(x){ return String(x.id)===String(state.itemId); })[0];
   if(!it) return '<div class="pg"><div class="empty sm"><b>😢 이 체험단을 찾을 수 없어요</b>모집이 끝나 목록에서 내려갔을 수 있어요.</div><a class="morebig" href="#/list">🎟️ 지금 모집 중인 체험단 보기 ›</a></div>';
-  var s=statusOf(it), img=safeUrl(it.image), stay=catOf(it)==="stay", src=it.source||"체험단 사이트";
+  var s=statusOf(it), img=safeUrl(it.image), stay=catOf(it)==="stay", src=it.source||"체험단 사이트", closed=s.key==="closed";
   var mapQ=(it.name||"").replace(/\s*\(([^)]*)\)\s*$/,function(m,g){ return " "+g; });
   var rows='<dl class="dtl">'+
     '<dt>제공 내역</dt><dd>'+esc(it.benefit||"")+(it.worth?'<br><b>'+esc(it.worth)+' 상당</b>':'')+'</dd>'+
@@ -554,10 +554,33 @@ function itemView(){
     '<div class="dhd">'+chBadges(it)+'<h1>'+esc(it.name)+'</h1>'+'<div class="dico"><button class="shb" data-ishare="'+esc(it.id)+'" aria-label="공유하기">'+ico(I.send)+'</button></div></div>'+
     rows+
     (stay&&mapQ?'<a class="b sec wide dmap" href="https://map.naver.com/p/search/'+encodeURIComponent(mapQ)+'" target="_blank" rel="noopener noreferrer">📍 위치 보기 (네이버지도)</a>':'')+
-    '<p class="dnote">신청은 '+esc(src)+'에서 진행돼요. 리뷰 조건·체험 가능일을 꼭 확인해 주세요.</p>'+
+    (closed?'<div class="dclosed"><b>모집이 끝난 체험단이에요</b><span>같은 '+(stay?'숙소':'제품')+'가 다시 모집하면 알림으로 알려드려요.'+(priceUrl(it)?' 지금 바로 이용하려면 아래 구매하러 가기를 눌러 주세요.':'')+'</span></div>'
+      :'<p class="dnote">신청은 '+esc(src)+'에서 진행돼요. 리뷰 조건·체험 가능일을 꼭 확인해 주세요.</p>')+
     '<div class="dbar"><button class="fv dbfav'+(isFav(it.id)?" on":"")+'" data-fav="'+esc(it.id)+'" aria-label="찜하기" aria-pressed="'+isFav(it.id)+'">'+ico(I.heart)+'</button>'+
-      (priceUrl(it)?'<a class="dbl" '+ext(priceUrl(it))+'>구매하러 가기</a>':'')+applyBtn(it,"dbp")+'</div>'+
+      (priceUrl(it)?'<a class="dbl" '+ext(priceUrl(it))+'>구매하러 가기</a>':'')+(closed?reopenBtn(it):applyBtn(it,"dbp"))+'</div>'+
+    relDeals(it)+
     '<a class="morebig" href="#/list">다른 체험단도 둘러보기 ›</a>'+recoSection("이런 체험단은 어때요?")+'</div>';
+}
+/* 마감 체험단: 재모집 알림 (찜 + 알림 켜기 → send_push.js 찜 오픈 알림이 같은 숙소·제품 재모집을 알려줌), 2026-10-18 시온님 요청 */
+function reopenOn(it){ return isFav(it.id)&&(!pushOk()||pushOn()); }
+function reopenBtn(it){ return reopenOn(it)?'<button class="b dbp dbon" data-reopen="'+esc(it.id)+'">🔔 재모집 알림 받는 중</button>':'<button class="b pri dbp" data-reopen="'+esc(it.id)+'">🔔 재모집 시 알림받기</button>'; }
+document.addEventListener("click",function(e){
+  var t=e.target.closest("[data-reopen]"); if(!t) return; e.preventDefault();
+  var id=t.getAttribute("data-reopen"), it=seed.items.filter(function(x){ return String(x.id)===id; })[0]; if(!it) return;
+  if(reopenOn(it)){ toast("다시 모집하면 알림으로 알려드릴게요 🔔"); return; }
+  if(!isFav(id)) toggleFav(id);
+  if(pushOk()&&!pushOn()){ enablePush(); return; }
+  render(); toast(pushOk()?"다시 모집하면 알림으로 알려드릴게요 🔔":"찜해 뒀어요. 찜 목록에서 다시 모집하는지 확인할 수 있어요");
+});
+/* 상세 페이지 아래 "함께 보면 좋은 특가" (골드박스), 2026-10-18 시온님 요청 */
+var REL_RE={stay:/여행|캐리어|파우치|세면|칫솔|치약|수건|목베개|보조배터리|선크림|선스틱|우산|캠핑|텀블러|슬리퍼|삼각대/,baby:/아기|유아|기저귀|물티슈|분유|이유식|젖병|빨대컵|베이비|키즈/,beauty:/크림|세럼|앰플|토너|선크림|선스틱|샴푸|마스크|클렌징|로션|화장|립|쿠션|바디/,health:/식품|커피|과자|라면|견과|단백질|유산균|비타민|우유|생수|햇반|즉석|만두|김치|오메가|홍삼|차 /,pet:/사료|간식|고양이|강아지|반려|배변|모래|펫/,life:/세제|휴지|화장지|물티슈|청소|주방|수세미|섬유유연제|건전지|수납|타월|탈취/,elec:/충전|이어폰|청소기|가습기|선풍기|전기|블루투스|케이블|모니터|에어|드라이어/};
+function relDeals(it){
+  var c=catOf(it), re=REL_RE[c]||REL_RE[c==="food"?"health":"life"], pool=(c==="baby"?babyDeals():[]).concat(liveGold()), seen={}, hit=[], rest=[];
+  pool.forEach(function(x){ var k=(x.name||"").slice(0,14); if(seen[k]||!safeUrl(x.u)) return; seen[k]=1; (re&&re.test(x.name||"")?hit:rest).push(x); });
+  var h=0; String(it.id).split("").forEach(function(ch){ h=(h*31+ch.charCodeAt(0))%9973; });
+  if(rest.length){ var o=h%rest.length; rest=rest.slice(o).concat(rest.slice(0,o)); }
+  var L=hit.concat(rest).slice(0,4); if(L.length<2) return "";
+  return '<section class="sec tossec drel"><div class="sh"><h2>함께 보면 좋은 특가 <span class="adtag">광고</span></h2></div><div class="tgrid">'+L.map(tossCard).join("")+'</div></section>';
 }
 function favView(){
   var list=seed.items.filter(function(it){ return isFav(it.id); }).sort(function(a,b){ var sa=statusOf(a).key==="closed", sb=statusOf(b).key==="closed"; if(sa!==sb) return sa?1:-1; return daysLeft(a)-daysLeft(b); });
