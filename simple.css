@@ -136,3 +136,4 @@ article.card,article.mini,article.hc{cursor:pointer}
 .dbar .dbl{background:#efeafd;color:#5b3fd6}
 .dbar .b.dbp{background:#5b3fd6;color:#fff}
 .dbar .b.dis{flex:1;min-height:50px;border-radius:14px}
+body:has(.dbar) .kchat{bottom:calc(var(--tab) + 84px + env(safe-area-inset-bottom))}
