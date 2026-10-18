@@ -34,13 +34,13 @@
 <link rel="stylesheet" href="simple.css">
 </head>
 <body>
-<div id="intro" hidden><div class="inad"><div class="intop"><img src="icons/icon-192.png" alt="" width="28" height="28"><b>다꾸체험단</b><em>광고</em></div><div class="intx"><small>가을 나들이 입장권 특가</small><h1>이번 주말<br><span>어디가지?</span></h1><p>쿠팡트래블 입장권 특가를 모아 보여드려요</p></div><img class="inart" src="images/promo-weekend.svg" alt=""></div></div>
-<script>/* 인트로 = 광고 화면(2026-10-18 시온님 요청: 1 인트로 → 2 아래 팝업 → 3 홈 배너). 홈으로 들어올 때 세션당 1번, 최소 1.6초·최대 3초, 누르면 닫힘(누른다고 광고로 이동하지 않음: 쿠팡 오클릭 규정). 공유 링크(상세 등)로 들어오면 안 뜸 */
+<div id="intro" hidden><div class="inad ft"><img class="ftbg" src="images/free-trip.svg" alt=""><div class="intop"><img src="icons/icon-192.png" alt="" width="28" height="28"><b>다꾸체험단</b></div><div class="intx"><small>아직도 몰랐어?</small><h1>이제 <span>공짜여행</span>이<br>시작된다!</h1><p>여행 무료 체험단<br>여행도 다니고 돈도 아끼고!</p><a class="ingo" href="#/trip" id="ingo">지금 바로가기 ›</a><em class="innote">숙박을 제공받고 후기를 남기는 체험단이에요</em></div></div></div>
+<script>/* 인트로(2026-10-19 시온님 요청: "이제 공짜여행이 시작된다!" 기획전 → 지금 바로가기 = 사이트 안 #/trip, 광고 아님). 홈으로 들어올 때 세션당 1번, 최소 1.6초·최대 4.5초, 바깥 누르면 닫힘. 그다음 아래 팝업(입장권 광고) → 홈. 공유 링크(상세 등)로 들어오면 안 뜸 */
 (function(){try{var h=location.hash;if((h&&h!=="#"&&h!=="#/")||sessionStorage.getItem("dakku-intro"))return;sessionStorage.setItem("dakku-intro","1");}catch(e){return;}
 var el=document.getElementById("intro"),t0=Date.now(),done=false;el.hidden=false;window.introOn=true;
 function close(){if(done)return;done=true;el.classList.add("out");setTimeout(function(){el.remove();window.introOn=false;if(window.afterIntro)window.afterIntro();},400);}
 window.introDone=function(){setTimeout(close,Math.max(0,1600-(Date.now()-t0)));};
-el.addEventListener("click",close);setTimeout(close,3000);})();</script>
+el.addEventListener("click",function(e){var g=e.target.closest&&e.target.closest("#ingo");if(g){e.preventDefault();try{if(window.gtag)gtag("event","promo_click",{place:"intro",promo:"freetrip"});}catch(er){}location.hash="#/trip";}close();});setTimeout(close,4500);})();</script>
 <div id="app"></div>
 <footer class="sitebiz" id="sitebiz"><nav class="sitenav" aria-label="체험단 모아보기"><b>체험단 모아보기</b> <a href="/c/stay.html">숙박 체험단</a> <a href="/c/baby.html">육아 체험단</a> <a href="/c/beauty.html">뷰티 체험단</a> <a href="/c/life.html">생활 체험단</a> <a href="/c/elec.html">가전·가구 체험단</a> <a href="/c/food.html">건강식품 체험단</a> <a href="/c/pet.html">반려동물 체험단</a> <a href="/c/blog.html">블로그 체험단</a> <a href="/c/insta.html">인스타 체험단</a> <a href="/c/reels.html">릴스 체험단</a> <a href="/c/review.html">구매평·페이백 체험단</a> <a href="/c/">지역별 숙박 체험단</a> <a href="/g/blog-sponsor.html">블로그 협찬 받는 법</a> <a href="/g/blog-index.html">블로그 지수</a> <a href="/g/blog-income.html">블로그 수익 내는 법</a></nav><p><b>다꾸체험단 (www.dagguu.com) · 운영 플랜비</b><br><span>상호 플랜비</span> <span>대표 김정은</span> <span>사업자등록번호 381-53-01054</span></p></footer>
 <script src="app.js"></script>

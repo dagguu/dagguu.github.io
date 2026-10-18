@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 620" fill="none">
+<defs>
+  <radialGradient id="hrt" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#f3e3ff"/><stop offset=".45" stop-color="#c79bff"/><stop offset="1" stop-color="#8a4ff0"/></radialGradient>
+  <linearGradient id="sc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbf7ff"/><stop offset=".55" stop-color="#d9c8ff"/><stop offset="1" stop-color="#a98af0"/></linearGradient>
+  <linearGradient id="scs" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8f6ae8"/><stop offset="1" stop-color="#b79cf7"/></linearGradient>
+  <radialGradient id="ring" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#ffd8ec"/><stop offset="1" stop-color="#ff8cc6"/></radialGradient>
+  <radialGradient id="ring2" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#d6f0ff"/><stop offset="1" stop-color="#7cc8ff"/></radialGradient>
+  <linearGradient id="tag" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#efe6ff" stop-opacity=".95"/><stop offset="1" stop-color="#b9a0f5" stop-opacity=".9"/></linearGradient>
+  <linearGradient id="key" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5f5fa"/><stop offset=".5" stop-color="#a9a9bd"/><stop offset="1" stop-color="#6d6d85"/></linearGradient>
+  <linearGradient id="tk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff6c9"/><stop offset="1" stop-color="#ffd84a"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="6"/></filter>
+  <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#1a0650" flood-opacity=".45"/></filter>
+</defs>
+<!-- 흐릿한 배경 조각 -->
+<rect x="-30" y="20" width="110" height="70" rx="18" fill="#9fc2ff" opacity=".45" filter="url(#blur)" transform="rotate(-12 25 55)"/>
+<circle cx="350" cy="560" r="40" fill="#c9a9ff" opacity=".35" filter="url(#blur)"/>
+<!-- 하트 (왼쪽 위) -->
+<g filter="url(#sh)" transform="translate(-14 118) rotate(-14 80 70)">
+  <path d="M80 140C40 112 0 84 0 46 0 18 22 0 46 0c16 0 28 8 34 20C86 8 98 0 114 0c24 0 46 18 46 46 0 38-40 66-80 94Z" fill="url(#hrt)"/>
+  <ellipse cx="42" cy="34" rx="20" ry="12" fill="#fff" opacity=".55" transform="rotate(-25 42 34)"/>
+</g>
+<!-- 캐리어 (오른쪽 위) -->
+<g filter="url(#sh)" transform="translate(268 92) rotate(12 60 90)">
+  <rect x="38" y="-20" width="44" height="34" rx="12" fill="none" stroke="#cbb8ff" stroke-width="9"/>
+  <rect x="0" y="8" width="120" height="160" rx="24" fill="url(#sc)"/>
+  <rect x="26" y="8" width="14" height="160" fill="url(#scs)" opacity=".55"/>
+  <rect x="80" y="8" width="14" height="160" fill="url(#scs)" opacity=".55"/>
+  <rect x="10" y="20" width="22" height="70" rx="11" fill="#fff" opacity=".6"/>
+  <circle cx="22" cy="176" r="9" fill="#6b4fc8"/><circle cx="98" cy="176" r="9" fill="#6b4fc8"/>
+</g>
+<!-- 열쇠 + 태그 (왼쪽 아래) -->
+<g filter="url(#sh)" transform="translate(6 400) rotate(-22 70 60)">
+  <rect x="0" y="10" width="120" height="66" rx="16" fill="url(#tag)"/>
+  <circle cx="104" cy="43" r="8" fill="#7d5ce0" opacity=".5"/>
+  <text x="18" y="56" font-family="Pretendard Variable,Pretendard,Apple SD Gothic Neo,sans-serif" font-size="30" font-weight="900" fill="#7d5ce0" opacity=".85">다꾸</text>
+  <circle cx="132" cy="44" r="16" fill="none" stroke="url(#key)" stroke-width="6"/>
+  <path d="M146 54l60 70" stroke="url(#key)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M186 102l14-10M198 116l12-9" stroke="url(#key)" stroke-width="8" stroke-linecap="round"/>
+</g>
+<!-- 튜브 (오른쪽 아래) -->
+<g filter="url(#sh)" transform="translate(262 380)">
+  <circle cx="62" cy="62" r="62" fill="url(#ring)"/>
+  <path d="M62 0a62 62 0 0 1 54 31L88 47a30 30 0 0 0-26-15Z" fill="#fff" opacity=".9"/>
+  <path d="M8 93a62 62 0 0 0 46 31l4-32a30 30 0 0 1-22-15Z" fill="#fff" opacity=".9"/>
+  <circle cx="62" cy="62" r="28" fill="#2a0f74"/>
+  <ellipse cx="38" cy="30" rx="16" ry="8" fill="#fff" opacity=".6" transform="rotate(-30 38 30)"/>
+</g>
+<!-- 티켓 (가운데 아래, 흐릿하게) -->
+<g transform="translate(140 520) rotate(-8 60 30)" opacity=".55" filter="url(#blur)">
+  <rect width="120" height="62" rx="12" fill="url(#tk)"/>
+</g>
+<!-- 반짝이 -->
+<g fill="#fff">
+  <path d="M200 40c1 9 6 14 15 15-9 1-14 6-15 15-1-9-6-14-15-15 9-1 14-6 15-15Z" opacity=".9"/>
+  <path d="M60 330c1 6 4 9 10 10-6 1-9 4-10 10-1-6-4-9-10-10 6-1 9-4 10-10Z" opacity=".7"/>
+  <path d="M330 320c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12Z" opacity=".8"/>
+</g>
+</svg>

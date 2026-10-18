@@ -193,10 +193,11 @@ document.addEventListener("click",function(e){
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
-  if(!/^(home|list|fav|benefit|deals|reporter|contact|item|my|privacy|price|event)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|benefit|deals|reporter|contact|item|my|privacy|price|event|trip)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
   if(tab==="event") state.evAbr=qs.t==="abroad";
+  if(tab==="trip") state.tq=qs.q||"";
   state.focusT=(tab==="deals"&&qs.t)?qs.t:"";
   state.dq=(tab==="deals"&&qs.q)?qs.q:"";
   state.pq=(tab==="price"&&qs.q)?qs.q:"";
@@ -229,6 +230,7 @@ function render(){
   else if(state.tab==="my") v.innerHTML=myView();
   else if(state.tab==="privacy") v.innerHTML=privacyView();
   else if(state.tab==="event") v.innerHTML=eventView();
+  else if(state.tab==="trip") v.innerHTML=tripView();
   else if(state.tab==="price"){ v.innerHTML=priceView(); if(state.pq) priceSearch(state.pq); }
   if(state.tab==="home") initFeed(); else if(HOBS){ HOBS.disconnect(); HOBS=null; }
   if(state.tab==="deals") initMoreDeals(); else if(MDEAL.obs){ MDEAL.obs.disconnect(); MDEAL.obs=null; }
@@ -698,6 +700,26 @@ function yeogiBox(pos){ // 여기어때 마케팅 파트너 링크(시온님이 
   var td=ymd(today()), Y=(seed.yeogi||[]).filter(function(x){ return safeUrl(x.u)&&(!x.until||x.until>=td)&&((x.pos||"top")===(pos||"top")); });
   return Y.map(function(x){ return '<a class="yeo" '+ext(x.u)+'><span><small>여기어때 · 광고</small><b>'+esc(x.t)+'</b>'+(x.d?'<em>'+esc(x.d)+'</em>':'')+'</span><i>'+esc(x.b||"보러가기")+' ›</i></a>'; }).join("");
 }
+/* 공짜여행 기획전(2026-10-19 시온님 요청 "이제 공짜여행이 시작된다!", 인트로 '지금 바로가기'·홈 배너 → #/trip): 모집 중 숙박 체험단 모음. 사이트 안 페이지라 광고 표시 없음 */
+var TRIP_Q=[["","전체"],["풀빌라","풀빌라"],["키즈","키즈"],["애견","애견동반"],["오션뷰","오션뷰"],["글램핑","글램핑"],["한옥","한옥"],["독채","독채"]];
+function tripView(){
+  var all=seed.items.filter(function(it){ return catOf(it)==="stay" && statusOf(it).key==="open"; }), q=state.tq||"";
+  var L=q?all.filter(function(it){ return ((it.name||"")+" "+(it.benefit||"")+" "+(it.sum||"")).indexOf(q)>=0; }):all;
+  var sum=0; all.forEach(function(it){ var v=valOf(it); if(v>0&&v<5e6) sum+=v; });
+  var fresh=all.filter(isNewToday).sort(function(a,b){ return valOf(b)-valOf(a); }), soon=all.filter(function(it){ return daysLeft(it)<=1; }).sort(byDeadline);
+  var h='<div class="trp">'+
+    '<section class="trhero"><img class="trart" src="images/free-trip.svg" alt=""><div class="trtx"><small>아직도 몰랐어?</small><h1>이제 <span>공짜여행</span>이<br>시작된다!</h1><p>여행도 다니고 돈도 아끼고!<br>여행 무료 체험단</p>'+
+      '<div class="trnum"><b>'+all.length+'곳</b> 모집 중'+(sum?' · 제공 금액 <b>'+manW(Math.floor(sum/10000)*10000)+' 이상</b>':'')+'</div></div></section>'+
+    '<section class="trhow"><h2>이렇게 떠나요</h2><ol><li><b>1</b><span><em>마음에 드는 숙소 신청</em>모집 사이트에서 신청해요</span></li><li><b>2</b><span><em>선정되면 예약하고 여행</em>숙박을 무료로 제공받아요</span></li><li><b>3</b><span><em>후기 남기기</em>블로그·SNS에 솔직한 후기를 올려요</span></li></ol>'+
+      '<p class="trnote">체험단은 숙박을 제공받고 후기를 남기는 조건이에요. 인원 추가·바베큐 같은 추가 요금은 상세 페이지에서 확인하세요.</p></section>'+
+    (fresh.length?hrow('✨ 오늘 새로 열린 여행','#/list?cat=stay&s=open',fresh):'')+
+    (soon.length?hrow('⏰ 곧 마감되는 여행','#/list?cat=stay&s=closing',soon):'')+
+    '<section class="hsec trlist"><div class="hsh"><h2>공짜여행 숙소 모두 보기</h2></div>'+
+      '<div class="trchips">'+TRIP_Q.map(function(c){ return '<a href="#/trip'+(c[0]?'?q='+encodeURIComponent(c[0]):'')+'"'+(c[0]===q?' class="on"':'')+'>'+esc(c[1])+'</a>'; }).join("")+'</div>'+
+      (L.length?'<div class="grid v2">'+L.sort(function(a,b){ return valOf(b)-valOf(a) || byDeadline(a,b); }).map(function(it){ return fullCard(it); }).join("")+'</div>':'<div class="empty sm"><b>지금은 '+esc(q)+' 숙소가 없어요</b>새로 올라오면 알려드릴게요.</div>')+
+    '</section><div class="hallw"><a class="b pri wide" href="#/list?cat=stay&s=open">숙박 체험단 전체 목록 보기 ›</a></div></div>';
+  return h;
+}
 function eventView(){
   var all=mrtList(), info=seed.mrtInfo||{}, abr=!!state.evAbr;
   var L=all.filter(function(x){ return abr?!x.dom:x.dom; }).sort(function(a,b){ return b.rate-a.rate; });
@@ -875,6 +897,7 @@ function promoPopup(){
 window.afterIntro=function(){ promoPopup(); };
 function heroSlides(){
   var s=[], ig=safeUrl((seed.sns||{}).instagram), oc=safeUrl(seed.openchat);
+  s.push({bg:"radial-gradient(120% 90% at 50% 20%,#5b2fd6 0%,#3a1aa8 45%,#1d0b5c 100%)",t:"이제 <span>공짜여행</span>이 시작된다!",d:"아직도 몰랐어? 여행 무료 체험단<br>여행도 다니고 돈도 아끼고!",b:"지금 바로가기",h:"#/trip",art:"images/free-trip.svg",ft:1});
   var P=promoOn(); if(P) s.push({bg:P.bg||"#f4e7d0",dark:1,k:P.k,t:P.t,d:P.d,b:P.b,h:P.u,x:1,art:P.art});
   var M=mrtList();
   if(M.length){ var top=M.slice().sort(function(a,b){ return b.rate-a.rate; }); s.push({bg:"#111",t:"<span>최저가</span> 특가 보러가기!",d:"국내·해외 숙소 특가를<br>매일 아침 모아 드려요",b:"특가 보러가기",h:"#/event",imgs:top.slice(0,2).map(function(x){ return x.img; }),rate:top[0].rate}); }
@@ -892,7 +915,7 @@ function heroSlide(o){
   var cd=o.cd?'<span class="hcd">⏳ <em '+(o.cd==="mid"?'data-mid>'+clock(msToMidnight()):'data-hd>'+clock(nextSeven()))+'</em> 남음</span>':'';
   var art=o.art?'<span class="hart part" aria-hidden="true"><img src="'+esc(o.art)+'" alt=""></span>':(o.imgs&&o.imgs.length)?'<span class="hart dimg" aria-hidden="true">'+o.imgs.slice(0,2).map(function(u,i){ return '<img class="di'+(i+1)+'" src="'+esc(u)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">'; }).join("")+(o.rate?'<em class="drate">최대<b>'+esc(o.rate)+'%</b></em>':'')+'</span>'
     :'<span class="hart" aria-hidden="true"><span class="he1">'+o.e[0]+'</span><span class="he2">'+o.e[1]+'</span><span class="he3">'+o.e[2]+'</span>'+SPARK.replace('class="spk"','class="spk s1"')+SPARK.replace('class="spk"','class="spk s2"')+SPARK.replace('class="spk"','class="spk s3"')+'</span>';
-  return '<a class="kv'+(o.dark?' dark':'')+(o.imgs?' dkv':'')+'" style="background:'+o.bg+'" '+href+'><span class="htx">'+(o.k?'<i class="hk">'+o.k+'</i>':'')+'<b>'+o.t+'</b>'+(o.d?'<small>'+o.d+'</small>':'')+cd+'<span class="hbtn">'+esc(o.b)+' ›</span></span>'+art+'</a>';
+  return '<a class="kv'+(o.dark?' dark':'')+(o.imgs?' dkv':'')+(o.ft?' ftkv':'')+'" style="background:'+o.bg+'" '+href+'><span class="htx">'+(o.k?'<i class="hk">'+o.k+'</i>':'')+'<b>'+o.t+'</b>'+(o.d?'<small>'+o.d+'</small>':'')+cd+'<span class="hbtn">'+esc(o.b)+' ›</span></span>'+art+'</a>';
 }
 function maxRate(a){ var m=0; a.forEach(function(x){ var r=parseInt(String(x.rate||"").replace(/\D/g,""),10); if(r>m) m=r; }); return m||""; }
 function liveGold(){ return (Array.isArray(seed.goldbox)?seed.goldbox:[]).filter(function(x){ return safeUrl(x.u) && !(x.endAt && Date.parse(x.endAt)<=Date.now()); }); }
