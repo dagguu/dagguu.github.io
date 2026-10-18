@@ -52,7 +52,7 @@ var LOGO_EVENTS=[
   {m1:2,d1:14,m2:2,d2:14,bg:"#8b4513",fg:"#ffffff",deco:"heart",name:"발렌타인데이 🍫"},
   {m1:3,d1:14,m2:3,d2:14,bg:"#ffffff",fg:"#e8508a",deco:"heart",name:"화이트데이 🍬"},
   {m1:5,d1:5,m2:5,d2:5,bg:"#ffd84d",fg:"#1d4ed8",deco:"balloon",name:"어린이날 🎈"},
-  {m1:10,d1:25,m2:10,d2:31,bg:"#ff7a1a",fg:"#1a1a1a",deco:"pumpkin",name:"Happy Halloween 🎃"},
+  {m1:10,d1:18,m2:10,d2:31,bg:"#6a3fc8",fg:"#ffffff",deco:"jack",name:"Happy Halloween 🎃"},
   {m1:11,d1:11,m2:11,d2:11,bg:"#7b4a2a",fg:"#f5d7a1",deco:"stick",name:"빼빼로데이 🍫"},
   {m1:12,d1:18,m2:12,d2:25,bg:"#c62828",fg:"#ffffff",deco:"snow",name:"Merry Christmas 🎄"}
 ];
@@ -70,6 +70,7 @@ var DECO={
   heart:function(c){ return '<path fill="'+c+'" d="M82 30C76 26 72 22 72 18C72 15 74.5 13 77 13C79 13 80.8 14.2 82 16C83.2 14.2 85 13 87 13C89.5 13 92 15 92 18C92 22 88 26 82 30Z"/>'; },
   balloon:function(c){ return '<ellipse cx="84" cy="17" rx="7" ry="8.5" fill="#ef4444"/><path d="M84 25.5C83 29 86 31 84 35" stroke="'+c+'" stroke-width="1.4" fill="none" stroke-linecap="round"/>'; },
   pumpkin:function(){ return '<path d="M47 22C47 16 50 12 55 11" stroke="#2f6b2f" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M55 13C60 10 65 12 66 16C61 17 57 16 55 13Z" fill="#3f8f3f"/>'; },
+  jack:function(){ return '<g transform="translate(80 22)"><path d="M0 -12C0 -16 2 -18 5 -19" stroke="#2f6b2f" stroke-width="3.2" fill="none" stroke-linecap="round"/><ellipse cx="-6" cy="0" rx="8" ry="11" fill="#ff7a1a"/><ellipse cx="6" cy="0" rx="8" ry="11" fill="#ff7a1a"/><ellipse cx="0" cy="0" rx="8" ry="12" fill="#ff8f2e"/><path d="M-7 -3L-3 -3L-5 -7Z M3 -3L7 -3L5 -7Z" fill="#2a1600"/><path d="M-7 3Q0 9 7 3L4 5L2 3L0 5L-2 3L-4 5Z" fill="#2a1600"/></g>'; },
   stick:function(){ return '<rect x="80" y="8" width="5" height="40" rx="2.5" fill="#e8c38a" transform="rotate(18 82 28)"/><rect x="80" y="8" width="5" height="24" rx="2.5" fill="#4a2615" transform="rotate(18 82 28)"/>'; },
   snow:function(){ return '<path fill="#ffffff" d="M24 25C24 17 33 13 41 15C47 9 58 10 62 16C70 15 78 19 78 26C70 28 34 29 24 25Z"/><circle cx="20" cy="84" r="2.6" fill="#ffffff" opacity=".9"/><circle cx="88" cy="82" r="2" fill="#ffffff" opacity=".85"/><circle cx="86" cy="14" r="2.4" fill="#ffffff" opacity=".9"/>'; }
 };
