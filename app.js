@@ -208,7 +208,7 @@ function render(){
   else if(state.tab==="price"){ v.innerHTML=priceView(); if(state.pq) priceSearch(state.pq); }
   if(state.tab==="home") initFeed(); else if(HOBS){ HOBS.disconnect(); HOBS=null; }
   if(state.tab==="deals") initMoreDeals(); else if(MDEAL.obs){ MDEAL.obs.disconnect(); MDEAL.obs=null; }
-  tick(); startSliders(); plainHeads(v); guideFill();
+  tick(); startSliders(); plainHeads(v); guideFill(); if(state.tab==="item") dcdInit();
 }
 /* 모던&심플(2026-10-17): 섹션 제목 앞 이모지 빼기 */
 function plainHeads(v){ [].forEach.call(v.querySelectorAll("h1,h2"),function(h){ var n=h.firstChild; if(n&&n.nodeType===3) n.nodeValue=n.nodeValue.replace(/^[\s\u2600-\u27BF\uFE0F\u200D]*(?:[\uD83C-\uD83E][\uDC00-\uDFFF][\uFE0F\u200D]*)*\s*/,""); }); }
@@ -551,6 +551,19 @@ function recoSection(title){
 }
 
 /* ---------- 찜 ---------- */
+/* 상세 페이지 남은 시간·말풍선(2026-10-18 시온님 요청, 체험단 앱 참고): 사진 위 "N일 HH:MM:SS 남음" → 스크롤해 사진이 지나가면 아래 버튼 줄 위로 옮겨 붙음(dcdfix). 매체 말풍선은 3초 뒤 사라짐, 공유 버튼 "친구에게도 공유하기"는 계속. 모집 기간 점 깜박임 */
+function dcdMs(end){ var d=parseDate(end); return d?(d.getTime()+864e5-Date.now()):0; }
+function dcdText(end){ var ms=Math.max(0,dcdMs(end)), dd=Math.floor(ms/864e5); return (dd>0?dd+"일 ":"")+clock(ms-dd*864e5); }
+var CHTIP={blog:"네이버 블로그",clip:"네이버 클립",insta:"인스타그램 피드",reels:"인스타그램 릴스",youtube:"유튜브",tiktok:"틱톡",cafe:"맘카페"};
+function chTip(it){ var c=chOf(it).filter(function(x){ return CHTIP[x]; }).map(function(x){ return CHTIP[x]; }), P=payOf(it);
+  if(c.length) return c.slice(0,3).join("·")+"에 작성해야 하는 체험단이에요."+(P.indexOf("review")>=0?" 구매평도 남겨요.":"");
+  if(P.indexOf("review")>=0) return "구매평을 남기는 체험단이에요."; return ""; }
+function dcdInit(){
+  var t=document.getElementById("chtip"); if(t) setTimeout(function(){ t.classList.add("hide"); },3200);
+  var a=document.getElementById("dcd"), f=document.getElementById("dcdfix"); if(!a||!f||!("IntersectionObserver" in window)) return;
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ f.classList.toggle("on",!e.isIntersecting && e.boundingClientRect.top<0); }); },{threshold:0});
+  io.observe(a); window._dcdIO&&window._dcdIO.disconnect(); window._dcdIO=io;
+}
 function itemView(){
   var it=seed.items.filter(function(x){ return String(x.id)===String(state.itemId); })[0];
   if(!it) return '<div class="pg"><div class="empty sm"><b>😢 이 체험단을 찾을 수 없어요</b>모집이 끝나 목록에서 내려갔을 수 있어요.</div><a class="morebig" href="#/list">🎟️ 지금 모집 중인 체험단 보기 ›</a></div>';
@@ -558,13 +571,14 @@ function itemView(){
   var mapQ=(it.name||"").replace(/\s*\(([^)]*)\)\s*$/,function(m,g){ return " "+g; });
   var rows='<dl class="dtl">'+
     '<dt>제공 내역</dt><dd>'+esc(it.benefit||"")+(it.worth?'<br><b>'+esc(it.worth)+' 상당</b>':'')+'</dd>'+
-    '<dt>모집 기간</dt><dd>'+(it.start?fmt(it.start)+' ':'')+'~ '+fmt(it.end)+' <span class="dd2'+(s.hot?' hot':'')+'">'+esc(s.dday)+'</span></dd>'+
+    '<dt>'+(closed?'':'<i class="blink" aria-hidden="true"></i>')+'모집 기간</dt><dd>'+(it.start?fmt(it.start)+' ':'')+'~ '+fmt(it.end)+' <span class="dd2'+(s.hot?' hot':'')+'">'+esc(s.dday)+'</span></dd>'+
     (apOf(it)?'<dt>경쟁률</dt><dd>'+apLine(it).replace(/<\/?p[^>]*>/g,'')+'</dd>':'')+
     '<dt>모집 사이트</dt><dd>'+esc(src)+'</dd>'+
     (it.region?'<dt>지역</dt><dd>'+esc(it.region)+'</dd>':'')+'</dl>';
   return '<div class="pg dpg">'+
-    '<div class="dthimg">'+(img?'<img src="'+esc(img)+'" alt="'+esc(it.name)+'" referrerpolicy="no-referrer" onerror="this.remove()">':'')+'</div>'+
-    '<div class="dhd">'+chBadges(it)+'<h1>'+esc(it.name)+'</h1>'+'<div class="dico"><button class="shb" data-ishare="'+esc(it.id)+'" aria-label="공유하기">'+ico(I.send)+'</button></div></div>'+
+    '<div class="dthimg">'+(closed?'':'<span class="dcd" id="dcd"><b data-dcd="'+esc(it.end)+'">'+dcdText(it.end)+'</b> 남음</span>')+(img?'<img src="'+esc(img)+'" alt="'+esc(it.name)+'" referrerpolicy="no-referrer" onerror="this.remove()">':'')+'</div>'+
+    '<div class="dhd">'+(chTip(it)?'<span class="chtip" id="chtip">'+esc(chTip(it))+'</span>':'')+chBadges(it)+'<h1>'+esc(it.name)+'</h1>'+'<div class="dico"><span class="shtip">친구에게도 공유하기</span><button class="shb" data-ishare="'+esc(it.id)+'" aria-label="공유하기">'+ico(I.send)+'</button></div></div>'+
+    (closed?'':'<span class="dcd dcdfix" id="dcdfix" aria-hidden="true"><b data-dcd="'+esc(it.end)+'">'+dcdText(it.end)+'</b> 남음</span>')+
     rows+aiSum(it)+
     (closed?'<div class="dclosed"><b>모집이 끝난 체험단이에요</b><span>같은 '+(stay?'숙소':'제품')+'가 다시 모집하면 알림으로 알려드려요.'+(priceUrl(it)?' 지금 바로 이용하려면 아래 '+(stay?'숙소 정보 보기':'상품 정보 보기')+'를 눌러 주세요.':'')+'</span></div>'
       :'<p class="dnote">신청은 '+esc(src)+'에서 진행돼요. 리뷰 조건·체험 가능일을 꼭 확인해 주세요.</p>')+
@@ -1041,7 +1055,7 @@ function initMoreDeals(){
   MDEAL.obs.observe(s);
 }
 function clock(ms){ var x=Math.max(0,Math.floor(ms/1000)); return ("0"+Math.floor(x/3600)).slice(-2)+":"+("0"+Math.floor(x%3600/60)).slice(-2)+":"+("0"+x%60).slice(-2); }
-var tickT; function tick(){ clearInterval(tickT); tickT=setInterval(function(){ var orE=document.querySelector("[data-or]"); if(orE) orE.innerHTML=orText(orState()); var ms=msToMidnight(), e=document.getElementById("cd"); if(e) e.textContent=hms(nextSeven()); var c=clock(ms); [].forEach.call(document.querySelectorAll("[data-cd]"),function(el){ el.textContent="⏰ "+c; }); [].forEach.call(document.querySelectorAll("[data-cdl]"),function(el){ el.textContent=c+" 남음"; }); [].forEach.call(document.querySelectorAll("[data-cdx]"),function(el){ el.textContent=c; }); [].forEach.call(document.querySelectorAll("[data-end]"),function(el){ el.textContent=endLeft(el.dataset.end); }); var td2=document.getElementById("tossd"); if(td2) td2.textContent=hms(ms); var g=document.getElementById("gbcd"); if(g) g.textContent=clock(nextSeven()); var st=document.getElementById("stripcd"); if(st) st.textContent=c; [].forEach.call(document.querySelectorAll("[data-hd]"),function(el){ el.textContent=clock(nextSeven()); }); [].forEach.call(document.querySelectorAll("[data-mid]"),function(el){ el.textContent=c; }); },1000); }
+var tickT; function tick(){ clearInterval(tickT); tickT=setInterval(function(){ var orE=document.querySelector("[data-or]"); if(orE) orE.innerHTML=orText(orState()); var ms=msToMidnight(), e=document.getElementById("cd"); if(e) e.textContent=hms(nextSeven()); var c=clock(ms); [].forEach.call(document.querySelectorAll("[data-cd]"),function(el){ el.textContent="⏰ "+c; }); [].forEach.call(document.querySelectorAll("[data-cdl]"),function(el){ el.textContent=c+" 남음"; }); [].forEach.call(document.querySelectorAll("[data-cdx]"),function(el){ el.textContent=c; }); [].forEach.call(document.querySelectorAll("[data-dcd]"),function(el){ el.textContent=dcdText(el.getAttribute("data-dcd")); }); [].forEach.call(document.querySelectorAll("[data-end]"),function(el){ el.textContent=endLeft(el.dataset.end); }); var td2=document.getElementById("tossd"); if(td2) td2.textContent=hms(ms); var g=document.getElementById("gbcd"); if(g) g.textContent=clock(nextSeven()); var st=document.getElementById("stripcd"); if(st) st.textContent=c; [].forEach.call(document.querySelectorAll("[data-hd]"),function(el){ el.textContent=clock(nextSeven()); }); [].forEach.call(document.querySelectorAll("[data-mid]"),function(el){ el.textContent=c; }); },1000); }
 
 /* ---------- 이벤트 ---------- */
 function onClick(e){
