@@ -26,6 +26,7 @@ CATF = {"stay": "stay", "baby": "baby", "beauty": "beauty", "life": "life", "ele
 CHN = {"blog": "블로그", "clip": "클립", "insta": "인스타그램", "reels": "릴스", "youtube": "유튜브", "tiktok": "틱톡"}
 BAD_SIGUN = {"중구", "동구", "서구", "남구", "북구", "부산진구"}
 
+GA = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-NK2TCS1QHH"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NK2TCS1QHH");</script>'  # 구글 애널리틱스(2026-10-18)
 def has_pay(it, w): return w in (it.get("pay") or []) or {"payback": "페이백", "review": "구매평"}[w] in str(it.get("benefit") or "")
 def reset(name):
     p = os.path.join(ROOT, name)
@@ -86,7 +87,7 @@ def shell(title, desc, canon, body, img="", robots="index,follow", ld=None):
     img = img or SITE + "/images/og.png"
     lds = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or []))
     return f'''<!doctype html>
-<html lang="ko"><head><meta charset="utf-8">
+<html lang="ko"><head><meta charset="utf-8">{GA}
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
@@ -270,7 +271,7 @@ open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(sm)
 # ---------- t/ 하루특가 공유 (앱으로 이동, 검색 제외) ----------
 def redirect_page(title, desc, img, target):
     return f'''<!doctype html>
-<html lang="ko"><head><meta charset="utf-8">
+<html lang="ko"><head><meta charset="utf-8">{GA}
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title>
 <meta name="robots" content="noindex">

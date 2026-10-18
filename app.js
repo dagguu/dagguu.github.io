@@ -167,6 +167,25 @@ function shell(){
 }
 function paintLogo(){ var l=document.getElementById("logo"); if(l) l.innerHTML=logoSvg(30)+'<b class="wm">다꾸체험단</b><span class="sr">'+SITE+'</span>'+(LOGO.name?'<em class="logo-ev">'+esc(LOGO.name)+'</em>':''); }
 
+/* 구글 애널리틱스 GA4(2026-10-18, 측정 ID G-NK2TCS1QHH, index.html head): 화면 이동은 page_view 를 직접 보내고, 주요 버튼은 이벤트로 */
+function ga(ev,p){ try{ if(window.gtag) window.gtag("event",ev,p||{}); }catch(e){} }
+var GA_LAST="";
+function gaPage(){ var h=location.hash||"#/"; if(h===GA_LAST) return; GA_LAST=h; ga("page_view",{page_location:location.origin+"/"+h, page_path:"/"+h.replace(/^#\/?/,""), page_title:document.title});
+  if(state.tab==="item"){ var it=seed.items.filter(function(x){ return String(x.id)===String(state.itemId); })[0]; if(it) ga("view_item_detail",{item_id:it.id, item_name:it.name, item_category:catOf(it), source:it.source||"", closed:statusOf(it).key==="closed"}); }
+  if(state.tab==="list"&&state.q) ga("search",{search_term:state.q}); }
+document.addEventListener("click",function(e){
+  var t=e.target, a;
+  if((a=t.closest("[data-apply]"))) ga("apply_open",{item_id:a.getAttribute("data-apply")});
+  else if((a=t.closest('.applym [data-m="go"]'))) ga("apply_go",{item_id:state.itemId||""});
+  else if((a=t.closest(".dbar .dbl"))) ga("coupang_click",{place:"detail",item_id:state.itemId});
+  else if((a=t.closest(".promom .pcard"))) ga("promo_click",{place:"popup",promo:(seed.promo||{}).link||""});
+  else if((a=t.closest(".kv"))&&a.querySelector(".part")) ga("promo_click",{place:"banner",promo:(seed.promo||{}).link||""});
+  else if((a=t.closest(".tcard"))){ var sec=a.closest(".wxsec")?"weather":a.closest(".drel")?"detail_related":a.closest("#gold")?"goldbox":a.closest("#babyhd,.hdl")?"babyhot":"deals"; ga("deal_click",{section:sec, item_name:(a.querySelector(".tn")||{}).textContent||""}); }
+  else if((a=t.closest("[data-reopen]"))) ga("reopen_alert",{item_id:a.getAttribute("data-reopen")});
+  else if((a=t.closest("[data-fav]"))) ga("fav_toggle",{item_id:a.getAttribute("data-fav")});
+  else if((a=t.closest("[data-ishare],[data-tshare]"))) ga("share",{item_id:a.getAttribute("data-ishare")||a.getAttribute("data-tshare")});
+  else if((a=t.closest("[data-pushon]"))) ga("push_on_click",{});
+},true);
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
@@ -178,7 +197,7 @@ function route(){
   state.dq=(tab==="deals"&&qs.q)?qs.q:"";
   state.pq=(tab==="price"&&qs.q)?qs.q:"";
   if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; else if(qs.cat) state.status="open"; if(!parts[1]){ state.q=""; state.chs=[]; } if(qs.q!==undefined) state.q=qs.q; if(qs.ch!==undefined) state.chs=qs.ch.split(",").filter(function(c){ return /^(blog|insta|clip|reels|youtube|tiktok|cafe|payback|review)$/.test(c); }); if(qs.o&&SORTS_OK.indexOf(qs.o)>=0) state.sort=qs.o; if(qs.p!==undefined) state.pet=(qs.p==='dog'||qs.p==='cat')?qs.p:''; if(qs.r!==undefined) state.regions=qs.r?qs.r.split(",").filter(function(r){ return REGIONS.indexOf(r)>=0; }):[]; saveUi(); }
-  render(); window.scrollTo(0,0);
+  render(); window.scrollTo(0,0); if(!state.loading) gaPage();
   if(state.focusT) focusToss();
   if(state.tab==="deals"&&state.dq){ setTimeout(function(){ var i=document.getElementById("dq"); if(i){ i.value=state.dq; filterDeals(state.dq); } },0); }
 }
@@ -193,6 +212,7 @@ function render(){
   var v=document.getElementById("view");
   if(state.loading){ v.innerHTML='<div class="empty">불러오는 중…</div>'; return; }
   if(window.introDone){ window.introDone(); window.introDone=null; }
+  if(!GA_LAST) setTimeout(gaPage,0);
   if(!window.introOn) setTimeout(promoPopup,600);
   if(state.tab==="home") v.innerHTML=homeView();
   else if(state.tab==="list"){ v.innerHTML=listView(); renderListGrid(); }
@@ -1562,7 +1582,7 @@ function privacyView(){
   '<h2>4. 처리 위탁과 국외 이전</h2><ul><li>회원 정보 저장: Supabase Inc.(데이터베이스·로그인 서비스). 저장 위치는 서비스 설정 지역에 따라요.</li><li>로그인: 주식회사 카카오(카카오 로그인)</li></ul>'+
   '<h2>5. 제3자 제공</h2><p>회원 정보를 다른 곳에 제공하지 않아요. 체험단 신청은 각 모집처 사이트에서 회원이 직접 해요.</p>'+
   '<h2>6. 회원의 권리</h2><p>언제든 내 정보를 보고, 고치고, 알림 동의를 끄고, 탈퇴할 수 있어요. 마이 다꾸에서 직접 하거나 아래 연락처로 요청해 주세요.</p>'+
-  '<h2>7. 쿠키와 브라우저 저장소</h2><p>로그인 유지와 찜·최근 본 기록을 위해 브라우저 저장소를 써요. 브라우저 설정에서 지울 수 있어요.</p>'+
+  '<h2>7. 쿠키와 브라우저 저장소, 이용 분석</h2><p>로그인 유지와 찜·최근 본 기록을 위해 브라우저 저장소를 써요. 서비스 개선을 위해 Google LLC의 Google 애널리틱스로 방문 화면·버튼 이용 같은 이용 기록을 개인을 알아볼 수 없는 형태로 분석해요(쿠키 사용, 국외 이전: 미국 등 Google 서버). 브라우저 설정에서 쿠키를 지우거나 막을 수 있고, <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google 애널리틱스 차단 부가기능</a>으로 거부할 수 있어요.</p>'+
   '<h2>8. 개인정보 보호책임자</h2><p>'+owner+(mail?' · '+mail:'')+' · 카카오톡 채널 ‘다꾸체험단’</p>'+
   '<p class="pdate">시행일: '+day+'</p></div>';
 }
