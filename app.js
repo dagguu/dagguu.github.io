@@ -142,11 +142,14 @@ var I={
 /* ---------- 셸 ---------- */
 var app=document.getElementById("app");
 var TABS=[["home","홈",I.home],["fav","찜",I.heart],["list","체험단",I.ticket],["benefit","혜택",I.check],["deals","특가",I.gift]];
+/* 뒤로 가기 버튼(아이폰 홈 화면 앱엔 뒤로 버튼이 없음, 2026-10-18 시온님 요청): 사이트 안에서 이동한 기록이 있으면 history.back, 없으면 홈 */
+var NAVN=0; window.addEventListener("hashchange",function(){ NAVN++; });
+document.addEventListener("click",function(e){ if(!e.target.closest("#backbtn")) return; e.preventDefault(); if(NAVN>0){ NAVN=Math.max(0,NAVN-2); history.back(); } else location.hash="#/"; });
 function shell(){
   app.innerHTML=
     '<div class="disclose">이 사이트는 쿠팡 파트너스, 토스쇼핑 쉐어링크, 여기어때, 마이리얼트립, 트립닷컴 등 제휴 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.</div>'+
     '<div class="frame">'+
-      '<header class="appbar"><a class="logo" href="#/" id="logo"></a><span class="hbtns"><span class="kch" id="kakao-talk-channel-add-button" data-channel-public-id="_xkqEFX" data-size="small" data-support-multiple-densities="true"></span><a class="iconbtn" href="#/list" data-focus="q" aria-label="체험단 검색">'+ico(I.search)+'</a><a class="iconbtn mebtn" href="#/my" id="mebtn" aria-label="마이 다꾸">'+ico(I.user)+'</a></span></header>'+
+      '<header class="appbar"><span class="abl"><button class="backbtn" id="backbtn" aria-label="뒤로 가기" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><a class="logo" href="#/" id="logo"></a></span><span class="hbtns"><span class="kch" id="kakao-talk-channel-add-button" data-channel-public-id="_xkqEFX" data-size="small" data-support-multiple-densities="true"></span><a class="iconbtn" href="#/list" data-focus="q" aria-label="체험단 검색">'+ico(I.search)+'</a><a class="iconbtn mebtn" href="#/my" id="mebtn" aria-label="마이 다꾸">'+ico(I.user)+'</a></span></header>'+
       '<main id="view" class="view"></main>'+
       '<footer class="foot"><a class="flink" href="#/contact">광고주 마케팅 상담 문의</a><br><a '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>💬 카카오톡 채널 ‘다꾸체험단’</a><div id="bizline"></div><p>'+SITE+' · 체험단 모집 정보는 각 모집처의 공지를 기준으로 하며, 신청 조건과 일정은 바뀔 수 있어요.</p></footer>'+
     '</div>'+
@@ -180,6 +183,7 @@ function focusToss(){
   setTimeout(function(){ card.classList.remove("tfocus"); },4000); state.focusT="";
 }
 function render(){
+  var bb=document.getElementById("backbtn"); if(bb) bb.hidden=state.tab==="home";
   [].forEach.call(document.querySelectorAll(".tabbar a"),function(a){ var on=a.dataset.tab===state.tab; a.classList.toggle("on",on); if(on) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
   var v=document.getElementById("view");
   if(state.loading){ v.innerHTML='<div class="empty">불러오는 중…</div>'; return; }
