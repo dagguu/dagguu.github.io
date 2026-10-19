@@ -334,3 +334,8 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .trchips a.on{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:700}
 .trlist .grid{padding:0 16px}
 .kv.ftkv .hart{width:40%}
+#intro .inad.ft .intx{padding-top:17vh}
+#intro .inad.ft .intx small{font-size:18px;padding:7px 16px}
+#intro .inad.ft .intx h1{font-size:min(13vw,58px);margin:20px 0 16px;line-height:1.15}
+#intro .inad.ft .intx p{font-size:21px;line-height:1.5}
+#intro .inad.ft .innote{margin-top:22px;font-size:13px}

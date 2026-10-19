@@ -34,7 +34,7 @@
 <link rel="stylesheet" href="simple.css">
 </head>
 <body>
-<div id="intro" hidden><div class="inad ft"><img class="ftbg" src="images/free-trip.svg" alt=""><div class="intop"><img src="icons/icon-192.png" alt="" width="28" height="28"><b>다꾸체험단</b></div><div class="intx"><small>아직도 몰랐어?</small><h1>이제 <span>공짜여행</span>이<br>시작된다!</h1><p>여행 무료 체험단<br>여행도 다니고 돈도 아끼고!</p><a class="ingo" href="#/trip" id="ingo">지금 바로가기 ›</a><em class="innote">숙박을 제공받고 후기를 남기는 체험단이에요</em></div></div></div>
+<div id="intro" hidden><div class="inad ft"><img class="ftbg" src="images/free-trip.svg" alt=""><div class="intop"><img src="icons/icon-192.png" alt="" width="28" height="28"><b>다꾸체험단</b></div><div class="intx"><small>아직도 몰랐어?</small><h1>이제 <span>공짜여행</span>이<br>시작된다!</h1><p>여행 무료 체험단<br>여행도 다니고 돈도 아끼고!</p><em class="innote">숙박을 제공받고 후기를 남기는 체험단이에요</em></div></div></div>
 <script>/* 인트로(2026-10-19 시온님 요청: "이제 공짜여행이 시작된다!" 기획전 → 지금 바로가기 = 사이트 안 #/trip, 광고 아님). 홈으로 들어올 때 세션당 1번, 최소 1.6초·최대 4.5초, 바깥 누르면 닫힘. 그다음 아래 팝업(입장권 광고) → 홈. 공유 링크(상세 등)로 들어오면 안 뜸 */
 (function(){try{var h=location.hash;if((h&&h!=="#"&&h!=="#/")||sessionStorage.getItem("dakku-intro"))return;sessionStorage.setItem("dakku-intro","1");}catch(e){return;}
 var el=document.getElementById("intro"),t0=Date.now(),done=false;el.hidden=false;window.introOn=true;
