@@ -587,3 +587,7 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .edudl .dlt i{font-style:normal;display:inline-grid;place-items:center;width:17px;height:24px;border-radius:5px;background:#fff;color:#1d0b3a;font-size:14px;font-weight:900;box-shadow:0 1px 2px rgba(0,0,0,.18)}
 .edudl .dlt u{text-decoration:none;font-size:11px;font-weight:800;margin:0 4px 0 2px}
 .edudl .dlt u:last-child{margin-right:0}
+
+.pg.edu .edudl{margin-top:-6px;top:63px}
+.edudl .dlm{display:none}
+@media(max-width:480px){.edudl .dlw{display:none}.edudl .dlm{display:inline}}
