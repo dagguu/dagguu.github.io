@@ -425,3 +425,4 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .educur li b{min-width:66px}
 .eduhero .edumonth{display:table;margin:12px auto 0;padding:8px 18px;font-size:17px}
 .eduhp span{display:block;white-space:nowrap}
+.eduhero h1 .one{font-style:normal;white-space:nowrap;font-size:min(6.6vw,27px)}
