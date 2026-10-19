@@ -505,3 +505,33 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .educoach small{display:block;font-size:11.5px;font-weight:800;color:#e9a6ff}
 .educoach b{display:block;margin:6px 0 10px;font-size:23px;line-height:1.25;font-weight:900}
 .educoach p{margin:0;font-size:12.5px;line-height:1.55;color:#ddd}
+
+/* 수익화 교육: 한 장짜리 통 이미지처럼 (2026-10-19) */
+.pg.edu{background:#000;color:#fff}
+.pg.edu>section{margin:0 -16px;border-radius:0;padding:34px 16px;box-shadow:none}
+.pg.edu>section+section{margin-top:0}
+.pg.edu .eduhero{background:linear-gradient(180deg,#3a1670 0%,#8a3fd0 45%,#b558d6 72%,#000 100%);padding-bottom:44px}
+.pg.edu .edupts,.pg.edu .eduwhy,.pg.edu .eduall,.pg.edu .edurv,.pg.edu .edusec{background:#000}
+.pg.edu .edusec h2{color:#fff;font-size:21px;font-weight:900;text-align:center;margin-bottom:16px}
+.pg.edu .educhk li{background:#15101c;color:#eee;border:1px solid #2c2236}
+.pg.edu .educhk li::before{color:#d46fd8}
+.pg.edu .educur li{background:#15101c;border-color:#2c2236;color:#fff}
+.pg.edu .edumonth2{text-align:center;color:#e9a6ff}
+.pg.edu .educur .cpt{color:#e9a6ff}
+.pg.edu .edubk50{background:linear-gradient(135deg,#2a1240,#4a1d63)}
+.pg.edu .edubk50 b{color:#fff}.pg.edu .edubk50 p{color:#e3d4ef}
+.pg.edu .eduway{color:#e6e6ec}
+.pg.edu .eduway li{padding:10px 12px;border-radius:12px;background:#15101c}
+.pg.edu .edunote,.pg.edu .edunote2{color:#9a93a6}
+.pg.edu .edunote a,.pg.edu .edunote2 a{color:#e9a6ff}
+.pg.edu .eduform .fl{color:#fff}
+.pg.edu .eduform .agree{color:#bbb}
+.pg.edu .edupick .rck{background:#15101c;color:#eee;border-color:#3a2d48}
+.pg.edu .eduform .b.pri{background:linear-gradient(90deg,#8a3fd0,#d46fd8);border:0}
+.pg.edu .edupt{background:#0b0810}
+.eagrid{grid-template-columns:repeat(3,1fr)!important;gap:10px 8px}
+.ea{aspect-ratio:1/1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:6px 4px}
+.ea .eae{font-size:26px}
+.ea b{font-size:12.5px;line-height:1.3;margin-top:4px}
+.ea small{font-size:10.5px;line-height:1.3}
+.ea em{font-size:12px;margin-top:3px}
