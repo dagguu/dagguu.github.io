@@ -1,0 +1,25 @@
+name: 쿠팡 실적 리포트 메일
+on:
+  schedule:
+    - cron: "10 0 * * 1"   # 매주 월요일 오전 9:10 (한국)
+  workflow_dispatch:
+permissions: { contents: write }
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: 리포트 받아 메일 보내기 (금액은 로그·저장소에 남기지 않음)
+        env:
+          COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
+          COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
+          NAVER_MAIL_ID: ${{ secrets.NAVER_MAIL_ID }}
+          NAVER_MAIL_PW: ${{ secrets.NAVER_MAIL_PW }}
+        run: python3 scripts/coupang_report.py
+      - name: 많이 산 분류 순위만 저장
+        run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add scripts/buy_trends.json
+          git diff --cached --quiet || (git commit -m "쿠팡 구매 분류 순위" && for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done)
