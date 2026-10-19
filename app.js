@@ -15,7 +15,7 @@ var CAT_ORDER = [
   {k:"elec",  t:"가전/가구", em:"🔌", icon:"M4 5h16v11H4ZM9 20h6M12 16v4"},
   {k:"health",t:"건강식품", em:"💊", icon:"M10.5 20.5a5 5 0 0 1-7-7l6-6a5 5 0 0 1 7 7ZM7 10l7 7"},
   {k:"pet",   t:"반려동물", em:"🐾", icon:"M12 20c-3 0-6-1.5-6-4 0-2.5 3-5 6-5s6 2.5 6 5c0 2.5-3 4-6 4ZM5 10a1.5 2 0 1 0 0-.01M19 10a1.5 2 0 1 0 0-.01M9 6a1.5 2 0 1 0 0-.01M15 6a1.5 2 0 1 0 0-.01"},
-  {k:"etc",   t:"기타", em:"🎁", icon:"M6 12h.01M12 12h.01M18 12h.01"}
+  {k:"etc",   t:"티켓", em:"🎟️", icon:"M6 12h.01M12 12h.01M18 12h.01"}
 ];
 var CATS = [{k:"stay",t:"숙박",region:true,unit:"숙소",view:"숙소보기",pick:["풀빌라"]}];
 var UPCOMING = [], ADS = [], DEALS = [], seed = {items:[]};
@@ -1465,7 +1465,7 @@ function prefPopup(){
   if(document.querySelector(".modal")) return;
   ls("dakku-want-asked","1");
   var pick={regions:[],ages:[]}, step=1;
-  var CHOICES=[["stay","🏨","숙박 체험단"],["baby","👶","육아 체험단"],["life","🧺","생활용품"],["beauty","💄","뷰티제품"],["elec","🔌","가전/가구"],["health","💊","건강식품"],["pet","🐾","반려동물"],["etc","🎁","기타"]];
+  var CHOICES=[["stay","🏨","숙박 체험단"],["baby","👶","육아 체험단"],["life","🧺","생활용품"],["beauty","💄","뷰티제품"],["elec","🔌","가전/가구"],["health","💊","건강식품"],["pet","🐾","반려동물"],["etc","🎟️","티켓"]];
   var wrap=document.createElement("div"); wrap.className="modal"; wrap.setAttribute("role","dialog"); wrap.setAttribute("aria-modal","true"); wrap.setAttribute("aria-label","기다리는 체험단 선택");
   function head(t,sub){ return '<button class="mx" data-m="x" aria-label="닫기">'+ico(I.x)+'</button><div class="mlogo">'+logoSvg(40)+'</div><h2>'+t+'</h2><p>'+sub+'</p>'; }
   function draw(){
