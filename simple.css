@@ -441,3 +441,25 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .edubks{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
 .edubks::-webkit-scrollbar{display:none}
 .edubks img{width:76px;height:114px;object-fit:cover;border-radius:5px;flex:none;box-shadow:0 3px 8px rgba(0,0,0,.12)}
+
+.edupts{margin:16px 0;padding:24px 16px;border-radius:18px;background:#0e0a14;color:#fff;text-align:center}
+.edupts>small{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.06em;color:#d9c2ff;border-bottom:1px solid #d9c2ff}
+.edupts h2{margin:10px 0 16px;font-size:22px;line-height:1.35;font-weight:900;color:#fff}
+.edupts h2 span{background:linear-gradient(90deg,#ff7a7a,#d46fd8,#a46bff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.edupt{margin:10px 0 0;padding:14px 12px;border-radius:16px;border:1px solid #ff9a6a}
+.edupt.p2{border-color:#e46fc8}.edupt.p3{border-color:#a45cf0}
+.edupt i{display:block;font-style:normal;font-size:12px;font-weight:700;color:#ddd}
+.edupt b{display:block;margin:4px 0;font-size:17px;font-weight:900;color:#fff}
+.edupt.p1 em{color:#ff9a5a}.edupt.p2 em{color:#ff6fc8}.edupt.p3 em{color:#c07bff}.edupt em{font-style:normal}
+.edupt p{margin:0;font-size:13px;color:#cfcfd6}
+.edurv{margin:16px 0;padding:24px 14px;border-radius:18px;background:#05060d;color:#fff}
+.edurv>small{display:block;text-align:center;font-size:12px;font-weight:800;letter-spacing:.1em;color:#2ee6f0}
+.edurv h2{margin:6px 0 4px;text-align:center;font-size:22px;font-weight:900;color:#fff}
+.edurvn{margin:0 0 14px;text-align:center;font-size:12.5px;line-height:1.5;color:#bdbdc8}
+.edurvs{display:grid;gap:10px}
+@media(min-width:600px){.edurvs{grid-template-columns:1fr 1fr}}
+.edurvc{padding:16px;border-radius:16px;background:#2a2a30}
+.edurvc small{display:block;font-size:12.5px;color:#e8e8ee}
+.edurvc b{display:block;margin:4px 0 8px;font-size:16px;line-height:1.4;font-weight:900;color:#a8f046}
+.edurvc p{margin:0;font-size:13.5px;line-height:1.6;color:#e6e6ec}
+.edurvx{margin:12px 0 0;text-align:center;font-size:11.5px;color:#8f8f9c}
