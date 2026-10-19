@@ -162,7 +162,7 @@ function shell(){
     '<div class="kchat" id="kakao-talk-channel-chat-button" data-channel-public-id="_xkqEFX" data-title="consult" data-size="small" data-color="yellow" data-shape="mobile" data-support-multiple-densities="true"></div>'+
     '<nav class="tabbar" aria-label="하단 메뉴">'+TABS.map(function(t){ var c=t[0]==="list"; return '<a href="#/'+(t[0]==="home"?"":t[0])+'" data-tab="'+t[0]+'"'+(c?' class="tc"':'')+'>'+(c?'<span class="tcb">'+ico(t[2],"ti")+'</span>':'<span class="tib">'+ico(t[2],"ti")+'</span>')+'<span>'+t[1]+'</span></a>'; }).join("")+'</nav>';
   app.addEventListener("click",onClick);
-  app.addEventListener("submit",function(e){ if(e.target.id==="cform"){ e.preventDefault(); submitContact(e.target); } });
+  app.addEventListener("submit",function(e){ if(e.target.id==="cform"){ e.preventDefault(); submitContact(e.target); } if(e.target.id==="eduform"){ e.preventDefault(); submitEdu(e.target); } });
   app.addEventListener("input",function(e){ if(e.target.dataset&&e.target.dataset.etc){ var r=e.target.parentNode.querySelector("input[type=radio]"); if(r) r.checked=true; } if(e.target.id==="q"){ state.q=e.target.value; renderListGrid(); } });
   app.addEventListener("change",function(e){ if(e.target.dataset && e.target.dataset.th!==undefined){ var tv=e.target.dataset.th; if(!tv) state.themes=[]; else { var tk=state.themes.indexOf(tv); if(e.target.checked&&tk<0) state.themes.push(tv); if(!e.target.checked&&tk>=0) state.themes.splice(tk,1); } var tb=document.getElementById("thbox"); if(tb) tb.innerHTML=themeChecks(); renderListGrid(); return; } if(e.target.dataset && e.target.dataset.chk!==undefined){ var v=e.target.dataset.chk; if(!v) state.chs=[]; else { var k=state.chs.indexOf(v); if(e.target.checked&&k<0) state.chs.push(v); if(!e.target.checked&&k>=0) state.chs.splice(k,1); } paintChs(); renderListGrid(); return; } if(e.target.dataset && e.target.dataset.pet!==undefined){ state.pet=e.target.dataset.pet; saveUi(); var pb=document.getElementById("petbox"); if(pb) pb.innerHTML=petChecks(); renderListGrid(); return; } if(e.target.dataset && e.target.dataset.rg!==undefined){ var v=e.target.dataset.rg; if(v==="전체") state.regions=[]; else { var i=state.regions.indexOf(v); if(e.target.checked&&i<0) state.regions.push(v); if(!e.target.checked&&i>=0) state.regions.splice(i,1); } saveUi(); paintRegions(); renderListGrid(); } });
 }
@@ -194,7 +194,7 @@ document.addEventListener("click",function(e){
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
-  if(!/^(home|list|fav|benefit|deals|reporter|contact|item|my|privacy|price|event|trip)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|benefit|deals|reporter|contact|item|my|privacy|price|event|trip|edu)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
   if(tab==="event") state.evAbr=qs.t==="abroad";
@@ -232,6 +232,7 @@ function render(){
   else if(state.tab==="privacy") v.innerHTML=privacyView();
   else if(state.tab==="event") v.innerHTML=eventView();
   else if(state.tab==="trip") v.innerHTML=tripView();
+  else if(state.tab==="edu") v.innerHTML=eduView();
   else if(state.tab==="price"){ v.innerHTML=priceView(); if(state.pq) priceSearch(state.pq); }
   if(state.tab==="home") initFeed(); else if(HOBS){ HOBS.disconnect(); HOBS=null; }
   if(state.tab==="deals") initMoreDeals(); else if(MDEAL.obs){ MDEAL.obs.disconnect(); MDEAL.obs=null; }
@@ -914,6 +915,7 @@ window.afterIntro=function(){ promoPopup(); };
 function heroSlides(){
   var s=[], ig=safeUrl((seed.sns||{}).instagram), oc=safeUrl(seed.openchat);
   s.push({bg:"radial-gradient(120% 90% at 50% 20%,#5b2fd6 0%,#3a1aa8 45%,#1d0b5c 100%)",t:"이제 <span>공짜여행</span>이 시작된다!",d:"아직도 몰랐어? 여행 무료 체험단<br>여행도 다니고 돈도 아끼고!",b:"지금 바로가기",h:"#/trip",art:"images/free-trip.svg",ft:1});
+  s.push({bg:"linear-gradient(120deg,#0f2a1e,#1d6b4a 55%,#36a77a)",t:"<span>다꾸 수익화</span> 1:1 코칭",d:"체험단 당첨 피드백부터<br>검색 상단 노출·블로그 수익화까지",b:"자세히 보기",h:"#/edu",e:["🧑‍🏫","📈","✍️"]});
   var P=promoOn(); if(P) s.push({bg:P.bg||"#f4e7d0",dark:1,k:P.k,t:P.t,d:P.d,b:P.b,h:P.u,x:1,art:P.art});
   var M=mrtList();
   if(M.length){ var top=M.slice().sort(function(a,b){ return b.rate-a.rate; }); s.push({bg:"#111",t:"<span>최저가</span> 특가 보러가기!",d:"국내·해외 숙소 특가를<br>매일 아침 모아 드려요",b:"특가 보러가기",h:"#/event",imgs:top.slice(0,2).map(function(x){ return x.img; }),rate:top[0].rate}); }
@@ -958,6 +960,7 @@ var slideT;
 function wideBanners(open,closing){
   var W=[], st=open.filter(function(it){ return catOf(it)==="stay"; });
   W.push({h:"#/trip",bg:"linear-gradient(90deg,#12063f 0%,#2a0f8a 55%,#5b3fd6 100%)",s:"아직도 몰랐어? 여행 무료 체험단",t:"이제 <em>공짜여행</em>이 시작된다!",art:"images/free-trip.svg"});
+  W.push({h:"#/edu",bg:"linear-gradient(90deg,#0f2a1e 0%,#1d6b4a 60%,#36a77a 100%)",s:"당첨·상단 노출·수익화까지",t:"다꾸 수익화 <em>1:1 코칭</em>",e:"🧑‍🏫"});
   if(closing.length) W.push({h:"#/list?cat=all&s=todayClose",bg:"linear-gradient(90deg,#2b1055 0%,#5a1f8f 60%,#a43f9f 100%)",s:'오늘 밤 12시까지 · ⏳ <span id="stripcd">'+clock(msToMidnight())+'</span>',t:"오늘 마감 체험단 <em>"+closing.length+"곳</em>",e:"⏰"});
   else W.push({h:"#/list?cat=all&s=open",bg:"linear-gradient(90deg,#2b1055 0%,#5a1f8f 60%,#a43f9f 100%)",s:"지금 신청할 수 있어요",t:"모집 중 체험단 <em>"+open.length+"곳</em>",e:"🎟️"});
   var kids=st.filter(function(it){ return /키즈\s*풀빌라/.test((it.name||"")+" "+(it.benefit||"")); }).length;
@@ -1062,6 +1065,35 @@ function contactView(){
       '<p class="ferr" id="ferr" role="alert"></p>'+
       '<button class="b dark wide" type="submit">무료 상담 신청하기</button>'+
     '</form></div>';
+}
+/* 다꾸 수익화 1:1 코칭(2026-10-19 시온님 요청). 수강료·기간은 공개하지 않음(상담 때 안내). 결제는 아직 없음 → 신청 내용을 카톡 채널로 보내는 방식 */
+var EDU_PICK=["블로그를 처음 시작해요","체험단 신청해도 당첨이 잘 안 돼요","내 글이 검색 위쪽에 안 보여요","블로그로 수익을 내고 싶어요"];
+function eduView(){
+  return '<div class="pg edu">'+
+    '<section class="eduhero"><small>다꾸 수익화</small><h1>블로그, 혼자 고민하지 말고<br><span>1:1로 같이</span> 키워요</h1><p>체험단 당첨부터 검색 노출, 수익화까지<br>내 블로그를 직접 보고 피드백해 드려요</p><a class="b" href="#eduapply" data-jumpid="eduapply">상담 신청하기</a></section>'+
+    '<section class="edusec"><h2>이런 분께 맞아요</h2><ul class="educhk">'+EDU_PICK.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join("")+'</ul></section>'+
+    '<section class="edusec"><h2>무엇을 함께 하나요</h2><div class="educards">'+
+      [["1","블로그 첫 세팅","주제 정하기, 프로필·카테고리 정리, 처음 쓸 글 방향까지 같이 잡아요."],["2","체험단 당첨 피드백","신청서와 지금 블로그를 같이 보고, 선정에 걸림돌이 되는 부분을 짚어 드려요."],["3","검색 상단 노출 글쓰기","검색하는 사람이 찾는 키워드와 글 구성을 내 글에 맞춰 첨삭해요."],["4","블로그 수익화","체험단·기자단·제휴 마케팅 등 내 블로그에 맞는 수익 방법을 단계별로 정해요."]].map(function(c){ return '<div class="educ"><b>'+c[0]+'</b><span><em>'+c[1]+'</em>'+c[2]+'</span></div>'; }).join("")+
+    '</div></section>'+
+    '<section class="edusec"><h2>진행 방식</h2><ul class="eduway"><li>💬 카톡으로 상담 신청 → 지금 블로그 상태 확인</li><li>🧑‍🏫 내 블로그에 맞춘 1:1 코칭으로 진행</li><li>📋 수강료와 기간은 상담 때 자세히 안내드려요</li></ul>'+
+      '<p class="edunote">코칭은 방법을 함께 찾는 과정이에요. 체험단 당첨, 검색 순위, 수익 금액을 약속하거나 보장하지는 않아요.</p></section>'+
+    '<section class="edusec" id="eduapply"><h2>상담 신청</h2><form id="eduform" class="eduform" novalidate>'+
+      '<label class="fl">닉네임 <i>*</i><input class="fi" name="nick" maxlength="30" autocomplete="nickname"></label>'+
+      '<label class="fl">블로그·인스타 주소<input class="fi" name="blog" maxlength="200" inputmode="url" placeholder="https://blog.naver.com/..."></label>'+
+      '<span class="fl">지금 고민 <i>*</i></span><div class="edupick">'+EDU_PICK.map(function(t,i){ return '<label class="rck"><input type="checkbox" name="pk" value="'+esc(t)+'">'+esc(t)+'</label>'; }).join("")+'</div>'+
+      '<label class="fl">하고 싶은 말<textarea class="fi ta" name="msg" maxlength="500" placeholder="궁금한 점이나 목표를 편하게 적어 주세요"></textarea></label>'+
+      '<label class="agree"><input type="checkbox" name="agree"> 상담을 위해 닉네임·블로그 주소·고민 내용을 받는 데 동의해요 (상담이 끝나면 지워요)</label>'+
+      '<p class="ferr" id="eduerr"></p><button class="b pri wide" type="submit">카톡으로 상담 신청하기</button></form></section>'+
+  '</div>';
+}
+document.addEventListener("click",function(e){ var a=e.target.closest&&e.target.closest("[data-jumpid]"); if(!a) return; e.preventDefault(); var el=document.getElementById(a.dataset.jumpid); if(el) el.scrollIntoView({behavior:"smooth",block:"start"}); });
+function submitEdu(f){
+  var nick=String(f.elements.nick.value||"").trim(), blog=String(f.elements.blog.value||"").trim(), msg=String(f.elements.msg.value||"").trim();
+  var pk=[].map.call(f.querySelectorAll('input[name="pk"]:checked'),function(x){ return x.value; });
+  var miss=[]; if(!nick) miss.push("닉네임"); if(!pk.length) miss.push("지금 고민"); if(!f.elements.agree.checked) miss.push("동의");
+  var err=document.getElementById("eduerr"); if(miss.length){ err.textContent=miss.join(", ")+"을(를) 확인해 주세요."; return; } err.textContent="";
+  ga("edu_apply",{});
+  doneContact("[다꾸 수익화 1:1 상담 신청]\n닉네임: "+nick+"\n블로그: "+(blog||"-")+"\n고민: "+pk.join(" / ")+"\n하고 싶은 말: "+(msg||"-")+"\n개인정보 수집 동의: 동의");
 }
 function submitContact(f){
   var g=function(n){ var el=f.elements[n]; return el?String(el.value||"").trim():""; };
