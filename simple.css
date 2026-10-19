@@ -423,3 +423,5 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .eduhp b{color:#ffe14d;font-size:14px}
 .edumonth2{margin:-4px 0 12px;font-size:15px;font-weight:900;color:#9b3fd0}
 .educur li b{min-width:66px}
+.eduhero .edumonth{display:table;margin:12px auto 0;padding:8px 18px;font-size:17px}
+.eduhp span{display:block;white-space:nowrap}

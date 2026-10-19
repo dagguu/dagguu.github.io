@@ -1070,7 +1070,7 @@ function contactView(){
 var EDU_PICK=["블로그를 처음 시작해요","체험단 신청해도 당첨이 잘 안 돼요","내 글이 검색 위쪽에 안 보여요","블로그로 수익을 내고 싶어요"];
 function eduView(){
   return '<div class="pg edu">'+
-    '<section class="eduhero"><small>다꾸 수익화</small><span class="edumonth">⚡ 한 달이면 다 배워요</span><h1>한번 배우면<br><span>평생 써먹는</span><br>블로그 수익화</h1><p>5주 1:1 교육으로 체험단 당첨부터 검색 노출, 수익화까지<br>끝난 뒤에도 1:1 코칭은 평생 무료예요</p><div class="eduhp">5주 1:1 교육 · 🎁 평생 무료 코칭 <b>(300만원 상당)</b> · 📚 전자책</div><a class="b" href="#eduapply" data-jumpid="eduapply">상담 신청하기</a></section>'+
+    '<section class="eduhero"><small>다꾸 수익화</small><span class="edumonth">⚡ 한 달이면 다 배워요</span><h1>한번 배우면<br><span>평생 써먹는</span><br>블로그 수익화</h1><p>5주 1:1 교육으로 체험단 당첨부터 검색 노출, 수익화까지<br>끝난 뒤에도 1:1 코칭은 평생 무료예요</p><div class="eduhp"><span>5주 1:1 교육 · 📚 전자책</span><span>🎁 평생 무료 코칭 <b>(300만원 상당)</b></span></div><a class="b" href="#eduapply" data-jumpid="eduapply">상담 신청하기</a></section>'+
     '<section class="edusec"><h2>이런 분께 맞아요</h2><ul class="educhk">'+EDU_PICK.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join("")+'</ul></section>'+
     '<section class="edusec"><h2>5주 커리큘럼</h2><p class="edumonth2">⚡ 한 달이면 블로그 수익화까지 다 배워요</p><ol class="educur">'+
       [["🛠️","블로그 셋팅 및 점검 · ✍️ 포스팅하는 법"],["🎟️","체험단 신청하는 방법 · 📝 당첨 후기 작성법"],["🔝","블로그 상단노출 방법"],["📰","블로그 기자단 · 🤖 AI 글쓰기"],["💰","블로그 수익화 비법"]].map(function(c,k){ return '<li><b>✨ '+(k+1)+'주차</b><span>'+c[0]+' '+c[1]+'</span></li>'; }).join("")+
