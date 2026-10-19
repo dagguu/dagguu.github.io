@@ -78,6 +78,7 @@ h2{font-size:18px;margin:30px 0 10px;letter-spacing:-.02em}
 .list b{display:block;font-size:15px;font-weight:600;line-height:1.35}.list small{display:block;color:#888;font-size:12.5px;margin-top:2px}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.tags a{font-size:13px;text-decoration:none;border:1px solid #e5e5e8;border-radius:999px;padding:5px 11px;color:#444}
 .closed{background:#fff3f3;color:#c22;padding:10px 12px;border-radius:10px;font-size:14px;margin:10px 0}
+.disc{margin:0 0 6px;font-size:11px;color:#999;line-height:1.5}
 footer{margin-top:40px;font-size:12px;color:#999;line-height:1.7;border-top:1px solid #eee;padding-top:14px}"""
 
 FOOT = ('<footer>이 사이트는 쿠팡 파트너스, 마이리얼트립, 여기어때 등 제휴 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.<br>'
@@ -104,6 +105,7 @@ def shell(title, desc, canon, body, img="", robots="index,follow", ld=None):
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>{CSS}</style>{lds}
 </head><body><div class="w">
+<p class="disc">이 사이트는 쿠팡 파트너스 등 제휴 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.</p>
 <header><a class="logo" href="/">다꾸<i>체험단</i></a><a class="app" href="/">앱으로 보기</a></header>
 {body}
 {FOOT}
@@ -175,7 +177,7 @@ for it in items:
     body += "<dl>" + "".join(f"<dt>{e(a)}</dt><dd>{e(b)}</dd>" for a, b in rows if b) + "</dl>"
     body += '<div class="btns">'
     if op and apply_: body += f'<a class="btn pri" href="{e(apply_)}" target="_blank" rel="nofollow noopener">{e(it.get("source") or "신청 사이트")}에서 신청하기</a>'
-    if view: body += f'<a class="btn sec" href="{e(view)}" target="_blank" rel="sponsored nofollow noopener">{"숙소 사진 보기" if cat=="stay" else "상품 가격 보기"} (광고)</a>'
+    if view: body += f'<a class="btn sec" href="{e(view)}" target="_blank" rel="sponsored nofollow noopener">{"숙소 사진 보기" if cat=="stay" else "상품 가격 보기"}</a>'
     body += f'<a class="btn ghost" href="/#/item?id={e(iid)}">다꾸 앱에서 찜하고 마감 알림 받기</a></div>'
     sim = [x for x in open_items if x["id"] != iid and (x.get("cat") or "stay") == cat and (cat != "stay" or (sg and sigun(x) == sg) or x.get("region") == it.get("region"))]
     if len(sim) < 6: sim += [x for x in open_items if x["id"] != iid and (x.get("cat") or "stay") == cat and x not in sim]
