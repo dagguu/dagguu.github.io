@@ -119,7 +119,7 @@ APPX = """.frame{--tab:0px;padding-bottom:110px}.view{padding:0 16px}
 .sx .list img{width:72px;height:72px;border-radius:10px;object-fit:cover;background:#f4f4f6;flex:none}
 .sx .list b{display:block;font-size:15px;font-weight:600;line-height:1.35}.sx .list small{display:block;color:#888;font-size:12.5px;margin-top:2px}
 .sx .tags{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0}.sx .tags a{font-size:13px;text-decoration:none;border:1px solid #e5e5e8;border-radius:999px;padding:5px 11px;color:#444}
-.sx .bc{font-size:12px;color:#999;margin:10px 0}.sx .bc a{color:inherit;text-decoration:none}
+.sx .sbc{display:block;width:auto;height:auto;position:static;font-size:12px;color:#999;margin:10px 0;writing-mode:horizontal-tb;word-break:keep-all}.sx .sbc a{color:inherit;text-decoration:none}
 .sfoot{font-size:12px;color:#999;line-height:1.7;border-top:1px solid #eee;padding:14px 0 0;margin:30px 0 0}"""
 
 APPJS = """<script>(function(){function p(n){return(n<10?"0":"")+n}
@@ -277,7 +277,7 @@ for it in items:
         for k in (sg, it.get("region")):
             if k and k in REG and (f"{k} 숙박 체험단", rslug(k)) not in tags: tags.append((f"{k} 숙박 체험단", rslug(k)))
     tags.append(("분야·지역별 모아보기", "/c/"))
-    body += '<div class="tags">' + "".join(f'<a href="{e(p)}">{e(n)}</a>' for n, p in tags) + "</div>" + bc + "</div>"
+    body += '<div class="tags">' + "".join(f'<a href="{e(p)}">{e(n)}</a>' for n, p in tags) + "</div>" + bc.replace('class="bc"', 'class="sbc"') + "</div>"
     body += '</div>'
     open(os.path.join(sdir, iid + ".html"), "w", encoding="utf-8").write(
         shell_app(title, desc, f"{SITE}/s/{iid}.html", body, img, "index,follow" if op else "noindex,follow", [bld], name))
