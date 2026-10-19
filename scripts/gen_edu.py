@@ -133,7 +133,7 @@ h1,h2{{letter-spacing:-.02em}}
 .sitebiz{{padding:20px 16px 100px;font-size:12px;color:#888;background:#0a0a0a}}.sitebiz a{{color:#aaa;margin-right:8px}}.sitebiz nav b{{display:block;margin-bottom:4px}}
 </style></head><body><div class="w">
 <header class="top"><a class="logo" href="/"><img src="/icons/icon-192.png" alt="">다꾸체험단</a><a class="tbtn" href="/">체험단 보러가기 ›</a></header>
-<div class="dl" id="dl"><b>10월 수강생 모집 · 10/31(토) 마감까지</b><span class="dlt" id="dlc"></span></div>
+<div class="dl" id="dl"><b>10월 수강생 · 10/31 마감까지</b><span class="dlt" id="dlc"></span></div>
 <script>(function(){{var end=new Date("2026-10-31T23:59:59+09:00").getTime(),b=document.getElementById("dl"),c=document.getElementById("dlc");function p(n){{return(n<10?"0":"")+n}}function t(){{var ms=end-Date.now();if(ms<=0){{b.style.display="none";return}}var m=Math.floor(ms/6e4);function q(n,u){{var x=p(n);return"<i>"+x[0]+"</i><i>"+x[1]+"</i><u>"+u+"</u>"}}c.innerHTML=q(Math.floor(m/1440),"일")+q(Math.floor(m%1440/60),"시간")+q(m%60,"분")}}t();setInterval(t,1000)}})();</script>
 <p class="disc">다꾸체험단은 쿠팡 파트너스 등 제휴 활동으로 일정액의 수수료를 받을 수 있습니다.</p>
 <section class="hero"><small>다꾸 수익화</small><span class="m">⚡ 한 달이면 다 배워요</span><span class="f">50대에도 블로그 체험단 해요!</span>
