@@ -463,3 +463,16 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .edurvc b{display:block;margin:4px 0 8px;font-size:16px;line-height:1.4;font-weight:900;color:#a8f046}
 .edurvc p{margin:0;font-size:13.5px;line-height:1.6;color:#e6e6ec}
 .edurvx{margin:12px 0 0;text-align:center;font-size:11.5px;color:#8f8f9c}
+
+.edurvc .rvn{display:inline-block;margin-bottom:8px;padding:3px 10px;border-radius:6px;background:#a8f046;color:#111;font-style:normal;font-size:11.5px;font-weight:900;letter-spacing:.06em}
+.edurvc{position:relative;border-radius:18px 18px 18px 4px}
+.eduhook{margin:16px 0;padding:30px 18px;border-radius:18px;background:linear-gradient(180deg,#0e0a14,#1d0f2e);color:#fff;text-align:center}
+.eduhook p{margin:0;font-size:17px;line-height:1.5;color:#eee}
+.eduhook p b{display:block;margin-top:2px;font-size:22px;font-weight:900;color:#e9a6ff}
+.eduhook .st{margin:22px 0 0;font-size:16px;font-weight:700}
+.eduhook .st s{color:#8f8a99;text-decoration-thickness:2px}
+.eduhook h2{margin:22px 0 0;font-size:28px;line-height:1.3;font-weight:900;color:#fff}
+.eduhook h2 span{color:#ffe14d}
+.pg.edu{padding-bottom:84px}
+.edubar .b{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;height:52px;margin:0;border-radius:14px;background:linear-gradient(90deg,#8a3fd0,#d46fd8);color:#fff;font-size:16.5px;font-weight:900;text-decoration:none;line-height:1.2}
+.edubar .b small{font-size:11.5px;font-weight:700;opacity:.9}
