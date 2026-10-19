@@ -64,7 +64,7 @@ html = f'''<!doctype html>
 <link rel="canonical" href="https://www.dagguu.com/edu.html">
 <meta property="og:title" content="다꾸 수익화 1:1 클래스 — 한번 배우면 평생 써먹는 블로그 수익화">
 <meta property="og:description" content="5주 1:1 교육 · 평생 무료 코칭 · 블로그 관련 서적 · 당첨 안 되면 100% 환불(조건 있음)">
-<meta property="og:image" content="https://www.dagguu.com/images/edu-coach.webp">
+<meta property="og:image" content="https://www.dagguu.com/icons/icon-512.png">
 <link rel="icon" href="/icons/icon-192.png">
 {ga()}
 <style>

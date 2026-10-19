@@ -567,3 +567,11 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .educta small{display:block;margin-top:10px;font-size:11px;color:#8f8a99}
 /* 입장권 팝업 보라 (2026-10-19) */
 .promom .psheet2,.pmband{background:linear-gradient(160deg,#3a1670 0%,#8a3fd0 55%,#b558d6 100%)}
+
+/* 강사 사진 뺀 수강료 칸 (2026-10-19) */
+.esbody{height:auto;padding:46px 0 34px;display:flex;justify-content:center}
+.esbox{position:relative;left:auto;top:auto;width:82%;max-width:320px;padding:20px 14px 16px}
+.esbox .esmon{font-size:34px}
+.esf.f1{left:4px;right:auto;top:6px;bottom:auto;transform:rotate(-12deg)}
+.esf.f2{right:4px;left:auto;top:auto;bottom:6px;transform:rotate(12deg)}
+.esf.f3{right:10px;top:16px;transform:rotate(10deg);background:linear-gradient(135deg,#ff7ab8,#d46fd8)}
