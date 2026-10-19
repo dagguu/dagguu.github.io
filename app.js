@@ -127,6 +127,7 @@ function safeUrl(u){ u=String(u||"").trim(); if(!u) return ""; if(/^https?:\/\//
 function ext(u){ return 'href="'+esc(u)+'" target="_blank" rel="noopener noreferrer sponsored"'; }
 function ico(d,cls){ return '<svg class="'+(cls||"i")+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="'+d+'"/></svg>'; }
 var I={
+  bag:"M5 8h14l-1.2 12.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8ZM9 8V6.5a3 3 0 0 1 6 0V8",
   user:"M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM4.5 20.5c.8-3.6 3.9-5.8 7.5-5.8s6.7 2.2 7.5 5.8",
   chev:"m9 6 6 6-6 6", back:"M15 5 8 12l7 7", search:"M11 4.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM16 16l4.5 4.5",
   heart:"M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z",
@@ -145,7 +146,7 @@ var I={
 
 /* ---------- 셸 ---------- */
 var app=document.getElementById("app");
-var TABS=[["home","홈",I.home],["fav","찜",I.heart],["list","체험단",I.ticket],["benefit","혜택",I.check],["deals","특가",I.gift]];
+var TABS=[["home","홈",I.home],["fav","찜",I.heart],["list","체험단",I.ticket],["shop","공구",I.bag],["deals","특가",I.gift]];
 /* TOP 버튼(2026-10-18 시온님 요청): 화면 1.5배 넘게 내려가면 톡상담 위에 보임 */
 (function(){ var raf=0; function upd(){ raf=0; var b=document.getElementById("totop"); if(b) b.hidden=window.scrollY<window.innerHeight*1.5; }
   window.addEventListener("scroll",function(){ if(!raf) raf=requestAnimationFrame(upd); },{passive:true}); window.addEventListener("hashchange",function(){ setTimeout(upd,50); });
@@ -198,7 +199,7 @@ document.addEventListener("click",function(e){
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
-  if(!/^(home|list|fav|benefit|deals|reporter|contact|item|my|privacy|price|event|trip|edu)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|benefit|shop|deals|reporter|contact|item|my|privacy|price|event|trip|edu)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
   if(tab==="event") state.evAbr=qs.t==="abroad";
@@ -228,6 +229,7 @@ function render(){
   else if(state.tab==="list"){ v.innerHTML=listView(); renderListGrid(); }
   else if(state.tab==="fav") v.innerHTML=favView();
   else if(state.tab==="benefit") v.innerHTML=benefitView();
+  else if(state.tab==="shop") v.innerHTML=shopView();
   else if(state.tab==="deals") v.innerHTML=dealsView();
   else if(state.tab==="reporter") v.innerHTML=reporterView();
   else if(state.tab==="contact") v.innerHTML=contactView();
@@ -761,6 +763,16 @@ function favView(){
   var soon=list.filter(function(it){ return statusOf(it).key==="open" && daysLeft(it)<=3; }).length;
   return '<div class="pg"><h1>찜 ❤️</h1>'+favPushBox()+(soon?'<p class="note">⏰ 찜한 체험단 중 <b>'+soon+'곳</b>이 3일 안에 마감돼요</p>':'')+
     (list.length?'<div class="grid v1">'+list.map(fullCard).join("")+'</div>'+recoSection("💜 찜한 곳과 비슷한 체험단"):'<div class="empty sm"><b>🤍 아직 찜한 체험단이 없어요</b>마음에 드는 체험단의 하트를 눌러 보세요.</div>'+recoSection())+recentSection()+'</div>';
+}
+
+/* ---------- 공구 (2026-10-19 시온님 요청: 하단 탭 혜택 → 공구, 시온님이 직접 파는 상품) ----------
+   data.json gonggu: [{name, price, orig, rate, img, u(구매 링크), until(YYYY-MM-DD, 지나면 숨김), soldOut}] */
+function shopList(){ var t=ymd(today()); return (seed.gonggu||[]).filter(function(x){ return x&&x.name&&safeUrl(x.u)&&!(x.until&&x.until<t); }); }
+function shopView(){
+  var L=shopList();
+  var h='<div class="pg"><h1>다꾸 공구</h1><p class="pgsub">다꾸체험단(플랜비)이 직접 판매하는 공동구매 상품이에요</p>';
+  if(!L.length) return h+'<div class="empty shopempty"><b>곧 공구가 열려요</b><span>카카오톡 채널을 추가하면 공구 오픈 소식을 받아볼 수 있어요</span><a class="btn" '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>카카오톡 채널 추가</a></div><p class="shopnote"><a href="#/benefit">룰렛·이벤트 혜택 보기 ›</a></p></div>';
+  return h+'<section class="sec tossec shopsec"><div class="tgrid">'+L.map(function(x){ return tossCard({name:(x.soldOut?"[품절] ":"")+x.name,img:x.img,u:x.u,price:x.price,rate:x.rate,badge:"다꾸 공구",endAt:x.until?x.until+"T23:59:59+09:00":""}); }).join("")+'</div></section><p class="shopnote">판매자: 플랜비(다꾸체험단) · 구매 링크의 판매 페이지에서 주문·배송·교환 안내를 확인하세요.<br><a href="#/benefit">룰렛·이벤트 혜택 보기 ›</a></p></div>';
 }
 
 /* ---------- 혜택 ---------- */
