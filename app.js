@@ -454,7 +454,7 @@ function listView(){
     '<label class="search">'+ico(I.search)+'<input id="q" type="search" placeholder="지역·숙소 이름 검색" value="'+esc(state.q)+'" autocomplete="off" aria-label="체험단 검색"></label>'+
     '<div class="catrow">'+[{k:"all",t:"전체",em:"🌈"}].concat(CAT_ORDER.filter(function(m){ return isOpenCat(m.k); }),CAT_ORDER.filter(function(m){ return !isOpenCat(m.k); })).map(function(m){ var on=m.k===state.cat; return '<button class="cat'+(on?" on":"")+'" data-cat="'+m.k+'" aria-pressed="'+on+'"><span class="em">'+m.em+'</span>'+esc(m.t)+'</button>'; }).join("")+'</div>'+
     (c?'<div class="chips hs">'+STATUSES.map(function(s){ return '<button class="chip'+(s[0]===state.status?" on":"")+'" data-status="'+s[0]+'">'+s[1]+'</button>'; }).join("")+'</div>'+
-      '<div class="fltbox">'+(c.region?'<div class="rgbox" id="rgbox">'+regionChecks()+'</div>':'')+((state.cat==="stay"||state.cat==="all")?'<div class="rgbox" id="thbox">'+themeChecks()+'</div>':'')+(state.cat==="pet"?'<div class="rgbox" id="petbox">'+petChecks()+'</div>':'')+'<div class="rgbox" id="chbox">'+chChecks()+'</div></div>'+
+      '<div class="fltbox">'+(c.region?'<div class="rgbox" id="rgbox">'+regionChecks()+'</div>':'')+(state.cat==="stay"?'<div class="rgbox" id="thbox">'+themeChecks()+'</div>':'')+(state.cat==="pet"?'<div class="rgbox" id="petbox">'+petChecks()+'</div>':'')+'<div class="rgbox" id="chbox">'+chChecks()+'</div></div>'+
       '<div id="toprows"></div>'+
       '<div class="tools"><span id="count" class="count"></span><span class="tr">'+
         '<label class="sortsel"><span class="sr">정렬</span><select id="sort" aria-label="정렬 순서">'+SORTS.map(function(o){ return '<option value="'+o[0]+'"'+(o[0]===state.sort?' selected':'')+'>'+o[1]+'</option>'; }).join("")+'</select></label>'+
@@ -523,7 +523,7 @@ function filtered(){
     if(c&&c.region && state.regions.length && state.regions.indexOf(it.region)<0) return false;
     if(state.cat==="pet" && state.pet && petOf(it).indexOf(state.pet)<0) return false;
     if(state.chs.length && !chOf(it).concat(payOf(it)).some(function(c){ return state.chs.indexOf(c)>=0; })) return false;
-    if(state.themes.length && (state.cat==="stay"||state.cat==="all") && !state.themes.some(function(k){ return themeOf(it,k); })) return false;
+    if(state.themes.length && state.cat==="stay" && !state.themes.some(function(k){ return themeOf(it,k); })) return false;
     var s=statusOf(it).key;
     if(state.status==="open" && s!=="open") return false;
     if(state.status==="closed" && s!=="closed") return false;
