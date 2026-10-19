@@ -700,10 +700,12 @@ function yeogiBox(pos){ // 여기어때 마케팅 파트너 링크(시온님이 
   return Y.map(function(x){ return '<a class="yeo" '+ext(x.u)+'><span><small>여기어때</small><b>'+esc(x.t)+'</b>'+(x.d?'<em>'+esc(x.d)+'</em>':'')+'</span><i>'+esc(x.b||"보러가기")+' ›</i></a>'; }).join("");
 }
 /* 공짜여행 기획전(2026-10-19 시온님 요청 "이제 공짜여행이 시작된다!", 인트로 '지금 바로가기'·홈 배너 → #/trip): 모집 중 숙박 체험단 모음. 사이트 안 페이지라 광고 표시 없음 */
-var TRIP_Q=[["","전체"],["풀빌라","풀빌라"],["키즈","키즈"],["키즈풀빌라","키즈풀빌라"],["애견","애견동반"],["오션뷰","오션뷰"],["글램핑","글램핑"],["한옥","한옥"],["독채","독채"]];
+var TRIP_Q=[["","전체"],["풀빌라","풀빌라"],["키즈","키즈"],["키즈풀빌라","키즈풀빌라"],["반려동물","반려동물 동반"],["오션뷰","오션뷰"],["글램핑","글램핑"],["한옥","한옥"],["독채","독채"]];
+var PET_STAY=/애견|반려|펫|강아지|댕댕|도그/i;
+function petStay(it){ var f=it.fee||{}; return PET_STAY.test((it.name||"")+" "+(it.benefit||"")+" "+(it.sum||"")+" "+(f.d||"")) && !/반려동물\s*:?\s*동반\s*불가|애견\s*동반\s*불가|반려동물\s*불가/.test((it.benefit||"")+" "+(it.sum||"")); }
 function tripView(){
   var all=seed.items.filter(function(it){ return catOf(it)==="stay" && statusOf(it).key==="open"; }), q=state.tq||"";
-  var L=q?all.filter(function(it){ return ((it.name||"")+" "+(it.benefit||"")+" "+(it.sum||"")).indexOf(q)>=0; }):all;
+  var L=q?all.filter(function(it){ var t=(it.name||"")+" "+(it.benefit||"")+" "+(it.sum||""); return q==="반려동물"?petStay(it):t.indexOf(q)>=0; }):all;
   var sum=0; all.forEach(function(it){ var v=valOf(it); if(v>0&&v<5e6) sum+=v; });
   var fresh=all.filter(isNewToday).sort(function(a,b){ return valOf(b)-valOf(a); }), soon=all.filter(function(it){ return daysLeft(it)<=1; }).sort(byDeadline);
   var h='<div class="trp">'+
@@ -945,6 +947,8 @@ function wideBanners(open,closing){
   else W.push({h:"#/list?cat=all&s=open",bg:"linear-gradient(90deg,#2b1055 0%,#5a1f8f 60%,#a43f9f 100%)",s:"지금 신청할 수 있어요",t:"모집 중 체험단 <em>"+open.length+"곳</em>",e:"🎟️"});
   var kids=st.filter(function(it){ return /키즈\s*풀빌라/.test((it.name||"")+" "+(it.benefit||"")); }).length;
   if(kids>=2) W.push({h:"#/trip?q="+encodeURIComponent("키즈풀빌라"),bg:"linear-gradient(90deg,#0b2a5c 0%,#1c4fa8 60%,#4f8de8 100%)",s:"아이랑 물놀이하는 가족여행",t:"키즈 풀빌라 체험단 <em>"+kids+"곳</em>",e:"👶🏻"});
+  var pets=st.filter(petStay).length;
+  if(pets>=2) W.push({h:"#/trip?q="+encodeURIComponent("반려동물"),bg:"linear-gradient(90deg,#3a1d0b 0%,#8a4a17 60%,#d08a3a 100%)",s:"댕댕이랑 같이 떠나요",t:"반려동물 동반 숙소 <em>"+pets+"곳</em>",e:"🐶"});
   if(mrtList().length) W.push({h:"#/event",bg:"linear-gradient(90deg,#111 0%,#2c2c34 60%,#4a4a58 100%)",s:"국내·해외 숙소 특가를 매일 아침",t:"최저가 숙소 <em>특가 모음</em>",e:"🏨"});
   var P=promoOn(); if(P) W.push({h:P.u,x:1,ad:1,bg:"linear-gradient(90deg,#0c1a6b 0%,#1f3aa8 60%,#3f6be0 100%)",s:esc(P.small||""),t:esc((P.t||"").replace(/<[^>]+>/g,"")),art:P.art});
   var n=W.length;
