@@ -11,7 +11,7 @@ if (!KEY || !PRIV || !PUB || !URL0) { console.log('알림 키·주소가 아직 
 const now = new Date(Date.now() + 9 * 3600e3), today = now.toISOString().slice(0, 10);
 const kday = ms => new Date(ms + 9 * 3600e3).toISOString().slice(0, 10);
 const items = (d.items || []).filter(i => !i.closed && (i.viewUrl || i.applyUrl));
-const CATN = { stay: '숙박', baby: '육아', life: '생활', beauty: '뷰티', elec: '가전/가구', health: '건강식품', pet: '반려동물' };
+const CATN = { stay: '숙박', baby: '육아', life: '생활', beauty: '뷰티', elec: '가전/가구', health: '건강식품', pet: '반려동물', etc: '입장권' };
 function count(list) { const c = {}; list.forEach(i => { const k = CATN[i.cat || 'stay'] || '기타'; c[k] = (c[k] || 0) + 1; }); return Object.entries(c).sort((a, b) => b[1] - a[1]).map(([k, n]) => `${k} ${n}`).join(' · '); }
 // 알림 문구(2026-10-17 시온님이 보여준 참고 알림: 구체적인 상품 1개 + [분류] + 금액, 쇼핑 특가는 (광고) 표시)
 function val(i) { // 금액(원) 추정: worth "N만원" → cpPrice → 제공내역 속 N원/N만원

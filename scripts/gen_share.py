@@ -21,8 +21,8 @@ TODAY = NOW.strftime("%Y-%m-%d")
 d = json.load(open(os.path.join(ROOT, "data.json"), encoding="utf-8"))
 e = lambda s: html.escape(str(s or ""), quote=True)
 
-CATN = {"stay": "숙박", "baby": "육아", "beauty": "뷰티", "life": "생활", "elec": "가전/가구", "health": "건강식품", "pet": "반려동물"}
-CATF = {"stay": "stay", "baby": "baby", "beauty": "beauty", "life": "life", "elec": "elec", "health": "food", "pet": "pet"}
+CATN = {"stay": "숙박", "baby": "육아", "beauty": "뷰티", "life": "생활", "elec": "가전/가구", "health": "건강식품", "pet": "반려동물", "etc": "입장권·기타"}
+CATF = {"stay": "stay", "baby": "baby", "beauty": "beauty", "life": "life", "elec": "elec", "health": "food", "pet": "pet", "etc": "etc"}
 CHN = {"blog": "블로그", "clip": "클립", "insta": "인스타그램", "reels": "릴스", "youtube": "유튜브", "tiktok": "틱톡"}
 BAD_SIGUN = {"중구", "동구", "서구", "남구", "북구", "부산진구"}
 
@@ -177,7 +177,7 @@ for it in items:
     body += "<dl>" + "".join(f"<dt>{e(a)}</dt><dd>{e(b)}</dd>" for a, b in rows if b) + "</dl>"
     body += '<div class="btns">'
     if op and apply_: body += f'<a class="btn pri" href="{e(apply_)}" target="_blank" rel="nofollow noopener">{e(it.get("source") or "신청 사이트")}에서 신청하기</a>'
-    if view: body += f'<a class="btn sec" href="{e(view)}" target="_blank" rel="sponsored nofollow noopener">{"숙소 사진 보기" if cat=="stay" else "상품 가격 보기"}</a>'
+    if view: body += f'<a class="btn sec" href="{e(view)}" target="_blank" rel="sponsored nofollow noopener">{"숙소 사진 보기" if cat=="stay" else ("입장권 가격 보기" if cat=="etc" else "상품 가격 보기")}</a>'
     body += f'<a class="btn ghost" href="/#/item?id={e(iid)}">다꾸 앱에서 찜하고 마감 알림 받기</a></div>'
     sim = [x for x in open_items if x["id"] != iid and (x.get("cat") or "stay") == cat and (cat != "stay" or (sg and sigun(x) == sg) or x.get("region") == it.get("region"))]
     if len(sim) < 6: sim += [x for x in open_items if x["id"] != iid and (x.get("cat") or "stay") == cat and x not in sim]
