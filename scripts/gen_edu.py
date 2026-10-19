@@ -38,6 +38,15 @@ CUR = [
     ("💰", "블로그 수익화 비법"),
 ]
 CHAT = "https://pf.kakao.com/_xkqEFX/chat"
+import json, html as H
+from datetime import datetime, timedelta, timezone
+TODAY = (datetime.now(timezone.utc) + timedelta(hours=9)).strftime("%Y-%m-%d")
+DATA = json.load(open(os.path.join(ROOT, "data.json"), encoding="utf-8"))
+OPEN = [it for it in DATA.get("items", []) if (it.get("end") or "") >= TODAY and it.get("image")]
+OPEN.sort(key=lambda it: (it.get("createdAt") or it.get("start") or ""), reverse=True)
+PICKS = OPEN[:6]
+cards = "".join(f'<a class="oc" href="/s/{H.escape(it["id"])}.html"><img src="{H.escape(it["image"])}" alt="" loading="lazy" referrerpolicy="no-referrer"><b>{H.escape(it.get("name",""))}</b><small>{H.escape((it.get("benefit") or "")[:40])}</small></a>' for it in PICKS)
+OPENSEC = f'<section class="open"><h2>지금 다꾸체험단에서 모집 중</h2><p class="sub">전국 체험단 <b>{len(OPEN)}곳</b>을 한곳에 모아 보여드려요</p><div class="ocs">{cards}</div><a class="btn" href="/">다꾸체험단 홈에서 체험단 보기 ›</a></section>'
 
 pts = grab('<section class="edupts">')
 why = grab('<section class="eduwhy">')
@@ -111,10 +120,18 @@ h1,h2{{letter-spacing:-.02em}}
 .cta p{{margin:0;font-size:15px;font-weight:800;color:#e9a6ff}}.cta h2{{margin:8px 0 0;font-size:27px;line-height:1.35}}.cta h2 span{{color:#ffe14d}}
 .btn{{display:inline-block;margin-top:16px;padding:14px 28px;border-radius:999px;background:linear-gradient(90deg,#8a3fd0,#d46fd8);color:#fff;font-weight:900;text-decoration:none}}
 .note{{font-size:12px;color:#9a93a6;text-align:center;padding:0 16px}}.note a{{color:#e9a6ff}}
+.top{{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:#000;border-bottom:1px solid #222}}
+.logo{{display:flex;align-items:center;gap:8px;font-weight:900;font-size:17px;text-decoration:none}}.logo img{{width:28px;height:28px;border-radius:8px}}
+.tbtn{{font-size:13px;font-weight:800;padding:7px 12px;border-radius:999px;background:#1d1427;border:1px solid #4b2a6b;color:#e9a6ff;text-decoration:none}}
+.open{{text-align:center}}.open h2{{font-size:21px;margin:0}}.open .sub{{font-size:13.5px;color:#ccc}}.open .sub b{{color:#ffe14d}}
+.ocs{{display:grid;grid-template-columns:1fr 1fr;gap:10px;text-align:left;margin-top:12px}}
+.oc{{display:block;border-radius:12px;overflow:hidden;background:#15101c;text-decoration:none}}.oc img{{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}}
+.oc b{{display:block;padding:8px 8px 0;font-size:13px;line-height:1.35;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}}.oc small{{display:block;padding:2px 8px 10px;font-size:11.5px;color:#aaa;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
 .bar{{position:fixed;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#000;border-top:1px solid #222}}
 .bar a{{display:block;max-width:528px;margin:0 auto;padding:14px;border-radius:14px;text-align:center;background:linear-gradient(90deg,#8a3fd0,#d46fd8);color:#fff;font-weight:900;text-decoration:none}}
 .sitebiz{{padding:20px 16px 100px;font-size:12px;color:#888;background:#0a0a0a}}.sitebiz a{{color:#aaa;margin-right:8px}}.sitebiz nav b{{display:block;margin-bottom:4px}}
 </style></head><body><div class="w">
+<header class="top"><a class="logo" href="/"><img src="/icons/icon-192.png" alt="">다꾸체험단</a><a class="tbtn" href="/">체험단 보러가기 ›</a></header>
 <p class="disc">다꾸체험단은 쿠팡 파트너스 등 제휴 활동으로 일정액의 수수료를 받을 수 있습니다.</p>
 <section class="hero"><small>다꾸 수익화</small><span class="m">⚡ 한 달이면 다 배워요</span><span class="f">50대에도 블로그 체험단 해요!</span>
 <h1>한번 배우면 <span>평생 써먹는</span><br>블로그 수익화</h1>
@@ -126,12 +143,13 @@ h1,h2{{letter-spacing:-.02em}}
 <section class="sec"><h2>5주 커리큘럼</h2><ol class="cur">{''.join(f'<li><b>✨ {i+1}주차</b>{e} {t}</li>' for i,(e,t) in enumerate(CUR))}</ol></section>
 {books}
 {rv}
+{OPENSEC}
 <section class="sec"><h2>진행 방식</h2>{way}</section>
 <section class="price"><span class="badge">오픈 이벤트</span><br><div class="box"><small>5주 1:1 강의 + 전자책·강의자료</small><b>월 10만원대</b><em>*12개월 카드 할부 시 (할부 수수료는 카드사 기준)<br>정확한 수강료는 상담 때 안내해 드려요</em></div></section>
 {guar}
 <p class="note" style="margin-top:14px">코칭은 방법을 함께 찾는 과정이에요. 체험단 당첨, 검색 순위, 수익 금액을 약속하거나 보장하지 않아요. <a href="/refund.html">환불정책 보기</a></p>
 <section class="cta"><p>아직 고민하는 분들께</p><h2>지금 시작하고<br><span>생활비 월 100</span> 아껴보세요!</h2><small style="display:block;margin-top:10px;font-size:11px;color:#8f8a99">*체험단 활용 정도에 따라 사람마다 달라요</small>
-<a class="btn" href="/#/edu">1:1 상담 신청하기</a><br><a class="btn" style="background:#fee500;color:#191919" href="{CHAT}" target="_blank" rel="noopener">카카오톡으로 바로 문의</a></section>
+<a class="btn" href="/#/edu">1:1 상담 신청하기</a><br><a class="btn" style="background:#fee500;color:#191919" href="{CHAT}" target="_blank" rel="noopener">카카오톡으로 바로 문의</a><br><a class="btn" style="background:#222" href="/">다꾸체험단 홈 가기</a></section>
 {footer()}
 </div>
 <div class="bar"><a href="/#/edu">⚡ 1:1 상담 신청하기</a></div>

@@ -311,3 +311,10 @@ for x in d.get("toss", []):
     n_t += 1
 
 print(f"체험단 페이지 {n_s}개(모집 중 {len(open_items)}), 모아보기 {len(hubs)+1}개, 사이트맵 {len(urls)}개 주소, 하루특가 {n_t}개")
+
+# 수익화 교육 정적 페이지(edu.html)도 모집 중 체험단 목록과 함께 새로 만든다
+try:
+    import subprocess, sys as _s
+    subprocess.run([_s.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "gen_edu.py")], check=False)
+except Exception as _e:
+    print("gen_edu 실패", _e)
