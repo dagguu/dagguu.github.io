@@ -339,3 +339,19 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 #intro .inad.ft .intx h1{font-size:min(13vw,58px);margin:20px 0 16px;line-height:1.15}
 #intro .inad.ft .intx p{font-size:21px;line-height:1.5}
 #intro .inad.ft .innote{margin-top:22px;font-size:13px}
+
+/* 가로 기획전 배너(2026-10-19) */
+.wbs{margin:14px 16px 4px}
+.wbtrack{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:14px}
+.wbtrack::-webkit-scrollbar{display:none}
+.wb{position:relative;flex:0 0 100%;scroll-snap-align:start;display:flex;align-items:center;height:76px;padding:0 18px;color:#fff;text-decoration:none;overflow:hidden;box-sizing:border-box}
+.wbt{position:relative;z-index:1;display:flex;flex-direction:column;gap:3px;min-width:0}
+.wbt small{font-size:12.5px;color:rgba(255,255,255,.78);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wbt b{font-size:17px;font-weight:800;letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wbt b em{font-style:normal;color:#ffe14d}
+.wbt small span{font-variant-numeric:tabular-nums;color:#ffd0d0;font-weight:700}
+.wba{position:absolute;right:-10px;top:50%;width:150px;height:150px;transform:translateY(-50%);object-fit:cover;object-position:center 25%;opacity:.95;pointer-events:none}
+.wbe{position:absolute;right:20px;top:50%;transform:translateY(-50%) rotate(-8deg);font-size:46px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.35))}
+.wbn{position:absolute;right:10px;bottom:8px;z-index:2;font-size:11px;color:#fff;background:rgba(0,0,0,.38);border-radius:999px;padding:2px 8px}
+.wbn b{font-weight:800}
+.wbad{position:absolute;right:10px;top:8px;z-index:2;font-style:normal;font-size:10px;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.4);border-radius:4px;padding:0 4px}

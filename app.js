@@ -183,6 +183,7 @@ document.addEventListener("click",function(e){
   else if((a=t.closest(".promom .pmc"))) ga("promo_click",{place:"popup_item",item_name:(a.querySelector(".pmn")||{}).textContent||""});
   else if((a=t.closest(".pmband .phead"))) ga("promo_click",{place:"mid_banner",promo:(seed.promo||{}).link||""});
   else if((a=t.closest(".pmband .pmc"))) ga("promo_click",{place:"mid_banner_item",item_name:(a.querySelector(".pmn")||{}).textContent||""});
+  else if((a=t.closest(".wb"))) ga("promo_click",{place:"wide_banner",promo:(a.querySelector(".wbt b")||{}).textContent||""});
   else if((a=t.closest(".kv"))&&a.querySelector(".part")) ga("promo_click",{place:"banner",promo:(seed.promo||{}).link||""});
   else if((a=t.closest(".tcard"))){ var sec=a.closest(".wxsec")?"weather":a.closest(".drel")?"detail_related":a.closest("#gold")?"goldbox":a.closest("#babyhd,.hdl")?"babyhot":"deals"; ga("deal_click",{section:sec, item_name:(a.querySelector(".tn")||{}).textContent||""}); }
   else if((a=t.closest("[data-reopen]"))) ga("reopen_alert",{item_id:a.getAttribute("data-reopen")});
@@ -365,8 +366,7 @@ function homeView(){
   var h=tickerHtml(open)+slideBanners(false);
   h+='<nav class="hmenu" aria-label="바로가기">'+HOME_MENU.map(function(m){ return '<a href="'+m[2]+'"><span class="hmi">'+m[0]+'</span><span>'+m[1]+'</span></a>'; }).join("")+'</nav>';
   var closingToday=open.filter(function(it){ return it.end===td; });
-  if(closingToday.length) h+='<a class="notice" href="#/list?cat=all&s=todayClose"><span class="ntag">오늘 마감</span><b>'+closingToday.length+'곳이 오늘 끝나요</b><span class="ncd">⏳ <span id="stripcd">'+clock(msToMidnight())+'</span></span></a>';
-  else h+='<a class="notice" href="#/list?cat=all&s=open"><span class="ntag">모집 중</span><b>지금 '+open.length+'곳이 모집 중이에요</b><span class="ncd">보러가기 ›</span></a>';
+  h+=wideBanners(open,closingToday);
   var byNew=function(a,b){ return (b.createdAt||0)-(a.createdAt||0); };
   var fresh=open.filter(function(it){ return (Date.now()-(it.createdAt||0))<3*864e5; }).sort(byNew);
   h+=hrow('✨ <em>새로 올라온</em> 체험단','#/list?cat=all&s=open',fresh);
@@ -938,7 +938,31 @@ function slideBanners(inPage,list){
     (slides.length>1?'<div class="sdots">'+slides.map(function(_,i){ return '<button data-dot="'+i+'" aria-label="'+(i+1)+'번째 배너"'+(i===0?' class="on"':'')+'></button>'; }).join("")+'</div>':'')+'</div>';
 }
 var slideT;
+/* 가로 기획전 배너(2026-10-19 시온님 요청, 트립비토즈 '비토즈위크 24시간 특가' 띠 배너 참고): 홈 메뉴 아래 예전 "오늘 마감" 줄 자리. 슬라이드 + "1 / N" */
+function wideBanners(open,closing){
+  var W=[], st=open.filter(function(it){ return catOf(it)==="stay"; });
+  W.push({h:"#/trip",bg:"linear-gradient(90deg,#12063f 0%,#2a0f8a 55%,#5b3fd6 100%)",s:"아직도 몰랐어? 여행 무료 체험단",t:"이제 <em>공짜여행</em>이 시작된다!",art:"images/free-trip.svg"});
+  if(closing.length) W.push({h:"#/list?cat=all&s=todayClose",bg:"linear-gradient(90deg,#2b1055 0%,#5a1f8f 60%,#a43f9f 100%)",s:'오늘 밤 12시까지 · ⏳ <span id="stripcd">'+clock(msToMidnight())+'</span>',t:"오늘 마감 체험단 <em>"+closing.length+"곳</em>",e:"⏰"});
+  else W.push({h:"#/list?cat=all&s=open",bg:"linear-gradient(90deg,#2b1055 0%,#5a1f8f 60%,#a43f9f 100%)",s:"지금 신청할 수 있어요",t:"모집 중 체험단 <em>"+open.length+"곳</em>",e:"🎟️"});
+  var kids=st.filter(function(it){ return /키즈|아이|가족/.test((it.name||"")+(it.benefit||"")); }).length;
+  if(kids>=3) W.push({h:"#/trip?q=%ED%82%A4%EC%A6%88",bg:"linear-gradient(90deg,#0b2a5c 0%,#1c4fa8 60%,#4f8de8 100%)",s:"아이랑 떠나는 가족여행",t:"키즈 숙소 체험단 <em>"+kids+"곳</em>",e:"🧸"});
+  if(mrtList().length) W.push({h:"#/event",bg:"linear-gradient(90deg,#111 0%,#2c2c34 60%,#4a4a58 100%)",s:"국내·해외 숙소 특가를 매일 아침",t:"최저가 숙소 <em>특가 모음</em>",e:"🏨"});
+  var P=promoOn(); if(P) W.push({h:P.u,x:1,ad:1,bg:"linear-gradient(90deg,#0c1a6b 0%,#1f3aa8 60%,#3f6be0 100%)",s:esc(P.small||""),t:esc((P.t||"").replace(/<[^>]+>/g,"")),art:P.art});
+  var n=W.length;
+  return '<div class="wbs" data-wslider><div class="wbtrack">'+W.map(function(o,i){
+    return '<a class="wb" style="background:'+o.bg+'" '+(o.x?ext(o.h):'href="'+o.h+'"')+'><span class="wbt"><small>'+o.s+'</small><b>'+o.t+'</b></span>'+
+      (o.art?'<img class="wba" src="'+esc(o.art)+'" alt="" loading="lazy">':'<span class="wbe" aria-hidden="true">'+o.e+'</span>')+
+      (o.ad?'<i class="wbad">광고</i>':'')+'<span class="wbn"><b>'+(i+1)+'</b> / '+n+'</span></a>'; }).join("")+'</div></div>';
+}
+var wbT; function startWide(){
+  clearInterval(wbT); var tr=document.querySelector("[data-wslider] .wbtrack"); if(!tr||tr.children.length<2) return;
+  var n=tr.children.length, hold=false; function idx(){ return Math.round(tr.scrollLeft/tr.clientWidth); }
+  tr.addEventListener("pointerdown",function(){ hold=true; }); tr.addEventListener("pointerup",function(){ setTimeout(function(){ hold=false; },3000); });
+  if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  wbT=setInterval(function(){ if(hold||!document.body.contains(tr)) return; tr.scrollTo({left:tr.clientWidth*((idx()+1)%n),behavior:"smooth"}); },3800);
+}
 function startSliders(){
+  startWide();
   clearInterval(slideT);
   var sl=document.querySelector("[data-slider]"); if(!sl) return;
   var tr=sl.querySelector(".strack"), dots=sl.querySelectorAll("[data-dot]"), n=tr.children.length; if(n<2) return;
