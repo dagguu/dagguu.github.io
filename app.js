@@ -1070,14 +1070,14 @@ function contactView(){
 var EDU_PICK=["블로그를 처음 시작해요","체험단 신청해도 당첨이 잘 안 돼요","내 글이 검색 위쪽에 안 보여요","블로그로 수익을 내고 싶어요"];
 function eduView(){
   return '<div class="pg edu">'+
-    '<section class="eduhero"><small>다꾸 수익화</small><h1>한번 배우면<br><span>평생 써먹는</span><br>블로그 수익화</h1><p>5주 1:1 교육으로 체험단 당첨부터 검색 노출, 수익화까지<br>결제일부터 12개월 동안은 1:1 코칭도 무료예요</p><div class="eduhp"><b>120만원</b> · 5주 1:1 교육 · 🎁 12개월 무료 코칭</div><a class="b" href="#eduapply" data-jumpid="eduapply">상담 신청하기</a></section>'+
+    '<section class="eduhero"><small>다꾸 수익화</small><h1>한번 배우면<br><span>평생 써먹는</span><br>블로그 수익화</h1><p>5주 1:1 교육으로 체험단 당첨부터 검색 노출, 수익화까지<br>결제일부터 12개월 동안은 1:1 코칭도 무료예요</p><div class="eduhp">5주 1:1 교육 · 🎁 12개월 무료 코칭 · 📚 전자책</div><a class="b" href="#eduapply" data-jumpid="eduapply">상담 신청하기</a></section>'+
     '<section class="edusec"><h2>이런 분께 맞아요</h2><ul class="educhk">'+EDU_PICK.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join("")+'</ul></section>'+
     '<section class="edusec"><h2>5주 커리큘럼</h2><ol class="educur">'+
       [["블로그 셋팅 및 점검 · 포스팅하는 법"],["체험단 신청하는 방법 · 당첨 후기 작성법"],["블로그 상단노출 방법"],["블로그 기자단 · AI 글쓰기"],["블로그 수익화 비법"]].map(function(c,k){ return '<li><b>'+(k+1)+'주차</b><span>'+c[0]+'</span></li>'; }).join("")+
     '</ol></section>'+
     '<section class="edusec"><h2>진행 방식</h2><ul class="eduway"><li>💬 카톡으로 상담 신청 → 지금 블로그 상태 확인</li><li>📚 전자책·강의자료를 바로 드려요</li><li>🧑‍🏫 5주 1:1 교육 커리큘럼</li><li>🎁 수강생 혜택: 결제일부터 12개월 동안 1:1 코칭 무료 (횟수 제한 없음)</li><li>💳 한 번 결제, 카드 할부 가능 (할부 개월 수는 카드사마다 달라요)</li></ul>'+
-      '<div class="eduprice"><small>수강료</small><b>120만원</b><span>5주 1:1 강의 100만원 + 전자책·강의자료 20만원</span><i class="edugift">🎁 수강생 혜택 · 12개월 1:1 코칭 무료</i><em>카드 할부 최대 12개월 · 12개월로 나누면 월 10만원꼴<br>(할부 수수료는 카드사 기준, 무이자 여부는 카드사마다 달라요)</em></div>'+
-      '<p class="edunote2">결제는 상담 후 안내드리는 결제 링크로 진행해요. 전자책·강의자료는 받은 뒤에는 그 부분이 환불되지 않아요. <a href="/refund.html">환불정책</a></p>'+
+      '<div class="eduprice edulock"><small>수강료</small><b class="blurp" aria-hidden="true">000만원</b><span>🔒 상담 신청하신 분께만 알려드려요</span><i class="edugift">🎁 수강생 혜택 · 12개월 1:1 코칭 무료</i><em>5주 1:1 강의 + 전자책·강의자료<br>카드 할부 최대 12개월 가능 (할부 수수료는 카드사 기준)</em><a class="b" href="#eduapply" data-jumpid="eduapply">수강료 알아보기</a></div>'+
+      '<p class="edunote2">결제는 상담 후 안내드리는 결제 링크로 진행하고, 수강료는 결제 화면에서 다시 확인할 수 있어요. 전자책·강의자료는 받은 뒤에는 그 부분이 환불되지 않아요. <a href="/refund.html">환불정책</a></p>'+
       '<p class="edunote">코칭은 방법을 함께 찾는 과정이에요. 체험단 당첨, 검색 순위, 수익 금액을 약속하거나 보장하지는 않아요. <a href="/refund.html">환불정책 보기</a></p></section>'+
     '<section class="edusec" id="eduapply"><h2>상담 신청</h2><form id="eduform" class="eduform" novalidate>'+
       '<label class="fl">닉네임 <i>*</i><input class="fi" name="nick" maxlength="30" autocomplete="nickname"></label>'+
