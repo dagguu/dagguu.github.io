@@ -427,3 +427,4 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .eduhp span{display:block;white-space:nowrap}
 .eduhero h1 .one{font-style:normal;white-space:nowrap;font-size:min(6.6vw,27px)}
 .eduprice .edugift{margin:6px 3px 0}
+.educur .cpt{font-size:12.5px;font-weight:800;color:#9b3fd0}
