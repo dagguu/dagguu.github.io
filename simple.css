@@ -601,3 +601,4 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .et.r p{border-radius:18px 18px 4px 18px;background:linear-gradient(135deg,#8a3fd0,#b558d6)}
 .et small{display:block;font-size:11.5px;font-weight:800;color:#e9a6ff;margin-bottom:2px}
 .et.r small{color:#ffe14d}
+.esf.f1{left:6px;right:auto;top:auto;bottom:4px;transform:rotate(-12deg)}.esbox{z-index:3}
