@@ -365,3 +365,4 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .th .cdst b{font-size:13.5px}
 .grid.v3 .th .cdst,.hc .th .cdst{font-size:10px;padding-top:5px}
 .grid.v3 .th .cdst b,.hc .th .cdst b{font-size:12px}
+.span .wbs.wb1{margin:4px 0}

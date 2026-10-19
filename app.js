@@ -557,7 +557,7 @@ function renderListGrid(){
   list.forEach(function(it,i){
     out.push(state.view==="3"?miniCard(it,true):fullCard(it));
     var every=state.view==="3"?9:(state.view==="1"?5:6);
-    if((i+1)%every===0){ var hd=hotDeal(), B=ADS.map(function(a){ return adWide(a); }); if(hd){ if(state.cat==="baby") B.unshift(hd); else B.splice(1,0,hd); } if(B.length) out.push('<div class="span">'+B[n++%B.length]+'</div>'); }
+    if((i+1)%every===0){ var hd=hotDeal(), B=ADS.map(function(a){ return adWide(a); }); if(hd){ if(state.cat==="baby") B.unshift(hd); else B.splice(1,0,hd); } if(state.cat==="pet"){ var pb=petStayBanner(); if(pb) B.unshift(pb); } if(B.length) out.push('<div class="span">'+B[n++%B.length]+'</div>'); }
   });
   g.innerHTML=list.length?out.join(""):(state.chs.length&&state.chs.indexOf("blog")<0?'<div class="empty span"><b>'+state.chs.map(function(c){ return CHN[c]||c; }).join(" · ")+' 체험단을 모으고 있어요</b>새로 올라오면 카톡으로 가장 먼저 알려드릴게요.<a class="b kakao" '+ext(kakaoUrl())+'>💬 카톡으로 알림 받기</a></div>':'<div class="empty span"><b>🥲 조건에 맞는 체험단이 없어요</b>다른 지역이나 상태를 골라 보세요.</div>');
   plainHeads(document.getElementById("view"));
@@ -703,6 +703,9 @@ function yeogiBox(pos){ // 여기어때 마케팅 파트너 링크(시온님이 
 var TRIP_Q=[["","전체"],["풀빌라","풀빌라"],["키즈","키즈"],["키즈풀빌라","키즈풀빌라"],["반려동물","반려동물 동반"],["오션뷰","오션뷰"],["글램핑","글램핑"],["한옥","한옥"],["독채","독채"]];
 var PET_STAY=/애견|반려|펫|강아지|댕댕|도그/i;
 function petStay(it){ var f=it.fee||{}; return PET_STAY.test((it.name||"")+" "+(it.benefit||"")+" "+(it.sum||"")+" "+(f.d||"")) && !/반려동물\s*:?\s*동반\s*불가|애견\s*동반\s*불가|반려동물\s*불가/.test((it.benefit||"")+" "+(it.sum||"")); }
+/* 반려동물 체험단 목록 중간 배너(2026-10-19 시온님 요청): 가로 배너의 "반려동물 동반 숙소" 한 장 */
+function petStayBanner(){ var n=seed.items.filter(function(it){ return catOf(it)==="stay" && statusOf(it).key==="open" && petStay(it); }).length; if(n<2) return "";
+  return '<div class="wbs wb1"><div class="wbtrack"><a class="wb" style="background:linear-gradient(90deg,#3a1d0b 0%,#8a4a17 60%,#d08a3a 100%)" href="#/trip?q='+encodeURIComponent("반려동물")+'"><span class="wbt"><small>댕댕이랑 같이 떠나요</small><b>반려동물 동반 숙소 <em>'+n+'곳</em></b></span><span class="wbe" aria-hidden="true">🐶</span></a></div></div>'; }
 function tripView(){
   var all=seed.items.filter(function(it){ return catOf(it)==="stay" && statusOf(it).key==="open"; }), q=state.tq||"";
   var L=q?all.filter(function(it){ var t=(it.name||"")+" "+(it.benefit||"")+" "+(it.sum||""); return q==="반려동물"?petStay(it):t.indexOf(q)>=0; }):all;
