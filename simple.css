@@ -565,3 +565,5 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .educta h2{margin:8px 0 0;font-size:27px;line-height:1.35;font-weight:900;color:#fff}
 .educta h2 span{color:#ffe14d}
 .educta small{display:block;margin-top:10px;font-size:11px;color:#8f8a99}
+/* 입장권 팝업 보라 (2026-10-19) */
+.promom .psheet2,.pmband{background:linear-gradient(160deg,#3a1670 0%,#8a3fd0 55%,#b558d6 100%)}
