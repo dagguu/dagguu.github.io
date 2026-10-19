@@ -46,7 +46,7 @@ OPEN = [it for it in DATA.get("items", []) if (it.get("end") or "") >= TODAY and
 OPEN.sort(key=lambda it: (it.get("createdAt") or it.get("start") or ""), reverse=True)
 PICKS = OPEN[:6]
 cards = "".join(f'<a class="oc" href="/s/{H.escape(it["id"])}.html"><img src="{H.escape(it["image"])}" alt="" loading="lazy" referrerpolicy="no-referrer"><b>{H.escape(it.get("name",""))}</b><small>{H.escape((it.get("benefit") or "")[:40])}</small></a>' for it in PICKS)
-OPENSEC = f'<section class="open"><h2>지금 다꾸체험단에서 모집 중</h2><p class="sub">전국 체험단 <b>{len(OPEN)}곳</b>을 한곳에 모아 보여드려요</p><div class="ocs">{cards}</div><a class="btn" href="/">다꾸체험단 홈에서 체험단 보기 ›</a></section>'
+OPENSEC = f'<section class="open"><h2>다꾸체험단에서 모아 보는 체험단</h2><p class="sub">여러 체험단 사이트에서 모집 중인 <b>{len(OPEN)}곳</b>을 한곳에 모았어요</p><div class="ocs">{cards}</div><a class="btn" href="/">다꾸체험단 홈에서 체험단 보기 ›</a></section>'
 
 pts = grab('<section class="edupts">')
 why = grab('<section class="eduwhy">')
