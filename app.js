@@ -343,7 +343,7 @@ function hrow(title,more,list,sub){
     '<div class="hs">'+list.slice(0,10).map(hcard).join("")+'</div></section>';
 }
 var HOME_MENU=[
-  ["📝","블로그","#/list?cat=all&s=open&ch=blog"],["📸","인스타그램","#/list?cat=all&s=open&ch=insta"],["🎬","숏폼","#/list?cat=all&s=open&ch=clip,reels,youtube"],["🎁","혜택","#/benefit"],["🔥","특가","#/deals"],
+  ["📝","블로그","#/list?cat=all&s=open&ch=blog"],["📸","인스타그램","#/list?cat=all&s=open&ch=insta"],["🎬","숏폼","#/list?cat=all&s=open&ch=clip,reels,youtube"],["✨","오늘 오픈","#/list?cat=all&s=todayOpen","NEW"],["⏰","마감임박","#/list?cat=all&s=closing","HOT"],
   ["🏨","숙박","#/list?cat=stay&s=open"],["👶","육아","#/list?cat=baby"],["💄","뷰티","#/list?cat=beauty"],["🧺","생활","#/list?cat=life"],["🔌","가전/가구","#/list?cat=elec"],["💊","건강식품","#/list?cat=health"],["🐾","반려동물","#/list?cat=pet"]
 ];
 /* 슬라이드 배너 위 한 줄 소식 (2026-10-18 시온님 요청). 지어낸 이용자 후기는 쓰지 않고 data.json 실제 숫자만 */
@@ -364,7 +364,7 @@ var tkT; function tkInit(){ clearInterval(tkT); var l=document.querySelector(".t
 function homeView(){
   var td=ymd(today()), open=seed.items.filter(function(it){ return statusOf(it).key==="open"; });
   var h=tickerHtml(open)+slideBanners(false);
-  h+='<nav class="hmenu" aria-label="바로가기">'+HOME_MENU.map(function(m){ return '<a href="'+m[2]+'"><span class="hmi">'+m[0]+'</span><span>'+m[1]+'</span></a>'; }).join("")+'</nav>';
+  h+='<nav class="hmenu" aria-label="바로가기">'+HOME_MENU.map(function(m){ return '<a href="'+m[2]+'"'+(m[3]?' class="hmhot"':'')+'><span class="hmi">'+m[0]+(m[3]?'<i class="hmb">'+m[3]+'</i>':'')+'</span><span>'+m[1]+'</span></a>'; }).join("")+'</nav>';
   var closingToday=open.filter(function(it){ return it.end===td; });
   h+=wideBanners(open,closingToday);
   var byNew=function(a,b){ return (b.createdAt||0)-(a.createdAt||0); };
@@ -516,7 +516,7 @@ function filtered(){
     var s=statusOf(it).key;
     if(state.status==="open" && s!=="open") return false;
     if(state.status==="closed" && s!=="closed") return false;
-    if(state.status==="todayOpen" && !(it.start===td && s!=="closed")) return false;
+    if(state.status==="todayOpen" && !(isNewToday(it) && s!=="closed")) return false;
     if(state.status==="pick" && !(isPick(it) && s!=="closed")) return false;
     if(state.status==="todayClose" && !(it.end===td && s==="open")) return false;
     if(state.status==="closing" && !(s==="open" && daysLeft(it)<=3)) return false;
