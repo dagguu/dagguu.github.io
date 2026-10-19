@@ -952,7 +952,7 @@ function wideBanners(open,closing){
   return '<div class="wbs" data-wslider><div class="wbtrack">'+W.map(function(o,i){
     return '<a class="wb" style="background:'+o.bg+'" '+(o.x?ext(o.h):'href="'+o.h+'"')+'><span class="wbt"><small>'+o.s+'</small><b>'+o.t+'</b></span>'+
       (o.art?'<img class="wba" src="'+esc(o.art)+'" alt="" loading="lazy">':'<span class="wbe" aria-hidden="true">'+o.e+'</span>')+
-      (o.ad?'<i class="wbad">광고</i>':'')+'<span class="wbn"><b>'+(i+1)+'</b> / '+n+'</span></a>'; }).join("")+'</div></div>';
+      '<span class="wbn"><b>'+(i+1)+'</b> / '+n+'</span></a>'; }).join("")+'</div></div>';
 }
 var wbT; function startWide(){
   clearInterval(wbT); var tr=document.querySelector("[data-wslider] .wbtrack"); if(!tr||tr.children.length<2) return;
