@@ -498,3 +498,10 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .eduprice.edulock em{color:#bdb6c8}
 .eduprice.edulock .edugift{background:#1a1222;border-color:#4b2a6b;color:#e9a6ff}
 .eduprice.edulock .b{background:linear-gradient(90deg,#8a3fd0,#d46fd8)}
+
+.educoach{position:relative;margin-top:14px;min-height:240px;border-radius:18px;overflow:hidden;background:radial-gradient(circle at 80% 40%,rgba(212,111,216,.45),transparent 60%),#000;color:#fff}
+.educoach img{position:absolute;right:0;bottom:0;height:100%;width:52%;object-fit:cover;object-position:top center;-webkit-mask-image:linear-gradient(90deg,transparent,#000 30%);mask-image:linear-gradient(90deg,transparent,#000 30%)}
+.educoach .ect{position:relative;z-index:1;width:62%;padding:22px 0 22px 16px}
+.educoach small{display:block;font-size:11.5px;font-weight:800;color:#e9a6ff}
+.educoach b{display:block;margin:6px 0 10px;font-size:23px;line-height:1.25;font-weight:900}
+.educoach p{margin:0;font-size:12.5px;line-height:1.55;color:#ddd}
