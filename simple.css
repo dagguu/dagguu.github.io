@@ -611,3 +611,41 @@ body:has(.dbar .dbl) .dcdfix{bottom:calc(var(--tab) + 134px + env(safe-area-inse
 body:has(.dbar .dbl) .kchat{bottom:calc(var(--tab) + 182px + env(safe-area-inset-bottom))}
 body:has(.dbar .dbl) .totop{bottom:calc(var(--tab) + 230px + env(safe-area-inset-bottom))}
 body:has(.dbar .dbl) #view{padding-bottom:140px}
+/* 필터 바·필터 시트 (2026-10-19 시온님, 스타일씨 필터 참고) */
+.fbar{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:2px 0 10px;margin:0 -16px;padding-left:16px;padding-right:16px}
+.fbar::-webkit-scrollbar{display:none}
+.fbar button{flex:0 0 auto;display:inline-flex;align-items:center;gap:4px;height:34px;padding:0 12px;border-radius:17px;border:1px solid #e3e3ea;background:#fff;color:#333;font-size:13.5px;font-weight:600;white-space:nowrap;cursor:pointer}
+.fbar .fbtn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round}
+.fbar .fbtn b{display:inline-grid;place-items:center;min-width:18px;height:18px;border-radius:9px;background:#5b3fd6;color:#fff;font-size:11px;padding:0 4px}
+.fbar .on{border-color:#5b3fd6;color:#5b3fd6;background:#f4f0ff}
+.fbar .fpill i{font-style:normal;font-size:10px;color:#999}
+.fbar .fchip,.fschips .fchip{border:1px solid #5b3fd6;color:#5b3fd6;background:#fff}
+.fsheet{position:fixed;inset:0;z-index:200;pointer-events:none}
+.fsheet .fsbg{position:absolute;inset:0;background:rgba(0,0,0,.45);opacity:0;transition:opacity .2s}
+.fsheet .fsbox{position:absolute;left:50%;bottom:0;transform:translate(-50%,100%);width:100%;max-width:var(--frame,480px);max-height:82vh;display:flex;flex-direction:column;background:#fff;border-radius:22px 22px 0 0;transition:transform .25s ease;box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom)}
+.fsheet.on{pointer-events:auto}.fsheet.on .fsbg{opacity:1}.fsheet.on .fsbox{transform:translate(-50%,0)}
+body.fsopen{overflow:hidden}
+.fsgrab{width:44px;height:5px;border-radius:3px;background:#e5e5ea;margin:10px auto 2px}
+.fshead{position:relative;text-align:center;padding:8px 16px 4px}.fshead b{font-size:18px}
+.fsx{position:absolute;right:12px;top:2px;width:40px;height:40px;border:0;background:none;font-size:20px;color:#333;cursor:pointer}
+.fsbody{flex:1;overflow-y:auto;min-height:0}
+.fstabs{display:flex;border-bottom:1px solid #f0f0f3;position:sticky;top:0;background:#fff;z-index:1;overflow-x:auto;scrollbar-width:none}
+.fstabs::-webkit-scrollbar{display:none}
+.fstabs button{flex:1 0 auto;padding:14px 10px 12px;border:0;background:none;font-size:15px;color:#555;border-bottom:3px solid transparent;cursor:pointer;white-space:nowrap}
+.fstabs button.on{color:#5b3fd6;font-weight:800;border-bottom-color:#5b3fd6}
+.fschips{display:flex;flex-wrap:wrap;gap:6px;padding:12px 16px 0}
+.fschips:empty{display:none}
+.fschips .fchip{height:32px;padding:0 12px;border-radius:16px;font-size:13.5px;font-weight:700;cursor:pointer}
+.fslist{padding:6px 8px 12px}
+.fsrow{display:flex;align-items:center;gap:14px;width:100%;padding:14px 10px;border:0;background:none;text-align:left;font-size:16px;color:#222;cursor:pointer}
+.fsck{flex:0 0 24px;height:24px;border:2px solid #d5d5dc;border-radius:7px;box-sizing:border-box;display:grid;place-items:center}
+.fsrow.rd .fsck{border-radius:50%}
+.fsrow.on .fsck{background:#5b3fd6;border-color:#5b3fd6}
+.fsrow.on .fsck::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.fsem{font-size:20px;width:26px;text-align:center}
+.fsnm{flex:1}
+.fsrow small{color:#999;font-size:13px}
+.fsrow.on .fsnm{font-weight:700}
+.fsfoot{display:flex;gap:10px;padding:10px 16px 14px;border-top:1px solid #f0f0f3}
+.fsreset{flex:0 0 38%;height:52px;border:0;border-radius:14px;background:#f2f2f5;color:#555;font-size:16px;font-weight:700;cursor:pointer}
+.fsgo{flex:1;height:52px;border:0;border-radius:14px;background:#5b3fd6;color:#fff;font-size:17px;font-weight:800;cursor:pointer}

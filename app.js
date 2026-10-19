@@ -31,7 +31,7 @@ var PREFS = [
 var SORTS=[["high","💎 고가제품순"],["popular","🔥 인기순"],["comp","🙌 경쟁률 낮은순"],["deadline","⏰ 마감임박순"],["low","🪙 저가제품순"]], SORTS_OK=["high","popular","comp","deadline","low"];
 var state = { tab:"home", cat:"all", regions:[], status:"open", q:"", chs:[], view:"2", sort:"high", pet:"", loading:true };
 function ls(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v); }catch(e){ return null; } }
-state.view = ls("dakku-view") || "2"; state.themes=[];
+state.view = ls("dakku-view") || "2"; state.themes=[]; state.types=[];
 try{ var su=JSON.parse(sessionStorage.getItem("dakku-ui")||"{}"); if(su.cat) state.cat=su.cat; if(Array.isArray(su.regions)) state.regions=su.regions.filter(function(r){ return REGIONS.indexOf(r)>=0; }); if(su.status) state.status=su.status; if(SORTS_OK.indexOf(su.sort)>=0) state.sort=su.sort; if(su.pet==="dog"||su.pet==="cat") state.pet=su.pet; }catch(e){}
 function saveUi(){ try{ sessionStorage.setItem("dakku-ui",JSON.stringify({cat:state.cat,regions:state.regions,status:state.status,sort:state.sort,pet:state.pet||""})); }catch(e){} }
 var FAV=[]; try{ FAV=JSON.parse(ls("dakku-fav")||"[]")||[]; }catch(e){ FAV=[]; }
@@ -203,7 +203,7 @@ function route(){
   state.focusT=(tab==="deals"&&qs.t)?qs.t:"";
   state.dq=(tab==="deals"&&qs.q)?qs.q:"";
   state.pq=(tab==="price"&&qs.q)?qs.q:"";
-  if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; else if(qs.cat) state.status="open"; if(!parts[1]){ state.q=""; state.chs=[]; state.themes=[]; } if(qs.th!==undefined) state.themes=qs.th.split(",").filter(function(x){ return THEMES.some(function(t){ return t[0]===x; }); }); if(qs.q!==undefined) state.q=qs.q; if(qs.ch!==undefined) state.chs=qs.ch.split(",").filter(function(c){ return /^(blog|insta|clip|reels|youtube|tiktok|cafe|payback|review)$/.test(c); }); if(qs.o&&SORTS_OK.indexOf(qs.o)>=0) state.sort=qs.o; if(qs.p!==undefined) state.pet=(qs.p==='dog'||qs.p==='cat')?qs.p:''; if(qs.r!==undefined) state.regions=qs.r?qs.r.split(",").filter(function(r){ return REGIONS.indexOf(r)>=0; }):[]; saveUi(); }
+  if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; else if(qs.cat) state.status="open"; if(!parts[1]){ state.q=""; state.chs=[]; state.themes=[]; state.types=[]; } if(qs.ty!==undefined) state.types=qs.ty.split(",").filter(function(x){ return FTYPES.some(function(t){ return t[0]===x; }); }); if(qs.th!==undefined) state.themes=qs.th.split(",").filter(function(x){ return THEMES.some(function(t){ return t[0]===x; }); }); if(qs.q!==undefined) state.q=qs.q; if(qs.ch!==undefined) state.chs=qs.ch.split(",").filter(function(c){ return /^(blog|insta|clip|reels|youtube|tiktok|cafe|payback|review)$/.test(c); }); if(qs.o&&SORTS_OK.indexOf(qs.o)>=0) state.sort=qs.o; if(qs.p!==undefined) state.pet=(qs.p==='dog'||qs.p==='cat')?qs.p:''; if(qs.r!==undefined) state.regions=qs.r?qs.r.split(",").filter(function(r){ return REGIONS.indexOf(r)>=0; }):[]; saveUi(); }
   render(); window.scrollTo(0,0); if(!state.loading) gaPage();
   if(state.focusT) focusToss();
   if(state.tab==="deals"&&state.dq){ setTimeout(function(){ var i=document.getElementById("dq"); if(i){ i.value=state.dq; filterDeals(state.dq); } },0); }
@@ -468,7 +468,7 @@ function listView(){
     '<label class="search">'+ico(I.search)+'<input id="q" type="search" placeholder="지역·숙소 이름 검색" value="'+esc(state.q)+'" autocomplete="off" aria-label="체험단 검색"></label>'+
     '<div class="catrow">'+[{k:"all",t:"전체",em:"🌈"}].concat(CAT_ORDER.filter(function(m){ return isOpenCat(m.k); }),CAT_ORDER.filter(function(m){ return !isOpenCat(m.k); })).map(function(m){ var on=m.k===state.cat; return '<button class="cat'+(on?" on":"")+'" data-cat="'+m.k+'" aria-pressed="'+on+'"><span class="em">'+m.em+'</span>'+esc(m.t)+'</button>'; }).join("")+'</div>'+
     (c?'<div class="chips hs">'+STATUSES.map(function(s){ return '<button class="chip'+(s[0]===state.status?" on":"")+'" data-status="'+s[0]+'">'+s[1]+'</button>'; }).join("")+'</div>'+
-      '<div class="fltbox">'+(c.region?'<div class="rgbox" id="rgbox">'+regionChecks()+'</div>':'')+(state.cat==="stay"?'<div class="rgbox" id="thbox">'+themeChecks()+'</div>':'')+(state.cat==="pet"?'<div class="rgbox" id="petbox">'+petChecks()+'</div>':'')+'<div class="rgbox" id="chbox">'+chChecks()+'</div></div>'+
+      '<div class="fbar" id="fbar">'+fbarHtml()+'</div>'+
       '<div id="toprows"></div>'+
       '<div class="tools"><span id="count" class="count"></span><span class="tr">'+
         '<label class="sortsel"><span class="sr">정렬</span><select id="sort" aria-label="정렬 순서">'+SORTS.map(function(o){ return '<option value="'+o[0]+'"'+(o[0]===state.sort?' selected':'')+'>'+o[1]+'</option>'; }).join("")+'</select></label>'+
@@ -492,6 +492,63 @@ function chChecks(){
   }).join("");
 }
 function paintChs(){ var b=document.getElementById("chbox"); if(b) b.innerHTML=chChecks(); }
+
+/* 필터 시트(2026-10-19 시온님 요청: 스타일씨처럼 아래에서 올라오는 필터 — 체험단 유형·작성 채널·카테고리·지역·테마) */
+var FTYPES=[["give","📦","제공형"],["payback","💳","페이백형"],["pr","🧾","페이백 + 구매평"],["review","📝","구매평"],["ret","🔁","회수형"]];
+var FCH=[["blog","📝","네이버 블로그"],["clip","🎬","네이버 클립"],["insta","📸","인스타그램"],["reels","🎞️","인스타그램 릴스"],["youtube","▶️","유튜브 Shorts"],["tiktok","🎵","틱톡"],["cafe","👩‍👧","맘카페"]];
+var RGEM={"서울":"🏙️","경기":"🌳","인천":"✈️","강원":"⛰️","충청":"🌾","전라":"🍃","경상":"🏯","부산":"🌊","제주":"🍊"};
+function typeOk(it,k){ var p=payOf(it), pb=p.indexOf("payback")>=0, rv=p.indexOf("review")>=0;
+  if(k==="give") return !pb&&!rv; if(k==="payback") return pb; if(k==="pr") return pb&&rv; if(k==="review") return rv; if(k==="ret") return p.indexOf("ret")>=0; return false; }
+var FS=null; // 시트 안에서 고르는 중인 값(보기 누르면 적용)
+function fTabs(cat){ var c=catInfo(cat), t=[["type","체험단 유형"],["ch","작성 채널"],["cat","카테고리"]]; if(cat==="all"||(c&&c.region)) t.push(["rg","지역"]); if(cat==="stay") t.push(["th","테마"]); if(cat==="pet") t.push(["pet","반려동물"]); return t; }
+function fChips(F){ var o=[];
+  if(F.cat!=="all"){ var m=catMeta(F.cat)||{}; o.push(["cat",F.cat,(m.em?m.em+" ":"")+(m.t||F.cat)]); }
+  F.types.forEach(function(k){ var t=FTYPES.filter(function(x){ return x[0]===k; })[0]; if(t) o.push(["type",k,t[2]]); });
+  F.chs.forEach(function(k){ var t=FCH.filter(function(x){ return x[0]===k; })[0]; o.push(["ch",k,t?t[2]:(CHL[k]||k)]); });
+  F.regions.forEach(function(r){ o.push(["rg",r,r]); });
+  F.themes.forEach(function(k){ var t=THEMES.filter(function(x){ return x[0]===k; })[0]; if(t) o.push(["th",k,t[2]]); });
+  if(F.pet) o.push(["pet",F.pet,F.pet==="dog"?"강아지":"고양이"]);
+  return o; }
+function curF(){ return {cat:state.cat,types:state.types.slice(),chs:state.chs.slice(),regions:state.regions.slice(),themes:state.themes.slice(),pet:state.pet||""}; }
+function fbarHtml(){ var ch=fChips(curF()).filter(function(x){ return x[0]!=="cat"; });
+  return '<button class="fbtn'+(ch.length?' on':'')+'" data-fopen="type" aria-label="필터 열기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>필터'+(ch.length?' <b>'+ch.length+'</b>':'')+'</button>'+
+    fTabs(state.cat).filter(function(t){ return t[0]!=="cat"; }).map(function(t){ var n=ch.filter(function(x){ return x[0]===t[0]; }).length; return '<button class="fpill'+(n?' on':'')+'" data-fopen="'+t[0]+'">'+t[1]+(n?' '+n:'')+' <i>▾</i></button>'; }).join("")+
+    ch.map(function(x){ return '<button class="fchip" data-fdel="'+x[0]+'|'+esc(x[1])+'">'+esc(x[2])+' ✕</button>'; }).join(""); }
+function fOpts(tab,F){ var open=seed.items.filter(function(it){ return statusOf(it).key==="open" && (F.cat==="all"||catOf(it)===F.cat); });
+  function n(fn){ return open.filter(fn).length; }
+  if(tab==="type") return FTYPES.map(function(t){ return [t[0],t[1],t[2],n(function(it){ return typeOk(it,t[0]); }),F.types.indexOf(t[0])>=0]; });
+  if(tab==="ch") return FCH.map(function(t){ return [t[0],t[1],t[2],n(function(it){ return chOf(it).indexOf(t[0])>=0; }),F.chs.indexOf(t[0])>=0]; });
+  if(tab==="cat") return [{k:"all",t:"전체",em:"🌈"}].concat(CAT_ORDER.filter(function(m){ return isOpenCat(m.k); })).map(function(m){ return [m.k,m.em,m.t,seed.items.filter(function(it){ return statusOf(it).key==="open" && (m.k==="all"||catOf(it)===m.k); }).length,F.cat===m.k]; });
+  if(tab==="rg") return REGIONS.map(function(r){ return [r,RGEM[r]||"📍",r,n(function(it){ return it.region===r; }),F.regions.indexOf(r)>=0]; });
+  if(tab==="th") return THEMES.map(function(t){ return [t[0],t[1],t[2],n(function(it){ return themeOf(it,t[0]); }),F.themes.indexOf(t[0])>=0]; });
+  if(tab==="pet") return [["dog","🐶","강아지"],["cat","🐱","고양이"]].map(function(t){ return [t[0],t[1],t[2],n(function(it){ return petOf(it).indexOf(t[0])>=0; }),F.pet===t[0]]; });
+  return []; }
+function fCount(F){ var keep=curF(); state.cat=F.cat; state.types=F.types; state.chs=F.chs; state.regions=F.regions; state.themes=F.themes; state.pet=F.pet;
+  var n=filtered().length; state.cat=keep.cat; state.types=keep.types; state.chs=keep.chs; state.regions=keep.regions; state.themes=keep.themes; state.pet=keep.pet; return n; }
+function fPaint(){ var el=document.getElementById("fsheet"); if(!el||!FS) return; var F=FS.F, tabs=fTabs(F.cat);
+  if(!tabs.some(function(t){ return t[0]===FS.tab; })) FS.tab="type";
+  var radio=FS.tab==="cat"||FS.tab==="pet";
+  el.querySelector(".fsbody").innerHTML='<div class="fstabs" role="tablist">'+tabs.map(function(t){ return '<button role="tab" class="'+(t[0]===FS.tab?'on':'')+'" data-ftab="'+t[0]+'">'+t[1]+'</button>'; }).join("")+'</div>'+
+    '<div class="fschips">'+fChips(F).map(function(x){ return '<button class="fchip" data-fsdel="'+x[0]+'|'+esc(x[1])+'">'+esc(x[2])+' ✕</button>'; }).join("")+'</div>'+
+    '<div class="fslist">'+fOpts(FS.tab,F).map(function(o){ return '<button class="fsrow'+(o[4]?' on':'')+(radio?' rd':'')+'" data-fpick="'+esc(o[0])+'"><span class="fsck" aria-hidden="true"></span><span class="fsem">'+o[1]+'</span><span class="fsnm">'+esc(o[2])+'</span><small>'+o[3]+'</small></button>'; }).join("")+'</div>';
+  el.querySelector("[data-fgo]").textContent=fCount(F)+'개 체험단 보기'; }
+function fOpen(tab){ if(!document.getElementById("fsheet")){ var d=document.createElement("div"); d.id="fsheet"; d.className="fsheet";
+    d.innerHTML='<div class="fsbg" data-fclose></div><div class="fsbox" role="dialog" aria-modal="true" aria-label="필터"><div class="fsgrab"></div><div class="fshead"><b>필터</b><button class="fsx" data-fclose aria-label="닫기">✕</button></div><div class="fsbody"></div><div class="fsfoot"><button class="fsreset" data-freset>↻ 초기화</button><button class="fsgo" data-fgo></button></div></div>';
+    document.body.appendChild(d); d.addEventListener("click",fClick); }
+  FS={tab:tab||"type",F:curF()}; fPaint(); document.getElementById("fsheet").classList.add("on"); document.body.classList.add("fsopen"); }
+function fClose(){ var el=document.getElementById("fsheet"); if(el) el.classList.remove("on"); document.body.classList.remove("fsopen"); FS=null; }
+function fToggle(F,tab,v){ var key={type:"types",ch:"chs",rg:"regions",th:"themes"}[tab];
+  if(tab==="cat"){ if(F.cat!==v){ F.cat=v; F.regions=[]; F.themes=[]; F.pet=""; } return; }
+  if(tab==="pet"){ F.pet=F.pet===v?"":v; return; }
+  var a=F[key], i=a.indexOf(v); if(i>=0) a.splice(i,1); else a.push(v); }
+function fApply(F){ state.cat=F.cat; state.types=F.types; state.chs=F.chs; state.regions=F.regions; state.themes=F.themes; state.pet=F.pet; if(state.status==="closed") state.status="open"; saveUi(); render(); }
+function fClick(e){ var t=e.target.closest("button,[data-fclose]"); if(!t||!FS) return;
+  if(t.hasAttribute("data-fclose")){ fClose(); return; }
+  if(t.dataset.ftab){ FS.tab=t.dataset.ftab; fPaint(); return; }
+  if(t.dataset.fpick!==undefined){ fToggle(FS.F,FS.tab,t.dataset.fpick); fPaint(); return; }
+  if(t.dataset.fsdel){ var a=t.dataset.fsdel.split("|"); if(a[0]==="cat") fToggle(FS.F,"cat","all"); else if(a[0]==="pet") FS.F.pet=""; else fToggle(FS.F,a[0],a[1]); fPaint(); return; }
+  if(t.hasAttribute("data-freset")){ FS.F={cat:FS.F.cat,types:[],chs:[],regions:[],themes:[],pet:""}; fPaint(); return; }
+  if(t.hasAttribute("data-fgo")){ var F=FS.F; fClose(); fApply(F); ga("list_filter",{cat:F.cat,types:F.types.join(","),chs:F.chs.join(","),regions:F.regions.join(","),themes:F.themes.join(",")}); return; } }
 /* 숙소 테마(2026-10-19 시온님 요청: 가족이랑·아이랑·반려동물이랑·단 둘이). 이름·제공내역·AI 요약·추가 요금 글자로 판단, 여러 개 고르면 하나라도 맞으면 보임 */
 var THEMES=[["fam","👨‍👩‍👧","가족이랑",/가족|패밀리|대가족|단체|[4-9]인|1\d인|독채/],["kid","👶","아이랑",/키즈|아이와|아이랑|아이들|어린이|유아|베이비|아기/],["pet","🐶","반려동물이랑",null],["cpl","💑","단 둘이",/커플|연인|둘만|둘이|신혼|허니문|기념일|자쿠지|스파|프라이빗/]];
 function themeOf(it,k){ if(catOf(it)!=="stay") return false; if(k==="pet") return petStay(it); var t=THEMES.filter(function(x){ return x[0]===k; })[0]; var f=it.fee||{}; return !!t && t[3].test((it.name||"")+" "+(it.benefit||"")+" "+(it.sum||"")+" "+[f.p,f.b,f.f,f.w,f.j,f.d].join(" ")); }
@@ -534,7 +591,8 @@ function filtered(){
   var q=state.q.trim().toLowerCase(), td=ymd(today()), c=catInfo(state.cat);
   return seed.items.filter(function(it){
     if(state.cat!=="all" && catOf(it)!==state.cat) return false;
-    if(c&&c.region && state.regions.length && state.regions.indexOf(it.region)<0) return false;
+    if(((c&&c.region)||state.cat==="all") && state.regions.length && state.regions.indexOf(it.region)<0) return false;
+    if(state.types.length && !state.types.some(function(k){ return typeOk(it,k); })) return false;
     if(state.cat==="pet" && state.pet && petOf(it).indexOf(state.pet)<0) return false;
     if(state.chs.length && !chOf(it).concat(payOf(it)).some(function(c){ return state.chs.indexOf(c)>=0; })) return false;
     if(state.themes.length && state.cat==="stay" && !state.themes.some(function(k){ return themeOf(it,k); })) return false;
@@ -1275,12 +1333,14 @@ var tickT; function tick(){ clearInterval(tickT); tickT=setInterval(function(){ 
 /* ---------- 이벤트 ---------- */
 function onClick(e){
   var lk=e.target.closest("article a[target=_blank]"); if(lk){ var art=lk.closest("article"), fb=art&&art.querySelector("[data-fav]"); if(fb) markSeen(fb.dataset.fav); }
-  var t=e.target.closest("[data-fav],[data-cat],[data-status],[data-view],[data-share],[data-pref-clear],[data-focus],[data-spin],[data-copy],[data-ishare],[data-tshare]"); if(!t) return;
+  var t=e.target.closest("[data-fopen],[data-fdel],[data-fav],[data-cat],[data-status],[data-view],[data-share],[data-pref-clear],[data-focus],[data-spin],[data-copy],[data-ishare],[data-tshare]"); if(!t) return;
   if(t.dataset.tshare){ e.preventDefault(); e.stopPropagation(); shareToss(t.dataset.tshare); return; }
   if(t.dataset.ishare){ e.preventDefault(); shareItem(t.dataset.ishare); return; }
   if(t.dataset.spin!==undefined){ doSpin(t); return; }
   if(t.dataset.copy){ try{ navigator.clipboard.writeText(t.dataset.copy).then(function(){ toast("코드를 복사했어요"); }); }catch(err){ toast(t.dataset.copy); } return; }
   if(t.dataset.fav!==undefined){ e.preventDefault(); toggleFav(t.dataset.fav); var on=isFav(t.dataset.fav); [].forEach.call(document.querySelectorAll('[data-fav="'+t.dataset.fav+'"]'),function(b){ b.classList.toggle("on",on); b.setAttribute("aria-pressed",on); }); toast(on?"❤️ 찜했어요":"🤍 찜을 해제했어요"); if(state.tab==="fav") render(); return; }
+  if(t.dataset.fopen){ fOpen(t.dataset.fopen); return; }
+  if(t.dataset.fdel){ var fa=t.dataset.fdel.split("|"), F=curF(); if(fa[0]==="pet") F.pet=""; else fToggle(F,fa[0],fa[1]); fApply(F); return; }
   if(t.dataset.cat){ state.cat=t.dataset.cat; state.regions=[]; if(state.status==="closed") state.status="open"; saveUi(); render(); return; }
   if(t.dataset.status){ state.status=t.dataset.status; saveUi(); [].forEach.call(document.querySelectorAll("[data-status]"),function(b){ b.classList.toggle("on",b===t); }); renderListGrid(); return; }
   if(t.dataset.view!==undefined){ state.view=state.view==="2"?"3":(state.view==="3"?"1":"2"); ls("dakku-view",state.view); var g=document.getElementById("grid"); if(g) g.className="grid v"+state.view; t.innerHTML=viewIcon(); t.setAttribute("aria-label","보기 방식 바꾸기 (지금 "+state.view+"단)"); renderListGrid(); return; }
