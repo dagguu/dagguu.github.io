@@ -3,7 +3,7 @@
 app.js eduView 의 섹션(포인트·누구나·모든 혜택·책·후기·환불 보장)을 그대로 잘라 와서
 자바스크립트 없이도 읽히는 한 장짜리 페이지로 만든다(네이버 검색광고 검수 로봇용).
 app.js 수익화 교육 문구를 바꾸면 python3 scripts/gen_edu.py 를 다시 돌린다(gen_share.py 도 부른다)."""
-import os, re
+import os, re, json
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JS = open(os.path.join(ROOT, "app.js"), encoding="utf-8").read()
@@ -28,6 +28,7 @@ def footer():
     return m.group(0) if m else ""
 
 
+TALK = json.loads(re.search(r'var EDU_TALK=(\[.*?\]);', JS).group(1)) if 'EDU_TALK' in JS else []
 PICK = re.search(r'var EDU_PICK=(\[.*?\]);', JS).group(1)
 PICK = re.findall(r'"([^"]+)"', PICK)
 CUR = [
@@ -128,6 +129,7 @@ h1,h2{{letter-spacing:-.02em}}
 .oc{{display:block;border-radius:12px;overflow:hidden;background:#15101c;text-decoration:none}}.oc img{{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}}
 .oc b{{display:block;padding:8px 8px 0;font-size:13px;line-height:1.35;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}}.oc small{{display:block;padding:2px 8px 10px;font-size:11.5px;color:#aaa;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
 .dl{{position:sticky;top:49px;z-index:5;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px 10px;padding:10px 12px;background:#ffe14d;color:#1d0b3a;font-size:13.5px;font-weight:800}}.dlm{{display:none}}@media(max-width:480px){{.dlw{{display:none}}.dlm{{display:inline}}}}.dl{{flex-wrap:nowrap;justify-content:space-between;gap:8px;font-size:12.5px;white-space:nowrap}}.dl b{{font-weight:900;overflow:hidden;text-overflow:ellipsis}}.dlt{{display:flex;align-items:center;gap:2px;flex:none}}.dlt i{{font-style:normal;display:inline-grid;place-items:center;width:17px;height:24px;border-radius:5px;background:#fff;font-size:14px;font-weight:900}}.dlt u{{text-decoration:none;font-size:11px;margin:0 4px 0 2px}}
+.edutalk{{display:grid;gap:10px;margin-bottom:16px}}.et{{display:flex;align-items:flex-end;gap:8px}}.et.r{{flex-direction:row-reverse}}.et i{{font-style:normal;flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-size:22px;background:#2a1d38}}.et p{{margin:0;max-width:74%;padding:10px 14px;border-radius:18px 18px 18px 4px;background:#1f1a26;color:#fff;font-size:14.5px;font-weight:700;line-height:1.45}}.et.r p{{border-radius:18px 18px 4px 18px;background:linear-gradient(135deg,#8a3fd0,#b558d6)}}.et small{{display:block;font-size:11.5px;font-weight:800;color:#e9a6ff;margin-bottom:2px}}.et.r small{{color:#ffe14d}}
 .bar{{position:fixed;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#000;border-top:1px solid #222}}
 .bar a{{display:block;max-width:528px;margin:0 auto;padding:14px;border-radius:14px;text-align:center;background:linear-gradient(90deg,#8a3fd0,#d46fd8);color:#fff;font-weight:900;text-decoration:none}}
 .sitebiz{{padding:20px 16px 100px;font-size:12px;color:#888;background:#0a0a0a}}.sitebiz a{{color:#aaa;margin-right:8px}}.sitebiz nav b{{display:block;margin-bottom:4px}}
@@ -142,7 +144,7 @@ h1,h2{{letter-spacing:-.02em}}
 {pts}
 {why}
 {allb}
-<section class="sec"><h2>이런 분께 맞아요</h2><ul class="chk">{''.join(f'<li>{t}</li>' for t in PICK)}</ul></section>
+<section class="sec"><h2>이런 분들께 맞아요</h2><div class="edutalk">{''.join(f'<div class="et{" r" if i%2 else ""}"><i>{a}</i><p><small>{b}</small>{c}</p></div>' for i,(a,b,c) in enumerate(TALK))}</div><ul class="chk">{''.join(f'<li>{t}</li>' for t in PICK)}</ul></section>
 <section class="sec"><h2>5주 커리큘럼</h2><ol class="cur">{''.join(f'<li><b>✨ {i+1}주차</b>{e} {t}</li>' for i,(e,t) in enumerate(CUR))}</ol></section>
 {books}
 {rv}

@@ -591,3 +591,13 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .pg.edu .edudl{margin-top:-6px;top:63px}
 .edudl .dlm{display:none}
 @media(max-width:480px){.edudl .dlw{display:none}.edudl .dlm{display:inline}}
+
+/* 이런 분들께 맞아요 말풍선 (2026-10-19) */
+.edutalk{display:grid;gap:10px;margin-bottom:16px}
+.et{display:flex;align-items:flex-end;gap:8px}
+.et.r{flex-direction:row-reverse}
+.et i{font-style:normal;flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-size:22px;background:#2a1d38}
+.et p{margin:0;max-width:74%;padding:10px 14px;border-radius:18px 18px 18px 4px;background:#1f1a26;color:#fff;font-size:14.5px;font-weight:700;line-height:1.45}
+.et.r p{border-radius:18px 18px 4px 18px;background:linear-gradient(135deg,#8a3fd0,#b558d6)}
+.et small{display:block;font-size:11.5px;font-weight:800;color:#e9a6ff;margin-bottom:2px}
+.et.r small{color:#ffe14d}
