@@ -664,7 +664,6 @@ input,select,textarea{font-size:16px!important}
 .promom .psheet2{width:100%;max-width:340px;margin:auto;box-shadow:0 18px 50px rgba(30,0,60,.35)}
 .promom .phead{padding:24px 16px 14px}
 .promom .phead b{font-size:26px}.promom .phead em{font-size:22px}
-:is(.promom,.pmband) .pmrow{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 18px,#000 calc(100% - 18px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 18px,#000 calc(100% - 18px),transparent 100%)}
 .promom .pmc{width:190px;height:76px;padding:9px 64px 9px 12px}
 .promom .pmc img{width:48px;height:48px}
 .promom .psheet2 .pfoot{padding:12px 20px 14px}
