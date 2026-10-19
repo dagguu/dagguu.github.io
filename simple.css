@@ -558,3 +558,4 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .esf{z-index:2}.esf.f1{right:12px;top:auto;bottom:70px;transform:rotate(-10deg)}
 .esbox .esmon{display:block;margin:2px 0;font-size:30px;font-weight:900;letter-spacing:-.03em;color:#111;background:linear-gradient(transparent 62%,#c5ff4a 62%)}
 .esbox .esask{display:inline-block;margin-top:6px;font-size:14px;font-weight:900;color:#111;text-decoration:none;background:linear-gradient(transparent 60%,#e9c4ff 60%)}
+.esf.f2{right:auto;left:24px;top:auto;bottom:26px;transform:rotate(12deg)}
