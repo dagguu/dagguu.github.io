@@ -366,3 +366,14 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .grid.v3 .th .cdst,.hc .th .cdst{font-size:10px;padding-top:5px}
 .grid.v3 .th .cdst b,.hc .th .cdst b{font-size:12px}
 .span .wbs.wb1{margin:4px 0}
+
+/* 목록 필터 정리(2026-10-19): 지역·테마·매체 각 한 줄 가로 스크롤, 체크 네모 없이 알약 */
+.fltbox{margin:6px 0 2px;border-top:1px solid #f0eef5;border-bottom:1px solid #f0eef5;padding:6px 0}
+.fltbox .rgbox{display:flex;flex-wrap:nowrap;align-items:center;gap:6px;overflow-x:auto;scrollbar-width:none;padding:5px 16px;margin:0}
+.fltbox .rgbox::-webkit-scrollbar{display:none}
+.fltbox .rgl{flex:none;width:52px;font-size:12.5px;font-weight:700;color:#888;margin:0}
+.fltbox .rck{flex:none;height:30px;padding:0 11px;gap:3px;border:1px solid #e6e3ee;font-size:13px;font-weight:600;white-space:nowrap}
+.fltbox .rck .bx{display:none}
+.fltbox .rck.on{border-color:var(--acc);background:var(--acc);color:#fff}
+.fltbox .rck.on small{color:rgba(255,255,255,.85)}
+.fltbox .rck small{margin-left:2px}

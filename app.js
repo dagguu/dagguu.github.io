@@ -31,7 +31,7 @@ var PREFS = [
 var SORTS=[["high","💎 고가제품순"],["popular","🔥 인기순"],["comp","🙌 경쟁률 낮은순"],["deadline","⏰ 마감임박순"],["low","🪙 저가제품순"]], SORTS_OK=["high","popular","comp","deadline","low"];
 var state = { tab:"home", cat:"all", regions:[], status:"open", q:"", chs:[], view:"2", sort:"high", pet:"", loading:true };
 function ls(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v); }catch(e){ return null; } }
-state.view = ls("dakku-view") || "2";
+state.view = ls("dakku-view") || "2"; state.themes=[];
 try{ var su=JSON.parse(sessionStorage.getItem("dakku-ui")||"{}"); if(su.cat) state.cat=su.cat; if(Array.isArray(su.regions)) state.regions=su.regions.filter(function(r){ return REGIONS.indexOf(r)>=0; }); if(su.status) state.status=su.status; if(SORTS_OK.indexOf(su.sort)>=0) state.sort=su.sort; if(su.pet==="dog"||su.pet==="cat") state.pet=su.pet; }catch(e){}
 function saveUi(){ try{ sessionStorage.setItem("dakku-ui",JSON.stringify({cat:state.cat,regions:state.regions,status:state.status,sort:state.sort,pet:state.pet||""})); }catch(e){} }
 var FAV=[]; try{ FAV=JSON.parse(ls("dakku-fav")||"[]")||[]; }catch(e){ FAV=[]; }
@@ -164,7 +164,7 @@ function shell(){
   app.addEventListener("click",onClick);
   app.addEventListener("submit",function(e){ if(e.target.id==="cform"){ e.preventDefault(); submitContact(e.target); } });
   app.addEventListener("input",function(e){ if(e.target.dataset&&e.target.dataset.etc){ var r=e.target.parentNode.querySelector("input[type=radio]"); if(r) r.checked=true; } if(e.target.id==="q"){ state.q=e.target.value; renderListGrid(); } });
-  app.addEventListener("change",function(e){ if(e.target.dataset && e.target.dataset.chk!==undefined){ var v=e.target.dataset.chk; if(!v) state.chs=[]; else { var k=state.chs.indexOf(v); if(e.target.checked&&k<0) state.chs.push(v); if(!e.target.checked&&k>=0) state.chs.splice(k,1); } paintChs(); renderListGrid(); return; } if(e.target.dataset && e.target.dataset.pet!==undefined){ state.pet=e.target.dataset.pet; saveUi(); var pb=document.getElementById("petbox"); if(pb) pb.innerHTML=petChecks(); renderListGrid(); return; } if(e.target.dataset && e.target.dataset.rg!==undefined){ var v=e.target.dataset.rg; if(v==="전체") state.regions=[]; else { var i=state.regions.indexOf(v); if(e.target.checked&&i<0) state.regions.push(v); if(!e.target.checked&&i>=0) state.regions.splice(i,1); } saveUi(); paintRegions(); renderListGrid(); } });
+  app.addEventListener("change",function(e){ if(e.target.dataset && e.target.dataset.th!==undefined){ var tv=e.target.dataset.th; if(!tv) state.themes=[]; else { var tk=state.themes.indexOf(tv); if(e.target.checked&&tk<0) state.themes.push(tv); if(!e.target.checked&&tk>=0) state.themes.splice(tk,1); } var tb=document.getElementById("thbox"); if(tb) tb.innerHTML=themeChecks(); renderListGrid(); return; } if(e.target.dataset && e.target.dataset.chk!==undefined){ var v=e.target.dataset.chk; if(!v) state.chs=[]; else { var k=state.chs.indexOf(v); if(e.target.checked&&k<0) state.chs.push(v); if(!e.target.checked&&k>=0) state.chs.splice(k,1); } paintChs(); renderListGrid(); return; } if(e.target.dataset && e.target.dataset.pet!==undefined){ state.pet=e.target.dataset.pet; saveUi(); var pb=document.getElementById("petbox"); if(pb) pb.innerHTML=petChecks(); renderListGrid(); return; } if(e.target.dataset && e.target.dataset.rg!==undefined){ var v=e.target.dataset.rg; if(v==="전체") state.regions=[]; else { var i=state.regions.indexOf(v); if(e.target.checked&&i<0) state.regions.push(v); if(!e.target.checked&&i>=0) state.regions.splice(i,1); } saveUi(); paintRegions(); renderListGrid(); } });
 }
 function paintLogo(){ var l=document.getElementById("logo"); if(l) l.innerHTML=logoSvg(30)+'<b class="wm">다꾸체험단</b><span class="sr">'+SITE+'</span>'+(LOGO.name?'<em class="logo-ev">'+esc(LOGO.name)+'</em>':''); }
 
@@ -202,7 +202,7 @@ function route(){
   state.focusT=(tab==="deals"&&qs.t)?qs.t:"";
   state.dq=(tab==="deals"&&qs.q)?qs.q:"";
   state.pq=(tab==="price"&&qs.q)?qs.q:"";
-  if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; else if(qs.cat) state.status="open"; if(!parts[1]){ state.q=""; state.chs=[]; } if(qs.q!==undefined) state.q=qs.q; if(qs.ch!==undefined) state.chs=qs.ch.split(",").filter(function(c){ return /^(blog|insta|clip|reels|youtube|tiktok|cafe|payback|review)$/.test(c); }); if(qs.o&&SORTS_OK.indexOf(qs.o)>=0) state.sort=qs.o; if(qs.p!==undefined) state.pet=(qs.p==='dog'||qs.p==='cat')?qs.p:''; if(qs.r!==undefined) state.regions=qs.r?qs.r.split(",").filter(function(r){ return REGIONS.indexOf(r)>=0; }):[]; saveUi(); }
+  if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; else if(qs.cat) state.status="open"; if(!parts[1]){ state.q=""; state.chs=[]; state.themes=[]; } if(qs.th!==undefined) state.themes=qs.th.split(",").filter(function(x){ return THEMES.some(function(t){ return t[0]===x; }); }); if(qs.q!==undefined) state.q=qs.q; if(qs.ch!==undefined) state.chs=qs.ch.split(",").filter(function(c){ return /^(blog|insta|clip|reels|youtube|tiktok|cafe|payback|review)$/.test(c); }); if(qs.o&&SORTS_OK.indexOf(qs.o)>=0) state.sort=qs.o; if(qs.p!==undefined) state.pet=(qs.p==='dog'||qs.p==='cat')?qs.p:''; if(qs.r!==undefined) state.regions=qs.r?qs.r.split(",").filter(function(r){ return REGIONS.indexOf(r)>=0; }):[]; saveUi(); }
   render(); window.scrollTo(0,0); if(!state.loading) gaPage();
   if(state.focusT) focusToss();
   if(state.tab==="deals"&&state.dq){ setTimeout(function(){ var i=document.getElementById("dq"); if(i){ i.value=state.dq; filterDeals(state.dq); } },0); }
@@ -454,7 +454,7 @@ function listView(){
     '<label class="search">'+ico(I.search)+'<input id="q" type="search" placeholder="지역·숙소 이름 검색" value="'+esc(state.q)+'" autocomplete="off" aria-label="체험단 검색"></label>'+
     '<div class="catrow">'+[{k:"all",t:"전체",em:"🌈"}].concat(CAT_ORDER.filter(function(m){ return isOpenCat(m.k); }),CAT_ORDER.filter(function(m){ return !isOpenCat(m.k); })).map(function(m){ var on=m.k===state.cat; return '<button class="cat'+(on?" on":"")+'" data-cat="'+m.k+'" aria-pressed="'+on+'"><span class="em">'+m.em+'</span>'+esc(m.t)+'</button>'; }).join("")+'</div>'+
     (c?'<div class="chips hs">'+STATUSES.map(function(s){ return '<button class="chip'+(s[0]===state.status?" on":"")+'" data-status="'+s[0]+'">'+s[1]+'</button>'; }).join("")+'</div>'+
-      (c.region?'<div class="rgbox" id="rgbox">'+regionChecks()+'</div>':'')+(state.cat==="pet"?'<div class="rgbox" id="petbox">'+petChecks()+'</div>':'')+'<div class="rgbox" id="chbox">'+chChecks()+'</div>'+
+      '<div class="fltbox">'+(c.region?'<div class="rgbox" id="rgbox">'+regionChecks()+'</div>':'')+((state.cat==="stay"||state.cat==="all")?'<div class="rgbox" id="thbox">'+themeChecks()+'</div>':'')+(state.cat==="pet"?'<div class="rgbox" id="petbox">'+petChecks()+'</div>':'')+'<div class="rgbox" id="chbox">'+chChecks()+'</div></div>'+
       '<div id="toprows"></div>'+
       '<div class="tools"><span id="count" class="count"></span><span class="tr">'+
         '<label class="sortsel"><span class="sr">정렬</span><select id="sort" aria-label="정렬 순서">'+SORTS.map(function(o){ return '<option value="'+o[0]+'"'+(o[0]===state.sort?' selected':'')+'>'+o[1]+'</option>'; }).join("")+'</select></label>'+
@@ -472,18 +472,29 @@ function chBadge(c){ return '<span class="chb chb-'+c+'">'+(CHL[c]||c)+'</span>'
 function chBadges(it){ var P=payOf(it), O=["premier","ret"], b=P.filter(function(x){ return O.indexOf(x)>=0; }).concat(P.filter(function(x){ return O.indexOf(x)<0; })).concat(chOf(it)); return b.length?'<div class="chbs">'+b.map(chBadge).join("")+'</div>':''; }
 function chChecks(){
   var all=!state.chs.length;
-  return '<span class="rgl">✍️ 종류</span>'+[["","전체"],["blog","블로그"],["insta","인스타"],["clip","클립"],["reels","릴스"],["youtube","유튜브"],["payback","페이백"],["review","구매평"]].map(function(c){
+  return '<span class="rgl">매체</span>'+[["","전체"],["blog","블로그"],["insta","인스타"],["clip","클립"],["reels","릴스"],["youtube","유튜브"],["payback","페이백"],["review","구매평"]].map(function(c){
     var on=c[0]?state.chs.indexOf(c[0])>=0:all;
-    return '<label class="rck'+(on?' on':'')+'"><input type="checkbox" data-chk="'+c[0]+'"'+(on?' checked':'')+'><span class="bx"></span>'+c[1]+'</label>';
+    return '<label class="rck'+(on?' on':'')+'"><input type="checkbox" data-chk="'+c[0]+'"'+(on?' checked':'')+'>'+c[1]+'</label>';
   }).join("");
 }
 function paintChs(){ var b=document.getElementById("chbox"); if(b) b.innerHTML=chChecks(); }
+/* 숙소 테마(2026-10-19 시온님 요청: 가족이랑·아이랑·반려동물이랑·단 둘이). 이름·제공내역·AI 요약·추가 요금 글자로 판단, 여러 개 고르면 하나라도 맞으면 보임 */
+var THEMES=[["fam","👨‍👩‍👧","가족이랑",/가족|패밀리|대가족|단체|[4-9]인|1\d인|독채/],["kid","👶","아이랑",/키즈|아이와|아이랑|아이들|어린이|유아|베이비|아기/],["pet","🐶","반려동물이랑",null],["cpl","💑","단 둘이",/커플|연인|둘만|둘이|신혼|허니문|기념일|자쿠지|스파|프라이빗/]];
+function themeOf(it,k){ if(catOf(it)!=="stay") return false; if(k==="pet") return petStay(it); var t=THEMES.filter(function(x){ return x[0]===k; })[0]; var f=it.fee||{}; return !!t && t[3].test((it.name||"")+" "+(it.benefit||"")+" "+(it.sum||"")+" "+[f.p,f.b,f.f,f.w,f.j,f.d].join(" ")); }
+function themeChecks(){
+  var cnt={}; seed.items.forEach(function(it){ if(statusOf(it).key==="open" && (state.cat==="all"||catOf(it)===state.cat)) THEMES.forEach(function(t){ if(themeOf(it,t[0])) cnt[t[0]]=(cnt[t[0]]||0)+1; }); });
+  var all=!state.themes.length;
+  return '<span class="rgl">테마</span>'+[["","","전체"]].concat(THEMES).map(function(t){
+    var on=t[0]?state.themes.indexOf(t[0])>=0:all;
+    return '<label class="rck'+(on?' on':'')+'"><input type="checkbox" data-th="'+t[0]+'"'+(on?' checked':'')+'>'+(t[1]?t[1]+' ':'')+t[2]+(t[0]&&cnt[t[0]]?'<small>'+cnt[t[0]]+'</small>':'')+'</label>';
+  }).join("");
+}
 function regionChecks(){
   var cnt={}; seed.items.forEach(function(it){ if(catOf(it)===state.cat && statusOf(it).key==="open") cnt[it.region]=(cnt[it.region]||0)+1; });
   var all=!state.regions.length;
-  return '<span class="rgl">📍 지역</span>'+['전체'].concat(REGIONS).map(function(r){
+  return '<span class="rgl">지역</span>'+['전체'].concat(REGIONS).map(function(r){
     var on=r==="전체"?all:state.regions.indexOf(r)>=0;
-    return '<label class="rck'+(on?' on':'')+'"><input type="checkbox" data-rg="'+r+'"'+(on?' checked':'')+'><span class="bx"></span>'+r+(r!=="전체"&&cnt[r]?'<small>'+cnt[r]+'</small>':'')+'</label>';
+    return '<label class="rck'+(on?' on':'')+'"><input type="checkbox" data-rg="'+r+'"'+(on?' checked':'')+'>'+r+(r!=="전체"&&cnt[r]?'<small>'+cnt[r]+'</small>':'')+'</label>';
   }).join("");
 }
 /* 반려동물: 강아지/고양이 (2026-10-18 시온님 요청). item.pet=["dog"]|["cat"]|["dog","cat"] 이 있으면 그걸, 없으면 이름·제공내역 글자로 판단. 둘 다 안 보이면 공용(둘 다에 보임). */
@@ -491,9 +502,9 @@ var DOGRE=/강아지|반려견|애견|도그|dog|퍼피|puppy|견용|노령견|�
 function petOf(it){ if(Array.isArray(it.pet)&&it.pet.length) return it.pet; var t=(it.name||"")+" "+(it.benefit||""), d=DOGRE.test(t), c=CATRE.test(t); return d&&!c?["dog"]:c&&!d?["cat"]:["dog","cat"]; }
 function petChecks(){
   var cnt={dog:0,cat:0}; seed.items.forEach(function(it){ if(catOf(it)==="pet"&&statusOf(it).key==="open") petOf(it).forEach(function(p){ cnt[p]++; }); });
-  return '<span class="rgl">🐾 반려동물</span>'+[["","전체"],["dog","🐶 강아지"],["cat","🐱 고양이"]].map(function(p){
+  return '<span class="rgl">반려동물</span>'+[["","전체"],["dog","🐶 강아지"],["cat","🐱 고양이"]].map(function(p){
     var on=(state.pet||"")===p[0];
-    return '<label class="rck'+(on?' on':'')+'"><input type="radio" name="petsel" data-pet="'+p[0]+'"'+(on?' checked':'')+'><span class="bx"></span>'+p[1]+(p[0]&&cnt[p[0]]?'<small>'+cnt[p[0]]+'</small>':'')+'</label>';
+    return '<label class="rck'+(on?' on':'')+'"><input type="radio" name="petsel" data-pet="'+p[0]+'"'+(on?' checked':'')+'>'+p[1]+(p[0]&&cnt[p[0]]?'<small>'+cnt[p[0]]+'</small>':'')+'</label>';
   }).join("");
 }
 function paintRegions(){ var b=document.getElementById("rgbox"); if(b) b.innerHTML=regionChecks(); }
@@ -512,6 +523,7 @@ function filtered(){
     if(c&&c.region && state.regions.length && state.regions.indexOf(it.region)<0) return false;
     if(state.cat==="pet" && state.pet && petOf(it).indexOf(state.pet)<0) return false;
     if(state.chs.length && !chOf(it).concat(payOf(it)).some(function(c){ return state.chs.indexOf(c)>=0; })) return false;
+    if(state.themes.length && (state.cat==="stay"||state.cat==="all") && !state.themes.some(function(k){ return themeOf(it,k); })) return false;
     var s=statusOf(it).key;
     if(state.status==="open" && s!=="open") return false;
     if(state.status==="closed" && s!=="closed") return false;
