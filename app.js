@@ -372,7 +372,6 @@ function homeView(){
   h+=hrow('✨ <em>새로 올라온</em> 체험단','#/list?cat=all&s=open',fresh);
   var picks=open.filter(isPick).sort(byDeadline);
   h+=hrow('💜 지금 <em>인기 있는</em> 체험단','#/list?cat=all&s=pick',picks);
-  h+=promoBand();
   var soon=open.filter(function(it){ return daysLeft(it)<=3; }).sort(function(a,b){ return daysLeft(a)-daysLeft(b); });
   h+=hrow('⏰ <em>곧 마감!</em> 지금 신청하세요','#/list?cat=all&s=closing',soon);
   var baby=open.filter(function(it){ return catOf(it)==="baby"; }).sort(function(a,b){ return (b.createdAt||0)-(a.createdAt||0); });
