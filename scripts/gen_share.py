@@ -112,6 +112,57 @@ def shell(title, desc, canon, body, img="", robots="index,follow", ld=None):
 </div></body></html>
 '''
 
+APPX = """.frame{--tab:0px;padding-bottom:110px}.view{padding:0 16px}
+.sx h2{font-size:18px;margin:30px 0 10px;letter-spacing:-.02em}
+.sx .list{list-style:none;margin:0;padding:0}.sx .list li{border-bottom:1px solid #f0f0f0}
+.sx .list a{display:flex;gap:12px;padding:12px 0;text-decoration:none;align-items:center;color:inherit}
+.sx .list img{width:72px;height:72px;border-radius:10px;object-fit:cover;background:#f4f4f6;flex:none}
+.sx .list b{display:block;font-size:15px;font-weight:600;line-height:1.35}.sx .list small{display:block;color:#888;font-size:12.5px;margin-top:2px}
+.sx .tags{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0}.sx .tags a{font-size:13px;text-decoration:none;border:1px solid #e5e5e8;border-radius:999px;padding:5px 11px;color:#444}
+.sx .bc{font-size:12px;color:#999;margin:10px 0}.sx .bc a{color:inherit;text-decoration:none}
+.sfoot{font-size:12px;color:#999;line-height:1.7;border-top:1px solid #eee;padding:14px 0 0;margin:30px 0 0}"""
+
+APPJS = """<script>(function(){function p(n){return(n<10?"0":"")+n}
+function ms(e){return new Date(e+"T23:59:59+09:00").getTime()+1000-Date.now()}
+function t(e){var m=Math.max(0,ms(e)),d=Math.floor(m/864e5);m-=d*864e5;return(d>0?d+"일 ":"")+p(Math.floor(m/36e5))+":"+p(Math.floor(m%36e5/6e4))+":"+p(Math.floor(m%6e4/1e3))}
+function tick(){[].forEach.call(document.querySelectorAll("[data-dcd]"),function(b){b.textContent=t(b.getAttribute("data-dcd"))})}tick();setInterval(tick,1000);
+var a=document.getElementById("dcd"),f=document.getElementById("dcdfix");if(a&&f&&"IntersectionObserver" in window)new IntersectionObserver(function(es){es.forEach(function(x){f.classList.toggle("on",!x.isIntersecting&&x.boundingClientRect.top<0)})}).observe(a);
+var s=document.getElementById("shb");if(s)s.onclick=function(){var d={title:document.title,url:location.href};if(navigator.share)navigator.share(d).catch(function(){});else if(navigator.clipboard)navigator.clipboard.writeText(location.href).then(function(){alert("링크를 복사했어요")})};
+["gesturestart","gesturechange"].forEach(function(n){document.addEventListener(n,function(e){e.preventDefault()},{passive:false})});})();</script>"""
+
+def shell_app(title, desc, canon, body, img="", robots="index,follow", ld=None, h=""):
+    img = img or SITE + "/images/og.png"
+    lds = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or []))
+    BACK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>'
+    SRCH = '<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM20 20l-3.5-3.5"/></svg>'
+    return f'''<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">{GA}
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>{e(title)}</title>
+<meta name="description" content="{e(desc)}">
+<meta name="robots" content="{robots}">
+<link rel="canonical" href="{e(canon)}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="다꾸체험단">
+<meta property="og:title" content="{e(title)}">
+<meta property="og:description" content="{e(desc)}">
+<meta property="og:url" content="{e(canon)}">
+<meta property="og:image" content="{e(img)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="/icons/icon-192.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/simple.css">
+<style>{APPX}</style>{lds}
+</head><body>
+<div class="disclose">이 사이트는 쿠팡 파트너스, 토스쇼핑 쉐어링크, 여기어때, 마이리얼트립, 트립닷컴 등 제휴 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.</div>
+<div class="frame">
+<header class="appbar"><span class="abl"><a class="backbtn" href="/" aria-label="홈으로">{BACK}</a><a class="logo" href="/"><img src="/icons/icon-192.png" alt="" width="30" height="30" style="border-radius:8px"><b class="wm">다꾸체험단</b></a></span><span class="hbtns"><a class="iconbtn" href="/#/list" aria-label="체험단 검색">{SRCH}</a></span></header>
+<main class="view">{body}
+<p class="sfoot">다꾸체험단 (www.dagguu.com) · 운영 플랜비 · 대표 김정은 · 사업자등록번호 381-53-01054</p></main>
+</div>{APPJS}</body></html>
+'''
+
 def crumbs(parts):
     """parts: [(이름, 경로 or None)]"""
     h = '<p class="bc">' + " › ".join(f'<a href="{e(p)}">{e(n)}</a>' if p else e(n) for n, p in parts) + "</p>"
@@ -170,26 +221,68 @@ for it in items:
     if it.get("end"): rows.append(("모집 마감", f"{mmdd(it['end'])} ({it['end']})"))
     if ch: rows.append(("활동 매체", " · ".join(ch)))
     if it.get("source"): rows.append(("신청 사이트", it["source"]))
-    body = bc + f"<h1>{e(name)} {e(cn)} 체험단</h1>"
-    body += f'<p class="sub">{e(it.get("source") or "")}{" 모집 · " if it.get("source") else ""}{e(mmdd(it.get("end")) + "까지") if it.get("end") else "상시 모집"}</p>'
-    if not op: body += '<p class="closed">이 체험단은 모집이 끝났어요. 아래에서 지금 모집 중인 비슷한 체험단을 확인해 보세요.</p>'
-    if img: body += f'<img class="hero" src="{e(img)}" alt="{e(name)}" referrerpolicy="no-referrer">'
-    body += "<dl>" + "".join(f"<dt>{e(a)}</dt><dd>{e(b)}</dd>" for a, b in rows if b) + "</dl>"
-    body += '<div class="btns">'
-    if op and apply_: body += f'<a class="btn pri" href="{e(apply_)}" target="_blank" rel="nofollow noopener">{e(it.get("source") or "신청 사이트")}에서 신청하기</a>'
-    if view: body += f'<a class="btn sec" href="{e(view)}" target="_blank" rel="sponsored nofollow noopener">{"숙소 사진 보기" if cat=="stay" else ("입장권 가격 보기" if cat=="etc" else "상품 가격 보기")}</a>'
-    body += f'<a class="btn ghost" href="/#/item?id={e(iid)}">다꾸 앱에서 찜하고 마감 알림 받기</a></div>'
+    # 2026-10-19 시온님 요청: 공유 페이지(s/)를 앱 상세 화면과 같은 모양으로 (앱 style.css·simple.css 를 그대로 씀)
+    CHL = {"blog": "블로그", "insta": "인스타", "clip": "클립", "reels": "릴스", "youtube": "유튜브", "tiktok": "틱톡", "cafe": "맘카페",
+           "payback": "페이백", "review": "구매평", "premier": "프리미어 전용", "ret": "회수형"}
+    pay = list(it.get("pay") or []); bn = str(it.get("benefit") or "")
+    if "회수형" in bn and "ret" not in pay: pay.append("ret")
+    if re.search("페이백|선결제", bn) and "payback" not in pay: pay.append("payback")
+    if "구매평" in bn and "review" not in pay: pay.append("review")
+    chs = [c for c in (it.get("ch") or []) if c != "review"] or ([] if (it.get("ch") or pay) else ["blog"])
+    badges = [x for x in pay if x in ("premier", "ret")] + [x for x in pay if x not in ("premier", "ret")] + chs
+    badge_html = ('<div class="chbs">' + "".join(f'<span class="chb chb-{e(c)}">{e(CHL.get(c, c))}</span>' for c in badges) + '</div>') if badges else ""
+    endd = it.get("end") or ""
+    dleft = None
+    if endd:
+        try: dleft = (datetime.strptime(endd, "%Y-%m-%d") - datetime.strptime(TODAY, "%Y-%m-%d")).days
+        except Exception: pass
+    dday = "마감" if not op else ("오늘 마감" if dleft == 0 else (f"D-{dleft}" if dleft is not None else ""))
+    rows2 = f'<dt>제공 내역</dt><dd>{e(it.get("benefit") or "")}' + (f'<br><b>{e(it["worth"])} 상당</b>' if it.get("worth") else "") + '</dd>'
+    rows2 += ('<dt>' + ('' if not op else '<i class="blink" aria-hidden="true"></i>') + '모집 기간</dt><dd>' + (e(mmdd(it.get("start"))) + ' ' if it.get("start") else '') +
+              '~ ' + e(mmdd(endd)) + f' <span class="dd2{" hot" if (dleft is not None and dleft <= 3 and op) else ""}">{e(dday)}</span></dd>')
+    ap = it.get("ap")
+    if op and isinstance(ap, list) and len(ap) >= 2 and (ap[1] or 0) > 0:
+        a0, a1 = int(ap[0] or 0), int(ap[1]); r = a0 / a1
+        rows2 += '<dt>경쟁률</dt><dd>' + (f'모집 {a1:,} · <b>아직 지원자 없음</b>' if not a0 else f'지원 {a0:,} · 모집 {a1:,} <b>{(f"{r:.1f}" if r < 10 else round(r))}:1</b>') + '</dd>'
+    rows2 += f'<dt>모집 사이트</dt><dd>{e(it.get("source") or "체험단 사이트")}</dd>'
+    if it.get("region"): rows2 += f'<dt>지역</dt><dd>{e(it["region"])}</dd>'
+    fee = ""
+    if cat == "stay" and isinstance(it.get("fee"), dict):
+        fr = [(k, em, lab) for k, em, lab in (("p", "👥", "인원 추가"), ("b", "🍖", "바베큐"), ("f", "🔥", "불멍"), ("w", "♨️", "온수·수영장"), ("j", "🛁", "자쿠지·스파"), ("d", "🐶", "반려동물")) if it["fee"].get(k)]
+        if fr: fee = '<div class="feebox"><b class="fbt">추가 요금 안내</b><dl>' + "".join(f'<dt>{em} {lab}</dt><dd>{e(it["fee"][k])}</dd>' for k, em, lab in fr) + '</dl><small>모집 글에 적힌 내용이에요. 요금은 바뀔 수 있으니 예약할 때 숙소에 꼭 확인하세요.</small></div>'
+    ai = (f'<div class="aisum"><span class="aisl">✦ AI 요약</span><p>{e(it["sum"])}</p><small>숙소·제품 소개 자료를 바탕으로 AI가 정리했어요. 정확한 정보는 판매 페이지에서 확인해 주세요.</small></div>') if (it.get("sum") or "").strip() else ""
+    plab = "숙소 사진 보기" if cat == "stay" else ("입장권 가격 보기" if cat == "etc" else "상품 가격 보기")
+    src = it.get("source") or "체험단 사이트"
+    HEART = '<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>'
+    SEND = '<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3 10.2 13.8M21 3l-6.6 18-4.2-7.2L3 9.6Z"/></svg>'
+    body = '<div class="pg dpg">'
+    body += '<div class="dthimg">' + (f'<span class="dcd" id="dcd"><b data-dcd="{e(endd)}"></b> 남음</span>' if op and endd else '') + (f'<img src="{e(img)}" alt="{e(name)}" referrerpolicy="no-referrer" onerror="this.remove()">' if img else '') + '</div>'
+    body += f'<div class="dhd">{badge_html}<h1>{e(name)}</h1><div class="dico"><span class="shtip">친구에게도 공유하기</span><button class="shb" id="shb" aria-label="공유하기">{SEND}</button></div></div>'
+    if op and endd: body += f'<span class="dcd dcdfix" id="dcdfix" aria-hidden="true"><b data-dcd="{e(endd)}"></b> 남음</span>'
+    body += f'<dl class="dtl">{rows2}</dl>' + fee + ai
+    if op: body += f'<p class="dnote">신청은 {e(src)}에서 진행돼요. 리뷰 조건·체험 가능일을 꼭 확인해 주세요.</p>'
+    else: body += f'<div class="dclosed"><b>모집이 끝난 체험단이에요</b><span>같은 {"숙소" if cat == "stay" else "제품"}가 다시 모집하면 다꾸 앱에서 알림으로 알려드려요.</span></div>'
+    body += f'<div class="dbar"><a class="fv dbfav" href="/#/item?id={e(iid)}" aria-label="다꾸 앱에서 찜하기">{HEART}</a>'
+    if view: body += f'<a class="dbl" href="{e(view)}" target="_blank" rel="sponsored nofollow noopener">{plab}</a>'
+    if op and apply_: body += f'<a class="b pri dbp" href="{e(apply_)}" target="_blank" rel="nofollow noopener">신청하기</a>'
+    elif not op: body += f'<a class="b pri dbp" href="/#/item?id={e(iid)}">🔔 재모집 알림받기</a>'
+    body += '</div>'
     sim = [x for x in open_items if x["id"] != iid and (x.get("cat") or "stay") == cat and (cat != "stay" or (sg and sigun(x) == sg) or x.get("region") == it.get("region"))]
     if len(sim) < 6: sim += [x for x in open_items if x["id"] != iid and (x.get("cat") or "stay") == cat and x not in sim]
     sim = sort_open(sim)[:8]
-    if sim:
-        body += f"<h2>지금 모집 중인 비슷한 체험단</h2><ul class='list'>" + "".join(li(x) for x in sim) + "</ul>"
+    body += '<div class="sx">'
+    if sim: body += f"<h2>지금 모집 중인 비슷한 체험단</h2><ul class='list'>" + "".join(li(x) for x in sim) + "</ul>"
     tags = [(f"{cn} 체험단 전체", f"/c/{CATF.get(cat,'stay')}.html")]
     if cat == "stay":
         for k in (sg, it.get("region")):
             if k and k in REG and (f"{k} 숙박 체험단", rslug(k)) not in tags: tags.append((f"{k} 숙박 체험단", rslug(k)))
     tags.append(("분야·지역별 모아보기", "/c/"))
-    body += '<div class="tags">' + "".join(f'<a href="{e(p)}">{e(n)}</a>' for n, p in tags) + "</div>"
+    body += '<div class="tags">' + "".join(f'<a href="{e(p)}">{e(n)}</a>' for n, p in tags) + "</div>" + bc + "</div>"
+    body += '</div>'
+    open(os.path.join(sdir, iid + ".html"), "w", encoding="utf-8").write(
+        shell_app(title, desc, f"{SITE}/s/{iid}.html", body, img, "index,follow" if op else "noindex,follow", [bld], name))
+    n_s += 1
+    continue
     open(os.path.join(sdir, iid + ".html"), "w", encoding="utf-8").write(
         shell(title, desc, f"{SITE}/s/{iid}.html", body, img, "index,follow" if op else "noindex,follow", [bld]))
     n_s += 1

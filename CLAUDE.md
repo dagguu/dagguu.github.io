@@ -138,3 +138,4 @@
 - 확대·축소 잠금(2026-10-19 시온님): index.html·gen_share·gen_edu·refund.html viewport 에 maximum-scale=1,user-scalable=no, simple.css touch-action:manipulation(더블탭 확대 막기)·입력칸 16px(아이폰 자동 확대 막기), app.js 맨 앞 gesturestart·두 손가락 touchmove 막기(아이폰 사파리·카톡 인앱 핀치).
 - 필터 시트 통일(2026-10-19 21시 시온님 "통일감 있게"): 모든 탭 줄 높이 58px·체크 네모 같은 모양(카테고리도 동그라미 대신 네모, style.css .rd 이름 충돌로 줄이 좁아지던 것 고침)·창 높이 고정 min(78vh,640px)·탭 같은 폭.
 - 필터 시트 항목 옆 개수는 뺌(2026-10-19 시온님). 아래 "N개 체험단 보기" 버튼 숫자는 그대로.
+- 공유 페이지 s/ 앱과 같은 모양(2026-10-19 시온님 "공유링크랑 디자인이 달라"): gen_share.py shell_app 이 앱 style.css·simple.css 를 불러 앱 상세(itemView)와 같은 마크업(맨 위 대가성 줄·appbar 로고/검색, 사진+남은 시간, 매체 배지·이름·공유, 정보표 dtl, 추가 요금·AI 요약, 아래 고정 ♡(앱에서 찜) · 가격 보기 ↗ · 신청하기)을 정적 HTML 로 쓴다(검색 로봇용 내용 그대로). 아래에 비슷한 체험단·모아보기 태그·경로. itemView 를 바꾸면 gen_share.py 도 같이 맞춘다. c/·r/·g/ 페이지는 예전 모양(shell).
