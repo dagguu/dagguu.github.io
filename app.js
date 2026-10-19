@@ -1072,9 +1072,9 @@ function eduView(){
   return '<div class="pg edu">'+
     '<section class="eduhero"><small>다꾸 수익화</small><h1>블로그, 혼자 고민하지 말고<br><span>1:1로 같이</span> 키워요</h1><p>8주 1:1 교육으로 체험단 당첨부터 검색 노출, 수익화까지<br>결제일부터 12개월 동안은 1:1 코칭도 무료예요</p><div class="eduhp"><b>120만원</b> · 8주 1:1 교육 · 🎁 12개월 무료 코칭</div><a class="b" href="#eduapply" data-jumpid="eduapply">상담 신청하기</a></section>'+
     '<section class="edusec"><h2>이런 분께 맞아요</h2><ul class="educhk">'+EDU_PICK.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join("")+'</ul></section>'+
-    '<section class="edusec"><h2>무엇을 함께 하나요</h2><div class="educards">'+
-      [["1","블로그 첫 세팅","주제 정하기, 프로필·카테고리 정리, 처음 쓸 글 방향까지 같이 잡아요."],["2","체험단 당첨 피드백","신청서와 지금 블로그를 같이 보고, 선정에 걸림돌이 되는 부분을 짚어 드려요."],["3","검색 상단 노출 글쓰기","검색하는 사람이 찾는 키워드와 글 구성을 내 글에 맞춰 첨삭해요."],["4","블로그 수익화","체험단·기자단·제휴 마케팅 등 내 블로그에 맞는 수익 방법을 단계별로 정해요."]].map(function(c){ return '<div class="educ"><b>'+c[0]+'</b><span><em>'+c[1]+'</em>'+c[2]+'</span></div>'; }).join("")+
-    '</div></section>'+
+    '<section class="edusec"><h2>8주 커리큘럼</h2><ol class="educur">'+
+      [["블로그 셋팅 및 점검"],["블로그 포스팅하는 법"],["체험단 신청하는 방법"],["체험단 당첨 후기 작성법"],["블로그 상단노출 방법"],["블로그 기자단"],["블로그 AI 글쓰기"],["블로그 수익화 비법"]].map(function(c,k){ return '<li><b>'+(k+1)+'주차</b><span>'+c[0]+'</span></li>'; }).join("")+
+    '</ol></section>'+
     '<section class="edusec"><h2>진행 방식</h2><ul class="eduway"><li>💬 카톡으로 상담 신청 → 지금 블로그 상태 확인</li><li>📚 전자책·강의자료를 바로 드려요</li><li>🧑‍🏫 8주 1:1 교육 커리큘럼</li><li>🎁 수강생 혜택: 결제일부터 12개월 동안 1:1 코칭 무료 (횟수 제한 없음)</li><li>💳 한 번 결제, 카드 할부 가능 (할부 개월 수는 카드사마다 달라요)</li></ul>'+
       '<div class="eduprice"><small>수강료</small><b>120만원</b><span>8주 1:1 교육 + 전자책·강의자료</span><i class="edugift">🎁 수강생 혜택 · 12개월 1:1 코칭 무료</i><em>카드 할부 최대 12개월 · 12개월로 나누면 월 10만원꼴<br>(할부 수수료는 카드사 기준, 무이자 여부는 카드사마다 달라요)</em></div>'+
       '<p class="edunote2">결제는 상담 후 안내드리는 결제 링크로 진행해요. 전자책·강의자료는 받은 뒤에는 그 부분이 환불되지 않아요. <a href="/refund.html">환불정책</a></p>'+
