@@ -1070,7 +1070,7 @@ function contactView(){
 var EDU_PICK=["블로그를 처음 시작해요","체험단 신청해도 당첨이 잘 안 돼요","내 글이 검색 위쪽에 안 보여요","블로그로 수익을 내고 싶어요"];
 function eduView(){
   return '<div class="pg edu">'+
-    '<section class="eduhero"><small>다꾸 수익화</small><h1>블로그, 혼자 고민하지 말고<br><span>1:1로 같이</span> 키워요</h1><p>8주 1:1 교육으로 체험단 당첨부터 검색 노출, 수익화까지<br>끝난 뒤에도 12개월 동안 무료로 코칭해 드려요</p><div class="eduhp"><b>120만원</b> · 8주 1:1 교육 · 🎁 12개월 무료 코칭</div><a class="b" href="#eduapply" data-jumpid="eduapply">상담 신청하기</a></section>'+
+    '<section class="eduhero"><small>다꾸 수익화</small><h1>블로그, 혼자 고민하지 말고<br><span>1:1로 같이</span> 키워요</h1><p>8주 1:1 교육으로 체험단 당첨부터 검색 노출, 수익화까지<br>결제일부터 12개월 동안은 1:1 코칭도 무료예요</p><div class="eduhp"><b>120만원</b> · 8주 1:1 교육 · 🎁 12개월 무료 코칭</div><a class="b" href="#eduapply" data-jumpid="eduapply">상담 신청하기</a></section>'+
     '<section class="edusec"><h2>이런 분께 맞아요</h2><ul class="educhk">'+EDU_PICK.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join("")+'</ul></section>'+
     '<section class="edusec"><h2>무엇을 함께 하나요</h2><div class="educards">'+
       [["1","블로그 첫 세팅","주제 정하기, 프로필·카테고리 정리, 처음 쓸 글 방향까지 같이 잡아요."],["2","체험단 당첨 피드백","신청서와 지금 블로그를 같이 보고, 선정에 걸림돌이 되는 부분을 짚어 드려요."],["3","검색 상단 노출 글쓰기","검색하는 사람이 찾는 키워드와 글 구성을 내 글에 맞춰 첨삭해요."],["4","블로그 수익화","체험단·기자단·제휴 마케팅 등 내 블로그에 맞는 수익 방법을 단계별로 정해요."]].map(function(c){ return '<div class="educ"><b>'+c[0]+'</b><span><em>'+c[1]+'</em>'+c[2]+'</span></div>'; }).join("")+
