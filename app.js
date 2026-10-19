@@ -1070,14 +1070,14 @@ function contactView(){
 var EDU_PICK=["블로그를 처음 시작해요","체험단 신청해도 당첨이 잘 안 돼요","내 글이 검색 위쪽에 안 보여요","블로그로 수익을 내고 싶어요"];
 function eduView(){
   return '<div class="pg edu">'+
-    '<section class="eduhero"><small>다꾸 수익화</small><h1>블로그, 혼자 고민하지 말고<br><span>1:1로 같이</span> 키워요</h1><p>체험단 당첨부터 검색 노출, 수익화까지<br>12개월 동안 횟수 제한 없이 피드백해 드려요</p><div class="eduhp"><b>120만원</b> · 12개월 무제한 · 최대 12개월 할부</div><a class="b" href="#eduapply" data-jumpid="eduapply">상담 신청하기</a></section>'+
+    '<section class="eduhero"><small>다꾸 수익화</small><h1>블로그, 혼자 고민하지 말고<br><span>1:1로 같이</span> 키워요</h1><p>3개월 1:1 교육으로 체험단 당첨부터 검색 노출, 수익화까지<br>끝난 뒤에도 12개월 동안 무료로 코칭해 드려요</p><div class="eduhp"><b>120만원</b> · 3개월 1:1 교육 · 🎁 12개월 무료 코칭</div><a class="b" href="#eduapply" data-jumpid="eduapply">상담 신청하기</a></section>'+
     '<section class="edusec"><h2>이런 분께 맞아요</h2><ul class="educhk">'+EDU_PICK.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join("")+'</ul></section>'+
     '<section class="edusec"><h2>무엇을 함께 하나요</h2><div class="educards">'+
       [["1","블로그 첫 세팅","주제 정하기, 프로필·카테고리 정리, 처음 쓸 글 방향까지 같이 잡아요."],["2","체험단 당첨 피드백","신청서와 지금 블로그를 같이 보고, 선정에 걸림돌이 되는 부분을 짚어 드려요."],["3","검색 상단 노출 글쓰기","검색하는 사람이 찾는 키워드와 글 구성을 내 글에 맞춰 첨삭해요."],["4","블로그 수익화","체험단·기자단·제휴 마케팅 등 내 블로그에 맞는 수익 방법을 단계별로 정해요."]].map(function(c){ return '<div class="educ"><b>'+c[0]+'</b><span><em>'+c[1]+'</em>'+c[2]+'</span></div>'; }).join("")+
     '</div></section>'+
-    '<section class="edusec"><h2>진행 방식</h2><ul class="eduway"><li>💬 카톡으로 상담 신청 → 지금 블로그 상태 확인</li><li>♾️ 결제 후 12개월 동안 1:1 피드백 횟수 제한 없이</li><li>💳 한 번 결제, 카드 할부 가능 (할부 개월 수는 카드사마다 달라요)</li></ul>'+
-      '<div class="eduprice"><small>수강료</small><b>120만원</b><span>12개월 동안 1:1 피드백 횟수 무제한</span><em>카드 할부 최대 12개월 · 12개월로 나누면 월 10만원꼴<br>(할부 수수료는 카드사 기준, 무이자 여부는 카드사마다 달라요)</em></div>'+
-      '<p class="edunote2">결제는 상담 후 안내드리는 결제 링크로 진행해요.</p>'+
+    '<section class="edusec"><h2>진행 방식</h2><ul class="eduway"><li>💬 카톡으로 상담 신청 → 지금 블로그 상태 확인</li><li>📚 결제하면 전자책·강의자료를 바로 드려요</li><li>🧑‍🏫 3개월 동안 1:1 교육</li><li>🎁 수강생 혜택: 결제일부터 12개월 동안 1:1 코칭 무료 (횟수 제한 없음)</li><li>💳 한 번 결제, 카드 할부 가능 (할부 개월 수는 카드사마다 달라요)</li></ul>'+
+      '<div class="eduprice"><small>수강료</small><b>120만원</b><span>3개월 1:1 교육 + 전자책·강의자료</span><i class="edugift">🎁 수강생 혜택 · 12개월 1:1 코칭 무료</i><em>카드 할부 최대 12개월 · 12개월로 나누면 월 10만원꼴<br>(할부 수수료는 카드사 기준, 무이자 여부는 카드사마다 달라요)</em></div>'+
+      '<p class="edunote2">결제는 상담 후 안내드리는 결제 링크로 진행해요. 전자책·강의자료는 받은 뒤에는 그 부분이 환불되지 않아요. <a href="/refund.html">환불정책</a></p>'+
       '<p class="edunote">코칭은 방법을 함께 찾는 과정이에요. 체험단 당첨, 검색 순위, 수익 금액을 약속하거나 보장하지는 않아요. <a href="/refund.html">환불정책 보기</a></p></section>'+
     '<section class="edusec" id="eduapply"><h2>상담 신청</h2><form id="eduform" class="eduform" novalidate>'+
       '<label class="fl">닉네임 <i>*</i><input class="fi" name="nick" maxlength="30" autocomplete="nickname"></label>'+
