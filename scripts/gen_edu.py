@@ -152,7 +152,7 @@ h1,h2{{letter-spacing:-.02em}}
 <section class="sec"><h2>진행 방식</h2>{way}</section>
 <section class="price"><span class="badge">오픈 이벤트</span><br><div class="box"><small>5주 1:1 강의 + 전자책·강의자료</small><b>월 10만원대</b><em>*12개월 카드 할부 시 (할부 수수료는 카드사 기준)<br>정확한 수강료는 상담 때 안내해 드려요</em></div></section>
 {guar}
-<p class="note" style="margin-top:14px">코칭은 방법을 함께 찾는 과정이에요. 체험단 당첨, 검색 순위, 수익 금액을 약속하거나 보장하지 않아요. <a href="/refund.html">환불정책 보기</a></p>
+<p class="note" style="margin-top:14px">코칭은 방법을 함께 찾는 과정이에요. 체험단 당첨, 검색 순위, 수익 금액을 약속하거나 보장하지 않아요.</p>
 <section class="cta"><p>아직 고민하는 분들께</p><h2>지금 시작하고<br><span>생활비 월 100</span> 아껴보세요!</h2><small style="display:block;margin-top:10px;font-size:11px;color:#8f8a99">*체험단 활용 정도에 따라 사람마다 달라요</small>
 <a class="btn" href="/#/edu">1:1 상담 신청하기</a><br><a class="btn" style="background:#fee500;color:#191919" href="{CHAT}" target="_blank" rel="noopener">카카오톡으로 바로 문의</a><br><a class="btn" style="background:#222" href="/">다꾸체험단 홈 가기</a></section>
 {footer()}

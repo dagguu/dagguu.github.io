@@ -1085,8 +1085,8 @@ function eduView(){
     '<section class="edusec"><h2>진행 방식</h2><ul class="eduway"><li>💬 카톡으로 상담 신청 → 수강료 결제</li><li>📚 전자책·강의자료를 바로 드려요</li><li>🧑‍🏫 5주 1:1 교육 커리큘럼</li><li>🎁 수강생 혜택: 평생 1:1 코칭 무료 (300만원 상당, 횟수 제한 없음)</li><li>🏆 수강생 혜택: 다꾸체험단이 직접 진행하는 캠페인·이벤트 평생 우선권</li><li>📚 수강생 혜택: 블로그 관련 서적 제공</li><li>💳 한 번 결제, 카드 할부 가능 (할부 개월 수는 카드사마다 달라요)</li></ul>'+
       '<div class="eduguar"><b>💯 당첨 안 되면 100% 환불</b><p>5주 교육을 마친 뒤 3개월 안에, 배운 방법대로 체험단을 30번 이상 신청했는데 한 번도 선정되지 않으면 결제 금액 전액을 돌려드려요. (신청 내역 캡처로 확인)</p><small>⚠️ 허위 신청 내역·캡처 조작 등 부정한 방법으로 환불을 받으면 환불금 반환을 청구하고, 민·형사상 법적 책임을 물을 수 있어요.</small></div>'+
       '<div class="edustage"><p class="esk">한 달이면 끝내는 블로그 체험단·수익화</p><h3>다꾸 수익화 1:1 클래스</h3><div class="esbody"><span class="esf f1">📝</span><span class="esf f2">✨</span><span class="esf f3">💜</span><div class="esbox"><span class="esbadge">오픈<br>이벤트</span><small>5주 1:1 강의 + 전자책·강의자료</small><hr><b class="esmon">월 10만원대</b><a class="esask" href="#eduapply" data-jumpid="eduapply">🔐 1:1 상담 신청하기</a><em>*12개월 카드 할부 시<br>(할부 수수료는 카드사 기준)</em></div></div><p class="esgift"><b>평생 1:1 코칭 무료 (300만원 상당)</b><br>다꾸체험단 이벤트 평생 우선권 · 블로그 관련 서적</p><a class="b esbtn" href="#eduapply" data-jumpid="eduapply">수강료 알아보기 ›</a></div>'+
-      '<p class="edunote2">결제는 상담 후 안내드리는 결제 링크로 진행하고, 수강료는 결제 화면에서 다시 확인할 수 있어요. 전자책·강의자료는 받은 뒤에는 그 부분이 환불되지 않아요. <a href="/refund.html">환불정책</a></p>'+
-      '<p class="edunote">코칭은 방법을 함께 찾는 과정이에요. 체험단 당첨, 검색 순위, 수익 금액을 약속하거나 보장하지는 않아요. <a href="/refund.html">환불정책 보기</a></p></section>'+
+      '<p class="edunote2">결제는 상담 후 안내드리는 결제 링크로 진행하고, 수강료는 결제 화면에서 다시 확인할 수 있어요. 전자책·강의자료는 받은 뒤에는 그 부분이 환불되지 않아요.</p>'+
+      '<p class="edunote">코칭은 방법을 함께 찾는 과정이에요. 체험단 당첨, 검색 순위, 수익 금액을 약속하거나 보장하지는 않아요.</p></section>'+
     '<section class="educta"><p>아직 고민하는 분들께</p><h2>지금 시작하고<br><span>생활비 월 100</span> 아껴보세요!</h2><small>*체험단 활용 정도에 따라 사람마다 달라요</small></section>'+
     '<section class="edusec" id="eduapply"><h2>상담 신청</h2><form id="eduform" class="eduform" novalidate>'+
       '<label class="fl">닉네임 <i>*</i><input class="fi" name="nick" maxlength="30" autocomplete="nickname"></label>'+
@@ -1095,6 +1095,7 @@ function eduView(){
       '<label class="fl">하고 싶은 말<textarea class="fi ta" name="msg" maxlength="500" placeholder="궁금한 점이나 목표를 편하게 적어 주세요"></textarea></label>'+
       '<label class="agree"><input type="checkbox" name="agree"> 상담을 위해 닉네임·블로그 주소·고민 내용을 받는 데 동의해요 (상담이 끝나면 지워요)</label>'+
       '<p class="ferr" id="eduerr"></p><button class="b pri wide" type="submit">카톡으로 상담 신청하기</button></form></section>'+
+    '<p class="edurefund"><a href="/refund.html">환불정책 보기</a></p>'+
     '<div class="dbar edubar"><a class="b" href="#eduapply" data-jumpid="eduapply">⚡ 1:1 상담 신청하기 <small>수강료 알아보기</small></a></div>'+
   '</div>';
 }

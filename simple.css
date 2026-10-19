@@ -602,3 +602,4 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .et small{display:block;font-size:11.5px;font-weight:800;color:#e9a6ff;margin-bottom:2px}
 .et.r small{color:#ffe14d}
 .esf.f1{left:6px;right:auto;top:auto;bottom:4px;transform:rotate(-12deg)}.esbox{z-index:3}
+.pg.edu .edurefund{margin:0 -16px;padding:18px 16px 26px;text-align:center;font-size:13px;background:#000}.pg.edu .edurefund a{color:#bdb6c8;text-decoration:underline}
