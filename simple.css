@@ -536,3 +536,22 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .ea small{font-size:10.5px;line-height:1.3}
 .ea em{font-size:12px;margin-top:3px}
 .pg.edu .eduhero .edumonth{display:block;margin:12px auto 0;padding:0;background:none;border-radius:0;color:#fff;font-size:16px;font-weight:800}
+
+.edustage{position:relative;margin:14px -16px 0;padding:30px 16px 26px;overflow:hidden;color:#fff;text-align:center;background:linear-gradient(115deg,transparent 52%,rgba(255,255,255,.07) 52%,rgba(255,255,255,.07) 58%,transparent 58%),radial-gradient(circle at 78% 55%,rgba(212,111,216,.55),transparent 55%),radial-gradient(circle at 20% 0,rgba(138,63,208,.35),transparent 50%),#000}
+.edustage .esk{margin:0;font-size:14px;font-weight:900;color:#e9a6ff}
+.edustage h3{margin:6px 0 0;font-size:26px;font-weight:900;letter-spacing:-.02em;color:#fff}
+.esbody{position:relative;height:330px;margin-top:10px}
+.esimg{position:absolute;right:-22px;bottom:0;height:330px;width:auto;filter:drop-shadow(0 0 18px rgba(212,111,216,.45))}
+.esf{position:absolute;display:grid;place-items:center;width:46px;height:46px;border-radius:14px;font-size:24px;background:linear-gradient(135deg,#8a3fd0,#d46fd8);box-shadow:0 8px 20px rgba(212,111,216,.5)}
+.esf.f1{right:150px;top:58px;transform:rotate(-10deg)}
+.esf.f2{right:6px;top:18px;transform:rotate(12deg);background:linear-gradient(135deg,#ffe14d,#ff9a5a)}
+.esbox{position:absolute;left:0;top:44px;width:58%;padding:16px 10px 12px;border-radius:6px;background:#fff;color:#111;border:3px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(135deg,#c5ff4a,#8a3fd0,#d46fd8) border-box;box-shadow:0 0 24px rgba(138,63,208,.6);z-index:1}
+.esbox small{display:block;font-size:12px;font-weight:800;color:#333}
+.esbox hr{margin:8px 0;border:0;border-top:1px solid #ccc}
+.esbox .blurp{display:block;font-size:30px;font-weight:900;color:#111;filter:blur(8px);user-select:none}
+.esbox strong{display:block;margin-top:4px;font-size:14px;font-weight:900;background:linear-gradient(transparent 60%,#e9c4ff 60%);color:#111}
+.esbox em{display:block;margin-top:6px;font-style:normal;font-size:10.5px;line-height:1.4;color:#666}
+.esbadge{position:absolute;left:-14px;top:-30px;width:60px;height:60px;display:grid;place-items:center;font-size:11.5px;line-height:1.2;font-weight:900;color:#fff;background:#e5322d;clip-path:polygon(50% 0,61% 12%,75% 6%,79% 21%,94% 25%,88% 39%,100% 50%,88% 61%,94% 75%,79% 79%,75% 94%,61% 88%,50% 100%,39% 88%,25% 94%,21% 79%,6% 75%,12% 61%,0 50%,12% 39%,6% 25%,21% 21%,25% 6%,39% 12%);transform:rotate(-12deg)}
+.esgift{position:relative;margin:16px 0 0;font-size:13.5px;line-height:1.6;font-weight:700;color:#ddd}
+.esgift b{font-size:16px;color:#fff;background:linear-gradient(transparent 55%,rgba(212,111,216,.6) 55%)}
+.edustage .esbtn{display:inline-block;margin-top:14px;padding:12px 26px;border-radius:999px;background:linear-gradient(90deg,#8a3fd0,#d46fd8);color:#fff;font-weight:900;text-decoration:none}
