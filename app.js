@@ -533,7 +533,7 @@ function fPaint(){ var el=document.getElementById("fsheet"); if(!el||!FS) return
   var radio=FS.tab==="cat"||FS.tab==="pet";
   el.querySelector(".fsbody").innerHTML='<div class="fstabs" role="tablist">'+tabs.map(function(t){ return '<button role="tab" class="'+(t[0]===FS.tab?'on':'')+'" data-ftab="'+t[0]+'">'+t[1]+'</button>'; }).join("")+'</div>'+
     '<div class="fschips">'+fChips(F).map(function(x){ return '<button class="fchip" data-fsdel="'+x[0]+'|'+esc(x[1])+'">'+esc(x[2])+' ✕</button>'; }).join("")+'</div>'+
-    '<div class="fslist">'+fOpts(FS.tab,F).map(function(o){ return '<button class="fsrow'+(o[4]?' on':'')+(radio?' rd':'')+'" data-fpick="'+esc(o[0])+'"><span class="fsck" aria-hidden="true"></span><span class="fsem">'+o[1]+'</span><span class="fsnm">'+esc(o[2])+'</span><small>'+o[3]+'</small></button>'; }).join("")+'</div>';
+    '<div class="fslist">'+fOpts(FS.tab,F).map(function(o){ return '<button class="fsrow'+(o[4]?' on':'')+'" data-fpick="'+esc(o[0])+'"><span class="fsck" aria-hidden="true"></span><span class="fsem">'+o[1]+'</span><span class="fsnm">'+esc(o[2])+'</span><small>'+o[3]+'</small></button>'; }).join("")+'</div>';
   el.querySelector("[data-fgo]").textContent=fCount(F)+'개 체험단 보기'; }
 function fOpen(tab){ if(!document.getElementById("fsheet")){ var d=document.createElement("div"); d.id="fsheet"; d.className="fsheet";
     d.innerHTML='<div class="fsbg" data-fclose></div><div class="fsbox" role="dialog" aria-modal="true" aria-label="필터"><div class="fsgrab"></div><div class="fshead"><b>필터</b><button class="fsx" data-fclose aria-label="닫기">✕</button></div><div class="fsbody"></div><div class="fsfoot"><button class="fsreset" data-freset>↻ 초기화</button><button class="fsgo" data-fgo></button></div></div>';
