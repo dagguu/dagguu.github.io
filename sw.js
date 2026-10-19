@@ -1,5 +1,5 @@
 /* 다꾸 체험단 모음 - 오프라인/빠른 실행용 서비스워커 */
-const V = "dakku-v195";
+const V = "dakku-v196";
 const CORE = ["./", "index.html", "style.css", "simple.css", "app.js", "manifest.webmanifest", "icons/icon-192.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(V).then(c => c.addAll(CORE.map(p => new Request(p, { cache: "reload" })))).then(() => self.skipWaiting())); });
 self.addEventListener("activate", e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
