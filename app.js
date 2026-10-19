@@ -944,7 +944,7 @@ function wideBanners(open,closing){
   if(closing.length) W.push({h:"#/list?cat=all&s=todayClose",bg:"linear-gradient(90deg,#2b1055 0%,#5a1f8f 60%,#a43f9f 100%)",s:'오늘 밤 12시까지 · ⏳ <span id="stripcd">'+clock(msToMidnight())+'</span>',t:"오늘 마감 체험단 <em>"+closing.length+"곳</em>",e:"⏰"});
   else W.push({h:"#/list?cat=all&s=open",bg:"linear-gradient(90deg,#2b1055 0%,#5a1f8f 60%,#a43f9f 100%)",s:"지금 신청할 수 있어요",t:"모집 중 체험단 <em>"+open.length+"곳</em>",e:"🎟️"});
   var kids=st.filter(function(it){ return /키즈\s*풀빌라/.test((it.name||"")+" "+(it.benefit||"")); }).length;
-  if(kids>=2) W.push({h:"#/trip?q="+encodeURIComponent("키즈풀빌라"),bg:"linear-gradient(90deg,#0b2a5c 0%,#1c4fa8 60%,#4f8de8 100%)",s:"아이랑 물놀이하는 가족여행",t:"키즈 풀빌라 체험단 <em>"+kids+"곳</em>",e:"🛟"});
+  if(kids>=2) W.push({h:"#/trip?q="+encodeURIComponent("키즈풀빌라"),bg:"linear-gradient(90deg,#0b2a5c 0%,#1c4fa8 60%,#4f8de8 100%)",s:"아이랑 물놀이하는 가족여행",t:"키즈 풀빌라 체험단 <em>"+kids+"곳</em>",e:"👶🏻"});
   if(mrtList().length) W.push({h:"#/event",bg:"linear-gradient(90deg,#111 0%,#2c2c34 60%,#4a4a58 100%)",s:"국내·해외 숙소 특가를 매일 아침",t:"최저가 숙소 <em>특가 모음</em>",e:"🏨"});
   var P=promoOn(); if(P) W.push({h:P.u,x:1,ad:1,bg:"linear-gradient(90deg,#0c1a6b 0%,#1f3aa8 60%,#3f6be0 100%)",s:esc(P.small||""),t:esc((P.t||"").replace(/<[^>]+>/g,"")),art:P.art});
   var n=W.length;
