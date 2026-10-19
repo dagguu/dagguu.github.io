@@ -658,8 +658,16 @@ function itemView(){
       :'<p class="dnote">신청은 '+esc(src)+'에서 진행돼요. 리뷰 조건·체험 가능일을 꼭 확인해 주세요.</p>')+
     '<div class="dbar"><button class="fv dbfav'+(isFav(it.id)?" on":"")+'" data-fav="'+esc(it.id)+'" aria-label="찜하기" aria-pressed="'+isFav(it.id)+'">'+ico(I.heart)+'</button>'+
       (priceUrl(it)?'<a class="dbl" '+ext(priceUrl(it))+'>'+(stay?'숙소 사진 보기':(catOf(it)==='etc'?'입장권 가격 보기':'상품 가격 보기'))+'</a>':'')+(closed?reopenBtn(it):applyBtn(it,"dbp"))+'</div>'+
-    relDeals(it)+
+    babyMore(it)+relDeals(it)+
     recoSection("이런 체험단은 어때요?")+'</div>';
+}
+/* 육아 상세 페이지 바로 아래 "다른 육아 체험단" (2026-10-19 시온님 요청): 모집 중 육아 중 같은 나이대 먼저, 그다음 금액 큰 순 */
+function babyMore(it){
+  if(catOf(it)!=="baby") return "";
+  var ag=it.ages||[], L=seed.items.filter(function(x){ return x.id!==it.id && catOf(x)==="baby" && statusOf(x).key!=="closed"; });
+  L.sort(function(a,b){ var ma=(a.ages||[]).some(function(g){ return ag.indexOf(g)>=0; })?1:0, mb=(b.ages||[]).some(function(g){ return ag.indexOf(g)>=0; })?1:0;
+    return (mb-ma) || (valOf(b)-valOf(a)) || (daysLeft(a)-daysLeft(b)); });
+  return hrow("👶 다른 육아 체험단","#/list?cat=baby",L);
 }
 /* 마감 체험단: 재모집 알림 (찜 + 알림 켜기 → send_push.js 찜 오픈 알림이 같은 숙소·제품 재모집을 알려줌), 2026-10-18 시온님 요청 */
 function reopenOn(it){ return isFav(it.id)&&(!pushOk()||pushOn()); }
