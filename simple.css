@@ -649,3 +649,6 @@ body.fsopen{overflow:hidden}
 .fsfoot{display:flex;gap:10px;padding:10px 16px 14px;border-top:1px solid #f0f0f3}
 .fsreset{flex:0 0 38%;height:52px;border:0;border-radius:14px;background:#f2f2f5;color:#555;font-size:16px;font-weight:700;cursor:pointer}
 .fsgo{flex:1;height:52px;border:0;border-radius:14px;background:#5b3fd6;color:#fff;font-size:17px;font-weight:800;cursor:pointer}
+.fsheet .fsbox{width:min(100vw,var(--frame,480px))}
+.fstabs button{flex:1 0 auto;padding:14px 8px 12px;font-size:14px}
+.fsrow{padding:13px 12px}
