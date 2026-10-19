@@ -32,7 +32,10 @@ const UNSUB = ''; // 2026-10-17 시온님 요청으로 알림 본문의 수신�
 // 특가 알림: 할인율 제일 높은 것. 같은 날 앞 시간에 보낸 상품은 빼고 그다음 1위(같은 알림이 하루에 여러 번 가지 않게)
 const DLIVE = x => x && x.u && !(x.endAt && Date.parse(x.endAt) <= Date.now()), DPCT = x => parseInt(String(x.rate || '0'), 10) || 0;
 const DG = (d.goldbox || []).filter(DLIVE), DT = (d.toss || []).filter(x => DLIVE(x) && !x.soldOut), DB = (d.babyDeals || []).filter(DLIVE);
-const POOL = { mdeal: DG.concat(DT, DB), hotdeal: DB, noon: DG.concat(DT, DB), match: DG.concat(DB) };
+// 12시 특가는 식품·생필품 먼저 (2026-10-19 쿠팡 리포트: 로켓프레시·식품·생활용품을 가장 많이 삼)
+const GROC = /두부|우유|계란|달걀|쌀|라면|김치|과일|사과|귤|바나나|채소|야채|고기|돼지|한우|닭|생수|커피|과자|햄|참치|스팸|즉석|간편|밀키트|휴지|화장지|물티슈|세제|섬유유연제|샴푸|바디워시|치약|칫솔|키친타올|비누|생리대|기저귀/;
+const NOONG = DG.concat(DT).filter(x => GROC.test(x.name || ''));
+const POOL = { mdeal: DG.concat(DT, DB), hotdeal: DB, noon: NOONG.length ? NOONG : DG.concat(DT, DB), match: DG.concat(DB) };
 function pickDeal(sl) { const used = new Set(); let pick = null;
   for (const k of ['mdeal', 'hotdeal', 'noon', 'match']) { const c = POOL[k].filter(x => !used.has(x.u)).sort((a, b) => DPCT(b) - DPCT(a))[0]; if (c) used.add(c.u); if (k === sl) { pick = c; break; } }
   return pick; }

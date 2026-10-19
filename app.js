@@ -185,6 +185,7 @@ document.addEventListener("click",function(e){
   else if((a=t.closest(".pmband .pmc"))) ga("promo_click",{place:"mid_banner_item",item_name:(a.querySelector(".pmn")||{}).textContent||""});
   else if((a=t.closest(".wb"))) ga("promo_click",{place:"wide_banner",promo:(a.querySelector(".wbt b")||{}).textContent||""});
   else if((a=t.closest(".kv"))&&a.querySelector(".part")) ga("promo_click",{place:"banner",promo:(seed.promo||{}).link||""});
+  else if((a=t.closest(".gdl .hdi"))) ga("deal_click",{section:"grocery", item_name:(a.querySelector(".hdn")||{}).textContent||""});
   else if((a=t.closest(".tcard"))){ var sec=a.closest(".wxsec")?"weather":a.closest(".drel")?"detail_related":a.closest("#gold")?"goldbox":a.closest("#babyhd,.hdl")?"babyhot":"deals"; ga("deal_click",{section:sec, item_name:(a.querySelector(".tn")||{}).textContent||""}); }
   else if((a=t.closest("[data-reopen]"))) ga("reopen_alert",{item_id:a.getAttribute("data-reopen")});
   else if((a=t.closest("[data-fav]"))) ga("fav_toggle",{item_id:a.getAttribute("data-fav")});
@@ -297,6 +298,17 @@ function babyDeals(){
   var a=(Array.isArray(seed.babyDeals)?seed.babyDeals:[]).concat((Array.isArray(seed.babyGold)?seed.babyGold:[]).filter(function(g){ return /출산|유아/.test(g.cat||""); }));
   return a.filter(function(x){ var k=(x.name||"").slice(0,12); if(!safeUrl(x.u)||seen[k]||(x.endAt&&Date.parse(x.endAt)<=now)) return false; seen[k]=1; return true; });
 }
+var GROC_RE=/식품|생활용품|두부|우유|계란|달걀|쌀|라면|김치|과일|사과|귤|바나나|채소|야채|고기|돼지|한우|닭|생수|커피|과자|햄|참치|스팸|김\b|즉석|간편|밀키트|휴지|화장지|물티슈|세제|섬유유연제|샴푸|바디워시|치약|칫솔|키친타올|비누|생리대|기저귀/;
+function groceryList(){
+  var seen={}, L=liveGold().concat((Array.isArray(seed.moreDeals)?seed.moreDeals:[]).filter(function(x){ return x.k==="식품"||x.k==="생활용품"||GROC_RE.test(x.name||""); }));
+  return L.filter(function(x){ if(!safeUrl(x.u)||seen[x.u]||(x.endAt&&Date.parse(x.endAt)<=Date.now())) return false; if(x.k!=="식품"&&x.k!=="생활용품"&&!GROC_RE.test(x.name||"")) return false; seen[x.u]=1; return true; }).sort(byPrice);
+}
+function groceryDeal(){
+  var L=groceryList(); if(L.length<4) return "";
+  return '<section class="hdl gdl"><div class="hdh"><span class="hdk">🛒 쿠팡 식품·생필품</span><b>오늘 장보기 특가</b><small>골드박스·카테고리 베스트에서 골랐어요</small></div>'+
+    '<div class="hdr">'+L.slice(0,12).map(function(x){ var img=safeUrl((x.img||"").replace("230x230ex","492x492ex"));
+      return '<a class="hdi" data-gsec="grocery" '+ext(safeUrl(x.u))+'><span class="hdm">'+(img?'<img src="'+esc(img)+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+(x.rate?'<i>'+esc(String(x.rate).replace("%",""))+'%</i>':'')+'</span><span class="hdn">'+esc(x.name)+'</span><span class="hdp"><b>'+esc(x.price||"")+'</b>'+(x.orig?'<s>'+esc(x.orig)+'</s>':'')+'</span></a>'; }).join("")+'</div></section>';
+}
 function hotDeal(){
   var L=babyDeals(); if(L.length<2) return "";
   return '<section class="hdl"><div class="hdh"><span class="hdk">👶 쿠팡 골드박스</span><b>오늘의 아기용품 핫딜</b><small>⏳ 오전 7시 마감까지 <em data-hd>'+clock(nextSeven())+'</em></small></div>'+
@@ -390,6 +402,7 @@ function homeView(){
   if(!regs.length){ var cnt={}; open.forEach(function(it){ if(it.region) cnt[it.region]=(cnt[it.region]||0)+1; }); var top=Object.keys(cnt).sort(function(x,y){ return cnt[y]-cnt[x]; })[0]; if(top) regs=[top]; regTitle='📍 지금 <em>'+esc(regs[0]||"")+'</em> 체험단이 많아요'; }
   else regTitle='📍 <em>관심 지역</em>의 체험단이에요';
   if(regs.length) h+=hrow(regTitle,'#/list?cat=stay&s=open&r='+encodeURIComponent(regs.join(",")),open.filter(function(it){ return regs.indexOf(it.region)>=0; }).sort(byDeadline));
+  var gd=groceryDeal(); if(gd) h+='<div class="hpad">'+gd+'</div>';
   var wx=wxSection(); if(wx) h+='<div class="hpad">'+wx+'</div>';
   var hd=hotDeal(); if(hd) h+='<div class="hpad">'+hd+'</div>'; var cb=cheapBtn(); if(cb) h+='<div class="hpad">'+cb+'</div>'; // 오늘의 특가(골드박스)는 홈에서 숨김 (2026-10-14 시온님 요청)
   var up=CAT_ORDER.filter(function(m){ return !isOpenCat(m.k) && UPCOMING.some(function(u){ return u.k===m.k||u.t===m.t; }); });
@@ -1212,7 +1225,7 @@ function wxSection(){
     (T.wx?'':'')+'<p class="wxsrc">'+(w&&w.src?'날씨 정보: '+esc(w.src)+' · ':'')+'쿠팡 검색 결과</p>'+'</section>';
 }
 function dealsView(){
-  var h=slideBanners(false,dealSlides())+'<div class="pg"><h1>오늘의 특가 🔥</h1>'+cheapBtn()+shopBtn()+dealSearch()+topDealsHtml()+wxSection()+recentDeals();
+  var h=slideBanners(false,dealSlides())+'<div class="pg"><h1>오늘의 특가 🔥</h1>'+cheapBtn()+shopBtn()+dealSearch()+topDealsHtml()+groceryDeal()+wxSection()+recentDeals();
   var GOLD=(Array.isArray(seed.goldbox)?seed.goldbox:[]).filter(function(x){ return safeUrl(x.u) && !(x.endAt && Date.parse(x.endAt)<=Date.now()); });
   if(GOLD.length) h+='<section class="sec tossec" id="gold"><div class="sh"><h2>⏰ 오늘이 제일 싸요!</h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="cd" style="margin:-6px 4px 10px">🔥마감임박🔥 서두르세요! <b id="gbcd">'+clock(nextSeven())+'</b></p><div class="tgrid">'+GOLD.slice().sort(byPrice).map(tossCard).join("")+'</div></section>';
   h+=cpBanner();
