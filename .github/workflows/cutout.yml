@@ -1,0 +1,36 @@
+name: 사진 누끼 따기
+on:
+  push:
+    branches: [main]
+    paths: ['images/src/*.jpg']
+  workflow_dispatch:
+permissions: { contents: write }
+jobs:
+  cut:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install -q "rembg[cpu]" pillow
+      - run: |
+          mkdir -p images/src/out
+          python - <<'PY'
+          import glob, os
+          from rembg import remove, new_session
+          from PIL import Image
+          for f in glob.glob('images/src/*.jpg'):
+              n=os.path.splitext(os.path.basename(f))[0]
+              im=Image.open(f).convert('RGB')
+              for m in ['birefnet-portrait','isnet-general-use','u2net_human_seg']:
+                  try:
+                      o=remove(im,session=new_session(m))
+                      o.save(f'images/src/out/{n}-{m}.png'); print('ok',n,m)
+                  except Exception as e: print('fail',m,e)
+          PY
+      - run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add images/src/out && git commit -m "사진 누끼 결과" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
