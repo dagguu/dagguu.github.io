@@ -575,3 +575,8 @@ body:has(.dbar) .totop{bottom:calc(var(--tab) + 176px + env(safe-area-inset-bott
 .esf.f1{left:4px;right:auto;top:6px;bottom:auto;transform:rotate(-12deg)}
 .esf.f2{right:4px;left:auto;top:auto;bottom:6px;transform:rotate(12deg)}
 .esf.f3{right:10px;top:16px;transform:rotate(10deg);background:linear-gradient(135deg,#ff7ab8,#d46fd8)}
+
+/* 수익화 교육 상단 마감 바 (2026-10-19) */
+.pg.edu .edudl{position:sticky;top:var(--hdrh,56px);z-index:15;margin:0 -16px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px 10px;padding:10px 12px;background:#ffe14d;color:#1d0b3a;font-size:13.5px;font-weight:800;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.edudl b{font-weight:900}
+.edudl em{font-style:normal;padding:3px 10px;border-radius:999px;background:#1d0b3a;color:#ffe14d;font-variant-numeric:tabular-nums;font-weight:900}
