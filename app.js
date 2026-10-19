@@ -1,3 +1,6 @@
+/* 화면 확대·축소 잠금(2026-10-19 시온님): viewport maximum-scale=1 + 아이폰 사파리·카톡 인앱 핀치/더블탭 막기 */
+(function(){ try{ ["gesturestart","gesturechange","gestureend"].forEach(function(t){ document.addEventListener(t,function(e){ e.preventDefault(); },{passive:false}); });
+  document.addEventListener("touchmove",function(e){ if(e.touches&&e.touches.length>1) e.preventDefault(); },{passive:false}); }catch(e){} })();
 (function(){
 "use strict";
 /* =========================================================

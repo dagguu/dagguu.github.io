@@ -652,3 +652,6 @@ body.fsopen{overflow:hidden}
 .fsheet .fsbox{width:min(100vw,var(--frame,480px))}
 .fstabs button{flex:1 0 auto;padding:14px 8px 12px;font-size:14px}
 .fsrow{padding:13px 12px}
+/* 확대 잠금: 더블탭 확대 막기, 입력칸 16px(아이폰은 16px 미만 입력칸을 누르면 자동 확대) */
+html,body{touch-action:manipulation;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+input,select,textarea{font-size:16px!important}

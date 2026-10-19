@@ -59,7 +59,7 @@ way = re.search(r'<ul class="eduway">.*?</ul>', JS).group(0)
 
 html = f'''<!doctype html>
 <html lang="ko"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>블로그 수익화 1:1 코칭 · 다꾸 수익화 클래스 | 다꾸체험단</title>
 <meta name="description" content="블로그 체험단 신청부터 상단노출, 애드포스트·협찬까지 5주 1:1로 배우는 블로그 수익화 코칭. 왕초보·직장인·육아맘·50대도 시작할 수 있어요. 끝난 뒤에도 1:1 코칭은 평생 무료.">
 <link rel="canonical" href="https://www.dagguu.com/edu.html">

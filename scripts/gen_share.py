@@ -89,7 +89,7 @@ def shell(title, desc, canon, body, img="", robots="index,follow", ld=None):
     lds = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or []))
     return f'''<!doctype html>
 <html lang="ko"><head><meta charset="utf-8">{GA}
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <meta name="robots" content="{robots}">
@@ -282,7 +282,7 @@ open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(sm)
 def redirect_page(title, desc, img, target):
     return f'''<!doctype html>
 <html lang="ko"><head><meta charset="utf-8">{GA}
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>{e(title)}</title>
 <meta name="robots" content="noindex">
 <meta name="description" content="{e(desc)}">
