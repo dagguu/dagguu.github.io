@@ -31,8 +31,8 @@ var PREFS = [
   {k:"hanok", t:"한옥 스테이",        re:/한옥/}
 ];
 
-var SORTS=[["high","💎 고가제품순"],["popular","🔥 인기순"],["comp","🙌 경쟁률 낮은순"],["deadline","⏰ 마감임박순"],["low","🪙 저가제품순"]], SORTS_OK=["high","popular","comp","deadline","low"];
-var state = { tab:"home", cat:"all", regions:[], status:"open", q:"", chs:[], view:"2", sort:"high", pet:"", loading:true };
+var SORTS=[["rec","✨ 추천순"],["high","💎 고가제품순"],["popular","🔥 인기순"],["comp","🙌 경쟁률 낮은순"],["deadline","⏰ 마감임박순"],["low","🪙 저가제품순"]], SORTS_OK=["rec","high","popular","comp","deadline","low"];
+var state = { tab:"home", cat:"all", regions:[], status:"open", q:"", chs:[], view:"2", sort:"rec", pet:"", loading:true };
 function ls(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v); }catch(e){ return null; } }
 state.view = ls("dakku-view") || "2"; state.themes=[]; state.types=[]; state.srcs=[];
 try{ var su=JSON.parse(sessionStorage.getItem("dakku-ui")||"{}"); if(su.cat) state.cat=su.cat; if(Array.isArray(su.regions)) state.regions=su.regions.filter(function(r){ return REGIONS.indexOf(r)>=0; }); if(su.status) state.status=su.status; if(SORTS_OK.indexOf(su.sort)>=0) state.sort=su.sort; if(su.pet==="dog"||su.pet==="cat") state.pet=su.pet; }catch(e){}
@@ -640,8 +640,19 @@ function valOf(it){ if(it._v!==undefined) return it._v; var v=0;
   if(!v){ var re=/(\d{1,3}(?:,\d{3})+|\d+)\s*(만\s*)?원/g, r, b=it.benefit||""; while((r=re.exec(b))){ var n=+r[1].replace(/,/g,"")*(r[2]?10000:1); if(n>v&&n<1e8) v=n; } }
   return it._v=v; }
 function popScore(it){ var s=0; if(isPick(it)) s+=3; s+=Math.min(chOf(it).length,4); var v=valOf(it); if(v>=300000) s+=3; else if(v>=100000) s+=2; else if(v>=30000) s+=1; if(payOf(it).indexOf("payback")>=0) s+=1; if(isFav(it.id)) s+=1; if(Date.now()-(it.createdAt||0)<2*864e5) s+=1; return s; }
+/* 추천순(2026-10-21 시온님 요청, 기본 정렬): 시온님 취향 제품(data.json taste) > 제공형 > 작성 채널 블로그·인스타 피드·클립·릴스 순 > 지원자 많은(인기) 것 > 추천 브랜드 > 금액 */
+var CH_W={blog:4,insta:3,clip:2,reels:1,youtube:0.5,tiktok:0.5,cafe:1};
+function tasteOf(it){ var t=seed.taste||[], n=String(it.name||"")+" "+String(it.benefit||""); for(var i=0;i<t.length;i++) if(t[i]&&n.indexOf(t[i])>=0) return true; return false; }
+function recScore(it){ if(it._r!==undefined) return it._r; var s=0, p=payOf(it);
+  if(tasteOf(it)) s+=10;
+  if(p.indexOf("payback")<0&&p.indexOf("review")<0) s+=3;
+  var c=0; chOf(it).forEach(function(k){ c=Math.max(c,CH_W[k]||0); }); s+=c;
+  var ap=it.ap&&it.ap[0]; if(ap) s+=Math.min(6,Math.log(ap+1)/Math.LN10*2);
+  if(isPick(it)) s+=2; if(valOf(it)>=100000) s+=1;
+  return it._r=s; }
 function sorter(){
   var o=state.sort;
+  if(o==="rec") return function(a,b){ return recScore(b)-recScore(a) || valOf(b)-valOf(a) || daysLeft(a)-daysLeft(b); };
   if(o==="deadline") return function(a,b){ return daysLeft(a)-daysLeft(b) || valOf(b)-valOf(a); };
   if(o==="popular") return function(a,b){ return popScore(b)-popScore(a) || daysLeft(a)-daysLeft(b); };
   if(o==="comp") return function(a,b){ var x=apRatio(a), y=apRatio(b); if(x===y) return valOf(b)-valOf(a) || daysLeft(a)-daysLeft(b); return x===Infinity?1:y===Infinity?-1:x-y; };
