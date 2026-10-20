@@ -1029,7 +1029,7 @@ function promoRows(L){ /* 2026-10-20 시온님 요청: 팝업·배너의 흐르�
 function tixView(){
   var P=promoOn(), L=P?promoList(P):[], T=openItems("etc");
   var h='<div class="pg tix"><h1>이번 주말 입장권 특가</h1><p class="pgsub">아쿠아리움·테마파크 같은 나들이 입장권을 모았어요. 가격과 날짜는 쿠팡 화면에서 확인해 주세요.</p>';
-  if(L.length) h+='<div class="tixg">'+L.map(function(x,i){ var img=safeUrl(x.img); return '<div class="tixc'+(String(i)===String(state.tixI)?' on':'')+'" id="tix'+i+'">'+(img?'<img src="'+esc(img)+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<div class="tixb"><b>'+esc(x.name)+'</b><span>'+esc(x.price||"")+'</span><a class="tixgo" data-gsec="tix" '+ext(safeUrl(x.u))+'>쿠팡에서 가격 보기</a></div></div>'; }).join("")+'</div>';
+  if(L.length) h+='<div class="tixg">'+L.map(function(x,i){ var img=safeUrl(x.img); return '<div class="tixc'+(String(i)===String(state.tixI)?' on':'')+'" id="tix'+i+'">'+(img?'<img src="'+esc(img)+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<div class="tixb"><b>'+esc(x.name)+'</b><span>'+esc(x.price||"")+'</span><a class="tixgo" data-gsec="tix" '+ext(safeUrl(x.u))+'>상품 바로가기</a></div></div>'; }).join("")+'</div>';
   else h+='<div class="empty">지금 보여드릴 입장권 특가가 없어요</div>';
   if(P) h+='<a class="tixall" '+ext(P.u)+'>입장권 특가 전체 보기</a>';
   h+=hrow("입장권 체험단도 있어요","#/list?cat=etc",T);
