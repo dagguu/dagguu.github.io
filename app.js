@@ -190,6 +190,7 @@ document.addEventListener("click",function(e){
   else if((a=t.closest(".wb"))) ga("promo_click",{place:"wide_banner",promo:(a.querySelector(".wbt b")||{}).textContent||""});
   else if((a=t.closest(".kv"))&&a.querySelector(".part")) ga("promo_click",{place:"banner",promo:(seed.promo||{}).link||""});
   else if((a=t.closest(".gdl .hdi"))) ga("deal_click",{section:"grocery", item_name:(a.querySelector(".hdn")||{}).textContent||""});
+  else if((a=t.closest(".tixgo"))){ var tb=a.closest(".tixc"); ga("coupang_click",{place:"tix", item_name:tb?tb.querySelector("b").textContent:""}); }
   else if((a=t.closest(".ldl .hdi"))) ga("deal_click",{section:"lifehot", item_name:(a.querySelector(".hdn")||{}).textContent||""});
   else if((a=t.closest(".tcard"))){ var sec=a.closest(".wxsec")?"weather":a.closest(".drel")?"detail_related":a.closest("#gold")?"goldbox":a.closest("#babyhd,.hdl")?"babyhot":"deals"; ga("deal_click",{section:sec, item_name:(a.querySelector(".tn")||{}).textContent||""}); }
   else if((a=t.closest("[data-reopen]"))) ga("reopen_alert",{item_id:a.getAttribute("data-reopen")});
@@ -200,12 +201,13 @@ document.addEventListener("click",function(e){
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
-  if(!/^(home|list|fav|benefit|shop|mag|deals|reporter|contact|item|my|privacy|price|event|trip|edu)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|benefit|shop|mag|tix|deals|reporter|contact|item|my|privacy|price|event|trip|edu)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
   if(tab==="event") state.evAbr=qs.t==="abroad";
   if(tab==="trip") state.tq=qs.q||"";
   if(tab==="mag") state.magT=qs.t==="p"?"p":"g";
+  if(tab==="tix") state.tixI=qs.i||"";
   state.focusT=(tab==="deals"&&qs.t)?qs.t:"";
   state.dq=(tab==="deals"&&qs.q)?qs.q:"";
   state.pq=(tab==="price"&&qs.q)?qs.q:"";
@@ -233,6 +235,7 @@ function render(){
   else if(state.tab==="benefit") v.innerHTML=benefitView();
   else if(state.tab==="shop") v.innerHTML=shopView();
   else if(state.tab==="mag") v.innerHTML=magView();
+  else if(state.tab==="tix"){ v.innerHTML=tixView(); if(state.tixI!==""){ setTimeout(function(){ var e=document.getElementById("tix"+state.tixI); if(e) e.scrollIntoView({block:"center"}); },60); } }
   else if(state.tab==="deals") v.innerHTML=dealsView();
   else if(state.tab==="reporter") v.innerHTML=reporterView();
   else if(state.tab==="contact") v.innerHTML=contactView();
@@ -1017,11 +1020,21 @@ var SPARK='<svg class="spk" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 
 function promoOn(){ var P=seed.promo; if(!P||!P.on) return null; if(P.until&&new Date().toISOString().slice(0,10)>P.until) return null; var L=(seed.links||{})[P.link]||{}, u=safeUrl(L.u); if(!u) return null; var o={}; for(var k in P) o[k]=P[k]; o.u=u; return o; }
 var PM_NAMED=/아쿠아|롯데월드|에버랜드|스카이|플라넷|리움|워터파크|동물원|박물관|미술관|테마파크|랜드|월드|타워|케이블카|레일바이크|스파|온천/; // 입장권 이름에 장소가 들어간 것만(옵션명만 있는 '입장권 1인권' 같은 건 뺌)
 function promoList(P){ var S=seed.seasonDeals||{}, L=[], seen={}; (P.items||[]).forEach(function(k){ (S[k]||[]).forEach(function(x){ var nm=x.name||"", n=nm.slice(0,16); if(safeUrl(x.u)&&safeUrl(x.img)&&!seen[n]&&PM_NAMED.test(nm)&&!/^\s*[A-Z]\d|^\[/.test(nm)){ seen[n]=1; L.push(x); } }); }); return L.slice(0,10); }
-function promoRows(L){
-  function card(x){ return '<a class="pmc" '+ext(safeUrl(x.u))+'><span class="pmt"><b>'+esc(x.price||"")+'</b>'+(x.rocket?'<i>로켓배송</i>':'')+'</span><span class="pmn">'+esc(x.name||"")+'</span><img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></a>'; }
+function promoRows(L){ /* 2026-10-20 시온님 요청: 팝업·배너의 흐르는 상품 카드는 쿠팡이 아니라 다꾸 입장권 특가 페이지(#/tix)로 — 운영정책 4.1-2 레이어 오클릭 대비 */
+  function card(x,i){ return '<a class="pmc" href="#/tix?i='+i+'"><span class="pmt"><b>'+esc(x.price||"")+'</b>'+(x.rocket?'<i>로켓배송</i>':'')+'</span><span class="pmn">'+esc(x.name||"")+'</span><img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></a>'; }
   var half=Math.ceil(L.length/2);
-  function row(a,cls){ return a.length?'<div class="pmrow '+cls+'"><div class="pmtrack">'+a.map(card).join("")+a.map(card).join("")+'</div></div>':''; }
-  return row(L.slice(0,half),"r1")+row(L.slice(half),"r2"); }
+  function row(a,cls,o){ var c=function(x,j){ return card(x,o+j); }; return a.length?'<div class="pmrow '+cls+'"><div class="pmtrack">'+a.map(c).join("")+a.map(c).join("")+'</div></div>':''; }
+  return row(L.slice(0,half),"r1",0)+row(L.slice(half),"r2",half); }
+/* 입장권 특가 모아보기(#/tix, 2026-10-20): 팝업 카드를 누르면 여기로. 상품마다 "쿠팡에서 가격 보기 ↗" 로만 쿠팡에 간다 */
+function tixView(){
+  var P=promoOn(), L=P?promoList(P):[], T=openItems("etc");
+  var h='<div class="pg tix"><h1>이번 주말 입장권 특가</h1><p class="pgsub">아쿠아리움·테마파크 같은 나들이 입장권을 모았어요. 가격과 날짜는 쿠팡 화면에서 확인해 주세요.</p>';
+  if(L.length) h+='<div class="tixg">'+L.map(function(x,i){ var img=safeUrl(x.img); return '<div class="tixc'+(String(i)===String(state.tixI)?' on':'')+'" id="tix'+i+'">'+(img?'<img src="'+esc(img)+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<div class="tixb"><b>'+esc(x.name)+'</b><span>'+esc(x.price||"")+'</span><a class="tixgo" data-gsec="tix" '+ext(safeUrl(x.u))+'>쿠팡에서 가격 보기</a></div></div>'; }).join("")+'</div>';
+  else h+='<div class="empty">지금 보여드릴 입장권 특가가 없어요</div>';
+  if(P) h+='<a class="tixall" '+ext(P.u)+'>입장권 특가 전체 보기</a>';
+  h+=hrow("입장권 체험단도 있어요","#/list?cat=etc",T);
+  return h+'</div>';
+}
 /* 홈 중간 배너(2026-10-19 시온님 요청 "팝업이랑 비슷한 디자인"): 같은 promo·상품, 상품 4개 미만이면 안 보임 */
 function promoBand(){ var P=promoOn(); if(!P) return ""; var L=promoList(P); if(L.length<4) return "";
   return '<section class="pmband" aria-label="광고"><a class="phead" '+ext(P.u)+'><small>'+esc(P.small||"")+'</small><b>'+esc((P.t||"").replace(/<[^>]+>/g,""))+'</b><em>'+esc(P.t2||P.b||"")+' ›</em></a>'+promoRows(L)+'<div class="pmgap"></div></section>'; }

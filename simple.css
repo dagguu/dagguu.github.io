@@ -681,3 +681,9 @@ input,select,textarea{font-size:16px!important}
 .hmenu.hms{display:block;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:18px 0 4px;scroll-snap-type:x proximity}.hmenu.hms::-webkit-scrollbar{display:none}
 .hms .hmr{display:flex;gap:2px;width:max-content;padding:0 8px}.hms .hmr+.hmr{margin-top:14px}
 .hms .hmr a{flex:none;width:calc((min(100vw,var(--frame)) - 16px)/5.4);scroll-snap-align:start}
+
+/* 입장권 특가 모아보기(2026-10-20) */
+.tixg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}.tixc{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column}.tixc.on{border-color:#6a3fc8;box-shadow:0 0 0 2px #6a3fc8 inset}
+.tixc img{width:100%;aspect-ratio:1;object-fit:cover;background:#f4f4f7}.tixb{padding:10px;display:flex;flex-direction:column;gap:6px;flex:1}.tixb b{font-size:13.5px;line-height:1.4;font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.tixb span{font-size:15px;font-weight:800}
+.tixgo{margin-top:auto;text-align:center;padding:9px 0;border-radius:10px;background:#f4f0ff;color:#5b2fc0;font-weight:800;font-size:13px}.tixgo::after,.tixall::after{content:" ↗"}
+.tixall{display:block;text-align:center;margin:16px 0 4px;padding:13px;border-radius:12px;background:#6a3fc8;color:#fff;font-weight:800}
