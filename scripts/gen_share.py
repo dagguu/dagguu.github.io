@@ -368,7 +368,7 @@ open(os.path.join(cdir, "index.html"), "w", encoding="utf-8").write(
     shell("체험단 모음 사이트 · 분야별·지역별 체험단 모아보기 | 다꾸체험단", "블로그·인스타·릴스 체험단, 숙박·육아·뷰티·생활·가전·식품·반려동물 체험단과 지역별 숙박 체험단을 한곳에 모았어요. 매일 업데이트.", SITE + "/c/", idx, "", "index,follow", [crumbs([("홈", "/"), ("모아보기", None)])[1]]))
 
 # ---------- sitemap ----------
-urls = [(SITE + "/", "daily"), (SITE + "/c/", "daily"), (SITE + "/refund.html", "monthly"), (SITE + "/edu.html", "weekly")] + [(SITE + p, "daily") for _, p, _ in hubs + chhubs] + [(SITE + "/g/", "weekly")] + [(SITE + p, "weekly") for _, p, _ in ghubs] + [(f"{SITE}/s/{it['id']}.html", "weekly") for it in open_items]
+urls = [(SITE + "/", "daily"), (SITE + "/c/", "daily"), (SITE + "/refund.html", "monthly"), (SITE + "/edu.html", "weekly")] + [(SITE + p, "daily") for _, p, _ in hubs + chhubs] + [(SITE + "/g/", "weekly")] + [(SITE + p, "weekly") for _, p, _ in ghubs] + [(f"{SITE}/s/{it['id']}.html", "weekly") for it in open_items] + [(f"{SITE}/p/{os.path.basename(f)[6:-5].replace('_', '-')}.html", "weekly") for f in __import__("glob").glob(os.path.join(ROOT, "scripts", "picks_*.json"))]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
     f"<url><loc>{e(u)}</loc><lastmod>{TODAY}</lastmod><changefreq>{f}</changefreq></url>\n" for u, f in urls) + "</urlset>\n"
 open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(sm)
@@ -411,5 +411,6 @@ print(f"체험단 페이지 {n_s}개(모집 중 {len(open_items)}), 모아보기
 try:
     import subprocess, sys as _s
     subprocess.run([_s.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "gen_edu.py")], check=False)
+    subprocess.run([_s.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "gen_picks.py")], check=False)  # 추천 모음 p/ (2026-10-20)
 except Exception as _e:
     print("gen_edu 실패", _e)
