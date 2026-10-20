@@ -1,3 +1,8 @@
 __pycache__/
 insta_out/
 kakao_out/
+# 2026-10-20 시온님 요청: 초안·공지 글은 공개 저장소에 올리지 않고 알림으로만 보냄
+chat/
+inf/
+newsletter/*.txt
+blog/*.txt

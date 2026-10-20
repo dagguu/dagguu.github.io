@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 Disallow: /tools/
+Disallow: /CLAUDE.md
+Disallow: /scripts/
+Disallow: /supabase/
+Disallow: /blog/
+Disallow: /chat/
+Disallow: /inf/
+Disallow: /newsletter/
 Sitemap: https://www.dagguu.com/sitemap.xml
