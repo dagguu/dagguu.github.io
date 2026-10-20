@@ -1,151 +1,106 @@
 {
- "date": "2026-10-19",
+ "date": "2026-10-20",
  "cards": [
   {
    "style": "v3",
    "accent": "#ff2e88",
    "accent2": "#ff8a3d",
-   "label": "🎉 오늘·어제 새로 열렸어요",
+   "label": "🎉 오늘 새로 열렸어요",
    "l1": "오늘 오픈",
-   "l2": "제주 리조트",
-   "sub": "26만원 상당 리조트 객실 1박이 열렸어요!",
+   "l2": "고가 숙소",
+   "sub": "40만원 안산 펜션부터 함양 숙소까지!",
    "sticker": "오늘\nOPEN",
-   "cta": "새 체험단 보러가기 →",
+   "cta": "오늘 오픈 체험단 보러가기 →",
    "tiles": [
     {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/static/booking/image/pension/ddnayo/8dc34f2c-5f56-4d6d-8684-aa3764daaace.jpg",
+     "img": "images/i20261013-034.jpg",
      "fit": "cover",
-     "name": "제주 누에베 리조트",
-     "copy": "리조트 객실 1박\n2인, 일~목",
-     "price": "26만원 상당"
+     "name": "안산 바다랑포도",
+     "copy": "1박 숙박\n체험권",
+     "price": "40만원 상당"
     },
     {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/9267d3b1-ffa0-47d5-83bb-aab17e82db29.jpg",
+     "img": "images/i20261012-21.jpg",
      "fit": "cover",
-     "name": "논산 애플팜펜션",
-     "copy": "1일 숙박권\n10/30까지 체험",
-     "price": "1일 숙박권"
+     "name": "아산 아르띠에 도고",
+     "copy": "1박 2일\n4인 기준",
+     "price": "30만원 상당"
     },
     {
-     "img": "images/i20261013-108.jpg",
+     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/53ce4b85-46e4-4aad-8cef-0d10e72f1481.jpg",
      "fit": "cover",
-     "name": "서귀포 이디오라게",
-     "copy": "1박 2인 숙박\n+ 와인세트",
-     "price": "5만원 와인세트"
+     "name": "함양 청산별곡",
+     "copy": "4인 숙박\n체험권",
+     "price": "20만원 상당"
     },
     {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/f6a622d3-6334-437c-a578-ae8bb6c3a3d0.png",
+     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/static/booking/image/pension/ddnayo/fab91eb2-abc6-4e92-b073-93490557d8ff.jpg",
      "fit": "cover",
-     "name": "기장 테라스 펜션",
-     "copy": "오션뷰 숙박권\n+ 루프탑 바베큐",
-     "price": "최대 6인"
+     "name": "함평 장년길40",
+     "copy": "글램핑 숙박\n2인 기준",
+     "price": "11만원 상당"
     }
    ],
-   "title": "[오늘오픈🎉] 26만원 제주 리조트!",
-   "desc": "제주 여행 계획 있다면 지금🏝️\n애월 리조트 객실 1박, 26만원 상당🌊\n✅기간 : ~10/25",
-   "btn": "체험단 보러가기",
-   "url": "https://www.dagguu.com/#/list?cat=stay&s=open"
+   "title": "[오늘오픈🎉] 40만원 숙소 열렸어요",
+   "desc": "가을 여행 계획 있다면 지금🧳\n안산·아산·함양·함평 숙소 새로 열림🏡\n✅기간 : ~10/26부터 순차 마감",
+   "btn": "오늘 오픈 보기",
+   "url": "https://www.dagguu.com/#/list?cat=all&s=todayOpen"
   },
   {
    "style": "v3",
-   "accent": "#2f6bff",
-   "accent2": "#00c2ff",
-   "label": "✨ NEW 어제 올라왔어요",
-   "l1": "바다 보이는",
-   "l2": "감성 숙소",
-   "sub": "경주·여수·영덕 바닷가 숙소 모음!",
-   "sticker": "NEW\n오픈",
-   "cta": "새 체험단 보러가기 →",
+   "accent": "#00a862",
+   "accent2": "#00c9b7",
+   "label": "🎉 오늘 새로 열린 제품",
+   "l1": "오늘 오픈",
+   "l2": "생활·건강템",
+   "sub": "난방텐트·블랙박스까지 새로 열렸어요!",
+   "sticker": "오늘\nOPEN",
+   "cta": "오늘 오픈 체험단 보러가기 →",
    "tiles": [
     {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/f635fc39-60ea-4f45-8a0d-025aac300bb3.jpg",
-     "fit": "cover",
-     "name": "경주 펜트빌",
-     "copy": "오션뷰 개인 풀\n독채·카라반",
-     "price": "객실 이용"
+     "img": "https://ads-partners.coupang.com/image1/cV5HViQpofltnVrqcWguoRupvaVeZmF9alysCn_piV2nUKtvk5pk3Z_9Fx_kV1mZoqyQ23rGBETPEO4KbMM6-5UYnnsKilMaRMMg3TAVWE5zpnTTb0ODKrZ2aIlLDI0R6VXc01qiorzoG8yZ4xAxNAXS9_q1OapqIwZUdnoAS9S5CSGPKwCNJ4_MJ1FkwBEtOTs1JUHYFrOyrDqN7RM6uh_8EaR3xyQE9h-UWfONZpmQO-i-GbNWHp8iBot2x2naHurWnD8LsEkY-N_ZOiXFgMQmQY_7Tn8o0HclcF6gacuUeaA5zxFkyljI_tXUSTUlH-uA-RfnffOKEXxAn8muusiFWAU4qZHxjaVs4vHzEy11ezjtFQpw8QBIRymS9IRv0RAA6BrJVJelNem0PwasJRFk3768_4fP7Qpvh9Iv-4Y77KR9B_E12jwhY0pGIr2G80zsmKh_u7sHGcoUPK2fKTmTMJ9RxQdbCr5squO_zNl1gWpS4GssnyjeqtV38GNgc8ezKRtZazFJ5zDQGuw48dJ-Cc4GD8TMA0yPaHMR3CwTwXYrnDrVvw==",
+     "fit": "contain",
+     "name": "알뜨리 난방텐트",
+     "copy": "텐트+커튼\n퀸킹 세트",
+     "price": "159,260원 환급"
     },
     {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/ed9b10d9-0159-4151-a106-4c0595ff6104.png",
-     "fit": "cover",
-     "name": "여수비치펜션",
-     "copy": "전 객실 오션뷰\n평일 1박2일",
-     "price": "평일 숙박권"
+     "img": "https://ads-partners.coupang.com/image1/5vnBph88vgTUGmc45pZLHM-zhSn5IrYOjBXv4qw5aa0BPGgqSAmK6QmqKWx6wcitQ0rjYed8l2VzW6o__MGyWP4c4dxmbpuzonsRazjvLFmdYiT4WWge88vx3miDP3vYZPT1phpoXYO7H2ppgJTF3zjaRxdzsKNFC1CWCxh7WHMf5-GdXzrpiiOuwvhCIX35eRXptnqcmiKukwxnDW9m7NS8IXjbUlyVfUJPI76BVuhSP00FJQ3atFSnQM0ZlnYc0hOZTXMLaV9aa6_Bi7rKiGRm1EgeSabmDX1fzr82fkXzrJG8wMhLcF03XBDzOkotaur2dvMOwcSs7EHtLqlKTrmnSARcCj_cbb46efng7bi0oK1PRZ5_UENTFbJT8Ok9gmAsAQ-jKpWKZhM5t1-UDBTRlRMLjJj6dnQki7XKqq3gks1AVc7lqnIyBAKIysIxvu28xnLwK15uWmYkirGAVxLNSEayK_XeABVogQsENg3aNea9cZ9g93fURim_2chRXKH9okuYggCg8IhlVxfTZJw4usgq9PllLRYBAtzEkwpsmknA6bU=",
+     "fit": "contain",
+     "name": "브이악셀",
+     "copy": "L-글루타민\n셀레늄 30포",
+     "price": "150,000원"
     },
     {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/b478132c-e736-4a20-a165-53f4a9fe9854.jpg",
-     "fit": "cover",
-     "name": "영덕 퍼플캣펜션",
-     "copy": "오션뷰 노천탕\n반려묘 동반",
-     "price": "숙박권"
+     "img": "https://ads-partners.coupang.com/image1/1WKR7rzTX7GyWkJr1QYwPaDeUQ3Evf9fr0PyYejIFElXPk5IfK2-0fC1XZ3MSQW93ow598AzMCfnVRTXqjw6TbIVODWx7p1uf8idjWleg_zu_Hok27w7jACiLh9rdHQtwm5O6QCz-AIV8_H0JmwAqqYKDRgWDDWzJ-TS5s9M1gZ-CQ7NWKu1kC0P8oLVE3tZBOQCPgwF-E7b6mhTeqKn02bGlKIFNQlMtckQ0Jk0jcikvbPWsclKzq3X1SHWXULvoT67nSTjiTUqbbsyC_3CIUnEMuh23ZtvfkZHMTGNbzm7RaNRGXsbhsEpt2CxOcgEW-uhvNDOAkOI6C0dmBxmqqAYXUtCRwXJDETWspwevEjrZNfM8Fd18dW7Sn9GXkK3y9LKwi8eXSYA4DeY6soZLi5X3gS6lKQCyuQYfV1cGQRkJDhfZY9fwNlpPT7fzz7_x8cLLEUnqNp3w6Y8aK6H6DvL6sh3nMNskaGvQnTAx5bM-dDo5hMgE1izDih29SZkahij1nH_KtJc_gCL0mLsf3vdSbsQa8WLOwLO2CYqdA==",
+     "fit": "contain",
+     "name": "아이테라 블랙박스",
+     "copy": "QHD 2채널\n출장장착 제공",
+     "price": "138,500원"
     },
     {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/37f8a600-46c2-4be9-9b5e-d58f87ab9176.jpg",
-     "fit": "cover",
-     "name": "경주 1945풀빌라",
-     "copy": "풀빌라 펜션\n반려동물 동반",
-     "price": "1박 체험권"
+     "img": "https://ads-partners.coupang.com/image1/brUdQxsRSIc9WHXMbln2-YktVu7cVCcrfzVojLgLzbgd4Imv134N1FOT1px9V1SxlaqLxIbAEs-RsE7Hn3aEE_I_AMvUk2p_8WkpGE9oysO8a0B6H_u47g8g_TSOCjkB-qdnaz_87fwEGx8dhiZvC2wQYEloy-GblUcphyVGOeNdZ4lU0y_a1-vcoZl1tlo7Sr6BKi-f-8jQR8hnIdlAuAXrQNQQvD1ewowvNzJcvzcW7iLiew6BDPN2l3khPO8sXYjB6PAyJF8zuJkm125h6eXvkxauwu7PGVHNHPG3OVTxYmFFsYv8S1RcCUHXgHTWpcl2Z6o-9BmfxCLvhfv9z4Y124xQ5jKOpg8NSHcgbXujVAbIf_IUa4Hb4BjlS_aVRJPO5GvZEV2iWPYy2ZGlr34IFZaXS2D3ZxbCUNBsA2DEjciDPNgpbqIwtaB9GtDz6FdEZ6_Wz7uXwqoEY0CSY6_r4WNPaiaEv_USakm3kINOpqZN2tUO3HbrPltvyU3jGAG4mOMhaQUgBbzf17nZVasPbVTBMQlK-7IoXrh-IJvx0Iag4Q==",
+     "fit": "contain",
+     "name": "밀리맘 새싹 로션",
+     "copy": "아기 로션\n300ml",
+     "price": "43,200원 환급"
     }
    ],
-   "title": "[NEW✨] 바다 보이는 숙소 왔어요",
-   "desc": "창밖으로 바다 보고 싶은 날🌊\n경주·여수·영덕 오션뷰 숙소 모음🏖️\n✅기간 : ~10/24부터 순차 마감",
-   "btn": "체험단 보러가기",
-   "url": "https://www.dagguu.com/#/list?cat=stay&s=open"
+   "title": "[오늘오픈🎉] 난방텐트가 떴어요",
+   "desc": "찬바람 불기 전에 챙겨요🍂\n난방텐트 159,260원 전액 페이백💸\n✅기간 : ~10/25",
+   "btn": "오늘 오픈 보기",
+   "url": "https://www.dagguu.com/#/list?cat=all&s=todayOpen"
   },
   {
    "style": "v3",
    "accent": "#ff3131",
    "accent2": "#ff9f1c",
-   "label": "⏰ 단 하루! 오늘 마감",
+   "label": "⏰ 오늘 밤 12시 마감",
    "l1": "오늘 마감",
-   "l2": "체험단 모음",
-   "sub": "35만원 숙박권·38만원 매트, 오늘이 마지막!",
-   "sticker": "오늘\n자정\n마감",
+   "l2": "고가 체험단",
+   "sub": "150만원 독채부터 65만원 음식물처리기까지!",
+   "sticker": "오늘\n마감",
    "cta": "오늘 마감 체험단 보러가기 →",
-   "tiles": [
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/fc1eccae-7be9-4874-8c6e-aaeed6ef637f.jpg",
-     "fit": "cover",
-     "name": "제주 센토사 한림",
-     "copy": "독채 풀빌라\n1박 숙박권",
-     "price": "35만원 숙박권"
-    },
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/657x657q90trim/image/vendor_inventory/7ba9/f4a124c0500f9c76148e51625c344d5b09c580bac16dee9f00c2da1782ba.jpg",
-     "fit": "contain",
-     "name": "파크론 놀이방매트",
-     "copy": "라퓨어소프트\n디자인 택1",
-     "price": "38만원 상당"
-    },
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/0a7a8d30-8b87-46b8-8daf-bef9ba9a9513.jpg",
-     "fit": "cover",
-     "name": "가평 PARA365",
-     "copy": "로얄동\n1박 숙박권",
-     "price": "1박 숙박권"
-    },
-    {
-     "img": "https://ads-partners.coupang.com/image1/UToAXJ9N-xlLPJeSUTo9q_KSqvuY8hPxmhp1FCTtSpy4grf1RJrJADyFDQPqlRP2UBa0RPOvUYiCutxzdf1SkS0orXGU5Kj0Hq7u3QWhi8L0v2X-QwEeDIqtx6eJ-9k7VytJS3PntDtgkgOe_Y6Bk5Z4kJaKyIkqRC011FiqR9Ky2zNOJ4CUshiFPlZEC23xWgI6DJn1fyK6DDV8DPBQSwCYXkMWy1LhClArfzoskXE8QiRg7gBZkB0595az0-u2SjoUZGNrdYkzcJM744JiYenRcY35EprV38yUMMvkOEYXhDXDR-MKE8I83kVrGbFCHkG7fB8AAOFWji2WKwSeHAX1yw-7m1MKzLKsjJIGBNjLr5JS7uN7PLSZS_1eaa2VoL1eUh9sxTm0Xzc3rN5oxA_pq54UPkgqQlMXuoWXvq9dmd_prX8ou3D9HTDy6Wssjyz1Ydr5ATy5oDbvfC1njdjPGMPVTrX-UMyoXljXQ-3NYdElUbfwBIBn2atBJWkxKB1awoN9B23KtFiNHm2_tbjykSig4vAZzg==",
-     "fit": "contain",
-     "name": "키즈텐 철분제",
-     "copy": "액상 스틱\n8ml 30포",
-     "price": "1박스"
-    }
-   ],
-   "title": "[오늘종료⏰] 38만원 매트 마지막날",
-   "desc": "미뤄둔 신청은 오늘이 마지막⏰\n제주 풀빌라·놀이방매트 체험단💸\n✅기간 : ~10/19 오늘까지!",
-   "btn": "오늘마감 보기",
-   "url": "https://www.dagguu.com/#/list?cat=stay&s=todayClose"
-  },
-  {
-   "style": "v3",
-   "accent": "#7b2ff7",
-   "accent2": "#ff2e9a",
-   "label": "⏰ 내일이면 끝나요",
-   "l1": "내일 마감",
-   "l2": "고가 독채",
-   "sub": "150만원 독채부터 45만원 제주 풀빌라까지!",
-   "sticker": "내일\n마감",
-   "cta": "마감임박 체험단 보러가기 →",
    "tiles": [
     {
      "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/b7588529-66b6-42ef-bb4e-c0c6b4af132a.jpg",
@@ -155,119 +110,164 @@
      "price": "150만원 상당"
     },
     {
+     "img": "https://ads-partners.coupang.com/image1/tE5_lG0U9CMvCU5GtLGddBXBFxkj7Z3G7Q7-ES-CNMZN8Cjwj_GsDvyY-CUwzcHsLzSgZxV9VIWjmSjeqyjJ8sh3MN1ThQm6HtxfaLp9aA8QS9ZgxKf_PKvLazzll_00UQ-kaEp5p2H54dqPPrexOm_Qpxn4IVRGJhDMKtw3UvB-vv3U9RlwZXKMzOk45bi440TQEFvM1_23U_LGnpUR0HaiYz61-eIOkfijXKY7YfAZsQ-jN7_ZUrdi0pA_AdCuL2P-i57SrnK25ZsV3ApnoqPsMolQwsT4ZpUhVcrX_Y0sm-c2IPAFzmnOMdSp65kCeD2H-s2_pHGf8tPyKm5adNvxROhv3a8VTYIFgHohjxzNhjRSqhT8IYM65iFZzetCz5wvdRJCjD0iqNTzoW56gxUo5ax4tuIsJD5dWQvm-J65fBx-UD6cYbYQX1rsabK3O1Eo_YQ74PT8NAYZaumwJM0ibPc2nL5Yjcpmmxjv_Yxk_hRGdyutu4CMm0sn3bagzbkLhy4cWTM-oHWcg9RPITRDC8JieUlvkfLZoiz13G6sYPAqZGQXmA==",
+     "fit": "contain",
+     "name": "스마트카라 스톤",
+     "copy": "음식물처리기\n2L",
+     "price": "65만원 상당"
+    },
+    {
      "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/d2adaeec-c38c-4bb4-9672-01f665096588.jpg",
      "fit": "cover",
      "name": "제주 그레이박스",
-     "copy": "독채 풀빌라\n2인 기준",
+     "copy": "숙박 제공권\n2인 기준",
      "price": "45만원 상당"
     },
     {
      "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/static/booking/image/pension/ddnayo/86b0237c-11fd-441f-80b1-8ada2b5f487b.jpg",
      "fit": "cover",
      "name": "문경 힐스카이",
-     "copy": "독채풀빌라\n1박 숙박권",
+     "copy": "독채풀빌라\n1박",
      "price": "44만원 상당"
-    },
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/b9f11047-0c62-4606-9fcd-9a849b919dfc.jpg",
-     "fit": "cover",
-     "name": "밀양 스테이자이언",
-     "copy": "미온수 수영장\n불멍·숯그릴 1회",
-     "price": "30만원대"
     }
    ],
-   "title": "[내일종료⏰] 역대급 150만원 독채",
-   "desc": "큰맘 먹고 갈 독채 찾았다면 지금🏡\n거창·제주·문경·밀양 고가 숙소🌙\n✅기간 : ~10/20 내일까지!",
-   "btn": "마감임박 보기",
-   "url": "https://www.dagguu.com/#/list?cat=stay&s=closing"
+   "title": "[오늘종료⏰] 역대급 숙소 마지막 날",
+   "desc": "미뤄둔 신청은 오늘이 끝이에요⏰\n150만원 독채·65만원 음식물처리기🏡\n✅기간 : ~10/20 오늘까지!",
+   "btn": "오늘마감 보기",
+   "url": "https://www.dagguu.com/#/list?cat=all&s=todayClose"
   },
   {
    "style": "v3",
-   "accent": "#00a862",
-   "accent2": "#00c9b7",
-   "label": "👶 써보고 돌려받는 육아템",
-   "l1": "전액 페이백",
-   "l2": "육아템 체험단",
-   "sub": "오늘 마감, 제품값 전액 돌려받는 기회!",
-   "sticker": "제품값\n전액\n환급",
-   "cta": "페이백 체험단 보러가기 →",
+   "accent": "#2f6bff",
+   "accent2": "#00c2ff",
+   "label": "⏰ 내일이면 끝나요",
+   "l1": "내일 마감",
+   "l2": "놓치면 아까운",
+   "sub": "139만원 음식물처리기·40만원 경주 숙소!",
+   "sticker": "내일\n마감",
+   "cta": "마감임박 체험단 보러가기 →",
    "tiles": [
     {
-     "img": "https://ads-partners.coupang.com/image1/kbkZ6qJy6CZXH1P0kd2J04i0RO-sPB82mVL41Z3zemCLgdIhYqogqhIt-qhwYzTGRxNBMN9KX0Psz3St5A6hYkdpYUlTd3zckOk5A03A2afMz1-X5Vg2AlqPsGFNlaeu8IYoxGN8Hl-zfdNNimz6fMrRTvp_NZxRZ0vub_iwycXVQPhXUmdu6NLQsbHY7P0yWpAesphFsBIx3z0ze_mZjjEJRpB5gBQMbYIlBLgk0wRdB7rYTJtr6tAdxyMnO7syVU5gcmWQA2S6HSoeaT1bn46HlZ2fM59v4LTW4xcRA5s6GDizveQGdsiTrxC77vc_s1vu6Bafk9megM33IKNDsqH4dNXUokgewH7Y2cDaSKd7E2gVkXhKehCI-zJubCBebXsXrcAnsGIE6ndtiw_Mxh-XrF7M0zbZdaYDB-HBxSvlp_m-jK6KW1YduAg8PrVnGpR3ZQkAweulngIU1Hg26_a0H7aWJOdpccB4gXev2DuC10TyHlWhi9wcA9odE7y6YwVcwMi9t2JLvzg6RztNNnNdxKIVe0L2-0EL74Wx_f-l1FlZx9s9",
+     "img": "https://ads-partners.coupang.com/image1/_OthWTtmftHXojfD_EDWKdqJG3Owvp7RxKxjy3bqp6XrJdDw3KKjNCIsVXEijDArihwp_FYPlG1O97IU7iSavkbGcWW9xw6Zv5iuPDzUBlLzTWN2G6tCw08RLYR9Jgh_Y-OUU1qMzGfHgseuGeWiomRhbNho-g4sI28ItyiFjJA6xH0JNbd8Oh0wd3TpLGgZmcbe-PDd6zhbEPjTHGwtHL1mZwYxBhNE-fqK8vbmOAXZWpTf7AHKrVHu58Up_L8e7-iEEeoxjKsVhqY_6Ctdktyv90T_D_xBfQfOCmw2Qa5bXrSORhpYwLEZIq3jAsecFHxY9PE5LWstO4lg37DFJGULiDto9sT6BUpC_6XMQiGq73oxFkm5OVfwERwXEDO1-Ggp5mbSZnq_8-YeO3Kbezx9Gnwl8MlZfvQ_fg7dTVffGWwHmcGjZJbE6ZhG2hxLVMvA72MA-tMumGjhbmb_5kWNh-XuoNHsIw4BT4NkgjDatpiwi3ztytoH5QNcc3u20XWtrVqfvJbltnuN2kZmapBc065C8FyfBDsohYV1vNySA_nCUN8=",
      "fit": "contain",
-     "name": "돗투돗 힙시트",
-     "copy": "포미 에어핏\n다이얼 아기띠",
-     "price": "129,000원 환급"
+     "name": "스마트카라 블레이드X",
+     "copy": "AI 음식물처리기\n5L",
+     "price": "139만원 상당"
     },
     {
-     "img": "https://ads-partners.coupang.com/image1/brUdQxsRSIc9WHXMbln2-YktVu7cVCcrfzVojLgLzbgd4Imv134N1FOT1px9V1SxlaqLxIbAEs-RsE7Hn3aEE_I_AMvUk2p_8WkpGE9oysO8a0B6H_u47g8g_TSOCjkB-qdnaz_87fwEGx8dhiZvC2wQYEloy-GblUcphyVGOeNdZ4lU0y_a1-vcoZl1tlo7Sr6BKi-f-8jQR8hnIdlAuAXrQNQQvD1ewowvNzJcvzcW7iLiew6BDPN2l3khPO8sXYjB6PAyJF8zuJkm125h6eXvkxauwu7PGVHNHPG3OVTxYmFFsYv8S1RcCUHXgHTWpcl2Z6o-9BmfxCLvhfv9z4Y124xQ5jKOpg8NSHcgbXujVAbIf_IUa4Hb4BjlS_aVRJPO5GvZEV2iWPYy2ZGlr34IFZaXS2D3ZxbCUNBsA2DEjciDPNgpbqIwtaB9GtDz6FdEZ6_Wz7uXwqoEY0CSY6_r4WNPaiaEv_USakm3kINOpqZN2tUO3HbrPltvyU3jGAG4mOMhaQUgBbzf17nZVasPbVTBMQlK-7IoXrh-IJvx0Iag4Q==",
-     "fit": "contain",
-     "name": "밀리맘 새싹 로션",
-     "copy": "아기 로션\n300ml",
-     "price": "46,200원 환급"
+     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/static/booking/image/pension/ddnayo/0caaa59e-5c80-4ccd-ad3e-3ea4a1321deb.jpg",
+     "fit": "cover",
+     "name": "경주휴펜션",
+     "copy": "3인 숙박\n체험권",
+     "price": "40만원 상당"
     },
     {
-     "img": "https://ads-partners.coupang.com/image1/mnb5wHmwUUxcLDiVmv5M6Rq4hrVOKbrKNi9CThy5F-YgzNax_tMex6GvnACrLtcsxFxq7OkSDSoDQBdxUj_KNRbPjVVxFv0rQgOoANRaMCb5oP6E6P1gz5bsiWTruMpYpgW6tIRSsjp8o80pC-IyzVLg5c2Y4Gevnr-OaiQkShzBU0XfoJzLW2UbHbrpxjKl36qFYjI_wmWsWMzm-mUSiHsnpMg01177AGyXXPpBv-X9-zDIn5Rg5vnsi8GZ_gRsCvYEQoVM21_b1H56KAoa-ueqkKcqsWknD2j7qIvXivDeb2BSz9zsuniMvkGY53JHzbNs9842157VJPnvDVV7jubK7K2SluL8fXcvhoyhd08f6gMzmk30HCSAp-_SaHA3jS1950w74pFCHT0nZALeRYJ9MUDvTjdBGCMq7TPi5pLjC3oIMDJFBbBI44tsedRKLWBuaMxbiYsd5BtTC8HQ5aggxHCvbUrwhac005-dIGa0YZtiMAPI8EnW0K5LiZKnvaXUJM1TYKTz4zxDRzFJF8oAi-xIqKfBDjXKh9ngOGJN3qqQWXFYmQ==",
-     "fit": "contain",
-     "name": "밀리맘 벨리케어",
-     "copy": "임산부 밀리타임\n오일앤크림",
-     "price": "40,000원 환급"
+     "img": "images/i20261013-095.jpg",
+     "fit": "cover",
+     "name": "제주 스테이 도노",
+     "copy": "1박 숙박권\n2인 기준",
+     "price": "28만원 상당"
     },
     {
-     "img": "https://ads-partners.coupang.com/image1/ffhi5NgQ0kpSaP8dfc6DuaY1UXGb77YSiLt9dm6dbX_TmwdpKapiSW0FCtyQVhcwcYU5n7Z_pJ7LsTKaNEte8QeulV8B43qUieXVSEyatHvzZ0DDT_UhBigcgHo-2PmAdIbtqKkolP6IH0DKLQTfCs13mNbZbfzo9JpG2Tc_Wo3WLZfVn05zMO7biwmMFNqakDTuLv_ZGKh7PZoQg-kzpezSzwL-keNmUTvMfkV9weUxHVnzgw6Ei8HtZkkAlVJC2eBcIB-fHfsdOuUWxPMZi-VfH0Sn0ESpZk5jqaShNT1DQyRIma-Z7zD7vJ2iW-CBeR09boMEbSrZR1HxhtntShGFVxEEN5Q6X2hihnZq5HUk2S040uy19E8T3bpSThMuqQAaeMUeeDZ5RazQvrfPF5-rbTJEAt5rfotR9y0UBZ_udnk2CCBW-sh2y8_93wn3TjKvy36IK6ytNZ6mhTpiDRTVftZenFv9wMoevXZAzgMHEwA517EdZOfmC51vaQeCQlVdXzlI5STKT_ucAUCQULDvL23Uxqwhi2k3NtjxXtmxjDq5RBS-",
+     "img": "https://ads-partners.coupang.com/image1/H_S3Qeie0XGrQqo5H7voNE4f8XLOvS3kA8UJOIsKt5l7YYiYyNRfk_omVhwVd8_1fSCCZL36fxY5ZP1VyG1lEhkj8_ygjyijQsbiGVuIuld3Df3Suv3YswBbyRXszkvVfS_6Sf_yBX084qBUDtISSXAAIDQ_9jmpUGwTKIWZVpfXLylzdMPgrmWqcb0fNfB7AbdsMpD9bd1H2gHoAsZp-wRnNytEsDaT-vnysuMJIxI84cREQZg1n8_8G_LIFk2RCCv66IXSwMdzF9E71Ik1zpbO8JkqLFAWqcCNWj-A2os_iYO3YkbdNYaSXSQbq5B9x31hFy25FljVUlDWubZHCmSWmazSHxWgR9BhqBqtgPgtArZQN8KTaFN9A4he6SK_qzqKgkADAER7EVN2QEK7MKRpbFL1C0lMjVJaAp8yFxLf-AqtTAV38bEhndSAU59mHp07Z0EyJVTvDN6wcGs0dVElH0hAgHXTgLpte9nIP0x07igr35IoonWRaYzIjjlqBKXxAqxMxrltuOV5GPil-oAtVnpkWYEaiaeHIrQnkcnhIrCClqA=",
      "fit": "contain",
-     "name": "밀리맘 키즈 샴푸",
-     "copy": "프레시 마일드\n500ml",
-     "price": "33,100원 환급"
+     "name": "플러스마이너스제로",
+     "copy": "카본히터\nREH-700",
+     "price": "244,000원"
     }
    ],
-   "title": "[전액페이백💸] 돌려받는 아기띠",
-   "desc": "찜해 둔 육아템이라면 오늘😉\n힙시트 아기띠부터 아기 로션까지👶\n✅기간 : ~10/19 오늘까지!",
-   "btn": "페이백 보러가기",
-   "url": "https://www.dagguu.com/#/list?cat=baby&ch=payback"
+   "title": "[내일종료⏰] 139만원 템 내일 끝",
+   "desc": "부엌 정리 꿈꿨다면 지금👀\n음식물처리기·경주·제주 숙소까지🌙\n✅기간 : ~10/21 내일까지!",
+   "btn": "마감임박 보기",
+   "url": "https://www.dagguu.com/#/list?cat=all&s=closing"
   },
   {
    "style": "v3",
-   "accent": "#ff6a00",
-   "accent2": "#ffc400",
-   "label": "🍼 쿠팡 골드박스 아기용품",
-   "l1": "아기용품",
-   "l2": "최대 55% 핫딜",
+   "accent": "#7b2ff7",
+   "accent2": "#ff2e9a",
+   "label": "🎡 주말 나들이 입장권",
+   "l1": "나들이",
+   "l2": "입장권 체험단",
+   "sub": "제주·대구·여주·부산 입장권 모음!",
+   "sticker": "입장권\n체험단",
+   "cta": "티켓 체험단 보러가기 →",
+   "tiles": [
+    {
+     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00186691/dad6de8e-1902-4f5b-acd3-30aae9b1b8ac.jpg",
+     "fit": "cover",
+     "name": "다이나믹메이즈 제주",
+     "copy": "패키지 이용권\n최대 4인",
+     "price": "오늘 오픈"
+    },
+    {
+     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00186371/165f7ea5-a8b1-4a31-a0a4-654358e78027.jpg",
+     "fit": "cover",
+     "name": "대구아쿠아리움",
+     "copy": "아쿠아리움\n입장권",
+     "price": "~10/22"
+    },
+    {
+     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A01310517/d0e18181-6fc6-473a-8763-ec58ffba289a.jpg",
+     "fit": "cover",
+     "name": "여주 루덴시아",
+     "copy": "입장권 2매\n+ 음료 2매",
+     "price": "~10/21"
+    },
+    {
+     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00668506/5817974c-ca66-4bd3-8443-3dff85c54538.jpg",
+     "fit": "cover",
+     "name": "해운대 뮤지엄원",
+     "copy": "미술관\n입장권 2매",
+     "price": "~10/22"
+    }
+   ],
+   "title": "[나들이🎡] 아쿠아리움 입장권 왔어요",
+   "desc": "아이랑 주말 나들이 고민이라면🎡\n아쿠아리움·테마파크·뮤지엄 입장권🐠\n✅기간 : ~10/21부터 순차 마감",
+   "btn": "티켓 보러가기",
+   "url": "https://www.dagguu.com/#/list?cat=etc"
+  },
+  {
+   "style": "v3",
+   "accent": "#f7971e",
+   "accent2": "#ffd200",
+   "label": "🛒 쿠팡 골드박스 아기·생활",
+   "l1": "아기·생활",
+   "l2": "최대 62% 핫딜",
    "sub": "하루만 이 가격, 내일 아침 7시까지!",
-   "sticker": "최대\n55%",
+   "sticker": "최대\n62%",
    "cta": "오늘의 핫딜 보러가기 →",
    "tiles": [
     {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/1423721803262108-18b9773d-b5e2-4ccc-b3c7-cb3ed11ad1af.jpg",
+     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/12097614422831-077fc3da-e652-4efd-a933-4b29a8815ed3.jpg",
      "fit": "contain",
-     "name": "베베앙 물티슈",
-     "copy": "유아물티슈 캡형\n120매 10개",
-     "price": "▼55% 11,600원"
+     "name": "락앤락 밀폐용기",
+     "copy": "비스프리 모듈러\n910ml 6개",
+     "price": "▼62% 31,800원"
     },
     {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/60294418557610-c972eb4e-9499-4dc4-892e-6f08ea439b44.jpg",
+     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/888265d9-951f-4b79-aa10-24f9cc333bd24708900332147694073.png",
      "fit": "contain",
-     "name": "로로벨 와와치약",
-     "copy": "100g\n5개",
-     "price": "▼52% 29,640원"
+     "name": "코멧 키친타올",
+     "copy": "천연펄프 2겹\n4롤 2개",
+     "price": "▼59% 7,740원"
     },
     {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2026/04/08/17/5/47b5da48-2abe-4ccc-9a83-ff476e967ee4.png",
+     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/163243650963526-0fd79093-e979-45b3-b9b8-0b3ed789474c.png",
      "fit": "contain",
-     "name": "루루루드림 아기띠",
-     "copy": "신생아\n올인원 아기띠",
-     "price": "▼40% 82,090원"
+     "name": "비앤비 섬유유연제",
+     "copy": "유아 섬유유연제\n1.5L 2개",
+     "price": "▼47% 13,660원"
     },
     {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2707320136454450-95a5fe36-337f-46ee-90b6-38dbf2520e6e.jpg",
+     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2136848624890474-ea9ac7ad-ba9c-47e4-8c9f-50d2a57df031.jpg",
      "fit": "contain",
-     "name": "마더케이 고리",
-     "copy": "베이직 고리\n30p 혼합색상",
-     "price": "▼34% 9,900원"
+     "name": "키즈바래 종이집",
+     "copy": "대형 종이집\n놀이텐트",
+     "price": "▼46% 26,800원"
     }
    ],
-   "title": "[핫딜🔥] 물티슈가 55% 내렸어요",
-   "desc": "물티슈 쟁여둘 타이밍👀\n물티슈·치약·아기띠 최대 55%↓🍼\n9천원대부터, 내일 아침 7시까지⏰",
+   "title": "[핫딜🔥] 키친타올이 7천원대",
+   "desc": "생필품 쟁여둘 타이밍👀\n밀폐용기·키친타올·아기 섬유유연제🧺\n7천원대부터, 내일 아침 7시까지⏰",
    "btn": "핫딜 보러가기",
    "url": "https://www.dagguu.com/#/deals"
   }
