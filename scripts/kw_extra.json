@@ -1,3047 +1,4853 @@
 {
- "updated": "2026-10-20 17:07",
+ "updated": "2026-10-20 17:40",
  "hints": [
-  "애착인형",
-  "토끼애착인형",
-  "유기농애착인형",
-  "남자아기애착인형",
-  "신생아애착인형"
+  "반려동물체험단",
+  "강아지체험단",
+  "고양이체험단",
+  "펫체험단",
+  "강아지사료체험단"
  ],
  "rows": [
   {
-   "kw": "티라노사우루스",
-   "vol": 27210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "옆잠베개",
-   "vol": 26300,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "출산선물",
-   "vol": 23110,
+   "kw": "강남맛집체험단",
+   "vol": 227100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애착인형",
-   "vol": 19880,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "인형",
-   "vol": 19580,
+   "kw": "샤오홍슈",
+   "vol": 29320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기실내복",
-   "vol": 16750,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아",
-   "vol": 12660,
+   "kw": "유튜버",
+   "vol": 23800,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아선물",
-   "vol": 11750,
+   "kw": "블로그체험단",
+   "vol": 20690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애견용품",
-   "vol": 10390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강아지장난감",
-   "vol": 8050,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "토끼인형",
-   "vol": 7910,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "강아지인형",
-   "vol": 7550,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "강아지용품",
-   "vol": 7390,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "인형키링",
-   "vol": 7210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "키링인형",
-   "vol": 6990,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌선물",
-   "vol": 6330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강아지노즈워크",
-   "vol": 6090,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "테디베어",
-   "vol": 6030,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미피인형",
-   "vol": 5890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고양이인형",
-   "vol": 5770,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기용품",
-   "vol": 5770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "곰인형",
-   "vol": 5570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두상베개",
-   "vol": 4800,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "스와들미",
-   "vol": 4420,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "노즈워크",
-   "vol": 4380,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오리인형",
-   "vol": 4290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아뜰리에슈매장",
-   "vol": 4280,
+   "kw": "루리웹핫딜",
+   "vol": 11230,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "양인형",
-   "vol": 4200,
+   "kw": "경기도지식인",
+   "vol": 9250,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "체험단사이트",
+   "vol": 4270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "구글블로그",
+   "vol": 3950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "네이버크리에이터",
+   "vol": 3630,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기100일선물",
-   "vol": 4190,
+   "kw": "블로그체험단사이트",
+   "vol": 3300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "벨리곰",
-   "vol": 3850,
+   "kw": "서포터즈",
+   "vol": 2500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맛집지도",
+   "vol": 2170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이지페이",
+   "vol": 2110,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기애착인형",
-   "vol": 3620,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아베개",
-   "vol": 3340,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기인형",
-   "vol": 3310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "인형꽃다발",
-   "vol": 3290,
+   "kw": "강남체험단",
+   "vol": 1850,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기가방",
-   "vol": 3100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수달인형",
-   "vol": 2980,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바디필로우인형",
-   "vol": 2890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기두상베개",
-   "vol": 2760,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "양막주머니",
-   "vol": 2720,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "인형제작",
-   "vol": 2680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미아방지가방",
-   "vol": 2530,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "대형인형",
-   "vol": 2410,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "봉제인형",
-   "vol": 2350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "곰돌이인형",
-   "vol": 2310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기바디필로우",
-   "vol": 2300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기역류방지쿠션",
-   "vol": 2280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캐릭터키링",
-   "vol": 2240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캐릭터인형",
-   "vol": 2230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "태교",
-   "vol": 2100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펭귄인형",
-   "vol": 2070,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동물피규어",
-   "vol": 2070,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "고양이키링",
-   "vol": 2060,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형주문제작",
-   "vol": 2010,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "알파카인형",
-   "vol": 1980,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형만들기",
-   "vol": 1920,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "토끼애착인형",
-   "vol": 1900,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "돼지인형",
-   "vol": 1840,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가제수건",
-   "vol": 1810,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "강아지노즈워크장난감",
-   "vol": 1800,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "코끼리인형",
-   "vol": 1770,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "인형키링제작",
+   "kw": "모두의체험단",
    "vol": 1750,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "상어인형",
-   "vol": 1750,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "토끼키링",
+   "kw": "협찬",
    "vol": 1690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "말인형",
+   "kw": "체험단모음",
    "vol": 1640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아두상베개",
-   "vol": 1620,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "슈톨렌애착인형",
-   "vol": 1610,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "거북이인형",
-   "vol": 1610,
+   "kw": "블로그협찬사이트",
+   "vol": 1570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아목욕타올",
-   "vol": 1610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "짱구베개",
-   "vol": 1590,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "남자아기애착인형",
-   "vol": 1540,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "노즈워크장난감",
-   "vol": 1460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "빵빵이의일상",
-   "vol": 1450,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "호랑이인형",
-   "vol": 1440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "문어인형",
-   "vol": 1440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스와들업사용시기",
-   "vol": 1410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "솜인형",
+   "kw": "체험단신청",
    "vol": 1400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "손뜨개",
-   "vol": 1360,
-   "comp": "높음",
+   "kw": "미국뉴스",
+   "vol": 1190,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "태명인형",
-   "vol": 1300,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "코아티",
-   "vol": 1240,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "귀여운인형",
-   "vol": 1170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아백팩",
-   "vol": 1160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기린인형",
+   "kw": "네이버블로그체험단",
    "vol": 1080,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "동물인형",
-   "vol": 1060,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아옷브랜드",
-   "vol": 1050,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아애착인형",
-   "vol": 1040,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "주문제작인형",
+   "kw": "블로그체험단신청",
    "vol": 1030,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애착토끼인형",
-   "vol": 1020,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "토끼인형키링",
-   "vol": 1010,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강아지애착인형",
-   "vol": 960,
+   "kw": "메타체험단",
+   "vol": 900,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "시바견인형",
-   "vol": 950,
+   "kw": "블로그수익화",
+   "vol": 900,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "판다인형",
-   "vol": 950,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아역류방지쿠션",
-   "vol": 950,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "여우인형",
-   "vol": 940,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "안고자는인형",
-   "vol": 930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "빵빵이인형",
-   "vol": 930,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "캐릭터쿠션",
-   "vol": 930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애착인형만들기",
-   "vol": 920,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다람쥐인형",
-   "vol": 920,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "인형뽑기인형",
-   "vol": 920,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "움직이는강아지장난감",
-   "vol": 890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형곰인형",
-   "vol": 890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두돌아기옷",
-   "vol": 880,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "MIFFY",
-   "vol": 870,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수면인형",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고래인형",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공룡키링",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모찌인형",
-   "vol": 850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형도매",
-   "vol": 830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아짱구베개",
-   "vol": 810,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "열쇠고리키링",
-   "vol": 810,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "우파루파인형",
+   "kw": "과학유튜버",
    "vol": 800,
-   "comp": "중간",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "쿠션제작",
-   "vol": 800,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테디베어인형",
+   "kw": "서평단모집",
    "vol": 790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쿠션키링",
-   "vol": 780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "8개월아기옷",
-   "vol": 750,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "국민애착인형",
-   "vol": 720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아인형",
-   "vol": 720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "봉제인형주문제작",
-   "vol": 720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "우정템",
-   "vol": 690,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고슴도치인형",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "병아리인형",
-   "vol": 650,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "손가락인형",
+   "kw": "블로그리뷰체험단",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라이브마켓",
    "vol": 650,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기배냇저고리",
-   "vol": 640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "24개월장난감",
-   "vol": 630,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "스와들블랭킷",
-   "vol": 630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아아기옷",
-   "vol": 630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌고래인형",
-   "vol": 620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "도마뱀인형",
+   "kw": "한복체험",
    "vol": 610,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유기농애착인형",
-   "vol": 600,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "수달키링",
+   "kw": "뷰티유튜버",
    "vol": 600,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "두돌여아선물",
-   "vol": 600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "봉제인형제작",
+   "kw": "인스타체험단",
    "vol": 590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아브랜드",
-   "vol": 590,
+   "kw": "일본모델",
+   "vol": 560,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오가닉애착인형",
-   "vol": 570,
+   "kw": "대학생대외활동",
+   "vol": 540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사자인형",
-   "vol": 570,
+   "kw": "스포츠마케팅회사",
+   "vol": 500,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "TEDDYBEAR",
-   "vol": 570,
+   "kw": "웨딩체험단",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인테리어블로그",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "서평단",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "숙박체험단",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모델알바",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "해외여행체험단",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "셀러모집",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아용품체험단",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모두모여체험단",
+   "vol": 380,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "아기토끼인형",
-   "vol": 560,
-   "comp": "높음",
+   "kw": "무료체험",
+   "vol": 370,
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "대왕인형",
-   "vol": 560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "치와와인형",
-   "vol": 550,
+   "kw": "기업가",
+   "vol": 370,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "앵무새인형",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기동물피규어",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "솜인형주문제작",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기인형",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "레서판다인형",
-   "vol": 520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "말티즈인형",
-   "vol": 510,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "물고기키링",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쥐인형",
-   "vol": 500,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "임산부인형",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "열쇠키링",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2살아기장난감",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가오리인형",
-   "vol": 480,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오가닉인형",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "하마인형",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "하프물범인형",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물고기인형",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "배냇저고리세트",
-   "vol": 460,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아옷선물",
-   "vol": 460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강아지생일선물",
-   "vol": 440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캐릭터인형제작",
-   "vol": 440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스칸디맘스와들업",
-   "vol": 440,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "두더지인형",
-   "vol": 430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강아지움직이는장난감",
-   "vol": 430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "만삭촬영소품",
-   "vol": 410,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "팬더인형",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "매쉬스와들업",
-   "vol": 400,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "키링인형제작",
-   "vol": 380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아목욕타월",
-   "vol": 380,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "늑대인형",
+   "kw": "마케팅포트폴리오",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소인형",
-   "vol": 360,
+   "kw": "화장품광고",
+   "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인테리어소품파는곳",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "빵빵이팝업",
-   "vol": 360,
+   "kw": "육아인플루언서",
+   "vol": 350,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "100일아기외출복",
-   "vol": 360,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "동물장난감",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "갓난아기선물",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고래상어인형",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애착인형추천",
+   "kw": "인스타그램마케팅",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "새인형",
+   "kw": "유튜버먹방",
    "vol": 340,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "봉제인형만들기",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "손바느질",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자애기선물",
+   "kw": "숙소체험단",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아배넷저고리",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기모자브랜드",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "30개월장난감",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애착인형브랜드",
+   "kw": "올리브영체험단",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "동물인형키링",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아내복바지",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사막여우인형",
+   "kw": "미용실리뷰",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베이비옷브랜드",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스인형",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쿠션주문제작",
+   "kw": "맛집블로그체험단",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "모드앤토드",
+   "kw": "뉴워커",
    "vol": 300,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "애기옷쇼핑몰",
-   "vol": 300,
-   "comp": "높음",
+   "kw": "기자단",
+   "vol": 290,
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "동물키링",
+   "kw": "책리뷰",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "귀여운소품",
+   "kw": "여행체험단",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캥거루인형",
+   "kw": "성형후기",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사슴인형",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "허스키인형",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펭귄키링",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형키링만들기",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쿠션키링제작",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기애착인형",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "토끼이불",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "북극곰인형",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기공룡장난감",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "플러시플러시",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형소량제작",
+   "kw": "육아체험단",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "블랙키링",
+   "kw": "대형사진인쇄",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "딸출산선물",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형뽑기도매",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스와들디자인",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노즈워크매트",
-   "vol": 250,
+   "kw": "핫딜방",
+   "vol": 260,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "고래피규어",
+   "kw": "기업리뷰사이트",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무료블로그체험단",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "시츄인형",
-   "vol": 240,
-   "comp": "중간",
+   "kw": "릴스체험단",
+   "vol": 250,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "뽑기인형",
+   "kw": "뷰티브랜드",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뷰티체험단",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3세남아장난감",
+   "kw": "파워블로거되는법",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "핸드메이드인형",
+   "kw": "리얼모델",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수제인형",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캐릭터키링제작",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이돌인형제작",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "작은인형",
+   "kw": "기자단모집",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "귀여운인형키링",
+   "kw": "피부과체험단",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자아기애착인형",
+   "kw": "게임광고",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공식블로그",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모델지원",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부산블로그체험단",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "개인형",
+   "kw": "화장품체험단",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바램펫피트니스",
+   "kw": "르뷰",
    "vol": 220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "헝겊인형",
+   "kw": "AIWORKS",
    "vol": 220,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "2살장난감",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기수면인형",
-   "vol": 215,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키링키링",
+   "kw": "병원매매",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "6개월아기내복",
+   "kw": "게임사전예약",
    "vol": 210,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "코코자네",
-   "vol": 210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "2살여아선물",
+   "kw": "네이버블로그협찬",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "4살남아장난감",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "웰시코기인형",
+   "kw": "무료체험단",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애견장난감",
+   "kw": "인스타그램체험단",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3살남아장난감",
+   "kw": "화장품샘플신청",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지놀이",
+   "kw": "블로그이벤트",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "1개월아기옷",
-   "vol": 195,
+   "kw": "성남맘카페",
+   "vol": 200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "한사토이기린",
-   "vol": 190,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가오리키링",
+   "kw": "베트남체험단",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에르고스와들업",
+   "kw": "해외체험단",
    "vol": 190,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "낙타인형",
+   "kw": "서포터즈모집사이트",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뷰티크리에이터",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "성형모델",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "구글맵리뷰",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무료이벤트",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인기키링",
+   "kw": "책광고",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "1살아기옷",
+   "kw": "광고모델에이전시",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여아선물",
-   "vol": 180,
+   "kw": "강아지체험단",
+   "vol": 170,
    "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "랭키닷컴",
+   "vol": 170,
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "패브릭키링",
+   "kw": "컴퓨터부업",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제작키링",
+   "kw": "데이터라벨링알바사이트",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "반려동물인형제작",
+   "kw": "골프유튜버",
    "vol": 170,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "솜인형제작",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BELLEMENT",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "태교인형",
+   "kw": "체험단리뷰",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "슈톨렌인형",
+   "kw": "시그니엘숙박권",
    "vol": 160,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "스킵합",
+   "kw": "4대보험없는알바",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "펫토이",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "PLUSYPLUSY",
-   "vol": 155,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아100일선물",
+   "kw": "아기용품체험단",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "턱받이만들기",
+   "kw": "부산체험단",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "공룡인형키링",
+   "kw": "미용실어플",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애착인형DIY",
+   "kw": "미용실후기",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "NOSP",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "공동구매중개",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제품체험단",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인형제작업체",
+   "kw": "미용실체험단",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "태명애착인형",
+   "kw": "리뷰메이커",
    "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "바디필로우제작",
+   "kw": "뷰티서포터즈",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자신생아옷",
+   "kw": "인플루언서블로그",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오가닉아기이불",
+   "kw": "패션마케터",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "병아리키링",
+   "kw": "뷰티인플루언서순위",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "13개월아기옷",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스와들업매쉬",
+   "kw": "체험단모집사이트",
    "vol": 130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "바디필로우주문제작",
-   "vol": 125,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "RICOTYPE",
-   "vol": 125,
+   "kw": "책블로그",
+   "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "토끼인형만들기",
+   "kw": "블로그기자단사이트",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아쇼핑몰",
+   "kw": "배송형체험단",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기애착인형추천",
+   "kw": "대구체험단",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인형선물",
+   "kw": "핸드폰광고",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인형DIY",
+   "kw": "체험단신청사이트",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오가닉배냇저고리",
+   "kw": "체험단추천",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아인형",
-   "vol": 115,
+   "kw": "체험단플랫폼",
+   "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애착곰인형",
-   "vol": 115,
+   "kw": "블로그서포터즈모집",
+   "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아쿠아리움인형",
-   "vol": 115,
+   "kw": "대구인플루언서",
+   "vol": 120,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "블로그대행알바",
+   "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아들출산선물",
+   "kw": "브랜드콜라보",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기인형추천",
+   "kw": "화장품리뷰",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인테리어인형",
+   "kw": "맨즈뷰티",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장식소품",
+   "kw": "뷰티마케팅",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대형인형제작",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형열쇠고리",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2세여아장난감",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기인형가방",
-   "vol": 105,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "SKIPHOP",
-   "vol": 105,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "나비잠스와들",
-   "vol": 105,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "인형샵",
+   "kw": "체험단마케팅",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "곰인형만들기",
+   "kw": "유튜브체험단",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기베개추천",
+   "kw": "제품체험단사이트",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "숙소협찬",
    "vol": 100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "딸랑이만들기",
+   "kw": "네일체험단",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사람인형만들기",
+   "kw": "여행블로그체험단",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "17개월아기옷",
+   "kw": "펜션체험단",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "태교인형만들기",
-   "vol": 95,
+   "kw": "화장품마케팅",
+   "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "존앤트리",
-   "vol": 90,
+   "kw": "강남언니광고",
+   "vol": 100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오가닉손수건",
+   "kw": "배송체험단",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "DIY인형",
+   "kw": "병원체험단",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "임산부축하선물",
+   "kw": "인플루언서체험단",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아옷쇼핑몰",
+   "kw": "뷰티체험단사이트",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키링인형만들기",
+   "kw": "육아블로그체험단",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "공룡선물",
+   "kw": "이벤트참여",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자아이애착인형",
+   "kw": "체험단사이트추천",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "서포터즈사이트",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고책창업",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "속옷리뷰",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오사카체험단",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "요양원컨설팅",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인테리어광고",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학원상담",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "네트워크병원",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험단블로그",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피부과개원",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "성형모델지원",
    "vol": 85,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남아애착인형",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호랑이애착인형",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기인형만들기",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "갈색토끼인형",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "곤충인형",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일남자아기옷",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "패브릭인형",
+   "kw": "옷체험단",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "루돌프인형",
+   "kw": "여행협찬",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캐리어체험단",
+   "vol": 80,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "리케어애드",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "IT블로그",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "반려동물장난감",
+   "kw": "블로그원고알바",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이집장난감",
+   "kw": "베개체험",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아애착인형",
-   "vol": 75,
+   "kw": "오사카블로그",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "중국마켓",
+   "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "한사토이토끼",
-   "vol": 75,
+   "kw": "호텔체험단",
+   "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "STOLLEEN",
-   "vol": 75,
+   "kw": "다이어트광고",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리뷰사이트",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험신청",
+   "vol": 80,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "고래인형키링",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "문어인형키링",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌고래장난감",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이인형",
+   "kw": "캠핑체험단",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "천인형",
+   "kw": "일본여행체험단",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인형추천",
+   "kw": "유모차체험단",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "10CM인형제작",
+   "kw": "공연마케팅",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오가닉베이비",
+   "kw": "기저귀샘플신청",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "인형대량구매",
+   "kw": "무료숙박",
    "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형맞춤제작",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소량인형제작",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "태교만들기",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자신생아옷",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임산부태교",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형가격",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기호랑이인형",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기애착인형만들기",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "25개월장난감",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아악세사리",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중기임산부선물",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고리키링",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초대형곰인형",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "굿즈인형제작",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제작인형",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "봉제인형소량제작",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "드라이버커버제작",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여아애착인형",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "순면인형",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바다코끼리인형",
-   "vol": 55,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "동물봉제인형",
+   "kw": "고양이체험단",
+   "vol": 60,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "임산부체험단",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "메이크업체험단",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "낚시체험단",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가구체험단",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기체험단",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지인플루언서",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "중국블로그",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리뷰단",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패션체험단",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그배우기",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샴푸광고",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈크리에이터",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험마케팅",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장품체험",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그교육",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "약국마케팅",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대만체험단",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험단카페",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "메트웍스",
+   "vol": 60,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "체험이벤트",
+   "vol": 60,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "블로그사이트",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "성형모델모집",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기장난감만들기",
-   "vol": 55,
+   "kw": "블로그기자단모집",
+   "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지인형주문제작",
-   "vol": 55,
+   "kw": "다이어트체험단",
+   "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스와들업말랑하니",
-   "vol": 55,
+   "kw": "결혼체험단",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그원고작성알바",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "붙임머리체험단",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차인플루언서",
+   "vol": 50,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "노트북체험단",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포스트제작",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책홍보",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집교재",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "호텔후기",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소상공인광고",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패션블로거",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷협찬",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험단후기",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여행블로그협찬",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "크리에이터마켓",
+   "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "스칸디맘스와들슈프림",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "30개월선물",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형동물인형",
+   "kw": "리뷰체험",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "출산인형",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오가닉턱받이",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가방걸이인형",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제작업체",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장난감선물",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유기농몰",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "반려견노즈워크",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "밀리언달러베이비인형",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유기농인형",
+   "kw": "배민체험단",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자애착인형",
-   "vol": 45,
+   "kw": "반려동물체험단",
+   "vol": 40,
    "comp": "높음",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "수면애착인형",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "압타베어",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "랍스터인형",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기동물인형",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한사인형",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애착인형키트",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "털빠짐없는애착인형",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애견노즈워크",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "용띠인형",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "손인형제작",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "손바느질DIY",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스킵합가방",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오가닉속싸개",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노즈워크추천",
+   "kw": "도서체험단",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "봉제완구",
+   "kw": "의류체험단",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "쿠션인형제작",
+   "kw": "청첩장체험단",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지노즈워크추천",
+   "kw": "경주체험단",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자아이애착인형",
+   "kw": "대전블로그체험단",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "배달체험단",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키보드체험단",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "연예인협찬",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시술체험단",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이어리체험단",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "타이어체험단",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방탈출블로그",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지방흡입체험단",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "육아서포터즈",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "후기알바",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뷰티블로그체험단",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리빙체험단",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "도쿄체험단",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플레이너츠",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "화장품후기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "릴스체험단모집",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장품브랜딩",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바비톡광고",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대학생기자단",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뷰티서포터즈모집",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제주블로그체험단",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페체험단",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리뷰플랫폼",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광주체험단",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마사지체험단",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가습기체험단",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기곰돌이인형",
+   "kw": "다이어트체험단모집",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "곰돌이인형만들기",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아조카선물",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "발렌타인데이선물",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한사토이인형",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "출산선물인형",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이쁜인형",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고급인형",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "DIY인형만들기",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친환경장난감",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형인형주문제작",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오가닉내의",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형곰돌이",
+   "kw": "대구서포터즈",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "봉제인형도매",
+   "kw": "미용실앱",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애착인형제작",
+   "kw": "플레이스작업",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기옷DIY",
-   "vol": 35,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "매쉬스와들",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스와드림",
-   "vol": 35,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "신생아옷사이트",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유트러스속싸개",
-   "vol": 35,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "2세선물",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2세옷",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "강아지장난감브랜드",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공룡봉제인형",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형쇼핑몰",
+   "kw": "기자단사이트",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "봉제인형제작업체",
+   "kw": "연극체험단",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인형샘플제작",
+   "kw": "캠핑용품체험단",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "동물인형제작",
+   "kw": "방탈출체험단",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오가닉브랜드",
+   "kw": "유아용품체험단",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광주블로그체험단",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무료체험단사이트",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그체험단비용",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "울산블로그체험단",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "입주청소체험단",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑장체험단",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가구협찬",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "채용공고디자인",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미리캔버스교육",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "펜션협찬",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "숙박체험",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맛집협찬",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고책사업",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여행서포터즈",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파인애플체험단",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "호텔협찬",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포스팅알바",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소파체험단",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "성형외과체험단",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "삿포로체험단",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "온라인전단지",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "앱홍보",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "요양원배너",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장품서포터즈",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "게임마케팅",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대기업마케팅",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "게임인플루언서",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "중구맘카페",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "강아지협찬",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영화홍보",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광고블로그",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병의원컨설팅",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패션광고",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험단업체",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일본인모델",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인플루언서모델",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전주체험단",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식체험단",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "헝겁인형",
+   "kw": "쇼핑몰체험단",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "두돌여자아이선물",
+   "kw": "렌즈체험단",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "숙소블로그체험단",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "토끼인형DIY",
+   "kw": "청주체험단",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인형사이트",
+   "kw": "인플루언서강의",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애완동물인형",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "DIY애착인형",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "곰인형DIY",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "슈톨렌베개",
+   "kw": "하루2시간알바",
    "vol": 25,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "인형회사",
+   "kw": "식당협찬",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "블로그댓글알바",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "청룡인형",
+   "kw": "유아체험단",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향수체험단",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샘플체험",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쿠팡체험단모집",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에스테틱체험단",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "협찬문의",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브잉",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유기농손수건",
+   "kw": "유튜버랭킹",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유튜브마켓",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "동물인형만들기",
+   "kw": "키즈카페체험단",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수제인형만들기",
+   "kw": "의류협찬",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유기농아기옷",
+   "kw": "침대체험단",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바다동물키링",
+   "kw": "쇼핑리뷰",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "곰인형대형",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "봉제인형공장",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "태교키트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니인형제작",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형쿠션제작",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형모자제작",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캐릭터쿠션제작",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "태교용품",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스킵합백팩",
+   "kw": "유튜브4000시간",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "1세옷",
+   "kw": "샴푸체험",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "꼬꼬잠스와들",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아여자옷",
+   "kw": "우리동네마케팅",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소형견노즈워크",
+   "kw": "체험후기",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지분리불안간식",
+   "kw": "피부과홈페이지",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "큰공룡인형",
+   "kw": "주간보호센터홍보",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "봉제업체",
+   "kw": "체험단알바",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "네일샵광고",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트플레이스대행",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뷰티인플루언서마케팅",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책홍보방법",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "골프체험단",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "곰인형제작",
+   "kw": "매트리스체험단",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인형봉제공장",
+   "kw": "강아지용품체험단",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대형쿠션제작",
+   "kw": "무료체험단모집",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지노즈워크장난감추천",
+   "kw": "SNS체험단",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오가닉인형만들기",
-   "vol": 15,
+   "kw": "렌트카체험단",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "숙박블로그체험단",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인테리어체험단",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디지털라벨링",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여행모집",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기자단모집사이트",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여행인플루언서모집",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여행리뷰",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여행체험",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인플루언서정보",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "게임홍보",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "네일블로그체험단",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헬스장체험단",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험단모집링크",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도서블로그",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도서협찬",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도서마케팅",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그맛집체험단",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글램핑체험단",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "속초체험단",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "서울체험단",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체리체험단",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원주체험단",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매출증진",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모두닥광고",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인터넷전단지",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장품테스터",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병원입점",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글로벌서포터즈",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병원에이전시",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "VIP마케팅",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동네광고",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홍보카페",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "게임광고대행사",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험단이벤트",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뷰티광고",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중국인인플루언서",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원주블로그체험단",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피부과유튜브",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "위탁판매프로그램",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모델찾기",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그제품협찬",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "네이버블로그체험단모집",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출판마케팅",
+   "vol": 20,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "동물소품",
+   "kw": "무료블로그체험단모집",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제주도숙소체험단",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인스타광고방법",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밀키트체험단",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아내의추천",
+   "kw": "책체험단",
    "vol": 15,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스톨린",
+   "kw": "기저귀체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브랜드체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "상품체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식품체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "삼성체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공연체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "네이버카페체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "네일아트체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "목포체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무료체험신청",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방문체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부산맛집체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부천체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그무료체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영수증리뷰체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험단광고",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로봇청소기체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세차체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "골프장리뷰",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그배너광고",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "문제집체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영화체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기자단광고",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "모찌인형제작",
+   "kw": "풀빌라체험단",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오가닉신생아옷",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오가닉손싸개",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오가닉신생아",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유기농배냇저고리",
+   "kw": "엄마품체험단",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "키링소품",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형키링제작업체",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형대량제작",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캐릭터인형주문제작",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형샘플",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형제조",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모찌쿠션제작",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "봉제인형샘플제작",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형디자인",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형주문",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캐릭터인형도매",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쿠션소량제작",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형파우치제작",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이돌인형주문제작",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형업체",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형소량주문제작",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "100일아가옷",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1살옷",
+   "kw": "네이버리뷰단",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "뱀부스와들업",
+   "kw": "신점체험단",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스와들메쉬",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "신생아우주복선물",
+   "kw": "헤어체험단",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "알잠슈트",
+   "kw": "필라테스체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피부관리체험단",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "엘라바좁쌀",
+   "kw": "속눈썹펌체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한국인플루언서",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "눈썹문신체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제주숙박체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여행서포터즈모집",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "경남체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가전제품체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이용품체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의상협찬",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기자단체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쇼파체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식탁체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "운동체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스튜디오체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "배드민턴블로그",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천안블로그체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "토익체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강릉블로그체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험사이트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거제도체험단",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "후기사이트",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "강릉체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그램",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "오가닉유아복",
+   "kw": "네이버체험단사이트",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "새끼강아지노즈워크",
+   "kw": "네일체험",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지교육용간식",
+   "kw": "커피리뷰",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "뱀띠애착인형",
+   "kw": "경락체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필리핀체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "립스틱광고",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도서광고",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "치과커뮤니티",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "골프광고",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뷰티어워드",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장품체험단모집",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디자인단가",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "박람회디자인",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "배너템플릿",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "협찬리뷰",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "치과배너",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한의원배너",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "골프마케팅",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뷰티브랜드마케팅",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "화장품마케팅회사",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뷰티대행사",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병원커뮤니티",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험단모집방법",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장품무료체험",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그구입",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필리핀인플루언서",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "성형체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트플레이스등록대행",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대전체험단모집",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피부체험단",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "플레이스토어리뷰",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "브랜드서포터즈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무역마케팅",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트플레이스대행사",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패션브랜드마케팅",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "후기체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피부과네트워크",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책마케팅",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험단비용",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인플루언서연결",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패션블로그체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "약국블로그",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에어컨청소구인",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오토캐드알바",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주간보호센터마케팅",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "숙소블로그",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인스타그램기자단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험단홈페이지",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "IT마케팅",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뷰티체험",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안동체험단",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "농산물홍보",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "강아지사료체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "펫체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "앱체험단",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "용띠애착인형",
+   "kw": "가전체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애견용품체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가방체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시식체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소기체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물티슈체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "보조배터리체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "어플체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영양제체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의자체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차용품체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "게임체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "IT체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기자단마케팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대학생체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "동물병원체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마케팅체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반영구체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보드게임체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로거체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "블로그기자단신청",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "블로그배송체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "블로그체험단광고",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그체험단마케팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그체험단무료",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "숏츠체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애견미용체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애견체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "웨딩홀체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유튜버체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전시체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험단기자단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "호텔블로그체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필라테스블로그체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "음식협찬",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그기자단비용",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대구네일체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "밀키트협찬",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공연리뷰",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영어회화체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "데이터라벨러교육",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리뷰기자단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여기엔다있어",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "주식무료종목",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "구매담당자교육",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의료기기체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학원체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블랙박스체험단",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남자애기애착인형",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마스코트인형제작",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "곰인형주문제작",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노즈워크로봇",
+   "kw": "도서서평단",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "청룡애착인형",
+   "kw": "오마카세체험단",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "뱀인형만들기",
+   "kw": "체험단창업",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "숙박협찬",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "리코타입나비잠",
+   "kw": "전자제품체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "상품협찬",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "협찬업체",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "협찬체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세종시체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그리뷰단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파워리뷰",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "인형열쇠고리제작",
+   "kw": "뮤지컬체험단",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "판촉물인형",
+   "kw": "블로그체험단이란",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "식기세척기체험단",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인형제작공장",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "털인형제작",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형제작사이트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캐리커쳐인형제작",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쿠션공장",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형생산",
+   "kw": "애터미블로그",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "인형판촉물",
+   "kw": "제품리뷰어",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인형제조업체",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스킵합미아방지가방",
+   "kw": "조명체험단",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "인형판다",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "6개월애기옷",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오가닉의류",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형의상제작",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스마트케어봇",
+   "kw": "어린이체험단",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "2살크리스마스선물",
+   "kw": "전시회체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사회공헌플랫폼",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여행블로거모집",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화상영어체험단",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "2세크리스마스선물",
+   "kw": "크로스핏체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "케이크체험단",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지노이즈워크",
+   "kw": "주부체험단",
    "vol": 10,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "서울블로그체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "왁싱체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그광고알바",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지블로그체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강원도체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공연리뷰단",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "리뷰체험단추천",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제주도숙박체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제품블로그체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "골프협찬",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의류서포터즈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "틱톡분석",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쇼핑체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그무료체험",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "블로그홍보단",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "숙박체험단모집",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여행기자단",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "펜션체험단모집",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "영어체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃집체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유튜브체험단모집",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안경체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일산체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PT체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모텔체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈카페광고",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차량용품체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원데이클래스체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "와인체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꿀체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블라인드체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "책협찬",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원두체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유산균체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한의원체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "서핑체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스키체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "광고마케팅학원",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험단직접모집",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커튼체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그광고사이트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자기기체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "음료마케팅",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "공기청정기광고",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사전체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인스타공구업체",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맛집기자단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "신제품리뷰",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기자단운영",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "블로그마케팅체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "인스타그램서포터즈",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "헬스체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장품블로거",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "테스터모집",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식당소개",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "브랜드협찬",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "직장인서포터즈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영상체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그리뷰가격",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무료재택부업",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "숙소체험단모집",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "호텔블로거",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "체험알바",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "춘천체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포장체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "체험단무료모집",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영종도체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그리뷰작업",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청주블로그체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맛집체험",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도서체험",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "타투체험",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도서홍보",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫플레이스체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "미용광고",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "밀키트마케팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자책홍보",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "토퍼체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "네이버맛집광고",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "마케팅전문기업",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바이럴사이트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병원아웃소싱",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원고대필",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일산마케팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홍보프로그램",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뷰티샵블로그",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전통시장마케팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화해제품등록",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "필리핀마케팅",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "트위터체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전통시장광고",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "EDM디자인",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "QR코드이벤트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엔포솔루션",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "연예인대행사",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "이메일수집",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인스타DB",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인스타병원광고",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인플루언서매니지먼트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카드뉴스인쇄",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카드뉴스제작단가",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "칸바템플릿",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "텍스트템플릿",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포토북템플릿",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포토샵대행",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뷰티파워블로거",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "웹디비",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장품홍보",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장품브랜드컨설팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "굿닥광고",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "미용실인스타",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "태국체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대구홍보업체",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장품브랜드마케팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부동산블로그마케팅&실무강좌",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "피부과브랜딩",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "패션마케팅대행사",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장품온라인마케팅",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "화장품대행사",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뷰티홍보대행사",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장품마케팅대행사",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뷰티마케팅대행사",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장품광고대행사",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "온라인마케팅광고대행사",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "바비톡마케팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커튼블로그",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "삼척체험단",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뷰티광고대행사",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대구블로그교육",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "충주체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공방체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리뷰서포터즈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인플체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험단제안서",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "체험단진행",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지자체마케팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코스메틱마케팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사진관체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필러체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "연예인PPL",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "연예인협찬비용",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신제품마케팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홍천체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "샘플체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "연예인의상협찬",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "당진체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "체험단사이트제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리뷰블로거",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫딜상품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집수리광고",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "연예인협찬대행사",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "신제품소개",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "세무마케팅",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "신제품체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "춘천블로그체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병원디스플레이",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "양양체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "도서관마케팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샴푸마케팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인플루언서바이럴마케팅",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "인플루언서블로그체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "과자체험단",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베이커리마케팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이북디자인",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이벤트체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "상위노출실행사",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "체험단홍보",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "택배체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부동산DB",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "온라인마케팅강사",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인스타그램광고강의",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "건축광고",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "페인트광고",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "해외바이럴",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인스타공구대행",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지식인업체",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "병원기자단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스키장체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "행사마케팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한의원디자인",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병원파워링크",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병원오프라인마케팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그후기광고",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오프라인광고대행",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플레이스등록대행",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유튜브엔터테인먼트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동물병원컨설팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의류쇼핑몰광고",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "데이터라벨링기업",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리워드사이트",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "인스타공구대행사",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모델사진구매",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쇼핑몰모델구인",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인케팅",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뉴스레터대행",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "블로그리뷰체험",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험단대행",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험단회사",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "익산체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리터칭알바",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "셀럽공구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이돌협찬",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공구마케팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체험단가격",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유튜브광고제안",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "블로그체험단견적",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "게스트하우스체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "패션협찬",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "온라인체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "화장품블로그체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대구블로그체험단모집",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "MCN대행사",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유튜버인플루언서",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "군산체험단",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마이크로유튜버",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전남체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공동구매진행",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이사체험단",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "인천체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맛집리뷰사이트",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "체험단대행사",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인스타그램체험단신청",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제품체험단모집",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인천블로그체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블로그체험단카페",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유튜브협찬플랫폼",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "펜션블로그체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "배송형블로그체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "치과MSO",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남해체험단",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "테니스광고",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신간홍보",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인플루언서체험단모집",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무료체험단신청",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "태안체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쇼츠체험단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영덕체험단",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "순천체험단",
+   "vol": 10,
+   "comp": "낮음",
    "hint": false
   }
  ]
