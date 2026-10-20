@@ -1,76 +1,2859 @@
 {
  "updated": "2026-10-20 14:40",
  "hints": [
-  "쿠팡추천템",
-  "쿠팡꿀템",
-  "쿠팡추천",
-  "쿠팡살림템",
-  "쿠팡육아템",
-  "쿠팡추천템순위",
-  "쿠팡생활용품추천",
-  "쿠팡인기상품",
-  "쿠팡가성비템",
-  "쿠팡주방템"
+  "추천템",
+  "살림템",
+  "꿀템",
+  "육아템",
+  "생활용품추천",
+  "가성비템",
+  "자취템",
+  "주방템",
+  "살림꿀템",
+  "육아꿀템",
+  "다이소꿀템",
+  "신혼살림템",
+  "아기용품추천",
+  "겨울필수템",
+  "로켓배송추천"
  ],
  "rows": [
   {
-   "kw": "쿠팡추천템",
-   "vol": 1310,
+   "kw": "계산기",
+   "vol": 1103200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기",
+   "vol": 160200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베이비페어",
+   "vol": 68500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈캠",
+   "vol": 51770,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "밥솥",
+   "vol": 44400,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수납장",
+   "vol": 43240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "분유포트",
+   "vol": 32880,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "미니냉장고",
+   "vol": 31300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기띠",
+   "vol": 30450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "휴대용분유포트",
+   "vol": 27780,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "탈취제",
+   "vol": 26810,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "옆잠베개",
+   "vol": 26300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물추천",
+   "vol": 25240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산선물",
+   "vol": 23110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기밥솥",
+   "vol": 22910,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젖병소독기",
+   "vol": 22600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아가습기",
+   "vol": 20080,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소형냉장고",
+   "vol": 19300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기통",
+   "vol": 19000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식물분쇄기",
+   "vol": 17890,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기가습기",
+   "vol": 15100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젖병세척기",
+   "vol": 14560,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "차량용냉장고",
+   "vol": 12870,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아선물",
+   "vol": 11750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "정수",
+   "vol": 11660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포대기",
+   "vol": 10790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기포대기",
+   "vol": 10570,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "밀폐용기",
+   "vol": 10440,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "현관CCTV",
+   "vol": 10230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유리병",
+   "vol": 9950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아아기띠",
+   "vol": 9230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기처리기",
+   "vol": 8480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "분유제조기",
+   "vol": 8380,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임신축하선물",
+   "vol": 8280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기백일선물",
+   "vol": 8040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이소꿀템",
+   "vol": 7860,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "쿠팡꿀템",
-   "vol": 470,
+   "kw": "핸디청소기",
+   "vol": 7820,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "쿠팡추천",
-   "vol": 320,
-   "comp": "중간",
-   "hint": true
+   "kw": "아기가습기추천",
+   "vol": 7610,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "쿠팡인기상품",
-   "vol": 70,
+   "kw": "신생아가습기추천",
+   "vol": 7490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기추천",
+   "vol": 7190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "홈캠추천",
+   "vol": 7040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장품냉장고",
+   "vol": 7020,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음쓰처리기",
+   "vol": 6810,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "미니밥솥",
+   "vol": 6440,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "미니압력밥솥",
+   "vol": 6120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기분쇄",
+   "vol": 6010,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "줄즈",
+   "vol": 5840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크대음식물분쇄기",
+   "vol": 5780,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기용품",
+   "vol": 5770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "TAPO",
+   "vol": 5620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "미니청소기",
+   "vol": 5440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의자등받이",
+   "vol": 4990,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "공병",
+   "vol": 4970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "락앤락몰",
+   "vol": 4970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신선물",
+   "vol": 4810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두상베개",
+   "vol": 4800,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "미생물음식물처리기",
+   "vol": 4800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기베개",
+   "vol": 4790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출수형분유포트",
+   "vol": 4780,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가정용음식물처리기",
+   "vol": 4670,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젖병열탕소독",
+   "vol": 4530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밥솥이유식",
+   "vol": 4450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인용밥솥",
+   "vol": 4440,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기100일선물",
+   "vol": 4190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플라스틱용기",
+   "vol": 4140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "페트병",
+   "vol": 4140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산준비물리스트",
+   "vol": 4100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쿠쿠3인용밥솥",
+   "vol": 3900,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "사운드북",
+   "vol": 3890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친구출산선물",
+   "vol": 3870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "메탈",
+   "vol": 3850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "육아",
+   "vol": 3740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신발탈취제",
+   "vol": 3710,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "화장품용기",
+   "vol": 3590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빌트인정수기",
+   "vol": 3390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아베개",
+   "vol": 3340,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기띠추천",
+   "vol": 3330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기선물",
+   "vol": 3320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "정수기구매",
+   "vol": 3230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주방수전교체",
+   "vol": 3170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑양념통",
+   "vol": 3060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아용품",
+   "vol": 2940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "육아용품",
+   "vol": 2820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "힙시트아기띠",
+   "vol": 2820,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기두상베개",
+   "vol": 2760,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뒤집기방지쿠션",
+   "vol": 2650,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "슬링아기띠",
+   "vol": 2630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "1인밥솥",
+   "vol": 2600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산준비물",
+   "vol": 2580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기렌탈",
+   "vol": 2560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "줄즈에어플러스",
+   "vol": 2560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "서포터즈",
+   "vol": 2500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산용품리스트",
+   "vol": 2460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈카메라",
+   "vol": 2450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장방향제",
+   "vol": 2430,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "좁쌀베개",
+   "vol": 2360,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "찜냄비",
+   "vol": 2350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "무타공정수기",
+   "vol": 2350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기태열",
+   "vol": 2340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아베개",
+   "vol": 2330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실버크로스듄",
+   "vol": 2310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기바디필로우",
+   "vol": 2300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기역류방지쿠션",
+   "vol": 2280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신출산육아대백과",
+   "vol": 2270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "플라스틱통",
+   "vol": 2230,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "명품아기띠",
+   "vol": 2210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아출산선물",
+   "vol": 2200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조미료통",
+   "vol": 2190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "티피링크CCTV",
+   "vol": 2070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이유식믹서기",
+   "vol": 2060,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오르테젖병세척기",
+   "vol": 2050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이유식제조기",
+   "vol": 2050,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산선물추천",
+   "vol": 2050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기띠힙시트",
+   "vol": 2010,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키보드청소",
+   "vol": 1980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퀸센스",
+   "vol": 1960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "삐뽀삐뽀119이유식",
+   "vol": 1960,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이베개",
+   "vol": 1910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인용압력밥솥",
+   "vol": 1900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쿠쿠1인용밥솥",
+   "vol": 1880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부출산선물",
+   "vol": 1840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기책",
+   "vol": 1810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수전필터",
+   "vol": 1810,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기홈캠",
+   "vol": 1720,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "패트병",
+   "vol": 1700,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기용품점",
+   "vol": 1700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크대음식물처리기",
+   "vol": 1670,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "2인용밥솥",
+   "vol": 1640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아두상베개",
+   "vol": 1620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기두상교정",
+   "vol": 1610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기선물",
+   "vol": 1600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "TAPOC200",
+   "vol": 1600,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "짱구베개",
+   "vol": 1590,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쿠쿠2인용밥솥",
+   "vol": 1560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "분유포트기",
+   "vol": 1550,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신발냄새제거",
+   "vol": 1550,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아가습기",
+   "vol": 1510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "농기구",
+   "vol": 1480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2단책꽂이",
+   "vol": 1470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생활용품점",
+   "vol": 1430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3인용밥솥",
+   "vol": 1430,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기전집",
+   "vol": 1410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "깔끔대장",
+   "vol": 1410,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "건식다리미",
+   "vol": 1410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책꽂이정리함",
+   "vol": 1390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주방수도꼭지",
+   "vol": 1370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기옆잠베개",
+   "vol": 1360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아홈캠",
+   "vol": 1320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조카백일선물",
+   "vol": 1320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기배게",
+   "vol": 1280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아용품리스트",
+   "vol": 1250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기띠",
+   "vol": 1220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쿠비녹스",
+   "vol": 1200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아내출산선물",
+   "vol": 1190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "작은책상",
+   "vol": 1180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "지하수필터",
+   "vol": 1160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냄새탈취제",
+   "vol": 1120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기카메라",
+   "vol": 1100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기사운드북",
+   "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산용품",
+   "vol": 1070,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아책",
+   "vol": 1060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아좁쌀베개",
+   "vol": 1040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종이가구",
+   "vol": 1030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쿠쿠에그밥솥",
+   "vol": 1010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이유식밥솥",
+   "vol": 1000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실리콘주방도구",
+   "vol": 990,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신발냄새제거제",
+   "vol": 970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "백일아기선물",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기스티커북",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두상교정",
+   "vol": 920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아준비물",
+   "vol": 920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조립식책장",
+   "vol": 910,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신발장탈취제",
+   "vol": 900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프라스틱용기",
+   "vol": 890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용그릇",
+   "vol": 890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젖병식기세척기",
+   "vol": 850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "락앤락유리반찬통",
+   "vol": 850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두돌아기베개",
+   "vol": 840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아책",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아짱구베개",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1살아기선물",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모로반사이불",
+   "vol": 800,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "육아템",
+   "vol": 790,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "쿠팡육아템",
+   "kw": "아기동화책",
+   "vol": 790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편한아기띠",
+   "vol": 790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주방수전추천",
+   "vol": 790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "보온포트",
+   "vol": 750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기홈캠추천",
+   "vol": 750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인용전기밥솥",
+   "vol": 750,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "투명용기",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기띠브랜드",
+   "vol": 720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "정수기조리수",
+   "vol": 720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꿀템박스",
+   "vol": 710,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "돌아기베개",
+   "vol": 710,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동분유제조기",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아카메라",
+   "vol": 690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실리콘수저세트",
+   "vol": 680,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "국민육아템",
+   "vol": 650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이소플라스틱통",
+   "vol": 640,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아두상교정",
+   "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아정보",
+   "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젖병식세기",
+   "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종이책장",
+   "vol": 620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소형밥솥",
+   "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3단책꽂이",
+   "vol": 620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "플라스틱병",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아브랜드",
+   "vol": 590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친구임신축하선물",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아전집",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기짱구베개",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두상배게",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베베캠",
+   "vol": 540,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아홈캠추천",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아필수템",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아선물",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5개월아기선물",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산산모선물",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쿠쿠1인밥솥",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2인밥솥",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쿠키통",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아배게",
+   "vol": 490,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스팀소독기",
+   "vol": 490,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "PET병",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책육아",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아배게",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "열탕소독기",
+   "vol": 460,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "변기탈취제",
+   "vol": 460,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "태열베개",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수도꼭지정수기",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기그림책",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아육아템",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밀가루보관통",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "티크나무",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쿨리베어",
+   "vol": 430,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "종이테이블",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형전기밥솥",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기용품브랜드",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아바디필로우",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "담배탈취제",
+   "vol": 390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "산모출산선물",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키보드청소기",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원형밀폐용기",
+   "vol": 370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "명품냄비",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원형용기",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "갓난아기선물",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신발장냄새제거",
+   "vol": 350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "숯탈취제",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기교구",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6개월아기책",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기베개",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사각플라스틱용기",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취템",
+   "vol": 320,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "식품용기",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국산전기포트",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기CCTV",
+   "vol": 300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아이베개",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이유식믹서기추천",
+   "vol": 280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "언더싱크",
+   "vol": 280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "종이수납함",
+   "vol": 280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소전집",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아그림책",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취밥솥",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꿀템",
+   "vol": 260,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "애기용품",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냉장고마그네틱",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아분유포트",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스페셜드림",
+   "vol": 250,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "어린이경추베개",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원형플라스틱용기",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산아기용품",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국산분유포트",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키보드가격",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산후조리선물",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "정수기수도꼭지",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PET용기",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "토이북",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기캠",
+   "vol": 220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "태열배게",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디지털북",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비홈캠",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영유아책",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기소전집",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "EM효소",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아필수품",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종이선반",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취생밥솥",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이나프스팀다리미",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "살림템",
+   "vol": 190,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "국민아기띠",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "육아선물",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아베게",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신발장냄새",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "육아꿀템",
+   "vol": 180,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "아람전집",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키친아트인덕션냄비",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이의뇌",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "8개월아기책",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쿠쿠분유포트",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물받이통",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주방템",
+   "vol": 160,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "18개월아기책",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용베개",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "플러스워터",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종이책상",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필립스생활가전",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취용품",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종이칸막이",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옆잠쿠션",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종이수납장",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종이서랍장",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종이수납박스",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "살리미",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기홈캠",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소리나는책",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아용품점",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형가구",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아경추베개",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아카메라",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영아선물",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아전집",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생전집",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "새집증후군탈취제",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인스타일러",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기용품추천",
+   "vol": 130,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "신생아태열베개",
+   "vol": 125,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아CCTV",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20개월아기책",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기경추베개",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아베개추천",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "해피테일즈쿨리베어",
+   "vol": 115,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "치과재료상",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "김포그릇가게",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "15개월아기책",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일본밀폐용기",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이국주밥솥",
+   "vol": 105,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "24개월아기책",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용품브랜드",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈베게",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기베개추천",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "리빙용품",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "종이책꽂이",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생활용품브랜드",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "새집탈취제",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실인테리어소품",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종이등받이의자",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울필수템",
+   "vol": 100,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "10개월아기책",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모야몽",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플라스틱식품용기",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유용미생물",
+   "vol": 90,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "16개월아기책",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "살림꿀템",
+   "vol": 90,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "이엠발효액",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기수면쿠션",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가성비아기띠",
+   "vol": 85,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아캠",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "페트용기",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비카메라",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "곶감포장용기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영유아전집",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아음악",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용주방그릇",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "골판지가구",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "타공없는정수기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에어맘",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "4살베개",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쿠쿠2인밥솥",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "추천템",
+   "vol": 60,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "애기100일선물",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아아이템",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취생필수품",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취필수품",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종이서랍",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하수구냄새탈취제",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상용청소기",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인테리어DIY",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴대용의류관리기",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "살림일기",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아이배게",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아메모리폼베개",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5세베개",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기라텍스베개",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플라스틱용기제조업체",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영유아도서",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모용품",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원룸가구추천",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장용방향제",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "살림이야기",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "박스가구",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인용스타일러",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차무선청소기",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기바디필로우",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "풀라무",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "3세한글",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "EM미생물",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아람책",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주방소품쇼핑몰",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "간이청소기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초강력핸디청소기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈CCTV어플",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아캠",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3세영어",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엘라바아기베개",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기도서",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강력한차량용청소기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방청소기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인가구쇼핑몰",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스페셜드림베개",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "옆눕베개",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생활용품쇼핑몰",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아가전",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코스텐",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "골판지책장",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피크닉종이의자",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취가전",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인용가구",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생활용품추천",
    "vol": 25,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "플라스틱용기업체",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영아도서",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생활용품사이트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기침대카메라",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퀸센스양수냄비",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아도서전집",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부엌소품",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주방용품사이트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가성비차량용청소기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취생전기밥솥",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식품플라스틱용기",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "살림노하우",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플라스틱용기제조",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꿀템도시락",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가성비템",
+   "vol": 20,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "쿠팡살림템",
+   "kw": "차량용청소기비교",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밥솥소형",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "투명실링용기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식기류도매",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "혜림푸드",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "EM에버미라클",
    "vol": 15,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "쿠팡생활용품추천",
+   "kw": "이엠효소",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경쇼핑몰",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두상교정모",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아캠",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3세수학",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아소전집",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "A4사이즈달력",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동출수포트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3살교육",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이국주미니밥솥",
    "vol": 15,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "쿠팡가성비템",
+   "kw": "소형청소기무선",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기숙사청소기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종이가구만들기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필터체인지",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "1인용밥솥쿠쿠",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취전기밥솥",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "살림잇템",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아홈카메라",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아카메라",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "전주대학교EM",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유아동전집",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맘캠",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스케치북8절지",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아가띠",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "3세아이책",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건타입청소기",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소형먼지청소기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가벼운가구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취방책꽂이",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종이수납정리함",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "종이신발장",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "종이진열장",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가전도매",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로켓배송추천",
    "vol": 10,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "쿠팡주방템",
+   "kw": "신혼살림템",
    "vol": 10,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "쿠팡추천템순위",
-   "vol": 10,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": true
   }
  ]
