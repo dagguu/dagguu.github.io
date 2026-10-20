@@ -50,7 +50,7 @@ def card(x):
     img = x["img"]
     return (f'<a class="pc" href="{e(x["url"])}" target="_blank" rel="noopener noreferrer sponsored" data-k="{e(x["kind"])}">'
             f'<span class="im"><img src="{e(img)}" alt="{e(x["name"])}" loading="lazy" referrerpolicy="no-referrer">{"<i class=rk>로켓배송</i>" if x.get("rocket") else ""}</span>'
-            f'<span class="k">{e(x["kind"])}</span><span class="n">{e(x["name"])}</span><span class="pr">{x["price"]:,}원</span><span class="go">쿠팡에서 보기</span></a>')
+            f'<span class="k">{e(x["kind"])}</span><span class="n">{e(x["name"])}</span><span class="pr">{x["price"]:,}원</span><span class="go">상품 보러가기</span></a>')
 
 def build(path):
     P = json.load(open(path, encoding="utf-8"))
