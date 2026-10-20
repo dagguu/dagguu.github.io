@@ -372,9 +372,9 @@ function hrow(title,more,list,sub){
   return '<section class="hsec"><div class="hsh"><h2>'+title+'</h2>'+(more?'<a class="hmore" href="'+more+'">더 보기 ›</a>':'')+'</div>'+(sub||"")+
     '<div class="hs">'+list.slice(0,10).map(hcard).join("")+'</div></section>';
 }
-var HOME_MENU=[
-  ["📝","블로그","#/list?cat=all&s=open&ch=blog"],["📸","인스타그램","#/list?cat=all&s=open&ch=insta"],["🎬","숏폼","#/list?cat=all&s=open&ch=clip,reels,youtube"],["✨","오늘 오픈","#/list?cat=all&s=todayOpen","NEW"],["⏰","마감임박","#/list?cat=all&s=closing","HOT"],
-  ["🏨","숙박","#/list?cat=stay&s=open"],["👶","육아","#/list?cat=baby"],["💄","뷰티","#/list?cat=beauty"],["🧺","생활","#/list?cat=life"],["🔌","가전/가구","#/list?cat=elec"],["💊","건강식품","#/list?cat=health"],["🐾","반려동물","#/list?cat=pet"]
+var HOME_MENU=[ /* 2026-10-20 시온님 요청: 두 줄 그대로 옆으로 밀어서 보기(슬라이드), 매거진·티켓·혜택 추가 */
+  ["✨","오늘 오픈","#/list?cat=all&s=todayOpen","NEW"],["⏰","마감임박","#/list?cat=all&s=closing","HOT"],["📝","블로그","#/list?cat=all&s=open&ch=blog"],["📸","인스타그램","#/list?cat=all&s=open&ch=insta"],["🎬","숏폼","#/list?cat=all&s=open&ch=clip,reels,youtube"],["📚","매거진","#/mag"],["🎁","혜택","#/benefit"],["🧳","공짜여행","#/trip"],
+  ["🏨","숙박","#/list?cat=stay&s=open"],["👶","육아","#/list?cat=baby"],["💄","뷰티","#/list?cat=beauty"],["🧺","생활","#/list?cat=life"],["🔌","가전/가구","#/list?cat=elec"],["💊","건강식품","#/list?cat=health"],["🐾","반려동물","#/list?cat=pet"],["🎟️","티켓","#/list?cat=etc"]
 ];
 /* 슬라이드 배너 위 한 줄 소식 (2026-10-18 시온님 요청). 지어낸 이용자 후기는 쓰지 않고 data.json 실제 숫자만 */
 function manW(v){ return v>=10000?Math.round(v/10000).toLocaleString()+"만원":v.toLocaleString()+"원"; }
@@ -394,7 +394,8 @@ var tkT; function tkInit(){ clearInterval(tkT); var l=document.querySelector(".t
 function homeView(){
   var td=ymd(today()), open=seed.items.filter(function(it){ return statusOf(it).key==="open"; });
   var h=tickerHtml(open)+slideBanners(false);
-  h+='<nav class="hmenu" aria-label="바로가기">'+HOME_MENU.map(function(m){ return '<a href="'+m[2]+'"'+(m[3]?' class="hmhot"':'')+'><span class="hmi">'+m[0]+(m[3]?'<i class="hmb">'+m[3]+'</i>':'')+'</span><span>'+m[1]+'</span></a>'; }).join("")+'</nav>';
+  var hmA=function(m){ return '<a href="'+m[2]+'"'+(m[3]?' class="hmhot"':'')+'><span class="hmi">'+m[0]+(m[3]?'<i class="hmb">'+m[3]+'</i>':'')+'</span><span>'+m[1]+'</span></a>'; }, hmH=Math.ceil(HOME_MENU.length/2);
+  h+='<nav class="hmenu hms" aria-label="바로가기"><div class="hmr">'+HOME_MENU.slice(0,hmH).map(hmA).join("")+'</div><div class="hmr">'+HOME_MENU.slice(hmH).map(hmA).join("")+'</div></nav>';
   var closingToday=open.filter(function(it){ return it.end===td; });
   h+=wideBanners(open,closingToday);
   var byNew=function(a,b){ return (b.createdAt||0)-(a.createdAt||0); };
