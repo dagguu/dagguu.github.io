@@ -57,7 +57,7 @@ def build(path):
     slug, date = P["slug"], P["date"]
     mm, dd = int(date[5:7]), int(date[8:10])
     title = "출산선물 추천 · 예산별 신생아 선물 고르는 법 | 다꾸체험단"
-    desc = "3만원 이하 손수건·속싸개부터 젖병소독기·분유포트까지, 예산별로 출산선물·신생아선물 고르는 기준과 상품을 모았어요."
+    desc = "손수건·애착인형부터 젖병소독기·분유포트까지, 예산별로 출산선물·신생아선물 고르는 기준과 상품을 모았어요."
     canon = f"{SITE}/p/{slug}.html"
     secs = P["sections"]
     toc = "".join(f'<a href="#s{i}">{e(s["t"].split(" · ")[0])}</a>' for i, s in enumerate(secs))
