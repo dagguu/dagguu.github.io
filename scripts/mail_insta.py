@@ -27,10 +27,12 @@ for n, q in enumerate(queue, 1):
     if q.get('caption'): body += ['', '[본문]', q['caption']]
     if q.get('dm'): body += ['', '[DM 답장]', q['dm']]
     body.append('')
+# 본문을 먼저 넣고 나서 첨부해야 한다(첨부 뒤 set_content 는 multipart 오류)
+msg.set_content('\n'.join(body) or '오늘 카드뉴스예요.')
+for n, q in enumerate(queue, 1):
     for f in sorted(glob.glob(os.path.join(ROOT, 'insta_out', day, q['id'], '*.jpg'))):
         msg.add_attachment(open(f, 'rb').read(), maintype='image', subtype='jpeg',
                            filename=f'{n}-{os.path.basename(f)}')
-msg.set_content('\n'.join(body) or '오늘 카드뉴스예요.')
 with smtplib.SMTP_SSL('smtp.naver.com', 465) as s:
     s.login(uid.split('@')[0], pw)
     s.send_message(msg)
