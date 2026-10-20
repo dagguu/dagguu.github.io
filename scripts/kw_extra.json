@@ -1,4589 +1,2413 @@
 {
- "updated": "2026-10-21 01:31",
+ "updated": "2026-10-21 01:32",
  "hints": [
-  "라비킷",
-  "보로탈코",
-  "마비스",
-  "정직한실험실",
-  "비타민마을",
-  "메디테라피",
-  "시올리",
-  "키니샴푸",
-  "하이헬스",
-  "닥터모건",
-  "샬랑드파리",
-  "바스탈취제",
-  "알뜨리",
-  "밀리맘",
-  "빕스쪽쪽이",
-  "세렌디뷰티",
-  "라플론",
-  "루솔브",
-  "메라블",
-  "퓨리영",
-  "로임스킨",
-  "클레드브루",
-  "포뉴",
-  "스노우플러스",
-  "봉봉프렌즈",
-  "래디웰",
-  "리앤핏",
-  "탱이하우스",
-  "쿠민착즙기",
-  "체인지업",
-  "덱스탑",
-  "유니홈",
-  "웻코트",
-  "카피어랜드",
-  "스윗테일",
-  "올리온",
-  "나인위시스",
-  "메디케이",
-  "레디선크림",
-  "리포데이",
-  "리놀라",
-  "모노아워",
-  "밀리타",
-  "베이비드래곤",
-  "하루반",
-  "풋필터",
-  "카페꼬메르",
-  "손발온정",
-  "페리덤",
-  "닥터토비아",
-  "비렌느",
-  "라디셀",
-  "리쥬비란",
-  "블루폴",
-  "넛데이즈",
-  "에버픽",
-  "먼슬리무드",
-  "누아트스튜디오",
-  "위즈핏",
-  "자연비책",
-  "리노아랩",
-  "청궁",
-  "메디트리",
-  "올페이스",
-  "윙잇",
-  "엔베러",
-  "그립비",
-  "신라면",
-  "센텔라모어",
-  "바이탈라이즈",
-  "로블루",
-  "라키라",
-  "에스이에스유",
-  "프레스티지스피큘",
-  "견행묘행",
-  "니드닛"
+  "르비르",
+  "웨이온",
+  "안국건강",
+  "이반장",
+  "미소마루",
+  "스마텍",
+  "센토디퓨저",
+  "하이크린",
+  "시드유",
+  "일양약품",
+  "사뮤르",
+  "피타니",
+  "미스터버블",
+  "베라스코",
+  "디클청소기",
+  "커버원",
+  "뷰앤블루",
+  "올리바콜라겐",
+  "닥터메인유",
+  "그린핑거",
+  "몽트라드",
+  "아트워시",
+  "아토오겔",
+  "프로컷재단기",
+  "도펠헤르츠",
+  "뉴스타스팀청소기",
+  "프라임필름",
+  "알뜨리난방텐트",
+  "덱스탑선풍기",
+  "봉봉프렌즈어린이화장품"
  ],
  "rows": [
   {
-   "kw": "룰루레몬",
-   "vol": 494300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "젝시믹스",
-   "vol": 315000,
+   "kw": "보조배터리",
+   "vol": 170300,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "칼국수",
-   "vol": 193680,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "쌀국수",
-   "vol": 129650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유산균",
-   "vol": 109400,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "카무트효소",
-   "vol": 72080,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "베리시",
-   "vol": 52890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "젝스믹스",
-   "vol": 47420,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "라비킷",
-   "vol": 40500,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "제시믹스",
-   "vol": 38110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "효소",
-   "vol": 37430,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "볶음너구리",
-   "vol": 36430,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "프로바이오틱스",
-   "vol": 35900,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신라면",
-   "vol": 32340,
+   "kw": "일양약품",
+   "vol": 28020,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "애니박스",
-   "vol": 32030,
+   "kw": "액상마그네슘",
+   "vol": 12930,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "A4용지",
-   "vol": 30100,
+   "kw": "소변자주마려움",
+   "vol": 11080,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "프로바이오틱스유산균",
-   "vol": 29050,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "짜파게티",
-   "vol": 25560,
+   "kw": "안국약품",
+   "vol": 10070,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "메디테라피",
-   "vol": 24440,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "컵라면",
-   "vol": 23370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리포데이",
-   "vol": 22180,
+   "kw": "그린핑거",
+   "vol": 10010,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "모기장",
-   "vol": 21460,
+   "kw": "입욕제",
+   "vol": 9730,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유산균추천",
-   "vol": 20190,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "에블린",
-   "vol": 19950,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "암웨이치약",
-   "vol": 18710,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "방풍비닐",
-   "vol": 17690,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "콘치웨어",
-   "vol": 17560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜드브루",
-   "vol": 17100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "안성탕면",
-   "vol": 15740,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "위임장양식",
-   "vol": 14920,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바스탈취제",
-   "vol": 14420,
+   "kw": "안국건강",
+   "vol": 7350,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "보로탈코",
-   "vol": 11890,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "데비웨어",
-   "vol": 11740,
+   "kw": "루테인효능",
+   "vol": 6270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "큐모모",
-   "vol": 11270,
+   "kw": "글루콘산마그네슘",
+   "vol": 6260,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아메리카노",
-   "vol": 11220,
+   "kw": "실리콘식탁매트",
+   "vol": 4880,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "더치커피",
-   "vol": 9570,
+   "kw": "기초대사량높이는방법",
+   "vol": 4400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마비스치약",
-   "vol": 8980,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조공",
-   "vol": 8740,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "생생우동",
-   "vol": 8430,
+   "kw": "도킹형보조배터리",
+   "vol": 4360,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신라면건면",
-   "vol": 8070,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "메라블",
-   "vol": 7860,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "칸쵸",
-   "vol": 7780,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "CCA주스",
-   "vol": 7410,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "라떼",
-   "vol": 7380,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "윙잇",
-   "vol": 7360,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "신라면투움바",
-   "vol": 7290,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "방한커튼",
-   "vol": 7080,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "비타민마을",
-   "vol": 6990,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "라면종류",
-   "vol": 6920,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "방풍커튼",
-   "vol": 6860,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "VERISH",
-   "vol": 6840,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "팔도비빔면",
-   "vol": 6650,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "애니바디",
-   "vol": 6590,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "비렌느",
-   "vol": 6480,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "유치원문방구",
-   "vol": 6170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스낵면",
-   "vol": 6040,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "초코과자",
-   "vol": 5680,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피종류",
-   "vol": 5660,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바닐라라떼",
-   "vol": 5660,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "효소의기능",
-   "vol": 5450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비빔면",
-   "vol": 5140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "단열뽁뽁이",
-   "vol": 4990,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블루폴",
-   "vol": 4770,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "헤이즐넛커피",
-   "vol": 4550,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "컵라면추천",
-   "vol": 4520,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "해물라면",
-   "vol": 4490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "CD",
-   "vol": 4330,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오징어짬뽕",
-   "vol": 4270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블루그레인",
-   "vol": 4260,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "BAS탈취제",
-   "vol": 4190,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "진라면순한맛",
-   "vol": 4170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사천짜파게티",
-   "vol": 4070,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신라면블랙",
-   "vol": 4020,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "고구마라떼",
-   "vol": 3920,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "방풍비닐커튼",
-   "vol": 3910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에블린속옷",
+   "kw": "보조밧데리",
    "vol": 3870,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유니클로브라",
-   "vol": 3830,
+   "kw": "마그네슘액상",
+   "vol": 3760,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마시는마그네슘",
+   "vol": 3680,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "빕스쪽쪽이",
-   "vol": 3700,
+   "kw": "기초대사량높이기",
+   "vol": 3660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에드워드코리아",
+   "vol": 3570,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "안국건강루테인",
+   "vol": 3500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "루테인추천",
+   "vol": 3450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아토오겔",
+   "vol": 3450,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "크라프트지",
-   "vol": 3700,
+   "kw": "다이어트방법",
+   "vol": 2910,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "프로폴리스치약",
-   "vol": 3690,
+   "kw": "일양약품전립선",
+   "vol": 2780,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "창문방풍비닐",
-   "vol": 3640,
+   "kw": "진공펌프",
+   "vol": 2750,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "배홍동비빔면",
-   "vol": 3520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "짜짜로니",
-   "vol": 3420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카피어랜드",
-   "vol": 3390,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "김치라면",
-   "vol": 3380,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "샬랑드파리",
-   "vol": 3260,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "가바효능",
-   "vol": 3240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜드브루원액",
-   "vol": 3170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청궁",
-   "vol": 3050,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "비비안노와이어",
-   "vol": 2980,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미국치약",
-   "vol": 2900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라면순위",
-   "vol": 2880,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "누아트스튜디오",
-   "vol": 2830,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "세수",
-   "vol": 2790,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "베란다방풍비닐",
-   "vol": 2760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카구리",
-   "vol": 2740,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신라면컵라면",
+   "kw": "PVC비닐",
    "vol": 2710,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "바바라언더웨어",
-   "vol": 2700,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "체인지업",
-   "vol": 2680,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "연양갱",
-   "vol": 2670,
+   "kw": "쏘팔코사놀",
+   "vol": 2580,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "나인위시스",
-   "vol": 2660,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "창문바람막이",
-   "vol": 2570,
+   "kw": "하루비움",
+   "vol": 2430,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유니클로브라탑",
-   "vol": 2550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "방풍",
-   "vol": 2440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피원액",
-   "vol": 2420,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "살랑드파리",
-   "vol": 2410,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "짜파게티범벅",
-   "vol": 2330,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "대용량간식",
-   "vol": 2320,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "장인라면",
-   "vol": 2290,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "탕비실간식",
-   "vol": 2250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신라면툼바",
+   "kw": "노트북보조배터리",
    "vol": 2230,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "포뉴",
-   "vol": 2200,
+   "kw": "아트워시",
+   "vol": 2230,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "잔티젠",
+   "vol": 2210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "도펠헤르츠",
+   "vol": 2130,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "액상커피",
-   "vol": 2140,
+   "kw": "테팔핸드블렌더",
+   "vol": 1940,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신라면스프",
-   "vol": 2140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "프링글스미니",
-   "vol": 2120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "봉지라면",
-   "vol": 2090,
+   "kw": "TMP",
+   "vol": 1850,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "CCA주스효능",
-   "vol": 2060,
+   "kw": "버블클렌저",
+   "vol": 1720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "메디트리",
-   "vol": 2060,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "루톤샴푸",
-   "vol": 2000,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "다과세트",
-   "vol": 1970,
+   "kw": "안국약품루테인",
+   "vol": 1710,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "착즙주스",
-   "vol": 1930,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "왕뚜껑컵라면",
-   "vol": 1900,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "밀리맘",
-   "vol": 1880,
+   "kw": "토비콤",
+   "vol": 1690,
    "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "살랑드파리쿠션",
-   "vol": 1840,
-   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "더잠",
-   "vol": 1830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마비스",
-   "vol": 1820,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "둥지냉면",
-   "vol": 1800,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "새우탕면",
-   "vol": 1790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "농심너구리",
-   "vol": 1780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "TOOTHPASTE",
-   "vol": 1770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마이쭈",
-   "vol": 1770,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "디카페인콜드브루",
-   "vol": 1760,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "핫브레이크",
-   "vol": 1760,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "메디",
-   "vol": 1750,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "ABC초코쿠키",
-   "vol": 1660,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "루톤",
+   "kw": "스마텍보조배터리",
    "vol": 1650,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "밀리타커피머신",
-   "vol": 1640,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "컵라면소컵",
-   "vol": 1640,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아이스커피",
-   "vol": 1630,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "짜파게티더블랙",
-   "vol": 1620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "창문단열",
+   "kw": "뜯어쓰는행주",
    "vol": 1610,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "곡물라떼",
-   "vol": 1580,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "팔도라면",
-   "vol": 1580,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신라면소컵",
-   "vol": 1570,
+   "kw": "눈건강루테인",
+   "vol": 1590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카피타노",
-   "vol": 1540,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "질책",
-   "vol": 1480,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "하루반",
-   "vol": 1460,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "할랄음식",
-   "vol": 1450,
+   "kw": "일양전립선눈건강",
+   "vol": 1510,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "풋필터",
-   "vol": 1440,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "아메리카노스틱",
-   "vol": 1430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "시세이도프로페셔널",
-   "vol": 1420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바디블루",
-   "vol": 1400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "GABA",
-   "vol": 1360,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "사무실과자",
-   "vol": 1360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "팔도도시락",
-   "vol": 1360,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "효소역가수치",
-   "vol": 1300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쌀라면",
-   "vol": 1290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에스프레소원액",
-   "vol": 1280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "농심신라면",
-   "vol": 1280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "참깨라면컵라면",
-   "vol": 1280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신라면40개",
-   "vol": 1270,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "캘빈클라인브라",
-   "vol": 1240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더치커피원액",
-   "vol": 1220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "CCA",
-   "vol": 1220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "역가수치높은효소",
-   "vol": 1210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터토비아",
-   "vol": 1210,
+   "kw": "피타니",
+   "vol": 1390,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "농심김치사발면",
-   "vol": 1210,
+   "kw": "안국루테인",
+   "vol": 1280,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "단열커튼",
+   "kw": "루테인가격",
+   "vol": 1265,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "루테인지아잔틴미니",
+   "vol": 1260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "일양전립선건강눈건강",
+   "vol": 1200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국제약루테인",
+   "vol": 1180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수축",
    "vol": 1160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "된장라면",
-   "vol": 1140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "방풍막",
-   "vol": 1120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디카페인라떼",
-   "vol": 1120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "투명비닐천막",
-   "vol": 1110,
+   "kw": "열수축필름",
+   "vol": 1130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "승모근괄사",
-   "vol": 1100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "탑텐브라",
+   "kw": "아기목욕",
    "vol": 1100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "휴대용치약",
+   "kw": "루테인오메가",
    "vol": 1090,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "종아리괄사",
-   "vol": 1080,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "러브미모스트",
-   "vol": 1070,
+   "kw": "나이트번내돈내산",
+   "vol": 1050,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "가격인상",
-   "vol": 1070,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "탕비실과자",
-   "vol": 1060,
+   "kw": "뱃살빼기",
+   "vol": 1030,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "역가수치",
-   "vol": 1040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유니클로와이어리스브라",
-   "vol": 1040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밀리타아로마보이",
-   "vol": 1010,
+   "kw": "IXL",
+   "vol": 990,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "시올리",
-   "vol": 1000,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "성질",
+   "kw": "안국제약",
    "vol": 980,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "콜드블루",
-   "vol": 970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니치약",
-   "vol": 930,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "배리쉬",
-   "vol": 930,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "리쥬비란",
-   "vol": 920,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "MARVIS치약",
-   "vol": 900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "우레탄비닐",
-   "vol": 900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메디테라피괄사",
-   "vol": 880,
+   "kw": "삼성전자보조배터리",
+   "vol": 940,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "만안문구",
-   "vol": 880,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "짜파게티맛있게끓이는법",
-   "vol": 880,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신라면투움바컵라면",
-   "vol": 870,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜드브루디카페인",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "창문단열재",
-   "vol": 850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이직선물",
-   "vol": 850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스노우플러스",
-   "vol": 840,
+   "kw": "유아버블클렌저",
+   "vol": 890,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "플레이텍스브라",
-   "vol": 840,
+   "kw": "루테인오메가3",
+   "vol": 830,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신라면작은컵",
-   "vol": 840,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "창문방풍",
-   "vol": 810,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밀리타",
+   "kw": "거품입욕제",
    "vol": 810,
    "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "쿠레타케붓펜22호",
-   "vol": 790,
-   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커피라떼",
-   "vol": 790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "과자몰",
-   "vol": 790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "MEDITHERAPY",
-   "vol": 780,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "샬랑드파리쿠션",
-   "vol": 780,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유쎄라블아이크림",
-   "vol": 780,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "맥심모카골드라이트",
-   "vol": 750,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "농심짜파게티",
-   "vol": 750,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "페리덤",
-   "vol": 730,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "덱스탑",
-   "vol": 720,
+   "kw": "스마텍",
+   "vol": 800,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "농심컵라면",
+   "kw": "TYESO텀블러",
+   "vol": 800,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "말산마그네슘",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "귀이명약",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일양약품루테인",
    "vol": 720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "약국치약",
+   "kw": "장수비닐",
+   "vol": 720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "눈영양제루테인",
    "vol": 710,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신라면1박스",
+   "kw": "수축필름",
    "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SMARTEK",
+   "vol": 690,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "이탈리아치약",
+   "kw": "마그네슘400",
    "vol": 680,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "단백질분해효소",
+   "kw": "PET필름",
    "vol": 680,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "정직한실험실",
-   "vol": 670,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "콜드브루커피",
-   "vol": 660,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아메리카노커피",
-   "vol": 640,
+   "kw": "토비콤루테인지아잔틴",
+   "vol": 650,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "컵누들우동맛",
-   "vol": 640,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "카라멜마끼아또",
+   "kw": "스완슨마그네슘",
    "vol": 630,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신라면한박스",
-   "vol": 630,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "로임스킨",
-   "vol": 620,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "오뚜기컵라면",
+   "kw": "전립선건강눈건강",
    "vol": 620,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "창틀바람막이",
-   "vol": 610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메디케이",
-   "vol": 610,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "까주스",
-   "vol": 610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라면박스",
-   "vol": 610,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "리앤핏",
-   "vol": 600,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "살펴보다",
-   "vol": 600,
+   "kw": "네오메딕스맨포뮬러",
+   "vol": 620,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "대뇌",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이너리즘",
+   "kw": "알박",
    "vol": 570,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "가바영양제",
+   "kw": "MDC",
    "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실크테라피본드앤리페어",
-   "vol": 560,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신라면컵",
-   "vol": 560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "과자할인",
-   "vol": 560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "방한비닐",
-   "vol": 550,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "루솔브",
-   "vol": 550,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "자연비책",
-   "vol": 550,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "라면가격",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "작은컵라면",
+   "kw": "액티몬보조배터리",
    "vol": 540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "앙방",
-   "vol": 530,
-   "comp": "중간",
+   "kw": "일양약품전립선눈건강",
+   "vol": 540,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "효소의효능",
+   "kw": "초전도",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국건강루테인미니",
    "vol": 530,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "타트체리영양제",
+   "kw": "열수축비닐",
    "vol": 530,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "불안하다",
-   "vol": 530,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "윙윗",
-   "vol": 520,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "홀리데이키친",
-   "vol": 520,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "과자도매",
+   "kw": "목욕장난감",
    "vol": 520,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신라면30개",
+   "kw": "PVC필름",
+   "vol": 520,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "일양약품전립선건강눈건강",
    "vol": 510,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "과자도매몰",
+   "kw": "아이원루테인",
    "vol": 500,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파슬리요가복",
-   "vol": 490,
+   "kw": "일양파워솔루션",
+   "vol": 500,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "치아변색",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다꾸스탬프",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베라왕속옷",
-   "vol": 480,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "태국라면",
-   "vol": 480,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "매운치약",
+   "kw": "아이원루테인지아잔틴미니",
    "vol": 470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "MEDI",
-   "vol": 470,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "팔뚝괄사",
-   "vol": 470,
+   "kw": "안국루테인미니",
+   "vol": 460,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "알뜨리",
-   "vol": 470,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "래디웰",
-   "vol": 470,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "그립비",
-   "vol": 470,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "신라면박스",
+   "kw": "목욕놀이",
    "vol": 460,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신라면큰사발",
+   "kw": "거품목욕",
+   "vol": 450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "천연입욕제",
    "vol": 450,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "효소식품",
-   "vol": 440,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "봉봉프렌즈",
+   "kw": "마그네슘젤리",
    "vol": 430,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "안국건강루테인지아잔틴",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잔티젠다이어트",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "웨이온",
+   "vol": 410,
+   "comp": "중간",
    "hint": true
   },
   {
-   "kw": "디카페인콜드브루원액",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "CCA쥬스",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "짜파게티스프",
-   "vol": 420,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "MARVIS",
-   "vol": 410,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "짜파게티5개입",
+   "kw": "젤리입욕제",
    "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다리괄사",
+   "kw": "귀에좋은영양제",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뉴스타스팀청소기",
    "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "새우탕큰사발",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "골드카뮤트",
-   "vol": 390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜드브루더치커피",
-   "vol": 390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셀핀다가바",
-   "vol": 390,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "샬롱드파리",
-   "vol": 380,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "사무실과자추천",
-   "vol": 380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "양치세트",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "그린티라떼",
-   "vol": 370,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "디카페인원액",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "창문비닐",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세렌디뷰티",
-   "vol": 360,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "모나미스테이션",
-   "vol": 360,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "OKI",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신라면멀티팩",
-   "vol": 360,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "창문방한",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "퓨리영",
-   "vol": 350,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "마니또선물",
+   "kw": "알뜨리난방텐트",
+   "vol": 400,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "루테인음식",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아입욕제",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "센토디퓨저",
+   "vol": 380,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "잔티움나이트버닝",
+   "vol": 360,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "다이어트프로그램",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거품목욕제",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기거품목욕",
    "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "과자할인점",
+   "kw": "나이트번후기",
    "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마사지기구",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인스턴트원두커피",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탕비실과자추천",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컵라면세트",
-   "vol": 330,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "ROOTON",
-   "vol": 320,
+   "kw": "KHA",
+   "vol": 340,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "잔티젠효과",
+   "vol": 335,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "허벅지괄사",
-   "vol": 320,
+   "kw": "체지방감소",
+   "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "만원선물",
+   "kw": "미스터버블",
    "vol": 320,
    "comp": "높음",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "루톤헤어토닉",
+   "kw": "애터미루테인",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "WACOAL",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥심카누",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "루카스나인디카페인라떼",
+   "kw": "NSE",
    "vol": 310,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "트러플짜파게티",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "PC방음식",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "OKI프린터",
+   "kw": "EDWARD",
    "vol": 300,
-   "comp": "중간",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "더치커피파우치",
-   "vol": 300,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "명품치약",
+   "kw": "루테인영양제추천",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "하얀이",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아메리카노원액",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "식품도매",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바스싱크대클리너",
+   "kw": "밧데리가격",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "시리얼바",
-   "vol": 280,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "바스탈취제공구",
-   "vol": 270,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "예민한장",
+   "kw": "안국건강루테인지아잔틴미니",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캐릭터샵",
+   "kw": "아기버블클렌저",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "CK브라",
+   "kw": "닥터메인유",
    "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "치약종류",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "레디웰",
-   "vol": 260,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "나이키탑",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사과양배추당근주스",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이빨하얗게",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잇몸케어",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "GODBODY",
-   "vol": 250,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "DAIZ브라",
-   "vol": 250,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "먼슬리무드",
-   "vol": 250,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "신라면5개",
+   "kw": "입욕젤",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수축포장기",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일양루테인",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "컵라면모음",
+   "kw": "SHIMADZU",
    "vol": 250,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유니홈",
+   "kw": "이반장",
    "vol": 240,
-   "comp": "낮음",
+   "comp": "중간",
    "hint": true
   },
   {
-   "kw": "커피순위",
+   "kw": "잔티움",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무실다과",
+   "kw": "에이원더",
    "vol": 240,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "메디테라피속살괄사",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "클레드브루",
-   "vol": 230,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "포용계",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "더치원액",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "간식주머니",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보타닉샴푸",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "DOROSIWA",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "과자대용량",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오뚜기밥200G",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컵라면박스",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이태리치약",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바디괄사추천",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쿠루토가샤프심",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올리온",
-   "vol": 210,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "꼰에야",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "윗잉",
-   "vol": 210,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "고급치약",
-   "vol": 200,
+   "kw": "수면다이어트",
+   "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "치과치약",
-   "vol": 200,
+   "kw": "자석타이머",
+   "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "치약브랜드",
-   "vol": 200,
+   "kw": "브이맨",
+   "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "칼디플러스",
+   "kw": "다리저림약",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국루테인지아잔틴미니",
+   "vol": 220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "루테인하루권장량",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뷰앤블루",
+   "vol": 220,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "CENOVIS",
+   "vol": 220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "ACTIMON",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코디박",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "압축비닐",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국루테인지아잔틴",
    "vol": 200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "전신괄사",
-   "vol": 200,
+   "kw": "하이크린",
+   "vol": 190,
    "comp": "중간",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "카누대용량",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컴플리트케어",
+   "kw": "PFEIFFER",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "효소곡물발효효소",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터모건",
-   "vol": 190,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "살랑드파리앰플",
-   "vol": 190,
+   "kw": "목욕슬라임",
+   "vol": 185,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오키프린터",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메디팩",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "살롱드파리쿠션",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "BIONEER",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "뽕브라마켓",
+   "kw": "안국약품루테인지아잔틴",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대용량아메리카노",
+   "kw": "후코잔틴",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "골드브루",
+   "kw": "거품놀이",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "블랙커피추천",
+   "kw": "어린이입욕제",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뉴트리랩스",
    "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신라면맛있게끓이는법",
+   "kw": "공업용드라이기",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "닥터치카고불소치약",
+   "kw": "슈퍼오메가3",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "얼굴마스크팩",
+   "kw": "50대다이어트방법",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "샤넬스티커",
-   "vol": 170,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "베이비드래곤",
-   "vol": 170,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "더치커피스토리",
+   "kw": "전립선눈건강",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "짜파게티고기",
+   "kw": "홈쇼핑루테인",
    "vol": 170,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카무트효소프리미엄",
+   "kw": "이형필름",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "루테인안국건강",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "CHALLANSDEPARIS",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "프레스온",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "하루반브라",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "인더웨어",
-   "vol": 160,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "로맨시스",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "비너스팬티스타킹",
+   "kw": "안국제약루테인미니",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에블린브라렛",
+   "kw": "진공밸브",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "올리브짜파게티",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "팔도컵라면",
+   "kw": "일양약품파워솔루션",
    "vol": 160,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "소컵라면",
+   "kw": "닥터메인유콘드로이친",
    "vol": 160,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "간식도매",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수입치약",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메디테라피채용",
-   "vol": 150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "재팬나인",
-   "vol": 150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "코팅종이",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다꾸스티커팩",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밀리타커피메이커",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더치커피원액추천",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜드브루선물세트",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잇윙",
-   "vol": 150,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "짜파게티40개",
-   "vol": 150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "곡물효소프로바이오틱스",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "명품칫솔",
+   "kw": "EDWARDS",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "두피롤러",
+   "kw": "탄산입욕제",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "문구몰",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밀리타코리아",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "LOUNTESS",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피액상",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더치커피답례품",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "액상스틱커피",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "과민증",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "하이헬스",
-   "vol": 130,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "비비안언더웨어",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디카페인더치커피",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "넛데이즈",
+   "kw": "포키롤",
    "vol": 130,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "센텔라모어",
-   "vol": 130,
+   "kw": "나이트버닝",
+   "vol": 125,
    "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "업소용육개장",
-   "vol": 130,
-   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "솔트치약",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탄수화물효소",
+   "kw": "아스타진틴",
    "vol": 120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "카페꼬메르",
-   "vol": 120,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "MEDITREE",
+   "kw": "SMODO",
    "vol": 120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "로블루",
+   "kw": "수축비닐",
    "vol": 120,
    "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "마비스칫솔",
-   "vol": 110,
-   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고구마효소",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카무트브랜드밀효소골드",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스윗테일",
-   "vol": 110,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "캐시퐁",
+   "kw": "토비콤아이포커스",
    "vol": 110,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "액체커피",
+   "kw": "안국제약루테인지아잔틴",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "라면할인",
+   "kw": "안국건강아이원루테인지아잔틴미니",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고약한",
+   "kw": "루테인지아잔틴플러스",
    "vol": 110,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "과자쇼핑몰",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "샬랑드파리매장",
-   "vol": 105,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "사과당근양배추주스",
+   "kw": "다이어트캡슐",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일동제약루테인",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자판기용종이컵",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "루테인프리미엄",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젤입욕제",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기거품놀이",
    "vol": 105,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "효소분말",
+   "kw": "안국눈영양제",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소화효소제추천",
+   "kw": "피라니게이지",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "믹스투믹스",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "더치커피세트",
+   "kw": "한미루테인",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "디카페인커피원액",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바이탈라이즈",
-   "vol": 100,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "나우푸드가바",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "라키라",
+   "kw": "현민지브이티",
    "vol": 100,
    "comp": "낮음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "하얀치아",
+   "kw": "마그네슘100MG",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "열수축포장기",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캐나다마그네슘",
    "vol": 95,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "샬랑드파리앰플",
-   "vol": 95,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "살랑드파리마스크팩",
-   "vol": 95,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "무불소치약추천",
+   "kw": "버블놀이",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "살빠지는효소",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BAS차량용탈취제",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탱이하우스",
+   "kw": "몽트라드",
    "vol": 90,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "전산용품",
+   "kw": "마그네슘500",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "한국오키시스템즈",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커팅매트A2",
+   "kw": "타우린마그네슘",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크라프트보드",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "RISO",
+   "kw": "CMAX",
    "vol": 90,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "콜드브루파우치",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜드브루추천",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밤에커피",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더치커피선물",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메디트리공식스토어",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "라면도매",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비너스아르보노와이어",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초모리브라",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "루카스디카페인",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "치아니코틴제거",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "치과의사치약",
+   "kw": "안국루테인지아잔틴플러스",
    "vol": 80,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "키니샴푸",
+   "kw": "다이어트보조제효과",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일양약품눈건강",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일양전립선건강눈건강파워솔루션",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뉴테인",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디클청소기",
+   "vol": 80,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "가루입욕제",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커버원",
    "vol": 80,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "메디테라피링클핏마스크",
+   "kw": "책비닐포장",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "펜라이",
-   "vol": 80,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "카페꼬메르더치커피",
-   "vol": 80,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "액상에스프레소",
-   "vol": 80,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피농축액",
+   "kw": "루땡",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신라면20봉",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블랙셀",
+   "kw": "루테인지아잔틴안국",
    "vol": 75,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "STL브라탑",
+   "kw": "일양눈건강간건강",
    "vol": 75,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "CCA주스추천",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소컵컵라면",
-   "vol": 75,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "효소제품",
+   "kw": "수면다이어트보조제",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "구취제거치약추천",
+   "kw": "잔티젠내돈내산",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "엑소좀레이저",
+   "kw": "복부비만다이어트",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아메리카노액상",
+   "kw": "보조배터리답례품",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "일랑더치커피",
+   "kw": "베라스코",
    "vol": 70,
    "comp": "중간",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "더치커피추천",
+   "kw": "페트병라벨",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에스프레소파우더",
+   "kw": "열수축",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신라면툼바큰사발면",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "회사다과",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고구마맛효소",
+   "kw": "일양전립선건강",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "메디테라피마스크팩",
-   "vol": 65,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "얼굴리프팅팩",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "샬랑드파리마스크팩",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메디라보",
-   "vol": 65,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "DUTCHCOFFEE",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오리지널콜드브루",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카무트브랜드밀발효효소",
+   "kw": "안국약품눈영양제",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명함프린터",
+   "kw": "안국건강루테인지아잔틴플러스",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "모노아워",
+   "kw": "안국건강아이원루테인미니",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시드유",
    "vol": 60,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "리놀라",
+   "kw": "일양약품눈건강간건강",
    "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "일양약품전립선건강눈건강파워솔루션",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극저온",
+   "vol": 60,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "LEYBOLD",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산화마그네슘추천",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "진약사톡",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PVC수축필름",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스킨필름",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사료포대",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "눈루테인",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미소마루",
+   "vol": 50,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "밀리타전자동커피머신",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에스프레소액상",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜드브루선물",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜드브루답례품",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라디셀",
-   "vol": 60,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "짜짜로니짜파게티",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "컵라면대용량",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컵라면할인",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "과자마트",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "도매과자",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "간식몰",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제비꽃샴푸",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "항균치약",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "치과치약추천",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "효소선물세트",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쿠루토",
-   "vol": 55,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "HARUBAN",
-   "vol": 55,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피액상스틱",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "윙잇고객센터",
-   "vol": 55,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "라면도매몰",
-   "vol": 55,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아카셀",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "거품없는치약",
+   "kw": "안국몰",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "닥터치카치약",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "바스탈취제미니",
+   "kw": "버닝다이어트",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마이스크린",
-   "vol": 50,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "엽서프린터",
+   "kw": "일양전립선",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피원액추천",
+   "kw": "샤오미무선보조배터리",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피제조",
+   "kw": "터보펌프",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "건강한커피",
+   "kw": "비건마그네슘",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신라면40개입",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라면행사",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "라면대량구매",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컵라면도매",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "과자사이트",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "저렴한간식",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "과자구매",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사탕도매",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "젤리도매",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "간식업체",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "간식사이트",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메디테라피후기",
+   "kw": "안국토비콤",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "얼굴리프팅마스크",
+   "kw": "나이트다이어트",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "도무송도안",
+   "kw": "올영다이어트",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "나이키앞지퍼스포츠브라",
+   "kw": "잔티젠나이트버닝",
    "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "콜드브루대용량",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신라면신상",
+   "kw": "안국약품루테인미니",
    "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신라면투움바파스타",
+   "kw": "캐나다루테인",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "웻코트",
+   "kw": "르비르",
    "vol": 40,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "아임카페콜드브루",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아오아오커피",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜드브루OEM",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페시럽추천",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "과자주문",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "간식24",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "건강한치약",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "치과의사가만든치약",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "속살괄사",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메디테라피링클핏",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메디마스크팩",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메디테라피팩",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "메디테라피링클핏니들",
-   "vol": 35,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "페이스니들롤러",
-   "vol": 35,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "두피니들롤러",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "괄사마사지도구",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "MTS롤러추천",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바스탈취제핑크",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "바스탈취",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바스섬유탈취제",
-   "vol": 35,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "샬랑드",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "에블린심리스브라렛",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "레노마브라",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜드브루가루",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "액상형커피",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "9HOURS",
-   "vol": 35,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "루카스디카페인라떼",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "CC주스",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "조승우CCA주스",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가바1500",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신라면농심",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신라면투움바가격",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신라면투움바만들기",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가바의효능",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리소인쇄기",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "기업전용쇼핑몰",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다꾸스티커쇼핑몰",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "도로시비치",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가성비아메리카노",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디카페인더치",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올페이스",
-   "vol": 30,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "리노아랩",
-   "vol": 30,
+   "kw": "안국건강몰",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "안국건강눈영양제",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "안국루테인미니100",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "드라이펌프",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴온스루테인지아잔틴",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오일진공펌프",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "크라이오펌프",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "CRYOPUMP",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "ALCATEL",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베큠펌프",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사뮤르",
+   "vol": 40,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "간식쇼핑몰",
+   "kw": "수축포장기계",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수축필름포장",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국건강잔티움",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국약품아스타잔틴",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국지아잔틴",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국약품루테인지아잔틴미니",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체지방분해유산균",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일양약품전립선건강",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쏘팔쏘팔",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이물놀이",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "입욕제선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로터리진공펌프",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "과자배달",
+   "kw": "울박",
+   "vol": 30,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유닛쿨러",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병수축필름",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "POF수축필름",
    "vol": 30,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "간식도매몰",
+   "kw": "비닐수축포장",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "간식구매",
+   "kw": "열수축포장",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마비스25ML",
+   "kw": "루테인지아잔틴빌베리",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "디렉터파이치약",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "무첨가치약",
+   "kw": "안국약품지아잔틴",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고급치약추천",
+   "kw": "안국제약루테인지아잔틴미니",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아라크리스",
+   "kw": "안국건강루테인미니100",
    "vol": 25,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "효소분해",
+   "kw": "홈다이어트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "경남제약루테인",
    "vol": 25,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "효소스틱",
+   "kw": "마이니루테인",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캐나다카무트",
+   "kw": "일양눈건강전립선",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "메디테라피니들",
+   "kw": "오일리스진공펌프",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "눈전립선영양제",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전립선눈영양제",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프로스테이트티엘씨",
    "vol": 25,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "메디테라피마스크",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "링클핏",
+   "kw": "유아거품목욕",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "MTS롤러다이소",
+   "kw": "뉴트리랩스마그네슘",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "티타늄MTS",
+   "kw": "울트라마그네슘",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "BAS탈취제공구",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "BAS세탁조클리너",
+   "kw": "수축라벨",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바스배수구클리너",
+   "kw": "열압축비닐",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "샬랑드파리패드",
+   "kw": "압축필름",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "살랑드파리패드",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "롱검",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캘리재료",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ES9411DN",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유화쇼핑몰",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가계부스티커",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신밀리타",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "프리부",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "업소용콜드브루",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "더치커피맛집",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜드브루제조",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "프리미엄더치커피",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜드브루가격",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디카페인콜드브루추천",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "음료수대용량",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜드브루납품",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잉윗",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "엔베러",
-   "vol": 25,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "라면싼곳",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실컵라면",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가바750",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "까망짜장면",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "푸디버디까망짜장면",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "문구류사이트",
+   "kw": "보조배터리대량구매",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "콜드브루원액선물",
+   "kw": "크라이오H&I",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "칫솔도매",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "탕비실라면",
+   "kw": "레이볼드",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "터보분자펌프",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "PVC수축튜브",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "비타민마을곡물효소프로바이오틱스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "솔금",
+   "kw": "안국건강잔티움나이트버닝",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "미세플라스틱없는치약",
+   "kw": "안국건강잔티젠",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "안심치약",
+   "kw": "루테인지아잔틴안국건강",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "비타민치약",
+   "kw": "안국건강지아잔틴",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "효소고구마맛",
+   "kw": "다이어트나이트",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "치주염치약추천",
+   "kw": "숙면다이어트",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "메디괄사",
+   "kw": "미역추출물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잔티젠추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고펌프매입",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전립선건강눈건강파워솔루션",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "EDWARDKOREA",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "TC750",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올리콘",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "진공펌프가격",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맨즈파워업",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "메디오랩",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "링클핏마스크",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "세라믹괄사마사지",
+   "kw": "일양쏘팔메토옥타코사놀",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "BAS바스탈취제",
+   "kw": "아이거품목욕",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바스건조기시트",
+   "kw": "어린이버블클렌저",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "BAS에어컨탈취제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BAS싱크대클리너",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BAS변기세정제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바스변기세정제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BAS섬유탈취제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "샬랑드파리광채쿠션",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라플론",
+   "kw": "올리바콜라겐",
    "vol": 15,
    "comp": "낮음",
    "hint": true
   },
   {
-   "kw": "엽서인쇄기",
+   "kw": "프라임필름",
    "vol": 15,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쿠루토가0.5",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마스터인쇄기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "속옷정기배송",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "더치커피팩",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "액상더치커피",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미스티블루커피",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "스틱형커피",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜드브루액상커피",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜드브루음료",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피믹스싸게파는곳",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "디카페인대용량",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "루카스나인시그니처디카페인",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "위즈핏",
-   "vol": 15,
-   "comp": "중간",
    "hint": true
   },
   {
-   "kw": "메디트리스마트스토어",
+   "kw": "수축필름인쇄",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수축필름제작",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수축포장지",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용진공비닐",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장품수축필름",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신라면대량구매",
+   "kw": "PE수축필름",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "농심신라면소컵",
+   "kw": "챔버형수축포장기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신라면도매",
+   "kw": "수축진공필름",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "라면구입",
+   "kw": "실링지제작",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신라면투움바편의점",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "컵라면대량구매",
+   "kw": "압축비닐포장",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가바100",
+   "kw": "일산비닐",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가바수면",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가바분말",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "과자저렴한곳",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실라면",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컵라면소컵모음",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컵라면싸게파는곳",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "컵라면특가",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "과자납품",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컵라면싼곳",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "과자유통",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "견행묘행",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "미니치약세트",
+   "kw": "AGMALL",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종합소화효소제",
+   "kw": "AG몰",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "이효리카무트효소",
+   "kw": "안심캡슐",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "메디쿱",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "링클핏니들",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "토소웅MTS",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "BAS탈취제핑크",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "바스탈취제고체",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BAS탈취제미니",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바스탈취제오렌지",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "BAS배수구클리너",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바스초강력탈취제",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "BAS초강력탈취제",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "샬랑드파리내돈내산",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "살랑드파리모공",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "살랑드파리팩트",
+   "kw": "안국건강나이트버닝",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "샬랑드파리팩트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메디라보엑소좀",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "메디라보내돈내산",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "메디라보아크엑소좀레이저크림",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "메디라보엑소좀크림",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "아크엑소좀",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "쿠민착즙기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "래디웰센시티브",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캘리그라피쇼핑몰",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캐논디지털인쇄기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인터넷문방구",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주보인쇄기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "리소프린터",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오키프린트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오키프린터토너",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인스만들기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "칼라크라프트지",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "레디선크림",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "오이쇼브라렛",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "손발온정",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "더치커피액상",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더치커피판매",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜드브루디스펜서",
+   "kw": "잔티움버닝",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "카페유통",
+   "kw": "안국약품영양제",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "더치커피OEM",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜드프레소",
+   "kw": "AWONDER",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "콜드브루브랜드",
+   "kw": "안국루테인츄",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카페B2B",
+   "kw": "안국건강루테인츄",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유전자다이어트",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에버픽",
+   "kw": "신소재다이어트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자기전다이어트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이어트신소재",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수면앤다이어트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "푸응다이어트버닝",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "잔티젠성분",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "WCS잔티젠",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "명성보조배터리",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "진공컨트롤러",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보조뱃터리",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경종이컵제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일양약품눈건강간건강프로젝트",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "GRP-180",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "NXDS10I",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "터보펌프수리",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오일로터리진공펌프",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경종이컵인쇄",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "칫솔제작업체",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에드워드드라이펌프",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스털링냉동기",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "액화수소밸브",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "칫솔제조업체",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "펌프매입",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "진공오일펌프",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "액화질소발생기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스카이무선충전",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두백진공펌프",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "액체질소발생기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알카텔코리아",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케이브이에스",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "칫솔제조공장",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건식펌프",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "HIPACE80",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "TURBOPUMP",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알카텔진공펌프",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극저온냉동기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오리온펌프",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "CRYOMECH",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "극저온펌프",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "진공사",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "EDWARDSPUMP",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전립선눈",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "IH1000",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베쓰밤",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터메인유노스릴리브",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터메인유포스파티딜세린",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프로컷재단기",
    "vol": 10,
    "comp": "낮음",
    "hint": true
   },
   {
-   "kw": "까쥬스",
+   "kw": "프리미엄마그네슘135",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "CCA착즙",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메디트리몰",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "윙잇추천템",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "윙잇첫구매",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "윙잇입점",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "윙잇새벽배송",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "윙잇배송",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "윙잇랠리",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "써드베이커리",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "WINGEAT",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "발효가바",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "라면도매사이트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "불닭볶음면도매",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라면구매",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "농심신라면투움바",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신라면투움바컵라면편의점",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "신라면투움바파는곳",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "신라면툼바편의점",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "라면쇼핑몰",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가공식품도매",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "도시락도매",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "가바식품",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "과자구입",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "까망라면",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "과자쇼핑",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실간식구매",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "회사간식주문",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에스이에스유",
+   "kw": "봉봉프렌즈어린이화장품",
    "vol": 10,
    "comp": "낮음",
    "hint": true
   },
   {
-   "kw": "프레스티지스피큘",
+   "kw": "덱스탑선풍기",
    "vol": 10,
    "comp": "낮음",
    "hint": true
   },
   {
-   "kw": "니드닛",
+   "kw": "프라임수축필름",
    "vol": 10,
    "comp": "높음",
-   "hint": true
+   "hint": false
+  },
+  {
+   "kw": "비닐수축포장기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PVC수축비닐",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "OPS수축필름",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "용기수축필름",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수축포장비닐",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장품수축포장",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포장임가공",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수출필름",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PET수축필름",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "CRYOVAC",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수축포장필름",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비닐수축기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수축포장업체",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "압축포장비닐",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수축포장대행",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소포장업체",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용진공봉투",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
   }
  ]
 }
