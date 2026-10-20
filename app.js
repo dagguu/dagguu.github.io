@@ -18,6 +18,7 @@ var CAT_ORDER = [
   {k:"elec",  t:"가전/가구", em:"🔌", icon:"M4 5h16v11H4ZM9 20h6M12 16v4"},
   {k:"health",t:"건강식품", em:"💊", icon:"M10.5 20.5a5 5 0 0 1-7-7l6-6a5 5 0 0 1 7 7ZM7 10l7 7"},
   {k:"pet",   t:"반려동물", em:"🐾", icon:"M12 20c-3 0-6-1.5-6-4 0-2.5 3-5 6-5s6 2.5 6 5c0 2.5-3 4-6 4ZM5 10a1.5 2 0 1 0 0-.01M19 10a1.5 2 0 1 0 0-.01M9 6a1.5 2 0 1 0 0-.01M15 6a1.5 2 0 1 0 0-.01"},
+  {k:"fashion",t:"패션", em:"👗", icon:"M8 4l4 2 4-2 4 4-3 3v9H7v-9L4 8Z"},
   {k:"etc",   t:"티켓", em:"🎟️", icon:"M6 12h.01M12 12h.01M18 12h.01"}
 ];
 var CATS = [{k:"stay",t:"숙박",region:true,unit:"숙소",view:"숙소보기",pick:["풀빌라"]}];
@@ -377,7 +378,7 @@ function hrow(title,more,list,sub){
 }
 var HOME_MENU=[ /* 2026-10-20 시온님 요청: 두 줄 그대로 옆으로 밀어서 보기(슬라이드), 매거진·티켓·혜택 추가 */
   ["✨","오늘 오픈","#/list?cat=all&s=todayOpen","NEW"],["⏰","마감임박","#/list?cat=all&s=closing","HOT"],["📝","블로그","#/list?cat=all&s=open&ch=blog"],["📸","인스타그램","#/list?cat=all&s=open&ch=insta"],["🎬","숏폼","#/list?cat=all&s=open&ch=clip,reels,youtube"],["📚","매거진","#/mag"],["🎁","혜택","#/benefit"],["🧳","공짜여행","#/trip"],
-  ["🏨","숙박","#/list?cat=stay&s=open"],["👶","육아","#/list?cat=baby"],["💄","뷰티","#/list?cat=beauty"],["🧺","생활","#/list?cat=life"],["🔌","가전/가구","#/list?cat=elec"],["💊","건강식품","#/list?cat=health"],["🐾","반려동물","#/list?cat=pet"],["🎟️","티켓","#/list?cat=etc"]
+  ["🏨","숙박","#/list?cat=stay&s=open"],["👶","육아","#/list?cat=baby"],["💄","뷰티","#/list?cat=beauty"],["🧺","생활","#/list?cat=life"],["🔌","가전/가구","#/list?cat=elec"],["💊","건강식품","#/list?cat=health"],["🐾","반려동물","#/list?cat=pet"],["👗","패션","#/list?cat=fashion"],["🎟️","티켓","#/list?cat=etc"]
 ];
 /* 슬라이드 배너 위 한 줄 소식 (2026-10-18 시온님 요청). 지어낸 이용자 후기는 쓰지 않고 data.json 실제 숫자만 */
 function manW(v){ return v>=10000?Math.round(v/10000).toLocaleString()+"만원":v.toLocaleString()+"원"; }
@@ -776,7 +777,7 @@ document.addEventListener("click",function(e){
   render(); toast(pushOk()?"다시 모집하면 알림으로 알려드릴게요 🔔":"찜해 뒀어요. 찜 목록에서 다시 모집하는지 확인할 수 있어요");
 });
 /* 상세 페이지 아래 "함께 보면 좋은 특가" (골드박스), 2026-10-18 시온님 요청 */
-var REL_RE={stay:/여행|캐리어|파우치|세면|칫솔|치약|수건|목베개|보조배터리|선크림|선스틱|우산|캠핑|텀블러|슬리퍼|삼각대/,baby:/아기|유아|기저귀|물티슈|분유|이유식|젖병|빨대컵|베이비|키즈/,beauty:/크림|세럼|앰플|토너|선크림|선스틱|샴푸|마스크|클렌징|로션|화장|립|쿠션|바디/,health:/식품|커피|과자|라면|견과|단백질|유산균|비타민|우유|생수|햇반|즉석|만두|김치|오메가|홍삼|차 /,pet:/사료|간식|고양이|강아지|반려|배변|모래|펫/,life:/세제|휴지|화장지|물티슈|청소|주방|수세미|섬유유연제|건전지|수납|타월|탈취/,elec:/충전|이어폰|청소기|가습기|선풍기|전기|블루투스|케이블|모니터|에어|드라이어/};
+var REL_RE={fashion:/양말|장갑|목도리|머플러|모자|비니|가방|지갑|벨트|슬리퍼|운동화|티셔츠|니트|레깅스|패딩|안경|선글라스/,stay:/여행|캐리어|파우치|세면|칫솔|치약|수건|목베개|보조배터리|선크림|선스틱|우산|캠핑|텀블러|슬리퍼|삼각대/,baby:/아기|유아|기저귀|물티슈|분유|이유식|젖병|빨대컵|베이비|키즈/,beauty:/크림|세럼|앰플|토너|선크림|선스틱|샴푸|마스크|클렌징|로션|화장|립|쿠션|바디/,health:/식품|커피|과자|라면|견과|단백질|유산균|비타민|우유|생수|햇반|즉석|만두|김치|오메가|홍삼|차 /,pet:/사료|간식|고양이|강아지|반려|배변|모래|펫/,life:/세제|휴지|화장지|물티슈|청소|주방|수세미|섬유유연제|건전지|수납|타월|탈취/,elec:/충전|이어폰|청소기|가습기|선풍기|전기|블루투스|케이블|모니터|에어|드라이어/};
 function relDeals(it){
   var c=catOf(it), re=REL_RE[c]||REL_RE[c==="food"?"health":"life"], pool=(c==="baby"?babyDeals():[]).concat(liveGold()), seen={}, hit=[], rest=[];
   pool.forEach(function(x){ var k=(x.name||"").slice(0,14); if(seen[k]||!safeUrl(x.u)) return; seen[k]=1; (re&&re.test(x.name||"")?hit:rest).push(x); });
@@ -1602,7 +1603,7 @@ function prefPopup(){
   if(document.querySelector(".modal")) return;
   ls("dakku-want-asked","1");
   var pick={regions:[],ages:[]}, step=1;
-  var CHOICES=[["stay","🏨","숙박 체험단"],["baby","👶","육아 체험단"],["life","🧺","생활용품"],["beauty","💄","뷰티제품"],["elec","🔌","가전/가구"],["health","💊","건강식품"],["pet","🐾","반려동물"],["etc","🎟️","티켓"]];
+  var CHOICES=[["stay","🏨","숙박 체험단"],["baby","👶","육아 체험단"],["life","🧺","생활용품"],["beauty","💄","뷰티제품"],["elec","🔌","가전/가구"],["health","💊","건강식품"],["pet","🐾","반려동물"],["fashion","👗","패션"],["etc","🎟️","티켓"]];
   var wrap=document.createElement("div"); wrap.className="modal"; wrap.setAttribute("role","dialog"); wrap.setAttribute("aria-modal","true"); wrap.setAttribute("aria-label","기다리는 체험단 선택");
   function head(t,sub){ return '<button class="mx" data-m="x" aria-label="닫기">'+ico(I.x)+'</button><div class="mlogo">'+logoSvg(40)+'</div><h2>'+t+'</h2><p>'+sub+'</p>'; }
   function draw(){

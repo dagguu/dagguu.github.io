@@ -21,8 +21,8 @@ TODAY = NOW.strftime("%Y-%m-%d")
 d = json.load(open(os.path.join(ROOT, "data.json"), encoding="utf-8"))
 e = lambda s: html.escape(str(s or ""), quote=True)
 
-CATN = {"stay": "숙박", "baby": "육아", "beauty": "뷰티", "life": "생활", "elec": "가전/가구", "health": "건강식품", "pet": "반려동물", "etc": "티켓"}
-CATF = {"stay": "stay", "baby": "baby", "beauty": "beauty", "life": "life", "elec": "elec", "health": "food", "pet": "pet", "etc": "etc"}
+CATN = {"stay": "숙박", "baby": "육아", "beauty": "뷰티", "life": "생활", "elec": "가전/가구", "health": "건강식품", "pet": "반려동물", "fashion": "패션", "etc": "티켓"}
+CATF = {"stay": "stay", "baby": "baby", "beauty": "beauty", "life": "life", "elec": "elec", "health": "food", "pet": "pet", "fashion": "fashion", "etc": "etc"}
 CHN = {"blog": "블로그", "clip": "클립", "insta": "인스타그램", "reels": "릴스", "youtube": "유튜브", "tiktok": "틱톡"}
 BAD_SIGUN = {"중구", "동구", "서구", "남구", "북구", "부산진구"}
 
