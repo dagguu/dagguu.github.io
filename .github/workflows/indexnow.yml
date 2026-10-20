@@ -1,0 +1,20 @@
+name: 검색엔진에 새 페이지 알리기 (IndexNow)
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths: ["sitemap.xml"]
+  schedule:
+    - cron: "17 * * * *"   # 매시 17분 (Actions 가 만든 커밋은 push 트리거가 안 돼서 함께 돌림)
+permissions: { contents: write }
+concurrency: { group: indexnow, cancel-in-progress: false }
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/indexnow.py
+      - run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add scripts/indexnow_sent.json && git commit -qm "IndexNow 보낸 주소 기록" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
