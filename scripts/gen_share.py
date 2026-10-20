@@ -23,7 +23,22 @@ e = lambda s: html.escape(str(s or ""), quote=True)
 
 CATN = {"stay": "숙박", "baby": "육아", "beauty": "뷰티", "life": "생활", "elec": "가전/가구", "health": "건강식품", "pet": "반려동물", "fashion": "패션", "etc": "티켓"}
 CATF = {"stay": "stay", "baby": "baby", "beauty": "beauty", "life": "life", "elec": "elec", "health": "food", "pet": "pet", "fashion": "fashion", "etc": "etc"}
-CHN = {"blog": "블로그", "clip": "클립", "insta": "인스타그램", "reels": "릴스", "youtube": "유튜브", "tiktok": "틱톡"}
+CHN = {"blog": "블로그", "clip": "클립", "insta": "인스타그램", "reels": "릴스", "youtube": "유튜브", "tiktok": "틱톡", "cafe": "맘카페",
+       "coupang": "쿠팡 리뷰", "musinsa": "무신사 후기", "nshop": "네이버 구매평", "ohou": "오늘의집 리뷰", "olive": "올리브영 리뷰"}
+PLAT_CH = ["coupang", "musinsa", "nshop", "ohou", "olive"]
+def plat_of(it):
+    b = str(it.get("benefit") or "") + " " + str(it.get("name") or ""); o = []
+    if it.get("source") == "무신사" or re.search(r"무신사\s*체험단|무신사\s*(후기|리뷰)", b): o.append("musinsa")
+    if re.search(r"쿠팡\s*(구매평|리뷰|포토\s*리뷰|상품평)|쿠팡리뷰", b): o.append("coupang")
+    if re.search(r"네이버\s*(구매평|쇼핑\s*리뷰|스토어\s*리뷰)|스마트\s*스토어\s*(구매평|리뷰)", b): o.append("nshop")
+    if re.search(r"오늘의집\s*(구매평|리뷰)|오늘의집\+", b): o.append("ohou")
+    if re.search(r"올리브영\s*(구매평|리뷰)", b): o.append("olive")
+    for x in (it.get("ch") or []):
+        if x in PLAT_CH and x not in o: o.append(x)
+    return o
+def ch_of(it):
+    c = [x for x in (it.get("ch") or []) if x != "review" and x not in PLAT_CH]; pl = plat_of(it)
+    return c + pl
 BAD_SIGUN = {"중구", "동구", "서구", "남구", "북구", "부산진구"}
 
 GA = '<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var me=0;try{var q=location.search;if(/[?&]me=1/.test(q))localStorage.setItem("dakku-me","1");if(/[?&]me=0/.test(q))localStorage.removeItem("dakku-me");me=localStorage.getItem("dakku-me")==="1";}catch(e){}window.DAKKU_ME=me;if(me){window["ga-disable-G-NK2TCS1QHH"]=true;return;}var s=document.createElement("script");s.async=1;s.src="https://www.googletagmanager.com/gtag/js?id=G-NK2TCS1QHH";document.head.appendChild(s);gtag("js",new Date());gtag("config","G-NK2TCS1QHH");(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","yzkdp7btul");})();</script>'  # 구글 애널리틱스·클래리티(2026-10-18), ?me=1 로 들어온 기기(시온님)는 안 셈
@@ -199,7 +214,7 @@ for it in items:
     iid = it["id"]; cat = it.get("cat") or "stay"; cn = CATN.get(cat, "체험단"); op = is_open(it)
     name = it.get("name") or ""; sg = sigun(it); img = img_of(it)
     view = url(it.get("infUrl")) or url(it.get("viewUrl")); apply_ = url(it.get("refUrl")) or url(it.get("applyUrl"))
-    ch = [CHN[c] for c in (it.get("ch") or []) if c in CHN]
+    ch = [CHN[c] for c in ch_of(it) if c in CHN]
     title = f"{name} {cn} 체험단" + (f" · {mmdd(it['end'])}까지 모집" if it.get("end") and op else (" (모집 마감)" if not op else "")) + " | 다꾸체험단"
     bits = []
     if it.get("benefit"): bits.append(str(it["benefit"])[:70])
@@ -223,12 +238,16 @@ for it in items:
     if it.get("source"): rows.append(("신청 사이트", it["source"]))
     # 2026-10-19 시온님 요청: 공유 페이지(s/)를 앱 상세 화면과 같은 모양으로 (앱 style.css·simple.css 를 그대로 씀)
     CHL = {"blog": "블로그", "insta": "인스타", "clip": "클립", "reels": "릴스", "youtube": "유튜브", "tiktok": "틱톡", "cafe": "맘카페",
+           "coupang": "쿠팡 리뷰", "musinsa": "무신사 후기", "nshop": "네이버 구매평", "ohou": "오늘의집 리뷰", "olive": "올리브영 리뷰",
            "payback": "페이백", "review": "구매평", "premier": "프리미어 전용", "ret": "회수형"}
     pay = list(it.get("pay") or []); bn = str(it.get("benefit") or "")
     if "회수형" in bn and "ret" not in pay: pay.append("ret")
     if re.search("페이백|선결제", bn) and "payback" not in pay: pay.append("payback")
     if "구매평" in bn and "review" not in pay: pay.append("review")
-    chs = [c for c in (it.get("ch") or []) if c != "review"] or ([] if (it.get("ch") or pay) else ["blog"])
+    pl = plat_of(it)
+    if pl: pay = [x for x in pay if x != "review"]
+    chs = [c for c in (it.get("ch") or []) if c != "review" and c not in PLAT_CH]
+    chs = (chs + pl) if chs else (pl or ([] if (it.get("ch") or pay) else ["blog"]))
     badges = [x for x in pay if x in ("premier", "ret")] + [x for x in pay if x not in ("premier", "ret")] + chs
     badge_html = ('<div class="chbs">' + "".join(f'<span class="chb chb-{e(c)}">{e(CHL.get(c, c))}</span>' for c in badges) + '</div>') if badges else ""
     endd = it.get("end") or ""

@@ -212,7 +212,7 @@ function route(){
   state.focusT=(tab==="deals"&&qs.t)?qs.t:"";
   state.dq=(tab==="deals"&&qs.q)?qs.q:"";
   state.pq=(tab==="price"&&qs.q)?qs.q:"";
-  if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; else if(qs.cat) state.status="open"; if(!parts[1]){ state.q=""; state.chs=[]; state.themes=[]; state.types=[]; state.srcs=[]; } if(qs.src!==undefined) state.srcs=qs.src?qs.src.split(",").filter(Boolean):[]; if(qs.ty!==undefined) state.types=qs.ty.split(",").filter(function(x){ return FTYPES.some(function(t){ return t[0]===x; }); }); if(qs.th!==undefined) state.themes=qs.th.split(",").filter(function(x){ return THEMES.some(function(t){ return t[0]===x; }); }); if(qs.q!==undefined) state.q=qs.q; if(qs.ch!==undefined) state.chs=qs.ch.split(",").filter(function(c){ return /^(blog|insta|clip|reels|youtube|tiktok|cafe|payback|review)$/.test(c); }); if(qs.o&&SORTS_OK.indexOf(qs.o)>=0) state.sort=qs.o; if(qs.p!==undefined) state.pet=(qs.p==='dog'||qs.p==='cat')?qs.p:''; if(qs.r!==undefined) state.regions=qs.r?qs.r.split(",").filter(function(r){ return REGIONS.indexOf(r)>=0; }):[]; saveUi(); }
+  if(tab==="list"){ if(qs.cat) state.cat=qs.cat; if(qs.s) state.status=qs.s; else if(qs.cat) state.status="open"; if(!parts[1]){ state.q=""; state.chs=[]; state.themes=[]; state.types=[]; state.srcs=[]; } if(qs.src!==undefined) state.srcs=qs.src?qs.src.split(",").filter(Boolean):[]; if(qs.ty!==undefined) state.types=qs.ty.split(",").filter(function(x){ return FTYPES.some(function(t){ return t[0]===x; }); }); if(qs.th!==undefined) state.themes=qs.th.split(",").filter(function(x){ return THEMES.some(function(t){ return t[0]===x; }); }); if(qs.q!==undefined) state.q=qs.q; if(qs.ch!==undefined) state.chs=qs.ch.split(",").filter(function(c){ return /^(blog|insta|clip|reels|youtube|tiktok|cafe|payback|review|coupang|musinsa|nshop|ohou|olive)$/.test(c); }); if(qs.o&&SORTS_OK.indexOf(qs.o)>=0) state.sort=qs.o; if(qs.p!==undefined) state.pet=(qs.p==='dog'||qs.p==='cat')?qs.p:''; if(qs.r!==undefined) state.regions=qs.r?qs.r.split(",").filter(function(r){ return REGIONS.indexOf(r)>=0; }):[]; saveUi(); }
   render(); window.scrollTo(0,0); if(!state.loading) gaPage();
   if(state.focusT) focusToss();
   if(state.tab==="deals"&&state.dq){ setTimeout(function(){ var i=document.getElementById("dq"); if(i){ i.value=state.dq; filterDeals(state.dq); } },0); }
@@ -500,12 +500,23 @@ function listView(){
     : soonView(catMeta(state.cat)))+
   '</div>';
 }
-var CHN={payback:"💰 페이백",review:"⭐ 구매평",blog:"📝 블로그",insta:"📸 인스타그램",clip:"🎬 클립",reels:"🎞️ 릴스",youtube:"▶️ 유튜브",tiktok:"🎵 틱톡",cafe:"👩‍👧 맘카페"};
-var CHL={blog:"블로그",insta:"인스타",clip:"클립",reels:"릴스",youtube:"유튜브",tiktok:"틱톡",cafe:"맘카페",short:"숏폼",payback:"페이백",review:"구매평",premier:"프리미어 전용",ret:"회수형"};
-function chOf(it){ var c=it.ch; if(typeof c==="string") c=c?[c]:[]; if(!Array.isArray(c)) return ["blog"]; var o=c.filter(function(x){ return x!=="review"; }); return ((c.length||it.pay)&&!o.length)?[]:(o.length?o:["blog"]); }
+var CHN={payback:"💰 페이백",review:"⭐ 구매평",blog:"📝 블로그",insta:"📸 인스타그램",clip:"🎬 클립",reels:"🎞️ 릴스",youtube:"▶️ 유튜브",tiktok:"🎵 틱톡",cafe:"👩‍👧 맘카페",coupang:"🛒 쿠팡 리뷰",musinsa:"👕 무신사 후기",nshop:"🛍️ 네이버 구매평",ohou:"🏠 오늘의집 리뷰",olive:"💚 올리브영 리뷰"};
+var CHL={blog:"블로그",insta:"인스타",clip:"클립",reels:"릴스",youtube:"유튜브",tiktok:"틱톡",cafe:"맘카페",coupang:"쿠팡 리뷰",musinsa:"무신사 후기",nshop:"네이버 구매평",ohou:"오늘의집 리뷰",olive:"올리브영 리뷰",short:"숏폼",payback:"페이백",review:"구매평",premier:"프리미어 전용",ret:"회수형"};
+/* 리뷰를 남기는 쇼핑몰도 작성 채널로(2026-10-21 시온님 요청: 쿠팡·무신사 등). ch 에 직접 넣거나, 제공내역·모집 사이트 글자로 판단 */
+var PLAT_CH=["coupang","musinsa","nshop","ohou","olive"];
+function platOf(it){ var b=String(it.benefit||"")+" "+String(it.name||""), o=[];
+  if(it.source==="무신사"||/무신사\s*체험단|무신사\s*(후기|리뷰)/.test(b)) o.push("musinsa");
+  if(/쿠팡\s*(구매평|리뷰|포토\s*리뷰|상품평)|쿠팡리뷰/.test(b)) o.push("coupang");
+  if(/네이버\s*(구매평|쇼핑\s*리뷰|스토어\s*리뷰)|스마트\s*스토어\s*(구매평|리뷰)/.test(b)) o.push("nshop");
+  if(/오늘의집\s*(구매평|리뷰)|오늘의집\+/.test(b)) o.push("ohou");
+  if(/올리브영\s*(구매평|리뷰)/.test(b)) o.push("olive");
+  (Array.isArray(it.ch)?it.ch:[]).forEach(function(x){ if(PLAT_CH.indexOf(x)>=0&&o.indexOf(x)<0) o.push(x); });
+  return o; }
+function chOf(it){ var c=it.ch; if(typeof c==="string") c=c?[c]:[]; if(!Array.isArray(c)) c=[]; var pl=platOf(it), o=c.filter(function(x){ return x!=="review"&&PLAT_CH.indexOf(x)<0; });
+  if(o.length) return o.concat(pl); if(pl.length) return pl; return ((c.length||it.pay)?[]:["blog"]); }
 function payOf(it){ var p=(it.pay||[]).slice(), b=it.benefit||""; if(/회수형/.test(b)&&p.indexOf("ret")<0) p.push("ret"); if(/페이백|선결제/.test(b)&&p.indexOf("payback")<0) p.push("payback"); if((/구매평/.test(b)||(it.ch||[]).indexOf("review")>=0)&&p.indexOf("review")<0) p.push("review"); return p; }
 function chBadge(c){ return '<span class="chb chb-'+c+'">'+(CHL[c]||c)+'</span>'; }
-function chBadges(it){ var P=payOf(it), O=["premier","ret"], b=P.filter(function(x){ return O.indexOf(x)>=0; }).concat(P.filter(function(x){ return O.indexOf(x)<0; })).concat(chOf(it)); return b.length?'<div class="chbs">'+b.map(chBadge).join("")+'</div>':''; }
+function chBadges(it){ var P=payOf(it).filter(function(x){ return x!=="review"||!platOf(it).length; }), O=["premier","ret"], b=P.filter(function(x){ return O.indexOf(x)>=0; }).concat(P.filter(function(x){ return O.indexOf(x)<0; })).concat(chOf(it)); return b.length?'<div class="chbs">'+b.map(chBadge).join("")+'</div>':''; }
 function chChecks(){
   var all=!state.chs.length;
   return '<span class="rgl">매체</span>'+[["","전체"],["blog","블로그"],["insta","인스타"],["clip","클립"],["reels","릴스"],["youtube","유튜브"],["payback","페이백"],["review","구매평"]].map(function(c){
@@ -517,7 +528,7 @@ function paintChs(){ var b=document.getElementById("chbox"); if(b) b.innerHTML=c
 
 /* 필터 시트(2026-10-19 시온님 요청: 스타일씨처럼 아래에서 올라오는 필터 — 체험단 유형·작성 채널·카테고리·지역·테마) */
 var FTYPES=[["give","📦","제공형"],["payback","💳","페이백형"],["pr","🧾","페이백 + 구매평"],["review","📝","구매평"],["ret","🔁","회수형"]];
-var FCH=[["blog","📝","네이버 블로그"],["clip","🎬","네이버 클립"],["insta","📸","인스타그램"],["reels","🎞️","인스타그램 릴스"],["youtube","▶️","유튜브 Shorts"],["tiktok","🎵","틱톡"],["cafe","👩‍👧","맘카페"]];
+var FCH=[["blog","📝","네이버 블로그"],["clip","🎬","네이버 클립"],["insta","📸","인스타그램"],["reels","🎞️","인스타그램 릴스"],["youtube","▶️","유튜브 Shorts"],["tiktok","🎵","틱톡"],["cafe","👩‍👧","맘카페"],["coupang","🛒","쿠팡 리뷰"],["musinsa","👕","무신사 후기"],["nshop","🛍️","네이버 구매평"],["ohou","🏠","오늘의집 리뷰"],["olive","💚","올리브영 리뷰"]];
 var RGEM={"서울":"🏙️","경기":"🌳","인천":"✈️","강원":"⛰️","충청":"🌾","전라":"🍃","경상":"🏯","부산":"🌊","제주":"🍊"};
 function typeOk(it,k){ var p=payOf(it), pb=p.indexOf("payback")>=0, rv=p.indexOf("review")>=0;
   if(k==="give") return !pb&&!rv; if(k==="payback") return pb; if(k==="pr") return pb&&rv; if(k==="review") return rv; if(k==="ret") return p.indexOf("ret")>=0; return false; }
@@ -724,7 +735,7 @@ function recoSection(title){
 /* 상세 페이지 남은 시간·말풍선(2026-10-18 시온님 요청, 체험단 앱 참고): 사진 위 "N일 HH:MM:SS 남음" → 스크롤해 사진이 지나가면 아래 버튼 줄 위로 옮겨 붙음(dcdfix). 매체 말풍선은 3초 뒤 사라짐, 공유 버튼 "친구에게도 공유하기"는 계속. 모집 기간 점 깜박임 */
 function dcdMs(end){ var d=parseDate(end); return d?(d.getTime()+864e5-Date.now()):0; }
 function dcdText(end){ var ms=Math.max(0,dcdMs(end)), dd=Math.floor(ms/864e5); return (dd>0?dd+"일 ":"")+clock(ms-dd*864e5); }
-var CHTIP={blog:"네이버 블로그",clip:"네이버 클립",insta:"인스타그램 피드",reels:"인스타그램 릴스",youtube:"유튜브",tiktok:"틱톡",cafe:"맘카페"};
+var CHTIP={coupang:"쿠팡 리뷰",musinsa:"무신사 후기",nshop:"네이버 쇼핑 구매평",ohou:"오늘의집 리뷰",olive:"올리브영 리뷰",blog:"네이버 블로그",clip:"네이버 클립",insta:"인스타그램 피드",reels:"인스타그램 릴스",youtube:"유튜브",tiktok:"틱톡",cafe:"맘카페"};
 function chTip(it){ var c=chOf(it).filter(function(x){ return CHTIP[x]; }).map(function(x){ return CHTIP[x]; }), P=payOf(it);
   if(c.length) return c.slice(0,3).join("·")+"에 작성해야 하는 체험단이에요."+(P.indexOf("review")>=0?" 구매평도 남겨요.":"");
   if(P.indexOf("review")>=0) return "구매평을 남기는 체험단이에요."; return ""; }
