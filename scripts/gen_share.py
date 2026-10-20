@@ -344,13 +344,15 @@ import sys; sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from guides import GUIDES
 gdir = reset("g"); ghubs = []
 blog_open = sort_open([it for it in open_items if "blog" in (it.get("ch") or [])])
-GCSS = "<style>.art p,.art li{font-size:16px;line-height:1.8;word-break:keep-all}.art h2{margin-top:34px}.art ol,.art ul{padding-left:22px}.art li{margin:8px 0}.meta{color:#999;font-size:12.5px}.art p.go{margin:4px 0 14px}.art a.go,.art p.go a{display:inline-block;margin:4px 12px 0 0;font-size:15px;font-weight:700;color:#5b3fd6;text-decoration:none}.art a.go:hover,.art p.go a:hover{text-decoration:underline}</style>"
+GCSS = "<style>.art p,.art li{font-size:16px;line-height:1.8;word-break:keep-all}.art h2{margin-top:34px}.art ol,.art ul{padding-left:22px}.art li{margin:8px 0}.meta{color:#999;font-size:12.5px}.art p.go{margin:4px 0 14px}.art a.go,.art p.go a{display:inline-block;margin:4px 12px 0 0;font-size:15px;font-weight:700;color:#5b3fd6;text-decoration:none}.art a.go:hover,.art p.go a:hover{text-decoration:underline}.gnav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:6px 0 4px}.gnav a{display:inline-flex;align-items:center;gap:4px;font-size:14px;font-weight:600;color:#444;text-decoration:none;border:1px solid #e5e5e8;border-radius:999px;padding:7px 14px;background:#fff}.gnav a:hover{border-color:#5b3fd6;color:#5b3fd6}.gnav.bot{margin:26px 0 8px}</style>"
+GBACK = "if(document.referrer.indexOf(location.origin)===0&&history.length>1){history.back();return false}"
 for g in GUIDES:
     p = f"/g/{g['slug']}.html"
     bc, bld = crumbs([("홈", "/"), ("체험단 가이드", "/g/"), (g["title"], None)])
     art = {"@context": "https://schema.org", "@type": "Article", "headline": g["title"], "description": g["desc"], "datePublished": g["date"], "dateModified": g["date"],
            "author": {"@type": "Organization", "name": "다꾸체험단"}, "publisher": {"@type": "Organization", "name": "다꾸체험단"}, "mainEntityOfPage": SITE + p}
-    body = GCSS + bc + f"<h1>{e(g['title'])}</h1><p class='meta'>다꾸체험단 · {e(g['date'])}</p><div class='art'>{g['body']}</div>"
+    gnav = lambda c: f'<nav class="gnav{c}"><a href="/g/" onclick="{GBACK}">‹ 뒤로가기</a><a href="/g/">☰ 목록보기</a></nav>'
+    body = GCSS + bc + gnav("") + f"<h1>{e(g['title'])}</h1><p class='meta'>다꾸체험단 · {e(g['date'])}</p><div class='art'>{g['body']}</div>" + gnav(" bot")
     body += f"<h2>지금 모집 중인 블로그 체험단 ({len(blog_open)}곳)</h2><ul class='list'>" + "".join(li(x) for x in blog_open[:6]) + "</ul>"
     body += f'<div class="btns"><a class="btn pri" href="/c/blog.html">블로그 체험단 전체 보기</a><a class="btn ghost" href="/">다꾸 앱에서 오늘 오픈 체험단 알림 받기</a></div>'
     body += '<div class="tags">' + "".join(f'<a href="{e(u)}">{e(n)}</a>' for n, u in g.get("related", [])) + "</div>"
