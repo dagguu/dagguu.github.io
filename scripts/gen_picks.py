@@ -106,7 +106,7 @@ def build(path):
 '''
     os.makedirs(os.path.join(ROOT, "p"), exist_ok=True)
     open(os.path.join(ROOT, "p", slug + ".html"), "w", encoding="utf-8").write(out)
-    return slug, title
+    return {"slug": slug, "t": P["h1"][0], "h": " ".join(P["h1"]), "d": desc, "date": date, "img": secs[0]["items"][0]["img"], "title": title}
 
 def more_links(slug):
     L = []
@@ -117,5 +117,21 @@ def more_links(slug):
 
 if __name__ == "__main__":
     done = [build(f) for f in sorted(glob.glob(os.path.join(ROOT, "scripts", "picks_*.json")))]
-    json.dump([{"slug": s, "title": t} for s, t in done], open(os.path.join(ROOT, "p", "list.json"), "w", encoding="utf-8"), ensure_ascii=False)
-    print("추천 모음 페이지:", ", ".join(s for s, _ in done))
+    done.sort(key=lambda x: x["date"], reverse=True)
+    json.dump(done, open(os.path.join(ROOT, "p", "list.json"), "w", encoding="utf-8"), ensure_ascii=False)
+    lis = "".join(f'<a class="pc" href="/p/{e(x["slug"])}.html" style="flex-direction:row;align-items:center;gap:12px;padding:10px"><img src="{e(x["img"])}" alt="" loading="lazy" referrerpolicy="no-referrer" style="width:72px;height:72px;border-radius:12px;object-fit:cover"><span><b style="display:block;font-size:15px;margin-bottom:4px">{e(x["h"])}</b><span style="font-size:13px;color:#6b6a7a;line-height:1.5">{e(x["d"])}</span></span></a>' for x in done)
+    idx = f'''<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">{GA}
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>다꾸 추천 모음 · 선물·육아템·생활템 고르는 법 | 다꾸체험단</title><meta name="description" content="출산선물처럼 고민되는 쇼핑을 주제별로 정리한 다꾸체험단 추천 모음이에요. 고르는 기준과 예산별 상품을 함께 볼 수 있어요."><link rel="canonical" href="{SITE}/p/">
+<link rel="icon" href="/icons/icon-192.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>{CSS}.lst{{display:flex;flex-direction:column;gap:10px;margin-top:18px}}</style></head><body><div class="w">
+<p class="disc">이 페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+<header><a class="logo" href="/">다꾸<i>체험단</i></a><a class="app" href="/#/mag">다꾸 매거진 ›</a></header>
+<section class="hero"><h1>다꾸 추천 모음</h1><p class="lead">고민되는 쇼핑을 주제별로 정리했어요. 고르는 기준을 먼저 보고 상품을 둘러보세요.</p></section>
+<div class="lst">{lis}</div>
+<footer><a href="/g/">체험단 가이드 보기</a> · <a href="/">다꾸체험단 홈</a></footer>
+</div></body></html>
+'''
+    open(os.path.join(ROOT, "p", "index.html"), "w", encoding="utf-8").write(idx)
+    print("추천 모음 페이지:", ", ".join(x["slug"] for x in done))

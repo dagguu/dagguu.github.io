@@ -200,11 +200,12 @@ document.addEventListener("click",function(e){
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
-  if(!/^(home|list|fav|benefit|shop|deals|reporter|contact|item|my|privacy|price|event|trip|edu)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|benefit|shop|mag|deals|reporter|contact|item|my|privacy|price|event|trip|edu)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
   if(tab==="event") state.evAbr=qs.t==="abroad";
   if(tab==="trip") state.tq=qs.q||"";
+  if(tab==="mag") state.magT=qs.t==="p"?"p":"g";
   state.focusT=(tab==="deals"&&qs.t)?qs.t:"";
   state.dq=(tab==="deals"&&qs.q)?qs.q:"";
   state.pq=(tab==="price"&&qs.q)?qs.q:"";
@@ -231,6 +232,7 @@ function render(){
   else if(state.tab==="fav") v.innerHTML=favView();
   else if(state.tab==="benefit") v.innerHTML=benefitView();
   else if(state.tab==="shop") v.innerHTML=shopView();
+  else if(state.tab==="mag") v.innerHTML=magView();
   else if(state.tab==="deals") v.innerHTML=dealsView();
   else if(state.tab==="reporter") v.innerHTML=reporterView();
   else if(state.tab==="contact") v.innerHTML=contactView();
@@ -860,11 +862,30 @@ function eventView(){
 }
 /* 체험단 가이드 글(g/, gen_share.py 가 g/list.json 생성) — 홈·혜택 탭에 목록 (2026-10-18) */
 var GUIDES=null;
+/* 다꾸 매거진(2026-10-20 시온님 "게시판 볼 곳 하나"): 체험단 가이드(g/list.json)와 추천 모음(p/list.json)은 따로 관리하고 #/mag 한 화면에서 탭으로 본다 */
+var PICKS=null;
+function magLoad(cb){
+  var n=0, done=function(){ if(++n===2) cb(); };
+  if(GUIDES) done(); else fetch("/g/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ GUIDES=L||[]; done(); }).catch(function(){ GUIDES=[]; done(); });
+  if(PICKS) done(); else fetch("/p/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ PICKS=L||[]; done(); }).catch(function(){ PICKS=[]; done(); });
+}
+function guideRow(g){ return '<a class="gdi" href="/g/'+esc(g.slug)+'.html"><b>'+esc(g.t)+'</b><small>'+esc(g.d)+'</small></a>'; }
+function pickRow(x){ return '<a class="gdi pki" href="/p/'+esc(x.slug)+'.html">'+(safeUrl(x.img)?'<img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<span><b>'+esc(x.h||x.t)+'</b><small>'+esc(x.d)+'</small></span></a>'; }
 function guideFill(){
-  var B=document.querySelectorAll("[data-guides]"); if(!B.length) return;
-  var paint=function(){ var h=GUIDES&&GUIDES.length?'<section class="gdbox"><div class="gdh"><b>체험단 가이드</b><a href="/g/">전체 ›</a></div>'+GUIDES.slice(0,4).map(function(g){ return '<a class="gdi" href="/g/'+esc(g.slug)+'.html"><b>'+esc(g.t)+'</b><small>'+esc(g.d)+'</small></a>'; }).join("")+'</section>':""; [].forEach.call(B,function(b){ b.innerHTML=h; }); };
-  if(GUIDES) return paint();
-  fetch("/g/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ GUIDES=L||[]; paint(); }).catch(function(){ GUIDES=[]; });
+  var B=document.querySelectorAll("[data-guides]"), M=document.getElementById("magbody"); if(!B.length&&!M) return;
+  magLoad(function(){
+    var h=(GUIDES.length?'<section class="gdbox"><div class="gdh"><b>체험단 가이드</b><a href="#/mag">전체 ›</a></div>'+GUIDES.slice(0,3).map(guideRow).join("")+'</section>':"")+
+      (PICKS.length?'<section class="gdbox"><div class="gdh"><b>다꾸 추천 모음</b><a href="#/mag?t=p">전체 ›</a></div>'+PICKS.slice(0,3).map(pickRow).join("")+'</section>':"");
+    [].forEach.call(B,function(b){ b.innerHTML=h; });
+    if(M){ var L=state.magT==="p"?PICKS:GUIDES; M.innerHTML=L.length?'<div class="maglist">'+L.map(state.magT==="p"?pickRow:guideRow).join("")+'</div>':'<div class="empty">곧 새 글이 올라와요</div>'; }
+  });
+}
+function magView(){
+  var t=state.magT==="p"?"p":"g";
+  return '<div class="pg mag"><h1>다꾸 매거진</h1><p class="pgsub">체험단 가이드와 다꾸 추천 모음을 모아 봤어요</p>'+
+    '<div class="magtabs"><a href="#/mag"'+(t==="g"?' class="on"':'')+'>체험단 가이드</a><a href="#/mag?t=p"'+(t==="p"?' class="on"':'')+'>추천 모음</a></div>'+
+    (t==="p"?'<p class="magnote">추천 모음의 상품 링크는 쿠팡 파트너스 활동으로 수수료를 받을 수 있어요.</p>':'')+
+    '<div id="magbody"><div class="empty">불러오는 중…</div></div></div>';
 }
 function benefitView(){
   var h='<div class="pg"><h1>혜택 🎁</h1><p class="pgsub">룰렛 · 이벤트 · 기자단 모집을 한곳에 모았어요</p>'+slideBanners(true);
