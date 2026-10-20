@@ -1,32 +1,33 @@
 {
- "updated": "2026-10-20 14:40",
+ "updated": "2026-10-20 16:02",
  "hints": [
-  "추천템",
-  "살림템",
-  "꿀템",
-  "육아템",
-  "생활용품추천",
-  "가성비템",
-  "자취템",
-  "주방템",
-  "살림꿀템",
-  "육아꿀템",
-  "다이소꿀템",
-  "신혼살림템",
-  "아기용품추천",
-  "겨울필수템",
-  "로켓배송추천"
+  "출산선물",
+  "출산선물추천",
+  "신생아선물",
+  "임신축하선물",
+  "아기선물",
+  "출산선물세트",
+  "신생아출산선물",
+  "친구출산선물",
+  "조리원선물",
+  "배냇저고리선물세트"
  ],
  "rows": [
   {
-   "kw": "계산기",
-   "vol": 1103200,
+   "kw": "음식물처리기",
+   "vol": 160200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "음식물처리기",
-   "vol": 160200,
+   "kw": "마그네슘",
+   "vol": 123300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이노시톨",
+   "vol": 76400,
    "comp": "중간",
    "hint": false
   },
@@ -43,14 +44,56 @@
    "hint": false
   },
   {
-   "kw": "밥솥",
-   "vol": 44400,
+   "kw": "브라운체온계",
+   "vol": 49930,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "수납장",
-   "vol": 43240,
+   "kw": "바디필로우",
+   "vol": 45680,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "전기포트",
+   "vol": 45000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물",
+   "vol": 39730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃다발",
+   "vol": 37890,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "개업화분",
+   "vol": 37640,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "흑염소진액",
+   "vol": 34910,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "탈모샴푸",
+   "vol": 33520,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "양배추",
+   "vol": 32960,
    "comp": "중간",
    "hint": false
   },
@@ -61,14 +104,20 @@
    "hint": false
   },
   {
-   "kw": "미니냉장고",
-   "vol": 31300,
-   "comp": "중간",
+   "kw": "엽산",
+   "vol": 32600,
+   "comp": "높음",
    "hint": false
   },
   {
    "kw": "아기띠",
    "vol": 30450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기옷",
+   "vol": 28740,
    "comp": "중간",
    "hint": false
   },
@@ -79,9 +128,15 @@
    "hint": false
   },
   {
-   "kw": "탈취제",
-   "vol": 26810,
+   "kw": "제철과일",
+   "vol": 26950,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "칼마디",
+   "vol": 26380,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -91,8 +146,14 @@
    "hint": false
   },
   {
-   "kw": "집들이선물추천",
-   "vol": 25240,
+   "kw": "임산부의날",
+   "vol": 24410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "과일선물세트",
+   "vol": 23930,
    "comp": "높음",
    "hint": false
   },
@@ -100,11 +161,11 @@
    "kw": "출산선물",
    "vol": 23110,
    "comp": "높음",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "전기밥솥",
-   "vol": 22910,
+   "kw": "여자속옷",
+   "vol": 23080,
    "comp": "중간",
    "hint": false
   },
@@ -115,26 +176,92 @@
    "hint": false
   },
   {
+   "kw": "체온계",
+   "vol": 21340,
+   "comp": "중간",
+   "hint": false
+  },
+  {
    "kw": "신생아가습기",
    "vol": 20080,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "소형냉장고",
-   "vol": 19300,
+   "kw": "부가부드래곤플라이",
+   "vol": 20080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기유산균",
+   "vol": 20030,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "음식물쓰레기통",
-   "vol": 19000,
+   "kw": "이노시톨효능",
+   "vol": 19950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "속옷",
+   "vol": 19950,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "음식물분쇄기",
-   "vol": 17890,
+   "kw": "애착인형",
+   "vol": 19880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브라",
+   "vol": 19030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "배냇저고리",
+   "vol": 18530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수유쿠션",
+   "vol": 18460,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "바디드라이어",
+   "vol": 18100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "늙은호박",
+   "vol": 16810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "낙산균",
+   "vol": 16430,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기욕조",
+   "vol": 16040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신주수계산기",
+   "vol": 15780,
    "comp": "중간",
    "hint": false
   },
@@ -145,14 +272,50 @@
    "hint": false
   },
   {
+   "kw": "신생아옷",
+   "vol": 14720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신주차계산기",
+   "vol": 14570,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
    "kw": "젖병세척기",
    "vol": 14560,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "차량용냉장고",
-   "vol": 12870,
+   "kw": "수유브라",
+   "vol": 14110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "튼살크림",
+   "vol": 12950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "칼마디영양제",
+   "vol": 12390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "역방쿠",
+   "vol": 12250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임산부영양제",
+   "vol": 11870,
    "comp": "중간",
    "hint": false
   },
@@ -160,54 +323,108 @@
    "kw": "신생아선물",
    "vol": 11750,
    "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "칼슘영양제",
+   "vol": 11670,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "정수",
+   "kw": "환도선다",
    "vol": 11660,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "포대기",
-   "vol": 10790,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기포대기",
-   "vol": 10570,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "밀폐용기",
-   "vol": 10440,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "현관CCTV",
-   "vol": 10230,
+   "kw": "임산부선물",
+   "vol": 11090,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유리병",
-   "vol": 9950,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아아기띠",
-   "vol": 9230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "음식물쓰레기처리기",
-   "vol": 8480,
+   "kw": "역류방지쿠션",
+   "vol": 10840,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임산부비타민D",
+   "vol": 10810,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "엽산효능",
+   "vol": 10600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신기간",
+   "vol": 10520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성속옷",
+   "vol": 10200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "접이식욕조",
+   "vol": 10160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "공룡종류",
+   "vol": 10080,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임산부",
+   "vol": 9780,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "란시노라놀린크림",
+   "vol": 9200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "배우자출산휴가",
+   "vol": 9010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시크릿쥬쥬",
+   "vol": 8990,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "얼굴붓기빼는법",
+   "vol": 8810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코엑스베이비페어",
+   "vol": 8500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기선물",
+   "vol": 8470,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -220,6 +437,24 @@
    "kw": "임신축하선물",
    "vol": 8280,
    "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "대구베이비페어",
+   "vol": 8250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "칼슘마그네슘",
+   "vol": 8240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈유산균",
+   "vol": 8140,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -229,15 +464,45 @@
    "hint": false
   },
   {
-   "kw": "다이소꿀템",
-   "vol": 7860,
-   "comp": "중간",
-   "hint": true
+   "kw": "아기돌선물",
+   "vol": 8040,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "핸디청소기",
-   "vol": 7820,
+   "kw": "브라운체온계6525",
+   "vol": 8040,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "추석과일선물세트",
+   "vol": 8010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신주수계산",
+   "vol": 7880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "양파즙",
+   "vol": 7720,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "면역력높이는음식",
+   "vol": 7650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "힙시트",
+   "vol": 7620,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -253,57 +518,129 @@
    "hint": false
   },
   {
-   "kw": "음식물처리기추천",
-   "vol": 7190,
-   "comp": "중간",
+   "kw": "브라렛",
+   "vol": 7410,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홈캠추천",
+   "kw": "임산부옷",
+   "vol": 7340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아유산균",
+   "vol": 7250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이도서관",
+   "vol": 7120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미오이노시톨",
    "vol": 7040,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "화장품냉장고",
+   "kw": "브래지어",
    "vol": 7020,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "음쓰처리기",
-   "vol": 6810,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미니밥솥",
-   "vol": 6440,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미니압력밥솥",
-   "vol": 6120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "음식물처리기분쇄",
-   "vol": 6010,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "줄즈",
-   "vol": 5840,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "싱크대음식물분쇄기",
-   "vol": 5780,
+   "kw": "활성엽산",
+   "vol": 6830,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임산부바디필로우",
+   "vol": 6700,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "호박즙",
+   "vol": 6590,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "전래동화",
+   "vol": 6510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기비타민D",
+   "vol": 6380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부속옷",
+   "vol": 6380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기장난감",
+   "vol": 6370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "돌선물",
+   "vol": 6330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "100일선물",
+   "vol": 6300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부튼살크림",
+   "vol": 6180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임산부샴푸",
+   "vol": 6060,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임산부단축근무",
+   "vol": 5980,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아빠생일선물",
+   "vol": 5880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장어즙",
+   "vol": 5850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이집생일선물",
+   "vol": 5810,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -313,32 +650,80 @@
    "hint": false
   },
   {
-   "kw": "TAPO",
-   "vol": 5620,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미니청소기",
-   "vol": 5440,
+   "kw": "라놀린크림",
+   "vol": 5730,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "의자등받이",
-   "vol": 4990,
+   "kw": "어린이유산균",
+   "vol": 5690,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "공병",
-   "vol": 4970,
+   "kw": "사과선물세트",
+   "vol": 5590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "락앤락몰",
-   "vol": 4970,
+   "kw": "바디드라이기",
+   "vol": 5520,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아욕조",
+   "vol": 5480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "드시모네베이비스텝",
+   "vol": 5470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아초점책",
+   "vol": 5410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "란시노크림",
+   "vol": 5260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아비타민D",
+   "vol": 5130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "병문안선물",
+   "vol": 5070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "늙은호박즙",
+   "vol": 5050,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임산부브라",
+   "vol": 4840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6개월아기옷",
+   "vol": 4830,
    "comp": "높음",
    "hint": false
   },
@@ -355,12 +740,6 @@
    "hint": false
   },
   {
-   "kw": "미생물음식물처리기",
-   "vol": 4800,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "아기베개",
    "vol": 4790,
    "comp": "중간",
@@ -373,8 +752,20 @@
    "hint": false
   },
   {
-   "kw": "가정용음식물처리기",
+   "kw": "동화책",
    "vol": 4670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산가방",
+   "vol": 4670,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임산부칼슘",
+   "vol": 4560,
    "comp": "중간",
    "hint": false
   },
@@ -385,15 +776,21 @@
    "hint": false
   },
   {
-   "kw": "밥솥이유식",
-   "vol": 4450,
+   "kw": "옆으로자는베개",
+   "vol": 4390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "1인용밥솥",
-   "vol": 4440,
+   "kw": "초점책",
+   "vol": 4340,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "활성형엽산",
+   "vol": 4220,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -403,14 +800,32 @@
    "hint": false
   },
   {
-   "kw": "플라스틱용기",
-   "vol": 4140,
+   "kw": "아기옷쇼핑몰",
+   "vol": 4170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "페트병",
-   "vol": 4140,
+   "kw": "임산부튼살크림추천",
+   "vol": 4170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임산부칼마디",
+   "vol": 4170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이노시톨추천",
+   "vol": 4130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임신계산기",
+   "vol": 4120,
    "comp": "중간",
    "hint": false
   },
@@ -421,9 +836,15 @@
    "hint": false
   },
   {
-   "kw": "쿠쿠3인용밥솥",
-   "vol": 3900,
-   "comp": "중간",
+   "kw": "꽃바구니배달",
+   "vol": 3940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃배달서비스",
+   "vol": 3940,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -436,12 +857,24 @@
    "kw": "친구출산선물",
    "vol": 3870,
    "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "긴베개",
+   "vol": 3860,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "메탈",
-   "vol": 3850,
+   "kw": "유아용욕조",
+   "vol": 3840,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "나이아신효능",
+   "vol": 3810,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -451,20 +884,44 @@
    "hint": false
   },
   {
-   "kw": "신발탈취제",
-   "vol": 3710,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "화장품용기",
-   "vol": 3590,
+   "kw": "튼살",
+   "vol": 3720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "빌트인정수기",
+   "kw": "50대남자선물",
+   "vol": 3610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기옷",
+   "vol": 3570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신축하박스",
+   "vol": 3430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모선물",
+   "vol": 3410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신초기",
    "vol": 3390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드시모네베이비스텝2",
+   "vol": 3340,
    "comp": "중간",
    "hint": false
   },
@@ -475,32 +932,68 @@
    "hint": false
   },
   {
-   "kw": "아기띠추천",
-   "vol": 3330,
+   "kw": "아기선물",
+   "vol": 3320,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "기력회복음식",
+   "vol": 3290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "과일세트",
+   "vol": 3260,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기선물",
-   "vol": 3320,
+   "kw": "바디필로우커버",
+   "vol": 3210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "정수기구매",
-   "vol": 3230,
+   "kw": "드시모네베이비스텝1",
+   "vol": 3180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "다리베개",
+   "vol": 3090,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산후영양제",
+   "vol": 3030,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "60대남자선물",
+   "vol": 3020,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "주방수전교체",
-   "vol": 3170,
+   "kw": "임신배나오는시기",
+   "vol": 3000,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캠핑양념통",
-   "vol": 3060,
+   "kw": "모유수유쿠션",
+   "vol": 2950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신6주차증상",
+   "vol": 2950,
    "comp": "높음",
    "hint": false
   },
@@ -511,14 +1004,74 @@
    "hint": false
   },
   {
+   "kw": "임신준비영양제",
+   "vol": 2940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "100일아기선물",
+   "vol": 2920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "과일선물",
+   "vol": 2910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조카돌선물",
+   "vol": 2900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디필로우인형",
+   "vol": 2890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그림책",
+   "vol": 2880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기체온계",
+   "vol": 2880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캘빈클라인속옷",
+   "vol": 2860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "육아용품",
    "vol": 2820,
    "comp": "높음",
    "hint": false
   },
   {
+   "kw": "브라운체온계AS",
+   "vol": 2820,
+   "comp": "중간",
+   "hint": false
+  },
+  {
    "kw": "힙시트아기띠",
    "vol": 2820,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아장난감",
+   "vol": 2770,
    "comp": "중간",
    "hint": false
   },
@@ -529,21 +1082,57 @@
    "hint": false
   },
   {
+   "kw": "튼살없애는법",
+   "vol": 2760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌잡이",
+   "vol": 2720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "롱쿠션",
+   "vol": 2720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엽산추천",
+   "vol": 2710,
+   "comp": "중간",
+   "hint": false
+  },
+  {
    "kw": "뒤집기방지쿠션",
    "vol": 2650,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "슬링아기띠",
-   "vol": 2630,
-   "comp": "중간",
+   "kw": "백일선물",
+   "vol": 2640,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "1인밥솥",
-   "vol": 2600,
+   "kw": "베이비샤워",
+   "vol": 2630,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사과배선물세트",
+   "vol": 2630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기고리장난감",
+   "vol": 2620,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -553,14 +1142,14 @@
    "hint": false
   },
   {
-   "kw": "음식물처리기렌탈",
-   "vol": 2560,
-   "comp": "높음",
+   "kw": "귀체온계",
+   "vol": 2530,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "줄즈에어플러스",
-   "vol": 2560,
+   "kw": "피부관리실",
+   "vol": 2510,
    "comp": "높음",
    "hint": false
   },
@@ -577,14 +1166,20 @@
    "hint": false
   },
   {
-   "kw": "홈카메라",
-   "vol": 2450,
-   "comp": "높음",
+   "kw": "임산부마그네슘",
+   "vol": 2460,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "옷장방향제",
-   "vol": 2430,
+   "kw": "유아유산균",
+   "vol": 2390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아체온계",
+   "vol": 2370,
    "comp": "중간",
    "hint": false
   },
@@ -595,21 +1190,9 @@
    "hint": false
   },
   {
-   "kw": "찜냄비",
-   "vol": 2350,
+   "kw": "아기영양제",
+   "vol": 2330,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "무타공정수기",
-   "vol": 2350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기태열",
-   "vol": 2340,
-   "comp": "높음",
    "hint": false
   },
   {
@@ -619,19 +1202,31 @@
    "hint": false
   },
   {
-   "kw": "실버크로스듄",
-   "vol": 2310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
    "kw": "아기바디필로우",
    "vol": 2300,
    "comp": "높음",
    "hint": false
   },
   {
+   "kw": "브라추천",
+   "vol": 2290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자아기옷",
+   "vol": 2290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "아기역류방지쿠션",
+   "vol": 2280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기캐리어",
    "vol": 2280,
    "comp": "높음",
    "hint": false
@@ -643,14 +1238,26 @@
    "hint": false
   },
   {
-   "kw": "플라스틱통",
-   "vol": 2230,
+   "kw": "기저귀케이크",
+   "vol": 2270,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "명품아기띠",
+   "kw": "임산부혜택",
+   "vol": 2240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "BAMBOO",
    "vol": 2210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부화장품",
+   "vol": 2200,
    "comp": "높음",
    "hint": false
   },
@@ -658,17 +1265,35 @@
    "kw": "신생아출산선물",
    "vol": 2200,
    "comp": "높음",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "조미료통",
-   "vol": 2190,
+   "kw": "과일배달",
+   "vol": 2140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "티피링크CCTV",
-   "vol": 2070,
+   "kw": "산모음식",
+   "vol": 2120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "태교",
+   "vol": 2100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기티포트",
+   "vol": 2090,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아유산균비타민D",
+   "vol": 2080,
    "comp": "높음",
    "hint": false
   },
@@ -679,7 +1304,25 @@
    "hint": false
   },
   {
+   "kw": "꽃다발배달",
+   "vol": 2060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산선물추천",
+   "vol": 2050,
+   "comp": "높음",
+   "hint": true
+  },
+  {
    "kw": "오르테젖병세척기",
+   "vol": 2050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생일꽃배달",
    "vol": 2050,
    "comp": "높음",
    "hint": false
@@ -691,8 +1334,14 @@
    "hint": false
   },
   {
-   "kw": "출산선물추천",
-   "vol": 2050,
+   "kw": "산모",
+   "vol": 2040,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "U자바디필로우",
+   "vol": 2020,
    "comp": "높음",
    "hint": false
   },
@@ -703,15 +1352,21 @@
    "hint": false
   },
   {
-   "kw": "키보드청소",
-   "vol": 1980,
+   "kw": "임산부베개",
+   "vol": 2000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "호박즙효능",
+   "vol": 2000,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퀸센스",
-   "vol": 1960,
-   "comp": "높음",
+   "kw": "현대백화점과일",
+   "vol": 1990,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -721,26 +1376,80 @@
    "hint": false
   },
   {
-   "kw": "어린이베개",
+   "kw": "임신극초기",
+   "vol": 1950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기유산균비타민D",
+   "vol": 1940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "두돌선물",
+   "vol": 1940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기변비",
    "vol": 1910,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "1인용압력밥솥",
+   "kw": "토끼애착인형",
    "vol": 1900,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "쿠쿠1인용밥솥",
+   "kw": "초기임산부선물",
+   "vol": 1890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장미꽃100송이",
    "vol": 1880,
    "comp": "높음",
    "hint": false
   },
   {
+   "kw": "이유식달력",
+   "vol": 1860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "칼마디추천",
+   "vol": 1850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
    "kw": "임산부출산선물",
    "vol": 1840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이동화책",
+   "vol": 1840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두돌아기선물",
+   "vol": 1830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산후선물",
+   "vol": 1820,
    "comp": "높음",
    "hint": false
   },
@@ -751,38 +1460,62 @@
    "hint": false
   },
   {
-   "kw": "수전필터",
-   "vol": 1810,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기홈캠",
-   "vol": 1720,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "패트병",
-   "vol": 1700,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기용품점",
-   "vol": 1700,
+   "kw": "칠순꽃바구니",
+   "vol": 1740,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "싱크대음식물처리기",
-   "vol": 1670,
+   "kw": "신생아배냇저고리",
+   "vol": 1710,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "2인용밥솥",
+   "kw": "라루셀",
+   "vol": 1680,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "6개월아기선물",
+   "vol": 1670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비접촉체온계",
+   "vol": 1660,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이화장품",
+   "vol": 1660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생일꽃바구니",
+   "vol": 1650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베넷저고리",
    "vol": 1640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안고자는베개",
+   "vol": 1630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부의날할인",
+   "vol": 1630,
    "comp": "높음",
    "hint": false
   },
@@ -799,15 +1532,15 @@
    "hint": false
   },
   {
-   "kw": "애기선물",
-   "vol": 1600,
+   "kw": "꽃배달싼곳",
+   "vol": 1610,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "TAPOC200",
+   "kw": "애기선물",
    "vol": 1600,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
@@ -817,8 +1550,32 @@
    "hint": false
   },
   {
-   "kw": "쿠쿠2인용밥솥",
-   "vol": 1560,
+   "kw": "임산부등록",
+   "vol": 1590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이방꾸미기",
+   "vol": 1590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3개월아기장난감",
+   "vol": 1590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산후좋은음식",
+   "vol": 1580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "윤곽관리",
+   "vol": 1580,
    "comp": "높음",
    "hint": false
   },
@@ -829,39 +1586,99 @@
    "hint": false
   },
   {
-   "kw": "신발냄새제거",
+   "kw": "코니힙시트",
    "vol": 1550,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유아가습기",
+   "kw": "남자아기애착인형",
+   "vol": 1540,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "장미100송이",
+   "vol": 1530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃바구니가격",
+   "vol": 1520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃배달당일배송",
+   "vol": 1520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "백화점과일바구니",
    "vol": 1510,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "농기구",
-   "vol": 1480,
+   "kw": "접이식반신욕조",
+   "vol": 1510,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "50대남자생일선물",
+   "vol": 1500,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "2단책꽂이",
+   "kw": "오케타니수유쿠션",
+   "vol": 1500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신9주차",
+   "vol": 1500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라놀린",
+   "vol": 1490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기힙시트",
+   "vol": 1490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "당일꽃배달",
    "vol": 1470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "생활용품점",
-   "vol": 1430,
+   "kw": "신생아비타민D유산균",
+   "vol": 1440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3인용밥솥",
-   "vol": 1430,
-   "comp": "중간",
+   "kw": "4살여아선물",
+   "vol": 1440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부식단",
+   "vol": 1440,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -871,27 +1688,33 @@
    "hint": false
   },
   {
-   "kw": "깔끔대장",
-   "vol": 1410,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "건식다리미",
-   "vol": 1410,
+   "kw": "임산부에게좋은음식",
+   "vol": 1400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "책꽂이정리함",
+   "kw": "임신부",
    "vol": 1390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "주방수도꼭지",
-   "vol": 1370,
-   "comp": "중간",
+   "kw": "임산부탈모샴푸",
+   "vol": 1360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아돌선물",
+   "vol": 1360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "롱베개",
+   "vol": 1360,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -901,8 +1724,38 @@
    "hint": false
   },
   {
-   "kw": "신생아홈캠",
-   "vol": 1320,
+   "kw": "돌아기유산균",
+   "vol": 1350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수면베개",
+   "vol": 1340,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임신초기선물",
+   "vol": 1330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "난소영양제",
+   "vol": 1330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부지원금",
+   "vol": 1330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5살여아선물",
+   "vol": 1330,
    "comp": "높음",
    "hint": false
   },
@@ -913,8 +1766,44 @@
    "hint": false
   },
   {
+   "kw": "엉덩이땀띠",
+   "vol": 1320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신8주차증상",
+   "vol": 1310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유두크림",
+   "vol": 1310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "드시모네유산균베이비",
+   "vol": 1300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원기회복",
+   "vol": 1290,
+   "comp": "중간",
+   "hint": false
+  },
+  {
    "kw": "아기배게",
    "vol": 1280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "얼굴형관리",
+   "vol": 1270,
    "comp": "높음",
    "hint": false
   },
@@ -925,13 +1814,49 @@
    "hint": false
   },
   {
-   "kw": "애기띠",
+   "kw": "남자친구부모님선물",
+   "vol": 1250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5살남아선물",
+   "vol": 1240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모에게좋은음식",
+   "vol": 1240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3살여아선물",
+   "vol": 1230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "새가슴브라",
    "vol": 1220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "쿠비녹스",
+   "kw": "조카100일선물",
+   "vol": 1210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젖병소독",
+   "vol": 1200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기내용유모차",
    "vol": 1200,
    "comp": "높음",
    "hint": false
@@ -943,32 +1868,140 @@
    "hint": false
   },
   {
-   "kw": "작은책상",
+   "kw": "아기출산선물",
+   "vol": 1190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등여아선물",
    "vol": 1180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부바디로션",
+   "vol": 1180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유두보호크림",
+   "vol": 1180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세계명작동화",
+   "vol": 1170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모애샴푸",
+   "vol": 1170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "지하수필터",
+   "kw": "첫돌선물",
    "vol": 1160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "냄새탈취제",
+   "kw": "친구임신선물",
+   "vol": 1160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여친생일선물",
+   "vol": 1160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부쿠션",
+   "vol": 1150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젖병살균기",
+   "vol": 1140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기팝업북",
+   "vol": 1130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마그네슘칼슘",
+   "vol": 1130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부샴푸추천",
+   "vol": 1120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수유브라추천",
    "vol": 1120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기카메라",
-   "vol": 1100,
+   "kw": "칼슘마그네슘비타민D",
+   "vol": 1110,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산축하선물",
+   "vol": 1100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기목욕",
+   "vol": 1100,
+   "comp": "높음",
    "hint": false
   },
   {
    "kw": "아기사운드북",
    "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이립밤",
+   "vol": 1090,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "공룡그림",
+   "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자신생아선물",
+   "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이유산균",
+   "vol": 1080,
    "comp": "높음",
    "hint": false
   },
@@ -979,9 +2012,51 @@
    "hint": false
   },
   {
+   "kw": "미오이노시톨추천",
+   "vol": 1070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사이드힙시트",
+   "vol": 1070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아돌선물",
+   "vol": 1060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "신생아책",
    "vol": 1060,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2살아기선물",
+   "vol": 1060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아교육전",
+   "vol": 1050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미오이노시톨활성형엽산",
+   "vol": 1040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대전산후조리원",
+   "vol": 1040,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -991,15 +2066,21 @@
    "hint": false
   },
   {
-   "kw": "종이가구",
+   "kw": "신생아필수템",
    "vol": 1030,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "쿠쿠에그밥솥",
-   "vol": 1010,
+   "kw": "6살여아선물",
+   "vol": 1030,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무안양파즙",
+   "vol": 1030,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -1009,13 +2090,73 @@
    "hint": false
   },
   {
-   "kw": "실리콘주방도구",
+   "kw": "구연동화",
+   "vol": 1000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등저학년추천도서",
+   "vol": 1000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산과일바구니",
    "vol": 990,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신발냄새제거제",
+   "kw": "남자엽산",
+   "vol": 990,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "책읽기",
+   "vol": 990,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기백일선물추천",
+   "vol": 980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부튼살오일",
+   "vol": 980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부튼살",
+   "vol": 980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제왕절개준비물",
+   "vol": 980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디건조기",
+   "vol": 970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌잔치케이크",
+   "vol": 970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그림책추천",
    "vol": 970,
    "comp": "높음",
    "hint": false
@@ -1033,8 +2174,50 @@
    "hint": false
   },
   {
-   "kw": "두상교정",
-   "vol": 920,
+   "kw": "신생아역류방지쿠션",
+   "vol": 950,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "4살남아선물",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부칼슘마그네슘",
+   "vol": 950,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어머님생신선물",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조카돌잔치선물",
+   "vol": 940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이노시톨영양제",
+   "vol": 940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이화장품세트",
+   "vol": 940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "콜드크림",
+   "vol": 930,
    "comp": "높음",
    "hint": false
   },
@@ -1045,27 +2228,69 @@
    "hint": false
   },
   {
-   "kw": "조립식책장",
-   "vol": 910,
+   "kw": "드시모네베이비",
+   "vol": 920,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신발장탈취제",
+   "kw": "오피스임부복",
+   "vol": 920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신15주차",
+   "vol": 920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두상교정",
+   "vol": 920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "7세여아선물",
    "vol": 900,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "프라스틱용기",
-   "vol": 890,
+   "kw": "베이비모니터",
+   "vol": 870,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "업소용그릇",
-   "vol": 890,
+   "kw": "기저귀크림",
+   "vol": 870,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청주산후조리원",
+   "vol": 870,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임산부칼슘영양제",
+   "vol": 870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부크림",
+   "vol": 850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부배게",
+   "vol": 850,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -1075,9 +2300,39 @@
    "hint": false
   },
   {
-   "kw": "락앤락유리반찬통",
+   "kw": "5세여아선물",
    "vol": 850,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3살남아선물",
+   "vol": 850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃주문",
+   "vol": 850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무료임신축하선물",
+   "vol": 840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "태교동화",
+   "vol": 840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아쿠션",
+   "vol": 840,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -1087,13 +2342,55 @@
    "hint": false
   },
   {
+   "kw": "애기욕조",
+   "vol": 840,
+   "comp": "중간",
+   "hint": false
+  },
+  {
    "kw": "유아책",
    "vol": 820,
    "comp": "높음",
    "hint": false
   },
   {
+   "kw": "임산부선물추천",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두돌아기책",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한글벽보",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "접이식아기욕조",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친구돌잔치선물",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "신생아짱구베개",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원기회복음식",
    "vol": 810,
    "comp": "높음",
    "hint": false
@@ -1111,10 +2408,16 @@
    "hint": false
   },
   {
-   "kw": "육아템",
-   "vol": 790,
+   "kw": "임산부칼슘추천",
+   "vol": 800,
    "comp": "높음",
-   "hint": true
+   "hint": false
+  },
+  {
+   "kw": "백화점과일",
+   "vol": 800,
+   "comp": "중간",
+   "hint": false
   },
   {
    "kw": "아기동화책",
@@ -1123,15 +2426,69 @@
    "hint": false
   },
   {
-   "kw": "편한아기띠",
+   "kw": "육아템",
    "vol": 790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "긴배게",
+   "vol": 790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기초점책",
+   "vol": 790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기비타민D",
+   "vol": 780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기포대기",
+   "vol": 780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기력회복",
+   "vol": 770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아박람회",
+   "vol": 770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이동화",
+   "vol": 760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모교실",
+   "vol": 760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름바디필로우",
+   "vol": 760,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "주방수전추천",
-   "vol": 790,
-   "comp": "중간",
+   "kw": "임신5개월",
+   "vol": 760,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -1141,45 +2498,81 @@
    "hint": false
   },
   {
-   "kw": "아기홈캠추천",
+   "kw": "신생아선물추천",
    "vol": 750,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "1인용전기밥솥",
-   "vol": 750,
+   "kw": "유아욕조",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "태명배냇저고리",
+   "vol": 740,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "투명용기",
+   "kw": "임산부기초화장품",
    "vol": 730,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기띠브랜드",
+   "kw": "팔순꽃바구니",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신7주",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부생일선물",
    "vol": 720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "정수기조리수",
+   "kw": "분당에스테틱",
    "vol": 720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "꿀템박스",
-   "vol": 710,
-   "comp": "중간",
+   "kw": "셀티아이베이비",
+   "vol": 720,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌아기베개",
+   "kw": "만삭임산부선물",
    "vol": 710,
-   "comp": "중간",
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신30주",
+   "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기고보습크림",
+   "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신축하꽃",
+   "vol": 710,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -1189,15 +2582,39 @@
    "hint": false
   },
   {
-   "kw": "유아카메라",
+   "kw": "골프브라",
    "vol": 690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실리콘수저세트",
+   "kw": "아기욕조추천",
    "vol": 680,
-   "comp": "중간",
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5세남아선물",
+   "vol": 680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산준비",
+   "vol": 660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디필로우추천",
+   "vol": 650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쌍둥이선물",
+   "vol": 650,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -1207,13 +2624,55 @@
    "hint": false
   },
   {
-   "kw": "다이소플라스틱통",
+   "kw": "초등추천도서",
+   "vol": 650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "튼살크림추천",
    "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "200일아기선물",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이책",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기배냇저고리",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부스킨로션",
+   "vol": 630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사돈선물",
+   "vol": 630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기유산균추천",
+   "vol": 620,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신생아두상교정",
+   "kw": "장인어른생신선물",
    "vol": 620,
    "comp": "높음",
    "hint": false
@@ -1225,32 +2684,98 @@
    "hint": false
   },
   {
-   "kw": "젖병식세기",
+   "kw": "임산부로션",
    "vol": 620,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종이책장",
-   "vol": 620,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "소형밥솥",
+   "kw": "신생아두상교정",
    "vol": 620,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3단책꽂이",
+   "kw": "6세남아선물",
    "vol": 620,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "플라스틱병",
+   "kw": "임산부필로우",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현대국민행복카드",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "둘째출산선물",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "UV소독기",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두피간지러움",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유기농애착인형",
    "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두돌여아선물",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부칼슘제",
+   "vol": 600,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "배냇슈트",
+   "vol": 600,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "청소년마그네슘",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산이벤트",
+   "vol": 590,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "드롭유산균",
+   "vol": 590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "7살남아선물",
+   "vol": 590,
    "comp": "높음",
    "hint": false
   },
@@ -1261,7 +2786,49 @@
    "hint": false
   },
   {
+   "kw": "출산선물세트",
+   "vol": 580,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "신생아선물세트",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "친구임신축하선물",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산후운동",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌지난아기선물",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "곤충도감",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기장판전자파",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "혼합과일선물세트",
    "vol": 580,
    "comp": "높음",
    "hint": false
@@ -1273,9 +2840,39 @@
    "hint": false
   },
   {
+   "kw": "어린이욕조",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "붓기에좋은음식",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동화책읽어주기",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "아기짱구베개",
    "vol": 560,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아달력",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비샤워풍선",
+   "vol": 550,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -1285,14 +2882,44 @@
    "hint": false
   },
   {
-   "kw": "베베캠",
+   "kw": "오가닉코튼",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기돌선물",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비유산균",
    "vol": 540,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신생아홈캠추천",
-   "vol": 530,
+   "kw": "FED유산균",
+   "vol": 540,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "염소진액",
+   "vol": 540,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "화장품장난감",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무농약양파즙",
+   "vol": 540,
    "comp": "높음",
    "hint": false
   },
@@ -1303,7 +2930,79 @@
    "hint": false
   },
   {
+   "kw": "8개월아기선물",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자아기돌선물",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수유쿠션추천",
+   "vol": 530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기엄마선물",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈베개",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부피부관리",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비샤워소품",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "U자베개",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부칼마디추천",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산산모선물",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "유아선물",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무료임신축하박스",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수유베개",
    "vol": 510,
    "comp": "높음",
    "hint": false
@@ -1315,27 +3014,27 @@
    "hint": false
   },
   {
-   "kw": "출산산모선물",
+   "kw": "브로콜리즙",
    "vol": 510,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "쿠쿠1인밥솥",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2인밥솥",
+   "kw": "유아화장품",
    "vol": 500,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "쿠키통",
-   "vol": 490,
+   "kw": "입맛없을때",
+   "vol": 500,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자궁영양제",
+   "vol": 490,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -1345,13 +3044,55 @@
    "hint": false
   },
   {
+   "kw": "아기종합영양제",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "7세남아선물",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "스팀소독기",
    "vol": 490,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "PET병",
+   "kw": "밍크뮤배냇저고리",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님건강식품",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "과일바구니가격",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코튼리빙",
+   "vol": 480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "6세책추천",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모호박즙",
    "vol": 480,
    "comp": "높음",
    "hint": false
@@ -1363,7 +3104,67 @@
    "hint": false
   },
   {
+   "kw": "임산부의날이벤트",
+   "vol": 470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "60대선물",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신중흡연",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원졸업선물",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아유산균추천",
+   "vol": 470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "생리불순영양제",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "교육박람회",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "과일바구니배달",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형베개",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "유아배게",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5세장난감",
    "vol": 460,
    "comp": "높음",
    "hint": false
@@ -1375,9 +3176,63 @@
    "hint": false
   },
   {
-   "kw": "변기탈취제",
+   "kw": "원더맘스산모교실",
    "vol": 460,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "배냇저고리세트",
+   "vol": 460,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남자아기돌선물",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기엄마선물",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비타슈넬이노시톨",
+   "vol": 450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마이오이노시톨",
+   "vol": 450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "광교에스테틱",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산축하",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부스시",
+   "vol": 450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "5세책추천",
+   "vol": 450,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -1387,8 +3242,14 @@
    "hint": false
   },
   {
-   "kw": "수도꼭지정수기",
+   "kw": "과일선물박스",
    "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산후탈모샴푸",
+   "vol": 440,
    "comp": "높음",
    "hint": false
   },
@@ -1399,43 +3260,163 @@
    "hint": false
   },
   {
-   "kw": "신생아육아템",
+   "kw": "기력보충",
+   "vol": 440,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쌍둥이출산선물",
    "vol": 440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "밀가루보관통",
+   "kw": "드시모네아기유산균",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어베개",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산후산모선물",
    "vol": 430,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "티크나무",
+   "kw": "임산부스킨케어",
    "vol": 430,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "쿨리베어",
+   "kw": "캘리코튼",
    "vol": 430,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "종이테이블",
+   "kw": "장난감도매",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수학동화",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부단축근무신청",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "호박즙파는곳",
+   "vol": 430,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임산부다리붓기",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소형전기밥솥",
+   "kw": "캘리코튼수건",
+   "vol": 420,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "6개월아기유산균",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가슴튼살",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생활동화",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3살아기선물",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이바지과일",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기용품선물",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4살장난감",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고지혈에좋은음식",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부다이어트식단",
    "vol": 400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기용품브랜드",
+   "kw": "아기풍선",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등여아생일선물",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생화장품",
+   "vol": 390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "산후관리",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산꽃다발",
    "vol": 390,
    "comp": "높음",
    "hint": false
@@ -1447,9 +3428,33 @@
    "hint": false
   },
   {
-   "kw": "담배탈취제",
+   "kw": "임신혜택",
    "vol": 390,
-   "comp": "중간",
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4세여아선물",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기용품브랜드",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아책대여",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사과배세트",
+   "vol": 390,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -1459,25 +3464,97 @@
    "hint": false
   },
   {
-   "kw": "키보드청소기",
+   "kw": "임산부피부트러블",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원형밀폐용기",
+   "kw": "70A브라",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선물용과일",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "할머니할아버지선물",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산박스",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산꽃바구니",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "40대선물",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창작동화",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알파벳발음",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부믹스커피",
    "vol": 370,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "명품냄비",
+   "kw": "임신박스",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원형용기",
+   "kw": "키즈립밤",
+   "vol": 360,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임신축하",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "10개월아기선물",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "노인기력회복",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌선물추천",
    "vol": 350,
    "comp": "높음",
    "hint": false
@@ -1489,15 +3566,39 @@
    "hint": false
   },
   {
-   "kw": "신발장냄새제거",
+   "kw": "유아동화책",
    "vol": 350,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "숯탈취제",
+   "kw": "과일꽃바구니",
    "vol": 350,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드시모네신생아유산균",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이도서",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생추천도서",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자수배냇저고리",
+   "vol": 350,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -1513,26 +3614,152 @@
    "hint": false
   },
   {
+   "kw": "산모샴푸",
+   "vol": 340,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "콜린영양제",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "힙시트아기띠추천",
+   "vol": 340,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "7개월아기유산균",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "애기베개",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사각플라스틱용기",
+   "kw": "5살장난감",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아도서",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자취템",
-   "vol": 320,
+   "kw": "여자애기선물",
+   "vol": 330,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "식품용기",
-   "vol": 300,
+   "kw": "해피베이비산모교실",
+   "vol": 330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아배넷저고리",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "작은욕조",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베베폼임신박스",
+   "vol": 320,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "임산부클렌징폼",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑백초점책",
+   "vol": 320,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아비타민",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소아변비",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "태교뜨개질",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산후조리음식",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "서울과일바구니",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부수분크림",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "호주라놀린크림",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "드시모네신생아",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "높은수유쿠션",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "5세남아장난감",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름배냇저고리",
+   "vol": 310,
    "comp": "높음",
    "hint": false
   },
@@ -1543,33 +3770,135 @@
    "hint": false
   },
   {
-   "kw": "아기CCTV",
+   "kw": "어린이생일선물",
    "vol": 300,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이베개",
+   "kw": "독서교육",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5살여자아이선물",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3세여아선물",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4개월아기선물",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자임신준비영양제",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이유식믹서기추천",
-   "vol": 280,
+   "kw": "보양음식",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신이벤트",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부식단관리",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부팩",
+   "vol": 290,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "언더싱크",
-   "vol": 280,
-   "comp": "중간",
+   "kw": "아기수유쿠션",
+   "vol": 290,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종이수납함",
+   "kw": "영어교구",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두돌전집",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신한친구선물",
    "vol": 280,
-   "comp": "중간",
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "난임영양제",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책놀이",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자파차단앞치마",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "봉제인형키링",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모반찬",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자아기선물",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4세남아선물",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동화책추천",
+   "vol": 280,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -1585,16 +3914,70 @@
    "hint": false
   },
   {
-   "kw": "자취밥솥",
+   "kw": "생리통영양제",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "꿀템",
-   "vol": 260,
+   "kw": "여자아기선물",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부산산후도우미업체",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신31주",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동캐리어",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용품점",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6세전집",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4세여아장난감",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아내선물",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유기농양파",
+   "vol": 270,
    "comp": "중간",
-   "hint": true
+   "hint": false
+  },
+  {
+   "kw": "휴대용수유쿠션",
+   "vol": 265,
+   "comp": "중간",
+   "hint": false
   },
   {
    "kw": "애기용품",
@@ -1603,7 +3986,85 @@
    "hint": false
   },
   {
-   "kw": "냉장고마그네틱",
+   "kw": "출산후샴푸",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이노시톨임신",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌잡이전집",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생리전증후군영양제",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈화장품",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기선물추천",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "윗가슴브라",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다리사이베개",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빨간펜전집",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아베넷저고리",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6살여자아이선물",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "7살생일선물",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4세책추천",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6세여아장난감",
    "vol": 260,
    "comp": "높음",
    "hint": false
@@ -1615,37 +4076,67 @@
    "hint": false
   },
   {
-   "kw": "스페셜드림",
-   "vol": 250,
-   "comp": "낮음",
+   "kw": "청소년칼마디",
+   "vol": 260,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이경추베개",
+   "kw": "출산영양제",
+   "vol": 250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "과일바구니선물",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원형플라스틱용기",
-   "vol": 240,
+   "kw": "산모마사지",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부튼살크림순위",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아보습크림",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인성동화",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "36개월장난감",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올인원아기띠",
+   "vol": 250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "6살생일선물",
+   "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "출산아기용품",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "국산분유포트",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키보드가격",
    "vol": 240,
    "comp": "높음",
    "hint": false
@@ -1657,13 +4148,61 @@
    "hint": false
   },
   {
-   "kw": "정수기수도꼭지",
+   "kw": "국산분유포트",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "PET용기",
+   "kw": "목욕탕용품",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병문안과일바구니",
+   "vol": 240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산축하박스",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가락시장과일바구니",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부선물박스",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신튼살크림",
+   "vol": 240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "9개월아기선물",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5세전집",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님간식",
    "vol": 230,
    "comp": "높음",
    "hint": false
@@ -1675,13 +4214,49 @@
    "hint": false
   },
   {
-   "kw": "아기캠",
-   "vol": 220,
+   "kw": "문피스바디필로우",
+   "vol": 230,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유하박스",
+   "vol": 230,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "5살생일선물",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "24개월아기선물",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동물카드",
+   "vol": 230,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "태열배게",
+   "kw": "출산후탈모샴푸",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신탈모",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친구돌선물",
    "vol": 220,
    "comp": "높음",
    "hint": false
@@ -1693,13 +4268,67 @@
    "hint": false
   },
   {
-   "kw": "베이비홈캠",
-   "vol": 210,
+   "kw": "어린이립스틱",
+   "vol": 220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산후튼살",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌애기선물",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "태열배게",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영유아유산균",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼인사선물",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부종에좋은음식",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아배냇가운",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기가루유산균",
+   "vol": 215,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "영유아책",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이향수",
    "vol": 210,
    "comp": "높음",
    "hint": false
@@ -1711,8 +4340,68 @@
    "hint": false
   },
   {
-   "kw": "EM효소",
-   "vol": 200,
+   "kw": "임산부바디워시추천",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조카생일선물",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2살여아선물",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터프로바",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이전집",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4세남아장난감",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아용품쇼핑몰",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니앨범제작",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조리원선물",
+   "vol": 210,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "출산후칼마디",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "8개월아기유산균",
+   "vol": 205,
    "comp": "높음",
    "hint": false
   },
@@ -1723,33 +4412,57 @@
    "hint": false
   },
   {
-   "kw": "종이선반",
+   "kw": "돌쟁이선물",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자취생밥솥",
+   "kw": "임산부화장품성분",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이나프스팀다리미",
+   "kw": "영어사운드북",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "살림템",
-   "vol": 190,
+   "kw": "임산부바디크림",
+   "vol": 200,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "국민아기띠",
-   "vol": 190,
+   "kw": "마더박스",
+   "vol": 200,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "장난감할인",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어르신선물세트",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임부속옷",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아도서추천",
+   "vol": 190,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -1759,22 +4472,40 @@
    "hint": false
   },
   {
-   "kw": "유아베게",
+   "kw": "임신달력",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신발장냄새",
+   "kw": "입덧선물",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "역류방지",
    "vol": 190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "육아꿀템",
-   "vol": 180,
+   "kw": "5세남아생일선물",
+   "vol": 190,
    "comp": "높음",
-   "hint": true
+   "hint": false
+  },
+  {
+   "kw": "남자아이선물",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5살책추천",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
   },
   {
    "kw": "아람전집",
@@ -1783,7 +4514,7 @@
    "hint": false
   },
   {
-   "kw": "키친아트인덕션냄비",
+   "kw": "둘째임신선물",
    "vol": 180,
    "comp": "높음",
    "hint": false
@@ -1791,6 +4522,126 @@
   {
    "kw": "아이의뇌",
    "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기저귀케익",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이메이크업",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "과일바구니배송",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이메이크업박스",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성속옷브랜드추천",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부마사지오일",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임밍아웃케이크",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4살생일선물",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이선물",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자아이선물",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "란시노라놀린",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아꿀템",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6살책추천",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기유산균추천",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부산산모교실",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "미니북제작",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "붓기크림",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "들뜸없는브라",
+   "vol": 175,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "손주돌선물",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마이이노시톨",
+   "vol": 170,
    "comp": "높음",
    "hint": false
   },
@@ -1807,19 +4658,127 @@
    "hint": false
   },
   {
-   "kw": "물받이통",
+   "kw": "임산부바디필로우추천",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "골프속옷",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맘스홀릭임신축하박스",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "20개월아기선물",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4살여자아이선물",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3개월아기선물",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "감정그림책",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "호박주스",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아배앓이유산균",
+   "vol": 165,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "만삭선물",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "주방템",
+   "kw": "역류쿠션",
    "vol": 160,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
    "kw": "18개월아기책",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부에게좋은선물",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신선물박스",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청담동에스테틱",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아화장놀이",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아추천도서",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쌍둥이돌선물",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이유식유산균",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두돌여자아기선물",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아책추천",
    "vol": 160,
    "comp": "높음",
    "hint": false
@@ -1831,67 +4790,103 @@
    "hint": false
   },
   {
-   "kw": "플러스워터",
+   "kw": "대구산모교실",
    "vol": 160,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "종이책상",
-   "vol": 160,
-   "comp": "높음",
+   "kw": "뉴트리원이노시톨",
+   "vol": 150,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "필립스생활가전",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자취용품",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종이칸막이",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "옆잠쿠션",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종이수납장",
+   "kw": "산후선물",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종이서랍장",
+   "kw": "임신선물추천",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종이수납박스",
+   "kw": "임신중기선물",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "살리미",
+   "kw": "과일당일배송",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "노와이어속옷",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신출산선물",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등전집",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아100일선물",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비샤워선물",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서프로그램",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3세학습지",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부배받침",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두살아기선물",
+   "vol": 145,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "액상유산균",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애기홈캠",
+   "kw": "임산부용품",
    "vol": 140,
    "comp": "높음",
    "hint": false
@@ -1903,37 +4898,139 @@
    "hint": false
   },
   {
+   "kw": "임산부토너",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부브랜드",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "손녀백일선물",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신축하선물추천",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병문안과일",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부속옷추천",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동화추천",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동도서",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6세책",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수유방석",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3살조카선물",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3세남아선물",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3살선물",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3살여자아이선물",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아용품선물",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "와이프임신선물",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "신생아용품점",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소형가구",
+   "kw": "배냇저고리브랜드",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아경추베개",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아카메라",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영아선물",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "신생아전집",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈메이크업",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등화장품",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "위드앤육아",
+   "vol": 130,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "어린이메이크업세트",
    "vol": 130,
    "comp": "높음",
    "hint": false
@@ -1945,22 +5042,46 @@
    "hint": false
   },
   {
-   "kw": "새집증후군탈취제",
+   "kw": "출산준비물세트",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "1인스타일러",
+   "kw": "영아선물",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기용품추천",
+   "kw": "6세선물",
    "vol": 130,
    "comp": "높음",
-   "hint": true
+   "hint": false
+  },
+  {
+   "kw": "유치원입학선물",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수원산모교실",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수유부칼마디",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈클렌징폼",
+   "vol": 125,
+   "comp": "높음",
+   "hint": false
   },
   {
    "kw": "신생아태열베개",
@@ -1969,7 +5090,25 @@
    "hint": false
   },
   {
-   "kw": "신생아CCTV",
+   "kw": "출산용품선물",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아생일선물",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기력없을때",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마포에스테틱",
    "vol": 120,
    "comp": "높음",
    "hint": false
@@ -1978,6 +5117,42 @@
    "kw": "20개월아기책",
    "vol": 120,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모에게좋은선물",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부이벤트",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "과일바구니당일배송",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "노인기력회복영양제",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자애기선물",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기힙시트",
+   "vol": 120,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -1993,20 +5168,20 @@
    "hint": false
   },
   {
-   "kw": "해피테일즈쿨리베어",
-   "vol": 115,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "치과재료상",
-   "vol": 110,
+   "kw": "4세전집",
+   "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "김포그릇가게",
-   "vol": 110,
+   "kw": "5세책",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아메이크업",
+   "vol": 115,
    "comp": "높음",
    "hint": false
   },
@@ -2017,15 +5192,129 @@
    "hint": false
   },
   {
-   "kw": "일본밀폐용기",
+   "kw": "임산부초기선물",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이국주밥솥",
-   "vol": 105,
+   "kw": "출산다이어트",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산선물기저귀케익",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부화장품추천",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동화전집",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아생일선물",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영유아선물",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산용품세트",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영아유산균",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아전집추천",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "위인전집",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이책",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2세여아장난감",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "200일아기장난감",
+   "vol": 110,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대전산모교실",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산교실",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "18개월아기유산균",
+   "vol": 105,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "9개월아기유산균",
+   "vol": 105,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아프로바이오틱스",
+   "vol": 105,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부액상칼슘",
+   "vol": 105,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "칼슘마그네슘디",
+   "vol": 105,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -2035,13 +5324,13 @@
    "hint": false
   },
   {
-   "kw": "유아용품브랜드",
+   "kw": "12개월아기선물",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈베게",
+   "kw": "한살아기선물",
    "vol": 100,
    "comp": "높음",
    "hint": false
@@ -2053,49 +5342,79 @@
    "hint": false
   },
   {
-   "kw": "리빙용품",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "종이책꽂이",
+   "kw": "파닉스카드",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "생활용품브랜드",
+   "kw": "아기생일선물",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "새집탈취제",
+   "kw": "여자아이돌선물",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무실인테리어소품",
+   "kw": "2살선물",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종이등받이의자",
+   "kw": "키즈베게",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "겨울필수템",
+   "kw": "임산부교실",
    "vol": 100,
-   "comp": "중간",
-   "hint": true
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부비듬샴푸",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
   },
   {
    "kw": "10개월아기책",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "딸임신선물",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이유식노트",
+   "vol": 95,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "편백샴푸",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "칼슘임산부",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소년칼슘마그네슘",
    "vol": 95,
    "comp": "높음",
    "hint": false
@@ -2107,15 +5426,21 @@
    "hint": false
   },
   {
-   "kw": "플라스틱식품용기",
+   "kw": "임신축하선물박스",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유용미생물",
+   "kw": "임산부선물세트",
    "vol": 90,
-   "comp": "낮음",
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부축하선물",
+   "vol": 90,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -2125,15 +5450,129 @@
    "hint": false
   },
   {
-   "kw": "살림꿀템",
+   "kw": "임산부무료선물",
    "vol": 90,
-   "comp": "중간",
-   "hint": true
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "이엠발효액",
+   "kw": "출산후관리",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조카돌선물추천",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산선물박스",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아동화",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "배냇저고리추천",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기액상유산균",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드시모네유산균베이비스텝2",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3살생일선물",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원교구사이트",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아문해력",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시댁인사선물",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인천산모교실",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임산부로마샴푸",
+   "vol": 85,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임신샴푸",
    "vol": 85,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아화장품세트",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아화장품",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부심리스브라",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프레뉴바디필로우",
+   "vol": 85,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "임산부무료",
+   "vol": 85,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기유산균드시모네",
+   "vol": 85,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -2149,31 +5588,157 @@
    "hint": false
   },
   {
-   "kw": "신생아캠",
+   "kw": "2돌선물",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "페트용기",
+   "kw": "예비맘선물",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베이비카메라",
+   "kw": "임산부관리",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산후케어",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부박스",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산축하과일바구니",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무료출산선물",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어화장품",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃바구니당일배송",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BABYSHOWER",
    "vol": 80,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "곶감포장용기",
-   "vol": 70,
+   "kw": "임산부앰플",
+   "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영유아전집",
+   "kw": "육아맘선물",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "역류방지쿠션추천",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유산균드롭",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4살책",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서습관",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천연스킨",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기오감놀이",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아접이식욕조",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임신부샴푸",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이화장품",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두비의즐거운생활",
+   "vol": 75,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "6살책",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하남베이비플러스",
+   "vol": 75,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "밀양산후도우미",
+   "vol": 75,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "초등학생향수",
    "vol": 70,
    "comp": "높음",
    "hint": false
@@ -2185,25 +5750,121 @@
    "hint": false
   },
   {
-   "kw": "업소용주방그릇",
+   "kw": "임신선물세트",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "골판지가구",
+   "kw": "영유아전집",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "타공없는정수기",
+   "kw": "하얀튼살크림",
    "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이전자책",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수유용품",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임산부초기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동전집",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아물품",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "30개월책",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엉덩이튼살크림",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3살학습지",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "호박즙추천",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베넷저고리세트",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산후샴푸",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산후조리원샴푸",
+   "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "에어맘",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈화장품세트",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아백일선물",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3세선물",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기드시모네",
    "vol": 65,
    "comp": "중간",
    "hint": false
@@ -2215,19 +5876,49 @@
    "hint": false
   },
   {
-   "kw": "쿠쿠2인밥솥",
+   "kw": "25개월장난감",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "추천템",
-   "vol": 60,
+   "kw": "비건샴푸추천",
+   "vol": 65,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "애기100일선물",
+   "kw": "30개월학습지",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자연유래샴푸",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자연유래화장품",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창원산모교실",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임산부마그네슘추천",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자어린이선물",
    "vol": 60,
    "comp": "높음",
    "hint": false
@@ -2239,51 +5930,177 @@
    "hint": false
   },
   {
-   "kw": "자취생필수품",
+   "kw": "출산후피부관리",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자취필수품",
+   "kw": "송월타올20수",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종이서랍",
+   "kw": "아동책",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "하수구냄새탈취제",
+   "kw": "애기100일선물",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "책상용청소기",
+   "kw": "13개월아기선물",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인테리어DIY",
+   "kw": "남자아기백일선물",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "휴대용의류관리기",
+   "kw": "4살조카선물",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "살림일기",
+   "kw": "베이비스텝2",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아도서대여",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기목욕놀이장난감",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "정자동에스테틱",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강남신부관리",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부전용샴푸",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈향수",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2세여아선물",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조카두돌선물",
    "vol": 55,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산후뱃살빼기",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생화장품세트",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이색조화장품",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신부속옷",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동화읽어주기",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용책",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신무료선물",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모유쿠션",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아옷만들기",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집입학선물",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "힙시트캐리어",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두돌아기선물추천",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "딸랑이공",
+   "vol": 55,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -2293,25 +6110,37 @@
    "hint": false
   },
   {
-   "kw": "유아메모리폼베개",
+   "kw": "신생아장난감세트",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "5세베개",
+   "kw": "30개월선물",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기라텍스베개",
+   "kw": "하남카시트",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기용품DIY",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "플라스틱용기제조업체",
+   "kw": "울산동구산후도우미",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모용품",
    "vol": 50,
    "comp": "높음",
    "hint": false
@@ -2323,67 +6152,235 @@
    "hint": false
   },
   {
-   "kw": "산모용품",
+   "kw": "베이비샤워가랜드",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원룸가구추천",
+   "kw": "유아독서교육",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "옷장용방향제",
+   "kw": "무향튼살크림",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "살림이야기",
+   "kw": "독서학습지",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에센스마스크팩",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부교육",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부추천선물",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동선물",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기첫돌선물",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2살조카선물",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3세워크북",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "태교추천",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자파차단방법",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터아돌베이비",
    "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "박스가구",
+   "kw": "유산균유아",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "1인용스타일러",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차무선청소기",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기바디필로우",
+   "kw": "태평타올",
    "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "풀라무",
-   "vol": 40,
+   "kw": "HAYDAYMOOD",
+   "vol": 45,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈메이크업박스",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "90A브라",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기유산균아연",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기생유산균",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수분크림사용방법",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5세동화책",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신크림",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "튼살제거크림",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "태교효과",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자아기100일선물",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부인생일선물",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기장난감선물",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아수면쿠션",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "백일여아선물",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부클렌징",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3살아이선물",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아힙시트",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "36개월학습지",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "붉은두피샴푸",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무안양파즙판매",
+   "vol": 45,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "장미선물",
+   "vol": 45,
+   "comp": "높음",
    "hint": false
   },
   {
    "kw": "3세한글",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EM미생물",
    "vol": 40,
    "comp": "높음",
    "hint": false
@@ -2395,32 +6392,86 @@
    "hint": false
   },
   {
-   "kw": "주방소품쇼핑몰",
+   "kw": "36개월유산균",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "간이청소기",
+   "kw": "문피스",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임산부케어",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초강력핸디청소기",
+   "kw": "출산축하꽃바구니",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홈CCTV어플",
-   "vol": 35,
+   "kw": "베이비샤워용품",
+   "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "육아캠",
-   "vol": 35,
+   "kw": "출산선물과일바구니",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "막수건",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "6세아이책",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아독서프로그램",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모유수유용품",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도매완구",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날이벤트",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "승진화분선물",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인형만들기DIY",
+   "vol": 40,
    "comp": "높음",
    "hint": false
   },
@@ -2431,7 +6482,49 @@
    "hint": false
   },
   {
-   "kw": "엘라바아기베개",
+   "kw": "아기명품선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아향수",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "정력을",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신탈모샴푸",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6세아이선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기력보강",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모관리",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신축하선물세트",
    "vol": 35,
    "comp": "높음",
    "hint": false
@@ -2443,37 +6536,235 @@
    "hint": false
   },
   {
-   "kw": "강력한차량용청소기",
+   "kw": "튼살크림선물세트",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "방청소기",
+   "kw": "17개월아기유산균",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "1인가구쇼핑몰",
+   "kw": "3살아기유산균",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스페셜드림베개",
+   "kw": "송림타월",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "옆눕베개",
+   "kw": "초등학생메이크업",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "생활용품쇼핑몰",
+   "kw": "그란타월",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무료임신박스",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가벼운브라",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모크림",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "손상모발헤어팩",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무료임신선물",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여자아기100일선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이백일선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비레벨",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "병풍초점책",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드시모네베이비유산균",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드시모네베이비2",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "드시모네유산균아기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "30개월영어",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엘라바아기베개",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용품선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5살조카선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2세선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3세동화책",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기출산용품",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유모차할인매장",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스트레치마크크림",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "허벅지튼살크림",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "두돌아기학습지",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "천안산모교실",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "광주산모교실",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "진주시산후도우미",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동탄산모교실",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전시회꽃선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장미꽃선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마그네슘비타민D영양제",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성칼마디",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "메쉬배냇저고리",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비클렌징워터",
    "vol": 30,
    "comp": "높음",
    "hint": false
@@ -2485,44 +6776,62 @@
    "hint": false
   },
   {
-   "kw": "코스텐",
+   "kw": "출산과일바구니배달",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "골판지책장",
+   "kw": "초등크리스마스선물",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "피크닉종이의자",
+   "kw": "출산후화장품",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자취가전",
+   "kw": "AI독서",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "1인용가구",
+   "kw": "어린이독서",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "생활용품추천",
-   "vol": 25,
+   "kw": "영아그림책",
+   "vol": 30,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "플라스틱용기업체",
-   "vol": 25,
+   "kw": "유아독서",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모빌제작",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부필수품",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아크리스마스선물",
+   "vol": 30,
    "comp": "높음",
    "hint": false
   },
@@ -2533,19 +6842,85 @@
    "hint": false
   },
   {
-   "kw": "생활용품사이트",
+   "kw": "유기농흑염소",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기침대카메라",
+   "kw": "아기용품사이트",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퀸센스양수냄비",
+   "kw": "3세아이선물",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다섯살선물",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모선물세트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기면역유산균",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "애기향수",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌유산균",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동화장품",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실리콘와펜제작",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산전케어",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "70브라",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "아기화장품세트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "95A브라",
    "vol": 25,
    "comp": "높음",
    "hint": false
@@ -2557,115 +6932,271 @@
    "hint": false
   },
   {
-   "kw": "부엌소품",
+   "kw": "산모화장품",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "주방용품사이트",
+   "kw": "산모바디워시",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가성비차량용청소기",
+   "kw": "임산부용화장품",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자취생전기밥솥",
+   "kw": "출산무료선물",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "식품플라스틱용기",
-   "vol": 20,
+   "kw": "아기피부유산균",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "살림노하우",
-   "vol": 20,
+   "kw": "4세도서",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "플라스틱용기제조",
-   "vol": 20,
+   "kw": "3살동화책",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "꿀템도시락",
-   "vol": 20,
+   "kw": "유아전자책",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가성비템",
-   "vol": 20,
+   "kw": "5세아이책",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자연주의브랜드",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "태교용품",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전주산모교실",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "센스있는돌선물",
+   "vol": 25,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "차량용청소기비교",
-   "vol": 20,
+   "kw": "두돌아기교육",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "밥솥소형",
-   "vol": 20,
+   "kw": "4세남자아이선물",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "투명실링용기",
-   "vol": 15,
+   "kw": "낫다샴푸",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "식기류도매",
-   "vol": 15,
+   "kw": "3세아기선물",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "혜림푸드",
-   "vol": 15,
+   "kw": "아동책대여",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쌍둥이용품",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "완구사이트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이책대여",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빨간튼살크림",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "만1세학습지",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "하남육아용품",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "3살방문수업",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영아학습지",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아교구회사",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포토제작",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오가닉바디필로우",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거창산후도우미",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "코베몰",
+   "vol": 25,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "EM에버미라클",
-   "vol": 15,
+   "kw": "육아교실",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부모임",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부천산모교실",
+   "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "이엠효소",
+   "kw": "부부산모교실",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아배냇저고리만들기",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "다이어트호박즙",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보자기공장",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "당일배송과일바구니",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "100%PURE",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아출판사",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두살선물",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "친환경쇼핑몰",
+   "kw": "임신용품",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "두상교정모",
+   "kw": "임신부선물",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아캠",
+   "kw": "탈모샴푸선물",
    "vol": 15,
    "comp": "높음",
    "hint": false
@@ -2683,13 +7214,31 @@
    "hint": false
   },
   {
-   "kw": "A4사이즈달력",
+   "kw": "탁상용달력사이즈",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자동출수포트",
+   "kw": "여름목욕가운",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플라스틱달력",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비샤워세트",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맘박스",
    "vol": 15,
    "comp": "높음",
    "hint": false
@@ -2701,67 +7250,307 @@
    "hint": false
   },
   {
-   "kw": "이국주미니밥솥",
+   "kw": "임산부샘플",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유기농스킨",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6세독서",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "튼살방지크림",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무료출산축하선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아박스",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "소형청소기무선",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기숙사청소기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종이가구만들기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "필터체인지",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "1인용밥솥쿠쿠",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자취전기밥솥",
+   "kw": "출산샘플",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "살림잇템",
-   "vol": 10,
+   "kw": "애기생일선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아가선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쌍둥이돌잔치선물",
+   "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신생아홈카메라",
+   "kw": "4세여자아이선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비프로바이오틱스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드시모네베이비1",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "두상교정모",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아북클럽",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "키즈오디오북",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국민수유쿠션",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "18개월영어",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "24개월영어",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "2살영어",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "3살영어책",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3살아기전집",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3세추천도서",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부전용화장품",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아책읽기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3세영어책",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "온라인독서프로그램",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "32개월학습지",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안녕윙크",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "튼살없애는크림",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하남유아용품",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "편백수샴푸",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천연토너",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "분당웨딩케어",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안면홍조팩",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동출수포트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "크베맘박스",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "청주산모교실",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "맘스클래스",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "제주산모교실",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "평택산모교실",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "산모교실리스트",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "원주산모교실",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "구미산모교실",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "산모교실추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일산산모교실",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "배냇저고리선물세트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "여름용배냇저고리",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신보조제",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "육아카메라",
+   "kw": "그린터치튼살크림",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "전주대학교EM",
+   "kw": "영아생일선물",
    "vol": 10,
    "comp": "낮음",
    "hint": false
@@ -2773,13 +7562,229 @@
    "hint": false
   },
   {
-   "kw": "맘캠",
+   "kw": "선물용임산부바디필로우",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "탁상달력디자인제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전국과일바구니",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아교육전",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "스케치북8절지",
+   "kw": "3세아이책",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신축하무료선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동독서",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이책읽기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아동도서",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "어린이독서프로그램",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모이벤트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부무료샘플",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "임신커뮤니티",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예비맘을위한선물세트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "서리박스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "산모박스",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3살애기선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쎌티아이베이비",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "애기용품선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두돌교육",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "거제산모교실",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산선물배달",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4살남아크리스마스선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4살여아크리스마스선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "4세여아크리스마스선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유아유산균비교",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "우가자차486",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "3살여아크리스마스선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "3세여아크리스마스선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "3세크리스마스선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용품전문점",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "7살독서",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4세크리스마스선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "공룡AR카드",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4살크리스마스선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2살크리스마스선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "2세크리스마스선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3살아기크리스마스선물",
    "vol": 10,
    "comp": "높음",
    "hint": false
@@ -2791,70 +7796,136 @@
    "hint": false
   },
   {
-   "kw": "3세아이책",
+   "kw": "7월산모교실",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "오가닉베넷저고리만들기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "산모수업",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "건타입청소기",
+   "kw": "온라인산모교실",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "소형먼지청소기",
+   "kw": "어버이날행사",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가벼운가구",
+   "kw": "6월산모교실",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "임신육아교실",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자취방책꽂이",
+   "kw": "3월산모교실",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "남양산모교실",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "후디스산모교실",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "5월산모교실",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "분당산모교실",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종이수납정리함",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "종이신발장",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "종이진열장",
+   "kw": "유아제품",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가전도매",
+   "kw": "파스퇴르산모교실",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "노인마사지기",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "로켓배송추천",
+   "kw": "신생아여름배냇저고리",
    "vol": 10,
-   "comp": "중간",
-   "hint": true
+   "comp": "낮음",
+   "hint": false
   },
   {
-   "kw": "신혼살림템",
+   "kw": "여름베넷저고리",
    "vol": 10,
    "comp": "높음",
-   "hint": true
+   "hint": false
+  },
+  {
+   "kw": "아기베넷저고리",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이욕조",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "용띠배냇저고리",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "자주색양파",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고업액상칼슘350",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
   }
  ]
 }
