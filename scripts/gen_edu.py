@@ -58,7 +58,7 @@ course = ('<section class="educourse"><small>CLASS</small><h2>수강 과목 선�
   '<div class="ec"><span class="ectag">과목 2 · 🔥 오픈 이벤트</span><b>[쿠팡파트너스] 쿠팡파트너스 수익화 3주 1:1</b><p>1주 가입·승인·셋팅 · 2주 상품 고르기·링크 글쓰기·대가성 문구 · 3주 최상단 글쓰기·운영정책 지키기<br>🎨 블로그 꾸미기·셋팅 1회 포함</p><span style="font-size:13px;color:#aaa"><s>1,500,000원</s> <b style="color:#ff6b84">20%</b> · 10/31까지 오픈 이벤트가</span><b class="pr" style="color:#ff6b84">1,200,000원</b></div>'
   '<div class="ec set"><span class="ectag">🔥 오픈 이벤트</span><b>[SET] 블로그 + 쿠팡파트너스 5주 1:1 올인원</b><p>두 과목을 5주 안에 한 번에 끝내요<br>🎨 블로그 꾸미기·셋팅 1회 포함<br>따로 들으면 <s>2,400,000원</s> <b style="color:#ff6b84">17%</b></p><b class="pr" style="color:#ff6b84">2,000,000원</b></div>'
   '<div class="ec" style="border-style:dashed"><span class="ectag" style="background:#c9f0ff">수강 외 결제 · 선택</span><b>이웃·방문자·인스타 1:1 실전 코칭</b><p>🤝 한 달 안에 이웃 1,000명 만들기 · 📈 한 달 안에 일 방문자 1,000명 만들기 · 📸 인스타그램 계정 만들기<br>이웃·방문자를 대신 늘려 드리는 서비스가 아니라, 목표를 세우고 직접 늘리는 방법을 1:1로 알려 드려요. 결과는 활동량·주제에 따라 달라요. 수강료와 별도이며 금액은 상담 때 안내해요.</p></div>'
-  '</div><a class="btn" href="/#/edu">수강 신청·결제하러 가기 ›</a><p class="ecnote">한 번 결제 · 카드 할부 가능(카드사 기준)<br>수익 금액·체험단 선정·검색 순위를 약속하거나 보장하지 않아요.</p></section>')
+  '</div><a class="btn" href="/#/edu">수강 신청·결제하러 가기 ›</a></section>')
 rv = grab('<section class="edurv">')
 guar = grab('<div class="eduguar">', "</div>")
 way = re.search(r'<ul class="eduway">.*?</ul>', JS).group(0)
@@ -164,7 +164,6 @@ h1,h2{{letter-spacing:-.02em}}
 <section class="sec"><h2>진행 방식</h2>{way}</section>
 <section class="price"><span class="badge">오픈 이벤트</span><br><div class="box"><small>5주 1:1 강의 + 전자책·강의자료</small><b>월 10만원대</b><em>*12개월 카드 할부 시 (할부 수수료는 카드사 기준)</em></div></section>
 {guar}
-<p class="note" style="margin-top:14px">코칭은 방법을 함께 찾는 과정이에요. 체험단 당첨, 검색 순위, 수익 금액을 약속하거나 보장하지 않아요.</p>
 <section class="cta"><p>아직 고민하는 분들께</p><h2>지금 시작하고<br><span>생활비 월 100</span> 아껴보세요!</h2><small style="display:block;margin-top:10px;font-size:11px;color:#8f8a99">*체험단 활용 정도에 따라 사람마다 달라요</small>
 <a class="btn" href="/#/edu">1:1 상담 신청하기</a><br><a class="btn" style="background:#fee500;color:#191919" href="{CHAT}" target="_blank" rel="noopener">카카오톡으로 바로 문의</a><br><a class="btn" style="background:#222" href="/">다꾸체험단 홈 가기</a></section>
 {footer()}
