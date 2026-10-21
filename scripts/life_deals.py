@@ -26,5 +26,17 @@ for c in pick[:12]:
     pr = lambda v: (str(v) + "원") if v and not str(v).endswith("원") else (v or "")
     out.append({"name": c.get("name"), "cpUrl": cp, "u": old.get(cp, ""), "img": img, "rate": str(c.get("rate") or "").strip("% "), "price": pr(c.get("price")), "orig": pr(c.get("orig")) if c.get("rate") else "", "endAt": end})
 d["lifeDeals"] = out
+# 골드박스 전체(2026-10-22 시온님 "오늘이 제일 싸요 10개만 나와"): 화면의 품절 아닌 골드박스 카드 전부 → goldAll, push 후 coupang.yml 이 u 를 20개씩 채운다
+oldg = {x.get("cpUrl"): x.get("u") for x in (d.get("goldAll") or []) + (d.get("lifeDeals") or []) + (d.get("babyDeals") or []) if x.get("u")}
+ga, seen3 = [], set()
+for c in cards:
+    n = str(c.get("name") or "")
+    if not c.get("pid") or n[:14] in seen3: continue
+    seen3.add(n[:14])
+    cp = f"https://www.coupang.com/vp/products/{c['pid']}" + (f"?itemId={c['itemId']}&vendorItemId={c['vendorItemId']}" if c.get("itemId") and c.get("vendorItemId") else "")
+    img = str(c.get("img") or ""); img = ("https:" + img if img.startswith("//") else img).replace("230x230ex", "492x492ex")
+    pr = lambda v: (str(v) + "원") if v and not str(v).endswith("원") else (v or "")
+    ga.append({"name": n, "cpUrl": cp, "u": oldg.get(cp, ""), "img": img, "rate": str(c.get("rate") or "").strip("% "), "price": pr(c.get("price")), "orig": pr(c.get("orig")) if c.get("rate") else "", "endAt": end})
+d["goldAll"] = ga
 open(p, "w", encoding="utf-8").write(json.dumps(d, ensure_ascii=False, separators=(",", ":")))
-print(f"생활용품 핫딜 {len(out)}개 (골드박스 카드 {len(cards)}개 중)")
+print(f"생활용품 핫딜 {len(out)}개 · 골드박스 전체 {len(ga)}개 (카드 {len(cards)}개 중)")

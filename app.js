@@ -1833,8 +1833,7 @@ function wxSection(){
 }
 function dealsView(){
   var h=slideBanners(false,dealSlides())+'<div class="pg"><h1>오늘의 특가 🔥</h1>'+cheapBtn()+shopBtn()+dealSearch()+topDealsHtml()+groceryDeal()+wxSection()+recentDeals();
-  var GOLD=(Array.isArray(seed.goldbox)?seed.goldbox:[]).filter(function(x){ return safeUrl(x.u) && !(x.endAt && Date.parse(x.endAt)<=Date.now()); });
-  if(GOLD.length) h+='<section class="sec tossec" id="gold"><div class="sh"><h2>⏰ 오늘이 제일 싸요!</h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="cd" style="margin:-6px 4px 10px">🔥마감임박🔥 서두르세요! <b id="gbcd">'+clock(nextSeven())+'</b></p><div class="tgrid">'+GOLD.slice().sort(byPrice).map(tossCard).join("")+'</div></section>';
+  h+=goldSec();
   h+=cpBanner();
   if(ADS.length){
     h+='<section class="sec"><div class="sh"><h2>🛍️ 특가 모아보기</h2></div><div class="hs">'+
@@ -1847,20 +1846,26 @@ function dealsView(){
   h+='<div id="babyhd">'+hotDeal()+'</div>';
   h+='<div id="lifehd">'+lifeHot()+'</div>';
   if(TOSS.length) h+='<section class="sec tossec" id="toss"><div class="sh"><h2>🛒 오늘의 하루특가</h2>'+(seed.tossUpdated?'<span class="upd">'+esc(String(seed.tossUpdated).slice(11))+' 기준</span>':'')+'</div><p class="cd tcdh">⏳ 밤 12시 교체까지 <b id="tossd">'+hms(msToMidnight())+'</b> 남음</p><div class="tgrid">'+TOSS.slice(0,10).sort(byPrice).map(tossCard).join("")+'</div></section>';
-  h+=moreDealsSec();
+  /* 오늘 많이 사는 쿠팡 인기템(moreDealsSec)은 2026-10-22 시온님 요청으로 뺌 → 골드박스 전체가 끝없이 이어짐 */
   h+='<a class="kakaobox sm" '+ext(kakaoUrl())+'><span><small>다꾸 <i>×</i> 카카오톡</small><b>🔔 새 특가 열리면 <em>가장 먼저 알려드려요!</em></b></span><span class="kg">알림 받기</span></a>';
   h+='<p class="fine">특가 링크는 제휴 링크로, 구매 시 다꾸가 수수료를 받을 수 있어요. 가격과 할인은 판매처 사정에 따라 바뀔 수 있어요.</p>';
   return h+'</div>';
 }
 /* 특가 탭 끝없는 목록 (골드박스 나머지 + 카테고리 베스트, 쿠팡 공식 API) */
 var MDEAL={L:[],i:0,obs:null};
+/* 오늘이 제일 싸요(2026-10-22 시온님 "10개만 나와, 인기템 지우고 골드박스로"): API 골드박스 + 골드박스 화면 카드 전체(goldAll) + 나머지 골드박스, 가격 낮은 순으로 12개씩 이어 붙임 */
+function goldList(){ var seen={}, out=[]; liveGold().concat((Array.isArray(seed.goldAll)?seed.goldAll:[]),(Array.isArray(seed.moreDeals)?seed.moreDeals:[]).filter(function(x){ return x.k==="골드박스"; })).forEach(function(x){ if(!safeUrl(x.u)||(x.endAt&&Date.parse(x.endAt)<=Date.now())) return; var k=String(x.name||"").slice(0,14); if(seen[k]||seen[x.u]) return; seen[k]=seen[x.u]=1; out.push(x); }); return out.sort(byPrice); }
+function goldSec(){
+  MDEAL.L=goldList(); MDEAL.i=0; if(!MDEAL.L.length) return "";
+  return '<section class="sec tossec" id="gold"><div class="sh"><h2>⏰ 오늘이 제일 싸요!</h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="cd" style="margin:-6px 4px 10px">🔥마감임박🔥 서두르세요! <b id="gbcd">'+clock(nextSeven())+'</b> · 골드박스 '+MDEAL.L.length+'개</p><div class="tgrid" id="mdfeed"></div><div id="mdsent" style="height:1px"></div></section>';
+}
 function moreDealsSec(){
   var shown={}; liveGold().concat(liveToss(),babyDeals(),lifeDeals()).forEach(function(x){ if(x.u) shown[x.u]=1; });
   MDEAL.L=(Array.isArray(seed.moreDeals)?seed.moreDeals:[]).filter(function(x){ return safeUrl(x.u)&&!shown[x.u]&&!(x.endAt&&Date.parse(x.endAt)<=Date.now()); }).sort(byPrice);
   MDEAL.i=0; if(!MDEAL.L.length) return "";
   return '<section class="sec tossec" id="moredeal"><div class="sh col"><h2>🛍️ 오늘 많이 사는 쿠팡 인기템</h2><p class="cd">골드박스·카테고리 베스트를 계속 보여드려요</p></div><div class="tgrid" id="mdfeed"></div><div id="mdsent" style="height:1px"></div></section>';
 }
-function mdealCard(x){ var y={name:x.name,u:x.u,img:x.img,price:x.price,rate:x.rate,endAt:x.endAt,badge:x.k&&x.k!=="골드박스"?x.k+" 베스트":(x.k?"골드박스":"")}; return tossCard(y); }
+function mdealCard(x){ var y={name:x.name,u:x.u,img:x.img,price:x.price,orig:x.orig,rate:x.rate?String(x.rate).replace(/%$/,"")+"%":"",rocket:x.rocket,endAt:x.endAt,badge:x.k&&x.k!=="골드박스"?x.k+" 베스트":""}; return tossCard(y); }
 function mdealMore(){ var g=document.getElementById("mdfeed"); if(!g||MDEAL.i>=MDEAL.L.length) return false; var n=MDEAL.L.slice(MDEAL.i,MDEAL.i+12); MDEAL.i+=n.length; g.insertAdjacentHTML("beforeend",n.map(mdealCard).join("")); return true; }
 function initMoreDeals(){
   if(MDEAL.obs){ MDEAL.obs.disconnect(); MDEAL.obs=null; }

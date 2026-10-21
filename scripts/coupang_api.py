@@ -148,6 +148,15 @@ def main():
                     r = call("POST", BASE + "/v1/deeplink", body={"coupangUrls": [x["cpUrl"]], "subId": SUB_SITE}) or []
                     if r and r[0].get("shortenUrl"): x["u"] = r[0]["shortenUrl"]; changed = True
                 except Exception as e: print("핫딜 변환 실패:", x.get("name"), e)
+        gtodo = [x for x in d.get("goldAll", []) if x.get("cpUrl") and not x.get("u")]  # 골드박스 전체(2026-10-22): 20개씩 묶어서
+        for i in range(0, len(gtodo), 20):
+            chunk = gtodo[i:i + 20]
+            try: res = call("POST", BASE + "/v1/deeplink", body={"coupangUrls": [x["cpUrl"] for x in chunk], "subId": SUB_SITE}) or []
+            except Exception as e: print("골드박스 전체 변환 실패:", e); res = []
+            by = {r.get("originalUrl"): r.get("shortenUrl") for r in res}
+            for x in chunk:
+                if by.get(x["cpUrl"]): x["u"] = by[x["cpUrl"]]; changed = True
+        if gtodo: print(f"골드박스 전체 링크 변환 {sum(1 for x in gtodo if x.get('u'))}/{len(gtodo)}개")
         todo = [it for it in d.get("items", []) if it.get("cpUrl") and not it.get("viewUrl")]
         for i in range(0, len(todo), 20):
             chunk = todo[i:i + 20]
