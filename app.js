@@ -1814,13 +1814,15 @@ var WX_TH=[ // 전국적인 날씨일 때만(2026-10-18 시온님 요청). w: 8�
   {k:"monsoon", ok:function(w,m,md){ return md>="06-20"&&md<="07-31"&&w.rainCities>=5; }, ic:"☔", t:"장마철", d:"눅눅한 집엔 제습기", kw:["제습기","장우산"]},
   {k:"rain", ok:function(w){ return w.rainCities>=5; }, ic:"☔", t:"전국에 비 소식", d:"장우산·제습기 챙기세요", kw:["장우산","제습기"]},
   {k:"shower", ok:function(w,m){ return m>=6&&m<=9&&w.rainCities>=4&&w.maxRain<10; }, ic:"🌦️", t:"곳곳에 소나기", d:"가방 속 우산 하나", kw:["장우산"]}];
-var SEASON_TH={1:["한겨울 따뜻하게","핫팩","온수매트"],2:["끝까지 따뜻하게","핫팩","전기요"],3:["황사·미세먼지 대비","황사마스크","공기청정기"],4:["봄맞이 침구 관리","침구청소기","공기청정기"],5:["여름 미리 준비","선풍기","모기퇴치기"],6:["장마 대비","제습기","선풍기"],7:["한여름 필수","선풍기","쿨매트"],8:["늦여름 모기 조심","모기퇴치기","선풍기"],9:["환절기 침구 관리","침구청소기","전기요"],10:["겨울이불 꺼낼 때","겨울이불","침구청소기"],11:["겨울 준비","겨울이불","전기요"],12:["연말 모임 시즌","숙취해소제","핫팩"]};
+var SEASON_TH={1:[["한겨울 따뜻하게","핫팩","온수매트"],["건조한 겨울 실내","가습기","수면양말"]],2:[["끝까지 따뜻하게","핫팩","전기요"],["건조한 실내","가습기","수면양말"]],3:[["황사·미세먼지 대비","황사마스크","공기청정기"],["봄맞이 침구 바꾸기","봄이불","침구청소기"]],4:[["봄맞이 침구 관리","침구청소기","봄이불"],["봄 햇살 대비","선크림","공기청정기"]],5:[["여름 미리 준비","선풍기","냉감이불"],["모기 시즌 시작","모기퇴치기","선크림"]],6:[["장마 대비","제습기","선풍기"],["시원한 잠자리","냉감이불","쿨매트"]],7:[["한여름 필수","선풍기","쿨매트"],["열대야 꿀잠","냉감이불","모기퇴치기"]],8:[["늦여름 모기 조심","모기퇴치기","선풍기"],["열대야 꿀잠","냉감이불","쿨매트"]],9:[["환절기 침구 관리","침구청소기","차렵이불"],["밤공기 선선할 때","전기요","가습기"]],10:[["겨울이불 꺼낼 때","겨울이불","극세사 이불"],["밤공기 쌀쌀할 때","전기요","온수매트"],["건조한 가을 실내","가습기","침구청소기"],["발끝까지 따뜻하게","수면양말","전기장판"]],11:[["겨울 준비","겨울이불","극세사 이불"],["따뜻한 잠자리","전기요","온수매트"],["건조한 실내","가습기","수면양말"],["첫 추위 대비","핫팩","전기장판"]],12:[["연말 모임 시즌","숙취해소제","핫팩"],["한겨울 잠자리","전기요","온수매트"],["건조한 겨울 실내","가습기","수면양말"]]};
+/* 2026-10-22 시온님 "매일 같은 이불만 나와": 테마·상품을 날짜로 돌려서 매일 바뀌게 */
+function wxDay(){ var k=new Date(Date.now()+9*36e5); return Math.floor(k.getTime()/864e5); }
 function wxThemes(){
   var S=seed.seasonDeals||{}, w=seed.weather, kst=new Date(Date.now()+9*36e5), today=kst.toISOString().slice(0,10), m=kst.getUTCMonth()+1, md=today.slice(5);
   if(!w||w.date!==today||w.rainCities==null) w=null;
-  var out=[], used={}; function add(ic,t,d,kws){ var L=[]; kws.forEach(function(q){ if(used[q]) return; (S[q]||[]).forEach(function(x){ if(safeUrl(x.u)&&L.length<4) L.push(x); }); used[q]=1; }); if(L.length>=2) out.push({ic:ic,t:t,d:d,L:L}); }
+  var out=[], used={}, dn=wxDay(); function add(ic,t,d,kws){ var L=[], seen={}; var KW=kws.filter(function(q){ return !used[q]&&(S[q]||[]).some(function(x){ return safeUrl(x.u); }); }); KW.forEach(function(q){ var A=(S[q]||[]).filter(function(x){ return safeUrl(x.u); }), off=A.length?(dn*2)%A.length:0, n=0; for(var j=0;j<A.length&&n<Math.ceil(4/KW.length);j++){ var x=A[(off+j)%A.length], key=String(x.name||"").slice(0,18); if(seen[key]) continue; seen[key]=1; L.push(x); n++; } used[q]=1; }); if(L.length>=2) out.push({ic:ic,t:t,d:d,L:L.slice(0,4)}); return L.length>=2; }
   if(w){ for(var i=0;i<WX_TH.length;i++){ var th=WX_TH[i]; if(th.ok(w,m,md)){ add(th.ic,th.t,th.d,th.kw); break; } } }
-  var st=SEASON_TH[m]; if(st) add("🗓️",st[0],st.slice(1).join("·")+" 챙기세요",st.slice(1));
+  var ST=SEASON_TH[m]||[]; for(var k=0;k<ST.length;k++){ var st=ST[(dn+k)%ST.length]; if(add("🗓️",st[0],st.slice(1).join("·")+" 챙기세요",st.slice(1))) break; }
   return out.slice(0,2);
 }
 function wxSection(){
