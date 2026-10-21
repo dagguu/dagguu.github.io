@@ -1290,7 +1290,7 @@ function eduPayAsk(k){
   var d=today(), dt=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일";
   var w=document.createElement("div"); w.className="eduask";
   w.innerHTML='<div class="eak ctr" role="dialog" aria-modal="true" aria-label="수강 계약서"><b class="eat">다꾸 수익화 1:1 교육 수강 계약서</b><p class="ean">결제 전에 끝까지 읽고 동의해 주세요</p>'+
-    '<h4>제1조 계약 당사자</h4><table class="eatb"><tr><th>교육 제공자</th><td colspan="2">'+esc(bz.name||"플랜비")+' (대표 '+esc(bz.ceo||"")+', 사업자등록번호 '+esc(bz.regNo||"")+')</td></tr><tr><th>수강생</th><td colspan="2">'+esc(nick())+' (카카오 로그인 회원)</td></tr></table>'+
+    '<h4>제1조 계약 당사자</h4><table class="eatb"><tr><th>교육 제공자</th><td colspan="2">'+esc(bz.name||"플랜비")+' (대표 '+esc(bz.ceo||"")+', 사업자등록번호 '+esc(bz.regNo||"")+')</td></tr><tr><th>수강생 실명 <i class="req">*</i></th><td colspan="2"><input class="fi earn" id="earn" maxlength="20" autocomplete="name" placeholder="실명을 입력해 주세요"><small class="earh">계약서와 결제자 확인에 써요 · 카카오 회원 '+esc(nick())+'</small></td></tr></table>'+
     '<h4>제2조 과목과 기간</h4><p class="eap">'+esc(nm)+' · 1:1 강의 기간 '+wk+'(첫 교육일부터) · 1:1 코칭 12개월</p>'+
     '<h4>제3조 수강료와 구성</h4><p class="eap">수강료 <b>'+pr.toLocaleString()+'원</b> (한 번 결제, 카드 할부는 카드사 기준)</p>'+
     '<table class="eatb">'+EDU_PARTS.map(function(r){ return '<tr><th>'+r[0]+'</th><td>'+r[1]+'%<br><small>'+(pr?Math.round(pr*r[1]/100).toLocaleString()+'원':'')+'</small></td><td>'+r[2]+'</td></tr>'; }).join("")+'</table>'+
@@ -1299,18 +1299,20 @@ function eduPayAsk(k){
     '<p class="eadt">계약일 '+dt+' · 약관 버전 '+EDU_TERMS_VER+'</p>'+
     '<label class="eachk"><input type="checkbox" class="eaok"> [필수] 위 계약 내용(과목·기간·수강료·구성)을 확인했어요</label>'+
     '<label class="eachk"><input type="checkbox" class="eaok"> [필수] 제4조 환불 조건과 디지털 콘텐츠 청약철회 제한에 동의해요</label>'+
-    '<div class="eabtn"><button type="button" class="b" data-ea="x">닫기</button><button type="button" class="b pri" data-ea="go" disabled>동의하고 결제하러 가기 ↗</button></div></div>';
+    '<p class="eapn">페이앱 결제 화면에서도 같은 실명으로 결제해 주세요.</p><div class="eabtn"><button type="button" class="b" data-ea="x">닫기</button><button type="button" class="b pri" data-ea="go" disabled>동의하고 결제하러 가기 ↗</button></div></div>';
   document.body.appendChild(w);
   var go=w.querySelector('[data-ea="go"]'), boxes=[].slice.call(w.querySelectorAll(".eaok"));
-  boxes.forEach(function(x){ x.addEventListener("change",function(){ go.disabled=!boxes.every(function(y){ return y.checked; }); }); });
+  var rn=w.querySelector("#earn"), rnOk=function(){ return /^[가-힣]{2,10}$|^[A-Za-z][A-Za-z .]{1,29}$/.test(rn.value.trim()); }, chk=function(){ go.disabled=!(rnOk()&&boxes.every(function(y){ return y.checked; })); };
+  try{ var pv=JSON.parse(ls("dakku-edu-consent")||"{}"); if(pv.name) rn.value=pv.name; }catch(er){}
+  boxes.forEach(function(x){ x.addEventListener("change",chk); }); rn.addEventListener("input",chk);
   w.addEventListener("click",function(e){
     if(e.target===w||e.target.closest('[data-ea="x"]')){ w.remove(); return; }
     if(e.target.closest('[data-ea="go"]')&&!go.disabled){
       ga("edu_pay_click",{course:k});
       var win=window.open("about:blank","_blank");
       var open=function(){ if(win) win.location.href=u; else location.href=u; w.remove(); };
-      try{ ls("dakku-edu-consent",JSON.stringify({course:k,price:pr,ver:EDU_TERMS_VER,at:new Date().toISOString()})); }catch(er){}
-      if(SB&&USER){ SB.from("edu_consents").insert({user_id:USER.id,course:k,price:pr,terms_ver:EDU_TERMS_VER,ua:navigator.userAgent.slice(0,200)}).then(function(r){ if(r&&r.error) console.warn("[dakku] consent",r.error.message); open(); },function(){ open(); }); }
+      var rname=rn.value.trim(); try{ ls("dakku-edu-consent",JSON.stringify({course:k,price:pr,ver:EDU_TERMS_VER,name:rname,at:new Date().toISOString()})); }catch(er){}
+      if(SB&&USER){ SB.from("edu_consents").insert({user_id:USER.id,real_name:rname,course:k,price:pr,terms_ver:EDU_TERMS_VER,ua:navigator.userAgent.slice(0,200)}).then(function(r){ if(r&&r.error) console.warn("[dakku] consent",r.error.message); open(); },function(){ open(); }); }
       else open();
     }
   });
@@ -1987,9 +1989,9 @@ function privacyView(){
   var a=seed.privacy||{}, owner=esc(a.owner||"다꾸 체험단 모음 운영자"), mail=esc(a.email||""), day=esc(a.date||"2026년 10월 14일");
   return '<div class="pg privacy"><a class="back" href="#/my">'+ico(I.back)+'<span>마이</span></a><h1>개인정보처리방침</h1>'+
   '<p>'+owner+'(이하 “다꾸”)는 회원의 개인정보를 소중히 다루며, 「개인정보 보호법」에 따라 아래와 같이 처리해요.</p>'+
-  '<h2>1. 수집하는 항목과 방법</h2><ul><li>카카오 로그인 시: 카카오 회원번호(식별자), 닉네임, 프로필 사진, 카카오계정 이메일(동의한 경우)</li><li>서비스 이용 시 회원이 직접 입력·선택: 관심 분야·지역·아기 나이, 알림 수신 동의 여부, 기자단 신청 블로그 주소</li><li>서비스 이용 기록: 찜한 체험단, 눌러본 상품, 룰렛 참여 결과</li></ul>'+
+  '<h2>1. 수집하는 항목과 방법</h2><ul><li>카카오 로그인 시: 카카오 회원번호(식별자), 닉네임, 프로필 사진, 카카오계정 이메일(동의한 경우)</li><li>서비스 이용 시 회원이 직접 입력·선택: 관심 분야·지역·아기 나이, 알림 수신 동의 여부, 기자단 신청 블로그 주소</li><li>수익화 교육 수강 계약 시: 실명, 계약 동의 일시·과목·수강료(계약 이행·환불 처리·분쟁 대비)</li><li>서비스 이용 기록: 찜한 체험단, 눌러본 상품, 룰렛 참여 결과</li></ul>'+
   '<h2>2. 이용 목적</h2><ul><li>회원 식별과 로그인 유지</li><li>찜·최근 본 상품을 여러 기기에서 보여주기</li><li>관심 조건에 맞는 체험단 추천과(동의한 경우) 새 체험단 알림</li><li>다꾸 기자단 선정·안내와 상품권 지급</li><li>룰렛 이벤트 참여 확인(하루 1회)과 경품 지급</li></ul>'+
-  '<h2>3. 보유 기간</h2><ul><li>회원 탈퇴 시 바로 지워요. 마이 다꾸 &gt; 회원 탈퇴에서 직접 할 수 있어요.</li><li>1년 동안 로그인하지 않으면 미리 알린 뒤 지워요.</li><li>법령에 보관 의무가 있는 경우 그 기간만 보관해요.</li></ul>'+
+  '<h2>3. 보유 기간</h2><ul><li>회원 탈퇴 시 바로 지워요. 마이 다꾸 &gt; 회원 탈퇴에서 직접 할 수 있어요.</li><li>1년 동안 로그인하지 않으면 미리 알린 뒤 지워요.</li><li>법령에 보관 의무가 있는 경우 그 기간만 보관해요. 수강 계약·결제 기록은 「전자상거래법」에 따라 5년 보관해요.</li></ul>'+
   '<h2>4. 처리 위탁과 국외 이전</h2><ul><li>회원 정보 저장: Supabase Inc.(데이터베이스·로그인 서비스). 저장 위치는 서비스 설정 지역에 따라요.</li><li>로그인: 주식회사 카카오(카카오 로그인)</li></ul>'+
   '<h2>5. 제3자 제공</h2><p>회원 정보를 다른 곳에 제공하지 않아요. 체험단 신청은 각 모집처 사이트에서 회원이 직접 해요.</p>'+
   '<h2>6. 회원의 권리</h2><p>언제든 내 정보를 보고, 고치고, 알림 동의를 끄고, 탈퇴할 수 있어요. 마이 다꾸에서 직접 하거나 아래 연락처로 요청해 주세요.</p>'+
