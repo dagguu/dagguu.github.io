@@ -199,7 +199,6 @@ document.addEventListener("click",function(e){
   else if((a=t.closest("[data-ishare],[data-tshare]"))) ga("share",{item_id:a.getAttribute("data-ishare")||a.getAttribute("data-tshare")});
   else if((a=t.closest("[data-pushon]"))) ga("push_on_click",{});
   else if((a=t.closest(".prlock a"))) ga("press_lock_click",{});
-  else if((a=t.closest("[data-edupay]"))) ga("edu_pay_click",{course:a.getAttribute("data-edupay")});
 },true);
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
@@ -1281,7 +1280,25 @@ function eduRewards(){
       '<p class="wzxn">이웃·방문자를 대신 늘려 드리는 서비스가 아니라, 직접 늘리는 방법을 1:1로 알려 드려요. 수강료와 별도이며 금액은 상담 때 안내해요.</p></div>'+
     '<p class="wzn">한 번 결제 · 카드 할부 가능(할부 개월 수·수수료는 카드사 기준) · <a href="/refund.html">환불정책</a><br>수익 금액·체험단 선정·검색 순위를 약속하거나 보장하지 않아요.</p></div>';
 }
-function eduPayBtn(k){ var u=safeUrl((seed.eduPay||{})[k]); if(!u||!authCfg()) return ''; if(!USER) return '<button class="ecpay ecjoin" type="button" data-edulogin>🔐 카카오로 회원가입하고 결제하기</button><small class="ecjn">회원가입 후 결제할 수 있어요 (카카오 로그인 = 회원가입)</small>'; return '<a class="ecpay" href="'+esc(u)+'" target="_blank" rel="noopener noreferrer" data-edupay="'+k+'">💳 결제하러 가기 ↗</a>'; }
+function eduPayBtn(k){ var u=safeUrl((seed.eduPay||{})[k]); if(!u||!authCfg()) return ''; if(!USER) return '<button class="ecpay ecjoin" type="button" data-edulogin>🔐 카카오로 회원가입하고 결제하기</button><small class="ecjn">회원가입 후 결제할 수 있어요 (카카오 로그인 = 회원가입)</small>'; return '<button class="ecpay" type="button" data-edupayask="'+k+'">💳 결제하러 가기</button>'; }
+/* 결제 전 환불 조건 확인 창(2026-10-21 시온님 "결제할 때 볼 수 있게"). 청약철회 제한은 결제 전에 알리고 동의를 받아야 효력이 있어서, 결제 페이지로 가기 전에 보여 주고 체크해야 넘어감 */
+var EDU_PARTS=[["① 전자책·강의자료",30,"받은 뒤 환불 안 됨"],["② 1:1 강의",10,"남은 날만큼 − 10%"],["③ 1:1 진단 컨설팅 1회",20,"받은 뒤 환불 안 됨"],["④ 12개월 1:1 코칭",10,"남은 개월만큼 − 10%"],["⑤ 블로그 꾸미기·셋팅 1회",10,"적용 후 환불 안 됨"],["⑥ AI 프롬프트",10,"받은 뒤 환불 안 됨"],["⑦ 기자단 모음 평생 열람·알림",10,"열람 시작 후 환불 안 됨"]];
+function eduPayAsk(k){
+  var u=safeUrl((seed.eduPay||{})[k]); if(!u) return;
+  var nm={blog:"블로그 수익화 (5주 1:1)",cp:"쿠팡파트너스 수익화 (3주 1:1)",set:"블로그 + 쿠팡파트너스 세트 (5주 1:1)"}[k]||"", pr=EDU_PRICE[k]||0;
+  var w=document.createElement("div"); w.className="eduask";
+  w.innerHTML='<div class="eak" role="dialog" aria-modal="true" aria-label="결제 전 환불 조건 확인"><b class="eat">결제 전에 꼭 확인해 주세요</b><p class="ean">'+esc(nm)+' · '+pr.toLocaleString()+'원</p>'+
+    '<table class="eatb">'+EDU_PARTS.map(function(r){ return '<tr><th>'+r[0]+'</th><td>'+r[1]+'%<br><small>'+(pr?Math.round(pr*r[1]/100).toLocaleString()+'원':'')+'</small></td><td>'+r[2]+'</td></tr>'; }).join("")+'</table>'+
+    '<ul class="eal"><li>자료를 받기 전이고 컨설팅·첫 교육 전이면 전액 환불해요.</li><li>강의·코칭은 중간에 해지할 수 있고, 남은 기간만큼 돌려드려요(해지 수수료 10%).</li><li>"평생"은 다꾸체험단이 체험단 사업을 운영하는 동안이에요.</li><li>수익 금액·체험단 선정·검색 순위는 보장하지 않아요.</li></ul>'+
+    '<p class="eaf"><a href="/refund.html" target="_blank" rel="noopener">환불정책 전문 보기 ↗</a></p>'+
+    '<label class="eachk"><input type="checkbox" id="eaok"> 위 금액 구성과 환불 조건을 확인했고 동의해요</label>'+
+    '<div class="eabtn"><button type="button" class="b" data-ea="x">닫기</button><button type="button" class="b pri" data-ea="go" disabled>동의하고 결제하러 가기 ↗</button></div></div>';
+  document.body.appendChild(w);
+  var go=w.querySelector('[data-ea="go"]');
+  w.querySelector("#eaok").addEventListener("change",function(){ go.disabled=!this.checked; });
+  w.addEventListener("click",function(e){ if(e.target===w||e.target.closest('[data-ea="x"]')){ w.remove(); return; } if(e.target.closest('[data-ea="go"]')&&!go.disabled){ ga("edu_pay_click",{course:k}); window.open(u,"_blank","noopener"); w.remove(); } });
+}
+document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.closest("[data-edupayask]"); if(!b) return; e.preventDefault(); eduPayAsk(b.getAttribute("data-edupayask")); });
 document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.closest("[data-edulogin]"); if(!b) return; e.preventDefault(); ga("edu_join_click",{}); ls("dakku-after-login","#/edu"); login("kakao"); });
 function eduView(){
   var EDU_DL="2026-10-31", eduOpen=dcdMs(EDU_DL)>0;

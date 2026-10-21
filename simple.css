@@ -795,3 +795,20 @@ input,select,textarea{font-size:16px!important}
 .eduhero .wzxi b{font-size:14px;color:#fff}
 .eduhero .wzxi p{margin:2px 0 0;font-size:12.5px;color:rgba(255,255,255,.78)}
 .eduhero .wzxn{margin:8px 0 0;font-size:12px;line-height:1.55;color:rgba(255,255,255,.7)}
+
+/* 결제 전 환불 조건 확인 창 */
+.eduask{position:fixed;inset:0;z-index:9999;background:rgba(10,6,20,.6);display:flex;align-items:center;justify-content:center;padding:16px}
+.eduask .eak{background:#fff;color:#1d1b24;border-radius:18px;max-width:420px;width:100%;max-height:88vh;overflow:auto;padding:18px 16px}
+.eduask .eat{display:block;font-size:18px}
+.eduask .ean{margin:4px 0 10px;font-size:14px;color:#6a3fc8;font-weight:800}
+.eduask .eatb{width:100%;border-collapse:collapse;font-size:12.5px}
+.eduask .eatb th,.eduask .eatb td{border-top:1px solid #eee;padding:7px 4px;text-align:left;vertical-align:top}
+.eduask .eatb td:nth-child(2){white-space:nowrap;font-weight:800}
+.eduask .eatb small{font-weight:400;color:#888}
+.eduask .eal{margin:10px 0 6px;padding-left:18px;font-size:12.5px;line-height:1.6;color:#444}
+.eduask .eaf{margin:0 0 10px;font-size:12.5px}
+.eduask .eachk{display:flex;gap:8px;align-items:flex-start;font-size:14px;font-weight:700;margin:6px 0 12px}
+.eduask .eachk input{width:20px;height:20px;flex:0 0 20px}
+.eduask .eabtn{display:flex;gap:8px}
+.eduask .eabtn .b{flex:1}
+.eduask .eabtn .b[disabled]{opacity:.4}
