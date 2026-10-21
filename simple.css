@@ -812,3 +812,7 @@ input,select,textarea{font-size:16px!important}
 .eduask .eabtn{display:flex;gap:8px}
 .eduask .eabtn .b{flex:1}
 .eduask .eabtn .b[disabled]{opacity:.4}
+.eduask .eak.ctr h4{margin:14px 0 6px;font-size:14px;color:#1d1b24}
+.eduask .eap{margin:0;font-size:13px;line-height:1.6;color:#333}
+.eduask .eadt{margin:12px 0 8px;font-size:12px;color:#888}
+.eduask .eatb th{width:44%}

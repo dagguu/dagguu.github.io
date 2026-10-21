@@ -1283,20 +1283,37 @@ function eduRewards(){
 function eduPayBtn(k){ var u=safeUrl((seed.eduPay||{})[k]); if(!u||!authCfg()) return ''; if(!USER) return '<button class="ecpay ecjoin" type="button" data-edulogin>🔐 카카오로 회원가입하고 결제하기</button><small class="ecjn">회원가입 후 결제할 수 있어요 (카카오 로그인 = 회원가입)</small>'; return '<button class="ecpay" type="button" data-edupayask="'+k+'">💳 결제하러 가기</button>'; }
 /* 결제 전 환불 조건 확인 창(2026-10-21 시온님 "결제할 때 볼 수 있게"). 청약철회 제한은 결제 전에 알리고 동의를 받아야 효력이 있어서, 결제 페이지로 가기 전에 보여 주고 체크해야 넘어감 */
 var EDU_PARTS=[["① 전자책·강의자료",30,"받은 뒤 환불 안 됨"],["② 1:1 강의",10,"남은 날만큼 − 10%"],["③ 1:1 진단 컨설팅 1회",20,"받은 뒤 환불 안 됨"],["④ 12개월 1:1 코칭",10,"남은 개월만큼 − 10%"],["⑤ 블로그 꾸미기·셋팅 1회",10,"적용 후 환불 안 됨"],["⑥ AI 프롬프트",10,"받은 뒤 환불 안 됨"],["⑦ 기자단 모음 평생 열람·알림",10,"열람 시작 후 환불 안 됨"]];
+var EDU_TERMS_VER="2026-10-21";
 function eduPayAsk(k){
   var u=safeUrl((seed.eduPay||{})[k]); if(!u) return;
-  var nm={blog:"블로그 수익화 (5주 1:1)",cp:"쿠팡파트너스 수익화 (3주 1:1)",set:"블로그 + 쿠팡파트너스 세트 (5주 1:1)"}[k]||"", pr=EDU_PRICE[k]||0;
+  var nm={blog:"블로그 수익화 (5주 1:1)",cp:"쿠팡파트너스 수익화 (3주 1:1)",set:"블로그 + 쿠팡파트너스 세트 (5주 1:1)"}[k]||"", wk={blog:"5주(35일)",cp:"3주(21일)",set:"5주(35일)"}[k]||"", pr=EDU_PRICE[k]||0, bz=seed.biz||{};
+  var d=today(), dt=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일";
   var w=document.createElement("div"); w.className="eduask";
-  w.innerHTML='<div class="eak" role="dialog" aria-modal="true" aria-label="결제 전 환불 조건 확인"><b class="eat">결제 전에 꼭 확인해 주세요</b><p class="ean">'+esc(nm)+' · '+pr.toLocaleString()+'원</p>'+
+  w.innerHTML='<div class="eak ctr" role="dialog" aria-modal="true" aria-label="수강 계약서"><b class="eat">다꾸 수익화 1:1 교육 수강 계약서</b><p class="ean">결제 전에 끝까지 읽고 동의해 주세요</p>'+
+    '<h4>제1조 계약 당사자</h4><table class="eatb"><tr><th>교육 제공자</th><td colspan="2">'+esc(bz.name||"플랜비")+' (대표 '+esc(bz.ceo||"")+', 사업자등록번호 '+esc(bz.regNo||"")+')</td></tr><tr><th>수강생</th><td colspan="2">'+esc(nick())+' (카카오 로그인 회원)</td></tr></table>'+
+    '<h4>제2조 과목과 기간</h4><p class="eap">'+esc(nm)+' · 1:1 강의 기간 '+wk+'(첫 교육일부터) · 1:1 코칭 12개월</p>'+
+    '<h4>제3조 수강료와 구성</h4><p class="eap">수강료 <b>'+pr.toLocaleString()+'원</b> (한 번 결제, 카드 할부는 카드사 기준)</p>'+
     '<table class="eatb">'+EDU_PARTS.map(function(r){ return '<tr><th>'+r[0]+'</th><td>'+r[1]+'%<br><small>'+(pr?Math.round(pr*r[1]/100).toLocaleString()+'원':'')+'</small></td><td>'+r[2]+'</td></tr>'; }).join("")+'</table>'+
-    '<ul class="eal"><li>자료를 받기 전이고 컨설팅·첫 교육 전이면 전액 환불해요.</li><li>강의·코칭은 중간에 해지할 수 있고, 남은 기간만큼 돌려드려요(해지 수수료 10%).</li><li>"평생"은 다꾸체험단이 체험단 사업을 운영하는 동안이에요.</li><li>수익 금액·체험단 선정·검색 순위는 보장하지 않아요.</li></ul>'+
-    '<p class="eaf"><a href="/refund.html" target="_blank" rel="noopener">환불정책 전문 보기 ↗</a></p>'+
-    '<label class="eachk"><input type="checkbox" id="eaok"> 위 금액 구성과 환불 조건을 확인했고 동의해요</label>'+
+    '<h4>제4조 결제 취소와 환불</h4><ul class="eal"><li>전자책·강의자료를 받기 전이고 컨설팅·첫 교육 전이면 전액 환불해요.</li><li>전자책·강의자료·AI 프롬프트는 디지털 콘텐츠라 받은 뒤에는 청약철회가 제한되어 환불되지 않아요(전자상거래법 제17조 제2항).</li><li>진단 컨설팅·블로그 꾸미기는 제공을 마치면 환불되지 않아요.</li><li>1:1 강의는 남은 일수만큼, 12개월 코칭은 남은 개월만큼 환불하고 남은 금액의 10%를 해지 수수료로 빼요.</li><li>기자단 모음 열람은 시작 후 환불되지 않아요. 다만 결제 후 12개월 안에 다꾸체험단이 체험단 사업을 종료하면 남은 개월만큼 돌려드려요.</li><li>환불은 카카오톡 채널 「다꾸체험단」으로 요청하면 3영업일 안에 결제 수단으로 취소해요.</li></ul>'+
+    '<h4>제5조 기타</h4><ul class="eal"><li>"평생"은 다꾸체험단이 체험단 사업을 운영하는 동안이에요.</li><li>교육은 방법을 함께 찾는 서비스로, 수익 금액·체험단 선정·검색 순위를 약속하거나 보장하지 않아요.</li><li>이 계약서에 없는 내용은 <a href="/refund.html" target="_blank" rel="noopener">환불정책</a>과 관련 법령을 따라요.</li></ul>'+
+    '<p class="eadt">계약일 '+dt+' · 약관 버전 '+EDU_TERMS_VER+'</p>'+
+    '<label class="eachk"><input type="checkbox" class="eaok"> [필수] 위 계약 내용(과목·기간·수강료·구성)을 확인했어요</label>'+
+    '<label class="eachk"><input type="checkbox" class="eaok"> [필수] 제4조 환불 조건과 디지털 콘텐츠 청약철회 제한에 동의해요</label>'+
     '<div class="eabtn"><button type="button" class="b" data-ea="x">닫기</button><button type="button" class="b pri" data-ea="go" disabled>동의하고 결제하러 가기 ↗</button></div></div>';
   document.body.appendChild(w);
-  var go=w.querySelector('[data-ea="go"]');
-  w.querySelector("#eaok").addEventListener("change",function(){ go.disabled=!this.checked; });
-  w.addEventListener("click",function(e){ if(e.target===w||e.target.closest('[data-ea="x"]')){ w.remove(); return; } if(e.target.closest('[data-ea="go"]')&&!go.disabled){ ga("edu_pay_click",{course:k}); window.open(u,"_blank","noopener"); w.remove(); } });
+  var go=w.querySelector('[data-ea="go"]'), boxes=[].slice.call(w.querySelectorAll(".eaok"));
+  boxes.forEach(function(x){ x.addEventListener("change",function(){ go.disabled=!boxes.every(function(y){ return y.checked; }); }); });
+  w.addEventListener("click",function(e){
+    if(e.target===w||e.target.closest('[data-ea="x"]')){ w.remove(); return; }
+    if(e.target.closest('[data-ea="go"]')&&!go.disabled){
+      ga("edu_pay_click",{course:k});
+      var win=window.open("about:blank","_blank");
+      var open=function(){ if(win) win.location.href=u; else location.href=u; w.remove(); };
+      try{ ls("dakku-edu-consent",JSON.stringify({course:k,price:pr,ver:EDU_TERMS_VER,at:new Date().toISOString()})); }catch(er){}
+      if(SB&&USER){ SB.from("edu_consents").insert({user_id:USER.id,course:k,price:pr,terms_ver:EDU_TERMS_VER,ua:navigator.userAgent.slice(0,200)}).then(function(r){ if(r&&r.error) console.warn("[dakku] consent",r.error.message); open(); },function(){ open(); }); }
+      else open();
+    }
+  });
 }
 document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.closest("[data-edupayask]"); if(!b) return; e.preventDefault(); eduPayAsk(b.getAttribute("data-edupayask")); });
 document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.closest("[data-edulogin]"); if(!b) return; e.preventDefault(); ga("edu_join_click",{}); ls("dakku-after-login","#/edu"); login("kakao"); });
