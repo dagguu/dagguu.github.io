@@ -54,9 +54,9 @@ why = grab('<section class="eduwhy">')
 allb = grab('<section class="eduall">')
 books = grab('<section class="edusec"><h2>📚')
 course = ('<section class="educourse"><small>CLASS</small><h2>수강 과목 선택</h2><p class="ecsub">10월 수강생 · 오픈 이벤트 진행 중</p><div class="ecards">'
-  '<div class="ec"><span class="ectag">과목 1</span><b>[블로그] 블로그 수익화 5주 1:1</b><p>체험단 당첨 · 기자단 · 최상단 노출 · AI 프롬프트 글쓰기 · 수익화</p><b class="pr">1,500,000원</b></div>'
-  '<div class="ec"><span class="ectag">과목 2</span><b>[쿠팡파트너스] 쿠팡파트너스 수익화 3주 1:1</b><p>1주 가입·승인·셋팅 · 2주 상품 고르기·링크 글쓰기·대가성 문구 · 3주 최상단 글쓰기·운영정책 지키기</p><b class="pr">1,500,000원</b></div>'
-  '<div class="ec set"><span class="ectag">🔥 오픈 이벤트</span><b>[세트] 블로그 + 쿠팡파트너스 5주 1:1 올인원</b><p>두 과목을 5주 안에 한 번에 끝내요<br>따로 들으면 <s>3,000,000원</s></p><b class="pr" style="color:#ff6b84">2,000,000원</b></div>'
+  '<div class="ec"><span class="ectag">과목 1</span><b>[블로그] 블로그 수익화 5주 1:1</b><p>체험단 당첨 · 기자단 · 최상단 노출 · AI 프롬프트 글쓰기 · 수익화<br>🎨 블로그 꾸미기·셋팅 1회 포함 (스킨 디자인 · 위젯 설치 · 공정위 스티커)</p><b class="pr">1,500,000원</b></div>'
+  '<div class="ec"><span class="ectag">과목 2</span><b>[쿠팡파트너스] 쿠팡파트너스 수익화 3주 1:1</b><p>1주 가입·승인·셋팅 · 2주 상품 고르기·링크 글쓰기·대가성 문구 · 3주 최상단 글쓰기·운영정책 지키기<br>🎨 블로그 꾸미기·셋팅 1회 포함</p><b class="pr">1,500,000원</b></div>'
+  '<div class="ec set"><span class="ectag">🔥 오픈 이벤트</span><b>[세트] 블로그 + 쿠팡파트너스 5주 1:1 올인원</b><p>두 과목을 5주 안에 한 번에 끝내요<br>🎨 블로그 꾸미기·셋팅 1회 포함<br>따로 들으면 <s>3,000,000원</s></p><b class="pr" style="color:#ff6b84">2,000,000원</b></div>'
   '<div class="ec" style="border-style:dashed"><span class="ectag" style="background:#c9f0ff">수강 외 결제 · 선택</span><b>이웃·방문자 늘리는 1:1 실전 코칭</b><p>🤝 서로이웃 늘리는 소통 코칭 · 📈 방문자 늘리는 글쓰기·키워드 코칭<br>이웃·방문자를 대신 늘려 드리는 서비스가 아니라, 직접 늘리는 방법을 1:1로 알려 드려요. 수강료와 별도이며 금액은 상담 때 안내해요.</p></div>'
   '</div><a class="btn" href="/#/edu">수강 신청·결제하러 가기 ›</a><p class="ecnote">한 번 결제 · 카드 할부 가능(카드사 기준) · <a href="/refund.html" style="color:#ffe14d">환불정책</a><br>수익 금액·체험단 선정·검색 순위를 약속하거나 보장하지 않아요.</p></section>')
 rv = grab('<section class="edurv">')
