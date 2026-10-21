@@ -97,7 +97,7 @@ h2{font-size:18px;margin:30px 0 10px;letter-spacing:-.02em}
 footer{margin-top:40px;font-size:12px;color:#999;line-height:1.7;border-top:1px solid #eee;padding-top:14px}"""
 
 FOOT = ('<footer>다꾸체험단은 여러 체험단 사이트의 모집 정보를 모아 보여 주는 서비스로, 각 체험단 사이트와 무관해요. 신청·선정·진행은 해당 사이트에서 이뤄져요.<br>이 사이트는 쿠팡 파트너스, 마이리얼트립, 여기어때 등 제휴 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.<br>'
-        '다꾸체험단 (www.dagguu.com) · 운영 플랜비 · 대표 김정은 · 사업자등록번호 381-53-01054</footer>')
+        '다꾸체험단 (www.dagguu.com) · 운영 플랜비 · 대표 김정은 · 사업자등록번호 381-53-01054 · <a href="/ad-notice.html">광고 및 콘텐츠 표시 안내</a></footer>')
 
 def shell(title, desc, canon, body, img="", robots="index,follow", ld=None):
     img = img or SITE + "/images/og.png"
@@ -174,7 +174,7 @@ def shell_app(title, desc, canon, body, img="", robots="index,follow", ld=None, 
 <div class="frame">
 <header class="appbar"><span class="abl"><a class="backbtn" href="/" aria-label="홈으로">{BACK}</a><a class="logo" href="/"><img src="/icons/icon-192.png" alt="" width="30" height="30" style="border-radius:8px"><b class="wm">다꾸체험단</b></a></span><span class="hbtns"><a class="iconbtn" href="/#/list" aria-label="체험단 검색">{SRCH}</a></span></header>
 <main class="view">{body}
-<p class="sfoot">다꾸체험단은 여러 체험단 사이트의 모집 정보를 모아 보여 주는 서비스로, 각 체험단 사이트와 무관해요. 신청·선정·진행은 해당 사이트에서 이뤄져요.<br>다꾸체험단 (www.dagguu.com) · 운영 플랜비 · 대표 김정은 · 사업자등록번호 381-53-01054</p></main>
+<p class="sfoot">다꾸체험단은 여러 체험단 사이트의 모집 정보를 모아 보여 주는 서비스로, 각 체험단 사이트와 무관해요. 신청·선정·진행은 해당 사이트에서 이뤄져요.<br>다꾸체험단 (www.dagguu.com) · 운영 플랜비 · 대표 김정은 · 사업자등록번호 381-53-01054 · <a href="/ad-notice.html">광고 및 콘텐츠 표시 안내</a></p></main>
 </div>{APPJS}</body></html>
 '''
 
@@ -390,7 +390,7 @@ open(os.path.join(cdir, "index.html"), "w", encoding="utf-8").write(
     shell("체험단 모음 사이트 · 분야별·지역별 체험단 모아보기 | 다꾸체험단", "블로그·인스타·릴스 체험단, 숙박·육아·뷰티·생활·가전·식품·반려동물 체험단과 지역별 숙박 체험단을 한곳에 모았어요. 매일 업데이트.", SITE + "/c/", idx, "", "index,follow", [crumbs([("홈", "/"), ("모아보기", None)])[1]]))
 
 # ---------- sitemap ----------
-urls = [(SITE + "/", "daily"), (SITE + "/c/", "daily"), (SITE + "/refund.html", "monthly"), (SITE + "/edu.html", "weekly")] + [(SITE + p, "daily") for _, p, _ in hubs + chhubs] + [(SITE + "/g/", "weekly"), (SITE + "/p/", "weekly")] + [(SITE + p, "weekly") for _, p, _ in ghubs] + [(f"{SITE}/s/{it['id']}.html", "weekly") for it in open_items] + [(f"{SITE}/p/{os.path.basename(f)[6:-5].replace('_', '-')}.html", "weekly") for f in __import__("glob").glob(os.path.join(ROOT, "scripts", "picks_*.json"))]
+urls = [(SITE + "/", "daily"), (SITE + "/c/", "daily"), (SITE + "/refund.html", "monthly"), (SITE + "/ad-notice.html", "monthly"), (SITE + "/edu.html", "weekly")] + [(SITE + p, "daily") for _, p, _ in hubs + chhubs] + [(SITE + "/g/", "weekly"), (SITE + "/p/", "weekly")] + [(SITE + p, "weekly") for _, p, _ in ghubs] + [(f"{SITE}/s/{it['id']}.html", "weekly") for it in open_items] + [(f"{SITE}/p/{os.path.basename(f)[6:-5].replace('_', '-')}.html", "weekly") for f in __import__("glob").glob(os.path.join(ROOT, "scripts", "picks_*.json"))]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
     f"<url><loc>{e(u)}</loc><lastmod>{TODAY}</lastmod><changefreq>{f}</changefreq></url>\n" for u, f in urls) + "</urlset>\n"
 open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(sm)
