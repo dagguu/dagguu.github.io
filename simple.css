@@ -841,3 +841,17 @@ input,select,textarea{font-size:16px!important}
 .edusheet .epnote{margin:4px 0 10px;font-size:12.5px;color:#6a3fc8;text-align:center}
 .edusheet .epgo{width:100%;height:50px;border-radius:14px;font-size:16px;font-weight:800;margin:0;background:linear-gradient(90deg,#8a3fd0,#d46fd8);color:#fff;border:0}
 .edusheet .epgo[disabled]{opacity:.4}
+
+.edusheet .epnm{display:block;font-size:13px;font-weight:800;margin:6px 0 8px;color:#333}
+.edusheet .epnm .fi{display:block;width:100%;height:42px;font-size:16px;margin:6px 0 0;box-sizing:border-box}
+.edusheet .epagr{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:4px 0 8px}
+.edusheet .epck{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700}
+.edusheet .epck input{width:20px;height:20px;accent-color:#8a3fd0;margin:0}
+.edusheet .epmore{border:0;background:none;color:#8a3fd0;font-size:13px;font-weight:700;text-decoration:underline;white-space:nowrap;padding:4px}
+.edusheet .eprf{max-height:40vh;overflow:auto;background:#f7f5fb;border-radius:12px;padding:12px;margin:0 0 10px;font-size:12.5px;line-height:1.55;color:#444}
+.edusheet .eprf table{width:100%;border-collapse:collapse;margin:6px 0}
+.edusheet .eprf th,.edusheet .eprf td{border-top:1px solid #e6e1ef;padding:5px 3px;text-align:left;vertical-align:top;font-weight:400}
+.edusheet .eprf td:nth-child(2){font-weight:800;white-space:nowrap}
+.edusheet .eprf ul{padding-left:16px;margin:6px 0}
+.edusheet .eprf a{color:#8a3fd0;font-weight:700}
+.edusheet .eprt{margin:4px 0;color:#6a3fc8}
