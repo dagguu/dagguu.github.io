@@ -247,7 +247,7 @@ function render(){
   else if(state.tab==="privacy") v.innerHTML=privacyView();
   else if(state.tab==="event") v.innerHTML=eventView();
   else if(state.tab==="trip") v.innerHTML=tripView();
-  else if(state.tab==="edu") v.innerHTML=eduView();
+  else if(state.tab==="edu"){ v.innerHTML=eduView(); eduResume(); }
   else if(state.tab==="price"){ v.innerHTML=priceView(); if(state.pq) priceSearch(state.pq); }
   if(state.tab==="home") initFeed(); else if(HOBS){ HOBS.disconnect(); HOBS=null; }
   if(state.tab==="deals") initMoreDeals(); else if(MDEAL.obs){ MDEAL.obs.disconnect(); MDEAL.obs=null; }
@@ -1281,7 +1281,7 @@ function eduRewards(){
       '<p class="wzxn">이웃·방문자를 대신 늘려 드리는 서비스가 아니라, 목표를 세우고 직접 늘리는 방법을 1:1로 알려 드려요. 결과는 활동량·주제에 따라 달라요. 수강료와 별도이며 금액은 상담 때 안내해요.</p></div>'+
     '<p class="wzn">한 번 결제 · 카드 할부 가능(할부 개월 수·수수료는 카드사 기준)<br>수익 금액·체험단 선정·검색 순위를 약속하거나 보장하지 않아요.</p></div>';
 }
-function eduPayBtn(k){ var u=safeUrl((seed.eduPay||{})[k]); if(!u||!authCfg()) return ''; if(!USER) return '<button class="ecpay ecjoin" type="button" data-edulogin>🔐 카카오로 회원가입하고 결제하기</button><small class="ecjn">회원가입 후 결제할 수 있어요 (카카오 로그인 = 회원가입)</small>'; return '<button class="ecpay" type="button" data-edupayask="'+k+'">💳 결제하러 가기</button>'; }
+function eduPayBtn(k){ return ''; } /* 2026-10-21 12:38 시온님: 과목 카드의 결제·카카오 버튼은 빼고, 아래 고정 '수강 신청하기' → 과목 선택 창(eduPick)에서 신청 */
 /* 결제 전 환불 조건 확인 창(2026-10-21 시온님 "결제할 때 볼 수 있게"). 청약철회 제한은 결제 전에 알리고 동의를 받아야 효력이 있어서, 결제 페이지로 가기 전에 보여 주고 체크해야 넘어감 */
 var EDU_PARTS=[["① 전자책·강의자료",30,"받은 뒤 환불 안 됨"],["② 1:1 강의",10,"남은 날만큼 − 10%"],["③ 1:1 진단 컨설팅 1회",20,"받은 뒤 환불 안 됨"],["④ 12개월 1:1 코칭",10,"남은 개월만큼 − 10%"],["⑤ 블로그 꾸미기·셋팅 1회",10,"적용 후 환불 안 됨"],["⑥ AI 프롬프트",10,"받은 뒤 환불 안 됨"],["⑦ 기자단 모음 평생 열람·알림",10,"열람 시작 후 환불 안 됨"]];
 var EDU_TERMS_VER="2026-10-21";
@@ -1320,6 +1320,28 @@ function eduPayAsk(k){
 }
 document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.closest("[data-edupayask]"); if(!b) return; e.preventDefault(); eduPayAsk(b.getAttribute("data-edupayask")); });
 document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.closest("[data-edulogin]"); if(!b) return; e.preventDefault(); ga("edu_join_click",{}); ls("dakku-after-login","#/edu"); login("kakao"); });
+/* 수강 신청 과목 선택 창(2026-10-21 시온님 "아래 고정 수강신청하기 누르면 상품 선택"). 고른 뒤 → 로그인 안 했으면 카카오 간편 가입 후 돌아와 계약서 → 페이앱 */
+var EDU_OPT=[["blog","[블로그] 블로그 수익화 5주 1:1"],["cp","[쿠팡파트너스] 쿠팡파트너스 수익화 3주 1:1"],["set","[세트] 블로그 + 쿠팡파트너스 5주 1:1 올인원"]];
+function eduPick(){
+  var w=function(n){ return n.toLocaleString()+'원'; }, pay=seed.eduPay||{};
+  var el=document.createElement("div"); el.className="edupick";
+  el.innerHTML='<div class="epk" role="dialog" aria-modal="true" aria-label="수강 과목 선택"><div class="ephd"><b>수강 과목 선택</b><button type="button" class="epx" aria-label="닫기">✕</button></div>'+
+    EDU_OPT.map(function(o){ var k=o[0], ls_=EDU_LIST[k], pr=EDU_PRICE[k]; var old=k==="set"?'따로 들으면 <s>'+w(EDU_PRICE.blog+EDU_PRICE.cp)+'</s>':(ls_&&ls_>pr?'<s>'+w(ls_)+'</s> <em>'+Math.round((1-pr/ls_)*100)+'%</em>':'');
+      return '<label class="epo"><input type="radio" name="edupk" value="'+k+'"'+(safeUrl(pay[k])?'':' disabled')+'><span class="epn"><b>'+esc(o[1])+'</b><small>'+old+'</small></span><strong>'+w(pr)+'</strong></label>'; }).join("")+
+    '<p class="epnote">'+(authCfg()&&!USER?'카카오로 간편 가입한 뒤 수강 계약서로 이어져요':'다음 화면에서 수강 계약서를 확인하고 결제해요')+'</p>'+
+    '<button type="button" class="b pri epgo" disabled>수강 신청하기</button></div>';
+  document.body.appendChild(el);
+  var go=el.querySelector(".epgo"), sel=function(){ var r=el.querySelector('input[name=edupk]:checked'); return r&&r.value; };
+  el.addEventListener("change",function(){ go.disabled=!sel(); });
+  el.addEventListener("click",function(e){
+    if(e.target===el||e.target.closest(".epx")){ el.remove(); return; }
+    if(e.target.closest(".epgo")&&!go.disabled){ var k=sel(); ga("edu_pick",{course:k}); el.remove();
+      if(authCfg()&&!USER){ ga("edu_join_click",{course:k}); ls("dakku-edu-pick",k); ls("dakku-after-login","#/edu"); login("kakao"); return; }
+      eduPayAsk(k); }
+  });
+}
+function eduResume(){ var k=ls("dakku-edu-pick"); if(!k||!USER) return; try{ localStorage.removeItem("dakku-edu-pick"); }catch(e){} setTimeout(function(){ eduPayAsk(k); },350); }
+document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.closest("[data-edupick]"); if(!b) return; e.preventDefault(); eduPick(); });
 function eduView(){
   var EDU_DL="2026-10-31", eduOpen=dcdMs(EDU_DL)>0;
   return '<div class="pg edu">'+(eduOpen?'<div class="edudl"><b><span class="dlw">🔥 10월 수강생 · 10/31 마감까지</span><span class="dlm">🔥 10월 수강생 모집중 🔥</span></b><span class="dlt" data-edl="'+EDU_DL+'">'+dlTiles(EDU_DL)+'</span></div>':'')+
@@ -1353,7 +1375,7 @@ function eduView(){
       '<label class="fl">하고 싶은 말<textarea class="fi ta" name="msg" maxlength="500" placeholder="궁금한 점이나 목표를 편하게 적어 주세요"></textarea></label>'+
       '<label class="agree"><input type="checkbox" name="agree"> 상담을 위해 닉네임·블로그 주소·고민 내용을 받는 데 동의해요 (상담이 끝나면 지워요)</label>'+
       '<p class="ferr" id="eduerr"></p><button class="b pri wide" type="submit">카톡으로 상담 신청하기</button></form></section>'+
-    '<div class="dbar edubar"><a class="b" href="#edurw" data-jumpid="edurw">💳 수강 신청하기 <small>과목·수강료 보기</small></a></div>'+
+    '<div class="dbar edubar"><a class="b" href="#edurw" data-edupick>💳 수강 신청하기 <small>과목 선택</small></a></div>'+
   '</div>';
 }
 document.addEventListener("click",function(e){ var a=e.target.closest&&e.target.closest("[data-jumpid]"); if(!a) return; e.preventDefault(); var el=document.getElementById(a.dataset.jumpid); if(el) el.scrollIntoView({behavior:"smooth",block:"start"}); });
