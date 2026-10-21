@@ -939,6 +939,7 @@ var SITES=[["레뷰","https://www.revu.net","#7b2ff2"],["리뷰노트","https://
   ["뷰티의여왕","https://bqueens.net","#e0569b"],["디너의여왕","https://dinnerqueen.net","#f2006a"],["서울오빠","https://www.seoulouba.co.kr","#5b8cff"],["미블","https://www.mrblog.net","#222222"],
   ["아싸뷰","https://assaview.co.kr","#2fc6d8"],["가보자 체험단","https://www.xn--o39a04kpnjo4k9hgflp.com","#7cc242","가보자"],["슈퍼멤버스","https://app.supermembers.co.kr","#ff8a00"],["똑똑리워드","https://ddok.it","#12b886","똑똑"],
   ["시원뷰","https://sioneview.com","#4dabf7"],["후기업","https://www.whogiup.com","#845ef7"]];
+var SITE_AB={"리뷰노트":"노트","리뷰플레이스":"리플","클라우드리뷰":"클라","오마이블로그":"오마이","슈퍼멤버스":"슈멤","똑똑리워드":"똑똑","택배의여왕":"택여","뷰티의여왕":"뷰여","디너의여왕":"디여","강남맛집":"강맛"};
 function siteOrder(){
   var open=seed.items.filter(function(it){ return statusOf(it).key==="open"; }), n={};
   open.forEach(function(it){ var k=it.source||""; n[k]=(n[k]||0)+1; });
@@ -951,7 +952,7 @@ function sitesView(){
   var L=siteOrder(), ed=!!state.siteEd;
   return '<div class="pg sites"><h1>체험단 사이트 바로가기</h1><p class="pgsub">자주 가는 체험단 사이트를 한 번에 열어 보세요 🚀</p>'+
     '<div class="stbar"><span>'+(ed?'↑ 를 눌러 순서를 바꿔요 (이 기기에 저장)':'다꾸에 모집 중인 곳이 많은 순')+'</span><button class="lnk" data-sited>'+(ed?'완료':'순서 편집')+'</button></div>'+
-    '<ul class="stlist">'+L.map(function(x,i){ var ab=x.k.replace(/\s*체험단$/,""); ab=ab.length>3?ab.slice(0,2):ab;
+    '<ul class="stlist">'+L.map(function(x,i){ var ab=SITE_AB[x.k]||x.k.replace(/\s*체험단$/,""); ab=ab.length>3?ab.slice(0,2):ab;
       return '<li><span class="stab" style="background:'+x.c+'">'+esc(ab)+'</span>'+
         '<a class="stgo" style="background:'+x.c+'" href="'+x.u+'" target="_blank" rel="noopener" data-sitego="'+esc(x.k)+'"><b>'+esc(x.k)+'</b><span>›</span></a>'+
         (ed?'<button class="stup" data-siteup="'+i+'" aria-label="위로"'+(i?'':' disabled')+'>↑</button>':
