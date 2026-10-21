@@ -53,6 +53,7 @@ pts = grab('<section class="edupts">')
 why = grab('<section class="eduwhy">')
 allb = grab('<section class="eduall">')
 books = grab('<section class="edusec"><h2>📚')
+course = grab('<section class="educourse">')
 rv = grab('<section class="edurv">')
 guar = grab('<div class="eduguar">', "</div>")
 way = re.search(r'<ul class="eduway">.*?</ul>', JS).group(0)
@@ -78,6 +79,9 @@ section{{padding:34px 16px}}
 h1,h2{{letter-spacing:-.02em}}
 .hero{{text-align:center;padding:40px 18px 44px;background:linear-gradient(180deg,#3a1670 0%,#8a3fd0 45%,#b558d6 72%,#000 100%)}}
 .hero small{{display:inline-block;font-size:13px;font-weight:800;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:5px 12px}}
+.hero .ceo{{display:table;margin:12px auto 0;padding:7px 16px;border-radius:999px;background:#111;color:#ffe14d;font-weight:900;border:1.5px solid #ffe14d}}
+.hero .top{{display:table;margin:8px auto 0;padding:7px 16px;border-radius:999px;background:#ffe14d;color:#3a1670;font-weight:900}}
+.educourse{{text-align:center}}.educourse>small{{font-size:12px;font-weight:800;letter-spacing:.2em;color:#c58bff}}.educourse h2{{margin:6px 0 4px;font-size:22px}}.educourse .ecsub{{margin:0 0 18px;font-size:14px;color:#ffe14d;font-weight:800}}.educourse .ecards{{display:grid;gap:12px;text-align:left}}.educourse .ec{{background:#1a1426;border:1.5px solid #3b2a5c;border-radius:18px;padding:18px 16px}}.educourse .ec.set{{border-color:#b56cff;box-shadow:0 0 22px rgba(181,108,255,.35)}}.educourse .ectag{{display:inline-block;font-size:11px;font-weight:800;color:#0e0b16;background:#c58bff;border-radius:6px;padding:2px 8px}}.educourse .ec.set .ectag{{background:#ffe14d}}.educourse .ec b{{display:block;margin:8px 0 2px;font-size:18px}}.educourse .ec em{{font-style:normal;font-size:13px;font-weight:800;color:#c58bff}}.educourse .ec p{{margin:8px 0 0;font-size:14px;line-height:1.55;color:#d9d2e6}}.educourse .ecol{{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}}.educourse .ecol li{{font-size:13.5px;line-height:1.5;color:#d9d2e6}}.educourse .ecol i{{font-style:normal;font-weight:800;color:#ffe14d;margin-right:6px}}.educourse .ecnote{{margin:14px 0 0;font-size:12px;color:#8f8a99}}
 .hero .m{{display:block;margin:12px 0 0;font-size:16px;font-weight:800}}
 .hero .f{{display:inline-block;margin-top:8px;padding:7px 16px;border-radius:999px;background:#fff;color:#9b3fd0;font-weight:900}}
 .hero h1{{margin:14px 0 10px;font-size:28px;line-height:1.3}}.hero h1 span{{color:#ffe14d}}
@@ -138,7 +142,7 @@ h1,h2{{letter-spacing:-.02em}}
 <div class="dl" id="dl"><b><span class="dlw">🔥 10월 수강생 · 10/31 마감까지</span><span class="dlm">🔥 10월 수강생 모집중 🔥</span></b><span class="dlt" id="dlc"></span></div>
 <script>(function(){{var end=new Date("2026-10-31T23:59:59+09:00").getTime(),b=document.getElementById("dl"),c=document.getElementById("dlc");function p(n){{return(n<10?"0":"")+n}}function t(){{var ms=end-Date.now();if(ms<=0){{b.style.display="none";return}}var m=Math.floor(ms/6e4);function q(n,u){{var x=p(n);return"<i>"+x[0]+"</i><i>"+x[1]+"</i><u>"+u+"</u>"}}c.innerHTML=q(Math.floor(m/1440),"일")+q(Math.floor(m%1440/60),"시간")+q(m%60,"분")}}t();setInterval(t,1000)}})();</script>
 <p class="disc">다꾸체험단은 쿠팡 파트너스 등 제휴 활동으로 일정액의 수수료를 받을 수 있습니다.</p>
-<section class="hero"><small>다꾸 수익화</small><span class="m">⚡ 한 달이면 다 배워요</span><span class="f">50대에도 블로그 체험단 해요!</span>
+<section class="hero"><small>다꾸 수익화</small><span class="m">⚡ 한 달이면 다 배워요</span><span class="ceo">📣 광고대행사 대표가 직접 알려드리는 비법</span><span class="f">50대에도 블로그 체험단 해요!</span><span class="top">🔝 최상단에 글 올리는 비법 전수</span>
 <h1>한번 배우면 <span>평생 써먹는</span><br>블로그 수익화</h1>
 <p>5주 1:1 교육으로 체험단 당첨부터 검색 노출, 수익화까지<br>끝난 뒤에도 1:1 코칭은 평생 무료예요</p></section>
 {pts}
@@ -146,6 +150,7 @@ h1,h2{{letter-spacing:-.02em}}
 {allb}
 <section class="sec"><h2>이런 분들께 맞아요</h2><div class="edutalk">{''.join(f'<div class="et{" r" if i%2 else ""}"><i>{a}</i><p><small>{b}</small>{c}</p></div>' for i,(a,b,c) in enumerate(TALK))}</div><ul class="chk">{''.join(f'<li>{t}</li>' for t in PICK)}</ul></section>
 <section class="sec"><h2>5주 커리큘럼</h2><ol class="cur">{''.join(f'<li><b>✨ {i+1}주차</b>{e} {t}</li>' for i,(e,t) in enumerate(CUR))}</ol></section>
+{course}
 {books}
 {rv}
 {OPENSEC}

@@ -726,3 +726,24 @@ input,select,textarea{font-size:16px!important}
 .press .prhero p.prfine{margin-top:8px;font-size:12px;color:#e6d4fb}
 .press .prbl{filter:blur(4px);user-select:none;-webkit-user-select:none}
 .press .prx small.prbl{display:inline-block;width:max-content}
+
+/* 수익화 교육: 광고대행사 대표·최상단 비법·과목 선택 (2026-10-21) */
+.eduhero .educeo{display:table;margin:12px auto 0;padding:7px 16px;border-radius:999px;background:#111;color:#ffe14d;font-size:15px;font-weight:900;border:1.5px solid #ffe14d}
+.eduhero .edutop{display:table;margin:8px auto 0;padding:7px 16px;border-radius:999px;background:#ffe14d;color:#3a1670;font-size:16px;font-weight:900}
+.pg.edu .educourse{margin:0 -16px;padding:34px 18px;background:#0e0b16;color:#fff;text-align:center}
+.educourse>small{font-size:12px;font-weight:800;letter-spacing:.2em;color:#c58bff}
+.educourse h2{margin:6px 0 4px;font-size:22px;color:#fff}
+.educourse .ecsub{margin:0 0 18px;font-size:14px;color:#ffe14d;font-weight:800}
+.educourse .ecards{display:grid;gap:12px;text-align:left}
+.educourse .ec{position:relative;background:#1a1426;border:1.5px solid #3b2a5c;border-radius:18px;padding:18px 16px}
+.educourse .ec.set{border-color:#b56cff;box-shadow:0 0 0 1px #b56cff inset,0 0 22px rgba(181,108,255,.35)}
+.educourse .ectag{display:inline-block;font-size:11px;font-weight:800;color:#0e0b16;background:#c58bff;border-radius:6px;padding:2px 8px}
+.educourse .ec.set .ectag{background:#ffe14d}
+.educourse .ec b{display:block;margin:8px 0 2px;font-size:18px;color:#fff}
+.educourse .ec em{font-style:normal;font-size:13px;font-weight:800;color:#c58bff}
+.educourse .ec p{margin:8px 0 0;font-size:14px;line-height:1.55;color:#d9d2e6}
+.educourse .ecol{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}
+.educourse .ecol li{font-size:13.5px;line-height:1.5;color:#d9d2e6}
+.educourse .ecol i{font-style:normal;font-weight:800;color:#ffe14d;margin-right:6px}
+.educourse .ecnote{margin:14px 0 0;font-size:12px;color:#8f8a99}
+.educourse .ecpay{display:block;margin-top:14px;padding:13px;border-radius:12px;background:#ffe14d;color:#1a1033;text-align:center;font-size:15px;font-weight:900;text-decoration:none}
