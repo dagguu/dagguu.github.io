@@ -1478,6 +1478,7 @@ var AD_PKGS=[
   {k:"r20",t:"기자단 20명",tag:"집중 노출",p:330000,d:["블로그 기자단 20명 게재","키워드 5개 선정","원고 가이드 + 사진 고르기","결과 보고서(글 링크 모음)"]}
 ];
 var AD_REFUND=["모집을 시작하기 전에는 전액 환불해요.","모집을 시작한 뒤에는 아직 글이 올라가지 않은 인원만큼 1인 단가로 환불해요(이미 원고를 쓰고 있는 인원은 빼요).","글이 올라간 인원은 환불되지 않아요.","마감일까지 약속한 인원을 다 채우지 못하면 못 채운 인원만큼 1인 단가로 돌려드려요.","게재 후 3개월 안에 블로거가 글을 지우면 다른 블로거로 다시 채우거나 1인 단가로 돌려드려요.","환불은 카카오톡 채널 「다꾸체험단」으로 요청하면 3영업일 안에 결제 수단으로 취소해요."];
+var AD_PKG_ON=false; /* 2026-10-21 시온님 "기자단 패키지는 일단 숨겨줘" — true 로 바꾸면 패키지 카드·가격이 다시 보임 */
 function adPkgs(){ var L=seed.adPkgs; return (L&&L.length)?L:AD_PKGS; }
 function contactView(){
   var w=function(n){ return Number(n).toLocaleString()+'원'; }, pay=seed.adPay||{};
@@ -1487,15 +1488,15 @@ function contactView(){
       '<ul>'+(x.d||[]).map(function(d){ return '<li>'+esc(d)+'</li>'; }).join("")+'</ul>'+
       '<div class="adbt">'+(safeUrl(pay[x.k])?'<button type="button" class="b pri" data-adpay="'+esc(x.k)+'">결제하기</button>':'')+
       '<a class="b" href="#cform" data-adpk="'+esc(x.t)+'">상담하기</a></div></div>'; }).join("");
-  var step=[["💬","상담·결제","원하는 키워드와 일정을 듣고 패키지를 정해요."],["📷","자료 받기","사진 10장 이상, 매장·숙소 소개, 꼭 넣을 내용을 받아요."],["📝","원고 가이드","키워드·제목 방향·사진 순서·대가성 문구를 담은 가이드를 만들어요."],["🙋","블로거 모집·선정","다꾸 회원 블로거와 체험단 플랫폼에서 모집해, 최근 활동과 방문자를 보고 골라요."],["✅","게재·검수","올라온 글의 키워드·사진·대가성 문구를 확인해요. 모집 시작부터 보통 2주 안팎."],["📊","결과 보고서","글 링크를 한 번에 모아 보내 드려요."]];
+  var step=[["💬","상담·결제","원하는 키워드와 일정을 듣고 인원·구성을 정해요."],["📷","자료 받기","사진 10장 이상, 매장·숙소 소개, 꼭 넣을 내용을 받아요."],["📝","원고 가이드","키워드·제목 방향·사진 순서·대가성 문구를 담은 가이드를 만들어요."],["🙋","블로거 모집·선정","다꾸 회원 블로거와 체험단 플랫폼에서 모집해, 최근 활동과 방문자를 보고 골라요."],["✅","게재·검수","올라온 글의 키워드·사진·대가성 문구를 확인해요. 모집 시작부터 보통 2주 안팎."],["📊","결과 보고서","글 링크를 한 번에 모아 보내 드려요."]];
   var faq=[["기자단과 체험단은 뭐가 달라요?","체험단은 블로거가 직접 방문해 경험을 쓰고, 기자단은 업체가 준 사진·정보로 소개 글을 써요. 기자단은 방문 일정이 없어 빠르게 여러 개를 올릴 수 있어요."],["검색 상단에 꼭 뜨나요?","검색 순위는 네이버가 정해서 약속드릴 수 없어요. 대신 약속한 인원만큼 글이 올라가는 건 책임지고, 못 채우면 돌려드려요."],["키워드는 직접 정해도 되나요?","네. 원하시는 키워드가 있으면 그대로 쓰고, 없으면 검색 수를 보고 골라 드려요."],["세금 증빙은 어떻게 받아요?","카드로 결제하시면 카드 영수증이 증빙이 돼요. 다른 증빙이 필요하면 상담 때 말씀해 주세요."],["체험단도 같이 할 수 있나요?","네. 진짜 후기는 체험단으로, 검색 노출 개수는 기자단으로 채우는 묶음을 많이 하세요. 상담으로 구성해 드려요."]];
   return '<div class="pg cform adp">'+
     '<a class="back" href="#/">'+ico(I.back)+'<span>홈</span></a>'+
     '<div class="adh"><small>📣 사장님 · 광고주</small><h1>블로그 기자단,<br>다꾸가 대신 모아 드려요</h1><p>숙소·매장·제품 소개 글을 블로거 여러 명에게 맡기고 싶을 때. 키워드 고르기부터 원고 가이드, 블로거 선정, 결과 보고서까지 한 번에 해요.</p>'+
       '<div class="adch"><span>⚡ 방문 일정 없이 빠르게</span><span>🔑 키워드 선정</span><span>📊 결과 보고서</span></div>'+
-      '<a class="b pri" href="#adpk" data-jumpid="adpk">패키지 보기</a></div>'+
+      (AD_PKG_ON?'<a class="b pri" href="#adpk" data-jumpid="adpk">패키지 보기</a>':'<a class="b pri" href="#cform" data-jumpid="cform">무료 상담 신청</a>')+'</div>'+
     '<section class="adsec"><h2>이럴 때 좋아요</h2><ul class="adwhy"><li><i>🏡</i><span><b>새로 열었거나 리뉴얼했어요</b>지역+업종 검색에 소개 글이 아직 없을 때</span></li><li><i>📅</i><span><b>체험단 받을 여유가 없어요</b>성수기라 방을 못 빼거나 매장이 바쁠 때</span></li><li><i>🔍</i><span><b>검색에 보이는 글을 늘리고 싶어요</b>체험단 후기와 함께 노출 개수를 채울 때</span></li></ul></section>'+
-    '<section class="adsec" id="adpk"><h2>기자단 패키지</h2><p class="adsub">글 1개 = 블로그 1명. 가격은 부가세 포함이에요.</p><div class="adpks">'+pk+'</div>'+
+    '<section class="adsec" id="adpk">'+(AD_PKG_ON?'<h2>기자단 패키지</h2><p class="adsub">글 1개 = 블로그 1명. 가격은 부가세 포함이에요.</p><div class="adpks">'+pk+'</div>':'<h2>구성·비용은 상담으로</h2><p class="adsub">인원·키워드·일정에 맞춰 상담으로 정해 드려요.</p><div class="adset"><b>📝 블로그 기자단</b><p>업체가 준 사진·정보로 블로거 여러 명이 소개 글을 올려요. 필요한 인원과 키워드를 알려 주세요.</p><a class="b" href="#cform" data-adpk="블로그 기자단">기자단 상담하기 ›</a></div>')+
       '<div class="adset"><b>🤝 체험단 + 기자단 묶음</b><p>체험단 몇 명으로 진짜 후기를 받고, 기자단으로 검색 노출 개수를 채워요. 숙소·매장 상황에 맞춰 상담으로 구성해 드려요.</p><a class="b" href="#cform" data-adpk="체험단 + 기자단 묶음">묶음 상담하기 ›</a></div></section>'+
     '<section class="adsec"><h2>진행 순서</h2><ol class="adstep">'+step.map(function(s,i){ return '<li><i>'+s[0]+'</i><span><b>'+(i+1)+'. '+s[1]+'</b>'+s[2]+'</span></li>'; }).join("")+'</ol></section>'+
     '<section class="adsec"><h2>다꾸가 지키는 원칙</h2><ul class="adrule"><li><b>모든 글에 대가성 문구</b>원고료를 받고 쓴 글이라는 걸 글 첫 부분에 밝혀요(공정위 추천·보증 심사지침).</li><li><b>약속한 인원은 책임져요</b>못 채운 인원과 3개월 안에 지워진 글은 다시 채우거나 돌려드려요.</li></ul></section>'+
@@ -1503,7 +1504,7 @@ function contactView(){
     '<section class="adsec"><h2>환불 기준</h2><ul class="adref">'+AD_REFUND.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join("")+'</ul></section>'+
     '<section class="adsec adform"><h2>무료 상담 신청</h2><p class="adsub">남겨 주시면 고르신 회신수단으로 연락드려요.</p>'+
     '<form id="cform" class="fbox" novalidate>'+
-      '<span class="fl">관심 상품 <i>*</i></span>'+radios("pkg",adPkgs().map(function(x){ return x.t; }).concat(["체험단 + 기자단 묶음","체험단 모집"]))+
+      '<span class="fl">관심 상품 <i>*</i></span>'+radios("pkg",(AD_PKG_ON?adPkgs().map(function(x){ return x.t; }):["블로그 기자단"]).concat(["체험단 + 기자단 묶음","체험단 모집"]))+
       '<label class="fl" for="f-name">업체명 혹은 성함 <i>*</i></label><input id="f-name" name="name" class="fi" placeholder="업체명을 입력해 주세요" required>'+
       '<label class="fl" for="f-area">지역 <i>*</i></label><input id="f-area" name="area" class="fi" placeholder="지역을 입력해 주세요" required>'+
       '<label class="fl" for="f-biz">업종 <i>*</i></label><input id="f-biz" name="biz" class="fi" placeholder="업종을 입력해 주세요 (예: 펜션, 카페)" required>'+
