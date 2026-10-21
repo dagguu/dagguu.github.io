@@ -203,13 +203,14 @@ document.addEventListener("click",function(e){
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
-  if(!/^(home|list|fav|benefit|shop|mag|tix|deals|reporter|press|contact|item|my|privacy|price|event|trip|edu)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|benefit|shop|mag|tix|deals|reporter|press|contact|item|my|privacy|price|event|trip|edu|checkout)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
   if(tab==="event") state.evAbr=qs.t==="abroad";
   if(tab==="trip") state.tq=qs.q||"";
   if(tab==="mag") state.magT=qs.t==="p"?"p":"g";
   if(tab==="tix") state.tixI=qs.i||"";
+  if(tab==="checkout") state.coK=qs.c||"";
   state.focusT=(tab==="deals"&&qs.t)?qs.t:"";
   state.dq=(tab==="deals"&&qs.q)?qs.q:"";
   state.pq=(tab==="price"&&qs.q)?qs.q:"";
@@ -248,6 +249,7 @@ function render(){
   else if(state.tab==="event") v.innerHTML=eventView();
   else if(state.tab==="trip") v.innerHTML=tripView();
   else if(state.tab==="edu"){ v.innerHTML=eduView(); eduResume(); }
+  else if(state.tab==="checkout"){ v.innerHTML=checkoutView(); coInit(); }
   else if(state.tab==="price"){ v.innerHTML=priceView(); if(state.pq) priceSearch(state.pq); }
   if(state.tab==="home") initFeed(); else if(HOBS){ HOBS.disconnect(); HOBS=null; }
   if(state.tab==="deals") initMoreDeals(); else if(MDEAL.obs){ MDEAL.obs.disconnect(); MDEAL.obs=null; }
@@ -1289,37 +1291,77 @@ document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.
 /* 수강 신청 과목 선택 창(2026-10-21 시온님 "아래 고정 수강신청하기 누르면 상품 선택"). 고른 뒤 → 로그인 안 했으면 카카오 간편 가입 후 돌아와 계약서 → 페이앱 */
 var EDU_OPT=[["blog","[블로그] 블로그 수익화 5주 1:1"],["cp","[쿠팡파트너스] 쿠팡파트너스 수익화 3주 1:1"],["set","[SET] 블로그 + 쿠팡파트너스 5주 1:1 올인원"]];
 var EDU_REFUND=['전자책·강의자료를 받기 전이고 컨설팅·첫 교육 전이면 전액 환불해요.','전자책·강의자료·AI 프롬프트는 디지털 콘텐츠라 받은 뒤에는 청약철회가 제한되어 환불되지 않아요(전자상거래법 제17조 제2항).','진단 컨설팅·블로그 꾸미기는 제공을 마치면 환불되지 않아요.','1:1 강의는 남은 일수만큼, 12개월 코칭은 남은 개월만큼 환불하고 남은 금액의 10%를 해지 수수료로 빼요.','기자단 모음 열람은 시작 후 환불되지 않아요. 다만 결제 후 12개월 안에 다꾸체험단이 체험단 사업을 종료하면 남은 개월만큼 돌려드려요.','환불은 카카오톡 채널 「다꾸체험단」으로 요청하면 3영업일 안에 결제 수단으로 취소해요.','교육은 방법을 함께 찾는 서비스로, 수익 금액·체험단 선정·검색 순위를 약속하거나 보장하지 않아요.'];
-function eduPick(pre){
-  pre=pre||{}; var w=function(n){ return n.toLocaleString()+'원'; }, pay=seed.eduPay||{};
+function eduPick(){
+  var w=function(n){ return n.toLocaleString()+'원'; }, pay=seed.eduPay||{};
   var el=document.createElement("div"); el.className="edusheet";
-  el.innerHTML='<div class="epk" role="dialog" aria-modal="true" aria-label="수강 신청"><div class="ephd"><b>수강 과목 선택</b><button type="button" class="epx" aria-label="닫기">✕</button></div>'+
-    EDU_OPT.map(function(o){ var k=o[0], lp=EDU_LIST[k], pr=EDU_PRICE[k]; var old=k==="set"?'따로 들으면 <s>'+w(EDU_PRICE.blog+EDU_PRICE.cp)+'</s> <em>'+Math.round((1-EDU_PRICE.set/(EDU_PRICE.blog+EDU_PRICE.cp))*100)+'%</em>':(lp&&lp>pr?'<s>'+w(lp)+'</s> <em>'+Math.round((1-pr/lp)*100)+'%</em>':'');
-      return '<label class="epo"><input type="radio" name="edupk" value="'+k+'"'+(safeUrl(pay[k])?'':' disabled')+(pre.k===k?' checked':'')+'><span class="epn"><b>'+esc(o[1])+'</b><small>'+old+'</small></span><strong>'+w(pr)+'</strong></label>'; }).join("")+
-    '<label class="epnm">수강생 이름 <input class="fi" id="epname" maxlength="20" autocomplete="name" placeholder="실명 (결제자와 같은 이름)"></label>'+
-    '<div class="epagr"><label class="epck"><input type="checkbox" id="epok"> [필수] 환불정책을 확인했고 동의해요</label><button type="button" class="epmore">자세히 보기</button></div>'+
-    '<div class="eprf" hidden><p class="eprt">교육 제공자: 다꾸체험단</p><b>결제 금액 구성</b><table>'+EDU_PARTS.map(function(r){ return '<tr><th>'+r[0]+'</th><td>'+r[1]+'%</td><td>'+r[2]+'</td></tr>'; }).join("")+'</table><p class="eprt">12개월 뒤 1:1 코칭은 평생 무료예요("평생"은 다꾸체험단이 체험단 사업을 운영하는 동안).</p><ul>'+EDU_REFUND.map(function(t){ return '<li>'+t+'</li>'; }).join("")+'</ul><a href="/refund.html" target="_blank" rel="noopener">환불정책 전문 보기 ↗</a></div>'+
-    '<button type="button" class="b pri epgo" disabled>결제하기</button></div>';
+  el.innerHTML='<div class="epk" role="dialog" aria-modal="true" aria-label="수강 과목 선택"><div class="ephd"><b>수강 과목 선택</b><button type="button" class="epx" aria-label="닫기">✕</button></div>'+
+    EDU_OPT.map(function(o){ var k=o[0], lp=eduListPrice(k), pr=EDU_PRICE[k], pc=Math.round((1-pr/lp)*100);
+      return '<label class="epo"><input type="radio" name="edupk" value="'+k+'"'+(safeUrl(pay[k])?'':' disabled')+'><span class="epn"><b>'+esc(o[1])+'</b><small>'+(k==="set"?'따로 들으면 ':'')+(lp>pr?'<s>'+w(lp)+'</s> <em>'+pc+'%</em>':'')+'</small></span><strong>'+w(pr)+'</strong></label>'; }).join("")+
+    '<button type="button" class="b pri epgo" disabled>다음</button></div>';
   document.body.appendChild(el);
-  var go=el.querySelector(".epgo"), nm=el.querySelector("#epname"), ok=el.querySelector("#epok");
-  var sel=function(){ var r=el.querySelector('input[name=edupk]:checked'); return r&&r.value; };
-  var nmOk=function(){ return /^[가-힣]{2,10}$|^[A-Za-z][A-Za-z .]{1,29}$/.test(nm.value.trim()); };
-  var chk=function(){ go.disabled=!(sel()&&nmOk()&&ok.checked); go.textContent=sel()?w(EDU_PRICE[sel()])+' 결제하기':'결제하기'; };
-  try{ var pv=JSON.parse(ls("dakku-edu-consent")||"{}"); if(pv.name) nm.value=pv.name; }catch(er){} if(pre.name) nm.value=pre.name; if(pre.ok) ok.checked=true; chk();
-  el.addEventListener("change",chk); nm.addEventListener("input",chk);
+  var go=el.querySelector(".epgo"), sel=function(){ var r=el.querySelector('input[name=edupk]:checked'); return r&&r.value; };
+  el.addEventListener("change",function(){ go.disabled=!sel(); });
   el.addEventListener("click",function(e){
     if(e.target===el||e.target.closest(".epx")){ el.remove(); return; }
-    if(e.target.closest(".epmore")){ var rf=el.querySelector(".eprf"); rf.hidden=!rf.hidden; e.target.textContent=rf.hidden?"자세히 보기":"접기"; if(!rf.hidden) ga("edu_refund_view",{}); return; }
     if(!e.target.closest(".epgo")||go.disabled) return;
-    var k=sel(), rname=nm.value.trim(), u=safeUrl(pay[k]), pr=EDU_PRICE[k]; if(!u) return;
-    if(authCfg()&&!USER){ ga("edu_join_click",{course:k}); ls("dakku-edu-pick",JSON.stringify({k:k,name:rname,ok:1})); ls("dakku-after-login","#/edu"); el.remove(); login("kakao"); return; }
+    var k=sel(), to="#/checkout?c="+k; ga("edu_pick",{course:k}); el.remove();
+    if(authCfg()&&!USER){ ga("edu_join_click",{course:k}); ls("dakku-after-login",to); login("kakao"); return; }
+    location.hash=to;
+  });
+}
+function eduListPrice(k){ return k==="set"?EDU_PRICE.blog+EDU_PRICE.cp:(EDU_LIST[k]||EDU_PRICE[k]); }
+function eduResume(){}
+/* 수강 결제 페이지 #/checkout?c=blog (2026-10-21 시온님이 와디즈 결제 화면 보여주며 "참고해서 만들어줘"): 수강생 정보 → 선택한 과목 → 결제 금액 → 결제 수단 안내 → 결제 유의사항 → 아래 고정 동의(전체 동의·각 항목 › 팝업) + N원 결제하기 → 동의 기록 → 페이앱 */
+var CO_DOCS={
+  refund:function(){ return '<p class="cot">교육 제공자: 다꾸체험단</p><b>결제 금액 구성</b><table>'+EDU_PARTS.map(function(r){ return '<tr><th>'+r[0]+'</th><td>'+r[1]+'%</td><td>'+r[2]+'</td></tr>'; }).join("")+'</table><p class="cot">12개월 뒤 1:1 코칭은 평생 무료예요("평생"은 다꾸체험단이 체험단 사업을 운영하는 동안).</p><b>결제 취소 및 환불 안내</b><ul>'+EDU_REFUND.map(function(t){ return '<li>'+t+'</li>'; }).join("")+'</ul><a href="/refund.html" target="_blank" rel="noopener">환불정책 전문 보기 ↗</a>'; },
+  privacy:function(){ return '<table><tr><th>수집 항목</th><td colspan="2">휴대폰 번호, 이메일, 카카오 회원 식별자, 신청 과목·결제 금액·동의 일시</td></tr><tr><th>목적</th><td colspan="2">수강 신청 확인, 결제자 확인, 강의 일정·자료 안내, 환불 처리, 분쟁 대응</td></tr><tr><th>보유 기간</th><td colspan="2">계약·결제 기록은 「전자상거래법」에 따라 5년, 그 밖에는 수강 종료 후 1년</td></tr></table><p class="cot">동의를 거부할 수 있지만, 거부하면 수강 신청을 할 수 없어요. 결제는 결제대행사 페이앱 화면에서 진행되고, 카드 정보는 다꾸체험단이 받지 않아요.</p><a href="#/privacy">개인정보처리방침 전체 보기 ›</a>'; },
+  notice:function(){ return '<p>수강 신청 확인, 강의 일정, 자료 전달, 결제·환불 안내를 문자·카카오톡·이메일로 보내 드려요. 광고성 정보는 보내지 않아요.</p>'; }
+};
+var CO_TITLE={refund:"환불 정책 동의",privacy:"개인정보 수집·이용 동의",notice:"수강·결제 관련 안내 수신 동의"};
+function checkoutView(){
+  var k=state.coK, w=function(n){ return n.toLocaleString()+'원'; }, opt=EDU_OPT.filter(function(o){ return o[0]===k; })[0];
+  if(!opt||!safeUrl((seed.eduPay||{})[k])) return '<div class="pg co"><div class="empty">과목을 다시 골라 주세요.<br><a class="b pri" href="#/edu">수강 과목 보러 가기</a></div></div>';
+  var lp=eduListPrice(k), pr=EDU_PRICE[k], pv={}; try{ pv=JSON.parse(ls("dakku-edu-consent")||"{}"); }catch(e){}
+  var em=(USER&&USER.email)||pv.email||"";
+  var login=authCfg()&&!USER;
+  return '<div class="pg co">'+
+    (login?'<section class="cosec colog"><b>회원가입 후 결제할 수 있어요</b><p>카카오 로그인 한 번이면 가입돼요.</p><button type="button" class="b pri" data-cologin>카카오로 계속하기</button></section>':'')+
+    '<section class="cosec"><h2>수강생 정보</h2>'+
+      '<label class="cof"><span>휴대폰 번호</span><input class="fi" id="coTel" inputmode="tel" maxlength="13" autocomplete="tel" placeholder="010-0000-0000" value="'+esc(pv.tel||"")+'"></label>'+
+      '<label class="cof"><span>이메일</span><input class="fi" id="coMail" type="email" maxlength="80" autocomplete="email" placeholder="자료 받을 이메일" value="'+esc(em)+'"></label></section>'+
+    '<section class="cosec"><h2>선택한 과목</h2><div class="coitem"><span class="cotag">🔥 오픈 이벤트</span><b>'+esc(opt[1])+'</b><div class="corow"><span>1개</span><strong>'+w(pr)+'</strong></div></div><a class="cochg" href="#/edu" data-edupick>과목 변경</a></section>'+
+    '<section class="cosec"><h2>결제 금액</h2><div class="corow"><span>수강료'+(k==="set"?' (따로 들을 때)':'')+'</span><span>'+w(lp)+'</span></div>'+(lp>pr?'<div class="corow"><span>오픈 이벤트 할인</span><span class="codc">−'+w(lp-pr)+'</span></div>':'')+'<div class="corow cototal"><b>총 결제 금액</b><b>'+w(pr)+'</b></div></section>'+
+    '<section class="cosec"><h2>결제 수단</h2><div class="copay"><b>💳 페이앱 결제</b><p>다음 화면(결제대행사 페이앱)에서 신용·체크카드 등 결제 수단을 고를 수 있어요. 할부 개월 수와 할부 수수료는 카드사 기준이에요.</p></div></section>'+
+    '<section class="cosec conote"><b>ⓘ 결제 유의사항</b><ul><li>결제가 끝나면 입력한 연락처로 강의 일정과 자료 받는 방법을 안내해 드려요.</li><li>전자책·강의자료·AI 프롬프트는 받은 뒤에는 환불되지 않아요. 자세한 내용은 아래 환불 정책 동의에서 확인할 수 있어요.</li><li>교육은 방법을 함께 찾는 서비스로, 수익 금액·체험단 선정·검색 순위를 보장하지 않아요.</li></ul></section>'+
+    '<div class="cobar"><label class="coall"><input type="checkbox" id="coAll"> <b>결제 진행 필수 동의</b></label>'+
+      [["refund","환불 정책 동의 (필수)"],["privacy","개인정보 수집·이용 동의 (필수)"],["notice","수강·결제 관련 안내 수신 동의 (필수)"]].map(function(a){ return '<div class="coag"><label><input type="checkbox" class="coAg" data-k="'+a[0]+'"> '+a[1]+'</label><button type="button" class="codoc" data-doc="'+a[0]+'" aria-label="'+a[1]+' 보기">›</button></div>'; }).join("")+
+      '<button type="button" class="b pri cogo" disabled>'+w(pr)+' 결제하기</button></div>'+
+  '</div>';
+}
+function coInit(){
+  var pg=document.querySelector(".pg.co"); if(!pg||!pg.querySelector(".cobar")) return;
+  var tel=pg.querySelector("#coTel"), mail=pg.querySelector("#coMail"), all=pg.querySelector("#coAll"), ags=[].slice.call(pg.querySelectorAll(".coAg")), go=pg.querySelector(".cogo");
+  var ok=function(){ return /^01[016789]-?\d{3,4}-?\d{4}$/.test(tel.value.trim()) && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail.value.trim()) && ags.every(function(a){ return a.checked; }) && !(authCfg()&&!USER); };
+  var chk=function(){ go.disabled=!ok(); all.checked=ags.every(function(a){ return a.checked; }); };
+  pg.addEventListener("input",chk); pg.addEventListener("change",function(e){ if(e.target===all){ ags.forEach(function(a){ a.checked=all.checked; }); } chk(); }); chk();
+  pg.addEventListener("click",function(e){
+    var d=e.target.closest("[data-doc]"); if(d){ coDoc(d.getAttribute("data-doc")); return; }
+    if(e.target.closest("[data-cologin]")){ ga("edu_join_click",{course:state.coK}); ls("dakku-after-login",location.hash); login("kakao"); return; }
+    if(!e.target.closest(".cogo")||go.disabled) return;
+    var k=state.coK, u=safeUrl((seed.eduPay||{})[k]), pr=EDU_PRICE[k], t=tel.value.trim(), m=mail.value.trim(); if(!u) return;
     ga("edu_pay_click",{course:k});
-    var win=window.open("about:blank","_blank"), open=function(){ if(win) win.location.href=u; else location.href=u; el.remove(); };
-    try{ ls("dakku-edu-consent",JSON.stringify({course:k,price:pr,ver:EDU_TERMS_VER,name:rname,at:new Date().toISOString()})); }catch(er){}
-    if(SB&&USER){ SB.from("edu_consents").insert({user_id:USER.id,real_name:rname,course:k,price:pr,terms_ver:EDU_TERMS_VER,ua:navigator.userAgent.slice(0,200)}).then(function(r){ if(r&&r.error) console.warn("[dakku] consent",r.error.message); open(); },function(){ open(); }); }
+    var win=window.open("about:blank","_blank"), open=function(){ if(win) win.location.href=u; else location.href=u; };
+    try{ ls("dakku-edu-consent",JSON.stringify({course:k,price:pr,ver:EDU_TERMS_VER,tel:t,email:m,at:new Date().toISOString()})); }catch(er){}
+    if(SB&&USER){ SB.from("edu_consents").insert({user_id:USER.id,phone:t,email:m,course:k,price:pr,terms_ver:EDU_TERMS_VER,ua:navigator.userAgent.slice(0,200)}).then(function(r){ if(r&&r.error) console.warn("[dakku] consent",r.error.message); open(); },function(){ open(); }); }
     else open();
   });
 }
-function eduResume(){ var v=ls("dakku-edu-pick"); if(!v||!USER) return; try{ localStorage.removeItem("dakku-edu-pick"); }catch(e){} var p={}; try{ p=JSON.parse(v); }catch(e){ p={k:v}; } setTimeout(function(){ eduPick(p); },350); }
+function coDoc(k){
+  var el=document.createElement("div"); el.className="codlg";
+  el.innerHTML='<div class="cobox" role="dialog" aria-modal="true" aria-label="'+CO_TITLE[k]+'"><div class="cohd"><b>'+CO_TITLE[k]+'</b><button type="button" class="cox" aria-label="닫기">✕</button></div><div class="cobody">'+CO_DOCS[k]()+'</div><button type="button" class="b pri cook">확인</button></div>';
+  document.body.appendChild(el); if(k==="refund") ga("edu_refund_view",{});
+  el.addEventListener("click",function(e){ if(e.target===el||e.target.closest(".cox")||e.target.closest(".cook")){ el.remove(); } else if(e.target.closest('a[href^="#/"]')) el.remove(); });
+}
 document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.closest("[data-edupick]"); if(!b) return; e.preventDefault(); eduPick(); });
 function eduView(){
   var EDU_DL="2026-10-31", eduOpen=dcdMs(EDU_DL)>0;
@@ -1990,7 +2032,7 @@ function privacyView(){
   var a=seed.privacy||{}, owner=esc(a.owner||"다꾸 체험단 모음 운영자"), mail=esc(a.email||""), day=esc(a.date||"2026년 10월 14일");
   return '<div class="pg privacy"><a class="back" href="#/my">'+ico(I.back)+'<span>마이</span></a><h1>개인정보처리방침</h1>'+
   '<p>'+owner+'(이하 “다꾸”)는 회원의 개인정보를 소중히 다루며, 「개인정보 보호법」에 따라 아래와 같이 처리해요.</p>'+
-  '<h2>1. 수집하는 항목과 방법</h2><ul><li>카카오 로그인 시: 카카오 회원번호(식별자), 닉네임, 프로필 사진, 카카오계정 이메일(동의한 경우)</li><li>서비스 이용 시 회원이 직접 입력·선택: 관심 분야·지역·아기 나이, 알림 수신 동의 여부, 기자단 신청 블로그 주소</li><li>수익화 교육 수강 계약 시: 실명, 계약 동의 일시·과목·수강료(계약 이행·환불 처리·분쟁 대비)</li><li>서비스 이용 기록: 찜한 체험단, 눌러본 상품, 룰렛 참여 결과</li></ul>'+
+  '<h2>1. 수집하는 항목과 방법</h2><ul><li>카카오 로그인 시: 카카오 회원번호(식별자), 닉네임, 프로필 사진, 카카오계정 이메일(동의한 경우)</li><li>서비스 이용 시 회원이 직접 입력·선택: 관심 분야·지역·아기 나이, 알림 수신 동의 여부, 기자단 신청 블로그 주소</li><li>수익화 교육 수강 신청 시: 휴대폰 번호·이메일, 계약 동의 일시·과목·수강료(계약 이행·환불 처리·분쟁 대비)</li><li>서비스 이용 기록: 찜한 체험단, 눌러본 상품, 룰렛 참여 결과</li></ul>'+
   '<h2>2. 이용 목적</h2><ul><li>회원 식별과 로그인 유지</li><li>찜·최근 본 상품을 여러 기기에서 보여주기</li><li>관심 조건에 맞는 체험단 추천과(동의한 경우) 새 체험단 알림</li><li>다꾸 기자단 선정·안내와 상품권 지급</li><li>룰렛 이벤트 참여 확인(하루 1회)과 경품 지급</li></ul>'+
   '<h2>3. 보유 기간</h2><ul><li>회원 탈퇴 시 바로 지워요. 마이 다꾸 &gt; 회원 탈퇴에서 직접 할 수 있어요.</li><li>1년 동안 로그인하지 않으면 미리 알린 뒤 지워요.</li><li>법령에 보관 의무가 있는 경우 그 기간만 보관해요. 수강 계약·결제 기록은 「전자상거래법」에 따라 5년 보관해요.</li></ul>'+
   '<h2>4. 처리 위탁과 국외 이전</h2><ul><li>회원 정보 저장: Supabase Inc.(데이터베이스·로그인 서비스). 저장 위치는 서비스 설정 지역에 따라요.</li><li>로그인: 주식회사 카카오(카카오 로그인)</li></ul>'+

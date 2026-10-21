@@ -855,3 +855,46 @@ input,select,textarea{font-size:16px!important}
 .edusheet .eprf ul{padding-left:16px;margin:6px 0}
 .edusheet .eprf a{color:#8a3fd0;font-weight:700}
 .edusheet .eprt{margin:4px 0;color:#6a3fc8}
+
+/* 수강 결제 페이지 #/checkout (2026-10-21, 와디즈 결제 화면 참고) */
+.pg.co{padding:0 0 330px;background:#f4f3f7;margin:0 -16px}
+.pg.co .cosec{background:#fff;padding:20px 16px;margin:0 0 10px}
+.pg.co .cosec h2{font-size:19px;margin:0 0 14px}
+.pg.co .colog{background:#faf3fd}
+.pg.co .colog p{margin:4px 0 10px;font-size:13px;color:#666}
+.pg.co .cof{display:block;margin:0 0 12px}
+.pg.co .cof span{display:block;font-size:13px;color:#666;margin:0 0 5px}
+.pg.co .cof .fi{width:100%;height:46px;font-size:16px;box-sizing:border-box;margin:0}
+.pg.co .cotag{display:inline-block;font-size:11.5px;font-weight:800;color:#fff;background:#9b3fd0;border-radius:6px;padding:3px 7px;margin:0 0 6px}
+.pg.co .coitem b{display:block;font-size:15px;color:#8a3fd0;line-height:1.4}
+.pg.co .corow{display:flex;justify-content:space-between;align-items:center;font-size:15px;color:#555;margin:10px 0 0}
+.pg.co .corow strong{font-size:18px;color:#111}
+.pg.co .cochg{display:inline-block;margin-top:12px;font-size:13px;color:#8a3fd0;font-weight:700}
+.pg.co .codc{color:#e8344f;font-weight:700}
+.pg.co .cototal{border-top:1px solid #eee;padding-top:14px;margin-top:14px;color:#111;font-size:17px}
+.pg.co .copay{border:1.5px solid #e6e1ef;border-radius:14px;padding:14px}
+.pg.co .copay p{margin:6px 0 0;font-size:13px;line-height:1.55;color:#666}
+.pg.co .conote{background:#f7f7f9;margin:0 16px 10px;border-radius:14px}
+.pg.co .conote b{font-size:15px;color:#555}
+.pg.co .conote ul{margin:8px 0 0;padding-left:18px;font-size:13px;line-height:1.7;color:#666}
+.pg.co .cobar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--tab) + env(safe-area-inset-bottom));z-index:30;width:100%;max-width:var(--frame);box-sizing:border-box;background:#fff;border-radius:20px 20px 0 0;box-shadow:0 -6px 20px rgba(0,0,0,.08);padding:14px 16px 12px}
+.pg.co .coall{display:flex;align-items:center;gap:10px;font-size:16px;padding:0 0 10px;border-bottom:1px solid #eee;margin:0 0 6px}
+.pg.co .coag{display:flex;align-items:center;justify-content:space-between}
+.pg.co .coag label{display:flex;align-items:center;gap:10px;font-size:14px;padding:7px 0;color:#333}
+.pg.co .cobar input[type=checkbox]{width:22px;height:22px;accent-color:#8a3fd0;margin:0;flex:0 0 22px}
+.pg.co .codoc{border:0;background:none;font-size:22px;color:#999;width:36px;height:36px}
+.pg.co .cogo{display:block;width:100%;height:54px;margin:10px 0 0;border:0;border-radius:12px;font-size:17px;font-weight:800;color:#fff;background:linear-gradient(90deg,#8a3fd0,#d46fd8)}
+.pg.co .cogo[disabled]{opacity:.45}
+.codlg{position:fixed;inset:0;z-index:9999;background:rgba(10,6,20,.45);display:flex;align-items:center;justify-content:center;padding:20px}
+.codlg .cobox{background:#fff;color:#1d1b24;border-radius:20px;width:100%;max-width:420px;max-height:84vh;display:flex;flex-direction:column;padding:20px 20px 16px;box-sizing:border-box}
+.codlg .cohd{display:flex;justify-content:space-between;align-items:center;margin:0 0 10px}
+.codlg .cohd b{font-size:18px}
+.codlg .cox{border:0;background:none;font-size:20px;color:#444;width:36px;height:36px}
+.codlg .cobody{overflow:auto;font-size:13.5px;line-height:1.65;color:#444}
+.codlg .cobody table{width:100%;border-collapse:collapse;margin:6px 0 10px;font-size:12.5px}
+.codlg .cobody th,.codlg .cobody td{border-top:1px solid #eee;padding:7px 4px;text-align:left;vertical-align:top;font-weight:400}
+.codlg .cobody th{color:#888;width:34%}
+.codlg .cobody ul{padding-left:18px;margin:6px 0 10px}
+.codlg .cobody a{color:#8a3fd0;font-weight:700}
+.codlg .cot{margin:6px 0;color:#6a3fc8}
+.codlg .cook{align-self:flex-end;margin:12px 0 0;min-width:110px;height:48px;border:0;border-radius:12px;background:#8a3fd0;color:#fff;font-weight:800;font-size:16px}

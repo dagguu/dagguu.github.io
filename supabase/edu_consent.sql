@@ -4,6 +4,8 @@ create table if not exists public.edu_consents (
   id bigint generated always as identity primary key,
   user_id uuid not null references auth.users(id) on delete cascade,
   real_name text,
+  phone text,
+  email text,
   course text not null,
   price integer not null,
   terms_ver text not null,
@@ -19,3 +21,5 @@ create policy "edu_consents select own" on public.edu_consents for select to aut
 
 -- 이미 테이블을 만든 경우 실명 칸만 추가
 alter table public.edu_consents add column if not exists real_name text;
+alter table public.edu_consents add column if not exists phone text;
+alter table public.edu_consents add column if not exists email text;
