@@ -1211,7 +1211,7 @@ function reporterView(){
 /* ---------- 블로그 기자단 (2026-10-21 시온님: 맛보기 2개만 보여주고 나머지는 잠금 → 수익화 교육 연결) ----------
    data.json press {at, n(모집 중 전체 수), src, list:[{t,src,url,o,ap,e,img}]} — 숫자는 실제 모집 중 개수만. "수강생만 신청 가능"이라고 쓰지 않는다(모집은 각 사이트에 공개). */
 function pressView(){
-  var P=seed.press||{}, L=(P.list||[]).filter(function(x){ return x.e>=ymd(today()); }).slice(0,2), more=Math.max(0,(P.n||0)-L.length);
+  var P=seed.press||{}, L=(P.list||[]).filter(function(x){ return x.e>=ymd(today()); }).slice(0,3), more=Math.max(0,(P.n||0)-L.length);
   var at=P.at?new Date(P.at):null, atS=at?(at.getMonth()+1)+"/"+at.getDate()+" "+String(at.getHours()).padStart(2,"0")+":"+String(at.getMinutes()).padStart(2,"0"):"";
   var dd=function(e){ var n=Math.round((new Date(e+"T00:00:00")-today())/864e5); return n<=0?"오늘 마감":"D-"+n; };
   /* 2026-10-21 시온님: 맛보기 카드는 모집 사이트 이름·지원/모집 숫자를 흐리게, 링크 없음(실제 값은 화면에 넣지 않고 가림 글자만) */
@@ -1223,7 +1223,7 @@ function pressView(){
     '<div class="prhero"><small>💻 블로그 재택알바</small><h1>제품 없이 글만 쓰고<br><em>원고료</em> 받아요</h1>'+
       '<p>방문하거나 제품을 받지 않아도 돼요. 받은 자료로 블로그 글을 쓰면 원고료나 포인트를 받아요. 이런 모집을 <b>\'기자단\'</b>이라고 불러요.</p><p class="prfine">고용 계약이 아니라 글 한 편마다 원고료·포인트를 받는 방식이에요. 금액은 모집마다 달라요.</p></div>'+
     '<div class="prhow"><div><b>1</b><span>모집 글 보고 신청</span></div><div><b>2</b><span>자료 받아 글 쓰기</span></div><div><b>3</b><span>원고료·포인트 받기</span></div></div>'+
-    '<h2 class="prh">지금 모집 중인 원고료 기자단 <small>맛보기 '+L.length+'개</small></h2>'+
+    '<h2 class="prh">지금 모집 중인 원고료 기자단</h2>'+
     (L.length?L.map(card).join(""):'<div class="empty">오늘 보여드릴 기자단을 준비하고 있어요</div>')+
     (more?'<div class="prlockw"><div class="prblur">'+sk+sk+sk+'</div>'+
       '<div class="prlock"><span class="pl1">🔒</span><b>모집 중인 기자단이 <em>'+more.toLocaleString()+'개</em> 더 있어요</b>'+
