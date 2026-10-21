@@ -211,7 +211,7 @@ function route(){
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
   if(!PMODE&&PART_LIVE&&P_ONLY.test(tab)){ location.replace(PART_URL+"#/"+h); return; }
   if(PMODE&&!P_TABS.test(tab)){ location.replace(MAIN_URL+"#/"+h); return; }
-  if(!/^(home|list|fav|benefit|shop|mag|tix|deals|reporter|press|contact|item|my|privacy|price|event|trip|edu|checkout|pjob|padmin)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|benefit|shop|mag|tix|deals|reporter|press|contact|item|my|privacy|price|event|trip|edu|checkout|pjob|padmin|sites)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
   if(tab==="event") state.evAbr=qs.t==="abroad";
@@ -247,6 +247,7 @@ function render(){
   else if(state.tab==="benefit") v.innerHTML=benefitView();
   else if(state.tab==="shop") v.innerHTML=shopView();
   else if(state.tab==="mag") v.innerHTML=magView();
+  else if(state.tab==="sites") v.innerHTML=sitesView();
   else if(state.tab==="tix"){ v.innerHTML=tixView(); if(state.tixI!==""){ setTimeout(function(){ var e=document.getElementById("tix"+state.tixI); if(e) e.scrollIntoView({block:"center"}); },60); } }
   else if(state.tab==="deals") v.innerHTML=dealsView();
   else if(state.tab==="reporter") v.innerHTML=reporterView();
@@ -393,7 +394,7 @@ function hrow(title,more,list,sub){
     '<div class="hs">'+list.slice(0,10).map(hcard).join("")+'</div></section>';
 }
 var HOME_MENU=[ /* 2026-10-21 시온님: 공짜여행 빼고, 마감임박 옆 재택알바·매거진·블로그, 숙박 옆 티켓. 윗줄/아랫줄은 숙박에서 나눔 */
-  ["✨","오늘 오픈","#/list?cat=all&s=todayOpen","NEW"],["⏰","마감임박","#/list?cat=all&s=closing","HOT"],["💻","재택알바","#/press"],["📚","매거진","#/mag"],["📝","블로그","#/list?cat=all&s=open&ch=blog"],["📸","인스타그램","#/list?cat=all&s=open&ch=insta"],["🎬","숏폼","#/list?cat=all&s=open&ch=clip,reels,youtube"],["🎁","혜택","#/benefit"],
+  ["✨","오늘 오픈","#/list?cat=all&s=todayOpen","NEW"],["⏰","마감임박","#/list?cat=all&s=closing","HOT"],["💻","재택알바","#/press"],["📚","매거진","#/mag"],["📝","블로그","#/list?cat=all&s=open&ch=blog"],["📸","인스타그램","#/list?cat=all&s=open&ch=insta"],["🎬","숏폼","#/list?cat=all&s=open&ch=clip,reels,youtube"],["🎁","혜택","#/benefit"],["🔗","사이트","#/sites"],
   ["🏨","숙박","#/list?cat=stay&s=open"],["🎟️","티켓","#/list?cat=etc"],["👶","육아","#/list?cat=baby"],["💄","뷰티","#/list?cat=beauty"],["🧺","생활","#/list?cat=life"],["🔌","가전/가구","#/list?cat=elec"],["💊","건강식품","#/list?cat=health"],["🐾","반려동물","#/list?cat=pet"],["👗","패션","#/list?cat=fashion"]
 ];
 /* 슬라이드 배너 위 한 줄 소식 (2026-10-18 시온님 요청). 지어낸 이용자 후기는 쓰지 않고 data.json 실제 숫자만 */
@@ -929,6 +930,40 @@ function guideFill(){
     if(M){ var L=state.magT==="p"?PICKS:GUIDES; M.innerHTML=L.length?'<div class="maglist">'+L.map(state.magT==="p"?pickRow:guideRow).join("")+'</div>':'<div class="empty">곧 새 글이 올라와요</div>'; }
   });
 }
+
+/* 체험단 사이트 바로가기 (2026-10-22 시온님 "이런 페이지 하나 만들어줘" — 콜라보매니저 플랫폼 바로가기 참고).
+   남의 로고는 쓰지 않고 색 + 글자만. 기본 순서는 다꾸에 모집 중인 곳 수, "순서 편집"으로 위로 올리면 이 기기에 기억(dakku-site-order). */
+var SITES=[["레뷰","https://www.revu.net","#7b2ff2"],["리뷰노트","https://www.reviewnote.co.kr","#1fae8c"],["포포몬","https://popomon.com","#ff7a45"],["스타일씨","https://www.stylec.co.kr","#ec4f8a"],
+  ["강남맛집","https://xn--939au0g4vj8sq.net","#ff6a13"],["리뷰플레이스","https://www.reviewplace.co.kr","#e5424d"],["클라우드리뷰","https://www.cloudreview.co.kr","#3d8bfd"],["댕댕뷰","https://dengdengview.co.kr","#c9822b"],
+  ["체리뷰","https://cherivu.co.kr","#d6336c"],["오마이블로그","https://www.ohmyblog.co.kr","#5b6ee1"],["링블","https://www.ringble.co.kr","#14a3b8"],["택배의여왕","https://tqueens.net","#f0568a"],
+  ["뷰티의여왕","https://bqueens.net","#e0569b"],["디너의여왕","https://dinnerqueen.net","#f2006a"],["서울오빠","https://www.seoulouba.co.kr","#5b8cff"],["미블","https://www.mrblog.net","#222222"],
+  ["아싸뷰","https://assaview.co.kr","#2fc6d8"],["가보자 체험단","https://www.xn--o39a04kpnjo4k9hgflp.com","#7cc242","가보자"],["슈퍼멤버스","https://app.supermembers.co.kr","#ff8a00"],["똑똑리워드","https://ddok.it","#12b886","똑똑"],
+  ["시원뷰","https://sioneview.com","#4dabf7"],["후기업","https://www.whogiup.com","#845ef7"]];
+function siteOrder(){
+  var open=seed.items.filter(function(it){ return statusOf(it).key==="open"; }), n={};
+  open.forEach(function(it){ var k=it.source||""; n[k]=(n[k]||0)+1; });
+  var L=SITES.map(function(x,i){ var c=(n[x[0]]||0)+(x[3]&&x[3]!==x[0]?(n[x[3]]||0):0); return {k:x[0],u:x[1],c:x[2],src:x[3]&&x[3]!==x[0]?x[0]+","+x[3]:x[0],n:c,i:i}; });
+  var saved=[]; try{ saved=JSON.parse(localStorage.getItem("dakku-site-order")||"[]"); }catch(e){}
+  L.sort(function(a,b){ var ia=saved.indexOf(a.k), ib=saved.indexOf(b.k); if(ia>=0||ib>=0) return (ia<0?999:ia)-(ib<0?999:ib); return (b.n-a.n)||(a.i-b.i); });
+  return L;
+}
+function sitesView(){
+  var L=siteOrder(), ed=!!state.siteEd;
+  return '<div class="pg sites"><h1>체험단 사이트 바로가기</h1><p class="pgsub">자주 가는 체험단 사이트를 한 번에 열어 보세요 🚀</p>'+
+    '<div class="stbar"><span>'+(ed?'↑ 를 눌러 순서를 바꿔요 (이 기기에 저장)':'다꾸에 모집 중인 곳이 많은 순')+'</span><button class="lnk" data-sited>'+(ed?'완료':'순서 편집')+'</button></div>'+
+    '<ul class="stlist">'+L.map(function(x,i){ var ab=x.k.replace(/\s*체험단$/,""); ab=ab.length>3?ab.slice(0,2):ab;
+      return '<li><span class="stab" style="background:'+x.c+'">'+esc(ab)+'</span>'+
+        '<a class="stgo" style="background:'+x.c+'" href="'+x.u+'" target="_blank" rel="noopener" data-sitego="'+esc(x.k)+'"><b>'+esc(x.k)+'</b><span>›</span></a>'+
+        (ed?'<button class="stup" data-siteup="'+i+'" aria-label="위로"'+(i?'':' disabled')+'>↑</button>':
+          (x.n?'<a class="stn" href="#/list?cat=all&s=open&src='+encodeURIComponent(x.src)+'"><b>'+x.n+'</b><small>모집 중</small></a>':'<span class="stn off"><small>–</small></span>'))+'</li>'; }).join("")+'</ul>'+
+    '<p class="stnote">다꾸체험단은 각 체험단 사이트와 무관한 정보 모음 서비스예요. 오른쪽 숫자를 누르면 그 사이트의 모집 중 체험단을 다꾸에서 모아 볼 수 있어요.</p></div>';
+}
+document.addEventListener("click",function(e){
+  var t=e.target, a;
+  if((a=t.closest&&t.closest("[data-sited]"))){ state.siteEd=!state.siteEd; render(); return; }
+  if((a=t.closest&&t.closest("[data-siteup]"))){ var i=+a.dataset.siteup; if(i<1) return; var L=siteOrder().map(function(x){ return x.k; }); var m=L[i]; L[i]=L[i-1]; L[i-1]=m; try{ localStorage.setItem("dakku-site-order",JSON.stringify(L)); }catch(err){} render(); return; }
+  if((a=t.closest&&t.closest("[data-sitego]"))) ga("site_go",{site:a.dataset.sitego});
+});
 function magView(){
   var t=state.magT==="p"?"p":"g";
   return '<div class="pg mag"><h1>다꾸 매거진</h1><p class="pgsub">체험단 가이드와 다꾸 추천 모음을 모아 봤어요</p>'+
