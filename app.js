@@ -1216,9 +1216,9 @@ function pressView(){
   var dd=function(e){ var n=Math.round((new Date(e+"T00:00:00")-today())/864e5); return n<=0?"오늘 마감":"D-"+n; };
   /* 2026-10-21 시온님: 맛보기 카드는 모집 사이트 이름·지원/모집 숫자를 흐리게, 링크 없음(실제 값은 화면에 넣지 않고 가림 글자만) */
   var card=function(x){ return '<div class="prc">'+
-    '<span class="pri"><img src="'+esc(x.img)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.visibility=\'hidden\'"><i>'+dd(x.e)+'</i></span>'+
+    '<span class="prim"><img src="'+esc(x.img)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.visibility=\'hidden\'"><i>'+dd(x.e)+'</i></span>'+
     '<span class="prx"><small><span class="prbl" aria-label="모집 사이트 가림">체험단사이트</span> · 📝 블로그</small><b>'+esc(x.t)+'</b><em>💰 '+esc(x.o)+'</em><small class="prbl" aria-label="지원·모집 인원 가림">지원 00 · 모집 0 · 0.0:1</small></span></div>'; };
-  var sk='<div class="prc sk"><span class="pri"></span><span class="prx"><span class="l1"></span><span class="l2"></span><span class="l3"></span></span></div>';
+  var sk='<div class="prc sk"><span class="prim"></span><span class="prx"><span class="l1"></span><span class="l2"></span><span class="l3"></span></span></div>';
   return '<div class="pg press">'+
     '<div class="prhero"><small>💻 블로그 재택알바</small><h1>제품 없이 글만 쓰고<br><em>원고료</em> 받아요</h1>'+
       '<p>방문하거나 제품을 받지 않아도 돼요. 받은 자료로 블로그 글을 쓰면 원고료나 포인트를 받아요. 이런 모집을 <b>\'기자단\'</b>이라고 불러요.</p><p class="prfine">고용 계약이 아니라 글 한 편마다 원고료·포인트를 받는 방식이에요. 금액은 모집마다 달라요.</p></div>'+
