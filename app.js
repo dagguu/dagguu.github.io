@@ -1243,7 +1243,7 @@ function pressView(){
     (more?'<div class="prlockw"><div class="prblur">'+sk+sk+sk+'</div>'+
       '<div class="prlock"><span class="pl1">🔒</span><b>모집 중인 기자단이 <em>'+more.toLocaleString()+'개</em> 더 있어요</b>'+
       '<p>매일 모아 정리한 전체 기자단 목록과<br>당첨 잘 되는 기자단 고르는 법·원고료 받는 글쓰기는<br><b>다꾸 수익화 클래스</b> 수강생에게 알려드려요.</p>'+
-      '<a class="b pri wide" href="#/edu">자세히 보기 ›</a></div></div>':'')+
+      '<a class="b pri wide" href="'+PART_URL+'#/edu">자세히 보기 ›</a></div></div>':'')+
     '<p class="prnote">'+(atS?atS+' 기준, '+esc(P.src||"체험모아")+'에 올라온 모집 중 기자단 수예요. ':'')+'기자단 모집 글은 각 모집 사이트에 공개돼 있고, 신청도 각 사이트에서 해요. 원고료·조건은 모집 사이트 안내가 우선이에요.</p>'+
   '</div>';
 }
