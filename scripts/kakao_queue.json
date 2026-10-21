@@ -2,15 +2,10 @@
  "date": "2026-10-21",
  "cards": [
   {
-   "style": "v3",
-   "accent": "#ff2e88",
-   "accent2": "#ff8a3d",
-   "label": "🎉 오늘 새로 열렸어요",
+   "style": "v4",
    "l1": "오늘 오픈",
    "l2": "한옥·풀빌라",
-   "sub": "45만원 화성 한옥부터 경주 오션뷰까지!",
-   "sticker": "오늘\nOPEN",
-   "cta": "오늘 오픈 체험단 보러가기 →",
+   "sub": "화성·청도·완주·경주 · ~10/27부터 마감",
    "tiles": [
     {
      "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/static/booking/image/pension/ddnayo/3f5deeac-9dbb-4a56-ad93-0d9951180d31.jpg",
@@ -44,18 +39,20 @@
    "title": "[오늘오픈🎉] 45만원 한옥 열렸어요",
    "desc": "단풍 여행은 한옥에서 어때요🍁\n화성·청도·완주 한옥 독채 새로 열림🏡\n✅기간 : ~10/27부터 순차 마감",
    "btn": "오늘 오픈 보기",
-   "url": "https://www.dagguu.com/#/list?cat=all&s=todayOpen"
+   "url": "https://www.dagguu.com/#/list?cat=all&s=todayOpen",
+   "h": [
+    "오늘 새로 열린",
+    "45만원 한옥 독채",
+    "4곳 모아봤어요"
+   ],
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/static/booking/image/pension/ddnayo/3f5deeac-9dbb-4a56-ad93-0d9951180d31.jpg",
+   "fit": "cover"
   },
   {
-   "style": "v3",
-   "accent": "#00a862",
-   "accent2": "#00c9b7",
-   "label": "🎉 오늘 새로 열린 제품",
+   "style": "v4",
    "l1": "오늘 오픈",
    "l2": "생활·육아템",
-   "sub": "모니터부터 캡슐세제까지 새로 열렸어요!",
-   "sticker": "오늘\nOPEN",
-   "cta": "오늘 오픈 체험단 보러가기 →",
+   "sub": "필립스·압타밀·라비킷·불스원 체험단",
    "tiles": [
     {
      "img": "https://ads-partners.coupang.com/image1/TOxpUb_wX3zdQ72TTNt5phSxuenEzSGOMng-KSpS2qrXPj7wHXUat7BLLOf_RJjiVRq8ajhYAF-kx7X5ySQ2B_ToWUh3LS91W4oLA28lKuKNtZj_RfgKb7-QjibeJitbEZRE-nrHh9q8hnnTheEp1ET4jqA8NdpHpZl-5iRvEi1i3V9ZbfGOH5c1Fxp3vszvq58MzCE3qGIFwvr4ympr4M21kuAUu2N5Tz-pPYMKxOxlE0CTK9tc06xM5zMiy9E3k6daK7qvQ120r6P8obxUG8KOVxAtg6lqvWNjY5dMUZBydLocX0W-ga7NusPXsqwFo4zZcRpYFKZmB22zvLPT3qifkRRejMb1eFKdR181x7daKgtt9H2tbqaXhp9C9F2GtIzdSGrpG0UDKo5zRVxBU0YpROdBcocivGMIcJTOSbXYX14f7QEqoOf70AE5GmdHmot7mWSSA6AECn1xebERWg3K774qU--jCBkhond0hotK3GXL6t374f5xcyFobmZDuCiUoEJ3M3d4CuU5a5UpYZtxsB0_oqrjmw==",
@@ -89,18 +86,20 @@
    "title": "[오늘오픈🎉] 18만원대 모니터 등장",
    "desc": "책상 셋업 바꾸고 싶었다면 지금🖥️\n분유·캡슐세제·방수 스프레이까지 열림🧺\n✅기간 : ~10/25부터 순차 마감",
    "btn": "오늘 오픈 보기",
-   "url": "https://www.dagguu.com/#/list?cat=all&s=todayOpen"
+   "url": "https://www.dagguu.com/#/list?cat=all&s=todayOpen",
+   "h": [
+    "18만원대 모니터부터",
+    "캡슐세제까지",
+    "오늘 새로 열렸어요"
+   ],
+   "bgimg": "https://ads-partners.coupang.com/image1/TOxpUb_wX3zdQ72TTNt5phSxuenEzSGOMng-KSpS2qrXPj7wHXUat7BLLOf_RJjiVRq8ajhYAF-kx7X5ySQ2B_ToWUh3LS91W4oLA28lKuKNtZj_RfgKb7-QjibeJitbEZRE-nrHh9q8hnnTheEp1ET4jqA8NdpHpZl-5iRvEi1i3V9ZbfGOH5c1Fxp3vszvq58MzCE3qGIFwvr4ympr4M21kuAUu2N5Tz-pPYMKxOxlE0CTK9tc06xM5zMiy9E3k6daK7qvQ120r6P8obxUG8KOVxAtg6lqvWNjY5dMUZBydLocX0W-ga7NusPXsqwFo4zZcRpYFKZmB22zvLPT3qifkRRejMb1eFKdR181x7daKgtt9H2tbqaXhp9C9F2GtIzdSGrpG0UDKo5zRVxBU0YpROdBcocivGMIcJTOSbXYX14f7QEqoOf70AE5GmdHmot7mWSSA6AECn1xebERWg3K774qU--jCBkhond0hotK3GXL6t374f5xcyFobmZDuCiUoEJ3M3d4CuU5a5UpYZtxsB0_oqrjmw==",
+   "fit": "contain"
   },
   {
-   "style": "v3",
-   "accent": "#ff3131",
-   "accent2": "#ff9f1c",
-   "label": "⏰ 오늘 밤 12시 마감",
+   "style": "v4",
    "l1": "오늘 마감",
    "l2": "독채·풀빌라",
-   "sub": "40만원 경주 독채, 오늘이 마지막!",
-   "sticker": "오늘\n마감",
-   "cta": "오늘 마감 체험단 보러가기 →",
+   "sub": "경주·제주·영종도·가평 숙소 4곳",
    "tiles": [
     {
      "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/static/booking/image/pension/ddnayo/0caaa59e-5c80-4ccd-ad3e-3ea4a1321deb.jpg",
@@ -134,18 +133,20 @@
    "title": "[오늘종료⏰] 40만원 독채 오늘까지",
    "desc": "미뤄둔 신청은 오늘이 끝이에요⏰\n경주·제주 독채, 가평 애견동반 풀빌라🏡\n✅기간 : ~10/21 오늘까지!",
    "btn": "오늘마감 보기",
-   "url": "https://www.dagguu.com/#/list?cat=all&s=todayClose"
+   "url": "https://www.dagguu.com/#/list?cat=all&s=todayClose",
+   "h": [
+    "오늘 밤 12시 마감",
+    "40만원 독채",
+    "놓치지 마세요"
+   ],
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/static/booking/image/pension/ddnayo/0caaa59e-5c80-4ccd-ad3e-3ea4a1321deb.jpg",
+   "fit": "cover"
   },
   {
-   "style": "v3",
-   "accent": "#2f6bff",
-   "accent2": "#00c2ff",
-   "label": "⏰ 내일이면 끝나요",
+   "style": "v4",
    "l1": "내일 마감",
    "l2": "고가 숙소",
-   "sub": "35만원 풀빌라·30만원 료칸호텔!",
-   "sticker": "내일\n마감",
-   "cta": "마감임박 체험단 보러가기 →",
+   "sub": "가평·기장·보은·제주 · 10/22까지",
    "tiles": [
     {
      "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/7efedaa6-4236-49e1-81d6-5f55e43c2f8d.jpg",
@@ -179,18 +180,20 @@
    "title": "[내일종료⏰] 료칸·풀빌라 내일까지",
    "desc": "주말 전에 신청 끝내 두세요👀\n가평 풀빌라·기장 료칸·제주 독채🌙\n✅기간 : ~10/22 내일까지!",
    "btn": "마감임박 보기",
-   "url": "https://www.dagguu.com/#/list?cat=all&s=closing"
+   "url": "https://www.dagguu.com/#/list?cat=all&s=closing",
+   "h": [
+    "내일 마감",
+    "료칸·풀빌라",
+    "4곳 모아봤어요"
+   ],
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/7efedaa6-4236-49e1-81d6-5f55e43c2f8d.jpg",
+   "fit": "cover"
   },
   {
-   "style": "v3",
-   "accent": "#7b2ff7",
-   "accent2": "#ff2e9a",
-   "label": "🎡 이번 주말 나들이",
+   "style": "v4",
    "l1": "나들이",
    "l2": "입장권 체험단",
-   "sub": "동물원·미디어아트·미로·아쿠아리움!",
-   "sticker": "입장권\n체험단",
-   "cta": "티켓 체험단 보러가기 →",
+   "sub": "동물원·미디어아트·미로·아쿠아리움",
    "tiles": [
     {
      "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00668506/b9b1747d-d4c5-4ea5-ad17-3f5f5d5e91e0.jpg",
@@ -224,18 +227,20 @@
    "title": "[나들이🎡] 동물원 입장권 왔어요",
    "desc": "아이랑 주말 어디 갈지 고민이라면🎡\n동물원·미디어아트·미로·아쿠아리움🐠\n✅기간 : ~10/22부터 순차 마감",
    "btn": "티켓 보러가기",
-   "url": "https://www.dagguu.com/#/list?cat=etc"
+   "url": "https://www.dagguu.com/#/list?cat=etc",
+   "h": [
+    "이번 주말",
+    "아이랑 갈 곳",
+    "입장권 체험단"
+   ],
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00552134/8ba81ae0-e35f-4abe-88e2-1207e4050dd6.jpg",
+   "fit": "cover"
   },
   {
-   "style": "v3",
-   "accent": "#f7971e",
-   "accent2": "#ffd200",
-   "label": "🛒 쿠팡 골드박스 아기·생활",
+   "style": "v4",
    "l1": "아기·생활",
    "l2": "최대 53% 핫딜",
-   "sub": "물티슈·캡슐세제·섬유유연제!",
-   "sticker": "최대\n53%",
-   "cta": "오늘의 특가 보러가기 →",
+   "sub": "캡슐세제·섬유유연제까지 · 내일 아침 7시까지",
    "tiles": [
     {
      "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/23101485338839-5554723b-d87f-419a-a5b8-db3a0a9e46f8.jpg",
@@ -269,7 +274,13 @@
    "title": "[핫딜🔥] 물티슈 53% 내렸어요",
    "desc": "물티슈 떨어질 때 됐다면 지금👀\n아기 물티슈·캡슐세제·섬유유연제🧺\n7천원대부터, 내일 아침 7시까지⏰",
    "btn": "핫딜 보러가기",
-   "url": "https://www.dagguu.com/#/deals"
+   "url": "https://www.dagguu.com/#/deals",
+   "h": [
+    "아기 물티슈",
+    "53% 내렸어요"
+   ],
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/23101485338839-5554723b-d87f-419a-a5b8-db3a0a9e46f8.jpg",
+   "fit": "contain"
   }
  ]
 }

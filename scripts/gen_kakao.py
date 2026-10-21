@@ -222,7 +222,36 @@ def card_v3(c):
 <div class='cta'>{e(c.get('cta','지금 보러가기 →'))}</div>
 </div></body></html>"""
 
-def render(c): return card_v3(c) if c.get('style') == 'v3' else card_v2(c) if c.get('style') == 'v2' else card(c)
+
+# v4 (2026-10-21 시온님 요청 "이제부터 이미지는 이런 디자인으로"): 사진 한 장을 꽉 채우고 어둡게 눌러서,
+# 왼쪽 아래에 굵은 흰 글씨 2~3줄 + 작은 설명 한 줄, 오른쪽 위 작은 주소. 스티커·색종이·타일 없음.
+CSS4 = f"""*{{margin:0;box-sizing:border-box}}
+body{{width:{W}px;height:{H}px;overflow:hidden;background:#111;font-family:'Pretendard','Noto Sans CJK KR',sans-serif;letter-spacing:-.035em}}
+.c{{position:relative;width:{W}px;height:{H}px;overflow:hidden;background:#1a1a1a}}
+.bg{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55) saturate(.88)}}
+.bl{{position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;filter:blur(28px) brightness(.45)}}
+.pd{{position:absolute;left:50%;top:96px;transform:translateX(-50%);width:500px;height:500px;object-fit:contain;border-radius:28px;background:#fff;padding:30px;filter:brightness(.8)}}
+.sh{{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.08) 35%,rgba(0,0,0,.55) 75%,rgba(0,0,0,.7) 100%)}}
+.hd{{position:absolute;right:44px;top:34px;color:rgba(255,255,255,.88);font-size:22px;font-weight:500;letter-spacing:0}}
+.tx{{position:absolute;left:64px;right:56px;bottom:170px;color:#fff}}
+.h{{font-weight:800;line-height:1.2;text-shadow:0 2px 14px rgba(0,0,0,.35)}}
+.h div{{white-space:nowrap}}
+.sub{{margin-top:34px;font-size:34px;font-weight:600;color:rgba(255,255,255,.95);text-shadow:0 2px 10px rgba(0,0,0,.35)}}
+"""
+def card_v4(c):
+    lines = c.get('h') or [x for x in (c.get('l1'), c.get('l2')) if x]
+    fs = int(min(96, 772 / (max(len(x) for x in lines) * 0.97)))
+    src = c.get('bgimg') or c['tiles'][0]['img']
+    fit = c.get('fit') or ('cover' if c.get('bgimg') else c['tiles'][0].get('fit', 'cover'))
+    u = data_uri(src)
+    pic = f"<img class='bg' src='{u}'>" if fit == 'cover' else f"<img class='bl' src='{u}'><img class='pd' src='{u}'>"
+    hs = ''.join(f'<div>{e(x)}</div>' for x in lines)
+    return f"""<html><head><meta charset='utf-8'><style>{CSS4}</style></head><body>
+<div class='c'>{pic}<div class='sh'></div><div class='hd'>{e(c.get('handle', 'www.dagguu.com'))}</div>
+<div class='tx'><div class='h' style='font-size:{fs}px'>{hs}</div><div class='sub'>{e(c.get('sub', ''))}</div></div>
+</div></body></html>"""
+
+def render(c): return card_v4(c) if c.get('style') == 'v4' else card_v3(c) if c.get('style') == 'v3' else card_v2(c) if c.get('style') == 'v2' else card(c)
 
 def text():
     raw = f"https://raw.githubusercontent.com/dagguu/dagguu.github.io/insta/kakao/{Q['date']}"
