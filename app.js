@@ -781,7 +781,7 @@ function itemView(){
     (closed?'<div class="dclosed"><b>모집이 끝난 체험단이에요</b><span>같은 '+(stay?'숙소':'제품')+'가 다시 모집하면 알림으로 알려드려요.'+(priceUrl(it)?' 지금 바로 이용하려면 아래 '+(stay?'숙소 사진 보기':(catOf(it)==='etc'?'입장권 가격 보기':'상품 가격 보기'))+'를 눌러 주세요.':'')+'</span></div>'
       :'<p class="dnote">신청은 '+esc(src)+'에서 진행돼요. 리뷰 조건·체험 가능일을 꼭 확인해 주세요.</p>')+
     '<div class="dbar"><button class="fv dbfav'+(isFav(it.id)?" on":"")+'" data-fav="'+esc(it.id)+'" aria-label="찜하기" aria-pressed="'+isFav(it.id)+'">'+ico(I.heart)+'</button>'+
-      (priceUrl(it)?'<a class="dbl" '+ext(priceUrl(it))+'>'+(stay?'숙소 사진 보기':(catOf(it)==='etc'?'입장권 가격 보기':'상품 가격 보기'))+'</a>':'')+(closed?reopenBtn(it):applyBtn(it,"dbp"))+'</div>'+
+      (priceUrl(it)?'<a class="dbl" '+ext(priceUrl(it))+'>'+(stay?'숙소 사진 보기':(catOf(it)==='etc'?'입장권 가격 보기':'제품 상세 보기'))+'</a>':'')+(closed?reopenBtn(it):applyBtn(it,"dbp"))+'</div>'+
     babyMore(it)+relDeals(it)+
     recoSection("이런 체험단은 어때요?")+'</div>';
 }

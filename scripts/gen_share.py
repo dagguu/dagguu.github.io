@@ -270,7 +270,7 @@ for it in items:
         fr = [(k, em, lab) for k, em, lab in (("p", "👥", "인원 추가"), ("b", "🍖", "바베큐"), ("f", "🔥", "불멍"), ("w", "♨️", "온수·수영장"), ("j", "🛁", "자쿠지·스파"), ("d", "🐶", "반려동물")) if it["fee"].get(k)]
         if fr: fee = '<div class="feebox"><b class="fbt">추가 요금 안내</b><dl>' + "".join(f'<dt>{em} {lab}</dt><dd>{e(it["fee"][k])}</dd>' for k, em, lab in fr) + '</dl><small>모집 글에 적힌 내용이에요. 요금은 바뀔 수 있으니 예약할 때 숙소에 꼭 확인하세요.</small></div>'
     ai = (f'<div class="aisum"><span class="aisl">✦ AI 요약</span><p>{e(it["sum"])}</p><small>숙소·제품 소개 자료를 바탕으로 AI가 정리했어요. 정확한 정보는 판매 페이지에서 확인해 주세요.</small></div>') if (it.get("sum") or "").strip() else ""
-    plab = "숙소 사진 보기" if cat == "stay" else ("입장권 가격 보기" if cat == "etc" else "상품 가격 보기")
+    plab = "숙소 사진 보기" if cat == "stay" else ("입장권 가격 보기" if cat == "etc" else "제품 상세 보기")
     src = it.get("source") or "체험단 사이트"
     HEART = '<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>'
     SEND = '<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3 10.2 13.8M21 3l-6.6 18-4.2-7.2L3 9.6Z"/></svg>'
