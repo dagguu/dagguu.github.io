@@ -96,7 +96,7 @@ h2{font-size:18px;margin:30px 0 10px;letter-spacing:-.02em}
 .disc{margin:0 0 6px;font-size:11px;color:#999;line-height:1.5}
 footer{margin-top:40px;font-size:12px;color:#999;line-height:1.7;border-top:1px solid #eee;padding-top:14px}"""
 
-FOOT = ('<footer>이 사이트는 쿠팡 파트너스, 마이리얼트립, 여기어때 등 제휴 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.<br>'
+FOOT = ('<footer>다꾸체험단은 여러 체험단 사이트의 모집 정보를 모아 보여 주는 서비스로, 각 체험단 사이트와 무관해요. 신청·선정·진행은 해당 사이트에서 이뤄져요.<br>이 사이트는 쿠팡 파트너스, 마이리얼트립, 여기어때 등 제휴 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.<br>'
         '다꾸체험단 (www.dagguu.com) · 운영 플랜비 · 대표 김정은 · 사업자등록번호 381-53-01054</footer>')
 
 def shell(title, desc, canon, body, img="", robots="index,follow", ld=None):
@@ -174,7 +174,7 @@ def shell_app(title, desc, canon, body, img="", robots="index,follow", ld=None, 
 <div class="frame">
 <header class="appbar"><span class="abl"><a class="backbtn" href="/" aria-label="홈으로">{BACK}</a><a class="logo" href="/"><img src="/icons/icon-192.png" alt="" width="30" height="30" style="border-radius:8px"><b class="wm">다꾸체험단</b></a></span><span class="hbtns"><a class="iconbtn" href="/#/list" aria-label="체험단 검색">{SRCH}</a></span></header>
 <main class="view">{body}
-<p class="sfoot">다꾸체험단 (www.dagguu.com) · 운영 플랜비 · 대표 김정은 · 사업자등록번호 381-53-01054</p></main>
+<p class="sfoot">다꾸체험단은 여러 체험단 사이트의 모집 정보를 모아 보여 주는 서비스로, 각 체험단 사이트와 무관해요. 신청·선정·진행은 해당 사이트에서 이뤄져요.<br>다꾸체험단 (www.dagguu.com) · 운영 플랜비 · 대표 김정은 · 사업자등록번호 381-53-01054</p></main>
 </div>{APPJS}</body></html>
 '''
 
