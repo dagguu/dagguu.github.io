@@ -1273,7 +1273,7 @@ function eduRewards(){
   return '<div class="wzrw" id="edurw"><h2>수강 과목 선택</h2><p class="wzp">10월 수강생 · 오픈 이벤트 진행 중</p>'+
     '<div class="wzr"><span class="wzt hot">과목 1 · 🔥 오픈 이벤트</span><b>[블로그] 블로그 수익화 5주 1:1</b><p>체험단 당첨 · 기자단 · 최상단 노출 · AI 프롬프트 글쓰기 · 수익화<br>🎨 블로그 꾸미기·셋팅 1회 포함</p><span class="wzo"><s>'+w(EDU_LIST.blog)+'</s> <em>20%</em> · '+EDU_EV+'까지 오픈 이벤트가</span><strong>'+w(EDU_PRICE.blog)+'</strong>'+eduPayBtn("blog")+'</div>'+
     '<div class="wzr"><span class="wzt hot">과목 2 · 🔥 오픈 이벤트</span><b>[쿠팡파트너스] 쿠팡파트너스 수익화 3주 1:1</b><p>1주 가입·승인·셋팅 · 2주 상품 고르기·링크 글쓰기·대가성 문구 · 3주 최상단 글쓰기·운영정책 지키기<br>🎨 블로그 꾸미기·셋팅 1회 포함</p><span class="wzo"><s>'+w(EDU_LIST.cp)+'</s> <em>20%</em> · '+EDU_EV+'까지 오픈 이벤트가</span><strong>'+w(EDU_PRICE.cp)+'</strong>'+eduPayBtn("cp")+'</div>'+
-    '<div class="wzr set"><span class="wzt hot">🔥 오픈 이벤트</span><b>[세트] 블로그 + 쿠팡파트너스 5주 1:1 올인원</b><p>두 과목을 5주 안에 한 번에 끝내요<br>🎨 블로그 꾸미기·셋팅 1회 포함</p><span class="wzo">따로 들으면 <s>'+w(EDU_PRICE.blog+EDU_PRICE.cp)+'</s></span><strong>'+w(EDU_PRICE.set)+'</strong>'+eduPayBtn("set")+'</div>'+
+    '<div class="wzr set"><span class="wzt hot">🔥 오픈 이벤트</span><b>[SET] 블로그 + 쿠팡파트너스 5주 1:1 올인원</b><p>두 과목을 5주 안에 한 번에 끝내요<br>🎨 블로그 꾸미기·셋팅 1회 포함</p><span class="wzo">따로 들으면 <s>'+w(EDU_PRICE.blog+EDU_PRICE.cp)+'</s> <em>'+Math.round((1-EDU_PRICE.set/(EDU_PRICE.blog+EDU_PRICE.cp))*100)+'%</em></span><strong>'+w(EDU_PRICE.set)+'</strong>'+eduPayBtn("set")+'</div>'+
     '<div class="wzx"><span class="wzxt">수강 외 결제 · 선택</span><b>이웃·방문자·인스타 1:1 실전 코칭</b>'+
       '<div class="wzxi"><i>🤝</i><div><b>한 달 안에 이웃 1,000명 만들기</b><p>목표 코칭 · 이웃 찾기 · 서로이웃 소통 · 댓글 관리 방법</p></div></div>'+
       '<div class="wzxi"><i>📈</i><div><b>한 달 안에 일 방문자 1,000명 만들기</b><p>목표 코칭 · 검색 유입 키워드 잡기 · 제목·본문 구성 피드백</p></div></div>'+
@@ -1287,13 +1287,13 @@ var EDU_PARTS=[["① 전자책·강의자료",30,"받은 뒤 환불 안 됨"],["
 var EDU_TERMS_VER="2026-10-21";
 document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.closest("[data-edulogin]"); if(!b) return; e.preventDefault(); ga("edu_join_click",{}); ls("dakku-after-login","#/edu"); login("kakao"); });
 /* 수강 신청 과목 선택 창(2026-10-21 시온님 "아래 고정 수강신청하기 누르면 상품 선택"). 고른 뒤 → 로그인 안 했으면 카카오 간편 가입 후 돌아와 계약서 → 페이앱 */
-var EDU_OPT=[["blog","[블로그] 블로그 수익화 5주 1:1"],["cp","[쿠팡파트너스] 쿠팡파트너스 수익화 3주 1:1"],["set","[세트] 블로그 + 쿠팡파트너스 5주 1:1 올인원"]];
+var EDU_OPT=[["blog","[블로그] 블로그 수익화 5주 1:1"],["cp","[쿠팡파트너스] 쿠팡파트너스 수익화 3주 1:1"],["set","[SET] 블로그 + 쿠팡파트너스 5주 1:1 올인원"]];
 var EDU_REFUND=['전자책·강의자료를 받기 전이고 컨설팅·첫 교육 전이면 전액 환불해요.','전자책·강의자료·AI 프롬프트는 디지털 콘텐츠라 받은 뒤에는 청약철회가 제한되어 환불되지 않아요(전자상거래법 제17조 제2항).','진단 컨설팅·블로그 꾸미기는 제공을 마치면 환불되지 않아요.','1:1 강의는 남은 일수만큼, 12개월 코칭은 남은 개월만큼 환불하고 남은 금액의 10%를 해지 수수료로 빼요.','기자단 모음 열람은 시작 후 환불되지 않아요. 다만 결제 후 12개월 안에 다꾸체험단이 체험단 사업을 종료하면 남은 개월만큼 돌려드려요.','환불은 카카오톡 채널 「다꾸체험단」으로 요청하면 3영업일 안에 결제 수단으로 취소해요.','교육은 방법을 함께 찾는 서비스로, 수익 금액·체험단 선정·검색 순위를 약속하거나 보장하지 않아요.'];
 function eduPick(pre){
   pre=pre||{}; var w=function(n){ return n.toLocaleString()+'원'; }, pay=seed.eduPay||{};
   var el=document.createElement("div"); el.className="edusheet";
   el.innerHTML='<div class="epk" role="dialog" aria-modal="true" aria-label="수강 신청"><div class="ephd"><b>수강 과목 선택</b><button type="button" class="epx" aria-label="닫기">✕</button></div>'+
-    EDU_OPT.map(function(o){ var k=o[0], lp=EDU_LIST[k], pr=EDU_PRICE[k]; var old=k==="set"?'따로 들으면 <s>'+w(EDU_PRICE.blog+EDU_PRICE.cp)+'</s>':(lp&&lp>pr?'<s>'+w(lp)+'</s> <em>'+Math.round((1-pr/lp)*100)+'%</em>':'');
+    EDU_OPT.map(function(o){ var k=o[0], lp=EDU_LIST[k], pr=EDU_PRICE[k]; var old=k==="set"?'따로 들으면 <s>'+w(EDU_PRICE.blog+EDU_PRICE.cp)+'</s> <em>'+Math.round((1-EDU_PRICE.set/(EDU_PRICE.blog+EDU_PRICE.cp))*100)+'%</em>':(lp&&lp>pr?'<s>'+w(lp)+'</s> <em>'+Math.round((1-pr/lp)*100)+'%</em>':'');
       return '<label class="epo"><input type="radio" name="edupk" value="'+k+'"'+(safeUrl(pay[k])?'':' disabled')+(pre.k===k?' checked':'')+'><span class="epn"><b>'+esc(o[1])+'</b><small>'+old+'</small></span><strong>'+w(pr)+'</strong></label>'; }).join("")+
     '<label class="epnm">수강생 이름 <input class="fi" id="epname" maxlength="20" autocomplete="name" placeholder="실명 (결제자와 같은 이름)"></label>'+
     '<div class="epagr"><label class="epck"><input type="checkbox" id="epok"> [필수] 환불정책을 확인했고 동의해요</label><button type="button" class="epmore">자세히 보기</button></div>'+
