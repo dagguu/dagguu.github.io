@@ -1267,12 +1267,12 @@ function dlTiles(end){ var ms=Math.max(0,dcdMs(end)), m=Math.floor(ms/6e4), d=Ma
 /* 수강료 결제 링크(2026-10-21 시온님: 가격은 숨기고, 시온님이 결제 링크를 주면 과목별 "결제하러 가기" 버튼). data.json eduPay {blog, cp, set} = 결제 페이지 주소. 없으면 버튼 안 보임 */
 /* 2026-10-21 시온님: 회원가입(카카오 로그인)을 해야 결제 버튼이 열림 */
 /* 수강 과목 = 와디즈 리워드처럼 (2026-10-21 시온님, 가격 공개). 블로그 150 · 쿠팡파트너스 150 = 실제 판매가, 세트 200 = 오픈 이벤트. "N개 남음"·"N명 보는 중" 같은 숫자는 실제 값이 없으면 넣지 않는다 */
-var EDU_PRICE={blog:1500000,cp:1500000,set:2000000};
+var EDU_PRICE={blog:1200000,cp:1200000,set:2000000}, EDU_LIST={blog:1500000,cp:1500000}, EDU_EV="10/31";
 function eduRewards(){
   var w=function(n){ return n.toLocaleString()+'원'; };
   return '<div class="wzrw" id="edurw"><h2>수강 과목 선택</h2><p class="wzp">10월 수강생 · 오픈 이벤트 진행 중</p>'+
-    '<div class="wzr"><span class="wzt">과목 1</span><b>[블로그] 블로그 수익화 5주 1:1</b><p>체험단 당첨 · 기자단 · 최상단 노출 · AI 프롬프트 글쓰기 · 수익화<br>🎨 블로그 꾸미기·셋팅 1회 포함</p><strong>'+w(EDU_PRICE.blog)+'</strong>'+eduPayBtn("blog")+'</div>'+
-    '<div class="wzr"><span class="wzt">과목 2</span><b>[쿠팡파트너스] 쿠팡파트너스 수익화 3주 1:1</b><p>1주 가입·승인·셋팅 · 2주 상품 고르기·링크 글쓰기·대가성 문구 · 3주 최상단 글쓰기·운영정책 지키기<br>🎨 블로그 꾸미기·셋팅 1회 포함</p><strong>'+w(EDU_PRICE.cp)+'</strong>'+eduPayBtn("cp")+'</div>'+
+    '<div class="wzr"><span class="wzt hot">과목 1 · 🔥 오픈 이벤트</span><b>[블로그] 블로그 수익화 5주 1:1</b><p>체험단 당첨 · 기자단 · 최상단 노출 · AI 프롬프트 글쓰기 · 수익화<br>🎨 블로그 꾸미기·셋팅 1회 포함</p><span class="wzo"><s>'+w(EDU_LIST.blog)+'</s> <em>20%</em> · '+EDU_EV+'까지 오픈 이벤트가</span><strong>'+w(EDU_PRICE.blog)+'</strong><small class="wzaf">11월 1일부터 '+w(EDU_LIST.blog)+'</small>'+eduPayBtn("blog")+'</div>'+
+    '<div class="wzr"><span class="wzt hot">과목 2 · 🔥 오픈 이벤트</span><b>[쿠팡파트너스] 쿠팡파트너스 수익화 3주 1:1</b><p>1주 가입·승인·셋팅 · 2주 상품 고르기·링크 글쓰기·대가성 문구 · 3주 최상단 글쓰기·운영정책 지키기<br>🎨 블로그 꾸미기·셋팅 1회 포함</p><span class="wzo"><s>'+w(EDU_LIST.cp)+'</s> <em>20%</em> · '+EDU_EV+'까지 오픈 이벤트가</span><strong>'+w(EDU_PRICE.cp)+'</strong><small class="wzaf">11월 1일부터 '+w(EDU_LIST.cp)+'</small>'+eduPayBtn("cp")+'</div>'+
     '<div class="wzr set"><span class="wzt hot">🔥 오픈 이벤트</span><b>[세트] 블로그 + 쿠팡파트너스 5주 1:1 올인원</b><p>두 과목을 5주 안에 한 번에 끝내요<br>🎨 블로그 꾸미기·셋팅 1회 포함</p><span class="wzo">따로 들으면 <s>'+w(EDU_PRICE.blog+EDU_PRICE.cp)+'</s></span><strong>'+w(EDU_PRICE.set)+'</strong>'+eduPayBtn("set")+'</div>'+
     '<div class="wzx"><span class="wzxt">수강 외 결제 · 선택</span><b>이웃·방문자 늘리는 1:1 실전 코칭</b>'+
       '<div class="wzxi"><i>🤝</i><div><b>서로이웃 늘리는 소통 코칭</b><p>이웃 찾기 · 서로이웃 소통 · 댓글 관리 방법</p></div></div>'+
