@@ -759,3 +759,31 @@ input,select,textarea{font-size:16px!important}
 .eduhero.hero2 p{margin:0 0 18px;font-size:15px}
 .eduhero .h2chips{display:flex;justify-content:center;gap:6px;flex-wrap:wrap}
 .eduhero .h2chips span{font-size:13px;font-weight:800;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);color:#fff}
+
+/* 와디즈형 히어로·리워드(2026-10-21) */
+.eduhero.wz .wzk{display:inline-block;font-size:15px;font-weight:900;color:#1a1033;background:#ffe14d;border-radius:8px;padding:6px 12px}
+.eduhero.wz h1{margin:14px 0 6px;font-size:28px;line-height:1.3}
+.eduhero.wz .wzby{margin:0 0 18px;font-size:14px;font-weight:800;color:#ffe14d}
+.eduhero .wzsum{text-align:left;background:#fff;color:#1d1b24;border-radius:18px;padding:16px;border:2px solid transparent;background-image:linear-gradient(#fff,#fff),linear-gradient(90deg,#8a3fd0,#3fb6d0);background-origin:border-box;background-clip:padding-box,border-box;margin-bottom:18px}
+.eduhero .wzst{display:block;font-size:15px;color:#6a3fc8;margin-bottom:10px}
+.eduhero .wzi{display:flex;gap:10px;margin:10px 0}
+.eduhero .wzi i{font-style:normal;font-size:20px;line-height:1.2}
+.eduhero .wzi b{font-size:15px;color:#1d1b24}
+.eduhero .wzi p{margin:2px 0 0;font-size:13.5px;line-height:1.5;color:#555}
+.eduhero .wzrw{text-align:left}
+.eduhero .wzrw h2{margin:6px 0 2px;font-size:20px;color:#fff}
+.eduhero .wzp{margin:0 0 10px;font-size:13px;color:#ffe14d;font-weight:700}
+.eduhero .wzr{background:#fff;color:#1d1b24;border:1.5px solid #ebe8f2;border-radius:16px;padding:16px;margin-bottom:10px}
+.eduhero .wzr.set{border:2.5px solid #ff4d6d;box-shadow:0 6px 22px rgba(255,77,109,.25)}
+.eduhero .wzt{display:inline-block;font-size:12px;font-weight:800;color:#0aa5a5;background:#e3f8f6;border-radius:6px;padding:3px 8px}
+.eduhero .wzt.hot{color:#e8344f;background:#ffe7ec}
+.eduhero .wzr b{display:block;margin:8px 0 4px;font-size:16px;line-height:1.4}
+.eduhero .wzr p{margin:0 0 8px;font-size:13px;line-height:1.5;color:#666}
+.eduhero .wzr strong{display:block;font-size:22px;font-weight:900}
+.eduhero .wzr.set strong{color:#e8344f;font-size:25px}
+.eduhero .wzo{display:block;font-size:13px;color:#888}
+.eduhero .wzr .ecpay{display:block;margin-top:12px;padding:13px;border-radius:12px;background:#1a1033;color:#fff;text-align:center;font-size:15px;font-weight:900;text-decoration:none;border:0;width:100%;font-family:inherit}
+.eduhero .wzr .ecjoin{background:#fee500;color:#191919}
+.eduhero .wzr .ecjn{display:block;margin-top:6px;font-size:12px;color:#888;text-align:center}
+.eduhero .wzn{font-size:12px;line-height:1.6;color:rgba(255,255,255,.75);margin:6px 0 0}
+.eduhero .wzn a{color:#ffe14d}

@@ -53,7 +53,11 @@ pts = grab('<section class="edupts">')
 why = grab('<section class="eduwhy">')
 allb = grab('<section class="eduall">')
 books = grab('<section class="edusec"><h2>📚')
-course = grab('<section class="educourse">')
+course = ('<section class="educourse"><small>CLASS</small><h2>수강 과목 선택</h2><p class="ecsub">10월 수강생 · 오픈 이벤트 진행 중</p><div class="ecards">'
+  '<div class="ec"><span class="ectag">과목 1</span><b>[블로그] 블로그 수익화 5주 1:1</b><p>체험단 당첨 · 기자단 · 최상단 노출 · AI 프롬프트 글쓰기 · 수익화</p><b class="pr">1,500,000원</b></div>'
+  '<div class="ec"><span class="ectag">과목 2</span><b>[쿠팡파트너스] 쿠팡파트너스 수익화 3주 1:1</b><p>1주 가입·승인·셋팅 · 2주 상품 고르기·링크 글쓰기·대가성 문구 · 3주 최상단 글쓰기·운영정책 지키기</p><b class="pr">1,500,000원</b></div>'
+  '<div class="ec set"><span class="ectag">🔥 오픈 이벤트</span><b>[세트] 블로그 + 쿠팡파트너스 5주 1:1 올인원</b><p>두 과목을 5주 안에 한 번에 끝내요<br>따로 들으면 <s>3,000,000원</s></p><b class="pr" style="color:#ff6b84">2,000,000원</b></div>'
+  '</div><a class="btn" href="/#/edu">수강 신청·결제하러 가기 ›</a><p class="ecnote">한 번 결제 · 카드 할부 가능(카드사 기준) · <a href="/refund.html" style="color:#ffe14d">환불정책</a><br>수익 금액·체험단 선정·검색 순위를 약속하거나 보장하지 않아요.</p></section>')
 rv = grab('<section class="edurv">')
 guar = grab('<div class="eduguar">', "</div>")
 way = re.search(r'<ul class="eduway">.*?</ul>', JS).group(0)
@@ -81,7 +85,7 @@ h1,h2{{letter-spacing:-.02em}}
 .hero small{{display:inline-block;font-size:13px;font-weight:800;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:5px 12px}}
 .hero .ceo{{display:table;margin:12px auto 0;padding:7px 16px;border-radius:999px;background:#111;color:#ffe14d;font-weight:900;border:1.5px solid #ffe14d}}
 .hero .top{{display:table;margin:8px auto 0;padding:7px 16px;border-radius:999px;background:#ffe14d;color:#3a1670;font-weight:900}}
-.educourse{{text-align:center}}.educourse>small{{font-size:12px;font-weight:800;letter-spacing:.2em;color:#c58bff}}.educourse h2{{margin:6px 0 4px;font-size:22px}}.educourse .ecsub{{margin:0 0 18px;font-size:14px;color:#ffe14d;font-weight:800}}.educourse .ecards{{display:grid;gap:12px;text-align:left}}.educourse .ec{{background:#1a1426;border:1.5px solid #3b2a5c;border-radius:18px;padding:18px 16px}}.educourse .ec.set{{border-color:#b56cff;box-shadow:0 0 22px rgba(181,108,255,.35)}}.educourse .ectag{{display:inline-block;font-size:11px;font-weight:800;color:#0e0b16;background:#c58bff;border-radius:6px;padding:2px 8px}}.educourse .ec.set .ectag{{background:#ffe14d}}.educourse .ec b{{display:block;margin:8px 0 2px;font-size:18px}}.educourse .ec em{{font-style:normal;font-size:13px;font-weight:800;color:#c58bff}}.educourse .ec p{{margin:8px 0 0;font-size:14px;line-height:1.55;color:#d9d2e6}}.educourse .ecol{{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}}.educourse .ecol li{{font-size:13.5px;line-height:1.5;color:#d9d2e6}}.educourse .ecol i{{font-style:normal;font-weight:800;color:#ffe14d;margin-right:6px}}.educourse .ecnote{{margin:14px 0 0;font-size:12px;color:#8f8a99}}
+.educourse{{text-align:center}}.educourse>small{{font-size:12px;font-weight:800;letter-spacing:.2em;color:#c58bff}}.educourse h2{{margin:6px 0 4px;font-size:22px}}.educourse .ecsub{{margin:0 0 18px;font-size:14px;color:#ffe14d;font-weight:800}}.educourse .ecards{{display:grid;gap:12px;text-align:left}}.educourse .ec{{background:#1a1426;border:1.5px solid #3b2a5c;border-radius:18px;padding:18px 16px}}.educourse .ec.set{{border-color:#b56cff;box-shadow:0 0 22px rgba(181,108,255,.35)}}.educourse .ectag{{display:inline-block;font-size:11px;font-weight:800;color:#0e0b16;background:#c58bff;border-radius:6px;padding:2px 8px}}.educourse .ec.set .ectag{{background:#ffe14d}}.educourse .ec b{{display:block;margin:8px 0 2px;font-size:18px}}.educourse .ec em{{font-style:normal;font-size:13px;font-weight:800;color:#c58bff}}.educourse .ec p{{margin:8px 0 0;font-size:14px;line-height:1.55;color:#d9d2e6}}.educourse .ecol{{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}}.educourse .ecol li{{font-size:13.5px;line-height:1.5;color:#d9d2e6}}.educourse .ecol i{{font-style:normal;font-weight:800;color:#ffe14d;margin-right:6px}}.educourse .pr{{font-size:22px!important;margin-top:8px!important}}.educourse .ecnote{{margin:14px 0 0;font-size:12px;color:#8f8a99}}
 .chip{{font-size:13px;font-weight:800;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);color:#fff}}
 .hero .m{{display:block;margin:12px 0 0;font-size:16px;font-weight:800}}
 .hero .f{{display:inline-block;margin-top:8px;padding:7px 16px;border-radius:999px;background:#fff;color:#9b3fd0;font-weight:900}}
@@ -143,20 +147,21 @@ h1,h2{{letter-spacing:-.02em}}
 <div class="dl" id="dl"><b><span class="dlw">🔥 10월 수강생 · 10/31 마감까지</span><span class="dlm">🔥 10월 수강생 모집중 🔥</span></b><span class="dlt" id="dlc"></span></div>
 <script>(function(){{var end=new Date("2026-10-31T23:59:59+09:00").getTime(),b=document.getElementById("dl"),c=document.getElementById("dlc");function p(n){{return(n<10?"0":"")+n}}function t(){{var ms=end-Date.now();if(ms<=0){{b.style.display="none";return}}var m=Math.floor(ms/6e4);function q(n,u){{var x=p(n);return"<i>"+x[0]+"</i><i>"+x[1]+"</i><u>"+u+"</u>"}}c.innerHTML=q(Math.floor(m/1440),"일")+q(Math.floor(m%1440/60),"시간")+q(m%60,"분")}}t();setInterval(t,1000)}})();</script>
 <p class="disc">다꾸체험단은 쿠팡 파트너스 등 제휴 활동으로 일정액의 수수료를 받을 수 있습니다.</p>
-<section class="hero"><small style="background:#111;border:1.5px solid #ffe14d;color:#ffe14d">📣 광고대행사 대표가 직접 알려드려요</small>
-<h1>한번 배우면 <span>평생 써먹는</span><br>블로그 수익화</h1>
-<p>5주 1:1로 최상단에 글 올리는 비법부터<br>체험단 당첨·수익화까지 다 배워요</p><div style="display:flex;justify-content:center;gap:6px;flex-wrap:wrap"><span class="chip">⚡ 한 달 완성</span><span class="chip">🔝 최상단 노출 비법</span><span class="chip">🌷 50대도 OK</span></div></section>
+<section class="hero"><span class="chip" style="background:#ffe14d;color:#1a1033;border:0;border-radius:8px;font-size:15px">왕초보 가능 부업 🤑</span>
+<h1>블로그로 누구나 쉽게!<br><span>AI 프롬프트</span> 수익화 방법</h1>
+<p style="color:#ffe14d;font-weight:800">📣 광고대행사 대표가 직접 알려드려요</p>
+<p>5주 1:1로 체험단 당첨 · 기자단 · 최상단에 글 올리는 비법부터<br>최신 AI 프롬프트 글쓰기, 블로그 수익화까지</p></section>
+{course}
 {pts}
 {why}
 {allb}
 <section class="sec"><h2>이런 분들께 맞아요</h2><div class="edutalk">{''.join(f'<div class="et{" r" if i%2 else ""}"><i>{a}</i><p><small>{b}</small>{c}</p></div>' for i,(a,b,c) in enumerate(TALK))}</div><ul class="chk">{''.join(f'<li>{t}</li>' for t in PICK)}</ul></section>
 <section class="sec"><h2>5주 커리큘럼</h2><ol class="cur">{''.join(f'<li><b>✨ {i+1}주차</b>{e} {t}</li>' for i,(e,t) in enumerate(CUR))}</ol></section>
-{course}
 {books}
 {rv}
 {OPENSEC}
 <section class="sec"><h2>진행 방식</h2>{way}</section>
-<section class="price"><span class="badge">오픈 이벤트</span><br><div class="box"><small>5주 1:1 강의 + 전자책·강의자료</small><b>월 10만원대</b><em>*12개월 카드 할부 시 (할부 수수료는 카드사 기준)<br>정확한 수강료는 상담 때 안내해 드려요</em></div></section>
+<section class="price"><span class="badge">오픈 이벤트</span><br><div class="box"><small>5주 1:1 강의 + 전자책·강의자료</small><b>월 10만원대</b><em>*12개월 카드 할부 시 (할부 수수료는 카드사 기준)</em></div></section>
 {guar}
 <p class="note" style="margin-top:14px">코칭은 방법을 함께 찾는 과정이에요. 체험단 당첨, 검색 순위, 수익 금액을 약속하거나 보장하지 않아요.</p>
 <section class="cta"><p>아직 고민하는 분들께</p><h2>지금 시작하고<br><span>생활비 월 100</span> 아껴보세요!</h2><small style="display:block;margin-top:10px;font-size:11px;color:#8f8a99">*체험단 활용 정도에 따라 사람마다 달라요</small>
