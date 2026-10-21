@@ -149,7 +149,7 @@ h1,h2{{letter-spacing:-.02em}}
 <script>(function(){{var end=new Date("2026-10-31T23:59:59+09:00").getTime(),b=document.getElementById("dl"),c=document.getElementById("dlc");function p(n){{return(n<10?"0":"")+n}}function t(){{var ms=end-Date.now();if(ms<=0){{b.style.display="none";return}}var m=Math.floor(ms/6e4);function q(n,u){{var x=p(n);return"<i>"+x[0]+"</i><i>"+x[1]+"</i><u>"+u+"</u>"}}c.innerHTML=q(Math.floor(m/1440),"일")+q(Math.floor(m%1440/60),"시간")+q(m%60,"분")}}t();setInterval(t,1000)}})();</script>
 <p class="disc">다꾸체험단은 쿠팡 파트너스 등 제휴 활동으로 일정액의 수수료를 받을 수 있습니다.</p>
 <section class="hero"><span class="chip" style="background:#ffe14d;color:#1a1033;border:0;border-radius:8px;font-size:15px">왕초보 가능 부업 🤑</span>
-<h1>블로그로 누구나 쉽게!<br><span>AI 프롬프트</span> 수익화 방법</h1>
+<h1>블로그로 누구나 쉽게!<br><span>AI 블로그 글쓰기</span> 수익화 방법</h1>
 <p style="color:#ffe14d;font-weight:800">📣 광고대행사 대표가 직접 알려드려요</p>
 <p>5주 1:1로 체험단 당첨 · 기자단 · 최상단에 글 올리는 비법부터<br>최신 AI 프롬프트 글쓰기, 블로그 수익화까지</p></section>
 {course}

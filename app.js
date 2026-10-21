@@ -1320,7 +1320,7 @@ document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.
 function eduView(){
   var EDU_DL="2026-10-31", eduOpen=dcdMs(EDU_DL)>0;
   return '<div class="pg edu">'+(eduOpen?'<div class="edudl"><b><span class="dlw">🔥 10월 수강생 · 10/31 마감까지</span><span class="dlm">🔥 10월 수강생 모집중 🔥</span></b><span class="dlt" data-edl="'+EDU_DL+'">'+dlTiles(EDU_DL)+'</span></div>':'')+
-    '<section class="eduhero hero2 wz"><span class="wzk">왕초보 가능 부업 🤑</span><h1>블로그로 누구나 쉽게!<br><span>AI 프롬프트</span> 수익화 방법</h1><p class="wzby">📣 광고대행사 대표가 직접 알려드려요</p>'+
+    '<section class="eduhero hero2 wz"><span class="wzk">왕초보 가능 부업 🤑</span><h1>블로그로 누구나 쉽게!<br><span>AI 블로그 글쓰기</span> 수익화 방법</h1><p class="wzby">📣 광고대행사 대표가 직접 알려드려요</p>'+
       '<div class="wzsum"><b class="wzst">✦ 한눈에 보기</b>'+
         '<div class="wzi"><i>🧑‍💻</i><div><b>블로그 수익화 5주 1:1</b><p>체험단 당첨 · 기자단 · 최상단에 글 올리는 비법까지</p></div></div>'+
         '<div class="wzi"><i>🤖</i><div><b>최신 AI 프롬프트로 글쓰기</b><p>글솜씨 없어도 왕초보가 따라 할 수 있게 프롬프트를 드려요</p></div></div>'+
