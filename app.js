@@ -203,7 +203,7 @@ document.addEventListener("click",function(e){
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
-  if(!/^(home|list|fav|benefit|shop|mag|tix|deals|reporter|press|contact|item|my|privacy|price|event|trip|edu|checkout)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|benefit|shop|mag|tix|deals|reporter|press|contact|item|my|privacy|price|event|trip|edu|checkout|pjob|padmin)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
   if(tab==="event") state.evAbr=qs.t==="abroad";
@@ -211,6 +211,7 @@ function route(){
   if(tab==="mag") state.magT=qs.t==="p"?"p":"g";
   if(tab==="tix") state.tixI=qs.i||"";
   if(tab==="checkout") state.coK=qs.c||"";
+  if(tab==="pjob") state.pjId=qs.id||"";
   state.focusT=(tab==="deals"&&qs.t)?qs.t:"";
   state.dq=(tab==="deals"&&qs.q)?qs.q:"";
   state.pq=(tab==="price"&&qs.q)?qs.q:"";
@@ -241,10 +242,12 @@ function render(){
   else if(state.tab==="tix"){ v.innerHTML=tixView(); if(state.tixI!==""){ setTimeout(function(){ var e=document.getElementById("tix"+state.tixI); if(e) e.scrollIntoView({block:"center"}); },60); } }
   else if(state.tab==="deals") v.innerHTML=dealsView();
   else if(state.tab==="reporter") v.innerHTML=reporterView();
-  else if(state.tab==="press") v.innerHTML=pressView();
+  else if(state.tab==="press"){ v.innerHTML=pressView(); pjList(); }
+  else if(state.tab==="pjob"){ v.innerHTML=pjobView(); pjobInit(); }
+  else if(state.tab==="padmin"){ v.innerHTML=padminView(); padminInit(); }
   else if(state.tab==="contact") v.innerHTML=contactView();
   else if(state.tab==="item") v.innerHTML=itemView();
-  else if(state.tab==="my") v.innerHTML=myView();
+  else if(state.tab==="my"){ v.innerHTML=myView(); pjMy(); }
   else if(state.tab==="privacy") v.innerHTML=privacyView();
   else if(state.tab==="event") v.innerHTML=eventView();
   else if(state.tab==="trip") v.innerHTML=tripView();
@@ -1226,7 +1229,7 @@ function pressView(){
     '<div class="prhero"><small>💻 블로그 재택알바</small><h1>제품 없이 글만 쓰고<br><em>원고료</em> 받아요</h1>'+
       '<p>방문하거나 제품을 받지 않아도 돼요. 받은 자료로 블로그 글을 쓰면 원고료나 포인트를 받아요. 이런 모집을 <b>\'기자단\'</b>이라고 불러요.</p><p class="prfine">고용 계약이 아니라 글 한 편마다 원고료·포인트를 받는 방식이에요. 금액은 모집마다 달라요.</p></div>'+
     '<div class="prhow"><div><b>1</b><span>모집 글 보고 신청</span></div><div><b>2</b><span>자료 받아 글 쓰기</span></div><div><b>3</b><span>원고료·포인트 받기</span></div></div>'+
-    '<h2 class="prh">지금 모집 중인 원고료 기자단</h2>'+
+    '<div id="pjlist" class="pjlist" hidden></div>'+'<h2 class="prh">지금 모집 중인 원고료 기자단</h2>'+
     (L.length?L.map(card).join(""):'<div class="empty">오늘 보여드릴 기자단을 준비하고 있어요</div>')+
     (more?'<div class="prlockw"><div class="prblur">'+sk+sk+sk+'</div>'+
       '<div class="prlock"><span class="pl1">🔒</span><b>모집 중인 기자단이 <em>'+more.toLocaleString()+'개</em> 더 있어요</b>'+
@@ -1235,6 +1238,146 @@ function pressView(){
     '<p class="prnote">'+(atS?atS+' 기준, '+esc(P.src||"체험모아")+'에 올라온 모집 중 기자단 수예요. ':'')+'기자단 모집 글은 각 모집 사이트에 공개돼 있고, 신청도 각 사이트에서 해요. 원고료·조건은 모집 사이트 안내가 우선이에요.</p>'+
   '</div>';
 }
+
+/* ---------- 다꾸 기자단(2026-10-21 시온님 "다음 진행": 광고주에게 판 기자단을 다꾸 회원 블로거에게 모집, 원고료 적립·출금) ----------
+   DB = supabase/press_jobs.sql (press_jobs·press_files·press_apps·press_ledger·press_withdrawals + 함수). 적립금은 출금만 되는 미지급 원고료(충전·구매·양도 없음).
+   화면: #/press 맨 위 "다꾸 기자단 모집"(pjList) · #/pjob?id= 상세·신청·글 제출 · 마이페이지 "내 기자단·원고료"(pjMy) · #/padmin 관리자(시온님) */
+var PJ_ST={applied:"신청 완료",selected:"선정 · 글 쓰기",rejected:"미선정",submitted:"글 제출 · 검수 중",returned:"수정 요청",approved:"승인 · 원고료 적립"};
+var PJ_MIN=10000, PJ_TAX=0.033;
+function won(n){ return Number(n||0).toLocaleString()+"원"; }
+function pjNet(n){ var it=Math.floor(n*0.03/10)*10; if(it<1000) return n; return n-it-Math.floor(it*0.1/10)*10; } /* 소득세 3%(1천원 미만 소액부징수) + 지방소득세 10% */
+function pjDd(e){ var n=Math.round((new Date(e+"T00:00:00")-today())/864e5); return n<0?"마감":n===0?"오늘 마감":"D-"+n; }
+function pjWait(cb){ if(SB){ cb(); return; } if(!authCfg()){ cb(); return; } initAuth(); var n=0, t=setInterval(function(){ if(SB||++n>40){ clearInterval(t); cb(); } },150); }
+function pjErr(e){ var m=(e&&e.message)||""; return /closed/.test(m)?"모집이 끝났어요":/duplicate|unique/.test(m)?"이미 신청했어요":/blog|url/.test(m)?"주소를 확인해 주세요":/balance/.test(m)?"적립금이 모자라요":/min/.test(m)?"1만원부터 출금할 수 있어요":/state/.test(m)?"지금은 할 수 없는 단계예요":"잠시 후 다시 시도해 주세요"; }
+function pjCard(j){ return '<a class="pjc" href="#/pjob?id='+j.id+'"><span class="pjt"><small>'+esc(j.region||"")+(j.kw?' · '+esc(j.kw):'')+'</small><b>'+esc(j.title)+'</b><em>원고료 '+won(j.pay)+'</em></span><span class="pjr"><i>'+pjDd(j.ends)+'</i><small>모집 '+j.slots+'명</small></span></a>'; }
+function pjList(){
+  var box=document.getElementById("pjlist"); if(!box) return;
+  pjWait(function(){ if(!SB){ box.hidden=true; return; }
+    SB.from("press_jobs").select("id,title,region,kw,pay,slots,ends,status").eq("status","open").gte("ends",ymd(today())).order("ends").then(function(r){
+      if(sbErr(r)||!r.data||!r.data.length){ box.hidden=true; return; }
+      box.innerHTML='<h2 class="prh">다꾸 기자단 모집</h2><p class="pjsub">다꾸가 직접 모집해요. 신청·글 제출·원고료 적립까지 다꾸에서 해요.</p>'+r.data.map(pjCard).join(""); box.hidden=false; plainHeads(box); });
+  });
+}
+function pjobView(){ return '<div class="pg pjob" id="pjob"><a class="back" href="#/press">'+ico(I.back)+'<span>재택알바</span></a><div class="empty">불러오는 중…</div></div>'; }
+function pjobInit(){
+  var v=document.getElementById("pjob"), id=+state.pjId; if(!v) return;
+  pjWait(function(){
+    if(!SB){ v.innerHTML='<div class="empty">지금은 볼 수 없어요</div>'; return; }
+    SB.from("press_jobs").select("*").eq("id",id).maybeSingle().then(function(r){
+      var j=r.data; if(sbErr(r)||!j){ v.innerHTML='<a class="back" href="#/press">'+ico(I.back)+'<span>재택알바</span></a><div class="empty">모집 글을 찾을 수 없어요</div>'; return; }
+      var open=j.status==="open"&&j.ends>=ymd(today());
+      var head='<a class="back" href="#/press">'+ico(I.back)+'<span>재택알바</span></a>'+
+        '<div class="pjh"><small>다꾸 기자단 · '+esc(j.region||"")+'</small><h1>'+esc(j.title)+'</h1><div class="pjpay"><b>'+won(j.pay)+'</b><span>1편 원고료 (세전)</span></div></div>'+
+        '<table class="pjtb"><tr><th>모집 인원</th><td>'+j.slots+'명</td></tr><tr><th>신청 마감</th><td>'+esc(j.ends)+' ('+pjDd(j.ends)+')</td></tr>'+(j.kw?'<tr><th>키워드</th><td>'+esc(j.kw)+'</td></tr>':'')+(j.biz?'<tr><th>업체</th><td>'+esc(j.biz)+'</td></tr>':'')+'<tr><th>작성 채널</th><td>네이버 블로그</td></tr></table>'+
+        (j.guide?'<section class="pjsec"><h2>무엇을 쓰나요</h2><p class="pjg">'+esc(j.guide).replace(/\n/g,"<br>")+'</p></section>':'')+
+        '<section class="pjsec"><h2>꼭 지켜 주세요</h2><ul class="pjrule"><li>광고주가 준 원고·사진 자료로 쓰는 소개 글이에요.</li><li>글 첫 부분에 원고료를 받고 쓴 글이라는 문구를 꼭 넣어요(공정위 추천·보증 심사지침).</li><li>글은 올린 날부터 3개월 동안 지우지 않아요.</li><li>원고료는 검수 승인 뒤 적립되고, 1만원부터 출금할 수 있어요. 출금할 때 3.3%(소득세·지방소득세)를 떼고 입금해요.</li></ul></section>';
+      if(!USER){ v.innerHTML=head+'<div class="dbar pjbar"><button class="b" data-pjlogin>카카오로 로그인하고 신청하기</button></div>'; return; }
+      SB.from("press_apps").select("*").eq("job_id",id).eq("user_id",USER.id).maybeSingle().then(function(a){
+        var ap=a.data, h=head;
+        if(ap){
+          h+='<section class="pjsec pjmy"><h2>내 신청</h2><p class="pjst st-'+ap.status+'">'+esc(PJ_ST[ap.status]||ap.status)+'</p>'+(ap.note?'<p class="pjnote">💬 '+esc(ap.note)+'</p>':'')+
+            '<p class="pjsm">블로그: '+esc(ap.blog_url)+'</p>'+(ap.post_url?'<p class="pjsm">제출한 글: <a href="'+esc(safeUrl(ap.post_url))+'" target="_blank" rel="noopener noreferrer">'+esc(ap.post_url)+'</a></p>':'')+'<div id="pjfiles"></div>'+
+            (ap.status==="selected"||ap.status==="returned"?'<form id="pjsubmit" class="pjf"><label class="fl" for="pj-post">올린 글 주소</label><input id="pj-post" class="fi" type="url" inputmode="url" placeholder="https://blog.naver.com/아이디/글번호" required><button class="b pri wide" type="submit">글 제출하기</button></form>':'')+'</section>';
+          v.innerHTML=h; plainHeads(v);
+          if(/selected|submitted|returned|approved/.test(ap.status)) SB.from("press_files").select("url,memo").eq("job_id",id).maybeSingle().then(function(f){ var el=document.getElementById("pjfiles"); if(el&&f.data&&safeUrl(f.data.url)) el.innerHTML='<a class="b pjfile" href="'+esc(safeUrl(f.data.url))+'" target="_blank" rel="noopener noreferrer">📁 원고·사진 자료 받기 ↗</a>'+(f.data.memo?'<p class="pjsm">'+esc(f.data.memo)+'</p>':''); });
+          var sf=document.getElementById("pjsubmit"); if(sf) sf.addEventListener("submit",function(e){ e.preventDefault(); var u=document.getElementById("pj-post").value.trim();
+            SB.rpc("press_submit",{p_app:ap.id,p_url:u}).then(function(x){ if(x.error){ toast(pjErr(x.error)); return; } toast("✅ 제출했어요. 검수 후 원고료가 적립돼요"); ga("press_submit",{}); pjobInit(); }); });
+          return;
+        }
+        if(!open){ v.innerHTML=h+'<div class="empty">모집이 끝났어요</div>'; plainHeads(v); return; }
+        var bl=(myChs().blogs||[]);
+        h+='<section class="pjsec"><h2>신청하기</h2><form id="pjapply" class="pjf">'+
+          '<label class="fl" for="pj-blog">블로그 주소 <i>*</i></label>'+(bl.length?'<select id="pj-blog" class="fi">'+bl.map(function(b){ return '<option>'+esc(b)+'</option>'; }).join("")+'<option value="">직접 입력</option></select><input id="pj-blog2" class="fi" type="url" inputmode="url" placeholder="https://blog.naver.com/아이디" hidden>':'<input id="pj-blog2" class="fi" type="url" inputmode="url" placeholder="https://blog.naver.com/아이디" required>')+
+          '<label class="fl" for="pj-msg">하고 싶은 말</label><textarea id="pj-msg" class="fi ta" maxlength="500" placeholder="주로 쓰는 주제, 하루 방문자 등"></textarea>'+
+          '<label class="ck"><input type="checkbox" id="pj-ok"><span>위 안내(대가성 문구·3개월 유지·3.3% 원천징수)를 확인했어요</span></label>'+
+          '<button class="b pri wide" type="submit">기자단 신청하기</button></form></section>';
+        v.innerHTML=h; plainHeads(v);
+        var sel=document.getElementById("pj-blog"), b2=document.getElementById("pj-blog2");
+        if(sel) sel.addEventListener("change",function(){ b2.hidden=!!sel.value; });
+        document.getElementById("pjapply").addEventListener("submit",function(e){ e.preventDefault();
+          var blog=(sel&&sel.value)||chNorm("blogs",b2.value)||b2.value.trim();
+          if(!/^https?:\/\//i.test(blog)){ toast("블로그 주소를 확인해 주세요"); return; }
+          if(!document.getElementById("pj-ok").checked){ toast("안내를 확인하고 체크해 주세요"); return; }
+          SB.rpc("press_apply",{p_job:id,p_blog:blog,p_msg:document.getElementById("pj-msg").value}).then(function(x){ if(x.error){ toast(pjErr(x.error)); return; } toast("✅ 신청했어요. 선정되면 여기에서 자료를 받을 수 있어요"); ga("press_apply",{job:id}); pjobInit(); }); });
+      });
+    });
+  });
+}
+document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.closest("[data-pjlogin]"); if(!b) return; e.preventDefault(); ls("dakku-after-login",location.hash); login("kakao"); });
+/* 마이페이지: 내 기자단·원고료 */
+function pjMySection(){ return USER?'<section class="pane mypj" id="mypj" hidden></section>':''; }
+function pjMy(){
+  var box=document.getElementById("mypj"); if(!box||!SB||!USER) return;
+  Promise.all([SB.from("press_apps").select("id,job_id,status,note,press_jobs(title,pay)").eq("user_id",USER.id).order("created_at",{ascending:false}).limit(20), SB.rpc("press_balance"), SB.from("press_withdrawals").select("amount,status,created_at").eq("user_id",USER.id).order("created_at",{ascending:false}).limit(5)]).then(function(R){
+    var apps=R[0].data, bal=R[1].data, wds=R[2].data||[]; if(R[0].error||R[1].error) return;
+    if(!apps.length&&!bal&&!wds.length){ box.innerHTML='<h2>✍️ 내 기자단 · 원고료</h2><p class="mysub">아직 신청한 다꾸 기자단이 없어요.</p><a class="lnk" href="#/press">모집 중인 기자단 보기 ›</a>'; box.hidden=false; return; }
+    var h='<h2>✍️ 내 기자단 · 원고료</h2><div class="pjbal"><span>출금할 수 있는 원고료</span><b>'+won(bal)+'</b><small>출금 시 3.3% 떼고 '+won(pjNet(bal))+' 입금</small>'+
+      '<button class="b pri" data-pjwd'+(bal<PJ_MIN?' disabled':'')+'>출금 신청</button>'+(bal<PJ_MIN?'<small>1만원부터 출금할 수 있어요</small>':'')+'</div>';
+    h+=apps.map(function(a){ var j=a.press_jobs||{}; return '<a class="pjmyr" href="#/pjob?id='+a.job_id+'"><span><b>'+esc(j.title||"")+'</b><small>'+won(j.pay)+'</small></span><i class="st-'+a.status+'">'+esc(PJ_ST[a.status]||a.status)+'</i></a>'; }).join("");
+    if(wds.length) h+='<p class="pjwdh">출금 신청 내역</p>'+wds.map(function(w){ return '<p class="pjwdr"><span>'+w.created_at.slice(0,10)+'</span><span>'+won(w.amount)+'</span><b>'+({requested:"처리 중",paid:"입금 완료",rejected:"반려"})[w.status]+'</b></p>'; }).join("");
+    box.innerHTML=h; box.hidden=false;
+  });
+}
+document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.closest("[data-pjwd]"); if(!b||b.disabled) return; e.preventDefault();
+  SB.rpc("press_balance").then(function(r){ var bal=r.data||0; if(bal<PJ_MIN){ toast("1만원부터 출금할 수 있어요"); return; }
+    var el=document.createElement("div"); el.className="edusheet";
+    el.innerHTML='<div class="epk" role="dialog" aria-modal="true" aria-label="출금 신청"><div class="ephd"><b>원고료 출금 신청</b><button type="button" class="epx" aria-label="닫기">✕</button></div>'+
+      '<label class="epnm">출금할 금액 (세전)<input class="fi" id="pjwda" type="number" inputmode="numeric" min="'+PJ_MIN+'" max="'+bal+'" step="1000" value="'+bal+'"></label>'+
+      '<p class="adpn">3.3%(소득세·지방소득세)를 떼고 입금해요. 처음 출금하실 때는 신청 후 카카오톡 채널 「다꾸체험단」으로 <b>이름·주민등록번호·은행·계좌번호</b>를 보내 주세요(원천징수 신고에 필요해요, 사이트에는 저장하지 않아요). 영업일 기준 7일 안에 입금해요.</p>'+
+      '<button type="button" class="b pri epgo">출금 신청하기</button></div>';
+    document.body.appendChild(el);
+    el.addEventListener("click",function(ev){ if(ev.target===el||ev.target.closest(".epx")) el.remove(); });
+    el.querySelector(".epgo").addEventListener("click",function(){ var n=Math.floor(+document.getElementById("pjwda").value||0);
+      if(n<PJ_MIN||n>bal){ toast(n<PJ_MIN?"1만원부터 출금할 수 있어요":"적립금보다 많아요"); return; }
+      SB.rpc("press_withdraw",{p_amount:n}).then(function(x){ if(x.error){ toast(pjErr(x.error)); return; } el.remove(); ga("press_withdraw",{}); toast("✅ 출금 신청했어요"); pjMy(); });
+    });
+  });
+});
+/* 관리자 #/padmin (press_admins 에 있는 계정만) */
+function padminView(){ return '<div class="pg padm" id="padm"><h1>기자단 관리</h1><div class="empty">불러오는 중…</div></div>'; }
+function padminInit(){
+  var v=document.getElementById("padm"); if(!v) return;
+  pjWait(function(){
+    if(!SB||!USER){ v.innerHTML='<h1>기자단 관리</h1><div class="empty">로그인이 필요해요<button class="b pri" data-pjlogin>카카오로 로그인</button></div>'; return; }
+    SB.rpc("is_press_admin").then(function(r){
+      if(!r.data){ v.innerHTML='<h1>기자단 관리</h1><div class="empty">관리자만 볼 수 있어요</div>'; return; }
+      Promise.all([SB.from("press_jobs").select("*").order("created_at",{ascending:false}).limit(50), SB.from("press_apps").select("*").order("created_at",{ascending:false}).limit(500), SB.from("press_withdrawals").select("*").eq("status","requested").order("created_at"), SB.from("press_files").select("*")]).then(function(R){
+        var jobs=R[0].data||[], apps=R[1].data||[], wds=R[2].data||[], files={}; (R[3].data||[]).forEach(function(f){ files[f.job_id]=f; });
+        var ids=apps.map(function(a){ return a.user_id; }).concat(wds.map(function(w){ return w.user_id; }));
+        SB.rpc("press_admin_names",{p_ids:ids.filter(function(x,i){ return ids.indexOf(x)===i; })}).then(function(N){
+          var nm={}; (N.data||[]).forEach(function(x){ nm[x.id]=x.nickname||"회원"; });
+          var h='<h1>기자단 관리</h1>';
+          h+='<section class="pane"><h2>출금 신청 ('+wds.length+')</h2>'+(wds.length?wds.map(function(w){ return '<div class="pawd"><span><b>'+esc(nm[w.user_id]||"회원")+'</b> · '+won(w.amount)+' → 입금 '+won(pjNet(w.amount))+'<small>'+w.created_at.slice(0,16).replace("T"," ")+'</small></span><button class="b pri" data-pawd="'+w.id+'" data-ok="1">입금 완료</button><button class="b" data-pawd="'+w.id+'" data-ok="0">반려</button></div>'; }).join(""):'<p class="mysub">처리할 출금이 없어요</p>')+'</section>';
+          h+='<section class="pane"><h2>새 모집 글</h2><form id="pjnew" class="pjf">'+
+            '<input class="fi" name="title" placeholder="제목 (예: 가평 ○○펜션 소개 글)" required><input class="fi" name="biz" placeholder="업체 이름"><input class="fi" name="region" placeholder="지역 (예: 경기 가평)"><input class="fi" name="kw" placeholder="키워드">'+
+            '<textarea class="fi ta" name="guide" placeholder="무엇을 쓰는지·조건 (모두에게 보여요)"></textarea>'+
+            '<input class="fi" name="files" type="url" placeholder="원고·사진 자료 링크 (선정된 사람만 보여요)"><input class="fi" name="memo" placeholder="자료 안내 메모 (선정된 사람만)">'+
+            '<div class="pjrow pj3"><label>1편 원고료(원)<input class="fi" name="pay" type="number" inputmode="numeric" required></label><label>모집 인원<input class="fi" name="slots" type="number" inputmode="numeric" required></label><label>신청 마감<input class="fi" name="ends" type="date" required></label></div>'+
+            '<button class="b pri wide" type="submit">모집 글 올리기</button></form></section>';
+          h+=jobs.map(function(j){ var A=apps.filter(function(a){ return a.job_id===j.id; }), done=A.filter(function(a){ return a.status==="approved"; }).length;
+            return '<section class="pane pajob"><h2>'+esc(j.title)+'</h2><p class="mysub">'+won(j.pay)+' · '+j.slots+'명 · 마감 '+esc(j.ends)+' · '+({open:"모집 중",closed:"마감",hidden:"숨김"})[j.status]+' · 신청 '+A.length+' · 승인 '+done+'</p>'+
+              '<div class="pjrow"><button class="b" data-pajs="'+j.id+'" data-s="'+(j.status==="open"?"closed":"open")+'">'+(j.status==="open"?"모집 마감하기":"다시 모집")+'</button><button class="b" data-pajs="'+j.id+'" data-s="hidden">숨기기</button><a class="b" href="#/pjob?id='+j.id+'">글 보기</a></div>'+
+              (files[j.id]?'<p class="pjsm">자료: '+esc(files[j.id].url)+'</p>':'')+
+              A.map(function(a){ var st=a.status, bt=function(s,t){ return '<button class="b" data-paa="'+a.id+'" data-s="'+s+'">'+t+'</button>'; };
+                return '<div class="paap"><p><b>'+esc(nm[a.user_id]||"회원")+'</b> <i class="st-'+st+'">'+esc(PJ_ST[st])+'</i><br><a href="'+esc(safeUrl(a.blog_url))+'" target="_blank" rel="noopener noreferrer">'+esc(a.blog_url)+'</a>'+(a.msg?'<br><small>'+esc(a.msg)+'</small>':'')+(a.post_url?'<br>글: <a href="'+esc(safeUrl(a.post_url))+'" target="_blank" rel="noopener noreferrer">'+esc(a.post_url)+'</a>':'')+'</p>'+
+                  '<div class="pjrow">'+(st==="applied"?bt("selected","선정")+bt("rejected","미선정"):st==="submitted"?bt("approved","승인(원고료 적립)")+bt("returned","수정 요청"):st==="rejected"?bt("selected","선정으로 바꾸기"):"")+'</div></div>'; }).join("")+'</section>'; }).join("");
+          v.innerHTML=h;
+          document.getElementById("pjnew").addEventListener("submit",function(e){ e.preventDefault(); var f=e.target, g=function(n){ return String(f.elements[n].value||"").trim(); };
+            SB.from("press_jobs").insert({title:g("title"),biz:g("biz")||null,region:g("region")||null,kw:g("kw")||null,guide:g("guide")||null,pay:+g("pay"),slots:+g("slots"),ends:g("ends")}).select("id").single().then(function(x){
+              if(x.error){ toast("올리지 못했어요: "+x.error.message); return; }
+              var done=function(){ toast("✅ 올렸어요"); padminInit(); };
+              if(safeUrl(g("files"))) SB.from("press_files").insert({job_id:x.data.id,url:g("files"),memo:g("memo")||null}).then(done); else done(); }); });
+        });
+      });
+    });
+  });
+}
+document.addEventListener("click",function(e){ var t=e.target.closest&&e.target.closest("[data-paa],[data-pawd],[data-pajs]"); if(!t||!SB) return; e.preventDefault();
+  var fin=function(x){ if(x.error){ toast("처리하지 못했어요: "+x.error.message); return; } toast("✅ 처리했어요"); padminInit(); };
+  if(t.dataset.paa){ var s=t.dataset.s, note=(s==="returned"||s==="rejected")?(prompt("신청자에게 보일 메모 (없으면 비워 두세요)")||""):""; if(s==="approved"&&!confirm("승인하면 원고료가 적립되고 되돌릴 수 없어요. 승인할까요?")) return; SB.rpc("press_admin_set",{p_app:+t.dataset.paa,p_status:s,p_note:note}).then(fin); }
+  else if(t.dataset.pawd){ var ok=t.dataset.ok==="1"; if(!confirm(ok?"입금을 마쳤나요? 입금 완료로 바꿔요.":"반려하면 적립금을 되돌려요.")) return; SB.rpc("press_admin_wd",{p_wd:+t.dataset.pawd,p_paid:ok,p_note:ok?"":(prompt("반려 이유")||"")}).then(fin); }
+  else SB.from("press_jobs").update({status:t.dataset.s}).eq("id",+t.dataset.pajs).then(fin);
+});
 
 /* ---------- 광고주 마케팅 상담 문의 ---------- */
 function contactBanner(){
@@ -2107,9 +2250,9 @@ function myView(){
   if(r){
     h+='<section class="pane myrep"><h2>✍️ 다꾸 기자단 ('+(+mon.slice(5))+'월)</h2>'+(MYREP?'<p class="mysub">신청한 블로그: <a href="'+esc(safeUrl(MYREP.blog_url))+'" target="_blank" rel="noopener noreferrer">'+esc(MYREP.blog_url)+'</a></p><p class="repst">상태: <b>'+esc(MYREP.status)+'</b></p>':repForm())+'<a class="lnk" href="#/reporter">기자단 안내 보기 ›</a></section>';
   }
-  h+=chSection();
+  h+=chSection()+pjMySection();
   h+=appliedSection()+'<div id="recent">'+recentSection()+'</div>';
-  h+='<div class="myfoot"><a href="#/privacy">개인정보처리방침</a> · <button class="lnk" data-unreg>회원 탈퇴</button></div>';
+  h+='<div class="myfoot"><a href="#/privacy">개인정보처리방침</a> · <button class="lnk" data-unreg>회원 탈퇴</button><br><button class="lnk myuid" data-copy="'+esc(USER.id)+'">회원 번호 복사</button></div>';
   return h+'</div>';
 }
 function repForm(){ return '<form id="repform" class="repf"><label class="fl" for="rp-blog">블로그 주소</label><input id="rp-blog" name="blog" class="fi" type="url" inputmode="url" placeholder="https://blog.naver.com/아이디" required><p class="ferr" id="rperr" role="alert"></p><button class="b pri wide" type="submit">이번 달 기자단 신청하기</button></form>'; }
@@ -2117,7 +2260,7 @@ function privacyView(){
   var a=seed.privacy||{}, owner=esc(a.owner||"다꾸 체험단 모음 운영자"), mail=esc(a.email||""), day=esc(a.date||"2026년 10월 14일");
   return '<div class="pg privacy"><a class="back" href="#/my">'+ico(I.back)+'<span>마이</span></a><h1>개인정보처리방침</h1>'+
   '<p>'+owner+'(이하 “다꾸”)는 회원의 개인정보를 소중히 다루며, 「개인정보 보호법」에 따라 아래와 같이 처리해요.</p>'+
-  '<h2>1. 수집하는 항목과 방법</h2><ul><li>카카오 로그인 시: 카카오 회원번호(식별자), 닉네임, 프로필 사진, 카카오계정 이메일(동의한 경우)</li><li>서비스 이용 시 회원이 직접 입력·선택: 관심 분야·지역·아기 나이, 알림 수신 동의 여부, 기자단 신청 블로그 주소</li><li>마이페이지에 직접 등록한 경우: 블로그·인스타그램 주소</li><li>수익화 교육 수강 신청 시: 휴대폰 번호·이메일, 계약 동의 일시·과목·수강료(계약 이행·환불 처리·분쟁 대비)</li><li>서비스 이용 기록: 찜한 체험단, 눌러본 상품, 룰렛 참여 결과</li></ul>'+
+  '<h2>1. 수집하는 항목과 방법</h2><ul><li>카카오 로그인 시: 카카오 회원번호(식별자), 닉네임, 프로필 사진, 카카오계정 이메일(동의한 경우)</li><li>서비스 이용 시 회원이 직접 입력·선택: 관심 분야·지역·아기 나이, 알림 수신 동의 여부, 기자단 신청 블로그 주소</li><li>마이페이지에 직접 등록한 경우: 블로그·인스타그램 주소</li><li>다꾸 기자단 참여 시: 신청 블로그 주소·하고 싶은 말, 제출한 글 주소, 원고료 적립·출금 내역. 원고료 출금 시 원천징수 신고를 위해 이름·주민등록번호·은행·계좌번호를 카카오톡 채널로 받아 신고·지급에만 쓰며 사이트에는 저장하지 않아요(소득세법에 따라 5년 보관)</li><li>수익화 교육 수강 신청 시: 휴대폰 번호·이메일, 계약 동의 일시·과목·수강료(계약 이행·환불 처리·분쟁 대비)</li><li>서비스 이용 기록: 찜한 체험단, 눌러본 상품, 룰렛 참여 결과</li></ul>'+
   '<h2>2. 이용 목적</h2><ul><li>회원 식별과 로그인 유지</li><li>찜·최근 본 상품을 여러 기기에서 보여주기</li><li>관심 조건에 맞는 체험단 추천과(동의한 경우) 새 체험단 알림</li><li>다꾸 기자단 선정·안내와 상품권 지급</li><li>룰렛 이벤트 참여 확인(하루 1회)과 경품 지급</li></ul>'+
   '<h2>3. 보유 기간</h2><ul><li>회원 탈퇴 시 바로 지워요. 마이 다꾸 &gt; 회원 탈퇴에서 직접 할 수 있어요.</li><li>1년 동안 로그인하지 않으면 미리 알린 뒤 지워요.</li><li>법령에 보관 의무가 있는 경우 그 기간만 보관해요. 수강 계약·결제 기록은 「전자상거래법」에 따라 5년 보관해요.</li></ul>'+
   '<h2>4. 처리 위탁과 국외 이전</h2><ul><li>회원 정보 저장: Supabase Inc.(데이터베이스·로그인 서비스). 저장 위치는 서비스 설정 지역에 따라요.</li><li>로그인: 주식회사 카카오(카카오 로그인)</li></ul>'+
