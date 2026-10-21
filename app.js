@@ -1275,6 +1275,10 @@ function eduRewards(){
     '<div class="wzr"><span class="wzt">과목 1</span><b>[블로그] 블로그 수익화 5주 1:1</b><p>체험단 당첨 · 기자단 · 최상단 노출 · AI 프롬프트 글쓰기 · 수익화</p><strong>'+w(EDU_PRICE.blog)+'</strong>'+eduPayBtn("blog")+'</div>'+
     '<div class="wzr"><span class="wzt">과목 2</span><b>[쿠팡파트너스] 쿠팡파트너스 수익화 3주 1:1</b><p>1주 가입·승인·셋팅 · 2주 상품 고르기·링크 글쓰기·대가성 문구 · 3주 최상단 글쓰기·운영정책 지키기</p><strong>'+w(EDU_PRICE.cp)+'</strong>'+eduPayBtn("cp")+'</div>'+
     '<div class="wzr set"><span class="wzt hot">🔥 오픈 이벤트</span><b>[세트] 블로그 + 쿠팡파트너스 5주 1:1 올인원</b><p>두 과목을 5주 안에 한 번에 끝내요</p><span class="wzo">따로 들으면 <s>'+w(EDU_PRICE.blog+EDU_PRICE.cp)+'</s></span><strong>'+w(EDU_PRICE.set)+'</strong>'+eduPayBtn("set")+'</div>'+
+    '<div class="wzx"><span class="wzxt">수강 외 결제 · 선택</span><b>이웃·방문자 늘리는 1:1 실전 코칭</b>'+
+      '<div class="wzxi"><i>🤝</i><div><b>서로이웃 늘리는 소통 코칭</b><p>이웃 찾기 · 서로이웃 소통 · 댓글 관리 방법</p></div></div>'+
+      '<div class="wzxi"><i>📈</i><div><b>방문자 늘리는 글쓰기·키워드 코칭</b><p>검색 유입 키워드 잡기 · 제목·본문 구성 피드백</p></div></div>'+
+      '<p class="wzxn">이웃·방문자를 대신 늘려 드리는 서비스가 아니라, 직접 늘리는 방법을 1:1로 알려 드려요. 수강료와 별도이며 금액은 상담 때 안내해요.</p></div>'+
     '<p class="wzn">한 번 결제 · 카드 할부 가능(할부 개월 수·수수료는 카드사 기준) · <a href="/refund.html">환불정책</a><br>수익 금액·체험단 선정·검색 순위를 약속하거나 보장하지 않아요.</p></div>';
 }
 function eduPayBtn(k){ var u=safeUrl((seed.eduPay||{})[k]); if(!u||!authCfg()) return ''; if(!USER) return '<button class="ecpay ecjoin" type="button" data-edulogin>🔐 카카오로 회원가입하고 결제하기</button><small class="ecjn">회원가입 후 결제할 수 있어요 (카카오 로그인 = 회원가입)</small>'; return '<a class="ecpay" href="'+esc(u)+'" target="_blank" rel="noopener noreferrer" data-edupay="'+k+'">💳 결제하러 가기 ↗</a>'; }
