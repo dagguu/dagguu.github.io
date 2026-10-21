@@ -1099,7 +1099,7 @@ window.afterIntro=function(){ promoPopup(); };
 function heroSlides(){
   var s=[], ig=safeUrl((seed.sns||{}).instagram), oc=safeUrl(seed.openchat);
   s.push({bg:"radial-gradient(120% 90% at 50% 20%,#5b2fd6 0%,#3a1aa8 45%,#1d0b5c 100%)",t:"이제 <span>공짜여행</span>이 시작된다!",d:"아직도 몰랐어? 여행 무료 체험단<br>여행도 다니고 돈도 아끼고!",b:"지금 바로가기",h:"#/trip",art:"images/free-trip.svg",ft:1});
-  s.push({bg:"linear-gradient(120deg,#3a1670,#8a3fd0 55%,#d46fd8)",t:"<span>다꾸 수익화</span> 1:1 코칭",d:"한번 배우면 평생 써먹는<br>블로그 수익화",b:"자세히 보기",h:"#/edu",e:["🧑‍🏫","📈","✍️"]});
+  /* 다꾸 수익화 배너는 2026-10-21 시온님 요청으로 뺌 */ //s.push({bg:"linear-gradient(120deg,#3a1670,#8a3fd0 55%,#d46fd8)",t:"<span>다꾸 수익화</span> 1:1 코칭",d:"한번 배우면 평생 써먹는<br>블로그 수익화",b:"자세히 보기",h:"#/edu",e:["🧑‍🏫","📈","✍️"]});
   var P=promoOn(); if(P) s.push({bg:"linear-gradient(120deg,#3a1670,#8a3fd0 55%,#b558d6)",t:P.t,d:P.d,b:P.b,h:P.u,x:1,art:P.art});
   var M=mrtList();
   if(M.length){ var top=M.slice().sort(function(a,b){ return b.rate-a.rate; }); s.push({bg:"#111",t:"<span>최저가</span> 특가 보러가기!",d:"국내·해외 숙소 특가를<br>매일 아침 모아 드려요",b:"특가 보러가기",h:"#/event",imgs:top.slice(0,2).map(function(x){ return x.img; }),rate:top[0].rate}); }
@@ -1144,7 +1144,7 @@ var slideT;
 function wideBanners(open,closing){
   var W=[], st=open.filter(function(it){ return catOf(it)==="stay"; });
   W.push({h:"#/trip",bg:"linear-gradient(90deg,#12063f 0%,#2a0f8a 55%,#5b3fd6 100%)",s:"아직도 몰랐어? 여행 무료 체험단",t:"이제 <em>공짜여행</em>이 시작된다!",art:"images/free-trip.svg"});
-  W.push({h:"#/edu",bg:"linear-gradient(90deg,#3a1670 0%,#8a3fd0 60%,#d46fd8 100%)",s:"한번 배우면 평생 써먹는 블로그 수익화",t:"다꾸체험단에서 <em>알려드려요!</em>",e:"🧑‍🏫"});
+  /* 다꾸 수익화 배너는 2026-10-21 시온님 요청으로 뺌 */ //W.push({h:"#/edu",bg:"linear-gradient(90deg,#3a1670 0%,#8a3fd0 60%,#d46fd8 100%)",s:"한번 배우면 평생 써먹는 블로그 수익화",t:"다꾸체험단에서 <em>알려드려요!</em>",e:"🧑‍🏫"});
   if(closing.length) W.push({h:"#/list?cat=all&s=todayClose",bg:"linear-gradient(90deg,#2b1055 0%,#5a1f8f 60%,#a43f9f 100%)",s:'오늘 밤 12시까지 · ⏳ <span id="stripcd">'+clock(msToMidnight())+'</span>',t:"오늘 마감 체험단 <em>"+closing.length+"곳</em>",e:"⏰"});
   else W.push({h:"#/list?cat=all&s=open",bg:"linear-gradient(90deg,#2b1055 0%,#5a1f8f 60%,#a43f9f 100%)",s:"지금 신청할 수 있어요",t:"모집 중 체험단 <em>"+open.length+"곳</em>",e:"🎟️"});
   var kids=st.filter(function(it){ return /키즈\s*풀빌라/.test((it.name||"")+" "+(it.benefit||"")); }).length;
