@@ -1996,6 +1996,38 @@ function recentSection(){
   return '<section class="hsec"><div class="hsh"><h2>👀 <em>최근 본</em> 상품</h2></div><div class="hs">'+list.slice(0,15).map(hcard).join("")+'</div></section>';
 }
 function chipChecks(name,opts,sel,radio){ return '<div class="rgbox">'+opts.map(function(o){ var v=o[0], on=(sel||[]).indexOf(v)>=0; return '<label class="rck'+(on?' on':'')+'"><input type="'+(radio?'radio':'checkbox')+'" name="'+name+'" value="'+esc(v)+'"'+(on?' checked':'')+'><span class="bx"></span>'+esc(o[1])+'</label>'; }).join("")+'</div>'; }
+/* 내 블로그·인스타 주소 여러 개 등록(2026-10-21 시온님). 로그인하면 profiles.blogs/instas(supabase/profile_channels.sql), 이 기기 dakku-chs 에도 기억 */
+var CH_MAX=5;
+function myChs(){ var P=PROFILE||{}, l={}; try{ l=JSON.parse(ls("dakku-chs")||"{}"); }catch(e){} return {blogs:(P.blogs&&P.blogs.length?P.blogs:l.blogs)||[], instas:(P.instas&&P.instas.length?P.instas:l.instas)||[]}; }
+function chNorm(k,v){ v=String(v||"").trim(); if(!v) return "";
+  if(k==="instas"){ var m=v.match(/instagram\.com\/([A-Za-z0-9._]{1,30})/)||v.match(/^@?([A-Za-z0-9._]{1,30})$/); return m?"https://www.instagram.com/"+m[1]+"/":""; }
+  if(/^[A-Za-z0-9_-]{3,30}$/.test(v)) return "https://blog.naver.com/"+v;
+  if(!/^https?:\/\//.test(v)) v="https://"+v; return /^https?:\/\/[^\s]+\.[^\s]+/.test(v)?v:""; }
+function chLabel(k,u){ var m=k==="instas"?u.match(/instagram\.com\/([^\/?#]+)/):u.match(/blog\.naver\.com\/([^\/?#]+)/); return m?(k==="instas"?"@":"")+m[1]:u.replace(/^https?:\/\//,""); }
+function chList(k){ var L=myChs()[k]; return L.map(function(u,i){ return '<li><a href="'+esc(safeUrl(u))+'" target="_blank" rel="noopener noreferrer">'+esc(chLabel(k,u))+'</a><button type="button" class="lnk red" data-chdel="'+k+'" data-i="'+i+'" aria-label="삭제">삭제</button></li>'; }).join("")||'<li class="chnone">아직 등록한 주소가 없어요</li>'; }
+function chSection(){
+  var row=function(k,t,ph,hint){ var n=myChs()[k].length; return '<div class="chgrp"><span class="fl">'+t+' <small>('+n+'/'+CH_MAX+')</small></span><ul class="chlist">'+chList(k)+'</ul>'+(n<CH_MAX?'<div class="chadd"><input class="fi" data-chin="'+k+'" placeholder="'+ph+'" autocomplete="off" inputmode="url"><button type="button" class="b pri" data-chadd="'+k+'">추가</button></div><small class="chhint">'+hint+'</small>':'')+'</div>'; };
+  return '<section class="pane mych" id="mych"><h2>📝 내 블로그·인스타 주소</h2><p class="mysub">체험단 신청할 때 쓰는 주소를 모아 두세요. 각각 '+CH_MAX+'개까지 등록할 수 있어요.</p>'+
+    row("blogs","블로그","https://blog.naver.com/아이디","네이버 블로그는 아이디만 넣어도 돼요")+
+    row("instas","인스타그램","@아이디 또는 instagram.com/아이디","@아이디만 넣어도 돼요")+'</section>';
+}
+function chSave(c){
+  try{ ls("dakku-chs",JSON.stringify(c)); }catch(e){}
+  PROFILE=Object.assign(PROFILE||{},{blogs:c.blogs,instas:c.instas});
+  var box=document.getElementById("mych"); if(box) box.outerHTML=chSection();
+  if(SB&&USER) SB.from("profiles").update({blogs:c.blogs,instas:c.instas,updated_at:new Date().toISOString()}).eq("id",USER.id).then(function(r){ if(sbErr(r)) toast("이 기기에만 저장했어요"); else toast("✅ 저장했어요"); });
+}
+document.addEventListener("click",function(e){
+  var a=e.target.closest&&e.target.closest("[data-chadd]"), d=e.target.closest&&e.target.closest("[data-chdel]"); if(!a&&!d) return; e.preventDefault();
+  var c=myChs(); c={blogs:c.blogs.slice(),instas:c.instas.slice()};
+  if(d){ c[d.getAttribute("data-chdel")].splice(+d.getAttribute("data-i"),1); chSave(c); return; }
+  var k=a.getAttribute("data-chadd"), inp=document.querySelector('[data-chin="'+k+'"]'), u=chNorm(k,inp&&inp.value);
+  if(!u){ toast(k==="instas"?"인스타 아이디나 주소를 확인해 주세요":"블로그 주소를 확인해 주세요"); return; }
+  if(c[k].indexOf(u)>=0){ toast("이미 등록한 주소예요"); return; }
+  if(c[k].length>=CH_MAX){ toast(CH_MAX+"개까지 등록할 수 있어요"); return; }
+  c[k].push(u); chSave(c); ga("my_channel_add",{type:k});
+});
+document.addEventListener("keydown",function(e){ var i=e.target.closest&&e.target.closest("[data-chin]"); if(i&&e.key==="Enter"){ e.preventDefault(); var b=document.querySelector('[data-chadd="'+i.getAttribute("data-chin")+'"]'); if(b) b.click(); } });
 function myView(){
   var a=authCfg(), favN=seed.items.filter(function(it){ return isFav(it.id); }).length;
   var h='<div class="pg my"><h1>마이 다꾸 🙋</h1>';
@@ -2024,6 +2056,7 @@ function myView(){
   if(r){
     h+='<section class="pane myrep"><h2>✍️ 다꾸 기자단 ('+(+mon.slice(5))+'월)</h2>'+(MYREP?'<p class="mysub">신청한 블로그: <a href="'+esc(safeUrl(MYREP.blog_url))+'" target="_blank" rel="noopener noreferrer">'+esc(MYREP.blog_url)+'</a></p><p class="repst">상태: <b>'+esc(MYREP.status)+'</b></p>':repForm())+'<a class="lnk" href="#/reporter">기자단 안내 보기 ›</a></section>';
   }
+  h+=chSection();
   h+=appliedSection()+'<div id="recent">'+recentSection()+'</div>';
   h+='<div class="myfoot"><a href="#/privacy">개인정보처리방침</a> · <button class="lnk" data-unreg>회원 탈퇴</button></div>';
   return h+'</div>';
@@ -2033,7 +2066,7 @@ function privacyView(){
   var a=seed.privacy||{}, owner=esc(a.owner||"다꾸 체험단 모음 운영자"), mail=esc(a.email||""), day=esc(a.date||"2026년 10월 14일");
   return '<div class="pg privacy"><a class="back" href="#/my">'+ico(I.back)+'<span>마이</span></a><h1>개인정보처리방침</h1>'+
   '<p>'+owner+'(이하 “다꾸”)는 회원의 개인정보를 소중히 다루며, 「개인정보 보호법」에 따라 아래와 같이 처리해요.</p>'+
-  '<h2>1. 수집하는 항목과 방법</h2><ul><li>카카오 로그인 시: 카카오 회원번호(식별자), 닉네임, 프로필 사진, 카카오계정 이메일(동의한 경우)</li><li>서비스 이용 시 회원이 직접 입력·선택: 관심 분야·지역·아기 나이, 알림 수신 동의 여부, 기자단 신청 블로그 주소</li><li>수익화 교육 수강 신청 시: 휴대폰 번호·이메일, 계약 동의 일시·과목·수강료(계약 이행·환불 처리·분쟁 대비)</li><li>서비스 이용 기록: 찜한 체험단, 눌러본 상품, 룰렛 참여 결과</li></ul>'+
+  '<h2>1. 수집하는 항목과 방법</h2><ul><li>카카오 로그인 시: 카카오 회원번호(식별자), 닉네임, 프로필 사진, 카카오계정 이메일(동의한 경우)</li><li>서비스 이용 시 회원이 직접 입력·선택: 관심 분야·지역·아기 나이, 알림 수신 동의 여부, 기자단 신청 블로그 주소</li><li>마이페이지에 직접 등록한 경우: 블로그·인스타그램 주소</li><li>수익화 교육 수강 신청 시: 휴대폰 번호·이메일, 계약 동의 일시·과목·수강료(계약 이행·환불 처리·분쟁 대비)</li><li>서비스 이용 기록: 찜한 체험단, 눌러본 상품, 룰렛 참여 결과</li></ul>'+
   '<h2>2. 이용 목적</h2><ul><li>회원 식별과 로그인 유지</li><li>찜·최근 본 상품을 여러 기기에서 보여주기</li><li>관심 조건에 맞는 체험단 추천과(동의한 경우) 새 체험단 알림</li><li>다꾸 기자단 선정·안내와 상품권 지급</li><li>룰렛 이벤트 참여 확인(하루 1회)과 경품 지급</li></ul>'+
   '<h2>3. 보유 기간</h2><ul><li>회원 탈퇴 시 바로 지워요. 마이 다꾸 &gt; 회원 탈퇴에서 직접 할 수 있어요.</li><li>1년 동안 로그인하지 않으면 미리 알린 뒤 지워요.</li><li>법령에 보관 의무가 있는 경우 그 기간만 보관해요. 수강 계약·결제 기록은 「전자상거래법」에 따라 5년 보관해요.</li></ul>'+
   '<h2>4. 처리 위탁과 국외 이전</h2><ul><li>회원 정보 저장: Supabase Inc.(데이터베이스·로그인 서비스). 저장 위치는 서비스 설정 지역에 따라요.</li><li>로그인: 주식회사 카카오(카카오 로그인)</li></ul>'+
