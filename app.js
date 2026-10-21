@@ -902,11 +902,12 @@ var GUIDES=null;
 var PICKS=null;
 function magLoad(cb){
   var n=0, done=function(){ if(++n===2) cb(); };
-  if(GUIDES) done(); else fetch("/g/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ GUIDES=L||[]; done(); }).catch(function(){ GUIDES=[]; done(); });
+  if(GUIDES) done(); else fetch("/g/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ GUIDES=(L||[]).slice().sort(function(a,b){ return (b.date||"")>(a.date||"")?1:(b.date||"")<(a.date||"")?-1:0; }); done(); }).catch(function(){ GUIDES=[]; done(); });
   if(PICKS) done(); else fetch("/p/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ PICKS=L||[]; done(); }).catch(function(){ PICKS=[]; done(); });
 }
-function guideRow(g){ return '<a class="gdi" href="/g/'+esc(g.slug)+'.html"><b>'+esc(g.t)+'</b><small>'+esc(g.d)+'</small></a>'; }
-function pickRow(x){ return '<a class="gdi pki" href="/p/'+esc(x.slug)+'.html">'+(safeUrl(x.img)?'<img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<span><b>'+esc(x.h||x.t)+'</b><small>'+esc(x.d)+'</small></span></a>'; }
+function gDate(d){ return d?'<em class="gdt">'+esc(String(d).replace(/-/g,"."))+' 업로드</em>':""; }
+function guideRow(g){ return '<a class="gdi" href="/g/'+esc(g.slug)+'.html"><b>'+esc(g.t)+'</b><small>'+esc(g.d)+'</small>'+gDate(g.date)+'</a>'; }
+function pickRow(x){ return '<a class="gdi pki" href="/p/'+esc(x.slug)+'.html">'+(safeUrl(x.img)?'<img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<span><b>'+esc(x.h||x.t)+'</b><small>'+esc(x.d)+'</small>'+gDate(x.date)+'</span></a>'; }
 function guideFill(){
   var B=document.querySelectorAll("[data-guides]"), M=document.getElementById("magbody"); if(!B.length&&!M) return;
   magLoad(function(){

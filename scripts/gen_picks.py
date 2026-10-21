@@ -119,7 +119,7 @@ if __name__ == "__main__":
     done = [build(f) for f in sorted(glob.glob(os.path.join(ROOT, "scripts", "picks_*.json")))]
     done.sort(key=lambda x: x["date"], reverse=True)
     json.dump(done, open(os.path.join(ROOT, "p", "list.json"), "w", encoding="utf-8"), ensure_ascii=False)
-    lis = "".join(f'<a class="pc" href="/p/{e(x["slug"])}.html" style="flex-direction:row;align-items:center;gap:12px;padding:10px"><img src="{e(x["img"])}" alt="" loading="lazy" referrerpolicy="no-referrer" style="width:72px;height:72px;border-radius:12px;object-fit:cover"><span><b style="display:block;font-size:15px;margin-bottom:4px">{e(x["h"])}</b><span style="font-size:13px;color:#6b6a7a;line-height:1.5">{e(x["d"])}</span></span></a>' for x in done)
+    lis = "".join(f'<a class="pc" href="/p/{e(x["slug"])}.html" style="flex-direction:row;align-items:center;gap:12px;padding:10px"><img src="{e(x["img"])}" alt="" loading="lazy" referrerpolicy="no-referrer" style="width:72px;height:72px;border-radius:12px;object-fit:cover"><span><b style="display:block;font-size:15px;margin-bottom:4px">{e(x["h"])}</b><span style="font-size:13px;color:#6b6a7a;line-height:1.5">{e(x["d"])}</span><span style="display:block;font-size:11.5px;color:#9a99a8;margin-top:3px">{e(x["date"].replace("-", "."))} 업로드</span></span></a>' for x in done)
     idx = f'''<!doctype html>
 <html lang="ko"><head><meta charset="utf-8">{GA}
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">

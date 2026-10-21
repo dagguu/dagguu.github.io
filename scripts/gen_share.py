@@ -361,6 +361,9 @@ open(os.path.join(cdir, "index.html"), "w", encoding="utf-8").write(
 # ---------- g/ 가이드 글 (scripts/guides.py) ----------
 import sys; sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from guides import GUIDES
+# 최신 글이 맨 위(2026-10-21 시온님): 날짜 내림차순, 같은 날이면 나중에 추가한 글 먼저
+GUIDES = [g for _, g in sorted(enumerate(GUIDES), key=lambda x: (x[1]["date"], x[0]), reverse=True)]
+gdot = lambda d: d.replace("-", ".")
 gdir = reset("g"); ghubs = []
 blog_open = sort_open([it for it in open_items if "blog" in (it.get("ch") or [])])
 GCSS = "<style>.art p,.art li{font-size:16px;line-height:1.8;word-break:keep-all}.art h2{margin-top:34px}.art ol,.art ul{padding-left:22px}.art li{margin:8px 0}.meta{color:#999;font-size:12.5px}.art p.go{margin:4px 0 14px}.art a.go,.art p.go a{display:inline-block;margin:4px 12px 0 0;font-size:15px;font-weight:700;color:#5b3fd6;text-decoration:none}.art a.go:hover,.art p.go a:hover{text-decoration:underline}.gnav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:6px 0 4px}.gnav a{display:inline-flex;align-items:center;gap:4px;font-size:14px;font-weight:600;color:#444;text-decoration:none;border:1px solid #e5e5e8;border-radius:999px;padding:7px 14px;background:#fff}.gnav a:hover{border-color:#5b3fd6;color:#5b3fd6}.gnav.bot{margin:26px 0 8px}</style>"
@@ -371,16 +374,16 @@ for g in GUIDES:
     art = {"@context": "https://schema.org", "@type": "Article", "headline": g["title"], "description": g["desc"], "datePublished": g["date"], "dateModified": g["date"],
            "author": {"@type": "Organization", "name": "다꾸체험단"}, "publisher": {"@type": "Organization", "name": "다꾸체험단"}, "mainEntityOfPage": SITE + p}
     gnav = lambda c: f'<nav class="gnav{c}"><a href="/g/" onclick="{GBACK}">‹ 뒤로가기</a><a href="/g/">☰ 목록보기</a></nav>'
-    body = GCSS + bc + gnav("") + f"<h1>{e(g['title'])}</h1><p class='meta'>다꾸체험단 · {e(g['date'])}</p><div class='art'>{g['body']}</div>" + gnav(" bot")
+    body = GCSS + bc + gnav("") + f"<h1>{e(g['title'])}</h1><p class='meta'>다꾸체험단 · {e(gdot(g['date']))} 업로드</p><div class='art'>{g['body']}</div>" + gnav(" bot")
     body += f"<h2>지금 모집 중인 블로그 체험단 ({len(blog_open)}곳)</h2><ul class='list'>" + "".join(li(x) for x in blog_open[:6]) + "</ul>"
     body += f'<div class="btns"><a class="btn pri" href="/c/blog.html">블로그 체험단 전체 보기</a><a class="btn ghost" href="/">다꾸 앱에서 오늘 오픈 체험단 알림 받기</a></div>'
     body += '<div class="tags">' + "".join(f'<a href="{e(u)}">{e(n)}</a>' for n, u in g.get("related", [])) + "</div>"
     open(os.path.join(gdir, g["slug"] + ".html"), "w", encoding="utf-8").write(shell(g["title"] + " | 다꾸체험단", g["desc"], SITE + p, body, "", "index,follow", [bld, art]))
     ghubs.append((g["title"], p, 0))
-json.dump([{"slug": g["slug"], "t": g["title"], "d": g["desc"]} for g in GUIDES], open(os.path.join(gdir, "list.json"), "w", encoding="utf-8"), ensure_ascii=False)  # 앱 안 "체험단 가이드" 목록용
+json.dump([{"slug": g["slug"], "t": g["title"], "d": g["desc"], "date": g["date"]} for g in GUIDES], open(os.path.join(gdir, "list.json"), "w", encoding="utf-8"), ensure_ascii=False)  # 앱 안 "체험단 가이드" 목록용
 bc, bld = crumbs([("홈", "/"), ("체험단 가이드", None)])
 gi = bc + "<h1>체험단 가이드</h1><p class='sub'>블로그 협찬·체험단을 처음 시작하는 분을 위한 글을 모았어요.</p><ul class='list'>" + "".join(
-    f'<li><a href="{e(p)}"><span><b>{e(g["title"])}</b><small>{e(g["desc"])}</small></span></a></li>' for g, (_, p, _) in zip(GUIDES, ghubs)) + "</ul>"
+    f'<li><a href="{e(p)}"><span><b>{e(g["title"])}</b><small>{e(g["desc"])}</small><small class="gdate">{e(gdot(g["date"]))} 업로드</small></span></a></li>' for g, (_, p, _) in zip(GUIDES, ghubs)) + "</ul>"
 open(os.path.join(gdir, "index.html"), "w", encoding="utf-8").write(shell("체험단 가이드 · 블로그 협찬 받는 법 | 다꾸체험단", "블로그 협찬 받는 법, 블로그 지수, 블로그 수익 내는 법 등 체험단을 시작하는 분을 위한 가이드.", SITE + "/g/", gi, "", "index,follow", [bld]))
 idx += "<h2>체험단 가이드</h2><div class='tags'>" + "".join(f'<a href="{e(p)}">{e(n)}</a>' for n, p, _ in ghubs) + "</div>"
 open(os.path.join(cdir, "index.html"), "w", encoding="utf-8").write(
