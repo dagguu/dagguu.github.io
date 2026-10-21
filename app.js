@@ -150,7 +150,7 @@ var app=document.getElementById("app");
 var TABS=[["home","홈",I.home],["fav","찜",I.heart],["list","체험단",I.ticket],["shop","공구",I.bag],["deals","특가",I.gift]];
 /* 사이트 둘로 나누기(2026-10-21 시온님): www.dagguu.com = 다꾸체험단(정보만, 로그인·결제 없음) / partners.dagguu.com = 다이어리뷰(회원·기자단·광고주·수익화 클래스).
    두 사이트가 같은 app.js 를 쓰고, partners 의 index.html 이 window.DK_MODE="partners" 를 켠다. 한쪽에 없는 화면 주소로 들어오면 다른 사이트로 넘긴다. */
-var PART_LIVE=false; /* partners.dagguu.com 이 열리면 true 로 바꾼다(그 전엔 www 에서 로그인·교육·광고주가 그대로 동작) */
+var PART_LIVE=true; /* partners.dagguu.com 이 열리면 true 로 바꾼다(그 전엔 www 에서 로그인·교육·광고주가 그대로 동작) */
 var PMODE=window.DK_MODE==="partners", MAIN_URL="https://www.dagguu.com/", PART_URL="https://partners.dagguu.com/", BASE=PMODE?(window.DK_BASE||MAIN_URL):"";
 var P_TABS=/^(home|press|pjob|padmin|contact|edu|checkout|my|privacy|benefit|shop|reporter)$/, P_ONLY=/^(pjob|padmin|contact|edu|checkout|benefit|shop|reporter)$/;
 if(PMODE) TABS=[["home","홈",I.home],["press","기자단",I.send],["edu","클래스",I.trend],["contact","광고주",I.bell],["my","마이",I.user]];
@@ -1559,12 +1559,12 @@ function checkoutView(){
   var k=state.coK, w=function(n){ return n.toLocaleString()+'원'; }, opt=EDU_OPT.filter(function(o){ return o[0]===k; })[0];
   if(!opt||!safeUrl((seed.eduPay||{})[k])) return '<div class="pg co"><div class="empty">과목을 다시 골라 주세요.<br><a class="b pri" href="#/edu">수강 과목 보러 가기</a></div></div>';
   var lp=eduListPrice(k), pr=EDU_PRICE[k], pv={}; try{ pv=JSON.parse(ls("dakku-edu-consent")||"{}"); }catch(e){}
-  var em=(USER&&USER.email)||pv.email||"";
+  var md=(USER&&USER.user_metadata)||{}, em=(USER&&USER.email)||md.email||pv.email||"", ph=pv.tel||(USER&&USER.phone)||md.phone_number||"";
   var login=authCfg()&&!USER;
   return '<div class="pg co">'+
     (login?'<section class="cosec colog"><b>회원가입 후 결제할 수 있어요</b><p>카카오 로그인 한 번이면 가입돼요.</p><button type="button" class="b pri" data-cologin>카카오로 계속하기</button></section>':'')+
     '<section class="cosec"><h2>수강생 정보</h2>'+
-      '<label class="cof"><span>휴대폰 번호</span><input class="fi" id="coTel" inputmode="tel" maxlength="13" autocomplete="tel" placeholder="010-0000-0000" value="'+esc(pv.tel||"")+'"></label>'+
+      '<label class="cof"><span>휴대폰 번호</span><input class="fi" id="coTel" inputmode="tel" maxlength="13" autocomplete="tel" placeholder="010-0000-0000" value="'+esc(ph)+'"></label>'+
       '<label class="cof"><span>이메일</span><input class="fi" id="coMail" type="email" maxlength="80" autocomplete="email" placeholder="자료 받을 이메일" value="'+esc(em)+'"></label></section>'+
     '<section class="cosec"><h2>선택한 과목</h2><div class="coitem"><span class="cotag">🔥 오픈 이벤트</span><b>'+esc(opt[1])+'</b><div class="corow"><span>1개</span><strong>'+w(pr)+'</strong></div></div><a class="cochg" href="#/edu" data-edupick>과목 변경</a></section>'+
     '<section class="cosec"><h2>결제 금액</h2><div class="corow"><span>수강료'+(k==="set"?' (따로 들을 때)':'')+'</span><span>'+w(lp)+'</span></div>'+(lp>pr?'<div class="corow"><span>오픈 이벤트 할인</span><span class="codc">−'+w(lp-pr)+'</span></div>':'')+'<div class="corow cototal"><b>총 결제 금액</b><b>'+w(pr)+'</b></div></section>'+
@@ -1580,6 +1580,8 @@ function coInit(){
   var tel=pg.querySelector("#coTel"), mail=pg.querySelector("#coMail"), all=pg.querySelector("#coAll"), ags=[].slice.call(pg.querySelectorAll(".coAg")), go=pg.querySelector(".cogo");
   var ok=function(){ return /^01[016789]-?\d{3,4}-?\d{4}$/.test(tel.value.trim()) && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail.value.trim()) && ags.every(function(a){ return a.checked; }) && !(authCfg()&&!USER); };
   var chk=function(){ go.classList.toggle("dis",!ok()); all.checked=ags.every(function(a){ return a.checked; }); };
+  /* 로그인한 회원은 예전에 결제 페이지에서 남긴 휴대폰·이메일을 서버(edu_consents 본인 기록)에서 불러와 채운다(다른 기기에서도) — 2026-10-21 시온님 */
+  if(SB&&USER&&(!tel.value||!mail.value)) SB.from("edu_consents").select("phone,email").eq("user_id",USER.id).order("agreed_at",{ascending:false}).limit(1).then(function(r){ var x=r&&r.data&&r.data[0]; if(!x) return; if(!tel.value&&x.phone) tel.value=x.phone; if(!mail.value&&x.email) mail.value=x.email; chk(); });
   pg.addEventListener("input",chk); pg.addEventListener("change",function(e){ if(e.target===all){ ags.forEach(function(a){ a.checked=all.checked; }); } chk(); }); chk();
   pg.addEventListener("click",function(e){
     var d=e.target.closest("[data-doc]"); if(d){ coDoc(d.getAttribute("data-doc")); return; }
