@@ -1266,7 +1266,9 @@ var EDU_TALK=[["🎓", "대학생", "학교 다니면서 알바도 해야 하고
 var EDU_PICK=["블로그를 처음 시작해요","체험단 신청해도 당첨이 잘 안 돼요","내 글이 검색 위쪽에 안 보여요","블로그로 수익을 내고 싶어요"];
 function dlTiles(end){ var ms=Math.max(0,dcdMs(end)), m=Math.floor(ms/6e4), d=Math.floor(m/1440), h=Math.floor(m%1440/60), mi=m%60; function t(n,u){ var x=(n<10?"0":"")+n; return '<i>'+x[0]+'</i><i>'+x[1]+'</i><u>'+u+'</u>'; } return t(d,"일")+t(h,"시간")+t(mi,"분"); }
 /* 수강료 결제 링크(2026-10-21 시온님: 가격은 숨기고, 시온님이 결제 링크를 주면 과목별 "결제하러 가기" 버튼). data.json eduPay {blog, cp, set} = 결제 페이지 주소. 없으면 버튼 안 보임 */
-function eduPayBtn(k){ var u=safeUrl((seed.eduPay||{})[k]); return u?'<a class="ecpay" href="'+esc(u)+'" target="_blank" rel="noopener noreferrer" data-edupay="'+k+'">💳 결제하러 가기 ↗</a>':''; }
+/* 2026-10-21 시온님: 회원가입(카카오 로그인)을 해야 결제 버튼이 열림 */
+function eduPayBtn(k){ var u=safeUrl((seed.eduPay||{})[k]); if(!u||!authCfg()) return ''; if(!USER) return '<button class="ecpay ecjoin" type="button" data-edulogin>🔐 카카오로 회원가입하고 결제하기</button><small class="ecjn">회원가입 후 결제할 수 있어요 (카카오 로그인 = 회원가입)</small>'; return '<a class="ecpay" href="'+esc(u)+'" target="_blank" rel="noopener noreferrer" data-edupay="'+k+'">💳 결제하러 가기 ↗</a>'; }
+document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.closest("[data-edulogin]"); if(!b) return; e.preventDefault(); ga("edu_join_click",{}); ls("dakku-after-login","#/edu"); login("kakao"); });
 function eduView(){
   var EDU_DL="2026-10-31", eduOpen=dcdMs(EDU_DL)>0;
   return '<div class="pg edu">'+(eduOpen?'<div class="edudl"><b><span class="dlw">🔥 10월 수강생 · 10/31 마감까지</span><span class="dlm">🔥 10월 수강생 모집중 🔥</span></b><span class="dlt" data-edl="'+EDU_DL+'">'+dlTiles(EDU_DL)+'</span></div>':'')+

@@ -748,3 +748,6 @@ input,select,textarea{font-size:16px!important}
 .educourse .ecnote{margin:14px 0 0;font-size:12px;color:#8f8a99}
 .educourse .ecpay{display:block;margin-top:14px;padding:13px;border-radius:12px;background:#ffe14d;color:#1a1033;text-align:center;font-size:15px;font-weight:900;text-decoration:none}
 .educourse .ec p.ecsave{margin-top:6px;color:#ffe14d;font-weight:800;font-size:13px}
+.educourse button.ecpay{width:100%;border:0;cursor:pointer;font-family:inherit}
+.educourse .ecjoin{background:#fee500;color:#191919}
+.educourse .ecjn{display:block;margin-top:6px;font-size:12px;color:#a9a3b8;text-align:center}
