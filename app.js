@@ -380,7 +380,7 @@ function hrow(title,more,list,sub){
     '<div class="hs">'+list.slice(0,10).map(hcard).join("")+'</div></section>';
 }
 var HOME_MENU=[ /* 2026-10-20 시온님 요청: 두 줄 그대로 옆으로 밀어서 보기(슬라이드), 매거진·티켓·혜택 추가 */
-  ["✨","오늘 오픈","#/list?cat=all&s=todayOpen","NEW"],["⏰","마감임박","#/list?cat=all&s=closing","HOT"],["📝","블로그","#/list?cat=all&s=open&ch=blog"],["📸","인스타그램","#/list?cat=all&s=open&ch=insta"],["🎬","숏폼","#/list?cat=all&s=open&ch=clip,reels,youtube"],["💰","수익화","#/press"],["📚","매거진","#/mag"],["🎁","혜택","#/benefit"],["🧳","공짜여행","#/trip"],
+  ["✨","오늘 오픈","#/list?cat=all&s=todayOpen","NEW"],["⏰","마감임박","#/list?cat=all&s=closing","HOT"],["📝","블로그","#/list?cat=all&s=open&ch=blog"],["📸","인스타그램","#/list?cat=all&s=open&ch=insta"],["🎬","숏폼","#/list?cat=all&s=open&ch=clip,reels,youtube"],["💻","재택알바","#/press"],["📚","매거진","#/mag"],["🎁","혜택","#/benefit"],["🧳","공짜여행","#/trip"],
   ["🏨","숙박","#/list?cat=stay&s=open"],["👶","육아","#/list?cat=baby"],["💄","뷰티","#/list?cat=beauty"],["🧺","생활","#/list?cat=life"],["🔌","가전/가구","#/list?cat=elec"],["💊","건강식품","#/list?cat=health"],["🐾","반려동물","#/list?cat=pet"],["👗","패션","#/list?cat=fashion"],["🎟️","티켓","#/list?cat=etc"]
 ];
 /* 슬라이드 배너 위 한 줄 소식 (2026-10-18 시온님 요청). 지어낸 이용자 후기는 쓰지 않고 data.json 실제 숫자만 */
@@ -1220,8 +1220,8 @@ function pressView(){
     '<span class="prx"><small>'+esc(x.src)+' · 📝 블로그</small><b>'+esc(x.t)+'</b><em>💰 '+esc(x.o)+'</em>'+(x.ap?'<small>지원 '+x.ap[0]+' · 모집 '+x.ap[1]+(r?' · '+r+':1':'')+'</small>':'')+'<span class="prgo">모집 사이트에서 보기 ↗</span></span></a>'; };
   var sk='<div class="prc sk"><span class="pri"></span><span class="prx"><span class="l1"></span><span class="l2"></span><span class="l3"></span></span></div>';
   return '<div class="pg press">'+
-    '<div class="prhero"><small>💰 블로그 수익화</small><h1>제품 없이 글만 쓰고<br><em>원고료</em> 받아요</h1>'+
-      '<p>방문하거나 제품을 받지 않아도 돼요. 받은 자료로 블로그 글을 쓰면 원고료나 포인트를 받아요. 이런 모집을 <b>\'기자단\'</b>이라고 불러요.</p></div>'+
+    '<div class="prhero"><small>💻 블로그 재택알바</small><h1>제품 없이 글만 쓰고<br><em>원고료</em> 받아요</h1>'+
+      '<p>방문하거나 제품을 받지 않아도 돼요. 받은 자료로 블로그 글을 쓰면 원고료나 포인트를 받아요. 이런 모집을 <b>\'기자단\'</b>이라고 불러요.</p><p class="prfine">고용 계약이 아니라 글 한 편마다 원고료·포인트를 받는 방식이에요. 금액은 모집마다 달라요.</p></div>'+
     '<div class="prhow"><div><b>1</b><span>모집 글 보고 신청</span></div><div><b>2</b><span>자료 받아 글 쓰기</span></div><div><b>3</b><span>원고료·포인트 받기</span></div></div>'+
     '<h2 class="prh">지금 모집 중인 원고료 기자단 <small>맛보기 '+L.length+'개</small></h2>'+
     (L.length?L.map(card).join(""):'<div class="empty">오늘 보여드릴 기자단을 준비하고 있어요</div>')+
