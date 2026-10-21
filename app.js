@@ -1257,7 +1257,7 @@ function won(n){ return Number(n||0).toLocaleString()+"원"; }
 function pjNet(n){ var it=Math.floor(n*0.03/10)*10; if(it<1000) return n; return n-it-Math.floor(it*0.1/10)*10; } /* 소득세 3%(1천원 미만 소액부징수) + 지방소득세 10% */
 function pjDd(e){ var n=Math.round((new Date(e+"T00:00:00")-today())/864e5); return n<0?"마감":n===0?"오늘 마감":"D-"+n; }
 function pjWait(cb){ if(SB){ cb(); return; } if(!authCfg()){ cb(); return; } initAuth(); var n=0, t=setInterval(function(){ if(SB||++n>40){ clearInterval(t); cb(); } },150); }
-function pjErr(e){ var m=(e&&e.message)||""; return /closed/.test(m)?"모집이 끝났어요":/duplicate|unique/.test(m)?"이미 신청했어요":/blog|url/.test(m)?"주소를 확인해 주세요":/balance/.test(m)?"적립금이 모자라요":/min/.test(m)?"1만원부터 출금할 수 있어요":/state/.test(m)?"지금은 할 수 없는 단계예요":"잠시 후 다시 시도해 주세요"; }
+function pjErr(e){ var m=(e&&e.message)||""; return /closed/.test(m)?"모집이 끝났어요":/duplicate|unique/.test(m)?"이미 신청했어요":/blog|url/.test(m)?"주소를 확인해 주세요":/balance/.test(m)?"적립금이 모자라요":/min/.test(m)?"1만원부터 출금할 수 있어요":/unit/.test(m)?"1만원 단위로 출금할 수 있어요":/max/.test(m)?"한 번에 50만원까지 출금할 수 있어요":/week/.test(m)?"출금 신청은 7일에 1번만 할 수 있어요":/info/.test(m)?"출금 자료를 확인해 주세요":/state/.test(m)?"지금은 할 수 없는 단계예요":"잠시 후 다시 시도해 주세요"; }
 function pjCard(j){ return '<a class="pjc" href="'+(PMODE?'':PART_URL)+'#/pjob?id='+j.id+'"><span class="pjt"><small>'+esc(j.region||"")+(j.kw?' · '+esc(j.kw):'')+'</small><b>'+esc(j.title)+'</b><em>원고료 '+won(j.pay)+'</em></span><span class="pjr"><i>'+pjDd(j.ends)+'</i><small>모집 '+j.slots+'명</small></span></a>'; }
 /* 모집 중 기자단 목록: 로그인 없이 읽기만 해서 두 사이트 모두 Supabase REST(공개 키)로 직접 읽음 */
 function pjList(){
@@ -1361,20 +1361,59 @@ function pjMy(){
     box.innerHTML=h; box.hidden=false;
   });
 }
+/* 원고료 출금 신청(2026-10-21 시온님이 스타일씨 캐시 출금 화면 보여줌): 1만원 단위·1회 최대 50만원·7일에 1번, 매주 목 17시까지 신청 → 금요일 입금.
+   이름·주민번호·은행·계좌는 data.json payKey(시온님 공개 키, tools/paykey.html 로 만듦)로 이 기기에서 암호화한 글자만 서버에 저장 → 관리자 화면에서 시온님 개인 키 파일로만 열림.
+   payKey 가 없으면 예전처럼 카톡 채널로 받는 안내만 */
+var PJ_MAX=500000, PJ_BANKS=["KB국민","신한","우리","하나","NH농협","IBK기업","카카오뱅크","토스뱅크","케이뱅크","SC제일","씨티","새마을금고","신협","우체국","수협","부산","대구","경남","광주","전북","제주","산업"];
+function pjB64(buf){ var s="",b=new Uint8Array(buf); for(var i=0;i<b.length;i++) s+=String.fromCharCode(b[i]); return btoa(s); }
+function pjUnB64(t){ var s=atob(t), b=new Uint8Array(s.length); for(var i=0;i<s.length;i++) b[i]=s.charCodeAt(i); return b.buffer; }
+function pjEnc(obj){ var k=String(seed.payKey||"").replace(/\s+/g,""); return crypto.subtle.importKey("spki",pjUnB64(k),{name:"RSA-OAEP",hash:"SHA-256"},false,["encrypt"]).then(function(key){ return crypto.subtle.encrypt({name:"RSA-OAEP"},key,new TextEncoder().encode(JSON.stringify(obj))); }).then(pjB64); }
 document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.closest("[data-pjwd]"); if(!b||b.disabled) return; e.preventDefault();
   SB.rpc("press_balance").then(function(r){ var bal=r.data||0; if(bal<PJ_MIN){ toast("1만원부터 출금할 수 있어요"); return; }
-    var el=document.createElement("div"); el.className="edusheet";
+    var mx=Math.min(PJ_MAX,Math.floor(bal/10000)*10000), hasKey=!!seed.payKey&&window.crypto&&crypto.subtle, opts=""; for(var v=mx;v>=PJ_MIN;v-=10000) opts+='<option value="'+v+'">'+won(v)+'</option>';
+    var el=document.createElement("div"); el.className="edusheet pjwds";
     el.innerHTML='<div class="epk" role="dialog" aria-modal="true" aria-label="출금 신청"><div class="ephd"><b>원고료 출금 신청</b><button type="button" class="epx" aria-label="닫기">✕</button></div>'+
-      '<label class="epnm">출금할 금액 (세전)<input class="fi" id="pjwda" type="number" inputmode="numeric" min="'+PJ_MIN+'" max="'+bal+'" step="1000" value="'+bal+'"></label>'+
-      '<p class="adpn">3.3%(소득세·지방소득세)를 떼고 입금해요. 처음 출금하실 때는 신청 후 카카오톡 채널 「다꾸체험단」으로 <b>이름·주민등록번호·은행·계좌번호</b>를 보내 주세요(원천징수 신고에 필요해요, 사이트에는 저장하지 않아요). 영업일 기준 7일 안에 입금해요.</p>'+
+      '<div class="wdbx"><label class="epnm">출금할 원고료 <small>(1만원 단위, 최대 50만원)</small><select class="fi" id="pjwda">'+opts+'</select></label><p class="wdnet">출금 예정 금액 <b id="pjwdn">'+won(pjNet(mx))+'</b><small>3.3%(소득세·지방소득세)를 뗀 금액이에요</small></p></div>'+
+      (hasKey?
+      '<div class="wdbx"><b class="wdh">출금 자료</b>'+
+        '<label class="epnm">입금자명(본인 실명)<input class="fi" id="pjwnm" maxlength="20" autocomplete="name"></label>'+
+        '<span class="epnm">주민등록번호</span><div class="wdrrn"><input class="fi" id="pjwr1" inputmode="numeric" maxlength="6" placeholder="앞 6자리"><span>-</span><input class="fi" id="pjwr2" type="password" inputmode="numeric" maxlength="7" placeholder="뒤 7자리"></div>'+
+        '<label class="epnm">은행<select class="fi" id="pjwbk"><option value="">은행 선택</option>'+PJ_BANKS.map(function(x){ return '<option>'+x+'</option>'; }).join("")+'</select></label>'+
+        '<label class="epnm">계좌번호<input class="fi" id="pjwac" inputmode="numeric" maxlength="20" placeholder="- 없이 숫자만"></label>'+
+        '<label class="epnm">입금 안내 연락처<input class="fi" id="pjwph" inputmode="tel" maxlength="13" placeholder="010-0000-0000" autocomplete="tel"></label></div>'+
+      '<details class="adpd" open><summary>출금 안내</summary><ul>'+
+        '<li>매주 목요일 17시까지 신청한 건은 그 주 금요일에 입금해요(금요일이 쉬는 날이면 그 전 영업일).</li>'+
+        '<li>출금 신청은 7일에 1번만 할 수 있어요.</li>'+
+        '<li>본인 명의 계좌로만 입금해요. 이름·계좌가 맞지 않으면 반려되고 원고료(원천징수 전 금액)로 되돌려 드려요.</li>'+
+        '<li>주민등록번호는 소득세법 제145조에 따른 원천징수 신고에만 쓰고, 이 기기에서 잠근 상태로 저장돼 운영자만 열 수 있어요. 법에 따라 5년 보관한 뒤 지워요.</li>'+
+        '<li>운영 정책에 어긋나는 활동으로 생긴 원고료는 반려될 수 있어요.</li></ul></details>'+
+      '<label class="epck adck"><input type="checkbox" id="pjwok"> <span>[필수] 출금을 위한 개인정보(이름·주민등록번호·은행·계좌·연락처) 수집·이용에 동의해요</span></label>'
+      :'<p class="adpn">처음 출금하실 때는 신청 후 카카오톡 채널 「다꾸체험단」으로 <b>이름·주민등록번호·은행·계좌번호</b>를 보내 주세요(원천징수 신고에 필요해요).</p>')+
       '<button type="button" class="b pri epgo">출금 신청하기</button></div>';
     document.body.appendChild(el);
+    var g=function(id){ var x=document.getElementById(id); return x?String(x.value||"").trim():""; };
+    document.getElementById("pjwda").addEventListener("change",function(){ document.getElementById("pjwdn").textContent=won(pjNet(+this.value)); });
     el.addEventListener("click",function(ev){ if(ev.target===el||ev.target.closest(".epx")) el.remove(); });
-    el.querySelector(".epgo").addEventListener("click",function(){ var n=Math.floor(+document.getElementById("pjwda").value||0);
-      if(n<PJ_MIN||n>bal){ toast(n<PJ_MIN?"1만원부터 출금할 수 있어요":"적립금보다 많아요"); return; }
-      SB.rpc("press_withdraw",{p_amount:n}).then(function(x){ if(x.error){ toast(pjErr(x.error)); return; } el.remove(); ga("press_withdraw",{}); toast("✅ 출금 신청했어요"); pjMy(); });
+    el.querySelector(".epgo").addEventListener("click",function(){ var btn=this, n=+g("pjwda");
+      if(n<PJ_MIN||n>bal||n%10000){ toast("출금 금액을 확인해 주세요"); return; }
+      var go=function(enc,ph){ btn.disabled=true; SB.rpc("press_withdraw",{p_amount:n,p_enc:enc,p_phone:ph}).then(function(x){ btn.disabled=false; if(x.error){ toast(pjErr(x.error)); return; } el.remove(); ga("press_withdraw",{}); toast("✅ 출금 신청했어요. 금요일에 입금해 드려요"); pjMy(); }); };
+      if(!hasKey){ go(null,null); return; }
+      var nm=g("pjwnm"), r1=g("pjwr1"), r2=g("pjwr2"), bk=g("pjwbk"), ac=g("pjwac").replace(/\D/g,""), ph=g("pjwph");
+      if(!/^[가-힣a-zA-Z ]{2,20}$/.test(nm)){ toast("입금자명(본인 실명)을 확인해 주세요"); return; }
+      if(!/^\d{6}$/.test(r1)||!/^\d{7}$/.test(r2)){ toast("주민등록번호를 확인해 주세요"); return; }
+      if(!bk||ac.length<8){ toast("은행·계좌번호를 확인해 주세요"); return; }
+      if(!/^01[016789]-?\d{3,4}-?\d{4}$/.test(ph)){ toast("연락처를 확인해 주세요"); return; }
+      if(!document.getElementById("pjwok").checked){ toast("개인정보 수집·이용에 동의해 주세요"); return; }
+      pjEnc({n:nm,r:r1+"-"+r2,b:bk,a:ac}).then(function(enc){ go(enc,ph); },function(){ toast("잠시 후 다시 시도해 주세요"); });
     });
   });
+});
+/* 관리자: 시온님 개인 키 파일로 출금 자료 열기(이 화면 메모리에만, 저장 안 함) */
+var PJ_PRV=null;
+function pjDec(enc){ if(!PJ_PRV||!enc) return Promise.resolve(null); return crypto.subtle.decrypt({name:"RSA-OAEP"},PJ_PRV,pjUnB64(enc)).then(function(b){ return JSON.parse(new TextDecoder().decode(b)); }).catch(function(){ return null; }); }
+document.addEventListener("change",function(e){ if(!e.target||e.target.id!=="pjkey") return; var f=e.target.files&&e.target.files[0]; if(!f) return;
+  f.text().then(function(t){ var k=t.replace("DAGGUU-PAYKEY-PRIVATE","").replace(/\s+/g,""); return crypto.subtle.importKey("pkcs8",pjUnB64(k),{name:"RSA-OAEP",hash:"SHA-256"},false,["decrypt"]); })
+   .then(function(k){ PJ_PRV=k; toast("🔓 출금 자료를 열었어요"); [].forEach.call(document.querySelectorAll("[data-wdenc]"),function(el){ pjDec(el.getAttribute("data-wdenc")).then(function(d){ el.innerHTML=d?'<b>'+esc(d.n)+'</b> · '+esc(d.r)+'<br>'+esc(d.b)+' '+esc(d.a)+' <button class="lnk" data-copy="'+esc(d.b+' '+d.a+' '+d.n)+'">복사</button>':'열 수 없어요(다른 키로 잠김)'; }); }); },function(){ toast("키 파일이 맞지 않아요"); });
 });
 /* 관리자 #/padmin (press_admins 에 있는 계정만) */
 function padminView(){ return '<div class="pg padm" id="padm"><h1>기자단 관리</h1><div class="empty">불러오는 중…</div></div>'; }
@@ -1383,6 +1422,7 @@ function padminInit(){
   pjWait(function(){
     if(!SB||!USER){ v.innerHTML='<h1>기자단 관리</h1><div class="empty">로그인이 필요해요<button class="b pri" data-pjlogin>카카오로 로그인</button></div>'; return; }
     SB.rpc("is_press_admin").then(function(r){
+      if(r.data) SB.rpc("press_purge").then(function(){});
       if(!r.data){ v.innerHTML='<h1>기자단 관리</h1><div class="empty">관리자만 볼 수 있어요</div>'; return; }
       Promise.all([SB.from("press_jobs").select("*").order("created_at",{ascending:false}).limit(50), SB.from("press_apps").select("*").order("created_at",{ascending:false}).limit(500), SB.from("press_withdrawals").select("*").eq("status","requested").order("created_at"), SB.from("press_files").select("*")]).then(function(R){
         var jobs=R[0].data||[], apps=R[1].data||[], wds=R[2].data||[], files={}; (R[3].data||[]).forEach(function(f){ files[f.job_id]=f; });
@@ -1390,7 +1430,7 @@ function padminInit(){
         SB.rpc("press_admin_names",{p_ids:ids.filter(function(x,i){ return ids.indexOf(x)===i; })}).then(function(N){
           var nm={}; (N.data||[]).forEach(function(x){ nm[x.id]=x.nickname||"회원"; });
           var h='<h1>기자단 관리</h1>';
-          h+='<section class="pane"><h2>출금 신청 ('+wds.length+')</h2>'+(wds.length?wds.map(function(w){ return '<div class="pawd"><span><b>'+esc(nm[w.user_id]||"회원")+'</b> · '+won(w.amount)+' → 입금 '+won(pjNet(w.amount))+'<small>'+w.created_at.slice(0,16).replace("T"," ")+'</small></span><button class="b pri" data-pawd="'+w.id+'" data-ok="1">입금 완료</button><button class="b" data-pawd="'+w.id+'" data-ok="0">반려</button></div>'; }).join(""):'<p class="mysub">처리할 출금이 없어요</p>')+'</section>';
+          h+='<section class="pane"><h2>출금 신청 ('+wds.length+')</h2>'+(wds.some(function(w){ return w.enc; })?'<label class="b wdkey">🔑 개인 키 파일로 출금 자료 열기<input type="file" id="pjkey" accept=".txt" hidden></label>':'')+(wds.length?wds.map(function(w){ return '<div class="pawd"><span><b>'+esc(nm[w.user_id]||"회원")+'</b> · '+won(w.amount)+' → 입금 '+won(pjNet(w.amount))+'<small>'+w.created_at.slice(0,16).replace("T"," ")+(w.phone?' · '+esc(w.phone):'')+'</small>'+(w.enc?'<small class="wdenc" data-wdenc="'+esc(w.enc)+'">🔒 출금 자료(개인 키로 열기)</small>':'<small>출금 자료 없음(카톡으로 받기)</small>')+'</span><button class="b pri" data-pawd="'+w.id+'" data-ok="1">입금 완료</button><button class="b" data-pawd="'+w.id+'" data-ok="0">반려</button></div>'; }).join(""):'<p class="mysub">처리할 출금이 없어요</p>')+'</section>';
           h+='<section class="pane"><h2>새 모집 글</h2><form id="pjnew" class="pjf">'+
             '<input class="fi" name="title" placeholder="제목 (예: 가평 ○○펜션 소개 글)" required><input class="fi" name="biz" placeholder="업체 이름"><input class="fi" name="region" placeholder="지역 (예: 경기 가평)"><input class="fi" name="kw" placeholder="키워드">'+
             '<textarea class="fi ta" name="guide" placeholder="무엇을 쓰는지·조건 (모두에게 보여요)"></textarea>'+
@@ -2306,7 +2346,7 @@ function privacyView(){
   var a=seed.privacy||{}, owner=esc(a.owner||"다꾸 체험단 모음 운영자"), mail=esc(a.email||""), day=esc(a.date||"2026년 10월 14일");
   return '<div class="pg privacy"><a class="back" href="#/my">'+ico(I.back)+'<span>마이</span></a><h1>개인정보처리방침</h1>'+
   '<p>'+owner+'(이하 “다꾸”)는 회원의 개인정보를 소중히 다루며, 「개인정보 보호법」에 따라 아래와 같이 처리해요.</p>'+
-  '<h2>1. 수집하는 항목과 방법</h2><ul><li>카카오 로그인 시: 카카오 회원번호(식별자), 닉네임, 프로필 사진, 카카오계정 이메일(동의한 경우)</li><li>서비스 이용 시 회원이 직접 입력·선택: 관심 분야·지역·아기 나이, 알림 수신 동의 여부, 기자단 신청 블로그 주소</li><li>마이페이지에 직접 등록한 경우: 블로그·인스타그램 주소</li><li>다꾸 기자단 참여 시: 신청 블로그 주소·하고 싶은 말, 제출한 글 주소, 원고료 적립·출금 내역. 원고료 출금 시 원천징수 신고를 위해 이름·주민등록번호·은행·계좌번호를 카카오톡 채널로 받아 신고·지급에만 쓰며 사이트에는 저장하지 않아요(소득세법에 따라 5년 보관)</li><li>수익화 교육 수강 신청 시: 휴대폰 번호·이메일, 계약 동의 일시·과목·수강료(계약 이행·환불 처리·분쟁 대비)</li><li>서비스 이용 기록: 찜한 체험단, 눌러본 상품, 룰렛 참여 결과</li></ul>'+
+  '<h2>1. 수집하는 항목과 방법</h2><ul><li>카카오 로그인 시: 카카오 회원번호(식별자), 닉네임, 프로필 사진, 카카오계정 이메일(동의한 경우)</li><li>서비스 이용 시 회원이 직접 입력·선택: 관심 분야·지역·아기 나이, 알림 수신 동의 여부, 기자단 신청 블로그 주소</li><li>마이페이지에 직접 등록한 경우: 블로그·인스타그램 주소</li><li>다꾸 기자단 참여 시: 신청 블로그 주소·하고 싶은 말, 제출한 글 주소, 원고료 적립·출금 내역. 원고료 출금 신청 시 원천징수 신고(소득세법 제145조)와 입금을 위해 이름·주민등록번호·은행·계좌번호·연락처를 받아요. 이 자료는 신청한 기기에서 암호화된 상태로 저장돼 운영자만 열 수 있고, 지급 후 5년 보관한 뒤 지워요</li><li>수익화 교육 수강 신청 시: 휴대폰 번호·이메일, 계약 동의 일시·과목·수강료(계약 이행·환불 처리·분쟁 대비)</li><li>서비스 이용 기록: 찜한 체험단, 눌러본 상품, 룰렛 참여 결과</li></ul>'+
   '<h2>2. 이용 목적</h2><ul><li>회원 식별과 로그인 유지</li><li>찜·최근 본 상품을 여러 기기에서 보여주기</li><li>관심 조건에 맞는 체험단 추천과(동의한 경우) 새 체험단 알림</li><li>다꾸 기자단 선정·안내와 상품권 지급</li><li>룰렛 이벤트 참여 확인(하루 1회)과 경품 지급</li></ul>'+
   '<h2>3. 보유 기간</h2><ul><li>회원 탈퇴 시 바로 지워요. 마이 다꾸 &gt; 회원 탈퇴에서 직접 할 수 있어요.</li><li>1년 동안 로그인하지 않으면 미리 알린 뒤 지워요.</li><li>법령에 보관 의무가 있는 경우 그 기간만 보관해요. 수강 계약·결제 기록은 「전자상거래법」에 따라 5년 보관해요.</li></ul>'+
   '<h2>4. 처리 위탁과 국외 이전</h2><ul><li>회원 정보 저장: Supabase Inc.(데이터베이스·로그인 서비스). 저장 위치는 서비스 설정 지역에 따라요.</li><li>로그인: 주식회사 카카오(카카오 로그인)</li></ul>'+

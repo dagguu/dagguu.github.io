@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>출금 자료 잠금 키 만들기</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo",sans-serif;max-width:560px;margin:0 auto;padding:24px 18px;color:#1d1b24;line-height:1.6}
+h1{font-size:21px}button{font:inherit;font-weight:800;border:0;border-radius:12px;padding:14px 18px;background:#5b3fd6;color:#fff;width:100%;margin:8px 0}
+textarea{width:100%;box-sizing:border-box;height:120px;font-size:12px;border:1px solid #ddd;border-radius:10px;padding:10px}
+.box{background:#f3f1fb;border-radius:14px;padding:14px;margin:14px 0;font-size:14px}.warn{background:#fff4e5}
+</style></head><body>
+<h1>🔐 출금 자료 잠금 키 만들기</h1>
+<div class="box">블로거가 출금 신청 때 적는 <b>이름·주민등록번호·계좌</b>를 이 키로 잠가서 저장해요.<br>
+<b>공개 키</b>는 사이트에 넣는 자물쇠, <b>개인 키</b>는 시온님만 가진 열쇠예요. 이 페이지는 인터넷으로 아무것도 보내지 않고, 이 기기 안에서만 만들어요.</div>
+<button id="gen">키 만들기</button>
+<div id="out" hidden>
+  <div class="box warn">① 아래 <b>개인 키 파일</b>이 자동으로 내려받아졌어요(dagguu-paykey-private.txt). 휴대폰·PC 안전한 곳에 보관하세요.<br>잃어버리면 이미 받은 출금 자료를 열 수 없어요. <b>절대 다른 사람이나 Claude 에게 보내지 마세요.</b></div>
+  <div class="box">② 아래 <b>공개 키</b>를 복사해서 Claude 에게 보내 주세요. (공개 키는 알려져도 괜찮아요)</div>
+  <textarea id="pub" readonly></textarea>
+  <button id="cp">공개 키 복사</button>
+</div>
+<script>
+function b64(buf){ var s="",b=new Uint8Array(buf); for(var i=0;i<b.length;i++) s+=String.fromCharCode(b[i]); return btoa(s); }
+document.getElementById("gen").onclick=async function(){
+  var k=await crypto.subtle.generateKey({name:"RSA-OAEP",modulusLength:2048,publicExponent:new Uint8Array([1,0,1]),hash:"SHA-256"},true,["encrypt","decrypt"]);
+  var pub=b64(await crypto.subtle.exportKey("spki",k.publicKey)), prv=b64(await crypto.subtle.exportKey("pkcs8",k.privateKey));
+  document.getElementById("pub").value=pub; document.getElementById("out").hidden=false; this.hidden=true;
+  var a=document.createElement("a"); a.href=URL.createObjectURL(new Blob(["DAGGUU-PAYKEY-PRIVATE\n"+prv],{type:"text/plain"})); a.download="dagguu-paykey-private.txt"; a.click();
+};
+document.getElementById("cp").onclick=function(){ navigator.clipboard.writeText(document.getElementById("pub").value); this.textContent="복사했어요 ✓"; };
+</script>
+</body></html>

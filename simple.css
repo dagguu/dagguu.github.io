@@ -1016,3 +1016,12 @@ input,select,textarea{font-size:16px!important}
 .pgo em,.pmain em{font-style:normal;font-size:20px;color:#bbb}
 .pmain{background:#fafafa;border-color:#fafafa;margin:18px 0}
 .pjempty small{color:#999}
+/* 원고료 출금 신청(2026-10-21, 스타일씨 방식) */
+.pjwds .epk{max-height:88vh;overflow-y:auto}
+.wdbx{border:1px solid var(--line);border-radius:14px;padding:12px;margin:0 0 10px}
+.wdh{display:block;font-size:14px;margin:0 0 6px}
+.wdnet{margin:6px 0 0;font-size:13px;color:#555}.wdnet b{font-size:17px;color:var(--acc);margin-left:6px}.wdnet small{display:block;color:#999;font-size:11.5px}
+.wdrrn{display:flex;align-items:center;gap:6px;margin:0 0 8px}.wdrrn .fi{flex:1;min-width:0;height:42px;font-size:16px;margin:0}
+.pjwds select.fi{display:block;width:100%;height:42px;font-size:16px;margin:6px 0 0;box-sizing:border-box}
+.wdenc{display:block;margin-top:4px;color:#555;font-size:12.5px;line-height:1.5}
+.wdkey{display:block;text-align:center;margin:0 0 8px;cursor:pointer}
