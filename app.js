@@ -1308,6 +1308,8 @@ document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.
 function pjMySection(){ return USER?'<section class="pane mypj" id="mypj" hidden></section>':''; }
 function pjMy(){
   var box=document.getElementById("mypj"); if(!box||!SB||!USER) return;
+  /* 관리자(시온님)에게만 마이페이지 맨 위 "기자단 관리" 버튼(2026-10-21 시온님) */
+  SB.rpc("is_press_admin").then(function(r){ if(!r.data||document.getElementById("padmlnk")) return; var h=document.querySelector(".pg.my h1"); if(h) h.insertAdjacentHTML("afterend",'<a id="padmlnk" class="b pri wide padmlnk" href="#/padmin">🛠️ 기자단 관리 (관리자)</a>'); });
   Promise.all([SB.from("press_apps").select("id,job_id,status,note,press_jobs(title,pay)").eq("user_id",USER.id).order("created_at",{ascending:false}).limit(20), SB.rpc("press_balance"), SB.from("press_withdrawals").select("amount,status,created_at").eq("user_id",USER.id).order("created_at",{ascending:false}).limit(5)]).then(function(R){
     var apps=R[0].data, bal=R[1].data, wds=R[2].data||[]; if(R[0].error||R[1].error) return;
     if(!apps.length&&!bal&&!wds.length){ box.innerHTML='<h2>✍️ 내 기자단 · 원고료</h2><p class="mysub">아직 신청한 다꾸 기자단이 없어요.</p><a class="lnk" href="#/press">모집 중인 기자단 보기 ›</a>'; box.hidden=false; return; }
