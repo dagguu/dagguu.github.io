@@ -1333,21 +1333,23 @@ function checkoutView(){
     '<section class="cosec"><h2>결제 금액</h2><div class="corow"><span>수강료'+(k==="set"?' (따로 들을 때)':'')+'</span><span>'+w(lp)+'</span></div>'+(lp>pr?'<div class="corow"><span>오픈 이벤트 할인</span><span class="codc">−'+w(lp-pr)+'</span></div>':'')+'<div class="corow cototal"><b>총 결제 금액</b><b>'+w(pr)+'</b></div></section>'+
     '<section class="cosec"><h2>결제 수단</h2><div class="copay"><b>💳 페이앱 결제</b><p>다음 화면(결제대행사 페이앱)에서 신용·체크카드 등 결제 수단을 고를 수 있어요. 할부 개월 수와 할부 수수료는 카드사 기준이에요.</p></div></section>'+
     '<section class="cosec conote"><b>ⓘ 결제 유의사항</b><ul><li>결제가 끝나면 입력한 연락처로 강의 일정과 자료 받는 방법을 안내해 드려요.</li><li>전자책·강의자료·AI 프롬프트는 받은 뒤에는 환불되지 않아요. 자세한 내용은 아래 환불 정책 동의에서 확인할 수 있어요.</li><li>교육은 방법을 함께 찾는 서비스로, 수익 금액·체험단 선정·검색 순위를 보장하지 않아요.</li></ul></section>'+
-    '<div class="cobar"><label class="coall"><input type="checkbox" id="coAll"> <b>결제 진행 필수 동의</b></label>'+
+    '<div class="cobar"><button type="button" class="cotog" aria-label="동의 항목 펼치기">︿</button><div class="coags"><label class="coall"><input type="checkbox" id="coAll"> <b>결제 진행 필수 동의</b></label>'+
       [["refund","환불 정책 동의 (필수)"],["privacy","개인정보 수집·이용 동의 (필수)"],["notice","수강·결제 관련 안내 수신 동의 (필수)"]].map(function(a){ return '<div class="coag"><label><input type="checkbox" class="coAg" data-k="'+a[0]+'"> '+a[1]+'</label><button type="button" class="codoc" data-doc="'+a[0]+'" aria-label="'+a[1]+' 보기">›</button></div>'; }).join("")+
-      '<button type="button" class="b pri cogo" disabled>'+w(pr)+' 결제하기</button></div>'+
+      '</div><button type="button" class="b pri cogo dis">'+w(pr)+' 결제하기</button></div>'+
   '</div>';
 }
 function coInit(){
   var pg=document.querySelector(".pg.co"); if(!pg||!pg.querySelector(".cobar")) return;
   var tel=pg.querySelector("#coTel"), mail=pg.querySelector("#coMail"), all=pg.querySelector("#coAll"), ags=[].slice.call(pg.querySelectorAll(".coAg")), go=pg.querySelector(".cogo");
   var ok=function(){ return /^01[016789]-?\d{3,4}-?\d{4}$/.test(tel.value.trim()) && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail.value.trim()) && ags.every(function(a){ return a.checked; }) && !(authCfg()&&!USER); };
-  var chk=function(){ go.disabled=!ok(); all.checked=ags.every(function(a){ return a.checked; }); };
+  var chk=function(){ go.classList.toggle("dis",!ok()); all.checked=ags.every(function(a){ return a.checked; }); };
   pg.addEventListener("input",chk); pg.addEventListener("change",function(e){ if(e.target===all){ ags.forEach(function(a){ a.checked=all.checked; }); } chk(); }); chk();
   pg.addEventListener("click",function(e){
     var d=e.target.closest("[data-doc]"); if(d){ coDoc(d.getAttribute("data-doc")); return; }
     if(e.target.closest("[data-cologin]")){ ga("edu_join_click",{course:state.coK}); ls("dakku-after-login",location.hash); login("kakao"); return; }
-    if(!e.target.closest(".cogo")||go.disabled) return;
+    if(e.target.closest(".cotog")){ pg.querySelector(".cobar").classList.toggle("open"); return; }
+    if(!e.target.closest(".cogo")) return;
+    if(go.classList.contains("dis")){ var bar=pg.querySelector(".cobar"); if(authCfg()&&!USER){ toast("카카오로 가입한 뒤 결제할 수 있어요"); window.scrollTo({top:0,behavior:"smooth"}); return; } if(!/^01[016789]-?\d{3,4}-?\d{4}$/.test(tel.value.trim())||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail.value.trim())){ toast("휴대폰 번호와 이메일을 확인해 주세요"); (/^01/.test(tel.value)?mail:tel).focus(); return; } bar.classList.add("open"); toast("필수 동의 항목을 확인해 주세요"); return; }
     var k=state.coK, u=safeUrl((seed.eduPay||{})[k]), pr=EDU_PRICE[k], t=tel.value.trim(), m=mail.value.trim(); if(!u) return;
     ga("edu_pay_click",{course:k});
     var win=window.open("about:blank","_blank"), open=function(){ if(win) win.location.href=u; else location.href=u; };
