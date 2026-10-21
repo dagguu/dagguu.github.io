@@ -1324,7 +1324,7 @@ document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.
 var EDU_OPT=[["blog","[블로그] 블로그 수익화 5주 1:1"],["cp","[쿠팡파트너스] 쿠팡파트너스 수익화 3주 1:1"],["set","[세트] 블로그 + 쿠팡파트너스 5주 1:1 올인원"]];
 function eduPick(){
   var w=function(n){ return n.toLocaleString()+'원'; }, pay=seed.eduPay||{};
-  var el=document.createElement("div"); el.className="edupick";
+  var el=document.createElement("div"); el.className="edusheet";
   el.innerHTML='<div class="epk" role="dialog" aria-modal="true" aria-label="수강 과목 선택"><div class="ephd"><b>수강 과목 선택</b><button type="button" class="epx" aria-label="닫기">✕</button></div>'+
     EDU_OPT.map(function(o){ var k=o[0], ls_=EDU_LIST[k], pr=EDU_PRICE[k]; var old=k==="set"?'따로 들으면 <s>'+w(EDU_PRICE.blog+EDU_PRICE.cp)+'</s>':(ls_&&ls_>pr?'<s>'+w(ls_)+'</s> <em>'+Math.round((1-pr/ls_)*100)+'%</em>':'');
       return '<label class="epo"><input type="radio" name="edupk" value="'+k+'"'+(safeUrl(pay[k])?'':' disabled')+'><span class="epn"><b>'+esc(o[1])+'</b><small>'+old+'</small></span><strong>'+w(pr)+'</strong></label>'; }).join("")+
