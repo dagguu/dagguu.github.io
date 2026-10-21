@@ -198,7 +198,6 @@ document.addEventListener("click",function(e){
   else if((a=t.closest("[data-fav]"))) ga("fav_toggle",{item_id:a.getAttribute("data-fav")});
   else if((a=t.closest("[data-ishare],[data-tshare]"))) ga("share",{item_id:a.getAttribute("data-ishare")||a.getAttribute("data-tshare")});
   else if((a=t.closest("[data-pushon]"))) ga("push_on_click",{});
-  else if((a=t.closest(".prc"))) ga("press_click",{item_name:(a.querySelector("b")||{}).textContent||""});
   else if((a=t.closest(".prlock a"))) ga("press_lock_click",{});
 },true);
 function route(){
@@ -1215,9 +1214,10 @@ function pressView(){
   var P=seed.press||{}, L=(P.list||[]).filter(function(x){ return x.e>=ymd(today()); }).slice(0,2), more=Math.max(0,(P.n||0)-L.length);
   var at=P.at?new Date(P.at):null, atS=at?(at.getMonth()+1)+"/"+at.getDate()+" "+String(at.getHours()).padStart(2,"0")+":"+String(at.getMinutes()).padStart(2,"0"):"";
   var dd=function(e){ var n=Math.round((new Date(e+"T00:00:00")-today())/864e5); return n<=0?"오늘 마감":"D-"+n; };
-  var card=function(x){ var r=x.ap&&x.ap[1]>0?(x.ap[0]/x.ap[1]).toFixed(1):""; return '<a class="prc" href="'+esc(safeUrl(x.url))+'" target="_blank" rel="noopener noreferrer">'+
+  /* 2026-10-21 시온님: 맛보기 카드는 모집 사이트 이름·지원/모집 숫자를 흐리게, 링크 없음(실제 값은 화면에 넣지 않고 가림 글자만) */
+  var card=function(x){ return '<div class="prc">'+
     '<span class="pri"><img src="'+esc(x.img)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.visibility=\'hidden\'"><i>'+dd(x.e)+'</i></span>'+
-    '<span class="prx"><small>'+esc(x.src)+' · 📝 블로그</small><b>'+esc(x.t)+'</b><em>💰 '+esc(x.o)+'</em>'+(x.ap?'<small>지원 '+x.ap[0]+' · 모집 '+x.ap[1]+(r?' · '+r+':1':'')+'</small>':'')+'<span class="prgo">모집 사이트에서 보기 ↗</span></span></a>'; };
+    '<span class="prx"><small><span class="prbl" aria-label="모집 사이트 가림">체험단사이트</span> · 📝 블로그</small><b>'+esc(x.t)+'</b><em>💰 '+esc(x.o)+'</em><small class="prbl" aria-label="지원·모집 인원 가림">지원 00 · 모집 0 · 0.0:1</small></span></div>'; };
   var sk='<div class="prc sk"><span class="pri"></span><span class="prx"><span class="l1"></span><span class="l2"></span><span class="l3"></span></span></div>';
   return '<div class="pg press">'+
     '<div class="prhero"><small>💻 블로그 재택알바</small><h1>제품 없이 글만 쓰고<br><em>원고료</em> 받아요</h1>'+

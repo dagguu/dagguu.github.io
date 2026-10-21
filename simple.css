@@ -724,3 +724,5 @@ input,select,textarea{font-size:16px!important}
 .press .prlock .b{max-width:280px}
 .press .prnote{font-size:12px;color:#888;line-height:1.5;margin:14px 2px 24px}
 .press .prhero p.prfine{margin-top:8px;font-size:12px;color:#e6d4fb}
+.press .prbl{filter:blur(4px);user-select:none;-webkit-user-select:none}
+.press .prx small.prbl{display:inline-block;width:max-content}
