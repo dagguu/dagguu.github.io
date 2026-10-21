@@ -1004,3 +1004,15 @@ input,select,textarea{font-size:16px!important}
 .pjtb td{padding:9px 0;border-bottom:1px solid var(--line);color:#111}
 .pj3 label{flex:1;min-width:90px;font-size:12px;font-weight:700;color:#666}.pj3 .fi{margin-top:4px}
 .padmlnk{display:block;text-align:center;margin:0 0 14px}
+/* 다이어리뷰(partners.dagguu.com, 2026-10-21) */
+.phero{background:linear-gradient(150deg,#3a1670,#6a3fc8 60%,#9b5fe0);color:#fff;border-radius:20px;padding:24px 20px;margin:8px 0 14px}
+.phero small{font-size:11.5px;font-weight:800;letter-spacing:.06em;opacity:.8}
+.phero h1{font-size:24px;line-height:1.32;margin:8px 0 10px;color:#fff}.phero h1 em{font-style:normal;color:#ffe36e}
+.phero p{font-size:14px;line-height:1.6;margin:0;opacity:.9}
+.pgo{display:grid;gap:8px;margin:0 0 22px}
+.pgo a,.pmain{display:flex;align-items:center;gap:12px;border:1.5px solid var(--line);border-radius:16px;padding:14px;color:inherit;text-decoration:none}
+.pgo i,.pmain i{font-style:normal;font-size:24px;width:44px;height:44px;flex:0 0 44px;border-radius:12px;background:var(--tint);display:flex;align-items:center;justify-content:center}
+.pgo span,.pmain span{flex:1;font-size:13px;color:#777;line-height:1.45}.pgo b,.pmain b{display:block;font-size:15px;color:#111}
+.pgo em,.pmain em{font-style:normal;font-size:20px;color:#bbb}
+.pmain{background:#fafafa;border-color:#fafafa;margin:18px 0}
+.pjempty small{color:#999}

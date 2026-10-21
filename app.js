@@ -148,6 +148,12 @@ var I={
 /* ---------- 셸 ---------- */
 var app=document.getElementById("app");
 var TABS=[["home","홈",I.home],["fav","찜",I.heart],["list","체험단",I.ticket],["shop","공구",I.bag],["deals","특가",I.gift]];
+/* 사이트 둘로 나누기(2026-10-21 시온님): www.dagguu.com = 다꾸체험단(정보만, 로그인·결제 없음) / partners.dagguu.com = 다이어리뷰(회원·기자단·광고주·수익화 클래스).
+   두 사이트가 같은 app.js 를 쓰고, partners 의 index.html 이 window.DK_MODE="partners" 를 켠다. 한쪽에 없는 화면 주소로 들어오면 다른 사이트로 넘긴다. */
+var PART_LIVE=false; /* partners.dagguu.com 이 열리면 true 로 바꾼다(그 전엔 www 에서 로그인·교육·광고주가 그대로 동작) */
+var PMODE=window.DK_MODE==="partners", MAIN_URL="https://www.dagguu.com/", PART_URL="https://partners.dagguu.com/", BASE=PMODE?(window.DK_BASE||MAIN_URL):"";
+var P_TABS=/^(home|press|pjob|padmin|contact|edu|checkout|my|privacy|benefit|shop|reporter)$/, P_ONLY=/^(pjob|padmin|contact|edu|checkout|benefit|shop|reporter)$/;
+if(PMODE) TABS=[["home","홈",I.home],["press","기자단",I.send],["edu","클래스",I.trend],["contact","광고주",I.bell],["my","마이",I.user]];
 /* TOP 버튼(2026-10-18 시온님 요청): 화면 1.5배 넘게 내려가면 톡상담 위에 보임 */
 (function(){ var raf=0; function upd(){ raf=0; var b=document.getElementById("totop"); if(b) b.hidden=window.scrollY<window.innerHeight*1.5; }
   window.addEventListener("scroll",function(){ if(!raf) raf=requestAnimationFrame(upd); },{passive:true}); window.addEventListener("hashchange",function(){ setTimeout(upd,50); });
@@ -157,21 +163,21 @@ var NAVN=0; window.addEventListener("hashchange",function(){ NAVN++; });
 document.addEventListener("click",function(e){ if(!e.target.closest("#backbtn")) return; e.preventDefault(); if(NAVN>0){ NAVN=Math.max(0,NAVN-2); history.back(); } else location.hash="#/"; });
 function shell(){
   app.innerHTML=
-    '<div class="disclose">이 사이트는 쿠팡 파트너스, 토스쇼핑 쉐어링크, 여기어때, 마이리얼트립, 트립닷컴 등 제휴 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.</div>'+
+    (PMODE?'':'<div class="disclose">이 사이트는 쿠팡 파트너스, 토스쇼핑 쉐어링크, 여기어때, 마이리얼트립, 트립닷컴 등 제휴 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.</div>')+
     '<div class="frame">'+
-      '<header class="appbar"><span class="abl"><button class="backbtn" id="backbtn" aria-label="뒤로 가기" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><a class="logo" href="#/" id="logo"></a></span><span class="hbtns"><span class="kch" id="kakao-talk-channel-add-button" data-channel-public-id="_xkqEFX" data-size="small" data-support-multiple-densities="true"></span><a class="iconbtn" href="#/list" data-focus="q" aria-label="체험단 검색">'+ico(I.search)+'</a><a class="iconbtn mebtn" href="#/my" id="mebtn" aria-label="마이 다꾸">'+ico(I.user)+'</a></span></header>'+
+      '<header class="appbar"><span class="abl"><button class="backbtn" id="backbtn" aria-label="뒤로 가기" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><a class="logo" href="#/" id="logo"></a></span><span class="hbtns"><span class="kch" id="kakao-talk-channel-add-button" data-channel-public-id="_xkqEFX" data-size="small" data-support-multiple-densities="true"></span>'+(PMODE?'':'<a class="iconbtn" href="#/list" data-focus="q" aria-label="체험단 검색">'+ico(I.search)+'</a>')+'<a class="iconbtn mebtn" href="#/my" id="mebtn" aria-label="마이 다꾸">'+ico(I.user)+'</a></span></header>'+
       '<main id="view" class="view"></main>'+
-      '<footer class="foot"><a class="flink" href="#/contact">광고주 마케팅 상담 문의</a><br><a '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>💬 카카오톡 채널 ‘다꾸체험단’</a><div id="bizline"></div><p>'+SITE+' · 체험단 모집 정보는 각 모집처의 공지를 기준으로 하며, 신청 조건과 일정은 바뀔 수 있어요.</p></footer>'+
+      (PMODE?'<footer class="foot"><a class="flink" href="#/contact">광고주 마케팅 상담 문의</a><br><a '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>💬 카카오톡 채널 ‘다꾸체험단’</a><p>다이어리뷰 · 블로그 기자단·체험단 대행 · <a href="'+MAIN_URL+'">다꾸체험단(체험단 모아보기)</a></p></footer>':'<footer class="foot"><a class="flink" href="#/contact">광고주 마케팅 상담 문의</a><br><a '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>💬 카카오톡 채널 ‘다꾸체험단’</a><div id="bizline"></div><p>'+SITE+' · 체험단 모집 정보는 각 모집처의 공지를 기준으로 하며, 신청 조건과 일정은 바뀔 수 있어요.</p></footer>')+
     '</div>'+
     '<button class="totop" id="totop" aria-label="맨 위로" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 14l6-6 6 6"/></svg><span>TOP</span></button>'+
     '<div class="kchat" id="kakao-talk-channel-chat-button" data-channel-public-id="_xkqEFX" data-title="consult" data-size="small" data-color="yellow" data-shape="mobile" data-support-multiple-densities="true"></div>'+
-    '<nav class="tabbar" aria-label="하단 메뉴">'+TABS.map(function(t){ var c=t[0]==="list"; return '<a href="#/'+(t[0]==="home"?"":t[0])+'" data-tab="'+t[0]+'"'+(c?' class="tc"':'')+'>'+(c?'<span class="tcb">'+ico(t[2],"ti")+'</span>':'<span class="tib">'+ico(t[2],"ti")+'</span>')+'<span>'+t[1]+'</span></a>'; }).join("")+'</nav>';
+    '<nav class="tabbar" aria-label="하단 메뉴">'+TABS.map(function(t){ var c=t[0]===(PMODE?"press":"list"); return '<a href="#/'+(t[0]==="home"?"":t[0])+'" data-tab="'+t[0]+'"'+(c?' class="tc"':'')+'>'+(c?'<span class="tcb">'+ico(t[2],"ti")+'</span>':'<span class="tib">'+ico(t[2],"ti")+'</span>')+'<span>'+t[1]+'</span></a>'; }).join("")+'</nav>';
   app.addEventListener("click",onClick);
   app.addEventListener("submit",function(e){ if(e.target.id==="cform"){ e.preventDefault(); submitContact(e.target); } if(e.target.id==="eduform"){ e.preventDefault(); submitEdu(e.target); } });
   app.addEventListener("input",function(e){ if(e.target.dataset&&e.target.dataset.etc){ var r=e.target.parentNode.querySelector("input[type=radio]"); if(r) r.checked=true; } if(e.target.id==="q"){ state.q=e.target.value; renderListGrid(); } });
   app.addEventListener("change",function(e){ if(e.target.dataset && e.target.dataset.th!==undefined){ var tv=e.target.dataset.th; if(!tv) state.themes=[]; else { var tk=state.themes.indexOf(tv); if(e.target.checked&&tk<0) state.themes.push(tv); if(!e.target.checked&&tk>=0) state.themes.splice(tk,1); } var tb=document.getElementById("thbox"); if(tb) tb.innerHTML=themeChecks(); renderListGrid(); return; } if(e.target.dataset && e.target.dataset.chk!==undefined){ var v=e.target.dataset.chk; if(!v) state.chs=[]; else { var k=state.chs.indexOf(v); if(e.target.checked&&k<0) state.chs.push(v); if(!e.target.checked&&k>=0) state.chs.splice(k,1); } paintChs(); renderListGrid(); return; } if(e.target.dataset && e.target.dataset.pet!==undefined){ state.pet=e.target.dataset.pet; saveUi(); var pb=document.getElementById("petbox"); if(pb) pb.innerHTML=petChecks(); renderListGrid(); return; } if(e.target.dataset && e.target.dataset.rg!==undefined){ var v=e.target.dataset.rg; if(v==="전체") state.regions=[]; else { var i=state.regions.indexOf(v); if(e.target.checked&&i<0) state.regions.push(v); if(!e.target.checked&&i>=0) state.regions.splice(i,1); } saveUi(); paintRegions(); renderListGrid(); } });
 }
-function paintLogo(){ var l=document.getElementById("logo"); if(l) l.innerHTML=logoSvg(30)+'<b class="wm">다꾸체험단</b><span class="sr">'+SITE+'</span>'+(LOGO.name?'<em class="logo-ev">'+esc(LOGO.name)+'</em>':''); }
+function paintLogo(){ var l=document.getElementById("logo"); if(l) l.innerHTML=logoSvg(30)+'<b class="wm">'+(PMODE?'다이어리뷰':'다꾸체험단')+'</b><span class="sr">'+SITE+'</span>'+(LOGO.name?'<em class="logo-ev">'+esc(LOGO.name)+'</em>':''); }
 
 /* 구글 애널리틱스 GA4(2026-10-18, 측정 ID G-NK2TCS1QHH, index.html head): 화면 이동은 page_view 를 직접 보내고, 주요 버튼은 이벤트로 */
 function ga(ev,p){ try{ if(window.gtag) window.gtag("event",ev,p||{}); }catch(e){} }
@@ -203,6 +209,8 @@ document.addEventListener("click",function(e){
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
+  if(!PMODE&&PART_LIVE&&P_ONLY.test(tab)){ location.replace(PART_URL+"#/"+h); return; }
+  if(PMODE&&!P_TABS.test(tab)){ location.replace(MAIN_URL+"#/"+h); return; }
   if(!/^(home|list|fav|benefit|shop|mag|tix|deals|reporter|press|contact|item|my|privacy|price|event|trip|edu|checkout|pjob|padmin)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
@@ -232,8 +240,8 @@ function render(){
   if(state.loading){ v.innerHTML='<div class="empty">불러오는 중…</div>'; return; }
   if(window.introDone){ window.introDone(); window.introDone=null; }
   if(!GA_LAST) setTimeout(gaPage,0);
-  if(!window.introOn) setTimeout(promoPopup,600);
-  if(state.tab==="home") v.innerHTML=homeView();
+  if(!window.introOn&&!PMODE) setTimeout(promoPopup,600);
+  if(state.tab==="home") v.innerHTML=PMODE?pHomeView():homeView();
   else if(state.tab==="list"){ v.innerHTML=listView(); renderListGrid(); }
   else if(state.tab==="fav") v.innerHTML=favView();
   else if(state.tab==="benefit") v.innerHTML=benefitView();
@@ -242,7 +250,7 @@ function render(){
   else if(state.tab==="tix"){ v.innerHTML=tixView(); if(state.tixI!==""){ setTimeout(function(){ var e=document.getElementById("tix"+state.tixI); if(e) e.scrollIntoView({block:"center"}); },60); } }
   else if(state.tab==="deals") v.innerHTML=dealsView();
   else if(state.tab==="reporter") v.innerHTML=reporterView();
-  else if(state.tab==="press"){ v.innerHTML=pressView(); pjList(); }
+  else if(state.tab==="press"){ v.innerHTML=PMODE?pPressView():pressView(); pjList(); }
   else if(state.tab==="pjob"){ v.innerHTML=pjobView(); pjobInit(); }
   else if(state.tab==="padmin"){ v.innerHTML=padminView(); padminInit(); }
   else if(state.tab==="contact") v.innerHTML=contactView();
@@ -254,7 +262,8 @@ function render(){
   else if(state.tab==="edu"){ v.innerHTML=eduView(); eduResume(); }
   else if(state.tab==="checkout"){ v.innerHTML=checkoutView(); coInit(); }
   else if(state.tab==="price"){ v.innerHTML=priceView(); if(state.pq) priceSearch(state.pq); }
-  if(state.tab==="home") initFeed(); else if(HOBS){ HOBS.disconnect(); HOBS=null; }
+  if(state.tab==="home"&&!PMODE) initFeed();
+  if(state.tab==="home"&&PMODE) pjList(); else if(HOBS){ HOBS.disconnect(); HOBS=null; }
   if(state.tab==="deals") initMoreDeals(); else if(MDEAL.obs){ MDEAL.obs.disconnect(); MDEAL.obs=null; }
   tick(); startSliders(); plainHeads(v); guideFill(); if(state.tab==="item") dcdInit(); tkInit();
 }
@@ -905,8 +914,8 @@ var GUIDES=null;
 var PICKS=null;
 function magLoad(cb){
   var n=0, done=function(){ if(++n===2) cb(); };
-  if(GUIDES) done(); else fetch("/g/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ GUIDES=(L||[]).slice().sort(function(a,b){ return (b.date||"")>(a.date||"")?1:(b.date||"")<(a.date||"")?-1:0; }); done(); }).catch(function(){ GUIDES=[]; done(); });
-  if(PICKS) done(); else fetch("/p/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ PICKS=L||[]; done(); }).catch(function(){ PICKS=[]; done(); });
+  if(GUIDES) done(); else fetch((BASE||"/")+"g/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ GUIDES=(L||[]).slice().sort(function(a,b){ return (b.date||"")>(a.date||"")?1:(b.date||"")<(a.date||"")?-1:0; }); done(); }).catch(function(){ GUIDES=[]; done(); });
+  if(PICKS) done(); else fetch((BASE||"/")+"p/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ PICKS=L||[]; done(); }).catch(function(){ PICKS=[]; done(); });
 }
 function gDate(d){ return d?'<em class="gdt">'+esc(String(d).replace(/-/g,"."))+' 업로드</em>':""; }
 function guideRow(g){ return '<a class="gdi" href="/g/'+esc(g.slug)+'.html"><b>'+esc(g.t)+'</b><small>'+esc(g.d)+'</small>'+gDate(g.date)+'</a>'; }
@@ -1249,25 +1258,57 @@ function pjNet(n){ var it=Math.floor(n*0.03/10)*10; if(it<1000) return n; return
 function pjDd(e){ var n=Math.round((new Date(e+"T00:00:00")-today())/864e5); return n<0?"마감":n===0?"오늘 마감":"D-"+n; }
 function pjWait(cb){ if(SB){ cb(); return; } if(!authCfg()){ cb(); return; } initAuth(); var n=0, t=setInterval(function(){ if(SB||++n>40){ clearInterval(t); cb(); } },150); }
 function pjErr(e){ var m=(e&&e.message)||""; return /closed/.test(m)?"모집이 끝났어요":/duplicate|unique/.test(m)?"이미 신청했어요":/blog|url/.test(m)?"주소를 확인해 주세요":/balance/.test(m)?"적립금이 모자라요":/min/.test(m)?"1만원부터 출금할 수 있어요":/state/.test(m)?"지금은 할 수 없는 단계예요":"잠시 후 다시 시도해 주세요"; }
-function pjCard(j){ return '<a class="pjc" href="#/pjob?id='+j.id+'"><span class="pjt"><small>'+esc(j.region||"")+(j.kw?' · '+esc(j.kw):'')+'</small><b>'+esc(j.title)+'</b><em>원고료 '+won(j.pay)+'</em></span><span class="pjr"><i>'+pjDd(j.ends)+'</i><small>모집 '+j.slots+'명</small></span></a>'; }
+function pjCard(j){ return '<a class="pjc" href="'+(PMODE?'':PART_URL)+'#/pjob?id='+j.id+'"><span class="pjt"><small>'+esc(j.region||"")+(j.kw?' · '+esc(j.kw):'')+'</small><b>'+esc(j.title)+'</b><em>원고료 '+won(j.pay)+'</em></span><span class="pjr"><i>'+pjDd(j.ends)+'</i><small>모집 '+j.slots+'명</small></span></a>'; }
+/* 모집 중 기자단 목록: 로그인 없이 읽기만 해서 두 사이트 모두 Supabase REST(공개 키)로 직접 읽음 */
 function pjList(){
-  var box=document.getElementById("pjlist"); if(!box) return;
-  pjWait(function(){ if(!SB){ box.hidden=true; return; }
-    SB.from("press_jobs").select("id,title,region,kw,pay,slots,ends,status").eq("status","open").gte("ends",ymd(today())).order("ends").then(function(r){
-      if(sbErr(r)||!r.data||!r.data.length){ box.hidden=true; return; }
-      box.innerHTML='<h2 class="prh">다꾸 기자단 모집</h2><p class="pjsub">다꾸가 직접 모집해요. 신청·글 제출·원고료 적립까지 다꾸에서 해요.</p>'+r.data.map(pjCard).join(""); box.hidden=false; plainHeads(box); });
-  });
+  var box=document.getElementById("pjlist"), a=seed.auth||{}; if(!box) return;
+  if(!safeUrl(a.url)||!a.key){ box.hidden=!PMODE; return; }
+  fetch(a.url+"/rest/v1/press_jobs?select=id,title,region,kw,pay,slots,ends&status=eq.open&ends=gte."+ymd(today())+"&order=ends",{headers:{apikey:a.key,Authorization:"Bearer "+a.key}}).then(function(r){ return r.ok?r.json():[]; }).catch(function(){ return []; }).then(function(L){
+    var hd=box.dataset.h||"다꾸 기자단 모집", sub=PMODE?"신청·글 제출·원고료 적립까지 다이어리뷰에서 해요.":"다이어리뷰가 직접 모집해요. 신청은 다이어리뷰에서 해요.";
+    if(!L||!L.length){ if(PMODE){ box.innerHTML='<h2 class="prh">'+hd+'</h2><div class="empty pjempty">지금 모집 중인 기자단이 없어요<br><small>새 모집이 열리면 카카오톡 채널로 알려드려요</small></div>'; box.hidden=false; } else box.hidden=true; return; }
+    box.innerHTML='<h2 class="prh">'+hd+'</h2><p class="pjsub">'+sub+'</p>'+L.map(pjCard).join(""); box.hidden=false; plainHeads(box); });
 }
-function pjobView(){ return '<div class="pg pjob" id="pjob"><a class="back" href="#/press">'+ico(I.back)+'<span>재택알바</span></a><div class="empty">불러오는 중…</div></div>'; }
+/* 다이어리뷰(partners) 홈·기자단·마이 */
+function pHomeView(){
+  return '<div class="pg phome">'+
+    '<section class="phero"><small>DIARY VIEW · 다이어리뷰</small><h1>블로거와 사장님을 잇는<br><em>기자단·체험단</em> 대행</h1><p>블로거는 글을 쓰고 원고료를 받고, 사장님은 블로그 홍보를 맡기는 곳이에요.</p></section>'+
+    '<div class="pgo"><a href="#/press"><i>✍️</i><span><b>블로거라면</b>기자단 신청하고 원고료 받기</span><em>›</em></a>'+
+      '<a href="#/contact"><i>📣</i><span><b>사장님이라면</b>기자단·체험단 홍보 맡기기</span><em>›</em></a>'+
+      '<a href="#/edu"><i>🎓</i><span><b>블로그를 키우고 싶다면</b>블로그 수익화 1:1 클래스</span><em>›</em></a></div>'+
+    '<div id="pjlist" class="pjlist" data-h="모집 중인 기자단" hidden></div>'+
+    '<a class="pmain" href="'+MAIN_URL+'"><span><b>전국 체험단 모아보기</b>숙박·육아·뷰티 체험단은 다꾸체험단에서</span><em>›</em></a>'+
+  '</div>';
+}
+function pPressView(){
+  return '<div class="pg press">'+
+    '<div class="prhero"><small>✍️ 다이어리뷰 기자단</small><h1>받은 자료로 글 쓰고<br><em>원고료</em> 받아요</h1><p>방문하거나 제품을 받지 않아도 돼요. 광고주가 준 원고·사진으로 블로그 글을 쓰면 원고료가 적립되고, 1만원부터 출금할 수 있어요.</p><p class="prfine">고용 계약이 아니라 글 한 편마다 원고료를 받는 방식이에요. 출금할 때 3.3%(소득세·지방소득세)를 떼고 입금해요.</p></div>'+
+    '<div class="prhow"><div><b>1</b><span>모집 글 보고 신청</span></div><div><b>2</b><span>선정되면 자료 받아 글 쓰기</span></div><div><b>3</b><span>검수 후 원고료 적립</span></div></div>'+
+    '<div id="pjlist" class="pjlist" data-h="모집 중인 기자단" hidden></div>'+
+  '</div>';
+}
+function pMyView(){
+  var a=authCfg(), h='<div class="pg my"><h1>마이 다이어리뷰</h1>';
+  if(!USER){
+    return h+'<section class="lgcard"><div class="mlogo">'+logoSvg(44)+'</div><b>로그인하고 기자단에<br>참여해 보세요</b>'+
+      '<ul class="lgben"><li>✍️ 기자단 신청 · 글 제출</li><li>💰 원고료 적립 · 출금 신청</li><li>📝 내 블로그·인스타 주소 등록</li><li>🎓 블로그 수익화 클래스 수강 신청</li></ul>'+
+      (a?'<button class="b kakaolg wide" data-login="kakao"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#191600" d="M12 4C7 4 3 7.2 3 11.1c0 2.5 1.7 4.7 4.2 6l-.9 3.4c-.1.3.3.6.6.4l4-2.7h1.1c5 0 9-3.2 9-7.1S17 4 12 4Z"/></svg>카카오로 3초 만에 시작하기</button><p class="lgnote">시작하면 <a href="#/privacy">개인정보처리방침</a>에 동의하는 것으로 봐요.</p>':'<p class="lgsoon">잠시 후 다시 열어 주세요</p>')+'</section></div>';
+  }
+  h+='<div class="hello"><b>'+esc(nick())+'님, 반가워요 👋</b><button class="lnk" data-logout>로그아웃</button></div>';
+  h+=chSection()+pjMySection();
+  h+='<a class="pmain" href="#/edu"><span><b>블로그 수익화 1:1 클래스</b>체험단 당첨부터 수익화까지</span><em>›</em></a>';
+  h+='<div class="myfoot"><a href="#/privacy">개인정보처리방침</a> · <button class="lnk" data-unreg>회원 탈퇴</button><br><button class="lnk myuid" data-copy="'+esc(USER.id)+'">회원 번호 복사</button></div>';
+  return h+'</div>';
+}
+function pjobView(){ return '<div class="pg pjob" id="pjob"><a class="back" href="#/press">'+ico(I.back)+'<span>기자단</span></a><div class="empty">불러오는 중…</div></div>'; }
 function pjobInit(){
   var v=document.getElementById("pjob"), id=+state.pjId; if(!v) return;
   pjWait(function(){
     if(!SB){ v.innerHTML='<div class="empty">지금은 볼 수 없어요</div>'; return; }
     SB.from("press_jobs").select("*").eq("id",id).maybeSingle().then(function(r){
-      var j=r.data; if(sbErr(r)||!j){ v.innerHTML='<a class="back" href="#/press">'+ico(I.back)+'<span>재택알바</span></a><div class="empty">모집 글을 찾을 수 없어요</div>'; return; }
+      var j=r.data; if(sbErr(r)||!j){ v.innerHTML='<a class="back" href="#/press">'+ico(I.back)+'<span>기자단</span></a><div class="empty">모집 글을 찾을 수 없어요</div>'; return; }
       var open=j.status==="open"&&j.ends>=ymd(today());
-      var head='<a class="back" href="#/press">'+ico(I.back)+'<span>재택알바</span></a>'+
-        '<div class="pjh"><small>다꾸 기자단 · '+esc(j.region||"")+'</small><h1>'+esc(j.title)+'</h1><div class="pjpay"><b>'+won(j.pay)+'</b><span>1편 원고료 (세전)</span></div></div>'+
+      var head='<a class="back" href="#/press">'+ico(I.back)+'<span>기자단</span></a>'+
+        '<div class="pjh"><small>다이어리뷰 기자단 · '+esc(j.region||"")+'</small><h1>'+esc(j.title)+'</h1><div class="pjpay"><b>'+won(j.pay)+'</b><span>1편 원고료 (세전)</span></div></div>'+
         '<table class="pjtb"><tr><th>모집 인원</th><td>'+j.slots+'명</td></tr><tr><th>신청 마감</th><td>'+esc(j.ends)+' ('+pjDd(j.ends)+')</td></tr>'+(j.kw?'<tr><th>키워드</th><td>'+esc(j.kw)+'</td></tr>':'')+(j.biz?'<tr><th>업체</th><td>'+esc(j.biz)+'</td></tr>':'')+'<tr><th>작성 채널</th><td>네이버 블로그</td></tr></table>'+
         (j.guide?'<section class="pjsec"><h2>무엇을 쓰나요</h2><p class="pjg">'+esc(j.guide).replace(/\n/g,"<br>")+'</p></section>':'')+
         '<section class="pjsec"><h2>꼭 지켜 주세요</h2><ul class="pjrule"><li>광고주가 준 원고·사진 자료로 쓰는 소개 글이에요.</li><li>글 첫 부분에 원고료를 받고 쓴 글이라는 문구를 꼭 넣어요(공정위 추천·보증 심사지침).</li><li>글은 올린 날부터 3개월 동안 지우지 않아요.</li><li>원고료는 검수 승인 뒤 적립되고, 1만원부터 출금할 수 있어요. 출금할 때 3.3%(소득세·지방소득세)를 떼고 입금해요.</li></ul></section>';
@@ -1312,7 +1353,7 @@ function pjMy(){
   SB.rpc("is_press_admin").then(function(r){ if(!r.data||document.getElementById("padmlnk")) return; var h=document.querySelector(".pg.my h1"); if(h) h.insertAdjacentHTML("afterend",'<a id="padmlnk" class="b pri wide padmlnk" href="#/padmin">🛠️ 기자단 관리 (관리자)</a>'); });
   Promise.all([SB.from("press_apps").select("id,job_id,status,note,press_jobs(title,pay)").eq("user_id",USER.id).order("created_at",{ascending:false}).limit(20), SB.rpc("press_balance"), SB.from("press_withdrawals").select("amount,status,created_at").eq("user_id",USER.id).order("created_at",{ascending:false}).limit(5)]).then(function(R){
     var apps=R[0].data, bal=R[1].data, wds=R[2].data||[]; if(R[0].error||R[1].error) return;
-    if(!apps.length&&!bal&&!wds.length){ box.innerHTML='<h2>✍️ 내 기자단 · 원고료</h2><p class="mysub">아직 신청한 다꾸 기자단이 없어요.</p><a class="lnk" href="#/press">모집 중인 기자단 보기 ›</a>'; box.hidden=false; return; }
+    if(!apps.length&&!bal&&!wds.length){ box.innerHTML='<h2>✍️ 내 기자단 · 원고료</h2><p class="mysub">아직 신청한 기자단이 없어요.</p><a class="lnk" href="#/press">모집 중인 기자단 보기 ›</a>'; box.hidden=false; return; }
     var h='<h2>✍️ 내 기자단 · 원고료</h2><div class="pjbal"><span>출금할 수 있는 원고료</span><b>'+won(bal)+'</b><small>출금 시 3.3% 떼고 '+won(pjNet(bal))+' 입금</small>'+
       '<button class="b pri" data-pjwd'+(bal<PJ_MIN?' disabled':'')+'>출금 신청</button>'+(bal<PJ_MIN?'<small>1만원부터 출금할 수 있어요</small>':'')+'</div>';
     h+=apps.map(function(a){ var j=a.press_jobs||{}; return '<a class="pjmyr" href="#/pjob?id='+a.job_id+'"><span><b>'+esc(j.title||"")+'</b><small>'+won(j.pay)+'</small></span><i class="st-'+a.status+'">'+esc(PJ_ST[a.status]||a.status)+'</i></a>'; }).join("");
@@ -1509,7 +1550,7 @@ function eduListPrice(k){ return k==="set"?EDU_PRICE.blog+EDU_PRICE.cp:(EDU_LIST
 function eduResume(){}
 /* 수강 결제 페이지 #/checkout?c=blog (2026-10-21 시온님이 와디즈 결제 화면 보여주며 "참고해서 만들어줘"): 수강생 정보 → 선택한 과목 → 결제 금액 → 결제 수단 안내 → 결제 유의사항 → 아래 고정 동의(전체 동의·각 항목 › 팝업) + N원 결제하기 → 동의 기록 → 페이앱 */
 var CO_DOCS={
-  refund:function(){ return '<p class="cot">교육 제공자: 다꾸체험단</p><b>결제 금액 구성</b><table>'+EDU_PARTS.map(function(r){ return '<tr><th>'+r[0]+'</th><td>'+r[1]+'%</td><td>'+r[2]+'</td></tr>'; }).join("")+'</table><p class="cot">12개월 뒤 1:1 코칭은 평생 무료예요("평생"은 다꾸체험단이 체험단 사업을 운영하는 동안).</p><b>결제 취소 및 환불 안내</b><ul>'+EDU_REFUND.map(function(t){ return '<li>'+t+'</li>'; }).join("")+'</ul><a href="/refund.html" target="_blank" rel="noopener">환불정책 전문 보기 ↗</a>'; },
+  refund:function(){ return '<p class="cot">교육 제공자: 다꾸체험단</p><b>결제 금액 구성</b><table>'+EDU_PARTS.map(function(r){ return '<tr><th>'+r[0]+'</th><td>'+r[1]+'%</td><td>'+r[2]+'</td></tr>'; }).join("")+'</table><p class="cot">12개월 뒤 1:1 코칭은 평생 무료예요("평생"은 다꾸체험단이 체험단 사업을 운영하는 동안).</p><b>결제 취소 및 환불 안내</b><ul>'+EDU_REFUND.map(function(t){ return '<li>'+t+'</li>'; }).join("")+'</ul><a href="'+(BASE||"/")+'refund.html" target="_blank" rel="noopener">환불정책 전문 보기 ↗</a>'; },
   privacy:function(){ return '<table><tr><th>수집 항목</th><td colspan="2">휴대폰 번호, 이메일, 카카오 회원 식별자, 신청 과목·결제 금액·동의 일시</td></tr><tr><th>목적</th><td colspan="2">수강 신청 확인, 결제자 확인, 강의 일정·자료 안내, 환불 처리, 분쟁 대응</td></tr><tr><th>보유 기간</th><td colspan="2">계약·결제 기록은 「전자상거래법」에 따라 5년, 그 밖에는 수강 종료 후 1년</td></tr></table><p class="cot">동의를 거부할 수 있지만, 거부하면 수강 신청을 할 수 없어요. 결제는 결제대행사 페이앱 화면에서 진행되고, 카드 정보는 다꾸체험단이 받지 않아요.</p><a href="#/privacy">개인정보처리방침 전체 보기 ›</a>'; },
   notice:function(){ return '<p>수강 신청 확인, 강의 일정, 자료 전달, 결제·환불 안내를 문자·카카오톡·이메일로 보내 드려요. 광고성 정보는 보내지 않아요.</p>'; }
 };
@@ -1578,7 +1619,7 @@ function eduView(){
     '<section class="edusec"><h2>5주 커리큘럼</h2><p class="edumonth2">⚡ 한 달이면 블로그 수익화까지 다 배워요</p><ol class="educur">'+
       [["🛠️","블로그 셋팅 및 점검 · ✍️ 포스팅하는 법"],["🎟️","체험단 신청하는 방법 · 📝 당첨 후기 작성법"],["🔝","블로그 상단노출 방법 · 🎬 인스타그램 릴스·클립 체험단 100% 활용"],["📰","블로그 기자단 · 🤖 AI 글쓰기 <small class=\"cpt\">(최신 AI 프롬프트 제공)</small>"],["💰","블로그 수익화 비법"]].map(function(c,k){ return '<li><b>✨ '+(k+1)+'주차</b><span>'+c[0]+' '+c[1]+'</span></li>'; }).join("")+
     '</ol></section>'+
-    '<section class="edusec"><h2>📚 수강생에게 드리는 블로그 책</h2><div class="edubk50"><img src="images/books/b50.jpg" alt="50대에도 블로그 체험단 한다" loading="lazy"><div><b>50대에도<br>블로그 체험단 한다</b><p>나이는 상관없어요.<br>처음 시작해도 체험단으로 즐겁게!</p></div></div><div class="edubks"><img src="images/books/b1.jpg" alt="블로그 관련 책" loading="lazy"><img src="images/books/b2.jpg" alt="블로그 관련 책" loading="lazy"><img src="images/books/b3.jpg" alt="블로그 관련 책" loading="lazy"><img src="images/books/b4.jpg" alt="블로그 관련 책" loading="lazy"><img src="images/books/b5.jpg" alt="블로그 관련 책" loading="lazy"><img src="images/books/b6.jpg" alt="블로그 관련 책" loading="lazy"><img src="images/books/b7.jpg" alt="블로그 관련 책" loading="lazy"><img src="images/books/b8.jpg" alt="블로그 관련 책" loading="lazy"><img src="images/books/b9.jpg" alt="블로그 관련 책" loading="lazy"></div></section>'+
+    '<section class="edusec"><h2>📚 수강생에게 드리는 블로그 책</h2><div class="edubk50"><img src="'+BASE+'images/books/b50.jpg" alt="50대에도 블로그 체험단 한다" loading="lazy"><div><b>50대에도<br>블로그 체험단 한다</b><p>나이는 상관없어요.<br>처음 시작해도 체험단으로 즐겁게!</p></div></div><div class="edubks"><img src="'+BASE+'images/books/b1.jpg" alt="블로그 관련 책" loading="lazy"><img src="'+BASE+'images/books/b2.jpg" alt="블로그 관련 책" loading="lazy"><img src="'+BASE+'images/books/b3.jpg" alt="블로그 관련 책" loading="lazy"><img src="'+BASE+'images/books/b4.jpg" alt="블로그 관련 책" loading="lazy"><img src="'+BASE+'images/books/b5.jpg" alt="블로그 관련 책" loading="lazy"><img src="'+BASE+'images/books/b6.jpg" alt="블로그 관련 책" loading="lazy"><img src="'+BASE+'images/books/b7.jpg" alt="블로그 관련 책" loading="lazy"><img src="'+BASE+'images/books/b8.jpg" alt="블로그 관련 책" loading="lazy"><img src="'+BASE+'images/books/b9.jpg" alt="블로그 관련 책" loading="lazy"></div></section>'+
     '<section class="edurv"><small>REVIEW</small><h2>수강생 후기</h2><p class="edurvn">다꾸 수익화 교육 전에 같은 강사가 진행한 블로그·인스타 협찬 강의 수강생이 남긴 실제 후기예요.</p><div class="edurvs"><div class="edurvc"><em class="rvn">REVIEW 01</em><b>타부업보다 훨씬 좋은 플랫폼</b><p>다른 부업 사이트에서 보면 터무니없는 강의자료와 중요한 것들은 안 알려주고 넘어가는 게 많아서 아쉬웠는데, 강사님께 실무 중심으로 많은 것들을 배울 수 있었습니다. 덕분에 도움이 많이 되었어요.</p></div><div class="edurvc"><em class="rvn">REVIEW 02</em><small>마케팅 처음 배우시는 분들께 추천!</small><b>초보자도 기초부터 탄탄하게 배울 수 있는 강의!</b><p>처음부터 어떻게 시작해야 하는지 고민을 많이 했는데.. 강사님 커리큘럼 보고 협찬 문의가 늘기 시작했어요. 기초부터 하나하나 다 알려주셔서 따라 하면서 익히기에 정말 좋았습니다.</p></div><div class="edurvc"><em class="rvn">REVIEW 03</em><small>부가수익이 필요해서 시작했어요!</small><b>이거 진작 시작할걸 그랬어요!</b><p>아예 처음 배우는 거라 초기 비용이 너무너무 부담되었는데… 부업 시작하시는 분들 멘토님이랑 저 믿고 시작하세요. 저는 친구한테도 추천하고 있어요!</p></div><div class="edurvc"><em class="rvn">REVIEW 04</em><b>AI 프롬프트 정리가 잘 되어 있어요</b><p>무엇보다 블로그 포스팅 AI 프롬프트 정리가 잘 되어 있어서 좋았어요. 멘토님께서 1:1 피드백도 매일 해주시고 출석 알림 주셔서 감사했습니다.</p></div><div class="edurvc"><em class="rvn">REVIEW 05</em><b>퇴사 후 만난 부업이에요</b><p>저는 5년 차 직장인으로 이직을 준비하던 중 집에서 용돈 벌 수 있는 일을 알아봤어요. 그러다 인스타를 통해서 멘토님을 알게 되었고, 화장품 협찬 릴스 보고 혹해서 시작하게 되었어요.</p></div><div class="edurvc"><em class="rvn">REVIEW 06</em><small>육아맘 협찬 부업으로 추천!</small><b>내 인생 최고의 부업!</b><p>그동안 부업을 해야겠다 마음만 먹고 있었는데 멘토님 인스타 보고 시작하게 됐어요. 고민 중이시라면 시작해 보세요.</p></div></div></section>'+
     '<section class="edusec"><h2>진행 방식</h2><ul class="eduway"><li>💬 카톡으로 상담 신청 → 수강료 결제</li><li>📚 전자책·강의자료를 바로 드려요</li><li>🧑‍🏫 5주 1:1 교육 커리큘럼</li><li>🧑‍🏫 1:1 진단 컨설팅 1회 + 12개월 1:1 코칭 (수강료에 포함, 횟수 제한 없음)</li><li>🎨 블로그 꾸미기·셋팅 1회 (스킨 디자인 · 위젯 설치 · 공정위 스티커, 수강료에 포함)</li><li>🤖 AI 글쓰기 프롬프트 제공 (수강료에 포함)</li><li>📰 기자단 모음 평생 열람 · 새 기자단 업데이트 알림 (수강료에 포함, 다꾸체험단 체험단 사업 종료 시까지)</li><li>🎁 수강생 혜택: 12개월 뒤에도 1:1 코칭 평생 무료</li><li>🏆 수강생 혜택: 다꾸체험단이 직접 진행하는 캠페인·이벤트 평생 우선권</li><li>📚 수강생 혜택: 블로그 관련 서적 제공</li><li>💳 한 번 결제, 카드 할부 가능 (할부 개월 수는 카드사마다 달라요)</li></ul>'+
       '<div class="eduguar"><b>💯 당첨 안 되면 100% 환불</b><p>5주 교육을 마친 뒤 3개월 안에, 배운 방법대로 체험단을 30번 이상 신청했는데 한 번도 선정되지 않으면 결제 금액 전액을 돌려드려요. (신청 내역 캡처로 확인)</p><small>⚠️ 허위 신청 내역·캡처 조작 등 부정한 방법으로 환불을 받으면 환불금 반환을 청구하고, 민·형사상 법적 책임을 물을 수 있어요.</small></div>'+
@@ -2111,7 +2152,7 @@ window.addEventListener("hashchange",function(){ if(state.tab!=="price") stopSca
 
 /* ---------- 회원 (Supabase · 카카오 로그인) ---------- */
 var SB=null, USER=null, PROFILE=null, MYREP=null, MYSPIN=null, SBWAIT=[];
-function authCfg(){ var a=seed.auth||{}; return (safeUrl(a.url)&&a.key)?a:null; }
+function authCfg(){ if(!PMODE&&PART_LIVE) return null; var a=seed.auth||{}; return (safeUrl(a.url)&&a.key)?a:null; }
 function loadSb(cb){
   if(window.supabase&&window.supabase.createClient){ cb(); return; }
   SBWAIT.push(cb); if(SBWAIT.length>1) return;
@@ -2225,15 +2266,16 @@ document.addEventListener("click",function(e){
 });
 document.addEventListener("keydown",function(e){ var i=e.target.closest&&e.target.closest("[data-chin]"); if(i&&e.key==="Enter"){ e.preventDefault(); var b=document.querySelector('[data-chadd="'+i.getAttribute("data-chin")+'"]'); if(b) b.click(); } });
 function myView(){
+  if(PMODE) return pMyView();
   var a=authCfg(), favN=seed.items.filter(function(it){ return isFav(it.id); }).length;
   var h='<div class="pg my"><h1>마이 다꾸 🙋</h1>';
   if(!USER){
-    h+='<section class="lgcard"><div class="mlogo">'+logoSvg(44)+'</div><b>로그인하고 체험단을<br>더 편하게 챙기세요</b>'+
-      '<ul class="lgben"><li>❤️ 찜한 체험단을 휴대폰·PC 어디서나</li><li>👀 내가 눌러본 상품 다시 보기</li><li>📍 관심 지역 · 👶 아기 나이 맞춤 체험단 알림</li><li>✍️ 다꾸 기자단 신청 · 🎡 룰렛 이벤트 참여</li></ul>'+
+    h+='<section class="lgcard"><div class="mlogo">'+logoSvg(44)+'</div>'+(a?'<b>로그인하고 체험단을<br>더 편하게 챙기세요</b>'+
+      '<ul class="lgben"><li>❤️ 찜한 체험단을 휴대폰·PC 어디서나</li><li>👀 내가 눌러본 상품 다시 보기</li><li>📍 관심 지역 · 👶 아기 나이 맞춤 체험단 알림</li><li>✍️ 다꾸 기자단 신청 · 🎡 룰렛 이벤트 참여</li></ul>':'<b>로그인 없이<br>편하게 둘러보세요</b>')+
       (a?'<button class="b kakaolg wide" data-login="kakao"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#191600" d="M12 4C7 4 3 7.2 3 11.1c0 2.5 1.7 4.7 4.2 6l-.9 3.4c-.1.3.3.6.6.4l4-2.7h1.1c5 0 9-3.2 9-7.1S17 4 12 4Z"/></svg>카카오로 3초 만에 시작하기</button>'+
          ((a.naver)?'<button class="b naverlg wide" data-login="'+esc(a.naver)+'"><b>N</b>네이버로 시작하기</button>':'')+
          '<p class="lgnote">시작하면 <a href="#/privacy">개인정보처리방침</a>에 동의하는 것으로 봐요.</p>'
-       :'<p class="lgsoon">🔧 회원 기능을 준비하고 있어요. 곧 카카오로 로그인할 수 있어요!</p>')+'</section>';
+       :'<p class="lgsoon">찜·최근 본 체험단은 이 기기에 저장돼요.<br>기자단 신청·원고료·수익화 클래스 같은 회원 기능은 <b>다이어리뷰</b>에서 할 수 있어요.</p><a class="b pri wide" href="'+PART_URL+'#/my">다이어리뷰 로그인 ›</a>')+'</section>';
     h+='<div class="mytiles"><a href="#/fav"><b>'+favN+'</b><span>찜</span></a><a href="#/my" data-jump="applied"><b>'+APPLIED.length+'</b><span>신청한</span></a><a href="#/fav"><b>'+SEEN.length+'</b><span>최근 본</span></a></div>';
     h+=pushBox()+appliedSection()+recentSection();
     return h+'</div>';
@@ -2302,18 +2344,18 @@ document.addEventListener("submit",function(e){
   }
 });
 
-if("serviceWorker" in navigator){ window.addEventListener("load",function(){ navigator.serviceWorker.register("sw.js").catch(function(){}); }); }
+if("serviceWorker" in navigator&&!PMODE){ window.addEventListener("load",function(){ navigator.serviceWorker.register("sw.js").catch(function(){}); }); }
 
 shell(); paintLogo(); route();
 (function(){ window.kakaoAsyncInit=function(){ try{ Kakao.Channel.createAddChannelButton({container:"#kakao-talk-channel-add-button"}); }catch(e){} try{ Kakao.Channel.createChatButton({container:"#kakao-talk-channel-chat-button"}); }catch(e){} };
   if(document.getElementById("kakao-js-sdk")) return; var js=document.createElement("script"); js.id="kakao-js-sdk"; js.src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.channel.min.js"; js.integrity="sha384-8oNFBbAHWVovcMLgR+mLbxqwoucixezSAzniBcjnEoumhfIbMIg4DrVsoiPEtlnt"; js.crossOrigin="anonymous"; js.async=true; document.head.appendChild(js); })();
 window.addEventListener("hashchange",route);
-fetch("data.json?v="+Date.now().toString(36).slice(0,-3),{cache:"no-cache"}).then(function(r){ return r.json(); }).then(function(d){
+fetch(BASE+"data.json?v="+Date.now().toString(36).slice(0,-3),{cache:"no-cache"}).then(function(r){ return r.json(); }).then(function(d){
   seed=d||seed; if(!Array.isArray(seed.items)) seed.items=[]; setTimeout(pushRefresh,1500); /* 사업자 정보는 index.html 의 고정 footer(#sitebiz)에 있음: 네이버 검색광고 확인용, JS 없이도 보이게 */
   if(Array.isArray(seed.categories)&&seed.categories.length) CATS=seed.categories;
   UPCOMING=Array.isArray(seed.upcoming)?seed.upcoming:[]; ADS=Array.isArray(seed.ads)?seed.ads:[]; DEALS=Array.isArray(seed.deals)?seed.deals:[];
   state.loading=false; LOGO=pickLogo(); paintLogo(); setFavicon(); render();
-  if(!WANT.cat) setTimeout(prefPopup,40000);
+  if(!WANT.cat&&!PMODE) setTimeout(prefPopup,40000);
   initAuth();
 }).catch(function(){ state.loading=false; var v=document.getElementById("view"); if(v) v.innerHTML='<div class="empty"><b>잠시 후 다시 시도해 주세요</b>목록을 불러오지 못했어요.</div>'; });
 })();
