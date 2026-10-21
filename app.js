@@ -198,11 +198,13 @@ document.addEventListener("click",function(e){
   else if((a=t.closest("[data-fav]"))) ga("fav_toggle",{item_id:a.getAttribute("data-fav")});
   else if((a=t.closest("[data-ishare],[data-tshare]"))) ga("share",{item_id:a.getAttribute("data-ishare")||a.getAttribute("data-tshare")});
   else if((a=t.closest("[data-pushon]"))) ga("push_on_click",{});
+  else if((a=t.closest(".prc"))) ga("press_click",{item_name:(a.querySelector("b")||{}).textContent||""});
+  else if((a=t.closest(".prlock a"))) ga("press_lock_click",{});
 },true);
 function route(){
   var h=(location.hash||"").replace(/^#\/?/,""), parts=h.split("?"), tab=parts[0]||"home", qs={};
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
-  if(!/^(home|list|fav|benefit|shop|mag|tix|deals|reporter|contact|item|my|privacy|price|event|trip|edu)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|benefit|shop|mag|tix|deals|reporter|press|contact|item|my|privacy|price|event|trip|edu)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
   if(tab==="event") state.evAbr=qs.t==="abroad";
@@ -239,6 +241,7 @@ function render(){
   else if(state.tab==="tix"){ v.innerHTML=tixView(); if(state.tixI!==""){ setTimeout(function(){ var e=document.getElementById("tix"+state.tixI); if(e) e.scrollIntoView({block:"center"}); },60); } }
   else if(state.tab==="deals") v.innerHTML=dealsView();
   else if(state.tab==="reporter") v.innerHTML=reporterView();
+  else if(state.tab==="press") v.innerHTML=pressView();
   else if(state.tab==="contact") v.innerHTML=contactView();
   else if(state.tab==="item") v.innerHTML=itemView();
   else if(state.tab==="my") v.innerHTML=myView();
@@ -377,7 +380,7 @@ function hrow(title,more,list,sub){
     '<div class="hs">'+list.slice(0,10).map(hcard).join("")+'</div></section>';
 }
 var HOME_MENU=[ /* 2026-10-20 시온님 요청: 두 줄 그대로 옆으로 밀어서 보기(슬라이드), 매거진·티켓·혜택 추가 */
-  ["✨","오늘 오픈","#/list?cat=all&s=todayOpen","NEW"],["⏰","마감임박","#/list?cat=all&s=closing","HOT"],["📝","블로그","#/list?cat=all&s=open&ch=blog"],["📸","인스타그램","#/list?cat=all&s=open&ch=insta"],["🎬","숏폼","#/list?cat=all&s=open&ch=clip,reels,youtube"],["📚","매거진","#/mag"],["🎁","혜택","#/benefit"],["🧳","공짜여행","#/trip"],
+  ["✨","오늘 오픈","#/list?cat=all&s=todayOpen","NEW"],["⏰","마감임박","#/list?cat=all&s=closing","HOT"],["📝","블로그","#/list?cat=all&s=open&ch=blog"],["📸","인스타그램","#/list?cat=all&s=open&ch=insta"],["🎬","숏폼","#/list?cat=all&s=open&ch=clip,reels,youtube"],["💰","수익화","#/press"],["📚","매거진","#/mag"],["🎁","혜택","#/benefit"],["🧳","공짜여행","#/trip"],
   ["🏨","숙박","#/list?cat=stay&s=open"],["👶","육아","#/list?cat=baby"],["💄","뷰티","#/list?cat=beauty"],["🧺","생활","#/list?cat=life"],["🔌","가전/가구","#/list?cat=elec"],["💊","건강식품","#/list?cat=health"],["🐾","반려동물","#/list?cat=pet"],["👗","패션","#/list?cat=fashion"],["🎟️","티켓","#/list?cat=etc"]
 ];
 /* 슬라이드 배너 위 한 줄 소식 (2026-10-18 시온님 요청). 지어낸 이용자 후기는 쓰지 않고 data.json 실제 숫자만 */
@@ -1205,6 +1208,30 @@ function reporterView(){
   '</div>';
 }
 
+
+/* ---------- 블로그 기자단 (2026-10-21 시온님: 맛보기 2개만 보여주고 나머지는 잠금 → 수익화 교육 연결) ----------
+   data.json press {at, n(모집 중 전체 수), src, list:[{t,src,url,o,ap,e,img}]} — 숫자는 실제 모집 중 개수만. "수강생만 신청 가능"이라고 쓰지 않는다(모집은 각 사이트에 공개). */
+function pressView(){
+  var P=seed.press||{}, L=(P.list||[]).filter(function(x){ return x.e>=ymd(today()); }).slice(0,2), more=Math.max(0,(P.n||0)-L.length);
+  var at=P.at?new Date(P.at):null, atS=at?(at.getMonth()+1)+"/"+at.getDate()+" "+String(at.getHours()).padStart(2,"0")+":"+String(at.getMinutes()).padStart(2,"0"):"";
+  var dd=function(e){ var n=Math.round((new Date(e+"T00:00:00")-today())/864e5); return n<=0?"오늘 마감":"D-"+n; };
+  var card=function(x){ var r=x.ap&&x.ap[1]>0?(x.ap[0]/x.ap[1]).toFixed(1):""; return '<a class="prc" href="'+esc(safeUrl(x.url))+'" target="_blank" rel="noopener noreferrer">'+
+    '<span class="pri"><img src="'+esc(x.img)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.visibility=\'hidden\'"><i>'+dd(x.e)+'</i></span>'+
+    '<span class="prx"><small>'+esc(x.src)+' · 📝 블로그</small><b>'+esc(x.t)+'</b><em>💰 '+esc(x.o)+'</em>'+(x.ap?'<small>지원 '+x.ap[0]+' · 모집 '+x.ap[1]+(r?' · '+r+':1':'')+'</small>':'')+'<span class="prgo">모집 사이트에서 보기 ↗</span></span></a>'; };
+  var sk='<div class="prc sk"><span class="pri"></span><span class="prx"><span class="l1"></span><span class="l2"></span><span class="l3"></span></span></div>';
+  return '<div class="pg press">'+
+    '<div class="prhero"><small>💰 블로그 수익화</small><h1>제품 없이 글만 쓰고<br><em>원고료</em> 받아요</h1>'+
+      '<p>방문하거나 제품을 받지 않아도 돼요. 받은 자료로 블로그 글을 쓰면 원고료나 포인트를 받아요. 이런 모집을 <b>\'기자단\'</b>이라고 불러요.</p></div>'+
+    '<div class="prhow"><div><b>1</b><span>모집 글 보고 신청</span></div><div><b>2</b><span>자료 받아 글 쓰기</span></div><div><b>3</b><span>원고료·포인트 받기</span></div></div>'+
+    '<h2 class="prh">지금 모집 중인 원고료 기자단 <small>맛보기 '+L.length+'개</small></h2>'+
+    (L.length?L.map(card).join(""):'<div class="empty">오늘 보여드릴 기자단을 준비하고 있어요</div>')+
+    (more?'<div class="prlockw"><div class="prblur">'+sk+sk+sk+'</div>'+
+      '<div class="prlock"><span class="pl1">🔒</span><b>모집 중인 기자단이 <em>'+more.toLocaleString()+'개</em> 더 있어요</b>'+
+      '<p>매일 모아 정리한 전체 기자단 목록과<br>당첨 잘 되는 기자단 고르는 법·원고료 받는 글쓰기는<br><b>다꾸 수익화 클래스</b> 수강생에게 알려드려요.</p>'+
+      '<a class="b pri wide" href="#/edu">🔐 1:1 상담 신청하기</a></div></div>':'')+
+    '<p class="prnote">'+(atS?atS+' 기준, '+esc(P.src||"체험모아")+'에 올라온 모집 중 기자단 수예요. ':'')+'기자단 모집 글은 각 모집 사이트에 공개돼 있고, 신청도 각 사이트에서 해요. 원고료·조건은 모집 사이트 안내가 우선이에요.</p>'+
+  '</div>';
+}
 
 /* ---------- 광고주 마케팅 상담 문의 ---------- */
 function contactBanner(){
