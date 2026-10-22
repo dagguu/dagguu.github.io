@@ -16,6 +16,8 @@ CSS = """.feat{margin:18px 0 26px}.feat small{display:block;font-size:13px;font-
 a{color:inherit;text-decoration:none}.w{max-width:640px;margin:0 auto;padding:0 16px 60px}
 .disc{margin:0 -16px;padding:7px 16px;background:#f6f6f8;color:#77768a;font-size:11.5px;line-height:1.5;text-align:center}
 header{display:flex;justify-content:space-between;align-items:center;height:56px}.logo{font-weight:800;font-size:19px;letter-spacing:-.03em}.logo i{font-style:normal;color:#6a3fc8}
+header .hl{display:flex;align-items:center;gap:4px}.bk{width:34px;height:34px;margin-left:-8px;border:0;background:none;font-size:30px;line-height:1;color:#16151c;cursor:pointer;padding:0 0 4px}
+#totop{position:fixed;right:16px;bottom:22px;width:46px;height:46px;border-radius:50%;border:1px solid #e3dbf7;background:#fff;color:#6a3fc8;font-size:12px;font-weight:800;box-shadow:0 4px 14px rgba(0,0,0,.12);opacity:0;pointer-events:none;transition:opacity .2s;z-index:50;cursor:pointer}#totop.on{opacity:1;pointer-events:auto}
 header .app{font-size:13px;font-weight:700;color:#6a3fc8;border:1px solid #e3dbf7;border-radius:999px;padding:7px 12px}
 .hero{padding:22px 0 8px}.hero small{display:inline-block;font-size:12px;font-weight:700;color:#6a3fc8;background:#f4f0ff;border-radius:999px;padding:5px 10px}
 h1{font-size:26px;line-height:1.3;letter-spacing:-.03em;margin:12px 0 8px}.lead{font-size:15px;line-height:1.7;color:#4a4958;margin:0}
@@ -99,7 +101,7 @@ def build(path):
 <style>{CSS}</style><script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 </head><body><div class="w">
 <p class="disc">이 페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
-<header><a class="logo" href="/">다꾸<i>체험단</i></a><a class="app" href="/">체험단 보러가기 ›</a></header>
+<header><span class="hl"><button class="bk" type="button" aria-label="뒤로 가기" onclick="if(history.length>1&&document.referrer)history.back();else location.href='/'">‹</button><a class="logo" href="/">다꾸<i>체험단</i></a></span><a class="app" href="/">체험단 보러가기 ›</a></header>
 <section class="hero"><small>{mm}월 업데이트</small><h1>{e(P["h1"][0])}<br>{e(P["h1"][1])}</h1>
 <p class="lead">{e(P["lead"])}</p>
 <div class="toc">{toc}</div></section>
@@ -115,6 +117,7 @@ def build(path):
 </div>
 <script>(function(){{var m=location.hash.match(/f=(\\d+)/),f=document.querySelector(".fc");if(!m||!f)return;var c=document.querySelector('.pc[data-p="'+m[1]+'"]');if(!c)return;f.href=c.href;f.dataset.k=c.dataset.k;f.querySelector(".im").innerHTML=c.querySelector(".im").innerHTML;f.querySelector(".n").textContent=c.querySelector(".n").textContent;f.querySelector(".pr").textContent=c.querySelector(".pr").textContent;scrollTo(0,0);}})();</script>
 <script>document.addEventListener("click",function(ev){{var a=ev.target.closest(".pc,.fc");if(a&&window.gtag)gtag("event","coupang_click",{{place:"picks_{slug}",item_name:a.dataset.k||""}});}});</script>
+<button id="totop" type="button" aria-label="맨 위로" onclick="scrollTo({{top:0,behavior:'smooth'}})">TOP</button><script>addEventListener("scroll",function(){{document.getElementById("totop").classList.toggle("on",scrollY>innerHeight*1.5)}},{{passive:true}});</script>
 </body></html>
 '''
     os.makedirs(os.path.join(ROOT, "p"), exist_ok=True)
@@ -140,11 +143,11 @@ if __name__ == "__main__":
 <link rel="icon" href="/icons/icon-192.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>{CSS}.lst{{display:flex;flex-direction:column;gap:10px;margin-top:18px}}</style></head><body><div class="w">
 <p class="disc">이 페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
-<header><a class="logo" href="/">다꾸<i>체험단</i></a><a class="app" href="/#/mag">다꾸 매거진 ›</a></header>
+<header><span class="hl"><button class="bk" type="button" aria-label="뒤로 가기" onclick="if(history.length>1&&document.referrer)history.back();else location.href='/'">‹</button><a class="logo" href="/">다꾸<i>체험단</i></a></span><a class="app" href="/#/mag">다꾸 매거진 ›</a></header>
 <section class="hero"><h1>다꾸 추천 모음</h1><p class="lead">고민되는 쇼핑을 주제별로 정리했어요. 고르는 기준을 먼저 보고 상품을 둘러보세요.</p></section>
 <div class="lst">{lis}</div>
 <footer><a href="/g/">체험단 가이드 보기</a> · <a href="/">다꾸체험단 홈</a></footer>
-</div></body></html>
+</div><button id="totop" type="button" aria-label="맨 위로" onclick="scrollTo({{top:0,behavior:'smooth'}})">TOP</button><script>addEventListener("scroll",function(){{document.getElementById("totop").classList.toggle("on",scrollY>innerHeight*1.5)}},{{passive:true}});</script></body></html>
 '''
     open(os.path.join(ROOT, "p", "index.html"), "w", encoding="utf-8").write(idx)
     print("추천 모음 페이지:", ", ".join(x["slug"] for x in done))

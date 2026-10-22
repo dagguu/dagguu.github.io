@@ -8,6 +8,8 @@
 a{color:inherit;text-decoration:none}.w{max-width:640px;margin:0 auto;padding:0 16px 60px}
 .disc{margin:0 -16px;padding:7px 16px;background:#f6f6f8;color:#77768a;font-size:11.5px;line-height:1.5;text-align:center}
 header{display:flex;justify-content:space-between;align-items:center;height:56px}.logo{font-weight:800;font-size:19px;letter-spacing:-.03em}.logo i{font-style:normal;color:#6a3fc8}
+header .hl{display:flex;align-items:center;gap:4px}.bk{width:34px;height:34px;margin-left:-8px;border:0;background:none;font-size:30px;line-height:1;color:#16151c;cursor:pointer;padding:0 0 4px}
+#totop{position:fixed;right:16px;bottom:22px;width:46px;height:46px;border-radius:50%;border:1px solid #e3dbf7;background:#fff;color:#6a3fc8;font-size:12px;font-weight:800;box-shadow:0 4px 14px rgba(0,0,0,.12);opacity:0;pointer-events:none;transition:opacity .2s;z-index:50;cursor:pointer}#totop.on{opacity:1;pointer-events:auto}
 header .app{font-size:13px;font-weight:700;color:#6a3fc8;border:1px solid #e3dbf7;border-radius:999px;padding:7px 12px}
 .hero{padding:22px 0 8px}.hero small{display:inline-block;font-size:12px;font-weight:700;color:#6a3fc8;background:#f4f0ff;border-radius:999px;padding:5px 10px}
 h1{font-size:26px;line-height:1.3;letter-spacing:-.03em;margin:12px 0 8px}.lead{font-size:15px;line-height:1.7;color:#4a4958;margin:0}
@@ -33,7 +35,7 @@ footer{margin-top:40px;font-size:12px;color:#8a8994;line-height:1.7;text-align:c
 </style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "전기요와 전기매트는 같은 건가요?", "acceptedAnswer": {"@type": "Answer", "text": "둘 다 전기로 데우는 매트예요. 보통 얇고 가벼운 것을 전기요, 두께와 퀼팅이 있는 것을 전기매트·탄소매트라고 많이 불러요. 제품마다 두께와 원단이 다르니 상세 페이지의 두께·크기를 보고 비교하세요."}}, {"@type": "Question", "name": "온수매트는 물을 얼마나 자주 넣어야 하나요?", "acceptedAnswer": {"@type": "Answer", "text": "제품과 사용 시간에 따라 달라요. 물이 줄면 알려 주는 제품도 있으니, 설명서의 물 보충 방법과 여름철 물 빼기·보관 방법을 같이 확인해 두세요."}}, {"@type": "Question", "name": "매트 위에 무엇을 덮어 쓰면 좋나요?", "acceptedAnswer": {"@type": "Answer", "text": "얇은 패드나 시트를 한 장 깔면 매트를 깨끗하게 쓰기 좋아요. 두꺼운 이불을 여러 겹 겹쳐 덮어 두거나 접힌 채로 켜 두지 말라는 안내가 있는 제품이 많으니 설명서를 꼭 확인하세요."}}, {"@type": "Question", "name": "가격은 정확한가요?", "acceptedAnswer": {"@type": "Answer", "text": "이 페이지의 가격은 10월 21일 쿠팡 검색 기준이에요. 할인·품절에 따라 바뀌니 구매 전에 쿠팡 화면에서 꼭 확인해 주세요."}}]}</script>
 </head><body><div class="w">
 <p class="disc">이 페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
-<header><a class="logo" href="/">다꾸<i>체험단</i></a><a class="app" href="/">체험단 보러가기 ›</a></header>
+<header><span class="hl"><button class="bk" type="button" aria-label="뒤로 가기" onclick="if(history.length>1&&document.referrer)history.back();else location.href='/'">‹</button><a class="logo" href="/">다꾸<i>체험단</i></a></span><a class="app" href="/">체험단 보러가기 ›</a></header>
 <section class="hero"><small>10월 업데이트</small><h1>온수매트·전기매트 추천<br>종류별로 고르는 겨울 매트</h1>
 <p class="lead">전기요·탄소매트·온수매트는 데우는 방식이 달라서 쓰는 곳과 관리 방법이 달라요. 방식별 차이를 먼저 보고, 예산과 사이즈에 맞는 매트를 골라 보세요.</p>
 <div class="toc"><a href="#s0">4만원 이하</a><a href="#s1">4만~10만원</a><a href="#s2">2인용</a><a href="#s3">온수매트</a></div></section>
@@ -49,4 +51,5 @@ footer{margin-top:40px;font-size:12px;color:#8a8994;line-height:1.7;text-align:c
 </div>
 <script>(function(){var m=location.hash.match(/f=(\d+)/),f=document.querySelector(".fc");if(!m||!f)return;var c=document.querySelector('.pc[data-p="'+m[1]+'"]');if(!c)return;f.href=c.href;f.dataset.k=c.dataset.k;f.querySelector(".im").innerHTML=c.querySelector(".im").innerHTML;f.querySelector(".n").textContent=c.querySelector(".n").textContent;f.querySelector(".pr").textContent=c.querySelector(".pr").textContent;scrollTo(0,0);})();</script>
 <script>document.addEventListener("click",function(ev){var a=ev.target.closest(".pc,.fc");if(a&&window.gtag)gtag("event","coupang_click",{place:"picks_heated-mat",item_name:a.dataset.k||""});});</script>
+<button id="totop" type="button" aria-label="맨 위로" onclick="scrollTo({top:0,behavior:'smooth'})">TOP</button><script>addEventListener("scroll",function(){document.getElementById("totop").classList.toggle("on",scrollY>innerHeight*1.5)},{passive:true});</script>
 </body></html>
