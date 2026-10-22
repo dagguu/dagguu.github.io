@@ -953,7 +953,7 @@ function siteOrder(){
 /* 마이 다꾸 체험단 사이트 바로가기 — 2026-10-22 시온님 */
 function mySites(){
   var L=siteOrder();
-  return '<section class="mysites"><div class="sh"><h2>🔗 체험단 사이트 바로가기</h2><a class="hmore" href="#/sites">순서 편집 ›</a></div><div class="msgrid">'+L.map(function(x){ var ab=SITE_AB[x.k]||x.k.replace(/\s*체험단$/,""); ab=ab.length>3?ab.slice(0,2):ab;
+  return '<section class="mysites"><div class="sh"><h2>🔗 체험단 사이트 바로가기</h2><a class="hmore" href="#/sites">순서 편집 ›</a></div><p class="mysub2">한번만 로그인 해두고 편하게 사용하세요!</p><div class="msgrid">'+L.map(function(x){ var ab=SITE_AB[x.k]||x.k.replace(/\s*체험단$/,""); ab=ab.length>3?ab.slice(0,2):ab;
     return '<a href="'+x.u+'" target="_blank" rel="noopener" data-sitego="'+esc(x.k)+'"><span class="stab" style="background:'+x.c+'">'+esc(ab)+'</span><b>'+esc(x.k)+'</b></a>'; }).join("")+'</div></section>';
 }
 function sitesView(){
