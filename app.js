@@ -690,7 +690,13 @@ function sorter(){
   if(o==="low") return function(a,b){ var x=valOf(a), y=valOf(b); if(!x!==!y) return x?-1:1; return x-y || daysLeft(a)-daysLeft(b); };
   return function(a,b){ var x=valOf(a), y=valOf(b); if(!x!==!y) return x?-1:1; return y-x || daysLeft(a)-daysLeft(b); };
 }
-function isNewToday(it){ var td=ymd(today()); return it.start===td || (it.createdAt && ymd(new Date(it.createdAt))===td); }
+/* 오늘 오픈 = 가장 최근에 새로 올라온 날(2026-10-22 시온님: 새로 업데이트되기 전까지는 전날 것이 계속 보이게) */
+var NEWDAY={k:"",d:""};
+function newDay(){ var td=ymd(today()), k=td+"|"+seed.items.length; if(NEWDAY.k===k) return NEWDAY.d;
+  var best="";
+  seed.items.forEach(function(it){ if((it.end||"9999")<td) return; [it.start, it.createdAt?ymd(new Date(it.createdAt)):""].forEach(function(d){ if(d && d<=td && d>best) best=d; }); });
+  NEWDAY={k:k,d:best||td}; return NEWDAY.d; }
+function isNewToday(it){ var td=newDay(); return it.start===td || (it.createdAt && ymd(new Date(it.createdAt))===td); }
 function topRows(list){
   if(state.status!=="open"||state.q.trim()) return "";
   var td=ymd(today()), close=list.filter(function(it){ return it.end===td; }), fresh=list.filter(function(it){ return isNewToday(it)&&it.end!==td; });
