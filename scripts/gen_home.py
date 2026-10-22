@@ -45,7 +45,7 @@ W, H = 1080, 1350
 CSS = """*{margin:0;box-sizing:border-box}
 body{width:1080px;height:1350px;overflow:hidden;background:#111}
 .c{position:relative;width:1080px;height:1350px;background-size:cover;background-position:center;color:#fff;font-family:'Noto Sans CJK KR','Noto Sans KR',sans-serif;letter-spacing:-.04em}
-.dk{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.38) 0%,rgba(0,0,0,.42) 45%,rgba(0,0,0,.66) 100%)}
+.dk{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.52) 45%,rgba(0,0,0,.72) 100%)}
 .lt{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,0) 22%)}
 .wm{position:absolute;top:42px;right:52px;font-size:25px;font-weight:500;opacity:.9;letter-spacing:0;text-shadow:0 1px 6px rgba(0,0,0,.35)}
 .tx{position:absolute;left:84px;right:60px;bottom:150px}
