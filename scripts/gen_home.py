@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
-"""@dagguu.home 감성 카드(1080x1350) — 육아 체험단 제품 소개용 (2026-10-22 시온님 "인스타는 이미지가 감성적이어야").
+"""@dagguu.home 정보성 카드뉴스(1080x1350) — 육아맘 생활 정보 + 마지막 장에 육아 체험단 제품 1개.
+(2026-10-22 시온님 "정보성 피드", "너무 어둡지 않게 밝게")
 
-scripts/home_queue.json 의 각 항목 → insta_out/home/<id>/1~3.jpg (이미 insta 브랜치에 있는 id 는 --all 없으면 건너뜀)
-항목: {"id": 글 id, "item": data.json item id, "date": "YYYY-MM-DD", "at": "21:07",
-       "photos": [{"src": 쿠팡 상품 대표·갤러리 사진 주소, "box": [x0,y0,x1,y1] 0~1 비율로 쓸 부분}, … 3개],
-       "l1": 표지 첫 줄, "l2": 표지 둘째 줄(장밋빛), "tags": 표지 작은 해시태그, "caption": 본문}
-- 사진은 쿠팡 상품 페이지의 대표·갤러리 사진만(상세페이지 이미지 X, 남의 SNS 사진 X).
-- 사람 얼굴이 보이지 않게 box 로 잘라 쓴다. 색상 견본 동그라미·글씨가 들어간 부분도 box 밖으로.
-- 디자인(2026-10-22 시온님 참고 카드뉴스): 사진 꽉 채움 + 어둡게 + 왼쪽 아래 굵은 흰 글씨 h(2~3줄) + 작은 설명 sub, 오른쪽 위 @dagguu.home. 2~3장은 사진 + @dagguu.home 만.
+scripts/home_queue.json 의 각 항목 → insta_out/home/<id>/1~N.jpg (이미 insta 브랜치에 있는 id 는 --all 없으면 건너뜀)
+항목: {"id", "item": data.json item id, "date", "at": "21:07",
+       "photos": [{"src": 쿠팡 상품 대표·갤러리 사진 주소(1200x1200ex), "box": [x0,y0,x1,y1]}, …],
+       "cover": 표지 사진 번호, "h": [표지 굵은 글씨 2~3줄], "sub": 표지 작은 설명,
+       "slides": [{"t": 정보 장 제목, "items": [3~4줄], "src": 출처(공식 기관 안내를 쓸 때), "bg": 흐린 바탕 사진 번호}, …](2~3장),
+       "product": {"photo": 사진 번호, "name", "lines": [특징 1~2줄], "k": 꼬리표(선택)},
+       "caption": 본문}
+- 사진은 쿠팡 상품 페이지의 대표·갤러리 사진만(상세페이지 이미지 X, 남의 SNS 사진 X). 사람 얼굴·색상 견본·글씨는 box 로 잘라 뺀다.
+- 정보는 일반 생활 정보·공식 기관 안내만(출처 표시). 효능·의학 표현, 확인 안 된 숫자, 지어낸 경험담 금지.
 """
 import json, os, sys, io, base64, html, urllib.request
 from playwright.sync_api import sync_playwright
@@ -41,28 +44,56 @@ def photo(p):
     return 'data:image/jpeg;base64,' + base64.b64encode(b.getvalue()).decode()
 
 W, H = 1080, 1350
-# 2026-10-22 시온님이 보여준 카드뉴스처럼: 사진 꽉 채움 + 어둡게 + 왼쪽 아래 굵은 흰 글씨 2~3줄 + 작은 설명 + 오른쪽 위 작은 계정
+# 2026-10-22 18:43 시온님 "정보성 피드, 너무 어둡지 않게 밝게": 표지(사진 + 옅은 그늘 + 흰 글씨) → 정보 장(흐린 밝은 사진 바탕 + 흰 카드 체크리스트) → 마지막 제품 장
 CSS = """*{margin:0;box-sizing:border-box}
-body{width:1080px;height:1350px;overflow:hidden;background:#111}
-.c{position:relative;width:1080px;height:1350px;background-size:cover;background-position:center;color:#fff;font-family:'Noto Sans CJK KR','Noto Sans KR',sans-serif;letter-spacing:-.04em}
-.dk{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.52) 45%,rgba(0,0,0,.72) 100%)}
-.lt{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,0) 22%)}
-.wm{position:absolute;top:42px;right:52px;font-size:25px;font-weight:500;opacity:.9;letter-spacing:0;text-shadow:0 1px 6px rgba(0,0,0,.35)}
-.tx{position:absolute;left:84px;right:60px;bottom:150px}
-.t{font-size:98px;font-weight:900;line-height:1.2}
+body{width:1080px;height:1350px;overflow:hidden;background:#f6f1ea}
+.c{position:relative;width:1080px;height:1350px;overflow:hidden;color:#fff;font-family:'Noto Sans CJK KR','Noto Sans KR',sans-serif;letter-spacing:-.04em;background:#f6f1ea}
+.bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.blur{inset:-60px;filter:blur(22px) brightness(1.08) saturate(.9)}
+.wash{position:absolute;inset:0;background:rgba(250,246,240,.5)}
+.dk{position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,30,25,.10) 0%,rgba(40,30,25,.08) 40%,rgba(40,30,25,.52) 100%)}
+.wm{position:absolute;top:42px;right:52px;font-size:25px;font-weight:500;letter-spacing:0;text-shadow:0 1px 6px rgba(0,0,0,.35)}
+.wm.d{color:#7a6a60;text-shadow:none}
+.tx{position:absolute;left:84px;right:60px;bottom:140px;text-shadow:0 2px 14px rgba(0,0,0,.28)}
+.t{font-size:96px;font-weight:900;line-height:1.2}
 .ln{white-space:nowrap}
-.sub{margin-top:30px;font-size:36px;font-weight:500;opacity:.95}
+.sub{margin-top:28px;font-size:36px;font-weight:500}
+.card{position:absolute;left:70px;right:70px;top:150px;bottom:150px;background:rgba(255,255,255,.93);border-radius:40px;padding:80px 70px;color:#2e2724;box-shadow:0 20px 50px rgba(90,64,44,.12);display:flex;flex-direction:column}
+.no{font-size:30px;font-weight:800;color:#c08a83;letter-spacing:.06em}
+.ct{margin-top:18px;font-size:66px;font-weight:900;line-height:1.25}
+.ul{margin-top:56px;display:flex;flex-direction:column;gap:38px}
+.li{display:flex;gap:24px;align-items:flex-start;font-size:40px;font-weight:600;line-height:1.4}
+.ck{flex:none;width:46px;height:46px;border-radius:50%;background:#f3e3df;color:#b57f78;font-size:28px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:4px}
+.src{margin-top:auto;font-size:24px;color:#9a8b82;line-height:1.5}
+.pph{position:absolute;left:0;right:0;top:0;height:780px;background-size:cover;background-position:center}
+.pcard{position:absolute;left:0;right:0;bottom:0;top:720px;background:#fffdfa;border-radius:44px 44px 0 0;padding:64px 80px;color:#2e2724}
+.pk{display:inline-block;font-size:26px;font-weight:800;color:#b57f78;background:#f6e9e6;border-radius:30px;padding:8px 22px}
+.pn{margin-top:22px;font-size:58px;font-weight:900;line-height:1.25}
+.pl{margin-top:24px;font-size:36px;font-weight:500;line-height:1.55;color:#4a403b}
+.pf{position:absolute;left:80px;bottom:64px;font-size:30px;font-weight:700;color:#b57f78}
 """
-def page(inner): return f"<html><head><meta charset='utf-8'><style>{CSS}</style></head><body>{inner}</body></html>"
+def page(inner): return f"<html><head><meta charset='utf-8'><style>{CSS}</style></head><body><div class='c'>{inner}</div></body></html>"
 
 def build(q):
+    P = [photo(p) for p in q['photos']]
     s = []
     lines = q.get('h') or [q.get('l1', ''), q.get('l2', '')]
-    s.append(page(f"""<div class='c' style="background-image:url({photo(q['photos'][0])})"><div class='dk'></div>
+    s.append(page(f"""<div class='bg' style="background-image:url({P[q.get('cover',0)]})"></div><div class='dk'></div>
 <div class='wm'>@dagguu.home</div><div class='tx'><div class='t'>{''.join(f"<div class='ln'>{e(x)}</div>" for x in lines if x)}</div>
-{f"<div class='sub'>{e(q['sub'])}</div>" if q.get('sub') else ''}</div></div>"""))
-    for p in q['photos'][1:3]:
-        s.append(page(f"""<div class='c' style="background-image:url({photo(p)})"><div class='lt'></div><div class='wm'>@dagguu.home</div></div>"""))
+{f"<div class='sub'>{e(q['sub'])}</div>" if q.get('sub') else ''}</div>"""))
+    for i, sl in enumerate(q.get('slides', []), 1):
+        lis = ''.join(f"<div class='li'><span class='ck'>✓</span><span>{e(x)}</span></div>" for x in sl['items'])
+        s.append(page(f"""<div class='bg blur' style="background-image:url({P[sl.get('bg',0)]})"></div><div class='wash'></div>
+<div class='wm d'>@dagguu.home</div><div class='card'><div class='no'>{i:02d}</div><div class='ct'>{e(sl['t'])}</div><div class='ul'>{lis}</div>
+{f"<div class='src'>{e(sl['src'])}</div>" if sl.get('src') else ''}</div>"""))
+    pr = q.get('product')
+    if pr:
+        s.append(page(f"""<div class='pph' style="background-image:url({P[pr.get('photo',0)]})"></div><div class='wm'>@dagguu.home</div>
+<div class='pcard'><span class='pk'>{e(pr.get('k','오늘 정보에 맞는 제품'))}</span><div class='pn'>{e(pr['name'])}</div>
+<div class='pl'>{'<br>'.join(e(x) for x in pr.get('lines', []))}</div><div class='pf'>제품은 프로필링크에서 확인해주세요!</div></div>"""))
+    if not q.get('slides') and not pr:  # 예전 형식: 사진만 2~3장
+        for p in P[1:3]:
+            s.append(page(f"""<div class='bg' style="background-image:url({p})"></div><div class='wm'>@dagguu.home</div>"""))
     return s
 
 with sync_playwright() as pw:
@@ -75,7 +106,7 @@ with sync_playwright() as pw:
             pg.set_content(h); pg.wait_for_timeout(300)
             # 표지 두 줄이 넘치면 글씨를 줄인다
             pg.evaluate("""()=>{const t=document.querySelector('.t'); if(!t) return; const L=[...t.querySelectorAll('.ln')], max=t.clientWidth;
-              let f=98; while(L.some(l=>l.scrollWidth>max+1)&&f>60){ f-=2; t.style.fontSize=f+'px'; } }""")
+              let f=96; while(L.some(l=>l.scrollWidth>max+1)&&f>60){ f-=2; t.style.fontSize=f+'px'; } }""")
             pg.screenshot(path=os.path.join(out, f'{n}.jpg'), type='jpeg', quality=95)
         print(out)
     b.close()

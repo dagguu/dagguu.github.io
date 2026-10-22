@@ -50,7 +50,7 @@ def post(tok):
     todo = sorted([x for x in q if x["id"] not in ids and (x["date"] + " " + x.get("at", "21:00")) <= now()], key=lambda x: (x["date"], x.get("at", "")))
     if not todo: print("올릴 글 없음"); return 0
     x = todo[0]
-    imgs = [f"{RAW}{x['id']}/{n}.jpg" for n in (1, 2, 3)]
+    imgs = [f"{RAW}{x['id']}/{n}.jpg" for n in range(1, 11)]
     imgs = [u for u in imgs if exists(u)]
     if not imgs: print("그림이 아직 없음:", x["id"]); return 0
     try:
