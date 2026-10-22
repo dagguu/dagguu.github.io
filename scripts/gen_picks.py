@@ -63,6 +63,9 @@ def build(path):
     title, desc = P["title"], P["desc"]
     canon = f"{SITE}/p/{slug}.html"
     secs = P["sections"]
+    import sys as _s; _s.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import cp_banned
+    for s_ in secs: s_["items"] = [x for x in s_["items"] if not cp_banned.is_banned(x.get("name", ""))]  # 파트너스 제한 브랜드 빼기
+    secs = [s_ for s_ in secs if s_["items"]]
     toc = "".join(f'<a href="#s{i}">{e(s["t"].split(" · ")[0])}</a>' for i, s in enumerate(secs))
     body = "".join(f'<section class="sec" id="s{i}"><h2>{e(s["t"])}</h2><p>{e(s["d"])}</p><div class="grid">{"".join(card(x) for x in s["items"])}</div></section>' for i, s in enumerate(secs))
     C = P.get("camp") or {}

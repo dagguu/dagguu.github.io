@@ -190,6 +190,13 @@ def main():
                     it["chatUrl"] = by[it["cpUrl"]]; changed = True
         print(f"단톡방 링크 변환 {sum(1 for it in ct if it.get('chatUrl'))}/{len(ct)}개")
 
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import cp_banned
+        nb = cp_banned.clean(d)
+        if nb: print(f"파트너스 제한 브랜드 상품 {nb}개 뺌"); changed = True
+    except Exception as e:
+        print("제한 브랜드 거르기 실패:", e)
     if changed:
         open(p, "w", encoding="utf-8").write(json.dumps(d, ensure_ascii=False, separators=(",", ":")))
     return 0

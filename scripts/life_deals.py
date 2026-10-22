@@ -38,5 +38,6 @@ for c in cards:
     pr = lambda v: (str(v) + "원") if v and not str(v).endswith("원") else (v or "")
     ga.append({"name": n, "cpUrl": cp, "u": oldg.get(cp, ""), "img": img, "rate": str(c.get("rate") or "").strip("% "), "price": pr(c.get("price")), "orig": pr(c.get("orig")) if c.get("rate") else "", "endAt": end})
 d["goldAll"] = ga
+import sys as _s, os as _o; _s.path.insert(0,_o.path.dirname(_o.path.abspath(__file__))); import cp_banned; print("제한 브랜드 뺌", cp_banned.clean(d))
 open(p, "w", encoding="utf-8").write(json.dumps(d, ensure_ascii=False, separators=(",", ":")))
 print(f"생활용품 핫딜 {len(out)}개 · 골드박스 전체 {len(ga)}개 (카드 {len(cards)}개 중)")
