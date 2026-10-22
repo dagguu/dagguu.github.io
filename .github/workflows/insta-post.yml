@@ -1,6 +1,6 @@
 name: 인스타 게시 (@dagguu.home)
 on:
-  schedule: [{ cron: "7 12 * * *" }]   # 매일 21:07 KST
+  # schedule 꺼짐(2026-10-22 18:51 시온님: 페이스북 계정 정지로 자동 업로드 취소)
   workflow_dispatch:
     inputs:
       mode: { description: "verify(연결만 확인) 또는 post", default: "verify" }
