@@ -950,6 +950,12 @@ function siteOrder(){
   L.sort(function(a,b){ var ia=saved.indexOf(a.k), ib=saved.indexOf(b.k); if(ia>=0||ib>=0) return (ia<0?999:ia)-(ib<0?999:ib); return (b.n-a.n)||(a.i-b.i); });
   return L;
 }
+/* 마이 다꾸 체험단 사이트 바로가기 — 2026-10-22 시온님 */
+function mySites(){
+  var L=siteOrder();
+  return '<section class="mysites"><div class="sh"><h2>🔗 체험단 사이트 바로가기</h2><a class="hmore" href="#/sites">순서 편집 ›</a></div><div class="msgrid">'+L.map(function(x){ var ab=SITE_AB[x.k]||x.k.replace(/\s*체험단$/,""); ab=ab.length>3?ab.slice(0,2):ab;
+    return '<a href="'+x.u+'" target="_blank" rel="noopener" data-sitego="'+esc(x.k)+'"><span class="stab" style="background:'+x.c+'">'+esc(ab)+'</span><b>'+esc(x.k)+'</b></a>'; }).join("")+'</div></section>';
+}
 function sitesView(){
   var L=siteOrder(), ed=!!state.siteEd;
   return '<div class="pg sites"><h1>체험단 사이트 바로가기</h1><p class="pgsub">자주 가는 체험단 사이트를 한 번에 열어 보세요 🚀</p>'+
@@ -2372,6 +2378,7 @@ function myView(){
          '<p class="lgnote">시작하면 <a href="#/privacy">개인정보처리방침</a>에 동의하는 것으로 봐요.</p>'
        :'<p class="lgsoon">찜·최근 본 체험단은 이 기기에 저장돼요.<br>기자단 신청·원고료·수익화 클래스 같은 회원 기능은 <b>다이어리뷰</b>에서 할 수 있어요.</p><a class="b pri wide" href="'+PART_URL+'#/my">다이어리뷰 로그인 ›</a>')+'</section>';
     h+='<div class="mytiles"><a href="#/fav"><b>'+favN+'</b><span>찜</span></a><a href="#/my" data-jump="applied"><b>'+APPLIED.length+'</b><span>신청한</span></a><a href="#/fav"><b>'+SEEN.length+'</b><span>최근 본</span></a></div>';
+    h+=mySites();
     h+=pushBox()+appliedSection()+recentSection();
     return h+'</div>';
   }
@@ -2379,6 +2386,7 @@ function myView(){
   var spinTxt=MYSPIN&&MYSPIN.won?'당첨 🎉':(MYSPIN&&MYSPIN.today?'오늘 완료':'참여 가능');
   h+='<div class="hello"><b>'+esc(nick())+'님, 반가워요 👋</b><button class="lnk" data-logout>로그아웃</button></div>';
   h+='<div class="mytiles"><a href="#/fav"><b>'+favN+'</b><span>찜</span></a><a href="#/my" data-jump="applied"><b>'+APPLIED.length+'</b><span>신청한</span></a><a href="#/my" data-jump="recent"><b>'+SEEN.length+'</b><span>최근 본</span></a>'+(BENEFIT_ON?'<a href="#/benefit"><b>'+spinTxt+'</b><span>룰렛</span></a>':'')+(r?'<a href="#/reporter"><b>'+(MYREP?esc(MYREP.status):'신청 전')+'</b><span>기자단</span></a>':'')+'</div>';
+  h+=mySites();
   h+=pushBox();
   h+='<form class="pane mypref" id="prefform"><h2>🔔 맞춤 체험단 알림</h2><p class="mysub">고른 지역·아기 나이에 맞는 새 체험단을 먼저 보여드리고, 알림을 켜면 새로 올라올 때 알려드려요.</p>'+
     '<span class="fl">관심 분야</span>'+chipChecks("cat",[["stay","🏨 숙박"],["baby","👶 육아"],["life","🧺 생활"],["beauty","💄 뷰티"],["elec","🔌 가전/가구"],["health","💊 건강식품"],["pet","🐾 반려동물"]],WANT.cat?[WANT.cat]:[],true)+
@@ -2453,4 +2461,16 @@ fetch(BASE+"data.json?v="+Date.now().toString(36).slice(0,-3),{cache:"no-cache"}
   if(!WANT.cat&&!PMODE) setTimeout(prefPopup,40000);
   initAuth();
 }).catch(function(){ state.loading=false; var v=document.getElementById("view"); if(v) v.innerHTML='<div class="empty"><b>잠시 후 다시 시도해 주세요</b>목록을 불러오지 못했어요.</div>'; });
+})();
+
+/* 컴퓨터(마우스)에서도 가로 줄(홈 메뉴 아이콘 등)을 끌어서·휠로 넘기게 — 2026-10-22 시온님 */
+(function(){
+  var hx=function(el){ while(el&&el!==document.body){ if(el.scrollWidth>el.clientWidth+2){ var o=getComputedStyle(el).overflowX; if(o==="auto"||o==="scroll") return el; } el=el.parentElement; } return null; };
+  var dr=null, moved=false;
+  document.addEventListener("mousedown",function(e){ if(e.button!==0) return; var el=hx(e.target); if(!el) return; dr={el:el,x:e.clientX,sl:el.scrollLeft,snap:el.style.scrollSnapType}; moved=false; });
+  document.addEventListener("mousemove",function(e){ if(!dr) return; var dx=e.clientX-dr.x; if(!moved&&Math.abs(dx)>5){ moved=true; dr.el.style.scrollSnapType="none"; dr.el.style.cursor="grabbing"; } if(moved){ dr.el.scrollLeft=dr.sl-dx; e.preventDefault(); } });
+  document.addEventListener("mouseup",function(){ if(!dr) return; dr.el.style.scrollSnapType=dr.snap; dr.el.style.cursor=""; dr=null; });
+  document.addEventListener("click",function(e){ if(moved){ e.preventDefault(); e.stopPropagation(); moved=false; } },true);
+  document.addEventListener("dragstart",function(e){ if(hx(e.target)) e.preventDefault(); });
+  document.addEventListener("wheel",function(e){ var el=e.target.closest&&e.target.closest(".hms"); if(!el||Math.abs(e.deltaX)>Math.abs(e.deltaY)) return; var max=el.scrollWidth-el.clientWidth; if(max<=0) return; var n=Math.max(0,Math.min(max,el.scrollLeft+e.deltaY)); if(n===el.scrollLeft) return; el.scrollLeft=n; e.preventDefault(); },{passive:false});
 })();

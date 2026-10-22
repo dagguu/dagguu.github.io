@@ -1048,3 +1048,11 @@ input,select,textarea{font-size:16px!important}
 /* 오늘 같은 날 필요한 것 더 보기 링크(2026-10-22) */
 .wxsec .sh{display:flex;align-items:center;justify-content:space-between}
 .wxsec .sh .hmore{font-size:13px;color:#888;font-weight:600;text-decoration:none}
+
+/* 마이 다꾸 사이트 바로가기 */
+.mysites{margin:18px 0}.mysites .sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.mysites h2{font-size:17px;margin:0}
+.msgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px 6px}
+.msgrid a{display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;color:#222;min-width:0}
+.msgrid .stab{flex:none;width:48px;height:48px;border-radius:14px;color:#fff;display:grid;place-items:center;font-weight:800;font-size:14px}
+.msgrid b{font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+@media (hover:hover){.hms{cursor:grab}}

@@ -200,3 +200,4 @@
 - 다이어리뷰 최신 화면(2026-10-22): partners 저장소 index.html 이 style.css·simple.css·app.js 를 ?v=10분 단위(DKV) 로 불러와 휴대폰 캐시에 옛 코드가 남지 않게 함(Claude 가 dagguu/partners 에 직접 push 가능). 다이어리뷰 하단 탭은 가운데 강조 동그라미 없음(www 만 체험단 강조).
 - 공구(#/shop)는 다꾸체험단(www)에 둔다(2026-10-22 시온님 "다이어리뷰로 안 넘어가게"): P_TABS·P_ONLY 에서 shop 을 뺌.
 - 룰렛·혜택 숨김(2026-10-22 시온님): app.js BENEFIT_ON=false → 홈 메뉴 혜택·홈 혜택 배너·공구 화면 링크·마이페이지 룰렛 칸·featureBanners 룰렛/퀴즈/검색어를 숨김(#/benefit 주소 자체는 남아 있음). 다시 보이려면 true.
+- 마이 다꾸 사이트 바로가기·PC 가로 넘기기(2026-10-22 시온님): 마이페이지(로그인 전·후 모두) 찜 칸 아래 app.js mySites = SITES 4칸 격자(누르면 그 사이트 홈, 순서는 #/sites 와 같음). 컴퓨터에서는 가로로 넘기는 줄(overflow-x)을 마우스로 끌어 넘기고, 홈 메뉴(.hms)는 휠로도 넘어감(app.js 맨 끝).
