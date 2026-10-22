@@ -1,0 +1,18 @@
+name: 스레드 사진 자르기
+on:
+  push: { paths: ["scripts/threads_img.json"] }
+  workflow_dispatch:
+permissions: { contents: write }
+concurrency: { group: threads, cancel-in-progress: false }
+jobs:
+  img:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pillow -q && python3 scripts/threads_img.py
+      - run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add images/threads scripts/threads_queue.json && git commit -m "스레드 사진" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
