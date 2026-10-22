@@ -1057,3 +1057,4 @@ input,select,textarea{font-size:16px!important}
 .msgrid b{font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 @media (hover:hover){.hms{cursor:grab}}
 .mysites .mysub2{margin:-4px 0 12px;font-size:13px;color:#8a3fd0;font-weight:600}
+.prnote{margin:-4px 4px 10px;font-size:12px;color:#999}

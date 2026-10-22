@@ -367,7 +367,7 @@ function kakaoUrl(){ return safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/fr
 /* ---------- 홈 ---------- */
 function featureBanners(){
   var f=seed.features||{}, out=[];
-  out.push({href:"#/deals",em:"🏃",kicker:"서두르세요!",title:"선착순 특가 보기 🔥",bg:"#fff0f0",tile:"#e5484d",ink:"#b42318",icon:I.gift});
+  out.push({href:"#/deals",em:"🏃",kicker:"매일 오전 7시 바뀌어요",title:"오늘의 특가 보기",bg:"#fff0f0",tile:"#e5484d",ink:"#b42318",icon:I.gift});
   if(BENEFIT_ON&&f.roulette) out.push({href:"#/benefit",em:"🎡",kicker:"하루 한 번 무료",title:"룰렛 돌리고 선물 받아가기 🎉",bg:"#f4f0ff",tile:"#6a3fc8",ink:"#4b2a9e",icon:I.wheel});
   if(BENEFIT_ON&&f.quiz) out.push({href:"#/benefit",em:"🤔",kicker:"하루 한 문제",title:"인기상품 가격 맞히기",bg:"#fff3e6",tile:"#e0782a",ink:"#9a4a0e",icon:I.quiz});
   if(BENEFIT_ON&&f.search) out.push({href:"#/benefit",em:"📈",kicker:"요즘 많이 찾는 숙소",title:"인기 검색어 보기",bg:"#eef3ff",tile:"#2f6bff",ink:"#1d4ed8",icon:I.trend});
@@ -898,7 +898,7 @@ function eventView(){
   var all=mrtList(), info=seed.mrtInfo||{}, abr=!!state.evAbr;
   var L=all.filter(function(x){ return abr?!x.dom:x.dom; }).sort(function(a,b){ return b.rate-a.rate; });
   var md=function(d){ var p=String(d||"").split("-"); return p.length===3?(+p[1])+"/"+(+p[2]):""; };
-  var h='<div class="pg ev"><h1>최저가 특가</h1><p class="pgsub">마이리얼트립 숙소 특가를 할인율 높은 순으로 모았어요</p>'+
+  var h='<div class="pg ev"><h1>숙소 할인 특가</h1><p class="pgsub">마이리얼트립 숙소 특가를 할인율 높은 순으로 모았어요</p>'+
     '<div class="evtab"><a href="#/event"'+(abr?'':' class="on"')+'>국내</a><a href="#/event?t=abroad"'+(abr?' class="on"':'')+'>해외</a></div>'+
     yeogiBox()+
     (info.checkIn?'<p class="evnote">'+md(info.checkIn)+'(토) 1박 · 성인 '+(info.adults||2)+'명 기준 가격이에요. 날짜·인원에 따라 달라지고, 매일 아침 새로 모아요.</p>':'');
@@ -1132,8 +1132,8 @@ function promoPopup(){
   try{ if(sessionStorage.getItem("dakku-promo")) return; var td=new Date().toISOString().slice(0,10); if(localStorage.getItem("dakku-promo-hide")===td) return; sessionStorage.setItem("dakku-promo","1"); }catch(e){ return; }
   var L=promoList(P);
   var w=document.createElement("div"); w.className="modal promom"; w.setAttribute("role","dialog"); w.setAttribute("aria-modal","true"); w.setAttribute("aria-label","광고");
-  w.innerHTML='<div class="psheet2"><a class="phead" '+ext(P.u)+'><small>'+esc(P.small||"")+'</small><b>'+esc((P.t||"").replace(/<[^>]+>/g,""))+'</b><em>'+esc(P.t2||P.b||"")+' ›</em></a>'+
-    (L.length>=4?promoRows(L):'<a class="pmart" '+ext(P.u)+'><img src="'+esc(P.art)+'" alt=""></a>')+
+  w.innerHTML='<div class="psheet2"><a class="phead" href="#/tix"><small>'+esc(P.small||"")+'</small><b>'+esc((P.t||"").replace(/<[^>]+>/g,""))+'</b><em>'+esc(P.t2||P.b||"")+' ›</em></a>'+
+    (L.length>=4?promoRows(L):'<a class="pmart" href="#/tix"><img src="'+esc(P.art)+'" alt=""></a>')+
     '<div class="pfoot"><button data-p="hide">오늘 그만보기</button><button data-p="x">닫기</button></div></div>';
   function close(){ w.classList.add("out"); setTimeout(function(){ w.remove(); },250); }
   w.addEventListener("click",function(e){ if(e.target===w) return close(); var b=e.target.closest("[data-p]"); if(b){ if(b.dataset.p==="hide"){ try{ localStorage.setItem("dakku-promo-hide",new Date().toISOString().slice(0,10)); }catch(er){} } close(); } else if(e.target.closest("a")) setTimeout(close,300); });
@@ -1146,7 +1146,7 @@ function heroSlides(){
   /* 다꾸 수익화 배너는 2026-10-21 시온님 요청으로 뺌 */ //s.push({bg:"linear-gradient(120deg,#3a1670,#8a3fd0 55%,#d46fd8)",t:"<span>다꾸 수익화</span> 1:1 코칭",d:"한번 배우면 평생 써먹는<br>블로그 수익화",b:"자세히 보기",h:"#/edu",e:["🧑‍🏫","📈","✍️"]});
   var P=promoOn(); if(P) s.push({bg:"linear-gradient(120deg,#3a1670,#8a3fd0 55%,#b558d6)",t:P.t,d:P.d,b:P.b,h:P.u,x:1,art:P.art});
   var M=mrtList();
-  if(M.length){ var top=M.slice().sort(function(a,b){ return b.rate-a.rate; }); s.push({bg:"#111",t:"<span>최저가</span> 특가 보러가기!",d:"국내·해외 숙소 특가를<br>매일 아침 모아 드려요",b:"특가 보러가기",h:"#/event",imgs:top.slice(0,2).map(function(x){ return x.img; }),rate:top[0].rate}); }
+  if(M.length){ var top=M.slice().sort(function(a,b){ return b.rate-a.rate; }); s.push({bg:"#111",t:"숙소 <span>할인</span> 특가 보러가기!",d:"국내·해외 숙소 특가를<br>매일 아침 모아 드려요",b:"특가 보러가기",h:"#/event",imgs:top.slice(0,2).map(function(x){ return x.img; }),rate:top[0].rate}); }
   s.push({bg:"linear-gradient(120deg,#ffe94d,#fee500)",dark:1,t:"카카오톡 친구추가하고<br><span>NEW 체험단</span> 소식받아보세요!",d:"",b:"친구추가하기",h:kakaoUrl(),x:1,e:["💬","🔔","💛"]});
   if(authCfg()&&!USER) s.push({bg:"linear-gradient(120deg,#a855f7,#ec4899)",t:"지금 가입하면 <span>이런 혜택</span>이!",d:"매일 룰렛 간식 쿠폰 · 기자단 신청<br>찜 저장 · 맞춤 체험단 알림",b:"카카오로 3초 가입",h:"#/my",e:["🎁","🎡","💜"]});
   if(oc) s.push({bg:"linear-gradient(120deg,#22c55e,#0ea5e9)",t:"블로그 <span>서로이웃</span> · 인스타 <span>맞팔</span>해요",d:"체험단 하는 사람들끼리<br>단톡방에서 함께 소통해요!",b:"단톡방 들어가기",h:oc,x:1,e:["🤝","📝","📸"]});
@@ -1169,8 +1169,8 @@ function liveToss(){ return (Array.isArray(seed.toss)?seed.toss:[]).filter(funct
 function dealSlides(){
   var s=[], G=liveGold(), B=babyDeals(), T=liveToss().filter(function(x){ return !x.soldOut; }), img=function(a){ return a.map(function(x){ return safeUrl(x.img); }).filter(Boolean); };
   var goods=G.filter(function(x){ return !/AFFTDP|trip\.coupang/.test(x.u); });
-  if(G.length) s.push({bg:"linear-gradient(120deg,#ffe14d,#ffc700)",dark:1,k:"매일 오전 7시, 단 하루 특가",t:"오늘이 <span>제일 싸요!</span>",d:"쿠팡 골드박스 특가를<br>한눈에 모아봤어요",cd:"7",b:"특가 보러가기",jump:"gold",imgs:img(goods.length?goods:G),rate:maxRate(G)});
-  if(B.length>=2) s.push({bg:"linear-gradient(120deg,#ffd6e3,#ffb4c8)",dark:1,k:"쿠팡 골드박스 · 아기용품",t:"오늘의 <span>아기용품</span> 핫딜",d:"물티슈·기저귀·유아용품<br>오늘만 이 가격!",cd:"7",b:"핫딜 보러가기",jump:"babyhd",imgs:img(B),rate:maxRate(B)});
+  if(G.length) s.push({bg:"linear-gradient(120deg,#ffe14d,#ffc700)",dark:1,k:"매일 오전 7시, 단 하루 특가",t:"오늘의 <span>골드박스</span> 특가",d:"쿠팡 골드박스 특가를<br>한눈에 모아봤어요",cd:"7",b:"특가 보러가기",jump:"gold",imgs:img(goods.length?goods:G),rate:maxRate(G)});
+  if(B.length>=2) s.push({bg:"linear-gradient(120deg,#ffd6e3,#ffb4c8)",dark:1,k:"쿠팡 골드박스 · 아기용품",t:"오늘의 <span>아기용품</span> 핫딜",d:"물티슈·기저귀·유아용품<br>내일 오전 7시까지 특가",cd:"7",b:"핫딜 보러가기",jump:"babyhd",imgs:img(B),rate:maxRate(B)});
   if(T.length) s.push({bg:"linear-gradient(120deg,#4f8cff,#2b62e3)",k:"밤 12시 교체 · 토스쇼핑",t:"오늘의 <span>하루특가</span>",d:"오늘 밤 12시까지만<br>이 가격이에요!",cd:"mid",b:"하루특가 보기",jump:"toss",imgs:img(T),rate:maxRate(T)});
   var o=seed.openrun; if(o&&safeUrl(o.u)) s.push({bg:"linear-gradient(120deg,#ff6a5b,#ff3d6e)",k:"매일 오전 "+(+o.hour||10)+"시 오픈",t:"<span>오픈런</span> 숙소 특가",d:"놓칠 수 없는 숙소 혜택,<br>오픈 시간에 맞춰 확인하세요!",b:"오픈런 바로보기",h:safeUrl(o.u),x:1,e:["⏰","🏨","🔥"]});
   (Array.isArray(seed.partners)?seed.partners:[]).filter(function(p){ return safeUrl(p.u); }).slice(0,1).forEach(function(p){ s.push({bg:"linear-gradient(120deg,#7c5cff,#4b2fd6)",k:esc(p.top||"여행 특가"),t:esc(p.t),d:esc(p.d||"진행 중인 특가를 확인해 보세요!"),b:p.b||"특가 보기",h:safeUrl(p.u),x:1,e:["✈️","🎟️","✨"]}); });
@@ -1195,7 +1195,7 @@ function wideBanners(open,closing){
   if(kids>=2) W.push({h:"#/trip?q="+encodeURIComponent("키즈풀빌라"),bg:"linear-gradient(90deg,#0b2a5c 0%,#1c4fa8 60%,#4f8de8 100%)",s:"아이랑 물놀이하는 가족여행",t:"키즈 풀빌라 체험단 <em>"+kids+"곳</em>",e:"👶🏻"});
   var pets=st.filter(petStay).length;
   if(pets>=2) W.push({h:"#/trip?q="+encodeURIComponent("반려동물"),bg:"linear-gradient(90deg,#3a1d0b 0%,#8a4a17 60%,#d08a3a 100%)",s:"댕댕이랑 같이 떠나요",t:"반려동물 동반 숙소 <em>"+pets+"곳</em>",e:"🐶"});
-  if(mrtList().length) W.push({h:"#/event",bg:"linear-gradient(90deg,#111 0%,#2c2c34 60%,#4a4a58 100%)",s:"국내·해외 숙소 특가를 매일 아침",t:"최저가 숙소 <em>특가 모음</em>",e:"🏨"});
+  if(mrtList().length) W.push({h:"#/event",bg:"linear-gradient(90deg,#111 0%,#2c2c34 60%,#4a4a58 100%)",s:"국내·해외 숙소 특가를 매일 아침",t:"숙소 할인 <em>특가 모음</em>",e:"🏨"});
   var P=promoOn(); if(P) W.push({h:P.u,x:1,ad:1,bg:"linear-gradient(90deg,#0c1a6b 0%,#1f3aa8 60%,#3f6be0 100%)",s:esc(P.small||""),t:esc((P.t||"").replace(/<[^>]+>/g,"")),art:P.art});
   var n=W.length;
   return '<div class="wbs" data-wslider><div class="wbtrack">'+W.map(function(o,i){
@@ -1767,7 +1767,7 @@ function msToMidnight(){ var n=new Date(), m=new Date(n); m.setHours(24,0,0,0); 
 function hms(ms){ var s=Math.max(0,Math.floor(ms/1000)), h=Math.floor(s/3600), mi=Math.floor(s%3600/60), se=s%60; return h+"시간 "+("0"+mi).slice(-2)+"분 "+("0"+se).slice(-2)+"초"; }
 function cheapBtn(cls){
   var x=(seed.links||{}).goldbox||{}, u=safeUrl(x.u); if(!u) return "";
-  return '<a class="cheapb'+(cls?' '+cls:'')+'" '+ext(u)+'><span class="cbx"><small>어디가 더 싸지?</small><b>쿠팡에서 최저가 확인하기</b></span><span class="cbl cbi" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span><em class="cbad">AD</em></a>';
+  return '<a class="cheapb'+(cls?' '+cls:'')+'" '+ext(u)+'><span class="cbx"><small>오늘 할인 중인 상품</small><b>쿠팡 골드박스 보러가기</b></span><span class="cbl cbi" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span><em class="cbad">AD</em></a>';
 }
 function shopBtn(){
   var u=safeUrl(((seed.links||{}).shop||{}).u); if(!u) return "";
@@ -1785,7 +1785,7 @@ function cpBanner(){
 }
 function todayDeals(){
   if(!DEALS.length) return "";
-  return '<section class="sec"><div class="sh col"><h2>⚡ 오늘의 특가</h2><p class="cd">🔥마감임박🔥 서두르세요! <b id="cd">'+hms(nextSeven())+'</b> 남음</p></div><div class="deallist">'+
+  return '<section class="sec"><div class="sh col"><h2>⚡ 오늘의 특가</h2><p class="cd">특가 종료까지 <b id="cd">'+hms(nextSeven())+'</b> 남음</p></div><div class="deallist">'+
       DEALS.map(function(d){ var u=safeUrl(d.u); if(!u) return ""; return '<a class="drow" '+ext(u)+'><span class="dt" style="background:'+esc(d.c||"#f4f0ff")+'"><span>'+esc(d.e||"🎁")+'</span>'+(d.tag?'<em>'+esc(d.tag)+'</em>':'')+'</span><span class="dx"><b>'+esc(d.t)+'</b><small>'+esc(d.d||"")+'</small><span class="dg">👉 특가 보러가기'+ico(I.chev)+'</span></span></a>'; }).join("")+'</div></section>';
 }
 function topDeals(n){
@@ -1872,7 +1872,7 @@ var MDEAL={L:[],i:0,obs:null};
 function goldList(){ var seen={}, out=[]; liveGold().concat((Array.isArray(seed.goldAll)?seed.goldAll:[]),(Array.isArray(seed.moreDeals)?seed.moreDeals:[]).filter(function(x){ return x.k==="골드박스"; })).forEach(function(x){ if(!safeUrl(x.u)||(x.endAt&&Date.parse(x.endAt)<=Date.now())) return; var k=String(x.name||"").slice(0,14); if(seen[k]||seen[x.u]) return; seen[k]=seen[x.u]=1; out.push(x); }); return out.sort(byPrice); }
 function goldSec(){
   MDEAL.L=goldList(); MDEAL.i=0; if(!MDEAL.L.length) return "";
-  return '<section class="sec tossec" id="gold"><div class="sh"><h2>⏰ 오늘이 제일 싸요!</h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="cd" style="margin:-6px 4px 10px">🔥마감임박🔥 서두르세요! <b id="gbcd">'+clock(nextSeven())+'</b> · 골드박스 '+MDEAL.L.length+'개</p><div class="tgrid" id="mdfeed"></div><div id="mdsent" style="height:1px"></div></section>';
+  return '<section class="sec tossec" id="gold"><div class="sh"><h2>⏰ 오늘의 골드박스 특가</h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="cd" style="margin:-6px 4px 10px">특가 종료까지 <b id="gbcd">'+clock(nextSeven())+'</b> · 골드박스 '+MDEAL.L.length+'개</p><p class="prnote">가격·할인율은 수집 시점 기준이라 쿠팡에서 다를 수 있어요.</p><div class="tgrid" id="mdfeed"></div><div id="mdsent" style="height:1px"></div></section>';
 }
 function moreDealsSec(){
   var shown={}; liveGold().concat(liveToss(),babyDeals(),lifeDeals()).forEach(function(x){ if(x.u) shown[x.u]=1; });

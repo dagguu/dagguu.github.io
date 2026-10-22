@@ -46,7 +46,7 @@ if (slot === 'morning') {
   if (L.length) msg = { title: `✨ 오늘 오픈 체험단 ${L.length}곳`, body: `${line(best(L)[0])}`, url: SITE + '#/list?s=todayOpen', tag: 'morning' };
 } else if (slot === 'noon' || slot === 'mdeal') {
   const t = pickDeal(slot);
-  if (t) msg = { title: '🔥 오늘만 특가', body: `(광고) ${deal(t)}`, url: SITE + '#/deals', tag: slot, image: t.img || '' };
+  if (t) msg = { title: '🔥 오늘의 특가', body: `(광고) ${deal(t)}`, url: SITE + '#/deals', tag: slot, image: t.img || '' };
 } else if (slot === 'test') {
   msg = { title: '🔔 다꾸체험단 알림 테스트', body: '알림이 잘 와요! 아침·점심·저녁에 체험단 소식을 보내드릴게요.', url: SITE, tag: 'test' };
 } else if (slot === 'match' || slot === 'night') {
@@ -56,7 +56,7 @@ if (slot === 'morning') {
   NEW = items.filter(i => (i.end || '9999') >= today && i.createdAt && i.createdAt >= since);
   if (slot === 'match') { // 오후 3시는 모두에게 쿠팡 골드박스 "오늘이 제일 싸요!" (할인율 1위) + 관심 키워드 알림은 따로
     const t = pickDeal('match'), pct = DPCT;
-    if (t) msg = { title: '⏰ 오늘이 제일 싸요!', body: `(광고) ${deal(t)}`, url: SITE + '#/deals', tag: 'gold', image: t.img || '' };
+    if (t) msg = { title: '⏰ 오늘의 골드박스 특가', body: `(광고) ${deal(t)}`, url: SITE + '#/deals', tag: 'gold', image: t.img || '' };
   }
   if (!msg && NEW.length) msg = { title: '', body: '', url: SITE, tag: slot, personalOnly: true };
 } else if (slot === 'hotdeal') {
