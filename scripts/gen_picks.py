@@ -12,7 +12,7 @@ GA = re.search(r"^GA = '(.*?)'  #", open(os.path.join(ROOT, "scripts", "gen_shar
 d = json.load(open(os.path.join(ROOT, "data.json"), encoding="utf-8"))
 TODAY = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).strftime("%Y-%m-%d")
 
-CSS = """*{box-sizing:border-box}body{margin:0;background:#fff;color:#16151c;font-family:Pretendard Variable,Pretendard,-apple-system,sans-serif;-webkit-text-size-adjust:100%;touch-action:manipulation}
+CSS = """.feat{margin:18px 0 26px}.feat small{display:block;font-size:13px;font-weight:800;color:#6a3fc8;margin:0 0 8px}.fc{display:block;border:2px solid #6a3fc8;border-radius:18px;padding:14px;text-decoration:none;color:inherit}.fc .im{position:relative;display:block;aspect-ratio:1;border-radius:12px;overflow:hidden;background:#f4f2f8}.fc .im img{width:100%;height:100%;object-fit:contain}.fc .n{display:block;font-size:16px;font-weight:700;line-height:1.4;margin:12px 0 6px}.fc .pr{display:block;font-size:20px;font-weight:900}.fc .go{display:block;margin-top:12px;background:#6a3fc8;color:#fff;text-align:center;border-radius:12px;padding:13px;font-weight:800}*{box-sizing:border-box}body{margin:0;background:#fff;color:#16151c;font-family:Pretendard Variable,Pretendard,-apple-system,sans-serif;-webkit-text-size-adjust:100%;touch-action:manipulation}
 a{color:inherit;text-decoration:none}.w{max-width:640px;margin:0 auto;padding:0 16px 60px}
 .disc{margin:0 -16px;padding:7px 16px;background:#f6f6f8;color:#77768a;font-size:11.5px;line-height:1.5;text-align:center}
 header{display:flex;justify-content:space-between;align-items:center;height:56px}.logo{font-weight:800;font-size:19px;letter-spacing:-.03em}.logo i{font-style:normal;color:#6a3fc8}
@@ -80,6 +80,14 @@ def build(path):
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}
     tips = "".join(f'<li>{e(a)} <b>{e(b)}</b> · {e(c)}</li>' for a, b, c in P.get("tips", []))
     guide = "".join(f'<section class="tips gd"><h2>{e(g["h"])}</h2>' + "".join(f"<p>{e(t)}</p>" for t in g["p"]) + "</section>" for g in P.get("guide", []))
+    # 맨 위 대표 상품(스레드 글에 나온 그 제품) — 2026-10-22 시온님 "글보다 상품이 먼저"
+    feat = ""
+    fp = str(P.get("feat") or "")
+    fx = next((x for s_ in secs for x in s_["items"] if str(x.get("pid")) == fp), None) if fp else None
+    if fx:
+        feat = (f'<section class="feat"><small>오늘 소개한 제품</small><a class="fc" href="{e(fx["url"])}" target="_blank" rel="noopener noreferrer sponsored" data-k="{e(fx["kind"])}">'
+                f'<span class="im"><img src="{e(fx["img"])}" alt="{e(fx["name"])}" referrerpolicy="no-referrer">{"<i class=rk>로켓배송</i>" if fx.get("rocket") else ""}</span>'
+                f'<span class="n">{e(fx["name"])}</span><span class="pr">{fx["price"]:,}원</span><span class="go">상품 보러가기</span></a></section>')
     bz = d.get("biz") or {}
     bizl = " · ".join(x for x in [bz.get("name") and f"상호 {bz['name']}", bz.get("ceo") and f"대표 {bz['ceo']}", bz.get("regNo") and f"사업자등록번호 {bz['regNo']}", bz.get("mailOrder") and f"통신판매업 {bz['mailOrder']}"] if x)
     out = f'''<!doctype html>
@@ -95,16 +103,17 @@ def build(path):
 <section class="hero"><small>{mm}월 업데이트</small><h1>{e(P["h1"][0])}<br>{e(P["h1"][1])}</h1>
 <p class="lead">{e(P["lead"])}</p>
 <div class="toc">{toc}</div></section>
+{feat}
+{body}
 <section class="tips"><h2>{e(P.get("tipsTitle", "고르기 전에 확인할 것"))}</h2><ul>{tips}</ul></section>
 {guide}
-{body}
 <p class="note">상품은 {mm}월 {dd}일 쿠팡 검색 결과에서 분류별로 골랐어요. 순위나 품질 평가가 아니며, 가격·배송은 쿠팡 화면을 기준으로 해 주세요.</p>
 {camp}
 {faqh}
 {more_links(slug)}
 <footer>다꾸체험단 · 전국 체험단을 한눈에<br><a href="/">www.dagguu.com</a><br>{e(bizl)}</footer>
 </div>
-<script>document.addEventListener("click",function(ev){{var a=ev.target.closest(".pc");if(a&&window.gtag)gtag("event","coupang_click",{{place:"picks_{slug}",item_name:a.dataset.k||""}});}});</script>
+<script>document.addEventListener("click",function(ev){{var a=ev.target.closest(".pc,.fc");if(a&&window.gtag)gtag("event","coupang_click",{{place:"picks_{slug}",item_name:a.dataset.k||""}});}});</script>
 </body></html>
 '''
     os.makedirs(os.path.join(ROOT, "p"), exist_ok=True)
