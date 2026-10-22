@@ -152,6 +152,7 @@ var TABS=[["home","홈",I.home],["fav","찜",I.heart],["list","체험단",I.tick
    두 사이트가 같은 app.js 를 쓰고, partners 의 index.html 이 window.DK_MODE="partners" 를 켠다. 한쪽에 없는 화면 주소로 들어오면 다른 사이트로 넘긴다. */
 var PART_LIVE=true; /* partners.dagguu.com 이 열리면 true 로 바꾼다(그 전엔 www 에서 로그인·교육·광고주가 그대로 동작) */
 var PMODE=window.DK_MODE==="partners", MAIN_URL="https://www.dagguu.com/", PART_URL="https://partners.dagguu.com/", BASE=PMODE?(window.DK_BASE||MAIN_URL):"";
+var BENEFIT_ON=false; /* 룰렛·혜택(#/benefit) 메뉴·링크 숨김 — 2026-10-22 시온님. 다시 보이려면 true */
 var P_TABS=/^(home|press|pjob|padmin|contact|edu|checkout|my|privacy|benefit|reporter)$/, P_ONLY=/^(pjob|padmin|contact|edu|checkout|benefit|reporter)$/; /* 공구(#/shop)는 다꾸체험단 www 에 둔다 — 2026-10-22 시온님 */
 if(PMODE) TABS=[["home","홈",I.home],["press","기자단",I.send],["edu","클래스",I.trend],["contact","광고주",I.bell],["my","마이",I.user]];
 /* TOP 버튼(2026-10-18 시온님 요청): 화면 1.5배 넘게 내려가면 톡상담 위에 보임 */
@@ -367,9 +368,9 @@ function kakaoUrl(){ return safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/fr
 function featureBanners(){
   var f=seed.features||{}, out=[];
   out.push({href:"#/deals",em:"🏃",kicker:"서두르세요!",title:"선착순 특가 보기 🔥",bg:"#fff0f0",tile:"#e5484d",ink:"#b42318",icon:I.gift});
-  if(f.roulette) out.push({href:"#/benefit",em:"🎡",kicker:"하루 한 번 무료",title:"룰렛 돌리고 선물 받아가기 🎉",bg:"#f4f0ff",tile:"#6a3fc8",ink:"#4b2a9e",icon:I.wheel});
-  if(f.quiz) out.push({href:"#/benefit",em:"🤔",kicker:"하루 한 문제",title:"인기상품 가격 맞히기",bg:"#fff3e6",tile:"#e0782a",ink:"#9a4a0e",icon:I.quiz});
-  if(f.search) out.push({href:"#/benefit",em:"📈",kicker:"요즘 많이 찾는 숙소",title:"인기 검색어 보기",bg:"#eef3ff",tile:"#2f6bff",ink:"#1d4ed8",icon:I.trend});
+  if(BENEFIT_ON&&f.roulette) out.push({href:"#/benefit",em:"🎡",kicker:"하루 한 번 무료",title:"룰렛 돌리고 선물 받아가기 🎉",bg:"#f4f0ff",tile:"#6a3fc8",ink:"#4b2a9e",icon:I.wheel});
+  if(BENEFIT_ON&&f.quiz) out.push({href:"#/benefit",em:"🤔",kicker:"하루 한 문제",title:"인기상품 가격 맞히기",bg:"#fff3e6",tile:"#e0782a",ink:"#9a4a0e",icon:I.quiz});
+  if(BENEFIT_ON&&f.search) out.push({href:"#/benefit",em:"📈",kicker:"요즘 많이 찾는 숙소",title:"인기 검색어 보기",bg:"#eef3ff",tile:"#2f6bff",ink:"#1d4ed8",icon:I.trend});
   out.push({href:"#/list?s=closing",em:"⏰",kicker:"3일 안에 끝나요",title:"마감 임박 체험단 보기 🏃",bg:"#eef8f3",tile:"#1f7a5a",ink:"#14573f",icon:I.flame});
   return out;
 }
@@ -397,7 +398,7 @@ function hrow(title,more,list,sub){
 var HOME_MENU=[ /* 2026-10-21 시온님: 공짜여행 빼고, 마감임박 옆 재택알바·매거진·블로그, 숙박 옆 티켓. 윗줄/아랫줄은 숙박에서 나눔 */
   ["✨","오늘 오픈","#/list?cat=all&s=todayOpen","NEW"],["⏰","마감임박","#/list?cat=all&s=closing","HOT"],["💻","재택알바","#/press"],["📚","매거진","#/mag"],["📝","블로그","#/list?cat=all&s=open&ch=blog"],["📸","인스타그램","#/list?cat=all&s=open&ch=insta"],["🎬","숏폼","#/list?cat=all&s=open&ch=clip,reels,youtube"],["🎁","혜택","#/benefit"],["🔗","바로가기","#/sites"],
   ["🏨","숙박","#/list?cat=stay&s=open"],["🎟️","티켓","#/list?cat=etc"],["👶","육아","#/list?cat=baby"],["💄","뷰티","#/list?cat=beauty"],["🧺","생활","#/list?cat=life"],["🔌","가전/가구","#/list?cat=elec"],["💊","건강식품","#/list?cat=health"],["🐾","반려동물","#/list?cat=pet"],["👗","패션","#/list?cat=fashion"]
-];
+].filter(function(m){ return BENEFIT_ON||m[2]!=="#/benefit"; });
 /* 슬라이드 배너 위 한 줄 소식 (2026-10-18 시온님 요청). 지어낸 이용자 후기는 쓰지 않고 data.json 실제 숫자만 */
 function manW(v){ return v>=10000?Math.round(v/10000).toLocaleString()+"만원":v.toLocaleString()+"원"; }
 function tickerHtml(open){
@@ -451,7 +452,7 @@ function homeView(){
   var gb=[];
   if(rep()) gb.push(['#/reporter','','#6aa8ff','#4338ca','✍️','다꾸 기자단 모집','후기 쓰고 1만원 상품권 받아요']);
   gb.push([kakaoUrl(),'ext','#5eead4','#16a34a','🔔','새로 나온 체험단 알림','매일 아침 카톡으로 먼저 받아요']);
-  gb.push(['#/benefit','','#ffc46b','#f43f5e','🎁','오늘의 혜택 모음','룰렛 · 쿠폰 · 이벤트 한곳에']);
+  if(BENEFIT_ON) gb.push(['#/benefit','','#ffc46b','#f43f5e','🎁','오늘의 혜택 모음','룰렛 · 쿠폰 · 이벤트 한곳에']);
   h+='<div class="gbs">'+gb.map(function(g){ return '<a class="gb" '+(g[1]?ext(g[0]):'href="'+g[0]+'"')+' style="--g1:'+g[2]+';--g2:'+g[3]+'"><span class="gt"><b>'+g[5]+'</b><small>'+g[6]+'</small></span><span class="ge">'+g[4]+'</span></a>'; }).join("")+'</div>';
   // 끝없는 스크롤: 모집 중 체험단 전부 → 이어서 특가 전부 (조금씩 이어 붙임)
   HFEED.items=open.slice().sort(byNew).slice(0,72); HFEED.deals=homeDeals().slice(0,20); HFEED.i=0; HFEED.j=0;
@@ -833,8 +834,8 @@ function shopList(){ var t=ymd(today()); return (seed.gonggu||[]).filter(functio
 function shopView(){
   var L=shopList();
   var h='<div class="pg"><h1>다꾸 공구</h1><p class="pgsub">다꾸체험단(플랜비)이 직접 판매하는 공동구매 상품이에요</p>';
-  if(!L.length) return h+'<div class="empty shopempty"><b>곧 공구가 열려요</b><span>카카오톡 채널을 추가하면 공구 오픈 소식을 받아볼 수 있어요</span><a class="btn" '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>카카오톡 채널 추가</a></div><p class="shopnote"><a href="#/benefit">룰렛·이벤트 혜택 보기 ›</a></p></div>';
-  return h+'<section class="sec tossec shopsec"><div class="tgrid">'+L.map(function(x){ return tossCard({name:(x.soldOut?"[품절] ":"")+x.name,img:x.img,u:x.u,price:x.price,rate:x.rate,badge:"다꾸 공구",endAt:x.until?x.until+"T23:59:59+09:00":""}); }).join("")+'</div></section><p class="shopnote">판매자: 플랜비(다꾸체험단) · 구매 링크의 판매 페이지에서 주문·배송·교환 안내를 확인하세요.<br><a href="#/benefit">룰렛·이벤트 혜택 보기 ›</a></p></div>';
+  if(!L.length) return h+'<div class="empty shopempty"><b>곧 공구가 열려요</b><span>카카오톡 채널을 추가하면 공구 오픈 소식을 받아볼 수 있어요</span><a class="btn" '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>카카오톡 채널 추가</a></div>'+(BENEFIT_ON?'<p class="shopnote"><a href="#/benefit">룰렛·이벤트 혜택 보기 ›</a></p>':'')+'</div>';
+  return h+'<section class="sec tossec shopsec"><div class="tgrid">'+L.map(function(x){ return tossCard({name:(x.soldOut?"[품절] ":"")+x.name,img:x.img,u:x.u,price:x.price,rate:x.rate,badge:"다꾸 공구",endAt:x.until?x.until+"T23:59:59+09:00":""}); }).join("")+'</div></section><p class="shopnote">판매자: 플랜비(다꾸체험단) · 구매 링크의 판매 페이지에서 주문·배송·교환 안내를 확인하세요.'+(BENEFIT_ON?'<br><a href="#/benefit">룰렛·이벤트 혜택 보기 ›</a>':'')+'</p></div>';
 }
 
 /* ---------- 혜택 ---------- */
@@ -2377,7 +2378,7 @@ function myView(){
   var P=PROFILE||{}, mon=ym(today()), r=rep();
   var spinTxt=MYSPIN&&MYSPIN.won?'당첨 🎉':(MYSPIN&&MYSPIN.today?'오늘 완료':'참여 가능');
   h+='<div class="hello"><b>'+esc(nick())+'님, 반가워요 👋</b><button class="lnk" data-logout>로그아웃</button></div>';
-  h+='<div class="mytiles"><a href="#/fav"><b>'+favN+'</b><span>찜</span></a><a href="#/my" data-jump="applied"><b>'+APPLIED.length+'</b><span>신청한</span></a><a href="#/my" data-jump="recent"><b>'+SEEN.length+'</b><span>최근 본</span></a><a href="#/benefit"><b>'+spinTxt+'</b><span>룰렛</span></a>'+(r?'<a href="#/reporter"><b>'+(MYREP?esc(MYREP.status):'신청 전')+'</b><span>기자단</span></a>':'')+'</div>';
+  h+='<div class="mytiles"><a href="#/fav"><b>'+favN+'</b><span>찜</span></a><a href="#/my" data-jump="applied"><b>'+APPLIED.length+'</b><span>신청한</span></a><a href="#/my" data-jump="recent"><b>'+SEEN.length+'</b><span>최근 본</span></a>'+(BENEFIT_ON?'<a href="#/benefit"><b>'+spinTxt+'</b><span>룰렛</span></a>':'')+(r?'<a href="#/reporter"><b>'+(MYREP?esc(MYREP.status):'신청 전')+'</b><span>기자단</span></a>':'')+'</div>';
   h+=pushBox();
   h+='<form class="pane mypref" id="prefform"><h2>🔔 맞춤 체험단 알림</h2><p class="mysub">고른 지역·아기 나이에 맞는 새 체험단을 먼저 보여드리고, 알림을 켜면 새로 올라올 때 알려드려요.</p>'+
     '<span class="fl">관심 분야</span>'+chipChecks("cat",[["stay","🏨 숙박"],["baby","👶 육아"],["life","🧺 생활"],["beauty","💄 뷰티"],["elec","🔌 가전/가구"],["health","💊 건강식품"],["pet","🐾 반려동물"]],WANT.cat?[WANT.cat]:[],true)+

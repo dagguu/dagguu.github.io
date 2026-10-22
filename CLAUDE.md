@@ -199,3 +199,4 @@
 - 오늘 같은 날 필요한 것 더 보기(2026-10-22 시온님): 섹션 제목 오른쪽 "더 보기 ›" → #/season (app.js seasonView = wxThemes(true): 이번 달 테마 전부 + 각 검색어 결과 전부, 같은 이름은 한 번만).
 - 다이어리뷰 최신 화면(2026-10-22): partners 저장소 index.html 이 style.css·simple.css·app.js 를 ?v=10분 단위(DKV) 로 불러와 휴대폰 캐시에 옛 코드가 남지 않게 함(Claude 가 dagguu/partners 에 직접 push 가능). 다이어리뷰 하단 탭은 가운데 강조 동그라미 없음(www 만 체험단 강조).
 - 공구(#/shop)는 다꾸체험단(www)에 둔다(2026-10-22 시온님 "다이어리뷰로 안 넘어가게"): P_TABS·P_ONLY 에서 shop 을 뺌.
+- 룰렛·혜택 숨김(2026-10-22 시온님): app.js BENEFIT_ON=false → 홈 메뉴 혜택·홈 혜택 배너·공구 화면 링크·마이페이지 룰렛 칸·featureBanners 룰렛/퀴즈/검색어를 숨김(#/benefit 주소 자체는 남아 있음). 다시 보이려면 true.
