@@ -1660,7 +1660,7 @@ function coInit(){
   var chk=function(){ go.classList.toggle("dis",!ok()); all.checked=ags.every(function(a){ return a.checked; }); };
   /* 로그인한 회원은 예전에 결제 페이지에서 남긴 휴대폰·이메일을 서버(edu_consents 본인 기록)에서 불러와 채운다(다른 기기에서도) — 2026-10-21 시온님 */
   if(SB&&USER&&(!tel.value||!mail.value)) SB.from("edu_consents").select("phone,email").eq("user_id",USER.id).order("agreed_at",{ascending:false}).limit(1).then(function(r){ var x=r&&r.data&&r.data[0]; if(!x) return; if(!tel.value&&x.phone) tel.value=x.phone; if(!mail.value&&x.email) mail.value=x.email; chk(); });
-  pg.addEventListener("input",chk); pg.addEventListener("change",function(e){ if(e.target===all){ ags.forEach(function(a){ a.checked=all.checked; }); } chk(); }); chk();
+  pg.addEventListener("input",function(e){ if(e.target.type!=="checkbox") chk(); }); pg.addEventListener("change",function(e){ if(e.target===all){ ags.forEach(function(a){ a.checked=all.checked; }); } chk(); }); chk();
   pg.addEventListener("click",function(e){
     var d=e.target.closest("[data-doc]"); if(d){ coDoc(d.getAttribute("data-doc")); return; }
     if(e.target.closest("[data-cologin]")){ ga("edu_join_click",{course:state.coK}); ls("dakku-after-login",location.hash); login("kakao"); return; }
