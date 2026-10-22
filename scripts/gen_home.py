@@ -24,14 +24,14 @@ def fetch(src):
     req = urllib.request.Request(src, headers={'User-Agent': 'Mozilla/5.0', 'Referer': 'https://www.coupang.com/'})
     return urllib.request.urlopen(req, timeout=30).read()
 
-def photo(p, maxh):
+def photo(p, maxh, fixed=False):
     """box 부분만 잘라 폭 940(작으면 키움)으로. (data URI, 높이)"""
     im = Image.open(io.BytesIO(fetch(p['src']))).convert('RGB')
     w, h = im.size
     x0, y0, x1, y1 = p.get('box', [0, 0, 1, 1])
     im = im.crop((int(w * x0), int(h * y0), int(w * x1), int(h * y1)))
     cw, ch = im.size
-    ph = min(maxh, round(PW * ch / cw))
+    ph = maxh if fixed else min(maxh, round(PW * ch / cw))
     # 액자 비율에 맞게 가운데 맞춤 자르기
     tr = PW / ph
     if cw / ch > tr:
@@ -42,9 +42,10 @@ def photo(p, maxh):
     b = io.BytesIO(); im.save(b, 'JPEG', quality=94)
     return 'data:image/jpeg;base64,' + base64.b64encode(b.getvalue()).decode(), ph
 
+FONT = "<link href='https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=block' rel='stylesheet'>"
 CSS = """*{margin:0;box-sizing:border-box}
 body{width:1080px;height:1350px;overflow:hidden;background:#f4eee6}
-.c{position:relative;width:1080px;height:1350px;background:#f4eee6;color:#4a3b32;font-family:'Noto Serif CJK KR','Noto Serif KR',serif;letter-spacing:-.02em}
+.c{position:relative;width:1080px;height:1350px;background:#f4eee6;color:#4a3b32;font-family:'Gowun Batang','Noto Serif CJK KR',serif;letter-spacing:-.02em}
 .c:before{content:'';position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 0%,rgba(255,255,255,.55),rgba(255,255,255,0) 60%)}
 .top{position:absolute;top:50px;left:70px;right:70px;display:flex;justify-content:space-between;font:600 23px/1 'Noto Sans CJK KR',sans-serif;color:#9a8574;letter-spacing:.14em}
 .pn{position:absolute;left:70px;width:940px;border-radius:26px;overflow:hidden;box-shadow:0 18px 40px rgba(90,64,44,.12)}
@@ -55,11 +56,11 @@ body{width:1080px;height:1350px;overflow:hidden;background:#f4eee6}
 .l2{color:#b57f78}
 .ft{position:absolute;bottom:58px;width:100%;text-align:center;font:600 23px 'Noto Sans CJK KR',sans-serif;color:#9a8574;letter-spacing:.14em}
 """
-def page(inner): return f"<html><head><meta charset='utf-8'><style>{CSS}</style></head><body><div class='c'>{inner}</div></body></html>"
+def page(inner): return f"<html><head><meta charset='utf-8'>{FONT}<style>{CSS}</style></head><body><div class='c'>{inner}</div></body></html>"
 
 def build(q):
     s = []
-    src, h = photo(q['photos'][0], 860)
+    src, h = photo(q['photos'][0], 860, True)
     s.append(page(f"""<div class='top'><span>DAGGUU HOME</span><span>@dagguu.home</span></div>
 <div class='pn' style='top:110px'><img src='{src}'></div>
 <div class='tx'><div class='tg'>{e(q.get('tags',''))}</div><div class='t'><div class='ln'>{e(q['l1'])}</div><div class='ln l2'>{e(q['l2'])}</div></div></div>"""))
@@ -76,7 +77,7 @@ with sync_playwright() as pw:
         if q['id'] in HAVE and '--all' not in sys.argv: continue
         out = os.path.join(OUT, q['id']); os.makedirs(out, exist_ok=True)
         for n, h in enumerate(build(q), 1):
-            pg.set_content(h); pg.wait_for_timeout(300)
+            pg.set_content(h, wait_until='networkidle'); pg.evaluate('document.fonts.ready'); pg.wait_for_timeout(300)
             # 표지 두 줄이 넘치면 글씨를 줄인다
             pg.evaluate("""()=>{const t=document.querySelector('.t'); if(!t) return; const L=[...t.querySelectorAll('.ln')], max=t.clientWidth;
               let f=66; while(L.some(l=>l.scrollWidth>max+1)&&f>44){ f-=2; L.forEach(l=>l.style.fontSize=f+'px'); } }""")
