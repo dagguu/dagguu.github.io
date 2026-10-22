@@ -223,20 +223,20 @@ def card_v3(c):
 </div></body></html>"""
 
 
-# v4 (2026-10-21 시온님 요청 "이제부터 이미지는 이런 디자인으로"): 사진 한 장을 꽉 채우고 어둡게 눌러서,
+# v4 (2026-10-21 시온님 요청 "이제부터 이미지는 이런 디자인으로"): 사진 한 장을 꽉 채우고(2026-10-22 시온님 "배경이 너무 어두워" → 사진은 밝게, 아래쪽 글씨 자리만 그라데이션),
 # 왼쪽 아래에 굵은 흰 글씨 2~3줄 + 작은 설명 한 줄, 오른쪽 위 작은 주소. 스티커·색종이·타일 없음.
 CSS4 = f"""*{{margin:0;box-sizing:border-box}}
 body{{width:{W}px;height:{H}px;overflow:hidden;background:#111;font-family:'Pretendard','Noto Sans CJK KR',sans-serif;letter-spacing:-.035em}}
 .c{{position:relative;width:{W}px;height:{H}px;overflow:hidden;background:#1a1a1a}}
-.bg{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55) saturate(.88)}}
-.bl{{position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;filter:blur(28px) brightness(.45)}}
-.pd{{position:absolute;left:50%;top:96px;transform:translateX(-50%);width:500px;height:500px;object-fit:contain;border-radius:28px;background:#fff;padding:30px;filter:brightness(.8)}}
-.sh{{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.08) 35%,rgba(0,0,0,.55) 75%,rgba(0,0,0,.7) 100%)}}
+.bg{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.9) saturate(1.05)}}
+.bl{{position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;filter:blur(28px) brightness(.85)}}
+.pd{{position:absolute;left:50%;top:96px;transform:translateX(-50%);width:500px;height:500px;object-fit:contain;border-radius:28px;background:#fff;padding:30px}}
+.sh{{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.12) 0%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 48%,rgba(0,0,0,.5) 74%,rgba(0,0,0,.68) 100%)}}
 .hd{{position:absolute;right:44px;top:34px;color:rgba(255,255,255,.88);font-size:22px;font-weight:500;letter-spacing:0}}
 .tx{{position:absolute;left:64px;right:56px;bottom:170px;color:#fff}}
-.h{{font-weight:800;line-height:1.2;text-shadow:0 2px 14px rgba(0,0,0,.35)}}
+.h{{font-weight:800;line-height:1.2;text-shadow:0 2px 16px rgba(0,0,0,.55),0 1px 3px rgba(0,0,0,.4)}}
 .h div{{white-space:nowrap}}
-.sub{{margin-top:34px;font-size:34px;font-weight:600;color:rgba(255,255,255,.95);text-shadow:0 2px 10px rgba(0,0,0,.35)}}
+.sub{{margin-top:34px;font-size:34px;font-weight:600;color:rgba(255,255,255,.97);text-shadow:0 2px 10px rgba(0,0,0,.6)}}
 """
 def card_v4(c):
     lines = c.get('h') or [x for x in (c.get('l1'), c.get('l2')) if x]
