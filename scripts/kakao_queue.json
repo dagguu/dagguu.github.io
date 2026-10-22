@@ -1,274 +1,1335 @@
 {
- "date": "2026-10-22",
+ "date": "pick-1022",
  "cards": [
   {
    "style": "v4",
-   "title": "[오늘오픈🎉] 150만원 풀빌라 떴다",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
    "h": [
-    "오늘 새로 열린",
-    "150만원 풀빌라 독채",
-    "4곳 모아봤어요"
+    "0-t01",
+    "다이나믹메이즈 제주"
    ],
-   "sub": "거창·완주·강화·창녕 · ~10/27부터 마감",
-   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/f5e2b3f3-03e4-462a-a7fd-1b4aeafc0939.jpg",
-   "fit": "cover",
-   "tiles": [
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/b7588529-66b6-42ef-bb4e-c0c6b4af132a.jpg",
-     "fit": "cover",
-     "name": "거창 에이치풀빌라",
-     "copy": "독채 1박\n2인 기준",
-     "price": "150만원 상당"
-    },
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/f5e2b3f3-03e4-462a-a7fd-1b4aeafc0939.jpg",
-     "fit": "cover",
-     "name": "완주 달빛품 펜션",
-     "copy": "독채형 펜션\n4인 기준",
-     "price": "58만원 상당"
-    },
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/ed6bfa70-f6e3-4fd9-bb02-308990949a2f.jpg",
-     "fit": "cover",
-     "name": "강화 화이트갤러리B",
-     "copy": "숙박 체험권\n2인 기준",
-     "price": "55만원 상당"
-    },
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/5642a058-9eba-44b3-949d-cc2563c2eb87.jpg",
-     "fit": "cover",
-     "name": "창녕 스테이더담",
-     "copy": "대형 자쿠지\n화로&그릴",
-     "price": "50만원 상당"
-    }
-   ],
-   "desc": "단풍 여행 숙소 찾고 있었다면🍁\n거창 독채 풀빌라·완주 월풀 스파 펜션🏡\n✅기간 : ~10/27부터 순차 마감",
-   "btn": "오늘 오픈 보기",
-   "url": "https://www.dagguu.com/#/list?cat=all&s=todayOpen"
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00186691/dad6de8e-1902-4f5b-acd3-30aae9b1b8ac.jpg",
+   "fit": "cover"
   },
   {
    "style": "v4",
-   "title": "[오늘오픈🎉] 아이랑 갈 풀빌라 떴다",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
    "h": [
-    "오늘 열린",
-    "키즈풀빌라",
-    "4곳 모아봤어요"
+    "3-004",
+    "한옥펜션왕경"
    ],
-   "sub": "가평 3곳·여수 백야도 · ~10/28 마감",
-   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/84314dcc-0cf8-4777-be52-e3898ff9e21d.jpg",
-   "fit": "cover",
-   "tiles": [
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/84314dcc-0cf8-4777-be52-e3898ff9e21d.jpg",
-     "fit": "cover",
-     "name": "여수 백야풀빌라",
-     "copy": "오션뷰 풀빌라\n미온수 수영장",
-     "price": "1박 체험권"
-    },
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/1c4688a3-a30a-403a-94fc-fbbc0d1ea1bb.jpg",
-     "fit": "cover",
-     "name": "가평 오드아이",
-     "copy": "실내 놀이터\n사계절 미온수풀",
-     "price": "1박2일 체험권"
-    },
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/16b7534f-8fee-4479-9e8d-9076c88ed534.jpg",
-     "fit": "cover",
-     "name": "가평 하렌키즈",
-     "copy": "키즈 풀빌라\n스파방",
-     "price": "1박 체험권"
-    },
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/static/booking/image/pension/ddnayo/c831a160-2010-49f4-937b-484f0fc8cdc2.jpg",
-     "fit": "cover",
-     "name": "가평 바니힐",
-     "copy": "키즈풀빌라\n아이 포함 3인",
-     "price": "객실 1박"
-    }
-   ],
-   "desc": "주말에 아이랑 어디 갈지 고민이라면👶\n실내 놀이터·미온수 수영장 있는 곳🏊\n✅기간 : ~10/28",
-   "btn": "키즈풀빌라 보기",
-   "url": "https://www.dagguu.com/#/list?cat=stay&q=키즈"
+   "sub": "",
+   "bgimg": "images/i20261013-004.jpg",
+   "fit": "cover"
   },
   {
    "style": "v4",
-   "title": "[오늘종료⏰] 처리기·가습기 오늘 끝",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
    "h": [
-    "오늘 밤 12시 마감",
-    "음식물처리기·가습기",
-    "풀빌라까지"
+    "3-088",
+    "키웨스트리조트 (여"
    ],
-   "sub": "바이툴즈·케리프·가평·기장 4개",
-   "bgimg": "https://ads-partners.coupang.com/image1/TzG2pisixsNW6ysRTxy0o_ZwEylrkYprDTDdYS2CLxOPTO2W1xI-CJ9q7rbtN7QxeOMK5HSSkRuxwyRGWxVdCVyq54YBwM3B88YGXRdPQ_R0LKwFdySw8hPcGdYI43D2DLGD-jO5hR6j_OeNJhAlD_63IDr-qjf1WTDXpH2IegQ7IGeKl3zCZUGukr3oIloeAVlCfW8tikxJ6uZgpeUNSo0ucnm318JAbKhPnHjCKQFRvb6DecM1Qm6B4uSMg3zJAGAlnKsR41MeJ145h4ja2gxBCtMuOhVMz5vVykGrsTfkbyZ5LY2RZ7AFxeG89lPYm2LoplMGxObFSZbMe4q4na8_gypicpGOUAmCUnHZV8XvSwMRq40qdAQUUbsmETfImjB94Zf7VMfMzUucr7-Mk_UZEBxQVEFhL_qDMQFG45qynaTn1QCoA4F0Ji5yJiHj-mVMtpbNG6ZNRv65gZ_nykhs1PL_ISbMukb1IXFE760Jf67gRB1vWBtdsstGeBRhOSCml59ZP7oKnn3Bic_TkXhNiwJ3PnVrsqyinsvaui17i2Xpa3V7e8Qef-YO0xejq_AGXX60g8duaS5YGrED",
-   "fit": "contain",
-   "tiles": [
-    {
-     "img": "https://ads-partners.coupang.com/image1/TzG2pisixsNW6ysRTxy0o_ZwEylrkYprDTDdYS2CLxOPTO2W1xI-CJ9q7rbtN7QxeOMK5HSSkRuxwyRGWxVdCVyq54YBwM3B88YGXRdPQ_R0LKwFdySw8hPcGdYI43D2DLGD-jO5hR6j_OeNJhAlD_63IDr-qjf1WTDXpH2IegQ7IGeKl3zCZUGukr3oIloeAVlCfW8tikxJ6uZgpeUNSo0ucnm318JAbKhPnHjCKQFRvb6DecM1Qm6B4uSMg3zJAGAlnKsR41MeJ145h4ja2gxBCtMuOhVMz5vVykGrsTfkbyZ5LY2RZ7AFxeG89lPYm2LoplMGxObFSZbMe4q4na8_gypicpGOUAmCUnHZV8XvSwMRq40qdAQUUbsmETfImjB94Zf7VMfMzUucr7-Mk_UZEBxQVEFhL_qDMQFG45qynaTn1QCoA4F0Ji5yJiHj-mVMtpbNG6ZNRv65gZ_nykhs1PL_ISbMukb1IXFE760Jf67gRB1vWBtdsstGeBRhOSCml59ZP7oKnn3Bic_TkXhNiwJ3PnVrsqyinsvaui17i2Xpa3V7e8Qef-YO0xejq_AGXX60g8duaS5YGrED",
-     "fit": "contain",
-     "name": "바이툴즈 음식물처리기",
-     "copy": "2.7L\n클립·쇼츠",
-     "price": "489,000원"
-    },
-    {
-     "img": "https://ads-partners.coupang.com/image1/aD1jZb33_9hxET1EaJYOCRMR7PZbUDPVj0EqCnrLym_Ynq9VTtZ-JBrmePDq81HvOG1nTeV6D8eKuV7WDJGLldrkQ2dRN8lFCrVzwCXwPhMtZN6SuS1XGZhtrnIUWzXbPHoreGQNW387V4Oj5S4ECAaJsrbYX9tiYND-4nvOWTawN-MoHlo4ewlvnFh2NDpNnxXHg_YHVzbRGdhmlYM1Ar0zEdMBCuhRfu5nIYbJWWyqCDZL_P3SSW44wZamz0-FZRhJPt_XRfWNekj35wg7EaQrPdjqgb4Dv8rlioeRpF4iRgDVmPUn5PaXm1a_KB0ZfOmsANAXmLx3RDvZ9KLpUrdHtP9i4aIelRZN6RotEwF8E07-TvgSiL4DSJ0bRTre9R63FSVGp4GpWMJrRuz68uoy9BRery1LLZxKXyojAEaPJUyNoHejYdwsJ6acg98V4cCiPwx7O113nolzCounqxAWGSqwgyYu2iPjsycHtse5rTiYFpZADu1e-rszI9E328-WnGZDgVnNXFB2PRVcxFZOt8R4EQ==",
-     "fit": "contain",
-     "name": "케리프 가습기",
-     "copy": "10L 복합식\n12만원 페이백",
-     "price": "169,900원"
-    },
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/7efedaa6-4236-49e1-81d6-5f55e43c2f8d.jpg",
-     "fit": "cover",
-     "name": "가평 골드문",
-     "copy": "풀빌라&글램핑\n숲속 신축",
-     "price": "35만원 상당"
-    },
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/C00924717/36be58db-766a-47dd-b560-c7af9a5d0bfe.png",
-     "fit": "cover",
-     "name": "기장 고움료칸호텔",
-     "copy": "료칸 콘셉트\n욕조 객실",
-     "price": "30만원 상당"
-    }
-   ],
-   "desc": "미뤄둔 신청은 오늘이 끝이에요⏰\n주방 가전·겨울 가습기·숲속 풀빌라🏡\n✅기간 : ~10/22 오늘까지!",
-   "btn": "오늘마감 보기",
-   "url": "https://www.dagguu.com/#/list?cat=all&s=todayClose"
+   "sub": "",
+   "bgimg": "images/i20261013-088.jpg",
+   "fit": "cover"
   },
   {
    "style": "v4",
-   "title": "[내일종료⏰] 풀빌라 4곳 내일 끝",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
    "h": [
-    "내일 마감",
-    "온수풀·오션뷰",
-    "풀빌라 4곳"
+    "3-089",
+    "더피아노펜션 (태안"
    ],
-   "sub": "가평·여수·포항·사천 · 10/23까지",
+   "sub": "",
+   "bgimg": "images/i20261013-089.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "3-096",
+    "여수 미아모르 풀빌"
+   ],
+   "sub": "",
+   "bgimg": "images/i20261013-096.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "3-097",
+    "포항 바이더씨 풀빌"
+   ],
+   "sub": "",
+   "bgimg": "images/i20261013-097.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "3-098",
+    "홍천 여유채"
+   ],
+   "sub": "",
+   "bgimg": "images/i20261013-098.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "4-r47",
+    "나나키즈풀빌라 (가"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/static/booking/image/pension/ddnayo/2426109e-2cbe-43f4-91f9-8241f06e19ce.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "4-r49",
+    "아르비토 풀빌라 ("
+   ],
+   "sub": "",
    "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/a5b6d5c8-d99e-4516-9884-e898001c49d9.jpg",
-   "fit": "cover",
-   "tiles": [
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/static/booking/image/pension/ddnayo/2426109e-2cbe-43f4-91f9-8241f06e19ce.jpg",
-     "fit": "cover",
-     "name": "가평 나나키즈",
-     "copy": "객실 안 온수풀\n3인 기준",
-     "price": "객실 1박"
-    },
-    {
-     "img": "images/i20261013-096.jpg",
-     "fit": "cover",
-     "name": "여수 미아모르",
-     "copy": "인피니티풀\n사계절 온수풀",
-     "price": "1일 숙박권"
-    },
-    {
-     "img": "images/i20261013-097.jpg",
-     "fit": "cover",
-     "name": "포항 바이더씨",
-     "copy": "파노라마 오션뷰\n개별 수영장",
-     "price": "1일 숙박권"
-    },
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/a5b6d5c8-d99e-4516-9884-e898001c49d9.jpg",
-     "fit": "cover",
-     "name": "사천 아르비토",
-     "copy": "비토섬 풀빌라\n붉은 석양",
-     "price": "평일 1박"
-    }
-   ],
-   "desc": "이번 주말 전에 신청 끝내 두세요👀\n객실 온수풀·인피니티풀·오션뷰🌊\n✅기간 : ~10/23 내일까지!",
-   "btn": "마감임박 보기",
-   "url": "https://www.dagguu.com/#/list?cat=all&s=closing"
+   "fit": "cover"
   },
   {
    "style": "v4",
-   "title": "[나들이🎡] 공룡월드 입장권 왔어요",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
    "h": [
-    "오늘 열린",
-    "입장권 체험단",
-    "아이랑 나들이"
+    "4-r50",
+    "호텔파티오 (고성)"
    ],
-   "sub": "여주·제주·화성·아산 · ~10/28부터 마감",
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/C00924717/fb7a2ff4-9a5e-4a80-bd63-b83945e671f4.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "6-014",
+    "스텔라토풀빌라 (연"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/bc0ae88a-10ef-430c-8468-b462587debe9.JPG",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "6-015",
+    "풍차마을펜션 (거창"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/9ecdcba4-276c-4917-a905-8d88fa68f3c3.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "9-t01",
+    "대구아쿠아리움 (대"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00186371/165f7ea5-a8b1-4a31-a0a4-654358e78027.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "9-t02",
+    "강릉 런닝맨 (강릉"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00186371/37f268e5-c7a0-4a4a-a7b7-29db262505dc.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "9-t03",
+    "런닝맨 부산점 (부"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00186371/92a92e4b-f51b-49a0-8521-64464f53a3f6.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "9-t04",
+    "다이나믹메이즈 부산"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00186371/92a92e4b-f51b-49a0-8521-64464f53a3f6.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "9-t05",
+    "인사동 런닝맨 (종"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00186371/5a39c293-73c2-4688-aa07-a53daf706fa2.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "9-t10",
+    "K-아일랜드 제주 "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00186371/f6e74f3f-7afe-4a55-9a92-8d4bf1646284.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "9-t11",
+    "월리를찾아라 체험관"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00186371/93b1133d-06b1-4312-8e59-40b744d1da34.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "9-t12",
+    "뮤지엄원 (해운대)"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00668506/5817974c-ca66-4bd3-8443-3dff85c54538.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "9-t13",
+    "테디베어하우스 테지"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00186691/08e91712-5dee-4161-bfe4-236f27b075e9.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "9-t14",
+    "화조원 (제주)"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A01310520/d77c2ccb-c795-4d48-a4b6-e71386433ca8.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "9-t15",
+    "한라디지털아트뮤지엄"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00552134/aebe2f14-f900-4a78-9976-1f3d93b41628.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "1-t01",
+    "쥬니멀동물원 (청주"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00668506/b9b1747d-d4c5-4ea5-ad17-3f5f5d5e91e0.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "1-t02",
+    "빛의 섬 루미버스 "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00552134/8ba81ae0-e35f-4abe-88e2-1207e4050dd6.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "1-t03",
+    "다이나믹메이즈 인사"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00186371/5a39c293-73c2-4688-aa07-a53daf706fa2.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "1-t04",
+    "메이즈랜드 (제주)"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00186691/cc0272c2-666b-4450-be14-d10f36afec18.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "1-t05",
+    "제주홀릭뮤지엄 (제"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00186691/8d7b114c-e60b-436d-b5db-4bb7fd259765.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "1-t06",
+    "에코랜드 테마파크 "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00186691/a1a91899-f640-4353-87bb-96d494c4ca4a.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-n01",
+    "화이트 갤러리 B "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/ed6bfa70-f6e3-4fd9-bb02-308990949a2f.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-n02",
+    "스테이더담 펜션 창"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/5642a058-9eba-44b3-949d-cc2563c2eb87.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-n03",
+    "파라미온 호텔 (부"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/720aa378-7488-41ff-9bba-da9a57e52a7e.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-n04",
+    "제부포레스트 (화성"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/213adb25-dbc1-4666-b3c6-396b8533d200.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-n05",
+    "시암 풀빌라 (경주"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/6fce7740-725a-4225-8faf-764945cf16cd.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-n06",
+    "바니힐 키즈풀빌라 "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/static/booking/image/pension/ddnayo/c831a160-2010-49f4-937b-484f0fc8cdc2.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-n07",
+    "해운대 블루스토리호"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/C00924717/be321c3d-3cc8-47f9-9f85-0caea63efdf0.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-n08",
+    "코오롱 씨클라우드 "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelSeller/hotel/A01564713/fe3821d0-5c7c-4c75-b713-5974b0d06711.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-n09",
+    "무안한옥마을 연꽃집"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/static/booking/image/pension/ddnayo/8121188b-2bf9-4bb8-bbd0-ecd43b77ec25.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-r01",
+    "오블리비아테 수영장"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/static/booking/image/pension/ddnayo/096abccb-7b6b-45d2-a23f-0e65c5c4ac65.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-r02",
+    "풀빌라 리안하우스 "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/85fd6eb4-2ffe-42ee-b56e-96b1d003453a.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-r03",
+    "에버미라클호텔 (밀"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/4357aae6-ce8b-47a0-8e7a-97d61fa56b43.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-r04",
+    "뷰호텔 (천안)"
+   ],
+   "sub": "",
+   "bgimg": "images/i20261013-006.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-r05",
+    "홍천제이글램핑"
+   ],
+   "sub": "",
+   "bgimg": "images/i20261013-106.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-r06",
+    "태안 썬셋스테이앤그"
+   ],
+   "sub": "",
+   "bgimg": "images/i20261013-104.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-r07",
+    "베네치아 (울주)"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/static/booking/image/pension/ddnayo/a2402486-ace7-460a-8877-724d2bb6a8aa.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a01",
+    "호텔 토브 (부산 "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/5a1aafda-b4e1-4729-a9d9-c2c1196ab163.png",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a02",
+    "달빛품 펜션 (완주"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/f5e2b3f3-03e4-462a-a7fd-1b4aeafc0939.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a03",
+    "미갈루 독채풀빌라 "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00152781/f59cdd31-42c3-4a5b-a65d-bae4804ea216.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a04",
+    "영진한옥애풀빌라 ("
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/3cb9de00-db3d-4895-84ff-7d78f0d54531.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a05",
+    "오색연가 펜션 (양"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/8b1f8d6a-d4da-4ef7-bed8-4d9a7099c363.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a06",
+    "리베라호텔 영종 ("
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/f89619fe-fe34-4c57-b5dd-daff4f197ed8.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a07",
+    "선재담 글램핑&카라"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/e487341f-72ec-4fe4-bbae-9aae192be753.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a08",
+    "오드아이키즈풀빌라 "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/1c4688a3-a30a-403a-94fc-fbbc0d1ea1bb.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a09",
+    "하렌키즈풀빌라 (가"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/16b7534f-8fee-4479-9e8d-9076c88ed534.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a10",
+    "케이팝 풀빌라 (가"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/66df6670-e02e-430f-8732-06990b3da665.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a11",
+    "오션나비드풀빌라 ("
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/c6d5c3c7-14f8-47c6-88b3-ebdcf4630217.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a12",
+    "백야풀빌라&키즈 ("
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/84314dcc-0cf8-4777-be52-e3898ff9e21d.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a13",
+    "가평 비에스풀빌라 "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/c2e9d39f-1297-471d-9480-16bdf0e32290.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a14",
+    "청도 더포레풀빌라 "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/469eb36a-9e56-4813-b10f-a6e25a4c504d.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a15",
+    "영덕 풀문 풀빌라 "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/73f31351-ab39-47bc-bf23-06f226e3f681.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a16",
+    "라운지 호텔 (송파"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/e51e54c4-a9ae-4ac6-8198-f9b184c0f8df.png",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a17",
+    "플로체호텔 (부천)"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/52a9d458-9716-4640-85fe-7db6f22cb2db.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a18",
+    "빌리언웨스턴호텔 대"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00160447/7a917ff0-3322-4756-a488-c1720127c8ec.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a19",
+    "해피트리가족호텔 고"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/af9ac0e2-61fe-4929-bf37-32f74180aca9.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a20",
+    "호텔샬롬제주 (제주"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00201450/ee77d429-d190-40be-b868-1a71ca1bfa47.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a21",
+    "에이치풀빌라 (거창"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/b7588529-66b6-42ef-bb4e-c0c6b4af132a.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a22",
+    "가평 스텔라 풀빌라"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travel_reactor/travelConnect/hotel/A00935655/a8a1eb16-186e-4cc5-96f3-e12dd101f157.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a23",
+    "울산 다온 풀빌라 "
+   ],
+   "sub": "",
+   "bgimg": "images/i20261013-054.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a24",
+    "몽마레펜션 (거제)"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelConnect/hotel/A00935655/1bd4f34f-efec-4cd1-b9f0-3bd651de2261.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a25",
+    "루덴시아 테마파크 "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A01310517/d0e18181-6fc6-473a-8763-ec58ffba289a.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a26",
+    "자롤로뮤지엄 (서귀"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00186691/a4fed19f-0356-4571-8992-d08300974aeb.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a27",
+    "동탄 공룡월드&키즈"
+   ],
+   "sub": "",
    "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00668506/fc0e0568-d919-48ca-8b31-dfb883f562df.jpg",
-   "fit": "contain",
-   "tiles": [
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A01310517/d0e18181-6fc6-473a-8763-ec58ffba289a.jpg",
-     "fit": "contain",
-     "name": "여주 루덴시아",
-     "copy": "입장권 2매\n음료 2매",
-     "price": "입장권 2매"
-    },
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00186691/a4fed19f-0356-4571-8992-d08300974aeb.jpg",
-     "fit": "contain",
-     "name": "서귀포 자롤로뮤지엄",
-     "copy": "성인\n입장권 2매",
-     "price": "입장권 2매"
-    },
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00668506/fc0e0568-d919-48ca-8b31-dfb883f562df.jpg",
-     "fit": "contain",
-     "name": "동탄 공룡월드",
-     "copy": "키즈카페\n1팀 최대 3매",
-     "price": "최대 3매"
-    },
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00668506/be13a395-f623-4d8c-999f-b7d765a513be.png",
-     "fit": "contain",
-     "name": "아산 공룡월드",
-     "copy": "퍼스트빌리지\n1팀 최대 3매",
-     "price": "최대 3매"
-    }
-   ],
-   "desc": "공룡 좋아하는 아이 있다면🦖\n테마파크·뮤지엄·공룡월드 입장권🎡\n✅기간 : ~10/28부터 순차 마감",
-   "btn": "티켓 보러가기",
-   "url": "https://www.dagguu.com/#/list?cat=etc"
+   "fit": "cover"
   },
   {
    "style": "v4",
-   "title": "[핫딜🔥] 디퓨저 4개가 2만원대",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
    "h": [
-    "디퓨저 4개",
-    "71% 내렸어요"
+    "2-a28",
+    "아산 퍼스트빌리지 "
    ],
-   "sub": "베이비 로션·유아 세제·욕실 클리너까지",
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00668506/be13a395-f623-4d8c-999f-b7d765a513be.png",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "2-a29",
+    "인천 공룡월드 (인"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/800x400q65crop400x400/image/travelSeller/common/A00668506/90d554c1-9240-47a3-88ef-54a160ccddd6.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal0",
+    "그린핑거 촉촉한 자"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/93940872513499-706968dc-5e9a-488e-8960-cbd70287f9f7.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal1",
+    "맘스럽 아토클래식 "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/7797/d4ee7e1d176f2cbd29e6dc5a13e95f4aef1828f35130182f33889b293e8d.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal2",
+    "엘빈즈 슈퍼핏 후기"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/103393876383467-a775c753-82be-4510-9f80-5f6283e5da5d.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal3",
+    "위드맘 산양 제왕 "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/171120920731258-1b8ff05b-5810-4bf3-b794-2f80b408c009.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal4",
+    "다이치 아동용 이노"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2026/02/09/17/2/e1cd9813-2ff3-46c2-be2f-3d931d034319.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal5",
+    "핑크퐁 영어놀이 아"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/rs_quotation_api/m3u4ohjt/a8e47258982b4344a164b1f8c4bd4255.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal6",
+    "모윰 올 실리콘 마"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/619737664227233-3bfb468a-1796-4616-88d2-82cccf28923d.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal7",
+    "비앤비 유아 섬유 "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/422824534058763-6741f8fd-70a1-433b-b20b-c1b7d8a2752a.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal8",
+    "벨베이비 유아용 밸"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/1388853593910638-7cdf5151-b3e6-4851-aa68-6a2a10ba368c.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal9",
+    "코코도르 시그니처 "
+   ],
+   "sub": "",
    "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/507954319182175-b8524765-dc34-4738-8247-633fdf2c0ac8.jpg",
-   "fit": "contain",
-   "tiles": [
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/93940872513499-706968dc-5e9a-488e-8960-cbd70287f9f7.jpg",
-     "fit": "contain",
-     "name": "그린핑거 베이비로션",
-     "copy": "촉촉한 자연보습\n500ml",
-     "price": "▼52% 15,900원"
-    },
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/422824534058763-6741f8fd-70a1-433b-b20b-c1b7d8a2752a.jpg",
-     "fit": "contain",
-     "name": "비앤비 섬유세제",
-     "copy": "알러젠프리향\n1.5L 2개",
-     "price": "▼50% 14,000원"
-    },
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/507954319182175-b8524765-dc34-4738-8247-633fdf2c0ac8.jpg",
-     "fit": "contain",
-     "name": "코코도르 디퓨저",
-     "copy": "숲속새벽공기\n200ml 4개",
-     "price": "▼71% 20,900원"
-    },
-    {
-     "img": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/259610319417673-0c82f803-0be8-4422-af2a-de9110469104.jpg",
-     "fit": "contain",
-     "name": "홈스타 핑크파워",
-     "copy": "욕실 찌든때\n750ml 2개",
-     "price": "▼42% 12,500원"
-    }
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal10",
+    "좋은느낌 유기농 1"
    ],
-   "desc": "집안 향기 바꾸고 싶었다면🌲\n베이비 로션·유아 세제·욕실 클리너🧺\n1만원대부터, 내일 아침 7시까지⏰",
-   "btn": "핫딜 보러가기",
-   "url": "https://www.dagguu.com/#/deals"
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/61892565834414-3974c9a6-6ff8-4288-8415-602778ff9fd1.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal11",
+    "홈스타 핑크파워 욕"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/259610319417673-0c82f803-0be8-4422-af2a-de9110469104.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal12",
+    "스카치브라이트 베이"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/ef74/d28e640a37031ac0a6d1dca0a3b2cad87e1ca65f999f17807893e5ade7fa.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal13",
+    "센토 프라임 바이브"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/251206530277050-2073e4d8-a0b3-486f-8b9f-3953f7adba49.png",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal14",
+    "액츠 퍼펙트 실내건"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/57158790568082-4fac19a7-27b4-48e8-8771-beef79bcacfe.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal15",
+    "일리윤 세라마이드 "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/10872492296592-9c6abdad-625f-462d-b3d0-71eb35d02adf.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal16",
+    "페브리즈 에어 다우"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/4933943041092889-dcfe8e84-6bcd-4426-bdba-812dd0ef4773.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal17",
+    "탐사 오리지널 물티"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/499811430307688-80491575-297e-4e5c-9dc2-541bd900d34b.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal18",
+    "바퀜 포라 시그니처"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2025/02/17/11/7/4c7165f1-4391-4090-ae55-8be4357dae82.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal19",
+    "탐사 체리블라썸 천"
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/1025_amir_coupang_oct_80k/236c/0079339b6f237701a630e4de4e5ddc32c9b7b94d04e0634893607373448b.jpg",
+   "fit": "cover"
+  },
+  {
+   "style": "v4",
+   "title": "t",
+   "desc": "d",
+   "btn": "b",
+   "url": "u",
+   "h": [
+    "deal20",
+    "오랄비 크로스액션 "
+   ],
+   "sub": "",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/30476567875169-ad0d2ce6-4390-46d6-807f-e575018a3999.jpg",
+   "fit": "cover"
   }
  ]
 }
