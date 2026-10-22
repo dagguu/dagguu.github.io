@@ -152,7 +152,7 @@ var TABS=[["home","홈",I.home],["fav","찜",I.heart],["list","체험단",I.tick
    두 사이트가 같은 app.js 를 쓰고, partners 의 index.html 이 window.DK_MODE="partners" 를 켠다. 한쪽에 없는 화면 주소로 들어오면 다른 사이트로 넘긴다. */
 var PART_LIVE=true; /* partners.dagguu.com 이 열리면 true 로 바꾼다(그 전엔 www 에서 로그인·교육·광고주가 그대로 동작) */
 var PMODE=window.DK_MODE==="partners", MAIN_URL="https://www.dagguu.com/", PART_URL="https://partners.dagguu.com/", BASE=PMODE?(window.DK_BASE||MAIN_URL):"";
-var P_TABS=/^(home|press|pjob|padmin|contact|edu|checkout|my|privacy|benefit|shop|reporter)$/, P_ONLY=/^(pjob|padmin|contact|edu|checkout|benefit|shop|reporter)$/;
+var P_TABS=/^(home|press|pjob|padmin|contact|edu|checkout|my|privacy|benefit|reporter)$/, P_ONLY=/^(pjob|padmin|contact|edu|checkout|benefit|reporter)$/; /* 공구(#/shop)는 다꾸체험단 www 에 둔다 — 2026-10-22 시온님 */
 if(PMODE) TABS=[["home","홈",I.home],["press","기자단",I.send],["edu","클래스",I.trend],["contact","광고주",I.bell],["my","마이",I.user]];
 /* TOP 버튼(2026-10-18 시온님 요청): 화면 1.5배 넘게 내려가면 톡상담 위에 보임 */
 (function(){ var raf=0; function upd(){ raf=0; var b=document.getElementById("totop"); if(b) b.hidden=window.scrollY<window.innerHeight*1.5; }

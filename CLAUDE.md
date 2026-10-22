@@ -198,3 +198,4 @@
 - 오늘이 제일 싸요 = 골드박스 전체(2026-10-22 시온님 "10개만 나와, 오늘 많이 사는 쿠팡 인기템 지우고 골드박스로"): life_deals.py 가 goldbox_cards.json(골드박스 화면 품절 아닌 카드 전부, 200여 개)으로 data.json goldAll 도 만든다(cpUrl·u·rate·price·orig·endAt) → push 하면 coupang_api.py deeplink 가 20개씩 묶어 u 를 채운다. 특가 탭 "⏰ 오늘이 제일 싸요!"(app.js goldSec·goldList) = API 골드박스 + goldAll + moreDeals 중 골드박스, 이름 앞 14자로 중복 제거, 가격 낮은 순, 12개씩 스크롤하면 이어 붙음(MDEAL·initMoreDeals 재사용). "🛍️ 오늘 많이 사는 쿠팡 인기템"(moreDealsSec)은 화면에서 뺌(함수·moreDeals 데이터는 장보기 특가에서 계속 씀).
 - 오늘 같은 날 필요한 것 더 보기(2026-10-22 시온님): 섹션 제목 오른쪽 "더 보기 ›" → #/season (app.js seasonView = wxThemes(true): 이번 달 테마 전부 + 각 검색어 결과 전부, 같은 이름은 한 번만).
 - 다이어리뷰 최신 화면(2026-10-22): partners 저장소 index.html 이 style.css·simple.css·app.js 를 ?v=10분 단위(DKV) 로 불러와 휴대폰 캐시에 옛 코드가 남지 않게 함(Claude 가 dagguu/partners 에 직접 push 가능). 다이어리뷰 하단 탭은 가운데 강조 동그라미 없음(www 만 체험단 강조).
+- 공구(#/shop)는 다꾸체험단(www)에 둔다(2026-10-22 시온님 "다이어리뷰로 안 넘어가게"): P_TABS·P_ONLY 에서 shop 을 뺌.
