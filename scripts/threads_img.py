@@ -7,6 +7,7 @@ R = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(R)
 jobs = json.load(open(os.path.join(R, "threads_img.json"), encoding="utf-8"))
 qp = os.path.join(R, "threads_queue.json"); q = json.load(open(qp, encoding="utf-8"))
 RAW = "https://raw.githubusercontent.com/dagguu/dagguu.github.io/main/images/threads/{}.jpg"
+os.makedirs(os.path.join(ROOT, "images", "threads"), exist_ok=True)
 for j in jobs:
     out = os.path.join(ROOT, "images", "threads", j["id"] + ".jpg")
     if not os.path.exists(out):
