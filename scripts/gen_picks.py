@@ -52,7 +52,7 @@ def open_cat(cat="baby", q="", n=6):
 
 def card(x):
     img = x["img"]
-    return (f'<a class="pc" href="{e(x["url"])}" target="_blank" rel="noopener noreferrer sponsored" data-k="{e(x["kind"])}">'
+    return (f'<a class="pc" href="{e(x["url"])}" target="_blank" rel="noopener noreferrer sponsored" data-k="{e(x["kind"])}" data-p="{e(str(x.get("pid") or ""))}">'
             f'<span class="im"><img src="{e(img)}" alt="{e(x["name"])}" loading="lazy" referrerpolicy="no-referrer">{"<i class=rk>로켓배송</i>" if x.get("rocket") else ""}</span>'
             f'<span class="k">{e(x["kind"])}</span><span class="n">{e(x["name"])}</span><span class="pr">{x["price"]:,}원</span><span class="go">상품 보러가기</span></a>')
 
@@ -113,6 +113,7 @@ def build(path):
 {more_links(slug)}
 <footer>다꾸체험단 · 전국 체험단을 한눈에<br><a href="/">www.dagguu.com</a><br>{e(bizl)}</footer>
 </div>
+<script>(function(){{var m=location.hash.match(/f=(\\d+)/),f=document.querySelector(".fc");if(!m||!f)return;var c=document.querySelector('.pc[data-p="'+m[1]+'"]');if(!c)return;f.href=c.href;f.dataset.k=c.dataset.k;f.querySelector(".im").innerHTML=c.querySelector(".im").innerHTML;f.querySelector(".n").textContent=c.querySelector(".n").textContent;f.querySelector(".pr").textContent=c.querySelector(".pr").textContent;scrollTo(0,0);}})();</script>
 <script>document.addEventListener("click",function(ev){{var a=ev.target.closest(".pc,.fc");if(a&&window.gtag)gtag("event","coupang_click",{{place:"picks_{slug}",item_name:a.dataset.k||""}});}});</script>
 </body></html>
 '''
