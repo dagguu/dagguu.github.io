@@ -93,13 +93,13 @@
   },
   {
    "style": "v4",
-   "title": "[오늘종료⏰] 처리기·가습기 오늘 끝",
+   "title": "[오늘종료⏰] 가전·숙소 오늘까지",
    "h": [
     "오늘 밤 12시 마감",
-    "음식물처리기·가습기",
-    "풀빌라까지"
+    "가전 체험단 2개",
+    "숙소 체험단 2곳"
    ],
-   "sub": "바이툴즈·케리프·가평·기장 4개",
+   "sub": "음식물처리기·가습기 / 가평·기장 숙소",
    "bgimg": "https://raw.githubusercontent.com/dagguu/dagguu.github.io/insta/kakao/src/2026-10-22-goldmoon.jpg",
    "fit": "cover",
    "tiles": [
@@ -132,7 +132,7 @@
      "price": "30만원 상당"
     }
    ],
-   "desc": "미뤄둔 신청은 오늘이 끝이에요⏰\n주방 가전·겨울 가습기·숲속 풀빌라🏡\n✅기간 : ~10/22 오늘까지!",
+   "desc": "미뤄둔 신청은 오늘이 끝이에요⏰\n가전 2개(음식물처리기·가습기)와 숙소 2곳🏡\n✅기간 : ~10/22 오늘까지!",
    "btn": "오늘마감 보기",
    "url": "https://www.dagguu.com/#/list?cat=all&s=todayClose"
   },
@@ -228,13 +228,14 @@
   },
   {
    "style": "v4",
-   "title": "[핫딜🔥] 디퓨저 4개가 2만원대",
+   "title": "[핫딜🔥] 아기·생활용품 할인 모음",
    "h": [
-    "디퓨저 4개",
-    "71% 내렸어요"
+    "오늘의 핫딜",
+    "아기·생활용품",
+    "최대 71% 할인"
    ],
-   "sub": "베이비 로션·유아 세제·욕실 클리너까지",
-   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/507954319182175-b8524765-dc34-4738-8247-633fdf2c0ac8.jpg",
+   "sub": "내일 아침 7시까지 특가",
+   "bgimg": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2025/02/17/11/7/4c7165f1-4391-4090-ae55-8be4357dae82.jpg",
    "fit": "cover",
    "tiles": [
     {
@@ -266,7 +267,7 @@
      "price": "▼42% 12,500원"
     }
    ],
-   "desc": "집안 향기 바꾸고 싶었다면🌲\n베이비 로션·유아 세제·욕실 클리너🧺\n1만원대부터, 내일 아침 7시까지⏰",
+   "desc": "육아·살림템 채울 때 됐다면🧺\n로션·세제·디퓨저·욕실 클리너까지🛒\n1만원대부터, 내일 아침 7시까지⏰",
    "btn": "핫딜 보러가기",
    "url": "https://www.dagguu.com/#/deals"
   }
