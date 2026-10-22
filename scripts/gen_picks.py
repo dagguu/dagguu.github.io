@@ -67,7 +67,7 @@ def build(path):
     for s_ in secs: s_["items"] = [x for x in s_["items"] if not cp_banned.is_banned(x.get("name", ""))]  # 파트너스 제한 브랜드 빼기
     secs = [s_ for s_ in secs if s_["items"]]
     toc = "".join(f'<a href="#s{i}">{e(s["t"].split(" · ")[0])}</a>' for i, s in enumerate(secs))
-    body = "".join(f'<section class="sec" id="s{i}"><h2>{e(s["t"])}</h2><p>{e(s["d"])}</p><div class="grid">{"".join(card(x) for x in s["items"])}</div></section>' for i, s in enumerate(secs))
+    body = "".join(f'<section class="sec" id="s{i}"><h2>{e(s["t"])}</h2><p>{e(s["d"])}</p>{('<figure style="margin:0 0 14px"><img src="'+e(s["howto"]["img"])+'" alt="'+e(s["howto"]["alt"])+'" loading="lazy" style="width:100%;border-radius:14px;display:block"><figcaption style="font-size:12px;color:#8a8999;margin-top:6px">'+e(s["howto"]["cap"])+'</figcaption></figure>') if s.get("howto") else ""}<div class="grid">{"".join(card(x) for x in s["items"])}</div></section>' for i, s in enumerate(secs))
     C = P.get("camp") or {}
     B = open_cat(C.get("cat", "baby"), C.get("q", ""))
     camp = ""
