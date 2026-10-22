@@ -1,5 +1,5 @@
 """스레드(Threads) 예약 글 올리기 — 2026-10-22 시온님.
-scripts/threads_queue.json: [{id, date(YYYY-MM-DD, 이 날짜 이후 첫 실행에 올림), text, img(공개 이미지 주소, 선택), link(선택)}]
+scripts/threads_queue.json: [{id, date(YYYY-MM-DD), at(HH:MM KST, 기본 20:00 — 이 시각이 지난 뒤 첫 실행에 1개씩), text, img(공개 이미지 주소, 선택), link(선택)}]
 올린 것은 scripts/threads_done.json 에 {id: 게시물 id} 로 남긴다.
 Secrets(시온님이 직접): THREADS_TOKEN(장기 액세스 토큰, 60일마다 갱신), THREADS_USER_ID(없으면 me).
 글 검사: 쿠팡 링크를 직접 넣은 글만 대가성 문구 필수(다꾸 페이지 링크만이면 안 씀, 2026-10-22 시온님), 쿠팡 파트너스 제한 브랜드·과장 문구 금지, 500자 이내."""
@@ -28,7 +28,8 @@ def main():
     q = json.load(open(os.path.join(HERE, "threads_queue.json"), encoding="utf-8"))
     dp = os.path.join(HERE, "threads_done.json")
     done = json.load(open(dp, encoding="utf-8")) if os.path.exists(dp) else {}
-    todo = [x for x in q if x["id"] not in done and x.get("date", "9999") <= TODAY]
+    NOW = datetime.now(KST).strftime("%Y-%m-%d %H:%M")
+    todo = sorted([x for x in q if x["id"] not in done and (x.get("date", "9999") + " " + x.get("at", "20:00")) <= NOW], key=lambda x: (x.get("date"), x.get("at", "20:00")))
     if "--check" in sys.argv:
         bad = 0
         for x in q:

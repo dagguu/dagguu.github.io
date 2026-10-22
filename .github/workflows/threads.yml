@@ -1,6 +1,6 @@
 name: 스레드 예약 글
 on:
-  schedule: [{ cron: "21 11 * * *" }]   # 매일 20:21 KST
+  schedule: [{ cron: "17 0 * * *" }, { cron: "47 3 * * *" }, { cron: "13 12 * * *" }]   # 09:17 일상글 · 12:47 · 21:13 링크글 (KST)
   workflow_dispatch:
     inputs:
       mode: { description: "post 또는 verify(글 안 올리고 연결만 확인)", default: "post" }
