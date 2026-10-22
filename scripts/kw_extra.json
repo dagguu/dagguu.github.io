@@ -1,410 +1,7212 @@
 {
- "updated": "2026-10-22 11:20",
+ "updated": "2026-10-22 16:17",
  "hints": [
-  "메디헤라",
-  "페카",
-  "피어나린",
-  "셀다움",
-  "루페샴푸",
-  "닥터올가",
-  "셀본",
-  "티암",
-  "후디스",
-  "쾌장군",
-  "몽잘",
-  "메르셀",
-  "멜라트",
-  "글로렌",
-  "비아임",
-  "오피겐",
-  "스윗캠핑히터",
-  "포모나크림",
-  "트루스오브뷰티",
-  "클레녹스",
-  "루오드",
-  "엘루어",
-  "채우장",
-  "호랑이키친",
-  "노쉬프로젝트"
+  "아기띠",
+  "분유포트",
+  "음식물처리기",
+  "집들이선물",
+  "아기욕조"
  ],
  "rows": [
   {
-   "kw": "후디스몰",
-   "vol": 15620,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "후디스산양분유",
-   "vol": 7340,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "후디스",
-   "vol": 3480,
+   "kw": "음식물처리기",
+   "vol": 158900,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "메탈사이딩",
-   "vol": 2200,
+   "kw": "차량용방향제",
+   "vol": 76900,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베이비페어",
+   "vol": 68500,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "일동후디스산양분유",
-   "vol": 2100,
+   "kw": "소고기",
+   "vol": 67110,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "닥터올가",
-   "vol": 1820,
+   "kw": "제습기",
+   "vol": 54100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기포트",
+   "vol": 46000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "한우",
+   "vol": 43260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화분",
+   "vol": 42600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이폰케이스",
+   "vol": 41240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물",
+   "vol": 40760,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "추석선물세트",
+   "vol": 38600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개업화분",
+   "vol": 37880,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저",
+   "vol": 34800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "추석선물",
+   "vol": 34500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소진액",
+   "vol": 33670,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "상견례선물",
+   "vol": 33430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "분유포트",
+   "vol": 33070,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "단열재화스너",
+   "kw": "맥주",
+   "vol": 31280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기띠",
+   "vol": 30800,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "집들이선물추천",
+   "vol": 25950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보르르분유포트",
+   "vol": 25150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산선물",
+   "vol": 23300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소",
+   "vol": 22340,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "한우선물세트",
+   "vol": 20850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도라지정과",
+   "vol": 20770,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "염소탕",
+   "vol": 18980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기통",
+   "vol": 18860,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "바디드라이어",
+   "vol": 18270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식물분쇄기",
+   "vol": 17840,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기욕조",
+   "vol": 16100,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "욕조",
+   "vol": 16000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "과일선물세트",
+   "vol": 15940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발렌타인데이",
+   "vol": 15680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼기념일선물",
+   "vol": 15620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캔들",
+   "vol": 14610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생일선물",
+   "vol": 13800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향초",
+   "vol": 13630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "개업선물",
+   "vol": 13150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명절선물",
+   "vol": 12250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코웨이음식물처리기",
+   "vol": 12140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소고기선물세트",
+   "vol": 12100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아선물",
+   "vol": 11820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마장동축산시장",
+   "vol": 11180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부선물",
+   "vol": 11120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포대기",
+   "vol": 10800,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "사쉐",
+   "vol": 10670,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기포대기",
+   "vol": 10630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기봉투",
+   "vol": 10560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "접이식욕조",
+   "vol": 10540,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "고무나무",
+   "vol": 10470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "선물세트",
+   "vol": 10150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아아기띠",
+   "vol": 9380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기처리기",
+   "vol": 8560,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "전통주",
+   "vol": 8440,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "분유제조기",
+   "vol": 8420,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임신축하선물",
+   "vol": 8270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자친구생일선물",
+   "vol": 8180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼선물",
+   "vol": 8030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형화분",
+   "vol": 7870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소탕",
+   "vol": 7860,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "반신욕기",
+   "vol": 7740,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "힙시트",
+   "vol": 7640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실화분",
+   "vol": 7630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "칠순선물",
+   "vol": 7580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보르르",
+   "vol": 7510,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "반신욕",
+   "vol": 7490,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "흑염소효능",
+   "vol": 7390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기추천",
+   "vol": 7190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "환갑선물",
+   "vol": 7180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퇴사선물",
+   "vol": 7120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명절선물세트",
+   "vol": 6910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이동식욕조",
+   "vol": 6810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음쓰처리기",
+   "vol": 6640,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "돌선물",
+   "vol": 6350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집생일선물",
+   "vol": 6280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기분쇄",
+   "vol": 6090,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신혼부부선물",
+   "vol": 5910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미생물음식물처리",
+   "vol": 5890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기용품",
+   "vol": 5870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아빠생일선물",
+   "vol": 5830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크대음식물분쇄기",
+   "vol": 5810,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "흑염소진액효능",
+   "vol": 5750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이사선물",
+   "vol": 5730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디드라이기",
+   "vol": 5660,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기",
+   "vol": 5660,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "의류관리기",
+   "vol": 5480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날",
+   "vol": 5450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아욕조",
+   "vol": 5440,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "한우세트",
+   "vol": 5430,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "생일선물추천",
+   "vol": 5430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SCENT",
+   "vol": 5430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌잔치선물",
+   "vol": 5330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엄마생일선물",
+   "vol": 5210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자양강장제",
+   "vol": 5180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "허그파파",
+   "vol": 5170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님생신선물",
+   "vol": 5040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님선물",
+   "vol": 4900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반신욕조",
+   "vol": 4890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개업축하화분",
+   "vol": 4850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용음식물처리기",
+   "vol": 4820,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임신선물",
+   "vol": 4810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미생물음식물처리기",
+   "vol": 4800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출수형분유포트",
+   "vol": 4790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "정년퇴직선물",
+   "vol": 4770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그림액자",
+   "vol": 4700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니제습기",
+   "vol": 4680,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "빔프로젝터스크린",
+   "vol": 4540,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "간이욕조",
+   "vol": 4520,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젖병열탕소독",
+   "vol": 4520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친구결혼선물",
+   "vol": 4460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "축하화분",
+   "vol": 4280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소엑기스",
+   "vol": 4270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보양식",
+   "vol": 4150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산준비물리스트",
+   "vol": 4140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식짤순이",
+   "vol": 4130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님결혼기념일선물",
+   "vol": 4050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빔스크린",
+   "vol": 3960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "불면증극복하는법",
+   "vol": 3910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친구출산선물",
+   "vol": 3900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "양초",
+   "vol": 3870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용욕조",
+   "vol": 3810,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스마트카라필터",
+   "vol": 3700,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "성년의날",
+   "vol": 3640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "입맛없을때음식",
+   "vol": 3510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소즙",
+   "vol": 3500,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기띠추천",
+   "vol": 3390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "포브아기띠",
+   "vol": 3390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "향수쇼핑몰",
+   "vol": 3350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화분쇼핑몰",
+   "vol": 3340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "30대여자선물",
+   "vol": 3310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "갈갈이",
+   "vol": 3290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편백수",
+   "vol": 3240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가정용음식물분쇄기",
+   "vol": 3220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다육이화분",
+   "vol": 3140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "퇴직선물",
+   "vol": 3050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생선물",
+   "vol": 3010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "크리스마스선물",
+   "vol": 2980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취필수템",
+   "vol": 2980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "60대여성선물",
+   "vol": 2950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아용품",
+   "vol": 2930,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "빼빼로데이선물",
+   "vol": 2930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용음식물처리기",
+   "vol": 2920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대여자선물",
+   "vol": 2890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기띠침받이",
+   "vol": 2890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트카라블레이드X",
+   "vol": 2870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "힙시트아기띠",
+   "vol": 2840,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "염소즙",
+   "vol": 2820,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "육아용품",
+   "vol": 2810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니욕조",
+   "vol": 2710,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "부부의날",
+   "vol": 2700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "씽크대음식물처리기",
+   "vol": 2690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시어머니생신선물",
+   "vol": 2670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슬링아기띠",
+   "vol": 2660,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기업판촉물",
+   "vol": 2620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산준비물",
+   "vol": 2610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "30대남자친구생일선물",
+   "vol": 2610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기렌탈",
+   "vol": 2580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "할머니생신선물",
+   "vol": 2560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼축하선물",
+   "vol": 2560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소이캔들",
+   "vol": 2560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "30대여자친구생일선물",
+   "vol": 2540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산용품리스트",
+   "vol": 2460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자친구선물",
+   "vol": 2460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트카라음식물처리기",
+   "vol": 2370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "할머니선물",
+   "vol": 2370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기세면대",
+   "vol": 2330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반신욕욕조",
+   "vol": 2310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기캐리어",
+   "vol": 2270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아출산선물",
+   "vol": 2260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃화분",
+   "vol": 2250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명품아기띠",
+   "vol": 2230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "욕조교체",
+   "vol": 2220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니의류관리기",
+   "vol": 2160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마장동한우선물세트",
+   "vol": 2160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "갈릴레오",
+   "vol": 2160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니음식물처리기",
+   "vol": 2130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20대남자생일선물",
+   "vol": 2130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화분배달",
+   "vol": 2110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기비교",
+   "vol": 2090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산선물추천",
+   "vol": 2070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원룸제습기",
+   "vol": 2070,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기띠힙시트",
+   "vol": 2060,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식물건조기",
+   "vol": 2020,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "단체선물",
+   "vol": 2000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PERFUME",
+   "vol": 2000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼부부집들이선물",
+   "vol": 1990,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개업축하선물",
+   "vol": 1990,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개업식화분",
+   "vol": 1960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "횡성한우선물세트",
+   "vol": 1950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집선생님선물",
+   "vol": 1950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용분쇄기",
+   "vol": 1940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기필터",
+   "vol": 1880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대엄마생신선물",
+   "vol": 1840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장냄새제거",
+   "vol": 1840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엄마환갑선물",
+   "vol": 1830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기독교굿즈",
+   "vol": 1830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한경희음식물처리기",
+   "vol": 1830,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "전자디퓨저",
+   "vol": 1830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어르신선물",
+   "vol": 1810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아빠환갑선물",
+   "vol": 1760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페개업선물",
+   "vol": 1760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향초캔들",
+   "vol": 1740,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "휴렉미생물",
+   "vol": 1740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크대음식물처리기",
+   "vol": 1680,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "흑염소즙효능",
+   "vol": 1620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인욕조",
+   "vol": 1620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "엄마선물",
+   "vol": 1610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "합격기원선물",
+   "vol": 1610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고기선물세트",
+   "vol": 1610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형제습기",
+   "vol": 1610,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "애기선물",
+   "vol": 1610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물건조분쇄기",
+   "vol": 1600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "접이식반신욕조",
+   "vol": 1600,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "코니힙시트",
+   "vol": 1590,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "50대아빠생일선물",
+   "vol": 1560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소농장",
+   "vol": 1550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "온도조절전기포트",
+   "vol": 1550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친구집들이선물",
+   "vol": 1540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "분유포트기",
+   "vol": 1540,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "건강선물",
+   "vol": 1540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한우선물",
+   "vol": 1530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아빠선물",
+   "vol": 1520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리",
+   "vol": 1510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "족욕통",
+   "vol": 1510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대남자생일선물",
+   "vol": 1490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아버지생신선물",
+   "vol": 1490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기힙시트",
+   "vol": 1470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엄마생신선물",
+   "vol": 1460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기미생물",
+   "vol": 1450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "휴롬음식물처리기",
+   "vol": 1420,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대용량음식물처리기",
+   "vol": 1410,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어머니생신선물",
+   "vol": 1390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전동스크린",
+   "vol": 1380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "갈갈이싱크퓨어",
+   "vol": 1370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피선물세트",
+   "vol": 1360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나무화분",
+   "vol": 1350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "1주년선물",
+   "vol": 1350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "푸드사이클러에코5",
+   "vol": 1350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카라음식물처리기",
+   "vol": 1330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "허리스트레칭기구",
+   "vol": 1310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "조카백일선물",
+   "vol": 1310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물",
    "vol": 1300,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "스타코플렉스",
+   "kw": "음식물쓰레기분쇄기",
+   "vol": 1290,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아용품리스트",
+   "vol": 1290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜욕조",
+   "vol": 1290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "섬세이에어샤워",
+   "vol": 1270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식건조기",
+   "vol": 1270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아내생일선물",
+   "vol": 1270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흙염소진액",
+   "vol": 1260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜화분",
+   "vol": 1240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아내결혼기념일선물",
+   "vol": 1230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20만원대선물",
+   "vol": 1220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화분선물",
+   "vol": 1220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼집집들이선물",
+   "vol": 1210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기띠",
+   "vol": 1200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포스터액자",
+   "vol": 1200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "분유포트추천",
+   "vol": 1190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기출산선물",
+   "vol": 1190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니스타일러",
+   "vol": 1170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음쓰통",
+   "vol": 1160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식물냉장고",
+   "vol": 1160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식물분쇄처리기",
+   "vol": 1150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기점유율1위",
+   "vol": 1140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "특가",
+   "vol": 1140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "분쇄형음식물처리기",
+   "vol": 1130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대여성선물",
+   "vol": 1130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음쓰처리기추천",
    "vol": 1120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "후디스산양분유1단계",
+   "kw": "여자신생아선물",
+   "vol": 1120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아빠생신선물",
+   "vol": 1120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼선물",
    "vol": 1110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기분쇄기",
+   "vol": 1110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장모님생신선물",
+   "vol": 1100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "땀",
+   "vol": 1100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기목욕",
+   "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아포대기",
+   "vol": 1090,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "몽잘",
-   "vol": 960,
+   "kw": "집방향제",
+   "vol": 1090,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "시멘트사이딩",
+   "kw": "씽크퓨어",
+   "vol": 1080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기냉장고",
+   "vol": 1080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "센스있는집들이선물",
+   "vol": 1070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사이드힙시트",
+   "vol": 1070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산용품",
+   "vol": 1070,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "욕조가격",
+   "vol": 1070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "찌꺼기",
+   "vol": 1060,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가정용제습기",
+   "vol": 1060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공기청정제습기",
+   "vol": 1050,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "30만원대선물",
+   "vol": 1040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기목욕통",
+   "vol": 1040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음처기",
+   "vol": 1040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아필수템",
+   "vol": 1040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소고기세트",
+   "vol": 1030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물탈수기",
+   "vol": 1020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "10만원대선물",
+   "vol": 1020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "양재동꽃시장디퓨저",
+   "vol": 1000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "연말선물",
+   "vol": 990,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디건조기",
+   "vol": 990,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2주년선물",
+   "vol": 990,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "추석부모님선물",
+   "vol": 970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드레스룸제습기",
+   "vol": 970,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어머님생신선물",
+   "vol": 960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리분쇄기",
+   "vol": 960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이디어상품",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생신선물",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파세코바디드라이어",
+   "vol": 950,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "백화점디퓨저",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님명절선물",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친구선물",
+   "vol": 940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아준비물",
+   "vol": 930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비대칭",
+   "vol": 930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1000일선물",
+   "vol": 920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물짤순이",
+   "vol": 910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼집선물",
+   "vol": 900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밸런타인데이",
+   "vol": 900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영사기",
+   "vol": 890,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "싱크대탈수기",
+   "vol": 890,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "5만원선물",
+   "vol": 890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "외국인친구선물",
    "vol": 880,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "후디스산양분유2단계",
-   "vol": 720,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "페카",
-   "vol": 670,
+   "kw": "소고기선물",
+   "vol": 870,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "스티로폼절단기",
-   "vol": 640,
+   "kw": "300일선물",
+   "vol": 870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개업선물추천",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스승의날선물",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용음식물쓰레기통",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크대음식물탈수기",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이직선물",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "승진축하선물",
+   "vol": 850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기욕조",
+   "vol": 840,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "피어나린",
+   "kw": "한살림흑염소",
+   "vol": 840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편한아기띠",
+   "vol": 840,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기보조금",
+   "vol": 840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용음식물처리기추천",
+   "vol": 840,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커플선물",
+   "vol": 840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신일음식물처리기",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선생님선물",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대여자생일선물",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실개업선물",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기포대기",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼집들이선물",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아템",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "접이식아기욕조",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "씽크대음식물분쇄기",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기념선물",
+   "vol": 770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보온포트",
+   "vol": 770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "교수님선물",
+   "vol": 760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장실미니제습기",
+   "vol": 760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명품디퓨저",
+   "vol": 760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아욕조",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴대용욕조",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아선물추천",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "펫용품",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인테리어디퓨저",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저선물",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화분식물",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "60대남자생일선물",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식탈수기",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기띠브랜드",
+   "vol": 720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아슬링",
+   "vol": 720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "염소가격",
+   "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "40대엄마생일선물",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식쓰레기처리기",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아파트음식물처리기",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물분쇄기추천",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "만삭임산부선물",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트카라400",
+   "vol": 700,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가정용욕조",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기욕조추천",
+   "vol": 690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기분유포트",
+   "vol": 690,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아아기띠추천",
+   "vol": 690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유리포트",
+   "vol": 690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실그림액자",
+   "vol": 690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급선물세트",
+   "vol": 680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동분유제조기",
+   "vol": 680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기보온포트",
+   "vol": 660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "섬세이바디드라이어",
+   "vol": 650,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "단무지공장",
+   "vol": 650,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캔들선물",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼선물추천",
+   "vol": 630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이사선물추천",
+   "vol": 630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올리브영집들이선물",
+   "vol": 630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "명품방향제",
+   "vol": 630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "사돈선물",
+   "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "칠순잔치선물",
+   "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "진액",
+   "vol": 620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기냄새",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이동욕조",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이장갑",
+   "vol": 610,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "센스있는선물",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크365",
+   "vol": 600,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에코업",
+   "vol": 600,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "60대여자선물",
+   "vol": 590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20만원선물",
+   "vol": 590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물통",
+   "vol": 590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인테리어선물",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반신욕효과",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이욕조",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기띠슬링",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기휴렉",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "목욕통",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반식욕조",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "설선물세트",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기처리",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에코씽",
+   "vol": 560,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "군인선물",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실방향제",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향수사이트",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이사집선물",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디스포저",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기띠커버",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "노인영양제",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아필수템",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "루펜음식물처리기",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엘지음식물처리기",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기냉동고",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "60대엄마생신선물",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디드라이",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음쓰분쇄기",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "환기디퓨저",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "답례선물",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퇴사선물추천",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라벤더향",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산산모선물",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소진액추천",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고빔프로젝터",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디드라이어추천",
+   "vol": 520,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "시댁명절선물",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시어머니선물",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식쓰레기통",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어르신선물추천",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "40대생일선물",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형사무실인테리어",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "행사사은품",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님인사선물",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "진급선물",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물세트",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방향제리필",
+   "vol": 490,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "옷장냄새",
+   "vol": 480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "60대아빠선물",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울선물",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이동식반신욕조",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파티굿즈",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "좋은치약",
+   "vol": 470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "10만원대집들이선물",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대생일선물",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스탠딩욕조",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음쓰냉장고",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시멘트화분",
+   "vol": 450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "선인장화분",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "몸말리는기계",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "백화점한우선물세트",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식처리기",
+   "vol": 440,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "WMF믹서기",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기분쇄형",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아슬링아기띠",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님생일선물",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자연방목흑염소진액",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에어맘분유포트",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3만원선물",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "며느리생일선물",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동출수분유포트",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "설선물",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기순위",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쾌존음식물처리기",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마켓더치",
+   "vol": 420,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자취생선물",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향수직구",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아버지선물",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실선물",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선물셋트",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플라스틱욕조",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날선물",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장인어른선물",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급선물",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기용품브랜드",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일본음료",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아애기띠",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원선생님선물",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의미있는선물",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물수거업체",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미생물처리기",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모출산선물",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취선물",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨져추천",
+   "vol": 380,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "원룸제습기추천",
+   "vol": 380,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "집디퓨저",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발건조기",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크대분쇄기",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기가격",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트카라400PRO",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크퓨어음식물처리기",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실방향제",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형욕조",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기억에남는선물",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이선물",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실용적인선물",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시험응원선물",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건강즙",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "힙시트아기띠추천",
+   "vol": 350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "고무나무화분",
+   "vol": 350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "휴대용스타일러",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "작은욕조",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블랙홀음식물처리기",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "센스있는개업선물",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보온전기포트",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어른들선물",
    "vol": 330,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "일동산양분유",
+   "kw": "부모님선물추천",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인싱크레이터",
+   "vol": 330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "방향제추천",
+   "vol": 330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "디퓨즈",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "몸건조기",
    "vol": 320,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "콘크리트강도",
+   "kw": "전신드라이기",
+   "vol": 320,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "전신건조기",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기슬링",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "40대여자친구생일선물",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인용욕조",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건강선물세트",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영양제선물세트",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기종류",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인싱크",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "왈라부슬링",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "퇴사자선물",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "위스키디퓨저",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "국산전기포트",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "70대할머니선물",
+   "vol": 300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "염소액기스",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "일동후디스산양분유1단계",
-   "vol": 290,
+   "kw": "쾌존음식물",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기통3L",
+   "vol": 300,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "티암",
+   "kw": "음식물처리기설치",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형음식물처리기",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "분쇄기추천",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크리더음식물처리기",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관방향제",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기용품",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "더치커피선물세트",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올인원아기띠",
    "vol": 280,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "셀다움",
-   "vol": 230,
+   "kw": "업소용음식물분쇄기",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기대용량",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대생일선물추천",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대용량방향제",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캔들추천",
+   "vol": 280,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "트루스오브뷰티",
+   "kw": "1인가구음식물처리기",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선물세트추천",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발향좋은디퓨저",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시부모님선물",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "특별한생일선물",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃액자",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형음식물처리기",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크퓨어음식물분쇄기",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저선물세트",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급방향제",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실디퓨저",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장실용제습기",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "설날선물",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "박준형음식물처리기",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장곰팡이제거",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물냉동고",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동캐리어",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "입주선물",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "70대선물",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그래놀라선물세트",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤워건조기",
+   "vol": 240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아분유포트",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물미생물처리기",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "감성액자",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산아기용품",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블레이드X",
+   "vol": 240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "국산분유포트",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반려동물디퓨저",
+   "vol": 240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어머님선물",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "30대여자선물추천",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아버지환갑선물",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "축구굿즈",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인음식물처리기",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식쓰레기",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기싱크대",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "할머니생일선물",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물갈갈이",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음쓰냉동고",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대엄마생일선물",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "저소음제습기",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이사집들이선물",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피톤치드디퓨저",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용분쇄기",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리업체",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크대음식물",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "갈갈이음식물처리기",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비바음식물처리기",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아용품쇼핑몰",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마늘다지는기계",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젠풀음식물처리기",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방방향제",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20만원대집들이선물",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이동식욕조가격",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천연디퓨져",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "온도조절포트",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장제습기",
    "vol": 210,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "쾌장군",
+   "kw": "흑염소효과",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기건조기",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코슬리바디드라이어",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크퓨어고급형",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이디퓨저",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로즈마리향",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "효도선물",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "살림템",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인씽크",
    "vol": 200,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "PACKER",
+   "kw": "베이비캐리어",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기업선물",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "입주박람회주관사",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "행사기념품추천",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관디퓨저",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저파는곳",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대학입학선물",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국민아기띠",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식물미생물",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "웰닉스",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이동식욕조추천",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "좌식욕조",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "외국인이좋아하는선물",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향받침대",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "와이프생일선물추천",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "비아임",
-   "vol": 170,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "후디스액상분유",
-   "vol": 165,
+   "kw": "그림선물",
+   "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스윗캠핑히터",
+   "kw": "중고사무용품",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "단초점프로젝터",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소형가전선물",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "7만원대선물",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드레스룸탈취제",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "정년퇴직선물추천",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파나소닉빔프로젝터",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "튜브욕조",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원룸음식물처리기",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미생물제제",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빌트인음식물처리기",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식당음식물처리기",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용음식물처리기렌탈",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취용품",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오픈선물",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님선물세트",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저대용량",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핸드타월답례품",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "EB-X51",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파나소닉프로젝터",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가족선물",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "우정선물",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기기계",
    "vol": 160,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "오피겐",
+   "kw": "야채분쇄기",
    "vol": 160,
-   "comp": "낮음",
-   "hint": true
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "셀본",
+   "kw": "풍수지리액자",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "씽크케어",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생일파티답례품",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모임선물",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자30대선물",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집안방향제",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용디퓨저",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "1년선물",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "벤자민화분",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "은사님선물",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사진선물",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식분쇄기",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "WMF티포트",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캥거루아기띠",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맷돌분쇄기",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물디퓨저",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원룸음식물쓰레기",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방향제분사기",
    "vol": 150,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "메디헤라",
-   "vol": 130,
+   "kw": "비누향디퓨저",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "턱끝",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반신욕용품",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이동형욕조",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라벤더디퓨저",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소추천",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부용품",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디드라이기추천",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아용품선물",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트카라400PRO2",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아용품점",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "HEM인센스스틱",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선물용디퓨저",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오래가는방향제",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중년여성선물",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가성비제습기",
+   "vol": 140,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "경성제약쾌장군",
+   "kw": "빅사이즈아기띠",
+   "vol": 135,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "디퓨져파는곳",
+   "vol": 135,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학원빔프로젝터",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기처리기추천",
    "vol": 130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "클레녹스",
+   "kw": "음식물분쇄기렌탈",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가성비음식물처리기",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20대여성선물",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주방디퓨저",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하이브리드음식물처리기",
    "vol": 120,
-   "comp": "낮음",
-   "hint": true
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "일동분유",
+   "kw": "블루벤트무무",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이색선물",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기가격",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈쇼핑음식물처리기",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기힙시트",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "휴렉음식물처리기지니",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "INSINKERATOR",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무소음제습기",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "과자쇼핑몰",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "콜드브루선물세트",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대아버지생신선물",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "메르셀",
+   "kw": "옷걸이스타일러",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향수구매",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴리엔음식물처리기",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "분쇄음식물처리기",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식품분쇄기",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크퓨어AS",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이액자",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조끼아기띠",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기업소용",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퀸코",
    "vol": 110,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "엘루어",
+   "kw": "와인병디퓨저",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저향추천",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집향기",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저세트",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장실소품",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "익선동향수",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급디퓨져",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유칼립투스디퓨저",
    "vol": 110,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "호랑이키친",
+   "kw": "숙면에좋은향",
    "vol": 110,
-   "comp": "낮음",
-   "hint": true
+   "comp": "중간",
+   "hint": false
   },
   {
-   "kw": "노쉬프로젝트",
+   "kw": "70대생일선물",
    "vol": 100,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "올가화장품",
-   "vol": 95,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "일동후디스산양분유2단계",
+   "kw": "교사선물",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프리미엄흑염소진액",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취생음식물처리기",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이오맘바디드라이어",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물감량기",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이디어주방용품",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트음식물처리기",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용품브랜드",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "푸드타파음식물처리기",
+   "vol": 100,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "향수디퓨저",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베란다제습기",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "호텔디퓨져",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이보석함",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "야자수화분",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5주년선물",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인씽크레이터",
+   "vol": 95,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "설선물추천",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빔프로젝터중고",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사장님선물",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "액자선물",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물분쇄기미생물",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기건조",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기탈수기",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건조음식물처리기",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미생물음쓰처리기",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물분쇄기불법",
    "vol": 90,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "멜라트",
+   "kw": "오즈윈드바디드라이어",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이가전",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남동생선물",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "양재동꽃시장향",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "간이목욕탕",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "디퓨져브랜드",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "당뇨흑염소진액",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제왕절개아기띠",
+   "vol": 85,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "60대여자생일선물",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아접이식욕조",
    "vol": 80,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "글로렌",
+   "kw": "유리분유포트",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개업선물액자",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실이사선물",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이액자선물",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소기할인",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용음식물쓰레기처리기",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "고체치약만들기",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냄새안나는음식물처리기",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기처리기렌탈",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실액자그림",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기통추천",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이용품",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저향",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니제습기추천",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자취방제습기",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오래가는디퓨저",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프리미엄디퓨저",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신발장디퓨저",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개소식선물",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가성비아기띠",
+   "vol": 75,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식물건조기추천",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "씽크대분쇄기",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향오래가는디퓨저",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반신욕사우나",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아포트로닉스",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고프로젝터",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형의류관리기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물액자",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물분쇄기설치",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리방법",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물파쇄기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오즈윈드",
    "vol": 70,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "셀본비비",
+   "kw": "싱크퓨어후기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아물품",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인싱크음식물처리기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물싱크대분쇄기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨져대용량",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "답례품디퓨저",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형방향제",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원룸디퓨저",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집안향기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그래놀라선물",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에어맘",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기띠패드",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홀리에홀리다",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "WMF포트",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기띠",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비슬링",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "손연재아기띠",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "초대형디퓨저",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베르가못디퓨저",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반신욕조기",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이그림",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동분유포트",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아파트음식물쓰레기처리기",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미생물음식물쓰레기처리기",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미생물음식물처리기추천",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미생물음식물",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발드라이어",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기미생물",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "귀여운액자",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크대음식물분쇄기렌탈",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슬링띠",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아아이템",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SC-D0403",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급선물추천",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트카라렌탈",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기업체",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨져선물",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가성비디퓨저",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자연방향제",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형디퓨져",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내용방향제",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집안식물",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드레스룸디퓨저",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용반신욕",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반신욕기추천",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "숲향디퓨저",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흙염소진액효능",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아아기띠",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영유아쇼핑몰",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아포대기",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아힙시트",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냉동음식물처리기",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "힙시트캐리어",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SK매직음식물처리기렌탈",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "호텔식뷔페",
    "vol": 55,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "스타코플렉스시공단가",
+   "kw": "집안화분",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퍼퓸방향제",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "굿즈도매",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사진기념품",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "분유포트기추천",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블루벤트무무플러스",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식쓰레기분쇄기",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급스러운선물",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초상화선물",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기렌탈",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건조분쇄음식물처리기",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식쓰레기건조기",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기싱크퓨어",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주언테크",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "식당용음식물처리기",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모용품",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모임선물추천",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼식답례선물",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "답례커피",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산업용음식물처리기",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크케어음식물처리기",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식쓰레기냉장고",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기보관",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페디퓨저",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실디퓨저추천",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "은은한디퓨저",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "양재꽃시장향",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "핸드메이드선물",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기분유제조기",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니그림액자",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물분해기",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디건조기추천",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃사진액자",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "해바라기사진액자",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "갈갈이분쇄기",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헬로비전그린싱크",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜디퓨저",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내향수",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저용액",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플아이템선물",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물그림",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "펙카",
-   "vol": 30,
+   "kw": "APPOTRONICS",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부엌용품",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인테리어소품선물",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물건조처리기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물분쇄",
+   "vol": 40,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "배면그라우팅",
+   "kw": "미생물음식물처리기렌탈",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크대음식물분쇄기추천",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디드라이어비교",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건조분쇄형음식물처리기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용음식물쓰레기처리기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "황금맷돌더클래스",
+   "vol": 40,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "잔반처리기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈용품",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기업선물세트",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플라워디퓨저",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아파트화분",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장실용디퓨저",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저발향",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매장디퓨저",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신선물",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이그림선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국민분유포트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물분쇄기가격",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경음식물처리기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오물분쇄기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "렌탈음식물처리기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미국음식물처리기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라헨느바디드라이어",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젠풀음식물",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에어락의류관리기",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저선물추천",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용음식물쓰레기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨져답례품",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크대음식물처리기설치",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "린클렌탈",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "국민아기용품",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃향기디퓨저",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자40대선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "답례품더치커피",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향좋은디퓨저",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물10만원",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "바스크디퓨저",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강력한방향제",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어깨침받이",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소함량",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "일동후디스액상분유",
+   "kw": "특별한집들이선물",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용음식물분쇄기추천",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기미생물제제",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기하이브리드",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인테리어용액자",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기감량기",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용미생물음식물처리기",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기업체",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리냉장고",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아용품브랜드",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리큅음식물쓰레기냉장고",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아가전",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저꽃",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기업인테리어",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스포츠굿즈",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예비시댁선물",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "채우장",
+   "kw": "아기튜브욕조",
    "vol": 25,
-   "comp": "낮음",
-   "hint": true
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "인젝션패커",
+   "kw": "개업그림",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개업선물그림",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대용량분유포트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴롬음식물쓰레기",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스승의날선물추천",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용음식물건조기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크대음식물처리기렌탈",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미생물음식물분쇄기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미생물음식물쓰레기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈쇼핑음식물분쇄기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크퓨어렌탈",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돈들어오는선물",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "씽크대음식물처리기렌탈",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미국음식물분쇄기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인싱크이레이터200",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "3인1에어컨",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영업용음식물처리기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기용품쇼핑몰",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소음식물처리기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주방분쇄기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤워드라이",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크대음식물분쇄기설치",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴렉스음식물처리기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "허머음식물처리기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건강답례품",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃집디퓨저",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저고급",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내용디퓨저",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지속력좋은디퓨저",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "허브향디퓨저",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리큅음식물쓰레기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발렌타인데이선물",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님어버이날선물",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "향기좋은디퓨저",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내인테리어화분",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화분싸게파는곳",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날선물추천",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아크릴주입제",
+   "kw": "휴롬음처기",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물폐기업체",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건조형음식물처리기",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물디스포저",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "씽크대음식물처리기추천",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "상업용음식물처리기",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴렉음식물처리기홈쇼핑",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용잔반처리기",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자방디퓨저",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매장디퓨져",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용품쇼핑몰",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밥솥선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정의달선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소고형분",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기념품포장",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AIRMOM",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "일동후디스산양분유3단계",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "일동산양",
+   "kw": "분쇄형음식물처리기추천",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "루페샴푸",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "방수패커",
-   "vol": 10,
+   "kw": "음식물쓰레기처리기냄새",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아크릴주입",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "배면차수제",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아크릴그라우팅",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아크릴배면차수제",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "DR.ORGA",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "역시쾌장군",
-   "vol": 10,
+   "kw": "미술선물",
+   "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "티암화장품",
+   "kw": "사진액자선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선물용그림",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "특이한개업선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기건조",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰레기분쇄",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기건조형",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물건조기렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기합법",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용미생물음식물처리기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마이크로오가닉칩",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바이오음식물처리기",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "창원음식물처리기",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "싱크대음식물쓰레기처리기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주방음식물처리기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "박준형음식물",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "발판드라이기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전신드라이",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물분쇄기합법",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크대음식물처리기추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크대음식물분쇄",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크퓨어분쇄기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크퓨어가격",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물분쇄기싱크퓨어",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드레스룸탈취",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동출수포트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기렌탈추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용음식물건조기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식당음식물분쇄기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "황금맷돌명품21",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "황금맷돌프리미엄",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "황금맷돌후기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냉난방기설치비포함",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현대큐밍음식물처리기",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "다비네",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소액선물",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "현빈음식물처리기",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "식당음식물쓰레기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용음식물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "합법음식물처리기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대구음식물분쇄기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "급식소음식물처리기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "답례품콜드브루",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "특별한선물세트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "린클음식물처리기렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물분쇄기업소용",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대용량음식물분쇄기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형음식물건조기",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "육아용품쇼핑몰",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기용품브랜드",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필우드편백",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방디퓨져",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부부의날선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향기좋은디퓨져",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "해피콜음식물처리기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "야채전처리업체",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "저소음음식물처리기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃향디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크대음식물분쇄처리기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비누꽃카네이션",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AI음식물처리기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "끌리니음식물처리기",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "사무실음식물처리기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이승기싱크리더",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "홍진영음식물처리기",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "생화향방향제",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아브랜드",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매장용디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨져리드",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "감성캔들",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형제습기추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장미니제습기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창고형제습기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이쁜디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프리미엄디퓨져",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발렌타인선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여대생졸업선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향이강한디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "15만원선물추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영천화분",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병원메뉴판",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비염디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알러지프리향료",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님설선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "설날이벤트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "설날할인",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "설이벤트",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "티암세럼",
+   "kw": "시댁어버이날선물",
    "vol": 10,
-   "comp": "중간",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "후디스프리미엄산양분유",
+   "kw": "집들이선물틔운",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "강남빔프로젝터대여",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "포모나크림",
+   "kw": "파나소닉총판",
    "vol": 10,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "루오드",
+   "kw": "기업용빔프로젝터",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흙염소",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "용산빔프로젝터",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그림액자선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기렌탈휴롬",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "아이욕조",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "아가띠",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "싱크음식물처리기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "명화선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "색다른선물",
    "vol": 10,
    "comp": "중간",
-   "hint": true
+   "hint": false
+  },
+  {
+   "kw": "이사선물그림",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "해바라기그림선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름음식물쓰레기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물쓰래기처리기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미생물분해음식물처리기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물분쇄기직구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "VOVO바디드라이어",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤오미바디드라이어",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "풋드라이어",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빅스마일데이지마켓",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리건조기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4세대음식물처리기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주방음식물분쇄기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개업그림선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크피아",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가정용음식물처리기렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용음식물처리기추천",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비앤비음식물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "씽크미",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "엔비스음식물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴렉디스포저",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병원음식물처리기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "과채류압축기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "농과채압축기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현대압축기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "음식물소멸기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SK에코클린",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주방용음식물분쇄기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "갈갈이음식물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "대형음식물쓰레기처리기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대용량음식물쓰레기처리기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현대음식물처리기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "싱크퓨어바이오",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리분쇄",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용미생물처리기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "단체급식음식물처리기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트카라음식물처리기렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트카라홈쇼핑",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용음식물감량기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에코퀸",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "학교음식물처리기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱크대설치음식물처리기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "처리킹",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "식당음식물처리",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용음식물처리",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "업소음식물쓰레기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "크리미크몬음식물처리기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아가용품",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "5세대음식물처리기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "싱크케어렌탈",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "회사음식물쓰레기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "회사음식물처리기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오린음식물처리기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "교수님스승의날선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "독도디퓨저",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저판매",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명품디퓨져",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "백화점디퓨져",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "생화향기디퓨저",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "수국디퓨저",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스승의날단체선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날선물순위",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날엄마선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜디퓨져",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원스승의날선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천연디퓨져추천",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향좋은디퓨져",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "과일압축기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "야채쓰레기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "양파공장",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "위탁급식전문업체",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주방도우미",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "채소압축기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "채소전처리",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "폐기물건조기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애디코음식물처리기",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카네이션디퓨저",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물분쇄기가정용",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날디퓨저",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "1인가구전자제품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제로스톤미니",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "양재동꽃시장디퓨져",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "남자집들이",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "LG그린싱크",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오큐음식물처리기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식물처리기휴리엔",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "휴렉홈케어",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "염화칼슘제습기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화분전문",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃집방향제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초대형디퓨져",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "외국인에게좋은선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저1+1",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이슈즈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커버제작업체",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "내방객선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기용품선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퍼퓸디퓨져",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발렌타인데이이벤트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날아버지선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날아빠선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "건강기념품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
   }
  ]
 }
