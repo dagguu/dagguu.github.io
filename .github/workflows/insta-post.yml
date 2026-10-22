@@ -1,5 +1,6 @@
 name: 인스타 게시 (@dagguu.home)
 on:
+  schedule: [{ cron: "7 12 * * *" }]   # 매일 21:07 KST
   workflow_dispatch:
     inputs:
       mode: { description: "verify(연결만 확인) 또는 post", default: "verify" }
@@ -13,8 +14,8 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - env: { INSTA_TOKEN: "${{ secrets.INSTA_TOKEN }}" }
-        run: python3 scripts/insta_post.py ${{ github.event.inputs.mode == 'verify' && '--verify' || '' }}
+        run: python3 scripts/insta_post.py ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'verify') && '--verify' || '' }}
       - run: |
           git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
-          git add scripts/insta_*.json && git commit -m "인스타 연결 확인" || exit 0
+          git add scripts/insta_*.json && git commit -m "인스타 게시 기록" || exit 0
           for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done

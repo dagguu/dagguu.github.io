@@ -1,0 +1,36 @@
+name: 인스타 감성 카드 만들기 (@dagguu.home)
+on:
+  push:
+    branches: [main]
+    paths: ['scripts/home_queue.json', 'scripts/gen_home.py']
+  workflow_dispatch:
+    inputs:
+      all: { description: "1 이면 이미 만든 것도 다시", default: "0" }
+permissions: { contents: write }
+concurrency: { group: insta-branch, cancel-in-progress: false }
+jobs:
+  make:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk fonts-noto-cjk-extra fonts-noto-color-emoji >/dev/null
+          pip install -q playwright pillow && python -m playwright install --with-deps chromium >/dev/null
+      - run: |
+          git fetch -q origin insta || true
+          HAVE=$(git ls-tree -d --name-only origin/insta home/ 2>/dev/null | sed 's#home/##' | paste -sd, -)
+          ALL=""; [ "${{ github.event.inputs.all }}" = "1" ] && ALL="--all"
+          python scripts/gen_home.py --have "${HAVE:-none}" $ALL
+      - run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          [ -d insta_out/home ] || exit 0
+          mv insta_out /tmp/insta_out
+          if git rev-parse --verify origin/insta >/dev/null 2>&1; then git checkout -q -B insta origin/insta; else git checkout -q --orphan insta && git rm -rfq . ; fi
+          mkdir -p home; for dd in $(ls /tmp/insta_out/home); do rm -rf "home/$dd"; mkdir -p "home/$dd"; cp /tmp/insta_out/home/$dd/* "home/$dd"/; done
+          git add -A home && git commit -qm "인스타 감성 카드 $(date +%F)" || exit 0
+          for i in 1 2 3; do git push -q origin insta && break; git pull -q --rebase origin insta; done
