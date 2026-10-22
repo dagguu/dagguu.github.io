@@ -1,0 +1,21 @@
+name: 스레드 예약 글
+on:
+  schedule: [{ cron: "21 11 * * *" }]   # 매일 20:21 KST
+  workflow_dispatch: {}
+permissions: { contents: write }
+concurrency: { group: threads, cancel-in-progress: false }
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - env:
+          THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+        run: python3 scripts/threads_post.py
+      - run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add scripts/threads_done.json && git commit -m "스레드 올린 기록" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
