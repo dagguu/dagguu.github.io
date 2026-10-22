@@ -211,7 +211,7 @@ function route(){
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
   if(!PMODE&&PART_LIVE&&P_ONLY.test(tab)){ location.replace(PART_URL+"#/"+h); return; }
   if(PMODE&&!P_TABS.test(tab)){ location.replace(MAIN_URL+"#/"+h); return; }
-  if(!/^(home|list|fav|benefit|shop|mag|tix|deals|reporter|press|contact|item|my|privacy|price|event|trip|edu|checkout|pjob|padmin|sites)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|benefit|shop|mag|tix|deals|reporter|press|contact|item|my|privacy|price|event|trip|edu|checkout|pjob|padmin|sites|season)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
   if(tab==="event") state.evAbr=qs.t==="abroad";
@@ -248,6 +248,7 @@ function render(){
   else if(state.tab==="shop") v.innerHTML=shopView();
   else if(state.tab==="mag") v.innerHTML=magView();
   else if(state.tab==="sites") v.innerHTML=sitesView();
+  else if(state.tab==="season") v.innerHTML=seasonView();
   else if(state.tab==="tix"){ v.innerHTML=tixView(); if(state.tixI!==""){ setTimeout(function(){ var e=document.getElementById("tix"+state.tixI); if(e) e.scrollIntoView({block:"center"}); },60); } }
   else if(state.tab==="deals") v.innerHTML=dealsView();
   else if(state.tab==="reporter") v.innerHTML=reporterView();
@@ -1817,18 +1818,25 @@ var WX_TH=[ // 전국적인 날씨일 때만(2026-10-18 시온님 요청). w: 8�
 var SEASON_TH={1:[["한겨울 따뜻하게","핫팩","온수매트"],["건조한 겨울 실내","가습기","수면양말"]],2:[["끝까지 따뜻하게","핫팩","전기요"],["건조한 실내","가습기","수면양말"]],3:[["황사·미세먼지 대비","황사마스크","공기청정기"],["봄맞이 침구 바꾸기","봄이불","침구청소기"]],4:[["봄맞이 침구 관리","침구청소기","봄이불"],["봄 햇살 대비","선크림","공기청정기"]],5:[["여름 미리 준비","선풍기","냉감이불"],["모기 시즌 시작","모기퇴치기","선크림"]],6:[["장마 대비","제습기","선풍기"],["시원한 잠자리","냉감이불","쿨매트"]],7:[["한여름 필수","선풍기","쿨매트"],["열대야 꿀잠","냉감이불","모기퇴치기"]],8:[["늦여름 모기 조심","모기퇴치기","선풍기"],["열대야 꿀잠","냉감이불","쿨매트"]],9:[["환절기 침구 관리","침구청소기","차렵이불"],["밤공기 선선할 때","전기요","가습기"]],10:[["겨울이불 꺼낼 때","겨울이불","극세사 이불"],["밤공기 쌀쌀할 때","전기요","온수매트"],["건조한 가을 실내","가습기","침구청소기"],["발끝까지 따뜻하게","수면양말","전기장판"]],11:[["겨울 준비","겨울이불","극세사 이불"],["따뜻한 잠자리","전기요","온수매트"],["건조한 실내","가습기","수면양말"],["첫 추위 대비","핫팩","전기장판"]],12:[["연말 모임 시즌","숙취해소제","핫팩"],["한겨울 잠자리","전기요","온수매트"],["건조한 겨울 실내","가습기","수면양말"]]};
 /* 2026-10-22 시온님 "매일 같은 이불만 나와": 테마·상품을 날짜로 돌려서 매일 바뀌게 */
 function wxDay(){ var k=new Date(Date.now()+9*36e5); return Math.floor(k.getTime()/864e5); }
-function wxThemes(){
+function wxThemes(all){
   var S=seed.seasonDeals||{}, w=seed.weather, kst=new Date(Date.now()+9*36e5), today=kst.toISOString().slice(0,10), m=kst.getUTCMonth()+1, md=today.slice(5);
   if(!w||w.date!==today||w.rainCities==null) w=null;
-  var out=[], used={}, dn=wxDay(); function add(ic,t,d,kws){ var L=[], seen={}; var KW=kws.filter(function(q){ return !used[q]&&(S[q]||[]).some(function(x){ return safeUrl(x.u); }); }); KW.forEach(function(q){ var A=(S[q]||[]).filter(function(x){ return safeUrl(x.u); }), off=A.length?(dn*2)%A.length:0, n=0; for(var j=0;j<A.length&&n<Math.ceil(4/KW.length);j++){ var x=A[(off+j)%A.length], key=String(x.name||"").slice(0,18); if(seen[key]) continue; seen[key]=1; L.push(x); n++; } used[q]=1; }); if(L.length>=2) out.push({ic:ic,t:t,d:d,L:L.slice(0,4)}); return L.length>=2; }
+  var out=[], used={}, dn=wxDay(); function add(ic,t,d,kws){ var L=[], seen={}; var KW=kws.filter(function(q){ return !used[q]&&(S[q]||[]).some(function(x){ return safeUrl(x.u); }); }); KW.forEach(function(q){ var A=(S[q]||[]).filter(function(x){ return safeUrl(x.u); }), off=A.length?(dn*2)%A.length:0, n=0; for(var j=0;j<A.length&&n<(all?99:Math.ceil(4/KW.length));j++){ var x=A[(off+j)%A.length], key=String(x.name||"").slice(0,18); if(seen[key]) continue; seen[key]=1; L.push(x); n++; } used[q]=1; }); if(L.length>=2) out.push({ic:ic,t:t,d:d,L:all?L:L.slice(0,4)}); return L.length>=2; }
   if(w){ for(var i=0;i<WX_TH.length;i++){ var th=WX_TH[i]; if(th.ok(w,m,md)){ add(th.ic,th.t,th.d,th.kw); break; } } }
-  var ST=SEASON_TH[m]||[]; for(var k=0;k<ST.length;k++){ var st=ST[(dn+k)%ST.length]; if(add("🗓️",st[0],st.slice(1).join("·")+" 챙기세요",st.slice(1))) break; }
-  return out.slice(0,2);
+  var ST=SEASON_TH[m]||[]; for(var k=0;k<ST.length;k++){ var st=ST[(dn+k)%ST.length]; if(add("🗓️",st[0],st.slice(1).join("·")+" 챙기세요",st.slice(1))&&!all) break; }
+  return all?out:out.slice(0,2);
+}
+/* 오늘 같은 날 필요한 것 더 보기(2026-10-22 시온님): 이번 달 테마 전부 + 검색 결과 전부 */
+function seasonView(){
+  var T=wxThemes(true), w=seed.weather;
+  if(!T.length) return '<div class="pg"><div class="empty sm"><b>지금은 준비된 상품이 없어요</b></div></div>';
+  return '<div class="pg"><h1>오늘 같은 날 필요한 것</h1><p class="pgsub">날씨와 계절에 맞춰 매일 아침 쿠팡 검색 결과로 골라요</p>'+T.map(function(t){ return '<section class="sec tossec wxsec"><p class="wxt"><span>'+t.ic+'</span><b>'+esc(t.t)+'</b> · '+esc(t.d)+'</p><div class="tgrid">'+t.L.map(tossCard).join("")+'</div></section>'; }).join("")+
+    '<p class="wxsrc">'+(w&&w.src?'날씨 정보: '+esc(w.src)+' · ':'')+'쿠팡 검색 결과 · 가격은 바뀔 수 있어요</p><a class="morebig" href="#/deals">🔥 다른 특가는 <b>특가 탭</b>에서 볼 수 있어요 ›</a></div>';
 }
 function wxSection(){
   var T=wxThemes(); if(!T.length) return "";
   var w=seed.weather;
-  return '<section class="sec tossec wxsec"><div class="sh"><h2>오늘 같은 날 필요한 것</h2></div>'+T.map(function(t){ return '<p class="wxt"><span>'+t.ic+'</span><b>'+esc(t.t)+'</b> · '+esc(t.d)+'</p><div class="tgrid">'+t.L.map(tossCard).join("")+'</div>'; }).join("")+
+  return '<section class="sec tossec wxsec"><div class="sh"><h2>오늘 같은 날 필요한 것</h2><a class="hmore" href="#/season">더 보기 ›</a></div>'+T.map(function(t){ return '<p class="wxt"><span>'+t.ic+'</span><b>'+esc(t.t)+'</b> · '+esc(t.d)+'</p><div class="tgrid">'+t.L.map(tossCard).join("")+'</div>'; }).join("")+
     (T.wx?'':'')+'<p class="wxsrc">'+(w&&w.src?'날씨 정보: '+esc(w.src)+' · ':'')+'쿠팡 검색 결과</p>'+'</section>';
 }
 function dealsView(){
