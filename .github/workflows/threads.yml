@@ -1,6 +1,6 @@
 name: 스레드 예약 글
 on:
-  schedule: [{ cron: "17 0 * * *" }, { cron: "47 3 * * *" }, { cron: "13 12 * * *" }]   # 09:17 일상글 · 12:47 · 21:13 링크글 (KST)
+  # schedule 꺼짐(2026-10-22 18:51 시온님: 스레드 연결 계정의 페이스북이 정지됨) — 예전: 09:17·12:47·21:13 KST
   workflow_dispatch:
     inputs:
       mode: { description: "post 또는 verify(글 안 올리고 연결만 확인)", default: "post" }
