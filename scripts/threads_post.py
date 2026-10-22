@@ -35,13 +35,18 @@ def main():
             e = check(x["text"]); print(x["id"], "OK" if not e else e); bad += bool(e)
         return 1 if bad else 0
     tok = os.environ.get("THREADS_TOKEN"); uid = os.environ.get("THREADS_USER_ID") or "me"
-    if not tok: print("THREADS_TOKEN 없음 — 건너뜀"); return 0
+    if not tok:
+        print("THREADS_TOKEN 없음 — 건너뜀")
+        if "--verify" in sys.argv: json.dump({"ok": False, "code": "no-token", "at": datetime.now(KST).strftime("%Y-%m-%d %H:%M")}, open(os.path.join(HERE, "threads_status.json"), "w"))
+        return 0
     if "--verify" in sys.argv:  # 글은 안 올리고 토큰·계정만 확인
         try:
             with urllib.request.urlopen(API + f"{uid}?fields=username&access_token=" + urllib.parse.quote(tok), timeout=30) as r:
-                print("연결 확인:", json.loads(r.read()).get("username"))
+                u = json.loads(r.read()).get("username"); print("연결 확인:", u); st = {"ok": True, "user": u}
         except Exception as e:
-            print("연결 실패:", getattr(e, "code", ""), str(e)[:200])
+            print("연결 실패:", getattr(e, "code", ""), str(e)[:200]); st = {"ok": False, "code": getattr(e, "code", "")}
+        st["at"] = datetime.now(KST).strftime("%Y-%m-%d %H:%M")
+        json.dump(st, open(os.path.join(HERE, "threads_status.json"), "w"), ensure_ascii=False)
         return 0
     for x in todo[:1]:  # 한 번에 1개만(같은 시간 여러 개 올리지 않음)
         e = check(x["text"])
