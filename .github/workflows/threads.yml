@@ -19,5 +19,5 @@ jobs:
         run: python3 scripts/threads_post.py ${{ github.event.inputs.mode == 'verify' && '--verify' || '' }}
       - run: |
           git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
-          git add scripts/threads_done.json scripts/threads_status.json 2>/dev/null; git add scripts/threads_done.json && git commit -m "스레드 올린 기록" || exit 0
+          git add scripts/threads_*.json && git commit -m "스레드 올린 기록" || exit 0
           for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
