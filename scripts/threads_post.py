@@ -36,6 +36,13 @@ def main():
         return 1 if bad else 0
     tok = os.environ.get("THREADS_TOKEN"); uid = os.environ.get("THREADS_USER_ID") or "me"
     if not tok: print("THREADS_TOKEN 없음 — 건너뜀"); return 0
+    if "--verify" in sys.argv:  # 글은 안 올리고 토큰·계정만 확인
+        try:
+            with urllib.request.urlopen(API + f"{uid}?fields=username&access_token=" + urllib.parse.quote(tok), timeout=30) as r:
+                print("연결 확인:", json.loads(r.read()).get("username"))
+        except Exception as e:
+            print("연결 실패:", getattr(e, "code", ""), str(e)[:200])
+        return 0
     for x in todo[:1]:  # 한 번에 1개만(같은 시간 여러 개 올리지 않음)
         e = check(x["text"])
         if e: print("올리지 않음", x["id"], e); continue
