@@ -23,6 +23,26 @@ def fetch(src):
     req = urllib.request.Request(src, headers={'User-Agent': 'Mozilla/5.0', 'Referer': ref})
     return urllib.request.urlopen(req, timeout=30).read()
 
+def img_wh(b):
+    # 사진 가로·세로(JPEG/PNG/WEBP) — 화질 확인용
+    import struct
+    try:
+        if b[:8] == b'\x89PNG\r\n\x1a\n': return struct.unpack('>II', b[16:24])
+        if b[:4] == b'RIFF' and b[8:12] == b'WEBP':
+            if b[12:16] == b'VP8X': return (1 + int.from_bytes(b[24:27], 'little'), 1 + int.from_bytes(b[27:30], 'little'))
+            if b[12:16] == b'VP8 ': w, h = struct.unpack('<HH', b[26:30]); return (w & 0x3fff, h & 0x3fff)
+        if b[:2] == b'\xff\xd8':
+            i = 2
+            while i < len(b):
+                if b[i] != 0xff: i += 1; continue
+                m = b[i + 1]; L = struct.unpack('>H', b[i + 2:i + 4])[0]
+                if m in (0xc0, 0xc1, 0xc2): h, w = struct.unpack('>HH', b[i + 5:i + 9]); return (w, h)
+                i += 2 + L
+    except Exception: pass
+    return (0, 0)
+
+SIZES = {}
+
 def data_uri(src):
     tries = [src]
     # 쿠팡트래블 썸네일은 400x400 으로 잘려 있어 큰 사진을 먼저 시도
@@ -34,6 +54,7 @@ def data_uri(src):
             if len(b) > 2000: break
         except Exception as ex:
             print('사진 실패', t, ex)
+    SIZES[src] = img_wh(b)
     kind = 'png' if b[:4] == b'\x89PNG' else 'jpeg'
     return f'data:image/{kind};base64,' + base64.b64encode(b).decode()
 
@@ -280,3 +301,12 @@ with sync_playwright() as pw:
         pg.screenshot(path=os.path.join(out, f'{n}.jpg'), type='jpeg', quality=88)
         print(out, n)
     b.close()
+# 화질 확인용(2026-10-23): 카드 배경·probe 사진의 실제 크기를 probe.txt 로 남김 → insta 브랜치에 같이 올라감
+for u in Q.get('probe', []):
+    try: data_uri(u)
+    except Exception as ex: print('probe 실패', u, ex)
+with open(os.path.join(out, 'probe.txt'), 'w') as f:
+    for n, c in enumerate(Q['cards'], 1):
+        w, h = SIZES.get(c.get('bgimg'), (0, 0)); f.write(f"card{n}\t{w}x{h}\t{c.get('bgimg')}\n")
+    for u in Q.get('probe', []):
+        w, h = SIZES.get(u, (0, 0)); f.write(f"probe\t{w}x{h}\t{u}\n")
