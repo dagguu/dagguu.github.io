@@ -42,6 +42,28 @@ h1{font-size:26px;line-height:1.3;letter-spacing:-.03em;margin:12px 0 8px}.lead{
 footer{margin-top:40px;font-size:12px;color:#8a8994;line-height:1.7;text-align:center}footer a{color:#6a3fc8;font-weight:700}
 """
 
+# 노션 페이지 느낌(2026-10-23 시온님 "노션 느낌", picks json 에 "style":"notion" 인 페이지만) — 흰 바탕·연한 커버·큰 이모지 아이콘·회색 태그·콜아웃·토글. 노션 로고는 쓰지 않는다.
+NOTION_CSS = """body{color:#37352f;font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Pretendard Variable,Pretendard,sans-serif}
+.w{max-width:720px;padding:0 22px 70px}.disc{margin:0 -22px;background:#f7f6f3;color:#787774}
+header{height:50px;font-size:14px}.logo{font-size:15px;font-weight:600}.logo i{color:#37352f}header .app{border:0;color:#787774;font-weight:500;padding:6px 8px;border-radius:4px}header .app:hover{background:#efefed}
+.ncv{height:150px;margin:0 -22px;background:linear-gradient(120deg,#f3eefb 0,#f7f3ea 55%,#eef4f8 100%)}.nic{font-size:74px;line-height:1;margin:-40px 0 0 2px}
+.hero{padding:14px 0 4px}.hero small{color:#787774;background:#f1f1ef;border-radius:4px;font-weight:500;padding:3px 8px}
+h1{font-size:34px;font-weight:700;letter-spacing:-.02em;line-height:1.25;margin:12px 0 10px}.lead{font-size:16px;line-height:1.75;color:#37352f}
+.toc{flex-direction:column;gap:0;margin:16px 0 0;overflow:visible}.toc a{border:0;border-radius:4px;padding:5px 6px;font-weight:400;font-size:14.5px;color:#787774;text-decoration:underline;text-decoration-color:#d3d1cb;text-underline-offset:3px}.toc a::before{content:"• ";color:#37352f;text-decoration:none}
+.feat small{color:#787774;font-weight:600;font-size:13px}.fc{border:1px solid #e9e9e7;border-radius:6px;padding:0;overflow:hidden;box-shadow:0 1px 2px rgba(15,15,15,.06)}.fc .im{border-radius:0;background:#f7f6f3}.fc .n,.fc .pr{margin-left:14px;margin-right:14px}.fc .pr{font-size:18px;font-weight:700}.fc .go{margin:12px 14px 14px;background:#2383e2;border-radius:4px;font-weight:600}
+.sec{margin-top:38px}.sec h2{font-size:23px;font-weight:700;padding-bottom:6px;border-bottom:1px solid #e9e9e7;margin-bottom:10px}.sec>p{color:#37352f;font-size:15px}
+.grid{gap:14px}.pc{border:1px solid #e9e9e7;border-radius:6px;box-shadow:0 1px 2px rgba(15,15,15,.05)}.pc .im{background:#f7f6f3}
+.pc .k{display:inline-block;align-self:flex-start;background:#f1f1ef;color:#787774;border-radius:3px;padding:1px 6px;font-size:11.5px;margin:10px 10px 4px}.pc .n{font-weight:500}.pc .pr{font-weight:600;font-size:15px}
+.pc .go{background:none;color:#787774;border-top:1px solid #f1f1ef;border-radius:0;margin:10px 0 0;font-weight:500;text-align:left;padding:9px 10px}
+.pc .rk{box-shadow:none;border:1px solid #e9e9e7;color:#2383e2;border-radius:3px}
+.tips{background:#f7f6f3;border:0;border-radius:4px;padding:16px 18px 16px 52px;position:relative}.tips::before{content:"💡";position:absolute;left:18px;top:15px;font-size:20px}.tips h2{font-size:16px;font-weight:700}.tips li{color:#37352f}
+.tips.gd{background:none;padding:0;margin-top:34px}.tips.gd::before{content:none}.tips.gd h2{font-size:21px;border-bottom:1px solid #e9e9e7;padding-bottom:6px;margin-bottom:10px}.gd p{color:#37352f;font-size:15px}.note{color:#9b9a97}
+.camp{background:none;border:1px solid #e9e9e7;border-radius:6px}.camp li a{border-top-color:#f1f1ef}.camp .more{background:#37352f;border-radius:4px;font-weight:600}
+.faq details{border:0;padding:4px 0}.faq summary{list-style:none;font-weight:500;padding:4px 0}.faq summary::-webkit-details-marker{display:none}.faq summary::before{content:"▸";display:inline-block;width:20px;color:#37352f;transition:transform .15s}.faq details[open] summary::before{transform:rotate(90deg)}.faq p{padding-left:20px;color:#37352f}
+.faq h2{font-size:20px;font-weight:700;border-bottom:1px solid #e9e9e7;padding-bottom:6px}.faq .toc{flex-direction:row;flex-wrap:wrap;gap:6px}.faq .toc a{background:#f1f1ef;text-decoration:none;color:#37352f;font-size:13px}.faq .toc a::before{content:""}
+footer a{color:#37352f}#totop{background:#37352f;box-shadow:0 4px 12px rgba(15,15,15,.2)}
+"""
+
 def open_cat(cat="baby", q="", n=6):
     def worth(it):
         m = re.search(r"(\d+)\s*만", str(it.get("worth") or "")); return int(m.group(1)) * 10000 if m else int(it.get("cpPrice") or 0)
@@ -94,6 +116,8 @@ def build(path):
     ogf = os.path.join(ROOT, "images", "og", slug + ".jpg")
     ogimg = f"{SITE}/images/og/{slug}.jpg" if os.path.exists(ogf) else secs[0]["items"][0]["img"]
     ogwh = '<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">' if os.path.exists(ogf) else ""
+    NOTION = P.get("style") == "notion"
+    NHEAD = f'<div class="ncv"></div><div class="nic">{e(P.get("icon", "📄"))}</div>' if NOTION else ""
     bz = d.get("biz") or {}
     bizl = " · ".join(x for x in [bz.get("name") and f"상호 {bz['name']}", bz.get("ceo") and f"대표 {bz['ceo']}", bz.get("regNo") and f"사업자등록번호 {bz['regNo']}", bz.get("mailOrder") and f"통신판매업 {bz['mailOrder']}"] if x)
     out = f'''<!doctype html>
@@ -102,11 +126,11 @@ def build(path):
 <title>{e(title)}</title><meta name="description" content="{e(desc)}"><meta name="robots" content="index,follow"><link rel="canonical" href="{e(canon)}">
 <meta property="og:type" content="article"><meta property="og:site_name" content="다꾸체험단"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(canon)}"><meta property="og:image" content="{e(ogimg)}">{ogwh}<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{e(ogimg)}">
 <link rel="icon" href="/icons/icon-192.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<style>{CSS}</style><script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+<style>{CSS}{NOTION_CSS if NOTION else ""}</style><script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 </head><body><div class="w">
 <p class="disc">이 페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
 <header><span class="hl"><button class="bk" type="button" aria-label="뒤로 가기" onclick="if(history.length>1&&document.referrer)history.back();else location.href='/'">‹</button><a class="logo" href="/">다꾸<i>체험단</i></a></span><a class="app" href="/">체험단 보러가기 ›</a></header>
-<section class="hero"><small>{mm}월 업데이트</small><h1>{e(P["h1"][0])}<br>{e(P["h1"][1])}</h1>
+{NHEAD}<section class="hero"><small>{mm}월 업데이트</small><h1>{e(P["h1"][0])}<br>{e(P["h1"][1])}</h1>
 <p class="lead">{e(P["lead"])}</p>
 <div class="toc">{toc}</div></section>
 {feat}
