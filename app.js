@@ -509,10 +509,10 @@ function listView(){
     '<label class="search">'+ico(I.search)+'<input id="q" type="search" placeholder="지역·숙소 이름 검색" value="'+esc(state.q)+'" autocomplete="off" aria-label="체험단 검색"></label>'+
     '<div class="catrow">'+[{k:"all",t:"전체",em:"🌈"}].concat(CAT_ORDER.filter(function(m){ return isOpenCat(m.k); }),CAT_ORDER.filter(function(m){ return !isOpenCat(m.k); })).map(function(m){ var on=m.k===state.cat; return '<button class="cat'+(on?" on":"")+'" data-cat="'+m.k+'" aria-pressed="'+on+'"><span class="em">'+m.em+'</span>'+esc(m.t)+'</button>'; }).join("")+'</div>'+
     (c?'<div class="chips hs">'+STATUSES.map(function(s){ return '<button class="chip'+(s[0]===state.status?" on":"")+'" data-status="'+s[0]+'">'+s[1]+'</button>'; }).join("")+'</div>'+
-      '<div class="fbar" id="fbar">'+fbarHtml()+'</div>'+
+      '<div class="fbrow"><div class="fbar" id="fbar">'+fbarHtml()+'</div>'+
+        '<label class="sortsel sortpill"><span class="sr">정렬</span><select id="sort" aria-label="정렬 순서" style="width:'+sortW(state.sort)+'px">'+SORTS.map(function(o){ return '<option value="'+o[0]+'"'+(o[0]===state.sort?' selected':'')+'>'+o[1].replace(/^\S+\s/,"")+'</option>'; }).join("")+'</select></label></div>'+
       '<div id="toprows"></div>'+
       '<div class="tools"><span id="count" class="count"></span><span class="tr">'+
-        '<label class="sortsel"><span class="sr">정렬</span><select id="sort" aria-label="정렬 순서">'+SORTS.map(function(o){ return '<option value="'+o[0]+'"'+(o[0]===state.sort?' selected':'')+'>'+o[1]+'</option>'; }).join("")+'</select></label>'+
         '<button class="viewbtn" data-view aria-label="보기 방식 바꾸기 (지금 '+state.view+'단)">'+viewIcon()+'</button></span></div>'+
       prefNote(state.cat)+
       '<div id="grid" class="grid v'+state.view+'"></div>'
@@ -565,8 +565,13 @@ function fChips(F){ var o=[];
   (F.srcs||[]).forEach(function(k){ o.push(["src",k,k]); });
   return o; }
 function curF(){ return {cat:state.cat,types:state.types.slice(),chs:state.chs.slice(),regions:state.regions.slice(),themes:state.themes.slice(),pet:state.pet||"",srcs:(state.srcs||[]).slice()}; }
-function fbarHtml(){ var ch=fChips(curF()).filter(function(x){ return x[0]!=="cat"; });
-  return '<button class="fbtn'+(ch.length?' on':'')+'" data-fopen="type" aria-label="필터 열기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>필터'+(ch.length?' <b>'+ch.length+'</b>':'')+'</button>'+
+/* 작성 채널 빠른 선택(2026-10-23 시온님 "블로그·클립·인스타그램 이렇게 선택할 수 있게") */
+function sortW(k){ var o=SORTS.filter(function(x){ return x[0]===k; })[0]; var t=o?o[1].replace(/^\S+\s/,""):"추천순"; return Math.round(t.length*16.5+(t.indexOf(" ")>=0?-7:0)+38); }
+var QCH=[["blog","블로그"],["clip","클립"],["insta","인스타그램"]];
+function fbarHtml(){ var all=fChips(curF()).filter(function(x){ return x[0]!=="cat"; }), chs=state.chs||[];
+  var ch=all.filter(function(x){ return !(x[0]==="ch"&&QCH.some(function(q){ return q[0]===x[1]; })); });
+  return '<button class="fbtn'+(ch.length?' on':'')+'" data-fopen="type" aria-label="필터 열기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>'+(ch.length?' <b>'+ch.length+'</b>':'')+'</button>'+
+    QCH.map(function(q){ var on=chs.indexOf(q[0])>=0; return '<button class="qch'+(on?' qon':'')+'" data-fdel="ch|'+q[0]+'" aria-pressed="'+on+'">'+q[1]+'</button>'; }).join("")+
     ch.map(function(x){ return '<button class="fchip" data-fdel="'+x[0]+'|'+esc(x[1])+'">'+esc(x[2])+' ✕</button>'; }).join(""); }
 function fOpts(tab,F){ var open=seed.items.filter(function(it){ return statusOf(it).key==="open" && (F.cat==="all"||catOf(it)===F.cat); });
   function n(fn){ return open.filter(fn).length; }
@@ -1936,7 +1941,7 @@ function shareToss(code){
   if(navigator.share){ navigator.share({title:x.name,text:text,url:url}).catch(function(){}); return; }
   try{ navigator.clipboard.writeText(text+"\n"+url).then(function(){ toast("✈️ 링크를 복사했어요. 친구에게 붙여넣어 보내세요!"); }).catch(function(){ prompt("아래 링크를 복사해 친구에게 보내세요",url); }); }catch(e){ toast(url); }
 }
-document.addEventListener("change",function(e){ if(e.target&&e.target.id==="sort"){ state.sort=e.target.value; saveUi(); renderListGrid(); } });
+document.addEventListener("change",function(e){ if(e.target&&e.target.id==="sort"){ state.sort=e.target.value; e.target.style.width=sortW(state.sort)+"px"; saveUi(); renderListGrid(); } });
 /* 카드 아무 곳이나 누르면 상세 페이지(링크·버튼 제외) — 2026-10-18 */
 document.addEventListener("click",function(e){ var t=e.target; if(!t||!t.closest||t.closest("a,button,input,label,select")) return; var art=t.closest("article.card,article.mini,article.hc"); if(!art) return; var a=art.querySelector('a[href^="#/item?id="]'); if(a) location.hash=a.getAttribute("href").slice(1); });
 document.addEventListener("click",function(e){ var b=e.target&&e.target.closest&&e.target.closest("[data-sortcomp]"); if(!b) return; state.sort="comp"; saveUi(); var s=document.getElementById("sort"); if(s) s.value="comp"; renderListGrid(); var g=document.getElementById("grid"); if(g) g.scrollIntoView({behavior:"smooth",block:"start"}); });

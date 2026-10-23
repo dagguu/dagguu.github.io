@@ -1058,3 +1058,14 @@ input,select,textarea{font-size:16px!important}
 @media (hover:hover){.hms{cursor:grab}}
 .mysites .mysub2{margin:-4px 0 12px;font-size:13px;color:#8a3fd0;font-weight:600}
 .prnote{margin:-4px 4px 10px;font-size:12px;color:#999}
+
+/* 작성 채널 알약 + 오른쪽 정렬 알약(2026-10-23 시온님) */
+.fbrow{display:flex;align-items:center;gap:6px;padding:4px 16px 10px}
+.fbrow .fbar{flex:1;min-width:0;margin:0;padding:0}
+.fbar .qch{height:36px;padding:0 11px;border-radius:18px;border:1px solid #d9d9e0;background:#fff;color:#444;font-size:14px;font-weight:600}
+.fbar .qch.qon{background:#6a3fc8;border-color:#6a3fc8;color:#fff;font-weight:800}
+.sortpill{flex:0 0 auto}
+.sortpill select{height:36px;border:1px solid #d9d9e0;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23888' stroke-width='2.2' d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 8px center/14px;border-radius:18px;padding:0 28px 0 12px;font-size:14px;font-weight:600;color:#333}
+.fbar .fbtn{width:36px;height:36px;padding:0;justify-content:center;position:relative}.fbar .fbtn svg{width:18px;height:18px}.fbar .fbtn b{position:absolute;top:-4px;right:-4px}
+.fbrow .fbar{padding-top:5px}
+.sortpill{padding-top:5px}
