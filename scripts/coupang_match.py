@@ -6,9 +6,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import coupang_api as C
 qs = json.load(open(os.path.join(C.ROOT, "scripts", "match_queries.json"), encoding="utf-8"))
 out = {}
+LIM = int(os.environ.get("MATCH_LIMIT", "10"))
 for q in qs[:30]:
     try:
-        d = C.call("GET", C.BASE + "/products/search", "keyword=" + urllib.parse.quote(q) + "&limit=5&subId=dagguu") or {}
+        d = C.call("GET", C.BASE + "/products/search", "keyword=" + urllib.parse.quote(q) + "&limit=" + str(LIM) + "&subId=dagguu") or {}
         out[q] = [{"pid": str(i.get("productId")), "name": i.get("productName"), "price": i.get("productPrice"),
                    "img": i.get("productImage"), "url": i.get("productUrl"), "rocket": i.get("isRocket")} for i in (d.get("productData") or [])]
     except Exception as e:
