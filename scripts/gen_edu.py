@@ -34,7 +34,7 @@ PICK = re.findall(r'"([^"]+)"', PICK)
 CUR = [
     ("🛠️", "블로그 셋팅 및 점검 · ✍️ 포스팅하는 법"),
     ("🎟️", "체험단 신청하는 방법 · 📝 당첨 후기 작성법"),
-    ("🔝", "블로그 상단노출 방법 · 🎬 인스타그램 릴스·클립 체험단 100% 활용"),
+    ("🔎", "블로그 검색 키워드 글쓰기 · 🎬 인스타그램 릴스·클립 체험단 100% 활용"),
     ("📰", "블로그 기자단 · 🤖 AI 글쓰기 <small>(최신 AI 프롬프트 제공)</small>"),
     ("💰", "블로그 수익화 비법"),
 ]
@@ -54,8 +54,8 @@ why = grab('<section class="eduwhy">')
 allb = grab('<section class="eduall">')
 books = grab('<section class="edusec"><h2>📚')
 course = ('<section class="educourse"><small>CLASS</small><h2>수강 과목 선택</h2><p class="ecsub">10월 수강생 · 오픈 이벤트 진행 중</p><div class="ecards">'
-  '<div class="ec"><span class="ectag">과목 1 · 🔥 오픈 이벤트</span><b>[블로그] 블로그 수익화 5주 1:1</b><p>체험단 당첨 · 기자단 · 최상단 노출 · AI 프롬프트 글쓰기 · 수익화<br>🎨 블로그 꾸미기·셋팅 1회 포함 (스킨 디자인 · 위젯 설치 · 공정위 스티커)</p><span style="font-size:13px;color:#aaa"><s>1,500,000원</s> <b style="color:#ff6b84">20%</b> · 10/31까지 오픈 이벤트가</span><b class="pr" style="color:#ff6b84">1,200,000원</b></div>'
-  '<div class="ec"><span class="ectag">과목 2 · 🔥 오픈 이벤트</span><b>[쿠팡파트너스] 쿠팡파트너스 수익화 3주 1:1</b><p>1주 가입·승인·셋팅 · 2주 상품 고르기·링크 글쓰기·대가성 문구 · 3주 최상단 글쓰기·운영정책 지키기<br>🎨 블로그 꾸미기·셋팅 1회 포함</p><span style="font-size:13px;color:#aaa"><s>1,500,000원</s> <b style="color:#ff6b84">20%</b> · 10/31까지 오픈 이벤트가</span><b class="pr" style="color:#ff6b84">1,200,000원</b></div>'
+  '<div class="ec"><span class="ectag">과목 1 · 🔥 오픈 이벤트</span><b>[블로그] 블로그 수익화 5주 1:1</b><p>체험단 당첨 · 기자단 · 검색 키워드 글쓰기 · AI 프롬프트 글쓰기 · 수익화<br>🎨 블로그 꾸미기·셋팅 1회 포함 (스킨 디자인 · 위젯 설치 · 공정위 스티커)</p><span style="font-size:13px;color:#aaa"><s>1,500,000원</s> <b style="color:#ff6b84">20%</b> · 10/31까지 오픈 이벤트가</span><b class="pr" style="color:#ff6b84">1,200,000원</b></div>'
+  '<div class="ec"><span class="ectag">과목 2 · 🔥 오픈 이벤트</span><b>[쿠팡파트너스] 쿠팡파트너스 수익화 3주 1:1</b><p>1주 가입·승인·셋팅 · 2주 상품 고르기·링크 글쓰기·대가성 문구 · 3주 검색 키워드 글쓰기·운영정책 지키기<br>🎨 블로그 꾸미기·셋팅 1회 포함</p><span style="font-size:13px;color:#aaa"><s>1,500,000원</s> <b style="color:#ff6b84">20%</b> · 10/31까지 오픈 이벤트가</span><b class="pr" style="color:#ff6b84">1,200,000원</b></div>'
   '<div class="ec set"><span class="ectag">🔥 오픈 이벤트</span><b>[SET] 블로그 + 쿠팡파트너스 5주 1:1 올인원</b><p>두 과목을 5주 안에 한 번에 끝내요<br>🎨 블로그 꾸미기·셋팅 1회 포함<br>따로 들으면 <s>2,400,000원</s> <b style="color:#ff6b84">17%</b></p><b class="pr" style="color:#ff6b84">2,000,000원</b></div>'
   '<div class="ec" style="border-style:dashed"><span class="ectag" style="background:#c9f0ff">수강 외 결제 · 선택</span><b>이웃·방문자·인스타 1:1 실전 코칭</b><p>🤝 한 달 안에 이웃 1,000명 만들기 · 📈 한 달 안에 일 방문자 1,000명 만들기 · 📸 인스타그램 계정 만들기<br>이웃·방문자를 대신 늘려 드리는 서비스가 아니라, 목표를 세우고 직접 늘리는 방법을 1:1로 알려 드려요. 결과는 활동량·주제에 따라 달라요. 수강료와 별도이며 금액은 상담 때 안내해요.</p></div>'
   '</div><a class="btn" href="/#/edu">수강 신청·결제하러 가기 ›</a></section>')
@@ -67,7 +67,7 @@ html = f'''<!doctype html>
 <html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>블로그 수익화 1:1 코칭 · 다꾸 수익화 클래스 | 다꾸체험단</title>
-<meta name="description" content="블로그 체험단 신청부터 상단노출, 애드포스트·협찬까지 5주 1:1로 배우는 블로그 수익화 코칭. 왕초보·직장인·육아맘·50대도 시작할 수 있어요. 끝난 뒤에도 1:1 코칭은 평생 무료.">
+<meta name="description" content="블로그 체험단 신청부터 키워드 글쓰기, 애드포스트·협찬까지 5주 1:1로 배우는 블로그 수익화 코칭. 왕초보·직장인·육아맘·50대도 시작할 수 있어요. 끝난 뒤에도 1:1 코칭은 평생 무료.">
 <link rel="canonical" href="https://www.dagguu.com/edu.html">
 <meta property="og:title" content="다꾸 수익화 1:1 클래스 — 한번 배우면 평생 써먹는 블로그 수익화">
 <meta property="og:description" content="5주 1:1 교육 · 평생 무료 코칭 · 블로그 관련 서적 · 당첨 안 되면 100% 환불(조건 있음)">
@@ -151,7 +151,7 @@ h1,h2{{letter-spacing:-.02em}}
 <section class="hero"><span class="chip" style="background:#ffe14d;color:#1a1033;border:0;border-radius:8px;font-size:15px">왕초보 가능 부업 🤑</span>
 <h1>블로그로 누구나 쉽게!<br><span>AI 블로그 글쓰기</span> 수익화 방법</h1>
 <p style="color:#ffe14d;font-weight:800">📣 광고대행사 대표가 직접 알려드려요</p>
-<p>5주 1:1로 체험단 당첨 · 기자단 · 최상단에 글 올리는 비법부터<br>최신 AI 프롬프트 글쓰기, 블로그 수익화까지</p></section>
+<p>5주 1:1로 체험단 당첨 · 기자단 · 검색 키워드 글쓰기부터<br>최신 AI 프롬프트 글쓰기, 블로그 수익화까지</p></section>
 {course}
 {pts}
 {why}
