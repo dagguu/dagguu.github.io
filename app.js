@@ -569,8 +569,10 @@ function curF(){ return {cat:state.cat,types:state.types.slice(),chs:state.chs.s
 function sortW(k){ var o=SORTS.filter(function(x){ return x[0]===k; })[0]; var t=o?o[1].replace(/^\S+\s/,""):"추천순"; return Math.round(t.length*16.5+(t.indexOf(" ")>=0?-7:0)+38); }
 var QCH=[["blog","블로그"],["clip","클립"],["insta","인스타그램"]];
 function fbarHtml(){ var all=fChips(curF()).filter(function(x){ return x[0]!=="cat"; }), chs=state.chs||[];
-  var ch=all.filter(function(x){ return !(x[0]==="ch"&&QCH.some(function(q){ return q[0]===x[1]; })); });
-  return '<button class="fbtn'+(ch.length?' on':'')+'" data-fopen="type" aria-label="필터 열기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>'+(ch.length?' <b>'+ch.length+'</b>':'')+'</button>'+
+  var ci=catInfo(state.cat), rgOn=!!(ci&&ci.region), rgs=state.regions||[];
+  var ch=all.filter(function(x){ return !(x[0]==="ch"&&QCH.some(function(q){ return q[0]===x[1]; })) && !(rgOn&&x[0]==="rg"); });
+  var rgBtn=rgOn?'<button class="qch qrg'+(rgs.length?' qon':'')+'" data-fopen="rg" aria-label="지역 선택">📍 '+(rgs.length?esc(rgs.length>2?rgs.slice(0,2).join("·")+" 외 "+(rgs.length-2):rgs.join("·")):"지역")+' ▾</button>':'';
+  return '<button class="fbtn'+(ch.length?' on':'')+'" data-fopen="type" aria-label="필터 열기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>'+(ch.length?' <b>'+ch.length+'</b>':'')+'</button>'+rgBtn+
     QCH.map(function(q){ var on=chs.indexOf(q[0])>=0; return '<button class="qch'+(on?' qon':'')+'" data-fdel="ch|'+q[0]+'" aria-pressed="'+on+'">'+q[1]+'</button>'; }).join("")+
     ch.map(function(x){ return '<button class="fchip" data-fdel="'+x[0]+'|'+esc(x[1])+'">'+esc(x[2])+' ✕</button>'; }).join(""); }
 function fOpts(tab,F){ var open=seed.items.filter(function(it){ return statusOf(it).key==="open" && (F.cat==="all"||catOf(it)===F.cat); });

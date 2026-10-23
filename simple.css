@@ -1101,3 +1101,6 @@ input,select,textarea{font-size:16px!important}
 .rkpage{display:block;text-align:center;margin:10px 0 0;font-size:13px;font-weight:700;color:#6a3fc8}
 .rkcard .prnote{margin:10px 0 0;font-size:11.5px;color:#999;text-align:center}
 .shopempty.sm{padding:22px 16px}
+
+.fbar .qch.qrg{border:1.5px solid #6a3fc8;color:#6a3fc8;font-weight:800;white-space:nowrap}.fbar .qch.qrg.qon{color:#fff}
+.fstabs button{flex:1 0 auto;min-width:auto;padding:14px 10px 12px}
