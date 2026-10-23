@@ -434,5 +434,6 @@ try:
     import subprocess, sys as _s
     subprocess.run([_s.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "gen_edu.py")], check=False)
     subprocess.run([_s.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "gen_picks.py")], check=False)  # 추천 모음 p/ (2026-10-20)
+    subprocess.run([_s.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "gen_rank.py")], check=False)  # 공구 탭 테마 랭킹 rank.json (2026-10-23)
 except Exception as _e:
     print("gen_edu 실패", _e)

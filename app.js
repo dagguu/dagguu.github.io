@@ -845,9 +845,29 @@ function shopList(){ var t=ymd(today()); return (seed.gonggu||[]).filter(functio
 function shopView(){
   var L=shopList();
   var h='<div class="pg"><h1>다꾸 공구</h1><p class="pgsub">다꾸체험단(플랜비)이 직접 판매하는 공동구매 상품이에요</p>';
-  if(!L.length) return h+'<div class="empty shopempty"><b>곧 공구가 열려요</b><span>카카오톡 채널을 추가하면 공구 오픈 소식을 받아볼 수 있어요</span><a class="btn" '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>카카오톡 채널 추가</a></div>'+(BENEFIT_ON?'<p class="shopnote"><a href="#/benefit">룰렛·이벤트 혜택 보기 ›</a></p>':'')+'</div>';
-  return h+'<section class="sec tossec shopsec"><div class="tgrid">'+L.map(function(x){ return tossCard({name:(x.soldOut?"[품절] ":"")+x.name,img:x.img,u:x.u,price:x.price,rate:x.rate,badge:"다꾸 공구",endAt:x.until?x.until+"T23:59:59+09:00":""}); }).join("")+'</div></section><p class="shopnote">판매자: 플랜비(다꾸체험단) · 구매 링크의 판매 페이지에서 주문·배송·교환 안내를 확인하세요.'+(BENEFIT_ON?'<br><a href="#/benefit">룰렛·이벤트 혜택 보기 ›</a>':'')+'</p></div>';
+  if(!L.length) h+='<div class="empty shopempty sm"><b>곧 공구가 열려요</b><span>카카오톡 채널을 추가하면 공구 오픈 소식을 받아볼 수 있어요</span><a class="btn" '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>카카오톡 채널 추가</a></div>';
+  else h+='<section class="sec tossec shopsec"><div class="tgrid">'+L.map(function(x){ return tossCard({name:(x.soldOut?"[품절] ":"")+x.name,img:x.img,u:x.u,price:x.price,rate:x.rate,badge:"다꾸 공구",endAt:x.until?x.until+"T23:59:59+09:00":""}); }).join("")+'</div></section>';
+  setTimeout(rankInit,0);
+  return h+'<section class="rksec" data-rank></section></div>';
 }
+/* 엄마들 장바구니·선물 추천 테마 랭킹(2026-10-23 시온님, 키즈노트 '옆집 장바구니 랭킹' 참고 — 똑같이 말고 선물 추천도).
+   rank.json = scripts/gen_rank.py(쿠팡 베스트 순서·골드박스·다꾸 추천 모음). 구매 건수·보는 사람 수·순위 변동은 데이터가 없어 보여 주지 않는다. */
+var RANK=null, RANK_K="", RANK_ALL=false;
+function rankInit(){ var el=document.querySelector("[data-rank]"); if(!el) return; if(RANK){ rankPaint(); return; }
+  fetch(BASE+"rank.json?v="+Date.now().toString(36).slice(0,-4),{cache:"no-cache"}).then(function(r){ return r.json(); }).then(function(j){ RANK=j; rankPaint(); }).catch(function(){ el.remove(); }); }
+function rankPaint(){ var el=document.querySelector("[data-rank]"); if(!el||!RANK) return; var T=RANK.themes||[]; if(!T.length){ el.remove(); return; }
+  var t=T.filter(function(x){ return x.k===RANK_K; })[0]||T[0]; RANK_K=t.k; var list=t.items.slice(0,RANK_ALL?10:5);
+  el.innerHTML='<div class="rkhd"><h2>엄마들 장바구니 · 선물 추천</h2><p>오늘 뭐 살지 고민될 때 테마별로 골라 보세요</p></div>'+
+    '<div class="rktabs">'+T.map(function(x){ return '<button class="'+(x.k===t.k?'on':'')+'" data-rtab="'+x.k+'">'+esc(x.tab)+'</button>'; }).join("")+'</div>'+
+    '<div class="rkcard"><span class="rksrc">'+esc(t.src)+'</span><h3>'+t.em+' '+esc(t.h)+'</h3><ol class="rklist">'+
+    list.map(function(x,i){ return '<li><a '+ext(safeUrl(x.u))+' data-rk="'+t.k+'"><b class="rkn">'+(i+1)+'</b><span class="rkim"><img src="'+esc(x.img)+'" alt="" loading="lazy"></span><span class="rktx"><span class="rknm">'+esc(x.n)+'</span><b class="rkp">'+esc(x.p)+'</b>'+(x.r?'<i class="rkr">로켓배송</i>':'')+'</span></a></li>'; }).join("")+'</ol>'+
+    (t.items.length>5?'<button class="rkmore" data-rmore>'+(RANK_ALL?'접기 ︿':'\''+esc(t.tab)+'\' 더보기 ›')+'</button>':'')+
+    (t.more?'<a class="rkpage" href="'+esc(t.more)+'">추천 모음 글로 보기 ›</a>':'')+
+    '<p class="prnote">가격은 '+esc(RANK.at||"")+' 수집 기준이라 쿠팡에서 다를 수 있어요</p></div>'; }
+document.addEventListener("click",function(e){ var t=e.target.closest&&e.target.closest("[data-rtab],[data-rmore],[data-rk]"); if(!t) return;
+  if(t.dataset.rtab){ RANK_K=t.dataset.rtab; RANK_ALL=false; rankPaint(); var b=document.querySelector('.rktabs .on'); if(b&&b.scrollIntoView) b.scrollIntoView({block:"nearest",inline:"center",behavior:"smooth"}); return; }
+  if(t.hasAttribute("data-rmore")){ RANK_ALL=!RANK_ALL; rankPaint(); return; }
+  if(t.dataset.rk){ try{ if(window.gtag) gtag("event","deal_click",{section:"rank_"+t.dataset.rk}); }catch(err){} } });
 
 /* ---------- 혜택 ---------- */
 function partnerRows(){
