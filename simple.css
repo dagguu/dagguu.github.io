@@ -1069,3 +1069,13 @@ input,select,textarea{font-size:16px!important}
 .fbar .fbtn{width:36px;height:36px;padding:0;justify-content:center;position:relative}.fbar .fbtn svg{width:18px;height:18px}.fbar .fbtn b{position:absolute;top:-4px;right:-4px}
 .fbrow .fbar{padding-top:5px}
 .sortpill{padding-top:5px}
+
+/* 최근 검색어(2026-10-23) */
+.rqbox{margin:-4px 16px 12px;padding:12px 14px;border:1px solid #ececf2;border-radius:14px;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.rqh{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.rqh b{font-size:13.5px}
+.rqh button{border:0;background:none;color:#999;font-size:12.5px;cursor:pointer;padding:0}
+.rql{display:flex;flex-wrap:wrap;gap:6px}
+.rqi{display:inline-flex;align-items:center;height:32px;border:1px solid #e3e3ea;border-radius:16px;background:#fafafa;padding:0 4px 0 12px}
+.rqt{border:0;background:none;font-size:13.5px;color:#333;cursor:pointer;padding:0;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rqx{border:0;background:none;color:#aaa;font-size:11px;cursor:pointer;width:24px;height:24px}
+.rqbox[hidden]{display:none}

@@ -506,7 +506,7 @@ var STATUSES=[["open","🔥 모집중"],["todayOpen","✨ 오늘 오픈"],["toda
 function listView(){
   var c=catInfo(state.cat);
   return '<div class="lv">'+
-    '<label class="search">'+ico(I.search)+'<input id="q" type="search" placeholder="지역·숙소 이름 검색" value="'+esc(state.q)+'" autocomplete="off" aria-label="체험단 검색"></label>'+
+    '<label class="search">'+ico(I.search)+'<input id="q" type="search" placeholder="지역·숙소 이름 검색" value="'+esc(state.q)+'" autocomplete="off" aria-label="체험단 검색"></label><div id="rqbox" class="rqbox" hidden></div>'+
     '<div class="catrow">'+[{k:"all",t:"전체",em:"🌈"}].concat(CAT_ORDER.filter(function(m){ return isOpenCat(m.k); }),CAT_ORDER.filter(function(m){ return !isOpenCat(m.k); })).map(function(m){ var on=m.k===state.cat; return '<button class="cat'+(on?" on":"")+'" data-cat="'+m.k+'" aria-pressed="'+on+'"><span class="em">'+m.em+'</span>'+esc(m.t)+'</button>'; }).join("")+'</div>'+
     (c?'<div class="chips hs">'+STATUSES.map(function(s){ return '<button class="chip'+(s[0]===state.status?" on":"")+'" data-status="'+s[0]+'">'+s[1]+'</button>'; }).join("")+'</div>'+
       '<div class="fbrow"><div class="fbar" id="fbar">'+fbarHtml()+'</div>'+
@@ -2484,4 +2484,28 @@ fetch(BASE+"data.json?v="+Date.now().toString(36).slice(0,-3),{cache:"no-cache"}
   document.addEventListener("click",function(e){ if(moved){ e.preventDefault(); e.stopPropagation(); moved=false; } },true);
   document.addEventListener("dragstart",function(e){ if(hx(e.target)) e.preventDefault(); });
   document.addEventListener("wheel",function(e){ var el=e.target.closest&&e.target.closest(".hms"); if(!el||Math.abs(e.deltaX)>Math.abs(e.deltaY)) return; var max=el.scrollWidth-el.clientWidth; if(max<=0) return; var n=Math.max(0,Math.min(max,el.scrollLeft+e.deltaY)); if(n===el.scrollLeft) return; el.scrollLeft=n; e.preventDefault(); },{passive:false});
+})();
+
+/* 최근 검색어(2026-10-23 시온님 "검색하면 내가 검색했던 기록 나오게"): 이 기기 localStorage dakku-recentq, 최대 10개. 검색칸을 누르면(비어 있을 때) 아래에 뜸 */
+(function(){
+  var KEY="dakku-recentq", T=null;
+  function esc(x){ return String(x).replace(/[&<>"']/g,function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+  function get(){ try{ var a=JSON.parse(localStorage.getItem(KEY)||"[]"); return Array.isArray(a)?a:[]; }catch(e){ return []; } }
+  function put(a){ try{ localStorage.setItem(KEY,JSON.stringify(a.slice(0,10))); }catch(e){} }
+  function add(v){ v=(v||"").trim(); if(v.length<2) return; var a=get().filter(function(x){ return x!==v; }); a.unshift(v); put(a); }
+  function box(){ return document.getElementById("rqbox"); }
+  function paint(){ var b=box(), q=document.getElementById("q"); if(!b||!q) return; var a=get();
+    if(q.value||!a.length||document.activeElement!==q){ b.hidden=true; return; }
+    b.innerHTML='<div class="rqh"><b>최근 검색</b><button type="button" data-rqclr>전체 삭제</button></div><div class="rql">'+a.map(function(x){ return '<span class="rqi"><button type="button" class="rqt" data-rq="'+esc(x)+'">'+esc(x)+'</button><button type="button" class="rqx" data-rqdel="'+esc(x)+'" aria-label="'+esc(x)+' 지우기">✕</button></span>'; }).join("")+'</div>';
+    b.hidden=false; }
+  function hide(){ var b=box(); if(b) b.hidden=true; }
+  document.addEventListener("focusin",function(e){ if(e.target&&e.target.id==="q") paint(); });
+  document.addEventListener("focusout",function(e){ if(e.target&&e.target.id==="q"){ add(e.target.value); setTimeout(function(){ var q=document.getElementById("q"); if(!q||document.activeElement!==q) hide(); },150); } });
+  document.addEventListener("input",function(e){ if(e.target&&e.target.id==="q"){ paint(); clearTimeout(T); var v=e.target.value; T=setTimeout(function(){ add(v); },1800); } });
+  document.addEventListener("keydown",function(e){ if(e.target&&e.target.id==="q"&&e.key==="Enter"){ add(e.target.value); e.target.blur(); } });
+  document.addEventListener("mousedown",function(e){ if(e.target.closest&&e.target.closest("#rqbox")) e.preventDefault(); });
+  document.addEventListener("click",function(e){ var t=e.target.closest&&e.target.closest("[data-rq],[data-rqdel],[data-rqclr]"); if(!t) return; var q=document.getElementById("q");
+    if(t.hasAttribute("data-rqclr")){ put([]); hide(); return; }
+    if(t.dataset.rqdel!==undefined){ put(get().filter(function(x){ return x!==t.dataset.rqdel; })); if(q) q.focus(); paint(); return; }
+    if(t.dataset.rq!==undefined&&q){ q.value=t.dataset.rq; add(q.value); hide(); q.blur(); q.dispatchEvent(new Event("input",{bubbles:true})); try{ if(window.gtag) gtag("event","search",{search_term:q.value,place:"recent"}); }catch(err){} } });
 })();
