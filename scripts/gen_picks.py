@@ -90,13 +90,17 @@ def build(path):
         feat = (f'<section class="feat"><small>오늘 소개한 제품</small><a class="fc" href="{e(fx["url"])}" target="_blank" rel="noopener noreferrer sponsored" data-k="{e(fx["kind"])}">'
                 f'<span class="im"><img src="{e(fx["img"])}" alt="{e(fx["name"])}" referrerpolicy="no-referrer">{"<i class=rk>로켓배송</i>" if fx.get("rocket") else ""}</span>'
                 f'<span class="n">{e(fx["name"])}</span><span class="pr">{fx["price"]:,}원</span><span class="go">상품 보러가기</span></a></section>')
+    # 링크 미리보기 그림: 사이트에 올린 images/og/<slug>.jpg (scripts/cards/og_picks.py) — 쿠팡 이미지 주소는 미리보기 로봇이 못 읽어서(2026-10-23)
+    ogf = os.path.join(ROOT, "images", "og", slug + ".jpg")
+    ogimg = f"{SITE}/images/og/{slug}.jpg" if os.path.exists(ogf) else secs[0]["items"][0]["img"]
+    ogwh = '<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">' if os.path.exists(ogf) else ""
     bz = d.get("biz") or {}
     bizl = " · ".join(x for x in [bz.get("name") and f"상호 {bz['name']}", bz.get("ceo") and f"대표 {bz['ceo']}", bz.get("regNo") and f"사업자등록번호 {bz['regNo']}", bz.get("mailOrder") and f"통신판매업 {bz['mailOrder']}"] if x)
     out = f'''<!doctype html>
 <html lang="ko"><head><meta charset="utf-8">{GA}
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>{e(title)}</title><meta name="description" content="{e(desc)}"><meta name="robots" content="index,follow"><link rel="canonical" href="{e(canon)}">
-<meta property="og:type" content="article"><meta property="og:site_name" content="다꾸체험단"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(canon)}"><meta property="og:image" content="{e(secs[0]["items"][0]["img"])}">
+<meta property="og:type" content="article"><meta property="og:site_name" content="다꾸체험단"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(canon)}"><meta property="og:image" content="{e(ogimg)}">{ogwh}<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{e(ogimg)}">
 <link rel="icon" href="/icons/icon-192.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>{CSS}</style><script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 </head><body><div class="w">
