@@ -64,6 +64,15 @@
    "d": "물을 끓인 수증기를 내보내서 물속 세균 걱정을 덜고 싶은 집에서 많이 찾아요. 김이 뜨거우니 아이 손이 닿지 않는 높은 곳에 두세요.",
    "items": [
     {
+     "name": "조지루시 가열식 가습기 4L",
+     "pid": "9036678837",
+     "price": 288640,
+     "img": "https://ads-partners.coupang.com/image1/PWWYo6t2jeuRAMPUPVnpKBuBUglULIi3tk5W11MvU0tf3M76qaU048HHlRvfFPZJ8uNEIFShKhSZaFDQUEUAJcTpCotYk0LkcLZ9S2bKntwN-YBb2_uQD56sItR9wORG2M7knitUJZknS3PJD0r-4qddEl_G5DkBNilj83Bw9gU5UcdhaH4UgQAxU1pe26SCAnxv2c4ZO7q8nl948ZbL3yqW2ckZvH0lJzOo9DYeMLaBMP4KtbkZquJv1NUOssRvUETuHcDGg2VYMfRVcYoEAxs4-BdD1Ymat2bamxlMvzrjtbVjW4N26kCtfePrNbNkQeNMDaOQCtKB7zdQLoBOvW2jhtwavQftf6J3nP4oIsoXZT9q1mgwhItnQu3JbRbIGNthlkgEhkmuwKNuaiKc25rcp2O1r4isyPTEJwb269cbT0Yt9ilnh88nGi59zJPdZsXgbpyuKiOwZHkxmQk4yZ4JvzULUZTy2lOpUqbvEuvcM1jOdFEDxYFHYsJWIoRu4qX0Pg_jga3gXk7kCiEBgqI29FSdqRPe",
+     "url": "https://link.coupang.com/re/AFFSDP?lptag=AF7878906&subid=dagguu&pageKey=9036678837&itemId=26510614829&vendorItemId=93485187614&traceid=V0-153-fb4b7fd692a3a8b5&requestid=20261024161515379134494654&token=31850C%7CMIXED&pt=0&slot=8",
+     "rocket": true,
+     "kind": "가열식 4L"
+    },
+    {
      "name": "신일 가열식 가습기",
      "pid": "9136176625",
      "price": 69210,
@@ -261,5 +270,6 @@
   "자연기화식가습기",
   "스텐가습기",
   "가열식가습기추천"
- ]
+ ],
+ "feat": "9036678837"
 }
