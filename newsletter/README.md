@@ -43,3 +43,4 @@
   · 숫자·혜택·마감은 data.json 그대로, 원문·상품명에 없는 시설·효능·구성은 쓰지 않는다. "인기"는 그저께 이전에 올라온 숙소를 소개할 때만.
 - 버튼(8자 이내)은 주제 목록으로: "오늘마감 보기 | https://www.dagguu.com/#/list?cat=stay&s=todayClose", "마감임박 보기 | …#/list?cat=stay&s=closing", "체험단 보러가기 | …#/list?cat=stay&s=open", "풀빌라 보러가기 | …#/list?cat=stay&q=풀빌라", "페이백 보러가기 | …#/list?cat=baby&ch=payback", "핫딜 보러가기 | …#/deals".
 - 형식은 newsletter/2026-10-16-carousel.txt 를 그대로 따른다(gen_kakao.py --text 출력).
+- 사진 후보 모아 보기(2026-10-24 시온님 "제품은 누끼 말고 배경 있는 사진, 화질 나쁜 건 쓰지 마"): kakao_queue.json 에 "scout":[이미지 주소 또는 페이지 주소…] 를 넣고 push 하면 gen_kakao.py 가 가로·세로 1000px 이상인 사진만 번호를 붙여 insta 브랜치 kakao/<날짜>/scout_N.jpg·scout.txt 로 남긴다(확인 뒤 scout 는 지움). Actions 에서도 쿠팡·쿠팡트래블 상품 페이지는 Access Denied 라 페이지 주소는 스타일씨 등 모집 사이트만 되고, 쿠팡 사진은 data.json 이미지·scripts/insta_queue.json photos(원본) 주소를 직접 넣는다. 제품 카드 배경은 흰 바탕 누끼컷 대신 생활 연출 사진(모집 사이트 상세 사진 등)을 쓴다.
