@@ -31,7 +31,7 @@
   fit[어울리는 여행 3~4개], guide[{h, p[1~2문단]}] 1~2개(주변 즐길 거리·알아 둘 점), tags[검색어 5개: 지역+유형+추천 식, 예 "성주펜션" "가야산펜션" "히노끼탕펜션"].
 - 사실은 쿠팡트래블 상품 페이지 JSON(introductions·facilities·landmarkDistance·address·productDetailType)에 있는 것만. 평점·순위·가격·"최고/1위/최저가/무료/역대급"·지어낸 후기 금지. 계절 운영(야외 수영장 하절기 등)은 그대로 밝힌다.
 - 쉬운 존댓말(~해요). 매일 같은 문장을 쓰지 않는다.
-- 쿠팡트래블 링크: data.json links["stay-<slug>"] = {"cpUrl": "https://trip.coupang.com/tp/products/{pid}"} → push 하면 coupang.yml 이 u 를 채운다(1~2분). u 가 생기면 글 아래 버튼이 뜬다.
+- 쿠팡트래블 링크: data.json links["stay-<slug>"] = {"cpUrl": "https://trip.coupang.com/tp/products/{pid}"} → push 하면 coupang.yml 이 u 를 채운다(1~2분). u 가 생기면 글 아래 "객실·가격 보기" 버튼이 뜬다(버튼에 "쿠팡트래블에서" 쓰지 않음, 2026-10-24 시온님).
 
 ## 마무리
 - python3 scripts/gen_share.py (gen_stays.py 가 m/<slug>.html·m/index.html·m/list.json·sitemap 을 만든다) → ls s | wc -l 확인 → 커밋·push.

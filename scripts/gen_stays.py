@@ -108,7 +108,7 @@ def build(P, allP):
     ld = {"@context": "https://schema.org", "@type": "Article", "headline": " ".join(P["h1"]), "datePublished": P["date"], "image": [x["src"] for x in ph[:3]],
           "about": {"@type": "LodgingBusiness", "name": P["name"], "address": next((b for a, b in P.get("info", []) if a == "주소"), P["area"])},
           "publisher": {"@type": "Organization", "name": "다꾸체험단", "url": SITE}}
-    bar = f'<div class="bar"><a href="{e(u)}" target="_blank" rel="noopener noreferrer sponsored" id="go">쿠팡트래블에서 객실·가격 보기</a></div>' if u else ""
+    bar = f'<div class="bar"><a href="{e(u)}" target="_blank" rel="noopener noreferrer sponsored" id="go">객실·가격 보기</a></div>' if u else ""
     out = head(title, desc, canon, cov["src"]) + f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script></head><body><div class="w">{TOP}' + f'''
 <section class="cov"><img src="{e(cov["src"])}" alt="{e(P["name"])}" referrerpolicy="no-referrer"><div class="tx"><small>{e(THEME.get(P.get("theme"), "숙소 추천"))} · {e(P["area"])}</small><h1>{e(P["h1"][0])}<br>{e(P["h1"][1])}</h1><p>{e(P["name"])}</p></div></section>
 <p class="lead">{e(P["lead"])}</p>
