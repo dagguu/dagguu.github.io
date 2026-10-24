@@ -1,5428 +1,1219 @@
 {
- "updated": "2026-10-24 11:14",
+ "updated": "2026-10-24 11:24",
  "hints": [
-  "블랙앤데커",
-  "르젠",
-  "켄싱턴",
-  "피레스트",
-  "파이온텍",
-  "팔레오",
-  "쿠민",
-  "보고바이오",
-  "뷰앤블루",
-  "아이프리",
-  "오투휠스",
-  "온다다시",
-  "위키드랩",
-  "구스페리",
-  "워크온바디오프",
-  "꼼지락",
-  "블루알로",
-  "데일로엔",
-  "리무브",
-  "햇풀먹인",
-  "자연비책",
-  "테이블코치"
+  "소노시즌",
+  "데오포켓",
+  "타임리턴",
+  "에센시엘",
+  "이젠가습기",
+  "프리너",
+  "헤비메이크업",
+  "원웨이칫솔",
+  "수영에미치다",
+  "피스하나",
+  "프롬나인",
+  "스페시핏",
+  "오우즈너리",
+  "휘페",
+  "아론염색약",
+  "로우키",
+  "비빚",
+  "샤이니어스",
+  "코코도르",
+  "뉴트리가든",
+  "벤오토",
+  "라바자",
+  "섬백리향",
+  "더스킨바",
+  "팝퓨어"
  ],
  "rows": [
   {
-   "kw": "착한구두",
-   "vol": 68310,
+   "kw": "썸제이",
+   "vol": 105900,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "러브패리스",
-   "vol": 53400,
+   "kw": "민지콩",
+   "vol": 87100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "분홍코끼리",
-   "vol": 33390,
+   "kw": "다바걸",
+   "vol": 76600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "메이비베이비",
+   "vol": 56700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "메이빈스",
+   "vol": 51020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "울릉도배편",
+   "vol": 23640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프롬비기닝",
+   "vol": 19740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "페미니크",
+   "vol": 13810,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "지젤슈즈",
-   "vol": 28190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보풀제거기",
-   "vol": 26470,
+   "kw": "소녀레시피",
+   "vol": 12760,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "구두",
-   "vol": 23420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "반얀트리서울",
-   "vol": 16810,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성구두",
-   "vol": 15610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성이시돌목장",
-   "vol": 14880,
+   "kw": "유이니",
+   "vol": 11090,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "더본호텔제주",
-   "vol": 13500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자구두",
-   "vol": 13270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바닐라슈",
-   "vol": 12790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소노리조트",
-   "vol": 11620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일선풍기",
-   "vol": 11250,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드",
-   "vol": 11030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울풀만호텔",
-   "vol": 10690,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "루프탑텐트",
-   "vol": 9970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "토르박스",
-   "vol": 9270,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "SK2피테라에센스",
-   "vol": 8420,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "소노호텔앤리조트",
-   "vol": 8370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "몬테라",
-   "vol": 7990,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "꼼지락탄소매트",
-   "vol": 7930,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "꼼지락",
-   "vol": 7880,
+   "kw": "코코도르",
+   "vol": 10350,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "영랑호",
-   "vol": 7610,
+   "kw": "프로스트제이",
+   "vol": 10250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에코플로우",
-   "vol": 7470,
-   "comp": "높음",
+   "kw": "아론샵",
+   "vol": 9880,
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "리무브",
-   "vol": 7450,
-   "comp": "높음",
+   "kw": "트윈침대",
+   "vol": 9160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이젠가습기",
+   "vol": 9150,
+   "comp": "중간",
    "hint": true
   },
   {
-   "kw": "르젠가습기",
+   "kw": "금계국",
+   "vol": 8800,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "벌개미취",
+   "vol": 8560,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주목나무",
+   "vol": 7720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가을꽃종류",
+   "vol": 7710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "야생화",
+   "vol": 7400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로우키",
    "vol": 7390,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "CCA주스",
-   "vol": 7210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "여의도페어몬트호텔",
-   "vol": 7200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바이오더마에센스로션",
-   "vol": 7160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이프리",
-   "vol": 7120,
-   "comp": "높음",
    "hint": true
   },
   {
-   "kw": "신일가열식가습기",
-   "vol": 6690,
+   "kw": "코코도르디퓨저",
+   "vol": 7360,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "REMOVE",
-   "vol": 6350,
+   "kw": "큰꿩의비름",
+   "vol": 6540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "할미꽃",
+   "vol": 5080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자스민꽃",
+   "vol": 4650,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "네이처하이크에어매트",
-   "vol": 6130,
+   "kw": "크리스마스트리나무",
+   "vol": 4510,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "제이슈",
-   "vol": 5600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "켄싱턴",
-   "vol": 5150,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "신일서큘레이터",
-   "vol": 4800,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "목포신안비치호텔",
-   "vol": 4520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "골프회원권시세",
-   "vol": 4490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주풀빌라",
-   "vol": 4340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "꼼지락차박매트",
-   "vol": 4330,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아트빌라스제주",
-   "vol": 4300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "토요코인대전",
-   "vol": 4280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벨락",
-   "vol": 4120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백진삼",
+   "kw": "억새풀",
    "vol": 4030,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "비비추",
+   "vol": 4030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소노시즌",
+   "vol": 3890,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "담쟁이덩굴",
+   "vol": 3890,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "구절초꽃",
+   "vol": 3520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꿩의비름",
+   "vol": 3430,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기린초",
+   "vol": 3300,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "골프회원권",
-   "vol": 4000,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명동로얄호텔",
-   "vol": 3950,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이쳐하이크",
-   "vol": 3670,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "대천파레브호텔",
-   "vol": 3620,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "블랙앤데커",
-   "vol": 3420,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "여주펜션",
-   "vol": 3380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크자충매트",
-   "vol": 3330,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "경기도펜션",
-   "vol": 3310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마운트리버야전침대",
-   "vol": 3310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "포레스트유",
-   "vol": 3290,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "보풀제거기추천",
+   "kw": "유자나무",
    "vol": 3270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제천포레스트",
-   "vol": 3140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드효능",
-   "vol": 3100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비바슈",
-   "vol": 3060,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "르젠가열식가습기",
-   "vol": 2870,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "목포클라우드인호텔",
-   "vol": 2830,
+   "kw": "라벤더꽃",
+   "vol": 2960,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다주미샵",
-   "vol": 2830,
-   "comp": "낮음",
+   "kw": "백량금",
+   "vol": 2790,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "살반",
-   "vol": 2740,
+   "kw": "자란",
+   "vol": 2080,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유니호텔제주",
-   "vol": 2730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ESSENCE",
-   "vol": 2710,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "르젠",
-   "vol": 2650,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "그랜드인터컨티넨탈파르나스",
-   "vol": 2480,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "샤오미선풍기",
-   "vol": 2420,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가습기청소",
-   "vol": 2410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세탁소보풀제거기",
-   "vol": 2370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형발전기",
-   "vol": 2340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드세럼",
-   "vol": 2310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "르젠선풍기",
-   "vol": 2260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도한라산",
-   "vol": 2260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주서귀포",
-   "vol": 2240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보플제거기",
-   "vol": 2240,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "담양퀸즈캐슬",
-   "vol": 2200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "모노어딕트",
-   "vol": 2150,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "우유배달",
-   "vol": 2140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주도해비치호텔",
-   "vol": 2120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오투휠스",
-   "vol": 2090,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "범산목장우유",
-   "vol": 2040,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "CCA주스효능",
-   "vol": 2040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AMPLE",
-   "vol": 2010,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "착즙주스",
-   "vol": 2010,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파워뱅크대여",
+   "kw": "쿤달디퓨저",
    "vol": 2000,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "차량용어닝",
-   "vol": 1990,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "SERUM",
-   "vol": 1930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "판테놀앰플",
-   "vol": 1850,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "삼성선풍기",
+   "kw": "금목서묘목",
    "vol": 1790,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "골프회원권거래소",
-   "vol": 1720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서울코리아나호텔",
-   "vol": 1650,
-   "comp": "중간",
+   "kw": "울릉도배편예약",
+   "vol": 1690,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "쥬드",
+   "kw": "트랜디어패럴",
    "vol": 1620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어나더랭귀지",
+   "vol": 1590,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "부처꽃",
+   "vol": 1590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라바짜원두",
+   "vol": 1580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "벤오토",
+   "vol": 1570,
    "comp": "중간",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "신일써큘레이터",
-   "vol": 1610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크야전침대",
-   "vol": 1600,
+   "kw": "헤비메이크업",
+   "vol": 1470,
    "comp": "중간",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "소노회원권",
-   "vol": 1540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "JEEP텐트",
-   "vol": 1480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "슈마루",
-   "vol": 1460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피테라에센스",
-   "vol": 1450,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신라스테이서울",
-   "vol": 1430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수분세럼",
-   "vol": 1430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블랙엔데커",
-   "vol": 1400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대명소노",
+   "kw": "디퓨저추천",
    "vol": 1390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "몬테라IGT",
-   "vol": 1380,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "골프장회원권",
-   "vol": 1350,
+   "kw": "매발톱꽃",
+   "vol": 1280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "네이처하이크타프",
-   "vol": 1340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드크림",
-   "vol": 1320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ES리조트",
-   "vol": 1310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "회원권거래소",
-   "vol": 1250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "CCA",
+   "kw": "부부침대",
    "vol": 1250,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "구스페리",
-   "vol": 1230,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "펩타이드앰플",
-   "vol": 1210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "이에스리조트",
-   "vol": 1210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "춘천수목원",
-   "vol": 1200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "롯데호텔소공동",
-   "vol": 1200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "순천베네치아호텔",
-   "vol": 1190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파이온텍",
+   "kw": "원추리꽃",
    "vol": 1180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "러브앤드팝",
+   "vol": 1150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "울릉도성인봉",
+   "vol": 1150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아론염색약",
+   "vol": 1140,
    "comp": "낮음",
    "hint": true
   },
   {
-   "kw": "골프장회원권시세",
-   "vol": 1170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백진삼삼기력",
-   "vol": 1170,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "올리브영세럼",
-   "vol": 1120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "우유정기배송",
-   "vol": 1110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "몬테라테이블",
+   "kw": "스페시핏",
    "vol": 1090,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리조트회원권",
-   "vol": 1050,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "팔레오",
-   "vol": 1020,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "백패킹의자",
-   "vol": 1020,
+   "kw": "COCODOR",
+   "vol": 1040,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "부산해운대신라스테이",
-   "vol": 1010,
+   "kw": "섬기린초",
+   "vol": 1030,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "니트보풀제거",
-   "vol": 950,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주여누스테이",
-   "vol": 940,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "카니발루프탑텐트",
-   "vol": 930,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "수분에센스",
+   "kw": "아론샵염색약",
    "vol": 920,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "네이탈디자인",
+   "kw": "봄꽃종류",
    "vol": 920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소노시즌매트리스",
+   "vol": 890,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "모노바비",
-   "vol": 900,
+   "kw": "라벤다꽃",
+   "vol": 810,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신일초음파가습기",
-   "vol": 880,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명동퍼시픽호텔",
-   "vol": 880,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "반얀트리호텔",
-   "vol": 880,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리어셈블",
-   "vol": 860,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "워크온바디오프",
-   "vol": 850,
+   "kw": "프롬나인",
+   "vol": 780,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "꼼지락매트",
-   "vol": 850,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "루프텐트",
-   "vol": 850,
+   "kw": "브라운코드",
+   "vol": 730,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영광하운드호텔",
-   "vol": 840,
+   "kw": "초화류",
+   "vol": 670,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퍼스트에센스",
-   "vol": 830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전주에이치에비뉴",
-   "vol": 830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "슈즈오프닝",
-   "vol": 820,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "몬테라CVT2L",
-   "vol": 820,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "샤오미무선선풍기",
-   "vol": 790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보랄선풍기",
-   "vol": 790,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "호텔데님서울",
-   "vol": 790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대명콘도회원권",
-   "vol": 780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전주아늑호텔",
-   "vol": 780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라마다해운대",
-   "vol": 770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리솜리조트제천",
-   "vol": 770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "범산목장유기농우유",
-   "vol": 770,
+   "kw": "국제종묘",
+   "vol": 640,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "크레모아울트라미니",
-   "vol": 770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘도회원권",
-   "vol": 750,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "그랜드하얏트서울수영장",
-   "vol": 750,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "대천파레브",
-   "vol": 750,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "양양독채펜션",
-   "vol": 730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쏘쿨",
-   "vol": 730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "NATUREHIKE",
-   "vol": 730,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "쏘렌토루프박스",
-   "vol": 730,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "회원권",
-   "vol": 720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신라스테이서대문조식",
-   "vol": 720,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주도워터파크",
-   "vol": 720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이비스명동",
-   "vol": 720,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "언니구두",
-   "vol": 720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "PEPTIDE",
-   "vol": 710,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "골프회원권가격",
-   "vol": 700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "단골언니",
-   "vol": 700,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파세코선풍기",
-   "vol": 690,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일무선선풍기",
-   "vol": 690,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주해비치수영장",
-   "vol": 690,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이쳐하이크에어매트",
-   "vol": 690,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주담모라호텔",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보풀제거",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "몬테라몽뜨",
-   "vol": 680,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "호텔파크하비오조식",
-   "vol": 670,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경주개인공간",
-   "vol": 670,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "올리브영앰플",
-   "vol": 670,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "월정리아름드리펜션",
-   "vol": 660,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바르는보톡스",
-   "vol": 650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보고바이오",
-   "vol": 650,
+   "kw": "오우즈너리",
+   "vol": 610,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "신화리조트",
-   "vol": 640,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주애월애독채펜션",
-   "vol": 640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부산서면롯데호텔",
-   "vol": 630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크캠핑의자",
-   "vol": 630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성구두쇼핑몰순위",
-   "vol": 620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중고파라솔",
-   "vol": 620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "까주스",
-   "vol": 620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "구좌읍숙소",
+   "kw": "울릉도낚시",
    "vol": 610,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이색테마모텔",
-   "vol": 610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "코리아나호텔조식",
-   "vol": 610,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "필모아워터저그",
-   "vol": 610,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "유니맥스선풍기",
-   "vol": 590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포주노호텔",
-   "vol": 590,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "동대문라마다호텔",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "통영스탠포드",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이쳐하이크자충매트",
-   "vol": 580,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "네이쳐하이크침낭",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "버블에센스",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디디오랩무선선풍기",
-   "vol": 570,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "서울반얀트리",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘도리조트",
-   "vol": 560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쿠민",
-   "vol": 560,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "자연비책",
-   "vol": 560,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "코모도경주",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포호텔몬다비",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "광양인서리공원",
-   "vol": 550,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "SOVO",
-   "vol": 550,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "콘도회원권거래소",
+   "kw": "준베리나무",
    "vol": 540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영월테마모텔",
-   "vol": 540,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "더본호텔조식",
+   "kw": "탐팩스펄",
    "vol": 530,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "이비스인사동",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동차텐트",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가평까사노블풀빌라",
-   "vol": 520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "싼타페루프박스",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경주코모도",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아세틸헥사펩타이드",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경기도애견펜션",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미간주름크림",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "위키드랩",
-   "vol": 500,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "우유구독",
-   "vol": 500,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크매트",
-   "vol": 490,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "롯데시티마포",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "필터없는미니가습기",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성이시돌우유",
-   "vol": 480,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "LG선풍기",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "하드테일MTB",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인천공항예약",
-   "vol": 460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "시크치노",
-   "vol": 460,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "몬테라캠핑의자",
-   "vol": 460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포폰타나호텔",
-   "vol": 450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "설악산단풍명소",
-   "vol": 440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일BLDC선풍기",
-   "vol": 440,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "링클크림",
-   "vol": 440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홀리샵",
-   "vol": 440,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "CCA쥬스",
+   "kw": "섬백리향",
+   "vol": 470,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "소녀스타일",
    "vol": 440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보국선풍기",
-   "vol": 430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엘지기화식가습기",
-   "vol": 430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여주독채펜션",
-   "vol": 430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "브슈",
-   "vol": 430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "몬테라CVT2그란데",
-   "vol": 430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주S호텔",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "북촌한옥",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명동이비스호텔",
-   "vol": 420,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "하운드호텔광주",
-   "vol": 420,
+   "kw": "라바짜커피",
+   "vol": 440,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "네이처하이크경량체어",
-   "vol": 420,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크빌리지",
-   "vol": 420,
+   "kw": "오토플레이V10",
+   "vol": 430,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "엘지전자가습기",
+   "kw": "벤트그라스",
    "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서해애견동반펜션",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고양이가습기",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "갈라짐",
-   "vol": 400,
+   "kw": "소노침대",
+   "vol": 380,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "서울그랜드워커힐",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "순천디에이치호텔",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목초우유",
-   "vol": 400,
+   "kw": "수영에미치다",
+   "vol": 360,
    "comp": "중간",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "고성크로톤풀빌라",
-   "vol": 390,
+   "kw": "뉴트리가든",
+   "vol": 360,
    "comp": "높음",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "차량루프탑텐트",
-   "vol": 390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대명회원권",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주무인텔",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경주호텔나무",
-   "vol": 370,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "광양브라운도트",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올인원파워뱅크",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주디아일랜드호텔",
+   "kw": "가을꽃모종",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주프라자CC",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신안라마다",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크체어",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보국써큘레이터",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도드림타워",
-   "vol": 350,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "익산브라운도트",
-   "vol": 350,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "롯데시티호텔김포",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "하이제주호텔",
+   "kw": "핑크뮬리모종",
    "vol": 340,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "제주도4박5일코스",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크에어펌프",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스토리지웍스루프탑텐트",
-   "vol": 340,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "토요코인호텔해운대",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이천독채펜션",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베르데힐",
+   "kw": "다년생꽃",
    "vol": 330,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "제주콘스트호텔",
-   "vol": 330,
+   "kw": "여름야생화",
+   "vol": 325,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "은목서묘목",
+   "vol": 320,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신세계영랑호",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보톡스펩타이드",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경기도한옥펜션",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가습기순위",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "NORTHPEAK",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블랙데커",
+   "kw": "가을모종",
    "vol": 310,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "거제프래밀리호텔",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보랄날개없는선풍기",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가습기대신",
-   "vol": 310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아난티리조트",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수동보풀제거기",
-   "vol": 310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "에코플로우델타1300",
-   "vol": 310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "대명콘도회원권가격",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "거품에센스",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사과양배추당근주스",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경기도펜션좋은곳",
+   "kw": "노지월동식물",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "힐랜더루프탑텐트",
-   "vol": 290,
-   "comp": "중간",
-   "hint": false
+   "kw": "데오포켓",
+   "vol": 270,
+   "comp": "낮음",
+   "hint": true
   },
   {
-   "kw": "펩타이드볼륨에센스2.0",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에센스오일",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜라겐세럼",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애플콕",
-   "vol": 280,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "로젠하임호텔",
+   "kw": "벤츠네비게이션업데이트",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가습기효능",
+   "kw": "야생화꽃",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "광주첨단브라운도트",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "구둣방",
-   "vol": 270,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "라마다호텔동대문",
-   "vol": 260,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "한일선풍기리모컨",
+   "kw": "야생화판매",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "피부과앰플",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노스피크타프스크린",
+   "kw": "각시붓꽃",
    "vol": 260,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "펩타이드화장품",
+   "kw": "소노시즌침대",
    "vol": 250,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신촌S호텔",
+   "kw": "팝퓨어",
    "vol": 250,
-   "comp": "높음",
-   "hint": false
+   "comp": "중간",
+   "hint": true
   },
   {
-   "kw": "애월유니호텔",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엄마화장품",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에코플로우델타프로",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드볼륨에센스",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엣센스",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주인별",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘스트호텔",
+   "kw": "트렌드어패럴",
    "vol": 240,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "우유가정배달",
+   "kw": "LAVAZZA",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "펩타이드에센스",
-   "vol": 230,
+   "kw": "키위묘목",
+   "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "한일서큘레이터",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서귀포펜션연리",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "폰타나호텔",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "온다다시",
-   "vol": 230,
+   "kw": "꽃잔디심는시기",
+   "vol": 240,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "메리골드모종",
+   "vol": 240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에센시엘",
+   "vol": 230,
+   "comp": "높음",
    "hint": true
   },
   {
-   "kw": "NATUREHIKE에어매트",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차위에텐트",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LEZEN가습기",
+   "kw": "과수묘목",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "코리아나호텔사우나",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "남원샵모텔",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전주더빈센트호텔",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "열가습기",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "워터에센스",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이마주름크림",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "O2W",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "리조트회원권거래소",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전주가족펜션",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일전자선풍기",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오일에센스",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주통나무펜션",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올리브영에센스추천",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경기도가족펜션",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "뷰앤블루",
+   "kw": "프리너",
    "vol": 210,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "자동차루프탑텐트",
+   "kw": "비빚",
    "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크에어쉘터",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "몬테라CVT2미니",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테이블코치",
-   "vol": 210,
-   "comp": "중간",
+   "comp": "낮음",
    "hint": true
   },
   {
-   "kw": "볼륨에센스",
-   "vol": 200,
+   "kw": "노지월동야생화",
+   "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주도난타",
-   "vol": 200,
+   "kw": "줄사철",
+   "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "콜라겐에센스",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포여행숙소",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가습기생수",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밀레니엄힐튼",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이비스호텔명동",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보톡스앰플",
-   "vol": 200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주벙커호텔",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차량용루프탑텐트",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여수지뜨",
+   "kw": "자동차미러링",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목포드메르",
+   "kw": "애기말발도리",
    "vol": 190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "목포관광호텔",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주구르미별동",
-   "vol": 190,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신일스탠드선풍기",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "거실선풍기",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경기도풀빌라펜션",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크자충매트10CM",
-   "vol": 190,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "몬테라CVT2M",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남원스위트",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "평화광장숙소",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한일써큘레이터",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포더하루호텔",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올인원에센스",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주신화호텔신화관",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "PALEO",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "ECOFLOW",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "부산농심호텔온천",
+   "kw": "벤츠무선카플레이",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "탄력에센스",
+   "kw": "철쭉묘목",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보만선풍기",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "발효에센스",
+   "kw": "상록패랭이",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "텐덤자전거",
-   "vol": 170,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "햇풀먹인",
-   "vol": 170,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "파이온텍볼륨톡스",
+   "kw": "겨울꽃화분",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이천미란다",
+   "kw": "크랜베리묘목",
    "vol": 160,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "BESTWESTERN",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가습기초음파",
-   "vol": 160,
+   "kw": "벤츠애플카플레이",
+   "vol": 155,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서울아트리움호텔",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "꼼꼼구두",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "콘도회원권시세",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주메종글래드조식",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "삼성전자선풍기",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아세틸헥사펩타이드-8",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엠버퓨어힐리조트",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경주담톤스위트",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보국서큘레이터",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보국에어젯",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "필러크림",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ES콘도",
-   "vol": 150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "군산엘타워",
-   "vol": 150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "에센스세럼",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크에어침대",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가이아루프탑텐트",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "새벽인천공항",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인천네스트호텔셔틀",
+   "kw": "두륜산야생화",
    "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "캡슐에센스",
+   "kw": "내수전전망대",
    "vol": 140,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "경주롯데리조트",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "피테라에센스저렴이",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포호텔봄",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한일전기선풍기",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "MONTERRA",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동차캠핑",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피레스트",
+   "kw": "봄야생화",
    "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "야생화종류",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라바짜탑클래스",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천리향묘목",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침실디퓨저",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "영산홍묘목",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "습지식물",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유자묘목",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가을에심는구근",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "타임리턴",
+   "vol": 110,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "콘도회원권매매",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드성분",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "40대화장품추천",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "롯데호텔소공",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이천단체펜션",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부안캘리포니아",
-   "vol": 130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "보푸라기제거기",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업소용보풀제거기",
-   "vol": 130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자전거쇼핑몰",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "렉스턴스포츠캠핑카",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사계절팬션",
-   "vol": 125,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타임레볼루션에센스",
-   "vol": 125,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "볼륨톡스",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경상남도펜션",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "삼산모텔",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드스킨부스터",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신안비치",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경주제제펜션",
-   "vol": 120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "NINETREE",
-   "vol": 120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "30대화장품",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "워커힐호텔서울",
-   "vol": 120,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "쉐라톤그랜드",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "삼기력",
-   "vol": 120,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "힐러랩",
-   "vol": 120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "슈바이릴리",
-   "vol": 120,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "세종초이스",
-   "vol": 120,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "이마크림",
-   "vol": 115,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주청정우유",
-   "vol": 115,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "르젠BLDC선풍기",
+   "kw": "미니쿠퍼카플레이",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주도무인텔",
+   "kw": "종묘회사",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목포신안비치",
+   "kw": "과일묘목",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목포시호텔",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "히알루론산에센스",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이비스엠베서더인사동",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포샹그리아",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "브라운도트광주신안점",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주호텔리조트",
-   "vol": 110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유선보풀제거기",
-   "vol": 110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "온다다시샴푸",
-   "vol": 110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "세종우유",
-   "vol": 110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "몬테라마름롤테이블L",
-   "vol": 110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "NH20FCD08",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바르는필러",
-   "vol": 105,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사과당근양배추주스",
-   "vol": 105,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대명양평",
+   "kw": "야생화모종",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "르젠무선선풍기",
+   "kw": "죽도유람선",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "징크세럼",
-   "vol": 100,
+   "kw": "울릉도오징어축제",
+   "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "탑스텐빌라드",
-   "vol": 100,
+   "kw": "무늬병꽃나무",
+   "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서해오션뷰펜션",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "PANPACIFIC",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주름세럼",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "데일로엔",
-   "vol": 100,
+   "kw": "피스하나",
+   "vol": 80,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "하드탑텐트",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이처매트",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크동계침낭",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파이진",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "경상남도리조트",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서초라바호텔",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경주베니키아",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호텔스카이파크센트럴",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임진강펜션",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "용평펜션",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가디건보풀",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "우유정기배달",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크지니쉘터",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "몬테라CVT2그란데L",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "르젠써큘레이터",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부스터세럼",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서귀포무인텔",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보국에어젯써큘레이터",
-   "vol": 85,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "에이치에비뉴목포",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보플제거",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "내셔널지오그래픽의자",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메이필드강서",
+   "kw": "울릉도스킨스쿠버",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인천휴호텔",
+   "kw": "자동차TPMS",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주호텔리젠트마린",
+   "kw": "울릉도트레킹",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신일무소음선풍기",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피부에센스",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드토너",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주담모라",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어메이징가습기",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경기도애견독채펜션",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무안미누네펜션",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가산골드리버호텔",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대용량에센스",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유선선풍기",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도스타즈호텔",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주웨이스톤서우봉호텔",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대명콘도회원권시세",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "샘물목장",
+   "kw": "자귀나무묘목",
    "vol": 80,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "네이처우드",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크CW300",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "우유배달신청",
-   "vol": 80,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "루프탑텐트가격",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "CCA주스추천",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제이앤코슈펩타이드",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서귀포스타빌",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "순창강천산모텔",
-   "vol": 75,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가슴마사지크림",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "몬테라매장",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "텐트전시장",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "송도오크우드프리미어",
+   "kw": "COCODOR디퓨저",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아산온양제일호텔",
+   "kw": "가을꽃씨",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "지오빌리지",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "통영베이",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포해비치모텔",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "성산가성비숙소",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "14인치선풍기",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중앙동토요코인",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "40대에센스",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도수영장리조트",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "속건조에센스",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "브라운도트호텔광주하남점",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "롯데서울호텔",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도Y리조트",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘스트호텔제주",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "용평리조트콘도",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "눈밑처짐크림",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "WORKONBODYOFF",
-   "vol": 70,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "자전거도매",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차량캠핑",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "루프탑텐트추천",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동차루프텐트",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터펩티에센스",
-   "vol": 65,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "STAYB",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주름에센스",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "정읍꿈의궁전",
-   "vol": 65,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "팔자주름개선화장품",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "델타1300",
-   "vol": 65,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "대명리조트회원권매매",
+   "kw": "다년생야생화",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강원도평창오리엔트리조트",
+   "kw": "꿩의바람꽃",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겹벚나무묘목",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마우나오션리조트경주",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "봄그리고가을리조트C동",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "온천스파추천",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경상남도호텔",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한화리조트할인",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일서큘레이터선풍기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LG전자선풍기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "THEWESTINJOSUNBUSAN",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신화월드서머셋온돌",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보르피린화장품",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경주페리토",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "건성에센스",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경기도대형견펜션",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주고급리조트",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포몬다비",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주름개선세럼",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스테이인성산",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일작",
-   "vol": 60,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "스윙비",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크TPU",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크경량야전침대",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크구스침낭",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "싼타페루프백",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "군산선유도가는방법",
-   "vol": 55,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "동산모텔",
-   "vol": 55,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "용인발렌타인",
+   "kw": "라바자",
    "vol": 55,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스킨부스터세럼",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파세코무선선풍기",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "드래곤시티조식",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에센스사용법",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "롯데호텔숙박",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "녹동디오션",
-   "vol": 55,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "목포명품무인텔",
-   "vol": 55,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "위키드랩비오틴",
-   "vol": 55,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "나나구두",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더슈",
-   "vol": 55,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "잠실캠핑",
-   "vol": 55,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "로사나부티크",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "거제단독펜션",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주시수영장호텔",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메이플관광호텔",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일저소음선풍기",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "50대에센스",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포폰타나",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도오션뷰풀빌라",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "해남우수영호텔",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장품에센스",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주에이바호텔",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라이크에스",
-   "vol": 50,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "차량용루프탑",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주파우제",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더6펩타이드",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드스킨부스터세럼",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "목포대명리조트",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "매트릭실세럼",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제이닉스선풍기",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울신라스테이온돌",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "연예인앰플",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "재생에센스",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "추자도에코롯지",
-   "vol": 45,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "WS호텔",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "군산아트무인텔",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이시돌우유",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "몬테라우드테이블",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타페루프탑텐트",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘도매매",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리조트회원권매매",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘도분양",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부산팔레드시즈뷔페",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파라다이스스파호텔",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "보국제로닷",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "H에비뉴역삼",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "SKYPARKHOTEL",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마몽드에센스",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에센스화장품",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이천테르메덴근처펜션",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주단체리조트",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "송파부티크호텔",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고흥녹동디오션",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "구례덕영루펜션",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라마다충장",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영광아라풀빌라",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장흥휴랜드펜션",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "삼성동자이언트호텔",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사보이호텔명동",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세종우유배달",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크에어매트리스",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대구수영장펜션",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도시드니호텔",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "용머리해안숙소",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "빌레리조트",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더6펩타이드스킨부스터세럼",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일렉트로마트선풍기",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "주름개선에센스",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주이테르펜션",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "H에비뉴이대",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도단체리조트",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리프팅에센스",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포씨원리조트",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베니키아아리울",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영광골든비치",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "화성나인부띠끄",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "일제보풀제거기",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "만능보풀제거기",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "WICKEDLAB",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "온다다시바디워시",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정우유배달",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "인버터파워뱅크",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "내추럴하이크",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크침낭M300",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이노지오",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리조트분양권",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도시리우스",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "법무법인리안",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주도금호콘도",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도삼다수목장",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도서부여행코스",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주보광휘닉스파크",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "서귀포온수풀",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일14인치선풍기",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신라스테이광화문패밀리트윈",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "담양텔레파시펜션",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "브라운도트호텔동광주점",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "디자이너스홍대",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "STAYHAKATA",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도엠스테이호텔",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크자충매트펌프",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "몬테라CVT2L체어",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "회원권시세조회",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라마다앙코르제주",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "서울호텔스위트룸",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주감성게스트하우스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도여자게스트하우스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "볼륨화장품",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주신축리조트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강남캘리포니아호텔",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "삼성무선선풍기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아세틸헥사펩타이드8",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명동피제이호텔",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가둘기펜션",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가성비에센스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "천연에센스",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "매트릭실효과",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일전자서큘레이터",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "몽태랑볼륨필링",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "보르피린세럼",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "필러앰플",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "항산화에센스",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "HAMILTONHOTEL",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주빌레리조트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주욕조숙소",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "각질제거에센스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더본디럭스패밀리",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "30대화장품추천",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조선제주호텔",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강남임페리얼팰리스호텔",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주디오션힐",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경주라한셀렉트스위트룸",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "불국사W",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "고농축에센스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "필러화장품",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "반얀트리서울가격",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울신라호텔패키지",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성산오션뷰숙소",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도리조트수영장",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보톡스아이크림",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "곡성들꽃펜션",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "브라운도트호텔광주용봉점",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "순천순천만펜션",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "켄싱턴리조트가격",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서해안애견펜션",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주트로피컬하이드어웨이",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주스파리조트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주풀빌라호텔",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "볼륨세럼",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터쉘딩",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "저분자콜라겐앰플",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블루알로",
-   "vol": 25,
-   "comp": "중간",
    "hint": true
   },
   {
-   "kw": "가정배달우유",
+   "kw": "자동차네비연결",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "현포",
+   "vol": 55,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "방풍모종",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차넷플릭스",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울야생화",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "야생화농장",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "야생화농원",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "붉은찔레꽃",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홍화산사",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "연꽃모종",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가을식재",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃잔디종류",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "지피류",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "허브구매",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "벌문",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "울릉도카약",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "산나물모종",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "월동야생화",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사철패랭이",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라벤더묘목",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "봄꽃구근",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올뉴K7안드로이드",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AARONSHOP",
    "vol": 25,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "이시돌목장우유",
+   "kw": "자동차OTT",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "필모아맥주컵",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "루프탑설치",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "루프탑텐트종류",
+   "kw": "봄꽃모종",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "네이처하이크더블에어매트",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "차량용루프텐트",
+   "kw": "야생화파는곳",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "CC주스",
+   "kw": "나팔꽃모종",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "노랑할미꽃",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "묘목축제",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "조승우CCA주스",
+   "kw": "콜치컴",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "하이원스키장오픈",
+   "kw": "다년생초화류",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서울더케이",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "라한셀렉트경주예약",
+   "kw": "상록잔디패랭이",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소공롯데호텔",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신안라마다프라자",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "케니스토리",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "리조트회원권시세",
+   "kw": "원웨이칫솔",
    "vol": 15,
-   "comp": "높음",
-   "hint": false
+   "comp": "낮음",
+   "hint": true
   },
   {
-   "kw": "르젠무엽선풍기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드볼륨마스터에센스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "DOULOS",
+   "kw": "아론새치염색약",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "경주디아망",
+   "kw": "아론트리트먼트염색약",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "숙면디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차핸드폰미러링",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니쿠퍼안드로이드",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올뉴말리부네비게이션",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "성인봉등산",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "더비치펜션빌리지",
+   "kw": "맥문동조경",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "메이플러스호텔",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메이필드호텔스위트룸",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신라구로스테이",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주벼리게스트하우스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "토요코인2",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호텔세미나실",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "필스테이명동메트로",
+   "kw": "청사사",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "통영베스트",
+   "kw": "할미꽃키우기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "탄력스킨케어",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보르조미부티크서울호텔",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가평모나코",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "순한에센스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포더하루",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포항숙박",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일써큘레이터선풍기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일전자써큘레이터",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일선풍기써큘레이터",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "무안백련리조트",
+   "kw": "어성초모종",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "NIAGARAHOTEL",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "PEYTOHOTEL",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강남역엠쉐르빌",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "신라스테이추천",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서귀포담모라",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에프원호텔",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울롯데호텔클럽라운지",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주름개선제",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "여성에센스추천",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주또시애월",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주또옴풀빌라",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "역삼스테이호텔",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "춘우재고택",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "휴안스테이",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경주1945",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호텔159",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "스타일리스서큘레이터",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "최신형선풍기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울역RANG",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울임페리얼팰리스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "WEHOUSE",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명동롯데L7",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울베이튼호텔",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이비스명동호텔",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "송추독채펜션",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주하귀로민박",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호텔프리마서울",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주도키즈독채",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주애견리조트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "푸라마시티센터호텔",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "광주라마다플라자",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리조트법인회원권",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신라스테이구로예약",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "상암스텐포드",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "켄싱턴호텔여의도예약",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주코지하우스앤투어",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "남자주름크림",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "세더마사",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에이바호텔함덕",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주해리안",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주해일리풀앤스파호텔",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펠리시아호텔",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "롯데호텔월드가격",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "핑크구미베어",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "온다다시트리트먼트",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자전거부품도매",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "입문로드바이크",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "자전거무이자할부",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "40만원대로드자전거",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올슈",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "포크슈즈",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "바니슈",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "슈즈앤아트",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "세종시우유배달",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "루프탑텐트대여",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "하드루프탑텐트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "하드탑루프탑텐트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크매트리스",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크직구",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크캠핑용품",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "싼타페루프캐리어",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘도시세",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제이앤코슈펩타이드볼륨에센스",
+   "kw": "레이디문",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "은색병",
+   "kw": "휘페",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "젯블루세럼",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "샤이니어스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "ISUPIA",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "더스킨바",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "미러링네비",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여름꽃모종",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "펩타이트",
+   "kw": "겹금계국",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "파이진볼륨톡스",
+   "kw": "야생화구입",
    "vol": 10,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남포동메이호텔",
+   "kw": "야생화재배",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초화류판매",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "라마다프라자제주조식",
+   "kw": "야생화파종",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃씨구입",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "야생화의종류",
    "vol": 10,
    "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "마산자라호텔",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "맘하우스",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신라스테이울산디럭스",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도썬라이즈호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도엠버호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주라마다앙코르호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "휘닉스에메랄드펜션",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에이퍼스트호텔",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "아이파크콘도설악",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "창원엠스테이",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "제주봉스테이",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가평고릴라펜션",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가평까사노블V풀빌라",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "가평라벨르펜션",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가평하늘숲글램핑파크펜션",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "온더스선풍기",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "따따베선풍기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "신안비치호텔예약",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "OAKWOODPREMIERCOEX",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임피리얼팰리스서울가격",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "임피리얼펠리스서울",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종로세림호텔",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "서귀포담모라호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포알렉스호텔",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "서울명동밀리오레호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울시그니엘예약",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울아산숙소힐하우스펜션",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "온더스날개없는선풍기",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주노브힐스테이",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주펜션미라",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "목포갤러리패밀리호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "티마크그랜드명동",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "드림타워리조트",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "서귀포더본",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서귀포성산호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케니스토리호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더본호텔가격",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "24년형선풍기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "24년형신일선풍기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "신일거실선풍기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타임레볼루션더퍼스트에센스",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "STANFORDHOTELSEOUL",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "반얀트리패키지",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울밀레니엄힐튼",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신라스테이마포예약",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "경기도가족독채펜션",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경기도반려견펜션",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "경기도펜션수영장",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "경기워크샵펜션",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "호텔릿서울역점",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리버밸리리조트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주노을풀빌라",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주성산골든뷰",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "임피리얼펠리스호텔",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "이비스버젯앰버서더해운대",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "프랑스세더마사보르피린",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무주IC펜션",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "순천하울당",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "익산영주네펜션",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화양한옥펜션",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "강남임피리얼팰리스",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울인사동크라운호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아루미호텔중문",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주메리어트리조트스파",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "제주에이치아이호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "함덕에이바호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호텔더그랑중문점",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "울트라본드",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자전거용품도매",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로드바이크입문용",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "입문용로드바이크추천",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "햇풀먹인제주우유",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "리무브브라탑",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "루프탑텐트렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "NH타프",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "네이처하이크렉타L",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "까쥬스",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "CCA착즙",
-   "vol": 10,
-   "comp": "높음",
    "hint": false
   }
  ]
