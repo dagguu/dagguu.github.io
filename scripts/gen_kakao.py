@@ -321,6 +321,8 @@ if Q.get('scout'):
         ctx = b.new_context(user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36', locale='ko-KR')
         pg = ctx.new_page()
         for pu in Q['scout']:
+            if re.search(r'\.(jpe?g|png|webp)(\?|$)', pu) or 'ads-partners.coupang.com/image' in pu or '/thumbnails/' in pu:
+                found.append(('img', pu)); continue
             try:
                 pg.goto(pu, timeout=45000, wait_until='domcontentloaded'); pg.wait_for_timeout(4000)
                 for _ in range(6): pg.mouse.wheel(0, 2500); pg.wait_for_timeout(500)
