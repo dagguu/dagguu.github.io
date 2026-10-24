@@ -8,7 +8,16 @@
   (출처 계정의 사진·글은 쓰지 않는다. 숙소 이름만 후보로 쓰고, 사진·사실은 쿠팡트래블에서.)
 - 쿠팡트래블에 있는 숙소만: 이름 + 시·군이 둘 다 맞는 상품(trip.coupang.com/tp/products/{id}). 없거나 애매하면 done:"쿠팡에 없음" 으로 적고 다음 후보.
   쿠팡트래블 검색은 숨은 iframe 으로 하루 5곳 이내, 검색 사이 2~4초(차단 막기, CLAUDE.md 참고).
-- 목록이 비면 그날은 쓰지 않고 시온님께 "숙소 목록이 비었어요" 알림.
+- 목록을 받으면(2026-10-24 시온님 "내가 리스트를 보내주면 그 숙소들의 특징을 파악하고 그 이후에는 알아서 숙소를 선택해줘"):
+  목록 숙소들을 쿠팡트래블에서 보고(유형·지역·시설·사진 분위기) 공통 특징을 scripts/stay_style.json 에 정리한다:
+  {from:[목록 숙소 이름], types:{유형:개수}, regions:{권역:개수}, features:[자주 나오는 시설·공간 예 "개별 수영장","통창 뷰","노천탕","독채","한옥","글램핑 텐트"],
+   mood:[사진 분위기 예 "야경 조명","숲속","오션뷰","미니멀 화이트"], keywords:[쿠팡트래블 검색에 쓸 말 10~20개 예 "가평 풀빌라","제주 독채"], avoid:[안 맞는 유형]}.
+- 목록이 다 떨어지면 시온님께 묻지 않고 알아서 고른다: stay_style.json 에 맞는 숙소를
+  ① data.json items 의 cat "stay"(coupangPid 가 있는 곳, 모집이 끝난 곳 포함) 중 features·mood 에 맞는 곳 →
+  ② 모자라면 stay_style.keywords 로 쿠팡트래블 검색(하루 5곳 이내).
+  이미 쓴 숙소(scripts/stays/*.json 의 pid)·같은 지역 사흘 연속·같은 유형 사흘 연속은 피하고, 사진을 보고 style 과 가장 비슷한 곳 1곳.
+  stay_list.json 에 {name, area, auto:true, slug, done} 으로 기록해 출처를 구분한다.
+- 목록도 stay_style.json 도 없으면 그날은 쓰지 않고 시온님께 "숙소 목록을 보내 주세요" 알림.
 
 ## 사진 (가장 중요)
 - 상품 페이지 HTML 의 hotel/<코드>/<uuid>.jpg 를 모두 모아 원본 주소 https://image.coupangcdn.com/image/travelConnect/hotel/... (안 열리면 .../image/travel_reactor/travelConnect/...)
