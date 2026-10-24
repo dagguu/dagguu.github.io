@@ -1,1217 +1,7209 @@
 {
- "updated": "2026-10-24 11:24",
+ "updated": "2026-10-24 16:14",
  "hints": [
-  "소노시즌",
-  "데오포켓",
-  "타임리턴",
-  "에센시엘",
-  "이젠가습기",
-  "프리너",
-  "헤비메이크업",
-  "원웨이칫솔",
-  "수영에미치다",
-  "피스하나",
-  "프롬나인",
-  "스페시핏",
-  "오우즈너리",
-  "휘페",
-  "아론염색약",
-  "로우키",
-  "비빚",
-  "샤이니어스",
-  "코코도르",
-  "뉴트리가든",
-  "벤오토",
-  "라바자",
-  "섬백리향",
-  "더스킨바",
-  "팝퓨어"
+  "아기가습기",
+  "분유포트",
+  "집들이선물",
+  "강아지자동급식기",
+  "겨울캠핑용품"
  ],
  "rows": [
   {
-   "kw": "썸제이",
-   "vol": 105900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "민지콩",
-   "vol": 87100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다바걸",
-   "vol": 76600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메이비베이비",
-   "vol": 56700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메이빈스",
-   "vol": 51020,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "울릉도배편",
-   "vol": 23640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "프롬비기닝",
-   "vol": 19740,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "페미니크",
-   "vol": 13810,
+   "kw": "가습기",
+   "vol": 190900,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "소녀레시피",
-   "vol": 12760,
+   "kw": "음식물처리기",
+   "vol": 156400,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유이니",
-   "vol": 11090,
+   "kw": "이불",
+   "vol": 99200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "코코도르",
-   "vol": 10350,
+   "kw": "가열식가습기",
+   "vol": 89500,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "차량용방향제",
+   "vol": 77000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베이비페어",
+   "vol": 70000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소고기",
+   "vol": 65650,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "제습기",
+   "vol": 54400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기포트",
+   "vol": 48400,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "화분",
+   "vol": 42500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물",
+   "vol": 41600,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "아이폰케이스",
+   "vol": 40850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "한우",
+   "vol": 40240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑용품",
+   "vol": 38520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개업화분",
+   "vol": 38130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "돗자리",
+   "vol": 37010,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "침낭",
+   "vol": 36800,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대용량가습기",
+   "vol": 35410,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저",
+   "vol": 35100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "상견례선물",
+   "vol": 33790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소진액",
+   "vol": 33570,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "분유포트",
+   "vol": 33110,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "프로스트제이",
-   "vol": 10250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아론샵",
-   "vol": 9880,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "트윈침대",
-   "vol": 9160,
+   "kw": "맥주",
+   "vol": 31170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "이젠가습기",
-   "vol": 9150,
+   "kw": "에어메이드가습기",
+   "vol": 29490,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "미니가습기",
+   "vol": 28910,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "휴대용분유포트",
+   "vol": 28910,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "전기요",
+   "vol": 27060,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물추천",
+   "vol": 26490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보르르분유포트",
+   "vol": 25480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "초음파가습기",
+   "vol": 24490,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가습기추천",
+   "vol": 23990,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산선물",
+   "vol": 23360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소",
+   "vol": 22200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "모달이불",
+   "vol": 21400,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아가습기",
+   "vol": 21310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "화로대",
+   "vol": 20300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "추석선물세트",
+   "vol": 19300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑화로대",
+   "vol": 18940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "염소탕",
+   "vol": 18880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디드라이어",
+   "vol": 18500,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "도라지정과",
+   "vol": 18100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "추석선물",
+   "vol": 16920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발렌타인데이",
+   "vol": 16720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑매트",
+   "vol": 16680,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "결혼기념일선물",
+   "vol": 16130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "복합식가습기",
+   "vol": 16090,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기화식가습기",
+   "vol": 15710,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기가습기",
+   "vol": 15640,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "금계국",
-   "vol": 8800,
+   "kw": "스텐가습기",
+   "vol": 15610,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "벌개미취",
-   "vol": 8560,
+   "kw": "차량방향제",
+   "vol": 15180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "주목나무",
-   "vol": 7720,
+   "kw": "한우선물세트",
+   "vol": 14670,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가을꽃종류",
-   "vol": 7710,
+   "kw": "캔들",
+   "vol": 14580,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "야생화",
-   "vol": 7400,
+   "kw": "백패킹",
+   "vol": 13870,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "로우키",
-   "vol": 7390,
+   "kw": "생일선물",
+   "vol": 13670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향초",
+   "vol": 13640,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "바디오일",
+   "vol": 12730,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아선물",
+   "vol": 11710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자연기화식가습기",
+   "vol": 11300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임산부선물",
+   "vol": 11080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사쉐",
+   "vol": 10640,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "과일선물세트",
+   "vol": 10590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고무나무",
+   "vol": 10500,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "사무실가습기",
+   "vol": 10390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가열가습기",
+   "vol": 10380,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마장동축산시장",
+   "vol": 9950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가열식가습기추천",
+   "vol": 9190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내방향제",
+   "vol": 8980,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "분유제조기",
+   "vol": 8450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남자친구생일선물",
+   "vol": 8380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신축하선물",
+   "vol": 8220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전통주",
+   "vol": 8190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "흑염소효능",
+   "vol": 8090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "불멍화로대",
+   "vol": 8060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼선물",
+   "vol": 8050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아가습기추천",
+   "vol": 8040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선물세트",
+   "vol": 8010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기가습기추천",
+   "vol": 7990,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형화분",
+   "vol": 7830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소탕",
+   "vol": 7800,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "거실화분",
+   "vol": 7630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "보르르",
+   "vol": 7610,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "강아지밥그릇",
+   "vol": 7580,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소고기선물세트",
+   "vol": 7560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "칠순선물",
+   "vol": 7550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑탄소매트",
+   "vol": 7120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퇴사선물",
+   "vol": 7090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑용이불",
+   "vol": 7060,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "환갑선물",
+   "vol": 6940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이자동급식기",
+   "vol": 6890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑이불",
+   "vol": 6880,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캠핑전기매트",
+   "vol": 6860,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캠핑전기장판",
+   "vol": 6850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집생일선물",
+   "vol": 6480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌선물",
+   "vol": 6380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소진액효능",
+   "vol": 6330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명절선물",
+   "vol": 6240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동계침낭",
+   "vol": 6230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지자동급식기",
+   "vol": 6140,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "코코도르디퓨저",
-   "vol": 7360,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "큰꿩의비름",
-   "vol": 6540,
+   "kw": "신혼부부선물",
+   "vol": 5990,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "할미꽃",
-   "vol": 5080,
+   "kw": "아기용품",
+   "vol": 5960,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자스민꽃",
-   "vol": 4650,
+   "kw": "아빠생일선물",
+   "vol": 5870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화롯대",
+   "vol": 5850,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스트리나무",
+   "kw": "이사선물",
+   "vol": 5840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디드라이기",
+   "vol": 5810,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동급식기",
+   "vol": 5760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형가습기",
+   "vol": 5720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명품차량용방향제",
+   "vol": 5710,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캠핑침낭",
+   "vol": 5690,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캠핑베개",
+   "vol": 5630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "거실전기매트",
+   "vol": 5620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의류관리기",
+   "vol": 5530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날",
+   "vol": 5460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌잔치선물",
+   "vol": 5450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생일선물추천",
+   "vol": 5440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SCENT",
+   "vol": 5380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엄마생일선물",
+   "vol": 5230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자양강장제",
+   "vol": 5210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님생신선물",
+   "vol": 5060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소엑기스",
+   "vol": 5040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개업축하화분",
+   "vol": 5020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니제습기",
+   "vol": 4900,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쇼파전기매트",
+   "vol": 4830,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출수형분유포트",
+   "vol": 4790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "임신선물",
+   "vol": 4740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑화롯대",
+   "vol": 4680,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "그림액자",
+   "vol": 4680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침대전기장판",
+   "vol": 4570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젖병열탕소독",
+   "vol": 4550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빔프로젝터스크린",
+   "vol": 4540,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캠핑화로",
+   "vol": 4530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "정년퇴직선물",
+   "vol": 4530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친구결혼선물",
    "vol": 4510,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "억새풀",
-   "vol": 4030,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "비비추",
-   "vol": 4030,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소노시즌",
+   "kw": "밥솥이유식",
+   "vol": 4490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용가습기",
+   "vol": 4430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "통세척가습기",
+   "vol": 4430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑용전기장판",
+   "vol": 4370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "축하화분",
+   "vol": 4360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님선물",
+   "vol": 4350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실가습기",
+   "vol": 4260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "흑염소즙",
+   "vol": 4230,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "보양식",
+   "vol": 4180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산준비물리스트",
+   "vol": 4160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑침대",
+   "vol": 4130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "탁상용가습기",
+   "vol": 4120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남편생일선물",
+   "vol": 4120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빔스크린",
+   "vol": 4040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친구출산선물",
+   "vol": 3910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "불면증극복하는법",
+   "vol": 3900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "양초",
    "vol": 3890,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "담쟁이덩굴",
-   "vol": 3890,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "구절초꽃",
-   "vol": 3520,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "꿩의비름",
-   "vol": 3430,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "기린초",
-   "vol": 3300,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "유자나무",
-   "vol": 3270,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "라벤더꽃",
-   "vol": 2960,
+   "kw": "세척편한가습기",
+   "vol": 3830,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백량금",
+   "kw": "한우세트",
+   "vol": 3810,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "차박준비물",
+   "vol": 3770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이밥그릇",
+   "vol": 3750,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기방가습기",
+   "vol": 3730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차박용품",
+   "vol": 3730,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "성년의날",
+   "vol": 3670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빼빼로데이선물",
+   "vol": 3610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향수쇼핑몰",
+   "vol": 3500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "입맛없을때음식",
+   "vol": 3450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화분쇼핑몰",
+   "vol": 3360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑용침낭",
+   "vol": 3310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "30대여자선물",
+   "vol": 3250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "크리스마스선물",
+   "vol": 3230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편백수",
+   "vol": 3210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캠핑가습기",
+   "vol": 3210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "다육이화분",
+   "vol": 3170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남자생일선물",
+   "vol": 3070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퇴직선물",
+   "vol": 3010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생선물",
+   "vol": 2990,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명절선물세트",
+   "vol": 2980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가습기종류",
+   "vol": 2970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "60대여성선물",
+   "vol": 2940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아용품",
+   "vol": 2930,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "50대여자선물",
+   "vol": 2870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무소음가습기",
+   "vol": 2800,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "육아용품",
    "vol": 2790,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자란",
-   "vol": 2080,
+   "kw": "집방향제추천",
+   "vol": 2790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부부의날",
+   "vol": 2780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자친구100일선물",
+   "vol": 2780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑용가습기",
+   "vol": 2740,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "쿤달디퓨저",
+   "kw": "염소즙",
+   "vol": 2730,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이유식마스터기",
+   "vol": 2720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스타벅스선물세트",
+   "vol": 2710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기업판촉물",
+   "vol": 2700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원룸가습기",
+   "vol": 2690,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "시어머니생신선물",
+   "vol": 2670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울침낭",
+   "vol": 2640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침낭추천",
+   "vol": 2630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "30대남자친구생일선물",
+   "vol": 2630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님추석선물",
+   "vol": 2630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산준비물",
+   "vol": 2620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장방향제",
+   "vol": 2620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "할머니생신선물",
+   "vol": 2590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼축하선물",
+   "vol": 2580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "30대여자친구생일선물",
+   "vol": 2510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑용전기매트",
+   "vol": 2490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소이캔들",
+   "vol": 2480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산용품리스트",
+   "vol": 2470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자친구선물",
+   "vol": 2460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선물하기",
+   "vol": 2340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "백패킹매트",
+   "vol": 2330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아출산선물",
+   "vol": 2270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "계면활성제없는치약",
+   "vol": 2260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "꽃화분",
+   "vol": 2240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑블랭킷",
+   "vol": 2230,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "원룸제습기",
+   "vol": 2190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "미니의류관리기",
+   "vol": 2180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스텐가열식가습기",
+   "vol": 2180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화분배달",
+   "vol": 2170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이유식제조기",
+   "vol": 2140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "할머니선물",
+   "vol": 2140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20대남자생일선물",
+   "vol": 2110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자친구선물",
+   "vol": 2080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "단체선물",
+   "vol": 2060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개업식화분",
+   "vol": 2050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼부부집들이선물",
+   "vol": 2050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "경량침낭",
+   "vol": 2030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형가습기",
+   "vol": 2030,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산선물추천",
+   "vol": 2020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이유식믹서기",
    "vol": 2000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "개업축하선물",
+   "vol": 1990,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "금목서묘목",
-   "vol": 1790,
+   "kw": "PERFUME",
+   "vol": 1990,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "울릉도배편예약",
+   "kw": "옷장제습제",
+   "vol": 1990,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "살균가습기",
+   "vol": 1980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "추석선물세트추천",
+   "vol": 1950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "200일선물",
+   "vol": 1900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기독교굿즈",
+   "vol": 1890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부출산선물",
+   "vol": 1890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대엄마생신선물",
+   "vol": 1890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장냄새제거",
+   "vol": 1890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "추석선물추천",
+   "vol": 1890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엄마환갑선물",
+   "vol": 1870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텐트매트",
+   "vol": 1840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자디퓨저",
+   "vol": 1820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페개업선물",
+   "vol": 1770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아빠환갑선물",
+   "vol": 1770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울캠핑난로",
+   "vol": 1720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향초캔들",
+   "vol": 1700,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "합격기원선물",
+   "vol": 1700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어르신선물",
    "vol": 1690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트랜디어패럴",
+   "kw": "발열이불",
+   "vol": 1680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아가습기",
+   "vol": 1670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동습도조절가습기",
+   "vol": 1670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의류살균기",
+   "vol": 1660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이방가습기",
+   "vol": 1640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마장동한우선물세트",
+   "vol": 1630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가을캠핑",
    "vol": 1620,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어나더랭귀지",
-   "vol": 1590,
-   "comp": "낮음",
+   "kw": "어린이집선생님선물",
+   "vol": 1620,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "부처꽃",
+   "kw": "흑염소즙효능",
+   "vol": 1600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차박전기매트",
+   "vol": 1600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "분유포트기",
+   "vol": 1590,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "50대아빠생일선물",
    "vol": 1590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "라바짜원두",
+   "kw": "온도조절전기포트",
    "vol": 1580,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "벤오토",
-   "vol": 1570,
-   "comp": "중간",
-   "hint": true
+   "kw": "흑염소농장",
+   "vol": 1560,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "헤비메이크업",
+   "kw": "친구집들이선물",
+   "vol": 1560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형제습기",
+   "vol": 1530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "50대남자생일선물",
+   "vol": 1520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건강선물",
+   "vol": 1520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아버지생신선물",
+   "vol": 1490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엄마선물",
    "vol": 1470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3만원대선물",
+   "vol": 1470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "횡성한우선물세트",
+   "vol": 1460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이소가스워머",
+   "vol": 1450,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "디퓨저추천",
-   "vol": 1390,
+   "kw": "추석명절선물",
+   "vol": 1440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "매발톱꽃",
-   "vol": 1280,
+   "kw": "어머니생신선물",
+   "vol": 1420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "부부침대",
+   "kw": "아내결혼기념일선물",
+   "vol": 1410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "답례품선물",
+   "vol": 1410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전동스크린",
+   "vol": 1400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1주년선물",
+   "vol": 1380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아빠선물",
+   "vol": 1360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미세먼지정화식물",
+   "vol": 1310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나무화분",
+   "vol": 1300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아내생일선물",
+   "vol": 1300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "허리스트레칭기구",
+   "vol": 1300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에어스타일러",
+   "vol": 1270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "흙염소진액",
    "vol": 1250,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "원추리꽃",
-   "vol": 1180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "러브앤드팝",
-   "vol": 1150,
+   "kw": "불멍화로",
+   "vol": 1250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20만원대선물",
+   "vol": 1240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "섬세이에어샤워",
+   "vol": 1240,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "울릉도성인봉",
+   "kw": "예쁜화분",
+   "vol": 1240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안전한가습기",
+   "vol": 1240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화분선물",
+   "vol": 1220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼집집들이선물",
+   "vol": 1220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개업식선물",
+   "vol": 1210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니스타일러",
+   "vol": 1200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포스터액자",
+   "vol": 1200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "한우선물",
+   "vol": 1160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "특가",
    "vol": 1150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아론염색약",
+   "kw": "송풍구방향제",
+   "vol": 1150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "저소음가습기",
+   "vol": 1150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베란다캠핑",
+   "vol": 1150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "분유포트추천",
    "vol": 1140,
-   "comp": "낮음",
-   "hint": true
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "스페시핏",
+   "kw": "여자신생아선물",
+   "vol": 1140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼선물",
+   "vol": 1140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용제습기",
+   "vol": 1130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대여성선물",
+   "vol": 1120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집방향제",
+   "vol": 1120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아빠생신선물",
+   "vol": 1120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "호텔디퓨저",
+   "vol": 1120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피선물세트",
+   "vol": 1100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빅아그네스텐트",
+   "vol": 1100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "센스있는집들이선물",
+   "vol": 1100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장모님생신선물",
    "vol": 1090,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "COCODOR",
-   "vol": 1040,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "섬기린초",
-   "vol": 1030,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아론샵염색약",
-   "vol": 920,
+   "kw": "출산용품",
+   "vol": 1080,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "봄꽃종류",
-   "vol": 920,
+   "kw": "공기청정제습기",
+   "vol": 1080,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캠핑전기요",
+   "vol": 1070,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소노시즌매트리스",
+   "kw": "30만원대선물",
+   "vol": 1070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차도구",
+   "vol": 1070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고기선물세트",
+   "vol": 1060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "10만원대선물",
+   "vol": 1020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "연말선물",
+   "vol": 1010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이유식밥솥",
+   "vol": 1010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디건조기",
+   "vol": 1000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차박용전기장판",
+   "vol": 1000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2주년선물",
+   "vol": 1000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안방가습기",
+   "vol": 1000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파세코바디드라이어",
+   "vol": 990,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "양재동꽃시장디퓨저",
+   "vol": 980,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아이디어상품",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑온열매트",
+   "vol": 950,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "친구선물",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어머님생신선물",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드레스룸제습기",
+   "vol": 950,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "생신선물",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차탕기",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아준비물",
+   "vol": 940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "백화점디퓨저",
+   "vol": 940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밸런타인데이",
+   "vol": 930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비대칭",
+   "vol": 930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실용가습기",
+   "vol": 910,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "1000일선물",
+   "vol": 910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "외국인친구선물",
+   "vol": 900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영사기",
+   "vol": 900,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신혼집선물",
+   "vol": 900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기가열식가습기",
+   "vol": 900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "300일선물",
    "vol": 890,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "라벤다꽃",
+   "kw": "개업선물추천",
+   "vol": 890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천연화장품",
+   "vol": 890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젖병식기세척기",
+   "vol": 870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차박이불",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5만원선물",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "입덧음식",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이직선물",
+   "vol": 850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한살림흑염소",
+   "vol": 840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실개업선물",
+   "vol": 840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플선물",
+   "vol": 840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "크리스마스선물추천",
+   "vol": 840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼집들이선물",
+   "vol": 830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대여자생일선물",
+   "vol": 830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아템",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스승의날선물",
    "vol": 810,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "프롬나인",
-   "vol": 780,
-   "comp": "중간",
-   "hint": true
+   "kw": "캠핑용전기요",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "브라운코드",
+   "kw": "소고기세트",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "승진축하선물",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보온포트",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소고기선물",
+   "vol": 790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이급식기",
+   "vol": 790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선생님선물",
+   "vol": 780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장실미니제습기",
+   "vol": 780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기념선물",
+   "vol": 770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "60대남자생일선물",
+   "vol": 770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인테리어디퓨저",
+   "vol": 760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명품디퓨저",
+   "vol": 760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화분식물",
+   "vol": 750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "간편세척가습기",
+   "vol": 750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "만삭임산부선물",
    "vol": 730,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초화류",
-   "vol": 670,
+   "kw": "교수님선물",
+   "vol": 730,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "국제종묘",
-   "vol": 640,
-   "comp": "낮음",
+   "kw": "유리포트",
+   "vol": 730,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오우즈너리",
+   "kw": "디퓨저선물",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사계절침낭",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "40대엄마생일선물",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "염소가격",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실그림액자",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파키라화분",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기분유포트",
+   "vol": 690,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이장갑",
+   "vol": 690,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동분유제조기",
+   "vol": 680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기보온포트",
+   "vol": 680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "섬세이바디드라이어",
+   "vol": 670,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "동계침낭추천",
+   "vol": 660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젖병식세기",
+   "vol": 660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "찻주전자",
+   "vol": 650,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "휴대용전기매트",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "센스있는선물",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이사선물추천",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명품방향제",
+   "vol": 640,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "고급선물세트",
+   "vol": 630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼선물추천",
+   "vol": 630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차량용사쉐",
+   "vol": 630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캔들선물",
+   "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20만원선물",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "60대여자선물",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "칠순잔치선물",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뱅갈고무나무화분",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블랙체리디퓨저",
    "vol": 610,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "울릉도낚시",
-   "vol": 610,
+   "kw": "진액",
+   "vol": 600,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "강아지사료통",
+   "vol": 590,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "사료통",
+   "vol": 590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "준베리나무",
+   "kw": "거실용가습기",
+   "vol": 590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "금호선인장",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사돈선물",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울선물",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실방향제",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향수사이트",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이사집선물",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인테리어선물",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차박전기장판",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "군인선물",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보아르휴대용분유포트",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파티굿즈",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "내열유리전기포트",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "60대엄마생신선물",
    "vol": 540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "탐팩스펄",
+   "kw": "바디드라이어추천",
    "vol": 530,
-   "comp": "낮음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "섬백리향",
+   "kw": "환기디퓨저",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "답례선물",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라벤더향",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산산모선물",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소진액추천",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고빔프로젝터",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침낭브랜드",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아필수템",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시어머니선물",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공예품",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소쉬운가습기",
+   "vol": 520,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "바디드라이",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제로부탄",
+   "vol": 510,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이너텐트매트",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "노인영양제",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님인사선물",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형사무실인테리어",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "행사사은품",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대생일선물",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이밥그릇높이",
+   "vol": 510,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "40대생일선물",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어르신선물추천",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스팀소독기",
+   "vol": 500,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "퇴사선물추천",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "HEM인센스",
+   "vol": 500,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자연방목흑염소진액",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지자동배식기",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물세트",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파도그림",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형전기포트",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동계캠핑",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "좋은치약",
+   "vol": 480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "방향제리필",
+   "vol": 480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "10만원대집들이선물",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급디퓨저",
+   "vol": 480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "옷장냄새",
    "vol": 470,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "소녀스타일",
+   "kw": "진급선물",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "60대아빠선물",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소편한가습기",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차박용전기매트",
+   "vol": 460,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "추석부모님선물",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시멘트화분",
+   "vol": 460,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "설선물세트",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "몸말리는기계",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인용침낭",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "열탕소독기",
+   "vol": 450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "부모님생일선물",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지급식기",
    "vol": 440,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "라바짜커피",
+   "kw": "사료자동급식기",
    "vol": 440,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오토플레이V10",
+   "kw": "WMF믹서기",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3만원선물",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명절선물추천",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에어맘분유포트",
    "vol": 430,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "벤트그라스",
+   "kw": "며느리생일선물",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선인장화분",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장인어른선물",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울캠핑난방",
    "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소노침대",
+   "kw": "향수직구",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날선물",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실선물",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님명절선물",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취생선물",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨져추천",
+   "vol": 400,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "일본음료",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "송년회선물",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모출산선물",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동출수분유포트",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동사료급여기",
+   "vol": 390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "방디퓨저",
+   "vol": 390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "건강즙",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급선물",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원룸제습기추천",
    "vol": 380,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "수영에미치다",
-   "vol": 360,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "뉴트리가든",
-   "vol": 360,
+   "kw": "집디퓨저",
+   "vol": 380,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "가을꽃모종",
+   "kw": "아버지선물",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인센스콘홀더",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발건조기",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의미있는선물",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시험응원선물",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취선물",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고무나무화분",
+   "vol": 370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저브랜드",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑패드",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "핑크뮬리모종",
+   "kw": "백화점한우선물세트",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실방향제",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보온전기포트",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내디퓨저추천",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부탄가스워머",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑전기매트추천",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기억에남는선물",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마켓더치",
+   "vol": 350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "보타니컬레메디",
+   "vol": 350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "애교예단",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실용적인선물",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방향제추천",
    "vol": 340,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "다년생꽃",
+   "kw": "센스있는개업선물",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사료보관통",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴대용스타일러",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전신드라이기",
    "vol": 330,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "여름야생화",
-   "vol": 325,
+   "kw": "고양이선물",
+   "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "은목서묘목",
+   "kw": "어른들선물",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원선생님선물",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울캠핑용품",
+   "vol": 320,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "애견자동급식기",
    "vol": 320,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "가을모종",
+   "kw": "차박담요",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전신건조기",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국산전기포트",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님선물추천",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨즈",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "녹보수화분",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가성비가습기",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "몸건조기",
    "vol": 310,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "노지월동식물",
+   "kw": "염소액기스",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지자동급식기추천",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이자동급식기추천",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "70대할머니선물",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "위스키디퓨저",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "감성화분",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여행용온열매트",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관방향제",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부가습기",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부디퓨저",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑침구",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "데오포켓",
+   "kw": "퇴사자선물",
+   "vol": 290,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "고양이사료통",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프리미엄선물세트",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피진",
+   "vol": 290,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저사용법",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다우니방향제",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형견자동급식기",
+   "vol": 280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대용량방향제",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캔들추천",
+   "vol": 280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대형선인장",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "설선물",
    "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시부모님선물",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이유식믹서기추천",
+   "vol": 270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저선물세트",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "진공사료통",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발향좋은디퓨저",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "내열유리커피포트",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "외국친구선물",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "더치커피선물세트",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "특별한생일선물",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영양제선물세트",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반려동물자동급식기",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃액자",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실디퓨저",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장실용제습기",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지사료보관통",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "FRESCO",
+   "vol": 260,
    "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "벤츠네비게이션업데이트",
-   "vol": 270,
-   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "야생화꽃",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "야생화판매",
+   "kw": "우디향디퓨저",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "각시붓꽃",
+   "kw": "백화점방향제",
    "vol": 260,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소노시즌침대",
+   "kw": "빅아그네스카퍼스퍼",
    "vol": 250,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "팝퓨어",
+   "kw": "캠핑용배게",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산아기용품",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선물셋트",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이가습기",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장곰팡이제거",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이사집들이선물",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반려동물디퓨저",
    "vol": 250,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "트렌드어패럴",
+   "kw": "집디퓨저추천",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤워건조기",
    "vol": 240,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "LAVAZZA",
+   "kw": "여름침낭",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키위묘목",
+   "kw": "감성액자",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "꽃잔디심는시기",
+   "kw": "할머니생일선물",
    "vol": 240,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "메리골드모종",
+   "kw": "국산분유포트",
    "vol": 240,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에센시엘",
+   "kw": "고급방향제",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "입주선물",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아분유포트",
    "vol": 230,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "과수묘목",
+   "kw": "70대선물",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "30대여자선물추천",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산후조리선물",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방방향제",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "저소음제습기",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20만원대집들이선물",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "온도조절포트",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피톤치드디퓨저",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아버지환갑선물",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "30대친구생일선물",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뿌리는방향제",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저리드스틱",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "욕실디퓨저",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "축구굿즈",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "프리너",
+   "kw": "캠핑용온열매트",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코슬리바디드라이어",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어머님선물",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선물세트추천",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시댁명절선물",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대엄마생일선물",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저200ML",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방향제스틱",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장제습기",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건강선물세트",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지자율배식",
    "vol": 210,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "비빚",
-   "vol": 210,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "노지월동야생화",
+   "kw": "행사기념품추천",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "줄사철",
+   "kw": "현관디퓨저",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자동차미러링",
+   "kw": "디퓨저파는곳",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대학입학선물",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소효과",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "설날선물",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기용품",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이디퓨저",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기업선물",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천연디퓨져",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로즈마리향",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자친구500일선물",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조용한가습기",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부방향제",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "우드디퓨저",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "연말선물세트",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "치약브랜드",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인테리어가습기",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스벅선물세트",
+   "vol": 195,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그림선물",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애기말발도리",
+   "kw": "중고사무용품",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울캠핑이불",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑이불세트",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "단초점프로젝터",
    "vol": 190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "벤츠무선카플레이",
+   "kw": "정년퇴직선물추천",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내방향제추천",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장실디퓨저추천",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "선물용화분",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장실디퓨져",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차박용이불",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생일파티답례품",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쿠쿠분유포트",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "효도선물",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오픈선물",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "외국인이좋아하는선물",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향받침대",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의류스타일러",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형가전선물",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저방향제",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방향제브랜드",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜가습기",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파나소닉빔프로젝터",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "철쭉묘목",
+   "kw": "그래놀라선물세트",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "상록패랭이",
+   "kw": "우정선물",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "와이프생일선물추천",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모임선물",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "7만원대선물",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드레스룸탈취제",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용디퓨저",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "겨울꽃화분",
+   "kw": "벤자민화분",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극락조화분",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편백수효능",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "EB-X51",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크랜베리묘목",
+   "kw": "가족선물",
    "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "벤츠애플카플레이",
-   "vol": 155,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "두륜산야생화",
+   "kw": "집들이선물디퓨저",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님선물세트",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저대용량",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핸드타월답례품",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "석고디퓨저",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화분추천",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소추천",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파나소닉프로젝터",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사진선물",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "풍수지리액자",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아용품점",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "은사님선물",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방향제분사기",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가성비제습기",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "비누향디퓨저",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨져파는곳",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1년선물",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라벤더디퓨저",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형스타일러",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "WMF티포트",
+   "vol": 145,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부용품",
    "vol": 140,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "내수전전망대",
+   "kw": "개업선물액자",
    "vol": 140,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "봄야생화",
+   "kw": "바디드라이기추천",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "HEM인센스스틱",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선물용디퓨저",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오래가는방향제",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국내생산가습기",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "턱끝",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주방디퓨저",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인스타일러",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기디퓨저",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천연아로마디퓨저",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "특이한화분",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지자율급식",
+   "vol": 135,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "직원추석선물",
+   "vol": 135,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학원빔프로젝터",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "야생화종류",
+   "kw": "백패킹전기장판",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "중년여성선물",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "라바짜탑클래스",
+   "kw": "20대여성선물",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "천리향묘목",
+   "kw": "그래놀라답례품",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "침실디퓨저",
+   "kw": "방향제디스펜서",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "힘펠공기순환기",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선물용커피",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "투윙스",
    "vol": 120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "영산홍묘목",
+   "kw": "옷걸이스타일러",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "습지식물",
+   "kw": "이색선물",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유자묘목",
+   "kw": "50대아버지생신선물",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가을에심는구근",
+   "kw": "유아용가습기",
    "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집안방향제",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저향추천",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저세트",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "과자쇼핑몰",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장실소품",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5주년선물",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷방제습기",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리드디퓨저",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신라호텔방향제",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경방향제",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향수구매",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빔프로젝터중고",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이오맘바디드라이어",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실액자그림",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "70대생일선물",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이사료자동급식기",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "와인병디퓨저",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향수디퓨저",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무소음제습기",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베란다제습기",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집향기",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반려견식기",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급디퓨져",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "숙면에좋은향",
+   "vol": 110,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "타임리턴",
-   "vol": 110,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "미니쿠퍼카플레이",
+   "kw": "원룸방향제",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종묘회사",
+   "kw": "신생아디퓨저",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "과일묘목",
+   "kw": "침실방향제",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "야생화모종",
+   "kw": "고양이자율급식",
+   "vol": 105,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포레스트디퓨저",
+   "vol": 105,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사료급식기",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "죽도유람선",
+   "kw": "교사선물",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "울릉도오징어축제",
+   "kw": "오즈윈드바디드라이어",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이액자",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "급식기",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동급여기",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "호텔디퓨져",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이보석함",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "익선동향수",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "야자수화분",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유칼립투스디퓨저",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "고양이사료보관",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "녹보수해피트리",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20대친구생일선물",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가성비스타일러",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선물화분",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경디퓨저",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반려견자동급식기",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무늬병꽃나무",
+   "kw": "프리미엄흑염소진액",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "피스하나",
+   "kw": "액자선물",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이액자선물",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이자동급식",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동배식기",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이자율급식기",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "양재동꽃시장향",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "콜드브루선물세트",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신발장디퓨저",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지사료보관",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개소식선물",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사료보관",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보온티팟",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "티팟추천",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물가전",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷방방향제",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엘리베이터방향제",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리필방향제",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "우디디퓨저",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "당뇨흑염소진액",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올뉴카니발모기장",
+   "vol": 85,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유리분유포트",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실이사선물",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사장님선물",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "60대여자생일선물",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨져대용량",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향오래가는디퓨저",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저향",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니제습기추천",
    "vol": 80,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "울릉도스킨스쿠버",
+   "kw": "자취방제습기",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자동차TPMS",
+   "kw": "오래가는디퓨저",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "울릉도트레킹",
+   "kw": "대형방향제",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자귀나무묘목",
+   "kw": "디퓨져브랜드",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지진공사료통",
    "vol": 80,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "COCODOR디퓨저",
+   "kw": "크리스마스선물세트",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷관리",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선물패키지",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다우니디퓨저",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천연오일디퓨저",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "코튼향디퓨저",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매장방향제",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천연오일방향제",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아포트로닉스",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가을꽃씨",
+   "kw": "중고프로젝터",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다년생야생화",
+   "kw": "겨울차박용품",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물액자",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "펫자동급식기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동분유포트",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오즈윈드",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "고체치약만들기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "귀여운액자",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "설선물추천",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "답례품디퓨저",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프리미엄디퓨저",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "원룸디퓨저",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집안향기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "숲향디퓨저",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "받고싶은선물",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에센셜오일디퓨저",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소기할인",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모네프디퓨저",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "천연아로마오일디퓨저",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화분제작",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장실온풍기설치",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천연디퓨저추천",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대용량디퓨저리필",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에어맘",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "홀리에홀리다",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "강아지자율급식기",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트자동급식기",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무선자동급식기",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "퍼퓸방향제",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초대형디퓨저",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베르가못디퓨저",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실용디퓨저",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코튼향방향제",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이그림",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "꿩의바람꽃",
+   "kw": "동계차박",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "겹벚나무묘목",
+   "kw": "소형의류관리기",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발드라이어",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아아이템",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급선물추천",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨져선물",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가성비디퓨저",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자연방향제",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형디퓨져",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집안화분",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내용방향제",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집안식물",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드레스룸디퓨저",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그래놀라선물",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소음없는가습기",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "양재꽃시장향",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "라바자",
-   "vol": 55,
+   "kw": "인테리어방향제",
+   "vol": 60,
    "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "자동차네비연결",
-   "vol": 55,
-   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "현포",
+   "kw": "허브방향제",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지밴드히터",
    "vol": 55,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "방풍모종",
+   "kw": "애견급식기",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지사료자동급식기",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "WMF포트",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜디퓨저",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저용액",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자스민방향제",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "푸바오담요",
    "vol": 55,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "자동차넷플릭스",
+   "kw": "한가위선물",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "굿즈도매",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "겨울야생화",
+   "kw": "사진기념품",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "야생화농장",
+   "kw": "분유포트기추천",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이사료급식기",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초상화선물",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지자동급식",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모용품",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모임선물추천",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼식답례선물",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "답례커피",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페디퓨저",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "연말단체선물",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피선물추천",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴대용의류관리기",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퍼퓸디퓨저",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자크리스마스선물",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코튼방향제",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편백나무향디퓨저",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핸드메이드선물",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "야생화농원",
+   "kw": "흙염소진액효능",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "붉은찔레꽃",
+   "kw": "아기분유제조기",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홍화산사",
+   "kw": "미니그림액자",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연꽃모종",
+   "kw": "라헨느바디드라이어",
    "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "가을식재",
+   "kw": "바디건조기추천",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃사진액자",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "해바라기사진액자",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지사료자동",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저선물추천",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내향수",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플아이템선물",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피원두선물세트",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페방향제",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베개냄새제거",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼식답례품디퓨저",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안방디퓨저",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃방향제",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샌달우드방향제",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "숲속향디퓨저",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장미향디퓨저",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물그림",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "꽃잔디종류",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "지피류",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "허브구매",
+   "kw": "강아지자동급여기",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "벌문",
+   "kw": "자동급식기추천",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인테리어소품선물",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디드라이어비교",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기업선물세트",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플라워디퓨저",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아파트화분",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장실용디퓨저",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저발향",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실디퓨저추천",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "은은한디퓨저",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매장디퓨저",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신선물",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내가습기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트의류관리기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장관리",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인가구스타일러",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷관리기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저캡",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라벤더향디퓨저",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아로마오일방향제",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형포트",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방향제선물세트",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "APPOTRONICS",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이그림선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국민분유포트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지사료급여기",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "울릉도카약",
+   "kw": "고양이자동배식기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반려견급식기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에어락의류관리기",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "산나물모종",
+   "kw": "강아지사료급식기",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "월동야생화",
+   "kw": "디퓨져답례품",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사철패랭이",
+   "kw": "꽃향기디퓨저",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "라벤더묘목",
+   "kw": "답례품더치커피",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "봄꽃구근",
+   "kw": "향좋은디퓨저",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "올뉴K7안드로이드",
+   "kw": "집들이선물10만원",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "10평가습기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바스크디퓨저",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강력한방향제",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중형가습기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "30평가습기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "축하꽃화분",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저향종류",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블랙베리방향제",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비염방향제",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "붙박이장청소",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아로마탈취제",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장청소",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침대진드기스프레이",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "큰선인장",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "과일향디퓨저",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저대용량리필",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "레몬향디퓨저",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "머스크향디퓨저",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑용침구",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "AARONSHOP",
-   "vol": 25,
-   "comp": "낮음",
+   "kw": "흑염소함량",
+   "vol": 30,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자동차OTT",
+   "kw": "특별한집들이선물",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급스러운선물",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건강답례품",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가성비좋은가습기",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저꽃",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기업인테리어",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스포츠굿즈",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영화제굿즈",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자디퓨저",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의류탈취기",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "머리안아픈방향제",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "연말모임선물",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "떡갈고무나무화분",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트펫급식기",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "봄꽃모종",
+   "kw": "개업그림",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "야생화파는곳",
+   "kw": "개업선물그림",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "나팔꽃모종",
+   "kw": "대용량분유포트",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노랑할미꽃",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "묘목축제",
+   "kw": "강아지배식기",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "콜치컴",
+   "kw": "대형견급식기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스승의날선물추천",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발판드라이기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돈들어오는선물",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인테리어용액자",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예비시댁선물",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지자동배식",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "자율급식기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지사료기계",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동급식기강아지",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤워드라이",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "답례품콜드브루",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃집디퓨저",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저고급",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내용디퓨저",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지속력좋은디퓨저",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "허브향디퓨저",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발렌타인데이선물",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이자동밥그릇",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "펫급식기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님어버이날선물",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "향기좋은디퓨저",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내인테리어화분",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화분싸게파는곳",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장용제습기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "호텔로비방향제",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드레스룸관리",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취스타일러",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "다년생초화류",
+   "kw": "스승의날이벤트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집안그림",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자방방향제",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매장용방향제",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수면방향제",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "멀티티포트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "멋진화분",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "호텔화장실디퓨저",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "외국인VIP선물",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수제디퓨저",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안전한디퓨저",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이방디퓨저",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방향제리필액",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비파우더향디퓨저",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유칼립투스향디퓨저",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기념품포장",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "상록잔디패랭이",
+   "kw": "반려동물급식기",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원웨이칫솔",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": true
+   "kw": "스마트급식기",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "아론새치염색약",
+   "kw": "남자방디퓨저",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매장디퓨져",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날선물추천",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의류관리",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "머리안아픈디퓨저",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엘리베이터디퓨저",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침실디퓨저추천",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대량굿즈",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동출수포트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소고형분",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름캠핑이불",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AIRMOM",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아론트리트먼트염색약",
+   "kw": "미술선물",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "숙면디퓨저",
+   "kw": "사진액자선물",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자동차핸드폰미러링",
+   "kw": "선물용그림",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미니쿠퍼안드로이드",
+   "kw": "특이한개업선물",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "올뉴말리부네비게이션",
+   "kw": "VOVO바디드라이어",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "성인봉등산",
+   "kw": "전신드라이",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "풋드라이어",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정의달선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드레스룸탈취",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밥솥선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아가전",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지밥주는기계",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "펫피더",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "맥문동조경",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청사사",
+   "kw": "소액선물",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "할미꽃키우기",
+   "kw": "고양이자동배식",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "고양이자동급여기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어성초모종",
+   "kw": "필우드편백",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부부의날선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향기좋은디퓨져",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃향디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비누꽃카네이션",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생화향방향제",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매장용디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨져리드",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "감성캔들",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형제습기추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장미니제습기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창고형제습기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이사료자동",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이쁜디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프리미엄디퓨져",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발렌타인선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여대생졸업선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향이강한디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "15만원선물추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무소음가습기추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영천화분",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병원메뉴판",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비염디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알러지프리향료",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대용량디퓨저추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "외국인에게선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨져꽃",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "30대크리스마스선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "연말파티선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페화장실디퓨저",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "레이디문",
-   "vol": 10,
+   "kw": "드레스룸습기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장소독",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "선물용더치커피",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장실천연방향제",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필우드편백스프레이",
+   "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "휘페",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": true
+   "kw": "1인의류관리기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "젯블루세럼",
-   "vol": 10,
+   "kw": "귀여운디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저샵",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병원디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수입디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "숲디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "숲향기디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자연디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "철쭉화분",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형약탕기",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "접이식메뉴판",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실꽃화분",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나무수저추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천연향디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오렌지향디퓨저",
+   "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "샤이니어스",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "ISUPIA",
-   "vol": 10,
-   "comp": "낮음",
+   "kw": "디스커버리4모기장",
+   "vol": 15,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "더스킨바",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "미러링네비",
-   "vol": 10,
-   "comp": "낮음",
+   "kw": "영업노트",
+   "vol": 15,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여름꽃모종",
+   "kw": "전기포트순위",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "새집방향제",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저리필대용량",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "머스크디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사과향디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화이트머스크향디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유기농디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강남빔프로젝터대여",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파나소닉총판",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기업용빔프로젝터",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흙염소",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "용산빔프로젝터",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그림액자선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명화선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "색다른선물",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "겹금계국",
+   "kw": "이사선물그림",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "해바라기그림선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤오미바디드라이어",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "개업그림선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님설선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "설날이벤트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "설날할인",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "설이벤트",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "야생화구입",
+   "kw": "애완견자동급식기",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "야생화재배",
+   "kw": "자동사료공급기",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초화류판매",
+   "kw": "쿠쿠자동급식기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원격급식기",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "조용한가습기추천",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동사료기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반려묘자동급식기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시댁어버이날선물",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "야생화파종",
+   "kw": "집들이선물틔운",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "고양이자동식기",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "꽃씨구입",
+   "kw": "특별한선물세트",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "야생화의종류",
+   "kw": "히팅가스워머",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "교수님스승의날선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "독도디퓨저",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저판매",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명품디퓨져",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "방디퓨져",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "백화점디퓨져",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "생화향기디퓨저",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "수국디퓨저",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스승의날단체선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날선물순위",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날엄마선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜디퓨져",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원스승의날선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천연디퓨져추천",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향좋은디퓨져",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카네이션디퓨저",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날디퓨저",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "양재동꽃시장디퓨져",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "염화칼슘제습기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화분전문",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃집방향제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초대형디퓨져",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "외국인에게좋은선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저1+1",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이슈즈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커버제작업체",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자율배식기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "내방객선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퍼퓸디퓨져",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발렌타인데이이벤트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날아버지선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날아빠선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "건강기념품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반려묘인테리어",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장살균",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "설명절선물추천",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스승의날커피선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "연말감사선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "연말직원선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "직원설선물세트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "캡슐커피선물세트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피세트선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장의류관리기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "의류관리기기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "드레스룸습기제거",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유아디퓨저",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "콜드브루원액선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편백제품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스승의날어린이집선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캡슐커피선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패션잡화도매",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "공기정화디퓨저",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "담배냄새제거방향제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급설선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "VB-MH100",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급난초",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아파트공기순환기설치",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "환기청정기추천",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "센스있는설선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인기추석선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "추석선물셋트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "특별한명절선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "욕실용디퓨저",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스트레스디퓨저",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "천연에센셜오일디퓨저",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블랙체리디퓨져",
    "vol": 10,
    "comp": "낮음",
    "hint": false
