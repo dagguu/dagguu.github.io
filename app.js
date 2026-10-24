@@ -217,7 +217,7 @@ function route(){
   if(tab==="item") state.itemId=qs.id||"";
   if(tab==="event") state.evAbr=qs.t==="abroad";
   if(tab==="trip") state.tq=qs.q||"";
-  if(tab==="mag") state.magT=qs.t==="p"?"p":"g";
+  if(tab==="mag") state.magT=qs.t==="p"?"p":qs.t==="s"?"s":"g";
   if(tab==="tix") state.tixI=qs.i||"";
   if(tab==="checkout") state.coK=qs.c||"";
   if(tab==="pjob") state.pjId=qs.id||"";
@@ -947,22 +947,24 @@ function eventView(){
 /* 체험단 가이드 글(g/, gen_share.py 가 g/list.json 생성) — 홈·혜택 탭에 목록 (2026-10-18) */
 var GUIDES=null;
 /* 다꾸 매거진(2026-10-20 시온님 "게시판 볼 곳 하나"): 체험단 가이드(g/list.json)와 추천 모음(p/list.json)은 따로 관리하고 #/mag 한 화면에서 탭으로 본다 */
-var PICKS=null;
+var PICKS=null, STAYM=null;
 function magLoad(cb){
-  var n=0, done=function(){ if(++n===2) cb(); };
+  var n=0, done=function(){ if(++n===3) cb(); };
+  if(STAYM) done(); else fetch((BASE||"/")+"m/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ STAYM=L||[]; done(); }).catch(function(){ STAYM=[]; done(); });
   if(GUIDES) done(); else fetch((BASE||"/")+"g/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ GUIDES=(L||[]).slice().sort(function(a,b){ return (b.date||"")>(a.date||"")?1:(b.date||"")<(a.date||"")?-1:0; }); done(); }).catch(function(){ GUIDES=[]; done(); });
   if(PICKS) done(); else fetch((BASE||"/")+"p/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ PICKS=L||[]; done(); }).catch(function(){ PICKS=[]; done(); });
 }
 function gDate(d){ return d?'<em class="gdt">'+esc(String(d).replace(/-/g,"."))+' 업로드</em>':""; }
 function guideRow(g){ return '<a class="gdi" href="/g/'+esc(g.slug)+'.html"><b>'+esc(g.t)+'</b><small>'+esc(g.d)+'</small>'+gDate(g.date)+'</a>'; }
 function pickRow(x){ return '<a class="gdi pki" href="/p/'+esc(x.slug)+'.html">'+(safeUrl(x.img)?'<img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<span><b>'+esc(x.h||x.t)+'</b><small>'+esc(x.d)+'</small>'+gDate(x.date)+'</span></a>'; }
+function stayRow(x){ return '<a class="gdi pki" href="/m/'+esc(x.slug)+'.html">'+(safeUrl(x.img)?'<img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<span><b>'+esc(x.t)+'</b><small>'+esc(x.name)+' · '+esc(x.area)+'</small>'+gDate(x.date)+'</span></a>'; }
 function guideFill(){
   var B=document.querySelectorAll("[data-guides]"), M=document.getElementById("magbody"); if(!B.length&&!M) return;
   magLoad(function(){
-    var h=(GUIDES.length?'<section class="gdbox"><div class="gdh"><b>체험단 가이드</b><a href="#/mag">전체 ›</a></div>'+GUIDES.slice(0,3).map(guideRow).join("")+'</section>':"")+
+    var h=(STAYM.length?'<section class="gdbox"><div class="gdh"><b>국내 숙소 추천</b><a href="#/mag?t=s">전체 ›</a></div>'+STAYM.slice(0,3).map(stayRow).join("")+'</section>':"")+(GUIDES.length?'<section class="gdbox"><div class="gdh"><b>체험단 가이드</b><a href="#/mag">전체 ›</a></div>'+GUIDES.slice(0,3).map(guideRow).join("")+'</section>':"")+
       (PICKS.length?'<section class="gdbox"><div class="gdh"><b>다꾸 추천 모음</b><a href="#/mag?t=p">전체 ›</a></div>'+PICKS.slice(0,3).map(pickRow).join("")+'</section>':"");
     [].forEach.call(B,function(b){ b.innerHTML=h; });
-    if(M){ var L=state.magT==="p"?PICKS:GUIDES; M.innerHTML=L.length?'<div class="maglist">'+L.map(state.magT==="p"?pickRow:guideRow).join("")+'</div>':'<div class="empty">곧 새 글이 올라와요</div>'; }
+    if(M){ var L=state.magT==="p"?PICKS:state.magT==="s"?STAYM:GUIDES; M.innerHTML=L.length?'<div class="maglist">'+L.map(state.magT==="p"?pickRow:state.magT==="s"?stayRow:guideRow).join("")+'</div>':'<div class="empty">곧 새 글이 올라와요</div>'; }
   });
 }
 
@@ -1007,10 +1009,10 @@ document.addEventListener("click",function(e){
   if((a=t.closest&&t.closest("[data-sitego]"))) ga("site_go",{site:a.dataset.sitego});
 });
 function magView(){
-  var t=state.magT==="p"?"p":"g";
-  return '<div class="pg mag"><h1>다꾸 매거진</h1><p class="pgsub">체험단 가이드와 다꾸 추천 모음을 모아 봤어요</p>'+
-    '<div class="magtabs"><a href="#/mag"'+(t==="g"?' class="on"':'')+'>체험단 가이드</a><a href="#/mag?t=p"'+(t==="p"?' class="on"':'')+'>추천 모음</a></div>'+
-    (t==="p"?'<p class="magnote">추천 모음의 상품 링크는 쿠팡 파트너스 활동으로 수수료를 받을 수 있어요.</p>':'')+
+  var t=state.magT==="p"?"p":state.magT==="s"?"s":"g";
+  return '<div class="pg mag"><h1>다꾸 매거진</h1><p class="pgsub">숙소 추천 · 체험단 가이드 · 추천 모음을 모아 봤어요</p>'+
+    '<div class="magtabs"><a href="#/mag"'+(t==="g"?' class="on"':'')+'>체험단 가이드</a><a href="#/mag?t=p"'+(t==="p"?' class="on"':'')+'>추천 모음</a><a href="#/mag?t=s"'+(t==="s"?' class="on"':'')+'>숙소 추천</a></div>'+
+    (t!=="g"?'<p class="magnote">'+(t==="s"?"숙소 추천":"추천 모음")+'의 링크는 쿠팡 파트너스 활동으로 수수료를 받을 수 있어요.</p>':'')+
     '<div id="magbody"><div class="empty">불러오는 중…</div></div></div>';
 }
 function benefitView(){
