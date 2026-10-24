@@ -1,0 +1,20 @@
+name: 카카오 채널 소식 메일 보내기
+# 채널 소식 예약 작업(매일 14:37)이 카드 이미지를 확인한 뒤 한 번 부른다(2026-10-24 시온님 요청).
+on:
+  workflow_dispatch:
+permissions: { contents: read }
+jobs:
+  mail:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: |
+          git fetch -q origin insta
+          D=$(python -c "import json;print(json.load(open('scripts/kakao_queue.json'))['date'])")
+          mkdir -p /tmp/k && git archive origin/insta "kakao/$D" | tar -x -C /tmp/k
+          python scripts/mail_kakao.py "/tmp/k/kakao/$D"
+        env:
+          NAVER_MAIL_ID: ${{ secrets.NAVER_MAIL_ID }}
+          NAVER_MAIL_PW: ${{ secrets.NAVER_MAIL_PW }}
