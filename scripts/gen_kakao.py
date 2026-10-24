@@ -310,3 +310,51 @@ with open(os.path.join(out, 'probe.txt'), 'w') as f:
         w, h = SIZES.get(c.get('bgimg'), (0, 0)); f.write(f"card{n}\t{w}x{h}\t{c.get('bgimg')}\n")
     for u in Q.get('probe', []):
         w, h = SIZES.get(u, (0, 0)); f.write(f"probe\t{w}x{h}\t{u}\n")
+
+# 사진 고르기용(2026-10-24): "scout": [상품·숙소 페이지 주소…] 를 넣으면 Actions 브라우저로 페이지를 열어
+# 사진 주소를 모으고, 가로·세로 모두 1000px 이상인 것만 번호를 붙여 scout_N.jpg(모아 보기)·scout.txt 로 남긴다.
+# (작업 컨테이너는 쿠팡 서버에 못 닿아서 이걸로 후보 사진을 본다. 확인 뒤 scout 는 지운다.)
+if Q.get('scout'):
+    found = []  # (page, url)
+    with sync_playwright() as pw:
+        b = pw.chromium.launch()
+        ctx = b.new_context(user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36', locale='ko-KR')
+        pg = ctx.new_page()
+        for pu in Q['scout']:
+            try:
+                pg.goto(pu, timeout=45000, wait_until='domcontentloaded'); pg.wait_for_timeout(4000)
+                for _ in range(6): pg.mouse.wheel(0, 2500); pg.wait_for_timeout(500)
+                htm = pg.content()
+                srcs = pg.eval_on_selector_all('img', 'els=>els.map(e=>e.currentSrc||e.src||e.getAttribute("data-src")||"")')
+            except Exception as ex:
+                print('scout 실패', pu, ex); htm, srcs = '', []
+            urls = srcs + re.findall(r'(?:https?:)?//[^"\'\s)\\]+?\.(?:jpe?g|png|webp)', htm)
+            seen = set(); n = 0
+            for u in urls:
+                if not u: continue
+                if u.startswith('//'): u = 'https:' + u
+                if not u.startswith('http') or any(x in u for x in ('icon', 'logo', 'badge', 'sprite', '/np/')): continue
+                key = re.sub(r'/thumbnails/remote/[^/]+/', '/', u)
+                if key in seen: continue
+                seen.add(key); found.append((pu, u)); n += 1
+                if n >= 40: break
+            print('scout', pu, n, 'title:', (re.search(r'<title>(.*?)</title>', htm or '') or [None, ''])[1][:60])
+        b.close()
+    good = []
+    for pu, u in found:
+        try: d = data_uri(u)
+        except Exception as ex: continue
+        w, h = SIZES.get(u, (0, 0))
+        if min(w, h) >= 1000: good.append((pu, u, w, h, d))
+    with open(os.path.join(out, 'scout.txt'), 'w') as f:
+        for i, (pu, u, w, h, d) in enumerate(good, 1): f.write(f"S{i}\t{w}x{h}\t{pu}\t{u}\n")
+    per = 24
+    with sync_playwright() as pw:
+        b = pw.chromium.launch(); pg = b.new_page(viewport={'width': 1200, 'height': 900})
+        for s in range(0, len(good), per):
+            cells = ''.join(f"<div class='c'><img src='{d}'><b>S{s+i+1} {w}x{h}</b></div>" for i, (pu, u, w, h, d) in enumerate(good[s:s+per]))
+            pg.set_content(f"<html><body style='margin:0;background:#222'><style>.g{{display:grid;grid-template-columns:repeat(6,200px)}}.c{{position:relative;width:200px;height:225px}}.c img{{width:200px;height:225px;object-fit:cover}}.c b{{position:absolute;left:0;top:0;background:#ff0;color:#000;font:bold 16px sans-serif;padding:2px 5px}}</style><div class='g'>{cells}</div></body></html>")
+            pg.wait_for_timeout(500)
+            pg.screenshot(path=os.path.join(out, f'scout_{s//per+1}.jpg'), type='jpeg', quality=80, full_page=True)
+        b.close()
+    print('scout good', len(good))
