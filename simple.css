@@ -1155,3 +1155,4 @@ input,select,textarea{font-size:16px!important}
 .msi img,.msi .noimg{width:62px;height:62px;border-radius:10px;object-fit:cover;flex:none;background:#f4f4f7}
 .msi b{display:block;font-size:14px;line-height:1.35}.msi small{display:block;font-size:12px;color:#6b6a7a;margin-top:2px}.msi em{display:block;font-style:normal;font-size:12px;font-weight:800;color:#ff2d55;margin-top:3px}
 .leaflet-container{font-family:inherit}
+.dpin span,.dpin.apx span{border:0;box-shadow:0 2px 8px rgba(40,10,90,.3)}
