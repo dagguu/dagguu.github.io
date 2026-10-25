@@ -1,6 +1,6 @@
 /* 화면 확대·축소 잠금(2026-10-19 시온님): viewport maximum-scale=1 + 아이폰 사파리·카톡 인앱 핀치/더블탭 막기 */
-(function(){ try{ ["gesturestart","gesturechange","gestureend"].forEach(function(t){ document.addEventListener(t,function(e){ e.preventDefault(); },{passive:false}); });
-  document.addEventListener("touchmove",function(e){ if(e.touches&&e.touches.length>1) e.preventDefault(); },{passive:false}); }catch(e){} })();
+(function(){ try{ ["gesturestart","gesturechange","gestureend"].forEach(function(t){ document.addEventListener(t,function(e){ if(e.target&&e.target.closest&&e.target.closest(".dmap")) return; e.preventDefault(); },{passive:false}); });
+  document.addEventListener("touchmove",function(e){ if(e.touches&&e.touches.length>1&&!(e.target&&e.target.closest&&e.target.closest(".dmap"))) e.preventDefault(); },{passive:false}); }catch(e){} })();
 (function(){
 "use strict";
 /* =========================================================
@@ -142,12 +142,13 @@ var I={
   x:"M6 6l12 12M18 6 6 18", trend:"M4 17l5-5 4 4 7-8M15 8h5v5",
   quiz:"M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17.5h.01M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z",
   send:"M21 3 10.2 13.8M21 3l-6.6 18-4.2-7.2L3 9.6Z",
-  wheel:"M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 0v9l6.4 6.4M12 12 3.5 9"
+  wheel:"M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 0v9l6.4 6.4M12 12 3.5 9",
+  map:"M9 4 3.5 6v14L9 18l6 2 5.5-2V4L15 6 9 4Zm0 0v14m6-12v14"
 };
 
 /* ---------- 셸 ---------- */
 var app=document.getElementById("app");
-var TABS=[["home","홈",I.home],["fav","찜",I.heart],["list","체험단",I.ticket],["shop","공구",I.bag],["deals","특가",I.gift]];
+var TABS=[["home","홈",I.home],["map","지도",I.map],["list","체험단",I.ticket],["shop","공구",I.bag],["deals","특가",I.gift]];
 /* 사이트 둘로 나누기(2026-10-21 시온님): www.dagguu.com = 다꾸체험단(정보만, 로그인·결제 없음) / partners.dagguu.com = 다이어리뷰(회원·기자단·광고주·수익화 클래스).
    두 사이트가 같은 app.js 를 쓰고, partners 의 index.html 이 window.DK_MODE="partners" 를 켠다. 한쪽에 없는 화면 주소로 들어오면 다른 사이트로 넘긴다. */
 var PART_LIVE=true; /* partners.dagguu.com 이 열리면 true 로 바꾼다(그 전엔 www 에서 로그인·교육·광고주가 그대로 동작) */
@@ -212,11 +213,12 @@ function route(){
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
   if(!PMODE&&PART_LIVE&&P_ONLY.test(tab)){ location.replace(PART_URL+"#/"+h); return; }
   if(PMODE&&!P_TABS.test(tab)){ location.replace(MAIN_URL+"#/"+h); return; }
-  if(!/^(home|list|fav|benefit|shop|mag|tix|deals|reporter|press|contact|item|my|privacy|price|event|trip|edu|checkout|pjob|padmin|sites|season)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|map|benefit|shop|mag|tix|deals|reporter|press|contact|item|my|privacy|price|event|trip|edu|checkout|pjob|padmin|sites|season)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
   if(tab==="event") state.evAbr=qs.t==="abroad";
   if(tab==="trip") state.tq=qs.q||"";
+  if(tab==="map") state.mapC=qs.c==="stay"||qs.c==="etc"?qs.c:"";
   if(tab==="mag") state.magT=qs.t==="p"?"p":qs.t==="g"?"g":"s";
   if(tab==="tix") state.tixI=qs.i||"";
   if(tab==="checkout") state.coK=qs.c||"";
@@ -245,6 +247,7 @@ function render(){
   if(state.tab==="home") v.innerHTML=PMODE?pHomeView():homeView();
   else if(state.tab==="list"){ v.innerHTML=listView(); renderListGrid(); }
   else if(state.tab==="fav") v.innerHTML=favView();
+  else if(state.tab==="map"){ v.innerHTML=mapView(); mapInit(); }
   else if(state.tab==="benefit") v.innerHTML=benefitView();
   else if(state.tab==="shop") v.innerHTML=shopView();
   else if(state.tab==="mag") v.innerHTML=magView();
@@ -834,6 +837,58 @@ var FEE_ROWS=[["p","👥","인원 추가"],["b","🍖","바베큐"],["f","🔥",
 function feeBox(it){ var f=it.fee; if(!f||catOf(it)!=="stay") return ""; var r=FEE_ROWS.filter(function(x){ return f[x[0]]; }); if(!r.length) return "";
   return '<div class="feebox"><b class="fbt">추가 요금 안내</b><dl>'+r.map(function(x){ return '<dt>'+x[1]+' '+x[2]+'</dt><dd>'+esc(f[x[0]])+'</dd>'; }).join("")+'</dl><small>모집 글에 적힌 내용이에요. 요금은 바뀔 수 있으니 예약할 때 숙소에 꼭 확인하세요.</small></div>'; }
 function aiSum(it){ var t=(it.sum||"").trim(); if(!t) return ""; return '<div class="aisum"><span class="aisl">✦ AI 요약</span><p>'+esc(t)+'</p><small>숙소·제품 소개 자료를 바탕으로 AI가 정리했어요. 정확한 정보는 판매 페이지에서 확인해 주세요.</small></div>'; }
+/* ---------- 지도 (2026-10-25 시온님 "숙소/티켓 지도, 하단 찜 자리에 지도보기, 찜은 마이다꾸로") ----------
+   좌표 = geo.json (scripts/geo.py · Actions geo.yml: 카카오 로컬 키워드 검색 → 못 찾으면 시·군 중심).
+   지도 = Leaflet + OpenStreetMap 타일(키 없음, 출처 표시). 핀을 누르면 그 자리 체험단 목록 → 사이트 상세(#/item). 쿠팡으로 바로 가지 않는다. */
+var GEO=null, LMAP=null;
+function mapView(){
+  var c=state.mapC||"";
+  return '<div class="pg mapg"><div class="maptop"><h1>체험단 지도</h1><div class="mapchips">'+
+    [["","전체"],["stay","🏡 숙박"],["etc","🎟️ 티켓"]].map(function(x){ return '<a href="#/map'+(x[0]?'?c='+x[0]:'')+'"'+(c===x[0]?' class="on"':'')+'>'+x[1]+'</a>'; }).join("")+'</div></div>'+
+    '<div id="dmap" class="dmap"><div class="empty">지도를 불러오는 중…</div></div><div id="mapsheet" class="mapsheet" hidden></div>'+
+    '<p class="mapnote" id="mapnote">모집 중인 숙박·티켓 체험단을 지도로 모았어요. 핀 위 숫자는 그 근처 체험단 수예요.</p></div>';
+}
+function loadLeaflet(cb){
+  if(window.L&&window.L.map) return cb();
+  if(!document.getElementById("lfcss")){ var l=document.createElement("link"); l.id="lfcss"; l.rel="stylesheet"; l.href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"; document.head.appendChild(l); }
+  var sc=document.getElementById("lfjs"); if(sc){ sc.addEventListener("load",cb); return; }
+  sc=document.createElement("script"); sc.id="lfjs"; sc.src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"; sc.onload=cb; sc.onerror=function(){ var m=document.getElementById("dmap"); if(m) m.innerHTML='<div class="empty">지도를 불러오지 못했어요. 잠시 뒤 다시 열어 주세요.</div>'; }; document.head.appendChild(sc);
+}
+function mapInit(){
+  var done=0, go=function(){ if(++done<2) return; mapDraw(); };
+  loadLeaflet(go);
+  if(GEO) go(); else fetch((BASE||"/")+"geo.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():{}; }).then(function(j){ GEO=(j&&j.p)||{}; go(); }).catch(function(){ GEO={}; go(); });
+}
+function mapDraw(){
+  var el=document.getElementById("dmap"); if(!el||!window.L) return;
+  var c=state.mapC||"";
+  var L0=seed.items.filter(function(it){ var k=catOf(it); return (k==="stay"||k==="etc")&&(!c||k===c)&&statusOf(it).key!=="closed"&&GEO[it.id]; });
+  if(!L0.length){ el.innerHTML='<div class="empty">지도 위치를 준비하고 있어요. 조금 뒤에 다시 열어 주세요.</div>'; return; }
+  var spots={}; L0.forEach(function(it){ var g=GEO[it.id], k=g[0].toFixed(3)+","+g[1].toFixed(3); (spots[k]=spots[k]||{g:g,L:[]}).L.push(it); });
+  el.innerHTML="";
+  if(LMAP){ try{ LMAP.remove(); }catch(e){} LMAP=null; }
+  LMAP=window.L.map(el,{zoomControl:true,attributionControl:true}).setView([36.3,127.8],7);
+  window.L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'}).addTo(LMAP);
+  var bounds=[], approx=0;
+  Object.keys(spots).forEach(function(k){
+    var S=spots[k], n=S.L.length, etc=S.L.every(function(it){ return catOf(it)==="etc"; });
+    if(S.g[2]==="c") approx+=n;
+    var ic=window.L.divIcon({className:"dpin"+(etc?" etc":"")+(S.g[2]==="c"?" apx":""),html:'<span>'+(n>1?n:(etc?"🎟️":"🏡"))+'</span>',iconSize:[34,34],iconAnchor:[17,17]});
+    window.L.marker([S.g[0],S.g[1]],{icon:ic}).addTo(LMAP).on("click",function(){ mapSheet(S); });
+    bounds.push([S.g[0],S.g[1]]);
+  });
+  if(bounds.length>1) LMAP.fitBounds(bounds,{padding:[28,28],maxZoom:11});
+  var nt=document.getElementById("mapnote"); if(nt) nt.innerHTML='모집 중 '+(c==="etc"?"티켓":c==="stay"?"숙박":"숙박·티켓")+' 체험단 <b>'+L0.length+'곳</b>을 지도에 표시했어요.'+(approx?' 흐린 핀('+approx+'곳)은 숙소 위치를 못 찾아 시·군 중심에 둔 거라 실제 위치와 달라요.':'');
+}
+function mapSheet(S){
+  var b=document.getElementById("mapsheet"); if(!b) return;
+  var L=S.L.slice().sort(function(a,c){ return daysLeft(a)-daysLeft(c); });
+  b.innerHTML='<div class="mshd"><b>'+(S.g[2]==="c"?"이 지역":"이곳")+' 체험단 '+L.length+'곳</b><button type="button" data-mclose aria-label="닫기">✕</button></div><div class="msl">'+L.map(function(it){ var d=daysLeft(it), img=safeUrl(it.image);
+    return '<a class="msi" href="#/item?id='+encodeURIComponent(it.id)+'">'+(img?'<img src="'+esc(img)+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'<span class="noimg"></span>')+'<span><b>'+esc(it.name)+'</b><small>'+esc(String(it.benefit||"").slice(0,48))+'</small><em>'+(d<=0?"오늘 마감":"D-"+d)+(it.source?' · '+esc(it.source):'')+'</em></span></a>'; }).join("")+'</div>';
+  b.hidden=false;
+  b.querySelector("[data-mclose]").onclick=function(){ b.hidden=true; };
+  try{ if(window.gtag) gtag("event","map_pin",{n:L.length}); }catch(e){}
+}
 function favView(){
   var list=seed.items.filter(function(it){ return isFav(it.id); }).sort(function(a,b){ var sa=statusOf(a).key==="closed", sb=statusOf(b).key==="closed"; if(sa!==sb) return sa?1:-1; return daysLeft(a)-daysLeft(b); });
   var soon=list.filter(function(it){ return statusOf(it).key==="open" && daysLeft(it)<=3; }).length;

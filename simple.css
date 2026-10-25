@@ -1135,3 +1135,23 @@ input,select,textarea{font-size:16px!important}
 #intro .inad.ft:has(.ftbg.ph)::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(18,6,63,.55) 0%,rgba(18,6,63,.35) 45%,rgba(18,6,63,.1) 75%,rgba(0,0,0,.25) 100%)}
 #intro .inad.ft:has(.ftbg.ph) .intop{position:relative;z-index:1}
 .mvc{display:block;margin-top:3px;font-size:12px;font-style:normal;font-weight:700;color:#8a8994}
+/* 체험단 지도(2026-10-25) */
+.pg.mapg{padding-bottom:0}
+.maptop{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.maptop h1{margin:0}
+.mapchips{display:flex;gap:6px}
+.mapchips a{border:1px solid #e3dbf7;border-radius:999px;padding:7px 12px;font-size:13.5px;font-weight:700;color:#4b3f72;background:#fff;text-decoration:none}
+.mapchips a.on{background:var(--acc,#6a3fc8);border-color:transparent;color:#fff}
+.dmap{position:relative;margin:12px -16px 0;height:calc(100dvh - 250px);min-height:380px;background:#eef0f4;z-index:0;touch-action:pan-x pan-y pinch-zoom}
+.dmap .empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
+.dpin span{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#6a3fc8;color:#fff;font-weight:900;font-size:14px;border:3px solid #fff;box-shadow:0 3px 10px rgba(40,10,90,.35)}
+.dpin.etc span{background:#ff7a1a}
+.dpin.apx span{opacity:.6;border-style:dashed}
+.mapnote{font-size:12.5px;color:#77768a;line-height:1.5;margin:10px 0 0}
+.mapsheet{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--tab) + env(safe-area-inset-bottom));width:min(100%,var(--frame));max-height:52vh;overflow:auto;background:#fff;border-radius:18px 18px 0 0;box-shadow:0 -8px 30px rgba(20,0,60,.18);z-index:500;padding:6px 14px 12px}
+.mshd{display:flex;justify-content:space-between;align-items:center;padding:8px 2px;position:sticky;top:0;background:#fff}
+.mshd b{font-size:15px}.mshd button{border:0;background:none;font-size:18px;color:#555;cursor:pointer;padding:4px 8px}
+.msi{display:flex;gap:10px;align-items:center;padding:9px 0;border-top:1px solid #f0eff5;text-decoration:none;color:inherit}
+.msi img,.msi .noimg{width:62px;height:62px;border-radius:10px;object-fit:cover;flex:none;background:#f4f4f7}
+.msi b{display:block;font-size:14px;line-height:1.35}.msi small{display:block;font-size:12px;color:#6b6a7a;margin-top:2px}.msi em{display:block;font-style:normal;font-size:12px;font-weight:800;color:#ff2d55;margin-top:3px}
+.leaflet-container{font-family:inherit}

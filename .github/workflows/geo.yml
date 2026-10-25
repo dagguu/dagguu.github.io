@@ -1,0 +1,25 @@
+name: 체험단 지도 좌표
+on:
+  push:
+    branches: [main]
+    paths: ["data.json"]
+  schedule: [{ cron: "40 4,10 * * *" }]   # 매일 13:40·19:40 KST
+  workflow_dispatch: {}
+permissions: { contents: write }
+concurrency: { group: geo, cancel-in-progress: false }
+jobs:
+  geo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - env:
+          KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
+        run: python3 scripts/geo.py
+      - run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add geo.json scripts/geo_cache.json
+          git diff --cached --quiet && exit 0
+          git commit -m "체험단 지도 좌표 $(TZ=Asia/Seoul date '+%F %H:%M')"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
