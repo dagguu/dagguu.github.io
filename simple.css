@@ -1127,3 +1127,7 @@ input,select,textarea{font-size:16px!important}
 .stpt b{font-size:21px;line-height:1.3;font-weight:800}
 .stpt em{font-style:normal;font-size:13.5px;opacity:.9}
 .stpt i{font-style:normal;align-self:flex-start;margin-top:4px;background:#ffe14d;color:#1a0b3d;font-weight:800;font-size:14px;border-radius:99px;padding:8px 14px}
+.kv.stkv{background:#1a0b3d!important;position:relative;overflow:hidden}
+.kv.stkv .stbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.kv.stkv::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(10,4,30,.8) 0%,rgba(10,4,30,.5) 55%,rgba(10,4,30,.15) 100%)}
+.kv.stkv .htx{position:relative;z-index:2}
