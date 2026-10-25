@@ -171,7 +171,7 @@ if __name__ == "__main__":
 <link rel="icon" href="/icons/icon-192.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>{CSS}.lst{{display:flex;flex-direction:column;gap:10px;margin-top:18px}}</style></head><body><div class="w">
 <p class="disc">이 페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
-<header><span class="hl"><button class="bk" type="button" aria-label="뒤로 가기" onclick="if(history.length>1&&document.referrer)history.back();else location.href='/'">‹</button><a class="logo" href="/">다꾸<i>체험단</i></a></span><a class="app" href="/#/mag">다꾸 매거진 ›</a></header>
+<header><span class="hl"><button class="bk" type="button" aria-label="뒤로 가기" onclick="if(history.length>1&&document.referrer)history.back();else location.href='/'">‹</button><a class="logo" href="/">다꾸<i>체험단</i></a></span><a class="app" href="/#/mag?t=p">다꾸 매거진 ›</a></header>
 <section class="hero"><h1>다꾸 추천 모음</h1><p class="lead">고민되는 쇼핑을 주제별로 정리했어요. 고르는 기준을 먼저 보고 상품을 둘러보세요.</p></section>
 <div class="lst">{lis}</div>
 <footer><a href="/g/">체험단 가이드 보기</a> · <a href="/">다꾸체험단 홈</a></footer>

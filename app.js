@@ -217,7 +217,7 @@ function route(){
   if(tab==="item") state.itemId=qs.id||"";
   if(tab==="event") state.evAbr=qs.t==="abroad";
   if(tab==="trip") state.tq=qs.q||"";
-  if(tab==="mag") state.magT=qs.t==="p"?"p":qs.t==="s"?"s":"g";
+  if(tab==="mag") state.magT=qs.t==="p"?"p":qs.t==="g"?"g":"s";
   if(tab==="tix") state.tixI=qs.i||"";
   if(tab==="checkout") state.coK=qs.c||"";
   if(tab==="pjob") state.pjId=qs.id||"";
@@ -962,7 +962,7 @@ function stayRow(x){ return '<a class="gdi pki smg" href="/m/'+esc(x.slug)+'.htm
 function guideFill(){
   var B=document.querySelectorAll("[data-guides]"), M=document.getElementById("magbody"); if(!B.length&&!M) return;
   magLoad(function(){
-    var h=(STAYM.length?'<section class="gdbox"><div class="gdh"><b>국내 감성숙소 추천</b><a href="#/mag?t=s">전체 ›</a></div>'+STAYM.slice(0,3).map(stayRow).join("")+'</section>':"")+(GUIDES.length?'<section class="gdbox"><div class="gdh"><b>체험단 가이드</b><a href="#/mag">전체 ›</a></div>'+GUIDES.slice(0,3).map(guideRow).join("")+'</section>':"")+
+    var h=(STAYM.length?'<section class="gdbox"><div class="gdh"><b>국내 감성숙소 추천</b><a href="#/mag?t=s">전체 ›</a></div>'+STAYM.slice(0,3).map(stayRow).join("")+'</section>':"")+(GUIDES.length?'<section class="gdbox"><div class="gdh"><b>체험단 가이드</b><a href="#/mag?t=g">전체 ›</a></div>'+GUIDES.slice(0,3).map(guideRow).join("")+'</section>':"")+
       (PICKS.length?'<section class="gdbox"><div class="gdh"><b>다꾸 추천 모음</b><a href="#/mag?t=p">전체 ›</a></div>'+PICKS.slice(0,3).map(pickRow).join("")+'</section>':"");
     [].forEach.call(B,function(b){ b.innerHTML=h; });
     if(M){ var L=state.magT==="p"?PICKS:state.magT==="s"?STAYM:GUIDES; M.innerHTML=L.length?(state.magT==="s"?'<div class="stsrch"><input id="stq" type="search" placeholder="번호 또는 숙소 이름·지역 검색 (예: 3, 가평)" autocomplete="off" enterkeyhint="search"></div>':'')+'<div class="maglist">'+L.map(state.magT==="p"?pickRow:state.magT==="s"?stayRow:guideRow).join("")+'</div>'+(state.magT==="s"?'<p class="smgnone" id="stnone" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p>':''):'<div class="empty">곧 새 글이 올라와요</div>';
@@ -1011,9 +1011,9 @@ document.addEventListener("click",function(e){
   if((a=t.closest&&t.closest("[data-sitego]"))) ga("site_go",{site:a.dataset.sitego});
 });
 function magView(){
-  var t=state.magT==="p"?"p":state.magT==="s"?"s":"g";
+  var t=state.magT==="p"?"p":state.magT==="g"?"g":"s";
   return '<div class="pg mag"><h1>다꾸 매거진</h1><p class="pgsub">감성숙소 추천 · 체험단 가이드 · 추천 모음을 모아 봤어요</p>'+
-    '<div class="magtabs"><a href="#/mag"'+(t==="g"?' class="on"':'')+'>체험단 가이드</a><a href="#/mag?t=p"'+(t==="p"?' class="on"':'')+'>추천 모음</a><a href="#/mag?t=s"'+(t==="s"?' class="on"':'')+'>감성숙소 추천</a></div>'+
+    '<div class="magtabs"><a href="#/mag"'+(t==="s"?' class="on"':'')+'>감성숙소 추천</a><a href="#/mag?t=g"'+(t==="g"?' class="on"':'')+'>체험단 가이드</a><a href="#/mag?t=p"'+(t==="p"?' class="on"':'')+'>추천 모음</a></div>'+
     (t!=="g"?'<p class="magnote">'+(t==="s"?"감성숙소 추천":"추천 모음")+'의 링크는 쿠팡 파트너스 활동으로 수수료를 받을 수 있어요.</p>':'')+
     '<div id="magbody"><div class="empty">불러오는 중…</div></div></div>';
 }
