@@ -52,7 +52,7 @@ h1.ix{font-size:26px;margin:18px 0 6px;letter-spacing:-.03em}
 SEARCH = ('<form class="srch" onsubmit="return false" role="search"><span>🔍</span>'
           '<input id="q" type="search" inputmode="search" placeholder="번호 또는 숙소 이름·지역 검색 (예: 3, 가평)" autocomplete="off" enterkeyhint="search"></form>')
 SEARCH_JS = r"""<script>(function(){var q=document.getElementById('q'),L=[].slice.call(document.querySelectorAll('#lst .lc')),N=document.getElementById('nores');
-function run(){var v=q.value.trim().toLowerCase().replace(/^no\.?\s*/,'').replace(/^#/,''),hit=0;L.forEach(function(a){var ok=!v||(/^\d+$/.test(v)?a.getAttribute('data-no')===String(+v):a.getAttribute('data-q').indexOf(v)>=0);a.hidden=!ok;if(ok)hit++;});N.hidden=!!hit||!v;
+function run(){var v=q.value.trim().toLowerCase().replace(/[\[\]]/g,'').replace(/^no\.?\s*/,'').replace(/^#/,''),hit=0;L.forEach(function(a){var ok=!v||(/^\d+$/.test(v)?a.getAttribute('data-no')===String(+v):a.getAttribute('data-q').indexOf(v)>=0);a.hidden=!ok;if(ok)hit++;});N.hidden=!!hit||!v;
 if(window.gtag&&v.length)clearTimeout(run.t),run.t=setTimeout(function(){gtag('event','search',{search_term:'stay_mag:'+v});},1200);}
 q.addEventListener('input',run);var m=(location.hash.match(/^#(\d+)$/)||location.search.match(/[?&]n=(\d+)/));if(m){q.value=m[1];run();}})();</script>"""
 
