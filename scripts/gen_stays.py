@@ -67,9 +67,19 @@ def load_all():
     L.sort(key=lambda P: P["date"], reverse=True)
     return L
 
+def _list_inf():
+    try:
+        sl = json.load(open(os.path.join(ROOT, "scripts", "stay_list.json"), encoding="utf-8"))
+        arr = sl if isinstance(sl, list) else (sl.get("list") or sl.get("items") or [])
+        return {str(e["pid"]): e["infUrl"] for e in arr if isinstance(e, dict) and e.get("pid") and e.get("infUrl")}
+    except Exception:
+        return {}
+LIST_INF = _list_inf()
+
 def link_of(P):
+    # 인플루언서 링크(시온님이 준 것) → links infUrl → stay_list.json 같은 pid 의 infUrl → 파트너스 u
     x = (d.get("links") or {}).get("stay-" + P["slug"]) or {}
-    return x.get("infUrl") or x.get("u") or ""
+    return x.get("infUrl") or LIST_INF.get(str(P.get("pid") or "")) or x.get("u") or ""
 
 def open_stays(region, n=5):
     def worth(it):

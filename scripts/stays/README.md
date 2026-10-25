@@ -44,3 +44,7 @@
 ## 마무리
 - python3 scripts/gen_share.py (gen_stays.py 가 m/<slug>.html·m/index.html·m/list.json·sitemap 을 만든다) → ls s | wc -l 확인 → 커밋·push.
 - scripts/stay_list.json 그 숙소에 slug·done 날짜 적기.
+
+## 인플루언서 링크
+- 시온님이 미리 준 인플루언서 링크는 scripts/stay_list.json 그 숙소 항목의 pid·infUrl 에 있다(2026-10-25 11곳). 그 숙소로 글을 쓸 때 data.json links["stay-<slug>"].infUrl 에도 같은 주소를 넣는다(gen_stays.py 는 pid 로도 찾아 쓴다).
+- 같은 숙소의 체험단(data.json items, coupangPid 같음)에도 item.infUrl 이 들어가 있다.
