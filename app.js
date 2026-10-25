@@ -921,9 +921,9 @@ function favView(){
 function shopList(){ var t=ymd(today()); return (seed.gonggu||[]).filter(function(x){ return x&&x.name&&safeUrl(x.u)&&!(x.until&&x.until<t); }); }
 function shopView(){
   var L=shopList();
-  var h='<div class="pg"><h1>다꾸 공구</h1><p class="pgsub">다꾸체험단(플랜비)이 직접 판매하는 공동구매 상품이에요</p>';
+  var h='<div class="pg"><h1>다꾸 공구</h1><p class="pgsub">다꾸가 고른 공동구매 상품이에요</p>';
   if(!L.length) h+='<div class="empty shopempty sm"><b>곧 공구가 열려요</b><span>카카오톡 채널을 추가하면 공구 오픈 소식을 받아볼 수 있어요</span><a class="btn" '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>카카오톡 채널 추가</a></div>';
-  else h+='<section class="sec tossec shopsec"><div class="tgrid">'+L.map(function(x){ return tossCard({name:(x.soldOut?"[품절] ":"")+x.name,img:x.img,u:x.u,price:x.price,rate:x.rate,badge:"다꾸 공구",endAt:x.until?x.until+"T23:59:59+09:00":""}); }).join("")+'</div></section>';
+  else h+='<section class="sec tossec shopsec"><div class="tgrid">'+L.map(function(x){ return tossCard({name:(x.soldOut?"[품절] ":"")+x.name,img:x.img,u:x.u,price:x.price,orig:x.orig,rate:x.rate,ship:x.ship,badge:"다꾸 공구",endAt:x.until?x.until+"T23:59:59+09:00":""}); }).join("")+'</div><p class="prnote">공구 상품은 스타일셀러에서 결제하고, 판매·배송·교환은 각 판매처('+esc(L.map(function(x){return x.seller||"";}).filter(function(v,i,a){return v&&a.indexOf(v)===i;}).join("·")||"판매처")+')가 맡아요. 다꾸는 판매 수익의 일부를 받아요.</p></section>';
   setTimeout(rankInit,0);
   return h+'<section class="rksec" data-rank></section></div>';
 }
@@ -1118,7 +1118,7 @@ function tossCode(x){ var m=/\/_m\/([A-Za-z0-9_-]+)/.exec(String(x.u||"")); retu
 function tossCard(x){
   var img=safeUrl(x.img), tk=tossCode(x);
   return '<a class="tcard'+(img?'':' noimg')+(x.soldOut?' sold':'')+'" '+ext(safeUrl(x.u))+'><span class="tim"'+(tk?' id="tk-'+esc(tk)+'"':'')+'>'+(tk?'<button class="shb tsh" data-tshare="'+esc(tk)+'" aria-label="'+esc(x.name)+' 공유하기">'+ico(I.send)+'</button>':'')+(img?'<img src="'+esc(img)+'" alt="'+esc(x.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">':'<span class="tno">'+ico(I.gift)+'</span>')+(x.badge?'<em>'+esc(x.badge)+'</em>':'')+(x.rocket?'<span class="rks">로켓배송</span>':'')+(x.best?'<strong class="bestb">🔥 오늘 최대 할인</strong>':'')+(x.soldOut?'<span class="soldov"><b>품절</b><span>밤 12시에 새 특가가 열려요</span></span>':'')+'</span>'+
-    (x.low30?'<span class="low30">지금 <b>30일 내 최저가</b>예요</span>':'')+'<span class="tn">'+esc(x.name)+'</span>'+(x.price?'<span class="tp">'+(x.rate?'<i>'+esc(x.rate)+'</i> ':'')+esc(x.price)+'</span>':'<span class="tgo">특가 확인하기 ›</span>')+(x.endAt?'<span class="tcd" data-end="'+esc(x.endAt)+'">'+endLeft(x.endAt)+'</span>':'')+(x.comp?'<span class="tchips"><span class="chipr">최저가보상</span></span>':'')+(x.ship?'<span class="tch">'+esc(x.ship)+'</span>':'')+'</a>';
+    (x.low30?'<span class="low30">지금 <b>30일 내 최저가</b>예요</span>':'')+'<span class="tn">'+esc(x.name)+'</span>'+(x.price?'<span class="tp">'+(x.rate?'<i>'+esc(x.rate)+'</i> ':'')+esc(x.price)+(x.orig?' <s class="tor">'+esc(x.orig)+'</s>':'')+'</span>':'<span class="tgo">특가 확인하기 ›</span>')+(x.endAt?'<span class="tcd" data-end="'+esc(x.endAt)+'">'+endLeft(x.endAt)+'</span>':'')+(x.comp?'<span class="tchips"><span class="chipr">최저가보상</span></span>':'')+(x.ship?'<span class="tch">'+esc(x.ship)+'</span>':'')+'</a>';
 }
 
 /* ---------- 간식 룰렛 (하루 1회, 하루 경품 총 1개 · 선착순 코드) ---------- */
