@@ -23,7 +23,7 @@ header .app{font-size:13px;font-weight:700;color:#6a3fc8;border:1px solid #e3dbf
 .cov{position:relative;margin:0 -16px;aspect-ratio:4/5;max-height:78vh;overflow:hidden;background:#222}.cov img{width:100%;height:100%;object-fit:cover;display:block}
 .rb{position:absolute;left:14px;top:14px;z-index:2;display:inline-flex;align-items:center;gap:6px;background:#ff2d55;color:#fff;font-weight:900;font-size:15px;letter-spacing:-.02em;border-radius:999px;padding:9px 14px;box-shadow:0 6px 18px rgba(255,45,85,.45);animation:rbp 1.4s ease-in-out infinite}.rb b{background:#fff;color:#ff2d55;border-radius:999px;padding:2px 8px;font-size:13.5px}
 @keyframes rbp{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}@media (prefers-reduced-motion:reduce){.rb{animation:none}}
-.lim{position:relative;flex:none;display:block}.rb.sm{left:4px;top:auto;bottom:4px;font-size:10px;padding:3px 6px;gap:3px;animation:none;box-shadow:none}.rb.sm b{font-size:9.5px;padding:1px 4px}
+.lim{position:relative;flex:none;display:block}.rb.sm{white-space:nowrap;left:50%;transform:translateX(-50%);top:auto;bottom:4px;font-size:10px;padding:3px 6px;gap:3px;animation:none;box-shadow:none}.rb.sm b{font-size:9.5px;padding:1px 4px}
 .cov:after{content:"";position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(transparent,rgba(0,0,0,.62))}
 .cov .tx{position:absolute;left:20px;right:20px;bottom:22px;z-index:1;color:#fff}.cov small{display:inline-block;font-size:12px;font-weight:800;background:rgba(255,255,255,.22);backdrop-filter:blur(6px);border-radius:999px;padding:5px 10px}
 .cov h1{font-size:28px;line-height:1.3;letter-spacing:-.03em;margin:10px 0 6px;text-shadow:0 2px 10px rgba(0,0,0,.35)}.cov p{margin:0;font-size:13.5px;opacity:.92}
@@ -106,7 +106,9 @@ def dday(end):
 
 def rbadge(end, cls="rb"):
     # 2026-10-25 시온님 "숙소추천 매거진 글 사진에 🚨체험단 모집중! D-1 한번 더 강조" — 날짜는 페이지 JS 가 오늘 기준으로 다시 계산(DDJS)
-    return f'<span class="{cls}" data-end="{e(end)}">🚨체험단 모집중! <b>{dday(end)}</b></span>' if end else ""
+    if not end: return ""
+    lab = "🚨모집중" if "sm" in cls else "🚨체험단 모집중!"
+    return f'<span class="{cls}" data-end="{e(end)}">{lab} <b>{dday(end)}</b></span>'
 
 DDJS = r"""<script>(function(){var t=new Date(Date.now()+9*36e5).toISOString().slice(0,10);document.querySelectorAll("[data-end]").forEach(function(x){var n=Math.round((Date.parse(x.getAttribute("data-end"))-Date.parse(t))/864e5);if(n<0){x.remove();return;}var b=x.querySelector("b");if(b)b.textContent=n===0?"D-DAY":"D-"+n;});})();</script>"""
 
