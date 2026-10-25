@@ -166,7 +166,7 @@ def build(P, allP):
           "about": {"@type": "LodgingBusiness", "name": P["name"], "address": next((b for a, b in P.get("info", []) if a == "주소"), P["area"])},
           "publisher": {"@type": "Organization", "name": "다꾸체험단", "url": SITE}}
     bar = f'<div class="bar"><a href="{e(u)}" target="_blank" rel="noopener noreferrer sponsored" id="go">객실·가격 보기</a></div>' if u else ""
-    out = head(title, desc, canon, cov["src"]) + f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script></head><body><div class="w">{TOP}' + f'''
+    out = head(title, desc, canon, (SITE + "/images/og/m-" + slug + ".jpg" if os.path.exists("images/og/m-" + slug + ".jpg") else cov["src"])) + f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script></head><body><div class="w">{TOP}' + f'''
 <section class="cov"><img src="{e(cov["src"])}" alt="{e(P["name"])}" referrerpolicy="no-referrer">{rbadge(camp_end(P))}<div class="tx"><small>No.{e(P.get("no",""))} · {e(THEME.get(P.get("theme"), "감성숙소 추천"))} · {e(P["area"])}</small><h1>{e(P["h1"][0])}<br>{e(P["h1"][1])}</h1><p>{e(P["name"])}</p></div></section>
 <p class="lead">{e(P["lead"])}</p>
 {stay_camp(P)}

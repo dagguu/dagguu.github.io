@@ -1,0 +1,22 @@
+name: 감성숙소 미리보기 그림
+on:
+  push: { paths: ["scripts/stays/**"] }
+  workflow_dispatch:
+    inputs: { all: { description: "전부 다시", default: "" } }
+permissions: { contents: write }
+concurrency: { group: og-stays, cancel-in-progress: false }
+jobs:
+  og:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pillow -q && python3 scripts/og_stays.py ${{ github.event.inputs.all && '--all' || '' }}
+      - run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add images/og || true
+          git diff --cached --quiet && exit 0
+          python3 scripts/gen_stays.py || true
+          git add -A images/og m index.html sitemap.xml 2>/dev/null; git commit -m "감성숙소 미리보기 그림" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
