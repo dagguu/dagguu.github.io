@@ -873,11 +873,13 @@ function mapDraw(){
   var grp=window.L.layerGroup().addTo(LMAP);
   /* 가까운 핀 묶기(2026-10-25): 화면에서 46px 안에 있는 자리는 숫자 동그라미 하나로, 누르면 확대 → 더 확대할 수 없으면 목록 */
   function draw(){
-    grp.clearLayers(); var z=LMAP.getZoom(), cells={};
-    SP.forEach(function(S){ var pt=LMAP.project([S.g[0],S.g[1]],z), k=Math.floor(pt.x/46)+":"+Math.floor(pt.y/46); (cells[k]=cells[k]||[]).push(S); });
-    Object.keys(cells).forEach(function(k){
-      var C=cells[k], L=[].concat.apply([],C.map(function(S){ return S.L; })), n=L.length, etc=L.every(function(it){ return catOf(it)==="etc"; });
-      var la=0, ln=0; C.forEach(function(S){ la+=S.g[0]; ln+=S.g[1]; }); la/=C.length; ln/=C.length;
+    grp.clearLayers(); var z=LMAP.getZoom(), CL=[];
+    SP.slice().sort(function(a,b){ return b.L.length-a.L.length; }).forEach(function(S){ var pt=LMAP.project([S.g[0],S.g[1]],z), hit=null;
+      for(var q=0;q<CL.length;q++){ var c=CL[q]; if(Math.abs(c.x-pt.x)<48&&Math.abs(c.y-pt.y)<48){ hit=c; break; } }
+      if(hit){ hit.C.push(S); } else CL.push({x:pt.x,y:pt.y,C:[S]}); });
+    CL.forEach(function(cl){
+      var C=cl.C, L=[].concat.apply([],C.map(function(S){ return S.L; })), n=L.length, etc=L.every(function(it){ return catOf(it)==="etc"; });
+      var ll=LMAP.unproject([cl.x,cl.y],z), la=ll.lat, ln=ll.lng;
       var sz=n>=20?44:n>=5?38:34;
       var ic=window.L.divIcon({className:"dpin"+(etc?" etc":""),html:'<span style="width:'+sz+'px;height:'+sz+'px">'+(n>1?n:(etc?"🎟️":"🏡"))+'</span>',iconSize:[sz,sz],iconAnchor:[sz/2,sz/2]});
       window.L.marker([la,ln],{icon:ic}).addTo(grp).on("click",function(){
