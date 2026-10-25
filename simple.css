@@ -1146,7 +1146,7 @@ input,select,textarea{font-size:16px!important}
 .dmap .empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
 .dpin span{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#6a3fc8;color:#fff;font-weight:900;font-size:14px;border:3px solid #fff;box-shadow:0 3px 10px rgba(40,10,90,.35)}
 .dpin.etc span{background:#ff7a1a}
-.dpin.apx span{opacity:.6;border-style:dashed}
+.dpin.apx span{border-style:dashed;border-color:rgba(255,255,255,.9)}
 .mapnote{font-size:12.5px;color:#77768a;line-height:1.5;margin:10px 0 0}
 .mapsheet{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--tab) + env(safe-area-inset-bottom));width:min(100%,var(--frame));max-height:52vh;overflow:auto;background:#fff;border-radius:18px 18px 0 0;box-shadow:0 -8px 30px rgba(20,0,60,.18);z-index:500;padding:6px 14px 12px}
 .mshd{display:flex;justify-content:space-between;align-items:center;padding:8px 2px;position:sticky;top:0;background:#fff}

@@ -878,7 +878,7 @@ function mapDraw(){
     bounds.push([S.g[0],S.g[1]]);
   });
   if(bounds.length>1) LMAP.fitBounds(bounds,{padding:[28,28],maxZoom:11});
-  var nt=document.getElementById("mapnote"); if(nt) nt.innerHTML='모집 중 '+(c==="etc"?"티켓":c==="stay"?"숙박":"숙박·티켓")+' 체험단 <b>'+L0.length+'곳</b>을 지도에 표시했어요.'+(approx?' 흐린 핀('+approx+'곳)은 숙소 위치를 못 찾아 시·군 중심에 둔 거라 실제 위치와 달라요.':'');
+  var nt=document.getElementById("mapnote"); if(nt) nt.innerHTML='모집 중 '+(c==="etc"?"티켓":c==="stay"?"숙박":"숙박·티켓")+' 체험단 <b>'+L0.length+'곳</b>을 지도에 표시했어요.'+(approx?' 점선 핀('+approx+'곳)은 숙소가 있는 시·군 중심에 표시한 거라 실제 위치와 조금 달라요.':'');
 }
 function mapSheet(S){
   var b=document.getElementById("mapsheet"); if(!b) return;
