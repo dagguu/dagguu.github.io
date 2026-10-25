@@ -89,7 +89,7 @@ body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans CJK KR','
 def page(inner): return f"<html><head><meta charset='utf-8'><style>{CSS}</style></head><body>{inner}</body></html>"
 
 def build(q):
-    it = items[q['id']]
+    it = items.get(q['id']) or {'name': q['id']}  # m-<slug> = 감성숙소 매거진 (data.json items 에 없음)
     m = re.match(r'^(.*?)\s*\(([^()]*)\)\s*$', it['name'])
     name, city = (m.group(1), m.group(2)) if m else (it['name'], '')
     col = q.get('color', '#ffe14d')
