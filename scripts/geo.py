@@ -14,7 +14,7 @@ KAKAO = os.environ.get("KAKAO_REST_KEY", "").strip()
 UA = "dagguu-map/1.0 (https://www.dagguu.com; eun901002@gmail.com)"
 KST = datetime.timezone(datetime.timedelta(hours=9))
 TODAY = datetime.datetime.now(KST).strftime("%Y-%m-%d")
-REG = {"서울": "서울특별시", "경기": "경기도", "인천": "인천광역시", "강원": "강원도", "충청": "충청", "전라": "전라", "경상": "경상", "부산": "부산광역시", "제주": "제주특별자치도"}
+REG = {"서울": "서울특별시", "경기": "경기도", "인천": "인천광역시", "강원": "강원도", "부산": "부산광역시", "제주": "제주특별자치도"}  # 충청·전라·경상은 남·북도를 몰라서 시·군 이름만
 
 def get(url, headers=None):
     req = urllib.request.Request(url, headers={"User-Agent": UA, **(headers or {})})
@@ -25,10 +25,14 @@ def split(name):
     m = re.match(r"^(.*?)\s*\(([^)]+)\)\s*$", name or "")
     return (m.group(1).strip(), m.group(2).strip()) if m else ((name or "").strip(), "")
 
-def city_q(city, region):
-    if not city: return REG.get(region, region) + ", 대한민국" if region else ""
-    c = re.split(r"[ ·,/]", city)[0]
-    return f"{c}, {REG.get(region, '')}, 대한민국".replace(", ,", ",")
+def city_q(city, region, place=""):
+    c = re.split(r"[ ·,/]", city)[0] if city else ""
+    if not c and place:  # "무안 애모시옹 풀빌라" 처럼 이름 앞에 시·군이 붙은 경우
+        w = place.split()[0]
+        if 2 <= len(w) <= 4 and not re.search(r"(펜션|호텔|풀빌라|리조트|스테이|글램핑|캠핑)", w): c = w
+    if not c: return ""
+    r = REG.get(region, "")
+    return f"{c}, {r}, 대한민국" if r else f"{c}, 대한민국"
 
 def kakao(place, city):
     if not KAKAO: return None
@@ -61,13 +65,13 @@ for it in items:
     place, city = split(it.get("name"))
     ck = "p:" + str(it.get("coupangPid") or it["id"])
     hit = cache.get(ck)
-    if hit is None or (hit and hit[2] == "c" and KAKAO and not cache.get(ck + "#k")):
+    if not hit or (hit[2] == "c" and KAKAO and not cache.get(ck + "#k")):
         g = kakao(place, city)
         if KAKAO: cache[ck + "#k"] = 1
         if not g:
-            cq = city_q(city, it.get("region", ""))
+            cq = city_q(city, it.get("region", ""), place)
             g = cache.get("c:" + cq)
-            if g is None:
+            if not g:
                 g = nominatim(cq); cache["c:" + cq] = g or []
             g = g or None
         cache[ck] = g or []; hit = cache[ck]; n_new += 1
