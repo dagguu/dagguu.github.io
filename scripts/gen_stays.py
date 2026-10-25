@@ -79,12 +79,12 @@ def head(title, desc, canon, img):
 
 TOP = ('<p class="disc">이 페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>'
        '<header><span class="hl"><button class="bk" type="button" aria-label="뒤로 가기" onclick="if(history.length>1&&document.referrer)history.back();else location.href=\'/\'">‹</button>'
-       '<a class="logo" href="/">다꾸<i>체험단</i></a></span><a class="app" href="/m/">숙소 추천 더 보기 ›</a></header>')
+       '<a class="logo" href="/">다꾸<i>체험단</i></a></span><a class="app" href="/m/">감성숙소 추천 더 보기 ›</a></header>')
 
 def build(P, allP):
     slug = P["slug"]; canon = f"{SITE}/m/{slug}.html"
     ph = P["photos"]; cov = ph[0]
-    title = P.get("title") or f'{P["name"]} · {P["area"]} {P.get("type","숙소")} | 다꾸 숙소 추천'
+    title = P.get("title") or f'{P["name"]} · {P["area"]} {P.get("type","숙소")} | 다꾸 감성숙소 추천'
     desc = P.get("desc") or P["lead"][:110]
     u = link_of(P)
     mm, dd = int(P["date"][5:7]), int(P["date"][8:10])
@@ -103,14 +103,14 @@ def build(P, allP):
     others = [Q for Q in allP if Q["slug"] != slug][:8]
     more = ""
     if others:
-        more = '<section class="more2"><h2>다른 숙소 추천</h2><div class="ml">' + "".join(
+        more = '<section class="more2"><h2>다른 감성숙소 추천</h2><div class="ml">' + "".join(
             f'<a href="/m/{e(Q["slug"])}.html"><img src="{e(Q["photos"][0]["src"])}" alt="" loading="lazy" referrerpolicy="no-referrer"><b>{e(Q["name"])}</b><small>{e(Q["area"])}</small></a>' for Q in others) + '</div></section>'
     ld = {"@context": "https://schema.org", "@type": "Article", "headline": " ".join(P["h1"]), "datePublished": P["date"], "image": [x["src"] for x in ph[:3]],
           "about": {"@type": "LodgingBusiness", "name": P["name"], "address": next((b for a, b in P.get("info", []) if a == "주소"), P["area"])},
           "publisher": {"@type": "Organization", "name": "다꾸체험단", "url": SITE}}
     bar = f'<div class="bar"><a href="{e(u)}" target="_blank" rel="noopener noreferrer sponsored" id="go">객실·가격 보기</a></div>' if u else ""
     out = head(title, desc, canon, cov["src"]) + f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script></head><body><div class="w">{TOP}' + f'''
-<section class="cov"><img src="{e(cov["src"])}" alt="{e(P["name"])}" referrerpolicy="no-referrer"><div class="tx"><small>{e(THEME.get(P.get("theme"), "숙소 추천"))} · {e(P["area"])}</small><h1>{e(P["h1"][0])}<br>{e(P["h1"][1])}</h1><p>{e(P["name"])}</p></div></section>
+<section class="cov"><img src="{e(cov["src"])}" alt="{e(P["name"])}" referrerpolicy="no-referrer"><div class="tx"><small>{e(THEME.get(P.get("theme"), "감성숙소 추천"))} · {e(P["area"])}</small><h1>{e(P["h1"][0])}<br>{e(P["h1"][1])}</h1><p>{e(P["name"])}</p></div></section>
 <p class="lead">{e(P["lead"])}</p>
 <div class="pts">{pts}</div>
 <section class="gal"><h2>공간 둘러보기</h2>{gal}<p class="src">사진: 쿠팡트래블 숙소 정보</p></section>
@@ -121,7 +121,7 @@ def build(P, allP):
 <p class="note">숙소 정보는 {mm}월 {dd}일 쿠팡트래블 상품 페이지를 기준으로 정리했어요. 객실·요금·운영 시설은 바뀔 수 있으니 예약 전에 꼭 확인해 주세요.</p>
 {camp}
 {more}
-<footer>다꾸체험단 · 국내 숙소 추천 매거진<br><a href="/m/">숙소 추천 전체 보기</a> · <a href="/">www.dagguu.com</a></footer>
+<footer>다꾸체험단 · 국내 감성숙소 추천 매거진<br><a href="/m/">감성숙소 추천 전체 보기</a> · <a href="/">www.dagguu.com</a></footer>
 </div>{bar}
 <script>document.addEventListener("click",function(ev){{if(ev.target.closest("#go")&&window.gtag)gtag("event","coupang_click",{{place:"stay_mag",item_name:{json.dumps(P["name"], ensure_ascii=False)}}});}});</script>
 </body></html>
@@ -134,9 +134,9 @@ if __name__ == "__main__":
     allP = load_all()
     done = [build(P, allP) for P in allP]
     json.dump(done, open(os.path.join(ROOT, "m", "list.json"), "w", encoding="utf-8"), ensure_ascii=False)
-    lis = "".join(f'<a class="lc" href="/m/{e(x["slug"])}.html"><img src="{e(x["img"])}" alt="" loading="lazy" referrerpolicy="no-referrer"><span><em>{e(THEME.get(x["theme"], "숙소 추천"))} · {e(x["area"])}</em><b>{e(x["t"])}</b><small>{e(x["name"])}</small></span></a>' for x in done)
-    idx = head("국내 숙소 추천 매거진 · 매일 한 곳씩 | 다꾸체험단", "요즘 인기 있는 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 사진과 함께 소개해요.", SITE + "/m/", done[0]["img"] if done else SITE + "/images/og.png") + \
-        f'</head><body><div class="w">{TOP.replace("숙소 추천 더 보기 ›", "다꾸 매거진 ›").replace("/m/", "/#/mag?t=s", 1)}<h1 class="ix">국내 숙소 추천</h1><p class="lead" style="margin-top:6px">요즘 인기 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 소개해요.</p><div class="lst">{lis or "<p>곧 첫 글이 올라와요</p>"}</div><footer><a href="/">다꾸체험단 홈</a></footer></div></body></html>'
+    lis = "".join(f'<a class="lc" href="/m/{e(x["slug"])}.html"><img src="{e(x["img"])}" alt="" loading="lazy" referrerpolicy="no-referrer"><span><em>{e(THEME.get(x["theme"], "감성숙소 추천"))} · {e(x["area"])}</em><b>{e(x["t"])}</b><small>{e(x["name"])}</small></span></a>' for x in done)
+    idx = head("국내 감성숙소 추천 · 매일 한 곳씩 | 다꾸체험단", "요즘 인기 있는 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 사진과 함께 소개해요.", SITE + "/m/", done[0]["img"] if done else SITE + "/images/og.png") + \
+        f'</head><body><div class="w">{TOP.replace("감성숙소 추천 더 보기 ›", "다꾸 매거진 ›").replace("/m/", "/#/mag?t=s", 1)}<h1 class="ix">국내 감성숙소 추천</h1><p class="lead" style="margin-top:6px">요즘 인기 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 소개해요.</p><div class="lst">{lis or "<p>곧 첫 글이 올라와요</p>"}</div><footer><a href="/">다꾸체험단 홈</a></footer></div></body></html>'
     open(os.path.join(ROOT, "m", "index.html"), "w", encoding="utf-8").write(idx)
     # 사이트맵에 m/ 주소 더하기 (gen_share.py 가 먼저 sitemap.xml 을 새로 쓴 뒤 불림)
     sm = os.path.join(ROOT, "sitemap.xml")
