@@ -182,4 +182,14 @@ if __name__ == "__main__":
         add = "".join(f"<url><loc>{SITE}/m/{x['slug']}.html</loc><lastmod>{x['date']}</lastmod></url>" for x in done if f"/m/{x['slug']}.html" not in s)
         if done and f"{SITE}/m/<" not in s: add = f"<url><loc>{SITE}/m/</loc></url>" + add
         if add: open(sm, "w", encoding="utf-8").write(s.replace("</urlset>", add + "</urlset>"))
+    # 홈 인트로 사진 + 오늘의 감성숙소(슬라이드·띠 배너·팝업용)를 index.html 에 직접 넣는다(2026-10-25 시온님: 인트로 글씨는 그대로, 사진만 감성숙소로)
+    ix = os.path.join(ROOT, "index.html")
+    if done and os.path.exists(ix):
+        T = done[0]
+        h = open(ix, encoding="utf-8").read()
+        h2 = re.sub(r'<img class="ftbg[^>]*>', '<img class="ftbg ph" src="' + e(T["img"]) + '" referrerpolicy="no-referrer" onerror="this.className=\'ftbg\';this.src=\'images/free-trip.svg\'" alt="">', h, count=1)
+        tj = json.dumps({k: T[k] for k in ("no", "slug", "name", "area", "t", "img", "date")}, ensure_ascii=False).replace("</", "<\\/")
+        tag = '<script id="staytoday">window.STAY_TODAY=' + tj + ';</script>'
+        h2 = re.sub(r'<script id="staytoday">.*?</script>', tag, h2, count=1) if 'id="staytoday"' in h2 else h2.replace('<div id="app"></div>', tag + '\n<div id="app"></div>', 1)
+        if h2 != h: open(ix, "w", encoding="utf-8").write(h2)
     print("숙소 추천 글:", ", ".join(x["slug"] for x in done) or "없음")

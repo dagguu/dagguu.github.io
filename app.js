@@ -1164,7 +1164,23 @@ function tixView(){
 /* 홈 중간 배너(2026-10-19 시온님 요청 "팝업이랑 비슷한 디자인"): 같은 promo·상품, 상품 4개 미만이면 안 보임 */
 function promoBand(){ var P=promoOn(); if(!P) return ""; var L=promoList(P); if(L.length<4) return "";
   return '<section class="pmband" aria-label="광고"><a class="phead" '+ext(P.u)+'><small>'+esc(P.small||"")+'</small><b>'+esc((P.t||"").replace(/<[^>]+>/g,""))+'</b><em>'+esc(P.t2||P.b||"")+' ›</em></a>'+promoRows(L)+'<div class="pmgap"></div></section>'; }
+/* 오늘의 감성숙소(2026-10-25 시온님): gen_stays.py 가 index.html 에 넣는 window.STAY_TODAY → 홈 슬라이드 첫 장·가로 띠 첫 장·팝업. 모두 사이트 안 매거진 글로 간다(쿠팡으로 바로 보내지 않음, 운영정책 4.1-2) */
+function stayToday(){ var T=window.STAY_TODAY; if(!T||!T.slug||!safeUrl(T.img)) return null; return T; }
+function stayNo(T){ return ("00"+(+T.no||0)).slice(-3); }
+function stayHref(T){ return "/m/"+encodeURIComponent(T.slug)+".html"; }
+function stayPopup(T){
+  if(state.tab!=="home"||document.querySelector(".promom")) return;
+  try{ if(sessionStorage.getItem("dakku-promo")) return; var td=new Date().toISOString().slice(0,10); if(localStorage.getItem("dakku-promo-hide")===td) return; sessionStorage.setItem("dakku-promo","1"); }catch(e){ return; }
+  var w=document.createElement("div"); w.className="modal promom stpop"; w.setAttribute("role","dialog"); w.setAttribute("aria-modal","true"); w.setAttribute("aria-label","오늘의 감성숙소");
+  w.innerHTML='<div class="psheet2"><a class="stpc" href="'+stayHref(T)+'" data-stgo="popup"><img src="'+esc(T.img)+'" alt="" referrerpolicy="no-referrer"><span class="stpt"><small>오늘의 감성숙소 ['+stayNo(T)+']</small><b>'+esc(T.t||T.name)+'</b><em>'+esc(T.name)+' · '+esc(T.area||"")+'</em><i>숙소 소개 보러가기 ›</i></span></a>'+
+    '<div class="pfoot"><button data-p="hide">오늘 그만보기</button><button data-p="x">닫기</button></div></div>';
+  function close(){ w.classList.add("out"); setTimeout(function(){ w.remove(); },250); }
+  w.addEventListener("click",function(e){ if(e.target===w) return close(); var b=e.target.closest("[data-p]"); if(b){ if(b.dataset.p==="hide"){ try{ localStorage.setItem("dakku-promo-hide",new Date().toISOString().slice(0,10)); }catch(er){} } close(); } else if(e.target.closest("a")) setTimeout(close,300); });
+  document.body.appendChild(w);
+}
+document.addEventListener("click",function(e){ var a=e.target.closest&&e.target.closest("[data-stgo]"); if(!a) return; try{ if(window.gtag){ var T=stayToday()||{}; gtag("event","promo_click",{place:a.getAttribute("data-stgo"),promo:"stay_today",item_name:T.name||""}); } }catch(er){} });
 function promoPopup(){
+  var ST=stayToday(); if(ST) return stayPopup(ST);
   var P=promoOn(); if(!P||state.tab!=="home"||document.querySelector(".promom")) return;
   try{ if(sessionStorage.getItem("dakku-promo")) return; var td=new Date().toISOString().slice(0,10); if(localStorage.getItem("dakku-promo-hide")===td) return; sessionStorage.setItem("dakku-promo","1"); }catch(e){ return; }
   var L=promoList(P);
@@ -1179,6 +1195,7 @@ function promoPopup(){
 window.afterIntro=function(){ promoPopup(); };
 function heroSlides(){
   var s=[], ig=safeUrl((seed.sns||{}).instagram), oc=safeUrl(seed.openchat);
+  var ST=stayToday(); if(ST) s.push({bg:"linear-gradient(90deg,rgba(10,4,30,.78) 0%,rgba(10,4,30,.45) 55%,rgba(10,4,30,.1) 100%),#222 url('"+ST.img.replace(/'/g,"%27")+"') center/cover",k:"오늘의 감성숙소 ["+stayNo(ST)+"]",t:esc(ST.t||ST.name),d:esc(ST.name)+" · "+esc(ST.area||""),b:"숙소 소개 보기",h:stayHref(ST),noart:1,st:1});
   s.push({bg:"radial-gradient(120% 90% at 50% 20%,#5b2fd6 0%,#3a1aa8 45%,#1d0b5c 100%)",t:"이제 <span>공짜여행</span>이 시작된다!",d:"아직도 몰랐어? 여행 무료 체험단<br>여행도 다니고 돈도 아끼고!",b:"지금 바로가기",h:"#/trip",art:"images/free-trip.svg",ft:1});
   /* 다꾸 수익화 배너는 2026-10-21 시온님 요청으로 뺌 */ //s.push({bg:"linear-gradient(120deg,#3a1670,#8a3fd0 55%,#d46fd8)",t:"<span>다꾸 수익화</span> 1:1 코칭",d:"한번 배우면 평생 써먹는<br>블로그 수익화",b:"자세히 보기",h:"#/edu",e:["🧑‍🏫","📈","✍️"]});
   var P=promoOn(); if(P) s.push({bg:"linear-gradient(120deg,#3a1670,#8a3fd0 55%,#b558d6)",t:P.t,d:P.d,b:P.b,h:P.u,x:1,art:P.art});
@@ -1196,9 +1213,9 @@ function heroSlides(){
 function heroSlide(o){
   var href=o.jump?'href="#/deals" data-jump="'+esc(o.jump)+'"':(o.x?ext(o.h):'href="'+esc(o.h)+'"');
   var cd=o.cd?'<span class="hcd">⏳ <em '+(o.cd==="mid"?'data-mid>'+clock(msToMidnight()):'data-hd>'+clock(nextSeven()))+'</em> 남음</span>':'';
-  var art=o.art?'<span class="hart part" aria-hidden="true"><img src="'+esc(o.art)+'" alt=""></span>':(o.imgs&&o.imgs.length)?'<span class="hart dimg" aria-hidden="true">'+o.imgs.slice(0,2).map(function(u,i){ return '<img class="di'+(i+1)+'" src="'+esc(u)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">'; }).join("")+(o.rate?'<em class="drate">최대<b>'+esc(o.rate)+'%</b></em>':'')+'</span>'
+  var art=o.noart?'':o.art?'<span class="hart part" aria-hidden="true"><img src="'+esc(o.art)+'" alt=""></span>':(o.imgs&&o.imgs.length)?'<span class="hart dimg" aria-hidden="true">'+o.imgs.slice(0,2).map(function(u,i){ return '<img class="di'+(i+1)+'" src="'+esc(u)+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">'; }).join("")+(o.rate?'<em class="drate">최대<b>'+esc(o.rate)+'%</b></em>':'')+'</span>'
     :'<span class="hart" aria-hidden="true"><span class="he1">'+o.e[0]+'</span><span class="he2">'+o.e[1]+'</span><span class="he3">'+o.e[2]+'</span>'+SPARK.replace('class="spk"','class="spk s1"')+SPARK.replace('class="spk"','class="spk s2"')+SPARK.replace('class="spk"','class="spk s3"')+'</span>';
-  return '<a class="kv'+(o.dark?' dark':'')+(o.imgs?' dkv':'')+(o.ft?' ftkv':'')+'" style="background:'+o.bg+'" '+href+'><span class="htx">'+(o.k?'<i class="hk">'+o.k+'</i>':'')+'<b>'+o.t+'</b>'+(o.d?'<small>'+o.d+'</small>':'')+cd+'<span class="hbtn">'+esc(o.b)+' ›</span></span>'+art+'</a>';
+  return '<a class="kv'+(o.dark?' dark':'')+(o.imgs?' dkv':'')+(o.ft?' ftkv':'')+(o.st?' stkv':'')+'"'+(o.st?' data-stgo="hero"':'')+' style="background:'+o.bg+'" '+href+'><span class="htx">'+(o.k?'<i class="hk">'+o.k+'</i>':'')+'<b>'+o.t+'</b>'+(o.d?'<small>'+o.d+'</small>':'')+cd+'<span class="hbtn">'+esc(o.b)+' ›</span></span>'+art+'</a>';
 }
 function maxRate(a){ var m=0; a.forEach(function(x){ var r=parseInt(String(x.rate||"").replace(/\D/g,""),10); if(r>m) m=r; }); return m||""; }
 function liveGold(){ return (Array.isArray(seed.goldbox)?seed.goldbox:[]).filter(function(x){ return safeUrl(x.u) && !(x.endAt && Date.parse(x.endAt)<=Date.now()); }); }
@@ -1224,6 +1241,7 @@ var slideT;
 /* 가로 기획전 배너(2026-10-19 시온님 요청, 트립비토즈 '비토즈위크 24시간 특가' 띠 배너 참고): 홈 메뉴 아래 예전 "오늘 마감" 줄 자리. 슬라이드 + "1 / N" */
 function wideBanners(open,closing){
   var W=[], st=open.filter(function(it){ return catOf(it)==="stay"; });
+  var ST=stayToday(); if(ST) W.push({h:stayHref(ST),st:1,bg:"linear-gradient(90deg,#1a0b3d 0%,#3a1a8a 60%,#6a3fd6 100%)",s:"오늘의 감성숙소 ["+stayNo(ST)+"] · "+esc(ST.area||""),t:esc(ST.name)+" <em>보러가기</em>",art:ST.img});
   W.push({h:"#/trip",bg:"linear-gradient(90deg,#12063f 0%,#2a0f8a 55%,#5b3fd6 100%)",s:"아직도 몰랐어? 여행 무료 체험단",t:"이제 <em>공짜여행</em>이 시작된다!",art:"images/free-trip.svg"});
   /* 다꾸 수익화 배너는 2026-10-21 시온님 요청으로 뺌 */ //W.push({h:"#/edu",bg:"linear-gradient(90deg,#3a1670 0%,#8a3fd0 60%,#d46fd8 100%)",s:"한번 배우면 평생 써먹는 블로그 수익화",t:"다꾸체험단에서 <em>알려드려요!</em>",e:"🧑‍🏫"});
   if(closing.length) W.push({h:"#/list?cat=all&s=todayClose",bg:"linear-gradient(90deg,#2b1055 0%,#5a1f8f 60%,#a43f9f 100%)",s:'오늘 밤 12시까지 · ⏳ <span id="stripcd">'+clock(msToMidnight())+'</span>',t:"오늘 마감 체험단 <em>"+closing.length+"곳</em>",e:"⏰"});
@@ -1236,8 +1254,8 @@ function wideBanners(open,closing){
   var P=promoOn(); if(P) W.push({h:P.u,x:1,ad:1,bg:"linear-gradient(90deg,#0c1a6b 0%,#1f3aa8 60%,#3f6be0 100%)",s:esc(P.small||""),t:esc((P.t||"").replace(/<[^>]+>/g,"")),art:P.art});
   var n=W.length;
   return '<div class="wbs" data-wslider><div class="wbtrack">'+W.map(function(o,i){
-    return '<a class="wb" style="background:'+o.bg+'" '+(o.x?ext(o.h):'href="'+o.h+'"')+'><span class="wbt"><small>'+o.s+'</small><b>'+o.t+'</b></span>'+
-      (o.art?'<img class="wba" src="'+esc(o.art)+'" alt="" loading="lazy">':'<span class="wbe" aria-hidden="true">'+o.e+'</span>')+
+    return '<a class="wb'+(o.st?' stwb':'')+'" style="background:'+o.bg+'" '+(o.x?ext(o.h):'href="'+o.h+'"')+(o.st?' data-stgo="wide_banner"':'')+'><span class="wbt"><small>'+o.s+'</small><b>'+o.t+'</b></span>'+
+      (o.art?'<img class="wba" src="'+esc(o.art)+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'<span class="wbe" aria-hidden="true">'+o.e+'</span>')+
       '<span class="wbn"><b>'+(i+1)+'</b> / '+n+'</span></a>'; }).join("")+'</div></div>';
 }
 var wbT; function startWide(){
