@@ -1124,7 +1124,7 @@ input,select,textarea{font-size:16px!important}
 .stpc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(10,4,30,.85) 100%)}
 .stpt{position:absolute;left:18px;right:18px;bottom:18px;z-index:1;display:flex;flex-direction:column;gap:6px}
 .stpt small{align-self:flex-start;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:3px 10px;font-size:12.5px;font-weight:700}
-.stpt b{font-size:21px;line-height:1.3;font-weight:800}
+.stpt b{font-size:21px;line-height:1.3;font-weight:800;word-break:keep-all}
 .stpt em{font-style:normal;font-size:13.5px;opacity:.9}
 .stpt i{font-style:normal;align-self:flex-start;margin-top:4px;background:#ffe14d;color:#1a0b3d;font-weight:800;font-size:14px;border-radius:99px;padding:8px 14px}
 .kv.stkv{background:#1a0b3d!important;position:relative;overflow:hidden}

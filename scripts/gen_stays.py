@@ -185,7 +185,7 @@ def build(P, allP):
 </body></html>
 '''
     open(os.path.join(ROOT, "m", slug + ".html"), "w", encoding="utf-8").write(out)
-    return {"no": P.get("no", 0), "slug": slug, "name": P["name"], "area": P["area"], "theme": P.get("theme", ""), "t": " ".join(P["h1"]), "d": P["lead"][:80], "date": P["date"], "img": cov["src"], "campEnd": camp_end(P)}
+    return {"no": P.get("no", 0), "slug": slug, "name": P["name"], "area": P["area"], "theme": P.get("theme", ""), "t": " ".join(P["h1"]), "tl": P["h1"], "d": P["lead"][:80], "date": P["date"], "img": cov["src"], "campEnd": camp_end(P)}
 
 if __name__ == "__main__":
     os.makedirs(os.path.join(ROOT, "m"), exist_ok=True)
@@ -209,7 +209,7 @@ if __name__ == "__main__":
         T = done[0]
         h = open(ix, encoding="utf-8").read()
         h2 = re.sub(r'<img class="ftbg[^>]*>', '<img class="ftbg ph" src="' + e(T["img"]) + '" referrerpolicy="no-referrer" onerror="this.className=\'ftbg\';this.src=\'images/free-trip.svg\'" alt="">', h, count=1)
-        tj = json.dumps({k: T[k] for k in ("no", "slug", "name", "area", "t", "img", "date")}, ensure_ascii=False).replace("</", "<\\/")
+        tj = json.dumps({k: T[k] for k in ("no", "slug", "name", "area", "t", "tl", "img", "date") if k in T}, ensure_ascii=False).replace("</", "<\\/")
         tag = '<script id="staytoday">window.STAY_TODAY=' + tj + ';</script>'
         h2 = re.sub(r'<script id="staytoday">.*?</script>', tag, h2, count=1) if 'id="staytoday"' in h2 else h2.replace('<div id="app"></div>', tag + '\n<div id="app"></div>', 1)
         if h2 != h: open(ix, "w", encoding="utf-8").write(h2)
