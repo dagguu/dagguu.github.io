@@ -948,6 +948,7 @@ function eventView(){
 var GUIDES=null;
 /* 다꾸 매거진(2026-10-20 시온님 "게시판 볼 곳 하나"): 체험단 가이드(g/list.json)와 추천 모음(p/list.json)은 따로 관리하고 #/mag 한 화면에서 탭으로 본다 */
 var PICKS=null, STAYM=null;
+function qs0(k){ var m=(location.hash.split("?")[1]||"").match(new RegExp("(?:^|&)"+k+"=([^&]*)")); return m?decodeURIComponent(m[1]):""; }
 function magLoad(cb){
   var n=0, done=function(){ if(++n===3) cb(); };
   if(STAYM) done(); else fetch((BASE||"/")+"m/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ STAYM=L||[]; done(); }).catch(function(){ STAYM=[]; done(); });
@@ -957,14 +958,15 @@ function magLoad(cb){
 function gDate(d){ return d?'<em class="gdt">'+esc(String(d).replace(/-/g,"."))+' 업로드</em>':""; }
 function guideRow(g){ return '<a class="gdi" href="/g/'+esc(g.slug)+'.html"><b>'+esc(g.t)+'</b><small>'+esc(g.d)+'</small>'+gDate(g.date)+'</a>'; }
 function pickRow(x){ return '<a class="gdi pki" href="/p/'+esc(x.slug)+'.html">'+(safeUrl(x.img)?'<img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<span><b>'+esc(x.h||x.t)+'</b><small>'+esc(x.d)+'</small>'+gDate(x.date)+'</span></a>'; }
-function stayRow(x){ return '<a class="gdi pki" href="/m/'+esc(x.slug)+'.html">'+(safeUrl(x.img)?'<img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<span><b>'+esc(x.t)+'</b><small>'+esc(x.name)+' · '+esc(x.area)+'</small>'+gDate(x.date)+'</span></a>'; }
+function stayRow(x){ return '<a class="gdi pki stn" href="/m/'+esc(x.slug)+'.html" data-no="'+esc(x.no||"")+'" data-q="'+esc((x.name+" "+x.area+" "+x.t).toLowerCase())+'">'+(x.no?'<i class="sno">'+esc(x.no)+'</i>':'')+(safeUrl(x.img)?'<img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<span><b>'+esc(x.t)+'</b><small>'+esc(x.name)+' · '+esc(x.area)+'</small>'+gDate(x.date)+'</span></a>'; }
 function guideFill(){
   var B=document.querySelectorAll("[data-guides]"), M=document.getElementById("magbody"); if(!B.length&&!M) return;
   magLoad(function(){
     var h=(STAYM.length?'<section class="gdbox"><div class="gdh"><b>국내 감성숙소 추천</b><a href="#/mag?t=s">전체 ›</a></div>'+STAYM.slice(0,3).map(stayRow).join("")+'</section>':"")+(GUIDES.length?'<section class="gdbox"><div class="gdh"><b>체험단 가이드</b><a href="#/mag">전체 ›</a></div>'+GUIDES.slice(0,3).map(guideRow).join("")+'</section>':"")+
       (PICKS.length?'<section class="gdbox"><div class="gdh"><b>다꾸 추천 모음</b><a href="#/mag?t=p">전체 ›</a></div>'+PICKS.slice(0,3).map(pickRow).join("")+'</section>':"");
     [].forEach.call(B,function(b){ b.innerHTML=h; });
-    if(M){ var L=state.magT==="p"?PICKS:state.magT==="s"?STAYM:GUIDES; M.innerHTML=L.length?'<div class="maglist">'+L.map(state.magT==="p"?pickRow:state.magT==="s"?stayRow:guideRow).join("")+'</div>':'<div class="empty">곧 새 글이 올라와요</div>'; }
+    if(M){ var L=state.magT==="p"?PICKS:state.magT==="s"?STAYM:GUIDES; M.innerHTML=L.length?(state.magT==="s"?'<div class="stsrch"><input id="stq" type="search" placeholder="번호 또는 숙소 이름·지역 검색 (예: 3, 가평)" autocomplete="off" enterkeyhint="search"></div>':'')+'<div class="maglist">'+L.map(state.magT==="p"?pickRow:state.magT==="s"?stayRow:guideRow).join("")+'</div>'+(state.magT==="s"?'<p class="empty" id="stnone" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p>':''):'<div class="empty">곧 새 글이 올라와요</div>';
+      var sq=document.getElementById("stq"); if(sq){ var run=function(){ var v=sq.value.trim().toLowerCase().replace(/^no\.?\s*/,"").replace(/^#/,""),hit=0; [].forEach.call(M.querySelectorAll(".stn"),function(a){ var ok=!v||(/^\d+$/.test(v)?a.getAttribute("data-no")===String(+v):a.getAttribute("data-q").indexOf(v)>=0); a.style.display=ok?"":"none"; if(ok)hit++; }); document.getElementById("stnone").hidden=!!hit||!v; }; sq.addEventListener("input",run); if(qs0("n")){ sq.value=qs0("n"); run(); } } }
   });
 }
 

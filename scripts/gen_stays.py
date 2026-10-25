@@ -43,8 +43,18 @@ header .app{font-size:13px;font-weight:700;color:#6a3fc8;border:1px solid #e3dbf
 .note{font-size:12px;color:#8a8994;line-height:1.6;margin:14px 0 0}
 footer{margin-top:40px;font-size:12px;color:#8a8994;line-height:1.7;text-align:center}footer a{color:#6a3fc8;font-weight:700}
 .lst{display:flex;flex-direction:column;gap:12px;margin-top:18px}.lc{display:flex;gap:12px;align-items:center;border:1px solid #ececf2;border-radius:16px;padding:10px}.lc img{width:84px;height:84px;border-radius:12px;object-fit:cover;flex:none;background:#f4f4f7}.lc b{display:block;font-size:15px;line-height:1.4;margin-bottom:4px}.lc small{font-size:12.5px;color:#6b6a7a;line-height:1.5}.lc em{display:inline-block;font-style:normal;font-size:11px;font-weight:800;color:#6a3fc8;background:#f4f0ff;border-radius:6px;padding:2px 6px;margin-bottom:5px}
+.srch{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:8px;margin:14px -16px 0;padding:10px 16px;background:#fff}.srch span{position:absolute;left:30px;font-size:15px}.srch input{width:100%;height:48px;border:1.5px solid #6a3fc8;border-radius:999px;padding:0 16px 0 42px;font-size:16px;outline:none;background:#faf8ff}
+.lc{position:relative}.lc[hidden]{display:none}.lc .no{position:absolute;left:4px;top:4px;z-index:1;min-width:26px;height:22px;padding:0 6px;border-radius:8px;background:#16151c;color:#fff;font-style:normal;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.nores{text-align:center;color:#8a8994;font-size:14px;padding:30px 0}
 h1.ix{font-size:26px;margin:18px 0 6px;letter-spacing:-.03em}
 """
+
+SEARCH = ('<form class="srch" onsubmit="return false" role="search"><span>🔍</span>'
+          '<input id="q" type="search" inputmode="search" placeholder="번호 또는 숙소 이름·지역 검색 (예: 3, 가평)" autocomplete="off" enterkeyhint="search"></form>')
+SEARCH_JS = r"""<script>(function(){var q=document.getElementById('q'),L=[].slice.call(document.querySelectorAll('#lst .lc')),N=document.getElementById('nores');
+function run(){var v=q.value.trim().toLowerCase().replace(/^no\.?\s*/,'').replace(/^#/,''),hit=0;L.forEach(function(a){var ok=!v||(/^\d+$/.test(v)?a.getAttribute('data-no')===String(+v):a.getAttribute('data-q').indexOf(v)>=0);a.hidden=!ok;if(ok)hit++;});N.hidden=!!hit||!v;
+if(window.gtag&&v.length)clearTimeout(run.t),run.t=setTimeout(function(){gtag('event','search',{search_term:'stay_mag:'+v});},1200);}
+q.addEventListener('input',run);var m=(location.hash.match(/^#(\d+)$/)||location.search.match(/[?&]n=(\d+)/));if(m){q.value=m[1];run();}})();</script>"""
 
 def load_all():
     L = []
@@ -100,7 +110,7 @@ TOP = ('<p class="disc">이 페이지는 쿠팡 파트너스 활동의 일환으
 def build(P, allP):
     slug = P["slug"]; canon = f"{SITE}/m/{slug}.html"
     ph = P["photos"]; cov = ph[0]
-    title = P.get("title") or f'{P["name"]} · {P["area"]} {P.get("type","숙소")} | 다꾸 감성숙소 추천'
+    title = P.get("title") or f'No.{P.get("no","")} {P["name"]} · {P["area"]} {P.get("type","숙소")} | 다꾸 감성숙소 추천'
     desc = P.get("desc") or P["lead"][:110]
     u = link_of(P)
     mm, dd = int(P["date"][5:7]), int(P["date"][8:10])
@@ -126,7 +136,7 @@ def build(P, allP):
           "publisher": {"@type": "Organization", "name": "다꾸체험단", "url": SITE}}
     bar = f'<div class="bar"><a href="{e(u)}" target="_blank" rel="noopener noreferrer sponsored" id="go">객실·가격 보기</a></div>' if u else ""
     out = head(title, desc, canon, cov["src"]) + f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script></head><body><div class="w">{TOP}' + f'''
-<section class="cov"><img src="{e(cov["src"])}" alt="{e(P["name"])}" referrerpolicy="no-referrer"><div class="tx"><small>{e(THEME.get(P.get("theme"), "감성숙소 추천"))} · {e(P["area"])}</small><h1>{e(P["h1"][0])}<br>{e(P["h1"][1])}</h1><p>{e(P["name"])}</p></div></section>
+<section class="cov"><img src="{e(cov["src"])}" alt="{e(P["name"])}" referrerpolicy="no-referrer"><div class="tx"><small>No.{e(P.get("no",""))} · {e(THEME.get(P.get("theme"), "감성숙소 추천"))} · {e(P["area"])}</small><h1>{e(P["h1"][0])}<br>{e(P["h1"][1])}</h1><p>{e(P["name"])}</p></div></section>
 <p class="lead">{e(P["lead"])}</p>
 {stay_camp(P)}
 <div class="pts">{pts}</div>
@@ -144,16 +154,16 @@ def build(P, allP):
 </body></html>
 '''
     open(os.path.join(ROOT, "m", slug + ".html"), "w", encoding="utf-8").write(out)
-    return {"slug": slug, "name": P["name"], "area": P["area"], "theme": P.get("theme", ""), "t": " ".join(P["h1"]), "d": P["lead"][:80], "date": P["date"], "img": cov["src"]}
+    return {"no": P.get("no", 0), "slug": slug, "name": P["name"], "area": P["area"], "theme": P.get("theme", ""), "t": " ".join(P["h1"]), "d": P["lead"][:80], "date": P["date"], "img": cov["src"]}
 
 if __name__ == "__main__":
     os.makedirs(os.path.join(ROOT, "m"), exist_ok=True)
     allP = load_all()
     done = [build(P, allP) for P in allP]
     json.dump(done, open(os.path.join(ROOT, "m", "list.json"), "w", encoding="utf-8"), ensure_ascii=False)
-    lis = "".join(f'<a class="lc" href="/m/{e(x["slug"])}.html"><img src="{e(x["img"])}" alt="" loading="lazy" referrerpolicy="no-referrer"><span><em>{e(THEME.get(x["theme"], "감성숙소 추천"))} · {e(x["area"])}</em><b>{e(x["t"])}</b><small>{e(x["name"])}</small></span></a>' for x in done)
+    lis = "".join(f'<a class="lc" href="/m/{e(x["slug"])}.html" data-no="{e(x["no"])}" data-q="{e((x["name"]+" "+x["area"]+" "+x["t"]).lower())}"><i class="no">{e(x["no"])}</i><img src="{e(x["img"])}" alt="" loading="lazy" referrerpolicy="no-referrer"><span><em>{e(THEME.get(x["theme"], "감성숙소 추천"))} · {e(x["area"])}</em><b>{e(x["t"])}</b><small>{e(x["name"])}</small></span></a>' for x in done)
     idx = head("국내 감성숙소 추천 · 매일 한 곳씩 | 다꾸체험단", "요즘 인기 있는 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 사진과 함께 소개해요.", SITE + "/m/", done[0]["img"] if done else SITE + "/images/og.png") + \
-        f'</head><body><div class="w">{TOP.replace("감성숙소 추천 더 보기 ›", "다꾸 매거진 ›").replace("/m/", "/#/mag?t=s", 1)}<h1 class="ix">국내 감성숙소 추천</h1><p class="lead" style="margin-top:6px">요즘 인기 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 소개해요.</p><div class="lst">{lis or "<p>곧 첫 글이 올라와요</p>"}</div><footer><a href="/">다꾸체험단 홈</a></footer></div></body></html>'
+        f'</head><body><div class="w">{TOP.replace("감성숙소 추천 더 보기 ›", "다꾸 매거진 ›").replace("/m/", "/#/mag?t=s", 1)}<h1 class="ix">국내 감성숙소 추천</h1><p class="lead" style="margin-top:6px">요즘 인기 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 소개해요. 번호나 숙소 이름·지역으로 찾아보세요.</p>{SEARCH}<div class="lst" id="lst">{lis or "<p>곧 첫 글이 올라와요</p>"}</div><p class="nores" id="nores" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p><footer><a href="/">다꾸체험단 홈</a></footer></div>{SEARCH_JS}</body></html>'
     open(os.path.join(ROOT, "m", "index.html"), "w", encoding="utf-8").write(idx)
     # 사이트맵에 m/ 주소 더하기 (gen_share.py 가 먼저 sitemap.xml 을 새로 쓴 뒤 불림)
     sm = os.path.join(ROOT, "sitemap.xml")
