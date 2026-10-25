@@ -15,7 +15,7 @@ TODAY = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).st
 THEME = {"인기": "요즘 인기 숙소", "신기한": "신기한 숙소", "감성": "감성 숙소"}
 
 CSS = """*{box-sizing:border-box}body{margin:0;background:#fff;color:#16151c;font-family:Pretendard Variable,Pretendard,-apple-system,BlinkMacSystemFont,sans-serif;-webkit-text-size-adjust:100%;touch-action:manipulation}
-a{color:inherit;text-decoration:none}.w{max-width:640px;margin:0 auto;padding:0 16px 110px}
+a{color:inherit;text-decoration:none}.w{max-width:640px;margin:0 auto;padding:0 16px 130px}
 .disc{margin:0 -16px;padding:7px 16px;background:#f6f6f8;color:#77768a;font-size:11.5px;line-height:1.5;text-align:center}
 header{display:flex;justify-content:space-between;align-items:center;height:56px}.logo{font-weight:800;font-size:19px;letter-spacing:-.03em}.logo i{font-style:normal;color:#6a3fc8}
 header .hl{display:flex;align-items:center;gap:4px}.bk{width:34px;height:34px;margin-left:-8px;border:0;background:none;font-size:30px;line-height:1;color:#16151c;cursor:pointer;padding:0 0 4px}
@@ -40,7 +40,7 @@ header .app{font-size:13px;font-weight:700;color:#6a3fc8;border:1px solid #e3dbf
 .camp li img{width:56px;height:56px;border-radius:10px;object-fit:cover;flex:none;background:#fff}.camp li b{display:block;font-size:14px;line-height:1.4}.camp li span{font-size:12.5px;color:#6b6a7a}
 .camp .more{display:block;text-align:center;margin-top:12px;padding:12px;border-radius:12px;background:#6a3fc8;color:#fff;font-weight:800;font-size:14px}
 .more2{margin-top:34px}.more2 h2{font-size:18px;margin:0 0 10px}.ml{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px}.ml a{flex:none;width:150px}.ml img{width:150px;height:150px;border-radius:14px;object-fit:cover;display:block;background:#f4f4f7}.ml b{display:block;font-size:13.5px;line-height:1.4;margin-top:7px}.ml small{font-size:12px;color:#8a8994}
-.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #eee;padding:10px 16px calc(10px + env(safe-area-inset-bottom));z-index:40}.bar a{display:block;max-width:608px;margin:0 auto;text-align:center;padding:15px;border-radius:14px;background:#6a3fc8;color:#fff;font-weight:800;font-size:15.5px}.bar a::after{content:" ↗"}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #eee;padding:10px 16px max(22px,calc(12px + env(safe-area-inset-bottom)));z-index:40}.bar a{display:block;max-width:608px;margin:0 auto;text-align:center;padding:15px;border-radius:14px;background:#6a3fc8;color:#fff;font-weight:800;font-size:15.5px}.bar a::after{content:" ↗"}
 .mine{margin-top:22px;padding:16px 16px 14px;border-radius:16px}.mine b{display:block;font-size:15.5px;margin-bottom:4px}.mine p{margin:0 0 12px;font-size:13.5px;line-height:1.6;color:#4d4c5a}.mine small{color:#8a8994}
 .mine a{display:block;text-align:center;padding:13px;border-radius:12px;font-weight:800;font-size:14.5px}.mine.on{background:#f4f0ff}.mine.on a{background:#6a3fc8;color:#fff}.mine.off{background:#fff8d6}.mine.off a{background:#fee500;color:#191600}
 .note{font-size:12px;color:#8a8994;line-height:1.6;margin:14px 0 0}
@@ -128,7 +128,7 @@ def stay_camp(P):
 def head(title, desc, canon, img):
     return f'''<!doctype html>
 <html lang="ko"><head><meta charset="utf-8">{GA}
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <title>{e(title)}</title><meta name="description" content="{e(desc)}"><meta name="robots" content="index,follow"><link rel="canonical" href="{e(canon)}">
 <meta property="og:type" content="article"><meta property="og:site_name" content="다꾸체험단"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(canon)}"><meta property="og:image" content="{e(img)}"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/icons/icon-192.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
