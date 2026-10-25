@@ -50,6 +50,26 @@ def kakao(place, city):
             return [round(float(d["y"]), 5), round(float(d["x"]), 5), "s"]
     return None
 
+RHINT = {"서울": ["서울"], "경기": ["경기"], "인천": ["인천"], "강원": ["강원"], "부산": ["부산"], "제주": ["제주"],
+         "충청": ["충북", "충남", "대전", "세종"], "전라": ["전북", "전남", "광주"], "경상": ["경북", "경남", "대구", "울산"]}
+
+def kakao_city(c, region):
+    """시·군 중심 = 그 시청·군청·구청 위치(카카오, 권역이 맞을 때만). 2026-10-25: OSM 이 화천·강원 고성·대전을 엉뚱한 곳으로 찾아서."""
+    if not KAKAO or not c: return None
+    hints = RHINT.get(region, [])
+    for suf in ("시청", "군청", "구청"):
+        q = c + suf if not c.endswith(("시", "군", "구")) else c + "청"
+        try:
+            r = get("https://dapi.kakao.com/v2/local/search/keyword.json?" + urllib.parse.urlencode({"query": q, "size": 5}), {"Authorization": "KakaoAK " + KAKAO})
+        except Exception as ex:
+            print("kakao 시·군 실패", q, ex); continue
+        for d in r.get("documents", []):
+            addr = d.get("address_name", "")
+            if (not hints or any(addr.startswith(h) for h in hints)) and q.replace(" ", "") in d.get("place_name", "").replace(" ", ""):
+                return [round(float(d["y"]), 5), round(float(d["x"]), 5), "c"]
+        if c.endswith(("시", "군", "구")): break
+    return None
+
 def nominatim(q):
     if not q: return None
     time.sleep(1.1)
@@ -65,12 +85,17 @@ for it in items:
     place, city = split(it.get("name"))
     ck = "p:" + str(it.get("coupangPid") or it["id"])
     hit = cache.get(ck)
-    if not hit or (hit[2] == "c" and KAKAO and not cache.get(ck + "#k")):
+    if not hit or (hit[2] == "c" and KAKAO and not cache.get(ck + "#c2")):
         g = kakao(place, city)
-        if KAKAO: cache[ck + "#k"] = 1
+        if KAKAO: cache[ck + "#k"] = 1; cache[ck + "#c2"] = 1
         if not g:
             cq = city_q(city, it.get("region", ""), place)
-            g = cache.get("c:" + cq)
+            c0 = cq.split(",")[0] if cq else ""
+            kk = "kc:" + c0 + "|" + it.get("region", "")
+            g = cache.get(kk) if KAKAO else None
+            if not g and KAKAO and c0:
+                g = kakao_city(c0, it.get("region", "")); cache[kk] = g or []
+            if not g: g = cache.get("c:" + cq)
             if not g:
                 g = nominatim(cq); cache["c:" + cq] = g or []
             g = g or None
