@@ -21,6 +21,9 @@ header{display:flex;justify-content:space-between;align-items:center;height:56px
 header .hl{display:flex;align-items:center;gap:4px}.bk{width:34px;height:34px;margin-left:-8px;border:0;background:none;font-size:30px;line-height:1;color:#16151c;cursor:pointer;padding:0 0 4px}
 header .app{font-size:13px;font-weight:700;color:#6a3fc8;border:1px solid #e3dbf7;border-radius:999px;padding:7px 12px}
 .cov{position:relative;margin:0 -16px;aspect-ratio:4/5;max-height:78vh;overflow:hidden;background:#222}.cov img{width:100%;height:100%;object-fit:cover;display:block}
+.rb{position:absolute;left:14px;top:14px;z-index:2;display:inline-flex;align-items:center;gap:6px;background:#ff2d55;color:#fff;font-weight:900;font-size:15px;letter-spacing:-.02em;border-radius:999px;padding:9px 14px;box-shadow:0 6px 18px rgba(255,45,85,.45);animation:rbp 1.4s ease-in-out infinite}.rb b{background:#fff;color:#ff2d55;border-radius:999px;padding:2px 8px;font-size:13.5px}
+@keyframes rbp{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}@media (prefers-reduced-motion:reduce){.rb{animation:none}}
+.lim{position:relative;flex:none;display:block}.rb.sm{left:4px;top:auto;bottom:4px;font-size:10px;padding:3px 6px;gap:3px;animation:none;box-shadow:none}.rb.sm b{font-size:9.5px;padding:1px 4px}
 .cov:after{content:"";position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(transparent,rgba(0,0,0,.62))}
 .cov .tx{position:absolute;left:20px;right:20px;bottom:22px;z-index:1;color:#fff}.cov small{display:inline-block;font-size:12px;font-weight:800;background:rgba(255,255,255,.22);backdrop-filter:blur(6px);border-radius:999px;padding:5px 10px}
 .cov h1{font-size:28px;line-height:1.3;letter-spacing:-.03em;margin:10px 0 6px;text-shadow:0 2px 10px rgba(0,0,0,.35)}.cov p{margin:0;font-size:13.5px;opacity:.92}
@@ -91,6 +94,22 @@ def open_stays(region, n=5):
     return (same + rest)[:n]
 
 KAKAO = (d.get("kakao") or "http://pf.kakao.com/_xkqEFX/friend")
+def camp_end(P):
+    """이 숙소에 모집 중인 체험단이 있으면 가장 빠른 마감일(YYYY-MM-DD), 없으면 ""."""
+    pid = str(P.get("pid") or "")
+    L = [str(it.get("end") or "") for it in d.get("items", []) if it.get("cat") == "stay" and not it.get("closed") and str(it.get("end") or "") >= TODAY and ((pid and str(it.get("coupangPid") or "") == pid) or it.get("id") == P.get("camp"))]
+    return min(L) if L else ""
+
+def dday(end):
+    n = (datetime.date.fromisoformat(end) - datetime.date.fromisoformat(TODAY)).days
+    return "D-DAY" if n <= 0 else f"D-{n}"
+
+def rbadge(end, cls="rb"):
+    # 2026-10-25 시온님 "숙소추천 매거진 글 사진에 🚨체험단 모집중! D-1 한번 더 강조" — 날짜는 페이지 JS 가 오늘 기준으로 다시 계산(DDJS)
+    return f'<span class="{cls}" data-end="{e(end)}">🚨체험단 모집중! <b>{dday(end)}</b></span>' if end else ""
+
+DDJS = r"""<script>(function(){var t=new Date(Date.now()+9*36e5).toISOString().slice(0,10);document.querySelectorAll("[data-end]").forEach(function(x){var n=Math.round((Date.parse(x.getAttribute("data-end"))-Date.parse(t))/864e5);if(n<0){x.remove();return;}var b=x.querySelector("b");if(b)b.textContent=n===0?"D-DAY":"D-"+n;});})();</script>"""
+
 def stay_camp(P):
     """이 숙소의 체험단(2026-10-25 시온님): 모집 중이면 신청 정보로, 끝났으면 카카오 채널 알림받기."""
     pid = str(P.get("pid") or "")
@@ -146,7 +165,7 @@ def build(P, allP):
           "publisher": {"@type": "Organization", "name": "다꾸체험단", "url": SITE}}
     bar = f'<div class="bar"><a href="{e(u)}" target="_blank" rel="noopener noreferrer sponsored" id="go">객실·가격 보기</a></div>' if u else ""
     out = head(title, desc, canon, cov["src"]) + f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script></head><body><div class="w">{TOP}' + f'''
-<section class="cov"><img src="{e(cov["src"])}" alt="{e(P["name"])}" referrerpolicy="no-referrer"><div class="tx"><small>No.{e(P.get("no",""))} · {e(THEME.get(P.get("theme"), "감성숙소 추천"))} · {e(P["area"])}</small><h1>{e(P["h1"][0])}<br>{e(P["h1"][1])}</h1><p>{e(P["name"])}</p></div></section>
+<section class="cov"><img src="{e(cov["src"])}" alt="{e(P["name"])}" referrerpolicy="no-referrer">{rbadge(camp_end(P))}<div class="tx"><small>No.{e(P.get("no",""))} · {e(THEME.get(P.get("theme"), "감성숙소 추천"))} · {e(P["area"])}</small><h1>{e(P["h1"][0])}<br>{e(P["h1"][1])}</h1><p>{e(P["name"])}</p></div></section>
 <p class="lead">{e(P["lead"])}</p>
 {stay_camp(P)}
 <div class="pts">{pts}</div>
@@ -160,20 +179,20 @@ def build(P, allP):
 {more}
 <footer>다꾸체험단 · 국내 감성숙소 추천 매거진<br><a href="/m/">감성숙소 추천 전체 보기</a> · <a href="/">www.dagguu.com</a></footer>
 </div>{bar}
-<script>document.addEventListener("click",function(ev){{if(!window.gtag)return;var nm={json.dumps(P["name"], ensure_ascii=False)};if(ev.target.closest("#go"))gtag("event","coupang_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#kakaogo"))gtag("event","kakao_add",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#campgo"))gtag("event","camp_click",{{place:"stay_mag",item_name:nm}});}});</script>
+<script>document.addEventListener("click",function(ev){{if(!window.gtag)return;var nm={json.dumps(P["name"], ensure_ascii=False)};if(ev.target.closest("#go"))gtag("event","coupang_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#kakaogo"))gtag("event","kakao_add",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#campgo"))gtag("event","camp_click",{{place:"stay_mag",item_name:nm}});}});</script>{DDJS}
 </body></html>
 '''
     open(os.path.join(ROOT, "m", slug + ".html"), "w", encoding="utf-8").write(out)
-    return {"no": P.get("no", 0), "slug": slug, "name": P["name"], "area": P["area"], "theme": P.get("theme", ""), "t": " ".join(P["h1"]), "d": P["lead"][:80], "date": P["date"], "img": cov["src"]}
+    return {"no": P.get("no", 0), "slug": slug, "name": P["name"], "area": P["area"], "theme": P.get("theme", ""), "t": " ".join(P["h1"]), "d": P["lead"][:80], "date": P["date"], "img": cov["src"], "campEnd": camp_end(P)}
 
 if __name__ == "__main__":
     os.makedirs(os.path.join(ROOT, "m"), exist_ok=True)
     allP = load_all()
     done = [build(P, allP) for P in allP]
     json.dump(done, open(os.path.join(ROOT, "m", "list.json"), "w", encoding="utf-8"), ensure_ascii=False)
-    lis = "".join(f'<a class="lc" href="/m/{e(x["slug"])}.html" data-no="{e(x["no"])}" data-q="{e((x["name"]+" "+x["area"]+" "+x["t"]).lower())}"><i class="no">{e(x["no"])}</i><img src="{e(x["img"])}" alt="" loading="lazy" referrerpolicy="no-referrer"><span><em>{e(THEME.get(x["theme"], "감성숙소 추천"))} · {e(x["area"])}</em><b>{e(x["t"])}</b><small>{e(x["name"])}</small></span></a>' for x in done)
+    lis = "".join(f'<a class="lc" href="/m/{e(x["slug"])}.html" data-no="{e(x["no"])}" data-q="{e((x["name"]+" "+x["area"]+" "+x["t"]).lower())}"><i class="no">{e(x["no"])}</i><span class="lim"><img src="{e(x["img"])}" alt="" loading="lazy" referrerpolicy="no-referrer">{rbadge(x.get("campEnd",""), "rb sm")}</span><span><em>{e(THEME.get(x["theme"], "감성숙소 추천"))} · {e(x["area"])}</em><b>{e(x["t"])}</b><small>{e(x["name"])}</small></span></a>' for x in done)
     idx = head("국내 감성숙소 추천 · 매일 한 곳씩 | 다꾸체험단", "요즘 인기 있는 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 사진과 함께 소개해요.", SITE + "/m/", done[0]["img"] if done else SITE + "/images/og.png") + \
-        f'</head><body><div class="w">{TOP.replace("감성숙소 추천 더 보기 ›", "다꾸 매거진 ›").replace("/m/", "/#/mag?t=s", 1)}<h1 class="ix">국내 감성숙소 추천</h1><p class="lead" style="margin-top:6px">요즘 인기 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 소개해요. 번호나 숙소 이름·지역으로 찾아보세요.</p>{SEARCH}<div class="lst" id="lst">{lis or "<p>곧 첫 글이 올라와요</p>"}</div><p class="nores" id="nores" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p><footer><a href="/">다꾸체험단 홈</a></footer></div>{SEARCH_JS}</body></html>'
+        f'</head><body><div class="w">{TOP.replace("감성숙소 추천 더 보기 ›", "다꾸 매거진 ›").replace("/m/", "/#/mag?t=s", 1)}<h1 class="ix">국내 감성숙소 추천</h1><p class="lead" style="margin-top:6px">요즘 인기 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 소개해요. 번호나 숙소 이름·지역으로 찾아보세요.</p>{SEARCH}<div class="lst" id="lst">{lis or "<p>곧 첫 글이 올라와요</p>"}</div><p class="nores" id="nores" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p><footer><a href="/">다꾸체험단 홈</a></footer></div>{SEARCH_JS}{DDJS}</body></html>'
     open(os.path.join(ROOT, "m", "index.html"), "w", encoding="utf-8").write(idx)
     # 사이트맵에 m/ 주소 더하기 (gen_share.py 가 먼저 sitemap.xml 을 새로 쓴 뒤 불림)
     sm = os.path.join(ROOT, "sitemap.xml")
