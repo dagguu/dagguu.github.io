@@ -869,15 +869,26 @@ function mapDraw(){
   if(LMAP){ try{ LMAP.remove(); }catch(e){} LMAP=null; }
   LMAP=window.L.map(el,{zoomControl:true,attributionControl:true}).setView([36.3,127.8],7);
   window.L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'}).addTo(LMAP);
-  var bounds=[], approx=0;
-  Object.keys(spots).forEach(function(k){
-    var S=spots[k], n=S.L.length, etc=S.L.every(function(it){ return catOf(it)==="etc"; });
-    if(S.g[2]==="c") approx+=n;
-    var ic=window.L.divIcon({className:"dpin"+(etc?" etc":"")+(S.g[2]==="c"?" apx":""),html:'<span>'+(n>1?n:(etc?"🎟️":"🏡"))+'</span>',iconSize:[34,34],iconAnchor:[17,17]});
-    window.L.marker([S.g[0],S.g[1]],{icon:ic}).addTo(LMAP).on("click",function(){ mapSheet(S); });
-    bounds.push([S.g[0],S.g[1]]);
-  });
+  var bounds=[], approx=0, SP=Object.keys(spots).map(function(k){ var S=spots[k]; if(S.g[2]==="c") approx+=S.L.length; bounds.push([S.g[0],S.g[1]]); return S; });
+  var grp=window.L.layerGroup().addTo(LMAP);
+  /* 가까운 핀 묶기(2026-10-25): 화면에서 46px 안에 있는 자리는 숫자 동그라미 하나로, 누르면 확대 → 더 확대할 수 없으면 목록 */
+  function draw(){
+    grp.clearLayers(); var z=LMAP.getZoom(), cells={};
+    SP.forEach(function(S){ var pt=LMAP.project([S.g[0],S.g[1]],z), k=Math.floor(pt.x/46)+":"+Math.floor(pt.y/46); (cells[k]=cells[k]||[]).push(S); });
+    Object.keys(cells).forEach(function(k){
+      var C=cells[k], L=[].concat.apply([],C.map(function(S){ return S.L; })), n=L.length, etc=L.every(function(it){ return catOf(it)==="etc"; });
+      var la=0, ln=0; C.forEach(function(S){ la+=S.g[0]; ln+=S.g[1]; }); la/=C.length; ln/=C.length;
+      var sz=n>=20?44:n>=5?38:34;
+      var ic=window.L.divIcon({className:"dpin"+(etc?" etc":""),html:'<span style="width:'+sz+'px;height:'+sz+'px">'+(n>1?n:(etc?"🎟️":"🏡"))+'</span>',iconSize:[sz,sz],iconAnchor:[sz/2,sz/2]});
+      window.L.marker([la,ln],{icon:ic}).addTo(grp).on("click",function(){
+        if(C.length>1&&LMAP.getZoom()<15) LMAP.fitBounds(C.map(function(S){ return [S.g[0],S.g[1]]; }),{padding:[50,50],maxZoom:LMAP.getZoom()+3});
+        else mapSheet({g:C[0].g.slice(0,2).concat(C.every(function(S){ return S.g[2]==="c"; })?"c":"s"),L:L});
+      });
+    });
+  }
+  LMAP.on("zoomend",draw);
   if(bounds.length>1) LMAP.fitBounds(bounds,{padding:[28,28],maxZoom:11});
+  draw();
   var nt=document.getElementById("mapnote"); if(nt) nt.innerHTML='모집 중 '+(c==="etc"?"티켓":c==="stay"?"숙박":"숙박·티켓")+' 체험단 <b>'+L0.length+'곳</b>을 지도에 표시했어요.'+(approx?' '+approx+'곳은 숙소가 있는 시·군 중심에 표시해서 실제 위치와 조금 달라요.':'');
 }
 function mapSheet(S){
