@@ -102,6 +102,30 @@ for it in items:
         cache[ck] = g or []; hit = cache[ck]; n_new += 1
     if hit: out[it["id"]] = hit
 
+# 감성숙소 추천 매거진(2026-10-25 시온님 "내가 추천하는 감성숙소 위치도 같이"): 공개된 글(date ≤ 오늘)만, 키 "m:<slug>"
+import glob
+for f in sorted(glob.glob(os.path.join(ROOT, "scripts", "stays", "*.json"))):
+    try: P = json.load(open(f, encoding="utf-8"))
+    except Exception: continue
+    if str(P.get("date", "9999")) > TODAY: continue
+    area = re.sub(r"\(.*?\)", "", P.get("area", "")).split()
+    city = area[-1] if area else ""
+    ck = "m:" + P["slug"]
+    hit = cache.get(ck)
+    if not hit or (hit[2] == "c" and KAKAO and not cache.get(ck + "#c2")):
+        g = kakao(P["name"], city)
+        if KAKAO: cache[ck + "#c2"] = 1
+        if not g:
+            reg = P.get("region", "")
+            kk = "kc:" + city + "|" + reg
+            g = cache.get(kk) if KAKAO else None
+            if not g and KAKAO and city:
+                g = kakao_city(city, reg); cache[kk] = g or []
+            if not g:
+                cq = city_q(city, reg); g = cache.get("c:" + cq) or nominatim(cq); cache["c:" + cq] = g or []
+        cache[ck] = g or []; hit = cache[ck]; n_new += 1
+    if hit: out[ck] = hit
+
 json.dump(cache, open(CP, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 json.dump({"at": datetime.datetime.now(KST).isoformat(timespec="minutes"), "p": out}, open(os.path.join(ROOT, "geo.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 s = sum(1 for v in out.values() if v[2] == "s")

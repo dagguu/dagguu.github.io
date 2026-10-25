@@ -2,8 +2,8 @@ name: 체험단 지도 좌표
 on:
   push:
     branches: [main]
-    paths: ["data.json"]
-  schedule: [{ cron: "40 4,10 * * *" }]   # 매일 13:40·19:40 KST
+    paths: ["data.json", "scripts/stays/**"]
+  schedule: [{ cron: "40 4,10 * * *" }, { cron: "45 7 * * *" }]   # 매일 13:40·19:40 KST + 16:45(16:31 감성숙소 글 공개 뒤)
   workflow_dispatch: {}
 permissions: { contents: write }
 concurrency: { group: geo, cancel-in-progress: false }

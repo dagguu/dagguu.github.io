@@ -1156,3 +1156,10 @@ input,select,textarea{font-size:16px!important}
 .msi b{display:block;font-size:14px;line-height:1.35}.msi small{display:block;font-size:12px;color:#6b6a7a;margin-top:2px}.msi em{display:block;font-style:normal;font-size:12px;font-weight:800;color:#ff2d55;margin-top:3px}
 .leaflet-container{font-family:inherit}
 .dpin span,.dpin.apx span{border:0;box-shadow:0 2px 8px rgba(40,10,90,.3)}
+
+/* 지도 감성숙소 추천 핀(2026-10-25) */
+.dpin.mag span{background:linear-gradient(135deg,#d46fd8,#8a3fd0);font-size:16px}
+.dpin.hasmag span{box-shadow:0 0 0 3px #f3c6f5,0 2px 8px rgba(40,10,90,.3)}
+.msi.msmag{background:#faf3fd}
+.msi .mtag{display:block;font-style:normal;font-size:11px;font-weight:800;color:#9b3fd0;margin-bottom:2px}
+.msi.msmag em{color:#e0245e}.msi.msmag em.mgo{color:#6a3fc8}

@@ -218,7 +218,7 @@ function route(){
   if(tab==="item") state.itemId=qs.id||"";
   if(tab==="event") state.evAbr=qs.t==="abroad";
   if(tab==="trip") state.tq=qs.q||"";
-  if(tab==="map") state.mapC=qs.c==="stay"||qs.c==="etc"?qs.c:"";
+  if(tab==="map") state.mapC=qs.c==="stay"||qs.c==="etc"||qs.c==="mag"?qs.c:"";
   if(tab==="mag") state.magT=qs.t==="p"?"p":qs.t==="g"?"g":"s";
   if(tab==="tix") state.tixI=qs.i||"";
   if(tab==="checkout") state.coK=qs.c||"";
@@ -844,7 +844,7 @@ var GEO=null, LMAP=null;
 function mapView(){
   var c=state.mapC||"";
   return '<div class="pg mapg"><div class="maptop"><h1>체험단 지도</h1><div class="mapchips">'+
-    [["","전체"],["stay","🏡 숙박"],["etc","🎟️ 티켓"]].map(function(x){ return '<a href="#/map'+(x[0]?'?c='+x[0]:'')+'"'+(c===x[0]?' class="on"':'')+'>'+x[1]+'</a>'; }).join("")+'</div></div>'+
+    [["","전체"],["mag","💜 감성숙소"],["stay","🏡 숙박"],["etc","🎟️ 티켓"]].map(function(x){ return '<a href="#/map'+(x[0]?'?c='+x[0]:'')+'"'+(c===x[0]?' class="on"':'')+'>'+x[1]+'</a>'; }).join("")+'</div></div>'+
     '<div id="dmap" class="dmap"><div class="empty">지도를 불러오는 중…</div></div><div id="mapsheet" class="mapsheet" hidden></div>'+
     '<p class="mapnote" id="mapnote">모집 중인 숙박·티켓 체험단을 지도로 모았어요. 핀 위 숫자는 그 근처 체험단 수예요.</p></div>';
 }
@@ -857,12 +857,17 @@ function loadLeaflet(cb){
 function mapInit(){
   var done=0, go=function(){ if(++done<2) return; mapDraw(); };
   loadLeaflet(go);
-  if(GEO) go(); else fetch((BASE||"/")+"geo.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():{}; }).then(function(j){ GEO=(j&&j.p)||{}; go(); }).catch(function(){ GEO={}; go(); });
+  var done2=0, go2=function(){ if(++done2===2) go(); };
+  if(GEO) go2(); else fetch((BASE||"/")+"geo.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():{}; }).then(function(j){ GEO=(j&&j.p)||{}; go2(); }).catch(function(){ GEO={}; go2(); });
+  if(STAYM) go2(); else fetch((BASE||"/")+"m/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ STAYM=L||[]; go2(); }).catch(function(){ STAYM=[]; go2(); });
 }
 function mapDraw(){
   var el=document.getElementById("dmap"); if(!el||!window.L) return;
   var c=state.mapC||"";
-  var L0=seed.items.filter(function(it){ var k=catOf(it); return (k==="stay"||k==="etc")&&(!c||k===c)&&statusOf(it).key!=="closed"&&GEO[it.id]; });
+  /* 감성숙소 추천(2026-10-25 시온님 "내가 추천하는 감성숙소 위치도 같이, 매거진 연결"): geo.json "m:<slug>" → 핀을 누르면 /m/<slug>.html */
+  var M0=(c===""||c==="mag"||c==="stay")?(STAYM||[]).filter(function(x){ return GEO["m:"+x.slug]; }).map(function(x){ return {mag:1,id:"m:"+x.slug,slug:x.slug,name:x.name,area:x.area,t:x.t,no:x.no,image:x.img,campEnd:x.campEnd}; }):[];
+  var L0=c==="mag"?[]:seed.items.filter(function(it){ var k=catOf(it); return (k==="stay"||k==="etc")&&(!c||k===c)&&statusOf(it).key!=="closed"&&GEO[it.id]; });
+  L0=M0.concat(L0);
   if(!L0.length){ el.innerHTML='<div class="empty">지도 위치를 준비하고 있어요. 조금 뒤에 다시 열어 주세요.</div>'; return; }
   var spots={}; L0.forEach(function(it){ var g=GEO[it.id], k=g[0].toFixed(3)+","+g[1].toFixed(3); (spots[k]=spots[k]||{g:g,L:[]}).L.push(it); });
   el.innerHTML="";
@@ -878,10 +883,10 @@ function mapDraw(){
       for(var q=0;q<CL.length;q++){ var c=CL[q]; if(Math.abs(c.x-pt.x)<48&&Math.abs(c.y-pt.y)<48){ hit=c; break; } }
       if(hit){ hit.C.push(S); } else CL.push({x:pt.x,y:pt.y,C:[S]}); });
     CL.forEach(function(cl){
-      var C=cl.C, L=[].concat.apply([],C.map(function(S){ return S.L; })), n=L.length, etc=L.every(function(it){ return catOf(it)==="etc"; });
+      var C=cl.C, L=[].concat.apply([],C.map(function(S){ return S.L; })), n=L.length, etc=L.every(function(it){ return !it.mag&&catOf(it)==="etc"; }), mg=L.some(function(it){ return it.mag; }), allmg=L.every(function(it){ return it.mag; });
       var ll=LMAP.unproject([cl.x,cl.y],z), la=ll.lat, ln=ll.lng;
       var sz=n>=20?44:n>=5?38:34;
-      var ic=window.L.divIcon({className:"dpin"+(etc?" etc":""),html:'<span style="width:'+sz+'px;height:'+sz+'px">'+(n>1?n:(etc?"🎟️":"🏡"))+'</span>',iconSize:[sz,sz],iconAnchor:[sz/2,sz/2]});
+      var ic=window.L.divIcon({className:"dpin"+(etc?" etc":"")+(allmg?" mag":mg?" hasmag":""),html:'<span style="width:'+sz+'px;height:'+sz+'px">'+(n>1?n:(allmg?"💜":etc?"🎟️":"🏡"))+'</span>',iconSize:[sz,sz],iconAnchor:[sz/2,sz/2]});
       window.L.marker([la,ln],{icon:ic}).addTo(grp).on("click",function(){
         if(C.length>1&&LMAP.getZoom()<15) LMAP.fitBounds(C.map(function(S){ return [S.g[0],S.g[1]]; }),{padding:[50,50],maxZoom:LMAP.getZoom()+3});
         else mapSheet({g:C[0].g.slice(0,2).concat(C.every(function(S){ return S.g[2]==="c"; })?"c":"s"),L:L});
@@ -891,12 +896,14 @@ function mapDraw(){
   LMAP.on("zoomend",draw);
   if(bounds.length>1) LMAP.fitBounds(bounds,{padding:[28,28],maxZoom:11});
   draw();
-  var nt=document.getElementById("mapnote"); if(nt) nt.innerHTML='모집 중 '+(c==="etc"?"티켓":c==="stay"?"숙박":"숙박·티켓")+' 체험단 <b>'+L0.length+'곳</b>을 지도에 표시했어요.'+(approx?' '+approx+'곳은 숙소가 있는 시·군 중심에 표시해서 실제 위치와 조금 달라요.':'');
+  var nm=M0.length, nc=L0.length-nm, nt=document.getElementById("mapnote"); if(nt) nt.innerHTML=(nm?'💜 감성숙소 추천 <b>'+nm+'곳</b>'+(nc?' · ':''):'')+(nc?'모집 중 '+(c==="etc"?"티켓":c==="stay"?"숙박":"숙박·티켓")+' 체험단 <b>'+nc+'곳</b>':'')+'을 지도에 표시했어요.'+(approx?' '+approx+'곳은 숙소가 있는 시·군 중심에 표시해서 실제 위치와 조금 달라요.':'');
 }
 function mapSheet(S){
   var b=document.getElementById("mapsheet"); if(!b) return;
-  var L=S.L.slice().sort(function(a,c){ return daysLeft(a)-daysLeft(c); });
-  b.innerHTML='<div class="mshd"><b>'+(S.g[2]==="c"?"이 지역":"이곳")+' 체험단 '+L.length+'곳</b><button type="button" data-mclose aria-label="닫기">✕</button></div><div class="msl">'+L.map(function(it){ var d=daysLeft(it), img=safeUrl(it.image);
+  var L=S.L.slice().sort(function(a,c){ return (c.mag?1:0)-(a.mag?1:0)||daysLeft(a)-daysLeft(c); });
+  b.innerHTML='<div class="mshd"><b>'+(S.g[2]==="c"?"이 지역":"이곳")+(L.every(function(x){return x.mag;})?' 감성숙소 ':' 숙소·체험단 ')+L.length+'곳</b><button type="button" data-mclose aria-label="닫기">✕</button></div><div class="msl">'+L.map(function(it){ if(it.mag){ var cd=it.campEnd?Math.round((parseDate(it.campEnd)-today())/864e5):-1, im=safeUrl(it.image);
+      return '<a class="msi msmag" href="/m/'+encodeURIComponent(it.slug)+'.html" data-mapmag="'+esc(it.slug)+'">'+(im?'<img src="'+esc(im)+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'<span class="noimg"></span>')+'<span><i class="mtag">💜 감성숙소 추천 ['+("00"+(+it.no||0)).slice(-3)+']</i><b>'+esc(it.name)+' · '+esc(it.area||"")+'</b><small>'+esc(it.t||"")+'</small>'+(cd>=0?'<em>🚨체험단 모집중 '+(cd===0?"D-DAY":"D-"+cd)+'</em>':'<em class="mgo">숙소 소개 보기 ›</em>')+'</span></a>'; }
+    var d=daysLeft(it), img=safeUrl(it.image);
     return '<a class="msi" href="#/item?id='+encodeURIComponent(it.id)+'">'+(img?'<img src="'+esc(img)+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'<span class="noimg"></span>')+'<span><b>'+esc(it.name)+'</b><small>'+esc(String(it.benefit||"").slice(0,48))+'</small><em>'+(d<=0?"오늘 마감":"D-"+d)+(it.source?' · '+esc(it.source):'')+'</em></span></a>'; }).join("")+'</div>';
   b.hidden=false;
   b.querySelector("[data-mclose]").onclick=function(){ b.hidden=true; };
@@ -2623,3 +2630,5 @@ fetch(BASE+"data.json?v="+Date.now().toString(36).slice(0,-3),{cache:"no-cache"}
     if(t.dataset.rqdel!==undefined){ put(get().filter(function(x){ return x!==t.dataset.rqdel; })); if(q) q.focus(); paint(); return; }
     if(t.dataset.rq!==undefined&&q){ q.value=t.dataset.rq; add(q.value); hide(); q.blur(); q.dispatchEvent(new Event("input",{bubbles:true})); try{ if(window.gtag) gtag("event","search",{search_term:q.value,place:"recent"}); }catch(err){} } });
 })();
+/* 지도 감성숙소 핀 → 매거진 글 (GA) */
+document.addEventListener("click",function(e){ var a=e.target.closest&&e.target.closest("[data-mapmag]"); if(a&&window.gtag) try{ gtag("event","map_mag",{slug:a.getAttribute("data-mapmag")}); }catch(x){} });
