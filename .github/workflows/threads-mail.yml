@@ -1,0 +1,21 @@
+name: 스레드 글 초안 메일 보내기
+# 2026-10-25 시온님 요청 "스레드 글 이메일로 보내줘". 아직 안 올린 초안 + 메모장 사진을 네이버 메일로 보낸다(게시 안 함).
+on:
+  workflow_dispatch:
+    inputs:
+      all:
+        description: "오늘 지난 시간 글도 포함 (y)"
+        required: false
+        default: ""
+permissions: { contents: read }
+jobs:
+  mail:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python scripts/mail_threads.py ${{ github.event.inputs.all == 'y' && '--all' || '' }}
+        env:
+          NAVER_MAIL_ID: ${{ secrets.NAVER_MAIL_ID }}
+          NAVER_MAIL_PW: ${{ secrets.NAVER_MAIL_PW }}
