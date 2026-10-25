@@ -1,5595 +1,7211 @@
 {
- "updated": "2026-10-25 11:16",
+ "updated": "2026-10-25 16:14",
  "hints": [
-  "키니샴푸",
-  "유레브",
-  "마르비니",
-  "올레그레인",
-  "로쎄",
-  "루솔브",
-  "참그린",
-  "리쥬파인",
-  "라브라크",
-  "다자르",
-  "어텐티",
-  "로댕쇼",
-  "안탈라",
-  "스킨투엠투",
-  "차미돈",
-  "모노아워",
-  "허밍테라피",
-  "히말라야파티스마트",
-  "로블루",
-  "밀리타",
-  "도미골프거리측정기",
-  "유유제약",
-  "스노우플러스",
-  "다이비프로",
-  "메이드인랩",
-  "쿠민착즙기",
-  "피레스트",
-  "뷰앤블루",
-  "블랙앤데커",
-  "듀얼온",
-  "르젠",
-  "팔레오",
-  "파파무니",
-  "파이온텍",
-  "그린스토아",
-  "켄싱턴",
-  "위키드랩",
-  "디오딧",
-  "소담목장",
-  "머그비",
-  "럼브",
-  "아이로베",
-  "미러랩",
-  "리오메딕스",
-  "올리온",
-  "시컬리",
-  "미아크",
-  "탱이하우스",
-  "카프리나",
-  "살림백서",
-  "더퓨리",
-  "수영에미치다",
-  "렉슨",
-  "셀시어스",
-  "푸릇담",
-  "메종드오너",
-  "릴라이",
-  "아론염색약",
-  "리뉴샷",
-  "밀레스",
-  "샌달리스",
-  "라니펫",
-  "바이탈펫",
-  "숨시내",
-  "싱플렉스",
-  "글램피크",
-  "디슈트",
-  "생활특권",
-  "더100고양이모래"
+  "난방텐트",
+  "아기수면조끼",
+  "충전식손난로",
+  "온풍기",
+  "문풍지"
  ],
  "rows": [
   {
-   "kw": "알파문구",
-   "vol": 96000,
+   "kw": "쇼파",
+   "vol": 65400,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "엘지화학",
-   "vol": 59610,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "다우니섬유유연제",
-   "vol": 30690,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "퍼실세탁세제",
-   "vol": 24520,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "다우니",
-   "vol": 20160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "반얀트리서울",
-   "vol": 16930,
+   "kw": "등산스틱",
+   "vol": 51400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다우니세탁세제",
-   "vol": 14630,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "노보노디스크",
-   "vol": 13650,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "더본호텔제주",
-   "vol": 13510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "생리식염수",
-   "vol": 12950,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "살림백서",
-   "vol": 12590,
+   "kw": "온풍기",
+   "vol": 41100,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "소노리조트",
-   "vol": 11670,
+   "kw": "욕실온풍기",
+   "vol": 39740,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "전기히터",
+   "vol": 38770,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "핫팩",
+   "vol": 36900,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "휴메딕스",
-   "vol": 11280,
-   "comp": "낮음",
+   "kw": "미니가습기",
+   "vol": 29180,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유레브",
-   "vol": 10910,
-   "comp": "낮음",
+   "kw": "아기수면조끼",
+   "vol": 29130,
+   "comp": "중간",
    "hint": true
   },
   {
-   "kw": "펩타이드",
-   "vol": 10890,
+   "kw": "아기옷",
+   "vol": 29000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "등산가방",
+   "vol": 26800,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가정용온풍기",
+   "vol": 24060,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신일선풍기",
-   "vol": 10820,
+   "kw": "방풍비닐",
+   "vol": 23470,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "서울풀만호텔",
-   "vol": 10640,
+   "kw": "난방텐트",
+   "vol": 23170,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "모기장",
+   "vol": 21410,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "동아에스티",
-   "vol": 10550,
+   "kw": "문풍지",
+   "vol": 18360,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "수면조끼",
+   "vol": 17750,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "피죤섬유유연제",
-   "vol": 10430,
+   "kw": "팬히터",
+   "vol": 17340,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "샤프란",
+   "kw": "커텐",
+   "vol": 17220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기내복",
+   "vol": 17190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "등산바지",
+   "vol": 16550,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "공구",
+   "vol": 16250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수면잠옷",
+   "vol": 16040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "히터",
+   "vol": 15720,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "등산배낭",
+   "vol": 15180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아옷",
+   "vol": 15150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기난로",
+   "vol": 14880,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "냉난방기",
+   "vol": 14840,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "천막",
+   "vol": 14820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장실온풍기",
+   "vol": 14460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "머미쿨쿨",
+   "vol": 14280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파세코난로",
+   "vol": 14050,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "등산모자",
+   "vol": 13600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울잠옷",
+   "vol": 13090,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "고어텍스자켓",
+   "vol": 11340,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "다이소바람막이",
    "vol": 10300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "안국약품",
-   "vol": 10100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아론샵",
-   "vol": 9930,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "유유제약",
-   "vol": 8830,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "REVEAL",
-   "vol": 8550,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "알프람정0.25MG",
-   "vol": 8510,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "SK2피테라에센스",
-   "vol": 8510,
+   "kw": "방풍커튼",
+   "vol": 9460,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "소노호텔앤리조트",
-   "vol": 8350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영랑호",
-   "vol": 7640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "르젠가습기",
-   "vol": 7550,
+   "kw": "방한커튼",
+   "vol": 9370,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "바이오더마에센스로션",
-   "vol": 7280,
+   "kw": "여아원피스",
+   "vol": 9210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여의도페어몬트호텔",
-   "vol": 7270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일가열식가습기",
-   "vol": 7010,
+   "kw": "손난로",
+   "vol": 9090,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "프릴주방세제",
-   "vol": 6620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "의료기기",
-   "vol": 6480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셀로맥스",
-   "vol": 5460,
+   "kw": "난로",
+   "vol": 8940,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "켄싱턴",
-   "vol": 5140,
+   "kw": "캠핑온풍기",
+   "vol": 8930,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "전기온풍기",
+   "vol": 8770,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "발난로",
+   "vol": 8470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "충전식손난로",
+   "vol": 8340,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "백제약품",
-   "vol": 4770,
+   "kw": "열풍기",
+   "vol": 8090,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신일서큘레이터",
-   "vol": 4710,
+   "kw": "주니어잠옷",
+   "vol": 7700,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "한림제약",
-   "vol": 4690,
+   "kw": "고어텍스",
+   "vol": 7440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패딩바지",
+   "vol": 7390,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "계면활성제",
-   "vol": 4560,
+   "kw": "여성등산바지",
+   "vol": 7390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "골프회원권시세",
-   "vol": 4530,
+   "kw": "난방기",
+   "vol": 7340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목포신안비치호텔",
-   "vol": 4450,
+   "kw": "창문",
+   "vol": 7260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주풀빌라",
-   "vol": 4350,
+   "kw": "창문틈새막이",
+   "vol": 7020,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "단열뽁뽁이",
+   "vol": 6870,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아트빌라스제주",
-   "vol": 4310,
+   "kw": "유아내복",
+   "vol": 6820,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "붙이는핫팩",
+   "vol": 6780,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "등산스틱추천",
+   "vol": 6540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "토요코인대전",
+   "kw": "가정용전기히터",
+   "vol": 6440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "골프가방",
+   "vol": 6260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성등산바지",
+   "vol": 6240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가스난로",
+   "vol": 5830,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "현관문고무패킹",
+   "vol": 5740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니온풍기",
+   "vol": 5740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "러브버그",
+   "vol": 5700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "찍찍이",
+   "vol": 5340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기조끼",
+   "vol": 5310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실온풍기",
+   "vol": 5280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침대텐트",
+   "vol": 5270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "방풍비닐커튼",
+   "vol": 5240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창문방풍비닐",
+   "vol": 5160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "벽걸이냉난방기",
+   "vol": 5130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가정용전기난로",
+   "vol": 5060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈잠옷",
+   "vol": 5030,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "한경희온풍기",
+   "vol": 5000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "풋워머",
+   "vol": 4580,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아실내복",
+   "vol": 4410,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "PTC온풍기",
+   "vol": 4330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신일히터",
    "vol": 4300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에스케이바이오사이언스",
-   "vol": 4210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "골프회원권",
-   "vol": 4040,
+   "kw": "시스템에어컨설치비용",
+   "vol": 4270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "브리오신주방세제",
-   "vol": 4030,
+   "kw": "사무실발난로",
+   "vol": 4270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "컨벡터",
+   "vol": 4150,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "명동로얄호텔",
+   "kw": "전기라디에이터",
+   "vol": 4120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기잠옷",
+   "vol": 4090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "온열기",
+   "vol": 4060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방문틈새막이",
    "vol": 3990,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대천파레브호텔",
-   "vol": 3640,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "대웅더샵",
-   "vol": 3550,
-   "comp": "낮음",
+   "kw": "욕실난방기",
+   "vol": 3830,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "블랙앤데커",
-   "vol": 3440,
+   "kw": "천장형에어컨",
+   "vol": 3800,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "렉슨",
-   "vol": 3440,
+   "kw": "난방필름",
+   "vol": 3800,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "미니관리기",
+   "kw": "풍지판",
+   "vol": 3730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용라디에이터",
+   "vol": 3700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가스히터",
+   "vol": 3670,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "애기옷",
+   "vol": 3640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PTC히터",
+   "vol": 3630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이잠옷",
+   "vol": 3490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베란다방풍비닐",
+   "vol": 3470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동잠옷",
+   "vol": 3460,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "방수자켓",
+   "vol": 3460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고어텍스바람막이",
+   "vol": 3460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이너텐트",
    "vol": 3430,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여주펜션",
+   "kw": "유아수면조끼",
    "vol": 3410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미소몰닷컴",
-   "vol": 3300,
+   "kw": "전기난방기",
+   "vol": 3410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용전기온풍기",
+   "vol": 3370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창문바람막이",
+   "vol": 3330,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "경기도펜션",
-   "vol": 3300,
+   "kw": "침대난방텐트",
+   "vol": 3320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제천포레스트",
-   "vol": 3160,
+   "kw": "캠핑전기히터",
+   "vol": 3260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "펩타이드효능",
-   "vol": 3090,
+   "kw": "전기스토브",
+   "vol": 3240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "슈가버블주방세제",
+   "kw": "등산복바지",
+   "vol": 3180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용히터",
+   "vol": 3170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창문뽁뽁이",
    "vol": 3080,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "파이토신",
-   "vol": 2920,
+   "kw": "면텐트",
+   "vol": 3050,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "르젠가열식가습기",
+   "kw": "사각난방텐트",
+   "vol": 3030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아잠옷",
+   "vol": 3030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기상하복",
+   "vol": 3000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "위닉스온풍기",
+   "vol": 2980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈파자마",
+   "vol": 2930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창문문풍지",
    "vol": 2890,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목포클라우드인호텔",
+   "kw": "핸드워머",
    "vol": 2820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유니호텔제주",
-   "vol": 2740,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ESSENCE",
-   "vol": 2690,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "르젠",
-   "vol": 2670,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "주사기닷컴",
-   "vol": 2560,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "그랜드인터컨티넨탈파르나스",
+   "kw": "방풍",
+   "vol": 2780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "경량등산가방",
+   "vol": 2750,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "삼성냉난방기",
+   "vol": 2750,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "현관문문풍지",
+   "vol": 2720,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "우풍차단",
+   "vol": 2710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물주머니",
+   "vol": 2700,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "돈풍기",
+   "vol": 2660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신일라디에이터",
+   "vol": 2640,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주름관",
+   "vol": 2610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용난방기",
+   "vol": 2600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밧데리충전기",
+   "vol": 2520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형온풍기",
+   "vol": 2500,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아수면조끼",
    "vol": 2490,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "보령바이오파마",
-   "vol": 2450,
-   "comp": "중간",
+   "kw": "가정용온풍기추천",
+   "vol": 2460,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가습기청소",
+   "kw": "아기원피스",
+   "vol": 2450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에어컨설치비용",
    "vol": 2420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "펩타이드세럼",
+   "kw": "키즈내복",
+   "vol": 2410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니히터",
+   "vol": 2400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니핫팩",
+   "vol": 2380,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "창문외풍차단",
+   "vol": 2370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방한텐트",
+   "vol": 2350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샷시모헤어",
    "vol": 2330,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "제주도한라산",
+   "kw": "전기핫팩",
    "vol": 2310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다우니세제",
-   "vol": 2280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "히말라야파티스마트",
-   "vol": 2280,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "제주서귀포",
-   "vol": 2260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "르젠선풍기",
-   "vol": 2190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "액츠",
-   "vol": 2170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "담양퀸즈캐슬",
-   "vol": 2170,
+   "kw": "여아잠옷",
+   "vol": 2220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "제주도해비치호텔",
-   "vol": 2140,
+   "kw": "골프지갑",
+   "vol": 2220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "피토레스코쿠션",
-   "vol": 2120,
+   "kw": "벽걸이온풍기",
+   "vol": 2180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "다우니실내건조섬유유연제",
-   "vol": 2110,
+   "kw": "한일전기히터",
+   "vol": 2160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기열풍기",
+   "vol": 2150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울등산바지",
+   "vol": 2150,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "다이소변기세정제",
-   "vol": 2080,
+   "kw": "등산자켓",
+   "vol": 2050,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "머그비",
-   "vol": 2080,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "샤오미선풍기",
-   "vol": 2070,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "AMPLE",
+   "kw": "캠핑용온풍기",
    "vol": 2030,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "대한약품",
-   "vol": 1990,
+   "kw": "발히터",
+   "vol": 2020,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "참그린주방세제",
-   "vol": 1950,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "SERUM",
+   "kw": "비닐커튼",
    "vol": 1930,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "탈라",
+   "kw": "전자핫팩",
+   "vol": 1930,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주니어내복",
+   "vol": 1930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관방풍커튼",
    "vol": 1920,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "판테놀앰플",
-   "vol": 1870,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "골프회원권거래소",
-   "vol": 1750,
+   "kw": "아기내의",
+   "vol": 1910,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "삼성선풍기",
+   "kw": "창문단열",
+   "vol": 1850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "난방기구",
+   "vol": 1840,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "거실형텐트",
+   "vol": 1830,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수면텐트",
+   "vol": 1820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등잠옷",
+   "vol": 1810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "손난로보조배터리",
+   "vol": 1800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어파자마",
+   "vol": 1790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기손난로",
+   "vol": 1790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기수면잠옷",
+   "vol": 1770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니난로",
+   "vol": 1760,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "산업용온풍기",
    "vol": 1740,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "메디팜약국",
-   "vol": 1700,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서울코리아나호텔",
-   "vol": 1650,
+   "kw": "업소용전기온풍기",
+   "vol": 1720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형온풍기",
+   "vol": 1710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "암벽화",
+   "vol": 1690,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "밀리타커피머신",
+   "kw": "사무실난로",
+   "vol": 1680,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "휴대용손난로",
    "vol": 1640,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다우니실내건조세탁세제",
+   "kw": "전열기",
+   "vol": 1630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어실내복",
+   "vol": 1630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "발핫팩",
    "vol": 1620,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신일써큘레이터",
-   "vol": 1570,
+   "kw": "가정용열풍기",
+   "vol": 1610,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소노회원권",
+   "kw": "사무실난방기",
+   "vol": 1600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천정형에어컨",
+   "vol": 1590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기실내조끼",
    "vol": 1540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대한민국닥터",
-   "vol": 1530,
+   "kw": "사무실히터",
+   "vol": 1520,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신라스테이서울",
+   "kw": "단열커튼",
+   "vol": 1510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩주머니",
+   "vol": 1510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용난로",
+   "vol": 1480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기난방텐트",
+   "vol": 1480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "군용핫팩",
+   "vol": 1480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인버터냉난방기",
    "vol": 1470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "피테라에센스",
+   "kw": "온풍기추천",
+   "vol": 1470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강화도어힌지",
+   "vol": 1470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "무선온풍기",
    "vol": 1460,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "메소드주방세제",
-   "vol": 1450,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "셀시어스",
-   "vol": 1450,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "수분세럼",
-   "vol": 1440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제이더블유신약",
+   "kw": "벽걸이히터",
    "vol": 1430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블랙엔데커",
-   "vol": 1420,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "G9",
-   "vol": 1410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "샹떼클레어섬유유연제",
+   "kw": "투명비닐천막",
    "vol": 1400,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "팜스트리트",
-   "vol": 1370,
-   "comp": "중간",
+   "kw": "온풍기히터",
+   "vol": 1400,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "골프장회원권",
+   "kw": "실내텐트",
+   "vol": 1380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동내복",
    "vol": 1370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대명소노",
+   "kw": "부니햇",
    "vol": 1370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "창틀바람막이",
+   "vol": 1360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "펩타이드크림",
+   "kw": "방풍막",
    "vol": 1340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아파자마",
+   "vol": 1320,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "ES리조트",
+   "kw": "PVC방풍비닐",
    "vol": 1320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "피지세탁세제",
+   "kw": "다이소방풍비닐",
+   "vol": 1320,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "틈새막이",
    "vol": 1310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "컨벡터히터",
+   "vol": 1300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "회원권거래소",
-   "vol": 1260,
+   "kw": "화장실난방기",
+   "vol": 1300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "라브라크캐리어",
+   "kw": "카본히터",
+   "vol": 1290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "난방기기",
+   "vol": 1290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실온풍기",
+   "vol": 1280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "우레탄창",
+   "vol": 1280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "문틈바람막이",
    "vol": 1240,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "파이온텍",
-   "vol": 1220,
-   "comp": "낮음",
-   "hint": true
+   "kw": "유아내의",
+   "vol": 1230,
+   "comp": "중간",
+   "hint": false
   },
   {
-   "kw": "롯데호텔소공동",
+   "kw": "초등학생잠옷",
+   "vol": 1220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "창문틈막이",
+   "vol": 1220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아아기이불",
    "vol": 1220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "춘천수목원",
+   "kw": "2개월아기옷",
    "vol": 1210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "골프장회원권시세",
-   "vol": 1200,
-   "comp": "높음",
+   "kw": "투명천막",
+   "vol": 1190,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "이에스리조트",
-   "vol": 1200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드앰플",
+   "kw": "현관문틈새막이",
    "vol": 1190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "순천베네치아호텔",
-   "vol": 1160,
+   "kw": "사무실전기히터",
+   "vol": 1170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "업센다크림",
+   "kw": "맞춤방풍비닐",
    "vol": 1150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아론염색약",
+   "kw": "창문단열재",
    "vol": 1150,
-   "comp": "낮음",
-   "hint": true
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "프라레일",
+   "kw": "원적외선히터",
    "vol": 1140,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "올리브영세럼",
+   "kw": "소형열풍기",
    "vol": 1110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아프니벤큐액",
+   "kw": "엘지냉난방기",
+   "vol": 1110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "우레탄비닐",
+   "vol": 1100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에어리어온풍기",
+   "vol": 1100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "실리콘문풍지",
    "vol": 1090,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오스틴제약",
+   "kw": "원터치난방텐트",
+   "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창문방풍",
+   "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "타포린천막",
+   "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기겨울수면조끼",
    "vol": 1080,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "멜라루카주방세제",
+   "kw": "핫앤핫핫팩",
+   "vol": 1070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동파자마",
+   "vol": 1060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "저전력온풍기",
    "vol": 1060,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커클랜드세탁세제",
+   "kw": "등산카고바지",
    "vol": 1060,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "리조트회원권",
+   "kw": "벽걸이난방기",
+   "vol": 1060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울용품",
+   "vol": 1060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신일큐브히터",
+   "vol": 1060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "욕실온열기",
    "vol": 1050,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "메디칼현대",
+   "kw": "업소용온풍기",
+   "vol": 1040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아잠옷",
    "vol": 1040,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "팔레오",
+   "kw": "미니라디에이터",
    "vol": 1040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창문방풍커버",
+   "vol": 1020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이소풍지판",
+   "vol": 1020,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "하이라이트히터",
+   "vol": 1020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용냉난방기",
+   "vol": 1000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "틈막이",
+   "vol": 1000,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "삼성식기세척기세제",
-   "vol": 1010,
+   "kw": "어린이파자마",
+   "vol": 990,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "부산해운대신라스테이",
-   "vol": 1010,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테크세제",
+   "kw": "방충망모헤어",
    "vol": 990,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "파메스틱",
+   "kw": "냉난방기가격",
+   "vol": 980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "저소음온풍기",
    "vol": 970,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "LG식기세척기세제",
-   "vol": 960,
+   "kw": "아동실내복",
+   "vol": 970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니전기히터",
+   "vol": 970,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마르비니",
-   "vol": 950,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "경기광주네일",
-   "vol": 950,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주여누스테이",
+   "kw": "문틈막이",
    "vol": 950,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "암웨이주방세제",
-   "vol": 940,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "수분에센스",
-   "vol": 940,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아론샵염색약",
-   "vol": 940,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "밀리타아로마보이",
-   "vol": 930,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "다우니섬유유연제추천",
-   "vol": 900,
+   "kw": "방풍지",
+   "vol": 950,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "안탈라",
-   "vol": 900,
-   "comp": "중간",
-   "hint": true
+   "kw": "전자손난로",
+   "vol": 940,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "신일초음파가습기",
+   "kw": "초등여아잠옷",
+   "vol": 940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기망토",
+   "vol": 940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형전기히터",
+   "vol": 920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울수면조끼",
+   "vol": 910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이수면조끼",
    "vol": 890,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명동퍼시픽호텔",
+   "kw": "휴대용난로",
    "vol": 890,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "반얀트리호텔",
+   "kw": "겨울수면잠옷",
    "vol": 890,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "젊은농부양배추즙",
+   "kw": "비닐천막",
+   "vol": 890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4개월아기옷",
+   "vol": 880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관방풍비닐",
+   "vol": 870,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "프롬비온풍기",
+   "vol": 870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울난방기구",
+   "vol": 870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아파자마",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방충망틈새막이",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발바닥핫팩",
    "vol": 860,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "허밍테라피",
-   "vol": 840,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "퍼스트에센스",
-   "vol": 840,
+   "kw": "아동내의",
+   "vol": 850,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전주에이치에비뉴",
-   "vol": 840,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "디슈트",
-   "vol": 840,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "밀리타",
+   "kw": "샷시틈새막이",
    "vol": 830,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "영광하운드호텔",
-   "vol": 820,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "참그린",
-   "vol": 800,
-   "comp": "높음",
-   "hint": true
+   "kw": "빈틈",
+   "vol": 810,
+   "comp": "낮음",
+   "hint": false
   },
   {
-   "kw": "원더톡스",
+   "kw": "모로반사이불",
    "vol": 790,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "대명콘도회원권",
-   "vol": 790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호텔데님서울",
+   "kw": "다이소틈새막이",
    "vol": 790,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "라브라크",
-   "vol": 780,
-   "comp": "높음",
-   "hint": true
+   "kw": "현관문가스켓",
+   "vol": 770,
+   "comp": "중간",
+   "hint": false
   },
   {
-   "kw": "라마다해운대",
-   "vol": 780,
+   "kw": "방음문풍지",
+   "vol": 770,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "전기팬히터",
+   "vol": 770,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전주아늑호텔",
-   "vol": 780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리솜리조트제천",
+   "kw": "창문우풍차단",
    "vol": 760,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "티제이팜",
-   "vol": 750,
+   "kw": "방풍테이프",
+   "vol": 760,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "보랄선풍기",
-   "vol": 750,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "콘도회원권",
+   "kw": "천장형냉난방기",
    "vol": 750,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "한국애브비",
+   "kw": "충전식핫팩",
+   "vol": 750,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "산업용에어컨",
+   "vol": 750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방한비닐",
+   "vol": 750,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "충전손난로",
    "vol": 740,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "샤오미무선선풍기",
+   "kw": "세라믹히터",
    "vol": 740,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이비스명동",
-   "vol": 740,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미아크",
-   "vol": 740,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "LG식기세척기린스",
+   "kw": "실리콘색상",
    "vol": 730,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "회원권",
+   "kw": "HEATER",
    "vol": 730,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "양양독채펜션",
-   "vol": 730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대천파레브",
+   "kw": "소형히터",
    "vol": 730,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "스노우플러스",
-   "vol": 720,
-   "comp": "중간",
-   "hint": true
+   "kw": "욕실용히터",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "PEPTIDE",
+   "kw": "거실용온풍기",
    "vol": 720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신라스테이서대문조식",
+   "kw": "유아수면잠옷",
    "vol": 710,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "제주도워터파크",
+   "kw": "산업용열풍기",
    "vol": 710,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "골프회원권가격",
+   "kw": "청소년잠옷",
+   "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실전기난로",
+   "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "똑딱이손난로",
+   "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "외풍차단시공",
    "vol": 700,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "그랜드하얏트서울수영장",
+   "kw": "아기온풍기",
    "vol": 700,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전자부품쇼핑몰",
+   "kw": "보온텐트",
    "vol": 690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "올리브영앰플",
+   "kw": "업소용전기히터",
+   "vol": 690,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "현관문바람막이",
+   "vol": 690,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여아유아복",
+   "vol": 690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니전기난로",
+   "vol": 690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩제작",
    "vol": 680,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주해비치수영장",
-   "vol": 680,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주담모라호텔",
+   "kw": "카본전기히터",
    "vol": 680,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "삼성식기세척기린스",
+   "kw": "저전력히터",
+   "vol": 680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실텐트",
+   "vol": 680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이동식온풍기",
+   "vol": 680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산업용전기온풍기",
+   "vol": 680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3M문풍지",
    "vol": 670,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신일무선선풍기",
+   "kw": "난방커튼",
    "vol": 670,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신화리조트",
+   "kw": "사무실발히터",
    "vol": 670,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "호텔파크하비오조식",
-   "vol": 670,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "잔여",
+   "kw": "초등수면조끼",
    "vol": 660,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "월정리아름드리펜션",
+   "kw": "바람막이텐트",
    "vol": 660,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "더유몰",
-   "vol": 650,
+   "kw": "아기수면조끼겨울",
+   "vol": 660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실라디에이터",
+   "vol": 660,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "동원약품",
-   "vol": 650,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파세코선풍기",
+   "kw": "키즈수면조끼",
    "vol": 650,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주애월애독채펜션",
+   "kw": "창문방음",
    "vol": 650,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "경주개인공간",
+   "kw": "PL창호",
    "vol": 650,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "부산서면롯데호텔",
+   "kw": "방수천막원단",
    "vol": 650,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바르는보톡스",
+   "kw": "농업용온풍기",
+   "vol": 650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고시스템에어컨",
    "vol": 640,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "구좌읍숙소",
+   "kw": "전기난방",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "석영관히터",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤시모헤어",
+   "vol": 630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주니어수면조끼",
+   "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대용량핫팩",
+   "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "난방용품",
+   "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "외풍",
+   "vol": 620,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "아이잠옷",
    "vol": 610,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "악센다",
+   "kw": "벌레차단",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관바람막이",
+   "vol": 610,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신일전기스토브",
+   "vol": 610,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에스워머",
    "vol": 600,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "이색테마모텔",
+   "kw": "온풍기전기세",
    "vol": 600,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목포주노호텔",
+   "kw": "동파방지",
    "vol": 600,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "퍼실주방세제",
+   "kw": "키즈수면잠옷",
    "vol": 590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "동대문라마다호텔",
+   "kw": "돌아기수면조끼",
    "vol": 590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서울반얀트리",
+   "kw": "1인용난방텐트",
    "vol": 590,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "루솔브",
-   "vol": 580,
-   "comp": "중간",
-   "hint": true
+   "kw": "난방비절약",
+   "vol": 590,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "버블에센스",
+   "kw": "원적외선튜브히터",
+   "vol": 590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관문방풍",
    "vol": 580,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "통영스탠포드",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "코리아나호텔조식",
+   "kw": "벨크로방풍비닐",
    "vol": 580,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "다우니섬유유연제리필",
+   "kw": "신일PTC온풍기",
    "vol": 570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "일상건강",
+   "kw": "실내난로",
    "vol": 570,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "포모라인",
+   "kw": "방풍바람막이",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방문문풍지",
    "vol": 560,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "코모도경주",
+   "kw": "깔창핫팩",
    "vol": 560,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "콘도리조트",
-   "vol": 560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디디오랩무선선풍기",
+   "kw": "현관문풍지",
    "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유니맥스선풍기",
+   "kw": "사무실냉난방기",
    "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목포호텔몬다비",
+   "kw": "욕실난방",
    "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영월테마모텔",
+   "kw": "똑딱이핫팩",
    "vol": 550,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "광양인서리공원",
-   "vol": 550,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "벡톤디킨슨",
-   "vol": 540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "콘도회원권거래소",
-   "vol": 540,
+   "kw": "해피데이핫팩",
+   "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "더본호텔조식",
+   "kw": "방풍텐트",
    "vol": 540,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "다이비프로",
-   "vol": 530,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "가평까사노블풀빌라",
-   "vol": 530,
+   "kw": "창문모헤어",
+   "vol": 540,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "이비스인사동",
+   "kw": "실내온풍기",
    "vol": 530,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아세틸헥사펩타이드",
+   "kw": "창틀문풍지",
+   "vol": 530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "창문방한",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원룸온풍기",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창문외풍차단비닐",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아원피스잠옷",
    "vol": 520,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미간주름크림",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소담목장",
-   "vol": 500,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "경주코모도",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "필터없는미니가습기",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "위키드랩",
-   "vol": 490,
+   "kw": "슈퍼싱글난방텐트",
+   "vol": 520,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "여성수입의류",
+   "kw": "슬립색",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기잠옷",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "근적외선히터",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선풍기히터",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시스템냉난방기",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "끼우는문풍지",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샷시문풍지",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "군인핫팩",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신일석영관히터",
+   "vol": 510,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파세코온풍기",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사수면조끼",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샷시풍지판",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이핫팩",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침대방한텐트",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방수천막제작",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "박상병핫팩",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산업용전기히터",
    "vol": 480,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "롯데시티마포",
+   "kw": "사무실냉온풍기",
    "vol": 480,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "경기도애견펜션",
+   "kw": "베란다바람막이",
    "vol": 480,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "브리오신세탁세제",
+   "kw": "문바람막이",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "투명문풍지",
+   "vol": 480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "창문비닐",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실난로",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에어리어A3",
+   "vol": 480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "열풍기임대",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자유아복",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장실난방",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "히터기",
    "vol": 470,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "LG선풍기",
+   "kw": "충전핫팩",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실온열기",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "7부우주복",
+   "vol": 465,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방풍문",
    "vol": 460,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "설악산단풍명소",
+   "kw": "신일카본히터",
    "vol": 460,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인천공항예약",
-   "vol": 460,
-   "comp": "높음",
+   "kw": "창틈이",
+   "vol": 450,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "목포폰타나호텔",
+   "kw": "실내조끼",
    "vol": 450,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "엘지기화식가습기",
+   "kw": "핫팩파는곳",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가스온풍기",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산업용히터",
    "vol": 440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "링클크림",
+   "kw": "핑코코",
    "vol": 440,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "여주독채펜션",
+   "kw": "어린이수면잠옷",
    "vol": 440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명동이비스호텔",
+   "kw": "창문방한비닐",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자석방풍비닐",
    "vol": 430,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "하운드호텔광주",
+   "kw": "소형난로",
    "vol": 430,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명품의류",
+   "kw": "업소용히터",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보조배터리손난로",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홍재메디칼",
-   "vol": 420,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "엘지전자가습기",
+   "kw": "창문소음차단",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이가습기",
+   "kw": "웃풍차단",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주S호텔",
+   "kw": "방풍뽁뽁이",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "북촌한옥",
+   "kw": "현관문단열",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보국선풍기",
+   "kw": "업소용난로",
    "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신일BLDC선풍기",
+   "kw": "바람막이비닐",
    "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "순천디에이치호텔",
+   "kw": "창문단열비닐",
    "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "글램피크",
+   "kw": "사무실난방기구",
    "vol": 410,
-   "comp": "중간",
-   "hint": true
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "서해애견동반펜션",
+   "kw": "대형핫팩",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보네이도온풍기",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기수면조끼추천",
    "vol": 400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다우니섬유유연제대용량",
+   "kw": "사무실난방",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베란다방풍",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "충전식난로",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기히터사무실",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원적외선난방기",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관방풍",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동수면잠옷",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아조끼",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "석유히터",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴고스",
    "vol": 390,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "메이드인랩",
+   "kw": "업소용난방기",
    "vol": 390,
-   "comp": "중간",
-   "hint": true
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "갈라짐",
+   "kw": "욕실난로",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유니맥스온풍기",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발가락핫팩",
    "vol": 390,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "서울그랜드워커힐",
+   "kw": "새턴2룸프로",
    "vol": 390,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유통기한임박화장품",
+   "kw": "유아실내조끼",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "광양브라운도트",
+   "kw": "패밀리침대난방텐트",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산업용냉난방기",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신일전기온풍기",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "우풍커튼",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관문패킹",
    "vol": 380,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "대명회원권",
+   "kw": "마이핫핫팩",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파세코히터",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형전기난로",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "난방텐트퀸",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고성크로톤풀빌라",
+   "kw": "창문막이",
    "vol": 370,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "제주디아일랜드호텔",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주무인텔",
+   "kw": "현관문틈새",
    "vol": 370,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신안라마다",
+   "kw": "공장난로",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다자르",
-   "vol": 360,
-   "comp": "중간",
-   "hint": true
+   "kw": "책상난로",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "자연퐁식기세척기세제",
+   "kw": "아동수면조끼",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주프라자CC",
+   "kw": "카카오보조배터리",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "경주호텔나무",
+   "kw": "주니어홈웨어",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "USB손난로",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창틀모헤어",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샷시틈막이",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창문벌레차단",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텐트침대",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "복사열난방기",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기온열기",
    "vol": 360,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "수영에미치다",
-   "vol": 360,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "엘지식기세척기세제",
+   "kw": "남아파자마",
    "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주도드림타워",
+   "kw": "방한비닐커튼",
    "vol": 350,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카프리나",
+   "kw": "핫팩추천",
    "vol": 350,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "바슈헬스코리아",
-   "vol": 340,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보톡스펩타이드",
+   "kw": "핫팩주문제작",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보국써큘레이터",
+   "kw": "오방난로전기세",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "롯데시티호텔김포",
+   "kw": "거즈수면조끼",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "토요코인호텔해운대",
+   "kw": "창틀막이",
    "vol": 340,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신세계영랑호",
+   "kw": "지퍼형방풍비닐",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "하이제주호텔",
-   "vol": 340,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주도4박5일코스",
+   "kw": "거실히터",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "익산브라운도트",
+   "kw": "캠핑전기온풍기",
    "vol": 340,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "제주콘스트호텔",
+   "kw": "히터추천",
    "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리빙쉘텐트추천",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내우주복",
+   "vol": 335,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "이천독채펜션",
+   "kw": "업소용전기난로",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베르데힐",
+   "kw": "석유온풍기",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩대용량",
    "vol": 330,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "가습기순위",
+   "kw": "절전형온풍기",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "우풍텐트",
+   "vol": 330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "충전용핫팩",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용온열기",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "데스크히터",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩100G",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1등급온풍기",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천장형난방기",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용히터추천",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "문틈새막이",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "경기도한옥펜션",
+   "kw": "모헤어문풍지",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바이파",
-   "vol": 310,
+   "kw": "신생아잠옷",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니손난로",
+   "vol": 320,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유판씨",
-   "vol": 310,
-   "comp": "중간",
+   "kw": "겨울난로",
+   "vol": 320,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "거품에센스",
+   "kw": "소형전기히터",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "난방텐트슈퍼싱글",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가습기대신",
-   "vol": 310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아난티리조트",
+   "kw": "핫팩대량구매",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "눈썹문신학원",
+   "kw": "로타리난로",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩150G",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어깨핫팩",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "누빔수면조끼",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "블랙데커",
+   "kw": "베란다문풍지",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대명콘도회원권가격",
+   "kw": "창틀틈새막이",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "경기도펜션좋은곳",
+   "kw": "문틈방음",
+   "vol": 300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "난방히터",
+   "vol": 300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "사무실미니온풍기",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "펩타이드볼륨에센스2.0",
-   "vol": 290,
-   "comp": "중간",
+   "kw": "텐트난방",
+   "vol": 300,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에센스오일",
-   "vol": 290,
-   "comp": "중간",
+   "kw": "튜브히터",
+   "vol": 300,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보랄날개없는선풍기",
+   "kw": "아기여름옷",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "콜라겐세럼",
+   "kw": "난로텐트",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤시틈막이",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형전기난로",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "적외선히터",
    "vol": 290,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "로젠하임호텔",
+   "kw": "스탠드온풍기",
    "vol": 290,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가습기효능",
+   "kw": "신일가스히터",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "온열텐트",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "거제프래밀리호텔",
+   "kw": "베란다외풍차단",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "디오딧",
-   "vol": 270,
-   "comp": "중간",
-   "hint": true
+   "kw": "외풍차단커튼",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "광주첨단브라운도트",
+   "kw": "군대핫팩",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도시가스난로",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "온열기구",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방문소음차단",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캐릭터핫팩",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이소방풍테이프",
+   "vol": 280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "산업용전기난로",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "숨시내",
+   "kw": "침대위텐트",
    "vol": 270,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "클라비스코트",
+   "kw": "겨울온풍기",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울히터",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신일미니히터",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공업용히터",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "귀여운핫팩",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동문바람막이",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "문틀필름",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스노우볼제작",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "라마다호텔동대문",
+   "kw": "모달수면조끼",
    "vol": 260,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에코버식기세척기세제",
-   "vol": 250,
-   "comp": "중간",
+   "kw": "초등학생파자마",
+   "vol": 260,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "펩타이드에센스",
+   "kw": "에어컨설치업체",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "난방텐트패밀리",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침대용텐트",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트온풍기",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "문하단틈막이",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실샷시",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "야외히터",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "절전형전기히터",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기용역",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "TPU비닐",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "펩타이드화장품",
+   "kw": "방풍비닐제작",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "엄마화장품",
+   "kw": "우풍방지",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "피부과앰플",
+   "kw": "창문바람막이비닐",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신촌S호텔",
-   "vol": 250,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "애월유니호텔",
+   "kw": "미니열풍기",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주인별",
+   "kw": "실내히터",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "한일선풍기리모컨",
+   "kw": "탁상용온풍기",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국산핫팩",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관틈새막이",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "해피프린스수면조끼",
+   "vol": 245,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냉난방기설치",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "엣센스",
+   "kw": "손난로제작",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서귀포펜션연리",
+   "kw": "애기수면조끼",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창문틈새",
    "vol": 240,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "콘스트호텔",
+   "kw": "손핫팩",
    "vol": 240,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "럼브",
+   "kw": "단열비닐",
    "vol": 240,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "암앤해머세탁세제",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "백구닷컴",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "지오영주문",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드볼륨에센스",
-   "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "한일서큘레이터",
-   "vol": 230,
+   "kw": "할로겐히터",
+   "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "워터에센스",
-   "vol": 230,
-   "comp": "중간",
+   "kw": "다이소외풍차단",
+   "vol": 240,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "폰타나호텔",
+   "kw": "휴대용핫팩",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카본난로",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내난방기",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "RAVRAC",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "피토레스코공구",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유유제약유산균",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "LEZEN가습기",
-   "vol": 220,
+   "kw": "바람막이문풍지",
+   "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "열가습기",
-   "vol": 220,
+   "kw": "전기히터전기세",
+   "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이마주름크림",
+   "kw": "캐로스온풍기",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화롯불핫팩",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샷시바람막이",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "코리아나호텔사우나",
+   "kw": "여름수면조끼",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실용온풍기",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "난방텐트1인용",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수면조끼추천",
    "vol": 220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "전주더빈센트호텔",
+   "kw": "원적외선난로",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이동식히터",
    "vol": 220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아메카지쇼핑몰",
-   "vol": 210,
+   "kw": "창문보온",
+   "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "우리약품",
-   "vol": 210,
+   "kw": "무소음온풍기",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실난방기구",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실난방",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라디에이터히터",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베란다난방",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관문문틈막이",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로이체손난로",
+   "vol": 220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "뷰앤블루",
-   "vol": 210,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "신일전자선풍기",
-   "vol": 210,
+   "kw": "면텐트추천",
+   "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오일에센스",
-   "vol": 210,
-   "comp": "중간",
+   "kw": "텐셀원단",
+   "vol": 220,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "콜라겐에센스",
+   "kw": "충전용손난로",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가습기생수",
+   "kw": "어린이잠옷브랜드",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "올리브영에센스추천",
+   "kw": "난방텐트싱글",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "리조트회원권거래소",
+   "kw": "겨울난방텐트",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주통나무펜션",
+   "kw": "창틈막이",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남원샵모텔",
-   "vol": 210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "경기도가족펜션",
+   "kw": "공업용온풍기",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "울산얼굴경락",
-   "vol": 200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "볼륨에센스",
-   "vol": 200,
+   "kw": "NE-1200NS",
+   "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보톡스앰플",
-   "vol": 200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주도난타",
-   "vol": 200,
+   "kw": "등유온풍기",
+   "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전주가족펜션",
-   "vol": 200,
+   "kw": "공업용전기히터",
+   "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목포여행숙소",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주구르미별동",
-   "vol": 200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "밀레니엄힐튼",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이비스호텔명동",
+   "kw": "거실난방텐트",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주벙커호텔",
+   "kw": "2층침대난방텐트",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "지포손난로",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "올리온",
+   "kw": "아이리버손난로",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실난방용품",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기히터추천",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보물섬캠핑",
    "vol": 200,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "테이블보주문제작",
+   "kw": "현관문외풍차단",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신일전자온풍기",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고무문풍지",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "그린스토아",
-   "vol": 190,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "파이온텍볼륨톡스",
+   "kw": "캐릭터손난로",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신일스탠드선풍기",
+   "kw": "전기난로추천",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "거실선풍기",
+   "kw": "1인난방텐트",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남원스위트",
+   "kw": "빈슨메시프원터치텐트",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여수지뜨",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포드메르",
-   "vol": 190,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "목포관광호텔",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경기도풀빌라펜션",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "푸릇담양배추즙",
+   "kw": "싱글침대텐트",
    "vol": 190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "스킨투엠투",
+   "kw": "방풍비닐자석",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "손난로핫팩",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩만들기",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트히터",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "탁상용히터",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하이라이트난로",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "춘식이손난로",
    "vol": 180,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "알로줄렌",
+   "kw": "실내난방텐트",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "EZRX",
+   "kw": "패밀리난방텐트",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "난방텐트추천",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샷시외풍차단",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤시문풍지",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실외기실방풍",
    "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "PALEO",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "탄력에센스",
+   "kw": "공업용난로",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "올인원에센스",
+   "kw": "사무실난방기추천",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "평화광장숙소",
+   "kw": "문틈문풍지",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목포더하루호텔",
+   "kw": "문풍지중문",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "릴라이",
-   "vol": 180,
-   "comp": "중간",
-   "hint": true
+   "kw": "신생아모로반사이불",
+   "vol": 175,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "타블렛세제",
+   "kw": "샷시방풍",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대구발각질",
+   "kw": "현관문소음방지",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보만선풍기",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한일써큘레이터",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "발효에센스",
+   "kw": "동양일렉스",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "부산농심호텔온천",
+   "kw": "야외용난로",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주신화호텔신화관",
+   "kw": "방문바람막이",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "싱플렉스",
+   "kw": "열풍히터",
    "vol": 170,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "라다메르올리고포스",
-   "vol": 165,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가습기초음파",
+   "kw": "현관문바람차단",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파스형핫팩",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용팬히터",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공장난방",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기난로전기세",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "필러크림",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "BESTWESTERN",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "엠버퓨어힐리조트",
+   "kw": "식품용실리콘",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "경주담톤스위트",
+   "kw": "오일히터",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "ES콘도",
+   "kw": "사무실전기온풍기",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내용텐트",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "문틈이",
    "vol": 160,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "삼성전자선풍기",
+   "kw": "난방비닐",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알로손난로",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초절전히터",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩160G",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정온풍기",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩100개",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "야외용히터",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4구전기히터",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아외출우주복",
+   "vol": 155,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩판촉물",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아세틸헥사펩타이드-8",
+   "kw": "현관문틈막이",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보국서큘레이터",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보국에어젯",
+   "kw": "단열텐트",
    "vol": 150,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "한일전기선풍기",
+   "kw": "싱글침대난방텐트",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "난방텐트킹",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "샷시단열",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에센스세럼",
-   "vol": 150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "콘도회원권시세",
+   "kw": "나우이엘온풍기",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주메종글래드조식",
-   "vol": 150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "이천미란다",
-   "vol": 150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "서울아트리움호텔",
+   "kw": "방풍필름",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "군산엘타워",
+   "kw": "가정용난방기구",
    "vol": 150,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "식기세척기캡슐세제",
+   "kw": "전기난방기구",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출입문바람막이",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관문모헤어",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국산손난로",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국산온풍기",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동속옷",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "밀리타코리아",
+   "kw": "중고에어컨설치",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창문틈",
    "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "밀리타커피메이커",
+   "kw": "온풍히터",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캡슐에센스",
+   "kw": "샤시풍지판",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "피테라에센스저렴이",
+   "kw": "스와들속싸개",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "새벽인천공항",
+   "kw": "두꺼운투명비닐",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인천네스트호텔셔틀",
+   "kw": "원룸히터",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라디에이터추천",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공장온풍기",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관외풍차단",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천장형온풍기",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫타임핫팩",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "문풍지테이프",
    "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "경주롯데리조트",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "롯데호텔소공",
-   "vol": 140,
+   "kw": "여아수면잠옷",
+   "vol": 135,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목포호텔봄",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "브리오신키친클리너",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인사메디",
+   "kw": "난방용텐트",
    "vol": 130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "피레스트",
-   "vol": 130,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "볼륨톡스",
+   "kw": "대형난방텐트",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "펩타이드성분",
+   "kw": "베이비잠옷",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "40대화장품추천",
+   "kw": "창문우풍",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "콘도회원권매매",
+   "kw": "보조배터리핫팩",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "삼산모텔",
+   "kw": "방풍비닐지퍼",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초절전난방",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코코아돌",
    "vol": 130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "NINETREE",
-   "vol": 130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "이천단체펜션",
+   "kw": "절전온풍기",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "부안캘리포니아",
-   "vol": 130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "쉐라톤그랜드",
+   "kw": "핫팩가격",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "타임레볼루션에센스",
+   "kw": "강화도어바람막이",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "똑딱이손난로제작",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "야외온풍기",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이동식난로",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공장난방기",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울난방",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "후지카온풍기",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아돌원피스",
    "vol": 125,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사계절팬션",
-   "vol": 125,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로블루",
-   "vol": 120,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "펩타이드스킨부스터",
+   "kw": "카카오프렌즈손난로",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "30대화장품",
+   "kw": "수면조끼아기",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "경상남도펜션",
+   "kw": "사무실용히터",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "경주제제펜션",
+   "kw": "난방텐트원터치",
    "vol": 120,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "워커힐호텔서울",
+   "kw": "문풍지붙이는법",
    "vol": 120,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이로베",
+   "kw": "포켓용핫팩",
    "vol": 120,
-   "comp": "중간",
-   "hint": true
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "시컬리",
+   "kw": "사무실미니히터",
    "vol": 120,
-   "comp": "중간",
-   "hint": true
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "탱이하우스",
+   "kw": "거실용히터",
    "vol": 120,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "이마크림",
-   "vol": 115,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "살림백서세제",
+   "kw": "캠핑난방용품",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기름히터",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩인쇄",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "쥴릭",
-   "vol": 110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "르젠BLDC선풍기",
+   "kw": "냉난방기이전설치",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "히알루론산에센스",
+   "kw": "창문난방",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주도무인텔",
+   "kw": "창틀벌레",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신안비치",
+   "kw": "충전식손난로추천",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목포신안비치",
+   "kw": "문방풍",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목포시호텔",
+   "kw": "일회용손난로",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이비스엠베서더인사동",
+   "kw": "현관문방풍비닐",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목포샹그리아",
+   "kw": "거실용난방기",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "브라운도트광주신안점",
+   "kw": "유리문바람막이",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주호텔리조트",
+   "kw": "천정형온풍기",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바이탈펫",
+   "kw": "무소음히터",
    "vol": 110,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "바르는필러",
+   "kw": "산업용난방기",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비닐하우스난방",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아난방텐트",
    "vol": 105,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "키니샴푸",
+   "kw": "밤부수면조끼",
    "vol": 100,
-   "comp": "중간",
-   "hint": true
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "리쥬파인",
-   "vol": 100,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "이을바이오사이언스",
+   "kw": "집안텐트",
    "vol": 100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "르젠무선선풍기",
+   "kw": "침대보온텐트",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "징크세럼",
+   "kw": "실내방한텐트",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "주름세럼",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대명양평",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탑스텐빌라드",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서해오션뷰펜션",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "PANPACIFIC",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "희망사무포인트",
+   "kw": "샤시바람막이",
    "vol": 100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "생활특권",
+   "kw": "방충망틈새",
    "vol": 100,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "에피벗쿠션공구",
+   "kw": "방풍비닐주문제작",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베란다비닐",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관단열",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이동식난방기",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가네고",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유리문문풍지",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초절전온풍기",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베란다우풍",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "벽외풍차단",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관문바람",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나우이엘전기온풍기",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강화도어문풍지",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "발에붙이는핫팩",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PCT히터",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관문벌레차단",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관문틈",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "재사용핫팩",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "온풍기업소용",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수능핫팩",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하팩",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "황토핫팩",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아잠옷브랜드",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아수면조끼",
    "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카카오손난로",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사각오링",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형전기온풍기",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤시방풍",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "틈새바람막이",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "방풍창문",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용전기히터추천",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공업용전기난로",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주머니난로",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동문문풍지",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중문문풍지",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일회용핫팩",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울난방기",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오방난로추천",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방화문문풍지",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공장용온풍기",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실바람막이",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중문모헤어",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실난방기",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "야외전기난로",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공장용히터",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "우풍차단텐트",
+   "vol": 85,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "사무실에어컨설치",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실형텐트추천",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패브릭난방텐트",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "원터치방한텐트",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5세수면조끼",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창틀방풍",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영유아잠옷",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어닝바람막이",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실용난로",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈쇼핑온풍기",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "문막이",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창문바람",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "붙이는핫팩추천",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천장온풍기",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩공장",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "점보오토텐트",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "점오텐",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "절전히터",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "10평온풍기",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레퍼드",
+   "vol": 80,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "장안에화제",
-   "vol": 95,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "PRIL",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로댕쇼",
-   "vol": 90,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "차미돈",
-   "vol": 90,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "대전발톱무좀",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에이치메드",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파이진",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어메이징가습기",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경상남도리조트",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서초라바호텔",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "경주베니키아",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호텔스카이파크센트럴",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임진강펜션",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "용평펜션",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "푸릇담",
-   "vol": 90,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "포모라인엑스트라",
-   "vol": 85,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "르젠써큘레이터",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부스터세럼",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보국에어젯써큘레이터",
-   "vol": 85,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "서귀포무인텔",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에이치에비뉴목포",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "젊은농부호박즙",
-   "vol": 85,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "MBC건축박람회",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일무소음선풍기",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피부에센스",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드토너",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대용량에센스",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유선선풍기",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메이필드강서",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아산온양제일호텔",
+   "kw": "현관문우풍",
    "vol": 80,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "인천휴호텔",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주호텔리젠트마린",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주담모라",
+   "kw": "다봉핫팩",
    "vol": 80,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "경기도애견독채펜션",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가산골드리버호텔",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도스타즈호텔",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘스트호텔제주",
+   "kw": "집난로",
    "vol": 80,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "대명콘도회원권시세",
+   "kw": "복사열히터",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소형핫팩",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "용평리조트콘도",
+   "kw": "천정형전기온풍기",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "더퓨리",
+   "kw": "공업용전기열풍기",
    "vol": 80,
-   "comp": "낮음",
-   "hint": true
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "노원얼굴경락",
+   "kw": "사무실용전기난로",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방한테이프",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기름온풍기",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패밀리침대텐트",
    "vol": 75,
-   "comp": "낮음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "제이앤코슈펩타이드",
+   "kw": "회전온풍기",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가슴마사지크림",
+   "kw": "사계절수면조끼",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서귀포스타빌",
+   "kw": "영업용온풍기",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "순창강천산모텔",
+   "kw": "흥신캠핑라디에이터",
+   "vol": 75,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베란다틈새",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "SK매직식기세척기세제",
+   "kw": "소형전기온풍기",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "모노아워",
-   "vol": 70,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "관절앤굿",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "14인치선풍기",
+   "kw": "방충망틈막이",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "40대에센스",
+   "kw": "창틀단열",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "속건조에센스",
+   "kw": "창문벌레",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "눈밑처짐크림",
+   "kw": "문틀바람막이",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "송도오크우드프리미어",
+   "kw": "아파트외풍차단",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "지오빌리지",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "통영베이",
+   "kw": "방문틈막이",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목포해비치모텔",
+   "kw": "흔드는핫팩",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영유아복",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이소투명문풍지",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "중앙동토요코인",
+   "kw": "도어바람막이",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주도수영장리조트",
+   "kw": "방화문바람막이",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무안미누네펜션",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "브라운도트호텔광주하남점",
+   "kw": "가스난방기",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "롯데서울호텔",
+   "kw": "온풍기난로",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주도Y리조트",
+   "kw": "대형난방기",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주웨이스톤서우봉호텔",
+   "kw": "저전력전기난로",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "라니펫",
+   "kw": "난방용히터",
    "vol": 70,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "샌달리스",
-   "vol": 70,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "닥터펩티에센스",
-   "vol": 65,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스킨부스터세럼",
+   "kw": "핫팩80G",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실난로추천",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기히터난로",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기여름수면조끼",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "주름에센스",
+   "kw": "난방텐트대형",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "팔자주름개선화장품",
+   "kw": "6세수면조끼",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "STAYB",
+   "kw": "베이비수면조끼",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "백일우주복",
    "vol": 65,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "정읍꿈의궁전",
+   "kw": "아기침구브랜드",
    "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신일대형온풍기",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실리콘비닐",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대성온풍기",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "외풍차단텐트",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "손난로배터리",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "손난로추천",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창문틀바람막이",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "벽걸이전기온풍기",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마이카히터",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3M투명문풍지",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "외풍비닐",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "USB핫팩",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "틈새문풍지",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방풍용품",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩도매",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원룸난방기",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카본전기난로",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예네전기온풍기",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도시가스온풍기",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초절전난방기",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용난방",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기히터기",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대성히터",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "LPG히터",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바람막이테이프",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창문방풍테이프",
+   "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "올레그레인",
-   "vol": 60,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "탱크캐리어",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "참그린세제",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밀리타전자동커피머신",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "도미골프거리측정기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "LG전자선풍기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보르피린화장품",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "건성에센스",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주름개선세럼",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일작",
-   "vol": 60,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "대명리조트회원권매매",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마우나오션리조트경주",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "봄그리고가을리조트C동",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "온천스파추천",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한화리조트할인",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성산가성비숙소",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "THEWESTINJOSUNBUSAN",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신화월드서머셋온돌",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "경주페리토",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경기도대형견펜션",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주고급리조트",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포몬다비",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스테이인성산",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밀레스",
-   "vol": 60,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "생활공작소식기세척기세제",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파세코무선선풍기",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에센스사용법",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "위키드랩비오틴",
+   "kw": "실리콘매장",
    "vol": 55,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "군산선유도가는방법",
-   "vol": 55,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "동산모텔",
-   "vol": 55,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "용인발렌타인",
+   "kw": "유아겨울조끼",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "WS호텔",
-   "vol": 55,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "롯데호텔숙박",
+   "kw": "바람차단",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목포명품무인텔",
+   "kw": "아이방온풍기",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "핫팩소량인쇄",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "메종드오너",
+   "kw": "스노우레퍼드",
    "vol": 55,
-   "comp": "중간",
-   "hint": true
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "에버미라클주방세제",
+   "kw": "아파트현관문바람막이",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "늘어나는장바구니",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "절전전기히터",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홍보용핫팩",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내보온텐트",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모문풍지",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마리아닐라",
+   "kw": "털문풍지",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "세라믹제작",
+   "kw": "비닐커버제작",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신일서큘레이터선풍기",
+   "kw": "외풍막이",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "화장품에센스",
+   "kw": "냉기차단",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강원도평창오리엔트리조트",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "로사나부티크",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경상남도호텔",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주시수영장호텔",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메이플관광호텔",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포폰타나",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "해남우수영호텔",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주에이바호텔",
+   "kw": "3M방풍테이프",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "더6펩타이드",
-   "vol": 45,
+   "kw": "방풍차단",
+   "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "펩타이드스킨부스터세럼",
-   "vol": 45,
+   "kw": "비닐문풍지",
+   "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신일저소음선풍기",
-   "vol": 45,
+   "kw": "외풍방지",
+   "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "매트릭실세럼",
-   "vol": 45,
+   "kw": "원적외선전기히터",
+   "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제이닉스선풍기",
-   "vol": 45,
+   "kw": "난방기추천",
+   "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연예인앰플",
-   "vol": 45,
+   "kw": "국산충전식손난로",
+   "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "재생에센스",
-   "vol": 45,
+   "kw": "사무실온풍기추천",
+   "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대구수영장펜션",
-   "vol": 45,
+   "kw": "사무실용전기히터",
+   "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "거제단독펜션",
-   "vol": 45,
+   "kw": "탄소히터",
+   "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주파우제",
-   "vol": 45,
+   "kw": "아파트현관문문풍지",
+   "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목포대명리조트",
+   "kw": "유리문방풍",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "냉난방기16평",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20평온풍기",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용전기난방기",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공장용난로",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원통형히터",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내라디에이터",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "면난방텐트",
    "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "서울신라스테이온돌",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "드래곤시티조식",
+   "kw": "샷시틈새",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "군산아트무인텔",
+   "kw": "똑딱핫팩",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "녹동디오션",
+   "kw": "신일PCT히터",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신일가정용히터",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "절전형난로",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "후지카전기히터",
    "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "참그린녹차",
+   "kw": "핫팩대량",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "온시아",
+   "kw": "샷시외풍",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아파트외풍",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "문틈새바람막이",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방풍커튼제작",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베란다창문단열",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인스타홈",
    "vol": 40,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "제노시스루페",
+   "kw": "전기온풍기추천",
    "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무용난로",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴대용손난로보조배터리",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실외용문풍지",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대용량온풍기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PTC전기히터",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "사무용온풍기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "저전력난방기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울철난방기구",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5중날문풍지",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공장열풍기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩제조업체",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공업용난방기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "햅시무선충전기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실용난방기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스탠드형난방기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기히터온풍기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마우스손난로",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩굿즈",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩종류",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실용난로",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기난로대형",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아파트현관문방풍",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라이언손난로",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈언더웨어",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "외풍텐트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빈슨메시프난방텐트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포그니난방텐트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아파트우풍",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤시외풍",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냉난방기6평",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "문풍지시공",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방풍이",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아파트현관바람막이",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "틈새차단",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기스토브전기세",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스노우레퍼드레전드",
+   "vol": 35,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "인솔제작",
-   "vol": 40,
+   "kw": "현관문외풍",
+   "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "멀츠아시아퍼시픽",
-   "vol": 40,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "이을바이오",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "보국제로닷",
-   "vol": 40,
+   "kw": "겨울외풍차단",
+   "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "50대에센스",
-   "vol": 40,
+   "kw": "냉난방기11평",
+   "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마몽드에센스",
-   "vol": 40,
+   "kw": "나노카본히터",
+   "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "콘도매매",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리조트회원권매매",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부산팔레드시즈뷔페",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파라다이스스파호텔",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "H에비뉴역삼",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "SKYPARKHOTEL",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "이천테르메덴근처펜션",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도오션뷰풀빌라",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "송파부티크호텔",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "구례덕영루펜션",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라마다충장",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장흥휴랜드펜션",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "삼성동자이언트호텔",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사보이호텔명동",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "넬리주방세제",
+   "kw": "가정용카본히터",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유유제약루테인",
+   "kw": "전원주택난방",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유유제약포모라인",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유유제약유판씨",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파파무니",
-   "vol": 35,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "더6펩타이드스킨부스터세럼",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일렉트로마트선풍기",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "주름개선에센스",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에센스화장품",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리프팅에센스",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "WICKEDLAB",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주도시드니호텔",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "용머리해안숙소",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "빌레리조트",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주이테르펜션",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "추자도에코롯지",
-   "vol": 35,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "H에비뉴이대",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강남임페리얼팰리스호텔",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주단체리조트",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도단체리조트",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포씨원리조트",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베니키아아리울",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영광아라풀빌라",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화성나인부띠끄",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주트로피컬하이드어웨이",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "젊은농부양파즙",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "GLAMPEAK",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "로쎄",
-   "vol": 30,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "그뤼너씨",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "에이메드",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신일14인치선풍기",
+   "kw": "문틈막기",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "리조트분양권",
+   "kw": "베란다외풍",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주도시리우스",
+   "kw": "샤시외풍차단",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "콘도분양",
+   "kw": "온풍난방기",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "법무법인리안",
+   "kw": "난방기설치",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고효율난방기",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩선물",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "판촉물핫팩",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩판촉",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도어문풍지",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출입문문풍지",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "15평온풍기",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이동형온풍기",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강화유리문바람막이",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "손난로충전기",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩소량제작",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엄마손핫팩",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냉난방기추천",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "볼케이노온풍기",
    "vol": 30,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "제주도금호콘도",
+   "kw": "실내온열기",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주도삼다수목장",
+   "kw": "나우온풍기",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주도서부여행코스",
+   "kw": "도색건조기",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주보광휘닉스파크",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "서귀포온수풀",
+   "kw": "곱창히터",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신라스테이광화문패밀리트윈",
+   "kw": "스노우볼주문제작",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고흥녹동디오션",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "브라운도트호텔동광주점",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "디자이너스홍대",
+   "kw": "공장용전기난로",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주도엠스테이호텔",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리뉴샷",
-   "vol": 30,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "라브라크24인치",
+   "kw": "아동여름잠옷",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "LG식기세척기전용세제",
+   "kw": "문풍지추천",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침대위난방텐트",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "식기세척기타블렛세제",
+   "kw": "아기수면가운",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "LEZE",
+   "kw": "애기조끼",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "SIC가공",
+   "kw": "아이수면조끼",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "빠이요수분크림",
+   "kw": "샤시단열",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "피토덤",
+   "kw": "샤시틈새",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "외풍차단틈막이",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창문틈막이시공",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샷시벌레",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이동식전기온풍기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방풍롤스크린",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방풍스크린",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커피머신밀리타",
+   "kw": "영유아원피스",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "알엑스샵",
+   "kw": "현관틈막이",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아파트현관문단열",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "볼륨화장품",
+   "kw": "창문비닐바람막이",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "삼성무선선풍기",
+   "kw": "테라스방풍",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아세틸헥사펩타이드8",
+   "kw": "창고온풍기",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가성비에센스",
+   "kw": "출입문틈막이",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "천연에센스",
+   "kw": "틈막이시공",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "매트릭실효과",
+   "kw": "10평히터",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신일전자서큘레이터",
+   "kw": "세라믹전기히터",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "몽태랑볼륨필링",
+   "kw": "무소음전기히터",
    "vol": 25,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보르피린세럼",
+   "kw": "난방기구추천",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴게소난로",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하트손난로",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5중틈막이",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아파트현관문바람",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "필러앰플",
+   "kw": "안전한히터",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "항산화에센스",
+   "kw": "실외난방기",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "각질제거에센스",
+   "kw": "린나이온풍기",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "30대화장품추천",
+   "kw": "전기난로가격",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고농축에센스",
+   "kw": "가정용소형온풍기",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "필러화장품",
+   "kw": "카본히터전기세",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보톡스아이크림",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "볼륨세럼",
+   "kw": "스타리온히터",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "저분자콜라겐앰플",
+   "kw": "탄소난로",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "회원권시세조회",
+   "kw": "실외히터",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "라마다앙코르제주",
+   "kw": "야외가스히터",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정난방기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "난로전기세",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "양말에붙이는핫팩",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "덕트히터",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방문방풍",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샷시테이프",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창문차음",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "서울호텔스위트룸",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주감성게스트하우스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도여자게스트하우스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강남캘리포니아호텔",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명동피제이호텔",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목포더하루",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "NIAGARAHOTEL",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주빌레리조트",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주욕조숙소",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더본디럭스패밀리",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조선제주호텔",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주디오션힐",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경주라한셀렉트스위트룸",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "불국사W",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "반얀트리서울가격",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울신라호텔패키지",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성산오션뷰숙소",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도리조트수영장",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "곡성들꽃펜션",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "브라운도트호텔광주용봉점",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "순천순천만펜션",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영광골든비치",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "켄싱턴리조트가격",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서해안애견펜션",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케니스토리",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주스파리조트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주풀빌라호텔",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AARONSHOP",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "글램피크매트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "NELLIE",
+   "kw": "손난로주문제작",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "칼날제작",
+   "kw": "손난로판촉물",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "올펫케어",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "하이원스키장오픈",
+   "kw": "손난로각인",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "라한셀렉트경주예약",
+   "kw": "겨울엔핫팩",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소공롯데호텔",
+   "kw": "강화유리문문풍지",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "담양텔레파시펜션",
+   "kw": "강화유리문풍지",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신안라마다프라자",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "STAYHAKATA",
+   "kw": "똑딱이핫팩제작",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "라브라크탱크",
-   "vol": 15,
+   "kw": "사무실전기난방기",
+   "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어텐티",
-   "vol": 15,
-   "comp": "중간",
-   "hint": true
+   "kw": "핫팩디자인",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "리놀레카",
+   "kw": "사무실추위",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "야외용온풍기",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공장용난방기",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "삿갓히터",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매장난로",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "온실시공",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아인견잠옷",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "풍성교나라모",
+   "kw": "대성하이원온풍기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름용수면조끼",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "손난로보조배터리제작",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돈풍기추천",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "전기원적외선히터",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "판촉물손난로",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실외기실우풍",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "현관문틈바람막이",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창문용방풍비닐",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냉난방기겸용",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냉난방기벽걸이형",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩대량주문",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대량핫팩",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "충전형손난로",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꼬꼬미의스토리",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "다샵방풍이",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "외풍시공",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창문단열시공",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출입문방풍",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관문문틈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주문제작핫팩",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩제조",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩홍보",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강화문바람막이",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "문풍지바람막이",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "업소용전기난방기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편한텐트",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "핫팩제조사",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "똑딱이손난로주문제작",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레퍼드레전드",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "PITTORESCO",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "엠마지",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "에이엔화장품",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "RXSHOP",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "인사앤굿",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "인사메디포르테",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "도우메디칼",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "약국플랫폼",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "쿠민착즙기",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "르젠무엽선풍기",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드볼륨마스터에센스",
+   "kw": "매장난방",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파이진볼륨톡스",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "탄력스킨케어",
+   "kw": "사무실난방기기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "순한에센스",
+   "kw": "전도용핫팩",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신일써큘레이터선풍기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일전자써큘레이터",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일선풍기써큘레이터",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주름개선제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성에센스추천",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스타일리스서큘레이터",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "최신형선풍기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타임레볼루션더퍼스트에센스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자주름크림",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세더마사",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터쉘딩",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "핑크구미베어",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "리조트회원권시세",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "DOULOS",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "경주디아망",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "더비치펜션빌리지",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메이플러스호텔",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "메이필드호텔스위트룸",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신라구로스테이",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주벼리게스트하우스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "토요코인2",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호텔세미나실",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "필스테이명동메트로",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주신축리조트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "통영베스트",
+   "kw": "전기히타",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "가둘기펜션",
+   "kw": "유리문틈막이",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강화도어틈새막이",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "문풍지현관문",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방문틈방음",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "상가문바람막이",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "상가출입문바람막이",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아파트현관문풍지",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여닫이문문풍지",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여닫이문풍지",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유리문풍지",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동문틈막이",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창고문바람막이",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "투명틈막이",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관모헤어",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관문방풍지",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관문벌레",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관틈새",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흰색문풍지",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "외풍차단창틈이",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기식온풍기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩업체",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "야외용난방기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캐리어전기온풍기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "풍새막이",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "가평모나코",
+   "kw": "원적외선전기난로",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목포항숙박",
+   "kw": "작업장난로",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무안백련리조트",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "HAMILTONHOTEL",
+   "kw": "원데이핫팩",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "PEYTOHOTEL",
+   "kw": "실외용온풍기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강남역엠쉐르빌",
+   "kw": "석유난방기",
    "vol": 15,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서울더케이",
+   "kw": "PCT온풍기",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신라스테이추천",
+   "kw": "온풍기설치",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서귀포담모라",
+   "kw": "발난로추천",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에프원호텔",
+   "kw": "카본히터추천",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서울롯데호텔클럽라운지",
+   "kw": "전기열풍기임대",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주또시애월",
+   "kw": "핫팩독판인쇄",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주또옴풀빌라",
+   "kw": "사무실전기난로추천",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "역삼스테이호텔",
+   "kw": "사무실전기스토브",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "춘우재고택",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "휴안스테이",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경주1945",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호텔159",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "서울역RANG",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울임페리얼팰리스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "WEHOUSE",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울베이튼호텔",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이비스명동호텔",
+   "kw": "스노우볼제작업체",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "송추독채펜션",
+   "kw": "핫팩OEM",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주하귀로민박",
+   "kw": "고온열풍기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "호텔프리마서울",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주도키즈독채",
+   "kw": "사무용전기난로",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주애견리조트",
+   "kw": "신일석유히터",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "푸라마시티센터호텔",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "광주라마다플라자",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리조트법인회원권",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신라스테이구로예약",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "상암스텐포드",
+   "kw": "아파트문풍지",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "켄싱턴호텔여의도예약",
+   "kw": "틈새바람",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주코지하우스앤투어",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "에이바호텔함덕",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주해리안",
+   "kw": "디자인핫팩",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주해일리풀앤스파호텔",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펠리시아호텔",
+   "kw": "전기카본히터",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "롯데호텔월드가격",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리오메딕스",
-   "vol": 15,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "젊은농부도라지배즙",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "젊은농부빨간양파즙",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아론트리트먼트염색약",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "소니카메라스킨",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오비노비앙코",
+   "kw": "아동인견잠옷",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파이토신재생크림공구",
+   "kw": "아기인견잠옷",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제노시스암예측",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "장안에화제넥스트",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "유판씨정",
+   "kw": "실리콘사출업체",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유유네이처락토페린",
+   "kw": "방음고무패킹",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인견수면조끼",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아여름수면조끼",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천정에어컨",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "유유건강생활",
+   "kw": "자동난방텐트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실용전기온풍기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창틀바람",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기온풍난방기",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "한신몰",
+   "kw": "냉난방기6평형",
    "vol": 10,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "듀얼온",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "제이앤코슈펩타이드볼륨에센스",
+   "kw": "애기잠옷",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "은색병",
+   "kw": "선물용핫팩",
    "vol": 10,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "펩타이트",
+   "kw": "홍보핫팩",
    "vol": 10,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "온더스선풍기",
+   "kw": "철문방음",
    "vol": 10,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "따따베선풍기",
+   "kw": "외풍차단업체",
    "vol": 10,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "온더스날개없는선풍기",
+   "kw": "문풍지방음",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일상공감빈틈없게",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "24년형선풍기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "24년형신일선풍기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "신일거실선풍기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "프랑스세더마사보르피린",
+   "kw": "핫팩주문",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "콘도시세",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남포동메이호텔",
+   "kw": "아이오랩온풍기",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "라마다프라자제주조식",
+   "kw": "RYOBI힌지",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마산자라호텔",
+   "kw": "스노우볼굿즈",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "맘하우스",
+   "kw": "센추리온풍기",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신라스테이울산디럭스",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도썬라이즈호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주도엠버호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주라마다앙코르호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "휘닉스에메랄드펜션",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에이퍼스트호텔",
+   "kw": "겨울외풍",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "아이파크콘도설악",
+   "kw": "손난로판촉",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "창원엠스테이",
+   "kw": "센추리전기온풍기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩제작업체",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈여름이불",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "보르조미부티크서울호텔",
+   "kw": "핫팩단체주문",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베란다바람",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "우풍차단방법",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩제조공장",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강화유리바람막이",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩인쇄제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창호외풍",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "DEC-1000H",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "제주봉스테이",
+   "kw": "핫팻",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "센추리난방기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그린비메가헬리우스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "대형오토텐트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형자동텐트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "손난로보조배터리판촉물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울철난방기기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베란다우풍차단",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩로고",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강화문문풍지",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩광고",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공장전기온풍기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제작핫팩",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5중날투명문풍지",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5중문풍지",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강화도어틈막이",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도어틈새",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도어틈새막이",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방화문틈막이",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "상가출입문문풍지",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아파트현관문외풍",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유리문틈새",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출입문틈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현관문투명문풍지",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "공장용전기온풍기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발핫팩추천",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩500개",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안전한난방기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "린나이가스온풍기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "난방비절감",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베란다샷시바람막이",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용카본전기히터",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "한솔히터",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기열풍기대여",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기열풍기렌탈",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "냉난방기7평형",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용대형난로",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매장난방기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴게소히터",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냉난방기렌트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "습식온풍기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아미핫팩",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩1000개",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기이불",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실카본히터",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도장열처리기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "핫팩문구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "10평라디에이터",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴게소온풍기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동파방지시스템",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일상공감외풍없게",
    "vol": 10,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가평고릴라펜션",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가평까사노블V풀빌라",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "가평라벨르펜션",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가평하늘숲글램핑파크펜션",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신안비치호텔예약",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "OAKWOODPREMIERCOEX",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임피리얼팰리스서울가격",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "임피리얼펠리스서울",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종로세림호텔",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "서귀포담모라호텔",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "목포알렉스호텔",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "서울명동밀리오레호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울시그니엘예약",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울아산숙소힐하우스펜션",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "제주노브힐스테이",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주펜션미라",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "목포갤러리패밀리호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "티마크그랜드명동",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "드림타워리조트",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "서귀포더본",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서귀포성산호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케니스토리호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더본호텔가격",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "STANFORDHOTELSEOUL",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명동롯데L7",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "반얀트리패키지",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울밀레니엄힐튼",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신라스테이마포예약",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경기도가족독채펜션",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경기도반려견펜션",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "경기도펜션수영장",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경기워크샵펜션",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호텔릿서울역점",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리버밸리리조트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주노을풀빌라",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주성산골든뷰",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "임피리얼펠리스호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이비스버젯앰버서더해운대",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무주IC펜션",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "순천하울당",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "익산영주네펜션",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화양한옥펜션",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "강남임피리얼팰리스",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울인사동크라운호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아루미호텔중문",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "제주메리어트리조트스파",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "제주에이치아이호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "함덕에이바호텔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호텔더그랑중문점",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미러랩",
-   "vol": 10,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "구매24",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "젊은농부배도라지즙",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "젊은농부사과즙",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "젊은농부ABC",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아론새치염색약",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "더100고양이모래",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "카라스필름",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디슈트노트북스킨",
-   "vol": 10,
-   "comp": "높음",
    "hint": false
   }
  ]
