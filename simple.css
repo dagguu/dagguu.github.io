@@ -1106,4 +1106,4 @@ input,select,textarea{font-size:16px!important}
 .fstabs button{flex:1 0 auto;min-width:auto;padding:14px 10px 12px}
 /* 감성숙소 추천 번호·검색 (2026-10-25) */
 .stsrch{position:sticky;top:0;z-index:5;background:var(--bg,#fff);padding:6px 0 10px}.stsrch input{width:100%;height:46px;border:1.5px solid #6a3fc8;border-radius:999px;padding:0 16px;font-size:16px;background:#faf8ff;outline:none}
-.stn{position:relative}.stn .sno{position:absolute;left:0;top:10px;z-index:1;min-width:24px;height:20px;padding:0 5px;border-radius:7px;background:#16151c;color:#fff;font-style:normal;font-size:11.5px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.smg{position:relative}.smgnone{text-align:center;color:var(--mute);padding:30px 0;font-size:14px}.smgnone[hidden]{display:none}.smg .sno{position:absolute;left:0;top:10px;z-index:1;min-width:24px;height:20px;padding:0 5px;border-radius:7px;background:#16151c;color:#fff;font-style:normal;font-size:11.5px;font-weight:800;display:flex;align-items:center;justify-content:center}
