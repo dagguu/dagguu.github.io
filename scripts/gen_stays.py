@@ -69,7 +69,7 @@ def load_all():
 
 def link_of(P):
     x = (d.get("links") or {}).get("stay-" + P["slug"]) or {}
-    return x.get("u") or ""
+    return x.get("infUrl") or x.get("u") or ""
 
 def open_stays(region, n=5):
     def worth(it):
