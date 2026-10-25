@@ -1134,3 +1134,4 @@ input,select,textarea{font-size:16px!important}
 #intro .inad.ft .ftbg.ph{filter:brightness(.55) saturate(1.05)}
 #intro .inad.ft:has(.ftbg.ph)::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,rgba(18,6,63,.55) 0%,rgba(18,6,63,.35) 45%,rgba(18,6,63,.1) 75%,rgba(0,0,0,.25) 100%)}
 #intro .inad.ft:has(.ftbg.ph) .intop{position:relative;z-index:1}
+.mvc{display:block;margin-top:3px;font-size:12px;font-style:normal;font-weight:700;color:#8a8994}

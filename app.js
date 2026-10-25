@@ -956,9 +956,10 @@ function magLoad(cb){
   if(PICKS) done(); else fetch((BASE||"/")+"p/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ PICKS=L||[]; done(); }).catch(function(){ PICKS=[]; done(); });
 }
 function gDate(d){ return d?'<em class="gdt">'+esc(String(d).replace(/-/g,"."))+' 업로드</em>':""; }
-function guideRow(g){ return '<a class="gdi" href="/g/'+esc(g.slug)+'.html"><b>'+esc(g.t)+'</b><small>'+esc(g.d)+'</small>'+gDate(g.date)+'</a>'; }
-function pickRow(x){ return '<a class="gdi pki" href="/p/'+esc(x.slug)+'.html">'+(safeUrl(x.img)?'<img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<span><b>'+esc(x.h||x.t)+'</b><small>'+esc(x.d)+'</small>'+gDate(x.date)+'</span></a>'; }
-function stayRow(x){ return '<a class="gdi pki smg" href="/m/'+esc(x.slug)+'.html" data-no="'+esc(x.no||"")+'" data-q="'+esc((x.name+" "+x.area+" "+x.t).toLowerCase())+'">'+(x.no?'<i class="sno">'+esc(x.no)+'</i>':'')+(safeUrl(x.img)?'<img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<span><b>'+esc(x.t)+'</b><small>'+esc(x.name)+' · '+esc(x.area)+'</small>'+gDate(x.date)+'</span></a>'; }
+function mvTag(k){ return '<em class="mvc" data-mv="'+esc(k)+'" hidden></em>'; }
+function guideRow(g){ return '<a class="gdi" href="/g/'+esc(g.slug)+'.html"><b>'+esc(g.t)+'</b><small>'+esc(g.d)+'</small>'+gDate(g.date)+mvTag("g:"+g.slug)+'</a>'; }
+function pickRow(x){ return '<a class="gdi pki" href="/p/'+esc(x.slug)+'.html">'+(safeUrl(x.img)?'<img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<span><b>'+esc(x.h||x.t)+'</b><small>'+esc(x.d)+'</small>'+gDate(x.date)+mvTag("p:"+x.slug)+'</span></a>'; }
+function stayRow(x){ return '<a class="gdi pki smg" href="/m/'+esc(x.slug)+'.html" data-no="'+esc(x.no||"")+'" data-q="'+esc((x.name+" "+x.area+" "+x.t).toLowerCase())+'">'+(x.no?'<i class="sno">'+esc(x.no)+'</i>':'')+(safeUrl(x.img)?'<img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<span><b>'+esc(x.t)+'</b><small>'+esc(x.name)+' · '+esc(x.area)+'</small>'+gDate(x.date)+mvTag("m:"+x.slug)+'</span></a>'; }
 function guideFill(){
   var B=document.querySelectorAll("[data-guides]"), M=document.getElementById("magbody"); if(!B.length&&!M) return;
   magLoad(function(){
@@ -967,6 +968,7 @@ function guideFill(){
     [].forEach.call(B,function(b){ b.innerHTML=h; });
     if(M){ var L=state.magT==="p"?PICKS:state.magT==="s"?STAYM:GUIDES; M.innerHTML=L.length?(state.magT==="s"?'<div class="stsrch"><input id="stq" type="search" placeholder="번호 또는 숙소 이름·지역 검색 (예: 3, 가평)" autocomplete="off" enterkeyhint="search"></div>':'')+'<div class="maglist">'+L.map(state.magT==="p"?pickRow:state.magT==="s"?stayRow:guideRow).join("")+'</div>'+(state.magT==="s"?'<p class="smgnone" id="stnone" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p>':''):'<div class="empty">곧 새 글이 올라와요</div>';
       var sq=document.getElementById("stq"); if(sq){ var run=function(){ var v=sq.value.trim().toLowerCase().replace(/[\[\]]/g,"").replace(/^no\.?\s*/,"").replace(/^#/,""),hit=0; [].forEach.call(M.querySelectorAll(".smg"),function(a){ var ok=!v||(/^\d+$/.test(v)?a.getAttribute("data-no")===String(+v):a.getAttribute("data-q").indexOf(v)>=0); a.style.display=ok?"":"none"; if(ok)hit++; }); document.getElementById("stnone").hidden=!!hit||!v; }; sq.addEventListener("input",run); if(qs0("n")){ sq.value=qs0("n"); run(); } } }
+    if(window.dkMagPaint) window.dkMagPaint();
   });
 }
 

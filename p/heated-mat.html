@@ -52,4 +52,4 @@ footer{margin-top:40px;font-size:12px;color:#8a8994;line-height:1.7;text-align:c
 <script>(function(){var m=location.hash.match(/f=(\d+)/),f=document.querySelector(".fc");if(!m||!f)return;var c=document.querySelector('.pc[data-p="'+m[1]+'"]');if(!c)return;f.href=c.href;f.dataset.k=c.dataset.k;f.querySelector(".im").innerHTML=c.querySelector(".im").innerHTML;f.querySelector(".n").textContent=c.querySelector(".n").textContent;f.querySelector(".pr").textContent=c.querySelector(".pr").textContent;scrollTo(0,0);})();</script>
 <script>document.addEventListener("click",function(ev){var a=ev.target.closest(".pc,.fc");if(a&&window.gtag)gtag("event","coupang_click",{place:"picks_heated-mat",item_name:a.dataset.k||""});});</script>
 <button id="totop" type="button" aria-label="맨 위로" onclick="scrollTo({top:0,behavior:'smooth'})">TOP</button><script>addEventListener("scroll",function(){document.getElementById("totop").classList.toggle("on",scrollY>300)},{passive:true});</script>
-</body></html>
+<script src="/mv.js" defer></script></body></html>
