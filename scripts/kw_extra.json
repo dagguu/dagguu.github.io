@@ -1,8022 +1,874 @@
 {
- "updated": "2026-10-25 18:56",
+ "updated": "2026-10-25 18:58",
  "hints": [
-  "리쥬파인",
-  "로쎄",
-  "도미골프",
-  "마르비니",
-  "라브라크",
-  "스노우플러스",
-  "안탈라",
-  "메이드인랩",
-  "참그린",
-  "스킨투엠투",
-  "유유제약",
-  "어텐티",
-  "허밍테라피",
-  "로블루",
-  "풀리",
-  "올레그레인",
-  "다자르",
-  "로댕쇼",
-  "밀리타",
-  "유레브",
-  "모노아워",
-  "키니샴푸",
-  "루솔브",
-  "쿠민착즙기",
-  "보고바이오",
-  "피레스트",
-  "닥터핏",
-  "뷰앤블루",
-  "듀얼온",
-  "르젠",
-  "차프넬",
-  "파파무니",
-  "파이온텍",
-  "팔레오",
-  "그린스토아",
-  "테이블코치",
-  "위키드랩",
-  "디오딧",
-  "소담목장",
-  "머그비",
-  "럼브",
-  "미러랩",
-  "글램핑크",
-  "리오메딕스",
-  "올리온",
-  "시컬리",
-  "미아크",
-  "탠저린생리대",
-  "로렌드",
-  "투비뉴",
-  "라디셀",
-  "이롭핏",
-  "피나틴트",
-  "UH홈데코",
-  "에스이에스유",
-  "밥엔나물",
-  "견행묘행",
-  "리쥬비란",
-  "슬로운샤워기",
-  "리뉴샷",
-  "아론염색약",
-  "밀레스",
-  "폰티악",
-  "카프리나",
-  "더100",
-  "으뜸배변패드",
-  "넵티브",
-  "닥터딥",
-  "덴탈프로",
-  "숨시내",
-  "닥터미니쉬",
-  "아르데코",
-  "봄비유",
-  "루니엘",
-  "탑스텝",
-  "프리너",
-  "닥터리코",
-  "애드벳",
-  "멀티락",
-  "피스하나",
-  "북극곰토퍼",
-  "메디에프",
-  "마리아꾸르끼",
-  "레베코코",
-  "휘페",
-  "그라운도프",
-  "샌달리스",
-  "차미돈",
-  "아이원루테인"
+  "종근당",
+  "에버그린초록입홍합",
+  "헬씨드",
+  "라우레타나",
+  "도모리초콜릿",
+  "메드비",
+  "블리닉",
+  "비엠에슬릿",
+  "글램피크",
+  "벨라블",
+  "소노시즌",
+  "닥터피엘",
+  "카멜마운트",
+  "퍼플래빗",
+  "벤딕트"
  ],
  "rows": [
   {
-   "kw": "엘지화학",
-   "vol": 59610,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "편평사마귀",
-   "vol": 51000,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "루테인",
-   "vol": 36820,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "다우니섬유유연제",
-   "vol": 30690,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "루테인지아잔틴",
-   "vol": 29060,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "퍼실세탁세제",
-   "vol": 24520,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "풀리",
-   "vol": 23180,
+   "kw": "닥터피엘",
+   "vol": 82500,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "다우니",
-   "vol": 20160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "다우니세탁세제",
-   "vol": 14630,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "노보노디스크",
-   "vol": 13650,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "클램프",
-   "vol": 13480,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "생리식염수",
-   "vol": 12950,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "휴메딕스",
-   "vol": 11280,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "유레브",
-   "vol": 10910,
-   "comp": "낮음",
+   "kw": "종근당",
+   "vol": 50500,
+   "comp": "높음",
    "hint": true
   },
   {
-   "kw": "펩타이드",
-   "vol": 10890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일선풍기",
-   "vol": 10820,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "동아에스티",
-   "vol": 10550,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "피죤섬유유연제",
-   "vol": 10430,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "샤프란",
-   "vol": 10300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "안국약품",
-   "vol": 10100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아론샵",
-   "vol": 9930,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "유유제약",
-   "vol": 8830,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "알프람정0.25MG",
-   "vol": 8510,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "SK2피테라에센스",
-   "vol": 8510,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "얼굴편평사마귀",
-   "vol": 8090,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "르젠가습기",
-   "vol": 7550,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "바이오더마에센스로션",
-   "vol": 7280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일가열식가습기",
-   "vol": 7010,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "FULLY",
-   "vol": 6760,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "프릴주방세제",
-   "vol": 6620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "의료기기",
-   "vol": 6480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사마귀제거",
-   "vol": 6160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "힌지",
-   "vol": 5780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모공앰플",
-   "vol": 5620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셀로맥스",
-   "vol": 5460,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "롤러",
-   "vol": 5380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "골판지",
-   "vol": 4940,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "반죽기",
-   "vol": 4890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백제약품",
-   "vol": 4770,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신일서큘레이터",
-   "vol": 4710,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "한림제약",
-   "vol": 4690,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "계면활성제",
-   "vol": 4560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "센카",
-   "vol": 4440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에스케이바이오사이언스",
-   "vol": 4210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "브리오신주방세제",
-   "vol": 4030,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유압자키",
-   "vol": 4030,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "백진삼",
-   "vol": 3870,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "닥터딥",
-   "vol": 3810,
+   "kw": "벤딕트",
+   "vol": 45600,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "컨베이어벨트",
-   "vol": 3770,
+   "kw": "카멜마운트",
+   "vol": 12250,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "종근당건강",
+   "vol": 11250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "안국건강루테인",
-   "vol": 3580,
+   "kw": "트윈침대",
+   "vol": 9230,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "대웅더샵",
-   "vol": 3550,
+   "kw": "닥터피엘샤워기필터",
+   "vol": 8650,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "종근당비타민C",
+   "vol": 8150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터피엘샤워기",
+   "vol": 7530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "연세",
+   "vol": 5870,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소노시즌",
+   "vol": 3910,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "CKD",
+   "vol": 3900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터피엘세면대필터",
+   "vol": 3850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "종근당건강몰",
+   "vol": 3480,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "BUSH",
-   "vol": 3500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동일고무벨트",
-   "vol": 3440,
+   "kw": "카멜모니터암",
+   "vol": 2790,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "미니관리기",
-   "vol": 3430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미소몰닷컴",
-   "vol": 3300,
+   "kw": "종근당몰",
+   "vol": 2730,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "슬라이딩레일",
-   "vol": 3290,
+   "kw": "키즈텐042",
+   "vol": 2310,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "전동카트",
-   "vol": 3240,
+   "kw": "닥터피엘필터",
+   "vol": 1860,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스쿨플랫",
-   "vol": 3230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "타이밍벨트",
-   "vol": 3220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "얼굴사마귀",
-   "vol": 3150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드효능",
-   "vol": 3090,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "슈가버블주방세제",
-   "vol": 3080,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아르데코",
-   "vol": 3010,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "휩드팩클렌저",
-   "vol": 2950,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파이토신",
-   "vol": 2920,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "닥터핏",
-   "vol": 2910,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "르젠가열식가습기",
-   "vol": 2890,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "세수",
-   "vol": 2870,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어",
-   "vol": 2860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쇼바",
-   "vol": 2840,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "루테인지아잔틴아스타잔틴",
-   "vol": 2840,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편평사마귀원인",
-   "vol": 2780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ESSENCE",
-   "vol": 2690,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "르젠",
-   "vol": 2670,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "손가락사마귀",
-   "vol": 2640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성분에디터앰플",
-   "vol": 2620,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "고정클램프",
-   "vol": 2560,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "주사기닷컴",
-   "vol": 2560,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "보령바이오파마",
-   "vol": 2450,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가습기청소",
-   "vol": 2420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드세럼",
-   "vol": 2330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다우니세제",
-   "vol": 2280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "르젠선풍기",
-   "vol": 2190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "액츠",
-   "vol": 2170,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "피토레스코쿠션",
-   "vol": 2120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "다우니실내건조섬유유연제",
-   "vol": 2110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "다이소변기세정제",
-   "vol": 2080,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "머그비",
-   "vol": 2080,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "샤오미선풍기",
-   "vol": 2070,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "AMPLE",
-   "vol": 2030,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "CLAMP",
-   "vol": 1990,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대한약품",
-   "vol": 1990,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "기초학력진단평가",
-   "vol": 1980,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "참그린주방세제",
-   "vol": 1950,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "SERUM",
-   "vol": 1930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탈라",
-   "vol": 1920,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BEARING",
-   "vol": 1910,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "조인트",
-   "vol": 1890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "판테놀앰플",
-   "vol": 1870,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아르데코파운데이션",
-   "vol": 1820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "평편사마귀제거",
-   "vol": 1780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "삼성선풍기",
-   "vol": 1740,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "메디팜약국",
-   "vol": 1700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피부사마귀",
-   "vol": 1660,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밀리타커피머신",
-   "vol": 1640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다우니실내건조세탁세제",
-   "vol": 1620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서랍장레일",
-   "vol": 1620,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "편평사마귀제거비용",
-   "vol": 1620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LM",
-   "vol": 1610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "얼굴사마귀제거",
-   "vol": 1610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일써큘레이터",
-   "vol": 1570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "풀리그린토마토",
-   "vol": 1550,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전자석",
-   "vol": 1540,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "대한민국닥터",
-   "vol": 1530,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "평편사마귀",
-   "vol": 1490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피테라에센스",
+   "kw": "카멜마운트거치대",
    "vol": 1460,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "메소드주방세제",
-   "vol": 1450,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "수분세럼",
-   "vol": 1440,
+   "kw": "종근당비타민",
+   "vol": 1420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제이더블유신약",
-   "vol": 1430,
+   "kw": "종근당멀티비타민",
+   "vol": 1390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "샹떼클레어섬유유연제",
-   "vol": 1400,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "그린토마토모공앰플",
+   "kw": "카멜마운트모니터암",
    "vol": 1380,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "팜스트리트",
-   "vol": 1370,
+   "kw": "부부침대",
+   "vol": 1270,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "두피사마귀",
-   "vol": 1370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다가네",
-   "vol": 1360,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드크림",
-   "vol": 1340,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "루니엘",
-   "vol": 1340,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "루테인지아잔틴미니",
-   "vol": 1320,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "피지세탁세제",
-   "vol": 1310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "안국루테인",
-   "vol": 1310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자바라컨베이어",
-   "vol": 1300,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "라브라크캐리어",
-   "vol": 1240,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파이온텍",
-   "vol": 1220,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "논프라피스",
-   "vol": 1200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드앰플",
-   "vol": 1190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흡착패드",
-   "vol": 1180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업센다크림",
-   "vol": 1150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아론염색약",
-   "vol": 1150,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "프라레일",
-   "vol": 1140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "루테인아스타잔틴",
-   "vol": 1140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "백진삼삼기력",
-   "vol": 1110,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "올리브영세럼",
-   "vol": 1110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아프니벤큐액",
-   "vol": 1090,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "V벨트",
-   "vol": 1080,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오스틴제약",
-   "vol": 1080,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "멜라루카주방세제",
-   "vol": 1060,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커클랜드세탁세제",
-   "vol": 1060,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "베어링종류",
-   "vol": 1060,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주방설비",
-   "vol": 1060,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메디칼현대",
-   "vol": 1040,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "핸드쟈키",
-   "vol": 1040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "팔레오",
-   "vol": 1040,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "목편평사마귀",
-   "vol": 1030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "삼성식기세척기세제",
-   "vol": 1010,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수동지게차",
-   "vol": 1010,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "테크세제",
-   "vol": 990,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "글램핑크",
-   "vol": 990,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "파메스틱",
-   "vol": 970,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "LG식기세척기세제",
-   "vol": 960,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마르비니",
-   "vol": 950,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "경기광주네일",
-   "vol": 950,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "베어링규격",
-   "vol": 950,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "암웨이주방세제",
-   "vol": 940,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "성분에디터그린토마토",
-   "vol": 940,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수분에센스",
-   "vol": 940,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아론샵염색약",
-   "vol": 940,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "평와셔",
-   "vol": 930,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "밀리타아로마보이",
-   "vol": 930,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "폰티악",
-   "vol": 930,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "안탈라",
+   "kw": "종근당종합비타민",
    "vol": 900,
    "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "다우니섬유유연제추천",
-   "vol": 900,
-   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신일초음파가습기",
+   "kw": "소노시즌매트리스",
    "vol": 890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베어",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "허밍테라피",
-   "vol": 840,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "퍼스트에센스",
-   "vol": 840,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "배관용자재",
-   "vol": 835,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밀리타",
-   "vol": 830,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "참그린",
-   "vol": 800,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "TOGGLE",
-   "vol": 790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원더톡스",
-   "vol": 790,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "손바닥사마귀",
-   "vol": 790,
+   "kw": "닥터피엘아토샤워헤드",
+   "vol": 820,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "라브라크",
-   "vol": 780,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "PLUNGER",
-   "vol": 780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "클램핑",
-   "vol": 770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "얼굴편평사마귀제거",
-   "vol": 770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베어벨트",
-   "vol": 760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "티제이팜",
+   "kw": "종근당스템벨",
    "vol": 750,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "보랄선풍기",
-   "vol": 750,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "한국애브비",
-   "vol": 740,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "샤오미무선선풍기",
-   "vol": 740,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미아크",
-   "vol": 740,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "LG식기세척기린스",
-   "vol": 730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "COUPLING",
-   "vol": 730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스노우플러스",
-   "vol": 720,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "PEPTIDE",
-   "vol": 720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전자부품쇼핑몰",
-   "vol": 690,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물사마귀제거",
-   "vol": 690,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올리브영앰플",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "삼성식기세척기린스",
-   "vol": 670,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ABSORBER",
-   "vol": 670,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일무선선풍기",
-   "vol": 670,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "편평사마귀제거연고",
-   "vol": 670,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잔여",
-   "vol": 660,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "컨베이어롤러",
-   "vol": 660,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더유몰",
-   "vol": 650,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "동원약품",
-   "vol": 650,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "솔벨브",
-   "vol": 650,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파세코선풍기",
-   "vol": 650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "슬로운샤워기",
-   "vol": 650,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "쇽업쇼바",
+   "kw": "닥터피엘샤워기헤드",
    "vol": 640,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보고바이오",
-   "vol": 640,
+   "kw": "메드비",
+   "vol": 550,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "바르는보톡스",
-   "vol": 640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고무튜브",
-   "vol": 630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사마귀제거크림",
-   "vol": 630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "손톱사마귀",
-   "vol": 630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플링가격",
-   "vol": 620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리쥬비란",
-   "vol": 620,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "편평사마귀실비",
-   "vol": 620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "북극곰토퍼",
-   "vol": 620,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "사마귀크림",
-   "vol": 610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "악센다",
-   "vol": 600,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "냉가망치",
-   "vol": 600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "CONVEYOR",
-   "vol": 600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "퍼실주방세제",
-   "vol": 590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "관붙이앵글밸브",
-   "vol": 590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ROLLER",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ABS모듈",
-   "vol": 580,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "루솔브",
-   "vol": 580,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "버블에센스",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편평사마귀한의원",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다우니섬유유연제리필",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일상건강",
-   "vol": 570,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "타이어롤러",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "포모라인",
-   "vol": 560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "안국건강루테인미니",
-   "vol": 560,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "도규",
-   "vol": 550,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "디디오랩무선선풍기",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유니맥스선풍기",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한관종제거비용",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비닐커텐",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벡톤디킨슨",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "핸드지게차",
-   "vol": 530,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "체인벨트",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아세틸헥사펩타이드",
-   "vol": 520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "발사마귀치료",
-   "vol": 520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탐팩스펄",
+   "kw": "연세키즈텐",
    "vol": 520,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "볼베어링규격",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가야바쇼바",
-   "vol": 510,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아이원루테인",
-   "vol": 510,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "타임벨트",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미간주름크림",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소담목장",
-   "vol": 500,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "멀티락",
-   "vol": 500,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "고무벨트",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가이드레일",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "필터없는미니가습기",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "위키드랩",
-   "vol": 490,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "여성수입의류",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동망치",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마리아꾸르끼",
-   "vol": 480,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "아이원루테인지아잔틴미니",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "브리오신세탁세제",
+   "kw": "씨케이디",
    "vol": 470,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "콘베어",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "얼굴에사마귀",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LG선풍기",
-   "vol": 460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "레베코코",
-   "vol": 460,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "모터풀리",
-   "vol": 450,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "사마귀율무",
-   "vol": 450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "안국루테인미니",
-   "vol": 450,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "엘지기화식가습기",
-   "vol": 440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "링클크림",
-   "vol": 440,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "레베코코샴푸",
-   "vol": 440,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "롤러컨베이어",
+   "kw": "종근당원데이21",
    "vol": 430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명품의류",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홍재메디칼",
-   "vol": 420,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "FORKLIFT",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엘지전자가습기",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고양이가습기",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편평사마귀크림",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보국선풍기",
+   "kw": "글램피크",
    "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일BLDC선풍기",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메이드인랩",
-   "vol": 390,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "다우니섬유유연제대용량",
+   "kw": "스템벨",
    "vol": 390,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "니들베어링",
-   "vol": 390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "갈라짐",
+   "kw": "종근당화장품",
    "vol": 390,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유통기한임박화장품",
-   "vol": 380,
-   "comp": "높음",
+   "kw": "종근당영양제",
+   "vol": 390,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "모터커플링",
+   "kw": "소노침대",
    "vol": 380,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "얼굴사마귀원인",
-   "vol": 380,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "우레탄롤러",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벨트풀리",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "배관부품",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "안국건강루테인지아잔틴",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자연퐁식기세척기세제",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이들러",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "V벨트풀리",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다자르",
-   "vol": 360,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "엘지식기세척기세제",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가이드롤러",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "프로파일너트",
-   "vol": 350,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "카프리나",
-   "vol": 350,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "타이밍풀리",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바슈헬스코리아",
-   "vol": 340,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "논가스용접봉",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보국써큘레이터",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보톡스펩타이드",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사마귀바이러스",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베세이클램프",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "손등사마귀",
-   "vol": 330,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "목사마귀",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "눈사마귀",
-   "vol": 330,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "안국건강아이원",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가습기순위",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바이파",
-   "vol": 310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유판씨",
-   "vol": 310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "JAC",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가습기대신",
-   "vol": 310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "거품에센스",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "눈썹문신학원",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "V밸트",
-   "vol": 300,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "브이벨트",
-   "vol": 300,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "RW",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보랄날개없는선풍기",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드볼륨에센스2.0",
-   "vol": 290,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "에센스오일",
-   "vol": 290,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "콜라겐세럼",
-   "vol": 290,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "안국건강루테인지아잔틴미니",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고무롤러",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "H벨트",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청소호스",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에어커텐",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가습기효능",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탠저린생리대",
-   "vol": 280,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "컨베어롤러",
+   "kw": "베라베프",
    "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벨트컨베이어",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성분에디터그린토마토앰플",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모공줄이는앰플",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디오딧",
-   "vol": 270,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "숨시내",
-   "vol": 270,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "아이원트리플",
-   "vol": 270,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "클라비스코트",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고무스토퍼",
-   "vol": 260,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "떡볶이기계",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "나일",
-   "vol": 260,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "에코버식기세척기세제",
-   "vol": 250,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "기초학력평가",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드에센스",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드화장품",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엄마화장품",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피부과앰플",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "롤러기",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "농약교반기",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한일선풍기리모컨",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엣센스",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "럼브",
-   "vol": 240,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "사마귀제거연고",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편평사마귀율무",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "암앤해머세탁세제",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "AI코스웨어",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로러",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백구닷컴",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "FRL",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "말굽센서",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "지오영주문",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "한일서큘레이터",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드볼륨에센스",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "워터에센스",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "이롭핏",
-   "vol": 230,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "율무사마귀",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탑스텝",
-   "vol": 230,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "안국루테인지아잔틴미니",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "RAVRAC",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "피토레스코공구",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "콘베이어",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유유제약유산균",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파워몰러",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "콘베어벨트",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캠팔로워",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LEZEN가습기",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "열가습기",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이마주름크림",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "손사마귀치료",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사마귀치료제",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아메카지쇼핑몰",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어밸트",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벽고정브라켓",
-   "vol": 210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "우리약품",
-   "vol": 210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "힌지핀",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중고컨베이어",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "UDT리프트",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "뷰앤블루",
-   "vol": 210,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "신일전자선풍기",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가습기생수",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오일에센스",
-   "vol": 210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "콜라겐에센스",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올리브영에센스추천",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테이블코치",
-   "vol": 210,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "덴탈프로",
-   "vol": 210,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "ARTDECO",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "프리너",
-   "vol": 210,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "울산얼굴경락",
-   "vol": 200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "V풀리",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘베어로라",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로울러",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "볼륨에센스",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보톡스앰플",
-   "vol": 200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "올리온",
-   "vol": 200,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "테이블보주문제작",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "코스웨어",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "V-BELT",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "플라스틱벨트",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "배관밸브종류",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일스탠드선풍기",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "거실선풍기",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "그린스토아",
-   "vol": 190,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "파이온텍볼륨톡스",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터딥스킨토너",
-   "vol": 190,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "스킨투엠투",
-   "vol": 180,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "알로줄렌",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "그리드커플링",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "쁘리",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "구동벨트",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "회전축",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밸브스템",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베어링규격표",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "심테이프",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EZRX",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "PALEO",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "탄력에센스",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올인원에센스",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "DR.DEEP",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "피부과사마귀제거",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "코사마귀",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "봄비유",
-   "vol": 180,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "대구발각질",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타블렛세제",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "평벨트",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산업용품",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "CO2레귤레이터",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이동식컨베이어",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "저두볼트",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메쉬벨트",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보만선풍기",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한일써큘레이터",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "발효에센스",
-   "vol": 170,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "얼굴사마귀연고",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "안국루테인지아잔틴",
-   "vol": 170,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "안국약품루테인지아잔틴",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라다메르올리고포스",
-   "vol": 165,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "진단평가",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "우레탄벨트",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벨트종류",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "루브리케이터",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "풀림방지볼트",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가습기초음파",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "필러크림",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "편사마귀",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "금속경첩",
-   "vol": 155,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타이밍벨트소리",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파이프롤러",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콤베어",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "열쇠경첩",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "삼성전자선풍기",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보국서큘레이터",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보국에어젯",
-   "vol": 150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "한일전기선풍기",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아세틸헥사펩타이드-8",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에센스세럼",
-   "vol": 150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "평편사마귀연고",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터미니쉬",
-   "vol": 150,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "식기세척기캡슐세제",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "희토류자석",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "면벨트",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "IDLER",
-   "vol": 140,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "문짝경첩",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테프론벨트",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원터치호스",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "링벨트",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파렛트카",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밀리타코리아",
-   "vol": 140,
+   "kw": "DR.PIEL",
+   "vol": 260,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "밀리타커피메이커",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캡슐에센스",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피테라에센스저렴이",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터딥로션",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "DRDEEP",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "편평사마귀율무팩",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "일반모칫솔",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "브리오신키친클리너",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인사메디",
-   "vol": 130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "실리콘롤러",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "반도벨트",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플링종류",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타이밍벨트풀리",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어풀리",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BACKSTOP",
-   "vol": 130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "피레스트",
-   "vol": 130,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "볼륨톡스",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드성분",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "40대화장품추천",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로렌드",
-   "vol": 130,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "UH홈데코",
-   "vol": 130,
+   "kw": "퍼플래빗",
+   "vol": 250,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "으뜸배변패드",
-   "vol": 130,
+   "kw": "소노시즌침대",
+   "vol": 250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "나은이",
+   "vol": 240,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "클리덤",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "씹어먹는비타민",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도모리초콜릿",
+   "vol": 200,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "타임레볼루션에센스",
+   "kw": "종근당공식몰",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "연세헬스케어",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "종근당넥크림",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터피엘샤워헤드",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터피엘와이드",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종근당CKD",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "씹어먹는비타민C",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터피엘필터샤워기",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PURESOME",
+   "vol": 130,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "닥터피엘아토샤워",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카멜마운트TV거치대",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스템벨가격",
    "vol": 125,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일제칫솔",
-   "vol": 125,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로블루",
-   "vol": 120,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "실리콘벨트",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "MR롤러",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이들롤러",
-   "vol": 120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "롤러카페트",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유량조절기",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형베어링",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대나무톱",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "삼기력",
-   "vol": 120,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "펩타이드스킨부스터",
+   "kw": "카멜거치대",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "30대화장품",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "시컬리",
-   "vol": 120,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "편평사마귀제거크림",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아스타잔틴추천",
-   "vol": 120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "이마크림",
-   "vol": 115,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "살림백서세제",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니컨베이어벨트",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베어링롤러",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산업용벨트",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "구동축",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "구슬바퀴",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디월트부품",
-   "vol": 110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어종류",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쇼크업쇼바",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쥴릭",
-   "vol": 110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "록너트",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LGV",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "르젠BLDC선풍기",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "히알루론산에센스",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바르는필러",
-   "vol": 105,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "리쥬파인",
+   "kw": "헬씨드",
    "vol": 100,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "데크인서트",
+   "kw": "종근당멀티비타민미네랄",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "듀라카브",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "힌지경첩",
+   "kw": "닥터피엘샤워필터",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "접촉식온도센서",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어벨트종류",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중앙커플링",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "위치결정핀",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이을바이오사이언스",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "필름접착기",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "티백제작",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키니샴푸",
-   "vol": 100,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "르젠무선선풍기",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "징크세럼",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주름세럼",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에피벗쿠션공구",
-   "vol": 95,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "장안에화제",
-   "vol": 95,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "PRIL",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대전발톱무좀",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타이밍벨트규격",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무쏘체인",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "체인연결핀",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타이밍벨트가격",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자바라콘베어",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "V벨트풀리규격",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "압쇼바",
+   "kw": "종근당종근당건강",
    "vol": 90,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "미쯔보시",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어벨트제작",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쇽업쇼버",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테프론실",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캠플로워",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에이치메드",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "3인치캐스터",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로댕쇼",
-   "vol": 90,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "어메이징가습기",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파이진",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "차미돈",
-   "vol": 90,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "포모라인엑스트라",
-   "vol": 85,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "르젠써큘레이터",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보국에어젯써큘레이터",
-   "vol": 85,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "부스터세럼",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편평사마귀마데카솔",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편평사마귀화장품",
-   "vol": 85,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "얼굴사마귀레이저",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "MBC건축박람회",
+   "kw": "닥터피엘샤워기세트",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "테이퍼부쉬",
-   "vol": 80,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "콘베어종류",
+   "kw": "닥터피엘리필",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "콘베어롤러",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라운드벨트",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2인치캐스터",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동컨베어",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타이밍풀리규격",
-   "vol": 80,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "헬리컬",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "체인컨베이어",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공압소음기",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미터링밸브",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동문벨트",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로빈엔진",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고압호스제작",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고무판제작",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일무소음선풍기",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유선선풍기",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피부에센스",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드토너",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대용량에센스",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피스하나",
-   "vol": 80,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "노원얼굴경락",
-   "vol": 75,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "마끼다부품",
-   "vol": 75,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제이앤코슈펩타이드",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가슴마사지크림",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터딥아크파",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "SK매직식기세척기세제",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벨트콘베어",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벨트컨베어",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "관절앤굿",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "TIMINGBELT",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "프리롤러",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자바라롤러",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "산업용타이밍벨트",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "우레탄바퀴3인치",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올덤커플링",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "철경첩",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고추건조",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형롤러",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "BUSING",
-   "vol": 70,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "벨트수리",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가변저항노브",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어시스템",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이물질흡입기",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "볼너트",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타이어로라",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모노아워",
+   "kw": "라우레타나",
    "vol": 70,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "14인치선풍기",
+   "kw": "씨케이디개런티드",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "40대에센스",
+   "kw": "종근당건강기능식품",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "속건조에센스",
+   "kw": "씹어먹는영양제",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "눈밑처짐크림",
+   "kw": "젤리형영양제",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "편평사마귀식초",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "샌달리스",
-   "vol": 70,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "성분에디터모공앰플",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터펩티에센스",
-   "vol": 65,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "스킨부스터세럼",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주름에센스",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "팔자주름개선화장품",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편평사마귀살리실산",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탱크캐리어",
+   "kw": "종근당건강화장품",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "참그린세제",
+   "kw": "종근당건강비타민",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "롤러제작",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산업용롤러",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동일V벨트",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "컨베어밸트",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사각환봉",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1인치바퀴",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BEARINGS",
-   "vol": 60,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "방진볼트",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스프라켓규격",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형컨베이어",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한창벨트",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미니컨베이어",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스러스트베어링규격",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "앵글플레이트",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대명TS",
-   "vol": 60,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "캠플로어",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "스텐롤러",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스토퍼볼트",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물류시스템",
-   "vol": 60,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "MITSUBOSHI",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "지그핀",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남경대패",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올레그레인",
-   "vol": 60,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "밀리타전자동커피머신",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LG전자선풍기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보르피린화장품",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "건성에센스",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주름개선세럼",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일작",
-   "vol": 60,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "밀레스",
-   "vol": 60,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "생활공작소식기세척기세제",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "우레탄캐스터바퀴",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파세코무선선풍기",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에센스사용법",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "위키드랩비오틴",
-   "vol": 55,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "덴탈프로칫솔",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터딥토너",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편평사마귀완치",
+   "kw": "CKD목주름",
    "vol": 55,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "안국아이원루테인",
+   "kw": "박주미화장품",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "종근당크림",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "종근당건강스템벨",
+   "vol": 55,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "닥터피엘샤워기헤드필터",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마리아닐라",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "세라믹제작",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에버미라클주방세제",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "그리드카플링",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기계벨트",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "MEGADYNE",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자바라컨베어",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디스크판",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어제작",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동용접토치",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "CAMFOLLOWER",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "CONVEYORBELT",
+   "kw": "연세대학교연세생활건강",
    "vol": 50,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "전동컨베이어",
+   "kw": "종근당괄사",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "중고콘베어",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어벨트수리",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥트가위",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "우레탄휠",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동용접기",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "곡물세척기",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전선포설",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자바라컨베이어벨트",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일서큘레이터선풍기",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장품에센스",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라디셀",
+   "kw": "종근당쇼핑몰",
    "vol": 50,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "넵티브",
+   "kw": "종근당케어",
    "vol": 50,
-   "comp": "낮음",
-   "hint": true
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "그린토마토모공",
+   "kw": "씹어먹는종합비타민",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "멀티비타민종근당",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카멜고중량모니터암",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "저자극샤워기",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바르는보스웰리아",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다목적기계유",
+   "kw": "블리닉",
+   "vol": 45,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "닥터피엘2차필터",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미싱벨트",
+   "kw": "닥터피엘샤워기와이드",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신일저소음선풍기",
+   "kw": "닥터피엘G1/2",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제이닉스선풍기",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더6펩타이드",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드스킨부스터세럼",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "매트릭실세럼",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "연예인앰플",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "재생에센스",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터딥클렌징",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "닥터딥비립종",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "닥터딥바디로션",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터딥멀티아토크림",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터딥물사마귀",
-   "vol": 45,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "편평사마귀프로폴리스",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편평사마귀로션",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제노시스루페",
-   "vol": 40,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "참그린녹차",
+   "kw": "종근당선물세트",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인솔제작",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "온시아",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마그네틱세퍼레이터",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테이퍼부쉬풀리",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테이퍼풀리",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "열전대종류",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "졸탑",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어벨트롤러",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메가다인",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "우레탄로라",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어로라",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베어로라",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미쯔보시벨트",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사다리컨베이어",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리니어가이드레일",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "방향제어밸브",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캠플로워베어링",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타이밍벨트세트",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "건조기벨트",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "긴경첩",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스가츠네경첩",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스프링캐스터",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "에어호스커플링",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "우레탄바퀴캐스터",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중량경첩",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피팅종류",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "우레탄타이밍벨트",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "압력제어밸브",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "레바손잡이",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고무로라",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동컨베이어",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "멀츠아시아퍼시픽",
-   "vol": 40,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "핀치롤",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "계단컨베이어",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캐리어롤러",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디지털선도학교",
-   "vol": 40,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "이을바이오",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "발효탱크",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어부품",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보국제로닷",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "50대에센스",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마몽드에센스",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밥엔나물",
-   "vol": 40,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "더100",
-   "vol": 40,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "넬리주방세제",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유유제약루테인",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유유제약포모라인",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유유제약유판씨",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성분에디터그린토마토모공앰플",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네오디움자석파는곳",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "KSB1336",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "대전롤러",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "연흥",
-   "vol": 35,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "기계체인",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "체인기어규격",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일렉트로마트선풍기",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파파무니",
+   "kw": "벨라블",
    "vol": 35,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "더6펩타이드스킨부스터세럼",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주름개선에센스",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에센스화장품",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리프팅에센스",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "WICKEDLAB",
+   "kw": "GLAMPEAK",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "사마귀없애는방법",
+   "kw": "샤워기닥터피엘",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가성비칫솔",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벌문",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "안국아이원",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "안국아이원트리플",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "로쎄",
-   "vol": 30,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "그뤼너씨",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자석선별기",
+   "kw": "CKD개런티드",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "후렌지카플링",
+   "kw": "종근당건강공식몰",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "컨베이어벨트만들기",
+   "kw": "나은이샤워기",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "링크벨트",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "롤러컨베어",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "폴리벨트",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "CONTITECH",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "구동롤러",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디스크카플링",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페트롤러",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어롤러제작",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "상하차컨베이어",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벨트풀리규격",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가이드레일클램프",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바퀴롤러",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "철와샤",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경사컨베이어",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수지벨트",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리턴롤러",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부싱규격",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케블라실",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "PVC벨트",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다이캐스팅경첩",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "우레탄볼트",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크라운롤러",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "AC필터",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ML-CP",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "상승컨베이어",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밸브의종류",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에이메드",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "CVJOINT",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파렛트대차",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스파이럴스프링",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미스미스프링",
-   "vol": 30,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "아다치컨베이어",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "플렉시블컨베이어",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메쉬컨베이어",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베어링홀더",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공장자동화시스템",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "칩컨베어",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공장자동화설비",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조립라인",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일14인치선풍기",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리뉴샷",
-   "vol": 30,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "닥터딥선크림",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터딥크림",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터리코",
-   "vol": 30,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "라브라크24인치",
+   "kw": "종근당건강식품",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "LEZE",
+   "kw": "데일리베스트종합비타민",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "SIC가공",
+   "kw": "구미콜라겐",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "LG식기세척기전용세제",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "빠이요수분크림",
+   "kw": "PPC오일",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "피토덤",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "식기세척기타블렛세제",
+   "kw": "셀룰라이트바디오일",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "알엑스샵",
+   "kw": "비엠에슬릿",
    "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "그린토마토포어리프팅앰플플러스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "우레탄코팅롤러",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베어링로라",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "TIMMINGBELT",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "V풀리규격",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "360도회전바퀴",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "6902ZZ",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "브이벨트규격",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "내열실",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "엔젤경첩",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원터치경첩",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중하중용캐스터",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플링싼곳",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플링판매",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "프리플로우컨베이어",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "TIMINGPULLEY",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보쉬컨베이어",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "반도V벨트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라운드컨베이어",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "KINZO",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신밀리타",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "삼성무선선풍기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일전자서큘레이터",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "볼륨화장품",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아세틸헥사펩타이드8",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가성비에센스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "천연에센스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "매트릭실효과",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "몽태랑볼륨필링",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "보르피린세럼",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "필러앰플",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "항산화에센스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "각질제거에센스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "30대화장품추천",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고농축에센스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "필러화장품",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보톡스아이크림",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "볼륨세럼",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "저분자콜라겐앰플",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AARONSHOP",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "스파이럴모칫솔",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "특수칫솔",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "손등에사마귀",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편평사마귀치료제",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "편평사마귀제거제",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메디에프",
-   "vol": 25,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "안국건강트리플",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "칼날제작",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "NELLIE",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자석공장",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "풀리가공",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "GRIDCOUPLING",
-   "vol": 20,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "후렌지커플링",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원형벨트",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벨트장력",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "내경나사홀더",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다목적스트리퍼",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "드리프트핀",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "롤러콘베어",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모터풀리규격",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벨트규격",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부싱종류",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "공업용경첩",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "볼베어링사이즈",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주물경첩",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플링조인트",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘티넨탈벨트",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "PVC롤러",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "우레탄롤러제작",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테이퍼롤러",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "캠플로어베어링",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올펫케어",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어수리",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘베어제작",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "식품세척기",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모노펌프스테이터",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "체인컨베어",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커브컨베이어",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "식품컨베이어",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이송장치",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "칩콘베어",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대화컨베어",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "투비뉴",
-   "vol": 20,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "그라운도프",
-   "vol": 20,
    "comp": "낮음",
    "hint": true
   },
   {
-   "kw": "도미골프",
+   "kw": "글램피크매트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터피엘세트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카멜티비거치대",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아토샤워기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종근당괄사크림",
    "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "CKD화장품",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종근당뷰티",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "CKD종근당",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종근당공식",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "종근당슈퍼비전멀티비타민",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스템벨앰플",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "종근당줄기세포화장품",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "나은이필터",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "네고왕샤워기",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "샤워기헤드닥터피엘",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터피엘라이브",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터피엘염소필터",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터피엘2중필터샤워기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카멜마운트고중량모니터암",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카멜마운트TV스탠드",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카멜티비스탠드",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카멜TV스탠드",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에버그린초록입홍합",
+   "vol": 10,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "라브라크탱크",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리놀레카",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "풍성교나라모",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "PITTORESCO",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "엠마지",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "에이엔화장품",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "어텐티",
-   "vol": 15,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "와류선별기",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "와전류선별기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수학코스웨어",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "부쉬풀리",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "RXSHOP",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "인사앤굿",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "인사메디포르테",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미니콘베어",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "V-PULLEY",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "FLANGECOUPLING",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "산업용컨베이어벨트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "롤러가공",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "특수벨트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스프라켓롤러",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "립벨트",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "도끼곡괭이",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두현ENG",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라운드크리너",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "벨트콘베이어",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "식품용컨베이어벨트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경사컨베어",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "퇴식콘베어",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청주로라",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대전타이밍벨트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BANDO벨트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "S5M",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "S5M타이밍벨트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "S8M타이밍벨트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "레귤레이터종류",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "방화셔터가이드레일",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "베어링핀",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "지주고정클램프",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상손잡이",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "프로파일용너트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "반도타이밍벨트",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어태치먼트벨트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기아체인",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테프론메쉬벨트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아다치벨트",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "레지본",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "HTD벨트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경첩도면",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경첩의종류",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고압커플링",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고정커플링",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공업용커플링",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "깃대경첩",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리니어볼베어링",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "볼캐스터규격",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서보모터커플링",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스토퍼캐스터",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "우레탄튜브규격",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "죠커플링규격",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캐스터스토퍼",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플링업체",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "플라스틱캐스터",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "회전커플링",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "플랫벨트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "반도화학",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "테프론망",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ELEKTROPHYSIK",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "수지롤러",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "고무카플링",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "체인콘베어",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베어링도면",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셔틀컨베이어",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "BELTCONVEYOR",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타이밍기어",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중고콘베어벨트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어벨트부품",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘베어벨트종류",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "롤러임대",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중고벨트컨베이어",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "도우메디칼",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "콘베이어제작",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쇽압쇼바",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로라임대",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캐리어로라",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보쉬컨베어",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베어제작",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어드럼",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아라미드실",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "NJL베어링",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "김포베어링",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어제작업체",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "퇴식컨베이어",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "롤러대여",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "식품용컨베이어",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파레트카트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "진동로라대여",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "필름부착기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "도로포장롤러",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "약국플랫폼",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "사다리콘베어",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어업체",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쿠민착즙기",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "르젠무엽선풍기",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신일전자써큘레이터",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일써큘레이터선풍기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일선풍기써큘레이터",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스타일리스서큘레이터",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "최신형선풍기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펩타이드볼륨마스터에센스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파이진볼륨톡스",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "탄력스킨케어",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "순한에센스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주름개선제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성에센스추천",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타임레볼루션더퍼스트에센스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자주름크림",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세더마사",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터쉘딩",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "핑크구미베어",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "리오메딕스",
-   "vol": 15,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "견행묘행",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "아론트리트먼트염색약",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "DENTALPRO",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터팁",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "스파이럴모",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임산부용칫솔",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터딥에멀젼",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터딥여드름",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터딥편평사마귀",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "사마귀로션",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파이토신재생크림공구",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오비노비앙코",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제노시스암예측",
+   "kw": "연세헬씨드",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "비철선별기",
+   "kw": "CKD몰",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "비철금속선별기",
+   "kw": "종근당온라인",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자력선별",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "유유건강생활",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "유유네이처락토페린",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "유판씨정",
+   "kw": "종근당세일",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장안에화제넥스트",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "가변풀리",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "VPULLEY",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "토마토모공",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "브이풀리",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네오디움자석규격",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형콘베어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "그리드카프링",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘베어부품",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘베이어벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BRECOFLEX",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고무컨베이어벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산업용V벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산업용고무벨트",
+   "kw": "종근당이벤트",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "우레탄밸트",
+   "kw": "종근당할인",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "타이밍밸트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "변속벨트",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "라텍스벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "SYNCHROFLEX",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "코팅롤러",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ELATECH",
+   "kw": "종근당케어몰",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "공업용롤러",
+   "kw": "종근당선물",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기어롤러",
+   "kw": "종근당슈퍼비전",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "드라이브롤러",
+   "kw": "종근당슈퍼비젼",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "헤드드럼",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스프링커플링",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "MITSUBOSHIBELT",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "NITTABELT",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "동력전달벨트",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "메가다인벨트",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "고무코팅롤러",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "옵티벨트",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "단두고사이비트",
+   "kw": "영양제간식",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "디더블유안전",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라쳇푸셔",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리버스밸브",
+   "kw": "네고왕닥터피엘",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "코너컨베이어",
+   "kw": "닥터피엘네고왕",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "퇴식컨베어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘베아",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘베이어로라",
+   "kw": "네고왕필터샤워기",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "GATESBELT",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "TIMMINGPULLEY",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "엘라텍",
+   "kw": "필터샤워기네고왕",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "대형컨베이어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밸트컨베이어",
+   "kw": "네고왕샤워필터",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "셔틀컨베어",
+   "kw": "카멜이동식거치대",
    "vol": 10,
    "comp": "높음",
    "hint": false
-  },
-  {
-   "kw": "인클라인컨베이어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "평벨트컨베이어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "V벨트교체",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "V벨트풀리종류",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고무벨트규격",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "고무타이밍벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "롤러핀",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "벨트구매",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "벨트식무단변속기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "벨트풀리종류",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "연마봉가격",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "열처리연마봉규격",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "회전부품",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "힌지샤프트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BANDOBELT",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5V근접센서",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "6306ZZC3",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "F686ZZ",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "F688ZZ",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "O링단자",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "S3M",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "S3M타이밍벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "S5M풀리",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "S8M벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "S8M풀리",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고무호스제작",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "배관자재도면",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베어링누름핀",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "스테인레스튜브규격",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스프라켓종류",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조정나사",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조정볼트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "진공패드홀더",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "캐스터5인치",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "클램핑스크류",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타이밍벨트길이계산",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "타이밍풀리S8M",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파워로크",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흡착홀더",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "GATES벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어가격",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부산타이밍벨트",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "갈매기벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "박스제작기계",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "버켓콘베어",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "스크랩컨베어",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "콤베아",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라운드컨베어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산업용컨베이어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "MB벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "프레스벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "14MGT",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "3V벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5V벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BELTCONVEYER",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "HTD14M",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "MEGAFLEX",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "PJ벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "SB벨트",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "SYNCHROBELT",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대명벨트",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "반도스퀴지",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "컨베어벨트제작",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "PK벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "식품컨베어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엔드리스벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케블라벨트",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "양면타이밍벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "STS경첩",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공업용캐스터",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공진경첩",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "높낮이캐스터",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벨로즈커플링",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "복열앵귤러볼베어링",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "볼베어링도면",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "볼베어링수명",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "볼베어링유니트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "브리클캐스터",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스톱경첩",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "슬릿커플링",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "용접경첩규격",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중량용경첩",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캐스터볼트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플링선정",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플링자재",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "플랜지볼베어링",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "플랜지커플링규격",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "해머캐스터",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "YONGLI",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "허치슨벨트",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "부싱제작",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니컨베어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어설치",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "8MGT",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "엘라테크",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "식품용벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "글로벌가스텍",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "SYNCHRONOUSBELT",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "우레탄컨베이어벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘티넨탈콘티테크",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "콘티벨트",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "CCS-1800",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "환벨트",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커브컨베어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산업용볼트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산업롤",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로라컨베이어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "NOK벨트",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "컨베이어벨트설치",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베어설치",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "폴리브이벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공압노즐",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "냉간단조품",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "메쉬콘베어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타이밍풀리가공",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "RT벨트",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "건조컨베이어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "버켓컨베이어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수평컨베이어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "식품용컨베어벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전동콘베어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중고벨트컨베어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타공벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "평밸트",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "타이밍폴리",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자동화컨베이어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파렛트컨베이어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한신몰",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "경하중용캐스터",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "RINGFEDER",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가스켓제조",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베어벨트수리",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "내열벨트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "상하차콘베어",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "컨베어업체",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로텍스카플링",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "메쉬컨베어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "DISCCOUPLING",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "컨베어시스템",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "체인구동",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "TSCHAN",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "628ZZ",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실리콘로라",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "프로파일컨베어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "힌지핀규격",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "CNC자작",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "NOK씰",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "PEEKBEARING",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "TC리데나",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중국식품수입",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컨베어제작업체",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "플렉시블콘베어",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "JACCOUPLING",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "KBC볼베어링",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한성쇼바",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "플렉시블컨베어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파레트컨베이어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다몬롤러",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "물류롤러",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어큠롤러",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "ACE쇼바",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "후렉시블컨베이어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "후렉시블컨베어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라운드콘베어",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "스크랩콘베어",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마그네틱컨베이어",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "퇴식구컨베이어",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "고무판제조",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LYNX2100",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "스크류컨베이어제작",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스티로폼테이핑기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "첨단중기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콤비롤러임대",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "포장자동화기계",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가우징절단기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "중기임대",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "포장중기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "포장기계업체",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "FLEXLINK",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AI수학코스웨어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "매쓰플랫학교",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "듀얼온",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "온더스선풍기",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "따따베선풍기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "온더스날개없는선풍기",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "24년형선풍기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "신일거실선풍기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "24년형신일선풍기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "차프넬",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "제이앤코슈펩타이드볼륨에센스",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "은색병",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "펩타이트",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "프랑스세더마사보르피린",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미러랩",
-   "vol": 10,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "에스이에스유",
-   "vol": 10,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "피나틴트",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "아론새치염색약",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "닥터딥싱글세트",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "닥터딥한포진",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "닥터딥한관종",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "닥터딥모공각화증",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "편평사마귀율무가루",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "애드벳",
-   "vol": 10,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "레이디문",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "휘페",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": true
   }
  ]
 }
