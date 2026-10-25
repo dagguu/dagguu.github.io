@@ -1,871 +1,876 @@
 {
- "updated": "2026-10-25 18:58",
+ "updated": "2026-10-25 18:59",
  "hints": [
-  "종근당",
-  "에버그린초록입홍합",
-  "헬씨드",
-  "라우레타나",
-  "도모리초콜릿",
-  "메드비",
-  "블리닉",
-  "비엠에슬릿",
-  "글램피크",
-  "벨라블",
-  "소노시즌",
-  "닥터피엘",
-  "카멜마운트",
-  "퍼플래빗",
-  "벤딕트"
+  "홈젬",
+  "살림백서",
+  "노일리스킨",
+  "브리츠",
+  "탱이하우스",
+  "아이로베",
+  "VT코스메틱",
+  "BAS탈취제"
  ],
  "rows": [
   {
-   "kw": "닥터피엘",
-   "vol": 82500,
+   "kw": "알파문구",
+   "vol": 96000,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "종근당",
-   "vol": 50500,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "벤딕트",
-   "vol": 45600,
+   "kw": "블루투스이어폰",
+   "vol": 77800,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "카멜마운트",
-   "vol": 12250,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "종근당건강",
-   "vol": 11250,
+   "kw": "이어폰",
+   "vol": 72400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트윈침대",
-   "vol": 9230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "닥터피엘샤워기필터",
-   "vol": 8650,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "종근당비타민C",
-   "vol": 8150,
+   "kw": "무선이어폰",
+   "vol": 65200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "닥터피엘샤워기",
+   "kw": "QCY이어폰",
+   "vol": 18850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "바스탈취제",
+   "vol": 14470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "살림백서",
+   "vol": 12590,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "이어폰추천",
+   "vol": 10770,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "브리츠무선이어폰",
+   "vol": 9970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블라우풍트이어폰",
+   "vol": 9750,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "브리츠",
+   "vol": 9020,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "REVEAL",
+   "vol": 8550,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "VT코스메틱",
    "vol": 7530,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "브리츠스피커",
+   "vol": 7340,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "연세",
-   "vol": 5870,
+   "kw": "아이리버무선이어폰",
+   "vol": 6830,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "소노시즌",
-   "vol": 3910,
+   "kw": "클립형이어폰",
+   "vol": 6410,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마샬이어폰",
+   "vol": 5410,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "BAS탈취제",
+   "vol": 4720,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "CKD",
-   "vol": 3900,
+   "kw": "골전도보청기",
+   "vol": 3840,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "닥터피엘세면대필터",
-   "vol": 3850,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "종근당건강몰",
-   "vol": 3480,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "카멜모니터암",
-   "vol": 2790,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "종근당몰",
-   "vol": 2730,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "키즈텐042",
-   "vol": 2310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "닥터피엘필터",
-   "vol": 1860,
+   "kw": "BRITZ스피커",
+   "vol": 3810,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카멜마운트거치대",
-   "vol": 1460,
+   "kw": "BRITZ",
+   "vol": 3580,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "종근당비타민",
-   "vol": 1420,
+   "kw": "브리츠블루투스스피커",
+   "vol": 3210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "브리츠블루투스이어폰",
+   "vol": 3000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아이리버골전도이어폰",
+   "vol": 2660,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종근당멀티비타민",
-   "vol": 1390,
+   "kw": "브리츠CD플레이어",
+   "vol": 2420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카멜마운트모니터암",
-   "vol": 1380,
+   "kw": "삼성블루투스이어폰",
+   "vol": 2350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브리츠이어폰",
+   "vol": 2160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이리버이어폰",
+   "vol": 2010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인켈",
+   "vol": 1750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니스피커",
+   "vol": 1580,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "부부침대",
-   "vol": 1270,
+   "kw": "이어폰파는곳",
+   "vol": 1520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "G9",
+   "vol": 1410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "불루투스이어폰",
+   "vol": 1350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소니블루투스이어폰",
+   "vol": 1200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "JBL무선이어폰",
+   "vol": 1120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "종근당종합비타민",
+   "kw": "이어폰브랜드",
+   "vol": 1120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "JBL블루투스이어폰",
+   "vol": 1080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브리츠헤드폰",
+   "vol": 970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이어마이크",
    "vol": 900,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "소노시즌매트리스",
-   "vol": 890,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "닥터피엘아토샤워헤드",
-   "vol": 820,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "종근당스템벨",
-   "vol": 750,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "닥터피엘샤워기헤드",
-   "vol": 640,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "메드비",
+   "kw": "BRITZ블루투스스피커",
+   "vol": 880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이리버블루투스이어폰",
+   "vol": 870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BRITZ블루투스이어폰",
+   "vol": 830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤오미블루투스스피커",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "LG넥밴드이어폰",
+   "vol": 780,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아이폰무선이어폰",
+   "vol": 760,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "노일리스킨",
+   "vol": 710,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "인켈스피커",
+   "vol": 690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핸드폰이어폰",
+   "vol": 690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헤드마이크",
+   "vol": 680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캔스톤",
+   "vol": 630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이어셋",
+   "vol": 610,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마이크이어폰",
    "vol": 550,
    "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "연세키즈텐",
-   "vol": 520,
-   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "씨케이디",
+   "kw": "방수이어폰",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인이어마이크",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "QCY블루투스이어폰",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이어폰마이크",
    "vol": 470,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "종근당원데이21",
-   "vol": 430,
+   "kw": "이어폰종류",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자전거이어폰",
+   "vol": 420,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "글램피크",
+   "kw": "무선이어마이크",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤오미블루투스이어폰",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블리츠스피커",
    "vol": 410,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "스템벨",
-   "vol": 390,
+   "kw": "휴대폰이어폰",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핸즈프리이어폰",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "골전도이어폰샥즈",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라디오스피커",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무선이어폰QCY",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블루투스사운드바",
+   "vol": 330,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "종근당화장품",
-   "vol": 390,
+   "kw": "IRIVER이어폰",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인켈블루투스스피커",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "갤럭시블루투스이어폰",
+   "vol": 290,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "종근당영양제",
-   "vol": 390,
+   "kw": "무선이어셋",
+   "vol": 280,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "소노침대",
-   "vol": 380,
-   "comp": "중간",
+   "kw": "엘지블루투스이어폰",
+   "vol": 280,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베라베프",
+   "kw": "바스싱크대클리너",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "목걸이이어폰",
    "vol": 270,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "DR.PIEL",
+   "kw": "레트로블루투스스피커",
    "vol": 260,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퍼플래빗",
-   "vol": 250,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "소노시즌침대",
+   "kw": "바스탈취제공구",
    "vol": 250,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "나은이",
-   "vol": 240,
-   "comp": "낮음",
+   "kw": "라디오블루투스스피커",
+   "vol": 230,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "클리덤",
+   "kw": "통화용이어폰",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "씹어먹는비타민",
+   "kw": "유선골전도이어폰",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "도모리초콜릿",
+   "kw": "레트로스피커",
    "vol": 200,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "종근당공식몰",
-   "vol": 200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "연세헬스케어",
-   "vol": 170,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "종근당넥크림",
-   "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "닥터피엘샤워헤드",
-   "vol": 150,
+   "kw": "블루투스핸즈프리",
+   "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "닥터피엘와이드",
+   "kw": "통화용블루투스",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핸드셋",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이어셋마이크",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "통화이어폰",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트폰이어폰",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "핸드폰무선이어폰",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "LG넥밴드",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고음질유선이어폰",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PC블루투스이어폰",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종근당CKD",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "씹어먹는비타민C",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터피엘필터샤워기",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "PURESOME",
-   "vol": 130,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "닥터피엘아토샤워",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카멜마운트TV거치대",
-   "vol": 130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "스템벨가격",
+   "kw": "목걸이블루투스이어폰",
    "vol": 125,
-   "comp": "낮음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "카멜거치대",
+   "kw": "탱이하우스",
    "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "헬씨드",
-   "vol": 100,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "종근당멀티비타민미네랄",
+   "kw": "아이로베",
+   "vol": 120,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "희망사무포인트",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "골전도헤드폰",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "닥터피엘샤워필터",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종근당종근당건강",
+   "kw": "택배이어폰",
    "vol": 90,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "닥터피엘샤워기세트",
+   "kw": "뮤지컬마이크",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BAS차량용탈취제",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "컴퓨터유선이어폰",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "닥터피엘리필",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라우레타나",
+   "kw": "모노이어폰",
    "vol": 70,
    "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "씨케이디개런티드",
-   "vol": 70,
-   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종근당건강기능식품",
+   "kw": "차량용핸즈프리",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "귀걸이블루투스",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "씹어먹는영양제",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "젤리형영양제",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종근당건강화장품",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "종근당건강비타민",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "CKD목주름",
-   "vol": 55,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "박주미화장품",
-   "vol": 55,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "종근당크림",
-   "vol": 55,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "종근당건강스템벨",
-   "vol": 55,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "닥터피엘샤워기헤드필터",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "연세대학교연세생활건강",
-   "vol": 50,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "종근당괄사",
+   "kw": "핸드폰블루투스이어폰",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종근당쇼핑몰",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "종근당케어",
+   "kw": "공연용마이크",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "씹어먹는종합비타민",
+   "kw": "바스탈취제미니",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "멀티비타민종근당",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카멜고중량모니터암",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "저자극샤워기",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바르는보스웰리아",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블리닉",
-   "vol": 45,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "닥터피엘2차필터",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터피엘샤워기와이드",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터피엘G1/2",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종근당선물세트",
+   "kw": "고성능이어폰",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "벨라블",
-   "vol": 35,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "GLAMPEAK",
-   "vol": 35,
-   "comp": "중간",
+   "kw": "강의용헤드셋마이크",
+   "vol": 40,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "샤워기닥터피엘",
+   "kw": "한쪽블루투스이어폰",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "CKD개런티드",
-   "vol": 30,
+   "kw": "하이파이헤드폰",
+   "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종근당건강공식몰",
-   "vol": 30,
+   "kw": "바스탈취제핑크",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "바스탈취",
+   "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "나은이샤워기",
-   "vol": 30,
+   "kw": "바스섬유탈취제",
+   "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종근당건강식품",
+   "kw": "애프터샥골전도",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "바스배수구클리너",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "데일리베스트종합비타민",
+   "kw": "BAS탈취제공구",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "BAS세탁조클리너",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "구미콜라겐",
-   "vol": 25,
+   "kw": "공연무선마이크",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "PPC오일",
-   "vol": 25,
+   "kw": "무선이어셋마이크",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "셀룰라이트바디오일",
-   "vol": 25,
+   "kw": "슈어이어마이크",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "비엠에슬릿",
-   "vol": 25,
-   "comp": "낮음",
+   "kw": "업무용블루투스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블루투스통화용이어폰",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "통화전용이어폰",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BAS섬유탈취제",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바스변기세정제",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바스건조기시트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BAS에어컨탈취제",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BAS싱크대클리너",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BAS변기세정제",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BAS바스탈취제",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈젬",
+   "vol": 10,
+   "comp": "중간",
    "hint": true
   },
   {
-   "kw": "글램피크매트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터피엘세트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카멜티비거치대",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아토샤워기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종근당괄사크림",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "CKD화장품",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종근당뷰티",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "CKD종근당",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종근당공식",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "종근당슈퍼비전멀티비타민",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스템벨앰플",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "종근당줄기세포화장품",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "나은이필터",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "네고왕샤워기",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "샤워기헤드닥터피엘",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터피엘라이브",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터피엘염소필터",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터피엘2중필터샤워기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카멜마운트고중량모니터암",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카멜마운트TV스탠드",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "카멜티비스탠드",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카멜TV스탠드",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에버그린초록입홍합",
-   "vol": 10,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "연세헬씨드",
+   "kw": "구매24",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "CKD몰",
+   "kw": "삭즈이어폰",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "안드로이드무선이어폰",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종근당온라인",
+   "kw": "방수블루투스",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종근당세일",
+   "kw": "운동MP3",
    "vol": 10,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "종근당이벤트",
+   "kw": "퍼플메이트",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "종근당할인",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종근당케어몰",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "종근당선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종근당슈퍼비전",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종근당슈퍼비젼",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영양제간식",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "네고왕닥터피엘",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "닥터피엘네고왕",
+   "kw": "퍼플사운드",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "네고왕필터샤워기",
+   "kw": "BAS탈취제핑크",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "필터샤워기네고왕",
+   "kw": "바스초강력탈취제",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "네고왕샤워필터",
+   "kw": "BAS초강력탈취제",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "카멜이동식거치대",
+   "kw": "BAS배수구클리너",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BAS탈취제미니",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바스탈취제고체",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바스탈취제오렌지",
    "vol": 10,
    "comp": "높음",
    "hint": false
