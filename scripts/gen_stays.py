@@ -38,6 +38,8 @@ header .app{font-size:13px;font-weight:700;color:#6a3fc8;border:1px solid #e3dbf
 .camp .more{display:block;text-align:center;margin-top:12px;padding:12px;border-radius:12px;background:#6a3fc8;color:#fff;font-weight:800;font-size:14px}
 .more2{margin-top:34px}.more2 h2{font-size:18px;margin:0 0 10px}.ml{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px}.ml a{flex:none;width:150px}.ml img{width:150px;height:150px;border-radius:14px;object-fit:cover;display:block;background:#f4f4f7}.ml b{display:block;font-size:13.5px;line-height:1.4;margin-top:7px}.ml small{font-size:12px;color:#8a8994}
 .bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #eee;padding:10px 16px calc(10px + env(safe-area-inset-bottom));z-index:40}.bar a{display:block;max-width:608px;margin:0 auto;text-align:center;padding:15px;border-radius:14px;background:#6a3fc8;color:#fff;font-weight:800;font-size:15.5px}.bar a::after{content:" ↗"}
+.mine{margin-top:22px;padding:16px 16px 14px;border-radius:16px}.mine b{display:block;font-size:15.5px;margin-bottom:4px}.mine p{margin:0 0 12px;font-size:13.5px;line-height:1.6;color:#4d4c5a}.mine small{color:#8a8994}
+.mine a{display:block;text-align:center;padding:13px;border-radius:12px;font-weight:800;font-size:14.5px}.mine.on{background:#f4f0ff}.mine.on a{background:#6a3fc8;color:#fff}.mine.off{background:#fff8d6}.mine.off a{background:#fee500;color:#191600}
 .note{font-size:12px;color:#8a8994;line-height:1.6;margin:14px 0 0}
 footer{margin-top:40px;font-size:12px;color:#8a8994;line-height:1.7;text-align:center}footer a{color:#6a3fc8;font-weight:700}
 .lst{display:flex;flex-direction:column;gap:12px;margin-top:18px}.lc{display:flex;gap:12px;align-items:center;border:1px solid #ececf2;border-radius:16px;padding:10px}.lc img{width:84px;height:84px;border-radius:12px;object-fit:cover;flex:none;background:#f4f4f7}.lc b{display:block;font-size:15px;line-height:1.4;margin-bottom:4px}.lc small{font-size:12.5px;color:#6b6a7a;line-height:1.5}.lc em{display:inline-block;font-style:normal;font-size:11px;font-weight:800;color:#6a3fc8;background:#f4f0ff;border-radius:6px;padding:2px 6px;margin-bottom:5px}
@@ -67,6 +69,20 @@ def open_stays(region, n=5):
     rest = [it for it in L if it not in same]
     same.sort(key=lambda it: -worth(it)); rest.sort(key=lambda it: -worth(it))
     return (same + rest)[:n]
+
+KAKAO = (d.get("kakao") or "http://pf.kakao.com/_xkqEFX/friend")
+def stay_camp(P):
+    """이 숙소의 체험단(2026-10-25 시온님): 모집 중이면 신청 정보로, 끝났으면 카카오 채널 알림받기."""
+    pid = str(P.get("pid") or "")
+    L = [it for it in d.get("items", []) if it.get("cat") == "stay" and ((pid and str(it.get("coupangPid") or "") == pid) or it.get("id") == P.get("camp"))]
+    if not L: return ""
+    op = sorted([it for it in L if str(it.get("end") or "") >= TODAY and not it.get("closed")], key=lambda it: it["end"])
+    if op:
+        it = op[0]; m, dd = int(it["end"][5:7]), int(it["end"][8:10])
+        return (f'<section class="mine on"><b>✨ 이 숙소 체험단 모집 중이에요</b><p>{e((it.get("benefit") or "")[:60])}<br><small>{m}월 {dd}일까지 · {e(it.get("source") or "")}</small></p>'
+                f'<a href="/s/{e(it["id"])}.html" id="campgo">체험단 자세히 보기 ›</a></section>')
+    return ('<section class="mine off"><b>이 숙소 체험단은 모집이 끝났어요</b><p>다꾸체험단 카카오톡 채널을 추가하면 새 숙박 체험단 소식을 받아 볼 수 있어요.</p>'
+            f'<a href="{e(KAKAO)}" target="_blank" rel="noopener noreferrer" id="kakaogo">🔔 알림받기 (카카오톡 채널 추가)</a></section>')
 
 def head(title, desc, canon, img):
     return f'''<!doctype html>
@@ -112,6 +128,7 @@ def build(P, allP):
     out = head(title, desc, canon, cov["src"]) + f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script></head><body><div class="w">{TOP}' + f'''
 <section class="cov"><img src="{e(cov["src"])}" alt="{e(P["name"])}" referrerpolicy="no-referrer"><div class="tx"><small>{e(THEME.get(P.get("theme"), "감성숙소 추천"))} · {e(P["area"])}</small><h1>{e(P["h1"][0])}<br>{e(P["h1"][1])}</h1><p>{e(P["name"])}</p></div></section>
 <p class="lead">{e(P["lead"])}</p>
+{stay_camp(P)}
 <div class="pts">{pts}</div>
 <section class="gal"><h2>공간 둘러보기</h2>{gal}<p class="src">사진: 쿠팡트래블 숙소 정보</p></section>
 <section class="sec"><h2>기본 정보</h2><table class="inf">{inf}</table></section>
@@ -123,7 +140,7 @@ def build(P, allP):
 {more}
 <footer>다꾸체험단 · 국내 감성숙소 추천 매거진<br><a href="/m/">감성숙소 추천 전체 보기</a> · <a href="/">www.dagguu.com</a></footer>
 </div>{bar}
-<script>document.addEventListener("click",function(ev){{if(ev.target.closest("#go")&&window.gtag)gtag("event","coupang_click",{{place:"stay_mag",item_name:{json.dumps(P["name"], ensure_ascii=False)}}});}});</script>
+<script>document.addEventListener("click",function(ev){{if(!window.gtag)return;var nm={json.dumps(P["name"], ensure_ascii=False)};if(ev.target.closest("#go"))gtag("event","coupang_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#kakaogo"))gtag("event","kakao_add",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#campgo"))gtag("event","camp_click",{{place:"stay_mag",item_name:nm}});}});</script>
 </body></html>
 '''
     open(os.path.join(ROOT, "m", slug + ".html"), "w", encoding="utf-8").write(out)

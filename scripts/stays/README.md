@@ -4,7 +4,13 @@
 같은 숙소를 그날 @dagguu.vlog 스레드 초안과 인스타 카드뉴스(정보성: 인기·신기한 숙소)에도 쓴다.
 
 ## 숙소 고르기
-- 후보는 시온님이 보내 준 목록 scripts/stay_list.json [{name, area(알면), note, slug(쓰면 채움), done(날짜)}] 에서 위에서부터 done 이 없는 것.
+- 후보는 시온님이 보내 준 목록 scripts/stay_list.json [{name, area, addr, note, slug, done}] 중 kind 가 없는(국내 숙소) 것·done 이 없는 것.
+  순서(2026-10-25 시온님 "순서는 랜덤, 체험단 모집중인 숙소가 있다면 그 숙소를 먼저"): python3 scripts/pick_stay.py 가 고른다 —
+  ① data.json 에 지금 모집 중인 숙박 체험단과 이름이 맞는 숙소(마감 가까운 순, 오늘 마감은 뒤로; 출력의 pid = 그 체험단 coupangPid 라 쿠팡트래블 검색 없이 바로 씀) → ② 나머지는 무작위.
+  1번 후보가 쿠팡트래블에 없으면 done:"쿠팡에 없음" 적고 다음 후보.
+  kind "overseas"(해외)·"ticket"(입장권)·"skip"(유스호스텔·게스트하우스)는 글로 쓰지 않는다.
+- 글 json 의 pid 는 그 숙소 쿠팡트래블 상품번호. gen_stays.py 가 data.json 숙박 체험단 중 같은 coupangPid 를 찾아 글 위쪽(lead 아래)에
+  모집 중이면 "✨ 이 숙소 체험단 모집 중이에요"(→ /s/<id>.html), 모집이 끝났으면 "🔔 알림받기 (카카오톡 채널 추가)"(data.json kakao 친구추가 주소) 상자를 자동으로 붙인다(2026-10-25 시온님). 체험단이 없던 숙소엔 안 붙는다.
   (출처 계정의 사진·글은 쓰지 않는다. 숙소 이름만 후보로 쓰고, 사진·사실은 쿠팡트래블에서.)
 - 쿠팡트래블에 있는 숙소만: 이름 + 시·군이 둘 다 맞는 상품(trip.coupang.com/tp/products/{id}). 없거나 애매하면 done:"쿠팡에 없음" 으로 적고 다음 후보.
   쿠팡트래블 검색은 숨은 iframe 으로 하루 5곳 이내, 검색 사이 2~4초(차단 막기, CLAUDE.md 참고).
