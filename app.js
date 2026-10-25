@@ -148,7 +148,7 @@ var I={
 
 /* ---------- 셸 ---------- */
 var app=document.getElementById("app");
-var TABS=[["home","홈",I.home],["map","지도",I.map],["list","체험단",I.ticket],["shop","공구",I.bag],["deals","특가",I.gift]];
+var TABS=[["home","홈",I.home],["list","체험단",I.ticket],["map","지도",I.map],["shop","공구",I.bag],["deals","특가",I.gift]];
 /* 사이트 둘로 나누기(2026-10-21 시온님): www.dagguu.com = 다꾸체험단(정보만, 로그인·결제 없음) / partners.dagguu.com = 다이어리뷰(회원·기자단·광고주·수익화 클래스).
    두 사이트가 같은 app.js 를 쓰고, partners 의 index.html 이 window.DK_MODE="partners" 를 켠다. 한쪽에 없는 화면 주소로 들어오면 다른 사이트로 넘긴다. */
 var PART_LIVE=true; /* partners.dagguu.com 이 열리면 true 로 바꾼다(그 전엔 www 에서 로그인·교육·광고주가 그대로 동작) */
@@ -173,7 +173,7 @@ function shell(){
     '</div>'+
     '<button class="totop" id="totop" aria-label="맨 위로" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 14l6-6 6 6"/></svg><span>TOP</span></button>'+
     '<div class="kchat" id="kakao-talk-channel-chat-button" data-channel-public-id="_xkqEFX" data-title="consult" data-size="small" data-color="yellow" data-shape="mobile" data-support-multiple-densities="true"></div>'+
-    '<nav class="tabbar" aria-label="하단 메뉴">'+TABS.map(function(t){ var c=!PMODE&&t[0]==="list"; return '<a href="#/'+(t[0]==="home"?"":t[0])+'" data-tab="'+t[0]+'"'+(c?' class="tc"':'')+'>'+(c?'<span class="tcb">'+ico(t[2],"ti")+'</span>':'<span class="tib">'+ico(t[2],"ti")+'</span>')+'<span>'+t[1]+'</span></a>'; }).join("")+'</nav>';
+    '<nav class="tabbar" aria-label="하단 메뉴">'+TABS.map(function(t){ var c=!PMODE&&t[0]==="map"; return '<a href="#/'+(t[0]==="home"?"":t[0])+'" data-tab="'+t[0]+'"'+(c?' class="tc"':'')+'>'+(c?'<span class="tcb">'+ico(t[2],"ti")+'</span>':'<span class="tib">'+ico(t[2],"ti")+'</span>')+'<span>'+t[1]+'</span></a>'; }).join("")+'</nav>';
   app.addEventListener("click",onClick);
   app.addEventListener("submit",function(e){ if(e.target.id==="cform"){ e.preventDefault(); submitContact(e.target); } if(e.target.id==="eduform"){ e.preventDefault(); submitEdu(e.target); } });
   app.addEventListener("input",function(e){ if(e.target.dataset&&e.target.dataset.etc){ var r=e.target.parentNode.querySelector("input[type=radio]"); if(r) r.checked=true; } if(e.target.id==="q"){ state.q=e.target.value; renderListGrid(); } });
