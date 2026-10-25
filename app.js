@@ -925,7 +925,9 @@ function shopView(){
   if(!L.length) h+='<div class="empty shopempty sm"><b>곧 공구가 열려요</b><span>카카오톡 채널을 추가하면 공구 오픈 소식을 받아볼 수 있어요</span><a class="btn" '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>카카오톡 채널 추가</a></div>';
   else { var BS={}; L.forEach(function(x){ if(x.bundle&&x.seller) BS[x.seller]=(BS[x.seller]||0)+1; });
     Object.keys(BS).forEach(function(k){ if(BS[k]>1) h+='<div class="shopbundle">🚚 <b>'+esc(k)+'</b> 상품끼리는 <b>합배송</b>돼요</div>'; });
-    h+='<section class="sec tossec shopsec"><div class="tgrid">'+L.map(function(x){ return tossCard({name:(x.soldOut?"[품절] ":"")+x.name,img:x.img,u:x.u,price:x.price,orig:x.orig,rate:x.rate,ship:x.ship,badge:"다꾸 공구",endAt:x.until?x.until+"T23:59:59+09:00":""}); }).join("")+'</div><p class="prnote">공구 상품은 스타일셀러에서 결제하고, 판매·배송·교환은 각 판매처('+esc(L.map(function(x){return x.seller||"";}).filter(function(v,i,a){return v&&a.indexOf(v)===i;}).join("·")||"판매처")+')가 맡아요. 다꾸는 판매 수익의 일부를 받아요.</p></section>'; }
+    h+='<section class="sec tossec shopsec"><div class="tgrid">'+L.map(function(x){ var c=tossCard({name:(x.soldOut?"[품절] ":"")+x.name,img:x.img,u:x.u,price:x.price,orig:x.orig,rate:x.rate,ship:x.ship,badge:"다꾸 공구",endAt:x.until?x.until+"T23:59:59+09:00":""});
+      /* 같은 상품이 쿠팡에도 있으면 아래에 쿠팡 가기 버튼(2026-10-25 시온님) — 구성·가격을 같이 적어 비교할 수 있게, "더 싸요" 문구 없음 */
+      return x.cp&&safeUrl(x.cp.u)?'<div class="gcard">'+c+'<a class="gcp" data-gcp '+ext(safeUrl(x.cp.u))+'>'+esc(x.cp.t||"쿠팡에서 보기")+' ↗</a></div>':c; }).join("")+'</div><p class="prnote">공구 상품은 판매 페이지에서 결제하고, 판매·배송·교환은 각 판매처('+esc(L.map(function(x){return x.seller||"";}).filter(function(v,i,a){return v&&a.indexOf(v)===i;}).join("·")||"판매처")+')가 맡아요. 다꾸는 판매 수익의 일부를 받아요.</p></section>'; }
   /* 공구 상품과 비슷한 쿠팡 상품(2026-10-25 시온님 "비슷한 상품은 쿠팡으로 연결") — 같은 상품이 아니라 '비슷한 상품'으로만 보여 주고 가격 비교 문구는 쓰지 않는다 */
   L.forEach(function(x){ var S=(x.sim||[]).filter(function(y){ return safeUrl(y.u); }); if(S.length<2) return;
     h+='<section class="sec tossec shopsim" data-gsim="'+esc(x.simT||"")+'"><div class="hsh"><h2>\''+esc(x.simT||x.name)+'\' 비슷한 상품 더 보기</h2></div><p class="pgsub">쿠팡에서 판매 중인 비슷한 상품이에요 (공구 상품과 같은 상품은 아니에요)</p><div class="tgrid">'+S.slice(0,4).map(function(y){ return tossCard({name:y.name,img:y.img,u:y.u,price:y.price,rocket:y.rocket}); }).join("")+'</div></section>'; });
@@ -2640,3 +2642,5 @@ fetch(BASE+"data.json?v="+Date.now().toString(36).slice(0,-3),{cache:"no-cache"}
 document.addEventListener("click",function(e){ var a=e.target.closest&&e.target.closest("[data-mapmag]"); if(a&&window.gtag) try{ gtag("event","map_mag",{slug:a.getAttribute("data-mapmag")}); }catch(x){} });
 
 document.addEventListener("click",function(e){ var a=e.target.closest&&e.target.closest("[data-gsim] a"); if(a&&window.gtag) try{ gtag("event","deal_click",{section:"gonggu_sim"}); }catch(x){} });
+
+document.addEventListener("click",function(e){ var a=e.target.closest&&e.target.closest("[data-gcp]"); if(a&&window.gtag) try{ gtag("event","coupang_click",{place:"gonggu_same"}); }catch(x){} });
