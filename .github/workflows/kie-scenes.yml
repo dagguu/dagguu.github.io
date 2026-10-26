@@ -5,6 +5,7 @@ on:
       name: { description: "scripts/tts/<name>.json", default: "daytona" }
       only: { description: "이 장면 이미지만 (예: ai:1,p:2) — 비우면 전부", default: "" }
       tier: { description: "input.model", default: "veo3_lite" }
+      fetch: { description: "1 = 지난 작업 결과만 다시 받기(크레딧 안 씀)", default: "" }
 permissions: { contents: write }
 concurrency: { group: kie-video, cancel-in-progress: false }
 jobs:
@@ -18,7 +19,7 @@ jobs:
         with: { python-version: "3.12" }
       - env:
           KIE_API_KEY: ${{ secrets.KIE_API_KEY }}
-        run: git fetch -q origin insta && python scripts/kie_scenes.py --name "${{ inputs.name }}" --only "${{ inputs.only }}" --tier "${{ inputs.tier }}"
+        run: git fetch -q origin insta && python scripts/kie_scenes.py --name "${{ inputs.name }}" --only "${{ inputs.only }}" --tier "${{ inputs.tier }}" --fetch "${{ inputs.fetch }}"
       - run: |
           git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
           git add scripts/kie_scenes_status.json && git commit -qm "장면 영상 상태" || true

@@ -3,7 +3,7 @@
 #   "p:N" = 감성숙소 json 사진 N. 프롬프트: 장면 vp → kie_prompts/<stay>.json 의 prompt(n) → 사진 설명.
 # 결과 kie_out/<imgDate>/<stay>/clip_<kind><N>.mp4 (워크플로가 insta 브랜치 video/ 로) — reel_make.py 가 있으면 사진 대신 이 영상을 씀.
 import json, os, sys, time, glob, datetime, urllib.request, urllib.error, argparse, subprocess
-ap = argparse.ArgumentParser(); ap.add_argument("--name", default="daytona"); ap.add_argument("--only", default=""); ap.add_argument("--tier", default="veo3_lite")
+ap = argparse.ArgumentParser(); ap.add_argument("--name", default="daytona"); ap.add_argument("--only", default=""); ap.add_argument("--tier", default="veo3_lite"); ap.add_argument("--fetch", default="")  # 1 = 지난 상태 파일의 작업만 다시 받기(크레딧 안 씀)
 a = ap.parse_args()
 KEY = os.environ.get("KIE_API_KEY", "").strip(); API = "https://api.kie.ai/api/v1/jobs"
 st = {"at": datetime.datetime.utcnow().isoformat(), "name": a.name, "jobs": []}
@@ -20,13 +20,24 @@ def call(url, body=None):
           headers={"Authorization": "Bearer " + KEY, "Content-Type": "application/json"}, method="POST" if body is not None else "GET")
     try: return json.load(urllib.request.urlopen(req, timeout=60))
     except urllib.error.HTTPError as e: return {"code": e.code, "msg": e.read().decode("utf-8", "ignore")[:300]}
+def walk(o):
+    if isinstance(o, str):
+        t = o.strip()
+        if t[:1] in "{[":
+            try: return walk(json.loads(t))
+            except Exception: return []
+        return [t] if t.startswith("http") and (".mp4" in t.lower() or "video" in t.lower()) and not t.lower().endswith((".jpg", ".jpeg", ".png", ".webp")) else []
+    if isinstance(o, dict): return [u for v in o.values() for u in walk(v)]
+    if isinstance(o, list): return [u for v in o for u in walk(v)]
+    return []
 def urls_in(d):
-    rj = d.get("resultJson")
-    if isinstance(rj, str):
-        try: rj = json.loads(rj)
-        except Exception: rj = {}
-    return [u for u in ((rj or {}).get("resultUrls") or []) if isinstance(u, str)]
+    # 입력(param·paramJson)에 든 사진 주소는 빼고 결과(resultJson·response 등)에서만 영상 주소를 찾음
+    return walk({k: v for k, v in d.items() if k not in ("param", "paramJson", "input")})
 only = {x.strip() for x in a.only.split(",") if x.strip()}
+if a.fetch == "1":
+    old = json.load(open("scripts/kie_scenes_status.json", encoding="utf-8"))
+    st["jobs"] = [{"img": j["img"], "taskId": j["taskId"], "state": "submitted"} for j in old["jobs"] if j.get("taskId")]
+    J["scenes"] = []
 seen = []
 for s in J["scenes"]:
     if s["img"] in seen or (only and s["img"] not in only): continue
@@ -52,7 +63,7 @@ while time.time() < end and any(j["state"] not in ("success", "fail", "error") f
         if j["state"] == "fail": j["msg"] = str(d.get("failMsg"))[:300]
         if j["state"] == "success":
             u = (urls_in(d) or [None])[0]
-            if not u: j["state"] = "fail"; j["msg"] = "결과 주소 없음"; continue
+            if not u: j["state"] = "fail"; j["msg"] = "결과 주소 없음"; j["keys"] = {k: (str(v)[:200] if k not in ("param", "paramJson") else "") for k, v in d.items()}; continue
             os.makedirs(f"kie_out/{day}/{stay}", exist_ok=True); k, n = j["img"].split(":")
             open(f"kie_out/{day}/{stay}/clip_{k}{n}.mp4", "wb").write(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=180).read())
             j["file"] = f"video/{day}/{stay}/clip_{k}{n}.mp4"
