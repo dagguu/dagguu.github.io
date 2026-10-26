@@ -1,0 +1,18 @@
+{
+ "at": "2026-10-26 09:59",
+ "tier": "veo3_lite",
+ "res": "1080p",
+ "dur": 4,
+ "jobs": [
+  {
+   "n": 1,
+   "cap": "통창 너머로 떠오르는 해",
+   "taskId": null,
+   "state": "error",
+   "msg": "Unauthorized – Authentication failed. Please check that your Authorization and Content-Type headers are correctly set."
+  }
+ ],
+ "slug": "pohang-daytona",
+ "name": "데이토나풀빌라",
+ "credits_total": 0
+}
