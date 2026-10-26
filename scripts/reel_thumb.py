@@ -16,8 +16,9 @@ im = ImageEnhance.Brightness(im).enhance(1.04)
 sh = Image.new("L", (W, H), 0); d = ImageDraw.Draw(sh)
 for y in range(0, 900): d.line([(0, y), (W, y)], fill=int(120 * max(0, 1 - y / 900) ** 1.3))
 im = Image.composite(Image.new("RGB", (W, H), (0, 0, 0)), im, sh)
-FP = next((p for p in ("/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc", "/usr/share/fonts/noto-cjk/NotoSansCJK-Black.ttc") if os.path.exists(p)))
-def font(sz): return ImageFont.truetype(FP, sz, index=1)  # 1 = KR
+JF = os.environ.get("REEL_FONT") or (os.path.expanduser("~/.fonts/Jalnan.ttf") if os.path.exists(os.path.expanduser("~/.fonts/Jalnan.ttf")) else "")
+FP = JF or next((p for p in ("/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc", "/usr/share/fonts/noto-cjk/NotoSansCJK-Black.ttc") if os.path.exists(p)))
+def font(sz): return ImageFont.truetype(FP, sz) if JF else ImageFont.truetype(FP, sz, index=1)  # 잘난체 / Noto(1 = KR)
 def fit(t, sz, maxw=980):
     while sz > 60 and font(sz).getlength(t) > maxw: sz -= 4
     return font(sz)
@@ -28,6 +29,8 @@ for (t, f, y, col) in ((l1, f1, y1, (255, 255, 255)), (l2, f2, y2, (255, 222, 40
     x = (W - f.getlength(t)) / 2
     dl.text((x + 6, y + 8), t, font=f, fill=(0, 0, 0, 150))
     dl.text((x, y), t, font=f, fill=col, stroke_width=7, stroke_fill=(20, 20, 20))
+SK = 0.2  # 기울임꼴 (2026-10-26 시온님): 글씨 층을 오른쪽으로 기울임
+cy = (y1 + y2 + f2.size) / 2; layer = layer.transform((W, H), Image.AFFINE, (1, SK, -SK * cy, 0, 1, 0), resample=Image.BICUBIC)
 shadow = layer.split()[3].filter(ImageFilter.GaussianBlur(10))
 im = Image.composite(Image.new("RGB", (W, H), (0, 0, 0)), im, shadow.point(lambda v: int(v * 0.35)))
 im.paste(layer, (0, 0), layer); im.save(out, quality=94)
