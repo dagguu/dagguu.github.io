@@ -32,9 +32,12 @@ if not P:
     status["error"] = "숙소 글 없음: " + slug; save(); sys.exit(0)
 status["slug"] = slug; status["name"] = P["name"]
 pf = f"scripts/kie_prompts/{slug}.json"
-prompts = {x["n"]: x["prompt"] for x in json.load(open(pf, encoding="utf-8"))} if os.path.exists(pf) else {}
+PL = json.load(open(pf, encoding="utf-8")) if os.path.exists(pf) else []
+prompts = {x["n"]: x["prompt"] for x in PL}
+people = {x["n"] for x in PL if x.get("people")}
 photos = P.get("photos", [])
 nums = [int(x) for x in a.only.split(",") if x.strip()] if a.only else list(range(1, len(photos) + 1))[: a.count]
+TAIL_P = " Only one person, back view only, face not visible. Keep the original architecture, rooms and layout exactly unchanged. Smooth cinematic camera motion, natural light."
 TAIL = " No people. Keep the original architecture, rooms and layout exactly unchanged. Smooth cinematic camera motion, natural light."
 def call(url, body=None):
     req = urllib.request.Request(url, data=json.dumps(body).encode() if body is not None else None,
@@ -64,7 +67,7 @@ if a.task:
 for n in nums:
     if n < 1 or n > len(photos): continue
     ph = photos[n - 1]
-    pr = (prompts.get(n) or ("Slow push-in camera move. " + ph.get("cap", ""))) + TAIL
+    pr = (prompts.get(n) or ("Slow push-in camera move. " + ph.get("cap", ""))) + (TAIL_P if n in people else TAIL)
     body = {"model": "veo-3-1", "input": {"prompt": pr, "image_urls": [ph["src"]], "aspect_ratio": "9:16",
             "resolution": a.res, "duration": a.dur, "generation_type": "FIRST_AND_LAST_FRAMES_2_VIDEO",
             "model": a.tier, "enable_translation": True}}
