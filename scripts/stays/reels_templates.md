@@ -81,3 +81,15 @@ json 의 type·theme·points·fit·tags 글자로 판단, 여러 개면 시온�
 - 자막: 크게(104px)·화면 가운데, 2단어 또는 9글자 안팎씩. 강조 단어 주황.
 - 제목: 영상에는 넣지 않는다(2026-10-26 22:24 시온님). 대신 썸네일(표지 1080x1920)을 만든다 — scripts/tts/<name>.json "title":[윗줄, 아랫줄]·"thumb":{img(기본 첫 풍경 장면), sec} → reel_make 가 scripts/reel_thumb.py 로 reels/<name>/thumb.jpg. 글씨는 가운데 3:4(프로필 격자)에 들어오게 위쪽 y 360 부근.
 
+## 장면 순서·카메라 움직임 (2026-10-26 22:33 시온님 "영상 만들 때 자연스러운 순서")
+대본도 이 순서로 쓴다(대본 문장 = 장면 사진).
+1. 외관 — 천천히 앞으로 전진하는 드론샷 (slow push-in / push forward)
+2. 야외 수영장 또는 바다 — 카메라 왼쪽 → 오른쪽 (slider / truck right)
+3. 거실 — 앞으로 전진 (push forward)
+4. 침실 — 카메라 왼쪽 → 오른쪽 (slider)
+5. 자쿠지 — 전진 + 자연스러운 물결 일렁임
+6. 오션뷰 — 창밖으로 전진 (push forward through the window / fly through)
+- 쓸 수 있는 컷 종류: 드론 전경 · 건물 정면 · 외관 디테일 · 드론 · 실내 오션뷰 · 실내 분위기(내부 공간) · 외부 공간 · 탑뷰
+- 영상 프롬프트 카메라 말: overhead shot(탑뷰) · slow push-in · pull-out · half orbit · gimbal moves · push forward · crane shot · fly through · slider · pull back
+- 숙소에 없는 공간(자쿠지·야외 수영장 등)은 건너뛰고 다음 순서로. 사람 장면(20%)은 이 순서 안 거실·침실·자쿠지 중 한두 곳에만.
+
