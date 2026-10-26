@@ -1,0 +1,85 @@
+# kie.ai Veo 3.1 (Lite) 로 감성숙소 사진 → 세로 짧은 영상 (2026-10-26 시온님 요청).
+# 시온님 설정: image to video · Veo3 Lite · 9:16 · 1080p · 4초 (35크레딧/개).
+# 키: Secrets KIE_API_KEY (시온님이 직접 넣음, Claude 는 보지 않음).
+# 프롬프트: scripts/kie_prompts/<slug>.json [{"n":1,"prompt":"..."}] (19:44 인스타 작업이 씀). 없으면 사진 설명으로 기본 프롬프트.
+# 사람을 만들어 넣는 프롬프트는 쓰지 않는다(실제 다녀온 영상처럼 오인 — CLAUDE.md).
+# 결과: kie_out/<date>/<slug>/<n>.mp4 (워크플로가 insta 브랜치 video/ 로 올림) + scripts/kie_status.json(크레딧·상태, 키·주소 없음)
+import json, os, sys, time, glob, datetime, urllib.request, urllib.error, argparse
+KST = datetime.timezone(datetime.timedelta(hours=9))
+TODAY = datetime.datetime.now(KST).strftime("%Y-%m-%d")
+ap = argparse.ArgumentParser()
+ap.add_argument("--slug", default="")
+ap.add_argument("--count", type=int, default=1)
+ap.add_argument("--tier", default="veo3_lite")
+ap.add_argument("--res", default="1080p")
+ap.add_argument("--dur", type=int, default=4)
+ap.add_argument("--only", default="")  # 사진 번호 "1,3,5"
+a = ap.parse_args()
+KEY = os.environ.get("KIE_API_KEY", "").strip()
+API = "https://api.kie.ai/api/v1/jobs"
+status = {"at": datetime.datetime.now(KST).strftime("%Y-%m-%d %H:%M"), "tier": a.tier, "res": a.res, "dur": a.dur, "jobs": []}
+def save():
+    json.dump(status, open("scripts/kie_status.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+if not KEY:
+    status["error"] = "KIE_API_KEY 없음 (저장소 Settings → Secrets → Actions 에 넣어 주세요)"; save(); print(status["error"]); sys.exit(0)
+stays = {}
+for f in glob.glob("scripts/stays/*.json"):
+    d = json.load(open(f, encoding="utf-8")); stays[d["slug"]] = d
+slug = a.slug or next((s for s, d in sorted(stays.items(), key=lambda x: x[1].get("date", "")) [::-1] if d.get("date", "") <= TODAY), "")
+P = stays.get(slug)
+if not P:
+    status["error"] = "숙소 글 없음: " + slug; save(); sys.exit(0)
+status["slug"] = slug; status["name"] = P["name"]
+pf = f"scripts/kie_prompts/{slug}.json"
+prompts = {x["n"]: x["prompt"] for x in json.load(open(pf, encoding="utf-8"))} if os.path.exists(pf) else {}
+photos = P.get("photos", [])
+nums = [int(x) for x in a.only.split(",") if x.strip()] if a.only else list(range(1, len(photos) + 1))[: a.count]
+TAIL = " No people. Keep the original architecture, rooms and layout exactly unchanged. Smooth cinematic camera motion, natural light."
+def call(url, body=None):
+    req = urllib.request.Request(url, data=json.dumps(body).encode() if body is not None else None,
+                                 headers={"Authorization": "Bearer " + KEY, "Content-Type": "application/json"},
+                                 method="POST" if body is not None else "GET")
+    try:
+        return json.load(urllib.request.urlopen(req, timeout=60))
+    except urllib.error.HTTPError as e:
+        return {"code": e.code, "msg": e.read().decode("utf-8", "ignore")[:300]}
+jobs = []
+for n in nums:
+    if n < 1 or n > len(photos): continue
+    ph = photos[n - 1]
+    pr = (prompts.get(n) or ("Slow push-in camera move. " + ph.get("cap", ""))) + TAIL
+    body = {"model": "veo-3-1", "input": {"prompt": pr, "image_urls": [ph["src"]], "aspect_ratio": "9:16",
+            "resolution": a.res, "duration": a.dur, "generation_type": "FIRST_AND_LAST_FRAMES_2_VIDEO",
+            "model": a.tier, "enable_translation": True}}
+    r = call(API + "/createTask", body)
+    tid = (r.get("data") or {}).get("taskId") if isinstance(r.get("data"), dict) else None
+    j = {"n": n, "cap": ph.get("cap", ""), "taskId": tid, "state": "submitted" if tid else "error"}
+    if not tid: j["msg"] = str(r.get("msg") or r)[:300]
+    jobs.append(j); status["jobs"].append(j); save()
+    time.sleep(1)
+deadline = time.time() + 20 * 60
+while time.time() < deadline and any(j["state"] not in ("success", "fail", "error") for j in jobs):
+    time.sleep(15)
+    for j in jobs:
+        if j["state"] in ("success", "fail", "error"): continue
+        r = call(f"{API}/recordInfo?taskId={j['taskId']}")
+        d = r.get("data") or {}
+        j["state"] = d.get("state", j["state"])
+        if d.get("creditsConsumed") is not None: j["credits"] = d.get("creditsConsumed")
+        if j["state"] == "fail": j["msg"] = str(d.get("failMsg") or "")[:300]
+        if j["state"] == "success":
+            try:
+                urls = json.loads(d.get("resultJson") or "{}").get("resultUrls") or []
+            except Exception:
+                urls = []
+            if urls:
+                os.makedirs(f"kie_out/{TODAY}/{slug}", exist_ok=True)
+                req = urllib.request.Request(urls[0], headers={"User-Agent": "Mozilla/5.0"})
+                open(f"kie_out/{TODAY}/{slug}/{j['n']}.mp4", "wb").write(urllib.request.urlopen(req, timeout=120).read())
+                j["file"] = f"video/{TODAY}/{slug}/{j['n']}.mp4"
+            else:
+                j["state"] = "fail"; j["msg"] = "결과 주소 없음"
+    save()
+status["credits_total"] = sum(j.get("credits") or 0 for j in jobs)
+save()
+print(json.dumps(status, ensure_ascii=False, indent=1))
