@@ -1,28 +1,49 @@
 {
- "at": "2026-10-26T13:21:46.379774",
- "name": "daytona",
+ "at": "2026-10-26T14:57:58.841569",
+ "name": "matie",
  "jobs": [
   {
-   "img": "p:3",
-   "taskId": "dd9c91336ef979a17122cbb16de06a2b",
+   "img": "p:1",
+   "taskId": "42616dfe235c420edc157631d94dd890",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-10-26/pohang-daytona/clip_p3.mp4"
+   "file": "video/2026-10-26/busan-matie-harbor/clip_p1.mp4"
   },
   {
-   "img": "p:4",
-   "taskId": "30c88d64d672592c429848edf999fbff",
+   "img": "ai:2",
+   "taskId": "b1993c29658aa91c4aa816745967ef82",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-10-26/pohang-daytona/clip_p4.mp4"
+   "file": "video/2026-10-26/busan-matie-harbor/clip_ai2.mp4"
+  },
+  {
+   "img": "p:3",
+   "taskId": "77be94dd3a3624b807602410f75c35b9",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-10-26/busan-matie-harbor/clip_p3.mp4"
+  },
+  {
+   "img": "p:5",
+   "taskId": "5a165651fc7780d7d88e9ec5c5b13275",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-10-26/busan-matie-harbor/clip_p5.mp4"
+  },
+  {
+   "img": "ai:4",
+   "taskId": "388fa7922e7e6dadb2cfe82d843e3d7c",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-10-26/busan-matie-harbor/clip_ai4.mp4"
   },
   {
    "img": "p:6",
-   "taskId": "bda633eb3350b408d3fb6690f03b9df4",
+   "taskId": "f94cd7ad29679209b138ccce979c4e69",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-10-26/pohang-daytona/clip_p6.mp4"
+   "file": "video/2026-10-26/busan-matie-harbor/clip_p6.mp4"
   }
  ],
- "credits_total": 105.0
+ "credits_total": 210.0
 }
