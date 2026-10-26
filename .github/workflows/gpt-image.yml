@@ -4,7 +4,7 @@ on:
     inputs:
       slug: { description: "숙소 slug (비우면 오늘 글)", default: "" }
       only: { description: "사진 번호 (예: 1,5)", default: "1" }
-      model: { description: "OpenAI 이미지 모델", default: "gpt-image-1" }
+      model: { description: "OpenAI 이미지 모델", default: "gpt-image-2.5-sunburst" }
       quality: { description: "low / medium / high", default: "high" }
 permissions: { contents: write }
 concurrency: { group: gpt-image, cancel-in-progress: false }
