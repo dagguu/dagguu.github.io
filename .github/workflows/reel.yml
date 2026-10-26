@@ -1,0 +1,29 @@
+name: 릴스 만들기 (대본 장면 ↔ 사진)
+on:
+  workflow_dispatch:
+    inputs:
+      name: { description: "scripts/tts/<name>.json (scenes 필요)", default: "daytona" }
+permissions: { contents: write }
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-noto-cjk fonts-noto-cjk-extra >/dev/null && pip install -q requests && git fetch -q origin insta
+      - env:
+          TYPECAST_API_KEY: ${{ secrets.TYPECAST_API_KEY }}
+        run: python scripts/reel_make.py --name "${{ inputs.name }}"
+      - run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add scripts/reel_status.json && git commit -qm "릴스 상태" || true
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
+          if [ -f reel_out/${{ inputs.name }}/reel.mp4 ]; then
+            mv reel_out /tmp/reel_out; git checkout -q -B insta origin/insta
+            mkdir -p reels && cp -r /tmp/reel_out/* reels/
+            git add reels && git commit -qm "릴스 $(date +%F)" || exit 0
+            for i in 1 2 3; do git push -q origin insta && break; git pull -q --rebase origin insta; done
+          fi
