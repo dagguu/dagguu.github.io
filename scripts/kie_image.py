@@ -54,7 +54,9 @@ def result_imgs(d):
         except Exception: rj = {}
     u = find_imgs((rj or {}).get("resultUrls") or rj or [])
     return u or find_imgs({k: v for k, v in d.items() if k not in ("param", "input")})
+OUTFIT = " Outfit (always): the woman wears a long flowing white skirt (ankle-length) with a simple top suited to the season; keep this white long skirt clearly visible."  # 2026-10-26 시온님: 여자는 항상 흰색 긴 치마
 def body(prompt, src):
+    prompt = prompt + OUTFIT
     if "nano-banana-edit" in a.model:
         return {"model": a.model, "input": {"prompt": prompt, "image_urls": [src], "output_format": "jpeg", "image_size": "9:16"}}
     if "seedream" in a.model:

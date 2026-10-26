@@ -12,7 +12,7 @@ if not KEY: st["error"] = "KIE_API_KEY 없음"; save(); sys.exit(0)
 J = json.load(open(f"scripts/tts/{a.name}.json", encoding="utf-8")); stay, day = J["stay"], J["imgDate"]
 P = json.load(open(f"scripts/stays/{stay}.json", encoding="utf-8"))
 pf = f"scripts/kie_prompts/{stay}.json"; KP = {x["n"]: x for x in (json.load(open(pf, encoding="utf-8")) if os.path.exists(pf) else [])}
-TAIL_P = " Keep the exact same Korean person from the image with the same face, hair and clothes; she stays turned away (back view or slight side profile), never turns her head toward the camera, no face close-up. Keep the room, architecture and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."
+TAIL_P = " Keep the exact same Korean person from the image with the same face, hair and clothes (long white skirt); she stays turned away (back view or slight side profile), never turns her head toward the camera, no face close-up. Keep the room, architecture and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."
 TAIL = " No people. Keep the original architecture, rooms and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."
 RAW = "https://raw.githubusercontent.com/dagguu/dagguu.github.io/insta/"
 def call(url, body=None):

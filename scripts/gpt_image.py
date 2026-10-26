@@ -32,7 +32,7 @@ for n in [int(x) for x in a.only.split(",") if x.strip()]:
     buf = io.BytesIO(); im.save(buf, "PNG"); buf.seek(0)
     r = requests.post("https://api.openai.com/v1/images/edits", headers={"Authorization": "Bearer " + KEY},
                       files={"image[]": ("photo.png", buf, "image/png")},
-                      data={"model": a.model, "prompt": imgp[n], "size": a.size, "quality": a.quality, "n": "1"}, timeout=300)
+                      data={"model": a.model, "prompt": imgp[n] + " Outfit (always): the woman wears a long flowing white skirt (ankle-length) with a simple top suited to the season; keep this white long skirt clearly visible.", "size": a.size, "quality": a.quality, "n": "1"}, timeout=300)
     try: d = r.json()
     except Exception: d = {"error": {"message": r.text[:300]}}
     if r.status_code != 200 or not d.get("data"):

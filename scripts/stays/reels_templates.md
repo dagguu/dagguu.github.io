@@ -93,4 +93,4 @@ json 의 type·theme·points·fit·tags 글자로 판단, 여러 개면 시온�
 - 영상 프롬프트 카메라 말: overhead shot(탑뷰) · slow push-in · pull-out · half orbit · gimbal moves · push forward · crane shot · fly through · slider · pull back
 - 숙소에 없는 공간(자쿠지·야외 수영장 등)은 건너뛰고 다음 순서로. 사람 장면(20%)은 이 순서 안 거실·침실·자쿠지 중 한두 곳에만.
 - (2026-10-26 23:01 시온님 "13초 여자는 외국인 얼굴") 옆모습 컷은 이미지 단계에서 "Korean woman in her late 20s, Korean facial features, black hair" 를 꼭 넣고, Veo 영상 단계에서 얼굴이 바뀌지 않게 "keep the exact same person/face, never turns toward the camera"를 넣는다. 옆모습보다 뒷모습을 우선(얼굴이 보일수록 외국인처럼 바뀔 위험이 큼). 영상이 나오면 사람 장면 프레임을 확인하고 얼굴이 한국인으로 안 보이면 그 장면은 풍경 영상으로 바꾼다.
-
+- (2026-10-26 23:54 시온님) 인물 의상 고정: 여자는 항상 흰색 긴 치마(발목 길이) + 계절에 맞는 단순한 상의. kie_image.py·gpt_image.py 가 모든 인물 프롬프트 끝에 자동으로 붙이고, Veo 영상 단계도 같은 옷을 유지하게 한다. img 프롬프트에 다른 하의(바지·청바지 등)를 쓰지 않는다.
