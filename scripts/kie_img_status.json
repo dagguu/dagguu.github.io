@@ -1,5 +1,5 @@
 {
- "at": "2026-10-26 17:15",
+ "at": "2026-10-26 17:17",
  "model": "nano-banana-pro",
  "res": "2K",
  "images": [
@@ -8,6 +8,7 @@
    "taskId": "fd58a3da3a25b46a7390d623e999b242",
    "state": "success",
    "credits": 18.0,
+   "src_url_is_input": false,
    "file": "img/2026-10-26/pohang-daytona/1_pro.jpg"
   },
   {
@@ -15,6 +16,7 @@
    "taskId": "bdbdfa6a8f18c2fb6b7ad99ba81d302a",
    "state": "success",
    "credits": 18.0,
+   "src_url_is_input": false,
    "file": "img/2026-10-26/pohang-daytona/5_pro.jpg"
   }
  ],
