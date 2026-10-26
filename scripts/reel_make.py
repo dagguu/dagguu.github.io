@@ -73,10 +73,21 @@ os.replace(OUT + "/list.txt", OUT + "/cuts/list.txt")
 def ts(t): t = max(0, t); return f"{int(t//3600)}:{int(t%3600//60):02d}:{t%60:05.2f}"
 L = ["[Script Info]", "ScriptType: v4.00+", "PlayResX: 1080", "PlayResY: 1920", "", "[V4+ Styles]",
      "Format: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV",
-     "Style: D,Noto Sans CJK KR Black,78,&H00FFFFFF,&H00000000,&H64000000,1,1,7,2,2,60,60,560", "", "[Events]",
+     "Style: D,Noto Sans CJK KR Black,104,&H00FFFFFF,&H00000000,&H64000000,1,1,8,3,5,60,60,0",
+     "Style: T,Noto Sans CJK KR Black,112,&H00FFFFFF,&H00000000,&H78000000,1,1,8,4,8,50,50,300", "", "[Events]",
      "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
+TT = J.get("title") or []
+if TT:  # 제목: 맨 처음 2.8초, 위쪽, 윗줄 흰색·아랫줄 노란색 (2026-10-26 시온님)
+    t1 = TT[0] + ("\\N{\\c&H00FFFF&}" + TT[1] if len(TT) > 1 else "")
+    L.append(f"Dialogue: 1,{ts(0)},{ts(min(2.8, dur))},T,,0,0,0,,{t1}")
+def chunk(ws):
+    out, cur = [], []
+    for w in ws:
+        if cur and (len(cur) >= 2 or len("".join(x["text"] for x in cur + [w])) > 9): out.append(cur); cur = []
+        cur.append(w)
+    return out + ([cur] if cur else [])
 for i, s in enumerate(SC):
-    ws = wsc[i]; chunks = [ws[x:x + 3] for x in range(0, len(ws), 3)] if len(ws) > 4 else [ws[x:x + 2] for x in range(0, len(ws), 2)]
+    ws = wsc[i]; chunks = chunk(ws)
     for c, ch in enumerate(chunks):
         a0 = ch[0]["start"]; a1 = chunks[c + 1][0]["start"] if c + 1 < len(chunks) else (ends[i] if i + 1 < len(SC) else dur)
         txt = " ".join(w["text"].rstrip(",.") for w in ch)

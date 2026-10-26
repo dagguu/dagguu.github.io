@@ -58,19 +58,21 @@
   },
   {
    "t": "해 뜨는 시간엔 거실에 앉아서 동해 일출 보고,",
-   "img": "ai:3",
+   "img": "p:3",
    "hl": [
     "일출"
    ],
-   "why": "바다 보이는 거실 소파"
+   "why": "바다 보이는 거실 소파",
+   "vp": "Slow camera glide across the living room toward the floor-to-ceiling window, golden sunrise over the sea, soft light moving across the floor."
   },
   {
    "t": "창가 따라 수영장이 있는 객실도 있어요.",
-   "img": "ai:4",
+   "img": "p:4",
    "hl": [
     "수영장"
    ],
-   "why": "창가 수영장"
+   "why": "창가 수영장",
+   "vp": "Slow camera dolly along the indoor pool by the window, gentle ripples and light reflections on the water, sea view outside."
   },
   {
    "t": "침대에 누워도 바다가 한가득이고,",
@@ -91,11 +93,16 @@
   },
   {
    "t": "알람 없이 바다 보고 일어나는 곳이에요.",
-   "img": "ai:6",
+   "img": "p:6",
    "hl": [
     "알람 없이"
    ],
-   "why": "침실 창가에서 바다 보기"
+   "why": "침실 창가에서 바다 보기",
+   "vp": "Slow push-in from the bed toward the large window with the ocean view, curtains moving slightly, calm morning light."
   }
+ ],
+ "title": [
+  "눈 뜨면 바로",
+  "동해가 꽉 차는 방"
  ]
 }
