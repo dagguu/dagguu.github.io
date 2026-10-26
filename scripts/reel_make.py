@@ -99,7 +99,7 @@ if TT and J.get("titleInVideo"):  # 2026-10-26 22:24 시온님: 제목은 영상
 def chunk(ws):
     out, cur = [], []
     for w in ws:
-        if cur and (len(cur) >= 2 or len("".join(x["text"] for x in cur + [w])) > 9): out.append(cur); cur = []
+        if cur and (len(cur) >= 2 or len("".join(x["text"] for x in cur + [w])) > 9 or cur[-1]["text"].endswith((",", "."))): out.append(cur); cur = []  # 쉼표에서 끊기
         cur.append(w)
     return out + ([cur] if cur else [])
 for i, s in enumerate(SC):
