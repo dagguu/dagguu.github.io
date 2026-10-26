@@ -1,16 +1,33 @@
 {
- "at": "2026-10-26 10:16",
+ "at": "2026-10-26 10:19",
  "tier": "veo3_lite",
  "res": "1080p",
  "dur": 4,
  "jobs": [
   {
    "n": 1,
-   "cap": "통창 너머로 떠오르는 해",
    "taskId": "06e3630f11a6492dcb73fbfad814c40a",
-   "state": "fail",
+   "state": "success",
    "credits": 35.0,
-   "msg": "결과 주소 없음"
+   "raw_keys": [
+    "taskId",
+    "model",
+    "state",
+    "param",
+    "resultJson",
+    "failCode",
+    "failMsg",
+    "costTime",
+    "completeTime",
+    "createTime",
+    "creditsConsumed",
+    "operationType",
+    "fallbackFlag",
+    "response",
+    "successFlag",
+    "paramJson"
+   ],
+   "file": "video/2026-10-26/pohang-daytona/1.mp4"
   }
  ],
  "slug": "pohang-daytona",
