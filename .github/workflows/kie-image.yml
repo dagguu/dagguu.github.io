@@ -4,7 +4,7 @@ on:
     inputs:
       slug: { description: "숙소 slug (비우면 오늘 글)", default: "" }
       only: { description: "사진 번호 (예: 1,3) — 비우면 img 프롬프트 전부", default: "" }
-      model: { description: "nano-banana-pro 또는 bytedance/seedream-v4-edit", default: "nano-banana-pro" }
+      model: { description: "google/nano-banana-edit(4크레딧) · nano-banana-pro(18) · bytedance/seedream-v4-edit", default: "google/nano-banana-edit" }
       res: { description: "1K / 2K / 4K", default: "2K" }
       tasks: { description: "이미 만든 결과 다시 받기 (1:taskId,5:taskId)", default: "" }
 permissions: { contents: write }

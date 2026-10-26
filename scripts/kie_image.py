@@ -1,6 +1,6 @@
 # kie.ai 이미지만 만들기 (2026-10-26 시온님 "내 kie 에서 이미지 생성 가능하니까"). 영상은 만들지 않는다.
 # 감성숙소 사진 + scripts/kie_prompts/<slug>.json 의 "img" 프롬프트 → 세로 9:16 이미지.
-# 모델: nano-banana-pro(기본, input.image_input·aspect_ratio·resolution) / bytedance/seedream-v4-edit(input.image_urls·image_size·image_resolution)
+# 모델: google/nano-banana-edit(기본, 4크레딧, 2026-10-26 시온님) / nano-banana-pro(18크레딧, input.image_input·aspect_ratio·resolution) / bytedance/seedream-v4-edit(input.image_urls·image_size·image_resolution)
 # 키: Secrets KIE_API_KEY (시온님이 직접). 결과 kie_img/<date>/<slug>/<n>_<model>.jpg (워크플로가 insta 브랜치 img/ 로) + scripts/kie_img_status.json
 import json, os, sys, time, glob, datetime, urllib.request, urllib.error, argparse
 KST = datetime.timezone(datetime.timedelta(hours=9))
@@ -8,7 +8,7 @@ TODAY = datetime.datetime.now(KST).strftime("%Y-%m-%d")
 ap = argparse.ArgumentParser()
 ap.add_argument("--slug", default="")
 ap.add_argument("--only", default="")
-ap.add_argument("--model", default="nano-banana-pro")
+ap.add_argument("--model", default="google/nano-banana-edit")
 ap.add_argument("--res", default="2K")
 ap.add_argument("--tasks", default="")  # "1:taskId,5:taskId" 이미 만든 결과 다시 받기(크레딧 안 씀)
 a = ap.parse_args()
@@ -55,6 +55,8 @@ def result_imgs(d):
     u = find_imgs((rj or {}).get("resultUrls") or rj or [])
     return u or find_imgs({k: v for k, v in d.items() if k not in ("param", "input")})
 def body(prompt, src):
+    if "nano-banana-edit" in a.model:
+        return {"model": a.model, "input": {"prompt": prompt, "image_urls": [src], "output_format": "jpeg", "image_size": "9:16"}}
     if "seedream" in a.model:
         return {"model": a.model, "input": {"prompt": prompt, "image_urls": [src], "image_size": "portrait_16_9",
                 "image_resolution": a.res, "max_images": 1}}
@@ -84,7 +86,7 @@ while time.time() < end and any(j["state"] not in ("success", "fail", "error") f
             u = (result_imgs(d) or [None])[0]; j["src_url_is_input"] = u in [p["src"] for p in photos]
             if u:
                 os.makedirs(f"kie_img/{TODAY}/{slug}", exist_ok=True)
-                tag = "pro" if "pro" in a.model else "sd"
+                tag = "pro" if "pro" in a.model else ("edit" if "edit" in a.model and "nano" in a.model else "sd")
                 fn = f"kie_img/{TODAY}/{slug}/{j['n']}_{tag}.jpg"
                 open(fn, "wb").write(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=120).read())
                 j["file"] = fn.replace("kie_img/", "img/")
