@@ -1,0 +1,32 @@
+name: 릴스 TTS (타입캐스트)
+on:
+  workflow_dispatch:
+    inputs:
+      mode: { description: "voices=목소리 목록 / make=음성 만들기", default: "make" }
+      name: { description: "scripts/tts/<name>.json", default: "daytona" }
+      voices: { description: "voice_id 쉼표 (비우면 여성 4명)", default: "" }
+      emotion: { description: "smart / normal / happy / toneup …", default: "smart" }
+      tempo: { description: "말 빠르기 0.5~2.0", default: "1.05" }
+permissions: { contents: write }
+jobs:
+  tts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: sudo apt-get install -y -qq ffmpeg >/dev/null && pip install -q requests
+      - env:
+          TYPECAST_API_KEY: ${{ secrets.TYPECAST_API_KEY }}
+        run: python scripts/tts_typecast.py --mode "${{ inputs.mode }}" --name "${{ inputs.name }}" --voices "${{ inputs.voices }}" --emotion "${{ inputs.emotion }}" --tempo "${{ inputs.tempo }}"
+      - run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add scripts/tts_typecast_status.json scripts/typecast_voices.json 2>/dev/null; git commit -qm "타입캐스트 TTS 상태" || true
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
+          if [ -d tts_out ]; then
+            mv tts_out /tmp/tts_out; git fetch origin insta; git checkout -q -B insta origin/insta
+            mkdir -p tts && cp -r /tmp/tts_out/* tts/
+            git add tts && git commit -qm "타입캐스트 TTS $(date +%F)" || exit 0
+            for i in 1 2 3; do git push -q origin insta && break; git pull -q --rebase origin insta; done
+          fi
