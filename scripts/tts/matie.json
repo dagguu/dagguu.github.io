@@ -1,0 +1,23 @@
+{
+ "slug": "busan-matie-harbor",
+ "voice": "tc_68f9c6a72f0f04a417bb136f",
+ "voiceName": "문정",
+ "tempo": 1.15,
+ "stay": "busan-matie-harbor",
+ "imgDate": "2026-10-27",
+ "title": ["51층 수영장에서", "북항이 한눈에"],
+ "thumb": {"img": "p:2", "sec": 1.5},
+ "scenes": [
+  {"t": "부산역 바로 옆, 북항 앞에 올해 4월 문을 연 호텔이에요.", "img": "p:1", "hl": ["부산역"], "why": "외관 야경 (드론 전진)",
+   "vp": "Slow aerial drone push-in toward the tall hotel tower at night, city lights and the harbor glowing, gentle cinematic motion."},
+  {"t": "51층 수영장에선, 통창 너머로 북항이 보이고,", "img": "ai:2", "hl": ["51층"], "why": "수영장 + 뒷모습 (왼→오)"},
+  {"t": "객실엔 거실이 따로 있어서, 항구를 보면서 쉴 수 있어요.", "img": "p:3", "hl": ["거실"], "why": "거실 (전진)",
+   "vp": "Slow push forward through the living room toward the window and harbor view, soft daylight, gimbal-smooth motion."},
+  {"t": "침실 큰 창으로도, 바다가 펼쳐지고,", "img": "p:5", "hl": ["바다"], "why": "침실 (왼→오)",
+   "vp": "Slow slider move from left to right across the bedroom, the large window revealing the sea, soft natural light."},
+  {"t": "창밖으론 북항 바다가 한눈에 들어와요.", "img": "ai:4", "hl": ["북항"], "why": "오션뷰 창가 뒷모습 (창밖으로 전진)"},
+  {"t": "입실이 저녁 6시라, 도착하면 불 켜진 호텔이 반겨줘요.", "img": "p:6", "hl": ["저녁 6시"], "why": "밤 입구",
+   "vp": "Slow push-in toward the illuminated hotel entrance at night, warm lights glowing, cinematic."},
+  {"t": "기차 내려서 바로 가는, 부산 북항 호캉스예요.", "img": "p:1", "hl": ["호캉스"], "why": "외관 마무리"}
+ ]
+}
