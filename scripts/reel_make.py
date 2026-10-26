@@ -45,12 +45,28 @@ def cut(img, d, mode, close, out):
     else:              z = f"{z0+0.15}"; x = f"(iw-iw/zoom)*(1-on/{fr})"; y = "ih/2-(ih/zoom/2)"
     vf = f"{base},zoompan=z='{z}':x='{x}':y='{y}':d={fr}:s=1080x1920:fps=30,format=yuv420p"
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-i", img, "-vf", vf, "-frames:v", str(fr), "-r", "30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", out], check=True)
+def clip(img):
+    kind, n = img.split(":"); p = f"{OUT}/clip_{kind}{n}.mp4"
+    if os.path.exists(p): return p
+    q = subprocess.run(["git", "show", f"origin/insta:video/{J['imgDate']}/{J['stay']}/clip_{kind}{n}.mp4"], capture_output=True)
+    if q.returncode == 0 and len(q.stdout) > 1000: open(p, "wb").write(q.stdout); return p
+    return None
+def vcut(v, ss, d, close, out):
+    vlen = float(subprocess.run(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",v],capture_output=True,text=True).stdout or 4)
+    if ss + d > vlen: ss = max(0, vlen - d)
+    sc = "scale=1350:2400:force_original_aspect_ratio=increase,crop=1080:1920" if close else "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920"
+    vf = f"{sc},setpts=PTS-STARTPTS,fps=30,format=yuv420p" + (f",tpad=stop_mode=clone:stop_duration={d}" if ss + d > vlen else "")
+    subprocess.run(["ffmpeg","-y","-loglevel","error","-ss",f"{ss:.2f}","-i",v,"-t",f"{d:.3f}","-vf",vf,"-an","-r","30","-c:v","libx264","-preset","veryfast","-crf","18",out],check=True)
+used = {}
 cuts, plan, k = [], [], 0
 for i, s in enumerate(SC):
     d = ends[i] - starts[i]; parts = max(1, round(d / 1.3)) if d > 1.8 else 1
     for j in range(parts):
-        o = f"{OUT}/cuts/{len(cuts):02d}.mp4"; cut(src(s["img"]), d / parts, MOV[k % 4], j % 2 == 1, o); cuts.append(o); k += 1
-    plan.append({"t": s["t"], "img": s["img"], "start": round(starts[i], 2), "end": round(ends[i], 2), "cuts": parts})
+        o = f"{OUT}/cuts/{len(cuts):02d}.mp4"; v = clip(s["img"])
+        if v: ss = used.get(s["img"], 0.0); vcut(v, ss, d / parts, j % 2 == 1, o); used[s["img"]] = ss + d / parts
+        else: cut(src(s["img"]), d / parts, MOV[k % 4], j % 2 == 1, o)
+        cuts.append(o); k += 1
+    plan.append({"video": bool(clip(s["img"])), "t": s["t"], "img": s["img"], "start": round(starts[i], 2), "end": round(ends[i], 2), "cuts": parts})
 open(OUT + "/list.txt", "w").write("".join(f"file '{os.path.basename(c)}'\n" for c in cuts))
 os.replace(OUT + "/list.txt", OUT + "/cuts/list.txt")
 # 자막 (ASS)
@@ -70,5 +86,5 @@ open(OUT + "/sub.ass", "w", encoding="utf-8").write("\n".join(L) + "\n")
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", OUT + "/cuts/list.txt", "-i", OUT + "/voice.mp3",
                 "-vf", f"subtitles={OUT}/sub.ass", "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
                 "-c:a", "aac", "-b:a", "192k", "-t", f"{dur:.2f}", "-movflags", "+faststart", OUT + "/reel.mp4"], check=True)
-import shutil; shutil.rmtree(OUT + "/cuts"); [os.remove(f"{OUT}/{f}") for f in os.listdir(OUT) if f.startswith("src_")]
+import shutil; shutil.rmtree(OUT + "/cuts"); [os.remove(f"{OUT}/{f}") for f in os.listdir(OUT) if f.startswith(("src_", "clip_"))]
 st.update({"dur": round(dur, 2), "cuts": len(cuts), "plan": plan, "file": f"reels/{a.name}/reel.mp4"}); save()

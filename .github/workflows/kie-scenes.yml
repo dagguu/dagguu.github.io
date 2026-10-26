@@ -1,0 +1,31 @@
+name: 릴스 장면 영상 (kie Veo)
+on:
+  workflow_dispatch:
+    inputs:
+      name: { description: "scripts/tts/<name>.json", default: "daytona" }
+      only: { description: "이 장면 이미지만 (예: ai:1,p:2) — 비우면 전부", default: "" }
+      tier: { description: "input.model", default: "veo3_lite" }
+permissions: { contents: write }
+concurrency: { group: kie-video, cancel-in-progress: false }
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - env:
+          KIE_API_KEY: ${{ secrets.KIE_API_KEY }}
+        run: git fetch -q origin insta && python scripts/kie_scenes.py --name "${{ inputs.name }}" --only "${{ inputs.only }}" --tier "${{ inputs.tier }}"
+      - run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add scripts/kie_scenes_status.json && git commit -qm "장면 영상 상태" || true
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
+          if [ -d kie_out ]; then
+            mv kie_out /tmp/kie_out; git checkout -q -B insta origin/insta
+            mkdir -p video && cp -r /tmp/kie_out/* video/
+            git add video && git commit -qm "장면 영상 $(date +%F)" || exit 0
+            for i in 1 2 3; do git push -q origin insta && break; git pull -q --rebase origin insta; done
+          fi
