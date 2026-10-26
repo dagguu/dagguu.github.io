@@ -10,6 +10,7 @@ ap.add_argument("--slug", default="")
 ap.add_argument("--only", default="")
 ap.add_argument("--model", default="nano-banana-pro")
 ap.add_argument("--res", default="2K")
+ap.add_argument("--tasks", default="")  # "1:taskId,5:taskId" 이미 만든 결과 다시 받기(크레딧 안 씀)
 a = ap.parse_args()
 KEY = os.environ.get("KIE_API_KEY", "").strip()
 API = "https://api.kie.ai/api/v1/jobs"
@@ -46,12 +47,23 @@ def find_imgs(o):
     elif isinstance(o, list):
         for v in o: out += find_imgs(v)
     return out
+def result_imgs(d):
+    rj = d.get("resultJson")
+    if isinstance(rj, str):
+        try: rj = json.loads(rj)
+        except Exception: rj = {}
+    u = find_imgs((rj or {}).get("resultUrls") or rj or [])
+    return u or find_imgs({k: v for k, v in d.items() if k not in ("param", "input")})
 def body(prompt, src):
     if "seedream" in a.model:
         return {"model": a.model, "input": {"prompt": prompt, "image_urls": [src], "image_size": "portrait_16_9",
                 "image_resolution": a.res, "max_images": 1}}
     return {"model": a.model, "input": {"prompt": prompt, "image_input": [src], "aspect_ratio": "9:16", "resolution": a.res}}
 jobs = []
+if a.tasks:
+    for t in a.tasks.split(","):
+        n, tid = t.split(":"); j = {"n": int(n), "taskId": tid.strip(), "state": "submitted"}; jobs.append(j); status["images"].append(j)
+    nums = []
 for n in nums:
     if n not in imgp or n < 1 or n > len(photos): continue
     r = call(API + "/createTask", body(imgp[n], photos[n - 1]["src"]))
@@ -69,7 +81,7 @@ while time.time() < end and any(j["state"] not in ("success", "fail", "error") f
         if j["state"] == "fail": j["msg"] = str(d.get("failMsg"))[:300]
         if j["state"] == "success":
             j["credits"] = d.get("creditsConsumed")
-            u = (find_imgs(d) or [None])[0]
+            u = (result_imgs(d) or [None])[0]; j["src_url_is_input"] = u in [p["src"] for p in photos]
             if u:
                 os.makedirs(f"kie_img/{TODAY}/{slug}", exist_ok=True)
                 tag = "pro" if "pro" in a.model else "sd"
