@@ -14,8 +14,8 @@ jobs:
         with: { fetch-depth: 0 }
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-noto-cjk fonts-noto-cjk-extra >/dev/null
-        timeout-minutes: 8
+      - run: for i in 1 2 3; do timeout 200 sudo apt-get update -qq -o Acquire::Retries=3 && timeout 300 sudo apt-get install -y -qq -o Acquire::Retries=3 ffmpeg fonts-noto-cjk >/dev/null && break; echo "apt 재시도 $i"; sleep 5; done; which ffmpeg
+        timeout-minutes: 20
       - run: pip install -q requests pillow fonttools && timeout 240 python scripts/get_font.py; git fetch -q origin insta
       - env:
           TYPECAST_API_KEY: ${{ secrets.TYPECAST_API_KEY }}
