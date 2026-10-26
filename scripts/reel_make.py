@@ -11,7 +11,7 @@ FAM = FU.get("family") or "Noto Sans CJK KR Black"; os.environ["REEL_FONT"] = FU
 KEY = os.environ.get("TYPECAST_API_KEY", "").strip()
 st = {"at": datetime.datetime.utcnow().isoformat(), "name": a.name}
 def save(): json.dump(st, open("scripts/reel_status.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-st["font"] = FAM; st["fontErr"] = FU.get("error")
+st["font"] = FAM; st["fontInfo"] = FU
 J = json.load(open(f"scripts/tts/{a.name}.json", encoding="utf-8")); SC = J["scenes"]
 P = json.load(open(f"scripts/stays/{J['stay']}.json", encoding="utf-8"))
 OUT = f"reel_out/{a.name}"; os.makedirs(OUT + "/cuts", exist_ok=True)
@@ -108,6 +108,7 @@ for i, s in enumerate(SC):
         a0 = ch[0]["start"]; a1 = chunks[c + 1][0]["start"] if c + 1 < len(chunks) else (ends[i] if i + 1 < len(SC) else dur)
         txt = " ".join(w["text"].rstrip(",.") for w in ch)
         for h in s.get("hl", []): txt = txt.replace(h, "{\\c&H0080FF&}" + h + "{\\c&HFFFFFF&}")
+        if FU.get("family") and not FU.get("hasSpace"): txt = txt.replace(" ", "{\\fnNoto Sans CJK KR Black} {\\fn" + FAM + "}")  # 잘난체 웹폰트엔 띄어쓰기 글자가 없음
         L.append(f"Dialogue: 0,{ts(a0)},{ts(a1)},D,,0,0,0,,{{\\i1}}{txt}")
 open(OUT + "/sub.ass", "w", encoding="utf-8").write("\n".join(L) + "\n")
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", OUT + "/cuts/list.txt", "-i", OUT + "/voice.mp3",

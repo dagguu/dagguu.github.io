@@ -20,15 +20,17 @@ JF = os.environ.get("REEL_FONT") or (os.path.expanduser("~/.fonts/Jalnan.ttf") i
 FP = JF or next((p for p in ("/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc", "/usr/share/fonts/noto-cjk/NotoSansCJK-Black.ttc") if os.path.exists(p)))
 def font(sz): return ImageFont.truetype(FP, sz) if JF else ImageFont.truetype(FP, sz, index=1)  # 잘난체 / Noto(1 = KR)
 def fit(t, sz, maxw=980):
-    while sz > 60 and font(sz).getlength(t) > maxw: sz -= 4
+    while sz > 60 and sum(font(sz).getlength(w) for w in t.split()) + sz * 0.28 * (len(t.split()) - 1) > maxw: sz -= 4
     return font(sz)
 f1, f2 = fit(l1, 128), fit(l2, 112)
 layer = Image.new("RGBA", (W, H), (0, 0, 0, 0)); dl = ImageDraw.Draw(layer)
 y1 = 360; y2 = y1 + f1.size + 34
 for (t, f, y, col) in ((l1, f1, y1, (255, 255, 255)), (l2, f2, y2, (255, 222, 40))):
-    x = (W - f.getlength(t)) / 2
-    dl.text((x + 6, y + 8), t, font=f, fill=(0, 0, 0, 150))
-    dl.text((x, y), t, font=f, fill=col, stroke_width=7, stroke_fill=(20, 20, 20))
+    ws = t.split(); gap = f.size * 0.28  # 잘난체 웹폰트엔 띄어쓰기 글자가 없어 단어마다 따로 그림
+    x = (W - sum(f.getlength(w) for w in ws) - gap * (len(ws) - 1)) / 2
+    for w in ws:
+        dl.text((x + 6, y + 8), w, font=f, fill=(0, 0, 0, 150))
+        dl.text((x, y), w, font=f, fill=col, stroke_width=7, stroke_fill=(20, 20, 20)); x += f.getlength(w) + gap
 SK = 0.2  # 기울임꼴 (2026-10-26 시온님): 글씨 층을 오른쪽으로 기울임
 cy = (y1 + y2 + f2.size) / 2; layer = layer.transform((W, H), Image.AFFINE, (1, SK, -SK * cy, 0, 1, 0), resample=Image.BICUBIC)
 shadow = layer.split()[3].filter(ImageFilter.GaussianBlur(10))

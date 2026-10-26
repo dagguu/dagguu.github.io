@@ -12,8 +12,12 @@ for u in URLS:
     try:
         r = requests.get(u, timeout=60)
         if r.status_code != 200 or len(r.content) < 10000: out["error"].append(f"{u} {r.status_code}"); continue
-        f = TTFont(io.BytesIO(r.content)); f.flavor = None; p = D + "/Jalnan.ttf"; f.save(p)
-        out.update({"file": p, "family": f["name"].getBestFamilyName(), "src": u}); break
+        f = TTFont(io.BytesIO(r.content)); f.flavor = None; nm = f["name"]
+        out["origName"] = str(nm.getBestFamilyName()); out["hasSpace"] = 32 in f.getBestCmap()
+        for i, v in ((1, "Jalnan"), (2, "Regular"), (4, "Jalnan"), (6, "Jalnan"), (16, "Jalnan"), (17, "Regular")):
+            nm.setName(v, i, 3, 1, 0x409); nm.setName(v, i, 1, 0, 0)  # 이름을 Jalnan 으로 통일 (libass·PIL 이 찾게)
+        p = D + "/Jalnan.ttf"; f.save(p)
+        out.update({"file": p, "family": "Jalnan", "src": u}); break
     except Exception as e: out["error"].append(f"{u} {e}"[:200])
 subprocess.run(["fc-cache", "-f"], capture_output=True)
 json.dump(out, open("fonts_used.json", "w"), ensure_ascii=False); print(out)
