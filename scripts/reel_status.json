@@ -1,5 +1,5 @@
 {
- "at": "2026-10-26T16:42:09.868184",
+ "at": "2026-10-26T16:59:45.698350",
  "name": "matie",
  "font": "Jalnan",
  "fontInfo": {
@@ -10,57 +10,6 @@
   "family": "Jalnan",
   "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
  },
- "dur": 19.9,
- "cuts": 15,
- "plan": [
-  {
-   "video": true,
-   "t": "부산역과 여객터미널 사이, 바다 앞에 있는 호텔이에요.",
-   "img": "p:1",
-   "start": 0.0,
-   "end": 3.99,
-   "cuts": 3
-  },
-  {
-   "video": true,
-   "t": "넓은 거실이 있는 방에선, 창밖으로 바다가 보이고,",
-   "img": "p:3",
-   "start": 3.99,
-   "end": 7.22,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "바다 쪽 큰 창이 있는 침실도 있어요.",
-   "img": "p:5",
-   "start": 7.22,
-   "end": 9.9,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "바다 보이는 방이면, 부산 바다가 한눈에 들어와요.",
-   "img": "ai:4",
-   "start": 9.9,
-   "end": 13.48,
-   "cuts": 3
-  },
-  {
-   "video": true,
-   "t": "밤에는 불 켜진 입구가 반겨줘요.",
-   "img": "p:6",
-   "start": 13.48,
-   "end": 15.83,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "부산역에서 차로 12분, 바다 앞 호텔이에요.",
-   "img": "p:1",
-   "start": 15.83,
-   "end": 19.9,
-   "cuts": 3
-  }
- ],
- "file": "reels/matie/reel.mp4"
+ "thumbOnly": true,
+ "file": "reels/matie/thumb.jpg"
 }
