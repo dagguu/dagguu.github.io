@@ -2,7 +2,8 @@
 # 시온님 설정: image to video · Veo3 Lite · 9:16 · 1080p · 4초 (35크레딧/개).
 # 키: Secrets KIE_API_KEY (시온님이 직접 넣음, Claude 는 보지 않음).
 # 프롬프트: scripts/kie_prompts/<slug>.json [{"n":1,"prompt":"..."}] (19:44 인스타 작업이 씀). 없으면 사진 설명으로 기본 프롬프트.
-# 사람을 만들어 넣는 프롬프트는 쓰지 않는다(실제 다녀온 영상처럼 오인 — CLAUDE.md).
+# 인물(2026-10-26 시온님): 프롬프트 항목에 "img"(사진 편집 프롬프트)가 있으면 먼저 nano-banana-edit 로
+#   원본 사진에 한국 여성 뒷모습을 넣은 9:16 이미지를 만들고(kie_out/.../<n>.jpg 도 저장), 그 이미지로 영상을 만든다.
 # 결과: kie_out/<date>/<slug>/<n>.mp4 (워크플로가 insta 브랜치 video/ 로 올림) + scripts/kie_status.json(크레딧·상태, 키·주소 없음)
 import json, os, sys, time, glob, datetime, urllib.request, urllib.error, argparse
 KST = datetime.timezone(datetime.timedelta(hours=9))
@@ -34,7 +35,8 @@ status["slug"] = slug; status["name"] = P["name"]
 pf = f"scripts/kie_prompts/{slug}.json"
 PL = json.load(open(pf, encoding="utf-8")) if os.path.exists(pf) else []
 prompts = {x["n"]: x["prompt"] for x in PL}
-people = {x["n"] for x in PL if x.get("people")}
+people = {x["n"] for x in PL if x.get("people") or x.get("img")}
+imgp = {x["n"]: x["img"] for x in PL if x.get("img")}
 photos = P.get("photos", [])
 nums = [int(x) for x in a.only.split(",") if x.strip()] if a.only else list(range(1, len(photos) + 1))[: a.count]
 TAIL_P = " Only one person, back view only, face not visible. Keep the original architecture, rooms and layout exactly unchanged. Smooth cinematic camera motion, natural light."
@@ -60,6 +62,41 @@ def find_urls(o):
     elif isinstance(o, list):
         for v in o: out += find_urls(v)
     return out
+def find_imgs(o):
+    out = []
+    if isinstance(o, str):
+        st = o.strip()
+        if st.startswith("{") or st.startswith("["):
+            try: return find_imgs(json.loads(st))
+            except Exception: pass
+        if st.startswith("http") and any(e in st.lower() for e in (".png", ".jpg", ".jpeg", ".webp")): out.append(st)
+    elif isinstance(o, dict):
+        for v in o.values(): out += find_imgs(v)
+    elif isinstance(o, list):
+        for v in o: out += find_imgs(v)
+    return out
+def wait(tid, limit=600):
+    end = time.time() + limit
+    while time.time() < end:
+        time.sleep(8)
+        d = call(f"{API}/recordInfo?taskId={tid}").get("data") or {}
+        if d.get("state") in ("success", "fail"): return d
+    return {}
+def make_image(n, src):
+    r = call(API + "/createTask", {"model": "google/nano-banana-edit", "input": {"prompt": imgp[n], "image_urls": [src],
+             "output_format": "jpeg", "image_size": "9:16"}})
+    tid = (r.get("data") or {}).get("taskId") if isinstance(r.get("data"), dict) else None
+    st = {"n": n, "taskId": tid}
+    if not tid: st["msg"] = str(r.get("msg") or r)[:300]; return None, st
+    d = wait(tid); st["state"] = d.get("state"); st["credits"] = d.get("creditsConsumed")
+    if d.get("state") != "success": st["msg"] = str(d.get("failMsg") or "시간 초과")[:300]; return None, st
+    u = (find_imgs(d) or [None])[0]
+    if u:
+        os.makedirs(f"kie_out/{TODAY}/{slug}", exist_ok=True)
+        open(f"kie_out/{TODAY}/{slug}/{n}.jpg", "wb").write(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=120).read())
+        st["file"] = f"video/{TODAY}/{slug}/{n}.jpg"
+    return u, st
+status["images"] = []
 jobs = []
 if a.task:
     nums = []
@@ -68,7 +105,13 @@ for n in nums:
     if n < 1 or n > len(photos): continue
     ph = photos[n - 1]
     pr = (prompts.get(n) or ("Slow push-in camera move. " + ph.get("cap", ""))) + (TAIL_P if n in people else TAIL)
-    body = {"model": "veo-3-1", "input": {"prompt": pr, "image_urls": [ph["src"]], "aspect_ratio": "9:16",
+    src = ph["src"]
+    if n in imgp:
+        u, st = make_image(n, src); status["images"].append(st); save()
+        if not u:
+            jobs.append({"n": n, "state": "error", "msg": "이미지 만들기 실패"}); status["jobs"].append(jobs[-1]); save(); continue
+        src = u
+    body = {"model": "veo-3-1", "input": {"prompt": pr, "image_urls": [src], "aspect_ratio": "9:16",
             "resolution": a.res, "duration": a.dur, "generation_type": "FIRST_AND_LAST_FRAMES_2_VIDEO",
             "model": a.tier, "enable_translation": True}}
     r = call(API + "/createTask", body)
@@ -98,6 +141,6 @@ while time.time() < deadline and any(j["state"] not in ("success", "fail", "erro
             else:
                 j["state"] = "fail"; j["msg"] = "결과 주소 없음"
     save()
-status["credits_total"] = sum(j.get("credits") or 0 for j in jobs)
+status["credits_total"] = sum(j.get("credits") or 0 for j in jobs) + sum(i.get("credits") or 0 for i in status["images"])
 save()
 print(json.dumps(status, ensure_ascii=False, indent=1))
