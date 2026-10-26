@@ -1,5 +1,5 @@
 {
- "at": "2026-10-26 11:12",
+ "at": "2026-10-26 11:26",
  "model": "gpt-image-2.5-sunburst",
  "quality": "high",
  "size": "1024x1536",
@@ -12,17 +12,17 @@
     1536
    ],
    "usage": {
-    "input_tokens": 817,
+    "input_tokens": 879,
     "input_tokens_details": {
      "image_tokens": 704,
-     "text_tokens": 113
+     "text_tokens": 175
     },
     "output_tokens": 1372,
     "output_tokens_details": {
      "image_tokens": 1372,
      "text_tokens": 0
     },
-    "total_tokens": 2189
+    "total_tokens": 2251
    }
   },
   {
@@ -33,17 +33,17 @@
     1536
    ],
    "usage": {
-    "input_tokens": 821,
+    "input_tokens": 871,
     "input_tokens_details": {
      "image_tokens": 704,
-     "text_tokens": 117
+     "text_tokens": 167
     },
     "output_tokens": 1372,
     "output_tokens_details": {
      "image_tokens": 1372,
      "text_tokens": 0
     },
-    "total_tokens": 2193
+    "total_tokens": 2243
    }
   }
  ],
