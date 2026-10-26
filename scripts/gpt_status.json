@@ -1,0 +1,20 @@
+{
+ "at": "2026-10-26 11:11",
+ "model": "gpt-image-1",
+ "quality": "high",
+ "size": "1024x1536",
+ "images": [
+  {
+   "n": 1,
+   "error": "The model 'gpt-image-1' does not exist.",
+   "status": 400
+  },
+  {
+   "n": 5,
+   "error": "The model 'gpt-image-1' does not exist.",
+   "status": 400
+  }
+ ],
+ "slug": "pohang-daytona",
+ "name": "데이토나풀빌라"
+}
