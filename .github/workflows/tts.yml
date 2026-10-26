@@ -4,6 +4,7 @@ on:
     inputs:
       name: { description: "scripts/tts/<name>.json", default: "daytona" }
       voices: { description: "목소리 (쉼표)", default: "nova,shimmer,coral" }
+      whole: { description: "1=대본 통째로", default: "1" }
 permissions: { contents: write }
 jobs:
   tts:
@@ -16,7 +17,7 @@ jobs:
       - run: sudo apt-get install -y -qq ffmpeg >/dev/null && pip install -q requests
       - env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: python scripts/tts_openai.py --name "${{ inputs.name }}" --voices "${{ inputs.voices }}"
+        run: python scripts/tts_openai.py --name "${{ inputs.name }}" --voices "${{ inputs.voices }}" --whole "${{ inputs.whole }}"
       - run: |
           git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
           git add scripts/tts_status.json && git commit -qm "TTS 상태" || true
