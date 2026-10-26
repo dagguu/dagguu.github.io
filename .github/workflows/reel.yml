@@ -14,7 +14,16 @@ jobs:
         with: { fetch-depth: 0 }
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: for i in 1 2 3; do sudo timeout -k 10 150 apt-get update -qq -o Acquire::http::Timeout=20 -o Acquire::Retries=2; sudo timeout -k 10 200 apt-get install -y -qq -o Acquire::http::Timeout=20 -o Acquire::Retries=2 ffmpeg fonts-noto-cjk >/dev/null && break; echo "apt 재시도 $i"; sleep 10; done; which ffmpeg
+      - run: |
+          if command -v ffmpeg >/dev/null && ffmpeg -hide_banner -filters 2>/dev/null | grep -q subtitles; then echo "ffmpeg 있음"; exit 0; fi
+          for i in 1 2 3; do
+            if [ $i -ge 2 ]; then sudo sed -i 's#http://azure.archive.ubuntu.com#http://archive.ubuntu.com#g; s#http://azure.archive.ubuntu.com#http://archive.ubuntu.com#g' /etc/apt/sources.list /etc/apt/sources.list.d/*.sources 2>/dev/null || true; fi
+            sudo timeout -k 10 150 apt-get update -qq -o Acquire::http::Timeout=20 -o Acquire::Retries=2
+            sudo timeout -k 10 240 apt-get install -y -qq --no-install-recommends -o Acquire::http::Timeout=20 -o Acquire::Retries=2 ffmpeg >/dev/null && break
+            echo "apt 재시도 $i"; sleep 10
+          done
+          sudo timeout -k 5 120 apt-get install -y -qq --no-install-recommends fonts-noto-cjk >/dev/null 2>&1 || echo "noto 건너뜀"
+          which ffmpeg
         timeout-minutes: 20
       - run: pip install -q requests pillow fonttools && timeout 240 python scripts/get_font.py; git fetch -q origin insta
       - env:
