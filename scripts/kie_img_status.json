@@ -1,23 +1,39 @@
 {
- "at": "2026-10-26 17:17",
+ "at": "2026-10-26 17:18",
  "model": "nano-banana-pro",
  "res": "2K",
  "images": [
   {
-   "n": 1,
-   "taskId": "fd58a3da3a25b46a7390d623e999b242",
+   "n": 3,
+   "taskId": "7b88aa28935cc1996ea8b7a4cb6cf54a",
    "state": "success",
    "credits": 18.0,
    "src_url_is_input": false,
-   "file": "img/2026-10-26/pohang-daytona/1_pro.jpg"
+   "file": "img/2026-10-26/pohang-daytona/3_pro.jpg"
+  },
+  {
+   "n": 4,
+   "taskId": "9fc3ff11450bfad4b4108d588703fa58",
+   "state": "success",
+   "credits": 18.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-26/pohang-daytona/4_pro.jpg"
   },
   {
    "n": 5,
-   "taskId": "bdbdfa6a8f18c2fb6b7ad99ba81d302a",
+   "taskId": "a40b5682c80640a4a221a2d7016eb8cf",
    "state": "success",
    "credits": 18.0,
    "src_url_is_input": false,
    "file": "img/2026-10-26/pohang-daytona/5_pro.jpg"
+  },
+  {
+   "n": 6,
+   "taskId": "009391fb394d4513c87d3bc38e431f7a",
+   "state": "success",
+   "credits": 18.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-26/pohang-daytona/6_pro.jpg"
   }
  ],
  "slug": "pohang-daytona"
