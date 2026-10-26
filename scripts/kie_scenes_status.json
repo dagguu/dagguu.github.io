@@ -1,0 +1,56 @@
+{
+ "at": "2026-10-26T09:11:40.566893",
+ "name": "daytona",
+ "jobs": [
+  {
+   "img": "ai:1",
+   "taskId": "bd1c8e44bd48471a4d4247d56d5c2376",
+   "state": "fail",
+   "credits": 35.0,
+   "msg": "결과 주소 없음"
+  },
+  {
+   "img": "p:2",
+   "taskId": "256a66aeb911f75ba11ffb01e0693886",
+   "state": "fail",
+   "credits": 35.0,
+   "msg": "결과 주소 없음"
+  },
+  {
+   "img": "p:1",
+   "taskId": "9a4c52d7cb45cc977af9426941b59ef6",
+   "state": "fail",
+   "credits": 35.0,
+   "msg": "결과 주소 없음"
+  },
+  {
+   "img": "ai:3",
+   "taskId": "b212afdac771f3c2d615160ef1b39d2d",
+   "state": "fail",
+   "credits": 35.0,
+   "msg": "결과 주소 없음"
+  },
+  {
+   "img": "ai:4",
+   "taskId": "c620e1cb1761cb52f7edd753e00167df",
+   "state": "fail",
+   "credits": 35.0,
+   "msg": "결과 주소 없음"
+  },
+  {
+   "img": "ai:5",
+   "taskId": "70c0917a58ebddd24c1cdbb54a5fee96",
+   "state": "fail",
+   "credits": 35.0,
+   "msg": "결과 주소 없음"
+  },
+  {
+   "img": "ai:6",
+   "taskId": "fc71154acf0f9ec4d921991f40a2d67e",
+   "state": "fail",
+   "credits": 35.0,
+   "msg": "결과 주소 없음"
+  }
+ ],
+ "credits_total": 245.0
+}
