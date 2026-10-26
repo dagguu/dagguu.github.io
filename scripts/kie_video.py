@@ -39,7 +39,7 @@ people = {x["n"] for x in PL if x.get("people") or x.get("img")}
 imgp = {x["n"]: x["img"] for x in PL if x.get("img")}
 photos = P.get("photos", [])
 nums = [int(x) for x in a.only.split(",") if x.strip()] if a.only else list(range(1, len(photos) + 1))[: a.count]
-TAIL_P = " Only the Korean person already in the image, back view or side profile only, never facing the camera. Keep the room, architecture and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."
+TAIL_P = " Keep the exact same Korean person from the image with the same face, hair and clothes; she stays turned away (back view or slight side profile), never turns her head toward the camera, no face close-up. Keep the room, architecture and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."
 TAIL = " No people. Keep the original architecture, rooms and layout exactly unchanged. Smooth cinematic camera motion, natural light."
 def call(url, body=None):
     req = urllib.request.Request(url, data=json.dumps(body).encode() if body is not None else None,

@@ -92,4 +92,5 @@ json 의 type·theme·points·fit·tags 글자로 판단, 여러 개면 시온�
 - 쓸 수 있는 컷 종류: 드론 전경 · 건물 정면 · 외관 디테일 · 드론 · 실내 오션뷰 · 실내 분위기(내부 공간) · 외부 공간 · 탑뷰
 - 영상 프롬프트 카메라 말: overhead shot(탑뷰) · slow push-in · pull-out · half orbit · gimbal moves · push forward · crane shot · fly through · slider · pull back
 - 숙소에 없는 공간(자쿠지·야외 수영장 등)은 건너뛰고 다음 순서로. 사람 장면(20%)은 이 순서 안 거실·침실·자쿠지 중 한두 곳에만.
+- (2026-10-26 23:01 시온님 "13초 여자는 외국인 얼굴") 옆모습 컷은 이미지 단계에서 "Korean woman in her late 20s, Korean facial features, black hair" 를 꼭 넣고, Veo 영상 단계에서 얼굴이 바뀌지 않게 "keep the exact same person/face, never turns toward the camera"를 넣는다. 옆모습보다 뒷모습을 우선(얼굴이 보일수록 외국인처럼 바뀔 위험이 큼). 영상이 나오면 사람 장면 프레임을 확인하고 얼굴이 한국인으로 안 보이면 그 장면은 풍경 영상으로 바꾼다.
 
