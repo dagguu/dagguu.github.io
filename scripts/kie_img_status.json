@@ -1,40 +1,24 @@
 {
- "at": "2026-10-26 17:18",
- "model": "nano-banana-pro",
+ "at": "2026-10-26 23:56",
+ "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 3,
-   "taskId": "7b88aa28935cc1996ea8b7a4cb6cf54a",
+   "n": 2,
+   "taskId": "a2e4f82d6280d534dfb091f082997e49",
    "state": "success",
-   "credits": 18.0,
+   "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-10-26/pohang-daytona/3_pro.jpg"
+   "file": "img/2026-10-26/busan-matie-harbor/2_edit.jpg"
   },
   {
    "n": 4,
-   "taskId": "9fc3ff11450bfad4b4108d588703fa58",
+   "taskId": "5549a50c777017d839b25b59c18db36a",
    "state": "success",
-   "credits": 18.0,
+   "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-10-26/pohang-daytona/4_pro.jpg"
-  },
-  {
-   "n": 5,
-   "taskId": "a40b5682c80640a4a221a2d7016eb8cf",
-   "state": "success",
-   "credits": 18.0,
-   "src_url_is_input": false,
-   "file": "img/2026-10-26/pohang-daytona/5_pro.jpg"
-  },
-  {
-   "n": 6,
-   "taskId": "009391fb394d4513c87d3bc38e431f7a",
-   "state": "success",
-   "credits": 18.0,
-   "src_url_is_input": false,
-   "file": "img/2026-10-26/pohang-daytona/6_pro.jpg"
+   "file": "img/2026-10-26/busan-matie-harbor/4_edit.jpg"
   }
  ],
- "slug": "pohang-daytona"
+ "slug": "busan-matie-harbor"
 }
