@@ -1,8 +1,15 @@
 {
- "at": "2026-10-26T14:36:51.815220",
+ "at": "2026-10-26T14:38:39.157427",
  "name": "daytona",
- "font": "Noto Sans CJK KR Black",
- "fontErr": [],
+ "font": "Jalnan",
+ "fontInfo": {
+  "error": [],
+  "origName": "None",
+  "hasSpace": false,
+  "file": "/home/runner/.fonts/Jalnan.ttf",
+  "family": "Jalnan",
+  "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
+ },
  "thumbOnly": true,
  "file": "reels/daytona/thumb.jpg"
 }
