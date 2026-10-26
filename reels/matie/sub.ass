@@ -10,33 +10,26 @@ Style: T,Jalnan,112,&H00FFFFFF,&H00000000,&H78000000,1,1,8,4,8,50,50,300
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.28,0:00:01.06,D,,0,0,0,,{\i1}{\c&H0080FF&}부산역{\c&HFFFFFF&}{\fnNoto Sans CJK KR Black} {\fnJalnan}바로
-Dialogue: 0,0:00:01.06,0:00:01.60,D,,0,0,0,,{\i1}옆
-Dialogue: 0,0:00:01.60,0:00:02.58,D,,0,0,0,,{\i1}바다{\fnNoto Sans CJK KR Black} {\fnJalnan}앞에
-Dialogue: 0,0:00:02.58,0:00:03.12,D,,0,0,0,,{\i1}올해{\fnNoto Sans CJK KR Black} {\fnJalnan}4월
-Dialogue: 0,0:00:03.12,0:00:03.58,D,,0,0,0,,{\i1}문을{\fnNoto Sans CJK KR Black} {\fnJalnan}연
-Dialogue: 0,0:00:03.58,0:00:04.51,D,,0,0,0,,{\i1}호텔이에요
-Dialogue: 0,0:00:04.56,0:00:06.16,D,,0,0,0,,{\i1}{\c&H0080FF&}51층{\c&HFFFFFF&}{\fnNoto Sans CJK KR Black} {\fnJalnan}수영장에선
-Dialogue: 0,0:00:06.16,0:00:06.62,D,,0,0,0,,{\i1}큰{\fnNoto Sans CJK KR Black} {\fnJalnan}창
-Dialogue: 0,0:00:06.62,0:00:07.54,D,,0,0,0,,{\i1}너머로{\fnNoto Sans CJK KR Black} {\fnJalnan}바다가
-Dialogue: 0,0:00:07.54,0:00:08.23,D,,0,0,0,,{\i1}보이고
-Dialogue: 0,0:00:08.29,0:00:09.11,D,,0,0,0,,{\i1}방에{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}거실{\c&HFFFFFF&}이
-Dialogue: 0,0:00:09.11,0:00:09.87,D,,0,0,0,,{\i1}따로{\fnNoto Sans CJK KR Black} {\fnJalnan}있어서
-Dialogue: 0,0:00:09.87,0:00:10.61,D,,0,0,0,,{\i1}바다를{\fnNoto Sans CJK KR Black} {\fnJalnan}보면서
-Dialogue: 0,0:00:10.61,0:00:10.91,D,,0,0,0,,{\i1}쉴{\fnNoto Sans CJK KR Black} {\fnJalnan}수
-Dialogue: 0,0:00:10.91,0:00:11.62,D,,0,0,0,,{\i1}있어요
-Dialogue: 0,0:00:11.67,0:00:12.33,D,,0,0,0,,{\i1}침실{\fnNoto Sans CJK KR Black} {\fnJalnan}큰
-Dialogue: 0,0:00:12.33,0:00:12.97,D,,0,0,0,,{\i1}창으로도
-Dialogue: 0,0:00:12.97,0:00:14.10,D,,0,0,0,,{\i1}{\c&H0080FF&}바다{\c&HFFFFFF&}가{\fnNoto Sans CJK KR Black} {\fnJalnan}펼쳐지고
-Dialogue: 0,0:00:14.15,0:00:15.15,D,,0,0,0,,{\i1}창밖으론{\fnNoto Sans CJK KR Black} {\fnJalnan}부산
-Dialogue: 0,0:00:15.15,0:00:15.87,D,,0,0,0,,{\i1}{\c&H0080FF&}바다{\c&HFFFFFF&}가{\fnNoto Sans CJK KR Black} {\fnJalnan}한눈에
-Dialogue: 0,0:00:15.87,0:00:16.60,D,,0,0,0,,{\i1}들어와요
-Dialogue: 0,0:00:16.65,0:00:17.51,D,,0,0,0,,{\i1}체크인이{\fnNoto Sans CJK KR Black} {\fnJalnan}저녁
-Dialogue: 0,0:00:17.51,0:00:18.19,D,,0,0,0,,{\i1}6시라
-Dialogue: 0,0:00:18.19,0:00:18.99,D,,0,0,0,,{\i1}도착하면{\fnNoto Sans CJK KR Black} {\fnJalnan}불
-Dialogue: 0,0:00:18.99,0:00:19.63,D,,0,0,0,,{\i1}켜진{\fnNoto Sans CJK KR Black} {\fnJalnan}호텔이
-Dialogue: 0,0:00:19.63,0:00:20.36,D,,0,0,0,,{\i1}반겨줘요
-Dialogue: 0,0:00:20.41,0:00:21.21,D,,0,0,0,,{\i1}기차에서{\fnNoto Sans CJK KR Black} {\fnJalnan}내려서
-Dialogue: 0,0:00:21.21,0:00:21.95,D,,0,0,0,,{\i1}바로{\fnNoto Sans CJK KR Black} {\fnJalnan}가는
-Dialogue: 0,0:00:21.95,0:00:22.57,D,,0,0,0,,{\i1}부산{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}바다{\c&HFFFFFF&}
-Dialogue: 0,0:00:22.57,0:00:24.08,D,,0,0,0,,{\i1}앞{\fnNoto Sans CJK KR Black} {\fnJalnan}호텔이에요
+Dialogue: 0,0:00:00.20,0:00:01.54,D,,0,0,0,,{\i1}부산역과{\fnNoto Sans CJK KR Black} {\fnJalnan}여객터미널
+Dialogue: 0,0:00:01.54,0:00:02.12,D,,0,0,0,,{\i1}사이
+Dialogue: 0,0:00:02.12,0:00:02.62,D,,0,0,0,,{\i1}{\c&H0080FF&}바다{\c&HFFFFFF&}{\fnNoto Sans CJK KR Black} {\fnJalnan}앞에
+Dialogue: 0,0:00:02.62,0:00:03.99,D,,0,0,0,,{\i1}있는{\fnNoto Sans CJK KR Black} {\fnJalnan}호텔이에요
+Dialogue: 0,0:00:04.04,0:00:04.84,D,,0,0,0,,{\i1}넓은{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}거실{\c&HFFFFFF&}이
+Dialogue: 0,0:00:04.84,0:00:05.65,D,,0,0,0,,{\i1}있는{\fnNoto Sans CJK KR Black} {\fnJalnan}방에선
+Dialogue: 0,0:00:05.65,0:00:06.63,D,,0,0,0,,{\i1}창밖으로{\fnNoto Sans CJK KR Black} {\fnJalnan}바다가
+Dialogue: 0,0:00:06.63,0:00:07.22,D,,0,0,0,,{\i1}보이고
+Dialogue: 0,0:00:07.27,0:00:07.77,D,,0,0,0,,{\i1}바다{\fnNoto Sans CJK KR Black} {\fnJalnan}쪽
+Dialogue: 0,0:00:07.77,0:00:08.29,D,,0,0,0,,{\i1}{\c&H0080FF&}큰{\fnNoto Sans CJK KR Black} {\fnJalnan}창{\c&HFFFFFF&}이
+Dialogue: 0,0:00:08.29,0:00:09.03,D,,0,0,0,,{\i1}있는{\fnNoto Sans CJK KR Black} {\fnJalnan}침실도
+Dialogue: 0,0:00:09.03,0:00:09.90,D,,0,0,0,,{\i1}있어요
+Dialogue: 0,0:00:09.95,0:00:10.69,D,,0,0,0,,{\i1}바다{\fnNoto Sans CJK KR Black} {\fnJalnan}보이는
+Dialogue: 0,0:00:10.69,0:00:11.47,D,,0,0,0,,{\i1}방이면
+Dialogue: 0,0:00:11.47,0:00:12.21,D,,0,0,0,,{\i1}{\c&H0080FF&}부산{\fnNoto Sans CJK KR Black} {\fnJalnan}바다{\c&HFFFFFF&}가
+Dialogue: 0,0:00:12.21,0:00:13.48,D,,0,0,0,,{\i1}한눈에{\fnNoto Sans CJK KR Black} {\fnJalnan}들어와요
+Dialogue: 0,0:00:13.54,0:00:14.18,D,,0,0,0,,{\i1}{\c&H0080FF&}밤{\c&HFFFFFF&}에는{\fnNoto Sans CJK KR Black} {\fnJalnan}불
+Dialogue: 0,0:00:14.18,0:00:14.88,D,,0,0,0,,{\i1}켜진{\fnNoto Sans CJK KR Black} {\fnJalnan}입구가
+Dialogue: 0,0:00:14.88,0:00:15.83,D,,0,0,0,,{\i1}반겨줘요
+Dialogue: 0,0:00:15.88,0:00:17.28,D,,0,0,0,,{\i1}부산역에서{\fnNoto Sans CJK KR Black} {\fnJalnan}차로
+Dialogue: 0,0:00:17.28,0:00:17.88,D,,0,0,0,,{\i1}{\c&H0080FF&}12분{\c&HFFFFFF&}
+Dialogue: 0,0:00:17.88,0:00:18.46,D,,0,0,0,,{\i1}바다{\fnNoto Sans CJK KR Black} {\fnJalnan}앞
+Dialogue: 0,0:00:18.46,0:00:19.90,D,,0,0,0,,{\i1}호텔이에요
