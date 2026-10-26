@@ -1,73 +1,7 @@
 {
- "at": "2026-10-26T13:48:30.299424",
+ "at": "2026-10-26T14:15:03.843142",
  "name": "daytona",
- "dur": 20.38,
- "cuts": 14,
- "plan": [
-  {
-   "video": true,
-   "t": "눈 뜨자마자, 창밖이 바다로 꽉 차요.",
-   "img": "ai:1",
-   "start": 0.0,
-   "end": 3.23,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "포항 바닷가 앞 풀빌라인데,",
-   "img": "p:2",
-   "start": 3.23,
-   "end": 5.13,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "t": "객실마다 통창이 벽 한 면이에요.",
-   "img": "p:1",
-   "start": 5.13,
-   "end": 7.46,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "해 뜨는 시간엔 거실에 앉아서 동해 일출 보고,",
-   "img": "p:3",
-   "start": 7.46,
-   "end": 10.46,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "창가 따라 수영장이 있는 객실도 있어요.",
-   "img": "p:4",
-   "start": 10.46,
-   "end": 13.16,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "침대에 누워도 바다가 한가득이고,",
-   "img": "ai:5",
-   "start": 13.16,
-   "end": 15.38,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "해변까지 걸어서 5분이라,",
-   "img": "p:2",
-   "start": 15.38,
-   "end": 17.31,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "t": "알람 없이 바다 보고 일어나는 곳이에요.",
-   "img": "p:6",
-   "start": 17.31,
-   "end": 20.38,
-   "cuts": 2
-  }
- ],
- "file": "reels/daytona/reel.mp4"
+ "font": "Noto Sans CJK KR Black",
+ "thumbOnly": true,
+ "file": "reels/daytona/thumb.jpg"
 }
