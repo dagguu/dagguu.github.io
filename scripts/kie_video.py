@@ -13,7 +13,8 @@ ap.add_argument("--count", type=int, default=1)
 ap.add_argument("--tier", default="veo3_lite")
 ap.add_argument("--res", default="1080p")
 ap.add_argument("--dur", type=int, default=4)
-ap.add_argument("--only", default="")  # 사진 번호 "1,3,5"
+ap.add_argument("--only", default="")
+ap.add_argument("--task", default="")  # 이미 만든 작업 다시 받기(크레딧 안 씀)  # 사진 번호 "1,3,5"
 a = ap.parse_args()
 KEY = os.environ.get("KIE_API_KEY", "").strip()
 API = "https://api.kie.ai/api/v1/jobs"
@@ -43,7 +44,23 @@ def call(url, body=None):
         return json.load(urllib.request.urlopen(req, timeout=60))
     except urllib.error.HTTPError as e:
         return {"code": e.code, "msg": e.read().decode("utf-8", "ignore")[:300]}
+def find_urls(o):
+    out = []
+    if isinstance(o, str):
+        st = o.strip()
+        if st.startswith("{") or st.startswith("["):
+            try: return find_urls(json.loads(st))
+            except Exception: pass
+        if st.startswith("http") and (".mp4" in st or "video" in st.lower() or "result" in st.lower()): out.append(st)
+    elif isinstance(o, dict):
+        for v in o.values(): out += find_urls(v)
+    elif isinstance(o, list):
+        for v in o: out += find_urls(v)
+    return out
 jobs = []
+if a.task:
+    nums = []
+    jobs.append({"n": int(a.only or 1), "taskId": a.task, "state": "submitted"}); status["jobs"] = jobs
 for n in nums:
     if n < 1 or n > len(photos): continue
     ph = photos[n - 1]
@@ -68,10 +85,8 @@ while time.time() < deadline and any(j["state"] not in ("success", "fail", "erro
         if d.get("creditsConsumed") is not None: j["credits"] = d.get("creditsConsumed")
         if j["state"] == "fail": j["msg"] = str(d.get("failMsg") or "")[:300]
         if j["state"] == "success":
-            try:
-                urls = json.loads(d.get("resultJson") or "{}").get("resultUrls") or []
-            except Exception:
-                urls = []
+            urls = find_urls(d)
+            j["raw_keys"] = list(d.keys())[:30]
             if urls:
                 os.makedirs(f"kie_out/{TODAY}/{slug}", exist_ok=True)
                 req = urllib.request.Request(urls[0], headers={"User-Agent": "Mozilla/5.0"})
