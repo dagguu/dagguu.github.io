@@ -1,5 +1,5 @@
 {
- "at": "2026-10-26T16:59:45.698350",
+ "at": "2026-10-26T17:03:24.365759",
  "name": "matie",
  "font": "Jalnan",
  "fontInfo": {
@@ -10,6 +10,57 @@
   "family": "Jalnan",
   "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
  },
- "thumbOnly": true,
- "file": "reels/matie/thumb.jpg"
+ "dur": 20.04,
+ "cuts": 16,
+ "plan": [
+  {
+   "video": true,
+   "t": "여러분, 저 진짜 깜짝 놀랐어요.",
+   "img": "p:1",
+   "start": 0.0,
+   "end": 2.49,
+   "cuts": 2
+  },
+  {
+   "video": true,
+   "t": "부산역 근처에, 창밖으로 바다가 보이는 숙소가 있거든요.",
+   "img": "ai:4",
+   "start": 2.49,
+   "end": 6.09,
+   "cuts": 3
+  },
+  {
+   "video": true,
+   "t": "거기다 거실이 따로 있는 넓은 객실이라, 바다 보면서 쉬기 딱 좋고,",
+   "img": "p:3",
+   "start": 6.09,
+   "end": 11.36,
+   "cuts": 4
+  },
+  {
+   "video": true,
+   "t": "침실 큰 창으로도 바다가 펼쳐져요.",
+   "img": "p:5",
+   "start": 11.36,
+   "end": 13.92,
+   "cuts": 2
+  },
+  {
+   "video": true,
+   "t": "밤에는 불 켜진 호텔이 정말 예쁘고,",
+   "img": "p:6",
+   "start": 13.92,
+   "end": 16.34,
+   "cuts": 2
+  },
+  {
+   "video": true,
+   "t": "기차 타고 부산 여행 갈 때, 딱 좋은 숙소예요.",
+   "img": "p:1",
+   "start": 16.34,
+   "end": 20.04,
+   "cuts": 3
+  }
+ ],
+ "file": "reels/matie/reel.mp4"
 }
