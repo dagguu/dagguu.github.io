@@ -2,7 +2,9 @@
 # woff → ttf 로 바꿔 ~/.fonts/Jalnan.ttf 에 두고, 글꼴 이름을 fonts_used.json 에 남긴다. 못 받으면 Noto 로 (fonts_used.json 에 error).
 import os, io, json, subprocess, requests
 from fontTools.ttLib import TTFont
-URLS = ["https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/Jalnan.woff",
+URLS = ["https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff",
+        "https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff",
+        "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/Jalnan.woff",
         "https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/Jalnan.woff",
         "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/Jalnan2.woff"]
 out = {"error": []}; D = os.path.expanduser("~/.fonts"); os.makedirs(D, exist_ok=True)

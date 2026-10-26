@@ -11,7 +11,7 @@ FAM = FU.get("family") or "Noto Sans CJK KR Black"; os.environ["REEL_FONT"] = FU
 KEY = os.environ.get("TYPECAST_API_KEY", "").strip()
 st = {"at": datetime.datetime.utcnow().isoformat(), "name": a.name}
 def save(): json.dump(st, open("scripts/reel_status.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-st["font"] = FAM
+st["font"] = FAM; st["fontErr"] = FU.get("error")
 J = json.load(open(f"scripts/tts/{a.name}.json", encoding="utf-8")); SC = J["scenes"]
 P = json.load(open(f"scripts/stays/{J['stay']}.json", encoding="utf-8"))
 OUT = f"reel_out/{a.name}"; os.makedirs(OUT + "/cuts", exist_ok=True)
