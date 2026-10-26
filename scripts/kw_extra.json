@@ -1,876 +1,4739 @@
 {
- "updated": "2026-10-25 18:59",
+ "updated": "2026-10-26 11:13",
  "hints": [
-  "홈젬",
-  "살림백서",
-  "노일리스킨",
-  "브리츠",
-  "탱이하우스",
-  "아이로베",
-  "VT코스메틱",
-  "BAS탈취제"
+  "퍼짓",
+  "리비트",
+  "큐리페어",
+  "메이드인랩",
+  "클레드브루",
+  "도미골프",
+  "다이비프로",
+  "어텐티",
+  "마르비니",
+  "참그린",
+  "라브라크",
+  "차미돈",
+  "올레그레인",
+  "다자르",
+  "로댕쇼",
+  "로쎄",
+  "안탈라",
+  "유레브",
+  "허밍테라피",
+  "로블루",
+  "키니샴푸",
+  "팔레오",
+  "소담목장",
+  "올리온",
+  "UH홈데코",
+  "럼브",
+  "르젠",
+  "켄트로얄",
+  "피레스트",
+  "위키드랩",
+  "글램핑크",
+  "머그비",
+  "탠저린생리대",
+  "라디셀",
+  "리오메딕스",
+  "시컬리",
+  "듀얼온",
+  "로렌드",
+  "뷰앤블루",
+  "보고바이오",
+  "그린스토아",
+  "미아크",
+  "매그니토",
+  "브레바",
+  "피에르마르콜리니",
+  "에코비",
+  "위드나르",
+  "길팁",
+  "샐러디",
+  "비엘리아",
+  "원더씬",
+  "유기네",
+  "레무로",
+  "니도르",
+  "하누와",
+  "뉴트리킷",
+  "행운큐브",
+  "디오딧",
+  "클룹",
+  "더클래스",
+  "막내댕이"
  ],
  "rows": [
   {
-   "kw": "알파문구",
-   "vol": 96000,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "블루투스이어폰",
-   "vol": 77800,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "이어폰",
-   "vol": 72400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선이어폰",
-   "vol": 65200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "QCY이어폰",
-   "vol": 18850,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "바스탈취제",
-   "vol": 14470,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "살림백서",
-   "vol": 12590,
+   "kw": "샐러디",
+   "vol": 82000,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "이어폰추천",
-   "vol": 10770,
+   "kw": "다우니섬유유연제",
+   "vol": 31280,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "브리츠무선이어폰",
-   "vol": 9970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블라우풍트이어폰",
-   "vol": 9750,
+   "kw": "퍼실세탁세제",
+   "vol": 24830,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "브리츠",
-   "vol": 9020,
+   "kw": "더클래스",
+   "vol": 23510,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "REVEAL",
-   "vol": 8550,
+   "kw": "클룹",
+   "vol": 20430,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "다우니",
+   "vol": 20420,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "다우니세탁세제",
+   "vol": 14740,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "바인더",
+   "vol": 13690,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "3M",
+   "vol": 11810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유레브",
+   "vol": 10960,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "피죤섬유유연제",
+   "vol": 10540,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신일선풍기",
+   "vol": 10390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "롯데리조트",
+   "vol": 10350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤프란",
+   "vol": 10250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "군산에이본호텔",
+   "vol": 7870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "르젠가습기",
+   "vol": 7710,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신일가열식가습기",
+   "vol": 7280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "프릴주방세제",
+   "vol": 6660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠",
+   "vol": 6290,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대구인터불고엑스코",
+   "vol": 5410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신일서큘레이터",
+   "vol": 4640,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "계면활성제",
+   "vol": 4560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피에르마르콜리니",
+   "vol": 4180,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "브리오신주방세제",
+   "vol": 4110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "AD",
+   "vol": 4110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "백진삼",
+   "vol": 3750,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "VT코스메틱",
-   "vol": 7530,
+   "kw": "미니관리기",
+   "vol": 3340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "더클래스세차용품",
+   "vol": 3200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "슈가버블주방세제",
+   "vol": 3100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "매그니토",
+   "vol": 2990,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "브리츠스피커",
-   "vol": 7340,
+   "kw": "스팽글",
+   "vol": 2990,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아이리버무선이어폰",
-   "vol": 6830,
+   "kw": "카톤",
+   "vol": 2930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파이토신",
+   "vol": 2910,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "클립형이어폰",
-   "vol": 6410,
+   "kw": "르젠가열식가습기",
+   "vol": 2890,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마샬이어폰",
-   "vol": 5410,
+   "kw": "케미컬가이",
+   "vol": 2880,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "BAS탈취제",
-   "vol": 4720,
+   "kw": "르젠",
+   "vol": 2680,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "골전도보청기",
-   "vol": 3840,
+   "kw": "가습기청소",
+   "vol": 2440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "BRITZ스피커",
-   "vol": 3810,
+   "kw": "글라코유막제거제",
+   "vol": 2360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "BRITZ",
-   "vol": 3580,
+   "kw": "다우니세제",
+   "vol": 2290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "액츠",
+   "vol": 2220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "브리츠블루투스스피커",
-   "vol": 3210,
+   "kw": "피토레스코쿠션",
+   "vol": 2140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "브리츠블루투스이어폰",
-   "vol": 3000,
+   "kw": "다우니실내건조섬유유연제",
+   "vol": 2130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아이리버골전도이어폰",
-   "vol": 2660,
+   "kw": "르젠선풍기",
+   "vol": 2110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "브리츠CD플레이어",
-   "vol": 2420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "삼성블루투스이어폰",
-   "vol": 2350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "브리츠이어폰",
-   "vol": 2160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이리버이어폰",
-   "vol": 2010,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인켈",
-   "vol": 1750,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니스피커",
-   "vol": 1580,
+   "kw": "다이소변기세정제",
+   "vol": 2090,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "이어폰파는곳",
-   "vol": 1520,
+   "kw": "머그비",
+   "vol": 2070,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "리비트",
+   "vol": 1980,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "샤오미선풍기",
+   "vol": 1980,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "참그린주방세제",
+   "vol": 1940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "탈라",
+   "vol": 1940,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "G9",
-   "vol": 1410,
+   "kw": "오토브라이트",
+   "vol": 1870,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "불루투스이어폰",
+   "kw": "기온쿼츠레더쉴드",
+   "vol": 1700,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "다우니실내건조세탁세제",
+   "vol": 1640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "삼성선풍기",
+   "vol": 1630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "루페스",
+   "vol": 1600,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "호텔인터불고",
+   "vol": 1590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "켄트로얄",
+   "vol": 1560,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "신일써큘레이터",
+   "vol": 1550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "통영금호마리나리조트",
+   "vol": 1500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "메소드주방세제",
+   "vol": 1450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "샹떼클레어섬유유연제",
+   "vol": 1420,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "CLOOP",
    "vol": 1350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소니블루투스이어폰",
-   "vol": 1200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "JBL무선이어폰",
-   "vol": 1120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "이어폰브랜드",
-   "vol": 1120,
+   "kw": "피지세탁세제",
+   "vol": 1320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스압축분무기",
+   "vol": 1320,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "JBL블루투스이어폰",
+   "kw": "야마하골프채",
+   "vol": 1280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "글라코발수코팅",
+   "vol": 1230,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "라브라크캐리어",
+   "vol": 1220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "업센다크림",
+   "vol": 1150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프라레일",
+   "vol": 1140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "광주홀리데이인",
+   "vol": 1130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글라코",
    "vol": 1080,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커클랜드세탁세제",
+   "vol": 1070,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "백진삼삼기력",
+   "vol": 1070,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "멜라루카주방세제",
+   "vol": 1050,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마그웻",
+   "vol": 1050,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "팔레오",
+   "vol": 1040,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "삼성식기세척기세제",
+   "vol": 1020,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "브리츠헤드폰",
-   "vol": 970,
+   "kw": "한화경주리조트",
+   "vol": 1020,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이어마이크",
+   "kw": "테크세제",
+   "vol": 990,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "글램핑크",
+   "vol": 990,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "파메스틱",
+   "vol": 980,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마르비니",
+   "vol": 960,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "암웨이주방세제",
+   "vol": 960,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "LG식기세척기세제",
+   "vol": 940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "경기광주네일",
+   "vol": 940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "다우니섬유유연제추천",
+   "vol": 920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신일초음파가습기",
+   "vol": 910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안탈라",
    "vol": 900,
-   "comp": "높음",
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "AD레펠",
+   "vol": 900,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "BRITZ블루투스스피커",
+   "kw": "더클레스",
    "vol": 880,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아이리버블루투스이어폰",
+   "kw": "대구인터불고조식",
    "vol": 870,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "BRITZ블루투스이어폰",
-   "vol": 830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "샤오미블루투스스피커",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LG넥밴드이어폰",
-   "vol": 780,
+   "kw": "바운드서울",
+   "vol": 860,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아이폰무선이어폰",
-   "vol": 760,
+   "kw": "기온쿼츠레더코트",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "루나틱폴리시",
+   "vol": 860,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "노일리스킨",
-   "vol": 710,
+   "kw": "허밍테라피",
+   "vol": 840,
    "comp": "낮음",
    "hint": true
   },
   {
-   "kw": "인켈스피커",
-   "vol": 690,
+   "kw": "참그린",
+   "vol": 800,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "양양투와이호텔",
+   "vol": 800,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "핸드폰이어폰",
-   "vol": 690,
+   "kw": "기온쿼츠레더클리너",
+   "vol": 790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "라브라크",
+   "vol": 780,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "청주호텔뮤제오",
+   "vol": 780,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "헤드마이크",
+   "kw": "유기네",
+   "vol": 770,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "모트라인몰",
+   "vol": 770,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "미아크",
+   "vol": 740,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "볼프강",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "LG식기세척기린스",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보닉스",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤오미무선선풍기",
+   "vol": 720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자부품쇼핑몰",
+   "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안산라성호텔",
+   "vol": 710,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "3M유리막코팅",
+   "vol": 705,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보랄선풍기",
+   "vol": 700,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "잇츠윈",
+   "vol": 700,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "원더씬",
+   "vol": 690,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "강촌엘리시안리조트",
    "vol": 680,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캔스톤",
-   "vol": 630,
+   "kw": "삼성식기세척기린스",
+   "vol": 670,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이어셋",
-   "vol": 610,
+   "kw": "잔여",
+   "vol": 660,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "길팁",
+   "vol": 660,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "그릿가드",
+   "vol": 660,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마이크이어폰",
+   "kw": "보고바이오",
+   "vol": 650,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "퍼짓",
+   "vol": 640,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "신일무선선풍기",
+   "vol": 640,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "AD오토브라이트",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소프트99",
+   "vol": 630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "볼라솔루션",
+   "vol": 630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "악센다",
+   "vol": 620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파세코선풍기",
+   "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블루믹스",
+   "vol": 620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "퍼실주방세제",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다우니섬유유연제리필",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SALADY",
+   "vol": 600,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대전인터시티",
+   "vol": 590,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "글라코G19",
+   "vol": 590,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "시모어퍼터",
+   "vol": 590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3MPPF필름",
+   "vol": 580,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캉가루",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터스시크릿",
+   "vol": 560,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "디디오랩무선선풍기",
    "vol": 550,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "방수이어폰",
+   "kw": "남원켄싱턴",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이비프로",
+   "vol": 540,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "유니맥스선풍기",
    "vol": 540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인이어마이크",
+   "kw": "에코비",
+   "vol": 540,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "IK",
    "vol": 530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캉가루물왁스",
+   "vol": 510,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "QCY블루투스이어폰",
+   "kw": "필터없는미니가습기",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성수입의류",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소담목장",
+   "vol": 490,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "위키드랩",
+   "vol": 490,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "스팽글리턴",
+   "vol": 490,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스분무기",
+   "vol": 490,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "3MPPF",
+   "vol": 480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이이너클린",
    "vol": 480,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이어폰마이크",
+   "kw": "브리오신세탁세제",
    "vol": 470,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "이어폰종류",
-   "vol": 450,
+   "kw": "한화대천",
+   "vol": 470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자전거이어폰",
-   "vol": 420,
+   "kw": "소낙스프로피라인",
+   "vol": 460,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "무선이어마이크",
+   "kw": "울트라레인보우",
+   "vol": 450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "엘지기화식가습기",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엘지전자가습기",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이가습기",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "터틀왁스",
+   "vol": 430,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "디테일링몰",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명품의류",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "샤오미블루투스이어폰",
+   "kw": "LG선풍기",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "블리츠스피커",
+   "kw": "위드나르",
+   "vol": 420,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "뉴트리킷",
    "vol": 410,
    "comp": "중간",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "휴대폰이어폰",
+   "kw": "신일BLDC선풍기",
    "vol": 400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "핸즈프리이어폰",
+   "kw": "인천오크우드",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거제도삼성호텔",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "메이드인랩",
+   "vol": 390,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "다우니섬유유연제대용량",
+   "vol": 390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유통기한임박화장품",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보국선풍기",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자연퐁식기세척기세제",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "골전도이어폰샥즈",
+   "kw": "미트슬라이드",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엘지식기세척기세제",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "라디오스피커",
+   "kw": "다자르",
+   "vol": 360,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "폼렌스",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보국써큘레이터",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무선이어폰QCY",
-   "vol": 330,
+   "kw": "가습기순위",
+   "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "블루투스사운드바",
-   "vol": 330,
+   "kw": "EXQ광택기",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3M컴파운드3000",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라마다호텔광주",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대전한화리조트",
+   "vol": 320,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "IRIVER이어폰",
+   "kw": "가평돌고래리조트",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인켈블루투스스피커",
+   "kw": "바이파",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가습기대신",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "잭스왁스",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "눈썹문신학원",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "갤럭시블루투스이어폰",
+   "kw": "가습기효능",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "THECLASS",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인천네스트",
+   "vol": 300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오플렉스",
+   "vol": 300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "글로스브로버블밤",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어스컴파운드",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프로스태프",
+   "vol": 300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "퓨리스",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "울티메이트",
    "vol": 290,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "무선이어셋",
-   "vol": 280,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "엘지블루투스이어폰",
+   "kw": "클라비스코트",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바스싱크대클리너",
+   "kw": "탠저린생리대",
    "vol": 280,
-   "comp": "높음",
-   "hint": false
+   "comp": "낮음",
+   "hint": true
   },
   {
-   "kw": "목걸이이어폰",
+   "kw": "보랄날개없는선풍기",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "레트로블루투스스피커",
-   "vol": 260,
+   "kw": "레무로",
+   "vol": 270,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "케가네",
+   "vol": 270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "부산자동차용품점",
+   "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바스탈취제공구",
+   "kw": "디오딧",
+   "vol": 260,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "에코버식기세척기세제",
    "vol": 250,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "라디오블루투스스피커",
+   "kw": "럼브",
+   "vol": 250,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "암앤해머세탁세제",
+   "vol": 240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "메가텐칫솔",
+   "vol": 240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "LEZEN가습기",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한일서큘레이터",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남해노이하우스",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "클레드브루",
+   "vol": 230,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "피토레스코공구",
+   "vol": 230,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "한일선풍기리모컨",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "통화용이어폰",
+   "kw": "열가습기",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "울산오션뷰호텔",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "GYEON",
+   "vol": 230,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "IK분무기",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "RAVRAC",
+   "vol": 220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아메카지쇼핑몰",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유선골전도이어폰",
+   "kw": "더클래스세차",
+   "vol": 220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파이어볼나파클리너",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠가죽코팅",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올리온",
+   "vol": 210,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "가습기초음파",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "레트로스피커",
-   "vol": 200,
+   "kw": "가습기생수",
+   "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "블루투스핸즈프리",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "통화용블루투스",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "핸드셋",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이어셋마이크",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "통화이어폰",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스마트폰이어폰",
-   "vol": 160,
+   "kw": "더클래스코리아",
+   "vol": 210,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "핸드폰무선이어폰",
+   "kw": "3M벨크로",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소나텍",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "울산얼굴경락",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "메가텐",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신일전자선풍기",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뷰앤블루",
+   "vol": 200,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "퓨리스D22",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "디테일링프로",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어스UC",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "테이블보주문제작",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실선풍기",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그린스토아",
+   "vol": 190,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "레인드롭바주카",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파이어볼고체왁스",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알로줄렌",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PALEO",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신일스탠드선풍기",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디테일팩토리브러쉬",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠인테리어디테일러",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스노즐",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "타블렛세제",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대구발각질",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한일써큘레이터",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비엘리아",
+   "vol": 170,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "AD폼랜스",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파이어볼쇼카",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "바나나브리즈",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자이몰콩쿠르",
+   "vol": 170,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "속초클래스300",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "양산에덴벨리리조트",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온레더코트",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글라코유막제거",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어왁스",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이툴백",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "LG넥밴드",
+   "kw": "카렉스고광택왁스",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고음질유선이어폰",
+   "kw": "자동차용품판매점",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "PC블루투스이어폰",
+   "kw": "맥과이어스울티메이트",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라다메르올리고포스",
+   "vol": 155,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식기세척기캡슐세제",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보만선풍기",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보국서큘레이터",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "STX리조트문경",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거제마리나베이",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠워터스팟",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "STX리조트조식",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "삼성전자선풍기",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목걸이블루투스이어폰",
-   "vol": 125,
+   "kw": "보국에어젯",
+   "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "탱이하우스",
+   "kw": "한일전기선풍기",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하이원리조트숙박",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파이어볼왁스",
+   "vol": 140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오토피네스",
+   "vol": 140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "광주호텔야자",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이너클린",
+   "vol": 140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이버킷",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하이원콘도예약",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브리오신키친클리너",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "살림백서세제",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "UH홈데코",
+   "vol": 130,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "피레스트",
+   "vol": 130,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "럭스360",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로렌드",
+   "vol": 130,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "영덕힐링턴콘도",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD세차",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "인천송도오크우드",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어광택제",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로블루",
+   "vol": 120,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "시컬리",
    "vol": 120,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "아이로베",
+   "kw": "삼기력",
    "vol": 120,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "샐러디매장",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잇츠윈윈타월",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마그웻워시패드",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오토글림",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대명양양",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SOFT99",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이카샴푸",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스부품",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키니샴푸",
+   "vol": 110,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "희망사무포인트",
+   "kw": "잇츠윈워시미트",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "P21S",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소프트99왁스",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD세차용품",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3MPPF보호필름",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트왁스",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온레더쉴드",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠레더클리너마일드",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이워터스팟",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠트림",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디테일링닥터스",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "막내댕이",
+   "vol": 110,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "르젠BLDC선풍기",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브레바",
+   "vol": 100,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "샐러디창업",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잇츠윈드라잉타월",
    "vol": 100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "골전도헤드폰",
+   "kw": "아머올",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "택배이어폰",
+   "kw": "파이어볼유리막코팅제",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파이어볼타이어광택제",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠큐어",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온레더클리너",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "IK압축분무기",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블루믹스프리워시",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에피벗쿠션공구",
+   "vol": 95,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "PRIL",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "뮤지컬마이크",
+   "kw": "로댕쇼",
+   "vol": 90,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "차미돈",
+   "vol": 90,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "대전발톱무좀",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "BAS차량용탈취제",
+   "kw": "르젠무선선풍기",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "컴퓨터유선이어폰",
+   "kw": "어메이징가습기",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "백암온천고려호텔",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "무주가족호텔",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이엑스큐",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글로스브로오렌지크러쉬",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글로스브로철분제거제",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "EXQ컴파운드",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD퍼플벨벳",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3M광택제",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠레더",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이V7",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이미트슬라이드",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자이몰왁스",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스인더스트리",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보국에어젯써큘레이터",
+   "vol": 85,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "MBC건축박람회",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "모노이어폰",
+   "kw": "신일무소음선풍기",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오토브라이트레펠",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파이어볼카샴푸",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파이어볼유리막",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도도쥬스",
+   "vol": 80,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠유리막코팅",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠프랩",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그릿가드버킷돌리",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "노원얼굴경락",
+   "vol": 75,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "르젠써큘레이터",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SK매직식기세척기세제",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "탱크캐리어",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "차량용핸즈프리",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "귀걸이블루투스",
+   "kw": "LG전자선풍기",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "핸드폰블루투스이어폰",
-   "vol": 50,
+   "kw": "14인치선풍기",
+   "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "공연용마이크",
-   "vol": 50,
+   "kw": "유선선풍기",
+   "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바스탈취제미니",
-   "vol": 50,
+   "kw": "샐러디창업비용",
+   "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고성능이어폰",
-   "vol": 40,
+   "kw": "남원효산콘도",
+   "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강의용헤드셋마이크",
-   "vol": 40,
+   "kw": "양산에덴밸리",
+   "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "한쪽블루투스이어폰",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "하이파이헤드폰",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바스탈취제핑크",
-   "vol": 35,
+   "kw": "오플렉스워셔액",
+   "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "바스탈취",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바스섬유탈취제",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애프터샥골전도",
-   "vol": 25,
+   "kw": "디바텍패드",
+   "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "바스배수구클리너",
-   "vol": 25,
+   "kw": "볼라솔루션P27",
+   "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "BAS탈취제공구",
-   "vol": 25,
+   "kw": "3M클레이바",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠레더클리너스트롱",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠큐어매트",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이블랙라이트",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이젯실",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글라코사이드미러",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이즈",
+   "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "BAS세탁조클리너",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공연무선마이크",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선이어셋마이크",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "슈어이어마이크",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업무용블루투스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블루투스통화용이어폰",
-   "vol": 15,
+   "kw": "볼프강DGPS",
+   "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "통화전용이어폰",
-   "vol": 15,
+   "kw": "울트라레인보우에어버핑",
+   "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "BAS섬유탈취제",
-   "vol": 15,
+   "kw": "브러쉬몬스터",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파세코무선선풍기",
+   "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바스변기세정제",
-   "vol": 15,
+   "kw": "블랙파이어",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어광택",
+   "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바스건조기시트",
-   "vol": 15,
+   "kw": "참그린세제",
+   "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "BAS에어컨탈취제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BAS싱크대클리너",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BAS변기세정제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BAS바스탈취제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈젬",
-   "vol": 10,
+   "kw": "올레그레인",
+   "vol": 60,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "구매24",
-   "vol": 10,
+   "kw": "하이원리조트펜션",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이그니스클룹",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "TAC광택기",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잭스왁스토탈인테리어",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "EXQ패드",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오토브라이트카샴푸",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "볼라솔루션유리막",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자이몰티타늄",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "글로스브로프리워시",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스2000",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다움호텔",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아담스폴리쉬",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "광주유막제거",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글로스브로타르오프",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어스왁스",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생활공작소식기세척기세제",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "위키드랩비오틴",
+   "vol": 55,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "삭즈이어폰",
-   "vol": 10,
+   "kw": "에버미라클주방세제",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마리아닐라",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "세라믹제작",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인솔제작",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신일서큘레이터선풍기",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라디셀",
+   "vol": 50,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "파이어볼쇼카왁스",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파이어볼세차",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오토브라이트다이렉트코리아",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "인천로얄호텔",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠가죽",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠가죽코팅제",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠마일드",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글라코G65",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글로스브로스피드와이프",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "글로스브로캐빈클린",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글로스브로타이어광택제",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동세차기계",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "루페스3인치",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신일저소음선풍기",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잭스왁스바디샤인",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이레더",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캐빈클린",
+   "vol": 45,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "안드로이드무선이어폰",
+   "kw": "맥과이어고체왁스",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어골드클래스",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "참그린녹차",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "온시아",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "제노시스루페",
+   "vol": 40,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "보국제로닷",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피나클소버린",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오플렉스돌리",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오토브라이트버킷",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스팽글케미컬",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3M콤파운드",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "볼라왁스",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오토피네스크리스탈",
+   "vol": 40,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "AD오토브라이트다이렉트",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠가죽클리너",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠카샴푸",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠캔코트",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠퀵디테일러",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에어로코스메틱",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "울트라레인보우버핑타월",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이소분용기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글라코99",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠바스",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스구찌",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠Q2",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠아이언",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스악셀포머",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어105",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "넬리주방세제",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "WICKEDLAB",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "일렉트로마트선풍기",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "제이닉스선풍기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "삼천포루벤스호텔",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마그웻버킷",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카믹스",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "디바텍양모",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD크리스탈",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가평대명리조트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차시트오염",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "나지올유리막",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠실내",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스폼",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고무클리너",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젯실매트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "울트라레인보우타월",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어메탈폴리쉬",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부두라이드폼랜스",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어세차",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "NELLIE",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로쎄",
+   "vol": 30,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "그뤼너씨",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신일전자서큘레이터",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신일14인치선풍기",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광주신양파크호텔",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마그웻포레스트",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "코흐케미그린스타",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "코흐케미모터플라스트",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "택시폼",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플래시왁스",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD컬러폼",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3M왁스",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3M컴파운드3000방",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3M광택패드",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오토피네스툴백",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "부두라이드버킷",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스팽글젠틀맨",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거제투데이호텔",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD베리체리",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오토브라이트매지폼",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나지올메탈코트",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠클리너",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이911툴백",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스압축분무기2000",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핸드폴리싱",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이디아블로",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디테일링프로가죽세정제",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디테일링프로퀵디테일러",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠뷰",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "디테일가즈",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "SGCB",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "글로스브로타이어클린",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "LG식기세척기전용세제",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "식기세척기타블렛세제",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라브라크24인치",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "LEZE",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SIC가공",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피토덤",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "삼성무선선풍기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디바텍폼패드",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "EXQMP150",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "EXQ마스터피스",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파이어볼왁스오프",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파이어볼프리워시",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "EXQ트라이앵글",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글로스브로유막제거",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "3M3000방컴파운드",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자이몰빈티지",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "BOLASOLUTION",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "버킷프렌즈",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "도도주스",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "도도쥬스폼랜스",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "부여백제관광호텔",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레더클리너마일드",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD브러쉬",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD핑크쉰",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오토브라이트실내세정제",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠세트",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠타이어광택제",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠플라스틱",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글로스브로물왁스",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미스터핑크",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이무광",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이스트리퍼센트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이에코스마트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이워터리스",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이폼랜스",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글라코바주카",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스인더스트리2000",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스폼건",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부두라이드카샴푸",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "CHEMICALGUYS",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이지크림",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케가",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이실내",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "그릿가드버킷",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이짐백",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이하이드로",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글로스브로이너샤인",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "G80가변배기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오크밸리근처펜션",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가죽시트관리",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어물왁스",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어세차용품",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발렛프로",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "칼날제작",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "더클래스셀프세차",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마그웻크랩휠미트",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "TAC유리막",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잭스왁스실내",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "티에이씨시스템",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD슈퍼폼",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파이어볼브라질왁스",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파이어볼에일리언블러드",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매스코닉",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "헬샤인고스트라이더",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "메탈코트",
+   "vol": 20,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "AD페인트클렌저",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오토피네스사틴",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기온레더",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이스프레이어블레더",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글로스브로실내세정제",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "큐리페어",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "도미골프",
+   "vol": 15,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "어텐티",
+   "vol": 15,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "라브라크탱크",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "풍성교나라모",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "리놀레카",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "PITTORESCO",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "빠이요수분크림",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엠마지",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에이엔화장품",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "MEGATEN",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "핑크구미베어",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "르젠무엽선풍기",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신일전자써큘레이터",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신일써큘레이터선풍기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신일선풍기써큘레이터",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스타일리스서큘레이터",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "최신형선풍기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리오메딕스",
+   "vol": 15,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "샐러디가맹",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "니도르",
+   "vol": 15,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "비발디파크주변펜션",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "마그웻크랩",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코흐케미구미픽스",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "발란스나인유리막코팅",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤이니왁스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "TAC시스템카샴푸",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모터플라스트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "듀플렉스세차",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD오토브라이트폼랜스",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "오토브라이트퀵디테일러",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스팽글디테일링",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스팽글세차",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스팽글카샴푸",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스팽글페인트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파이어볼코리아",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD디테일링",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "TAC에이쿼츠",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "AD다이렉트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3M고체왁스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3M광택",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3M러빙컴파운드",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "3M발수코팅",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3M컴파운드2000방",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3M헤라",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "듀플렉스왁스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "터틀왁스컴파운드",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "AD왁스",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오토피네스크루백",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자이몰글레이저",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파이어볼유리막코팅",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD폼",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도도쥬스본투비마일드",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대전아드리아호텔",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "LEATHERCOAT",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠코팅제",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시트보호제",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "AD블랙다이",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD알칸타라",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오토브라이트유리세정제",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오토브라이트크리스탈",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "오토브라이트퍼플레인",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오토브라이트페인트클렌저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오토브라이트FAB",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오토브라이트핑크쉰",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠실내세정제",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온가죽코팅제",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠유리막코팅제",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠탈지제",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "보라솔루션",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "AUTOBRITEDIRECT",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이랩디테일러",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이메티큘러스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이센트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이왁스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이프리워시",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하이드로차지",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠컴파운드",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠레더마일드",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스미니",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스압축분무기부품",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스헤드",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "볼프강실런트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사전용세제",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오토브라이트베리체리",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도도쥬스왁스",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이가방",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이버터웻왁스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이타이어",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도도쥬스본투비",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "퓨리스D15",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스하비",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세차약품",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "시모나이즈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유리막발수코팅제",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어광택기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어얼티메이트컴파운드",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어타이어",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어타이어광택제",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어하이퍼드레싱",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "카렉스세차",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글로스브로트리거",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어APC",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소낙스가방",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블루믹스왁스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어스APC",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오비노비앙코",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "방수블루투스",
+   "kw": "파이토신재생크림공구",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "운동MP3",
+   "kw": "제노시스암예측",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "퍼플메이트",
+   "kw": "온더스선풍기",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "퍼플사운드",
+   "kw": "따따베선풍기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "온더스날개없는선풍기",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "BAS탈취제핑크",
+   "kw": "24년형신일선풍기",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "바스초강력탈취제",
+   "kw": "신일거실선풍기",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "BAS초강력탈취제",
+   "kw": "24년형선풍기",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "BAS배수구클리너",
+   "kw": "듀얼온",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "샐러디가맹점",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "하누와",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "행운큐브",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "남원토비스콘도",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "BAS탈취제미니",
+   "kw": "가평클럽인너호텔앤리조트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "오플렉스퓨어인테리어클리너",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바스탈취제고체",
+   "kw": "잇츠윈롤리팝",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바스탈취제오렌지",
+   "kw": "잇츠윈미트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오토글림레더",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "TAC왁스",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스팽글닥터몬스터",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "잭스왁스코리아",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "듀플렉스세차용품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아머올가죽세정보호제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD알칸타라클리너",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "ADDBS브러쉬",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD디테일링브러쉬",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD엘레강스",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "EXQMP-150",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스팽글페인트클렌져",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스팽글프리워시",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파이어볼샴푸",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파이어볼세차용품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마그웻세차버킷",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스팽글인테리어",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "A-QUARTZ",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헬샤인어비스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "AD페인트클렌져",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "볼라솔루션G37",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3M낙진제거제",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "3M에어샌딩기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파이어볼바인더",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오토피네스레볼루션",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오토피네스유리세정제",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "자이몰필드글레이즈",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "강화올제스파펜션",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "덕구온천주변숙박",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소노문변산",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소노문스위트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인천파라다이스시티호텔예약",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창원프라하호텔",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "파주칼튼호텔",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "하이원근처숙박",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3M폴리싱",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "컴파운드3M",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD발수코팅제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD저스트더토닉",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "오토브라이트다이렉트브러쉬",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오토브라이트시트러스워시",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나지올유리막코팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글라코G73G19",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "글라코유리발수코팅",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "기온Q2",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠타르제거제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레더가드",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케가이너클린",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이세차툴백",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이셔닐",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이스티커",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이젯실매트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이파파손",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이하이브리드",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "울트라레인보우버핑",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠타이어익스프레스",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스에르고2000",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마로렉스오아시스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "퓨리스D74",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "ADDBS",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이닐피스크",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기온쿼츠Q2타이어",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디테일링프로금속광택제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디테일링프로엔진룸",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이세트",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이APC",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글래스엑스",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이디콘",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이스마트젤",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이휠클리너",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AD타르제거제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "볼라P17",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스피드폴",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어스하이퍼드레싱",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어워터스팟",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카렉스보조미러",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카렉스휠크리너",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어스물왁스",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차량케미컬",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블루믹스마스터샤인",
    "vol": 10,
    "comp": "높음",
    "hint": false
