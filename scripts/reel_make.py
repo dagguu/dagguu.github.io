@@ -3,7 +3,7 @@
 # 1) 타입캐스트 with-timestamps 로 전체 대본 음성 + 단어 시간  2) 장면마다 첫 단어~다음 장면 첫 단어 = 그 사진이 나오는 시간
 # 3) 장면이 1.8초 넘으면 같은 사진을 넓게/가깝게 1.2초 안팎 컷으로 나눔, 컷마다 카메라 움직임(줌인·좌우 이동·줌아웃)
 # 4) 자막: 2~3단어씩, 가운데 아래 흰 글씨+검은 테두리, hl 단어는 주황  → reel_out/<name>/reel.mp4 (워크플로가 insta 브랜치 reels/ 로)
-import json, os, sys, subprocess, base64, argparse, datetime, requests
+import re, json, os, sys, subprocess, base64, argparse, datetime, requests
 ap = argparse.ArgumentParser(); ap.add_argument("--name", default="daytona"); ap.add_argument("--thumb-only", action="store_true"); a = ap.parse_args()
 # 폰트: 여기어때 잘난체 + 기울임 (2026-10-26 시온님, scripts/get_font.py 가 먼저 받아 둠)
 FU = json.load(open("fonts_used.json")) if os.path.exists("fonts_used.json") else {}
@@ -97,9 +97,15 @@ if TT and J.get("titleInVideo"):  # 2026-10-26 22:24 시온님: 제목은 영상
     t1 = TT[0] + ("\\N{\\c&H00FFFF&}" + TT[1] if len(TT) > 1 else "")
     L.append(f"Dialogue: 1,{ts(0)},{ts(min(2.8, dur))},T,,0,0,0,,{{\\i1}}{t1}")
 def chunk(ws):
+    # 2026-10-27 시온님 "네 명이 가면 문장이 잘렸어": 숫자·세는 말(한/두/세/네/다섯…/숫자)과 1글자 말은 다음 말과 붙여 둔다, 쉼표·마침표에서 끊는다
+    NUM = re.compile(r"^(한|두|세|네|다섯|여섯|일곱|여덟|아홉|열|스무|몇|\d[\d,]*)$")
+    glue = lambda t: bool(NUM.match(t.rstrip(",."))) or len(t.rstrip(",.")) <= 1
     out, cur = [], []
     for w in ws:
-        if cur and (len(cur) >= 2 or len("".join(x["text"] for x in cur + [w])) > 9 or cur[-1]["text"].endswith((",", "."))): out.append(cur); cur = []  # 쉼표에서 끊기
+        n = len("".join(x["text"] for x in cur + [w]))
+        if cur and cur[-1]["text"].endswith((",", ".", "?", "!")): out.append(cur); cur = []
+        elif cur and not glue(cur[-1]["text"]) and (len(cur) >= 2 or n > 9): out.append(cur); cur = []
+        elif cur and len(cur) >= 3: out.append(cur); cur = []
         cur.append(w)
     return out + ([cur] if cur else [])
 for i, s in enumerate(SC):
