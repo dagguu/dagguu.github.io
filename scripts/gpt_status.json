@@ -1,18 +1,50 @@
 {
- "at": "2026-10-26 11:11",
- "model": "gpt-image-1",
+ "at": "2026-10-26 11:12",
+ "model": "gpt-image-2.5-sunburst",
  "quality": "high",
  "size": "1024x1536",
  "images": [
   {
    "n": 1,
-   "error": "The model 'gpt-image-1' does not exist.",
-   "status": 400
+   "file": "img/2026-10-26/pohang-daytona/1.jpg",
+   "wh": [
+    1024,
+    1536
+   ],
+   "usage": {
+    "input_tokens": 817,
+    "input_tokens_details": {
+     "image_tokens": 704,
+     "text_tokens": 113
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2189
+   }
   },
   {
    "n": 5,
-   "error": "The model 'gpt-image-1' does not exist.",
-   "status": 400
+   "file": "img/2026-10-26/pohang-daytona/5.jpg",
+   "wh": [
+    1024,
+    1536
+   ],
+   "usage": {
+    "input_tokens": 821,
+    "input_tokens_details": {
+     "image_tokens": 704,
+     "text_tokens": 117
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2193
+   }
   }
  ],
  "slug": "pohang-daytona",
