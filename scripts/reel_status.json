@@ -1,5 +1,5 @@
 {
- "at": "2026-10-26T15:38:18.478461",
+ "at": "2026-10-26T16:13:57.459810",
  "name": "matie",
  "font": "Jalnan",
  "fontInfo": {
@@ -10,6 +10,65 @@
   "family": "Jalnan",
   "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
  },
- "thumbOnly": true,
- "file": "reels/matie/thumb.jpg"
+ "dur": 22.73,
+ "cuts": 17,
+ "plan": [
+  {
+   "video": true,
+   "t": "부산역 바로 옆, 바다 앞에 올해 4월 문을 연 호텔이에요.",
+   "img": "p:1",
+   "start": 0.0,
+   "end": 3.97,
+   "cuts": 3
+  },
+  {
+   "video": true,
+   "t": "51층 수영장에선, 큰 창 너머로 바다가 보이고,",
+   "img": "ai:2",
+   "start": 3.97,
+   "end": 7.07,
+   "cuts": 2
+  },
+  {
+   "video": true,
+   "t": "방에 거실이 따로 있어서, 바다를 보면서 쉴 수 있어요.",
+   "img": "p:3",
+   "start": 7.07,
+   "end": 10.21,
+   "cuts": 2
+  },
+  {
+   "video": true,
+   "t": "침실 큰 창으로도, 바다가 펼쳐지고,",
+   "img": "p:5",
+   "start": 10.21,
+   "end": 12.49,
+   "cuts": 2
+  },
+  {
+   "video": true,
+   "t": "창밖으론 부산 바다가 한눈에 들어와요.",
+   "img": "ai:4",
+   "start": 12.49,
+   "end": 14.97,
+   "cuts": 2
+  },
+  {
+   "video": true,
+   "t": "체크인이 저녁 6시라, 도착하면 불 켜진 호텔이 반겨줘요.",
+   "img": "p:6",
+   "start": 14.97,
+   "end": 18.7,
+   "cuts": 3
+  },
+  {
+   "video": true,
+   "t": "기차에서 내려서 바로 가는, 부산 바다 앞 호텔이에요.",
+   "img": "p:1",
+   "start": 18.7,
+   "end": 22.73,
+   "cuts": 3
+  }
+ ],
+ "file": "reels/matie/reel.mp4"
 }
