@@ -1,56 +1,28 @@
 {
- "at": "2026-10-26T09:14:41.330060",
+ "at": "2026-10-26T13:21:46.379774",
  "name": "daytona",
  "jobs": [
   {
-   "img": "ai:1",
-   "taskId": "bd1c8e44bd48471a4d4247d56d5c2376",
+   "img": "p:3",
+   "taskId": "dd9c91336ef979a17122cbb16de06a2b",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-10-26/pohang-daytona/clip_ai1.mp4"
+   "file": "video/2026-10-26/pohang-daytona/clip_p3.mp4"
   },
   {
-   "img": "p:2",
-   "taskId": "256a66aeb911f75ba11ffb01e0693886",
+   "img": "p:4",
+   "taskId": "30c88d64d672592c429848edf999fbff",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-10-26/pohang-daytona/clip_p2.mp4"
+   "file": "video/2026-10-26/pohang-daytona/clip_p4.mp4"
   },
   {
-   "img": "p:1",
-   "taskId": "9a4c52d7cb45cc977af9426941b59ef6",
+   "img": "p:6",
+   "taskId": "bda633eb3350b408d3fb6690f03b9df4",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-10-26/pohang-daytona/clip_p1.mp4"
-  },
-  {
-   "img": "ai:3",
-   "taskId": "b212afdac771f3c2d615160ef1b39d2d",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-10-26/pohang-daytona/clip_ai3.mp4"
-  },
-  {
-   "img": "ai:4",
-   "taskId": "c620e1cb1761cb52f7edd753e00167df",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-10-26/pohang-daytona/clip_ai4.mp4"
-  },
-  {
-   "img": "ai:5",
-   "taskId": "70c0917a58ebddd24c1cdbb54a5fee96",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-10-26/pohang-daytona/clip_ai5.mp4"
-  },
-  {
-   "img": "ai:6",
-   "taskId": "fc71154acf0f9ec4d921991f40a2d67e",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-10-26/pohang-daytona/clip_ai6.mp4"
+   "file": "video/2026-10-26/pohang-daytona/clip_p6.mp4"
   }
  ],
- "credits_total": 245.0
+ "credits_total": 105.0
 }
