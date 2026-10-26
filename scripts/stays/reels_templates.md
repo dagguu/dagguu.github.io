@@ -79,5 +79,5 @@ json 의 type·theme·points·fit·tags 글자로 판단, 여러 개면 시온�
 - 사람 장면 20% · 풍경 80%: 8장면이면 사람(ai:N) 2개 안팎, 나머지는 숙소 사진(p:N) 영상. 첫 장면(제목과 같이)이나 침대·창가처럼 "쓰는 모습"이 필요한 곳에만 사람.
 - 인물은 반드시 한국인, 뒷모습이나 옆모습만(카메라를 보는 얼굴 X). 프롬프트에 "Korean", "back view or side profile, never facing the camera".
 - 자막: 크게(104px)·화면 가운데, 2단어 또는 9글자 안팎씩. 강조 단어 주황.
-- 제목: 영상 맨 처음 2.8초, 위쪽에 2줄(흰색 + 노란색) — scripts/tts/<name>.json "title":[윗줄, 아랫줄].
+- 제목: 영상에는 넣지 않는다(2026-10-26 22:24 시온님). 대신 썸네일(표지 1080x1920)을 만든다 — scripts/tts/<name>.json "title":[윗줄, 아랫줄]·"thumb":{img(기본 첫 풍경 장면), sec} → reel_make 가 scripts/reel_thumb.py 로 reels/<name>/thumb.jpg. 글씨는 가운데 3:4(프로필 격자)에 들어오게 위쪽 y 360 부근.
 

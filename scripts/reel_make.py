@@ -77,7 +77,7 @@ L = ["[Script Info]", "ScriptType: v4.00+", "PlayResX: 1080", "PlayResY: 1920", 
      "Style: T,Noto Sans CJK KR Black,112,&H00FFFFFF,&H00000000,&H78000000,1,1,8,4,8,50,50,300", "", "[Events]",
      "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
 TT = J.get("title") or []
-if TT:  # 제목: 맨 처음 2.8초, 위쪽, 윗줄 흰색·아랫줄 노란색 (2026-10-26 시온님)
+if TT and J.get("titleInVideo"):  # 2026-10-26 22:24 시온님: 제목은 영상에 넣지 않고 썸네일로  # 제목: 맨 처음 2.8초, 위쪽, 윗줄 흰색·아랫줄 노란색 (2026-10-26 시온님)
     t1 = TT[0] + ("\\N{\\c&H00FFFF&}" + TT[1] if len(TT) > 1 else "")
     L.append(f"Dialogue: 1,{ts(0)},{ts(min(2.8, dur))},T,,0,0,0,,{t1}")
 def chunk(ws):
@@ -97,5 +97,9 @@ open(OUT + "/sub.ass", "w", encoding="utf-8").write("\n".join(L) + "\n")
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", OUT + "/cuts/list.txt", "-i", OUT + "/voice.mp3",
                 "-vf", f"subtitles={OUT}/sub.ass", "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
                 "-c:a", "aac", "-b:a", "192k", "-t", f"{dur:.2f}", "-movflags", "+faststart", OUT + "/reel.mp4"], check=True)
+if TT:  # 썸네일(표지) = thumb.img(기본 첫 풍경 장면) 영상/사진 + 제목 2줄
+    th = J.get("thumb") or {}; ti = th.get("img") or next((x["img"] for x in SC if x["img"].startswith("p:")), SC[0]["img"])
+    tsrc = clip(ti) or src(ti)
+    subprocess.run([sys.executable, "scripts/reel_thumb.py", tsrc, OUT + "/thumb.jpg", TT[0], TT[1] if len(TT) > 1 else "", str(th.get("sec", 1.5))], check=False)
 import shutil; shutil.rmtree(OUT + "/cuts"); [os.remove(f"{OUT}/{f}") for f in os.listdir(OUT) if f.startswith(("src_", "clip_"))]
 st.update({"dur": round(dur, 2), "cuts": len(cuts), "plan": plan, "file": f"reels/{a.name}/reel.mp4"}); save()
