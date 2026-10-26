@@ -1,4739 +1,9975 @@
 {
- "updated": "2026-10-26 11:13",
+ "updated": "2026-10-26 11:18",
  "hints": [
-  "퍼짓",
-  "리비트",
-  "큐리페어",
-  "메이드인랩",
-  "클레드브루",
-  "도미골프",
-  "다이비프로",
-  "어텐티",
-  "마르비니",
-  "참그린",
-  "라브라크",
-  "차미돈",
-  "올레그레인",
-  "다자르",
-  "로댕쇼",
-  "로쎄",
-  "안탈라",
-  "유레브",
-  "허밍테라피",
-  "로블루",
-  "키니샴푸",
-  "팔레오",
-  "소담목장",
-  "올리온",
-  "UH홈데코",
-  "럼브",
-  "르젠",
-  "켄트로얄",
-  "피레스트",
-  "위키드랩",
-  "글램핑크",
-  "머그비",
-  "탠저린생리대",
-  "라디셀",
-  "리오메딕스",
-  "시컬리",
-  "듀얼온",
-  "로렌드",
-  "뷰앤블루",
-  "보고바이오",
-  "그린스토아",
-  "미아크",
-  "매그니토",
-  "브레바",
-  "피에르마르콜리니",
-  "에코비",
-  "위드나르",
-  "길팁",
-  "샐러디",
-  "비엘리아",
-  "원더씬",
-  "유기네",
-  "레무로",
-  "니도르",
-  "하누와",
-  "뉴트리킷",
-  "행운큐브",
-  "디오딧",
-  "클룹",
-  "더클래스",
-  "막내댕이"
+  "박준뷰티랩",
+  "콤스",
+  "디올트",
+  "마들푸드",
+  "꼼지락온열매트",
+  "노바디체어",
+  "안다르",
+  "키플링",
+  "폰티악캐리어",
+  "코어하임",
+  "도모리",
+  "라우레타나",
+  "뉴트리오",
+  "라니펫",
+  "브루아오로",
+  "휘페",
+  "컴피리빙",
+  "덴탈프로",
+  "수영에미치다",
+  "비엠에슬릿",
+  "어반룩",
+  "헤비메이크업",
+  "블리닉",
+  "리즈로즈",
+  "밀레스",
+  "벤딕트",
+  "퍼플래빗",
+  "해치말차",
+  "사포네",
+  "리훈",
+  "조셉앤스테이시",
+  "캘드론",
+  "오리고",
+  "이새",
+  "VT코스메틱"
  ],
  "rows": [
   {
-   "kw": "샐러디",
-   "vol": 82000,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "다우니섬유유연제",
-   "vol": 31280,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "퍼실세탁세제",
-   "vol": 24830,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "더클래스",
-   "vol": 23510,
+   "kw": "안다르",
+   "vol": 585700,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "클룹",
-   "vol": 20430,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "다우니",
-   "vol": 20420,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "다우니세탁세제",
-   "vol": 14740,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "바인더",
-   "vol": 13690,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "3M",
-   "vol": 11810,
+   "kw": "룰루레몬",
+   "vol": 523300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유레브",
-   "vol": 10960,
+   "kw": "젝시믹스",
+   "vol": 364100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "올리브오일",
+   "vol": 112100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캔마트",
+   "vol": 106300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "박승철헤어",
+   "vol": 94770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의자",
+   "vol": 81500,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "다바걸",
+   "vol": 78100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조아맘",
+   "vol": 78000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "HDEX",
+   "vol": 68270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부디무드라",
+   "vol": 65530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "코코블랙",
+   "vol": 64200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식탁의자",
+   "vol": 57920,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝스믹스",
+   "vol": 54020,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베리시",
+   "vol": 51220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육육걸즈",
+   "vol": 47000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "벤딕트",
+   "vol": 46100,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "제시믹스",
+   "vol": 43630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "브론즈부부",
+   "vol": 41930,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "라일론",
+   "vol": 40620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마담4060",
+   "vol": 40400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "럭스위즈",
+   "vol": 34080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "요가복",
+   "vol": 31170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "메이뜰",
+   "vol": 30780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프론투라인",
+   "vol": 30340,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "더카라",
+   "vol": 28210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로즈맘",
+   "vol": 27590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디얼마미",
+   "vol": 27400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동탄호수공원",
+   "vol": 27090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "박준뷰티랩",
+   "vol": 26140,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "키플링",
+   "vol": 25080,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "뮬라웨어",
+   "vol": 24890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마스마룰즈백팩",
+   "vol": 23870,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "안나디바",
+   "vol": 22880,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬가방",
+   "vol": 21610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키플링백팩",
+   "vol": 20820,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "알로요가",
+   "vol": 20300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로즈몽",
+   "vol": 20230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에블린",
+   "vol": 19730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시",
+   "vol": 18860,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "이새",
+   "vol": 18820,
    "comp": "낮음",
    "hint": true
   },
   {
-   "kw": "피죤섬유유연제",
-   "vol": 10540,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신일선풍기",
-   "vol": 10390,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "롯데리조트",
-   "vol": 10350,
+   "kw": "콘치웨어",
+   "vol": 18620,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "샤프란",
-   "vol": 10250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "군산에이본호텔",
-   "vol": 7870,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "르젠가습기",
-   "vol": 7710,
+   "kw": "룰루레몬매장",
+   "vol": 18550,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신일가열식가습기",
-   "vol": 7280,
+   "kw": "모로칸오일",
+   "vol": 17830,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "프릴주방세제",
-   "vol": 6660,
+   "kw": "올리브오일효능",
+   "vol": 17070,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기온쿼츠",
+   "kw": "오리고",
+   "vol": 16500,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "키플링크로스백",
+   "vol": 15460,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "레깅스",
+   "vol": 15190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잇존어패럴",
+   "vol": 15080,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "엑스트라버진올리브오일",
+   "vol": 12990,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "트레이닝복",
+   "vol": 12430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "데비웨어",
+   "vol": 12250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모스캣",
+   "vol": 11950,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "잇존",
+   "vol": 11740,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "큐모모",
+   "vol": 11370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "엑스트라올리브오일",
+   "vol": 11340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부원피스",
+   "vol": 11210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리훈",
+   "vol": 11210,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "캉골백팩",
+   "vol": 10400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올리브유효능",
+   "vol": 10260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여왕거미",
+   "vol": 9990,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "볼캡",
+   "vol": 9720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필라테스복",
+   "vol": 9510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "내츄럴가든",
+   "vol": 9460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "LULULEMON",
+   "vol": 9240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "듀오백의자",
+   "vol": 8910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올리브캡슐",
+   "vol": 8620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그란데라인",
+   "vol": 8280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "요가바지",
+   "vol": 8270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엑스트라버진오일",
+   "vol": 7890,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스매장",
+   "vol": 7790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여자운동복",
+   "vol": 7660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "니디즘",
+   "vol": 7630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "VT코스메틱",
+   "vol": 7540,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "위례미용실",
+   "vol": 7500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보정속옷",
+   "vol": 7350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잭스믹스",
+   "vol": 7230,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "트레이닝복세트",
+   "vol": 7220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "RBW짐웨어",
+   "vol": 7220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "몸빼",
+   "vol": 7200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애니바디",
+   "vol": 7170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스레깅스",
+   "vol": 7130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "잠실미용실",
+   "vol": 6950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "네추럴가든",
+   "vol": 6940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트레이닝셋업",
+   "vol": 6930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오리고블랭킷",
+   "vol": 6920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "팬틴트리트먼트",
+   "vol": 6730,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "콜롬비아후리스",
+   "vol": 6730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리훈다이어리",
+   "vol": 6730,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "VERISH",
+   "vol": 6720,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "노익스강",
+   "vol": 6500,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "ATHLETE",
+   "vol": 6430,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "노와이어브라",
+   "vol": 6310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엑스트라버진올리브유",
+   "vol": 6310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수헬렌",
    "vol": 6290,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "대구인터불고엑스코",
+   "kw": "올리브오일추천",
+   "vol": 6260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "네츄럴가든",
+   "vol": 6250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "김창숙부티크",
+   "vol": 6220,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "젝시미스",
+   "vol": 6140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "부츠컷레깅스",
+   "vol": 6140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "MASMARULEZ",
+   "vol": 5980,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬텀블러",
+   "vol": 5970,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "시디즈매장",
+   "vol": 5960,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키플링가방",
+   "vol": 5710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올리브유먹는법",
+   "vol": 5650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트레이닝팬츠",
+   "vol": 5520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올리브효능",
    "vol": 5410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신일서큘레이터",
-   "vol": 4640,
+   "kw": "유기농올리브오일",
+   "vol": 5360,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "계면활성제",
-   "vol": 4560,
+   "kw": "앉은뱅이의자",
+   "vol": 5350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬아울렛",
+   "vol": 5190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "4060",
+   "vol": 5160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여름원피스",
+   "vol": 5120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "피에르마르콜리니",
+   "kw": "신데렐라클리닉",
+   "vol": 5110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공복올리브오일",
+   "vol": 5010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이너웨어",
+   "vol": 4990,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자트레이닝세트",
+   "vol": 4910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필라테스옷",
+   "vol": 4790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키트레이닝복세트",
+   "vol": 4730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오일풀링",
+   "vol": 4600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "TREATMENT",
+   "vol": 4490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "토삭스코리아",
+   "vol": 4370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "ANDAR",
+   "vol": 4360,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "하바나선데이",
+   "vol": 4320,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "블루그레인",
+   "vol": 4250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "지축미용실",
+   "vol": 4190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "큰컵브라",
    "vol": 4180,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "브리오신주방세제",
-   "vol": 4110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "AD",
-   "vol": 4110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백진삼",
+   "kw": "더수리",
+   "vol": 3960,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝스미스",
+   "vol": 3910,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "휴먼메이드반팔",
+   "vol": 3850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에블린속옷",
+   "vol": 3800,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "란제리속옷",
+   "vol": 3800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케라시스트리트먼트",
+   "vol": 3780,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여성트레이닝복",
    "vol": 3750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유니클로브라",
+   "vol": 3680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엄마옷로즈맘",
+   "vol": 3670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이야이야올리브오일",
+   "vol": 3640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "김여사",
+   "vol": 3600,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스페인올리브오일",
+   "vol": 3580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유니클로맨투맨",
+   "vol": 3460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키플링토트백",
+   "vol": 3440,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "잭시믹스",
+   "vol": 3430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "힐크릭골프웨어",
+   "vol": 3390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아모스트리트먼트",
+   "vol": 3360,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "운동복브랜드",
+   "vol": 3350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "위뜨8",
+   "vol": 3300,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "미니관리기",
-   "vol": 3340,
+   "kw": "언더아머바지",
+   "vol": 3280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "더클래스세차용품",
+   "kw": "헤드스파트리트먼트",
+   "vol": 3260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "올리브유추천",
+   "vol": 3230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방이동미용실",
+   "vol": 3220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수면브라",
    "vol": 3200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "슈가버블주방세제",
-   "vol": 3100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "매그니토",
-   "vol": 2990,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "스팽글",
-   "vol": 2990,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "카톤",
-   "vol": 2930,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파이토신",
+   "kw": "룩스웨어",
+   "vol": 3190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여자속옷브랜드",
+   "vol": 3190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠실새내미용실",
+   "vol": 3170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "워너비즈핏",
+   "vol": 3130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "요가복브랜드",
+   "vol": 3090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "르바세",
+   "vol": 3050,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "헤드스파7트리트먼트",
+   "vol": 3010,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가슴작아보이는브라",
+   "vol": 2960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오리고담요",
+   "vol": 2940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "LPP트리트먼트",
+   "vol": 2920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모로칸오일트리트먼트",
    "vol": 2910,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "르젠가열식가습기",
+   "kw": "문정동미용실",
+   "vol": 2900,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "올리브오일엑스트라버진",
+   "vol": 2900,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "거들",
    "vol": 2890,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "케미컬가이",
+   "kw": "비비안노와이어",
    "vol": 2880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엘라스틴트리트먼트",
+   "vol": 2860,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "르젠",
-   "vol": 2680,
+   "kw": "헤어트리트먼트추천",
+   "vol": 2830,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "가습기청소",
+   "kw": "아르아율",
+   "vol": 2820,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여성요가복",
+   "vol": 2770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기모레깅스",
+   "vol": 2740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올리브유엑스트라버진",
+   "vol": 2740,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자세교정의자",
+   "vol": 2730,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "필라테스상의",
+   "vol": 2690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "처진가슴브라",
+   "vol": 2680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자조거팬츠",
+   "vol": 2650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자레깅스",
+   "vol": 2600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유기농엑스트라버진올리브오일",
+   "vol": 2590,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "퓨어올리브오일",
+   "vol": 2590,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스토리요가",
+   "vol": 2580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "XEXYMIX",
+   "vol": 2560,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "안다르골프웨어",
+   "vol": 2550,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "허리편한의자",
+   "vol": 2520,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "비에티",
+   "vol": 2490,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "시크헤라",
+   "vol": 2490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬패스트앤프리",
+   "vol": 2480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유니클로브라탑",
+   "vol": 2460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "추리닝세트",
+   "vol": 2450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "큰가슴브라",
+   "vol": 2450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바바라언더웨어",
    "vol": 2440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "글라코유막제거제",
-   "vol": 2360,
+   "kw": "기모트레이닝세트",
+   "vol": 2390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다우니세제",
+   "kw": "하이원스",
+   "vol": 2380,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여성운동복",
+   "vol": 2370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "압착올리브유",
+   "vol": 2340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "폰티악캐리어",
+   "vol": 2320,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "젝시믹스바람막이",
    "vol": 2290,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스상의",
+   "vol": 2290,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키플링숄더백",
+   "vol": 2280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "액츠",
+   "kw": "우븐팬츠",
+   "vol": 2280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모슬린",
+   "vol": 2250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "떰토",
+   "vol": 2230,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오페마인",
    "vol": 2220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "피토레스코쿠션",
-   "vol": 2140,
+   "kw": "로더렛",
+   "vol": 2180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "다우니실내건조섬유유연제",
-   "vol": 2130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "르젠선풍기",
-   "vol": 2110,
+   "kw": "삭스",
+   "vol": 2170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다이소변기세정제",
-   "vol": 2090,
+   "kw": "룰루레몬세일",
+   "vol": 2160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "요가복상의",
+   "vol": 2120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알로양말",
+   "vol": 2080,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "머그비",
-   "vol": 2070,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "리비트",
-   "vol": 1980,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "샤오미선풍기",
-   "vol": 1980,
+   "kw": "색동호박",
+   "vol": 2060,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "참그린주방세제",
+   "kw": "브라샵로라",
+   "vol": 2050,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "앙빼더데이",
+   "vol": 2050,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "필라테스복장",
    "vol": 1940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집업후드",
+   "vol": 1920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "만두카매트",
+   "vol": 1900,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "탈라",
-   "vol": 1940,
+   "kw": "요가하렘팬츠",
+   "vol": 1900,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오토브라이트",
-   "vol": 1870,
+   "kw": "그리스올리브오일",
+   "vol": 1890,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "알로레깅스",
+   "vol": 1850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마스마룰즈크로스백",
+   "vol": 1850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여성조거팬츠",
+   "vol": 1800,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기온쿼츠레더쉴드",
+   "kw": "스페인올리브유",
+   "vol": 1800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "더잠",
+   "vol": 1770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유피토스헤어팩",
+   "vol": 1750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "HUIT8",
+   "vol": 1750,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "올리브오일먹는법",
+   "vol": 1750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "허리디스크의자",
+   "vol": 1740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애프터홈파티",
+   "vol": 1730,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "럭시퀸",
+   "vol": 1730,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "박준뷰티랩트리트먼트",
+   "vol": 1720,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "송파미용실",
+   "vol": 1710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "박준트리트먼트",
+   "vol": 1710,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캉골버킷백",
    "vol": 1700,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "다우니실내건조세탁세제",
-   "vol": 1640,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "삼성선풍기",
-   "vol": 1630,
+   "kw": "스포츠웨어",
+   "vol": 1700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하루반",
+   "vol": 1660,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "루페스",
+   "kw": "유피토스트리트먼트",
+   "vol": 1650,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "문정역미용실",
+   "vol": 1640,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "보스코노",
+   "vol": 1630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "석촌역미용실",
+   "vol": 1620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디야니요가복",
    "vol": 1600,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "호텔인터불고",
+   "kw": "젝시믹스쉐르파",
+   "vol": 1590,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "공복올리브오일추천",
    "vol": 1590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "켄트로얄",
-   "vol": 1560,
+   "kw": "필라테스운동복",
+   "vol": 1580,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "신일써큘레이터",
+   "kw": "SKULLPIG",
+   "vol": 1580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부츠컷트레이닝",
+   "vol": 1570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제스믹스",
+   "vol": 1560,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스수영복",
+   "vol": 1560,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "전문가용헤어팩",
    "vol": 1550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "통영금호마리나리조트",
-   "vol": 1500,
+   "kw": "룰루레몬할인",
+   "vol": 1550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "메소드주방세제",
-   "vol": 1450,
+   "kw": "BYSEC",
+   "vol": 1550,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "샹떼클레어섬유유연제",
+   "kw": "일본트리트먼트",
+   "vol": 1540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스패딩",
+   "vol": 1530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마스마룰즈가방",
+   "vol": 1520,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "잠실역미용실",
+   "vol": 1510,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키플링매장",
+   "vol": 1510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "요가팬츠",
+   "vol": 1480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "앞후크브라",
+   "vol": 1480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이츠데이",
+   "vol": 1460,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "문정미용실",
+   "vol": 1450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보니끌레",
+   "vol": 1450,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "키플링캐리어",
+   "vol": 1420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브라런닝",
    "vol": 1420,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "CLOOP",
+   "kw": "폰타나올리브오일",
+   "vol": 1400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아날로그키퍼다이어리",
+   "vol": 1390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여주아울렛룰루레몬",
+   "vol": 1380,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "나푸키아트리트먼트",
    "vol": 1350,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "피지세탁세제",
-   "vol": 1320,
+   "kw": "BSMD",
+   "vol": 1350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파트라의자",
+   "vol": 1340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마로렉스압축분무기",
-   "vol": 1320,
+   "kw": "엑스트라버진올리브오일추천",
+   "vol": 1330,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "야마하골프채",
-   "vol": 1280,
+   "kw": "엑스트라버진",
+   "vol": 1330,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "글라코발수코팅",
+   "kw": "백설올리브유",
+   "vol": 1310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비에티트리트먼트",
+   "vol": 1300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "시세이도서브리믹",
+   "vol": 1300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "듀오백매장",
+   "vol": 1300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "듀오백Q1",
+   "vol": 1290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5부레깅스",
+   "vol": 1270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스바지",
+   "vol": 1270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "런닝브라",
+   "vol": 1270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "올리브오일선물세트",
+   "vol": 1270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "허리의자",
+   "vol": 1260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필라테스바지",
+   "vol": 1260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공항룩",
+   "vol": 1260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "FRONT2LINE",
+   "vol": 1230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "GYMSHARK",
    "vol": 1230,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "라브라크캐리어",
+   "kw": "허리에좋은의자",
    "vol": 1220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "업센다크림",
+   "kw": "미용실트리트먼트",
+   "vol": 1210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헤어컨디셔너",
+   "vol": 1210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "랩스온랩스",
+   "vol": 1210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "NYLORA",
+   "vol": 1190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "브라브랜드",
+   "vol": 1190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제이스버디",
+   "vol": 1170,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "운동복바지",
+   "vol": 1170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시헬로키티",
+   "vol": 1170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "등산레깅스",
    "vol": 1150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "프라레일",
-   "vol": 1140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "광주홀리데이인",
+   "kw": "미지니",
    "vol": 1130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "글라코",
+   "kw": "ALO요가",
+   "vol": 1120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고샤루브친스키",
+   "vol": 1110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "바이커쇼츠",
+   "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "요가상의",
+   "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올리브오일산도",
+   "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "온니꼬",
+   "vol": 1090,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "제인코트",
    "vol": 1080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캉골책가방",
+   "vol": 1070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "듀란",
+   "vol": 1060,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커클랜드세탁세제",
-   "vol": 1070,
+   "kw": "레깅스반바지",
+   "vol": 1060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "타이다이",
+   "vol": 1060,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "백진삼삼기력",
-   "vol": 1070,
+   "kw": "왁여성골프웨어",
+   "vol": 1060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냉압착올리브오일",
+   "vol": 1060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뮬러",
+   "vol": 1050,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "웜업",
+   "vol": 1050,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "멜라루카주방세제",
-   "vol": 1050,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마그웻",
-   "vol": 1050,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "팔레오",
-   "vol": 1040,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "삼성식기세척기세제",
-   "vol": 1020,
+   "kw": "커트잘하는미용실",
+   "vol": 1030,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "한화경주리조트",
-   "vol": 1020,
+   "kw": "콘치웨어부츠컷",
+   "vol": 1030,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이탈리아올리브오일",
+   "vol": 1030,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "테크세제",
-   "vol": 990,
+   "kw": "뮤브",
+   "vol": 1020,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "러브미모스트",
+   "vol": 1020,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "글램핑크",
-   "vol": 990,
+   "kw": "헤비메이크업",
+   "vol": 1010,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "파메스틱",
+   "kw": "ALOYOGA",
+   "vol": 1000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스쉐르파하이넥점퍼",
+   "vol": 1000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "컴프레션반팔",
+   "vol": 1000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "MALDEN",
+   "vol": 1000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "송파역미용실",
+   "vol": 990,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "려트리트먼트",
    "vol": 980,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마르비니",
-   "vol": 960,
+   "kw": "스컬피그매장",
+   "vol": 980,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유니클로운동복",
+   "vol": 980,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키플링백팩라지",
+   "vol": 970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스운동화",
+   "vol": 970,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "VALOR",
+   "vol": 970,
    "comp": "낮음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "암웨이주방세제",
+   "kw": "올리브유선물세트",
+   "vol": 970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케라시스린스",
    "vol": 960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알로요가복",
+   "vol": 960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬청담",
+   "vol": 950,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "LG식기세척기세제",
+   "kw": "심리스속옷",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헬리오시티미용실",
+   "vol": 940,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "밀크바오밥트리트먼트",
+   "vol": 940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키플링파우치",
+   "vol": 940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "JOSEPH",
    "vol": 940,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "경기광주네일",
-   "vol": 940,
+   "kw": "올림피아옷",
+   "vol": 930,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "다우니섬유유연제추천",
+   "kw": "룰루레몬직구",
    "vol": 920,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신일초음파가습기",
-   "vol": 910,
+   "kw": "운동복세트",
+   "vol": 920,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "안탈라",
-   "vol": 900,
-   "comp": "중간",
-   "hint": true
+   "kw": "배리쉬",
+   "vol": 910,
+   "comp": "낮음",
+   "hint": false
   },
   {
-   "kw": "AD레펠",
+   "kw": "젝시믹스양말",
    "vol": 900,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "더클레스",
+   "kw": "조셉앤스테이시키티",
+   "vol": 900,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "방이역미용실",
+   "vol": 890,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬사이즈",
    "vol": 880,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "대구인터불고조식",
+   "kw": "브루아오로올리브오일",
+   "vol": 880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애슬레저룩",
    "vol": 870,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바운드서울",
-   "vol": 860,
+   "kw": "제시믹스바지",
+   "vol": 870,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "기온쿼츠레더코트",
+   "kw": "ORIGO",
+   "vol": 870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "죠셉",
+   "vol": 870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "석촌미용실",
    "vol": 860,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "루나틱폴리시",
+   "kw": "젝시믹스후드집업",
    "vol": 860,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "허밍테라피",
+   "kw": "플레이텍스브라",
+   "vol": 850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유니클로레깅스",
+   "vol": 850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스래쉬가드",
+   "vol": 840,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이헌영",
    "vol": 840,
    "comp": "낮음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "참그린",
-   "vol": 800,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "양양투와이호텔",
-   "vol": 800,
+   "kw": "헤어트리트먼트사용법",
+   "vol": 830,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기온쿼츠레더클리너",
+   "kw": "레페르",
+   "vol": 820,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "비나앤코",
+   "vol": 820,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "만두카프로",
+   "vol": 820,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "LPP",
+   "vol": 810,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키플링미니크로스백",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거들팬티",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올레오칸탈",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "머슬앤뷰티",
+   "vol": 800,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "대구룰루레몬",
+   "vol": 800,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "난닝구닷컴",
    "vol": 790,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "라브라크",
-   "vol": 780,
+   "kw": "필라테스레깅스",
+   "vol": 790,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "청주호텔뮤제오",
+   "kw": "레깅스브랜드",
    "vol": 780,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유기네",
-   "vol": 770,
+   "kw": "젝시",
+   "vol": 780,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "모트라인몰",
+   "kw": "요가레깅스",
+   "vol": 780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "머슬마니아",
+   "vol": 780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플라스크케라틴크림",
    "vol": 770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레깅스트레이닝복",
+   "vol": 770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원마일웨어",
+   "vol": 770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대전룰루레몬",
+   "vol": 760,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "미아크",
-   "vol": 740,
-   "comp": "높음",
-   "hint": true
+   "kw": "룰루레몬소프트스트림",
+   "vol": 760,
+   "comp": "중간",
+   "hint": false
   },
   {
-   "kw": "볼프강",
-   "vol": 740,
+   "kw": "박준뷰티랩샴푸",
+   "vol": 750,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오즈이즈요가복",
+   "vol": 750,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "3부레깅스",
+   "vol": 750,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "LG식기세척기린스",
+   "kw": "퓨어올리브유",
+   "vol": 750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉엔스테이시",
    "vol": 730,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마로렉스",
+   "kw": "조이마담",
    "vol": 730,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "보닉스",
-   "vol": 730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "샤오미무선선풍기",
+   "kw": "CMC트리트먼트",
    "vol": 720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전자부품쇼핑몰",
+   "kw": "기모타이즈",
    "vol": 710,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "안산라성호텔",
-   "vol": 710,
+   "kw": "가락동미용실",
+   "vol": 700,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "3M유리막코팅",
-   "vol": 705,
+   "kw": "여자운동복브랜드",
+   "vol": 700,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보랄선풍기",
+   "kw": "여성트레이닝팬츠",
    "vol": 700,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "잇츠윈",
+   "kw": "맥포스가방",
    "vol": 700,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원더씬",
+   "kw": "박준염색약",
    "vol": 690,
-   "comp": "낮음",
-   "hint": true
+   "comp": "중간",
+   "hint": false
   },
   {
-   "kw": "강촌엘리시안리조트",
+   "kw": "장지동미용실",
+   "vol": 690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬미국",
+   "vol": 690,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥포스알바트로스",
+   "vol": 690,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "믹스엑스믹스",
    "vol": 680,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "삼성식기세척기린스",
+   "kw": "찬드라요가복",
+   "vol": 680,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "브루아오로",
+   "vol": 680,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "캡슐올리브오일",
+   "vol": 680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아자미트리트먼트",
+   "vol": 670,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "CONCH",
+   "vol": 670,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "요가티셔츠",
    "vol": 670,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "잔여",
+   "kw": "챌린저골프",
+   "vol": 670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마들닭갈비",
+   "vol": 660,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "FORMATIVE",
    "vol": 660,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "길팁",
-   "vol": 660,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "그릿가드",
+   "kw": "제시믹스상의",
    "vol": 660,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "보고바이오",
+   "kw": "알로운동복",
+   "vol": 660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캉골가방백팩",
+   "vol": 660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "요가복바지",
+   "vol": 650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PATRICK",
    "vol": 650,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "퍼짓",
-   "vol": 640,
-   "comp": "중간",
-   "hint": true
+   "kw": "캘빈클라인티셔츠",
+   "vol": 650,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "신일무선선풍기",
-   "vol": 640,
+   "kw": "페르메논",
+   "vol": 650,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "AD오토브라이트",
+   "kw": "조셉앤스테이시S",
+   "vol": 650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전지현광고",
+   "vol": 640,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "천연염색옷",
    "vol": 640,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소프트99",
+   "kw": "부유방브라",
+   "vol": 640,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쉬즈팝",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인체공학의자",
+   "vol": 630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬캐나다",
    "vol": 630,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "볼라솔루션",
-   "vol": 630,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "악센다",
-   "vol": 620,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파세코선풍기",
+   "kw": "겨울레깅스",
    "vol": 620,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "블루믹스",
+   "kw": "레깅스스타킹",
    "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "토런스",
+   "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전지현안다르",
+   "vol": 610,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬세일기간",
+   "vol": 610,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "퍼실주방세제",
+   "kw": "엑스트라버진코코넛오일",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엔씨페트라트리트먼트",
    "vol": 600,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다우니섬유유연제리필",
+   "kw": "바이크팬츠",
    "vol": 600,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "SALADY",
+   "kw": "젝시믹스브라탑",
    "vol": 600,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대전인터시티",
+   "kw": "콩스타일",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠실룰루레몬",
    "vol": 590,
-   "comp": "중간",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "글라코G19",
-   "vol": 590,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "시모어퍼터",
+   "kw": "바이커팬츠",
    "vol": 590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3MPPF필름",
+   "kw": "럭스웨어",
+   "vol": 590,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "와이드레깅스",
+   "vol": 590,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시M",
+   "vol": 590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스조거팬츠",
    "vol": 580,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "캉가루",
+   "kw": "러닝웨어",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유기농올리브유",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬쇼핑백",
+   "vol": 570,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "부츠컷트레이닝팬츠",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헬스옷브랜드",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "E컵브라",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올리브오일종류",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시가방",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오리고실내화",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체어마켓",
+   "vol": 560,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "녹족",
    "vol": 560,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "닥터스시크릿",
+   "kw": "패스트앤프리",
    "vol": 560,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "디디오랩무선선풍기",
+   "kw": "젝시믹스집업",
+   "vol": 560,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "D컵브라",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올리브오일선물",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "링콘올리브오일",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디올트",
+   "vol": 550,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "무실리콘트리트먼트",
    "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남원켄싱턴",
+   "kw": "핑거홀",
    "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다이비프로",
-   "vol": 540,
+   "kw": "올레오칸탈올리브오일",
+   "vol": 550,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "유니맥스선풍기",
+   "kw": "석촌동미용실",
    "vol": 540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에코비",
+   "kw": "박준샴푸",
    "vol": 540,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "IK",
+   "kw": "LAUNDAY",
+   "vol": 540,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "브라캐미솔",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급올리브오일",
+   "vol": 540,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬명동",
    "vol": 530,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "캉가루물왁스",
+   "kw": "MULAWEAR",
+   "vol": 530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "필라테스옷브랜드",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키작녀트레이닝세트",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "와일드띵스",
+   "vol": 530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "시크릿스",
+   "vol": 520,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬임산부",
+   "vol": 520,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬브라탑",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이너리즘",
+   "vol": 520,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카파바지",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편한원피스",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬할인코드",
+   "vol": 510,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기모트레이닝복세트",
    "vol": 510,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "필터없는미니가습기",
+   "kw": "여성츄리닝",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "얼데이",
+   "vol": 500,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "ROXY",
    "vol": 500,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성수입의류",
+   "kw": "기모치마레깅스",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고포잇",
+   "vol": 500,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "리훈달력",
+   "vol": 500,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "케라틴트리트먼트",
    "vol": 490,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소담목장",
+   "kw": "룰루레몬더현대",
    "vol": 490,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아모스키토트리트먼트",
+   "vol": 480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "코어하임",
+   "vol": 480,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "에슬레져룩",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파슬리요가복",
+   "vol": 480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "OZEZ",
+   "vol": 480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "명동룰루레몬",
+   "vol": 470,
    "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "위키드랩",
-   "vol": 490,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "스팽글리턴",
-   "vol": 490,
-   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마로렉스분무기",
-   "vol": 490,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "3MPPF",
-   "vol": 480,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이이너클린",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "브리오신세탁세제",
+   "kw": "콘치웨어매장",
    "vol": 470,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "한화대천",
+   "kw": "여자레깅스반바지",
    "vol": 470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소낙스프로피라인",
+   "kw": "베라왕속옷",
+   "vol": 470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "덤프스트럭",
+   "vol": 470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "반팔요가복",
    "vol": 460,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "울트라레인보우",
+   "kw": "룰루레몬일본",
    "vol": 450,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "엘지기화식가습기",
+   "kw": "HUIT",
+   "vol": 450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스페인산올리브유",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오리고쿠션",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PATRA의자",
    "vol": 440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "엘지전자가습기",
+   "kw": "미나홈트",
+   "vol": 440,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "잇츠데이",
+   "vol": 440,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "먹는올리브오일",
    "vol": 440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이가습기",
-   "vol": 440,
+   "kw": "의자매장",
+   "vol": 430,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "터틀왁스",
+   "kw": "키플링백팩미니",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬로고",
    "vol": 430,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "디테일링몰",
+   "kw": "뒤란핏",
+   "vol": 430,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "고리레깅스",
    "vol": 430,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명품의류",
+   "kw": "노바디체어",
    "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LG선풍기",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "위드나르",
-   "vol": 420,
-   "comp": "낮음",
+   "comp": "중간",
    "hint": true
   },
   {
-   "kw": "뉴트리킷",
+   "kw": "척추의자",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키플링백팩스몰",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필라테스복상의",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스티셔츠",
+   "vol": 420,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "KANGOL가방",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PGX",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "골프공장",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샐러드용올리브오일",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "폰타나올리브유",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "송파구미용실",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에슬레져",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "벤제프골프",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "욱사장",
    "vol": 410,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "신일BLDC선풍기",
-   "vol": 400,
+   "kw": "벌어진가슴브라",
+   "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인천오크우드",
-   "vol": 400,
+   "kw": "나이키여성트레이닝세트",
+   "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "거제도삼성호텔",
+   "kw": "ITSUDAY",
    "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메이드인랩",
-   "vol": 390,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "다우니섬유유연제대용량",
-   "vol": 390,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유통기한임박화장품",
+   "kw": "안다르전지현",
+   "vol": 400,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "그라피",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬이태원",
+   "vol": 400,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "심리스브라세트",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "김종국옷",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베르만어페럴",
+   "vol": 400,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "올리브유종류",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프리미엄올리브오일",
+   "vol": 400,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "냉압착올리브유",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로레알헤어스파",
+   "vol": 390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대용량트리트먼트",
+   "vol": 390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "샬라",
+   "vol": 390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캉골백",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보국선풍기",
+   "kw": "여자홈웨어",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자연퐁식기세척기세제",
+   "kw": "카파바람막이",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "덤브",
+   "vol": 390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "허리보호의자",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파트라라보",
+   "vol": 380,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "투인원반바지",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나드트리트먼트",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미트슬라이드",
+   "kw": "헤어트린트먼트",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "엘지식기세척기세제",
+   "kw": "안다르기모",
+   "vol": 370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬부산",
+   "vol": 370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "우븐조거팬츠",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "송파동미용실",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다자르",
+   "kw": "샤마르",
+   "vol": 360,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대전신세계룰루레몬",
+   "vol": 360,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬코리아",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이태원룰루레몬",
+   "vol": 360,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스반팔",
+   "vol": 360,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스요가복",
+   "vol": 360,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여자레깅스브랜드",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브렁크",
+   "vol": 360,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "햇올리브오일",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유기농엑스트라버진올리브유",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수영에미치다",
    "vol": 360,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "폼렌스",
+   "kw": "마그레세라다이어리",
+   "vol": 360,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "팬틴극손상트리트먼트",
    "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보국써큘레이터",
-   "vol": 340,
+   "kw": "숏레깅스",
+   "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가습기순위",
-   "vol": 340,
+   "kw": "에슬레저",
+   "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "EXQ광택기",
-   "vol": 340,
+   "kw": "골지레깅스",
+   "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3M컴파운드3000",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라마다호텔광주",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대전한화리조트",
-   "vol": 320,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가평돌고래리조트",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바이파",
-   "vol": 310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가습기대신",
-   "vol": 310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "잭스왁스",
-   "vol": 310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "눈썹문신학원",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가습기효능",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "THECLASS",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인천네스트",
-   "vol": 300,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오플렉스",
-   "vol": 300,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "글로스브로버블밤",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어스컴파운드",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "프로스태프",
-   "vol": 300,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "퓨리스",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "울티메이트",
-   "vol": 290,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "클라비스코트",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탠저린생리대",
-   "vol": 280,
+   "kw": "룰루레몬공홈",
+   "vol": 350,
    "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "부유방커버브라",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성여름원피스",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "JOSEPHANDSTACEY",
+   "vol": 350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "실키허그",
+   "vol": 340,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "애슬레틱",
+   "vol": 340,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "STL집업",
+   "vol": 340,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "LULULEMON매장",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝스믹스레깅스",
+   "vol": 340,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "나이키여성트레이닝복",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휘뜨",
+   "vol": 340,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "액츄얼라이즈",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올리브오일공복",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코엑스룰루레몬",
+   "vol": 330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "MOREOUT",
+   "vol": 330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여성요가복상의",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스스포츠브라",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애슬레저브랜드",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "투솜골프",
+   "vol": 330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "럭비져지",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오일가글",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올레인산",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4060마담",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시니트백",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자롱슬리브",
+   "vol": 320,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스바람막이",
+   "vol": 320,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스점퍼",
+   "vol": 320,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "필라테스티셔츠",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뉴트리오",
+   "vol": 320,
+   "comp": "중간",
    "hint": true
   },
   {
-   "kw": "보랄날개없는선풍기",
+   "kw": "스페인산올리브오일",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "링콘델라수베티카",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키플링아바누M",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키플링힙색",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬베스트",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "판교현대백화점룰루레몬",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "요가복하의",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하시엔다구즈만",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올리브유선물",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아모스소프트닝컨디셔너",
+   "vol": 300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "비욘드요가",
+   "vol": 300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "롯데백화점룰루레몬",
+   "vol": 300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기모부츠컷레깅스",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스페인엑스트라버진올리브오일",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오리고이불",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시매장",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강남신세계룰루레몬",
+   "vol": 295,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "박준뷰티",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PPT트리트먼트",
+   "vol": 290,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "프론트2라인",
+   "vol": 290,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "WACOAL",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헬스장여자운동복",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름브라",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엑스트라버진올리브유추천",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키플링미니백",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "린넨팬츠",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스후드",
+   "vol": 280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여성런닝복",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "메리모드",
+   "vol": 280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "좋은올리브오일",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "해치말차",
+   "vol": 280,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "박준노워시트리트먼트",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "레무로",
+   "kw": "룰루레몬상품권",
    "vol": 270,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "케가네",
-   "vol": 270,
-   "comp": "중간",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "부산자동차용품점",
+   "kw": "룰루레몬여주아울렛",
+   "vol": 270,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "신세계백화점룰루레몬",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "디오딧",
+   "kw": "판교룰루레몬",
+   "vol": 270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "콘치웨어레깅스",
+   "vol": 270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "빅오샵",
+   "vol": 270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "등살커버브라",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오히블랑카",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무향트리트먼트",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가락시장역미용실",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "실리콘없는트리트먼트",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "로렌블",
+   "vol": 260,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "에슬레틱",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "통큰걸",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "바이크쇼츠",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레깅스추천",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "LUXWEAR",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "GODBODY",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캘러웨이여성골프웨어",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "허그본반팔",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "노후크브라",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키여성운동복",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "군인패치",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이탈리아올리브유",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바질올리브오일",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "퍼플래빗",
    "vol": 260,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "에코버식기세척기세제",
+   "kw": "레드오핀",
    "vol": 250,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "럼브",
+   "kw": "룰루레몬판교",
    "vol": 250,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "안다르젝시믹스",
+   "vol": 250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스자켓",
+   "vol": 250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "레깅스쇼츠",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반팔브라탑",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스남성바지",
+   "vol": 250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "얇은패드브라",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "DUMBSTRUCK",
+   "vol": 250,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "큐씨플레이",
+   "vol": 250,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "4부레깅스",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라프리메라",
+   "vol": 250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "프로틴샴푸",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전문가용트리트먼트",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트리트먼트에센스",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PARSLEY",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스모델",
+   "vol": 240,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "휴트",
+   "vol": 240,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "틸팅의자",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로크핏모자",
+   "vol": 240,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "GOTTHIS",
+   "vol": 240,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "올리브오일세트",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마들푸드",
+   "vol": 230,
+   "comp": "중간",
    "hint": true
   },
   {
-   "kw": "암앤해머세탁세제",
-   "vol": 240,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "메가텐칫솔",
-   "vol": 240,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "LEZEN가습기",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한일서큘레이터",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남해노이하우스",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "클레드브루",
+   "kw": "박준헤어랩",
    "vol": 230,
-   "comp": "중간",
-   "hint": true
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "피토레스코공구",
+   "kw": "케라시스프로폴리스트리트먼트",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다시마트리트먼트",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스헤어밴드",
    "vol": 230,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "한일선풍기리모컨",
+   "kw": "유앤미스포츠",
+   "vol": 230,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "헬스복세트",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "열가습기",
+   "kw": "마시는올리브오일",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "울산오션뷰호텔",
+   "kw": "고급올리브유",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "GYEON",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "IK분무기",
+   "kw": "굿노트달력",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "RAVRAC",
+   "kw": "머리트리트먼트",
    "vol": 220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아메카지쇼핑몰",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더클래스세차",
+   "kw": "오제닉스클리닉",
    "vol": 220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "파이어볼나파클리너",
+   "kw": "ERRDAY",
+   "vol": 220,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬기프트카드",
+   "vol": 220,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬대전",
+   "vol": 220,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬보틀",
+   "vol": 220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스긴팔",
+   "vol": 220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스기모레깅스",
+   "vol": 220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스마스크",
+   "vol": 220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커버낫메신저백",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기온쿼츠가죽코팅",
+   "kw": "여자트레이닝팬츠",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "올리온",
+   "kw": "뮬라웨어매장",
+   "vol": 220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "런핏",
+   "vol": 220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "드로우어텐션",
+   "vol": 220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "선물용올리브오일",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생식올리브오일",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식용올리브오일",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올리브기름",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉스테이시",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시지갑",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마들춘천닭갈비",
    "vol": 210,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "미용실헤어트리트먼트",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "척추교정의자",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키플링백팩서울",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬물병",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬추천",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스운동복",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "모어아웃요가복",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "JANECOURT",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스포츠나시",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자운동복바지",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성스포츠브라",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "HADEX",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "앞후크",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "WAYDEN",
+   "vol": 210,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "올림피아티셔츠",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마담센스",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마들푸드춘천닭갈비",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마들푸드닭갈비",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "박준헤어트리트먼트",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키플링배낭",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키플링고릴라",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스안다르",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "CONCHWEAR",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스포츠레깅스",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "DOROSIWA",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스워터레깅스",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캉골보스턴백",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "꼰에야",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어필더핏",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "HUGVONE",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "EXTRAVIRGINOLIVEOIL",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엑스트라버진올리브",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "덴탈프로",
+   "vol": 200,
+   "comp": "높음",
    "hint": true
   },
   {
-   "kw": "가습기초음파",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가습기생수",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더클래스코리아",
-   "vol": 210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "3M벨크로",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소나텍",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "울산얼굴경락",
+   "kw": "써니러브",
    "vol": 200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "메가텐",
-   "vol": 200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신일전자선풍기",
+   "kw": "조셉앤스테이시크로스백",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "뷰앤블루",
-   "vol": 200,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "퓨리스D22",
-   "vol": 200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "디테일링프로",
-   "vol": 200,
+   "kw": "젝시믹스세트",
+   "vol": 195,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "맥과이어스UC",
-   "vol": 200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "테이블보주문제작",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "거실선풍기",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "그린스토아",
-   "vol": 190,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "레인드롭바주카",
+   "kw": "머리카락단백질",
    "vol": 190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "파이어볼고체왁스",
+   "kw": "여름트레이닝바지",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "알로줄렌",
+   "kw": "발리요가복",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유니클로여성후리스",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "로나제인",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스팬츠",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "위잇",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "휘트",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "MUTOWEAR",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "액티브웨어",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성스포츠웨어",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마스마룰즈짐색",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "ROGUE티셔츠",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "올리브오일가격",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아날로그키퍼스페이스",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스팀헤어팩",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "PALEO",
+   "kw": "박준LPP",
    "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신일스탠드선풍기",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디테일팩토리브러쉬",
+   "kw": "유니클로요가복",
    "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "기온쿼츠인테리어디테일러",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마로렉스노즐",
+   "kw": "전지현운동복",
    "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "타블렛세제",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대구발각질",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한일써큘레이터",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비엘리아",
-   "vol": 170,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "AD폼랜스",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파이어볼쇼카",
-   "vol": 170,
+   "kw": "룰루레몬배송",
+   "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "바나나브리즈",
+   "kw": "룰루레몬츄리닝",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬티",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬현대백화점",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "현대백화점룰루레몬",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여자요가복",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스땀복",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스매트",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "필라테스레깅스추천",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "UPLOUNGE",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스맨즈",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남성버뮤다팬츠",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아세이떼바오스",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "터키올리브오일",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스페인유기농올리브오일",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬사이즈4",
+   "vol": 175,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이새바지",
+   "vol": 175,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "LPP샴푸",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생활지음",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "자이몰콩쿠르",
+   "kw": "키플링서울",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키플링여성백팩",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "위그로우",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬롯데백화점",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬코엑스",
    "vol": 170,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "속초클래스300",
+   "kw": "로맨시스",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스하의",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뽕브라마켓",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "양산에덴벨리리조트",
+   "kw": "UPLG",
+   "vol": 170,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여성바디수트",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기온레더코트",
+   "kw": "포더",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "글라코유막제거",
+   "kw": "히덱스",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "거북목의자",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "맥과이어왁스",
+   "kw": "그누크",
+   "vol": 170,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "요가브라",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "케미컬가이툴백",
+   "kw": "이태리올리브오일",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리즈로즈",
+   "vol": 170,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "단백질헤어트리트먼트",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카렉스고광택왁스",
+   "kw": "룰루레몬필라테스",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자동차용품판매점",
+   "kw": "비너스팬티스타킹",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "애슬레타",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "맥과이어스울티메이트",
+   "kw": "제시믹스운동화",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스츄리닝",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스할인",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가을요가복",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "라다메르올리고포스",
+   "kw": "에이치덱스양말",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스남성레깅스",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스남자",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "렙스온렙스",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "프리덤옷",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "좋은올리브유",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오리고방석",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오리고쇼파패드",
    "vol": 155,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "식기세척기캡슐세제",
+   "kw": "헤어PPT",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보만선풍기",
+   "kw": "일진트리트먼트",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보국서큘레이터",
+   "kw": "테슬라레깅스",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "STX리조트문경",
+   "kw": "소로나티셔츠",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "거제마리나베이",
+   "kw": "나이키여성트레이닝복세트",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기온쿼츠워터스팟",
+   "kw": "룰루레몬마크",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "STX리조트조식",
+   "kw": "압구정룰루레몬",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스이너웨어",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스토삭스",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "트레이닝복브랜드추천",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "삼성전자선풍기",
+   "kw": "운동복하의",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "르슈아",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "크롭브라탑",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에이치덱스바람막이",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프리미엄엑스트라버진올리브오일",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "문정동헤어샵",
+   "vol": 145,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "벨레꼬제",
+   "vol": 145,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬신상",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보국에어젯",
+   "kw": "룰루레몬오프라인",
    "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "한일전기선풍기",
+   "kw": "LOUNTESS",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "하이원리조트숙박",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파이어볼왁스",
+   "kw": "젝시믹스트레이닝세트",
    "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오토피네스",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "광주호텔야자",
+   "kw": "런닝웨어",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이너클린",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이버킷",
+   "kw": "요가웨어",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "하이원콘도예약",
+   "kw": "인더웨어",
+   "vol": 140,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "모모의옷장",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "브리오신키친클리너",
-   "vol": 130,
+   "kw": "시디즈사무실의자",
+   "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "살림백서세제",
-   "vol": 130,
+   "kw": "큐브의자",
+   "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "UH홈데코",
-   "vol": 130,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "피레스트",
-   "vol": 130,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "럭스360",
-   "vol": 130,
+   "kw": "듀오백사무용의자",
+   "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "로렌드",
-   "vol": 130,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "영덕힐링턴콘도",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AD세차",
-   "vol": 130,
+   "kw": "MAVRK",
+   "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "인천송도오크우드",
-   "vol": 130,
+   "kw": "브라탑반팔",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일반모칫솔",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리훈스터디플래너",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스나시",
+   "vol": 135,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "맥과이어광택제",
+   "kw": "녹족요가복",
+   "vol": 135,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "펌잘하는미용실",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "로블루",
+   "kw": "염색이벤트",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키플링크로스가방",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신디요가복",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬교환",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬목동",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스세일",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스쇼츠",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "헬스장레깅스",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "UP라운지",
+   "vol": 130,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "의자전문점",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BRAVES",
+   "vol": 130,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "스포츠탑",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그리스올리브유",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오일풀링코코넛오일",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코코아오일",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬하남",
+   "vol": 125,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "콘치웨어상의",
+   "vol": 125,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스요가바지",
+   "vol": 125,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캉골에센셜백팩",
+   "vol": 125,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키여성운동복세트",
+   "vol": 125,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "짐샤크나시",
+   "vol": 125,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "일제칫솔",
+   "vol": 125,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "박준뷰티랩노워시트리트먼트",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에슬레저룩",
    "vol": 120,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "시컬리",
+   "kw": "키플링책가방",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물라",
    "vol": 120,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "삼기력",
+   "kw": "배럴브라탑",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬옷",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬클래스",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스타필드룰루레몬",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "비비안언더웨어",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부츠컷레깅스추천",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "필라테스운동복추천",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성우븐팬츠",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "위크유",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "투인원팬츠",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디벨로프",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "챌린저여성골프웨어",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "데일라",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "나이키기모레깅스",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성기모레깅스",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "융기모레깅스",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아덴트소울",
    "vol": 120,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "샐러디매장",
+   "kw": "도모리",
    "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잇츠윈윈타월",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마그웻워시패드",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오토글림",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대명양양",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "SOFT99",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이카샴푸",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마로렉스부품",
-   "vol": 120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "키니샴푸",
-   "vol": 110,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "잇츠윈워시미트",
-   "vol": 110,
+   "kw": "티덴브러쉬",
+   "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "P21S",
-   "vol": 110,
+   "kw": "명품올리브오일",
+   "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소프트99왁스",
-   "vol": 110,
+   "kw": "먹는올리브유",
+   "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "AD세차용품",
-   "vol": 110,
+   "kw": "유기농오일",
+   "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3MPPF보호필름",
-   "vol": 110,
+   "kw": "CJ올리브유",
+   "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스마트왁스",
-   "vol": 110,
+   "kw": "IISE",
+   "vol": 120,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "로더렛트리트먼트",
+   "vol": 115,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기온레더쉴드",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠레더클리너마일드",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이워터스팟",
-   "vol": 110,
+   "kw": "믹스투믹스",
+   "vol": 115,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "기온쿼츠트림",
-   "vol": 110,
+   "kw": "퓨마스포츠브라",
+   "vol": 115,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "디테일링닥터스",
-   "vol": 110,
-   "comp": "중간",
+   "kw": "버진코코넛오일",
+   "vol": 115,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "막내댕이",
+   "kw": "유기농엑스트라버진코코넛오일",
+   "vol": 115,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꼼지락온열매트",
    "vol": 110,
-   "comp": "중간",
+   "comp": "높음",
    "hint": true
   },
   {
-   "kw": "르젠BLDC선풍기",
+   "kw": "미용실헤어로션",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "곱스케",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "레스피라",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "바디모어",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "전지현레깅스",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬무료반품",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬호주",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캡내장요가복",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레깅스쇼핑몰",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스포츠팬츠",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키여자트레이닝복",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "ROCFIT",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이야이야올리브유",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉가방",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "박준헤어캡",
+   "vol": 105,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전지현요가복",
+   "vol": 105,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬워터보틀",
+   "vol": 105,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜츄리닝",
+   "vol": 105,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "KANGOL백팩",
+   "vol": 105,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "언브로큰티셔츠",
+   "vol": 105,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "엑스트라버진올리브오일선물세트",
+   "vol": 105,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시백팩",
+   "vol": 105,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트리트먼트리필",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "ALO요가복",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "브레바",
+   "kw": "STL티셔츠",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쿠치마치",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬핑크",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여름레깅스",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스양말",
    "vol": 100,
    "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "샐러디창업",
-   "vol": 100,
-   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "잇츠윈드라잉타월",
+   "kw": "젝시믹스바이커쇼츠",
    "vol": 100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아머올",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파이어볼유리막코팅제",
+   "kw": "파이브라인",
    "vol": 100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "파이어볼타이어광택제",
+   "kw": "젝시믹스런닝화",
+   "vol": 100,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "필라테스요가복",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기온쿼츠큐어",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온레더클리너",
+   "kw": "폴웨어브랜드",
    "vol": 100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "IK압축분무기",
+   "kw": "여성요가복하의",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "블루믹스프리워시",
+   "kw": "여자스웻팬츠",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편한운동복",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생활지음의자",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핏템",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프리덤티셔츠",
    "vol": 100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "에피벗쿠션공구",
+   "kw": "여자여름원피스",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피지코",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "폴리페놀올리브오일",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엑스트라버진냉압착올리브오일",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "굴리엘미",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "올리브오일발사믹선물세트",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "OAB스튜디오",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "PDF다이어리",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "박준고데기",
    "vol": 95,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "PRIL",
-   "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "로댕쇼",
-   "vol": 90,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "차미돈",
-   "vol": 90,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "대전발톱무좀",
-   "vol": 90,
+   "kw": "위뜨패딩",
+   "vol": 95,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "르젠무선선풍기",
-   "vol": 90,
+   "kw": "편한요가복",
+   "vol": 95,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어메이징가습기",
-   "vol": 90,
+   "kw": "면스포츠브라",
+   "vol": 95,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백암온천고려호텔",
+   "kw": "스컬피그브라탑",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에이치덱스모자",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "티에이더블유",
+   "vol": 95,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "나이키여자운동복",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오리고가방",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "춘천닭갈비마들",
    "vol": 90,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "무주가족호텔",
+   "kw": "미용실단백질트리트먼트",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이엑스큐",
+   "kw": "송파헤어샵",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "조이할리",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "글로스브로오렌지크러쉬",
+   "kw": "룰루레몬가격",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "글로스브로철분제거제",
+   "kw": "룰루레몬아울렛매장",
+   "vol": 90,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "스피카요가복",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스비키니",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "3.5부레깅스",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "EXQ컴파운드",
+   "kw": "요가반팔",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "AD퍼플벨벳",
+   "kw": "필라테스부츠컷",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3M광택제",
+   "kw": "파트라라보의자",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기온쿼츠레더",
+   "kw": "여자등산레깅스",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "케미컬가이V7",
+   "kw": "에이치덱스할인코드",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "샵어페럴",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "라이더웨어",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "케미컬가이미트슬라이드",
+   "kw": "고릴라웨어",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자이몰왁스",
+   "kw": "프리덤바지",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마로렉스인더스트리",
+   "kw": "하더",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "나이키여자트레이닝세트",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보국에어젯써큘레이터",
+   "kw": "리코나인",
+   "vol": 90,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "리훈회사생활",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오로라LPP",
    "vol": 85,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "MBC건축박람회",
+   "kw": "미장원봄",
+   "vol": 85,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "약산성트리트먼트",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키플링보조가방",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스장갑",
+   "vol": 85,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스트레이닝복",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필라테스반팔",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홀터넥요가복",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오리고파우치",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "콤스",
+   "vol": 80,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "일진LPP",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신일무소음선풍기",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오토브라이트레펠",
+   "kw": "알씨투트리트먼트",
    "vol": 80,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "파이어볼카샴푸",
+   "kw": "셀프헤어팩",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파이어볼유리막",
+   "kw": "노바디체어K77",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "톤오브유",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬NULU",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬코디",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "도도쥬스",
+   "kw": "룰루레몬한국",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스기모",
    "vol": 80,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "기온쿼츠유리막코팅",
+   "kw": "엑티브웨어",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기온쿼츠프랩",
+   "kw": "루즈핏조거팬츠",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "그릿가드버킷돌리",
+   "kw": "여성요가바지",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노원얼굴경락",
+   "kw": "로드투",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "일체형스포츠브라",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "압도하라",
+   "vol": 80,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "짐샤크직구",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올메쉬의자",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키짐웨어",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "햇올리브유",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알마자라스",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "박준뷰티랩노워시",
+   "vol": 75,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뮤겐스트리트먼트",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "염색잘하는곳",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헤드스파7트리트먼트종류",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키플링여성크로스백",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬글로벌핏",
+   "vol": 75,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "NOKJOK",
+   "vol": 75,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스조거팬츠",
    "vol": 75,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "르젠써큘레이터",
+   "kw": "젝시믹스요가복상의",
+   "vol": 75,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스크롭탑",
+   "vol": 75,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스탑",
+   "vol": 75,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "녹족레깅스",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "SK매직식기세척기세제",
-   "vol": 70,
+   "kw": "플라잉요가복",
+   "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "탱크캐리어",
+   "kw": "제인코트요가복",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기모레깅스바지",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자트레이닝복브랜드",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "노와이어스포츠브라",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부유방속옷",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키여자트레이닝복세트",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코르티호엘푸에르토",
+   "vol": 75,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오일풀링오일",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오리고차렵이불",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "경찰병원미용실",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "LG전자선풍기",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "14인치선풍기",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유선선풍기",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "샐러디창업비용",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남원효산콘도",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "양산에덴밸리",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오플렉스워셔액",
+   "kw": "룰루레몬온라인",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "디바텍패드",
+   "kw": "젝시믹스티",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "볼라솔루션P27",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3M클레이바",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠레더클리너스트롱",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠큐어매트",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이블랙라이트",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이젯실",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "글라코사이드미러",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이즈",
+   "kw": "두쏘",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "볼프강DGPS",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "울트라레인보우에어버핑",
+   "kw": "겨울기모레깅스",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "브러쉬몬스터",
+   "kw": "RBW나시",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "비스트모드반팔",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "김종국운동복",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "클럽래빗",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "브라캡반팔",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "라니펫",
+   "vol": 70,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "라우레타나",
+   "vol": 70,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "휴대용올리브오일",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마그레세라위클리",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자브키토산",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "탈모헤어트리트먼트",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "송파염색",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "단백질컨디셔너",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개롱미용실",
    "vol": 65,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "파세코무선선풍기",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블랙파이어",
+   "kw": "룰루레몬파르나스몰",
    "vol": 65,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "맥과이어광택",
+   "kw": "뮬라요가복",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "STL브라탑",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스브라탑",
+   "vol": 65,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스요가복",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스슬리브리스",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스후드티",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스커버업",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "ANDAR레깅스",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "큰컵심리스",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "참그린세제",
+   "kw": "피치기모레깅스",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캡반팔",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "피지컬어패럴",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "덤브스트럭반팔",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "암환자올리브오일",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시크로스",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플리츠니트백",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모발팩",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "올레그레인",
+   "kw": "엠세라드하이드레이팅헤어팩",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "머리영양팩",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제밀프란",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에슬레져브랜드",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬구매대행",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬미국직구",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬직구방법",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스요가",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스크롭",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소함소함요가복",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "줌바운동복",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캉골노트북가방",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필라테스아우터",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울치마레깅스",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "살색기모레깅스",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실편한의자",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베르다드",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "PHYSICALGARMENTS",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "프리미엄올리브유",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선물용올리브유",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마시는올리브유",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산타니올",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "밀레스",
    "vol": 60,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "하이원리조트펜션",
+   "kw": "어반룩",
    "vol": 60,
-   "comp": "높음",
-   "hint": false
+   "comp": "중간",
+   "hint": true
   },
   {
-   "kw": "이그니스클룹",
-   "vol": 60,
+   "kw": "오로라트리트먼트",
+   "vol": 55,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "TAC광택기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잭스왁스토탈인테리어",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "EXQ패드",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오토브라이트카샴푸",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "볼라솔루션유리막",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자이몰티타늄",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "글로스브로프리워시",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마로렉스2000",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다움호텔",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아담스폴리쉬",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "광주유막제거",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "글로스브로타르오프",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어스왁스",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "생활공작소식기세척기세제",
+   "kw": "송파구헤어샵",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "위키드랩비오틴",
+   "kw": "엘지트리트먼트",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "W3AR",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파슬리웨어",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬뽀글이",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한국룰루레몬",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "콘치레깅스",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "콘치웨어요가복",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잭시",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스삭스",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스힙커버",
    "vol": 55,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "에버미라클주방세제",
+   "kw": "룰루레몬커버업",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여름요가복",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레깅스5부",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "요가복반팔",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필라테스롱슬리브",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올인원레깅스",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레깅스룩",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "첼린저골프웨어",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "볼란테반팔",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "비키니속옷",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프론트후크브라",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프리덤나시",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "ONERM",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "김종국티셔츠",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라라골프",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "RBW반팔",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이야이야오일",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "덴탈프로칫솔",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리훈하고싶은말",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시숄더백",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시산리오",
+   "vol": 55,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "미용실앰플",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤미르",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마리아닐라",
+   "kw": "룰루레몬행사",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로우에잇",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "세라믹제작",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인솔제작",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일서큘레이터선풍기",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라디셀",
-   "vol": 50,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "파이어볼쇼카왁스",
+   "kw": "콘치웨어브라탑",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "파이어볼세차",
+   "kw": "여름운동복",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오토브라이트다이렉트코리아",
+   "kw": "트레이닝복여자",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BIGA",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "RSPT",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "인천로얄호텔",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠가죽",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠가죽코팅제",
+   "kw": "유피라운지머슬핏",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "기온쿼츠마일드",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "글라코G65",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "글로스브로스피드와이프",
+   "kw": "이지투미",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "글로스브로캐빈클린",
+   "kw": "브리밋",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "HDEX운동복",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "글로스브로타이어광택제",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동세차기계",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "루페스3인치",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일저소음선풍기",
+   "kw": "박준프로틴엘피피트리트먼트",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "잭스왁스바디샤인",
+   "kw": "박준뷰티랩헤어오일",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "케미컬가이레더",
+   "kw": "박준헤어샴푸",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캐빈클린",
-   "vol": 45,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어고체왁스",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어골드클래스",
+   "kw": "미용실PPT",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "참그린녹차",
-   "vol": 40,
+   "kw": "웰라헤어팩",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "온시아",
-   "vol": 40,
-   "comp": "중간",
+   "kw": "일진아렌",
+   "vol": 45,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제노시스루페",
-   "vol": 40,
+   "kw": "김희애트리트먼트",
+   "vol": 45,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "보국제로닷",
-   "vol": 40,
+   "kw": "헤어샵트리트먼트",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "피나클소버린",
-   "vol": 40,
+   "kw": "두피트리트먼트추천",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오플렉스돌리",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오토브라이트버킷",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스팽글케미컬",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3M콤파운드",
-   "vol": 40,
+   "kw": "문정동남자머리",
+   "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "볼라왁스",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오토피네스크리스탈",
-   "vol": 40,
+   "kw": "RESPIRA",
+   "vol": 45,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "AD오토브라이트다이렉트",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠가죽클리너",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠카샴푸",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠캔코트",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠퀵디테일러",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에어로코스메틱",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "울트라레인보우버핑타월",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이소분용기",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "글라코99",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠바스",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마로렉스구찌",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠Q2",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠아이언",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마로렉스악셀포머",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어105",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "넬리주방세제",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "WICKEDLAB",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "일렉트로마트선풍기",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제이닉스선풍기",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "삼천포루벤스호텔",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마그웻버킷",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카믹스",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "디바텍양모",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AD크리스탈",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가평대명리조트",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동차시트오염",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "나지올유리막",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠실내",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마로렉스폼",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고무클리너",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "젯실매트",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "울트라레인보우타월",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어메탈폴리쉬",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부두라이드폼랜스",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어세차",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "NELLIE",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로쎄",
-   "vol": 30,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "그뤼너씨",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신일전자서큘레이터",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일14인치선풍기",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "광주신양파크호텔",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마그웻포레스트",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "코흐케미그린스타",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "코흐케미모터플라스트",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "택시폼",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "플래시왁스",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AD컬러폼",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3M왁스",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3M컴파운드3000방",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3M광택패드",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오토피네스툴백",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "부두라이드버킷",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스팽글젠틀맨",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "거제투데이호텔",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AD베리체리",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오토브라이트매지폼",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "나지올메탈코트",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠클리너",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이911툴백",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마로렉스압축분무기2000",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "핸드폴리싱",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이디아블로",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디테일링프로가죽세정제",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디테일링프로퀵디테일러",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠뷰",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "디테일가즈",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "SGCB",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "글로스브로타이어클린",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LG식기세척기전용세제",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "식기세척기타블렛세제",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라브라크24인치",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LEZE",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "SIC가공",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피토덤",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "삼성무선선풍기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디바텍폼패드",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EXQMP150",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EXQ마스터피스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파이어볼왁스오프",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파이어볼프리워시",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EXQ트라이앵글",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "글로스브로유막제거",
-   "vol": 25,
+   "kw": "디어헬렌",
+   "vol": 45,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "3M3000방컴파운드",
-   "vol": 25,
+   "kw": "카하나",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자이몰빈티지",
-   "vol": 25,
+   "kw": "STL스포츠브라",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "STL후기",
+   "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "BOLASOLUTION",
-   "vol": 25,
+   "kw": "단스킨브라탑",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뮬라웨어요가복",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쿨레깅스",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "ERRVE",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스옷",
+   "vol": 45,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "버킷프렌즈",
-   "vol": 25,
+   "kw": "젝시믹스탱크탑",
+   "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "도도주스",
-   "vol": 25,
+   "kw": "소함소함커버업",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "본투윈옷",
+   "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "도도쥬스폼랜스",
-   "vol": 25,
+   "kw": "레깅스와이존",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필라테스티",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캉골학생가방",
+   "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "부여백제관광호텔",
-   "vol": 25,
+   "kw": "요가스커트",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "레더클리너마일드",
-   "vol": 25,
+   "kw": "요가아우터",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "AD브러쉬",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AD핑크쉰",
-   "vol": 25,
+   "kw": "제인코트수영복",
+   "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오토브라이트실내세정제",
-   "vol": 25,
+   "kw": "자주사각팬티",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기온쿼츠세트",
-   "vol": 25,
+   "kw": "여성운동복하의",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자요가바지",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "줌바레깅스",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파트라올라",
+   "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "기온쿼츠타이어광택제",
-   "vol": 25,
+   "kw": "레깅스운동복",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기온쿼츠플라스틱",
-   "vol": 25,
+   "kw": "롱브라탑",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "글로스브로물왁스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미스터핑크",
-   "vol": 25,
+   "kw": "젝시믹스여성골프웨어",
+   "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "케미컬가이무광",
-   "vol": 25,
+   "kw": "하덱스바람막이",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "케미컬가이스트리퍼센트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이에코스마트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이워터리스",
-   "vol": 25,
+   "kw": "하덱스양말",
+   "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "케미컬가이폼랜스",
-   "vol": 25,
+   "kw": "의자전시장",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "글라코바주카",
-   "vol": 25,
+   "kw": "볼륨스포츠브라",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마로렉스인더스트리2000",
-   "vol": 25,
+   "kw": "앞여밈브라",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마로렉스폼건",
-   "vol": 25,
+   "kw": "압착올리브오일",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "부두라이드카샴푸",
-   "vol": 25,
+   "kw": "스페인엑스트라버진",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "CHEMICALGUYS",
-   "vol": 25,
+   "kw": "이탈리아엑스트라버진올리브오일",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이지크림",
-   "vol": 25,
+   "kw": "수입올리브오일",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "케가",
-   "vol": 25,
+   "kw": "오로오피",
+   "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "케미컬가이실내",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "그릿가드버킷",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이짐백",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이하이드로",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "글로스브로이너샤인",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "G80가변배기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오크밸리근처펜션",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가죽시트관리",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어물왁스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어세차용품",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "발렛프로",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "칼날제작",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더클래스셀프세차",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마그웻크랩휠미트",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "TAC유리막",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잭스왁스실내",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "티에이씨시스템",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AD슈퍼폼",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파이어볼브라질왁스",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파이어볼에일리언블러드",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "매스코닉",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "헬샤인고스트라이더",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "메탈코트",
-   "vol": 20,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "AD페인트클렌저",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오토피네스사틴",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "기온레더",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이스프레이어블레더",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "글로스브로실내세정제",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "큐리페어",
-   "vol": 15,
+   "kw": "블리닉",
+   "vol": 45,
    "comp": "낮음",
    "hint": true
   },
   {
-   "kw": "도미골프",
-   "vol": 15,
+   "kw": "리훈오늘기억",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시미니",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "LUCKYPLEATSKNITSSTARRY",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "크로커다일여성복",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "손상헤어트리트먼트",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모노디오",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬스토어",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬원단",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "운동아우터",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편한트레이닝복",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "듀오백DK025",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "시공사례",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엑스네지",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여름브라렛",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "MUSCLEARMED",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "씨엘스토리",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "라이코스펫",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "올리브유엑스트라버진추천",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리훈오늘쓰임",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "박준뷰티랩단백질샴푸",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "알앤비피톤테라피",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "POLTONE",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무코타클리닉홈케어",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헬리오시티상가미용실",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "탈색트리트먼트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키플링시티백스몰",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키플링여행용크로스백",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아보카도운동복",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에슬리트",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "STL할인",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "버블라임레깅스",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "요가복STL",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스레깅스추천",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "하리피플",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "니뽄쭈야",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "썸데이이프",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "LULULEMONCANADA",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬백화점",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬카고",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "STL사이즈",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "위뜨요가복",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "잭시미스",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스반팔",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스워터레깅스",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스등산복",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스롱패딩",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스타이즈",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스헬스복",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스스윔웨어",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "요가복코디",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플라잉요가옷",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하타요가복",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "Y존커버레깅스",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이쁜운동복",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬프로모션",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필라복",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마린의자",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자운동복레깅스",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지음의자",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성스포츠바지",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "땀복레깅스",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성운동레깅스",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "몸매보정레깅스",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "페이비즈",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BEASTMODE",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "나인Z",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "덤브스트럭머슬핏",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "와커",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "허그본바지",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "씬님속옷",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "인견브래지어",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올림피아티",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "브라앞후크",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기모레깅스팬츠",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비비안기모레깅스",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올림피아나시",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "FREEDOM짐웨어",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스남자반팔",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "내장캡반팔",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성브이넥반팔티셔츠",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "앞으로브라",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여자나이키운동복",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "장성엽옷",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "브라탑반팔티",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "앞후크속옷",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "아웃핏베럴",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "식용올리브유",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "링콘델라",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가성비칫솔",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리훈일기장",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "JOSEPHSTACEY",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "조셉엔스테이시니트백",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의자편집샵",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스컬피그조거",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스컬피그플렉스에어레깅스",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파트라매장",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "운동용브라탑",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "척추보호의자",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오디오니트",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "서플라이디포",
+   "vol": 30,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "코아스사무용의자",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "춘천의자",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "고객용의자",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라코니코올리브오일",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리훈노트",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "박준단백질",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "박준프로틴샴푸",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미용실LPP",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PPT클리닉",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건조모발샴푸",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헤어클리닉제품추천",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동탄저렴한미용실",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에르베레깅스",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "STL기모레깅스",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "단스킨요가복",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원리추얼",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "스컬피그팬츠",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬Y존",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬룸스프레이",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬해외직구",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "아보카도레깅스",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "단스킨레깅스",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "버니벅스",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프리부",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아보카도요가",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스1+1",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스래쉬가드집업",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스래시가드",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스민소매",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "포에떼",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "모베스티",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뮬라웨어하의",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뮬라웨어하렘팬츠",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여자헬스상의",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캉골웨이스트백",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패드내장요가복",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "루비아나",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "웬디로즈",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "도로시비치",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "루즈핏운동복",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자우븐팬츠",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미스글램",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "G컵스포츠브라",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국산레깅스",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에어로빅레깅스",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가구저렴한사이트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의자오프라인",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브라탑크롭",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매버릭머슬핏",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의자가구점",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "MATBLACK",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "덤브스트럭맨투맨",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매버릭티셔츠",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "볼란테가방",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스남자나시",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "RSBN",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "노와이어풀컵브라",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "볼륨심리스브라",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유앤에프",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여성스포츠속옷",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밍크기모레깅스",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원주의자",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자나이키셋업",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의자아울렛",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반팔브라",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패드반팔",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패드반팔티",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "FZCA",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "REPSONREPS",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "무스쿨로",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "짐웨어버뮤다",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "UNF짐웨어",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "큰가슴심리스브라",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "올레오칸탈올리브유",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헤랄도",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴대용올리브유",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "VIRGINCOCONUTOIL",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비엠에슬릿",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "스파이럴모칫솔",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "특수칫솔",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사포네",
+   "vol": 25,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "어텐티",
+   "kw": "다이어리리훈",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리훈5년",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리훈볼펜",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "리훈이야기",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "LUCKYPLEATSKNITM",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시니트백S",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시럭키플리츠",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "플리츠니트가방",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시캔버스백",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시피오리",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시에코백",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬USA",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애슬레져",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "ITSDAY",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "부산듀오백매장",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대도사무용가구",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "운동용후드티",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뱅퀴시짐웨어",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리스펙트에슬레틱",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아세이떼바오스코리아",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "리훈업무일지",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모레모LPP",
    "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "박준뷰티랩헤어팩",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헤어워터팩",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "송파허쉬컷",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "석촌동헤어",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "손상모헤어트리트먼트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "박승철헤어스튜디오가격",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "진어메이징",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "T301FE",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디몬스터",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "셀렌시아",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "아이멜로",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "애슐리트",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "요가복젝시믹스",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "애슬리트코리아",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아몬드온",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "안다르젝시믹스레깅스",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "그란데라인브라탑",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "뉴발란스요가복",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에이브레깅스",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "파슬리레깅스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포인트픽스",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소로나티",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스컬피그땀복",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "스컬피그후기",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "플렉스에어",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플렉스에어레깅스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뮬라웨어아울렛",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뮬라웨어오프라인",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "그란데라인요가복",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "콘치웨어스포츠브라",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "콘치웨어알라딘",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "나이키필라테스복",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름용레깅스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "속옷정기배송",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스기모레깅스",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스모델",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스기모조거",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스숏팬츠",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스필라테스복",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "슬로우캄포",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "무브웜상의",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스핏러너",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "5부기모레깅스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "찬드라점프수트",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "애슬레져룩",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시디즈M17",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "섹시요가복",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여자헬스옷",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쫀쫀한레깅스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬마크다운",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬오프라인세일",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파트라사무용의자",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "백팩캉골",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "캉골1342",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캉골책가방세트",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "심리스요가복",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파트라플로",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "본인뉴욕",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "루즈핏요가복",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방수브라",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "금찌브라",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성빅사이즈레깅스",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "파트라마린의자",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자나이키츄리닝세트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영국의자",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AMBION",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "RYDERWEAR",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "VQ바지",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "김종국바지",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "김종국반바지",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "매버릭바지",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에이치덱스티셔츠",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스남성래쉬가드",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스남자래쉬가드",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "프레이트하우스",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "프리덤럭비",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하덱스모자",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "허그본티셔츠",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파트라카일",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "의자오프라인매장",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "언브로큰반팔",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라드앤파",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "BEALPHA",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "수제의자",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "클라미",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "레깅스기모",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "익산의자",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BLEEK",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "리베라가구",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베나웨어",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여자나이키츄리닝",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "QCPLAY",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "프리덤의류",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "융털기모레깅스",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "에이치덱스민소매",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "프리미엄짐웨어",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "TAKEFORM",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여자나이키트레이닝복세트",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "몬스터핏불",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "메쉬저지",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "골든앤머신",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "VQ짐웨어",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "덤브스트럭나시",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베어웨어",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "큰가슴브라렛",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의정부의자",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에이펙시아",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "브루아오로올리브유",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올리브유올레오칸탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "폴리페놀올리브유",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유기농냉압착올리브유",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모노컬티바",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수입올리브유",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유기농올리브유추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오로OP",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베네토발폴리첼라",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "DENTALPRO",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스파이럴모",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부용칫솔",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리훈3년일기",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "리훈데일리다이어리",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "리훈업무다이어리",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리훈만년다이어리",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "굿노트육아일기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시니트백M",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "JOSEPH&STACEY",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "조셉앤스테이시실버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "박준단백질LPP트리트먼트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "스캘프팩",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안다르애슬레저",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "TMPL",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마치무브먼트",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파이브리스",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뮬라웨어여성요가복",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "안다르여성요가복",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "물라웨어",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "스컬피그바이커쇼츠",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "스컬피그씬님",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스컬피크",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뮬라웨어젝시믹스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "뮬라웨어요가복상의",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "LULULEMONATHLETICA",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬공구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬이벤트",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "한혜진룰루레몬",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뮬라웨",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뮬라웨어세일",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뮬라웨어할인",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뮬라웨어요가",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스매장",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "콘치웨어요가복상의",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스추천",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹시",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "콘치웨어운동복",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "오이쇼브라렛",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안다르제시믹스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "의자시착",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "리바디요가복",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스레깅스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "제시미스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스나시",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스래쉬가드",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스민소매",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스쇼츠",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스스포츠브라",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스티셔츠",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스패딩",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스할인",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스가격",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스여름레깅스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스이벤트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제시믹스수영복",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "뮬라웨어강사할인",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "리무브요가복",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "모어아웃상의",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "콘치웨어트레이닝복",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "친환경요가복",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에슬레저브랜드",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뮬라웨어요가복하의",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여자애슬레저",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬매장세일",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "룰루레몬여름세일",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "아이콘의자",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파트라모노",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "포티스의자",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "중학생캉골책가방",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "캉골1388",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "파트라시티",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "더노블리",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "파트라스킨",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "리브라의자",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생활지음오크노",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "생활지음올라",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "친환경운동복",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파트라라보엠",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "DK004",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "코코드미엘",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "듀오백할인",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "버닉스",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "브라프라",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오랜지플라워",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뱃살레깅스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "봄레깅스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "드라이반팔티",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반바지반팔세트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라보파트라",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리오베이스",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "피지크어패럴",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "DBSR나시",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "XKLA",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "김종국트레이닝복",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "덤브스트럭사이즈",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "리스펙트짐웨어",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "매버릭나시",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "머슬암드민소매",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "엑추얼라이즈",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스남성트레이닝복",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젝시믹스남자워터레깅스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "피지코나시",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "하덱스할인코드",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "힐조세븐",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "페트릭웨어",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인포메이션가구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "씬님브라",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "씬님브래지어",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "더메이커짐웨어",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "브렁크짐웨어",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "기모융레깅스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "등산용기모레깅스",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "면기모레깅스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유발기모레깅스",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "김종국나시티",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "패트릭웨어",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PDF책상",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "PS가구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "U라인책상",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "리베라책상",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코아스사무가구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "KINETICPEOPLE",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "STDN",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "데일리필드",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "치치골프",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "제스트온",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "피지코어페럴",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "RBW티셔츠",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맷블랙짐웨어",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유엔에프짐웨어",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키네틱나시",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키네틱피플나시",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이디웨어",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파르젤론",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "헤비코튼오버핏",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올레오칸탈750",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "브루아오로리미티드에디션",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올리브오일수입",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올레오칸탈생식",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "CJ압착올리브유",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "컴피리빙",
+   "vol": 10,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "라브라크탱크",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "풍성교나라모",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "리놀레카",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "PITTORESCO",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "빠이요수분크림",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엠마지",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "에이엔화장품",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "MEGATEN",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "핑크구미베어",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "르젠무엽선풍기",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신일전자써큘레이터",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일써큘레이터선풍기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일선풍기써큘레이터",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스타일리스서큘레이터",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "최신형선풍기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리오메딕스",
-   "vol": 15,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "샐러디가맹",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "니도르",
-   "vol": 15,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "비발디파크주변펜션",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "마그웻크랩",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "코흐케미구미픽스",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "발란스나인유리막코팅",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "샤이니왁스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "TAC시스템카샴푸",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모터플라스트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "듀플렉스세차",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AD오토브라이트폼랜스",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "오토브라이트퀵디테일러",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "스팽글디테일링",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스팽글세차",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스팽글카샴푸",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스팽글페인트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파이어볼코리아",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AD디테일링",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "TAC에이쿼츠",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "AD다이렉트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3M고체왁스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3M광택",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3M러빙컴파운드",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "3M발수코팅",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3M컴파운드2000방",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3M헤라",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "듀플렉스왁스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "터틀왁스컴파운드",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "AD왁스",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오토피네스크루백",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자이몰글레이저",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파이어볼유리막코팅",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AD폼",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "도도쥬스본투비마일드",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "대전아드리아호텔",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "LEATHERCOAT",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠코팅제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "시트보호제",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "AD블랙다이",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AD알칸타라",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오토브라이트유리세정제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오토브라이트크리스탈",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "오토브라이트퍼플레인",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오토브라이트페인트클렌저",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오토브라이트FAB",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오토브라이트핑크쉰",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠실내세정제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온가죽코팅제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠유리막코팅제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠탈지제",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "보라솔루션",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "AUTOBRITEDIRECT",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이랩디테일러",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이메티큘러스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이센트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이왁스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이프리워시",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "하이드로차지",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠컴파운드",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠레더마일드",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마로렉스미니",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마로렉스압축분무기부품",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마로렉스헤드",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "볼프강실런트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "극세사전용세제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오토브라이트베리체리",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "도도쥬스왁스",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이가방",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이버터웻왁스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이타이어",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "도도쥬스본투비",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "퓨리스D15",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마로렉스하비",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세차약품",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "시모나이즈",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유리막발수코팅제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어광택기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어얼티메이트컴파운드",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어타이어",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어타이어광택제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어하이퍼드레싱",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "카렉스세차",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "글로스브로트리거",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어APC",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소낙스가방",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블루믹스왁스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어스APC",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오비노비앙코",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파이토신재생크림공구",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제노시스암예측",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "온더스선풍기",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "따따베선풍기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "온더스날개없는선풍기",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "24년형신일선풍기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "신일거실선풍기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "24년형선풍기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "듀얼온",
+   "kw": "휘페",
    "vol": 10,
    "comp": "낮음",
    "hint": true
   },
   {
-   "kw": "샐러디가맹점",
+   "kw": "리훈대학생활",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "리훈그란데",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "하누와",
+   "kw": "리훈다이어리그란데",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리훈하반기다이어리",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "리훈어떤날의문장",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "리훈PDF",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "굿노트식단일기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "다이어리아이패드",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "갤탭가계부",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "굿노트업무노트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캘드론",
    "vol": 10,
    "comp": "낮음",
    "hint": true
   },
   {
-   "kw": "행운큐브",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "남원토비스콘도",
+   "kw": "조셉앤스테이시머플러",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가평클럽인너호텔앤리조트",
+   "kw": "조셉앤스테이시니트백미니",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "오플렉스퓨어인테리어클리너",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잇츠윈롤리팝",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잇츠윈미트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오토글림레더",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "TAC왁스",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스팽글닥터몬스터",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "잭스왁스코리아",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "듀플렉스세차용품",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아머올가죽세정보호제",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AD알칸타라클리너",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ADDBS브러쉬",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AD디테일링브러쉬",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AD엘레강스",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EXQMP-150",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스팽글페인트클렌져",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스팽글프리워시",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파이어볼샴푸",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파이어볼세차용품",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마그웻세차버킷",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스팽글인테리어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "A-QUARTZ",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "헬샤인어비스",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "AD페인트클렌져",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "볼라솔루션G37",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3M낙진제거제",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "3M에어샌딩기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파이어볼바인더",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오토피네스레볼루션",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오토피네스유리세정제",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "자이몰필드글레이즈",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "강화올제스파펜션",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "덕구온천주변숙박",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소노문변산",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소노문스위트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인천파라다이스시티호텔예약",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "창원프라하호텔",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "파주칼튼호텔",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "하이원근처숙박",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3M폴리싱",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컴파운드3M",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AD발수코팅제",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AD저스트더토닉",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "오토브라이트다이렉트브러쉬",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오토브라이트시트러스워시",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "나지올유리막코팅",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "글라코G73G19",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "글라코유리발수코팅",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "기온Q2",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠타르제거제",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "레더가드",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케가이너클린",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이세차툴백",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이셔닐",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이스티커",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이젯실매트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이파파손",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이하이브리드",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "울트라레인보우버핑",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠타이어익스프레스",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마로렉스에르고2000",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마로렉스오아시스",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "퓨리스D74",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ADDBS",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이닐피스크",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기온쿼츠Q2타이어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디테일링프로금속광택제",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디테일링프로엔진룸",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이세트",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이APC",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "글래스엑스",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이디콘",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이스마트젤",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케미컬가이휠클리너",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AD타르제거제",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "볼라P17",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스피드폴",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어스하이퍼드레싱",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어워터스팟",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카렉스보조미러",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카렉스휠크리너",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "맥과이어스물왁스",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차량케미컬",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블루믹스마스터샤인",
+   "kw": "조셉앤스테이시슬링백",
    "vol": 10,
    "comp": "높음",
    "hint": false
