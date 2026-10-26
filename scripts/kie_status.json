@@ -1,12 +1,13 @@
 {
- "at": "2026-10-26 10:19",
+ "at": "2026-10-26 10:26",
  "tier": "veo3_lite",
  "res": "1080p",
  "dur": 4,
  "jobs": [
   {
    "n": 1,
-   "taskId": "06e3630f11a6492dcb73fbfad814c40a",
+   "cap": "통창 너머로 떠오르는 해",
+   "taskId": "675d8e502bedbd2c61196d8ee03ab2c7",
    "state": "success",
    "credits": 35.0,
    "raw_keys": [
@@ -28,9 +29,35 @@
     "paramJson"
    ],
    "file": "video/2026-10-26/pohang-daytona/1.mp4"
+  },
+  {
+   "n": 5,
+   "cap": "일출이 보이는 침실",
+   "taskId": "a24320da3cffe7aa061462e16224b73e",
+   "state": "success",
+   "credits": 35.0,
+   "raw_keys": [
+    "taskId",
+    "model",
+    "state",
+    "param",
+    "resultJson",
+    "failCode",
+    "failMsg",
+    "costTime",
+    "completeTime",
+    "createTime",
+    "creditsConsumed",
+    "operationType",
+    "fallbackFlag",
+    "response",
+    "successFlag",
+    "paramJson"
+   ],
+   "file": "video/2026-10-26/pohang-daytona/5.mp4"
   }
  ],
  "slug": "pohang-daytona",
  "name": "데이토나풀빌라",
- "credits_total": 35.0
+ "credits_total": 70.0
 }
