@@ -1,7 +1,51 @@
 {
- "at": "2026-10-26T08:36:09.759482",
- "mode": "voices",
+ "at": "2026-10-26T08:37:25.945873",
+ "mode": "make",
  "name": "daytona",
- "voices": {},
- "count": 608
+ "voices": {
+  "tc_1": {
+   "id": "tc_692799c46508f6b9468c54c7",
+   "total": 19.8,
+   "ts_keys": [
+    "audio",
+    "audio_format",
+    "audio_duration",
+    "words",
+    "characters"
+   ]
+  },
+  "tc_2": {
+   "id": "tc_6731b36bd944a485bc4070fd",
+   "total": 17.48,
+   "ts_keys": [
+    "audio",
+    "audio_format",
+    "audio_duration",
+    "words",
+    "characters"
+   ]
+  },
+  "tc_3": {
+   "id": "tc_65bb3a1976b69213594357fc",
+   "total": 17.32,
+   "ts_keys": [
+    "audio",
+    "audio_format",
+    "audio_duration",
+    "words",
+    "characters"
+   ]
+  },
+  "tc_4": {
+   "id": "tc_67d238428572120c4aa644cc",
+   "total": 19.51,
+   "ts_keys": [
+    "audio",
+    "audio_format",
+    "audio_duration",
+    "words",
+    "characters"
+   ]
+  }
+ }
 }
