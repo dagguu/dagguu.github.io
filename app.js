@@ -918,7 +918,7 @@ function favView(){
 
 /* ---------- 공구 (2026-10-19 시온님 요청: 하단 탭 혜택 → 공구, 시온님이 직접 파는 상품) ----------
    data.json gonggu: [{name, price, orig, rate, img, u(구매 링크), until(YYYY-MM-DD, 지나면 숨김), soldOut}] */
-function shopList(){ var t=ymd(today()); return (seed.gonggu||[]).filter(function(x){ return x&&x.name&&safeUrl(x.u)&&!(x.until&&x.until<t); }); }
+function shopList(){ var t=ymd(today()); return (seed.gonggu||[]).filter(function(x){ return x&&x.name&&safeUrl(x.u)&&!(x.until&&x.until<t); }).map(function(x,i){ return [x,i]; }).sort(function(a,b){ return ((b[0].n||0)-(a[0].n||0))||(a[1]-b[1]); }).map(function(p){ return p[0]; }); } /* 최신순: n(올린 순번) 큰 것 먼저 — 2026-10-27 시온님 */
 function shopView(){
   var L=shopList();
   var h='<div class="pg"><h1>다꾸 공구</h1><p class="pgsub">다꾸가 고른 공동구매 상품이에요</p>';
