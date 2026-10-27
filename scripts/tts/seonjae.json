@@ -25,20 +25,20 @@
   },
   {
    "t": "주황빛 아치 텐트마다, 밤엔 불이 켜지거든요.",
-   "img": "ai:4",
+   "img": "p:2",
    "hl": [
     "아치 텐트"
    ],
-   "why": "텐트 사이 걷는 뒷모습"
+   "why": "물에 비친 아치 텐트",
+   "vp": "Slow slider move from left to right along the glowing arched tents and their reflections in the pool at night."
   },
   {
    "t": "은빛 카라반 객실도 있고,",
-   "img": "p:7",
+   "img": "ai:4",
    "hl": [
     "카라반"
    ],
-   "why": "카라반",
-   "vp": "Slow slider move from left to right past the silver caravan at night, soft lights glowing."
+   "why": "카라반 앞 뒷모습"
   },
   {
    "t": "여섯 명이 함께 자는 객실도 있어서, 가족 여행으로 좋아요.",
@@ -50,12 +50,12 @@
   },
   {
    "t": "근데 조건이 하나 있어요. 강아지는 펫 글램핑 객실만 돼요.",
-   "img": "p:2",
+   "img": "p:7",
    "hl": [
     "펫 글램핑"
    ],
-   "why": "물에 비친 텐트",
-   "vp": "Slow push-in toward the arched tents reflected in the still water, gentle ripples."
+   "why": "주황 아치 텐트 낮",
+   "vp": "Slow push-in toward the open orange arched glamping tent, soft daylight, leaves moving gently."
   },
   {
    "t": "자세한 건 숙소 정보에서 꼭 확인해 보세요.",
