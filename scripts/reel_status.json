@@ -1,6 +1,6 @@
 {
- "at": "2026-10-26T17:54:47.910320",
- "name": "matie",
+ "at": "2026-10-27T12:01:42.677184",
+ "name": "seonjae",
  "font": "Jalnan",
  "fontInfo": {
   "error": [],
@@ -10,65 +10,57 @@
   "family": "Jalnan",
   "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
  },
- "dur": 23.12,
- "cuts": 17,
+ "dur": 19.77,
+ "cuts": 15,
  "plan": [
   {
    "video": true,
-   "t": "부산 신상 호텔인데, 인당 5만원대라구요?",
+   "t": "바다가 보이는 글램핑이, 인당 7만원대래요?",
    "img": "p:1",
    "start": 0.0,
-   "end": 2.73,
-   "cuts": 2
+   "end": 3.39,
+   "cuts": 3
   },
   {
    "video": true,
-   "t": "여기 51층에, 바다가 보이는 수영장이 있거든요.",
-   "img": "ai:2",
-   "start": 2.73,
-   "end": 5.88,
-   "cuts": 2
-  },
-  {
-   "video": false,
-   "t": "11월부터는 따뜻한 물이라, 겨울에도 수영할 수 있고,",
+   "t": "주황빛 아치 텐트마다, 밤엔 불이 켜지거든요.",
    "img": "p:2",
-   "start": 5.88,
-   "end": 9.38,
-   "cuts": 3
-  },
-  {
-   "video": true,
-   "t": "거실이 따로 있는 넓은 객실은 기본이고,",
-   "img": "p:3",
-   "start": 9.38,
-   "end": 11.98,
+   "start": 3.39,
+   "end": 6.61,
    "cuts": 2
   },
   {
    "video": true,
-   "t": "심지어 여덟 명까지 잘 수 있어서, 가족, 친구 모임으로 딱 좋아요.",
-   "img": "p:5",
-   "start": 11.98,
-   "end": 16.5,
-   "cuts": 3
-  },
-  {
-   "video": true,
-   "t": "창밖으로 부산 바다가 펼쳐지는 객실도 있으니,",
+   "t": "은빛 카라반 객실도 있고,",
    "img": "ai:4",
-   "start": 16.5,
-   "end": 19.53,
-   "cuts": 2
+   "start": 6.61,
+   "end": 8.29,
+   "cuts": 1
+  },
+  {
+   "video": true,
+   "t": "여섯 명이 함께 자는 객실도 있어서, 가족 여행으로 좋아요.",
+   "img": "ai:5",
+   "start": 8.29,
+   "end": 11.84,
+   "cuts": 3
+  },
+  {
+   "video": true,
+   "t": "근데 조건이 하나 있어요. 강아지는 펫 글램핑 객실만 돼요.",
+   "img": "p:7",
+   "start": 11.84,
+   "end": 16.36,
+   "cuts": 3
   },
   {
    "video": true,
    "t": "자세한 건 숙소 정보에서 꼭 확인해 보세요.",
    "img": "p:1",
-   "start": 19.53,
-   "end": 23.12,
+   "start": 16.36,
+   "end": 19.77,
    "cuts": 3
   }
  ],
- "file": "reels/matie/reel.mp4"
+ "file": "reels/seonjae/reel.mp4"
 }
