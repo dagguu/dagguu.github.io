@@ -505,7 +505,7 @@ function initFeed(){
 }
 
 /* ---------- 체험단 목록 ---------- */
-var STATUSES=[["open","🔥 모집중"],["todayOpen","✨ 오늘 오픈"],["todayClose","🚨 오늘 마감"],["closing","⏰ 마감 임박"],["pick","💜 추천"],["closed","🔒 마감"]];
+var STATUSES=[["open","🔥 모집중"],["todayOpen","✨ 오늘 오픈"],["todayClose","🚨 오늘 마감"],["closing","⏰ 마감 임박"],["pick","💜 추천"]]; /* 마감 칩은 2026-10-27 마감 체험단 삭제로 뺌 */
 function listView(){
   var c=catInfo(state.cat);
   return '<div class="lv">'+
