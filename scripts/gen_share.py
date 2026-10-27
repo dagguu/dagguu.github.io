@@ -436,6 +436,7 @@ try:
     subprocess.run([_s.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "gen_picks.py")], check=False)  # 추천 모음 p/ (2026-10-20)
     subprocess.run([_s.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "gen_rank.py")], check=False)
     subprocess.run([_s.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "gen_stays.py")], check=False)
+    subprocess.run([_s.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "split_data.py")], check=False)  # 첫 화면용 data-live.json / 예전 마감 data-past.json (2026-10-27)
     subprocess.run([_s.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "add_mv.py")], check=False)  # 매거진 조회수 (2026-10-25)  # 국내숙소추천 매거진 m/ (2026-10-24)  # 공구 탭 테마 랭킹 rank.json (2026-10-23)
 except Exception as _e:
     print("gen_edu 실패", _e)

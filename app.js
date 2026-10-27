@@ -2594,8 +2594,17 @@ shell(); paintLogo(); route();
 (function(){ window.kakaoAsyncInit=function(){ try{ Kakao.Channel.createAddChannelButton({container:"#kakao-talk-channel-add-button"}); }catch(e){} try{ Kakao.Channel.createChatButton({container:"#kakao-talk-channel-chat-button"}); }catch(e){} };
   if(document.getElementById("kakao-js-sdk")) return; var js=document.createElement("script"); js.id="kakao-js-sdk"; js.src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.channel.min.js"; js.integrity="sha384-8oNFBbAHWVovcMLgR+mLbxqwoucixezSAzniBcjnEoumhfIbMIg4DrVsoiPEtlnt"; js.crossOrigin="anonymous"; js.async=true; document.head.appendChild(js); })();
 window.addEventListener("hashchange",route);
-fetch(BASE+"data.json?v="+Date.now().toString(36).slice(0,-3),{cache:"no-cache"}).then(function(r){ return r.json(); }).then(function(d){
-  seed=d||seed; if(!Array.isArray(seed.items)) seed.items=[]; setTimeout(pushRefresh,1500); /* 사업자 정보는 index.html 의 고정 footer(#sitebiz)에 있음: 네이버 검색광고 확인용, JS 없이도 보이게 */
+/* 2026-10-27 시온님 "로딩이 너무 느려": 모집 중(+어제 마감)만 담은 data-live.json 을 먼저 그리고, 예전에 마감된 체험단(data-past.json)은 뒤에서 받아 붙인다(scripts/split_data.py). live 가 없으면 예전처럼 data.json */
+var DV=Date.now().toString(36).slice(0,-3), PAST=null;
+function loadPast(){ if(PAST) return PAST; PAST=fetch(BASE+"data-past.json?v="+DV,{cache:"no-cache"}).then(function(r){ return r.ok?r.json():{items:[]}; }).then(function(p){
+    var have={}; seed.items.forEach(function(x){ have[x.id]=1; }); (p&&p.items||[]).forEach(function(x){ if(!have[x.id]) seed.items.push(x); }); seed.pastN=0; NEWDAY={};
+    if(state.tab==="item"||state.tab==="fav"||(state.tab==="list"&&state.status!=="open")) render(); }).catch(function(){}); return PAST; }
+function needPast(){ if(state.tab==="fav"||(state.tab==="list"&&state.status==="closed")) return true; if(state.tab==="item") return !seed.items.some(function(x){ return String(x.id)===String(state.itemId); }); return false; }
+fetch(BASE+"data-live.json?v="+DV,{cache:"no-cache"}).then(function(r){ if(!r.ok) throw 0; return r.json(); }).catch(function(){ PAST=Promise.resolve(); return fetch(BASE+"data.json?v="+DV,{cache:"no-cache"}).then(function(r){ return r.json(); }); }).then(function(d){
+  seed=d||seed; if(!Array.isArray(seed.items)) seed.items=[];
+  if(seed.pastN&&needPast()) return loadPast().then(function(){ return d; });
+  return d; }).then(function(d){
+  if(seed.pastN) setTimeout(loadPast,1200); setTimeout(pushRefresh,1500); /* 사업자 정보는 index.html 의 고정 footer(#sitebiz)에 있음: 네이버 검색광고 확인용, JS 없이도 보이게 */
   if(Array.isArray(seed.categories)&&seed.categories.length) CATS=seed.categories;
   UPCOMING=Array.isArray(seed.upcoming)?seed.upcoming:[]; ADS=Array.isArray(seed.ads)?seed.ads:[]; DEALS=Array.isArray(seed.deals)?seed.deals:[];
   state.loading=false; LOGO=pickLogo(); paintLogo(); setFavicon(); render();

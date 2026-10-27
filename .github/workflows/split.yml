@@ -1,0 +1,25 @@
+name: data-live 나누기
+# data.json 이 바뀌었는데 gen_share.py 를 안 돌린 커밋이 있어도 첫 화면용 data-live.json·data-past.json 이 따라오게 (2026-10-27)
+on:
+  push:
+    branches: [main]
+    paths: [data.json]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: split-data, cancel-in-progress: false }
+jobs:
+  split:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          for i in 1 2 3; do
+            git pull -q --rebase origin main || true
+            python3 scripts/split_data.py
+            git add data-live.json data-past.json
+            git diff --cached --quiet && exit 0
+            git -c user.name="dagguu" -c user.email="eun901002@gmail.com" commit -qm "data-live 나누기"
+            git push -q && exit 0
+            git reset -q --hard origin/main; sleep 5
+          done
