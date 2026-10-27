@@ -116,7 +116,10 @@ def stay_camp(P):
     """이 숙소의 체험단(2026-10-25 시온님): 모집 중이면 신청 정보로, 끝났으면 카카오 채널 알림받기."""
     pid = str(P.get("pid") or "")
     L = [it for it in d.get("items", []) if it.get("cat") == "stay" and ((pid and str(it.get("coupangPid") or "") == pid) or it.get("id") == P.get("camp"))]
-    if not L: return ""
+    if not L:
+        try: ended = set(json.load(open(os.path.join(ROOT, "scripts", "ended_pids.json"), encoding="utf-8")))
+        except Exception: ended = set()
+        if not (pid and pid in ended): return ""
     op = sorted([it for it in L if str(it.get("end") or "") >= TODAY and not it.get("closed")], key=lambda it: it["end"])
     if op:
         it = op[0]; m, dd = int(it["end"][5:7]), int(it["end"][8:10])
