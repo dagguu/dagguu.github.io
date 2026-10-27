@@ -1,0 +1,77 @@
+{
+ "slug": "seonjae-seonjaedam",
+ "voice": "tc_68f9c6a72f0f04a417bb136f",
+ "voiceName": "문정",
+ "tempo": 1.15,
+ "stay": "seonjae-seonjaedam",
+ "imgDate": "2026-10-27",
+ "title": [
+  "선재도 바다 옆 글램핑",
+  "인당 7만원대?!"
+ ],
+ "thumb": {
+  "img": "p:1",
+  "sec": 1.5
+ },
+ "scenes": [
+  {
+   "t": "바다가 보이는 글램핑이, 인당 7만원대래요?",
+   "img": "p:1",
+   "hl": [
+    "인당 7만원대"
+   ],
+   "why": "밤 조명 텐트 = 특징 첫 컷",
+   "vp": "Slow drone push forward over the row of glowing orange arched glamping tents at night."
+  },
+  {
+   "t": "주황빛 아치 텐트마다, 밤엔 불이 켜지거든요.",
+   "img": "ai:4",
+   "hl": [
+    "아치 텐트"
+   ],
+   "why": "텐트 사이 걷는 뒷모습"
+  },
+  {
+   "t": "은빛 카라반 객실도 있고,",
+   "img": "p:7",
+   "hl": [
+    "카라반"
+   ],
+   "why": "카라반",
+   "vp": "Slow slider move from left to right past the silver caravan at night, soft lights glowing."
+  },
+  {
+   "t": "여섯 명이 함께 자는 객실도 있어서, 가족 여행으로 좋아요.",
+   "img": "ai:5",
+   "hl": [
+    "여섯 명"
+   ],
+   "why": "랜턴 테이블"
+  },
+  {
+   "t": "근데 조건이 하나 있어요. 강아지는 펫 글램핑 객실만 돼요.",
+   "img": "p:2",
+   "hl": [
+    "펫 글램핑"
+   ],
+   "why": "물에 비친 텐트",
+   "vp": "Slow push-in toward the arched tents reflected in the still water, gentle ripples."
+  },
+  {
+   "t": "자세한 건 숙소 정보에서 꼭 확인해 보세요.",
+   "img": "p:1",
+   "hl": [
+    "숙소 정보"
+   ],
+   "why": "마무리"
+  }
+ ],
+ "price": {
+  "src": "쿠팡트래블 + 맘맘 숙소 페이지(인원·조건 확인)",
+  "checked": "2026-10-27",
+  "date": "2026-11-03(화) 1박",
+  "room": "오션뷰 글램핑 B 패밀리 450,000원 · 기준 6인 → 인당 75,000원",
+  "others": "파크 글램핑 단층 165,000(기준2) · 프라이빗 카라반 210,000(기준2) · 복층 220,000(기준2·최대6) · 펫 글램핑 단층 250,000(기준2·최대4) · 오션뷰 복층 320,000(기준4)"
+ },
+ "caption_note": "인당 7만원대 = 오션뷰 글램핑 B 패밀리 평일 6인 기준 · 반려견은 펫 글램핑 단층만(20kg 이하, 광견병 접종) · 바베큐 3만원·불멍 2만원 현장결제 · 날짜·객실마다 가격이 달라요"
+}
