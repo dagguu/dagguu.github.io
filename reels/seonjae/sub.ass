@@ -10,23 +10,23 @@ Style: T,Jalnan,112,&H00FFFFFF,&H00000000,&H78000000,1,1,8,4,8,50,50,300
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.18,0:00:00.96,D,,0,0,0,,{\i1}바다가{\fnNoto Sans CJK KR Black} {\fnJalnan}보이는
-Dialogue: 0,0:00:00.96,0:00:01.72,D,,0,0,0,,{\i1}글램핑이
-Dialogue: 0,0:00:01.72,0:00:03.29,D,,0,0,0,,{\i1}{\c&H0080FF&}인당{\fnNoto Sans CJK KR Black} {\fnJalnan}7만원대{\c&HFFFFFF&}래요?
-Dialogue: 0,0:00:03.34,0:00:04.11,D,,0,0,0,,{\i1}주황빛{\fnNoto Sans CJK KR Black} {\fnJalnan}아치
-Dialogue: 0,0:00:04.11,0:00:04.87,D,,0,0,0,,{\i1}텐트마다
-Dialogue: 0,0:00:04.87,0:00:05.53,D,,0,0,0,,{\i1}밤엔{\fnNoto Sans CJK KR Black} {\fnJalnan}불이
-Dialogue: 0,0:00:05.53,0:00:06.48,D,,0,0,0,,{\i1}켜져요
-Dialogue: 0,0:00:06.53,0:00:07.31,D,,0,0,0,,{\i1}은빛{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}카라반{\c&HFFFFFF&}
-Dialogue: 0,0:00:07.31,0:00:08.32,D,,0,0,0,,{\i1}객실도{\fnNoto Sans CJK KR Black} {\fnJalnan}있고
-Dialogue: 0,0:00:08.37,0:00:09.33,D,,0,0,0,,{\i1}{\c&H0080FF&}여섯{\fnNoto Sans CJK KR Black} {\fnJalnan}명{\c&HFFFFFF&}{\fnNoto Sans CJK KR Black} {\fnJalnan}객실도
-Dialogue: 0,0:00:09.33,0:00:09.87,D,,0,0,0,,{\i1}있어서
-Dialogue: 0,0:00:09.87,0:00:10.67,D,,0,0,0,,{\i1}가족{\fnNoto Sans CJK KR Black} {\fnJalnan}여행으로
-Dialogue: 0,0:00:10.67,0:00:11.54,D,,0,0,0,,{\i1}좋고
-Dialogue: 0,0:00:11.59,0:00:12.55,D,,0,0,0,,{\i1}근데{\fnNoto Sans CJK KR Black} {\fnJalnan}조건이
-Dialogue: 0,0:00:12.55,0:00:13.50,D,,0,0,0,,{\i1}하나{\fnNoto Sans CJK KR Black} {\fnJalnan}있어요
-Dialogue: 0,0:00:13.50,0:00:14.94,D,,0,0,0,,{\i1}강아지는{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}펫{\fnNoto Sans CJK KR Black} {\fnJalnan}글램핑{\c&HFFFFFF&}
-Dialogue: 0,0:00:14.94,0:00:15.89,D,,0,0,0,,{\i1}객실만{\fnNoto Sans CJK KR Black} {\fnJalnan}돼요
-Dialogue: 0,0:00:15.94,0:00:16.96,D,,0,0,0,,{\i1}자세한{\fnNoto Sans CJK KR Black} {\fnJalnan}건{\fnNoto Sans CJK KR Black} {\fnJalnan}숙소
-Dialogue: 0,0:00:16.96,0:00:18.18,D,,0,0,0,,{\i1}정보에서{\fnNoto Sans CJK KR Black} {\fnJalnan}꼭{\fnNoto Sans CJK KR Black} {\fnJalnan}확인해
-Dialogue: 0,0:00:18.18,0:00:19.43,D,,0,0,0,,{\i1}보세요
+Dialogue: 0,0:00:00.19,0:00:00.87,D,,0,0,0,,{\i1}바다가{\fnNoto Sans CJK KR Black} {\fnJalnan}보이는
+Dialogue: 0,0:00:00.87,0:00:01.55,D,,0,0,0,,{\i1}글램핑이
+Dialogue: 0,0:00:01.55,0:00:03.05,D,,0,0,0,,{\i1}{\c&H0080FF&}인당{\fnNoto Sans CJK KR Black} {\fnJalnan}7만원대{\c&HFFFFFF&}래요?
+Dialogue: 0,0:00:03.10,0:00:03.84,D,,0,0,0,,{\i1}주황빛{\fnNoto Sans CJK KR Black} {\fnJalnan}아치
+Dialogue: 0,0:00:03.84,0:00:04.49,D,,0,0,0,,{\i1}텐트마다
+Dialogue: 0,0:00:04.49,0:00:05.03,D,,0,0,0,,{\i1}밤엔{\fnNoto Sans CJK KR Black} {\fnJalnan}불이
+Dialogue: 0,0:00:05.03,0:00:05.59,D,,0,0,0,,{\i1}켜져요
+Dialogue: 0,0:00:05.64,0:00:06.37,D,,0,0,0,,{\i1}은빛{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}카라반{\c&HFFFFFF&}
+Dialogue: 0,0:00:06.37,0:00:07.11,D,,0,0,0,,{\i1}객실도{\fnNoto Sans CJK KR Black} {\fnJalnan}있고
+Dialogue: 0,0:00:07.16,0:00:07.92,D,,0,0,0,,{\i1}{\c&H0080FF&}여섯{\fnNoto Sans CJK KR Black} {\fnJalnan}명{\c&HFFFFFF&}{\fnNoto Sans CJK KR Black} {\fnJalnan}객실도
+Dialogue: 0,0:00:07.92,0:00:08.38,D,,0,0,0,,{\i1}있어서
+Dialogue: 0,0:00:08.38,0:00:09.09,D,,0,0,0,,{\i1}가족{\fnNoto Sans CJK KR Black} {\fnJalnan}여행으로
+Dialogue: 0,0:00:09.09,0:00:09.53,D,,0,0,0,,{\i1}좋고
+Dialogue: 0,0:00:09.58,0:00:10.36,D,,0,0,0,,{\i1}근데{\fnNoto Sans CJK KR Black} {\fnJalnan}조건이
+Dialogue: 0,0:00:10.36,0:00:10.94,D,,0,0,0,,{\i1}하나{\fnNoto Sans CJK KR Black} {\fnJalnan}있어요
+Dialogue: 0,0:00:10.94,0:00:12.13,D,,0,0,0,,{\i1}강아지는{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}펫{\fnNoto Sans CJK KR Black} {\fnJalnan}글램핑{\c&HFFFFFF&}
+Dialogue: 0,0:00:12.13,0:00:13.31,D,,0,0,0,,{\i1}객실만{\fnNoto Sans CJK KR Black} {\fnJalnan}돼요
+Dialogue: 0,0:00:13.36,0:00:14.20,D,,0,0,0,,{\i1}자세한{\fnNoto Sans CJK KR Black} {\fnJalnan}건{\fnNoto Sans CJK KR Black} {\fnJalnan}숙소
+Dialogue: 0,0:00:14.20,0:00:15.22,D,,0,0,0,,{\i1}정보에서{\fnNoto Sans CJK KR Black} {\fnJalnan}꼭{\fnNoto Sans CJK KR Black} {\fnJalnan}확인해
+Dialogue: 0,0:00:15.22,0:00:16.56,D,,0,0,0,,{\i1}보세요
