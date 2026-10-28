@@ -1,5 +1,5 @@
 {
- "at": "2026-10-28T13:35:23.689454",
+ "at": "2026-10-28T13:51:02.305498",
  "name": "gyeongju-snb-poolvilla",
  "font": "Jalnan",
  "fontInfo": {
@@ -10,88 +10,80 @@
   "family": "Jalnan",
   "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
  },
- "dur": 19.51,
- "cuts": 15,
+ "dur": 19.93,
+ "cuts": 17,
  "plan": [
   {
    "video": true,
-   "t": "여러분, 저 진짜 깜짝 놀랐어요.",
+   "t": "이게 숙소 안에서 찍은 바다라고요?",
    "img": "ai:1",
    "start": 0.0,
-   "end": 2.57,
+   "end": 2.83,
    "cuts": 2
   },
   {
    "video": true,
-   "t": "경주 바다 바로 앞에",
+   "t": "경주 감포 바다 앞",
    "img": "ai:12",
-   "start": 2.57,
-   "end": 3.87,
+   "start": 2.83,
+   "end": 3.91,
    "cuts": 1
   },
   {
    "video": true,
-   "t": "이런 풀빌라가 있거든요.",
+   "t": "풀빌라인데요,",
    "img": "ai:13",
-   "start": 3.87,
-   "end": 5.48,
+   "start": 3.91,
+   "end": 4.98,
    "cuts": 1
   },
   {
    "video": true,
-   "t": "객실 안 수영장에서 따뜻하게 몸 담그고,",
+   "t": "객실 안 수영장에 따뜻한 물 받아놓고",
    "img": "ai:5",
-   "start": 5.48,
-   "end": 7.92,
+   "start": 4.98,
+   "end": 7.26,
    "cuts": 2
   },
   {
    "video": true,
-   "t": "통창 너머로 동해를 보고,",
+   "t": "통창 너머 동해 보며 몸 담가요.",
    "img": "ai:9",
-   "start": 7.92,
-   "end": 9.52,
-   "cuts": 1
+   "start": 7.26,
+   "end": 9.38,
+   "cuts": 2
   },
   {
    "video": true,
-   "t": "바다 보이는 월풀 스파까지 있고,",
+   "t": "바다 보이는 월풀 스파까지 추가 요금 없이 쓰고,",
    "img": "ai:7",
-   "start": 9.52,
-   "end": 11.62,
+   "start": 9.38,
+   "end": 12.06,
    "cuts": 2
   },
   {
    "video": true,
-   "t": "넓은 거실에서 푹 쉬고,",
-   "img": "ai:10",
-   "start": 11.62,
-   "end": 13.58,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "거기다 루프탑 수영장 객실에",
+   "t": "밖은 추워도 물속은 따뜻하니까,",
    "img": "ai:2",
-   "start": 13.58,
-   "end": 15.69,
+   "start": 12.06,
+   "end": 14.26,
    "cuts": 2
   },
   {
    "video": true,
-   "t": "가족 친구 모임으로도 딱 좋고,",
+   "t": "송대말등대까지 걸어서 산책하고,",
    "img": "ai:8",
-   "start": 15.69,
-   "end": 17.63,
-   "cuts": 1
+   "start": 14.26,
+   "end": 16.53,
+   "cuts": 2
   },
   {
    "video": true,
-   "t": "이 뷰는 못 참죠~",
+   "t": "멀리 안 가도 바다 보며 쉬기 좋은 곳이에요.",
    "img": "ai:11",
-   "start": 17.63,
-   "end": 19.51,
-   "cuts": 1
+   "start": 16.53,
+   "end": 19.93,
+   "cuts": 3
   }
  ],
  "file": "reels/gyeongju-snb-poolvilla/reel.mp4"
