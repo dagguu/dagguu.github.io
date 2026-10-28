@@ -10,25 +10,26 @@ Style: T,Jalnan,112,&H00FFFFFF,&H00000000,&H78000000,1,1,8,4,8,50,50,300
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,0:00:00.90,D,,0,0,0,,{\i1\pos(540,830)}여러분
-Dialogue: 0,0:00:00.90,0:00:01.64,D,,0,0,0,,{\i1\pos(540,830)}저{\fnNoto Sans CJK KR Black} {\fnJalnan}진짜
-Dialogue: 0,0:00:01.64,0:00:02.57,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}깜짝{\c&HFFFFFF&}{\fnNoto Sans CJK KR Black} {\fnJalnan}놀랐어요
-Dialogue: 0,0:00:02.62,0:00:03.26,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}경주{\fnNoto Sans CJK KR Black} {\fnJalnan}바다{\c&HFFFFFF&}
-Dialogue: 0,0:00:03.26,0:00:03.87,D,,0,0,0,,{\i1\pos(540,830)}바로{\fnNoto Sans CJK KR Black} {\fnJalnan}앞에
-Dialogue: 0,0:00:03.92,0:00:04.72,D,,0,0,0,,{\i1\pos(540,830)}이런{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}풀빌라{\c&HFFFFFF&}가
-Dialogue: 0,0:00:04.72,0:00:05.48,D,,0,0,0,,{\i1\pos(540,830)}있거든요
-Dialogue: 0,0:00:05.53,0:00:06.45,D,,0,0,0,,{\i1\pos(540,830)}객실{\fnNoto Sans CJK KR Black} {\fnJalnan}안{\fnNoto Sans CJK KR Black} {\fnJalnan}수영장에서
-Dialogue: 0,0:00:06.45,0:00:07.92,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}따뜻하게{\c&HFFFFFF&}{\fnNoto Sans CJK KR Black} {\fnJalnan}몸{\fnNoto Sans CJK KR Black} {\fnJalnan}담그고
-Dialogue: 0,0:00:07.97,0:00:08.63,D,,0,0,0,,{\i1\pos(540,830)}통창{\fnNoto Sans CJK KR Black} {\fnJalnan}너머로
-Dialogue: 0,0:00:08.63,0:00:09.52,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}동해{\c&HFFFFFF&}를{\fnNoto Sans CJK KR Black} {\fnJalnan}보고
-Dialogue: 0,0:00:09.57,0:00:10.27,D,,0,0,0,,{\i1\pos(540,830)}바다{\fnNoto Sans CJK KR Black} {\fnJalnan}보이는
-Dialogue: 0,0:00:10.27,0:00:11.05,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}월풀{\fnNoto Sans CJK KR Black} {\fnJalnan}스파{\c&HFFFFFF&}까지
-Dialogue: 0,0:00:11.05,0:00:11.62,D,,0,0,0,,{\i1\pos(540,830)}있고
-Dialogue: 0,0:00:11.67,0:00:12.71,D,,0,0,0,,{\i1\pos(540,830)}넓은{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}거실{\c&HFFFFFF&}에서
-Dialogue: 0,0:00:12.71,0:00:13.58,D,,0,0,0,,{\i1\pos(540,830)}푹{\fnNoto Sans CJK KR Black} {\fnJalnan}쉬고
-Dialogue: 0,0:00:13.63,0:00:14.80,D,,0,0,0,,{\i1\pos(540,830)}거기다{\fnNoto Sans CJK KR Black} {\fnJalnan}루프탑
-Dialogue: 0,0:00:14.80,0:00:15.69,D,,0,0,0,,{\i1\pos(540,830)}수영장{\fnNoto Sans CJK KR Black} {\fnJalnan}객실에
-Dialogue: 0,0:00:15.74,0:00:16.28,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}가족{\fnNoto Sans CJK KR Black} {\fnJalnan}친구{\c&HFFFFFF&}
-Dialogue: 0,0:00:16.28,0:00:17.63,D,,0,0,0,,{\i1\pos(540,830)}모임으로도{\fnNoto Sans CJK KR Black} {\fnJalnan}딱{\fnNoto Sans CJK KR Black} {\fnJalnan}좋고
-Dialogue: 0,0:00:17.68,0:00:18.24,D,,0,0,0,,{\i1\pos(540,830)}이{\fnNoto Sans CJK KR Black} {\fnJalnan}뷰는
-Dialogue: 0,0:00:18.24,0:00:19.51,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}못{\fnNoto Sans CJK KR Black} {\fnJalnan}참죠~{\c&HFFFFFF&}
+Dialogue: 0,0:00:00.00,0:00:01.18,D,,0,0,0,,{\i1\pos(540,830)}이게{\fnNoto Sans CJK KR Black} {\fnJalnan}숙소
+Dialogue: 0,0:00:01.18,0:00:01.76,D,,0,0,0,,{\i1\pos(540,830)}안에서{\fnNoto Sans CJK KR Black} {\fnJalnan}찍은
+Dialogue: 0,0:00:01.76,0:00:02.83,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}바다{\c&HFFFFFF&}라고요?
+Dialogue: 0,0:00:02.88,0:00:03.54,D,,0,0,0,,{\i1\pos(540,830)}경주{\fnNoto Sans CJK KR Black} {\fnJalnan}감포
+Dialogue: 0,0:00:03.54,0:00:03.91,D,,0,0,0,,{\i1\pos(540,830)}바다{\fnNoto Sans CJK KR Black} {\fnJalnan}앞
+Dialogue: 0,0:00:03.96,0:00:04.98,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}풀빌라{\c&HFFFFFF&}인데요
+Dialogue: 0,0:00:05.03,0:00:06.05,D,,0,0,0,,{\i1\pos(540,830)}객실{\fnNoto Sans CJK KR Black} {\fnJalnan}안{\fnNoto Sans CJK KR Black} {\fnJalnan}수영장에
+Dialogue: 0,0:00:06.05,0:00:07.26,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}따뜻한{\fnNoto Sans CJK KR Black} {\fnJalnan}물{\c&HFFFFFF&}{\fnNoto Sans CJK KR Black} {\fnJalnan}받아놓고
+Dialogue: 0,0:00:07.31,0:00:07.89,D,,0,0,0,,{\i1\pos(540,830)}통창{\fnNoto Sans CJK KR Black} {\fnJalnan}너머
+Dialogue: 0,0:00:07.89,0:00:08.45,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}동해{\c&HFFFFFF&}{\fnNoto Sans CJK KR Black} {\fnJalnan}보며
+Dialogue: 0,0:00:08.45,0:00:09.38,D,,0,0,0,,{\i1\pos(540,830)}몸{\fnNoto Sans CJK KR Black} {\fnJalnan}담가요
+Dialogue: 0,0:00:09.43,0:00:10.05,D,,0,0,0,,{\i1\pos(540,830)}바다{\fnNoto Sans CJK KR Black} {\fnJalnan}보이는
+Dialogue: 0,0:00:10.05,0:00:10.89,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}월풀{\fnNoto Sans CJK KR Black} {\fnJalnan}스파{\c&HFFFFFF&}까지
+Dialogue: 0,0:00:10.89,0:00:11.33,D,,0,0,0,,{\i1\pos(540,830)}추가{\fnNoto Sans CJK KR Black} {\fnJalnan}요금
+Dialogue: 0,0:00:11.33,0:00:12.06,D,,0,0,0,,{\i1\pos(540,830)}없이{\fnNoto Sans CJK KR Black} {\fnJalnan}쓰고
+Dialogue: 0,0:00:12.11,0:00:13.05,D,,0,0,0,,{\i1\pos(540,830)}밖은{\fnNoto Sans CJK KR Black} {\fnJalnan}추워도
+Dialogue: 0,0:00:13.05,0:00:14.26,D,,0,0,0,,{\i1\pos(540,830)}물속은{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}따뜻하니까{\c&HFFFFFF&}
+Dialogue: 0,0:00:14.31,0:00:15.38,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}송대말등대{\c&HFFFFFF&}까지
+Dialogue: 0,0:00:15.38,0:00:16.53,D,,0,0,0,,{\i1\pos(540,830)}걸어서{\fnNoto Sans CJK KR Black} {\fnJalnan}산책하고
+Dialogue: 0,0:00:16.58,0:00:17.34,D,,0,0,0,,{\i1\pos(540,830)}멀리{\fnNoto Sans CJK KR Black} {\fnJalnan}안{\fnNoto Sans CJK KR Black} {\fnJalnan}가도
+Dialogue: 0,0:00:17.34,0:00:17.98,D,,0,0,0,,{\i1\pos(540,830)}바다{\fnNoto Sans CJK KR Black} {\fnJalnan}보며
+Dialogue: 0,0:00:17.98,0:00:18.52,D,,0,0,0,,{\i1\pos(540,830)}쉬기{\fnNoto Sans CJK KR Black} {\fnJalnan}좋은
+Dialogue: 0,0:00:18.52,0:00:19.93,D,,0,0,0,,{\i1\pos(540,830)}곳이에요
