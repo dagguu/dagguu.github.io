@@ -1,5 +1,5 @@
 {
- "at": "2026-10-28T12:35:09.810597",
+ "at": "2026-10-28T12:37:47.272986",
  "name": "gyeongju-snb-poolvilla",
  "font": "Jalnan",
  "fontInfo": {
@@ -10,87 +10,87 @@
   "family": "Jalnan",
   "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
  },
- "dur": 19.12,
- "cuts": 14,
+ "dur": 20.71,
+ "cuts": 15,
  "plan": [
   {
    "video": true,
-   "t": "바다 보이는 객실 수영장이,",
+   "t": "여러분, 저 진짜 깜짝 놀랐어요.",
    "img": "ai:4",
    "start": 0.0,
-   "end": 1.88,
+   "end": 2.27,
+   "cuts": 2
+  },
+  {
+   "video": true,
+   "t": "경주 바다 바로 앞, 객실 안에 수영장이 있는",
+   "img": "ai:5",
+   "start": 2.27,
+   "end": 5.17,
+   "cuts": 2
+  },
+  {
+   "video": true,
+   "t": "풀빌라가 있거든요.",
+   "img": "ai:1",
+   "start": 5.17,
+   "end": 6.56,
    "cuts": 1
   },
   {
    "video": true,
-   "t": "인당 8만원대래요?",
-   "img": "ai:5",
-   "start": 1.88,
-   "end": 3.16,
-   "cuts": 1
+   "t": "거기다, 통창 너머로 동해가 바로 보이고,",
+   "img": "ai:9",
+   "start": 6.56,
+   "end": 9.24,
+   "cuts": 2
   },
   {
    "video": true,
    "t": "루프탑 수영장 객실도 있고,",
    "img": "ai:2",
-   "start": 3.16,
-   "end": 4.81,
+   "start": 9.24,
+   "end": 10.94,
    "cuts": 1
   },
   {
    "video": true,
-   "t": "통창 밖으로 동해가 바로 보여요.",
-   "img": "ai:9",
-   "start": 4.81,
-   "end": 6.79,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "월풀 스파 객실에,",
+   "t": "바다 보이는 월풀 스파까지,",
    "img": "ai:7",
-   "start": 6.79,
-   "end": 8.02,
+   "start": 10.94,
+   "end": 12.86,
    "cuts": 1
   },
   {
    "video": true,
-   "t": "바다 앞 테라스까지,",
-   "img": "ai:8",
-   "start": 8.02,
-   "end": 9.45,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "t": "거실에서도 바다가 한눈에 들어오고,",
+   "t": "그리고, 최대 10명까지 묵을 수 있어서,",
    "img": "ai:10",
-   "start": 9.45,
-   "end": 11.67,
+   "start": 12.86,
+   "end": 15.14,
    "cuts": 2
   },
   {
    "video": true,
-   "t": "등대까지 걸어서 11분이에요.",
-   "img": "ai:1",
-   "start": 11.67,
-   "end": 13.59,
+   "t": "가족 친구 모임으로도 딱 좋고,",
+   "img": "ai:8",
+   "start": 15.14,
+   "end": 16.99,
    "cuts": 1
   },
   {
    "video": true,
-   "t": "수영장 너머로 바다가 쭉 펼쳐져요.",
+   "t": "이런 뷰는 못 참죠~",
    "img": "ai:3",
-   "start": 13.59,
-   "end": 15.92,
-   "cuts": 2
+   "start": 16.99,
+   "end": 18.43,
+   "cuts": 1
   },
   {
    "video": true,
-   "t": "자세한 건 숙소 정보에서 꼭 확인해 보세요.",
+   "t": "해외여행 갈 필요가 없겠어요.",
    "img": "ai:11",
-   "start": 15.92,
-   "end": 19.12,
+   "start": 18.43,
+   "end": 20.71,
    "cuts": 2
   }
  ],
