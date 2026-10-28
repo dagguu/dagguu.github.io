@@ -111,7 +111,8 @@ def chunk(ws):
 for i, s in enumerate(SC):
     ws = wsc[i]; chunks = chunk(ws)
     for c, ch in enumerate(chunks):
-        a0 = ch[0]["start"]; a1 = chunks[c + 1][0]["start"] if c + 1 < len(chunks) else (ends[i] if i + 1 < len(SC) else dur)
+        a0 = 0.0 if (i == 0 and c == 0) else ch[0]["start"]  # 첫 자막은 0초부터(2026-10-28 선재담 첫 프레임에 글자 없음 → 건너뛰기 84.9%)
+        a1 = chunks[c + 1][0]["start"] if c + 1 < len(chunks) else (ends[i] if i + 1 < len(SC) else dur)
         txt = " ".join(w["text"].rstrip(",.") for w in ch)
         for h in s.get("hl", []): txt = txt.replace(h, "{\\c&H0080FF&}" + h + "{\\c&HFFFFFF&}")
         if FU.get("family") and not FU.get("hasSpace"): txt = txt.replace(" ", "{\\fnNoto Sans CJK KR Black} {\\fn" + FAM + "}")  # 잘난체 웹폰트엔 띄어쓰기 글자가 없음
