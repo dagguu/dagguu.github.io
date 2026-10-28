@@ -286,7 +286,36 @@ def text():
         L.append("")
     return "\n".join(L)
 
+# 배경 사진 겹침 검사(2026-10-28 시온님 "카드4번 배경사진이 왜 항상 똑같아? 내일부터 다르게"):
+# scripts/kakao_bg_used.json = {날짜: [배경 사진 열쇠…]} — 최근 14일 안 다른 날 카드에 쓴 사진이면 멈춘다.
+# --text 로 검사를 통과하면 오늘 날짜 줄을 새로 써 둔다(kakao_queue.json 과 같이 커밋).
+def bg_key(u):
+    m = re.search(r'/(image/.+)$', u) if 'coupangcdn' in u else None
+    return m.group(1) if m else u
+
+def bg_check(save):
+    import datetime
+    p = os.path.join(ROOT, 'scripts', 'kakao_bg_used.json')
+    used = json.load(open(p, encoding='utf-8')) if os.path.exists(p) else {}
+    today = datetime.date.fromisoformat(Q['date'])
+    seen = {}
+    for d, L in used.items():
+        if d == Q['date'] or (today - datetime.date.fromisoformat(d)).days > 14: continue
+        for k in L: seen.setdefault(k, d)
+    mine = []
+    for n, c in enumerate(Q['cards'], 1):
+        src = c.get('bgimg') or (c.get('tiles') or [{}])[0].get('img', '')
+        k = bg_key(src)
+        if k in seen: raise SystemExit(f"카드 {n} 배경 사진이 {seen[k]} 카드와 같아요 — 다른 사진으로 바꿔 주세요: {src}")
+        if k in mine: raise SystemExit(f"카드 {n} 배경 사진이 오늘 다른 카드와 같아요: {src}")
+        mine.append(k)
+    if save:
+        used[Q['date']] = mine
+        used = {d: used[d] for d in sorted(used) if (today - datetime.date.fromisoformat(d)).days <= 30}
+        json.dump(used, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
 if '--text' in sys.argv:
+    bg_check(True)
     print(text()); sys.exit(0)
 text()  # 글자수 검사
 
