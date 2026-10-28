@@ -2089,9 +2089,8 @@ function applyBtns(it,url,src){
   var L=(it.applies||[]).filter(function(a){ return a&&safeUrl(a.url)&&(!a.end||a.end>=ymd(today())); }), h="";
   if(L.length>1) h=L.map(function(a){ var nm=(a.ch||[]).map(function(c){ return CHN[c]||c; }).join(" · ")||"체험단";
       return '<a class="b pri wide apch" data-m="go" href="'+esc(safeUrl(a.url))+'" target="_blank" rel="noopener noreferrer">'+esc(nm)+' 체험단 신청 ↗</a>'; }).join("");
-  else h='<a class="b pri wide" data-m="go" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(src)+'에서 신청하기 ↗</a>';
-  var q=APPLY_SEARCH[it.source||""], kw=applyKw(it);
-  if(q&&kw) h+='<a class="apsrch" data-m="srch" href="'+esc(q+encodeURIComponent(kw))+'" target="_blank" rel="noopener noreferrer">🔎 '+esc(src)+'에서 \''+esc(kw)+'\' 다른 매체 체험단도 찾아보기 ↗</a>';
+  else { var q=APPLY_SEARCH[it.source||""], kw=applyKw(it); if(q&&kw&&!it.refUrl) url=q+encodeURIComponent(kw);  // 2026-10-28 시온님: 리뷰노트는 신청 버튼이 바로 검색 결과(같은 숙소 모든 매체 캠페인)로
+    h='<a class="b pri wide" data-m="go" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(src)+'에서 신청하기 ↗</a>'; }
   return h;
 }
 function applyPopup(it){

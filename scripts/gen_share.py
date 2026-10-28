@@ -215,6 +215,9 @@ for it in items:
     iid = it["id"]; cat = it.get("cat") or "stay"; cn = CATN.get(cat, "체험단"); op = is_open(it)
     name = it.get("name") or ""; sg = sigun(it); img = img_of(it)
     view = url(it.get("infUrl")) or url(it.get("viewUrl")); apply_ = url(it.get("refUrl")) or url(it.get("applyUrl"))
+    if not it.get("refUrl") and it.get("source") == "리뷰노트":  # 2026-10-28 시온님: 리뷰노트는 같은 숙소 모든 매체 캠페인이 나오는 검색 결과로
+        import urllib.parse as _up
+        apply_ = "https://www.reviewnote.co.kr/campaigns?search=" + _up.quote(re.sub(r"\s+", " ", re.sub(r"\s*\([^)]*\)\s*", " ", it.get("name") or "")).strip())
     ch = [CHN[c] for c in ch_of(it) if c in CHN]
     title = f"{name} {cn} 체험단" + (f" · {mmdd(it['end'])}까지 모집" if it.get("end") and op else (" (모집 마감)" if not op else "")) + " | 다꾸체험단"
     bits = []
