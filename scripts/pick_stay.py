@@ -22,9 +22,17 @@ def camp(x):
         if len(a) >= 3 and a in b and (not city or city in str(it.get("name")) or city in str(it.get("region"))):
             if not best or it["end"] < best["end"]: best = it
     return best
-first = sorted([(camp(x), x) for x in todo if camp(x)], key=lambda t: (t[0]["end"] <= TODAY, t[0]["end"]))  # 오늘 마감은 뒤로(글이 오후에 올라가서)
+# 계절 트렌드(2026-10-28 시온님 "지금 트렌드가 온천·스파·단풍·노천탕·온수풀"): 10~3월엔 이 말이 이름·지역·메모·체험단 글에 있는 숙소를 먼저
+MON = int(TODAY[5:7])
+SEASON = re.compile(r"온천|스파|노천|온수|료칸|히노끼|자쿠지|월풀(?!빌라)|사우나|족욕|단풍|탕") if MON in (10, 11, 12, 1, 2, 3) else re.compile(r"수영장|풀빌라|오션|계곡|바다")
+def warm(x, it=None):
+    s = " ".join(str(x.get(f) or "") for f in ("name", "area", "memo", "tags", "note"))
+    if it: s += " " + " ".join(str(it.get(f) or "") for f in ("name", "benefit", "sum"))
+    return bool(SEASON.search(s))
+first = sorted([(camp(x), x) for x in todo if camp(x)], key=lambda t: (t[0]["end"] <= TODAY, not warm(t[1], t[0]), t[0]["end"]))  # 오늘 마감은 뒤로(글이 오후에 올라가서)
 rest = [x for x in todo if not camp(x)]
 random.Random(TODAY).shuffle(rest)
+rest.sort(key=lambda x: not warm(x))  # 섞은 뒤 계절 숙소를 앞으로(안정 정렬이라 그 안에서는 무작위)
 out = [dict(x, camp=c["id"], campEnd=c["end"], pid=c.get("coupangPid") or "") for c, x in first] + rest
 print(json.dumps(out[:n], ensure_ascii=False, indent=1))
 print(f"# 모집 중 체험단이 있는 후보 {len(first)}곳 · 남은 국내 후보 {len(todo)}곳", file=sys.stderr)
