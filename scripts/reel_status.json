@@ -1,6 +1,6 @@
 {
- "at": "2026-10-28T01:18:05.134331",
- "name": "seonjae",
+ "at": "2026-10-28T11:59:50.075413",
+ "name": "gyeongju-snb-poolvilla",
  "font": "Jalnan",
  "fontInfo": {
   "error": [],
@@ -10,57 +10,89 @@
   "family": "Jalnan",
   "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
  },
- "dur": 16.72,
- "cuts": 13,
+ "dur": 19.49,
+ "cuts": 16,
  "plan": [
   {
    "video": true,
-   "t": "바다가 보이는 글램핑이, 인당 7만원대래요?",
-   "img": "ai:9",
-   "start": 0.0,
-   "end": 2.85,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "주황빛 아치 텐트마다, 밤엔 불이 켜져요.",
-   "img": "p:1",
-   "start": 2.85,
-   "end": 5.55,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "은빛 카라반 객실도 있고,",
+   "t": "바다 보이는 객실 수영장이,",
    "img": "ai:4",
-   "start": 5.55,
-   "end": 7.05,
+   "start": 0.0,
+   "end": 1.85,
    "cuts": 1
   },
   {
    "video": true,
-   "t": "여섯 명 객실도 있어서, 가족 여행으로 좋고,",
+   "t": "인당 8만원대래요?",
    "img": "ai:5",
-   "start": 7.05,
-   "end": 9.5,
+   "start": 1.85,
+   "end": 3.15,
+   "cuts": 1
+  },
+  {
+   "video": true,
+   "t": "루프탑 수영장 객실도 있고,",
+   "img": "ai:2",
+   "start": 3.15,
+   "end": 4.79,
+   "cuts": 1
+  },
+  {
+   "video": true,
+   "t": "통창 밖으로 동해가 바로 보여요.",
+   "img": "ai:9",
+   "start": 4.79,
+   "end": 7.12,
    "cuts": 2
   },
   {
    "video": true,
-   "t": "근데 조건이 하나 있어요. 강아지는 펫 글램핑 객실만 돼요.",
-   "img": "p:7",
-   "start": 9.5,
-   "end": 13.4,
-   "cuts": 3
+   "t": "월풀 스파 객실에,",
+   "img": "ai:7",
+   "start": 7.12,
+   "end": 8.38,
+   "cuts": 1
+  },
+  {
+   "video": true,
+   "t": "바다 앞 테라스까지,",
+   "img": "ai:8",
+   "start": 8.38,
+   "end": 9.6,
+   "cuts": 1
+  },
+  {
+   "video": true,
+   "t": "거실에서도 바다가 한눈에 들어오고,",
+   "img": "ai:10",
+   "start": 9.6,
+   "end": 11.7,
+   "cuts": 2
+  },
+  {
+   "video": true,
+   "t": "등대까지 걸어서 11분이에요.",
+   "img": "ai:1",
+   "start": 11.7,
+   "end": 13.68,
+   "cuts": 2
+  },
+  {
+   "video": true,
+   "t": "근데 수영장 온수는 따로 신청해야 해요.",
+   "img": "ai:3",
+   "start": 13.68,
+   "end": 16.19,
+   "cuts": 2
   },
   {
    "video": true,
    "t": "자세한 건 숙소 정보에서 꼭 확인해 보세요.",
-   "img": "p:8",
-   "start": 13.4,
-   "end": 16.72,
+   "img": "ai:11",
+   "start": 16.19,
+   "end": 19.49,
    "cuts": 3
   }
  ],
- "file": "reels/seonjae/reel.mp4"
+ "file": "reels/gyeongju-snb-poolvilla/reel.mp4"
 }
