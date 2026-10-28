@@ -2080,6 +2080,20 @@ function apNote(){ if(!seed.apAt) return ''; var d=new Date(seed.apAt); if(isNaN
 /* ---------- 신청하기 팝업 · 신청한 체험단 ---------- */
 var APPLIED=[]; try{ APPLIED=JSON.parse(ls("dakku-applied")||"[]")||[]; }catch(e){ APPLIED=[]; }
 function markApplied(id){ var i=APPLIED.indexOf(id); if(i>=0) APPLIED.splice(i,1); APPLIED.unshift(id); APPLIED=APPLIED.slice(0,50); ls("dakku-applied",JSON.stringify(APPLIED)); }
+/* 같은 숙소·제품이 매체별로 따로 모집할 때(2026-10-28 시온님 "유튜브 체험단만 뜨는데 블로그·인스타도 있더라"):
+   item.applies=[{ch:["blog"],url,end?}] 가 있으면 매체마다 신청 버튼, 없으면 한 개.
+   APPLY_SEARCH 에 있는 사이트는 "같은 숙소 다른 체험단 찾기"(그 사이트 검색 결과) 링크도 붙인다. */
+var APPLY_SEARCH={"리뷰노트":"https://www.reviewnote.co.kr/campaigns?search="};
+function applyKw(it){ return String(it.name||"").replace(/\s*\([^)]*\)\s*/g," ").replace(/\s+/g," ").trim(); }
+function applyBtns(it,url,src){
+  var L=(it.applies||[]).filter(function(a){ return a&&safeUrl(a.url)&&(!a.end||a.end>=ymd(today())); }), h="";
+  if(L.length>1) h=L.map(function(a){ var nm=(a.ch||[]).map(function(c){ return CHN[c]||c; }).join(" · ")||"체험단";
+      return '<a class="b pri wide apch" data-m="go" href="'+esc(safeUrl(a.url))+'" target="_blank" rel="noopener noreferrer">'+esc(nm)+' 체험단 신청 ↗</a>'; }).join("");
+  else h='<a class="b pri wide" data-m="go" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(src)+'에서 신청하기 ↗</a>';
+  var q=APPLY_SEARCH[it.source||""], kw=applyKw(it);
+  if(q&&kw) h+='<a class="apsrch" data-m="srch" href="'+esc(q+encodeURIComponent(kw))+'" target="_blank" rel="noopener noreferrer">🔎 '+esc(src)+'에서 \''+esc(kw)+'\' 다른 매체 체험단도 찾아보기 ↗</a>';
+  return h;
+}
 function applyPopup(it){
   var url=safeUrl(it.refUrl||it.applyUrl); if(!url) return;
   var old=document.querySelector(".modal.applym"); if(old) old.remove();
@@ -2089,7 +2103,7 @@ function applyPopup(it){
     '<h2>['+esc(src)+'] 홈페이지로<br>이동해요👀</h2><p>한번만 로그인 해두면<br>편하게 신청 가능해져요.</p>'+
     (payOf(it).indexOf("payback")>=0?'<div class="paynote"><b>💳 선정 후 구매하는 페이백 상품이에요</b><span>['+esc(src)+']에서 당첨 후 안내에 따라 진행하세요. 선정 전에 먼저 구매하면 페이백을 받지 못할 수 있어요.</span></div>':'')+
     '<p class="apnote">✅ 신청하신 체험단은<br><a href="#/my" data-m="x" data-jump="applied">다꾸체험단 마이페이지</a>에서 확인하실 수 있어요.</p>'+
-    '<a class="b pri wide" data-m="go" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(src)+'에서 신청하기 ↗</a>'+
+    applyBtns(it,url,src)+
     '<button class="b sec wide" data-m="x" style="margin-top:8px">닫기</button></div>';
   function close(){ wrap.remove(); document.removeEventListener("keydown",esck); }
   function esck(e){ if(e.key==="Escape") close(); }
@@ -2097,6 +2111,7 @@ function applyPopup(it){
     if(e.target===wrap) return close();
     var b=e.target.closest("[data-m]"); if(!b) return;
     if(b.dataset.m==="go"){ markApplied(it.id); setTimeout(close,300); return; }
+    if(b.dataset.m==="srch"){ ga("apply_search",{item_id:it.id,source:it.source||""}); return; }
     if(b.dataset.m==="x") close();
   });
   document.addEventListener("keydown",esck);
