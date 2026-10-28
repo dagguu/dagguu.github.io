@@ -116,7 +116,7 @@ for i, s in enumerate(SC):
         txt = " ".join(w["text"].rstrip(",.") for w in ch)
         for h in s.get("hl", []): txt = txt.replace(h, "{\\c&H0080FF&}" + h + "{\\c&HFFFFFF&}")
         if FU.get("family") and not FU.get("hasSpace"): txt = txt.replace(" ", "{\\fnNoto Sans CJK KR Black} {\\fn" + FAM + "}")  # 잘난체 웹폰트엔 띄어쓰기 글자가 없음
-        L.append(f"Dialogue: 0,{ts(a0)},{ts(a1)},D,,0,0,0,,{{\\i1}}{txt}")
+        L.append(f"Dialogue: 0,{ts(a0)},{ts(a1)},D,,0,0,0,,{{\\i1\\pos(540,830)}}{txt}")  # 2026-10-28 시온님 "자막을 중앙에서 1cm 정도 위로" (화면 높이 1920 ≈ 휴대폰 14.5cm → 1cm ≈ 130px)
 open(OUT + "/sub.ass", "w", encoding="utf-8").write("\n".join(L) + "\n")
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", OUT + "/cuts/list.txt", "-i", OUT + "/voice.mp3",
                 "-vf", f"subtitles={OUT}/sub.ass:fontsdir=" + os.path.expanduser("~/.fonts"), "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
