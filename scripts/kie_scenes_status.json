@@ -1,77 +1,63 @@
 {
- "at": "2026-10-28T11:55:46.297746",
+ "at": "2026-10-28T12:02:04.636537",
  "name": "gyeongju-snb-poolvilla",
  "jobs": [
   {
    "img": "ai:4",
-   "taskId": "f95f1676ae27637e0c3e59621ede9bb1",
+   "taskId": "91b36ba4a96f102243664fef593599b7",
    "state": "success",
    "credits": 35.0,
    "file": "video/2026-10-28/gyeongju-snb-poolvilla/clip_ai4.mp4"
   },
   {
    "img": "ai:5",
-   "taskId": "871d5c20017c2fb93312acd6de791a54",
+   "taskId": "a602e362cde03cf431fc58d4e8e98680",
    "state": "success",
    "credits": 35.0,
    "file": "video/2026-10-28/gyeongju-snb-poolvilla/clip_ai5.mp4"
   },
   {
-   "img": "ai:2",
-   "taskId": "20691251df2ce5d5a6cd5fffd7f030ab",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-10-28/gyeongju-snb-poolvilla/clip_ai2.mp4"
-  },
-  {
    "img": "ai:9",
-   "taskId": "d3023b86bc2e4e09fc744afcd536bf22",
+   "taskId": "3f0798ecfff487ed7fb61deb612c3aca",
    "state": "success",
    "credits": 35.0,
    "file": "video/2026-10-28/gyeongju-snb-poolvilla/clip_ai9.mp4"
   },
   {
    "img": "ai:7",
-   "taskId": "28f6ce0890a7b02e3ca55ddfb435351c",
+   "taskId": "80c615665e4e94647a18fee66ffaba5b",
    "state": "success",
    "credits": 35.0,
    "file": "video/2026-10-28/gyeongju-snb-poolvilla/clip_ai7.mp4"
   },
   {
-   "img": "ai:8",
-   "taskId": "649dd61ea7b440bd63d48b181e7773bf",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-10-28/gyeongju-snb-poolvilla/clip_ai8.mp4"
-  },
-  {
    "img": "ai:10",
-   "taskId": "98a0230941aba5389b6af382a3eea80a",
+   "taskId": "9abd6e944eeca0b91d9445e03b602a59",
    "state": "success",
    "credits": 35.0,
    "file": "video/2026-10-28/gyeongju-snb-poolvilla/clip_ai10.mp4"
   },
   {
    "img": "ai:1",
-   "taskId": "705eaa29f62cd38d783a2c7b70e5c2bd",
+   "taskId": "3a2422d3ca4658cdac970c4d9e22a92f",
    "state": "success",
    "credits": 35.0,
    "file": "video/2026-10-28/gyeongju-snb-poolvilla/clip_ai1.mp4"
   },
   {
    "img": "ai:3",
-   "taskId": "fff4e0214a7000855a9f47cb91cef043",
+   "taskId": "cabdfa7885514a40389e4be52e957aed",
    "state": "success",
    "credits": 35.0,
    "file": "video/2026-10-28/gyeongju-snb-poolvilla/clip_ai3.mp4"
   },
   {
    "img": "ai:11",
-   "taskId": "0b5d96b7b93ef090ac870daa2c69d450",
+   "taskId": "88a0fdbbdd8f2123bc5a5bbc7b43d001",
    "state": "success",
    "credits": 35.0,
    "file": "video/2026-10-28/gyeongju-snb-poolvilla/clip_ai11.mp4"
   }
  ],
- "credits_total": 350.0
+ "credits_total": 280.0
 }
