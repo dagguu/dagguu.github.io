@@ -45,7 +45,7 @@ for s in J["scenes"]:
     if kind == "ai":
         path = next((f"img/{day}/{stay}/{n}{suf}.jpg" for suf in ("_pro", "_edit") if subprocess.run(["git", "cat-file", "-e", f"origin/insta:img/{day}/{stay}/{n}{suf}.jpg"]).returncode == 0), None)
         if not path: st["jobs"].append({"img": s["img"], "state": "error", "msg": "AI 이미지 없음"}); save(); continue
-        src = RAW + path; pr = (s.get("vp") or KP.get(n, {}).get("prompt") or "Slow push-in camera move.") + TAIL_P
+        src = RAW + path; pr = (s.get("vp") or KP.get(n, {}).get("prompt") or "Slow push-in camera move.") + (TAIL_P if KP.get(n, {}).get("people") else TAIL)  # 2026-10-28: 사람 없는 AI 이미지에도 TAIL_P 를 붙여서 Veo 가 여자를 만들어 넣었음
     else:
         src = P["photos"][n - 1]["src"]; pr = (s.get("vp") or "Slow push-in camera move. " + P["photos"][n - 1].get("cap", "")) + TAIL
     body = {"model": "veo-3-1", "input": {"prompt": pr, "image_urls": [src], "aspect_ratio": "9:16", "resolution": "1080p", "duration": 4,
