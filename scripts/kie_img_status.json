@@ -1,23 +1,15 @@
 {
- "at": "2026-10-28 20:53",
+ "at": "2026-10-28 20:54",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 1,
-   "taskId": "e859423969f9b1469e837050032c192e",
+   "n": 9,
+   "taskId": "e2c60ab2c29825ae8a4ab2b3b3b3ad26",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-10-28/gyeongju-snb-poolvilla/1_edit.jpg"
-  },
-  {
-   "n": 6,
-   "taskId": "f79e1a6a9ac23ada6b4a55e95cd088ac",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-10-28/gyeongju-snb-poolvilla/6_edit.jpg"
+   "file": "img/2026-10-28/gyeongju-snb-poolvilla/9_edit.jpg"
   }
  ],
  "slug": "gyeongju-snb-poolvilla"
