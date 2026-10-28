@@ -1,5 +1,5 @@
 {
- "at": "2026-10-28T12:59:37.933130",
+ "at": "2026-10-28T13:16:39.588148",
  "name": "gyeongju-snb-poolvilla",
  "font": "Jalnan",
  "fontInfo": {
@@ -10,89 +10,6 @@
   "family": "Jalnan",
   "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
  },
- "dur": 17.61,
- "cuts": 13,
- "plan": [
-  {
-   "video": true,
-   "t": "여러분, 저 진짜 깜짝 놀랐어요.",
-   "img": "ai:1",
-   "start": 0.0,
-   "end": 1.99,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "경주 바다 바로 앞에",
-   "img": "ai:12",
-   "start": 1.99,
-   "end": 3.27,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "t": "이런 풀빌라가 있거든요.",
-   "img": "ai:13",
-   "start": 3.27,
-   "end": 4.82,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "t": "객실 안 수영장에서 동해가 보이고,",
-   "img": "ai:5",
-   "start": 4.82,
-   "end": 6.98,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "통창 너머로 바다가 한눈에,",
-   "img": "ai:9",
-   "start": 6.98,
-   "end": 8.62,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "t": "거실은 넓고 환하고,",
-   "img": "ai:10",
-   "start": 8.62,
-   "end": 10.38,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "t": "월풀 스파까지 있어요.",
-   "img": "ai:7",
-   "start": 10.38,
-   "end": 12.06,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "t": "거기다, 루프탑 수영장 객실에",
-   "img": "ai:2",
-   "start": 12.06,
-   "end": 13.71,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "t": "가족 친구 모임으로도 딱 좋고,",
-   "img": "ai:8",
-   "start": 13.71,
-   "end": 15.51,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "t": "이런 뷰는 못 참죠~",
-   "img": "ai:11",
-   "start": 15.51,
-   "end": 17.61,
-   "cuts": 2
-  }
- ],
- "file": "reels/gyeongju-snb-poolvilla/reel.mp4"
+ "thumbOnly": true,
+ "file": "reels/gyeongju-snb-poolvilla/thumb.jpg"
 }
