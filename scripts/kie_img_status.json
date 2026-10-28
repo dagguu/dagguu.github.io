@@ -1,16 +1,88 @@
 {
- "at": "2026-10-28 10:10",
+ "at": "2026-10-28 20:49",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 9,
-   "taskId": "b925fb2ee1259012efe75a17abd9ce7d",
+   "n": 1,
+   "taskId": "5adeb8ffb84b8fe0c3f350c5100461dc",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-10-28/seonjae-seonjaedam/9_edit.jpg"
+   "file": "img/2026-10-28/gyeongju-snb-poolvilla/1_edit.jpg"
+  },
+  {
+   "n": 2,
+   "taskId": "fbf1717b5af6321141ec6db7140ee55c",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-28/gyeongju-snb-poolvilla/2_edit.jpg"
+  },
+  {
+   "n": 3,
+   "taskId": "e2a57d6fa0d2ea26900e40e0a7ba9aad",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-28/gyeongju-snb-poolvilla/3_edit.jpg"
+  },
+  {
+   "n": 4,
+   "taskId": "911d14aecef3921ec0ff4f97b9975bf5",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-28/gyeongju-snb-poolvilla/4_edit.jpg"
+  },
+  {
+   "n": 5,
+   "taskId": "2195642241a75f1a7cd01c93d5ac5aeb",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-28/gyeongju-snb-poolvilla/5_edit.jpg"
+  },
+  {
+   "n": 6,
+   "taskId": "23ed7ef0762720301758f71b961ffba2",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-28/gyeongju-snb-poolvilla/6_edit.jpg"
+  },
+  {
+   "n": 7,
+   "taskId": "803f69df3ab23f92d6503052b831a934",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-28/gyeongju-snb-poolvilla/7_edit.jpg"
+  },
+  {
+   "n": 8,
+   "taskId": "053021710439609ca450c3f07d5b239a",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-28/gyeongju-snb-poolvilla/8_edit.jpg"
+  },
+  {
+   "n": 10,
+   "taskId": "c2c687eb54df5dd465efdf0d76da018a",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-28/gyeongju-snb-poolvilla/10_edit.jpg"
+  },
+  {
+   "n": 11,
+   "taskId": "bab51c76717d5e990face7359a1a20cc",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-28/gyeongju-snb-poolvilla/11_edit.jpg"
   }
  ],
- "slug": "seonjae-seonjaedam"
+ "slug": "gyeongju-snb-poolvilla"
 }
