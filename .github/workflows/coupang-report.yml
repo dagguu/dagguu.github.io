@@ -3,6 +3,8 @@ on:
   schedule:
     - cron: "10 0 * * 1"   # 매주 월요일 오전 9:10 (한국)
   workflow_dispatch:
+    inputs:
+      days: { description: "최근 며칠 (기본 30)", required: false, default: "30" }
 permissions: { contents: write }
 jobs:
   report:
@@ -17,6 +19,7 @@ jobs:
           COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
           NAVER_MAIL_ID: ${{ secrets.NAVER_MAIL_ID }}
           NAVER_MAIL_PW: ${{ secrets.NAVER_MAIL_PW }}
+          REPORT_DAYS: ${{ inputs.days }}
         run: python3 scripts/coupang_report.py
       - name: 많이 산 분류 순위만 저장
         run: |

@@ -14,7 +14,8 @@ import coupang_api as C
 ROOT = C.ROOT
 now = datetime.now(C.KST)
 end = (now - timedelta(days=1)).strftime("%Y%m%d")
-start = (now - timedelta(days=30)).strftime("%Y%m%d")
+DAYS = int(os.environ.get("REPORT_DAYS") or 30)
+start = (now - timedelta(days=DAYS)).strftime("%Y%m%d")
 
 
 def rows(kind):
@@ -65,7 +66,7 @@ json.dump({"updated": now.strftime("%Y-%m-%d"), "period": f"{start}-{end}", "cat
           open(os.path.join(ROOT, "scripts", "buy_trends.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 w = lambda n: f"{int(n):,}"
-lines = [f"기간 {start} ~ {end} (최근 30일)", "",
+lines = [f"기간 {start} ~ {end} (최근 {DAYS}일)", "",
          f"클릭 {w(tot_click)}회 · 주문 {len(orders)}건 · 주문금액 {w(gmv_total)}원 · 수익 {w(fee_total)}원",
          (f"클릭 → 주문 전환율 {len(orders) / tot_click * 100:.1f}%" if tot_click else ""), "",
          "■ 경로별 (subId: dagguu=사이트, dagguuchat=단톡방)"]
