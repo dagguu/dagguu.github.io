@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """오늘의 생활용품 핫딜(2026-10-20 시온님 요청): 골드박스 화면에서 읽은 상품 카드 중 생활용품만 골라 data.json lifeDeals 를 통째로 바꾼다.
-입력: scripts/goldbox_cards.json = [{"pid","itemId","vendorItemId","name","rate","price","orig","img"}, ...]
+입력: scripts/goldbox_cards.json = [{"pid","itemId","vendorItemId","name","rate","price","orig","img","sold"(판매됨 %, promotionClosingInfo.rate)}, ...]
   (07:23 아기용품 핫딜 작업이 골드박스 페이지 Vue 데이터 productsInfo 에서 품절 아닌 카드 전부를 저장)
 사용: python3 scripts/life_deals.py   → push 하면 coupang.yml 이 cpUrl 로 u(수익 링크)를 채운다.
 """
@@ -36,8 +36,11 @@ for c in cards:
     cp = f"https://www.coupang.com/vp/products/{c['pid']}" + (f"?itemId={c['itemId']}&vendorItemId={c['vendorItemId']}" if c.get("itemId") and c.get("vendorItemId") else "")
     img = str(c.get("img") or ""); img = ("https:" + img if img.startswith("//") else img).replace("230x230ex", "492x492ex")
     pr = lambda v: (str(v) + "원") if v and not str(v).endswith("원") else (v or "")
-    ga.append({"name": n, "cpUrl": cp, "u": oldg.get(cp, ""), "img": img, "rate": str(c.get("rate") or "").strip("% "), "price": pr(c.get("price")), "orig": pr(c.get("orig")) if c.get("rate") else "", "endAt": end})
+    ga.append({"name": n, "cpUrl": cp, "u": oldg.get(cp, ""), "img": img, "rate": str(c.get("rate") or "").strip("% "), "price": pr(c.get("price")), "orig": pr(c.get("orig")) if c.get("rate") else "", "endAt": end, **({"sold": int(c["sold"])} if c.get("sold") not in (None, "") else {})})
 d["goldAll"] = ga
+if any("sold" in x for x in ga):
+    from datetime import datetime as _dt, timedelta as _td, timezone as _tz
+    d["goldSoldAt"] = _dt.now(_tz(_td(hours=9))).strftime("%H:%M")
 import sys as _s, os as _o; _s.path.insert(0,_o.path.dirname(_o.path.abspath(__file__))); import cp_banned; print("제한 브랜드 뺌", cp_banned.clean(d))
 open(p, "w", encoding="utf-8").write(json.dumps(d, ensure_ascii=False, separators=(",", ":")))
 print(f"생활용품 핫딜 {len(out)}개 · 골드박스 전체 {len(ga)}개 (카드 {len(cards)}개 중)")

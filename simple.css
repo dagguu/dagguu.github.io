@@ -1172,3 +1172,9 @@ input,select,textarea{font-size:16px!important}
 /* 신청 팝업: 매체별 신청 버튼·같은 숙소 다른 체험단 찾기 (2026-10-28) */
 .sheet .apch+.apch{margin-top:8px}
 .sheet .apsrch{display:block;margin:10px 4px 2px;font-size:13px;font-weight:700;color:#6a3fc8;text-decoration:underline;text-underline-offset:3px;word-break:keep-all;line-height:1.5}
+
+/* 골드박스 판매됨 막대 (2026-10-28) */
+.tcard .tsold{display:flex;align-items:center;gap:6px;margin-top:6px;font-size:11.5px;color:#555}
+.tcard .tsold .tsb{flex:1;height:7px;border-radius:4px;background:#eee;overflow:hidden}
+.tcard .tsold .tsb i{display:block;height:100%;border-radius:4px;background:#e5462b}
+.tcard .tsold b{color:#222;font-weight:700}

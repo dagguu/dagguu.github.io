@@ -1126,7 +1126,7 @@ function tossCode(x){ var m=/\/_m\/([A-Za-z0-9_-]+)/.exec(String(x.u||"")); retu
 function tossCard(x){
   var img=safeUrl(x.img), tk=tossCode(x);
   return '<a class="tcard'+(img?'':' noimg')+(x.soldOut?' sold':'')+'" '+ext(safeUrl(x.u))+'><span class="tim"'+(tk?' id="tk-'+esc(tk)+'"':'')+'>'+(tk?'<button class="shb tsh" data-tshare="'+esc(tk)+'" aria-label="'+esc(x.name)+' 공유하기">'+ico(I.send)+'</button>':'')+(img?'<img src="'+esc(img)+'" alt="'+esc(x.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">':'<span class="tno">'+ico(I.gift)+'</span>')+(x.badge?'<em>'+esc(x.badge)+'</em>':'')+(x.rocket?'<span class="rks">로켓배송</span>':'')+(x.fee?'<span class="shk">'+esc(x.fee)+'</span>':'')+(x.best?'<strong class="bestb">🔥 오늘 최대 할인</strong>':'')+(x.soldOut?'<span class="soldov"><b>품절</b><span>밤 12시에 새 특가가 열려요</span></span>':'')+'</span>'+
-    (x.low30?'<span class="low30">지금 <b>30일 내 최저가</b>예요</span>':'')+'<span class="tn">'+esc(x.name)+'</span>'+(x.price?'<span class="tp">'+(x.rate?'<i>'+esc(x.rate)+'</i> ':'')+esc(x.price)+(x.orig?' <s class="tor">'+esc(x.orig)+'</s>':'')+'</span>':'<span class="tgo">특가 확인하기 ›</span>')+(x.endAt?'<span class="tcd" data-end="'+esc(x.endAt)+'">'+endLeft(x.endAt)+'</span>':'')+(x.comp?'<span class="tchips"><span class="chipr">최저가보상</span></span>':'')+(x.ship?'<span class="tch">'+esc(x.ship)+'</span>':'')+'</a>';
+    (x.low30?'<span class="low30">지금 <b>30일 내 최저가</b>예요</span>':'')+'<span class="tn">'+esc(x.name)+'</span>'+(x.price?'<span class="tp">'+(x.rate?'<i>'+esc(x.rate)+'</i> ':'')+esc(x.price)+(x.orig?' <s class="tor">'+esc(x.orig)+'</s>':'')+'</span>':'<span class="tgo">특가 확인하기 ›</span>')+(x.sold!=null&&x.sold!==""?'<span class="tsold"><span class="tsb"><i style="width:'+Math.max(2,Math.min(100,+x.sold))+'%"></i></span><b>'+(+x.sold)+'%</b> 판매됨</span>':'')+(x.endAt?'<span class="tcd" data-end="'+esc(x.endAt)+'">'+endLeft(x.endAt)+'</span>':'')+(x.comp?'<span class="tchips"><span class="chipr">최저가보상</span></span>':'')+(x.ship?'<span class="tch">'+esc(x.ship)+'</span>':'')+'</a>';
 }
 
 /* ---------- 간식 룰렛 (하루 1회, 하루 경품 총 1개 · 선착순 코드) ---------- */
@@ -2011,10 +2011,10 @@ function dealsView(){
 var MDEAL={L:[],i:0,obs:null};
 /* 오늘이 제일 싸요(2026-10-22 시온님 "10개만 나와, 인기템 지우고 골드박스로"): API 골드박스 + 골드박스 화면 카드 전체(goldAll) + 나머지 골드박스, 가격 낮은 순으로 12개씩 이어 붙임 */
 function dkey(n){ return String(n||"").replace(/^\s*(\[[^\]]*\]\s*)+/,"").split(",")[0].replace(/\s+/g,"").slice(0,14); }
-function goldList(){ var seen={}, out=[]; liveGold().concat((Array.isArray(seed.goldAll)?seed.goldAll:[]),(Array.isArray(seed.moreDeals)?seed.moreDeals:[]).filter(function(x){ return x.k==="골드박스"; })).forEach(function(x){ if(!safeUrl(x.u)||(x.endAt&&Date.parse(x.endAt)<=Date.now())) return; var k=dkey(x.name); if(seen[k]||seen[x.u]) return; seen[k]=seen[x.u]=1; out.push(x); }); return out.sort(byPrice); }
+function goldList(){ var seen={}, out=[]; (Array.isArray(seed.goldAll)?seed.goldAll:[]).concat(liveGold(),(Array.isArray(seed.moreDeals)?seed.moreDeals:[]).filter(function(x){ return x.k==="골드박스"; })).forEach(function(x){ if(!safeUrl(x.u)||(x.endAt&&Date.parse(x.endAt)<=Date.now())) return; var k=dkey(x.name); if(seen[k]||seen[x.u]) return; seen[k]=seen[x.u]=1; out.push(x); }); return out.sort(function(a,b){ var sa=a.sold==null?-1:+a.sold, sb=b.sold==null?-1:+b.sold; return sb-sa||byPrice(a,b); }); }
 function goldSec(){
   MDEAL.L=goldList(); MDEAL.i=0; if(!MDEAL.L.length) return "";
-  return '<section class="sec tossec" id="gold"><div class="sh"><h2>⏰ 오늘의 골드박스 특가</h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="cd" style="margin:-6px 4px 10px">특가 종료까지 <b id="gbcd">'+clock(nextSeven())+'</b> · 골드박스 '+MDEAL.L.length+'개</p><p class="prnote">가격·할인율은 수집 시점 기준이라 쿠팡에서 다를 수 있어요.</p><div class="tgrid" id="mdfeed"></div><div id="mdsent" style="height:1px"></div></section>';
+  return '<section class="sec tossec" id="gold"><div class="sh"><h2>⏰ 오늘의 골드박스 특가</h2>'+(seed.goldboxUpdated?'<span class="upd">'+esc(seed.goldboxUpdated)+' 기준</span>':'')+'</div><p class="cd" style="margin:-6px 4px 10px">특가 종료까지 <b id="gbcd">'+clock(nextSeven())+'</b> · 골드박스 '+MDEAL.L.length+'개</p><p class="prnote">많이 팔린(마감 가까운) 순이에요. 가격·할인율·판매율은 수집 시점'+(seed.goldSoldAt?'('+esc(seed.goldSoldAt)+')':'')+' 기준이라 쿠팡에서 다를 수 있어요.</p><div class="tgrid" id="mdfeed"></div><div id="mdsent" style="height:1px"></div></section>';
 }
 function moreDealsSec(){
   var shown={}; liveGold().concat(liveToss(),babyDeals(),lifeDeals()).forEach(function(x){ if(x.u) shown[x.u]=1; });
@@ -2022,7 +2022,7 @@ function moreDealsSec(){
   MDEAL.i=0; if(!MDEAL.L.length) return "";
   return '<section class="sec tossec" id="moredeal"><div class="sh col"><h2>🛍️ 오늘 많이 사는 쿠팡 인기템</h2><p class="cd">골드박스·카테고리 베스트를 계속 보여드려요</p></div><div class="tgrid" id="mdfeed"></div><div id="mdsent" style="height:1px"></div></section>';
 }
-function mdealCard(x){ var y={name:x.name,u:x.u,img:x.img,price:x.price,orig:x.orig,rate:x.rate?String(x.rate).replace(/%$/,"")+"%":"",rocket:x.rocket,endAt:x.endAt,badge:x.k&&x.k!=="골드박스"?x.k+" 베스트":""}; return tossCard(y); }
+function mdealCard(x){ var y={name:x.name,u:x.u,img:x.img,price:x.price,orig:x.orig,rate:x.rate?String(x.rate).replace(/%$/,"")+"%":"",rocket:x.rocket,endAt:x.endAt,sold:x.sold,badge:x.k&&x.k!=="골드박스"?x.k+" 베스트":""}; return tossCard(y); }
 function mdealMore(){ var g=document.getElementById("mdfeed"); if(!g||MDEAL.i>=MDEAL.L.length) return false; var n=MDEAL.L.slice(MDEAL.i,MDEAL.i+12); MDEAL.i+=n.length; g.insertAdjacentHTML("beforeend",n.map(mdealCard).join("")); return true; }
 function initMoreDeals(){
   if(MDEAL.obs){ MDEAL.obs.disconnect(); MDEAL.obs=null; }
