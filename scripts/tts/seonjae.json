@@ -10,26 +10,25 @@
   "인당 7만원대?!"
  ],
  "thumb": {
-  "img": "p:1",
+  "img": "ai:9",
   "sec": 1.5
  },
  "scenes": [
   {
    "t": "바다가 보이는 글램핑이, 인당 7만원대래요?",
-   "img": "p:1",
+   "img": "ai:9",
    "hl": [
     "인당 7만원대"
    ],
-   "why": "밤 조명 텐트 = 특징 첫 컷",
-   "vp": "Slow drone push forward over the row of glowing orange arched glamping tents at night."
+   "why": "바다 앞 텐트 = 특징 첫 컷"
   },
   {
    "t": "주황빛 아치 텐트마다, 밤엔 불이 켜져요.",
-   "img": "p:2",
+   "img": "p:1",
    "hl": [
     "아치 텐트"
    ],
-   "why": "물에 비친 아치 텐트",
+   "why": "밤 조명 텐트",
    "vp": "Slow slider move from left to right along the glowing arched tents and their reflections in the pool at night."
   },
   {
@@ -59,11 +58,12 @@
   },
   {
    "t": "자세한 건 숙소 정보에서 꼭 확인해 보세요.",
-   "img": "p:1",
+   "img": "p:8",
    "hl": [
     "숙소 정보"
    ],
-   "why": "마무리"
+   "why": "바다 보이는 수영장 마무리",
+   "vp": "Slow push forward along the pool toward the sea on the horizon, palm trees swaying gently."
   }
  ],
  "price": {
