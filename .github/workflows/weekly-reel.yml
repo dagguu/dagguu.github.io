@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       date: { description: "scripts/weekly/<date>.json", required: true }
+      mail: { description: "y = 메일 보내기", default: "y" }
 permissions: { contents: write }
 jobs:
   make:
@@ -22,6 +23,12 @@ jobs:
           pip install -q pillow; git fetch -q origin insta
         timeout-minutes: 15
       - run: python scripts/weekly_make.py --date "${{ inputs.date }}"
+      - if: inputs.mail == 'y'
+        continue-on-error: true
+        env:
+          NAVER_MAIL_ID: ${{ secrets.NAVER_MAIL_ID }}
+          NAVER_MAIL_PW: ${{ secrets.NAVER_MAIL_PW }}
+        run: python scripts/mail_weekly.py "${{ inputs.date }}"
       - run: |
           git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
           git add scripts/weekly_status.json && git commit -qm "주간 모음 상태" || true
