@@ -3,13 +3,13 @@
 #   "p:N" = 감성숙소 json 사진 N. 프롬프트: 장면 vp → kie_prompts/<stay>.json 의 prompt(n) → 사진 설명.
 # 결과 kie_out/<imgDate>/<stay>/clip_<kind><N>.mp4 (워크플로가 insta 브랜치 video/ 로) — reel_make.py 가 있으면 사진 대신 이 영상을 씀.
 import json, os, sys, time, glob, datetime, urllib.request, urllib.error, argparse, subprocess
-ap = argparse.ArgumentParser(); ap.add_argument("--name", default="daytona"); ap.add_argument("--only", default=""); ap.add_argument("--tier", default="veo3_lite"); ap.add_argument("--fetch", default="")  # 1 = 지난 상태 파일의 작업만 다시 받기(크레딧 안 씀)
+ap = argparse.ArgumentParser(); ap.add_argument("--name", default="daytona"); ap.add_argument("--only", default=""); ap.add_argument("--tier", default="veo3_lite"); ap.add_argument("--fetch", default=""); ap.add_argument("--src", default="")  # 장면 json 경로(비우면 scripts/tts/<name>.json, 인스타 영상 피드는 scripts/carousel/<slug>.json)  # 1 = 지난 상태 파일의 작업만 다시 받기(크레딧 안 씀)
 a = ap.parse_args()
 KEY = os.environ.get("KIE_API_KEY", "").strip(); API = "https://api.kie.ai/api/v1/jobs"
 st = {"at": datetime.datetime.utcnow().isoformat(), "name": a.name, "jobs": []}
 def save(): json.dump(st, open("scripts/kie_scenes_status.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 if not KEY: st["error"] = "KIE_API_KEY 없음"; save(); sys.exit(0)
-J = json.load(open(f"scripts/tts/{a.name}.json", encoding="utf-8")); stay, day = J["stay"], J["imgDate"]
+J = json.load(open(a.src or f"scripts/tts/{a.name}.json", encoding="utf-8")); stay, day = J["stay"], J["imgDate"]
 P = json.load(open(f"scripts/stays/{stay}.json", encoding="utf-8"))
 pf = f"scripts/kie_prompts/{stay}.json"; KP = {x["n"]: x for x in (json.load(open(pf, encoding="utf-8")) if os.path.exists(pf) else [])}
 TAIL_P = " Keep the exact same Korean person from the image with the same face, hair and clothes (long white skirt); she stays turned away (back view or slight side profile), never turns her head toward the camera, no face close-up. Keep the room, architecture and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."

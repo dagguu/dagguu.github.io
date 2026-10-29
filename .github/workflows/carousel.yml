@@ -1,0 +1,42 @@
+name: 인스타 영상 피드 만들기 (5장 영상)
+on:
+  workflow_dispatch:
+    inputs:
+      slug: { description: "scripts/carousel/<slug>.json", required: true }
+      mail: { description: "y = 다 만든 뒤 메일 보내기", default: "y" }
+permissions: { contents: write }
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: |
+          for i in 1 2 3; do
+            sudo timeout -k 10 150 apt-get update -qq -o Acquire::http::Timeout=20 -o Acquire::Retries=2
+            sudo timeout -k 10 300 apt-get install -y -qq --no-install-recommends -o Acquire::http::Timeout=20 ffmpeg fonts-noto-cjk fonts-noto-color-emoji >/dev/null && break
+            sleep 10
+          done
+          pip install -q playwright && python -m playwright install --with-deps chromium >/dev/null
+          git fetch -q origin insta
+        timeout-minutes: 15
+      - run: python scripts/carousel_make.py --slug "${{ inputs.slug }}"
+      - if: inputs.mail == 'y'
+        continue-on-error: true
+        env:
+          NAVER_MAIL_ID: ${{ secrets.NAVER_MAIL_ID }}
+          NAVER_MAIL_PW: ${{ secrets.NAVER_MAIL_PW }}
+        run: python scripts/mail_carousel.py "${{ inputs.slug }}"
+      - run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add scripts/carousel_status.json && git commit -qm "영상 피드 상태" || true
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
+          if ls carousel_out/*/1.mp4 >/dev/null 2>&1; then
+            mv carousel_out /tmp/carousel_out; git checkout -q -B insta origin/insta
+            mkdir -p carousel && cp -r /tmp/carousel_out/* carousel/
+            git add carousel && git commit -qm "영상 피드 $(date +%F)" || exit 0
+            for i in 1 2 3; do git push -q origin insta && break; git pull -q --rebase origin insta; done
+          fi
