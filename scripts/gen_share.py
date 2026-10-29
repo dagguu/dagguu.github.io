@@ -444,3 +444,9 @@ try:
     subprocess.run([_s.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "add_mv.py")], check=False)  # 매거진 조회수 (2026-10-25)  # 국내숙소추천 매거진 m/ (2026-10-24)  # 공구 탭 테마 랭킹 rank.json (2026-10-23)
 except Exception as _e:
     print("gen_edu 실패", _e)
+
+# 사진 없는 체험단 경고 (2026-10-29 시온님 "비어있는 사진이 많아" — 등록 때 image 를 비워 둔 채 올라간 것이 17개 있었음)
+_noimg = [f"{i['id']} {i['name']}" for i in d.get("items", []) if not i.get("closed") and not (i.get("image") or "").strip()]
+if _noimg:
+    print(f"⚠️ 사진 없는 체험단 {len(_noimg)}개 — image 를 채우고 다시 실행하세요 (모집 페이지 사진 → match_results img → 쿠팡 상품 사진):")
+    for _x in _noimg: print("  ", _x)
