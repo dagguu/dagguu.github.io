@@ -1,0 +1,67 @@
+{
+ "date": "2026-11-01",
+ "cuts": [
+  {
+   "n": 1,
+   "slug": "gyeongju-snb-poolvilla",
+   "cut": "ai:4",
+   "kind": "video"
+  },
+  {
+   "n": 1,
+   "slug": "gyeongju-snb-poolvilla",
+   "cut": "ai:7",
+   "kind": "video"
+  },
+  {
+   "n": 2,
+   "slug": "pohang-daytona",
+   "cut": "vp:1",
+   "kind": "video"
+  },
+  {
+   "n": 2,
+   "slug": "pohang-daytona",
+   "cut": "ai:4",
+   "kind": "video"
+  },
+  {
+   "n": 3,
+   "slug": "seonjae-seonjaedam",
+   "cut": "vp:1",
+   "kind": "video"
+  },
+  {
+   "n": 3,
+   "slug": "seonjae-seonjaedam",
+   "cut": "vp:8",
+   "kind": "video"
+  },
+  {
+   "n": 4,
+   "slug": "busan-matie-harbor",
+   "cut": "vp:1",
+   "kind": "video"
+  },
+  {
+   "n": 4,
+   "slug": "busan-matie-harbor",
+   "cut": "vp:3",
+   "kind": "video"
+  },
+  {
+   "n": 5,
+   "slug": "gapyeong-glamhavana",
+   "cut": "p:1",
+   "kind": "photo"
+  },
+  {
+   "n": 5,
+   "slug": "gapyeong-glamhavana",
+   "cut": "p:3",
+   "kind": "photo"
+  }
+ ],
+ "errors": [],
+ "sec": 13.2
+}
