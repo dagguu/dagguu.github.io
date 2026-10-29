@@ -1,6 +1,6 @@
 {
- "at": "2026-10-28T13:51:02.305498",
- "name": "gyeongju-snb-poolvilla",
+ "at": "2026-10-29T08:30:47.207151",
+ "name": "gangneung-takenomori",
  "font": "Jalnan",
  "fontInfo": {
   "error": [],
@@ -10,81 +10,89 @@
   "family": "Jalnan",
   "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
  },
- "dur": 19.93,
- "cuts": 17,
+ "dur": 18.6,
+ "cuts": 15,
  "plan": [
   {
    "video": true,
-   "t": "이게 숙소 안에서 찍은 바다라고요?",
-   "img": "ai:1",
-   "start": 0.0,
-   "end": 2.83,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "경주 감포 바다 앞",
-   "img": "ai:12",
-   "start": 2.83,
-   "end": 3.91,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "t": "풀빌라인데요,",
-   "img": "ai:13",
-   "start": 3.91,
-   "end": 4.98,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "t": "객실 안 수영장에 따뜻한 물 받아놓고",
-   "img": "ai:5",
-   "start": 4.98,
-   "end": 7.26,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "통창 너머 동해 보며 몸 담가요.",
-   "img": "ai:9",
-   "start": 7.26,
-   "end": 9.38,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "바다 보이는 월풀 스파까지 추가 요금 없이 쓰고,",
-   "img": "ai:7",
-   "start": 9.38,
-   "end": 12.06,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "밖은 추워도 물속은 따뜻하니까,",
+   "t": "사진만 보면 일본인 줄 알겠죠?",
    "img": "ai:2",
-   "start": 12.06,
-   "end": 14.26,
+   "start": 0.0,
+   "end": 1.98,
    "cuts": 2
   },
   {
    "video": true,
-   "t": "송대말등대까지 걸어서 산책하고,",
+   "t": "여기 강릉 주문진이에요.",
+   "img": "ai:3",
+   "start": 1.98,
+   "end": 3.9,
+   "cuts": 1
+  },
+  {
+   "video": true,
+   "t": "등불 걸린 료칸 글램핑에,",
+   "img": "ai:4",
+   "start": 3.9,
+   "end": 5.57,
+   "cuts": 1
+  },
+  {
+   "video": true,
+   "t": "히노끼탕 있는",
+   "img": "ai:5",
+   "start": 5.57,
+   "end": 6.31,
+   "cuts": 1
+  },
+  {
+   "video": true,
+   "t": "독채까지 있거든요.",
+   "img": "ai:1",
+   "start": 6.31,
+   "end": 7.48,
+   "cuts": 1
+  },
+  {
+   "video": true,
+   "t": "따뜻한 물도 추가 요금 없이 받아서",
+   "img": "ai:7",
+   "start": 7.48,
+   "end": 9.29,
+   "cuts": 1
+  },
+  {
+   "video": true,
+   "t": "밖은 추워도 몸은 계속 따뜻해요.",
+   "img": "ai:12",
+   "start": 9.29,
+   "end": 11.55,
+   "cuts": 2
+  },
+  {
+   "video": true,
+   "t": "객실마다 독채라 우리끼리 조용하고,",
    "img": "ai:8",
-   "start": 14.26,
-   "end": 16.53,
+   "start": 11.55,
+   "end": 13.57,
    "cuts": 2
   },
   {
    "video": true,
-   "t": "멀리 안 가도 바다 보며 쉬기 좋은 곳이에요.",
-   "img": "ai:11",
-   "start": 16.53,
-   "end": 19.93,
+   "t": "수영장 있는 풀빌라도 있어요.",
+   "img": "ai:9",
+   "start": 13.57,
+   "end": 15.32,
+   "cuts": 1
+  },
+  {
+   "video": true,
+   "t": "멀리 안 가도 료칸 감성으로 쉬기 좋은 곳이에요.",
+   "img": "ai:10",
+   "start": 15.32,
+   "end": 18.6,
    "cuts": 3
   }
  ],
- "file": "reels/gyeongju-snb-poolvilla/reel.mp4"
+ "file": "reels/gangneung-takenomori/reel.mp4"
 }
