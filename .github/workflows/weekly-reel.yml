@@ -1,0 +1,34 @@
+name: 주간 감성숙소 모음 릴스
+on:
+  workflow_dispatch:
+    inputs:
+      date: { description: "scripts/weekly/<date>.json", required: true }
+permissions: { contents: write }
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: |
+          for i in 1 2 3; do
+            sudo timeout -k 10 150 apt-get update -qq -o Acquire::http::Timeout=20 -o Acquire::Retries=2
+            sudo timeout -k 10 300 apt-get install -y -qq --no-install-recommends -o Acquire::http::Timeout=20 ffmpeg fonts-noto-cjk >/dev/null && break
+            sleep 10
+          done
+          pip install -q pillow; git fetch -q origin insta
+        timeout-minutes: 15
+      - run: python scripts/weekly_make.py --date "${{ inputs.date }}"
+      - run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add scripts/weekly_status.json && git commit -qm "주간 모음 상태" || true
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
+          if [ -f weekly_out/${{ inputs.date }}/reel.mp4 ]; then
+            mv weekly_out /tmp/weekly_out; git checkout -q -B insta origin/insta
+            mkdir -p weekly && cp -r /tmp/weekly_out/* weekly/
+            git add weekly && git commit -qm "주간 모음 ${{ inputs.date }}" || exit 0
+            for i in 1 2 3; do git push -q origin insta && break; git pull -q --rebase origin insta; done
+          fi
