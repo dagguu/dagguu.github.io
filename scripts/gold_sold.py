@@ -8,7 +8,7 @@ import json, os, re, sys
 from datetime import datetime, timedelta, timezone
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 p = os.path.join(ROOT, "data.json")
-m = dict(x.split(":") for x in sys.argv[1].split(",") if ":" in x)
+m = dict(x.split(":") for x in sys.argv[1].split(",") if re.fullmatch(r"\d+:\d+", x.strip()))  # undefined(판매율 없음)는 건너뜀
 d = json.load(open(p, encoding="utf-8"))
 n = 0
 for x in d.get("goldAll") or []:
