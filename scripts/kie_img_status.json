@@ -1,24 +1,88 @@
 {
- "at": "2026-10-28 21:54",
+ "at": "2026-10-29 17:15",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 12,
-   "taskId": "9858305fd075661cf023c3167afc0f56",
+   "n": 1,
+   "taskId": "b1f0cd30bfde97e67d79f0b8cbbffa53",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-10-28/gyeongju-snb-poolvilla/12_edit.jpg"
+   "file": "img/2026-10-29/gangneung-takenomori/1_edit.jpg"
   },
   {
-   "n": 13,
-   "taskId": "8af3133a0599d39ec0872da9deb512fa",
+   "n": 2,
+   "taskId": "bb8d8c04dead62eaa3960d72272bacd6",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-10-28/gyeongju-snb-poolvilla/13_edit.jpg"
+   "file": "img/2026-10-29/gangneung-takenomori/2_edit.jpg"
+  },
+  {
+   "n": 3,
+   "taskId": "bd77af954773e1be75fc944e8eebfdbb",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-29/gangneung-takenomori/3_edit.jpg"
+  },
+  {
+   "n": 4,
+   "taskId": "d8e36b558c3ae7b83fb3ac6a4c3a5464",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-29/gangneung-takenomori/4_edit.jpg"
+  },
+  {
+   "n": 5,
+   "taskId": "da080e677a856a16e243bb6660a623b7",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-29/gangneung-takenomori/5_edit.jpg"
+  },
+  {
+   "n": 7,
+   "taskId": "110ba39bbe872723054bdf0a2903db53",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-29/gangneung-takenomori/7_edit.jpg"
+  },
+  {
+   "n": 8,
+   "taskId": "92fce554158bb694fb2e8626e1b9b119",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-29/gangneung-takenomori/8_edit.jpg"
+  },
+  {
+   "n": 9,
+   "taskId": "99a1613ec8e4317f4b008bfd5899e4f7",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-29/gangneung-takenomori/9_edit.jpg"
+  },
+  {
+   "n": 10,
+   "taskId": "87c5a5a21adbc3876f761022c23113a9",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-29/gangneung-takenomori/10_edit.jpg"
+  },
+  {
+   "n": 12,
+   "taskId": "1ca6ba39d27197e0d426fcdf7cc59234",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-29/gangneung-takenomori/12_edit.jpg"
   }
  ],
- "slug": "gyeongju-snb-poolvilla"
+ "slug": "gangneung-takenomori"
 }
