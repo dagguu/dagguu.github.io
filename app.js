@@ -2428,7 +2428,7 @@ function initAuth(){
       USER=u; paintMe();
       if(/[?&]code=/.test(location.search)) history.replaceState(null,"",location.pathname+(location.hash||""));
       if(!changed) return;
-      if(u){ syncDown().then(function(){ var go=ls("dakku-after-login"); if(go){ try{ localStorage.removeItem("dakku-after-login"); }catch(e){} if(location.hash!==go){ location.hash=go; return; } } render(); }); }
+      if(u){ syncDown().then(function(){ var go=ls("dakku-after-login"); if(go){ try{ localStorage.removeItem("dakku-after-login"); }catch(e){} if(go==="www"){ location.href=MAIN_URL; return; } if(location.hash!==go){ location.hash=go; return; } } render(); }); }
       else { PROFILE=null; MYREP=null; MYSPIN=null; render(); }
     });
   });
@@ -2438,7 +2438,7 @@ function nick(){ return (PROFILE&&PROFILE.nickname)||(USER&&USER.user_metadata&&
 function goLogin(msg){ if(msg) toast(msg); ls("dakku-after-login",location.hash||"#/"); location.hash="#/my"; }
 function login(provider){
   if(!SB){ toast("잠시 후 다시 눌러 주세요"); initAuth(); return; }
-  if(!ls("dakku-after-login")) ls("dakku-after-login","#/my");
+  if(!ls("dakku-after-login")) ls("dakku-after-login",PMODE?"www":"#/my");  // 다이어리뷰에서 그냥 로그인하면 다꾸체험단 홈으로(2026-10-29 시온님), 결제·기자단 신청 중이면 그 화면으로
   SB.auth.signInWithOAuth({provider:provider,options:{redirectTo:location.origin+location.pathname}}).then(function(r){ if(r.error) toast("로그인을 시작하지 못했어요. 잠시 후 다시 시도해 주세요."); });
 }
 function sbErr(r){ if(r&&r.error){ console.warn("[dakku]",r.error.message); return true; } return false; }
