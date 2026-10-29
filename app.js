@@ -44,6 +44,7 @@ function toggleFav(id){ var i=FAV.indexOf(id); if(i>=0) FAV.splice(i,1); else FA
 var PREF = ls("dakku-pref") || "";
 var WANT = {}; try{ WANT=JSON.parse(ls("dakku-want")||"{}")||{}; }catch(e){ WANT={}; }
 if(WANT.region){ WANT.regions=[WANT.region]; delete WANT.region; } if(WANT.age){ WANT.ages=[WANT.age]; delete WANT.age; }
+function wantCats(){ var c=Array.isArray(WANT.cats)&&WANT.cats.length?WANT.cats:String(WANT.cat||"").split(","); return c.filter(Boolean); }  // 관심 분야 여러 개(2026-10-29 시온님), profiles.cat 에는 "stay,baby" 처럼 저장
 function wantRegs(){ return Array.isArray(WANT.regions)?WANT.regions:[]; }
 function saveWant(){ ls("dakku-want",JSON.stringify(WANT)); mWant(); }
 var AGES=["임신 중","0~6개월","7~12개월","13~24개월","3~4세","5~7세","8세 이상"];
@@ -1314,7 +1315,7 @@ function dealSlides(){
   if(T.length) s.push({bg:"linear-gradient(120deg,#4f8cff,#2b62e3)",k:"밤 12시 교체 · 토스쇼핑",t:"오늘의 <span>하루특가</span>",d:"오늘 밤 12시까지만<br>이 가격이에요!",cd:"mid",b:"하루특가 보기",jump:"toss",imgs:img(T),rate:maxRate(T)});
   var o=seed.openrun; if(o&&safeUrl(o.u)) s.push({bg:"linear-gradient(120deg,#ff6a5b,#ff3d6e)",k:"매일 오전 "+(+o.hour||10)+"시 오픈",t:"<span>오픈런</span> 숙소 특가",d:"놓칠 수 없는 숙소 혜택,<br>오픈 시간에 맞춰 확인하세요!",b:"오픈런 바로보기",h:safeUrl(o.u),x:1,e:["⏰","🏨","🔥"]});
   (Array.isArray(seed.partners)?seed.partners:[]).filter(function(p){ return safeUrl(p.u); }).slice(0,1).forEach(function(p){ s.push({bg:"linear-gradient(120deg,#7c5cff,#4b2fd6)",k:esc(p.top||"여행 특가"),t:esc(p.t),d:esc(p.d||"진행 중인 특가를 확인해 보세요!"),b:p.b||"특가 보기",h:safeUrl(p.u),x:1,e:["✈️","🎟️","✨"]}); });
-  var babyFirst=WANT.cat==="baby"||(WANT.ages||[]).length;
+  var babyFirst=wantCats().indexOf("baby")>=0||(WANT.ages||[]).length;
   if(babyFirst) s.sort(function(a,b){ return (b.jump==="babyhd")-(a.jump==="babyhd"); });
   return s;
 }
@@ -2239,39 +2240,39 @@ function toast(msg){ var t=document.querySelector(".toast"); if(!t){ t=document.
 
 /* ---------- 취향 묻기 (40초 머물면 한 번) ---------- */
 function prefPopup(){
-  if(ls("dakku-want-asked") || WANT.cat) return;
+  if(ls("dakku-want-asked") || wantCats().length) return;
   if(document.querySelector(".modal")) return;
   ls("dakku-want-asked","1");
-  var pick={regions:[],ages:[]}, step=1;
+  var pick={cats:[],regions:[],ages:[]}, step=1, steps=[];
   var CHOICES=[["stay","🏨","숙박 체험단"],["baby","👶","육아 체험단"],["life","🧺","생활용품"],["beauty","💄","뷰티제품"],["elec","🔌","가전/가구"],["health","💊","건강·식품"],["pet","🐾","반려동물"],["fashion","👗","패션"],["etc","🎟️","티켓"]];
   var wrap=document.createElement("div"); wrap.className="modal"; wrap.setAttribute("role","dialog"); wrap.setAttribute("aria-modal","true"); wrap.setAttribute("aria-label","기다리는 체험단 선택");
   function head(t,sub){ return '<button class="mx" data-m="x" aria-label="닫기">'+ico(I.x)+'</button><div class="mlogo">'+logoSvg(40)+'</div><h2>'+t+'</h2><p>'+sub+'</p>'; }
   function draw(){
     var h='<div class="sheet">';
     if(step===1){
-      h+=head("어떤 체험단<br>기다리고 계세요?","골라주시면 다음부터 맨 앞에 모아드릴게요!")+'<div class="wgrid">'+CHOICES.map(function(c){
+      h+=head("어떤 체험단<br>기다리고 계세요?","여러 개 골라도 돼요! 다음부터 맨 앞에 모아드릴게요")+'<div class="wgrid">'+CHOICES.map(function(c){
         var n=isOpenCat(c[0])?openItems(c[0]).length:0;
-        return '<button class="wopt'+(pick.cat===c[0]?' on':'')+'" data-m="cat" data-v="'+c[0]+'"><span class="we">'+c[1]+'</span><b>'+c[2]+'</b><small>'+(n?n+'곳 모집 중':'곧 열려요')+'</small></button>';
-      }).join("")+'</div><button class="b pri wide" data-m="next"'+(pick.cat?'':' disabled')+'>다음</button>';
-    } else if(step===2 && pick.cat==="stay"){
+        var on=pick.cats.indexOf(c[0])>=0; return '<button class="wopt'+(on?' on':'')+'" aria-pressed="'+on+'" data-m="cat" data-v="'+c[0]+'"><span class="we">'+c[1]+'</span><b>'+c[2]+'</b><small>'+(n?n+'곳 모집 중':'곧 열려요')+'</small></button>';
+      }).join("")+'</div><button class="b pri wide" data-m="next"'+(pick.cats.length?'':' disabled')+'>'+(pick.cats.length>1?pick.cats.length+'개 고르고 다음':'다음')+'</button>';
+    } else if(step==="stay"){
       var cnt={}; openItems("stay").forEach(function(it){ cnt[it.region]=(cnt[it.region]||0)+1; });
       h+=head("어느 지역 숙소를<br>찾고 계세요?","여러 곳 골라도 돼요! 고른 지역을 맨 앞에 모아드려요")+'<div class="rgrid">'+["전국"].concat(REGIONS).map(function(r){
         var n=r==="전국"?openItems("stay").length:(cnt[r]||0);
         return '<button class="ropt'+(pick.regions.indexOf(r)>=0?' on':'')+'" aria-pressed="'+(pick.regions.indexOf(r)>=0)+'" data-m="val" data-v="'+r+'"><b>'+(r==="전국"?"🇰🇷 전국":r)+'</b><small>'+n+'곳</small></button>';
       }).join("")+'</div><div class="wbtns"><button class="b sec" data-m="back">이전</button><button class="b pri" data-m="ok"'+(pick.regions.length?'':' disabled')+'>이걸로 모아주세요</button></div>';
-    } else if(step===2 && pick.cat==="baby"){
+    } else if(step==="baby"){
       h+=head("아기가 몇 살이에요?","아이가 여럿이면 모두 골라주세요 👶")+'<div class="rgrid">'+AGES.map(function(a){
         return '<button class="ropt'+(pick.ages.indexOf(a)>=0?' on':'')+'" aria-pressed="'+(pick.ages.indexOf(a)>=0)+'" data-m="val" data-v="'+a+'"><b>'+a+'</b></button>';
       }).join("")+'</div><div class="wbtns"><button class="b sec" data-m="back">이전</button><button class="b pri" data-m="ok"'+(pick.ages.length?'':' disabled')+'>선택 완료</button></div>';
     } else {
-      var c=CHOICES.filter(function(x){ return x[0]===pick.cat; })[0], open=isOpenCat(pick.cat);
-      h+=head(c[1]+' '+c[2]+(open?' 먼저 보여드릴게요!':'<br>열리면 알려드릴게요!'),open?'홈 맨 위에 모아뒀어요.':(pick.ages.length?'아기 나이('+esc(pick.ages.join(", "))+')에 맞는 체험단부터 챙겨드릴게요.':'새 체험단이 열리면 카톡으로 가장 먼저 알려드려요.'))+
+      var cs=CHOICES.filter(function(x){ return pick.cats.indexOf(x[0])>=0; }), c=cs[0], open=pick.cats.some(isOpenCat);
+      h+=head((cs.length>1?cs.map(function(x){ return x[1]; }).join(" ")+' '+cs.length+'개 분야':c[1]+' '+c[2])+(open?' 먼저 보여드릴게요!':'<br>열리면 알려드릴게요!'),open?'홈 맨 위에 모아뒀어요.':(pick.ages.length?'아기 나이('+esc(pick.ages.join(", "))+')에 맞는 체험단부터 챙겨드릴게요.':'새 체험단이 열리면 카톡으로 가장 먼저 알려드려요.'))+
         (open?'':'<a class="b kakao wide" href="'+esc(kakaoUrl())+'" target="_blank" rel="noopener noreferrer" style="margin-bottom:8px">💬 카톡으로 알림 받기</a>')+'<button class="b '+(open?'pri':'sec')+' wide" data-m="x">확인</button>';
     }
     wrap.innerHTML=h+'</div>';
   }
   function finish(){
-    WANT={cat:pick.cat}; if(pick.cat==="stay"){ var rs=pick.regions.filter(function(r){ return r!=="전국"; }); if(rs.length) WANT.regions=rs; } if(pick.cat==="baby" && pick.ages.length) WANT.ages=pick.ages.slice();
+    WANT={cats:pick.cats.slice(),cat:pick.cats.join(",")}; if(pick.cats.indexOf("stay")>=0){ var rs=pick.regions.filter(function(r){ return r!=="전국"; }); if(rs.length) WANT.regions=rs; } if(pick.cats.indexOf("baby")>=0 && pick.ages.length) WANT.ages=pick.ages.slice();
     saveWant(); render();
   }
   draw(); document.body.appendChild(wrap);
@@ -2279,13 +2280,14 @@ function prefPopup(){
     var b=e.target.closest("[data-m]"); if(!b){ if(e.target===wrap) wrap.remove(); return; }
     var m=b.dataset.m;
     if(m==="x"){ wrap.remove(); return; }
-    if(m==="cat"){ pick.cat=b.dataset.v; draw(); return; }
-    if(m==="val"){ var v=b.dataset.v, arr=pick.cat==="stay"?pick.regions:pick.ages, i=arr.indexOf(v);
+    if(m==="cat"){ var ci=pick.cats.indexOf(b.dataset.v); if(ci>=0) pick.cats.splice(ci,1); else pick.cats.push(b.dataset.v); draw(); return; }
+    if(m==="val"){ var v=b.dataset.v, arr=step==="stay"?pick.regions:pick.ages, i=arr.indexOf(v);
       if(i>=0) arr.splice(i,1); else { if(v==="전국") arr.length=0; else { var j=arr.indexOf("전국"); if(j>=0) arr.splice(j,1); } arr.push(v); }
       draw(); return; }
-    if(m==="back"){ step=1; draw(); return; }
-    if(m==="next"){ if(!pick.cat) return; if(pick.cat==="stay"||pick.cat==="baby"){ step=2; draw(); } else { finish(); step=3; draw(); } return; }
-    if(m==="ok"){ finish(); if(pick.cat==="stay"){ wrap.remove(); toast((wantRegs().length?"📍 "+wantRegs().join("·"):"🏨 숙박")+" 체험단을 맨 앞에 모았어요"); window.scrollTo(0,0); } else { step=3; draw(); } return; }
+    if(m==="back"){ var bi=steps.indexOf(step); step=bi>0?steps[bi-1]:1; draw(); return; }
+    if(m==="next"){ if(!pick.cats.length) return; steps=["stay","baby"].filter(function(k){ return pick.cats.indexOf(k)>=0; }); if(steps.length){ step=steps[0]; draw(); } else { finish(); step=3; draw(); } return; }
+    if(m==="ok"){ var ni=steps.indexOf(step); if(ni>=0&&ni<steps.length-1){ step=steps[ni+1]; draw(); return; }
+      finish(); if(pick.cats.length===1&&pick.cats[0]==="stay"){ wrap.remove(); toast((wantRegs().length?"📍 "+wantRegs().join("·"):"🏨 숙박")+" 체험단을 맨 앞에 모았어요"); window.scrollTo(0,0); } else { step=3; draw(); } return; }
   });
 }
 
@@ -2461,7 +2463,7 @@ function syncDown(){
     if(loc.length) SB.from("views").upsert(loc.map(function(id){ return {user_id:uid,item_id:id}; })).then(sbErr);
     SEEN=SEEN.concat(sv.filter(function(id){ return SEEN.indexOf(id)<0; })).slice(0,30); ls("dakku-seen",JSON.stringify(SEEN));
     var P=PROFILE;
-    if((P.regions&&P.regions.length)||(P.ages&&P.ages.length)||P.cat){ WANT.cat=P.cat||WANT.cat; WANT.regions=P.regions||[]; WANT.ages=P.ages||[]; ls("dakku-want",JSON.stringify(WANT)); }
+    if((P.regions&&P.regions.length)||(P.ages&&P.ages.length)||P.cat){ WANT.cat=P.cat||WANT.cat; WANT.cats=String(WANT.cat||"").split(",").filter(Boolean); WANT.regions=P.regions||[]; WANT.ages=P.ages||[]; ls("dakku-want",JSON.stringify(WANT)); }
     else if(WANT.cat||(WANT.regions||[]).length||(WANT.ages||[]).length) mWant();
     MYREP=R[3].data||null;
     var sp=R[4].data||[]; MYSPIN={today:sp.filter(function(x){ return x.day===day; })[0]||null, won:sp.filter(function(x){ return x.code; })[0]||null};
@@ -2469,7 +2471,7 @@ function syncDown(){
 }
 function mFav(id,on){ if(!SB||!USER||!id) return; if(on) SB.from("favorites").upsert({user_id:USER.id,item_id:id}).then(sbErr); else SB.from("favorites").delete().eq("user_id",USER.id).eq("item_id",id).then(sbErr); }
 function mSeen(id){ if(!SB||!USER||!id) return; SB.from("views").upsert({user_id:USER.id,item_id:id,viewed_at:new Date().toISOString()}).then(sbErr); }
-function mWant(){ if(!SB||!USER) return; var row={cat:WANT.cat||null,regions:WANT.regions||[],ages:WANT.ages||[],updated_at:new Date().toISOString()}; PROFILE=Object.assign(PROFILE||{},row); SB.from("profiles").update(row).eq("id",USER.id).then(sbErr); }
+function mWant(){ if(!SB||!USER) return; var row={cat:wantCats().join(",")||null,regions:WANT.regions||[],ages:WANT.ages||[],updated_at:new Date().toISOString()}; PROFILE=Object.assign(PROFILE||{},row); SB.from("profiles").update(row).eq("id",USER.id).then(sbErr); }
 function serverSpin(btn){
   btn.disabled=true; btn.textContent="돌아가는 중…";
   SB.rpc("spin").then(function(r){
@@ -2546,7 +2548,7 @@ function myView(){
   h+=mySites();
   h+=pushBox();
   h+='<form class="pane mypref" id="prefform"><h2>🔔 맞춤 체험단 알림</h2><p class="mysub">고른 지역·아기 나이에 맞는 새 체험단을 먼저 보여드리고, 알림을 켜면 새로 올라올 때 알려드려요.</p>'+
-    '<span class="fl">관심 분야</span>'+chipChecks("cat",[["stay","🏨 숙박"],["baby","👶 육아"],["life","🧺 생활"],["beauty","💄 뷰티"],["elec","🔌 가전/가구"],["health","💊 건강·식품"],["pet","🐾 반려동물"]],WANT.cat?[WANT.cat]:[],true)+
+    '<span class="fl">관심 분야 <small>(여러 개 고를 수 있어요)</small></span>'+chipChecks("cat",[["stay","🏨 숙박"],["baby","👶 육아"],["life","🧺 생활"],["beauty","💄 뷰티"],["elec","🔌 가전/가구"],["health","💊 건강·식품"],["pet","🐾 반려동물"],["fashion","👗 패션"],["etc","🎟️ 티켓"]],wantCats())+
     '<span class="fl">관심 지역</span>'+chipChecks("regions",REGIONS.map(function(x){ return [x,x]; }),WANT.regions)+
     '<span class="fl">아기 나이</span>'+chipChecks("ages",AGES.map(function(x){ return [x,x]; }),WANT.ages)+
     '<label class="ck ntf"><input type="checkbox" name="notify"'+(P.notify?' checked':'')+'><span><b>새 체험단 알림 받기</b><small>관심 분야·지역·아기 나이와 알림 동의 여부를 알림 목적으로만 써요. 언제든 끌 수 있어요.</small></span></label>'+
@@ -2586,7 +2588,7 @@ document.addEventListener("submit",function(e){
   var f=e.target;
   if(f.id==="prefform"){ e.preventDefault();
     var vals=function(n){ return [].map.call(f.querySelectorAll('input[name="'+n+'"]:checked'),function(x){ return x.value; }); };
-    var cats=vals("cat"); WANT.cat=cats[0]||""; WANT.regions=vals("regions"); WANT.ages=vals("ages"); ls("dakku-want",JSON.stringify(WANT)); ls("dakku-want-asked","1");
+    var cats=vals("cat"); WANT.cats=cats; WANT.cat=cats.join(","); WANT.regions=vals("regions"); WANT.ages=vals("ages"); ls("dakku-want",JSON.stringify(WANT)); ls("dakku-want-asked","1");
     var on=f.elements.notify.checked, row={cat:WANT.cat||null,regions:WANT.regions,ages:WANT.ages,notify:on,updated_at:new Date().toISOString()};
     if(on&&!(PROFILE&&PROFILE.notify)) row.notify_agreed_at=new Date().toISOString();
     PROFILE=Object.assign(PROFILE||{},row);
@@ -2624,7 +2626,7 @@ fetch(BASE+"data-live.json?v="+DV,{cache:"no-cache"}).then(function(r){ if(!r.ok
   if(Array.isArray(seed.categories)&&seed.categories.length) CATS=seed.categories;
   UPCOMING=Array.isArray(seed.upcoming)?seed.upcoming:[]; ADS=Array.isArray(seed.ads)?seed.ads:[]; DEALS=Array.isArray(seed.deals)?seed.deals:[];
   state.loading=false; LOGO=pickLogo(); paintLogo(); setFavicon(); render();
-  if(!WANT.cat&&!PMODE) setTimeout(prefPopup,40000);
+  if(!wantCats().length&&!PMODE) setTimeout(prefPopup,40000);
   initAuth();
 }).catch(function(){ state.loading=false; var v=document.getElementById("view"); if(v) v.innerHTML='<div class="empty"><b>잠시 후 다시 시도해 주세요</b>목록을 불러오지 못했어요.</div>'; });
 })();
