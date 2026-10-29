@@ -1178,3 +1178,7 @@ input,select,textarea{font-size:16px!important}
 .tcard .tsold .tsb{flex:1;height:7px;border-radius:4px;background:#eee;overflow:hidden}
 .tcard .tsold .tsb i{display:block;height:100%;border-radius:4px;background:#e5462b}
 .tcard .tsold b{color:#222;font-weight:700}
+
+/* 마이 다이어리뷰 → 다꾸체험단 바로가기 (2026-10-29) */
+.pgomain{display:flex;align-items:center;gap:10px;margin:4px 0 14px;padding:12px 14px;border:1.5px solid #5b3fd0;border-radius:14px;background:#f5f2ff;color:#1b1340;text-decoration:none}
+.pgomain span{display:flex;flex:none}.pgomain b{font-size:15px;white-space:nowrap}.pgomain small{color:#6b6390;font-size:12px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.pgomain i{font-style:normal;font-size:20px;color:#5b3fd0}

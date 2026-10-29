@@ -1472,7 +1472,7 @@ function pPressView(){
   '</div>';
 }
 function pMyView(){
-  var a=authCfg(), h='<div class="pg my"><h1>마이 다이어리뷰</h1>';
+  var a=authCfg(), h='<div class="pg my"><h1>마이 다이어리뷰</h1><a class="pgomain" href="'+MAIN_URL+'#/my" onclick="ga(\'main_go\',{place:\'pmy\'})"><span>'+logoSvg(26)+'</span><b>다꾸체험단 바로가기</b><small>모집 중 체험단 모아보기</small><i>›</i></a>';  // 2026-10-29 시온님
   if(!USER){
     return h+'<section class="lgcard"><div class="mlogo">'+logoSvg(44)+'</div><b>로그인하고 기자단에<br>참여해 보세요</b>'+
       '<ul class="lgben"><li>✍️ 기자단 신청 · 글 제출</li><li>💰 원고료 적립 · 출금 신청</li><li>📝 내 블로그·인스타 주소 등록</li><li>🎓 블로그 수익화 클래스 수강 신청</li></ul>'+
