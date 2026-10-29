@@ -22,7 +22,7 @@ import subprocess as _sp, sys as _sy; _sp.run([_sy.executable, os.path.join(os.p
 d = json.load(open(os.path.join(ROOT, "data.json"), encoding="utf-8"))
 e = lambda s: html.escape(str(s or ""), quote=True)
 
-CATN = {"stay": "숙박", "baby": "육아", "beauty": "뷰티", "life": "생활", "elec": "가전/가구", "health": "건강식품", "pet": "반려동물", "fashion": "패션", "etc": "티켓"}
+CATN = {"stay": "숙박", "baby": "육아", "beauty": "뷰티", "life": "생활", "elec": "가전/가구", "health": "건강·식품", "pet": "반려동물", "fashion": "패션", "etc": "티켓"}
 CATF = {"stay": "stay", "baby": "baby", "beauty": "beauty", "life": "life", "elec": "elec", "health": "food", "pet": "pet", "fashion": "fashion", "etc": "etc"}
 CHN = {"blog": "블로그", "clip": "클립", "insta": "인스타그램", "reels": "릴스", "youtube": "유튜브", "tiktok": "틱톡", "cafe": "맘카페",
        "coupang": "쿠팡 리뷰", "musinsa": "무신사 후기", "nshop": "네이버 구매평", "ohou": "오늘의집 리뷰", "olive": "올리브영 리뷰"}
