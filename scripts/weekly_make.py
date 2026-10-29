@@ -29,13 +29,13 @@ def font(sz, bold=False):
     raise SystemExit("한글 글꼴(NotoSansCJK) 없음")
 
 def text_png(lines, path):
-    """참고 영상처럼 위쪽 가운데 얇은 흰 글씨 + 부드러운 그림자 (투명 PNG)."""
+    """참고 영상처럼 위쪽 가운데 흰 글씨 + 얇은 어두운 테두리 + 부드러운 그림자 (투명 PNG)."""
     im = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
     y = int(H * 0.255)
     for t, sz in lines:
         f = font(sz); w = d.textlength(t, font=f)
         while w > W - 120 and sz > 30: sz -= 2; f = font(sz); w = d.textlength(t, font=f)
-        d.text(((W - w) / 2, y), t, font=f, fill=(255, 255, 255, 255)); y += int(sz * 1.35)
+        d.text(((W - w) / 2, y), t, font=f, fill=(255, 255, 255, 255), stroke_width=max(2, sz // 22), stroke_fill=(30, 30, 30, 235)); y += int(sz * 1.35)  # 얇은 테두리 (2026-10-29 시온님)
     sh = im.split()[3].filter(ImageFilter.GaussianBlur(6)).point(lambda v: int(v * 0.55))
     base = Image.new("RGBA", (W, H), (0, 0, 0, 0)); base.putalpha(sh)
     base.alpha_composite(im); base.save(path)
