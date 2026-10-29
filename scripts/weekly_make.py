@@ -21,10 +21,12 @@ out = os.path.join(ROOT, "weekly_out", a.date); tmp = os.path.join(out, "_tmp");
 st = {"date": a.date, "cuts": [], "errors": []}
 
 def font(sz, bold=False):
-    for p in ("/usr/share/fonts/opentype/noto/NotoSansCJK-%s.ttc" % ("Bold" if bold else "Medium"),
-              "/usr/share/fonts/noto-cjk/NotoSansCJK-%s.ttc" % ("Bold" if bold else "Medium")):
-        if os.path.exists(p): return ImageFont.truetype(p, sz, index=1)
-    return ImageFont.load_default()
+    # fonts-noto-cjk 에는 Regular·Bold 만 있다(Medium 은 -extra). 못 찾으면 멈춤(아주 작은 기본 글씨로 만들지 않게).
+    want = ["Bold"] if bold else ["Medium", "Regular", "DemiLight"]
+    for w in want + ["Regular", "Bold"]:
+        for p in glob.glob(f"/usr/share/fonts/**/NotoSansCJK-{w}.ttc", recursive=True):
+            return ImageFont.truetype(p, sz, index=1)
+    raise SystemExit("한글 글꼴(NotoSansCJK) 없음")
 
 def text_png(lines, path):
     """참고 영상처럼 위쪽 가운데 얇은 흰 글씨 + 부드러운 그림자 (투명 PNG)."""
