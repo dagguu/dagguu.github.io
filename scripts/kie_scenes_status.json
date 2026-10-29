@@ -1,77 +1,14 @@
 {
- "at": "2026-10-29T08:21:36.182768",
+ "at": "2026-10-29T08:25:33.572461",
  "name": "gangneung-takenomori",
  "jobs": [
   {
-   "img": "ai:2",
-   "taskId": "9eca08a8a6ab9a5384990448fba0aa9a",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-10-29/gangneung-takenomori/clip_ai2.mp4"
-  },
-  {
    "img": "ai:3",
-   "taskId": "dba1f3bf4f0b1d4507b343982ef31d78",
-   "state": "fail",
-   "credits": 0.0,
-   "msg": "Internal Error, Please try again later."
-  },
-  {
-   "img": "ai:4",
-   "taskId": "87e3ced64991a323f893335a1f932eb7",
+   "taskId": "38bdb25de187dc56b0bf790fe06c70b3",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-10-29/gangneung-takenomori/clip_ai4.mp4"
-  },
-  {
-   "img": "ai:5",
-   "taskId": "80cbb1b13e893ffc9de763a3b35b80c3",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-10-29/gangneung-takenomori/clip_ai5.mp4"
-  },
-  {
-   "img": "ai:1",
-   "taskId": "059ee6d16d60b6247c3ce8ced9760b93",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-10-29/gangneung-takenomori/clip_ai1.mp4"
-  },
-  {
-   "img": "ai:7",
-   "taskId": "3d3023fd8173af695f158c406bef0dbc",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-10-29/gangneung-takenomori/clip_ai7.mp4"
-  },
-  {
-   "img": "ai:12",
-   "taskId": "b877d4ee9ab822359428492624bee125",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-10-29/gangneung-takenomori/clip_ai12.mp4"
-  },
-  {
-   "img": "ai:8",
-   "taskId": "63f1800861fae6f21e62aca49670076a",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-10-29/gangneung-takenomori/clip_ai8.mp4"
-  },
-  {
-   "img": "ai:9",
-   "taskId": "7529f35910c0a8dac26888b3ff8e6e8d",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-10-29/gangneung-takenomori/clip_ai9.mp4"
-  },
-  {
-   "img": "ai:10",
-   "taskId": "e69dded48355cba3fd37fbfb7d1ef980",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-10-29/gangneung-takenomori/clip_ai10.mp4"
+   "file": "video/2026-10-29/gangneung-takenomori/clip_ai3.mp4"
   }
  ],
- "credits_total": 315.0
+ "credits_total": 35.0
 }
