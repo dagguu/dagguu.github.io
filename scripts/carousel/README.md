@@ -24,4 +24,4 @@
 ## MZ 스타일 스티커 (2026-10-30 시온님이 사진 꾸미기 앱 화면 보여주며 "이런 mz 스타일 스티커도 꾸며 줄 수 있어?")
 - 사진 카드뉴스(gen_insta.py)에서 queue 항목에 "stickers": [[표지 스티커], [2장], [3장]…] 를 넣으면 scripts/cards/stickers.py 가 직접 그린 스티커를 얹는다: hand(손글씨+곱슬 화살표)·cloud(생각 구름)·bubble(말풍선)·tag(네모 라벨, 연두·노랑 바탕)·puffy(뭉게 글씨 "포근·풍덩")·burst(번쩍 말풍선)·star·spark·emoji. 폰트는 Google Fonts(Nanum Pen Script·Gaegu·Jua, OFL).
 - 앱의 스티커 그림·폰트 파일은 가져오지 않는다. 글은 사진에 보이는 것·숙소 json 사실만, 짧은 반말/해요체. 무료·역대급·최저가·체험단·금액·댓글→DM 금지. 마지막 장엔 "🔎 프로필 링크에서 [NNN] 검색" 라벨.
-- 자막 상자(caps)와 같이 쓰면 복잡하니 둘 중 하나만. 첫 예시: insta 브랜치 2026-10-30/m-goseong-stage-poolvilla-mz/. 영상 피드(carousel_make.py)에는 아직 없음(시온님이 정하면 붙임).
+- 자막 상자(caps)와 같이 쓸 수 있다(2026-10-30 시온님 "네모글씨랑 mz스티커 같은 이미지에 다 넣어줘"): 상자가 아래쪽(약 75~92% 높이)에 있으니 스티커는 y 70% 위에만 두고, 마지막 장 [NNN] 라벨은 상자와 겹치니 뺀다. 첫 예시: insta 브랜치 2026-10-30/m-goseong-stage-poolvilla-mz/. 영상 피드(carousel_make.py)에는 아직 없음(시온님이 정하면 붙임).
