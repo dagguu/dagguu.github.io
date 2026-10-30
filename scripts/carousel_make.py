@@ -5,13 +5,16 @@
 
 입력 scripts/carousel/<slug>.json:
   {"stay": slug, "imgDate": "YYYY-MM-DD", "cover": {"tags","l1","l2","color"}, "scenes": [{"img": "ai:N", "vp": "...", "cap": "2장부터 자막 상자 글"}] x5, "caption": "..."}
-  cap(2026-10-30 시온님 "두번째 이미지부터 이런 느낌"): 반투명 밝은 회색 상자 + 얇은 테두리 + 가운데 2줄 + 아래 흐린 @dagguu.trip.
+  cap(2026-10-30 시온님 "두번째 이미지부터 이런 느낌"): 반투명 밝은 회색 상자(사진 아래쪽) + 얇은 테두리 + 가운데 2줄, @dagguu.trip 은 오른쪽 위.
+  stickers(2026-10-30 시온님 "영상피드에도 적용"): 장면·cover 에 [{"k","t","x","y","r","s","c","a"}] (scripts/cards/stickers.py), 아래 자막 상자를 피해 y 70% 안.
 장면 영상 = insta 브랜치 video/<imgDate>/<stay>/clip_<kind><N>.mp4 (kie-scenes.yml --src scripts/carousel/<slug>.json 이 만든 9:16 Veo 영상)
 결과 carousel_out/<slug>/1.mp4 ~ 5.mp4 (1080x1350 4:5, 소리 없음 — 음악은 시온님이 인스타에서),
      1_notext.mp4(글씨 없는 첫 장), cover.jpg(첫 장 첫 화면). 워크플로가 insta 브랜치 carousel/<slug>/ 로 올린다.
 """
 import json, os, sys, subprocess, html, argparse
 from playwright.sync_api import sync_playwright
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "cards"))
+from stickers import STICKER_HEAD, STICKER_CSS, stickers_html  # MZ 스티커(2026-10-30 시온님 "영상피드에도 적용")
 
 ap = argparse.ArgumentParser(); ap.add_argument("--slug", required=True); a = ap.parse_args()
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -56,18 +59,22 @@ FIT = """()=>{const t=document.querySelector('.t'); if(!t) return; const L=[...t
   if(over()) L.forEach(l=>{ if(l.scrollWidth>max+1) l.textContent=l.textContent.replace(/[\\s]*[\\u2600-\\u27BF\\u{1F300}-\\u{1FAFF}\\uFE0F\\u200D]+[\\s]*$/u,''); });
   let f=84; while(over()&&f>48){ f-=2; t.style.fontSize=f+'px'; } }"""
 c = J["cover"]; handle = c.get("handle", "@dagguu.trip")
-cover_html = f"""<html><head><meta charset='utf-8'><style>{CSS}</style></head><body><div class='s'><div class='g'></div>
+HEAD = f"<html><head><meta charset='utf-8'>{STICKER_HEAD}<style>{CSS}{STICKER_CSS}</style></head><body><div class='s'>"
+cover_html = f"""{HEAD}<div class='g'></div>{stickers_html(c.get('stickers'))}
 <div class='wm'>{e(handle)}</div><div class='box'><div class='tg'>{e(c.get('tags',''))}</div>
 <div class='t'><div class='ln'>{e(c['l1'])}</div><div class='ln' style='color:{c.get('color','#ffe14d')}'>{e(c['l2'])}</div></div></div></div></body></html>"""
-wm_html = f"<html><head><meta charset='utf-8'><style>{CSS}</style></head><body><div class='s'><div class='wm'>{e(handle)}</div></div></body></html>"
+wm_html = f"{HEAD}<div class='wm'>{e(handle)}</div></div></body></html>"
 with sync_playwright() as pw:
     b = pw.chromium.launch(); pg = b.new_page(viewport={"width": W, "height": H})
     pages = [("cover.png", cover_html), ("wm.png", wm_html)]
     for i, sc in enumerate(J["scenes"][:5], 1):
-        if i > 1 and sc.get("cap"):
-            pages.append((f"cap{i}.png", f"<html><head><meta charset='utf-8'><style>{CSS}</style></head><body><div class='s'><div class='cap'>{capfmt(sc['cap'])}</div><div class='wm'>{e(handle)}</div></div></body></html>"))
+        if i > 1 and (sc.get("cap") or sc.get("stickers")):
+            capd = f"<div class='cap'>{capfmt(sc['cap'])}</div>" if sc.get("cap") else ""
+            pages.append((f"ov{i}.png", f"{HEAD}{stickers_html(sc.get('stickers'))}{capd}<div class='wm'>{e(handle)}</div></div></body></html>"))
     for name, h in pages:
-        pg.set_content(h); pg.wait_for_timeout(300)
+        try: pg.set_content(h, wait_until="networkidle", timeout=20000)
+        except Exception: pg.set_content(h)
+        pg.evaluate("async()=>{await document.fonts.ready}"); pg.wait_for_timeout(400)
         if name == "cover.png": pg.evaluate(FIT)
         pg.screenshot(path=os.path.join(tmp, name), omit_background=True)
     b.close()
@@ -87,7 +94,7 @@ for i, s in enumerate(J["scenes"][:5], 1):
     src = clip(s["img"])
     if not src: st["slides"].append({"n": i, "img": s["img"], "error": "장면 영상 없음"}); continue
     y = s.get("y", 0.5)
-    ov = "cover.png" if i == 1 else (f"cap{i}.png" if s.get("cap") else "wm.png")
+    ov = "cover.png" if i == 1 else (f"ov{i}.png" if (s.get("cap") or s.get("stickers")) else "wm.png")
     render(src, os.path.join(tmp, ov), os.path.join(out, f"{i}.mp4"), y)
     if i == 1:
         render(src, os.path.join(tmp, "wm.png"), os.path.join(out, "1_notext.mp4"), y)

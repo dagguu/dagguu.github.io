@@ -3,7 +3,7 @@
 숙찾남(roomfinder.kr) 피드처럼 한 게시물 = 5장, 장마다 4초 영상. 첫 장만 시온님 원래 표지 글씨(해시태그 한 줄 + 흰 글씨 1줄 + 노란/하늘색 1줄 + 오른쪽 위 @dagguu.trip), 2~5장은 영상 + @dagguu.trip 만.
 
 ## 만드는 순서 (매일 19:44 예약 작업)
-1. 숙소 = 그날 감성숙소 매거진 숙소(scripts/stays/<slug>.json). 같은 숙소 릴스 장면 영상(insta 브랜치 video/<날짜>/<slug>/clip_ai*.mp4)이 있으면 그걸 고르고 새로 만들지 않는다(크레딧 0).
+1. 숙소 = `python3 scripts/pick_carousel.py --json` 이 고른 곳(2026-10-31부터, 2026-10-30 시온님 "릴스랑 숙소 안 겹치게, 영상피드는 체험단 모집하는 감성 숙소 = 국내숙소추천 매거진 글"): 16:31 매거진 글 중 지금 체험단 모집 중인 숙소, 오늘 릴스 숙소(reels_done·reel_plan 오늘)와 이미 만든 곳은 뺌. 출력이 없으면 그날 영상 피드는 건너뛰고 알림에 이유를 적는다. fallback:true 면 모집 중은 아니라고 알림에 밝힌다. 릴스 숙소를 영상 피드로 다시 쓰지 않는다. 같은 숙소 릴스 장면 영상(insta 브랜치 video/<날짜>/<slug>/clip_ai*.mp4)이 있으면 그걸 고르고 새로 만들지 않는다(크레딧 0).
 2. 없으면 scripts/kie_prompts/<slug>.json 에 장면 5개 img 프롬프트(사진을 9:16 으로 늘리기, 사물·건물 그대로, 사람은 많아야 1장·한국인 뒷모습/옆모습·흰 긴 치마) → kie-image.yml(slug, only=번호) → scripts/carousel/<slug>.json → kie-scenes.yml(name=<slug>, src=scripts/carousel/<slug>.json). 약 200크레딧(이미지 4 + 영상 35, ×5).
 3. carousel.yml(slug) → insta 브랜치 carousel/<slug>/1~5.mp4, 1_notext.mp4(글씨 없는 첫 장), cover.jpg + 메일.
 
@@ -24,4 +24,4 @@
 ## MZ 스타일 스티커 (2026-10-30 시온님이 사진 꾸미기 앱 화면 보여주며 "이런 mz 스타일 스티커도 꾸며 줄 수 있어?")
 - 사진 카드뉴스(gen_insta.py)에서 queue 항목에 "stickers": [[표지 스티커], [2장], [3장]…] 를 넣으면 scripts/cards/stickers.py 가 직접 그린 스티커를 얹는다: hand(손글씨+곱슬 화살표)·cloud(생각 구름)·bubble(말풍선)·tag(네모 라벨, 연두·노랑 바탕)·puffy(뭉게 글씨 "포근·풍덩")·burst(번쩍 말풍선)·star·spark·emoji. 폰트는 Google Fonts(Nanum Pen Script·Gaegu·Jua, OFL).
 - 앱의 스티커 그림·폰트 파일은 가져오지 않는다. 글은 사진에 보이는 것·숙소 json 사실만, 짧은 반말/해요체. 무료·역대급·최저가·체험단·금액·댓글→DM 금지. 마지막 장엔 "🔎 프로필 링크에서 [NNN] 검색" 라벨.
-- 자막 상자(caps)와 같이 쓸 수 있다(2026-10-30 시온님 "네모글씨랑 mz스티커 같은 이미지에 다 넣어줘"): 상자가 아래쪽(약 75~92% 높이)에 있으니 스티커는 y 70% 위에만 두고, 마지막 장 [NNN] 라벨은 상자와 겹치니 뺀다. 첫 예시: insta 브랜치 2026-10-30/m-goseong-stage-poolvilla-mz/. 영상 피드(carousel_make.py)에는 아직 없음(시온님이 정하면 붙임).
+- 자막 상자(caps)와 같이 쓸 수 있다(2026-10-30 시온님 "네모글씨랑 mz스티커 같은 이미지에 다 넣어줘"): 상자가 아래쪽(약 75~92% 높이)에 있으니 스티커는 y 70% 위에만 두고, 마지막 장 [NNN] 라벨은 상자와 겹치니 뺀다. 첫 예시: insta 브랜치 2026-10-30/m-goseong-stage-poolvilla-mz/. 영상 피드(carousel_make.py)에도 적용(2026-10-30 시온님 "매일 만드는 영상피드에도 적용해줘"): scripts/carousel/<slug>.json 의 cover.stickers·scenes[N].stickers 에 같은 형식으로 넣으면 영상 위에 얹힌다(2~5장 = cap + stickers, 스티커는 y 70% 위). 장마다 스티커 1~3개, 매일 같은 말·같은 배치를 반복하지 않는다.
