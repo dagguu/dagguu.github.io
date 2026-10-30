@@ -16,6 +16,7 @@ links = d.get("soonLinks") or {}
 out = []
 for x in s.get("items") or []:
     if not x.get("start") or (x.get("end") or x["start"]) < today: continue
+    if "해외" in str(x.get("kind", "")) or "해외" in str(x.get("name", "")): continue   # 해외숙소는 빼고 국내숙소·레저티켓만 (2026-10-30 시온님)
     out.append({"name": x["name"], "kind": x.get("kind", ""), "start": x["start"], "end": x.get("end", x["start"]),
                 "rate": x.get("rate", 0), "price": x.get("price", 0), "img": x.get("img", ""),
                 "u": links.get(x["name"]) or base, "own": bool(links.get(x["name"])), "src": "여기어때 오픈런"})
