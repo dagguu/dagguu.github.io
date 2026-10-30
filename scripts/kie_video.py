@@ -40,6 +40,8 @@ imgp = {x["n"]: x["img"] for x in PL if x.get("img")}
 photos = P.get("photos", [])
 nums = [int(x) for x in a.only.split(",") if x.strip()] if a.only else list(range(1, len(photos) + 1))[: a.count]
 TAIL_P = " Keep the exact same Korean person from the image with the same face, hair and clothes (long white skirt); she stays turned away (back view or slight side profile), never turns her head toward the camera, no face close-up. Keep the room, architecture and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."
+# 2026-10-30 시온님 "사진을 좌우로 미는 게 아니라 스마트폰 짐벌로 직접 걸어가며 찍은 것처럼 공간감 있게": 모든 장면 프롬프트에 붙임
+GIMBAL = " Shoot it like a real handheld smartphone on a gimbal: the camera physically moves through the 3D space (walking slowly and arcing from left to right around the subject), with true parallax - nearby objects pass faster than the background, new sides of furniture, walls and the view are revealed as the camera moves, steady gimbal stabilization with a very slight natural walking float. For drone shots the drone likewise flies through real 3D space with parallax. This is NOT a 2D pan, slide, zoom or Ken Burns move across a flat photo."
 TAIL = " No people. Keep the original architecture, rooms and layout exactly unchanged. Smooth cinematic camera motion, natural light."
 def call(url, body=None):
     req = urllib.request.Request(url, data=json.dumps(body).encode() if body is not None else None,
@@ -104,7 +106,7 @@ if a.task:
 for n in nums:
     if n < 1 or n > len(photos): continue
     ph = photos[n - 1]
-    pr = (prompts.get(n) or ("Slow push-in camera move. " + ph.get("cap", ""))) + (TAIL_P if n in people else TAIL)
+    pr = (prompts.get(n) or ("Slow push-in camera move. " + ph.get("cap", ""))) + GIMBAL + (TAIL_P if n in people else TAIL)
     src = ph["src"]
     if n in imgp:
         u, st = make_image(n, src); status["images"].append(st); save()

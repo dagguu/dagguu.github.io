@@ -13,6 +13,8 @@ J = json.load(open(a.src or f"scripts/tts/{a.name}.json", encoding="utf-8")); st
 P = json.load(open(f"scripts/stays/{stay}.json", encoding="utf-8"))
 pf = f"scripts/kie_prompts/{stay}.json"; KP = {x["n"]: x for x in (json.load(open(pf, encoding="utf-8")) if os.path.exists(pf) else [])}
 TAIL_P = " Keep the exact same Korean person from the image with the same face, hair and clothes (long white skirt); she stays turned away (back view or slight side profile), never turns her head toward the camera, no face close-up. Keep the room, architecture and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."
+# 2026-10-30 시온님 "사진을 좌우로 미는 게 아니라 스마트폰 짐벌로 직접 걸어가며 찍은 것처럼 공간감 있게": 모든 장면 프롬프트에 붙임
+GIMBAL = " Shoot it like a real handheld smartphone on a gimbal: the camera physically moves through the 3D space (walking slowly and arcing from left to right around the subject), with true parallax - nearby objects pass faster than the background, new sides of furniture, walls and the view are revealed as the camera moves, steady gimbal stabilization with a very slight natural walking float. For drone shots the drone likewise flies through real 3D space with parallax. This is NOT a 2D pan, slide, zoom or Ken Burns move across a flat photo."
 TAIL = " No people. Keep the original architecture, rooms and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."
 RAW = "https://raw.githubusercontent.com/dagguu/dagguu.github.io/insta/"
 def call(url, body=None):
@@ -45,9 +47,9 @@ for s in J["scenes"]:
     if kind == "ai":
         path = next((f"img/{day}/{stay}/{n}{suf}.jpg" for suf in ("_pro", "_edit") if subprocess.run(["git", "cat-file", "-e", f"origin/insta:img/{day}/{stay}/{n}{suf}.jpg"]).returncode == 0), None)
         if not path: st["jobs"].append({"img": s["img"], "state": "error", "msg": "AI 이미지 없음"}); save(); continue
-        src = RAW + path; pr = (s.get("vp") or KP.get(n, {}).get("prompt") or "Slow push-in camera move.") + (TAIL_P if KP.get(n, {}).get("people") else TAIL)  # 2026-10-28: 사람 없는 AI 이미지에도 TAIL_P 를 붙여서 Veo 가 여자를 만들어 넣었음
+        src = RAW + path; pr = (s.get("vp") or KP.get(n, {}).get("prompt") or "Slow push-in camera move.") + GIMBAL + (TAIL_P if KP.get(n, {}).get("people") else TAIL)  # 2026-10-28: 사람 없는 AI 이미지에도 TAIL_P 를 붙여서 Veo 가 여자를 만들어 넣었음
     else:
-        src = P["photos"][n - 1]["src"]; pr = (s.get("vp") or "Slow push-in camera move. " + P["photos"][n - 1].get("cap", "")) + TAIL
+        src = P["photos"][n - 1]["src"]; pr = (s.get("vp") or "Slow push-in camera move. " + P["photos"][n - 1].get("cap", "")) + GIMBAL + TAIL
     body = {"model": "veo-3-1", "input": {"prompt": pr, "image_urls": [src], "aspect_ratio": "9:16", "resolution": "1080p", "duration": 4,
             "generation_type": "FIRST_AND_LAST_FRAMES_2_VIDEO", "model": a.tier, "enable_translation": True}}
     r = call(API + "/createTask", body)
