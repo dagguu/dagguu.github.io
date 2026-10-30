@@ -65,7 +65,8 @@ def new_rank(x):
     return lvl * 1000 + tier * 100 + tb, lab
 def score(x):
     s = " ".join(str(x.get(f) or "") for f in ("name", "area", "memo", "tags", "note"))
-    v = new_rank(x)[0] + uniq(x) + (3 if WARM.search(s) else 0) + min(3, len(set(HOOK.findall(s)))) + signals(x.get("name"), x.get("slug"))[0]   # 여기어때 잘 팔림·검색량·오픈런·마이리얼트립·쿠팡 할인(yeogi_top.signals)
+    v = new_rank(x)[0] + (1500 if x.get("viral") else 0) + uniq(x)  # viral = 시온님이 보낸 조회수 터진 릴스 숙소(2026-10-31), 확인된 신상 바로 다음 순서
+    v = v+ (3 if WARM.search(s) else 0) + min(3, len(set(HOOK.findall(s)))) + signals(x.get("name"), x.get("slug"))[0]   # 여기어때 잘 팔림·검색량·오픈런·마이리얼트립·쿠팡 할인(yeogi_top.signals)
     city = (x.get("area") or "").split(" ")[-1]
     if city and any(city in a for a in recent_area): v -= 2
     v -= len(set(HOOK.findall(s)) & recent_words)
