@@ -56,9 +56,11 @@ def result_imgs(d):
     u = find_imgs((rj or {}).get("resultUrls") or rj or [])
     return u or find_imgs({k: v for k, v in d.items() if k not in ("param", "input")})
 OUTFIT = " Outfit (always): the woman wears a long flowing white skirt (ankle-length) with a simple top suited to the season; keep this white long skirt clearly visible."  # 2026-10-26 시온님: 여자는 항상 흰색 긴 치마
+TONE = " Color and light: bright, airy warm autumn tone - soft golden daylight, warm whites, gentle autumn foliage colors where outdoors; not dark or gloomy, keep the real place unchanged."  # 2026-10-30 21:52 시온님 "밝은 가을톤"
 SIZE = " Make the image in a vertical 9:16 size (portrait, 9:16 aspect ratio, full-bleed, no borders or letterboxing)."  # 2026-10-29 시온님: 프롬프트에 "9:16 사이즈로" 꼭
 def body(prompt, src):
     if "woman" in prompt.lower(): prompt = prompt + OUTFIT  # 사람 없는 프롬프트(바다 채우기 등)엔 안 붙임
+    if "autumn tone" not in prompt: prompt = prompt + TONE
     if "9:16" not in prompt: prompt = prompt + SIZE
     if "nano-banana-edit" in a.model:
         return {"model": a.model, "input": {"prompt": prompt, "image_urls": [src], "output_format": "jpeg", "image_size": "9:16"}}
