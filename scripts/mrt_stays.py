@@ -64,7 +64,7 @@ def main():
                     if hit: break
                     tr = {"kw": kw, "region": r.get("name") or r.get("regionName"), "type": r.get("type"), "pages": 0, "n": 0}
                     st["tried"].append(tr)
-                    for page in range(12):
+                    for page in range(40):
                         data = M.post("/v1/products/accommodation/search", {"regionId": r["regionId"], "checkIn": cin, "checkOut": cout, "adultCount": 2, "page": page, "size": 50}) or {}
                         items = data.get("items") or []
                         if page == 0: tr["keys"] = [k for k in data.keys() if k != "items"]; tr["total"] = data.get("totalCount") or data.get("total")
