@@ -45,7 +45,7 @@ header .app{font-size:13px;font-weight:700;color:#6a3fc8;border:1px solid #e3dbf
 .mine a{display:block;text-align:center;padding:13px;border-radius:12px;font-weight:800;font-size:14.5px}.mine.on{background:#f4f0ff}.mine.on a{background:#6a3fc8;color:#fff}.mine.off{background:#fff8d6}.mine.off a{background:#fee500;color:#191600}
 .deal{margin-top:22px;padding:16px;border:1.5px solid #ececf2;border-radius:16px}.deal>b{display:block;font-size:15.5px;margin-bottom:10px}
 .dr{display:flex;align-items:center;gap:10px;padding:12px 0;border-top:1px solid #f1f1f4}.dr:first-of-type{border-top:0;padding-top:2px}.dr .dl{flex:1;min-width:0}.dr .dl small{display:block;font-size:12px;color:#8a8994;margin-bottom:3px}.dr .dl strong{font-size:17px;letter-spacing:-.02em}.dr .dl s{font-size:12.5px;color:#a3a2ad;margin-left:6px}.dr .dl em{font-style:normal;color:#ff2d55;font-weight:900;font-size:15px;margin-right:5px}.dr .dl span{font-size:14px;font-weight:700;line-height:1.45}
-.dr a{flex:none;font-size:13px;font-weight:800;border-radius:10px;padding:10px 12px;background:#16151c;color:#fff}.dr a::after{content:" ↗"}.dr a.yg{background:#ff1468}
+.dr a{flex:none;font-size:13px;font-weight:800;border-radius:10px;padding:10px 12px;background:#16151c;color:#fff}.dr a::after{content:" ↗"}.dr a.yg{background:#ff1468}.bpn{margin:-2px 0 8px;font-size:12px;color:#555;line-height:1.5}.bpn b{display:inline-block;color:#2b5cd6;background:#eef4ff;border-radius:6px;padding:1px 6px;font-size:11.5px}.bpn a{color:#555;text-decoration:underline;background:none;padding:0;font-weight:600;font-size:12px}.bpn a::after{content:""}
 .deal p{margin:8px 0 0;font-size:11.5px;color:#9a99a6;line-height:1.55}
 .note{font-size:12px;color:#8a8994;line-height:1.6;margin:14px 0 0}
 footer{margin-top:40px;font-size:12px;color:#8a8994;line-height:1.7;text-align:center}footer a{color:#6a3fc8;font-weight:700}
@@ -150,6 +150,9 @@ def stay_camp(P):
 try: MRT = json.load(open(os.path.join(ROOT, "scripts", "stay_mrt.json"), encoding="utf-8"))
 except Exception: MRT = {}
 WD = "월화수목금토일"
+try: BP = json.load(open(os.path.join(ROOT, "scripts", "stay_mrt_bp.json"), encoding="utf-8"))   # 마이리얼트립 최저가 보장제 표시를 숙소 페이지에서 직접 본 곳(2026-10-30 시온님)
+except Exception: BP = {}
+BP_URL = "https://www.myrealtrip.com/main/best-price"
 try: CPP = json.load(open(os.path.join(ROOT, "scripts", "stay_cp.json"), encoding="utf-8"))
 except Exception: CPP = {}
 
@@ -162,6 +165,8 @@ def deal_box(P):
         cond = f'{dd.month}/{dd.day}({WD[dd.weekday()]}) 1박 · 성인 2명'
         pr = f'<em>{m["rate"]}%</em><strong>{m["price"]:,}원</strong><s>{m["orig"]:,}원</s>' if m.get("rate", 0) >= 3 and m.get("orig", 0) > m["price"] else f'<strong>{m["price"]:,}원부터</strong>'
         rows.append(f'<div class="dr"><span class="dl"><small>마이리얼트립 · {cond}</small>{pr}</span><a href="{e(m["u"])}" target="_blank" rel="noopener noreferrer sponsored" id="mrtgo">보러가기</a></div>')
+        if BP.get(P["slug"]):
+            rows.append(f'<p class="bpn"><b>마이리얼트립 최저가 보장제 적용</b> · 보장 조건은 <a href="{BP_URL}" target="_blank" rel="noopener noreferrer">마이리얼트립 안내</a> 기준이에요 ({int(BP[P["slug"]]["at"][5:7])}/{int(BP[P["slug"]]["at"][8:10])} 숙소 페이지 확인)</p>')
     mc = d.get("mrtCoupon") or {}
     if mc.get("u") and (mc.get("until") or "9999") >= TODAY:   # 마이리얼트립 숙박세일 페스타 쿠폰(시온님이 준 링크, 모든 숙소 공용)
         ud = datetime.date.fromisoformat(mc["until"]) if mc.get("until") else None
@@ -294,6 +299,7 @@ if __name__ == "__main__":
             if o[3]:
                 dd = datetime.date.fromisoformat(o[3]); cd = f"{dd.month}/{dd.day}({WD[dd.weekday()]}) 1박 조회 기준"
             offs.append({"src": o[2], "price": o[0], "rate": o[1] if o[1] >= 3 else 0, "cond": cd, "u": o[4]})
+            if o[2] == "마이리얼트립" and BP.get(x["slug"]): offs[-1]["bp"] = 1
         yg = ((d.get("links") or {}).get("stay-" + x["slug"]) or {}).get("yeogi") or list_lk(x).get("yeogi")
         if yg: offs.append({"src": "여기어때", "price": 0, "rate": 0, "cond": "여기어때에서 이 숙소 보기", "u": yg})
         yn = ((d.get("links") or {}).get("stay-" + x["slug"]) or {}).get("yanolja") or list_lk(x).get("yanolja")

@@ -83,7 +83,11 @@ def main():
               except Exception as ex: ml = None; st["err"] = "mylink " + str(ex)[:120]
             if ml:
                 out[slug] = {"mname": hit.get("itemName"), "price": sp, "orig": op, "rate": round((op - sp) * 100 / op) if op > sp else 0,
-                             "u": ml, "checkIn": cin, "at": today, "score": hit.get("reviewScore"), "reviews": hit.get("reviewCount")}
+                             "u": ml, "checkIn": cin, "at": today, "score": hit.get("reviewScore"), "reviews": hit.get("reviewCount"),
+                             "pu": hit.get("productUrl") or ""}
+                bp = {k: v for k, v in hit.items() if re.search(r"best|lowest|guarant|badge|tag|label|promo", k, re.I)}
+                if bp: out[slug]["bp"] = bp   # 최저가 보장제 같은 표시가 API 에 있으면(2026-10-30 확인용)
+                st["hitKeys"] = sorted(hit.keys())
         elif slug in old:
             out[slug] = old[slug]; st["kept"] = True   # 이번에 못 찾으면 예전 것 유지(조회일은 그대로라 화면에 날짜가 보임)
         status["stays"][slug] = st
