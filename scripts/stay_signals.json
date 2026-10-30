@@ -111,6 +111,60 @@
     "price": 314600,
     "kind": "국내숙소",
     "img": "https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fimage.withstatic.com%2F423%2F424%2F235%2F2d273b2ca67d4c7498039ffe31b7fe34.jpg%3Fwidth%3D2400%26height%3D1324%26format%3Dwebp&blockId=408832f0-3f86-817a-8cae-cc0f8e79b3f0&width=1024"
+   },
+   {
+    "name": "서울크루즈",
+    "start": "2026-10-29",
+    "end": "2026-11-01",
+    "rate": 35,
+    "price": 36000,
+    "kind": "레저티켓",
+    "img": "https://oopy.lazyrockets.com/api/v2/notion/image?src=attachment%3Aa0e24be9-9415-4c09-bd6a-6f8f5a54ad45%3A%EC%84%9C%EC%9A%B8%ED%81%AC%EB%A3%A8%EC%A6%88.jpg&blockId=402832f0-3f86-817f-bf39-d7aa2f9abb6c&width=1024"
+   },
+   {
+    "name": "금호 설악 리조트",
+    "start": "2026-10-29",
+    "end": "2026-11-01",
+    "rate": 75,
+    "price": 72900,
+    "kind": "국내숙소",
+    "img": "https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fimage.withstatic.com%2F353%2F167%2F348%2Fa78faffa6fb4457387e5df0ac29d8a9e.jpg%3Fwidth%3D2400%26height%3D1324%26format%3Dwebp&blockId=402832f0-3f86-8165-8472-eb9c1b5228c7&width=1024"
+   },
+   {
+    "name": "오크밸리리조트 밸리빌리지",
+    "start": "2026-10-29",
+    "end": "2026-11-01",
+    "rate": 83,
+    "price": 82080,
+    "kind": "국내숙소",
+    "img": "https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fimage.withstatic.com%2Fgiant%2F2026%2F09%2F28%2Fe2%2Fe22e4f793bd94024b4b5c521c44f4807.png%3Fwidth%3D2400%26height%3D1324%26format%3Dwebp&blockId=402832f0-3f86-8158-886e-c3e549d7b1ab&width=1024"
+   },
+   {
+    "name": "페어몬트 앰배서더 서울",
+    "start": "2026-10-29",
+    "end": "2026-11-01",
+    "rate": 69,
+    "price": 334100,
+    "kind": "국내숙소",
+    "img": "https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fimage.withstatic.com%2Fgiant%2F2026%2F08%2F26%2Fc8%2Fc8673d635cc64a54abd6bd5f13764747.jpg%3Fwidth%3D2400%26height%3D1324%26format%3Dwebp&blockId=402832f0-3f86-8154-891e-d69b9f62b794&width=1024"
+   },
+   {
+    "name": "라마다 속초",
+    "start": "2026-10-29",
+    "end": "2026-11-01",
+    "rate": 78,
+    "price": 74520,
+    "kind": "국내숙소",
+    "img": "https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fimage.withstatic.com%2Fgiant%2F2026%2F02%2F13%2Fc8%2Fc88f77a436034af2b183fbc3884f7008.jpg%3Fwidth%3D2400%26height%3D1324%26format%3Dwebp&blockId=402832f0-3f86-819d-a35a-e4b1539e9742&width=1024"
+   },
+   {
+    "name": "레고랜드",
+    "start": "2026-10-26",
+    "end": "2026-11-01",
+    "rate": 35,
+    "price": 36000,
+    "kind": "레저티켓",
+    "img": "https://oopy.lazyrockets.com/api/v2/notion/image?src=attachment%3A2d1294c6-8d22-4a84-b314-183ec3927ce1%3A%EB%A0%88%EA%B3%A0%EB%9E%9C%EB%93%9C_%282%29.jpg&blockId=402832f0-3f86-8148-b56b-dadb44615192&width=1024"
    }
   ]
  },
