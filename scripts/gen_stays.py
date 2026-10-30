@@ -14,7 +14,7 @@ d = json.load(open(os.path.join(ROOT, "data.json"), encoding="utf-8"))
 TODAY = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).strftime("%Y-%m-%d")
 THEME = {"인기": "요즘 인기 숙소", "신기한": "신기한 숙소", "감성": "감성 숙소"}
 
-CSS = """*{box-sizing:border-box}body{margin:0;background:#fff;color:#16151c;font-family:Pretendard Variable,Pretendard,-apple-system,BlinkMacSystemFont,sans-serif;-webkit-text-size-adjust:100%;touch-action:manipulation}
+CSS = """.smap{height:240px;border-radius:14px;overflow:hidden;background:#eef0f4;border:1px solid #e6e6ee;z-index:0;position:relative;touch-action:pan-x pan-y pinch-zoom}.maddr{margin:10px 2px 4px;font-size:14px;color:#444}.mmore{display:inline-block;font-size:13px;color:#7a3fd0;text-decoration:none;font-weight:600;margin:2px 2px 0}.spin{background:none;border:0}.spin span{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50% 50% 50% 0;background:#7a3fd0;transform:rotate(-45deg);box-shadow:0 2px 6px rgba(0,0,0,.3);font-size:15px}.spin i{transform:rotate(45deg);font-style:normal}.leaflet-container{font:inherit}*{box-sizing:border-box}body{margin:0;background:#fff;color:#16151c;font-family:Pretendard Variable,Pretendard,-apple-system,BlinkMacSystemFont,sans-serif;-webkit-text-size-adjust:100%;touch-action:manipulation}
 a{color:inherit;text-decoration:none}.w{max-width:640px;margin:0 auto;padding:0 16px 130px}
 .disc{margin:0 -16px;padding:7px 16px;background:#f6f6f8;color:#77768a;font-size:11.5px;line-height:1.5;text-align:center}
 header{display:flex;justify-content:space-between;align-items:center;height:56px}.logo{font-weight:800;font-size:19px;letter-spacing:-.03em}.logo i{font-style:normal;color:#6a3fc8}
@@ -173,6 +173,17 @@ def deal_box(P):
         note = '<p>국내 숙소 공용 쿠폰이라 이 숙소에 쓸 수 있는지는 여기어때에서 확인해 주세요.</p>'
     return f'<section class="deal"><b>🏷️ 할인 정보</b>{"".join(rows)}{note}</section>'
 
+def map_box(P):
+    """글 안 작은 지도(2026-10-30 시온님 "글 안에 작은 지도를 넣어줘"): 좌표는 쿠팡트래블 상품 페이지 location(P["geo"]).
+    Leaflet 1.9.4(cdnjs) + OpenStreetMap 타일, 화면에 가까워지면 불러옴. 쿠팡으로 보내지 않는다."""
+    g = P.get("geo")
+    if not g: return ""
+    addr = next((b for a, b in P.get("info", []) if a == "주소"), P.get("geoAddr") or P.get("area", ""))
+    return (f'<section class="sec mapsec"><h2>숙소 위치</h2><div id="smap" class="smap" data-lat="{g[0]}" data-lng="{g[1]}" data-nm="{e(P["name"])}" role="img" aria-label="{e(P["name"])} 위치 지도"></div>'
+            f'<p class="maddr">📍 {e(addr)}</p><a class="mmore" href="/#/map?c=stay">다꾸 지도에서 주변 숙박 체험단 보기 ›</a></section>')
+
+MAPJS = """<script>(function(){var el=document.getElementById("smap");if(!el)return;var done=0;function go(){if(done)return;done=1;var c=document.createElement("link");c.rel="stylesheet";c.href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css";document.head.appendChild(c);var s=document.createElement("script");s.src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js";s.onload=function(){var la=+el.dataset.lat,lo=+el.dataset.lng;var m=L.map(el,{scrollWheelZoom:false,zoomControl:true,attributionControl:true}).setView([la,lo],14);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(m);var ic=L.divIcon({className:"spin",html:"<span><i>💜</i></span>",iconSize:[34,34],iconAnchor:[17,34]});L.marker([la,lo],{icon:ic}).addTo(m).bindTooltip(el.dataset.nm,{direction:"top",offset:[0,-30]});};document.head.appendChild(s);}if("IntersectionObserver"in window){new IntersectionObserver(function(es,o){if(es[0].isIntersecting){o.disconnect();go();}},{rootMargin:"400px"}).observe(el);}else go();})();</script>"""
+
 def head(title, desc, canon, img):
     return f'''<!doctype html>
 <html lang="ko"><head><meta charset="utf-8">{GA}
@@ -222,6 +233,7 @@ def build(P, allP):
 <div class="pts">{pts}</div>
 <section class="gal"><h2>공간 둘러보기</h2>{gal}<p class="src">사진: 쿠팡트래블 숙소 정보</p></section>
 <section class="sec"><h2>기본 정보</h2><table class="inf">{inf}</table></section>
+{map_box(P)}
 {('<section class="sec"><h2>이런 여행에 어울려요</h2><div class="fit">'+fit+'</div></section>') if fit else ""}
 {guide}
 <p class="tags">{tags}</p>
@@ -230,7 +242,7 @@ def build(P, allP):
 {more}
 <footer>다꾸체험단 · 국내 감성숙소 추천 매거진<br><a href="/m/">감성숙소 추천 전체 보기</a> · <a href="/">www.dagguu.com</a></footer>
 </div>{bar}
-<script>document.addEventListener("click",function(ev){{if(!window.gtag)return;var nm={json.dumps(P["name"], ensure_ascii=False)};if(ev.target.closest("#go,#cpgo"))gtag("event","coupang_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#mrtgo"))gtag("event","mrt_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#yeogigo,#yeogicp"))gtag("event","yeogi_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#kakaogo"))gtag("event","kakao_add",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#campgo"))gtag("event","camp_click",{{place:"stay_mag",item_name:nm}});}});</script>{DDJS}
+<script>document.addEventListener("click",function(ev){{if(!window.gtag)return;var nm={json.dumps(P["name"], ensure_ascii=False)};if(ev.target.closest("#go,#cpgo"))gtag("event","coupang_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#mrtgo"))gtag("event","mrt_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#yeogigo,#yeogicp"))gtag("event","yeogi_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#kakaogo"))gtag("event","kakao_add",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#campgo"))gtag("event","camp_click",{{place:"stay_mag",item_name:nm}});}});</script>{DDJS}{MAPJS if P.get("geo") else ""}
 </body></html>
 '''
     open(os.path.join(ROOT, "m", slug + ".html"), "w", encoding="utf-8").write(out)

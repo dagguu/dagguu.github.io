@@ -111,6 +111,8 @@ for f in sorted(glob.glob(os.path.join(ROOT, "scripts", "stays", "*.json"))):
     area = re.sub(r"\(.*?\)", "", P.get("area", "")).split()
     city = area[-1] if area else ""
     ck = "m:" + P["slug"]
+    if P.get("geo"):   # 쿠팡트래블 상품 페이지 location(위도·경도)을 글 json 에 적어 둔 것이 가장 정확
+        out[ck] = [P["geo"][0], P["geo"][1], "s"]; continue
     hit = cache.get(ck)
     if not hit or (hit[2] == "c" and KAKAO and not cache.get(ck + "#c2")):
         g = kakao(P["name"], city)
