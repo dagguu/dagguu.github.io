@@ -1234,3 +1234,4 @@ input,select,textarea{font-size:16px!important}
 .tvads.tvmag{margin:4px 0 14px}.tvads.tvmag .hsh{padding-left:0;padding-right:0}.tvads.tvmag .tvad{margin:0 0 10px}
 .rlhome{margin:4px 0 18px}.rlhh{display:flex;align-items:baseline;justify-content:space-between;gap:8px}.rlhh h2{font-size:17px}.rlhh a{font-size:13px;color:#8a8a99;white-space:nowrap;text-decoration:none}
 .rlhome .rlg{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 8px}.rlhome .rlt small,.rlhome .rlsrc{display:none}.rlhome .rlt b{font-size:13px}.rlhome .rlp b{font-size:13px}.rlhome .rlp em{font-size:13px}.rlhome .rlb{font-size:10px}.rlhome .rlpk{font-size:10px}
+.rlbs{position:absolute;left:8px;top:8px;right:8px;display:flex;flex-wrap:wrap;gap:4px;pointer-events:none}.rlbs .rlb{position:static;max-width:100%}

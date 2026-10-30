@@ -1071,9 +1071,9 @@ function reelsHtml(lim){
   var hd=lim?'<div class="rlhd rlhh"><h2>영상으로 다음 여행을 찾아보세요</h2><a href="#/mag?t=s">더 보기 ›</a></div>':'<div class="rlhd"><h2>영상으로 다음 여행을 찾아보세요</h2><small>다꾸가 직접 만든 숙소 소개 영상이에요 · 누르면 위아래로 넘겨 볼 수 있어요</small></div>';
   return '<section class="rlsec'+(lim?' rlhome':'')+'">'+hd+'<div class="rlg">'+(lim?REELS.slice(0,lim):REELS).map(function(x,i){
     var dl=x.campEnd?Math.round((Date.parse(x.campEnd+"T00:00:00+09:00")-Date.parse(ymd(today())+"T00:00:00+09:00"))/864e5):-1;
-    var badge=dl>=0?'🚨 체험단 모집중 '+(dl===0?'D-DAY':'D-'+dl):'['+String(x.no||"").padStart(3,"0")+']';
+    var badge='<span class="rlbs"><em class="rlb">['+String(x.no||"").padStart(3,"0")+']</em>'+(dl>=0?'<em class="rlb hot">🚨 체험단 모집중 '+(dl===0?'D-DAY':'D-'+dl)+'</em>':'')+'</span>';
     var pr=x.price?'<span class="rlp">'+(x.rate?'<em>'+x.rate+'%</em>':'')+'<b>'+Number(x.price).toLocaleString("ko-KR")+'원~</b></span><span class="rlsrc">'+esc(x.src||"")+' 조회 기준</span>':'';
-    return '<div class="rlc"><button class="rlv" data-rl="'+i+'" aria-label="'+esc(x.name)+' 영상 크게 보기"><video muted loop playsinline preload="none" poster="'+esc(x.img)+'" data-src="'+esc(x.v)+'"></video><em class="rlb'+(dl>=0?' hot':'')+'">'+esc(badge)+'</em><span class="rlpk">💜 다꾸 PICK</span><span class="rlpl" aria-hidden="true">▶</span></button>'+
+    return '<div class="rlc"><button class="rlv" data-rl="'+i+'" aria-label="'+esc(x.name)+' 영상 크게 보기"><video muted loop playsinline preload="none" poster="'+esc(x.img)+'" data-src="'+esc(x.v)+'"></video>'+badge+'<span class="rlpk">💜 다꾸 PICK</span><span class="rlpl" aria-hidden="true">▶</span></button>'+
       '<a class="rlt" href="/m/'+esc(x.slug)+'.html" data-rlgo="'+esc(x.slug)+'"><b>'+esc(x.name)+'</b><small>'+esc((x.h||[]).join(" "))+'</small>'+pr+'<span class="rla">'+esc(x.area)+'</span></a></div>';
   }).join("")+'</div></section>';
 }
