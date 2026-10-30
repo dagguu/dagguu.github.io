@@ -14,7 +14,7 @@ from yeogi_top import is_top, search_bonus, signals, openrun_extra
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KST = datetime.timezone(datetime.timedelta(hours=9))
 TODAY = datetime.datetime.now(KST).strftime("%Y-%m-%d")
-n = int(sys.argv[1]) if len(sys.argv) > 1 else 5
+n = int(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1].isdigit() else 5
 L = json.load(open(os.path.join(ROOT, "scripts", "stay_list.json"), encoding="utf-8"))
 try: done = json.load(open(os.path.join(ROOT, "scripts", "reels_done.json"), encoding="utf-8"))
 except Exception: done = {}
@@ -23,6 +23,9 @@ try:
     out = subprocess.run(["git", "-C", ROOT, "ls-tree", "-r", "--name-only", "origin/insta", "reels"], capture_output=True, text=True).stdout
     made |= set(re.findall(r"reels/([^/]+)/reel\.mp4", out))
 except Exception: pass
+for _f in __import__("glob").glob(os.path.join(ROOT, "scripts", "tts", "*.json")):   # reels/<이름>/ 이름이 slug 와 다를 수 있어 tts json 의 stay 로도 뺀다
+    try: made.add(json.load(open(_f, encoding="utf-8")).get("stay"))
+    except Exception: pass
 since = (datetime.datetime.now(KST) - datetime.timedelta(days=3)).strftime("%Y-%m-%d")
 recent = [v for k, v in (done.items() if isinstance(done, dict) else []) if isinstance(v, dict) and k >= since]
 recent_area = [v.get("area", "") for v in recent]
@@ -40,6 +43,39 @@ def score(x):
 todo = [x for x in L if not x.get("kind") and x.get("slug") not in made and not str(x.get("done", "")).startswith(("쿠팡에 없음", "사진 부족"))]
 rnd = random.Random("reel" + TODAY); rnd.shuffle(todo)
 todo.sort(key=lambda x: -score(x))
+
+if "--plan" in sys.argv:   # 앞으로 만들 영상 목록(2026-10-30 시온님 "앞으로 만들 영상 목록") → scripts/reel_plan.json
+    days = int(sys.argv[sys.argv.index("--plan") + 1]) if len(sys.argv) > sys.argv.index("--plan") + 1 else 14
+    try: old = json.load(open(os.path.join(ROOT, "scripts", "reel_plan.json"), encoding="utf-8")).get("plan", [])
+    except Exception: old = []
+    keep = {p_["date"]: p_ for p_ in old if p_.get("date", "") >= TODAY}   # 이미 정해 둔(시온님이 고친) 날짜는 그대로 두고 빈 날만 채운다
+    taken = set(p_.get("name") for p_ in keep.values())
+    pool = [x for x in todo if x["name"] not in taken]; plan = []
+    d0 = datetime.datetime.now(KST)
+    if d0.hour >= 17: d0 += datetime.timedelta(days=1)   # 오늘 17:07 작업이 이미 돌았으면 내일부터
+    hist = [v for v in recent]
+    for k in range(days):
+        day = (d0 + datetime.timedelta(days=k)).strftime("%Y-%m-%d")
+        if day in keep:
+            plan.append(keep[day]); hist.append({"area": keep[day].get("area", ""), "words": keep[day].get("words", []), "name": keep[day].get("name", "")}); continue
+        if not pool: break
+        recent_area[:] = [v.get("area", "") for v in hist[-3:]]
+        recent_words.clear(); recent_words.update(w for v in hist[-3:] for w in v.get("words", []))
+        used = [h.get("name", "").split()[0] for h in hist if h.get("name")]
+        def ps(x):   # 목록에서는 같은 꼴이 줄줄이 나오지 않게 더 세게 섞는다(료칸만 5일 연속 같은 것)
+            s_ = " ".join(str(x.get(f) or "") for f in ("name", "area", "memo", "tags", "note"))
+            w = set(HOOK.findall(s_)) | set(WARM.findall(s_))
+            return score(x) - 3 * len(w & recent_words) - (4 if x["name"].split()[0] in used else 0)
+        pool.sort(key=lambda x: -ps(x)); x = pool.pop(0)
+        s_ = " ".join(str(x.get(f) or "") for f in ("name", "area", "memo", "tags", "note"))
+        words = sorted(set(HOOK.findall(s_)) | set(WARM.findall(s_)))
+        plan.append({"date": day, "name": x["name"], "area": x.get("area", ""), "slug": x.get("slug", ""), "words": words,
+                     "score": score(x), "why": signals(x.get("name"), x.get("slug"))[1], "status": "예정"})
+        hist.append({"area": x.get("area", ""), "words": words, "name": x["name"]})
+    out = {"at": TODAY, "rule": "python3 scripts/pick_reel.py --plan 14 는 이미 정해 둔 날짜는 그대로 두고 빈 날만 채운다. 17:07 릴스 작업은 오늘 날짜 줄의 숙소로 만든다. 쿠팡트래블에 없거나 사진이 부족하면 status 에 이유를 적고 pick_reel.py 다음 후보로. 시온님이 순서·숙소를 바꾸면 이 파일을 고친다.", "plan": plan}
+    json.dump(out, open(os.path.join(ROOT, "scripts", "reel_plan.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    for p_ in plan: print(p_["date"], p_["name"], p_["area"], "·", ", ".join(p_["why"] + p_["words"]))
+    sys.exit(0)
 print(json.dumps([dict(x, score=score(x), why=signals(x.get("name"), x.get("slug"))[1]) for x in todo[:n]], ensure_ascii=False, indent=1))
 ex = openrun_extra()
 if ex: print("# 숙찾남 목록에 없는 여기어때 오픈런 숙소(감성숙소면 후보로 검토):", ", ".join(f"{x['name']} {x['start'][5:]}~{x['end'][5:]} {x.get('rate')}%" for x in ex), file=sys.stderr)
