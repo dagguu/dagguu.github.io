@@ -142,7 +142,7 @@ def main():
                     r = call("POST", BASE + "/v1/deeplink", body={"coupangUrls": [x["cpUrl"]], "subId": SUB_SITE}) or []
                     if r and r[0].get("shortenUrl"): x["u"] = r[0]["shortenUrl"]; changed = True; print("버튼 링크 변환:", k)
                 except Exception as e: print("버튼 링크 변환 실패:", k, e)
-        for x in d.get("babyDeals", []) + d.get("lifeDeals", []):  # 아기용품·생활용품 핫딜
+        for x in d.get("babyDeals", []) + d.get("lifeDeals", []) + d.get("goldTravel", []):  # 아기용품·생활용품 핫딜·골드박스 숙소/티켓
             if x.get("cpUrl") and not x.get("u"):
                 try:
                     r = call("POST", BASE + "/v1/deeplink", body={"coupangUrls": [x["cpUrl"]], "subId": SUB_SITE}) or []

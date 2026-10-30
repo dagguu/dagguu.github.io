@@ -1086,6 +1086,10 @@ var RLOBS=null;
    순서: 1 이틀 안에 끝나는 특가 2 내 릴스·감성숙소 숙소 3 가을·온천·료칸 4 신상 5 할인율 큰 순 → 가격 낮은 순 */
 function tdList(){
   var td=ymd(today()), L=(Array.isArray(seed.travelDeals)?seed.travelDeals:[]).filter(function(x){ return safeUrl(x.u)&&(!x.until||x.until>=td); });
+  // 쿠팡 골드박스 숙소·레저 티켓(2026-10-30 시온님, data.json goldTravel = life_deals.py 가 매일 골드박스 화면에서 만듦, 다음 날 07시까지)
+  (Array.isArray(seed.goldTravel)?seed.goldTravel:[]).forEach(function(g){ if(!safeUrl(g.u)||(g.endAt&&new Date(g.endAt)<new Date())) return;
+    var n=function(v){ return parseInt(String(v||"").replace(/[^0-9]/g,""),10)||0; };
+    L.push({name:g.name,kind:g.kind,area:g.area,img:g.img,price:n(g.price),orig:n(g.orig),rate:n(g.rate),until:(g.endAt||"").slice(0,10),untilTxt:"내일 오전 7시까지",cond:"쿠팡 골드박스 특가"+(g.sold?" · "+g.sold+"% 판매됨":""),src:"쿠팡트래블",u:g.u,at:td,btn:"상품 보러가기",gold:1}); });
   var t2=ymd(new Date(today().getTime()+2*864e5)), rate=function(x){ return x.rate||(x.orig&&x.price?Math.round((1-x.price/x.orig)*100):0); };
   var key=function(x){ var s=(x.name||"")+" "+(x.cond||"")+" "+(x.kind||"");
     return [x.until&&x.until<=t2?0:1, x.stay?0:1, /단풍|가을|숲|포레|계곡|불멍|글램핑|온천|스파|노천|온수|히노끼|료칸/.test(s)?0:1, x.new?0:1, -rate(x), x.price||9e9]; };
@@ -1097,10 +1101,10 @@ function tdHtml(lim){
   var td=ymd(today()), md=function(v){ var t=new Date(v+"T00:00:00+09:00"); return (t.getMonth()+1)+'/'+t.getDate()+'('+"일월화수목금토"[t.getDay()]+')'; };
   return '<section class="snsec tdsec"><div class="rlhd'+(lim?' rlhh':'')+'"><h2>여행 특가</h2>'+(lim?'<a href="#/mag?t=d">더 보기 ›</a>':'')+'<small>판매 마감일이 가까운 특가부터 보여드려요</small></div><div class="sng">'+L.map(function(x){
     var hot=x.until&&x.until<=ymd(new Date(today().getTime()+864e5));
-    var badge=x.until?(x.until===td?'오늘 마감':md(x.until)+'까지'):'';
+    var badge=x.untilTxt||(x.until?(x.until===td?'오늘 마감':md(x.until)+'까지'):'');
     return '<div class="snc"><div class="snim">'+(safeUrl(x.img)?'<img src="'+esc(x.img)+'" alt="" loading="lazy" referrerpolicy="no-referrer"'+(x.pos?' style="object-position:'+esc(x.pos)+'"':'')+'>':'')+(badge?'<em class="snbd'+(hot?' on':'')+'">'+esc(badge)+'</em>':'')+'<span class="snk">'+esc(x.kind||"")+'</span></div>'+
       '<div class="snt"><b>'+esc(x.name)+'</b><p>'+(x._r?'<i>'+x._r+'%</i> ':'')+rfWon(x.price)+(x.orig?' <s class="tdo">'+rfWon(x.orig)+'</s>':'')+'</p><small>'+esc((x.area?x.area+' · ':'')+(x.cond||""))+'</small><small>'+esc(x.src||"")+' · '+esc(md(x.at||td))+' 조회 기준</small></div>'+
-      '<a class="snb go" '+ext(safeUrl(x.u))+' data-tdgo="'+esc(x.name)+'">'+esc(x.src||"")+'에서 보기 ↗</a></div>';
+      '<a class="snb go" '+ext(safeUrl(x.u))+' data-tdgo="'+esc(x.name)+'"'+(x.gold?' data-tdcp="1"':'')+'>'+esc(x.btn||((x.src||"")+'에서 보기'))+' ↗</a></div>';
   }).join("")+'</div><p class="snnote">가격은 조회한 날짜·조건 기준이라 날짜·객실·쿠폰에 따라 달라질 수 있어요.</p></section>';
 }
 function soonHtml(){
@@ -1237,7 +1241,7 @@ function reelOpen(i){
 document.addEventListener("click",function(e){
   var b=e.target.closest&&e.target.closest("[data-rl]"); if(b){ e.preventDefault(); reelOpen(+b.dataset.rl); return; }
   var g=e.target.closest&&e.target.closest("[data-rlgo]"); if(g){ try{ if(window.gtag) gtag("event","reel_open",{slug:g.dataset.rlgo}); }catch(_){} }
-  var tg=e.target.closest&&e.target.closest("[data-tdgo]"); if(tg){ try{ if(window.gtag) gtag("event","mrt_click",{place:"travel_deal",item_name:tg.dataset.tdgo}); }catch(_){} }
+  var tg=e.target.closest&&e.target.closest("[data-tdgo]"); if(tg){ try{ if(window.gtag) gtag("event",tg.dataset.tdcp?"coupang_click":"mrt_click",{place:"travel_deal",item_name:tg.dataset.tdgo}); }catch(_){} }
   var sk=e.target.closest&&e.target.closest("[data-snk],[data-sngo]"); if(sk){ try{ if(window.gtag) gtag("event",sk.dataset.snk?"kakao_add":"yeogi_click",{place:"soon",item_name:sk.dataset.snk||sk.dataset.sngo}); }catch(_){} }
 });
 function guideFill(){
