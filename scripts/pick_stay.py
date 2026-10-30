@@ -41,7 +41,7 @@ for f in glob.glob(os.path.join(ROOT, "scripts", "stays", "*.json")):
     except Exception: pass
 used |= {str(c.get("coupangPid")) for c, _ in first}
 MOOD = re.compile(r"풀빌라|독채|한옥|글램핑|스테이|료칸|펜션|카라반|오션|빌라|캠핑|리조트|스파|온천")
-BAD = re.compile(r"모텔|게스트하우스|호스텔|비즈니스|연수원|레지던스|파티룸")
+BAD = re.compile(r"모텔|스테이 패스포트|아늑 |호텔 바이 아늑|위고고|웨일로|하운드호텔|게스트하우스|호스텔|비즈니스|연수원|레지던스|파티룸")
 seen = set(); extra = []
 for it in sorted(opened, key=lambda it: (it["end"] <= TODAY, not warm({}, it), not MOOD.search(it.get("name", "")), -(int(re.sub(r"\D", "", str(it.get("worth") or "")) or 0)), it["end"])):
     pid = str(it.get("coupangPid") or "")
