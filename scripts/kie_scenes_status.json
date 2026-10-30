@@ -1,14 +1,60 @@
 {
- "at": "2026-10-29T08:25:33.572461",
- "name": "gangneung-takenomori",
+ "at": "2026-10-30T08:19:53.651316",
+ "name": "sancheong-andforet",
  "jobs": [
   {
-   "img": "ai:3",
-   "taskId": "38bdb25de187dc56b0bf790fe06c70b3",
+   "img": "ai:1",
+   "taskId": "93fa3f084aa0acecd936ffaeea3a8a08",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-10-29/gangneung-takenomori/clip_ai3.mp4"
+   "file": "video/2026-10-30/sancheong-andforet/clip_ai1.mp4"
+  },
+  {
+   "img": "ai:2",
+   "taskId": "e5cb9929740c42e4b841f8c863ee4614",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-10-30/sancheong-andforet/clip_ai2.mp4"
+  },
+  {
+   "img": "ai:3",
+   "taskId": "d95aef0a6d71284eb32aca8482064b4d",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-10-30/sancheong-andforet/clip_ai3.mp4"
+  },
+  {
+   "img": "ai:4",
+   "taskId": "8ef0101f0ad7c7b0189e4fda1a0900ea",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-10-30/sancheong-andforet/clip_ai4.mp4"
+  },
+  {
+   "img": "ai:5",
+   "taskId": "a657e6a3f7db2fc1ab7349ee53cafea6",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-10-30/sancheong-andforet/clip_ai5.mp4"
+  },
+  {
+   "img": "ai:6",
+   "taskId": null,
+   "state": "error",
+   "msg": "Credits insufficient : Your current balance isn’t enough to run this request. Please top up to continue."
+  },
+  {
+   "img": "ai:7",
+   "taskId": null,
+   "state": "error",
+   "msg": "Credits insufficient : Your current balance isn’t enough to run this request. Please top up to continue."
+  },
+  {
+   "img": "ai:8",
+   "taskId": null,
+   "state": "error",
+   "msg": "Credits insufficient : Your current balance isn’t enough to run this request. Please top up to continue."
   }
  ],
- "credits_total": 35.0
+ "credits_total": 175.0
 }
