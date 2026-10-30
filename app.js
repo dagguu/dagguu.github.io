@@ -967,7 +967,7 @@ function rankPaint(){ var el=document.querySelector("[data-rank]"); if(!el||!RAN
     '<div class="rkcard"><span class="rksrc">'+esc(t.src)+'</span><h3>'+t.em+' '+esc(t.h)+'</h3><ol class="rklist">'+
     list.map(function(x,i){ return '<li><a '+ext(safeUrl(x.u))+' data-rk="'+t.k+'"><b class="rkn">'+(i+1)+'</b><span class="rkim"><img src="'+esc(x.img)+'" alt="" loading="lazy"></span><span class="rktx"><span class="rknm">'+esc(x.n)+'</span><b class="rkp">'+esc(x.p)+'</b>'+(x.r?'<i class="rkr">로켓배송</i>':'')+'</span></a></li>'; }).join("")+'</ol>'+
     (t.items.length>5?'<button class="rkmore" data-rmore>'+(RANK_ALL?'접기 ︿':'\''+esc(t.tab)+'\' 더보기 ›')+'</button>':'')+
-    (t.more?'<a class="rkpage" href="'+esc(t.more)+'">추천 모음 글로 보기 ›</a>':'')+
+    (t.more?'<a class="rkpage" href="'+esc(t.more)+'">생활꿀템 글로 보기 ›</a>':'')+
     '<p class="prnote">가격은 '+esc(RANK.at||"")+' 수집 기준이라 쿠팡에서 다를 수 있어요</p></div>'; }
 document.addEventListener("click",function(e){ var t=e.target.closest&&e.target.closest("[data-rtab],[data-rmore],[data-rk]"); if(!t) return;
   if(t.dataset.rtab){ RANK_K=t.dataset.rtab; RANK_ALL=false; rankPaint(); var b=document.querySelector('.rktabs .on'); if(b&&b.scrollIntoView) b.scrollIntoView({block:"nearest",inline:"center",behavior:"smooth"}); return; }
@@ -1244,7 +1244,7 @@ function guideFill(){
   var B=document.querySelectorAll("[data-guides]"), M=document.getElementById("magbody"); if(!B.length&&!M) return;
   magLoad(function(){
     var h=(STAYM.length?'<section class="gdbox"><div class="gdh"><b>국내 감성숙소 추천</b><a href="#/mag?t=s">전체 ›</a></div>'+STAYM.slice(0,3).map(stayRow).join("")+'</section>':"")+(GUIDES.length?'<section class="gdbox"><div class="gdh"><b>체험단 가이드</b><a href="#/mag?t=g">전체 ›</a></div>'+GUIDES.slice(0,3).map(guideRow).join("")+'</section>':"")+
-      (PICKS.length?'<section class="gdbox"><div class="gdh"><b>다꾸 추천 모음</b><a href="#/mag?t=p">전체 ›</a></div>'+PICKS.slice(0,3).map(pickRow).join("")+'</section>':"");
+      (PICKS.length?'<section class="gdbox"><div class="gdh"><b>다꾸 생활꿀템</b><a href="#/mag?t=p">전체 ›</a></div>'+PICKS.slice(0,3).map(pickRow).join("")+'</section>':"");
     [].forEach.call(B,function(b){ b.innerHTML=h; });
     if(M&&state.magT==="d"){ var dh=PMODE?'':tdHtml()+soonHtml(); M.innerHTML=dh||'<div class="empty">지금 올라온 여행 특가가 없어요. 곧 새 특가를 올릴게요</div>'; return; }   // 다꾸 매거진 '여행 특가' 탭 (2026-10-30 시온님)
     if(M){ var L=state.magT==="p"?PICKS:state.magT==="s"?STAYM:GUIDES; M.innerHTML=(state.magT==="s"?reelsHtml()+(PMODE?'':travelAds(true)):'')+(L.length?(state.magT==="s"?'<div class="stsrch"><input id="stq" type="search" placeholder="번호 또는 숙소 이름·지역 검색 (예: 3, 가평)" autocomplete="off" enterkeyhint="search"></div>':'')+'<div class="maglist">'+L.map(state.magT==="p"?pickRow:state.magT==="s"?stayRow:guideRow).join("")+'</div>'+(state.magT==="s"?'<p class="smgnone" id="stnone" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p>':''):'<div class="empty">곧 새 글이 올라와요</div>'); if(state.magT==="s") reelsInit(M);
@@ -1295,9 +1295,9 @@ document.addEventListener("click",function(e){
 });
 function magView(){
   var t=state.magT==="p"?"p":state.magT==="g"?"g":state.magT==="d"?"d":"s";
-  return '<div class="pg mag"><h1>다꾸 매거진</h1><p class="pgsub">감성숙소 추천 · 여행 특가 · 체험단 가이드 · 추천 모음을 모아 봤어요</p>'+
-    '<div class="magtabs"><a href="#/mag"'+(t==="s"?' class="on"':'')+'>감성숙소 추천</a>'+(PMODE?'':'<a href="#/mag?t=d"'+(t==="d"?' class="on"':'')+'>여행 특가</a>')+'<a href="#/mag?t=g"'+(t==="g"?' class="on"':'')+'>체험단 가이드</a><a href="#/mag?t=p"'+(t==="p"?' class="on"':'')+'>추천 모음</a></div>'+
-    (t==="p"?'<p class="magnote">'+"추천 모음"+'의 링크는 쿠팡 파트너스 활동으로 수수료를 받을 수 있어요.</p>':'')+
+  return '<div class="pg mag"><h1>다꾸 매거진</h1><p class="pgsub">감성숙소 추천 · 여행 특가 · 체험단 가이드 · 생활꿀템을 모아 봤어요</p>'+
+    '<div class="magtabs"><a href="#/mag"'+(t==="s"?' class="on"':'')+'>감성숙소 추천</a>'+(PMODE?'':'<a href="#/mag?t=d"'+(t==="d"?' class="on"':'')+'>여행 특가</a>')+'<a href="#/mag?t=g"'+(t==="g"?' class="on"':'')+'>체험단 가이드</a><a href="#/mag?t=p"'+(t==="p"?' class="on"':'')+'>생활꿀템</a></div>'+
+    (t==="p"?'<p class="magnote">'+"생활꿀템"+'의 링크는 쿠팡 파트너스 활동으로 수수료를 받을 수 있어요.</p>':'')+
     '<div id="magbody"><div class="empty">불러오는 중…</div></div></div>';
 }
 function benefitView(){

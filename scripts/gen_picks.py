@@ -157,7 +157,7 @@ def more_links(slug):
     for f in sorted(glob.glob(os.path.join(ROOT, "scripts", "picks_*.json"))):
         P = json.load(open(f, encoding="utf-8"))
         if P["slug"] != slug: L.append(f'<a href="/p/{e(P["slug"])}.html">{e(P["h1"][0])}</a>')
-    return f'<section class="faq"><h2>다른 추천 모음</h2><div class="toc">{"".join(L)}</div></section>' if L else ""
+    return f'<section class="faq"><h2>다른 생활꿀템</h2><div class="toc">{"".join(L)}</div></section>' if L else ""
 
 if __name__ == "__main__":
     done = [build(f) for f in sorted(glob.glob(os.path.join(ROOT, "scripts", "picks_*.json")))]
@@ -167,12 +167,12 @@ if __name__ == "__main__":
     idx = f'''<!doctype html>
 <html lang="ko"><head><meta charset="utf-8">{GA}
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>다꾸 추천 모음 · 선물·육아템·생활템 고르는 법 | 다꾸체험단</title><meta name="description" content="출산선물처럼 고민되는 쇼핑을 주제별로 정리한 다꾸체험단 추천 모음이에요. 고르는 기준과 예산별 상품을 함께 볼 수 있어요."><link rel="canonical" href="{SITE}/p/">
+<title>다꾸 생활꿀템 · 선물·육아템·생활템 고르는 법 | 다꾸체험단</title><meta name="description" content="출산선물처럼 고민되는 쇼핑을 주제별로 정리한 다꾸체험단 생활꿀템 모음이에요. 고르는 기준과 예산별 상품을 함께 볼 수 있어요."><link rel="canonical" href="{SITE}/p/">
 <link rel="icon" href="/icons/icon-192.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>{CSS}.lst{{display:flex;flex-direction:column;gap:10px;margin-top:18px}}</style></head><body><div class="w">
 <p class="disc">이 페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
 <header><span class="hl"><button class="bk" type="button" aria-label="뒤로 가기" onclick="if(history.length>1&&document.referrer)history.back();else location.href='/'">‹</button><a class="logo" href="/">다꾸<i>체험단</i></a></span><a class="app" href="/#/mag?t=p">다꾸 매거진 ›</a></header>
-<section class="hero"><h1>다꾸 추천 모음</h1><p class="lead">고민되는 쇼핑을 주제별로 정리했어요. 고르는 기준을 먼저 보고 상품을 둘러보세요.</p></section>
+<section class="hero"><h1>다꾸 생활꿀템</h1><p class="lead">고민되는 쇼핑을 주제별로 정리했어요. 고르는 기준을 먼저 보고 상품을 둘러보세요.</p></section>
 <div class="lst">{lis}</div>
 <footer><a href="/g/">체험단 가이드 보기</a> · <a href="/">다꾸체험단 홈</a></footer>
 </div><button id="totop" type="button" aria-label="맨 위로" onclick="scrollTo({{top:0,behavior:'smooth'}})">TOP</button><script>addEventListener("scroll",function(){{document.getElementById("totop").classList.toggle("on",scrollY>300)}},{{passive:true}});</script></body></html>
