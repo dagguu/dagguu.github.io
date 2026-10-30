@@ -1,5 +1,5 @@
 {
- "at": "2026-10-30 16:38",
+ "at": "2026-10-30 17:17",
  "checkIn": "2026-11-07",
  "stays": {
   "busan-matie-harbor": {
@@ -171,6 +171,28 @@
     }
    ],
    "hit": "포항 데이토나풀빌라"
+  },
+  "sancheong-andforet": {
+   "name": "앤더포레 글램핑",
+   "city": "산청",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "산청",
+     "region": "산청",
+     "type": "CITY",
+     "pages": 1,
+     "n": 49,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 163
+    }
+   ],
+   "hit": "산청 앤더포레 글램핑"
   },
   "seonjae-seonjaedam": {
    "name": "선재담 글램핑&카라반 리조트",
