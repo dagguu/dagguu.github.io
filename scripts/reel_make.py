@@ -32,6 +32,34 @@ if not a.thumb_only and r.status_code != 200: st["error"] = r.text[:300]; save()
 if not a.thumb_only: R = r.json()
 open(OUT + "/voice.mp3", "wb").write(base64.b64decode(R["audio"])); W = R["words"]
 dur = float(R.get("audio_duration") or W[-1]["end"]) + 0.6
+# 말 사이 빈 곳 줄이기(2026-10-30 시온님 "중간중간 음성이 비는데"): 타입캐스트가 문장 끝마다 0.3~0.7초 쉬어서 끊겨 들림
+# → 단어 사이 쉼이 GAP 보다 길면 GAP 만 남기고 잘라 붙이고, 단어 시간도 같이 당긴다. 맨 앞 쉼도 0.05초로.
+GAP = float(J.get("gap", 0.12))
+if not a.thumb_only and W:
+    cut_ = []
+    if W[0]["start"] > 0.08: cut_.append((0.0, W[0]["start"] - 0.05))
+    for i in range(len(W) - 1):
+        g = W[i + 1]["start"] - W[i]["end"]
+        if g > GAP + 0.04: cut_.append((W[i]["end"] + GAP / 2, W[i + 1]["start"] - GAP / 2))
+    if cut_:
+        def mp(t):
+            sh = 0.0
+            for a0, b0 in cut_:
+                if t >= b0: sh += b0 - a0
+                elif t > a0: return a0 - sh
+            return t - sh
+        keep, prev = [], 0.0
+        for a0, b0 in cut_:
+            if a0 > prev: keep.append((prev, a0))
+            prev = b0
+        keep.append((prev, None))
+        fl = "".join(f"[0:a]atrim=start={x0:.3f}" + (f":end={x1:.3f}" if x1 else "") + f",asetpts=PTS-STARTPTS[k{i}];" for i, (x0, x1) in enumerate(keep))
+        fl += "".join(f"[k{i}]" for i in range(len(keep))) + f"concat=n={len(keep)}:v=0:a=1[o]"
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", OUT + "/voice.mp3", "-filter_complex", fl, "-map", "[o]", "-c:a", "libmp3lame", "-b:a", "192k", OUT + "/voice2.mp3"], check=True)
+        os.replace(OUT + "/voice2.mp3", OUT + "/voice.mp3")
+        W = [dict(w, start=mp(w["start"]), end=mp(w["end"])) for w in W]
+        st["gapCut"] = round(sum(b0 - a0 for a0, b0 in cut_), 2)
+        dur = W[-1]["end"] + 0.6
 # 장면 시작 시간: 단어를 순서대로 세어 맞춤
 idx, starts, wsc = 0, [], []
 for s in SC:
