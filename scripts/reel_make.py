@@ -117,7 +117,7 @@ os.replace(OUT + "/list.txt", OUT + "/cuts/list.txt")
 def ts(t): t = max(0, t); return f"{int(t//3600)}:{int(t%3600//60):02d}:{t%60:05.2f}"
 L = ["[Script Info]", "ScriptType: v4.00+", "PlayResX: 1080", "PlayResY: 1920", "", "[V4+ Styles]",
      "Format: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV",
-     "Style: D,Noto Sans CJK KR,60,&H00FFFFFF,&H50000000,&H78000000,0,1,1.6,2,5,60,60,0",  # 2026-10-30 시온님: 작고 가는 흰 글씨 한 줄(참고 릴스)
+     "Style: D,Noto Sans CJK KR,64,&H00FFFFFF,&H50000000,&H78000000,0,1,1.6,2,5,60,60,0",  # 2026-10-30 시온님: 작고 가는 흰 글씨 한 줄(참고 릴스)
      "Style: T,"+FAM+",118,&H00FFFFFF,&H00000000,&H90000000,1,1,6,5,8,50,50,330", "", "[Events]",  # T = 처음 1.6초 큰 제목(흰 글씨 두 줄)
      "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
 TT = J.get("title") or []
@@ -133,8 +133,8 @@ def chunk(ws):
     for w in ws:
         n = len("".join(x["text"] for x in cur + [w]))
         if cur and cur[-1]["text"].endswith((",", ".", "?", "!")): out.append(cur); cur = []
-        elif cur and not glue(cur[-1]["text"]) and (len(cur) >= 2 or n > 9): out.append(cur); cur = []
-        elif cur and len(cur) >= 3: out.append(cur); cur = []
+        elif cur and not glue(cur[-1]["text"]) and (len(cur) >= 3 or n > 13): out.append(cur); cur = []  # 2026-10-30 시온님 참고 릴스: 한 줄에 2~4단어(13자 안팎)
+        elif cur and len(cur) >= 4: out.append(cur); cur = []
         cur.append(w)
     return out + ([cur] if cur else [])
 for i, s in enumerate(SC):
