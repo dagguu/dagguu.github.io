@@ -1,2463 +1,1016 @@
 {
- "updated": "2026-10-30 11:14",
+ "updated": "2026-10-30 11:17",
  "hints": [
-  "링티",
-  "세인트프랑",
-  "리쥬파인",
-  "펫라벨",
-  "하이퍼셀",
-  "앨리스랩",
-  "본아페티",
-  "낫띵베럴",
-  "덤에이플러스",
-  "투비글로우",
-  "레디보이",
-  "로블루",
-  "마데카크림",
-  "멜라트",
-  "미키라",
-  "케온",
-  "BAS탈취제",
-  "라이프펫",
-  "무쿠컷",
-  "테루파",
-  "에몬트",
-  "타마플렉스",
-  "OHOB",
-  "비피리젠",
-  "디럭스킨",
-  "강한방",
-  "장작캠프",
-  "모노프",
-  "닥터제인",
-  "락토디토",
-  "가꾸기",
-  "센텔라모어",
-  "래디웰",
-  "백호젠그린가글",
-  "수납온",
-  "메이드인랩",
-  "리비트",
-  "피치홀릭",
-  "뉴스타스팀청소기",
-  "닥터윤",
-  "키니샴푸",
-  "스웻이프",
-  "리앤핏",
-  "리노이드",
-  "뉴칸",
-  "마르비니",
-  "루미코르",
-  "보프탈취제",
-  "코쿠온풍기",
-  "텀블즈",
-  "프로벨",
-  "메타웰니스",
+  "아이닉",
+  "누잠",
+  "데이웍스",
+  "스냅픽스",
+  "코코도르",
+  "고솔루션",
+  "게더사료",
+  "이젠가습기",
+  "광동생활건강",
+  "키오라",
+  "티히히",
+  "메디셀온",
   "봄비유",
-  "닥터코알라",
-  "코페르",
-  "헬씨드",
-  "디제이엔에이",
-  "클레드브루",
-  "안탈라",
-  "선암파머스",
-  "하루미츠",
-  "르꽁뚜아르뒤뱅",
-  "엔웰스"
+  "달메어",
+  "엠피맨",
+  "메디타민",
+  "터치소울",
+  "타임듀이",
+  "구델츠",
+  "굿앤키즈",
+  "마이해빗",
+  "블랙포레",
+  "나인밀라",
+  "큐스템",
+  "베노틴",
+  "보닉스",
+  "에즈온",
+  "아이소브",
+  "막탈라",
+  "포제나",
+  "라브리에",
+  "야무",
+  "키덤스",
+  "비오엠",
+  "난펫",
+  "엔젤텐포",
+  "민트다",
+  "인포카"
  ],
  "rows": [
   {
-   "kw": "오메가3",
-   "vol": 202900,
+   "kw": "세차장",
+   "vol": 48710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "셀프세차장",
+   "vol": 43070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "누잠",
+   "vol": 22090,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "휠체어",
+   "vol": 19830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "누잠토퍼",
+   "vol": 13700,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "아이닉",
+   "vol": 12450,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "전동휠체어",
+   "vol": 10750,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유산균",
-   "vol": 109200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마데카크림",
-   "vol": 70030,
+   "kw": "이젠가습기",
+   "vol": 10610,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "프로바이오틱스",
-   "vol": 35200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오메가3효능",
-   "vol": 34300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "프로바이오틱스유산균",
-   "vol": 28620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "링티",
-   "vol": 26600,
+   "kw": "코코도르",
+   "vol": 10590,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "오메가3추천",
-   "vol": 22400,
+   "kw": "세차용품",
+   "vol": 10130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유산균추천",
-   "vol": 20180,
+   "kw": "바이아우어샴푸",
+   "vol": 8660,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "알티지오메가3",
-   "vol": 19610,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "동국제약마데카크림",
-   "vol": 19110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바스탈취제",
-   "vol": 13950,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "바이오렉트라",
-   "vol": 13900,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오메가3복용시간",
-   "vol": 13070,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "글루코사민",
-   "vol": 11770,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "하이퍼셀오메가3",
-   "vol": 10300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임산부오메가3",
-   "vol": 10060,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "식물성오메가3",
-   "vol": 9940,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전해질",
-   "vol": 9270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사과즙",
-   "vol": 8610,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "세인트프랑",
+   "kw": "맥주효모샴푸",
    "vol": 8480,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "센텔리안24마데카크림",
-   "vol": 7720,
+   "kw": "디에제르샴푸",
+   "vol": 7690,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "코코도르디퓨저",
+   "vol": 7170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "초임계RTG오메가3",
-   "vol": 7640,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "큐업",
-   "vol": 7590,
+   "kw": "양모패드",
+   "vol": 4980,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "RTG오메가3",
-   "vol": 7500,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "고려은단멀티비타민",
-   "vol": 7320,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전해질음료",
-   "vol": 6790,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "본아페티",
-   "vol": 6780,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "트루엔오메가3",
-   "vol": 6680,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "코페르",
-   "vol": 6680,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "뼈에좋은음식",
-   "vol": 6640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세노비스마그네슘",
-   "vol": 6270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청량음료",
-   "vol": 6030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피부유산균",
-   "vol": 5980,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "손끝저림",
-   "vol": 5910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "연세",
-   "vol": 5860,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "타마린드",
-   "vol": 5830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3효과",
-   "vol": 5810,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오쏘몰이뮨30일",
-   "vol": 5710,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "복분자효능",
-   "vol": 5480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초임계오메가3",
-   "vol": 4820,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "동국마데카크림",
-   "vol": 4810,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "근육통",
-   "vol": 4800,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초임계알티지오메가3",
-   "vol": 4740,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "BAS탈취제",
-   "vol": 4720,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "식물영양제",
-   "vol": 4620,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전해질부족",
-   "vol": 4550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터린오메가3",
-   "vol": 4510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "뉴트리코어오메가3",
-   "vol": 4250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제로음료",
+   "kw": "GATHER",
    "vol": 4110,
-   "comp": "중간",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "센텔리안24마데카",
-   "vol": 4060,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "관절MSM",
-   "vol": 3910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마시는수액",
-   "vol": 3890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "센텔리안마데카크림",
-   "vol": 3890,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "쏜리서치종합비타민",
-   "vol": 3870,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오메가3복용법",
-   "vol": 3850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타마플렉스",
-   "vol": 3840,
-   "comp": "높음",
+   "kw": "인포카",
+   "vol": 4040,
+   "comp": "낮음",
    "hint": true
   },
   {
-   "kw": "오메가3콜레스테롤",
-   "vol": 3640,
-   "comp": "높음",
+   "kw": "피토페시아샴푸",
+   "vol": 3680,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "암웨이영양제",
+   "kw": "카톤전동분무기",
    "vol": 3600,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "액티바이즈",
-   "vol": 3590,
+   "kw": "바이아우어",
+   "vol": 3580,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오메가3먹는시간",
-   "vol": 3370,
+   "kw": "가래빼는법",
+   "vol": 3310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사과주스",
-   "vol": 3370,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오메가3RTG",
-   "vol": 3270,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파이토신",
+   "kw": "카톤",
    "vol": 3210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비에티",
+   "vol": 2670,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마데카크림타임리버스",
-   "vol": 3200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니관리기",
-   "vol": 3150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3함량",
-   "vol": 3040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피부영양제",
-   "vol": 3010,
+   "kw": "블랙포레샴푸",
+   "vol": 2640,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오메가3초임계",
-   "vol": 2940,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "약국오메가3",
-   "vol": 2910,
+   "kw": "몽클로스",
+   "vol": 2220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오메가3섭취시간",
-   "vol": 2900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세인트프랑쿠션",
-   "vol": 2790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3고르는법",
-   "vol": 2710,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임산부커피",
-   "vol": 2700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쥬스",
-   "vol": 2700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전해질보충제",
-   "vol": 2680,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오메가3DHA",
-   "vol": 2650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리노이드",
-   "vol": 2620,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "글루코사민효능",
-   "vol": 2500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피부면역유산균",
-   "vol": 2500,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오메가쓰리효능",
-   "vol": 2440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3알티지",
-   "vol": 2410,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "경구수액",
-   "vol": 2350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쏜리서치SAT",
-   "vol": 2350,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "키즈텐042",
-   "vol": 2350,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오쏘몰이뮨7일",
-   "vol": 2330,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "일본선크림",
-   "vol": 2330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "암웨이오메가3",
-   "vol": 2310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가쓰리",
-   "vol": 2300,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오메가3영양제",
-   "vol": 2300,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오메가3임산부",
-   "vol": 2300,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "고함량오메가3",
-   "vol": 2260,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오메가효능",
-   "vol": 2210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "DHA",
+   "kw": "아브카",
    "vol": 2200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임산부오메가3추천",
-   "vol": 2190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "THORNE",
-   "vol": 2190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "리포데이올인원",
-   "vol": 2180,
+   "kw": "수공구",
+   "vol": 2170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "광동상회",
+   "vol": 2110,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "피토레스코쿠션",
-   "vol": 2160,
+   "kw": "세븐에이트염색약",
+   "vol": 2080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그리에이트",
+   "vol": 2000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사사키샴푸",
+   "vol": 1990,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "NAG",
-   "vol": 2140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "리비트",
-   "vol": 2140,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "탈라",
-   "vol": 2140,
+   "kw": "쿤달디퓨저",
+   "vol": 1970,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "더마데카크림",
-   "vol": 2120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "식물성알티지오메가3",
-   "vol": 2010,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "사향효능",
-   "vol": 1960,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3하루권장량",
-   "vol": 1930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터윤",
-   "vol": 1930,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "알티지오메가3효능",
-   "vol": 1910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "뉴질랜드오메가3",
-   "vol": 1880,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "포도당수액",
-   "vol": 1850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "낫띵베럴",
-   "vol": 1850,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "오쏘몰바이탈M",
-   "vol": 1850,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "비타민수액",
-   "vol": 1800,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3가격",
-   "vol": 1790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일본썬크림",
-   "vol": 1790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비피리젠",
-   "vol": 1760,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "자로우질유산균",
-   "vol": 1760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "센텔리안24마데카크림타임리버스",
+   "kw": "오징어먹물",
    "vol": 1740,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "식물성오메가3효능",
-   "vol": 1730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3순도",
+   "kw": "디에제르",
    "vol": 1700,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "전기공구",
+   "vol": 1650,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "뉴칸",
-   "vol": 1680,
-   "comp": "중간",
-   "hint": true
+   "kw": "손세차가격",
+   "vol": 1650,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "하이퍼셀",
+   "kw": "키오라",
    "vol": 1630,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "오메가3종류",
-   "vol": 1630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바이오스라이프이에너지",
-   "vol": 1620,
+   "kw": "마이해빗",
+   "vol": 1550,
    "comp": "중간",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "오쏘몰바이탈F",
-   "vol": 1600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "링티아이",
-   "vol": 1580,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "강아지항산화제",
-   "vol": 1580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비타민3",
-   "vol": 1580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3식물성",
-   "vol": 1540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "DHA오메가3",
-   "vol": 1530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "MSM효능",
-   "vol": 1510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오쏘몰이뮨멀티비타민",
-   "vol": 1510,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "EPA",
-   "vol": 1500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임신오메가3",
-   "vol": 1490,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "알티지오메가",
+   "kw": "서울화장품",
    "vol": 1470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오메가3성분",
-   "vol": 1470,
+   "kw": "개복숭아효소효능",
+   "vol": 1460,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저추천",
+   "vol": 1440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사과쥬스",
-   "vol": 1470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임산부오메가",
+   "kw": "쏘헤어",
    "vol": 1430,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "케미컬",
+   "vol": 1410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "임산부식물성오메가3",
-   "vol": 1400,
+   "kw": "고압세차기",
+   "vol": 1380,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마데카솔크림",
-   "vol": 1400,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "비타민C고려은단",
-   "vol": 1400,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오일미스트",
-   "vol": 1370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "황국균",
-   "vol": 1360,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "비타민워터",
-   "vol": 1350,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "알티지",
-   "vol": 1340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3지방산",
-   "vol": 1340,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "올인원맨즈팩",
-   "vol": 1320,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "임신준비오메가3",
+   "kw": "고양이사료샘플",
    "vol": 1310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초임계알티지오메가",
-   "vol": 1300,
+   "kw": "우신화장품",
+   "vol": 1310,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오매가3",
+   "kw": "바이오메드샴푸",
+   "vol": 1310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥주샴푸",
    "vol": 1290,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "식물성오메가",
-   "vol": 1290,
-   "comp": "높음",
+   "kw": "맑은365면역보감",
+   "vol": 1280,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "알티지오메가3듀얼",
-   "vol": 1250,
-   "comp": "높음",
-   "hint": false
+   "kw": "메디타민",
+   "vol": 1230,
+   "comp": "중간",
+   "hint": true
   },
   {
-   "kw": "오쏘몰비타민",
+   "kw": "N09",
    "vol": 1200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오메가3EPADHA",
-   "vol": 1190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사과즙효능",
-   "vol": 1190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가추천",
+   "kw": "광동생활건강",
    "vol": 1180,
-   "comp": "높음",
-   "hint": false
+   "comp": "중간",
+   "hint": true
   },
   {
-   "kw": "임산부용오메가3",
-   "vol": 1180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초임계식물성알티지오메가3",
+   "kw": "다보스",
    "vol": 1170,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "식물성초임계RTG오메가3",
-   "vol": 1150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오쏘뮬이뮨",
-   "vol": 1150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "알티지오메가-3",
-   "vol": 1145,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "RTG오메가3식물성",
+   "kw": "스팀세차가격",
    "vol": 1140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유착성관절낭염",
+   "kw": "야무",
    "vol": 1130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "먹는수액",
-   "vol": 1120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트루엔알티지오메가3",
-   "vol": 1120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "식물성초임계알티지오메가3",
-   "vol": 1110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "암웨이마그네슘",
-   "vol": 1110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "하루미츠",
-   "vol": 1100,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "식물성RTG오메가3",
+   "kw": "판매",
    "vol": 1090,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오메가3비타민E",
-   "vol": 1070,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "프라레일",
+   "kw": "엔젤텐포",
    "vol": 1070,
    "comp": "중간",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "식물성오메가3추천",
-   "vol": 1050,
+   "kw": "나인밀라",
+   "vol": 1060,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "COCODOR",
+   "vol": 1030,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "관절연골",
-   "vol": 1050,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "여드름유산균",
-   "vol": 1050,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애터미오메가3",
-   "vol": 1050,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "좋은오메가3",
+   "kw": "나인밀라샴푸",
    "vol": 1020,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "어깨염증치료",
-   "vol": 1020,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "혈행개선",
-   "vol": 1010,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터린하이퍼셀오메가3",
+   "kw": "세차봉",
    "vol": 1000,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "ORTHOMOL",
-   "vol": 1000,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "링거티",
-   "vol": 990,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무카페인커피",
-   "vol": 990,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "센텔리안24더마데카크림",
+   "kw": "버킷돌리",
    "vol": 990,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "파메스틱",
-   "vol": 990,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "알티지오메가3추천",
+   "kw": "에즈온",
    "vol": 970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업센다크림",
-   "vol": 970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "뉴칸더블파워",
-   "vol": 950,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마시는포도당",
-   "vol": 940,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "퓨어알티지오메가3",
-   "vol": 940,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "앨리스랩",
-   "vol": 940,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "투퍼데이종합비타민",
-   "vol": 940,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "RTG오메가3추천",
-   "vol": 930,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마르비니",
-   "vol": 930,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "초임계",
-   "vol": 920,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "혈행",
-   "vol": 910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경기광주네일",
-   "vol": 910,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "물대용차",
-   "vol": 900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "안탈라",
-   "vol": 900,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "착즙",
+   "kw": "광동맑은365",
    "vol": 900,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "강아지치매",
-   "vol": 890,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "EPADHA",
+   "kw": "애터미샴푸",
    "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고약사",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "암웨이비타민",
-   "vol": 840,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "가꾸기",
-   "vol": 830,
+   "kw": "누잠토퍼매트리스",
+   "vol": 850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "광동몰",
+   "vol": 820,
    "comp": "낮음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "워터라이트",
+   "kw": "아브카샴푸",
    "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "즙",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3의효능",
-   "vol": 780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "코페르미스트",
-   "vol": 780,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "링티복숭아",
+   "kw": "독일맥주효모샴푸",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마이해빗효소",
+   "vol": 790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "몽클로스샴푸",
+   "vol": 790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "미용실파마약",
+   "vol": 790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블랙포레",
    "vol": 770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "식물성알티지오메가3추천",
-   "vol": 770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제로이온음료",
-   "vol": 770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초임계알티지오메가3추천",
-   "vol": 760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자외선차단핸드크림",
-   "vol": 760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "선암파머스",
-   "vol": 750,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "르꽁뚜아르뒤뱅",
-   "vol": 750,
+   "kw": "바운드서울",
+   "vol": 760,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "이온음료분말",
+   "kw": "하야시히노키샴푸",
    "vol": 740,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "프로벨",
+   "kw": "샤인메이트",
    "vol": 740,
    "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "알티지오메가쓰리",
-   "vol": 730,
-   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고려은단이뮨샷",
-   "vol": 730,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전자부품쇼핑몰",
-   "vol": 730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "식물오메가3",
+   "kw": "비오엠",
    "vol": 710,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가시오가피열매효능",
-   "vol": 710,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "류머티스관절염",
-   "vol": 710,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라이프펫",
-   "vol": 700,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "락토디토",
-   "vol": 700,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "유한양행비타민",
-   "vol": 700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잔여",
-   "vol": 700,
    "comp": "낮음",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "워터젤리",
+   "kw": "독일산맥주효모",
    "vol": 690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "갈증해소음료",
-   "vol": 680,
+   "kw": "보닉스",
+   "vol": 690,
    "comp": "높음",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "전해질수치",
-   "vol": 680,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "씹어먹는오메가3",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3식품",
+   "kw": "INIC",
    "vol": 660,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "알티지퓨어오메가3",
+   "kw": "쏘헤어샴푸",
    "vol": 660,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "카페인없는커피",
-   "vol": 640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "악센다",
-   "vol": 640,
+   "kw": "박준염색약",
+   "vol": 660,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "스웻이프",
-   "vol": 630,
+   "kw": "게더고양이사료",
+   "vol": 650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이소브",
+   "vol": 650,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "물에타먹는소금",
-   "vol": 620,
-   "comp": "높음",
+   "kw": "블루믹스",
+   "vol": 650,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "제로슈거",
-   "vol": 620,
-   "comp": "높음",
+   "kw": "샤인프릭",
+   "vol": 630,
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "강황가루효능",
+   "kw": "퍼마텍스",
+   "vol": 620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "벤티샴푸",
    "vol": 610,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "리앤핏",
+   "kw": "다이나코리아",
    "vol": 600,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "리포데이올인원맨즈팩",
-   "vol": 590,
+   "kw": "맥주효모탈모샴푸",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "목편한세상",
+   "vol": 570,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "RTG오메가3효능",
+   "kw": "가래삭히는약",
    "vol": 570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장용성오메가3",
-   "vol": 560,
+   "kw": "우파TV",
+   "vol": 570,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오쏘몰이뮨먹는법",
-   "vol": 560,
+   "kw": "UV코팅제",
+   "vol": 570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "암웨이비타민D",
-   "vol": 550,
+   "kw": "맑은365",
+   "vol": 560,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "뽐므드파파",
+   "kw": "목가래약",
    "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엔진크리너",
+   "vol": 540,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "박준샴푸",
+   "vol": 520,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "플라스틱광택제",
+   "vol": 520,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "메디셀온",
+   "vol": 510,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "소망화장품",
+   "vol": 510,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "라브리에",
+   "vol": 500,
    "comp": "낮음",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "메디카크림",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어깨관절",
-   "vol": 520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보습핸드크림",
-   "vol": 520,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "송중기오메가3",
-   "vol": 510,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "무설탕",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동국제약크림",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "연세키즈텐",
-   "vol": 510,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오메가3하루섭취량",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "울금환",
-   "vol": 500,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "이뮨플러스",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "NFC착즙",
-   "vol": 500,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "물에타먹는음료",
-   "vol": 490,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "강황환효능",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "래디웰",
+   "kw": "티히히",
    "vol": 490,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "오쏘몰이뮨비타민",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성수입의류",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고관절석회",
+   "kw": "누잠매트리스토퍼",
    "vol": 480,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "MSM식이유황효능",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피비유",
-   "vol": 480,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "암웨이종합비타민",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소금물다이어트",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터제인",
-   "vol": 470,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "하이퍼셀알티지오메가3",
-   "vol": 460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장용성유산균",
-   "vol": 460,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "안국약품브이팩",
-   "vol": 460,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "KOPHER",
+   "kw": "롬복염색약",
    "vol": 450,
-   "comp": "낮음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "동국제약아이크림",
+   "kw": "기린화장품",
    "vol": 440,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "메이드인랩",
+   "kw": "스웨거",
    "vol": 440,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "얼음골사과즙",
+   "kw": "엠세라드헤어팩",
    "vol": 440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사과즙100포",
-   "vol": 440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아빠의주스",
-   "vol": 440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물대신차",
-   "vol": 430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마데카크림미스트",
-   "vol": 430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명품의류",
-   "vol": 430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3먹는법",
+   "kw": "바이아우어맥주효모샴푸",
    "vol": 420,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마데카로션",
+   "kw": "세차의자",
    "vol": 420,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "뉴스타스팀청소기",
-   "vol": 420,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "센트롤",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비타민프로그램",
+   "kw": "유막제거비용",
    "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "올리브영선크림순위",
+   "kw": "미도씨",
+   "vol": 400,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "김해손세차",
    "vol": 400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "클라비스코트",
-   "vol": 400,
+   "kw": "캐츠랑키튼8KG",
+   "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다농이네",
+   "kw": "다슈샴푸",
    "vol": 390,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "제로음료수",
-   "vol": 380,
-   "comp": "중간",
+   "kw": "디테일링버킷",
+   "vol": 390,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무쿠컷",
+   "kw": "하부세차",
    "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "터치소울",
+   "vol": 370,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "한국콜마선크림",
-   "vol": 380,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오메가3EPA",
-   "vol": 370,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "트루엔초임계오메가3",
+   "kw": "창원손세차",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마데카크림시즌6",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셀파렉스",
-   "vol": 370,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "비타바움멀티비타민",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올리브영무기자차선크림",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유통기한임박화장품",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수분섭취",
+   "kw": "닥터그라프트",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오메가영양제",
+   "kw": "차량세정티슈",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "디제이엔에이",
-   "vol": 360,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "TUTTIFRUTTI",
-   "vol": 360,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "과채음료",
-   "vol": 360,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오쏠몰이뮨",
-   "vol": 350,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "RTG",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3트리플",
+   "kw": "광동제약몰",
    "vol": 340,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마데카크림홈쇼핑",
+   "kw": "용닥터몰",
    "vol": 340,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "UNICITY",
+   "kw": "포레스트스토리",
    "vol": 340,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오쏘몰바이탈",
+   "kw": "해든화장품",
    "vol": 340,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "손주름",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "혈행건강",
+   "kw": "광동맑은365스틱",
    "vol": 330,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마데카크림시즌7",
-   "vol": 330,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피대용",
+   "kw": "미친스킨샴푸",
    "vol": 320,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "OMEGA3",
+   "kw": "메디슈어샴푸",
    "vol": 320,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "골든마데카크림",
+   "kw": "타이어어플",
    "vol": 320,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "강아지항산화영양제",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세노비스트리플러스맨",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터린초임계오메가3",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타임리버스",
+   "kw": "마이해빗철분제",
    "vol": 310,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "고양이치매",
+   "kw": "틈새청소브러쉬",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지치매영양제",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바이파",
+   "kw": "시데로",
    "vol": 310,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "닥터린초임계알티지오메가3",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "RTG알티지오메가3",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올리브영마데카크림",
+   "kw": "미니분무기",
    "vol": 300,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "눈썹문신학원",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애플주스",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "양극",
+   "kw": "AVCA",
    "vol": 290,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "무가당음료",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "프리미엄오메가3",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "얼굴크림",
-   "vol": 290,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커버크림",
-   "vol": 290,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유니시티제품",
-   "vol": 290,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "올리브영오쏘몰",
-   "vol": 290,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전해질워터",
+   "kw": "게더사료",
    "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "알작은오메가3",
-   "vol": 280,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "동국제약마데카크림타임리버스",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바스싱크대클리너",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "핸드선크림",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "온천수미스트",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터린하이퍼셀알티지오메가3",
-   "vol": 270,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "물에타먹는가루",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "MSM콘드로이친",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모노프",
-   "vol": 270,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "레디웰",
-   "vol": 270,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "손주름핸드크림",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영주사과즙",
-   "vol": 270,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마시는링거",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물대신",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피부면역력",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "예민한장",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실라짓",
-   "vol": 260,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "핸드크림30ML",
-   "vol": 260,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "바디닥터스오메가3",
-   "vol": 250,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "레디보이",
-   "vol": 250,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "ORTHOMOLIMMUN",
-   "vol": 250,
+   "kw": "광동메모리365",
+   "vol": 280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "심플리오샴푸",
+   "vol": 280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "디케이코스메틱",
+   "vol": 270,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "디테일링세차가격",
+   "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "클로로파워",
+   "kw": "샤인메이트폼패드",
+   "vol": 270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "버바팀",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고솔루션",
+   "vol": 250,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "N공구",
    "vol": 250,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "고려은단눈영양제",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "과일즙",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3캐나다",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유니시티유산균",
+   "kw": "네쉬헤어왁스",
    "vol": 240,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "DLO",
+   "kw": "스캔그립",
    "vol": 240,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "청송농부",
+   "kw": "GYEON",
    "vol": 240,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "동국제약센텔리안24마데카크림",
-   "vol": 230,
+   "kw": "맥과이어컴파운드",
+   "vol": 240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차손세차",
+   "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바스탈취제공구",
-   "vol": 230,
+   "kw": "디월트무선광택기",
+   "vol": 240,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "N아세틸글루코사민",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아세틸글루코사민",
+   "kw": "데이웍스",
    "vol": 230,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "암웨이제품",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "텀블즈",
-   "vol": 230,
-   "comp": "중간",
    "hint": true
   },
   {
-   "kw": "히알루론산미스트",
+   "kw": "애터미탈모샴푸",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뮤겐스",
    "vol": 230,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "클레드브루",
-   "vol": 230,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "링티가격",
+   "kw": "광동365",
    "vol": 220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "제로에이드",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수분보급젤리",
+   "kw": "NESH",
    "vol": 220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오메가3순위",
+   "kw": "벤튼맥주효모샴푸",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "순도높은오메가3",
+   "kw": "효모샴푸",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "동국제약더마데카크림",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무릎관절염약",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "글루코사민콘드로이친MSM",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가꾸기유산균",
+   "kw": "전동드릴브러쉬",
    "vol": 220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "피부유산균추천",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커클랜드영양제",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "코페르선크림",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피토레스코공구",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "사과착즙주스",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "링티플러스",
+   "kw": "면역보감",
    "vol": 210,
-   "comp": "중간",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "제로음료추천",
+   "kw": "아보덤사료",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "몸에좋은물",
+   "kw": "듀렌",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "엠세라드",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "센텔리안마데카",
+   "kw": "3PH세차",
    "vol": 210,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "센텔라모어",
-   "vol": 210,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "비타민C100MG",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조인트모빌리티",
-   "vol": 210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "울산얼굴경락",
-   "vol": 210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아메카지쇼핑몰",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3원료",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마데카크림50ML",
-   "vol": 200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "케온",
-   "vol": 200,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "관절닥터타마본",
-   "vol": 200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유니시티회원가입",
-   "vol": 200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유한양행센스밸런스",
-   "vol": 200,
-   "comp": "중간",
    "hint": false
   },
   {
@@ -2467,2985 +1020,2277 @@
    "hint": true
   },
   {
-   "kw": "알로줄렌",
+   "kw": "인큐스",
    "vol": 200,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "전해질분말",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비타민드링크",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물에타먹는",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어깨통증증상",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BIONEER",
+   "kw": "누잠토퍼커버",
    "vol": 190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "비타하임멀티비타민",
+   "kw": "자동차튜닝용품",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엔진룸클리너",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키덤스",
    "vol": 190,
    "comp": "중간",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "선핸드크림",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테이블보주문제작",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무농약사과즙",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수분젤리",
+   "kw": "누잠매트",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "센텔리안24크림",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "센스밸런스",
+   "kw": "아카나사료샘플",
    "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "코페르더마앰플",
+   "kw": "바이아우어탈모샴푸",
    "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "포도당음료",
-   "vol": 170,
+   "kw": "PHYTOPECIA",
+   "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "맛있는물",
-   "vol": 170,
+   "kw": "미친스킨맥주효모샴푸",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "정비업체",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "세차카페",
+   "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전해질물",
-   "vol": 170,
-   "comp": "높음",
+   "kw": "맥과이어스UC",
+   "vol": 180,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "비건오메가3",
+   "kw": "구름토퍼",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유한알티지식물성오메가3",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "센텔리안24타임리버스",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈쇼핑마데카크림",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장품크림",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이뮨오쏘몰",
+   "kw": "광동맑은365면역보감",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오쏘몰직구",
+   "kw": "소망인큐스",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "보프탈취제",
-   "vol": 170,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "선크림대용량",
-   "vol": 170,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "대구발각질",
+   "kw": "스노우폼건",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "먹는포도당",
+   "kw": "부산차량용품점",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "LM그래핀",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "목기침",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수분보충",
+   "kw": "나인밀라두피세럼",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캐나다산오메가3",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "뉴질랜드MSM",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비타민오쏘몰",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미백핸드크림",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "시카선크림",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "연세헬스케어",
+   "kw": "하호니코",
    "vol": 160,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "장수사과즙",
+   "kw": "맥과이어왁스",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "안동사과즙",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라다메르올리고포스",
-   "vol": 155,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3비교",
+   "kw": "누잠매트리스세탁",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "녹십자오메가3",
-   "vol": 150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마데카크림스틱",
+   "kw": "비건사료",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이토끼똥",
+   "kw": "큐스템",
    "vol": 150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유산균피부",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "우먼스포뮬라2",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동아제약비타민",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "독일이뮨",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "코페르앰플",
-   "vol": 145,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리쥬파인",
-   "vol": 140,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "링티효과",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전해질수",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "분말이온음료",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "음극",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "홈쇼핑크림",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "허리아플때먹는약",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "라이화이버",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마데카크림가격",
-   "vol": 135,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "코페르SOS",
-   "vol": 135,
    "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "코페르때국물",
-   "vol": 135,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "이온음료가루",
-   "vol": 130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "RTG오메가",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자오메가3",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트루엔알티지오메가",
-   "vol": 130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전해질가루",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3비타민",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동국제약마데카크림시즌7",
-   "vol": 130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "센텔리안타임리버스",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동국마데카",
-   "vol": 130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "장작캠프",
-   "vol": 130,
-   "comp": "높음",
    "hint": true
   },
   {
-   "kw": "키니샴푸",
+   "kw": "세화피엔씨",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "하야시히노끼샴푸",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아브카맥주효모샴푸",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일진트리트먼트",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보닉스블렌드",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "디테일링썸",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차용품매장",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "루페스마크3",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "게더캣",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하야시샴푸",
+   "vol": 140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥주효모트리트먼트",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레삐유",
+   "vol": 140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "보닉스고체왁스",
+   "vol": 140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "김해수입차정비",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대구세차용품점",
+   "vol": 140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "만성기침약",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "엠피맨",
    "vol": 130,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "유니시티디톡스",
+   "kw": "굿앤키즈",
    "vol": 130,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "스윔업",
-   "vol": 130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "주름개선핸드크림",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네롤리미스트",
-   "vol": 125,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "링티약국",
-   "vol": 120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "링티보틀",
-   "vol": 120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오메가3뉴트리코어",
-   "vol": 120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전해질영양제",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터린알티지오메가3",
-   "vol": 120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "임산부DHA",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로블루",
-   "vol": 120,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "센텔리안24마데카크림파워부스팅포뮬러",
+   "kw": "메디슈어",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "블랑슈터",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "솔랩샴푸",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "덴트초이몰",
+   "vol": 130,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "다이유어카",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "블루믹스카샴푸",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어광택제",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "루미너스툴백",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마이해빗프리미엄효소",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노견유산균",
+   "kw": "맥주효모샴푸추천",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유니쎌팜",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비타민A레티놀",
+   "kw": "헤어샵샴푸",
    "vol": 120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오쏘몰이뮨멀티비타민&미네랄",
+   "kw": "워시홀릭",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "매트세척기",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "디엘오코어팩",
+   "kw": "파이어볼B2B",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "세차동호회",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "멘제르나컴파운드",
    "vol": 120,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "속안쓰린비타민C",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디엘오",
+   "kw": "라보코스메티카시데로",
    "vol": 120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "임산부미스트",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "뿌리는마스크팩",
+   "kw": "아쿠아벨록스",
    "vol": 120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "수분보충음료",
-   "vol": 110,
+   "kw": "난펫",
+   "vol": 120,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "김해자동차용품",
+   "vol": 115,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "분말스틱",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초임계알티지",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초임계알티지오메가31000",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성오메가3",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강아지항산화",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노견종합영양제",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보스웰리아추천",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘드로이친종류",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "옵티마이뮨",
-   "vol": 110,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "핑크원더미스트",
+   "kw": "이로운효소",
    "vol": 110,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "비타민미스트",
+   "kw": "무코타샴푸",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "손주름크림",
+   "kw": "보닉스네이티브",
    "vol": 110,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "사무실미스트",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사과착즙",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대전발톱무좀",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아임사과즙",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아내의사과즙",
+   "kw": "비오틴맥주효모샴푸",
    "vol": 105,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유뇨",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타먹는비타민",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가31200",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동국제약수분크림",
+   "kw": "침실디퓨저",
    "vol": 100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마데카크림액티브스킨포뮬러",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마데카크림파워부스팅포뮬러",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강아지종합비타민",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "GLUCOSAMINE",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오십견에좋은음식",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동아제약멀티비타민",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "헬시오리진유산균",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "코페르큐리페어",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "핸드썬크림",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유기농사과즙",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엔웰스",
+   "kw": "타임듀이",
    "vol": 100,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "관절MSM추천",
-   "vol": 95,
+   "kw": "띵코",
+   "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "코페르비비",
-   "vol": 95,
-   "comp": "낮음",
+   "kw": "세차업체",
+   "vol": 100,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에피벗쿠션공구",
-   "vol": 95,
-   "comp": "낮음",
+   "kw": "폼캐논",
+   "vol": 100,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "펫라벨",
+   "kw": "MJJC",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "블루믹스프리워시",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "귀여운차량용품",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아쿠아펠",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트왁스",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고압세척기부품",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "왁스어플리케이터",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천연효모",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쏘펠",
    "vol": 90,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "광주세차용품",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청주세차용품",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "철녹제거",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "백옥크림",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세차용품매장",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "누잠내돈내산",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광동면역보감",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "데미LPP",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그리에이트미니미니",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "악마집게",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "닥터트웬티",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "퓨어스타스피드폴리쉬",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세차기계",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바이크세차용품",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "민트다",
+   "vol": 80,
+   "comp": "높음",
    "hint": true
   },
   {
-   "kw": "피부수분",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가-3",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터린식물성오메가3",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "초임계식물성RTG오메가3",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "식물성캡슐",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비린내안나는오메가3",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "투비글로우",
-   "vol": 90,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "멜라트",
-   "vol": 90,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "BAS차량용탈취제",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고관절통증약",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "글루코사민효과",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "CHONDROITIN",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강한방",
-   "vol": 90,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "피부에좋은유산균",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올인원이뮨",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터스베스트멀티비타민",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "팩투폼",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "남성용미스트",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "헬씨드",
-   "vol": 90,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "링티파는곳",
-   "vol": 85,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마데카크림6",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마데카수딩젤크림",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보스벨리아",
-   "vol": 85,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "코페르크림",
-   "vol": 85,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "광미스트",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "링티복숭아맛",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수분보충제",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "링티링포텐",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "골프음료",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "본아페티영양제",
-   "vol": 80,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "동국제약마데카크림홈쇼핑",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더마데카크림시즌6",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마데카크림7",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "N-아세틸글루코사민",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "관절통증약",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맨즈에너지팩",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "브이팩남성용",
-   "vol": 80,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "썬크림알러지",
-   "vol": 80,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "기능성핸드크림",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "100%사과즙",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "MBC건축박람회",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가쓰리추천",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "관절닥터타마본5DAYS",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈쇼핑썬크림",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "코페르핸드크림",
+   "kw": "네쉬샴푸",
    "vol": 75,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "노원얼굴경락",
+   "kw": "나인밀라맥주효모샴푸",
    "vol": 75,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "알티지초임계오메가3",
-   "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남성오메가3",
+   "kw": "닥터트웬티샴푸",
+   "vol": 75,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "메모리365",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "더마데카",
+   "kw": "카르나4캣",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리플러스우먼",
+   "kw": "NINEMILA",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "리포좀비타민C500",
+   "kw": "자이엘",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "무쯔나미",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "세라믹제작",
+   "kw": "다주자",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수험생음료",
+   "kw": "블랙파이어",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "손세차방법",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "페트로캐나다",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차케어",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무선고압분사기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그릿가드버킷돌리",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맑은365가격",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "당뇨효소",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "닥터린오메가",
+   "kw": "헤어단비",
    "vol": 65,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "수험생오메가3",
+   "kw": "아이몬프로헤어칼라",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "면역비타힘",
+   "kw": "BEER샴푸",
    "vol": 65,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "무주사과즙",
+   "kw": "보닉스블렌드블랙",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "뉴알티지오메가3",
-   "vol": 60,
+   "kw": "부산세차용품",
+   "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수분충전",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무설탕이온음료",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "여자오메가3",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가RTG",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가알티지",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초임계오메가",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "작은오메가3",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에너지티",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "센텔리안24마데카크림50ML",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마데카21크림",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "관절명가",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피치홀릭",
+   "kw": "스냅픽스",
    "vol": 60,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "안국약품브이팩남성용",
+   "kw": "누잠메트리스",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "닥터코알라",
+   "kw": "광동음료",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "광동제약유산균",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "구델츠",
    "vol": 60,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "펩타이드미스트",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜라겐미스트추천",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캡슐미스트",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노슈가사과즙",
+   "kw": "DK코스메틱",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "닥터린초임계식물성알티지오메가3",
-   "vol": 55,
+   "kw": "차량작업등",
+   "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "알티지클린오메가3",
-   "vol": 55,
+   "kw": "세차교육",
+   "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "글루코사민영양제",
-   "vol": 55,
+   "kw": "오아시스툴",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대구세차용품",
+   "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "골다공증증세",
+   "kw": "자동차세차솔",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어스왁스",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광동365스틱",
    "vol": 55,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "암웨이건강식품",
-   "vol": 55,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유니시티화장품",
+   "kw": "염색약가격",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "코페르화장품",
+   "kw": "장헤나",
    "vol": 55,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "코페르오일드롭",
+   "kw": "청주자동차용품",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대전세차용품",
    "vol": 55,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "코페르시그니처앰플",
+   "kw": "세알남프리워시",
    "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카루캣",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레오나르도연어",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "달메어",
+   "vol": 50,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "TEEHEEHEE",
+   "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "프리미엄RTG오메가3",
+   "kw": "우신알앤비",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수입오메가3",
+   "kw": "디어스슈보",
    "vol": 50,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마데카화장품",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테루파",
+   "kw": "포제나",
    "vol": 50,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "타마본",
-   "vol": 50,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "MSM100",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "니몸내몸",
+   "kw": "리복스",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "달심클렌즈",
+   "kw": "루미너스물왁스",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "루미코르",
-   "vol": 50,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "코스맥스선크림",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "SPF핸드크림",
+   "kw": "인비보라",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세대학교연세생활건강",
-   "vol": 50,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "인솔제작",
+   "kw": "차량공구",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유기농사과쥬스",
+   "kw": "회전브러쉬",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "WCS오메가3",
+   "kw": "대구자동차용품",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차샵",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세차장비",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차량엔진룸청소",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "워시미트추천",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "구름매트리스",
    "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "과일물",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수분음료",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3식물성캡슐",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트루엔초임계",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "알이작은오메가3",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유기농오메가3",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "본아페티강아지영양제",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마데카시즌6",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "센텔리안24마데카블레미쉬커버크림",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바스탈취제미니",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "정관장관절영양제",
-   "vol": 45,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "MSM조인트",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "뿌리는화장품",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "NMN핸드크림",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자극없는선크림",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마리아닐라",
+   "kw": "맑음365",
    "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "운동후음료",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3분말",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스포츠드링크",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "붓기차효과",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마데카더마",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강아지종합영양제추천",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호주산콘드로이친",
-   "vol": 40,
+   "kw": "게더치킨",
+   "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "글루코사민황산염",
-   "vol": 40,
+   "kw": "맑은365효능",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "핸드크림선크림",
-   "vol": 40,
+   "kw": "사사키탈모샴푸",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모노벨",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "NESH샴푸",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소망엠세라드",
+   "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "누타",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "비타민C스프레이",
-   "vol": 40,
+   "kw": "보닉스왁스",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "BB선크림",
-   "vol": 40,
+   "kw": "자동차부식방지제",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제노시스루페",
+   "kw": "일본세차용품",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "울산세차용품",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차량용품백화점",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광동스펀몰",
    "vol": 40,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "링티수액",
+   "kw": "까미모",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "PL코스메틱",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "인비저블글래스",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세차카드",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "클레이루브",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퓨어스타트위스트드라잉타월",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소버린왁스",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "패브릭가드303",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "벤츠세차용품",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "COCODOR디퓨저",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "포도당스틱",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타먹는이온음료",
+   "kw": "면역보감프리미엄",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오메가식물성",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "알티지오메가3식물성",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네츄럴오메가3",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셀로닉스트리어드",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "알티지식물성오메가3",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트루엔알티지",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "본아페티유산균",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마데카하이드라",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바스탈취제핑크",
+   "kw": "맑은365프리미엄",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "바스섬유탈취제",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "글루코사민추천",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호주글루코사민",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "뉴질랜드녹색홍합",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유황MSM",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어깨에",
-   "vol": 35,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "종근당비타민C메가도스",
+   "kw": "MYHABIT",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "하이뮨비타민",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한국야쿠르트비타민",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "코페르솔루션크림",
+   "kw": "마이해빗철분",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "코페르카밍오션선크림",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "코페르팩투폼",
+   "kw": "GOODING",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "코페르프리미엄브릴리언트미스트",
+   "kw": "쏘펠샴푸",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "코페르핸드밤",
+   "kw": "다슈탈모샴푸",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "럭셔리샴푸",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백탁없는무기자차선크림",
+   "kw": "인큐스아로마헤어팩",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자외선크림",
+   "kw": "헤나트리트먼트",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노케스템",
+   "kw": "맥주샴푸추천",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창원세차용품",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "GLOSSBRO",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "푸어보이즈",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어세차",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이문원샴푸",
    "vol": 30,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "트루엔키즈수분보급젤리",
+   "kw": "대구사이드스텝",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "물많이마시기",
+   "kw": "오토너드",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스포츠영양제",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장용성RTG오메가3",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "VIVOMEGA",
+   "kw": "인비파랑",
    "vol": 30,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마데카커버크림",
+   "kw": "블루믹스고체왁스",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차세차브러쉬",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기미미스트",
+   "kw": "마프라판타지",
    "vol": 30,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "UV핸드크림",
+   "kw": "필터렉스",
    "vol": 30,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "SIC가공",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "링티판매처",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임산부입덧완화",
+   "kw": "광동제약맑은365",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "운동선수음료",
+   "kw": "고양이사료게더",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "닥터린RTG오메가3",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "브이알티지오메가3",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "송중기오메가",
+   "kw": "광동제약365",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오메가트리플",
+   "kw": "광동직영",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광동맑은365프리미엄",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "조인성오메가",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "알티지오메가3초임계",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3제품",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "붓기티백",
+   "kw": "불가리스샴푸",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "식물성RTG오메가3추천",
+   "kw": "마이해빗프리미엄효소습관",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오메가3닥터",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "본아페티기관지",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미키라",
-   "vol": 25,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "센텔리안24마데카크림액티브스킨포뮬러50ML",
+   "kw": "나인밀라맥주효모",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "센텔리안MD크림",
+   "kw": "나인밀라애플민트",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "동국크림",
+   "kw": "마이해빗츄어블",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "테카크림",
+   "kw": "마이해빗츄어블철분",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "설와송",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세큐어샴푸",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "바스탈취",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바스배수구클리너",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BAS세탁조클리너",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BAS탈취제공구",
+   "kw": "다모애샴푸",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "디럭스킨",
-   "vol": 25,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "MSM조인트케어",
+   "kw": "다슈한방샴푸",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "엠에스엠골드",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "롱검",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "먹는피부영양제",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "알레르기유산균",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "뉴칸멀티비타민",
+   "kw": "일진케론",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "뉴칸이뮨",
+   "kw": "아이몬염색",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독일산맥주효모샴푸",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "솔랩앰플",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보닉스블렌드물왁스",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "가든오브라이프비타민코드",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고려은단골드비타민C1000",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "코페르멀티밤",
+   "kw": "보닉스물왁스",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "선비비크림",
+   "kw": "FLEXPXE80",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "풍성교나라모",
+   "kw": "세차카드목걸이",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세차할인",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오토바이휠세척",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인스타피니쉬",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "코코타올",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천안세차용품",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "광주엔공구",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광주세차용품점",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동탄세차용품",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부천세차용품",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "서울세차용품",
    "vol": 25,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "LEZE",
+   "kw": "라보코스메티카3PH",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "피토덤",
+   "kw": "맥과이어물왁스",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차청소용품세트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어세차용품",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세차브랜드",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "303패브릭",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "시골농부사과즙",
+   "kw": "카니발세차용품",
    "vol": 25,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "레스퀵라이트발포정",
+   "kw": "탈모완화기능성샴푸",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "비타민쇼핑몰",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "식물성오메가3RTG",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이온에너지",
-   "vol": 20,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "OHOB",
+   "kw": "막탈라",
    "vol": 20,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "MSM제품",
+   "kw": "글로스브로펑키블랙",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "비타민C100%",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "칼날제작",
+   "kw": "스토너인비져블글래스",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "올댓애플",
+   "kw": "듀라코트",
    "vol": 20,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마시는링티",
+   "kw": "케미컬소분용기",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "셀프세차장용품",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "불스원샷세차용품",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "누잠방수커버",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "링티선물세트",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "여름음료",
+   "kw": "숙면디퓨저",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "운동할때음료",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수분충전음료",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다이어트아이스티",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피키스틱이온",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "식물성알티지",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "DHA오메가",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "RTG식물성오메가3",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "식물성오메가3비타민D",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "식물성오메가3초임계",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3선물세트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터린식물성알티지오메가3",
+   "kw": "게더캣사료",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "트루엔RTG오메가3",
+   "kw": "고양이게더사료",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "식물성영양제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스포츠비타민",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EPA오메가",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "녹십자알티지오메가3",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초임계RTG오메가",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초임계알티지오메가3루테인",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "알티지오메가3루테인",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "알티지오메가3복용법",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "본아페티브레스캡스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "본아페티아이즈캡스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "브레스캡스",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "마데카릴리프크림",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동국아이크림",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BAS섬유탈취제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바스변기세정제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BAS에어컨탈취제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BAS바스탈취제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BAS변기세정제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바스건조기시트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BAS싱크대클리너",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강아지치매보조제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노령견종합영양제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노묘변비",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "관절쌩쌩",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보스웰리아글루코사민",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "뉴질랜드글루코사민",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엔아세틸글루코사민",
+   "kw": "GATHER사료",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "바이탈솔루션엠에스엠",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무릎관절MSM",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "구루코사민",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "라이프스팬초록홍합",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "천연MSM",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "관절통쾌",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피부케어유산균",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피부면역력유산균",
+   "kw": "게더시니어",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "뉴칸비타민",
+   "kw": "광동마트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광동제약건강기능식품",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광동맑은",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피부에좋은즙",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "면역365",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광동365면역보감",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광클럽",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "안국브이팩",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "MEGAMEN",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유니시티사업",
+   "kw": "광동제약공식몰",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유니시티정수기",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "코어팩",
+   "kw": "스텔라앤츄이스캔",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "멀티비타민이지",
+   "kw": "베노틴",
    "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "녹즙정기배송",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "코페르때꾹물",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "광택미스트",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "화이트닝미스트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화이트닝핸드크림",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "손티에이징",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "병원선크림",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무기자차선로션",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "리놀레카",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "올댓프룻",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "PITTORESCO",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "빠이요수분크림",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "그뤼너씨",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "엠마지",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "에이엔화장품",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "링거워터",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "링티구매",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "링티오프라인",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "링티할인",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "링티선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "NCS식물성알티지오메가3",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "NCS오메가3",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "트루엔수분젤리",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여름아이템",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "티백구매",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "과일워터",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장내미생물분석",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타먹는음료수",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인지질오메가3",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "피키스틱",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "식물성RTG",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가3식물성RTG",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "퓨어알티지DHA오메가3",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "술루션",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "술타민",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "주당백",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "주당화",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "식물성RTG오메가",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조류오메가3",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "뉴트리원식물성오메가3",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "미세조류오메가",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "녹십자오메가",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "내츄럴오메가",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "알티지오메가추천",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "출근환",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "D사오메가3",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "이피에이",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다이어트보조음료",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "알티지오메가3성분",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "덤에이플러스",
-   "vol": 10,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "본아페티하트캡스",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이즈캡스",
-   "vol": 10,
+   "kw": "닥터딘샴푸",
+   "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "동국마데카크림6",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "동국마데카크림7",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "동국제약마데카크림6",
-   "vol": 10,
+   "kw": "마이해빗효소습관",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "동국제약마데카크림7",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "마데카프라임가격",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "동국제약센텔리안크림",
-   "vol": 10,
+   "kw": "나인밀라탈모샴푸",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "BAS탈취제핑크",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "BAS초강력탈취제",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "바스초강력탈취제",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "BAS배수구클리너",
-   "vol": 10,
+   "kw": "A9샴푸",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바스탈취제오렌지",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바스탈취제고체",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BAS탈취제미니",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에몬트",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "타마플렉스컴플리트",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "관절NAG",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "NAGMSM",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노인성어깨관절염",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "보령초록잎홍합",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "울트라가뿐한관절",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콘도르이친",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "글루코사민콘드로이친EX",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "녹십자웰빙관절연골엔구절초",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수납온",
-   "vol": 10,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "백호젠그린가글",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "래디웰센시티브",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "뉴칸밀크씨슬",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비오틴멀티비타민",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스업윔",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "디엘오랩스",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "코쿠온풍기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": true
-  },
-  {
-   "kw": "메타웰니스",
-   "vol": 10,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "코페르릴렉서",
-   "vol": 10,
+   "kw": "닥터딘",
+   "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "더롬브선크림",
-   "vol": 10,
+   "kw": "벤티탈모샴푸",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "오베핀",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오벨라샴푸",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "자이엘샴푸",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마이가미",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "손에바르는선크림",
-   "vol": 10,
+   "kw": "피토페시아플러스",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "미장원샴푸",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "착한팩토리맥주효모샴푸",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥주발효샴푸",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "튤립핸드크림",
-   "vol": 10,
+   "kw": "체코맥주효모샴푸",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "손주름케어",
-   "vol": 10,
+   "kw": "VONIX",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "보닉스세럼",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "보닉스시너지페인트",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자외선차단기능성화장품",
-   "vol": 10,
+   "kw": "보닉스시너지",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미세먼지차단선크림",
-   "vol": 10,
+   "kw": "디크로닉퀵프로",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자외선차단썬크림",
-   "vol": 10,
+   "kw": "리스타트워시",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "부천모토카워시",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "블랙체리차량용",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바이옴레미디수분선크림",
-   "vol": 10,
+   "kw": "블루믹스마일드",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세헬씨드",
+   "kw": "블루믹스마일드플러스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세척용브러쉬",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수입차세차",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차량용융",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케미컬가이빅마우스",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "콜리845",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "타이어용품",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패드클리너",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "폼랜스통",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블루믹스마일드플러스카샴푸",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "평택세차용품",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포항세차용품",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세알남폼랜스",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "부산세차용품점",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "버스세차용품",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블루믹스왁스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디테일가즈더트락",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어스APC",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인천세차용품점",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오프라인세차용품",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글래스타월",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세차용품세일",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어APC",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어스물왁스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초보세차용품세트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "ISUPIA",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "파이토신재생크림공구",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제노시스암예측",
+   "kw": "AKFRDMS365",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "무설탕사과즙",
+   "kw": "광동건강식품",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "면역보감더프리미엄",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광동제약직영몰",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스펀몰",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "광동공식몰",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "카페음료납품",
+   "kw": "광동상회고객센터",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "맑은365면역보감더프리미엄",
    "vol": 10,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광동제약메모리365",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광동면역보감프리미엄",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "광동면역보감더프리미엄",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광동프리미엄",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "광동맑은365면역보감프리미엄",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광동맑은365면역보감더프리미엄",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "TOUCHSOUL",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "다슈비녹시딜샴푸",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "프리미엄효소습관",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마이하빗",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "효소습관",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마이해빗츄어블철분제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터유지샴푸",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "딥톡엔",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "맥푸",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모식스탈모샴푸",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "불가리스탈모샴푸",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "비어맥",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오스모타이트",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "미용실트린트먼트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "맥주효모탈모샴푸추천",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피토스몰",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "미친맥주효모샴푸",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "솔랩헤어토닉",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "친스킨맥주효모샴푸",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세차장세차용품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "ZYMOL",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기온비닐클리너",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "대구자동차매트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대구핸들커버",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마일드프리워시",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어스카샴푸",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥과이어퀵왁스",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "발수유리세정제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "왁스버핑타올",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동세차기세제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동세차브러쉬",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "G80세차용품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파주세차용품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디테일링썸오토압축분무기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BLUEMIX",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "세차사이트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차용품전문",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블루믹스마스터샤인",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일산세차용품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "터미널보호제",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차왁스타월",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차청소세트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인천세차용품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바인더타이어",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "세차용품구매",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세차쇼핑몰",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라보3PH",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "세린이세트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초보셀프세차",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헬샤인하데스",
+   "vol": 10,
+   "comp": "중간",
    "hint": false
   }
  ]
