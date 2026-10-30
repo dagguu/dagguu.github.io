@@ -43,7 +43,7 @@ if any("sold" in x for x in ga):
     d["goldSoldAt"] = _dt.now(_tz(_td(hours=9))).strftime("%H:%M")
 # 골드박스 숙소·레저 티켓(2026-10-30 시온님 "쿠팡 골드박스 숙소나 레저 티켓 특가상품에 매일 같이"): 여행 상품은 /vp/products 주소로는 수익 링크가 안 만들어져서
 # 쿠팡트래블 상품 주소로 goldTravel 에 따로 담는다 → coupang_api.py deeplink 가 u 를 채우고, 화면 여행 특가 카드(app.js tdList)가 함께 보여 준다.
-TRAVEL = re.compile(r"리조트|호텔|펜션|풀빌라|글램핑|빌라|스테이|료칸|숙박|객실|1박|입장권|이용권|자유이용|티켓|워터파크|아쿠아리움|테마파크|월드|랜드|스파|온천|찜질")
+TRAVEL = re.compile(r"리조트|호텔|펜션|풀빌라|글램핑|빌라|스테이|료칸|숙박|객실|1박(?!스)|입장권|이용권|자유이용|티켓|워터파크|아쿠아리움|테마파크|월드|랜드|스파|온천|찜질")
 NOT_T = re.compile(r"보호필름|피아노|매트|이불|베개|캐리어|가방|의자|침대|소파")
 oldt = {x.get("cpUrl"): x.get("u") for x in d.get("goldTravel") or [] if x.get("u")}
 def tclean(n):   # 판매자 문구(★오늘만…★·무료·후기·찬스 등)는 빼고 숙소·시설 이름만
