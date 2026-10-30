@@ -77,8 +77,10 @@ def main():
         if hit:
             st["hit"] = hit.get("itemName")
             sp, op = int(hit.get("salePrice") or 0), int(hit.get("originalPrice") or 0)
-            try: ml = (M.post("/v1/mylink", {"targetUrl": hit["productUrl"]}, 0.3) or {}).get("mylink")
-            except Exception as ex: ml = None; st["err"] = "mylink " + str(ex)[:120]
+            ml = (old.get(slug) or {}).get("u") if (old.get(slug) or {}).get("mname") == hit.get("itemName") else None   # 같은 숙소면 예전 링크 그대로
+            if not ml:
+              try: ml = (M.post("/v1/mylink", {"targetUrl": hit["productUrl"]}, 0.3) or {}).get("mylink")
+              except Exception as ex: ml = None; st["err"] = "mylink " + str(ex)[:120]
             if ml:
                 out[slug] = {"mname": hit.get("itemName"), "price": sp, "orig": op, "rate": round((op - sp) * 100 / op) if op > sp else 0,
                              "u": ml, "checkIn": cin, "at": today, "score": hit.get("reviewScore"), "reviews": hit.get("reviewCount")}
