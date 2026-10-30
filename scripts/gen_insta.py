@@ -99,7 +99,7 @@ def build(q):
 <div class='wm'>{e(q.get('handle','@dagguu.trip'))}</div><div class='box'><div class='tg'>{e(q.get('tags',''))}</div>
 <div class='t'><div class='ln'>{e(q['l1'])}</div><div class='ln' style='color:{col}'>{e(q['l2'])}</div></div></div></div>"""))
     # 2~3장: 사진 + 우상단 @dagguu.trip 만 (글씨 없음, 시온님 요청 2026-10-15)
-    for p in ph[1:3]:
+    for p in ph[1:5]:
         slides.append(page(f"""<div class='s' style="background-image:url({p})"><div class='wm'>{e(q.get('handle','@dagguu.trip'))}</div></div>"""))
     return slides
 
