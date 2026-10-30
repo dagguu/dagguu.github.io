@@ -1,0 +1,49 @@
+{
+ "at": "2026-10-30 09:43",
+ "checkIn": "2026-11-07",
+ "stays": {
+  "busan-matie-harbor": {
+   "name": "마티에 부산하버시티",
+   "city": "부산",
+   "auto": [],
+   "pages": 3,
+   "region": "부산"
+  },
+  "gangneung-takenomori": {
+   "name": "강릉 다케노모리글램핑&료칸",
+   "city": "강릉",
+   "auto": [],
+   "pages": 5,
+   "region": "강릉",
+   "hit": "강릉 다케노모리글램핑&료칸"
+  },
+  "gapyeong-glamhavana": {
+   "name": "글램하바나",
+   "city": "가평",
+   "auto": [],
+   "pages": 1,
+   "region": "가평",
+   "hit": "가평 글램하바나"
+  },
+  "gyeongju-snb-poolvilla": {
+   "name": "경주 에스앤비풀빌라",
+   "city": "경주",
+   "auto": [],
+   "pages": 1,
+   "region": "경주"
+  },
+  "pohang-daytona": {
+   "name": "데이토나풀빌라",
+   "city": "포항",
+   "auto": [],
+   "pages": 1,
+   "region": "포항"
+  },
+  "seonjae-seonjaedam": {
+   "name": "선재담 글램핑&카라반 리조트",
+   "city": "옹진",
+   "auto": [],
+   "pages": 0
+  }
+ }
+}
