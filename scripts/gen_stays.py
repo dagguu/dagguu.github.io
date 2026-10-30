@@ -264,6 +264,15 @@ if __name__ == "__main__":
         PP = next((Q for Q in allP if Q["slug"] == x["slug"]), {})
         if m.get("price") and m.get("u"): opts.append((m["price"], m.get("rate", 0) if m.get("orig", 0) > m["price"] else 0, "마이리얼트립", m.get("checkIn", ""), m["u"]))
         if c.get("price") and PP and link_of(PP): opts.append((c["price"], round((c["orig"] - c["price"]) * 100 / c["orig"]) if c.get("orig", 0) > c["price"] else 0, "쿠팡트래블", c.get("checkIn", ""), link_of(PP)))
+        offs = []   # 피드 가격 카드 → 누르면 사이트별 목록(2026-10-30 시온님 "여기어때/쿠팡/마이리얼트립 나오게")
+        for o in sorted(opts, key=lambda o: (-(o[1] >= 3), o[0])):
+            cd = ""
+            if o[3]:
+                dd = datetime.date.fromisoformat(o[3]); cd = f"{dd.month}/{dd.day}({WD[dd.weekday()]}) 1박 조회 기준"
+            offs.append({"src": o[2], "price": o[0], "rate": o[1] if o[1] >= 3 else 0, "cond": cd, "u": o[4]})
+        yg = ((d.get("links") or {}).get("stay-" + x["slug"]) or {}).get("yeogi")
+        if yg: offs.append({"src": "여기어때", "price": 0, "rate": 0, "cond": "여기어때에서 이 숙소 보기", "u": yg})
+        if offs: r["offers"] = offs
         if opts:
             pr, rt, src, ci, pu = sorted(opts, key=lambda o: (-(o[1] >= 3), o[0]))[0]
             if ci:

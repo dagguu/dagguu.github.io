@@ -1101,20 +1101,47 @@ function rfAds(){
   var M=(Array.isArray(seed.mrtDeals)?seed.mrtDeals:[]).filter(function(x){ return x.dom&&safeUrl(x.u)&&safeUrl(x.img)&&(x.rate||0)>=15; }).sort(function(a,b){ return (b.rate||0)-(a.rate||0); }).slice(0,20);
   var rot=function(L){ return L.length?L.slice(day%L.length).concat(L.slice(0,day%L.length)):L; }; M=rot(M);
   var out=[], i=0;
-  while(i<Math.max(G.length,M.length)){ if(G[i]) out.push({k:"gold",x:G[i]}); if(M[i]) out.push({k:"mrt",x:M[i]}); i++; }
+  var G3=[]; for(var g=0;g+3<=G.length;g+=3) G3.push(G.slice(g,g+3));
+  while(i<Math.max(G3.length,M.length)){ if(G3[i]) out.push({k:"gold3",xs:G3[i]}); if(M[i]) out.push({k:"mrt",x:M[i]}); i++; }
   return out;
 }
 function rfWon(v){ var n=typeof v==="number"?v:parseInt(String(v||"").replace(/[^0-9]/g,""),10); return n?n.toLocaleString("ko-KR")+"원":""; }
 function rfReelSlide(x,i){
   var dl=x.campEnd?Math.round((Date.parse(x.campEnd+"T00:00:00+09:00")-Date.parse(ymd(today())+"T00:00:00+09:00"))/864e5):-1, ed=x.campEnd?new Date(x.campEnd+"T00:00:00+09:00"):null;
   var badge=dl>=0?(ed.getMonth()+1)+'/'+ed.getDate()+'('+"일월화수목금토"[ed.getDay()]+')까지 체험단 모집':'감성숙소 추천 ['+String(x.no||"").padStart(3,"0")+']';
-  var pu=safeUrl(x.pu), card=x.price?'<a class="rfcard" '+(pu?ext(pu)+' data-rfgo="'+esc(x.slug)+'"':'href="/m/'+esc(x.slug)+'.html"')+'><img src="'+esc(x.img)+'" alt="" loading="lazy"><span><b>'+esc(x.name)+'</b><em>'+(x.rate?'<i>'+x.rate+'%</i>':'')+rfWon(x.price)+'~</em><small>'+esc(x.src||"")+' 조회 기준 ↗</small></span></a>':'';
+  var pu=safeUrl(x.pu), offs=(x.offers||[]).filter(function(o){ return safeUrl(o.u); }), card;
+  if(offs.length>=2){
+    var o0=offs[0];
+    card='<button class="rfcard rfstack" data-rfoff="'+i+'"><img src="'+esc(x.img)+'" alt="" loading="lazy"><span><b>'+esc(x.name)+'</b><em>'+(o0.rate?'<i>'+o0.rate+'%</i>':'')+(o0.price?rfWon(o0.price)+'~':'가격 보기')+'</em><small>'+esc(o0.src)+' 외 '+(offs.length-1)+'곳 · 눌러서 비교해 보세요</small></span><span class="rfarr" aria-hidden="true">›</span></button>';
+  } else card=x.price?'<a class="rfcard" '+(pu?ext(pu)+' data-rfgo="'+esc(x.slug)+'"':'href="/m/'+esc(x.slug)+'.html"')+'><img src="'+esc(x.img)+'" alt="" loading="lazy"><span><b>'+esc(x.name)+'</b><em>'+(x.rate?'<i>'+x.rate+'%</i>':'')+rfWon(x.price)+'~</em><small>'+esc(x.src||"")+' 조회 기준 ↗</small></span></a>':'';
   return '<section class="rfs" data-i="'+i+'"><video playsinline loop preload="none" poster="'+esc(x.img)+'" data-src="'+esc(x.v)+'"></video><div class="rfshade"></div>'+
     '<div class="rfbot"><em class="rfbadge'+(dl>=0?' hot':'')+'">'+esc(badge)+'</em>'+
     '<div class="rfti"><a href="/m/'+esc(x.slug)+'.html" data-rlgo="'+esc(x.slug)+'"><b>'+esc(x.name)+' ›</b><small>'+esc((x.h||[]).join(" "))+'</small></a><button class="rfsh" data-rfshare="'+esc(x.slug)+'" aria-label="공유하기"><svg viewBox="0 0 24 24" width="18" height="18"><path d="'+I.share+'" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button></div>'+
     '<div class="rfpick"><img src="/icons/icon-192.png" alt=""><span>다꾸 님이 추천해요!</span><em>다꾸 PICK ✓</em></div>'+card+'</div><div class="rfbar"><i></i></div></section>';
 }
+function rfGold3(xs){
+  var img=String(xs[0].img).replace("492x492ex","1000x1000ex");
+  return '<section class="rfs rfad rfg3"><div class="rfadbg" style="background-image:url(\''+esc(img)+'\')"></div><div class="rfadin"><small class="rfadk">쿠팡 골드박스 · 내일 오전 7시까지 특가</small><div class="rfg3l">'+
+    xs.map(function(x){ var r=parseInt(x.rate,10)||0;
+      return '<div class="rfg3i"><img src="'+esc(String(x.img).replace("492x492ex","492x492ex"))+'" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="rfg3t"><b>'+esc(x.name)+'</b><em>'+(r?'<i>'+r+'%</i>':'')+rfWon(x.price)+'</em>'+(x.sold?'<span class="rfsold"><span style="width:'+Math.min(100,x.sold)+'%"></span><em>'+x.sold+'% 판매됨</em></span>':'')+'<a class="rfg3go" '+ext(safeUrl(x.u))+' data-rfad="gold">보러가기 ↗</a></span></div>'; }).join("")+
+    '</div><p class="rfadnote">가격·판매율은 수집 시점 기준이라 쿠팡에서 다를 수 있어요</p></div><em class="rfadtag">AD</em></section>';
+}
+function rfOffPop(d,x){
+  var offs=(x.offers||[]).filter(function(o){ return safeUrl(o.u); }); if(!offs.length) return;
+  var old=d.querySelector(".rfpop"); if(old) old.remove();
+  var p=document.createElement("div"); p.className="rfpop";
+  p.innerHTML='<div class="rfpopc" role="dialog" aria-label="가격 비교"><div class="rfpoph"><b>'+esc(x.name)+'</b><button class="rfpopx" aria-label="닫기">✕</button></div>'+
+    offs.map(function(o){ var k=o.src==="쿠팡트래블"?"coupang":o.src==="마이리얼트립"?"mrt":"yeogi";
+      return '<div class="rfoff"><img src="'+esc(x.img)+'" alt="" loading="lazy"><span class="rfoffi"><small>'+esc(o.src)+'</small>'+(o.price?'<em>'+(o.rate?'<i>'+o.rate+'%</i>':'')+rfWon(o.price)+'~</em>':'<em class="rfoffy">숙소 보기</em>')+(o.cond?'<small class="rfoffc">'+esc(o.cond)+'</small>':'')+'</span><a class="rfoffgo" '+ext(safeUrl(o.u))+' data-rfok="'+k+'">보러가기 ↗</a></div>'; }).join("")+
+    '<p class="rfpopn">가격은 조회 시점 기준이라 날짜·객실마다 달라요</p></div>';
+  d.appendChild(p);
+  p.addEventListener("click",function(e){
+    var g=e.target.closest("[data-rfok]"); if(g){ try{ if(window.gtag) gtag("event",g.dataset.rfok==="coupang"?"coupang_click":g.dataset.rfok==="mrt"?"mrt_click":"yeogi_click",{place:"reel_feed_offers",item_name:x.name}); }catch(_){} return; }
+    if(e.target===p||e.target.closest(".rfpopx")) p.remove();
+  });
+}
 function rfAdSlide(a){
+  if(a.k==="gold3") return rfGold3(a.xs);
   var x=a.x, g=a.k==="gold", info=seed.mrtInfo||{}, ci=info.checkIn?new Date(info.checkIn+"T00:00:00+09:00"):null;
   var top=g?'쿠팡 골드박스 · 내일 오전 7시까지 특가':'마이리얼트립 국내 숙소 할인'+(ci?' · '+(ci.getMonth()+1)+'/'+ci.getDate()+'('+"일월화수목금토"[ci.getDay()]+') 1박':'');
   var img=g?String(x.img).replace("492x492ex","1000x1000ex"):x.img, rate=parseInt(x.rate,10)||0;
@@ -1165,6 +1192,7 @@ function reelOpen(i){
     var sh=e.target.closest("[data-rfshare]"); if(sh){ e.preventDefault(); var u=location.origin+"/m/"+sh.dataset.rfshare+".html", t=(all.filter(function(x){ return x.slug===sh.dataset.rfshare; })[0]||{}).name||"다꾸 감성숙소";
       if(navigator.share) navigator.share({title:t,url:u}).catch(function(){}); else if(navigator.clipboard){ navigator.clipboard.writeText(u); toast&&toast("링크를 복사했어요"); } try{ if(window.gtag) gtag("event","share",{place:"reel_feed"}); }catch(_){} return; }
     var ad=e.target.closest("[data-rfad]"); if(ad){ try{ if(window.gtag) gtag("event",ad.dataset.rfad==="gold"?"coupang_click":"mrt_click",{place:"reel_feed_ad"}); }catch(_){} return; }
+    var of=e.target.closest("[data-rfoff]"); if(of){ e.preventDefault(); rfOffPop(d,all[+of.dataset.rfoff]); try{ if(window.gtag) gtag("event","reel_price_click",{slug:(all[+of.dataset.rfoff]||{}).slug}); }catch(_){} return; }
     var go=e.target.closest("[data-rfgo]"); if(go){ try{ if(window.gtag) gtag("event","reel_price_click",{slug:go.dataset.rfgo}); }catch(_){} return; }
     var v=e.target.closest(".rfs")&&!e.target.closest("a,button")&&e.target.closest(".rfs").querySelector("video"); if(v){ if(v.paused) v.play().catch(function(){}); else v.pause(); }
   });
