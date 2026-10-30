@@ -1,5 +1,5 @@
 {
- "at": "2026-10-30T09:39:31.764647",
+ "at": "2026-10-30T09:46:58.162349",
  "name": "sancheong-andforet",
  "font": "Jalnan",
  "fontInfo": {
@@ -10,87 +10,88 @@
   "family": "Jalnan",
   "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
  },
- "dur": 24.48,
- "cuts": 19,
+ "gapCut": 3.05,
+ "dur": 20.35,
+ "cuts": 15,
  "plan": [
   {
    "video": true,
    "t": "사진만 보면 북유럽 숲속 같죠?",
    "img": "ai:1",
    "start": 0.0,
-   "end": 2.55,
-   "cuts": 2
+   "end": 1.72,
+   "cuts": 1
   },
   {
    "video": true,
    "t": "산청 지리산 아래 생긴 신상 글램핑이에요.",
    "img": "ai:2",
-   "start": 2.55,
-   "end": 5.15,
+   "start": 1.72,
+   "end": 4.14,
    "cuts": 2
   },
   {
    "video": true,
    "t": "객실마다 바비큐 자리가 따로 있고,",
    "img": "ai:3",
-   "start": 5.15,
-   "end": 7.02,
+   "start": 4.14,
+   "end": 5.91,
    "cuts": 1
   },
   {
    "video": true,
    "t": "통창 너머로는 산이 꽉 차요.",
    "img": "ai:4",
-   "start": 7.02,
-   "end": 9.66,
-   "cuts": 2
+   "start": 5.91,
+   "end": 7.53,
+   "cuts": 1
   },
   {
    "video": true,
    "t": "삼각 창 앞에 앉아 숲 보며 쉬고,",
    "img": "ai:5",
-   "start": 9.66,
-   "end": 11.68,
-   "cuts": 2
+   "start": 7.53,
+   "end": 9.42,
+   "cuts": 1
   },
   {
    "video": true,
    "t": "전 객실이 복층이라",
    "img": "ai:6",
-   "start": 11.68,
-   "end": 12.72,
+   "start": 9.42,
+   "end": 10.54,
    "cuts": 1
   },
   {
    "video": true,
    "t": "넓게 쓸 수 있거든요.",
    "img": "ai:7",
-   "start": 12.72,
-   "end": 14.4,
+   "start": 10.54,
+   "end": 11.74,
    "cuts": 1
   },
   {
    "video": true,
    "t": "거기다 객실마다 작은 수영장이 있는데,",
    "img": "ai:8",
-   "start": 14.4,
-   "end": 16.86,
+   "start": 11.74,
+   "end": 13.83,
    "cuts": 2
   },
   {
    "video": true,
    "t": "따뜻한 물로 바꿀 수 있어서 밖은 추워도 물속은 따뜻해요.",
    "img": "ai:9",
-   "start": 16.86,
-   "end": 20.61,
-   "cuts": 3
+   "start": 13.83,
+   "end": 16.8,
+   "cuts": 2
   },
   {
    "video": true,
    "t": "멀리 안 가도 숲속에서 조용히 쉬기 좋은 곳이에요.",
    "img": "ai:10",
-   "start": 20.61,
-   "end": 24.48,
+   "start": 16.8,
+   "end": 20.35,
    "cuts": 3
   }
  ],
