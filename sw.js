@@ -1,11 +1,12 @@
 /* 다꾸 체험단 모음 - 오프라인/빠른 실행용 서비스워커 */
-const V = "dakku-v360";
+const V = "dakku-v361";
 const CORE = ["./", "index.html", "style.css", "simple.css", "app.js", "manifest.webmanifest", "icons/icon-192.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(V).then(c => c.addAll(CORE.map(p => new Request(p, { cache: "reload" })))).then(() => self.skipWaiting())); });
 self.addEventListener("activate", e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener("fetch", e => {
   const u = new URL(e.request.url);
   if (e.request.method !== "GET" || u.origin !== location.origin) return;
+  if (u.pathname.startsWith("/v/") || u.pathname.endsWith(".mp4")) return;   // 릴스 영상은 브라우저가 직접(부분 요청·206 은 캐시하지 않음)
   // 숙소 사진: 캐시 우선
   if (u.pathname.includes("/images/") || u.pathname.includes("/icons/")) {
     e.respondWith(caches.match(e.request).then(r => r || fetch(e.request).then(res => { const cp = res.clone(); caches.open(V).then(c => c.put(e.request, cp)); return res; })));

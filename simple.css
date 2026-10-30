@@ -1185,3 +1185,19 @@ input,select,textarea{font-size:16px!important}
 
 /* 여행 제휴 배너(2026-10-30) */
 .tvads .tvad{margin:0 16px 12px;overflow:hidden;border-radius:12px;display:flex;justify-content:center}.tvads .tvtrip{display:block}.tvads .tvtrip iframe{transform-origin:0 0;border:0;display:block}.tvads .tvad iframe{border:0;max-width:none}
+/* 여행 탭 릴스 카드(2026-10-30, 마이리얼트립 지금특가 카드 느낌) */
+.rlsec{margin:4px 0 22px}.rlhd{margin:0 0 12px}.rlhd h2{font-size:19px;font-weight:800;margin:0 0 3px;letter-spacing:-.3px}.rlhd small{font-size:13px;color:#8a8a99}
+.rlg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 10px}@media(min-width:720px){.rlg{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.rlc{min-width:0}.rlv{position:relative;display:block;width:100%;aspect-ratio:9/14;border:0;padding:0;border-radius:12px;overflow:hidden;background:#1b1a22;cursor:pointer}
+.rlv video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.rlb{position:absolute;left:8px;top:8px;background:rgba(20,20,26,.78);color:#fff;font-style:normal;font-size:11px;font-weight:700;padding:4px 7px;border-radius:6px;letter-spacing:-.2px;max-width:calc(100% - 16px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.rlb.hot{background:#e8344e}
+.rlpk{position:absolute;left:8px;bottom:8px;background:rgba(255,255,255,.92);color:#5b2bb5;font-size:11px;font-weight:800;padding:4px 8px;border-radius:999px}
+.rlpl{position:absolute;right:8px;bottom:8px;width:28px;height:28px;border-radius:50%;background:rgba(0,0,0,.45);color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center}
+.rlt{display:block;padding:9px 2px 0;color:inherit;text-decoration:none}.rlt b{display:block;font-size:14.5px;font-weight:800;line-height:1.35;letter-spacing:-.3px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.rlt small{display:block;font-size:12px;color:#2f6fe4;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rlp{display:flex;align-items:baseline;gap:4px;margin-top:6px}.rlp em{font-style:normal;color:#ff3b4f;font-weight:800;font-size:15px}.rlp b{font-size:15px;font-weight:800;display:inline}
+.rlsrc{display:block;font-size:10.5px;color:#a0a0ad;margin-top:2px}.rla{display:block;font-size:11.5px;color:#8a8a99;margin-top:4px}
+.rlfs{position:fixed;inset:0;z-index:9999;background:#000;display:flex;align-items:center;justify-content:center}.rlfs video{width:100%;height:100%;max-width:560px;object-fit:contain;background:#000}
+.rlx{position:absolute;top:calc(12px + env(safe-area-inset-top));right:14px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.18);color:#fff;font-size:18px;cursor:pointer}
+.rlgo{position:absolute;left:14px;right:14px;bottom:calc(64px + env(safe-area-inset-bottom));max-width:532px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;background:rgba(255,255,255,.95);border-radius:14px;padding:11px 14px;color:#16151c;text-decoration:none}
+.rlgo span{min-width:0}.rlgo small{display:block;font-size:11px;color:#8a8a99}.rlgo b{display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.rlgo em{font-style:normal;flex:none;background:#7a3fd0;color:#fff;font-size:13px;font-weight:700;padding:8px 12px;border-radius:10px}

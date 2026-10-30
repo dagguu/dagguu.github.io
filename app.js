@@ -144,12 +144,13 @@ var I={
   quiz:"M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17.5h.01M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z",
   send:"M21 3 10.2 13.8M21 3l-6.6 18-4.2-7.2L3 9.6Z",
   wheel:"M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 0v9l6.4 6.4M12 12 3.5 9",
-  map:"M9 4 3.5 6v14L9 18l6 2 5.5-2V4L15 6 9 4Zm0 0v14m6-12v14"
+  map:"M9 4 3.5 6v14L9 18l6 2 5.5-2V4L15 6 9 4Zm0 0v14m6-12v14",
+  trip:"M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M5 7h14a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1ZM9 7v12M15 7v12"
 };
 
 /* ---------- 셸 ---------- */
 var app=document.getElementById("app");
-var TABS=[["home","홈",I.home],["list","체험단",I.ticket],["map","지도",I.map],["shop","공구",I.bag],["deals","특가",I.gift]];
+var TABS=[["home","홈",I.home],["list","체험단",I.ticket],["map","지도",I.map],["mag","여행",I.trip],["deals","특가",I.gift]];
 /* 사이트 둘로 나누기(2026-10-21 시온님): www.dagguu.com = 다꾸체험단(정보만, 로그인·결제 없음) / partners.dagguu.com = 다이어리뷰(회원·기자단·광고주·수익화 클래스).
    두 사이트가 같은 app.js 를 쓰고, partners 의 index.html 이 window.DK_MODE="partners" 를 켠다. 한쪽에 없는 화면 주소로 들어오면 다른 사이트로 넘긴다. */
 var PART_LIVE=true; /* partners.dagguu.com 이 열리면 true 로 바꾼다(그 전엔 www 에서 로그인·교육·광고주가 그대로 동작) */
@@ -1049,10 +1050,11 @@ function eventView(){
 /* 체험단 가이드 글(g/, gen_share.py 가 g/list.json 생성) — 홈·혜택 탭에 목록 (2026-10-18) */
 var GUIDES=null;
 /* 다꾸 매거진(2026-10-20 시온님 "게시판 볼 곳 하나"): 체험단 가이드(g/list.json)와 추천 모음(p/list.json)은 따로 관리하고 #/mag 한 화면에서 탭으로 본다 */
-var PICKS=null, STAYM=null;
+var PICKS=null, STAYM=null, REELS=null;
 function qs0(k){ var m=(location.hash.split("?")[1]||"").match(new RegExp("(?:^|&)"+k+"=([^&]*)")); return m?decodeURIComponent(m[1]):""; }
 function magLoad(cb){
-  var n=0, done=function(){ if(++n===3) cb(); };
+  var n=0, done=function(){ if(++n===4) cb(); };
+  if(REELS) done(); else fetch((BASE||"/")+"m/reels.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ REELS=L||[]; done(); }).catch(function(){ REELS=[]; done(); });
   if(STAYM) done(); else fetch((BASE||"/")+"m/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ STAYM=L||[]; done(); }).catch(function(){ STAYM=[]; done(); });
   if(GUIDES) done(); else fetch((BASE||"/")+"g/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ GUIDES=(L||[]).slice().sort(function(a,b){ return (b.date||"")>(a.date||"")?1:(b.date||"")<(a.date||"")?-1:0; }); done(); }).catch(function(){ GUIDES=[]; done(); });
   if(PICKS) done(); else fetch((BASE||"/")+"p/list.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ PICKS=L||[]; done(); }).catch(function(){ PICKS=[]; done(); });
@@ -1062,13 +1064,50 @@ function mvTag(k){ return '<em class="mvc" data-mv="'+esc(k)+'" hidden></em>'; }
 function guideRow(g){ return '<a class="gdi" href="/g/'+esc(g.slug)+'.html"><b>'+esc(g.t)+'</b><small>'+esc(g.d)+'</small>'+gDate(g.date)+mvTag("g:"+g.slug)+'</a>'; }
 function pickRow(x){ return '<a class="gdi pki" href="/p/'+esc(x.slug)+'.html">'+(safeUrl(x.img)?'<img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<span><b>'+esc(x.h||x.t)+'</b><small>'+esc(x.d)+'</small>'+gDate(x.date)+mvTag("p:"+x.slug)+'</span></a>'; }
 function stayRow(x){ return '<a class="gdi pki smg" href="/m/'+esc(x.slug)+'.html" data-no="'+esc(x.no||"")+'" data-q="'+esc((x.name+" "+x.area+" "+x.t).toLowerCase())+'">'+(x.no?'<i class="sno">'+esc(x.no)+'</i>':'')+(safeUrl(x.img)?'<img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<span><b>'+esc(x.t)+'</b><small>'+esc(x.name)+' · '+esc(x.area)+'</small>'+gDate(x.date)+mvTag("m:"+x.slug)+'</span></a>'; }
+/* 여행 탭 릴스 카드 (2026-10-30 시온님 "내가 만든 릴스를 마이리얼트립 지금특가처럼 넣어줘"): m/reels.json(gen_stays.py) + v/<slug>.mp4.
+   카드 = 세로 영상(화면에 보이면 소리 없이 자동 재생) + 왼쪽 위 배지 + 아래 이름·한 줄·가격(조회 날짜·출처 표시). 영상을 누르면 소리 켜고 크게, 글씨를 누르면 감성숙소 글. */
+function reelsHtml(){
+  if(!REELS||!REELS.length) return "";
+  return '<section class="rlsec"><div class="rlhd"><h2>영상으로 다음 여행을 찾아보세요</h2><small>다꾸가 직접 만든 숙소 소개 영상이에요</small></div><div class="rlg">'+REELS.map(function(x,i){
+    var dl=x.campEnd?Math.round((Date.parse(x.campEnd+"T00:00:00+09:00")-Date.parse(ymd(today())+"T00:00:00+09:00"))/864e5):-1;
+    var badge=dl>=0?'🚨 체험단 모집중 '+(dl===0?'D-DAY':'D-'+dl):'['+String(x.no||"").padStart(3,"0")+']';
+    var pr=x.price?'<span class="rlp">'+(x.rate?'<em>'+x.rate+'%</em>':'')+'<b>'+Number(x.price).toLocaleString("ko-KR")+'원~</b></span><span class="rlsrc">'+esc(x.src||"")+' 조회 기준</span>':'';
+    return '<div class="rlc"><button class="rlv" data-rl="'+i+'" aria-label="'+esc(x.name)+' 영상 크게 보기"><video muted loop playsinline preload="none" poster="'+esc(x.img)+'" data-src="'+esc(x.v)+'"></video><em class="rlb'+(dl>=0?' hot':'')+'">'+esc(badge)+'</em><span class="rlpk">💜 다꾸 PICK</span><span class="rlpl" aria-hidden="true">▶</span></button>'+
+      '<a class="rlt" href="/m/'+esc(x.slug)+'.html" data-rlgo="'+esc(x.slug)+'"><b>'+esc(x.name)+'</b><small>'+esc((x.h||[]).join(" "))+'</small>'+pr+'<span class="rla">'+esc(x.area)+'</span></a></div>';
+  }).join("")+'</div></section>';
+}
+var RLOBS=null;
+function reelsInit(M){
+  if(RLOBS){ RLOBS.disconnect(); RLOBS=null; }
+  var vs=M.querySelectorAll(".rlv video"); if(!vs.length) return;
+  var play=function(v){ if(!v.src) v.src=v.dataset.src; var p=v.play(); if(p&&p.catch) p.catch(function(){}); };
+  if("IntersectionObserver" in window){
+    RLOBS=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting&&e.intersectionRatio>=0.55) play(e.target); else e.target.pause(); }); },{threshold:[0,0.55,1]});
+    [].forEach.call(vs,function(v){ RLOBS.observe(v); });
+  }
+}
+function reelOpen(i){
+  var x=(REELS||[])[i]; if(!x) return;
+  [].forEach.call(document.querySelectorAll(".rlv video"),function(v){ v.pause(); });
+  var d=document.createElement("div"); d.className="rlfs"; d.setAttribute("role","dialog"); d.setAttribute("aria-label",x.name+" 영상");
+  d.innerHTML='<video src="'+esc(x.v)+'" poster="'+esc(x.img)+'" playsinline autoplay controls loop></video><button class="rlx" aria-label="닫기">✕</button><a class="rlgo" href="/m/'+esc(x.slug)+'.html" data-rlgo="'+esc(x.slug)+'"><span><small>'+esc(x.area)+'</small><b>'+esc(x.name)+'</b></span><em>숙소 소개 보기 ›</em></a>';
+  document.body.appendChild(d); document.body.style.overflow="hidden";
+  var v=d.querySelector("video"); v.muted=false; var p=v.play(); if(p&&p.catch) p.catch(function(){ v.muted=true; v.play(); });
+  var close=function(){ v.pause(); d.remove(); document.body.style.overflow=""; };
+  d.querySelector(".rlx").onclick=close; d.addEventListener("click",function(e){ if(e.target===d) close(); });
+  try{ if(window.gtag) gtag("event","reel_play",{item_name:x.name}); }catch(e){}
+}
+document.addEventListener("click",function(e){
+  var b=e.target.closest&&e.target.closest("[data-rl]"); if(b){ e.preventDefault(); reelOpen(+b.dataset.rl); return; }
+  var g=e.target.closest&&e.target.closest("[data-rlgo]"); if(g){ try{ if(window.gtag) gtag("event","reel_open",{slug:g.dataset.rlgo}); }catch(_){} }
+});
 function guideFill(){
   var B=document.querySelectorAll("[data-guides]"), M=document.getElementById("magbody"); if(!B.length&&!M) return;
   magLoad(function(){
     var h=(STAYM.length?'<section class="gdbox"><div class="gdh"><b>국내 감성숙소 추천</b><a href="#/mag?t=s">전체 ›</a></div>'+STAYM.slice(0,3).map(stayRow).join("")+'</section>':"")+(GUIDES.length?'<section class="gdbox"><div class="gdh"><b>체험단 가이드</b><a href="#/mag?t=g">전체 ›</a></div>'+GUIDES.slice(0,3).map(guideRow).join("")+'</section>':"")+
       (PICKS.length?'<section class="gdbox"><div class="gdh"><b>다꾸 추천 모음</b><a href="#/mag?t=p">전체 ›</a></div>'+PICKS.slice(0,3).map(pickRow).join("")+'</section>':"");
     [].forEach.call(B,function(b){ b.innerHTML=h; });
-    if(M){ var L=state.magT==="p"?PICKS:state.magT==="s"?STAYM:GUIDES; M.innerHTML=L.length?(state.magT==="s"?'<div class="stsrch"><input id="stq" type="search" placeholder="번호 또는 숙소 이름·지역 검색 (예: 3, 가평)" autocomplete="off" enterkeyhint="search"></div>':'')+'<div class="maglist">'+L.map(state.magT==="p"?pickRow:state.magT==="s"?stayRow:guideRow).join("")+'</div>'+(state.magT==="s"?'<p class="smgnone" id="stnone" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p>':''):'<div class="empty">곧 새 글이 올라와요</div>';
+    if(M){ var L=state.magT==="p"?PICKS:state.magT==="s"?STAYM:GUIDES; M.innerHTML=(state.magT==="s"?reelsHtml():'')+(L.length?(state.magT==="s"?'<div class="stsrch"><input id="stq" type="search" placeholder="번호 또는 숙소 이름·지역 검색 (예: 3, 가평)" autocomplete="off" enterkeyhint="search"></div>':'')+'<div class="maglist">'+L.map(state.magT==="p"?pickRow:state.magT==="s"?stayRow:guideRow).join("")+'</div>'+(state.magT==="s"?'<p class="smgnone" id="stnone" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p>':''):'<div class="empty">곧 새 글이 올라와요</div>'); if(state.magT==="s") reelsInit(M);
       var sq=document.getElementById("stq"); if(sq){ var run=function(){ var v=sq.value.trim().toLowerCase().replace(/[\[\]]/g,"").replace(/^no\.?\s*/,"").replace(/^#/,""),hit=0; [].forEach.call(M.querySelectorAll(".smg"),function(a){ var ok=!v||(/^\d+$/.test(v)?a.getAttribute("data-no")===String(+v):a.getAttribute("data-q").indexOf(v)>=0); a.style.display=ok?"":"none"; if(ok)hit++; }); document.getElementById("stnone").hidden=!!hit||!v; }; sq.addEventListener("input",run); if(qs0("n")){ sq.value=qs0("n"); run(); } } }
     if(window.dkMagPaint) window.dkMagPaint();
   });

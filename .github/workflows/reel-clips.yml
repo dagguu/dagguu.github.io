@@ -1,0 +1,29 @@
+name: 여행 탭 릴스 미리보기
+on:
+  workflow_run:
+    workflows: ["릴스 만들기 (대본 장면 ↔ 사진)"]
+    types: [completed]
+  schedule:
+    - cron: "10 10 * * *"   # 19:10 KST
+  workflow_dispatch:
+    inputs:
+      all: { description: "1 = 전부 다시 만들기", default: "" }
+permissions: { contents: write }
+concurrency: { group: reel-clips, cancel-in-progress: false }
+jobs:
+  clips:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main, fetch-depth: 0 }
+      - run: |
+          git fetch origin insta
+          command -v ffmpeg >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          python3 scripts/reel_clips.py ${{ github.event.inputs.all == '1' && '--all' || '' }}
+          python3 scripts/gen_stays.py
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add v m index.html
+          if git diff --cached --quiet; then echo "바뀐 것 없음"; exit 0; fi
+          git commit -m "여행 탭 릴스 미리보기 갱신"
+          for i in 1 2 3; do git pull --rebase -X theirs origin main && git push && exit 0; sleep 5; done; exit 1

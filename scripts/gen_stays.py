@@ -253,6 +253,24 @@ if __name__ == "__main__":
     allP = load_all()
     done = [build(P, allP) for P in allP]
     json.dump(done, open(os.path.join(ROOT, "m", "list.json"), "w", encoding="utf-8"), ensure_ascii=False)
+    # 여행 탭 릴스 카드(2026-10-30 시온님 "내가 만든 릴스를 마이리얼트립 지금특가처럼"): v/<slug>.mp4 가 있는 공개 글만 → m/reels.json
+    reels = []
+    for x in done:
+        if not os.path.exists(os.path.join(ROOT, "v", x["slug"] + ".mp4")): continue
+        r = {"slug": x["slug"], "no": x["no"], "name": x["name"], "area": x["area"], "h": x["tl"], "campEnd": x.get("campEnd", ""),
+             "v": "/v/" + x["slug"] + ".mp4", "img": "/v/" + x["slug"] + ".jpg"}
+        m, c = MRT.get(x["slug"]) or {}, CPP.get(x["slug"]) or {}
+        opts = []
+        if m.get("price"): opts.append((m["price"], m.get("rate", 0) if m.get("orig", 0) > m["price"] else 0, "마이리얼트립", m.get("checkIn", "")))
+        if c.get("price"): opts.append((c["price"], round((c["orig"] - c["price"]) * 100 / c["orig"]) if c.get("orig", 0) > c["price"] else 0, "쿠팡트래블", c.get("checkIn", "")))
+        if opts:
+            pr, rt, src, ci = sorted(opts, key=lambda o: (-(o[1] >= 3), o[0]))[0]
+            if ci:
+                dd = datetime.date.fromisoformat(ci); src += f" · {dd.month}/{dd.day}({WD[dd.weekday()]}) 1박"
+            r.update({"price": pr, "rate": rt if rt >= 3 else 0, "src": src})
+        reels.append(r)
+    reels.sort(key=lambda r: -int(r.get("no") or 0))
+    json.dump(reels, open(os.path.join(ROOT, "m", "reels.json"), "w", encoding="utf-8"), ensure_ascii=False)
     lis = "".join(f'<a class="lc" href="/m/{e(x["slug"])}.html" data-no="{e(x["no"])}" data-q="{e((x["name"]+" "+x["area"]+" "+x["t"]).lower())}"><i class="no">{e(x["no"])}</i><span class="lim"><img src="{e(x["img"])}" alt="" loading="lazy" referrerpolicy="no-referrer">{rbadge(x.get("campEnd",""), "rb sm")}</span><span><em>{e(THEME.get(x["theme"], "감성숙소 추천"))} · {e(x["area"])}</em><b>{e(x["t"])}</b><small>{e(x["name"])}</small><em class="mvc" data-mv="m:{e(x["slug"])}" hidden></em></span></a>' for x in done)
     idx = head("국내 감성숙소 추천 · 매일 한 곳씩 | 다꾸체험단", "요즘 인기 있는 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 사진과 함께 소개해요.", SITE + "/m/", done[0]["img"] if done else SITE + "/images/og.png") + \
         f'</head><body><div class="w">{TOP.replace("감성숙소 추천 더 보기 ›", "다꾸 매거진 ›").replace("/m/", "/#/mag?t=s", 1)}<h1 class="ix">국내 감성숙소 추천</h1><p class="lead" style="margin-top:6px">요즘 인기 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 소개해요. 번호나 숙소 이름·지역으로 찾아보세요.</p>{SEARCH}<div class="lst" id="lst">{lis or "<p>곧 첫 글이 올라와요</p>"}</div><p class="nores" id="nores" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p><footer><a href="/">다꾸체험단 홈</a></footer></div>{SEARCH_JS}{DDJS}</body></html>'
