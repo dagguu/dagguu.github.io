@@ -1273,3 +1273,5 @@ input,select,textarea{font-size:16px!important}
 .tdo{font-size:12px;color:#a8a7b3;font-weight:500;margin-left:2px}.tdsec .snt small+small{margin-top:1px}
 
 .magtabs{overflow-x:auto;scrollbar-width:none}.magtabs::-webkit-scrollbar{display:none}.magtabs a{flex:1 0 auto;padding:11px 12px;font-size:14px;white-space:nowrap}
+
+.mcp{display:flex;align-items:center;gap:12px;margin:4px 0 14px;padding:14px 16px;border-radius:14px;background:#eef4ff;border:1px solid #cddcff;color:#16151c;text-decoration:none}.mcp span{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}.mcp small{font-size:12px;color:#2b5cd6;font-weight:700}.mcp b{font-size:15px}.mcp em{font-style:normal;font-size:12px;color:#555;line-height:1.45}.mcp i{flex:none;font-style:normal;font-size:13px;font-weight:800;background:#16151c;color:#fff;border-radius:10px;padding:10px 12px}

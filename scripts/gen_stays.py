@@ -162,6 +162,11 @@ def deal_box(P):
         cond = f'{dd.month}/{dd.day}({WD[dd.weekday()]}) 1박 · 성인 2명'
         pr = f'<em>{m["rate"]}%</em><strong>{m["price"]:,}원</strong><s>{m["orig"]:,}원</s>' if m.get("rate", 0) >= 3 and m.get("orig", 0) > m["price"] else f'<strong>{m["price"]:,}원부터</strong>'
         rows.append(f'<div class="dr"><span class="dl"><small>마이리얼트립 · {cond}</small>{pr}</span><a href="{e(m["u"])}" target="_blank" rel="noopener noreferrer sponsored" id="mrtgo">보러가기</a></div>')
+    mc = d.get("mrtCoupon") or {}
+    if mc.get("u") and (mc.get("until") or "9999") >= TODAY:   # 마이리얼트립 숙박세일 페스타 쿠폰(시온님이 준 링크, 모든 숙소 공용)
+        ud = datetime.date.fromisoformat(mc["until"]) if mc.get("until") else None
+        ut = f' · {ud.month}/{ud.day}까지' if ud else ''
+        rows.append(f'<div class="dr"><span class="dl"><small>마이리얼트립 할인 쿠폰{ut}</small><span>{e(mc.get("t"))}</span></span><a href="{e(mc["u"])}" target="_blank" rel="noopener noreferrer sponsored" id="mrtcp">쿠폰 받기</a></div>')
     c = CPP.get(P["slug"]); cu = link_of(P)
     if c and c.get("price") and cu:   # 쿠팡트래블 같은 날짜 객실표(scripts/stay_cp.json, 브라우저로 읽음)
         dd = datetime.date.fromisoformat(c["checkIn"])
@@ -258,7 +263,7 @@ def build(P, allP):
 {more}
 <footer>다꾸체험단 · 국내 감성숙소 추천 매거진<br><a href="/m/">감성숙소 추천 전체 보기</a> · <a href="/">www.dagguu.com</a></footer>
 </div>{bar}
-<script>document.addEventListener("click",function(ev){{if(!window.gtag)return;var nm={json.dumps(P["name"], ensure_ascii=False)};if(ev.target.closest("#go,#cpgo"))gtag("event","coupang_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#mrtgo"))gtag("event","mrt_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#yeogigo,#yeogicp"))gtag("event","yeogi_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#kakaogo"))gtag("event","kakao_add",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#campgo"))gtag("event","camp_click",{{place:"stay_mag",item_name:nm}});}});</script>{DDJS}{MAPJS if P.get("geo") else ""}
+<script>document.addEventListener("click",function(ev){{if(!window.gtag)return;var nm={json.dumps(P["name"], ensure_ascii=False)};if(ev.target.closest("#go,#cpgo"))gtag("event","coupang_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#mrtgo,#mrtcp"))gtag("event","mrt_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#yeogigo,#yeogicp"))gtag("event","yeogi_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#kakaogo"))gtag("event","kakao_add",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#campgo"))gtag("event","camp_click",{{place:"stay_mag",item_name:nm}});}});</script>{DDJS}{MAPJS if P.get("geo") else ""}
 </body></html>
 '''
     open(os.path.join(ROOT, "m", slug + ".html"), "w", encoding="utf-8").write(out)
