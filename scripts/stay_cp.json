@@ -1,9 +1,54 @@
 {
  "_": "감성숙소 매거진 할인 정보의 쿠팡트래블 가격(2026-10-30 시온님 요청). 내장 브라우저로 /tp/products/{pid}?checkIn=&checkOut=&adultCount=2 객실표를 읽어 매진 아닌 객실 중 가장 낮은 '1박 기준 요금'(세금/봉사료 포함)·기준 인원. orig 는 같은 객실의 일반 요금(반짝특가 등 특가 요금이 따로 보일 때만). 마이리얼트립과 같은 날짜(stay_mrt.json checkIn)로 읽는다.",
- "busan-matie-harbor": {"price": 561000, "base": 2, "room": "De Mer Junior Suite Twin", "checkIn": "2026-11-07", "at": "2026-10-30"},
- "gangneung-takenomori": {"price": 216000, "orig": 240000, "tag": "반짝특가", "base": 2, "room": "B1(신축글램핑)", "checkIn": "2026-11-07", "at": "2026-10-30"},
- "gapyeong-glamhavana": {"price": 329000, "base": 2, "room": "글램 106", "checkIn": "2026-11-07", "at": "2026-10-30"},
- "gyeongju-snb-poolvilla": {"price": 245000, "base": 2, "room": "303호(오션뷰/실내pool)", "checkIn": "2026-11-07", "at": "2026-10-30"},
- "pohang-daytona": {"price": 189000, "base": 2, "room": "디럭스스파 301호", "checkIn": "2026-11-07", "at": "2026-10-30"},
- "seonjae-seonjaedam": {"price": 300000, "base": 2, "room": "펫 글램핑 단층", "checkIn": "2026-11-07", "at": "2026-10-30"}
+ "busan-matie-harbor": {
+  "price": 561000,
+  "base": 2,
+  "room": "De Mer Junior Suite Twin",
+  "checkIn": "2026-11-07",
+  "at": "2026-10-30"
+ },
+ "gangneung-takenomori": {
+  "price": 216000,
+  "orig": 240000,
+  "tag": "반짝특가",
+  "base": 2,
+  "room": "B1(신축글램핑)",
+  "checkIn": "2026-11-07",
+  "at": "2026-10-30"
+ },
+ "gapyeong-glamhavana": {
+  "price": 329000,
+  "base": 2,
+  "room": "글램 106",
+  "checkIn": "2026-11-07",
+  "at": "2026-10-30"
+ },
+ "gyeongju-snb-poolvilla": {
+  "price": 245000,
+  "base": 2,
+  "room": "303호(오션뷰/실내pool)",
+  "checkIn": "2026-11-07",
+  "at": "2026-10-30"
+ },
+ "pohang-daytona": {
+  "price": 189000,
+  "base": 2,
+  "room": "디럭스스파 301호",
+  "checkIn": "2026-11-07",
+  "at": "2026-10-30"
+ },
+ "seonjae-seonjaedam": {
+  "price": 300000,
+  "base": 2,
+  "room": "펫 글램핑 단층",
+  "checkIn": "2026-11-07",
+  "at": "2026-10-30"
+ },
+ "sancheong-andforet": {
+  "price": 390000,
+  "base": 2,
+  "room": "스탠다드+BBQ",
+  "checkIn": "2026-11-07",
+  "at": "2026-10-30"
+ }
 }

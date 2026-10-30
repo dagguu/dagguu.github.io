@@ -300,6 +300,8 @@ if __name__ == "__main__":
                 dd = datetime.date.fromisoformat(o[3]); cd = f"{dd.month}/{dd.day}({WD[dd.weekday()]}) 1박 조회 기준"
             offs.append({"src": o[2], "price": o[0], "rate": o[1] if o[1] >= 3 else 0, "cond": cd, "u": o[4]})
             if o[2] == "마이리얼트립" and BP.get(x["slug"]): offs[-1]["bp"] = 1
+        if not any(o["src"] == "쿠팡트래블" for o in offs) and PP and link_of(PP):
+            offs.append({"src": "쿠팡트래블", "price": 0, "rate": 0, "cond": "쿠팡트래블에서 이 숙소 보기", "u": link_of(PP)})
         yg = ((d.get("links") or {}).get("stay-" + x["slug"]) or {}).get("yeogi") or list_lk(x).get("yeogi")
         if yg: offs.append({"src": "여기어때", "price": 0, "rate": 0, "cond": "여기어때에서 이 숙소 보기", "u": yg})
         yn = ((d.get("links") or {}).get("stay-" + x["slug"]) or {}).get("yanolja") or list_lk(x).get("yanolja")
