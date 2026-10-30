@@ -238,3 +238,6 @@ json 의 type·theme·points·fit·tags 글자로 판단, 여러 개면 시온�
 - kie_scenes.py·kie_video.py 가 모든 영상 프롬프트에 GIMBAL 문장을 자동으로 붙인다. 장면 프롬프트에는 "slider move" 대신 "slow gimbal walk arcing from left to right around …", "gimbal walk forward through the room toward …" 처럼 카메라가 공간 안에서 움직이는 말로 쓴다. 드론 컷도 실제로 날아가며 시차가 생기게.
 - 편집(reel_make.py)에서 영상 컷에 좌우 밀기·줌을 더하지 않는다(지금도 안 함).
 - 2026-10-30 19:58 시온님 "영상에 드론이랑 짐벌 절대 나오게 하지마": Veo 는 프롬프트의 drone·gimbal·crane·slider·smartphone 같은 장비 이름을 화면에 그려 넣는다 → 영상 프롬프트(kie_prompts prompt·tts/carousel vp)에 장비 이름을 쓰지 않는다. "aerial glide forward", "smooth walk-through glide arcing left to right", "slow rise", "push forward" 처럼 움직임만 쓴다. GIMBAL 문장 끝에 "no drones, gimbals, cameras, phones, tripods or any filming equipment appear" 가 붙는다.
+
+## 썸네일 사진 = 사람 나온 장면 (2026-10-30 20:15 시온님 "이제부터 썸네일 이미지는 사람이 나온 장면으로")
+- tts json thumb.img 는 people:true 인 AI 장면(한국 여성 뒷모습·옆모습) 중 숙소가 잘 보이는 컷으로 고른다. 사람 장면이 없으면 그때만 풍경 컷.

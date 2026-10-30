@@ -155,6 +155,21 @@ except Exception: BP = {}
 BP_URL = "https://www.myrealtrip.com/main/best-price"
 try: CPP = json.load(open(os.path.join(ROOT, "scripts", "stay_cp.json"), encoding="utf-8"))
 except Exception: CPP = {}
+# 여기어때·야놀자 가격(2026-10-30 시온님 "야놀자 여기어때 가격 써주고 특가 보러가기로"): 내장 브라우저로 그 숙소 검색 결과(같은 날짜 1박·성인 2)를 읽어 scripts/stay_ota.json {slug:{yeogi|yanolja:{price,checkIn,at}}}
+try: OTA = json.load(open(os.path.join(ROOT, "scripts", "stay_ota.json"), encoding="utf-8"))
+except Exception: OTA = {}
+def ota_row(slug, k, name, url, gid):
+    o = (OTA.get(slug) or {}).get(k) or {}
+    if o.get("price") and o.get("checkIn"):
+        dd = datetime.date.fromisoformat(o["checkIn"])
+        return f'<div class="dr"><span class="dl"><small>{name} · {dd.month}/{dd.day}({WD[dd.weekday()]}) 1박 · 성인 2명</small><strong>{o["price"]:,}원부터</strong></span><a class="yg" href="{e(url)}" target="_blank" rel="noopener noreferrer sponsored" id="{gid}">특가 보러가기</a></div>'
+    return f'<div class="dr"><span class="dl"><small>{name}</small><span>{name}에서도 이 숙소를 볼 수 있어요</span></span><a class="yg" href="{e(url)}" target="_blank" rel="noopener noreferrer sponsored" id="{gid}">특가 보러가기</a></div>'
+def ota_offer(slug, k, name, url):
+    o = (OTA.get(slug) or {}).get(k) or {}
+    if o.get("price") and o.get("checkIn"):
+        dd = datetime.date.fromisoformat(o["checkIn"])
+        return {"src": name, "price": o["price"], "rate": 0, "cond": f"{dd.month}/{dd.day}({WD[dd.weekday()]}) 1박 조회 기준", "u": url}
+    return {"src": name, "price": 0, "rate": 0, "cond": f"{name}에서 이 숙소 보기", "u": url}
 
 def deal_box(P):
     """할인 정보(2026-10-30 시온님): 마이리얼트립 공식 API 로 찾은 이 숙소 가격·할인 + 수익 링크, 여기어때는 시온님이 준 링크만."""
@@ -186,9 +201,9 @@ def deal_box(P):
     if not x.get("yeogi") and list_lk(P).get("yeogi"): x = dict(x, yeogi=list_lk(P)["yeogi"])
     yn = x.get("yanolja") or list_lk(P).get("yanolja")
     if yn:   # 시온님이 준 야놀자 제휴 링크(3ha.in, 2026-10-30)
-        rows.append(f'<div class="dr"><span class="dl"><small>야놀자</small><span>야놀자에서도 이 숙소를 볼 수 있어요</span></span><a class="yg" href="{e(yn)}" target="_blank" rel="noopener noreferrer sponsored" id="yanoljago">보러가기</a></div>')
+        rows.append(ota_row(P["slug"], "yanolja", "야놀자", yn, "yanoljago"))
     if x.get("yeogi"):   # 시온님이 여기어때 파트너센터에서 만든 이 숙소 링크
-        rows.append(f'<div class="dr"><span class="dl"><small>여기어때</small><span>여기어때에서도 이 숙소를 볼 수 있어요</span></span><a class="yg" href="{e(x["yeogi"])}" target="_blank" rel="noopener noreferrer sponsored" id="yeogigo">보러가기</a></div>')
+        rows.append(ota_row(P["slug"], "yeogi", "여기어때", x["yeogi"], "yeogigo"))
     cp = next((y for y in (d.get("yeogi") or []) if "쿠폰" in (y.get("t") or "") and (y.get("until") or "9999") >= TODAY and y.get("u")), None)
     if cp:
         ut = f' · {int(cp["until"][5:7])}/{int(cp["until"][8:10])}까지' if cp.get("until") else ""
@@ -302,10 +317,10 @@ if __name__ == "__main__":
             if o[2] == "마이리얼트립" and BP.get(x["slug"]): offs[-1]["bp"] = 1
         if not any(o["src"] == "쿠팡트래블" for o in offs) and PP and link_of(PP):
             offs.append({"src": "쿠팡트래블", "price": 0, "rate": 0, "cond": "쿠팡트래블에서 이 숙소 보기", "u": link_of(PP)})
-        yg = ((d.get("links") or {}).get("stay-" + x["slug"]) or {}).get("yeogi") or list_lk(x).get("yeogi")
-        if yg: offs.append({"src": "여기어때", "price": 0, "rate": 0, "cond": "여기어때에서 이 숙소 보기", "u": yg})
-        yn = ((d.get("links") or {}).get("stay-" + x["slug"]) or {}).get("yanolja") or list_lk(x).get("yanolja")
-        if yn: offs.append({"src": "야놀자", "price": 0, "rate": 0, "cond": "야놀자에서 이 숙소 보기", "u": yn})
+        yg = ((d.get("links") or {}).get("stay-" + x["slug"]) or {}).get("yeogi") or list_lk(PP or x).get("yeogi")
+        if yg: offs.append(ota_offer(x["slug"], "yeogi", "여기어때", yg))
+        yn = ((d.get("links") or {}).get("stay-" + x["slug"]) or {}).get("yanolja") or list_lk(PP or x).get("yanolja")
+        if yn: offs.append(ota_offer(x["slug"], "yanolja", "야놀자", yn))
         if offs: r["offers"] = offs
         if opts:
             pr, rt, src, ci, pu = sorted(opts, key=lambda o: (-(o[1] >= 3), o[0]))[0]

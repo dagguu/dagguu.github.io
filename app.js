@@ -1178,7 +1178,7 @@ function rfOffPop(d,x){
   var p=document.createElement("div"); p.className="rfpop";
   p.innerHTML='<div class="rfpopc" role="dialog" aria-label="가격 비교"><div class="rfpoph"><b>'+esc(x.name)+'</b><button class="rfpopx" aria-label="닫기">✕</button></div>'+
     offs.map(function(o){ var k=o.src==="쿠팡트래블"?"coupang":o.src==="마이리얼트립"?"mrt":o.src==="야놀자"?"yanolja":"yeogi";
-      return '<div class="rfoff"><img src="'+esc(x.img)+'" alt="" loading="lazy"><span class="rfoffi"><small>'+esc(o.src)+(o.bp?' <b class="rfbp">최저가 보장제 적용</b>':'')+'</small>'+(o.price?'<em>'+(o.rate?'<i>'+o.rate+'%</i>':'')+rfWon(o.price)+'~</em>':'<em class="rfoffy">숙소 보기</em>')+(o.cond?'<small class="rfoffc">'+esc(o.cond)+'</small>':'')+(o.bp?'<small class="rfoffc">보장 조건은 마이리얼트립 안내 기준</small>':'')+'</span><a class="rfoffgo" '+ext(safeUrl(o.u))+' data-rfok="'+k+'">보러가기 ↗</a></div>'; }).join("")+
+      return '<div class="rfoff"><img src="'+esc(x.img)+'" alt="" loading="lazy"><span class="rfoffi"><small>'+esc(o.src)+(o.bp?' <b class="rfbp">최저가 보장제 적용</b>':'')+'</small>'+(o.price?'<em>'+(o.rate?'<i>'+o.rate+'%</i>':'')+rfWon(o.price)+'~</em>':'<em class="rfoffy">숙소 보기</em>')+(o.cond?'<small class="rfoffc">'+esc(o.cond)+'</small>':'')+(o.bp?'<small class="rfoffc">보장 조건은 마이리얼트립 안내 기준</small>':'')+'</span><a class="rfoffgo" '+ext(safeUrl(o.u))+' data-rfok="'+k+'">'+(k==="yanolja"||k==="yeogi"?"특가 보러가기":"보러가기")+' ↗</a></div>'; }).join("")+
     '<p class="rfpopn">가격은 조회 시점 기준이라 날짜·객실마다 달라요</p></div>';
   d.appendChild(p);
   p.addEventListener("click",function(e){
