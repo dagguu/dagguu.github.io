@@ -5,7 +5,7 @@ scripts/insta_queue.json 의 각 항목을 읽어 insta_out/<날짜>/<id>/1~3.jp
 항목: {"id": data.json item id, "photos": [사진 주소 3개], "l1": "흰 글씨 줄", "l2": "색 글씨 줄",
        "tags": "#감성숙소 #제주여행", "color": "#ffe14d"(선택), "handle": "@dagguu.trip"(육아는 "@dagguu.home")}
 - 1장: 표지(사진 + 아래 그라데이션 + 해시태그 한 줄 + 큰 제목 두 줄 + 우상단 @dagguu.trip)
-- 2~3장: 사진 + 우상단 @dagguu.trip 만 (글씨 없음)
+- 2장부터(최대 7장): caps[] 가 있으면 자막 상자(반투명 회색 상자 2줄 + 아래 흐린 @dagguu.trip), 없으면 사진 + 우상단 @dagguu.trip 만
 표지 글씨에 금액·무료·제공·팔로우 같은 말은 쓰지 않는다(계정 제재 위험).
 """
 import json, os, re, sys, base64, html, urllib.request, datetime as dt
@@ -85,7 +85,20 @@ body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans CJK KR','
 .info{position:absolute;left:50px;bottom:64px;right:50px;display:flex}
 .pill{background:rgba(20,16,40,.62);backdrop-filter:blur(6px);border-radius:22px;padding:22px 30px;font-size:40px;font-weight:700;line-height:1.35}
 .pill small{display:block;font-size:28px;font-weight:600;opacity:.8;margin-bottom:4px}
+/* 2장부터 자막 상자 (2026-10-30 시온님이 보여준 룸투어 피드 느낌): 반투명 밝은 회색 상자 + 얇은 테두리 + 가운데 정렬 2줄 */
+.cap{position:absolute;left:90px;right:90px;top:59%;transform:translateY(-50%);background:rgba(238,238,238,.9);border:2px solid rgba(40,40,40,.75);
+ padding:30px 34px;text-align:center;color:#222;font-size:40px;font-weight:500;line-height:1.45;letter-spacing:-.5px;word-break:keep-all}
+.cap b{font-weight:800;color:#111}.cap .red{display:block;color:#e2463c;font-weight:800;margin-bottom:6px}
+.cwm{position:absolute;left:0;right:0;top:72%;text-align:center;font-size:30px;font-weight:500;color:rgba(255,255,255,.55);text-shadow:0 1px 4px rgba(0,0,0,.25)}
 """
+def capfmt(t):
+    """자막 상자 글: 줄바꿈 \\n, **굵게**, {"red": 빨간 첫 줄, "t": 글} 도 됨."""
+    red = ''
+    if isinstance(t, dict): red, t = t.get('red', ''), t.get('t', '')
+    h = e(t).replace('\n', '<br>')
+    h = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', h)
+    return (f"<span class='red'>{e(red)}</span>" if red else '') + h
+
 def page(inner): return f"<html><head><meta charset='utf-8'><style>{CSS}</style></head><body>{inner}</body></html>"
 
 def build(q):
@@ -99,8 +112,14 @@ def build(q):
 <div class='wm'>{e(q.get('handle','@dagguu.trip'))}</div><div class='box'><div class='tg'>{e(q.get('tags',''))}</div>
 <div class='t'><div class='ln'>{e(q['l1'])}</div><div class='ln' style='color:{col}'>{e(q['l2'])}</div></div></div></div>"""))
     # 2~3장: 사진 + 우상단 @dagguu.trip 만 (글씨 없음, 시온님 요청 2026-10-15)
-    for p in ph[1:5]:
-        slides.append(page(f"""<div class='s' style="background-image:url({p})"><div class='wm'>{e(q.get('handle','@dagguu.trip'))}</div></div>"""))
+    # caps 가 있으면 2장부터 장마다 자막 상자 + 가운데 아래 흐린 @dagguu.trip (2026-10-30 시온님 "두번째 이미지부터 이런 느낌")
+    caps = q.get('caps') or []
+    for i, p in enumerate(ph[1:]):
+        hd = e(q.get('handle','@dagguu.trip'))
+        if i < len(caps) and caps[i]:
+            slides.append(page(f"""<div class='s' style="background-image:url({p})"><div class='cap'>{capfmt(caps[i])}</div><div class='cwm'>{hd}</div></div>"""))
+        else:
+            slides.append(page(f"""<div class='s' style="background-image:url({p})"><div class='wm'>{hd}</div></div>"""))
     return slides
 
 with sync_playwright() as pw:

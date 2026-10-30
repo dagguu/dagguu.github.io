@@ -4,7 +4,8 @@
 (해시태그 한 줄 + 흰 글씨 1줄 + 노란/하늘색 글씨 1줄 + 오른쪽 위 @dagguu.trip).
 
 입력 scripts/carousel/<slug>.json:
-  {"stay": slug, "imgDate": "YYYY-MM-DD", "cover": {"tags","l1","l2","color"}, "scenes": [{"img": "ai:N", "vp": "..."}] x5, "caption": "..."}
+  {"stay": slug, "imgDate": "YYYY-MM-DD", "cover": {"tags","l1","l2","color"}, "scenes": [{"img": "ai:N", "vp": "...", "cap": "2장부터 자막 상자 글"}] x5, "caption": "..."}
+  cap(2026-10-30 시온님 "두번째 이미지부터 이런 느낌"): 반투명 밝은 회색 상자 + 얇은 테두리 + 가운데 2줄 + 아래 흐린 @dagguu.trip.
 장면 영상 = insta 브랜치 video/<imgDate>/<stay>/clip_<kind><N>.mp4 (kie-scenes.yml --src scripts/carousel/<slug>.json 이 만든 9:16 Veo 영상)
 결과 carousel_out/<slug>/1.mp4 ~ 5.mp4 (1080x1350 4:5, 소리 없음 — 음악은 시온님이 인스타에서),
      1_notext.mp4(글씨 없는 첫 장), cover.jpg(첫 장 첫 화면). 워크플로가 insta 브랜치 carousel/<slug>/ 로 올린다.
@@ -38,7 +39,18 @@ body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans CJK KR','
 .box{position:absolute;left:62px;right:62px;bottom:92px}
 .tg{font-size:30px;font-weight:600;opacity:.92;margin-bottom:14px;text-shadow:0 2px 8px rgba(0,0,0,.5)}
 .t{font-size:84px;font-weight:900;line-height:1.2;text-shadow:0 3px 14px rgba(0,0,0,.55)}
-.ln{white-space:nowrap}"""
+.ln{white-space:nowrap}
+.cap{position:absolute;left:90px;right:90px;top:59%;transform:translateY(-50%);background:rgba(238,238,238,.9);border:2px solid rgba(40,40,40,.75);
+ padding:30px 34px;text-align:center;color:#222;font-size:40px;font-weight:500;line-height:1.45;letter-spacing:-.5px;word-break:keep-all}
+.cap b{font-weight:800;color:#111}.cap .red{display:block;color:#e2463c;font-weight:800;margin-bottom:6px}
+.cwm{position:absolute;left:0;right:0;top:72%;text-align:center;font-size:30px;font-weight:500;color:rgba(255,255,255,.55);text-shadow:0 1px 4px rgba(0,0,0,.25)}"""
+import re
+def capfmt(t):
+    """2장부터 자막 상자 글(2026-10-30 시온님 룸투어 피드 참고): 줄바꿈 \\n, **굵게**, {"red": 빨간 첫 줄, "t": 글}."""
+    red = ""
+    if isinstance(t, dict): red, t = t.get("red", ""), t.get("t", "")
+    h = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", e(t).replace("\n", "<br>"))
+    return (f"<span class='red'>{e(red)}</span>" if red else "") + h
 FIT = """()=>{const t=document.querySelector('.t'); if(!t) return; const L=[...t.querySelectorAll('.ln')], max=t.clientWidth;
   const over=()=>L.some(l=>l.scrollWidth>max+1);
   if(over()) L.forEach(l=>{ if(l.scrollWidth>max+1) l.textContent=l.textContent.replace(/[\\s]*[\\u2600-\\u27BF\\u{1F300}-\\u{1FAFF}\\uFE0F\\u200D]+[\\s]*$/u,''); });
@@ -50,7 +62,11 @@ cover_html = f"""<html><head><meta charset='utf-8'><style>{CSS}</style></head><b
 wm_html = f"<html><head><meta charset='utf-8'><style>{CSS}</style></head><body><div class='s'><div class='wm'>{e(handle)}</div></div></body></html>"
 with sync_playwright() as pw:
     b = pw.chromium.launch(); pg = b.new_page(viewport={"width": W, "height": H})
-    for name, h in (("cover.png", cover_html), ("wm.png", wm_html)):
+    pages = [("cover.png", cover_html), ("wm.png", wm_html)]
+    for i, sc in enumerate(J["scenes"][:5], 1):
+        if i > 1 and sc.get("cap"):
+            pages.append((f"cap{i}.png", f"<html><head><meta charset='utf-8'><style>{CSS}</style></head><body><div class='s'><div class='cap'>{capfmt(sc['cap'])}</div><div class='cwm'>{e(handle)}</div></div></body></html>"))
+    for name, h in pages:
         pg.set_content(h); pg.wait_for_timeout(300)
         if name == "cover.png": pg.evaluate(FIT)
         pg.screenshot(path=os.path.join(tmp, name), omit_background=True)
@@ -71,7 +87,8 @@ for i, s in enumerate(J["scenes"][:5], 1):
     src = clip(s["img"])
     if not src: st["slides"].append({"n": i, "img": s["img"], "error": "장면 영상 없음"}); continue
     y = s.get("y", 0.5)
-    render(src, os.path.join(tmp, "cover.png" if i == 1 else "wm.png"), os.path.join(out, f"{i}.mp4"), y)
+    ov = "cover.png" if i == 1 else (f"cap{i}.png" if s.get("cap") else "wm.png")
+    render(src, os.path.join(tmp, ov), os.path.join(out, f"{i}.mp4"), y)
     if i == 1:
         render(src, os.path.join(tmp, "wm.png"), os.path.join(out, "1_notext.mp4"), y)
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "0.3", "-i", os.path.join(out, "1.mp4"), "-frames:v", "1", "-q:v", "2", os.path.join(out, "cover.jpg")], check=True)
