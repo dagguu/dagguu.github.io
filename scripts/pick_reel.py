@@ -47,18 +47,25 @@ try:
     _K = lambda t: re.sub(r"[^가-힣a-z0-9]", "", re.sub(r"\(.*?\)", "", str(t).lower()))
     OPEN_CAMP = [_K(it.get("name")) for it in _D.get("items", []) if it.get("cat") == "stay" and str(it.get("end") or "") >= TODAY and not it.get("closed")]
 except Exception: OPEN_CAMP = []
+# 인테리어 독특한 곳 우선, 흔한 체인 리조트·호텔은 뒤로 (2026-10-30 23:07 시온님 "사진 퀄리티, 인테리어 독특한 곳+신상 우선")
+UNIQ = re.compile(r"한옥|료칸|캐빈|카라반|글램핑|독채|풀빌라|스테이|동굴|숲|포레|노천|히노끼|인피니티|플로팅|트리|돔|빌리지|별장|아트|뮤지엄|스튜디오|오두막|하녹|모들|안토|이제 ")
+CHAIN = re.compile(r"쏠비치|소노|윈덤|하얏트|라한|롯데|L7|한화|메이필드|파르나스|조선|아난티|워커힐|켄싱턴|부영|리솜|도미인|페어필드|메리어트|센트럴베이|엘리시아|아이파크|오션 그랜드|엠버|STX|탑스텐|에코랜드|그린야드|발레 리조트")
+def uniq(x):
+    s_ = " ".join(str(x.get(f) or "") for f in ("name", "memo", "tags", "note"))
+    return (6 if UNIQ.search(s_) else 0) - (8 if CHAIN.search(s_) else 0)
 def new_rank(x):
     lvl = 2 if is_new(x) else 1 if x.get("newHint") else 0
+    if lvl and CHAIN.search(" ".join(str(x.get(f) or "") for f in ("name", "memo", "tags", "note"))): lvl -= 1   # 흔한 체인은 신상이어도 한 칸 뒤로
     if not lvl: return 0, ""
     s = " ".join(str(x.get(f) or "") for f in ("name", "area", "memo", "tags", "note"))
     tier, lab = (4, "가을+신상") if AUTUMN.search(s) else (3, "온천+신상") if ONSEN.search(s) else (2, "료칸+신상") if RYOKAN.search(s) else (1, "신상")
     why = signals(x.get("name"), x.get("slug"))[1]
     a = _K(x["name"]) if OPEN_CAMP else ""
-    tb = 8 + (4 if is_top(x.get("name")) else 0) + (2 if any("할인" in w for w in why) else 0) + (1 if a and len(a) >= 3 and any(a in b for b in OPEN_CAMP) else 0)
+    tb = 8 + uniq(x) + (4 if is_top(x.get("name")) else 0) + (2 if any("할인" in w for w in why) else 0) + (1 if a and len(a) >= 3 and any(a in b for b in OPEN_CAMP) else 0)
     return lvl * 1000 + tier * 100 + tb, lab
 def score(x):
     s = " ".join(str(x.get(f) or "") for f in ("name", "area", "memo", "tags", "note"))
-    v = new_rank(x)[0] + (3 if WARM.search(s) else 0) + min(3, len(set(HOOK.findall(s)))) + signals(x.get("name"), x.get("slug"))[0]   # 여기어때 잘 팔림·검색량·오픈런·마이리얼트립·쿠팡 할인(yeogi_top.signals)
+    v = new_rank(x)[0] + uniq(x) + (3 if WARM.search(s) else 0) + min(3, len(set(HOOK.findall(s)))) + signals(x.get("name"), x.get("slug"))[0]   # 여기어때 잘 팔림·검색량·오픈런·마이리얼트립·쿠팡 할인(yeogi_top.signals)
     city = (x.get("area") or "").split(" ")[-1]
     if city and any(city in a for a in recent_area): v -= 2
     v -= len(set(HOOK.findall(s)) & recent_words)
