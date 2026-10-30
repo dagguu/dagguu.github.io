@@ -1,1349 +1,7209 @@
 {
- "updated": "2026-10-30 11:23",
+ "updated": "2026-10-30 16:17",
  "hints": [
-  "퓨어테이블",
-  "버박",
-  "마스코타펫티슈",
-  "하루반",
-  "구스페리",
-  "워크온바디오프",
-  "퍼르"
+  "수능선물",
+  "극세사이불",
+  "김장매트",
+  "보온병",
+  "유아패딩"
  ],
  "rows": [
   {
-   "kw": "룰루레몬",
-   "vol": 537800,
+   "kw": "가습기",
+   "vol": 234700,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수능디데이",
+   "vol": 147300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "젝시믹스",
-   "vol": 405100,
+   "kw": "가열식가습기",
+   "vol": 111400,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "젝스믹스",
-   "vol": 59610,
+   "kw": "이불",
+   "vol": 105100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "베리시",
-   "vol": 49560,
+   "kw": "찹쌀떡",
+   "vol": 45150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여성가디건",
+   "vol": 43420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제시믹스",
-   "vol": 48000,
+   "kw": "겨울이불",
+   "vol": 43020,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "콘치웨어",
-   "vol": 19190,
+   "kw": "청바지",
+   "vol": 41900,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "결혼식답례품",
+   "vol": 37950,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "극세사이불",
+   "vol": 37230,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "키즈경량패딩",
+   "vol": 36720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에블린",
-   "vol": 19130,
+   "kw": "차렵이불",
+   "vol": 35560,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "데비웨어",
-   "vol": 12580,
+   "kw": "수능선물",
+   "vol": 31550,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "쿠션",
+   "vol": 23060,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "모달이불",
+   "vol": 22670,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "모기장",
+   "vol": 19830,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "머플러",
+   "vol": 19060,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈패딩",
+   "vol": 18790,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지샴푸",
-   "vol": 11270,
+   "kw": "수영가방",
+   "vol": 18070,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "큐모모",
-   "vol": 10960,
+   "kw": "보온병",
+   "vol": 17110,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "기화식가습기",
+   "vol": 16640,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "애니바디",
-   "vol": 7590,
+   "kw": "아기패딩",
+   "vol": 16450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지네",
+   "vol": 16130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름이불",
+   "vol": 16060,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "VERISH",
-   "vol": 6420,
+   "kw": "시몬스매트리스",
+   "vol": 16060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "복합식가습기",
+   "vol": 15420,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "강아지귀세정제",
+   "kw": "결혼답례품",
+   "vol": 14880,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이불세트",
+   "vol": 14780,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기바라클라바",
+   "vol": 14400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실가습기",
+   "vol": 13020,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소파커버",
+   "vol": 12910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈운동화",
+   "vol": 11760,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "버킷햇",
+   "vol": 11600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동복",
+   "vol": 10990,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "써모스보온병",
+   "vol": 10630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "모기향",
+   "vol": 10530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기경량패딩",
+   "vol": 10500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유리병",
+   "vol": 10350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈후리스",
+   "vol": 10280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기후리스",
+   "vol": 9940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이불브랜드",
+   "vol": 9600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자무스탕",
+   "vol": 9550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물통",
+   "vol": 9180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수능선물추천",
+   "vol": 8920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스텐텀블러",
+   "vol": 8130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "김장매트",
+   "vol": 8120,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "겨울이불추천",
+   "vol": 8040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비누받침대",
+   "vol": 7900,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수험생영양제",
+   "vol": 7780,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아경량패딩",
+   "vol": 7260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어경량패딩",
+   "vol": 7200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알러지케어이불",
+   "vol": 7170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈바람막이",
+   "vol": 7110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쇼파쿠션",
+   "vol": 6890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수능초콜릿",
+   "vol": 6820,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쿠션커버",
+   "vol": 6620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아패딩",
+   "vol": 6270,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "수능응원선물",
+   "vol": 6160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "입는담요",
+   "vol": 6140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "겨울신발",
+   "vol": 6130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불종류",
+   "vol": 5890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아경량패딩",
+   "vol": 5830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈롱패딩",
+   "vol": 5820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빨대텀블러",
+   "vol": 5740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기목도리",
+   "vol": 5520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보온죽통",
+   "vol": 5260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기가디건",
+   "vol": 5250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "중력이불",
    "vol": 5180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "강아지심장사상충",
-   "vol": 4690,
+   "kw": "소파쿠션",
+   "vol": 5160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "블루그레인",
+   "kw": "여아패딩",
+   "vol": 5140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "겨울극세사이불",
+   "vol": 5080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가을이불",
+   "vol": 5030,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "간절기이불",
+   "vol": 5000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침구세트",
+   "vol": 4940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈후드집업",
+   "vol": 4910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기어그",
+   "vol": 4790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "패딩우주복",
+   "vol": 4540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성후리스",
+   "vol": 4430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침구",
+   "vol": 4370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈패딩조끼",
+   "vol": 4270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기장갑",
+   "vol": 4270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대용량텀블러",
+   "vol": 4240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러세척",
+   "vol": 4210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "먼지없는이불",
+   "vol": 4200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키키즈바람막이",
+   "vol": 4190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아사이불",
    "vol": 4160,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "에블린속옷",
+   "kw": "알레르망차렵이불",
+   "vol": 4120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비염가습기",
+   "vol": 4090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈맨투맨",
+   "vol": 4030,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "겨울이불세트",
+   "vol": 4000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기패딩",
+   "vol": 3940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유리물병",
+   "vol": 3870,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "알레르망겨울이불",
+   "vol": 3810,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여아상하복",
+   "vol": 3770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생옷",
+   "vol": 3750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈상하복",
+   "vol": 3700,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "리유저블컵",
    "vol": 3620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무거운이불",
+   "vol": 3620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어바지",
+   "vol": 3570,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유니클로브라",
-   "vol": 3360,
+   "kw": "아기겨울신발",
+   "vol": 3500,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지약용샴푸",
-   "vol": 3350,
+   "kw": "수능선물세트",
+   "vol": 3470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수험생선물",
+   "vol": 3450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보온물통",
+   "vol": 3450,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "비비안노와이어",
-   "vol": 2690,
+   "kw": "보온물병",
+   "vol": 3400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바바라언더웨어",
-   "vol": 2360,
+   "kw": "식칼",
+   "vol": 3290,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "텀블러제작",
+   "vol": 3200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유니클로브라탑",
-   "vol": 2320,
+   "kw": "우주복패딩",
+   "vol": 3190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주니어패딩",
+   "vol": 3170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지눈충혈",
-   "vol": 2210,
+   "kw": "템퍼토퍼",
+   "vol": 3160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지샴푸추천",
+   "kw": "침대헤드커버",
+   "vol": 3150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "떡주문",
+   "vol": 3150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울차렵이불",
+   "vol": 3140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식도",
+   "vol": 3120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "극세사이불세트",
+   "vol": 3090,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "구름이불",
+   "vol": 3090,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "경량패딩키즈",
+   "vol": 3060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사",
+   "vol": 3030,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "홍보물품",
+   "vol": 3010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈부츠",
+   "vol": 2970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등경량패딩",
+   "vol": 2970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈플리스",
+   "vol": 2950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슈퍼싱글침구세트",
+   "vol": 2920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수험생할인",
+   "vol": 2890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사겨울이불",
+   "vol": 2870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니로디니패딩",
+   "vol": 2860,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "알레르망구스",
+   "vol": 2850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사은품",
+   "vol": 2850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "북유럽쿠션",
+   "vol": 2790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형물통",
+   "vol": 2720,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자가발열매트",
+   "vol": 2720,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아후리스",
+   "vol": 2650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밍크이불",
+   "vol": 2630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동경량패딩",
+   "vol": 2580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침대이불세트",
+   "vol": 2580,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수능찹쌀떡",
+   "vol": 2570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기념품샵",
+   "vol": 2540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기머플러",
+   "vol": 2540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부드러운이불",
+   "vol": 2470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발열이불",
+   "vol": 2460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라지킹침구세트",
+   "vol": 2460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이경량패딩",
+   "vol": 2450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈신발",
+   "vol": 2420,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카페인알약",
+   "vol": 2410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등남아옷",
+   "vol": 2400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패딩목도리",
+   "vol": 2350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자가발열이불",
+   "vol": 2330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "텀블러브랜드",
+   "vol": 2300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이브자리극세사이불",
+   "vol": 2290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아바람막이",
+   "vol": 2290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생일답례품",
+   "vol": 2170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "솜이불",
+   "vol": 2170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "보온병추천",
+   "vol": 2160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈티셔츠",
+   "vol": 2150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어후드집업",
+   "vol": 2130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기점퍼",
+   "vol": 2100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈브랜드",
+   "vol": 2080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보냉텀블러",
+   "vol": 2050,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "순면이불",
+   "vol": 2030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어쇼핑몰",
+   "vol": 2020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈구스다운",
+   "vol": 1990,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "합격기원선물",
+   "vol": 1970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성롱패딩",
+   "vol": 1970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아경량패딩",
+   "vol": 1960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수능합격기원선물",
+   "vol": 1940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불추천",
+   "vol": 1940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "면이불",
+   "vol": 1940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여아바람막이",
+   "vol": 1930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바닥요",
    "vol": 1920,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이샴푸",
+   "kw": "잠깨는법",
+   "vol": 1890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈점퍼",
+   "vol": 1890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈후드티",
+   "vol": 1890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사계절차렵이불",
+   "vol": 1890,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "텀블러파우치",
+   "vol": 1880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모달이불세트",
+   "vol": 1880,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남대문이불",
+   "vol": 1860,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "초등고학년옷",
+   "vol": 1850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알러지케어이불세트",
+   "vol": 1830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "후드패딩",
+   "vol": 1820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈청바지",
+   "vol": 1800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동복브랜드",
    "vol": 1790,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "더잠",
+   "kw": "유아조끼",
+   "vol": 1770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아바지",
+   "vol": 1770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어티셔츠",
+   "vol": 1740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈뽀글이",
    "vol": 1730,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "하루반",
-   "vol": 1700,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "고양이피부병",
-   "vol": 1660,
+   "kw": "남자아동복",
+   "vol": 1710,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "레날어드밴스드독",
+   "kw": "주니어후리스",
+   "vol": 1700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈야구점퍼",
+   "vol": 1700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고3수능선물",
+   "vol": 1690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아패딩",
+   "vol": 1690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어바람막이",
+   "vol": 1690,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이패딩",
+   "vol": 1680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사침대커버",
+   "vol": 1680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수능떡",
+   "vol": 1670,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아동패딩",
+   "vol": 1630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고등학생영양제",
+   "vol": 1630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아옷브랜드",
+   "vol": 1630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "봄이불",
+   "vol": 1630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쇼파쿠션커버",
+   "vol": 1620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여아가디건",
+   "vol": 1620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사계절이불세트",
+   "vol": 1620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수면이불",
+   "vol": 1590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라지킹이불",
+   "vol": 1580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어의류",
+   "vol": 1570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냄비손잡이",
+   "vol": 1560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아바라클라바",
+   "vol": 1560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈구스패딩",
+   "vol": 1560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아패딩조끼",
+   "vol": 1560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈가디건",
+   "vol": 1560,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "옥수수솜이불",
+   "vol": 1560,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주니어맨투맨",
+   "vol": 1550,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "알러지이불",
+   "vol": 1550,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈조거팬츠",
+   "vol": 1550,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈옷브랜드",
+   "vol": 1530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이스백",
+   "vol": 1520,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이옷",
+   "vol": 1510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아티셔츠",
+   "vol": 1510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대용량보온병",
+   "vol": 1490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈조끼",
+   "vol": 1490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아후리스",
    "vol": 1480,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바디블루",
+   "kw": "베이비패딩",
+   "vol": 1480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알러지케어차렵이불",
+   "vol": 1470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "락앤락비스프리",
+   "vol": 1460,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주니어후드티",
+   "vol": 1460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈숏패딩",
+   "vol": 1430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱글요커버",
+   "vol": 1430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슈퍼싱글이불세트",
+   "vol": 1420,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈셋업",
    "vol": 1410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슈퍼싱글이불",
+   "vol": 1410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이케아쿠션",
+   "vol": 1400,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오라틴",
-   "vol": 1320,
+   "kw": "누빔이불",
+   "vol": 1400,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "천하제일사료",
-   "vol": 1280,
-   "comp": "낮음",
+   "kw": "락앤락보온병",
+   "vol": 1390,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지보습제",
+   "kw": "패딩모자",
+   "vol": 1390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니보온병",
+   "vol": 1370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아코트",
+   "vol": 1370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생잠옷",
+   "vol": 1360,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "김장다라이",
+   "vol": 1350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "시어서커",
+   "vol": 1350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아장갑",
+   "vol": 1350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱글이불",
+   "vol": 1350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "침구류",
+   "vol": 1330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아가디건",
+   "vol": 1310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그래핀이불",
+   "vol": 1310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러각인",
+   "vol": 1300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈원피스",
+   "vol": 1300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스테인리스텀블러",
+   "vol": 1270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여아롱패딩",
+   "vol": 1270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불커버80수",
    "vol": 1250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지심장사상충약가격",
+   "kw": "유아목도리",
+   "vol": 1230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어여아옷",
+   "vol": 1230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아가방",
+   "vol": 1220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어옷브랜드",
    "vol": 1210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "도담쌀",
-   "vol": 1180,
-   "comp": "낮음",
+   "kw": "키즈옷쇼핑몰",
+   "vol": 1210,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "구스페리",
+   "kw": "키즈다운패딩",
+   "vol": 1200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알레르망이불커버",
+   "vol": 1200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사이불커버",
+   "vol": 1200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기히트텍",
+   "vol": 1200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사차렵이불",
+   "vol": 1200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성겨울가디건",
+   "vol": 1200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수험생비타민",
+   "vol": 1190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아티셔츠",
+   "vol": 1190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아후드집업",
+   "vol": 1180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "모달겨울이불",
+   "vol": 1180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생패딩",
    "vol": 1170,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "캘빈클라인브라",
+   "kw": "두꺼운이불",
+   "vol": 1170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수능떡선물",
+   "vol": 1160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동후리스",
+   "vol": 1150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아패딩조끼",
+   "vol": 1150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아복브랜드",
+   "vol": 1150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생옷쇼핑몰",
+   "vol": 1150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생경량패딩",
+   "vol": 1130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여아옷브랜드",
    "vol": 1120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "탑텐브라",
+   "kw": "주니어원피스",
    "vol": 1120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "질켄",
+   "kw": "초등패딩",
+   "vol": 1110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기아우터",
    "vol": 1100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "러브미모스트",
+   "kw": "여아후드집업",
+   "vol": 1100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이지갑",
+   "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울용이불",
+   "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패딩머플러",
+   "vol": 1060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "노린재퇴치",
+   "vol": 1060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아맨투맨",
+   "vol": 1050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아블라우스",
+   "vol": 1050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아맨투맨",
+   "vol": 1050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침대보",
+   "vol": 1030,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주니어상하복",
    "vol": 1020,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "레날어드밴스드캣",
+   "kw": "박홍근극세사이불",
+   "vol": 1020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캐릭터담요",
    "vol": 1000,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "버박",
-   "vol": 990,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "강아지덴탈스프레이",
-   "vol": 910,
+   "kw": "키즈기모바지",
+   "vol": 1000,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "배리쉬",
-   "vol": 880,
-   "comp": "낮음",
+   "kw": "침구쇼핑몰",
+   "vol": 970,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "워크온바디오프",
-   "vol": 860,
+   "kw": "국산이불",
+   "vol": 970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BLEN볼펜",
+   "vol": 960,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "플레이텍스브라",
+   "kw": "소파토퍼",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어패딩조끼",
+   "vol": 940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아상하복",
+   "vol": 940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈아우터",
+   "vol": 930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기방한모자",
+   "vol": 930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베드러너",
+   "vol": 920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아점퍼",
+   "vol": 920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포근한이불",
+   "vol": 920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등여아경량패딩",
+   "vol": 910,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캐릭터텀블러",
+   "vol": 900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사매트리스커버",
+   "vol": 900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기롱패딩",
+   "vol": 880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퀸이불세트",
+   "vol": 880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등여아패딩",
+   "vol": 870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아롱패딩",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시험합격선물",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴대용텀블러",
+   "vol": 850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "겨울극세사이불세트",
    "vol": 850,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "버박약용샴푸",
-   "vol": 790,
+   "kw": "유아겨울모자",
+   "vol": 840,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "버박귀세정제",
+   "kw": "침대이불",
+   "vol": 840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베딩",
+   "vol": 840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이후리스",
+   "vol": 830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아옷브랜드",
+   "vol": 830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈니트",
+   "vol": 830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈트레이닝복",
+   "vol": 830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침구브랜드",
+   "vol": 830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어기모바지",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼식선물",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아바람막이",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가을이불세트",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "킹사이즈이불",
+   "vol": 820,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "등산보온병",
+   "vol": 820,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "보냉병",
+   "vol": 810,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남아티셔츠",
+   "vol": 810,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "따뜻한이불",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4계절이불",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어롱패딩",
+   "vol": 780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "구두닦이",
+   "vol": 780,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소파쿠션커버",
+   "vol": 780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트라이탄물통",
+   "vol": 780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수능응원간식",
+   "vol": 770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아점퍼",
+   "vol": 770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등후드집업",
+   "vol": 770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울모달이불",
+   "vol": 770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성목도리",
+   "vol": 770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고등영양제",
+   "vol": 765,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알레르망매트리스커버",
    "vol": 760,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지엑티베이트",
+   "kw": "남아셔츠",
+   "vol": 760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울양모이불",
+   "vol": 760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어옷쇼핑몰",
+   "vol": 760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈코트",
+   "vol": 750,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "등산물병",
+   "vol": 750,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "잠깨는음료",
+   "vol": 740,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈자켓",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "60수이불",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "합격떡",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밍크극세사이불",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아브랜드",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아가디건",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈집업",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "클린켄틴",
+   "vol": 720,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수능합격선물",
+   "vol": 720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈셔츠",
+   "vol": 720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "봄가을이불",
+   "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "500ML텀블러",
+   "vol": 700,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "닥스극세사이불",
    "vol": 700,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "도기앤키티",
+   "kw": "겨울이불커버",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불보",
+   "vol": 690,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기겨울패딩",
+   "vol": 690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어점퍼",
+   "vol": 690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두꺼운겨울이불",
+   "vol": 690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기겨울옷",
    "vol": 680,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유니클로와이어리스브라",
+   "kw": "가볍고따뜻한이불",
    "vol": 680,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지치석제거스프레이",
-   "vol": 590,
+   "kw": "이불브랜드추천",
+   "vol": 680,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지구강스프레이",
+   "kw": "알러지케어겨울이불",
+   "vol": 670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어트레이닝바지",
+   "vol": 670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울침구세트",
+   "vol": 670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수능이벤트",
+   "vol": 670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈쇼핑이불",
+   "vol": 670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아맨투맨",
+   "vol": 670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가벼운겨울이불",
+   "vol": 660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어가디건",
+   "vol": 660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생여아옷",
+   "vol": 660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등여아원피스",
+   "vol": 660,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "예쁜텀블러",
+   "vol": 650,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "옥수수이불",
+   "vol": 650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무지이불",
+   "vol": 650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밍크극세사담요",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이옷브랜드",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "100수이불",
+   "vol": 640,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈트레이닝복세트",
+   "vol": 630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등바람막이",
+   "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈팬츠",
+   "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어상하세트",
+   "vol": 620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "극세사베개커버",
+   "vol": 610,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "7세여아옷",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아겨울원피스",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동바람막이",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어조거팬츠",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보부상크로스백",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울솜이불",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시험선물",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스트라이프이불",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이바지",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러꾸미기",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어와이드팬츠",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱글이불사이즈",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아후리스",
    "vol": 570,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "이너리즘",
+   "kw": "두꺼운극세사이불",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이바람막이",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어트레이닝세트",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울침구",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인용이불",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거미살충제",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동티셔츠",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "간절기이불세트",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈기모상하복",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "덮는이불",
+   "vol": 570,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "초등바지",
+   "vol": 570,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이옷쇼핑몰",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이조끼",
+   "vol": 560,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "극세사침구세트",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피곤할때",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울면이불",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아옷쇼핑몰",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아겨울신발",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모달극세사이불",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한겨울이불",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "킹사이즈이불세트",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아니트조끼",
    "vol": 530,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "강아지뿌리는치약",
+   "kw": "주니어야구점퍼",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아후드집업",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동후드집업",
+   "vol": 530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈상하세트",
    "vol": 520,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파슬리요가복",
+   "kw": "플라스틱텀블러",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동조끼",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바람막이키즈",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알레르기이불",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시어서커이불",
    "vol": 510,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "세라마이드앤오메가3",
+   "kw": "아기겉옷",
    "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈요가복",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "클린켄틴텀블러",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코스모스보온병",
+   "vol": 490,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "베라왕속옷",
+   "kw": "체크이불",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "킹사이즈침구세트",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아조거팬츠",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보온보냉병",
+   "vol": 480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "명품텀블러",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아코트",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국산극세사이불",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈후드",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울이불종류",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장실모기",
+   "vol": 480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남아니트",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "배추절임통",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원터치보온병",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자전거물병",
+   "vol": 470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "리유저블텀블러",
+   "vol": 470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈항공점퍼",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아야구점퍼",
+   "vol": 470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이롱패딩",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "얇은극세사이불",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아자켓",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도톰한이불",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고3선물",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생리통온열찜질기",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아겨울옷",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어기모후드집업",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형보온병",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "삼단요",
    "vol": 440,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이연고",
+   "kw": "수능기원선물",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아브랜드",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가을겨울이불",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이브자리이불세트",
    "vol": 430,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키워보리",
-   "vol": 410,
-   "comp": "중간",
+   "kw": "알레르망구스차렵",
+   "vol": 430,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "덴탈스프레이",
+   "kw": "아이패딩",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러답례품",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈가을점퍼",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퀸사이즈이불세트",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어코트",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아아우터",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울극세사차렵이불",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급이불",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱글이불세트",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈롱후리스",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동롱패딩",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이후드집업",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아잠바",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아상하복세트",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방수이불",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기숙사이불",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시험응원선물",
    "vol": 400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이발바닥털",
+   "kw": "김장용품",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모찌이불",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아셔츠",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등여아바람막이",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈아노락",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생물병",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건조기이불",
+   "vol": 400,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아뽀글이점퍼",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아롱패딩",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울두꺼운이불",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈스타킹",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캐시미어이불",
+   "vol": 390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아사면이불",
+   "vol": 390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여아숏패딩",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대형견목욕",
+   "kw": "여자아이옷브랜드",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "하이포닉고양이샴푸",
+   "kw": "마이크로화이바이불",
    "vol": 380,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "베토퀴놀",
+   "kw": "남아후드티",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등후드티",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기숙사이불세트",
+   "vol": 380,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "집먼지진드기이불",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페인젤리",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알러지케어",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈쇼핑이불세트",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지심장사상충약추천",
+   "kw": "텀블러사이트",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수능선물초콜릿",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커스텀텀블러",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴대용물병",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아상하복세트",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이티셔츠",
+   "vol": 370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주니어아우터",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침대극세사패드",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생바람막이",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불베개세트",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라지킹침구",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "와플이불",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모달침구",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아니트조끼",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱글침대이불세트",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오가닉이불",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아아우터",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빨대물통",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동점퍼",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사밍크이불",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "먼지안나는이불",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불셋트",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "김장준비",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "버박샴푸",
+   "kw": "유아플리스",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어플리스",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울이불극세사",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기모이불",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈데님",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어트레이닝복",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생옷브랜드",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이옷브랜드",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패딩이불",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이가디건",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모달침구세트",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "80수이불",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아겨울양말",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이약용샴푸",
+   "kw": "겨울배냇저고리",
+   "vol": 330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "극세사이불추천",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사스프레드",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름이불세트",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가글액",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피대용",
+   "vol": 320,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여아구스패딩",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어숏패딩",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어셔츠",
+   "vol": 320,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈청자켓",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레노마극세사이불",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순면겨울이불",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동복사이트",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원터치물병",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이피부염",
-   "vol": 300,
-   "comp": "중간",
+   "kw": "국산겨울이불",
+   "vol": 310,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지피부병샴푸",
+   "kw": "아동가디건",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어셋업",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지치주염약",
+   "kw": "초등롱패딩",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거름망텀블러",
+   "vol": 300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아동장갑",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기패딩",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1리터보온병",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스탠텀블러",
+   "vol": 300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "양면극세사이불",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아기모바지",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어조끼",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아가을점퍼",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퀸이불",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "환절기이불",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아겨울옷",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "로맨시스",
-   "vol": 270,
+   "kw": "스텐보온병",
+   "vol": 290,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "WACOAL",
+   "kw": "텀블러인쇄",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사커버",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등여아맨투맨",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈트레이닝바지",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핑크이불",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리유저블컵제작",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피대신",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수능시험선물",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈간절기점퍼",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알러지방지이불",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "큐브가습기",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지피부샴푸",
+   "kw": "여아겨울신발",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등여아가디건",
    "vol": 270,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "GODBODY",
-   "vol": 260,
+   "kw": "먼지없는겨울이불",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자아이옷브랜드",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사침대매트",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "노르딕슬립겨울이불",
+   "vol": 270,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "CK브라",
+   "kw": "울미니스커트",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알러지이불세트",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "KLEANKANTEEN",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지저자극샴푸",
+   "kw": "클린캔틴",
+   "vol": 260,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "초등남아패딩",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기패딩바지",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스포츠물통",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈야상",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보냉물병",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아간절기점퍼",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "슈퍼싱글겨울이불",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비가디건",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠잘오는이불",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고밀도차렵이불",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈츄리닝",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생리통완화기계",
+   "vol": 250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기패딩점퍼",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "나이키탑",
+   "kw": "여아뽀글이점퍼",
+   "vol": 250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈조끼패딩",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수능대박선물",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "따뜻한겨울이불",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사양면이불",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈의류브랜드",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사모달이불",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중학생점퍼",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어집업",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침구류세트",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생여자옷",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슈퍼싱글차렵이불",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "김장용매트",
+   "vol": 240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "초등학생롱패딩",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "길고양이구내염",
+   "kw": "가벼운극세사이불",
    "vol": 240,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이덴탈스프레이",
+   "kw": "어린이셔츠",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동브랜드",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동옷브랜드",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빈티지이불",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사계절침구세트",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비염이불",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수능생선물",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지안정제",
+   "kw": "유리병제작",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아구스패딩",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈뽀글이점퍼",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈극세사이불",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동셔츠",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자가발열토퍼",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어레깅스",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생맨투맨",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퀸침대이불세트",
    "vol": 230,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "하루반브라",
-   "vol": 220,
+   "kw": "유니클로주니어",
+   "vol": 230,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "애견약용샴푸",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강아지질켄",
+   "kw": "김장절임매트",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "엔돌펫",
+   "kw": "텀블러굿즈",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4인용소파커버",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기겨울외투",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키친아트보온병",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스테인레스물병",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아겨울패딩",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아트레이닝복",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등가디건",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱글겨울이불",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보온이불",
    "vol": 220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "DOROSIWA",
-   "vol": 210,
-   "comp": "중간",
+   "kw": "주니어긴팔티셔츠",
+   "vol": 220,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지알러지샴푸",
+   "kw": "알러지프리이불",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "손님이불",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보온보냉물통",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지아토피샴푸",
-   "vol": 210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "코리아펫",
+   "kw": "알러지케어극세사이불",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "꼰에야",
+   "kw": "극세사이불싱글",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동트레이닝복",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불쇼핑몰",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울차렵이불세트",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라지킹겨울이불",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "초등학생티셔츠",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퀸침구세트",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "군대수료식선물",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "노래자랑현수막",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "메쉬현수막",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈아동복",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러만들기",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아동기모바지",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "먼지없는극세사이불",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어의류브랜드",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어항공점퍼",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈윈드브레이커",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어후드",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "구스앤구스",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "양모겨울이불",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어남방",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아청자켓",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순면이불세트",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "졸음방지",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "비너스팬티스타킹",
+   "kw": "커피보온병",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사요",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사이불패드세트",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사이불퀸",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러소량제작",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "작은보온병",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공부간식",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "너무피곤해요",
    "vol": 190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "강아지치석제거제",
+   "kw": "오코텍스이불",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사싱글이불",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울이불싱글",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아긴팔티셔츠",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아트레이닝복",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈트레이닝세트",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아주니어의류",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울극세사패드",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어기모맨투맨",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "킹이불세트",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모달와플이불",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "입시선물",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "린넨이불",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불리빙박스",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흰색침구",
+   "vol": 185,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아기모청바지",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "NHV",
+   "kw": "커플텀블러",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아야구점퍼",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아원피스브랜드",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어면바지",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피곤할때먹는영양제",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동야구점퍼",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아간절기점퍼",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중학생트레이닝복",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이블세트",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기숙사침구세트",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등남아티셔츠",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어카고팬츠",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불세트추천",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침구세트이쁜곳",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생남자옷",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불방수커버",
    "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "이뮤노벳",
-   "vol": 180,
+   "kw": "주니어기모청바지",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아겨울원피스",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아겨울코트",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아귀달이모자",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈명품패딩",
+   "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "포밤",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "DAIZ브라",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "강아지샴푸린스",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "버박파이오덤",
+   "kw": "유아극세사이불",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "뽕브라마켓",
+   "kw": "유아야구점퍼",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베트컴코리아",
-   "vol": 170,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "고양이구강스프레이",
+   "kw": "키즈블루종",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애견심장사상충약",
+   "kw": "몸이피곤할때",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에블린브라렛",
+   "kw": "진드기방지이불",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아구스다운",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이샴푸추천",
+   "kw": "초극세사이불",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러종류",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두꺼운차렵이불",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈야구잠바",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이바람막이",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱글침대이불",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱글침구세트",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "60수순면이불",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코끼리이불",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슈퍼싱글침구",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈쇼핑극세사이불",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침구셋트",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "알러지침구",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아외투",
+   "vol": 155,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아패딩점퍼",
+   "vol": 155,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형보온병",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "락토벳",
+   "kw": "여자아이패딩",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "LOUNTESS",
+   "kw": "여아외투",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "극세사침구",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈쇼핑겨울이불",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱글극세사이불",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이브랜드",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아아우터",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이니트",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생상하복",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세사이불세트",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생리통마사지기",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "세라퀸",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "강아지보습샴푸",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "반려견샴푸",
+   "kw": "고등학생비타민",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "라메르오메가3",
+   "kw": "빨대보온병",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아다운패딩",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보온보냉물병",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울순면이불",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차렵극세사이불",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이야구점퍼",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어트레이닝복세트",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생가디건",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중학생코트",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등여아점퍼",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라지킹극세사이불",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어겨울바지",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아와이드팬츠",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퀸사이즈침구세트",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "킹이불",
    "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "고양이뿌리는치약",
+   "kw": "가벼운보온병",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지진드기샴푸",
+   "kw": "보온보냉",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "포메라니안샴푸",
+   "kw": "진공보온병",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인더웨어",
-   "vol": 120,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "비비안언더웨어",
-   "vol": 120,
+   "kw": "밍크극세사",
+   "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "개구충제",
-   "vol": 120,
+   "kw": "공시생선물",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "10MM극세사이불",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈반팔",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주니어겨울옷",
+   "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지양치스프레이",
-   "vol": 120,
+   "kw": "주니어경량조끼",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아의류브랜드",
+   "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지염색약",
+   "kw": "옴소독",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차렵이불패드세트",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자어린이옷",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알러지케어침구",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대학배치표",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어패션",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생트레이닝복",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "LK이불",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아골지티셔츠",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모달차렵",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동숏패딩",
+   "vol": 125,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈치마",
+   "vol": 125,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어기모상하복",
+   "vol": 125,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "호신경보기",
    "vol": 120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "강아지각질샴푸",
+   "kw": "남자아이패딩",
    "vol": 120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오로자임치약",
+   "kw": "유아용패딩",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울용차렵이불",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라셀극세사이불",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동자켓",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "써모스보냉병",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아트레이닝복",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어기모팬츠",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어보드복",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생점퍼",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침대침구세트",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈복",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈겨울옷",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동코트",
    "vol": 115,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "믹스투믹스",
+   "kw": "키즈청치마",
    "vol": 115,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이눈세정제",
+   "kw": "키즈트레이닝",
+   "vol": 115,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "귀여운이불",
+   "vol": 115,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울싱글이불",
+   "vol": 115,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수능합격기원",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지스프레이치약",
+   "kw": "유아패딩바지",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "온라인동물병원",
+   "kw": "키즈니트가디건",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이비듬샴푸",
+   "kw": "키즈맨투맨세트",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "세라마이드오메가3",
+   "kw": "겨울오리털이불",
    "vol": 110,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퍼르",
+   "kw": "겨울따뜻한이불",
    "vol": 110,
-   "comp": "중간",
-   "hint": true
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "덴티스츄",
+   "kw": "이불겨울",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불사이트",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침구세트Q",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아츄리닝",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이옷사이트",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급차렵이불",
+   "vol": 105,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울아동복",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노견치석제거",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "고양이피부영양제",
+   "kw": "모달극세사",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "말티푸샴푸",
+   "kw": "양털극세사이불",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "컵보온병",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아겨울레깅스",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침구아울렛",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고밀도순면이불",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고3비타민",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인이불세트",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뱀부이불",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알러지케어침구세트",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자어린이옷",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차렵이불퀸",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어야구잠바",
    "vol": 95,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "동물병원어플",
+   "kw": "남아청자켓",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "킹침구세트",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체크차렵이불",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생겨울옷",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수능수험생선물",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울발열이불",
    "vol": 90,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "강아지치약스프레이",
+   "kw": "1인용극세사이불",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사이불라지킹",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등여아롱패딩",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여아기모맨투맨",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알레르기방지이불",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈여아바지",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동구스다운",
    "vol": 85,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초모리브라",
+   "kw": "유아방한장갑",
    "vol": 85,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지약용샴푸추천",
+   "kw": "사진텀블러",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동후리스조끼",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불극세사",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아멜빵치마",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생기모바지",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아프릴블라우스",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아방한복",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "PRO5A유산균",
+   "kw": "아동겨울패딩",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "개비린내샴푸",
+   "kw": "양면극세사담요",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지치아영양제",
+   "kw": "극세사이불슈퍼싱글",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "개밤",
+   "kw": "극세사겨울이불세트",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울이불브랜드",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등여아아우터",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쥬니어의류",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈바람막이점퍼",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어간절기점퍼",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이옷쇼핑몰",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아아노락",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사계절침구",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슈퍼싱글침대이불세트",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생의류",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어트레이닝",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "60수아사면이불",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여아기모원피스",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아방수장갑",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈외투",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아숏패딩",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아겨울점퍼",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자아이셔츠",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브랜드키즈",
    "vol": 75,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "애견린스",
+   "kw": "주니어니삭스",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퓨어테이블",
+   "kw": "극세사이불킹",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어기모후드",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아카고팬츠",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불싼곳",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아골지티",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공업용줄자",
    "vol": 70,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "PRO-5A",
+   "kw": "수능초코렛",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "뿌리는치약",
+   "kw": "퀸센스보온병",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "벳플러스액티베이트캣",
+   "kw": "에코컵",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "WORKONBODYOFF",
+   "kw": "텀블러굿즈제작",
    "vol": 70,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "HARUBAN",
-   "vol": 65,
-   "comp": "중간",
+   "kw": "고급극세사이불",
+   "vol": 70,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "STL브라탑",
-   "vol": 65,
-   "comp": "중간",
+   "kw": "겨울알러지케어이불",
+   "vol": 70,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "향기좋은강아지샴푸",
+   "kw": "재수생선물",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "킹사이즈겨울이불",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어패딩점퍼",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중학생기모바지",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부드러운겨울이불",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사양털이불",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향균이불",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "감성이불",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알러지침구세트",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경물병",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "비너스아르보노와이어",
+   "kw": "극세사두꺼운이불",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지버블샴푸",
+   "kw": "남아겨울옷",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이양치질",
+   "kw": "유아경량점퍼",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사차렵이불세트",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아간절기아우터",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중학생츄리닝",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아누빔점퍼",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슈퍼싱글침대이불",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동기모상하복",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "더블이불세트",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "킹침대이불세트",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜이불쇼핑몰",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6세여아원피스",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름홑이불",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등츄리닝",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제작그립톡",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이목욕샴푸",
+   "kw": "수능대박기원선물",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자가발열극세사이불",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알러지케어극세사",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈여름옷",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생아우터",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생니삭스",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수험생카페인",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "킹사이즈침구",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모달면이불",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "먼지없는이불세트",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "면이불세트",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "북유럽침구",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동아우터",
    "vol": 55,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기고양이샴푸",
+   "kw": "아동구스패딩",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이피부병약",
+   "kw": "유아패딩장갑",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그래핀자가발열",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아트레이닝바지",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사세트",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "면극세사이불",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인용침구",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동카고팬츠",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아사차렵이불",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차렵이불사계절",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어반팔",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫데이핫팩",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이잇몸약",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고양이전용샴푸",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무지조타",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펫츠다이닝",
+   "kw": "클린칸틴",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "치석제거스프레이",
+   "kw": "해피락김장매트",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈쇼핑침구세트",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보냉보온병",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사이불브랜드",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울침구추천",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아동브랜드",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사차렵",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울철이불",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원룸이불",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침구세트브랜드",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "봄이불세트",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "더블침대이불세트",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인용침구세트",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "봄이불추천",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알러지케어이불추천",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캐릭터극세사담요",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이로션",
+   "kw": "아동복패딩",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이바디워시",
+   "kw": "아이롱패딩",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "레노마브라",
+   "kw": "유아동패딩",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애견컨디셔너",
+   "kw": "킹사이즈극세사이불",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "극세사이불킹사이즈",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주니어남아티셔츠",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "반려견목욕용품",
+   "kw": "키즈여름원피스",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "동물병원쇼핑몰",
+   "kw": "주니어바람막이점퍼",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동니트가디건",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아바람막이점퍼",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이르침구",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체크침구",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱글침구",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜이불세트",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "먼지안붙는이불",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아롱티셔츠",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퀸사이즈차렵이불",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "듀라론이불",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순면침구",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아반팔",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알러지방지패드",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생리통완화기",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스카가오메가3",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "고양이가려움",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "플로렌테로액트",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "이볼브사료",
+   "kw": "루첸스페셜기프트세트",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "말영양제",
+   "kw": "리유저블컵주문제작",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리유저블텀블러제작",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침대커버이불세트",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모달와플",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순면침구세트",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불회사",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퀸사이즈침구",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알러지없는이불",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈웨어",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침구풀세트",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈방수장갑",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동기모팬츠",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이외투",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사이불겨울",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "광주강아지간식",
+   "kw": "라지킹극세사",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "진돗개샴푸",
+   "kw": "아동겨울점퍼",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알러지극세사이불",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밍크극세사차렵이불",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사이불Q",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공부비타민",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "휘슬샴푸",
+   "kw": "여자아이가디건",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈반팔티셔츠",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공시생영양제",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어기모티",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아바람막이점퍼",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈여름바람막이",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동복가디건",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아바람막이점퍼",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불저렴한곳",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취이불",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자아이상하복",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취생이불",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어여름원피스",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "애견구강스프레이",
+   "kw": "극세사이불S",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에블린심리스브라렛",
+   "kw": "어린이반팔티",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지치주염영양제",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강아지샴푸브랜드",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "나이키앞지퍼스포츠브라",
+   "kw": "이불1+1",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "강아지올인원샴푸",
+   "kw": "이불K",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "더블침구세트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불세트퀸",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모던이불",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유리컵만들기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가드너매트리스",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜침구",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불킹",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기능성이불",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필굿이불",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아토피침구",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학원용품",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "반려동물샴푸",
+   "kw": "보온병제작",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "도로시비치",
-   "vol": 25,
-   "comp": "중간",
+   "kw": "스텐텀블러제작",
+   "vol": 30,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "프리부",
-   "vol": 25,
-   "comp": "중간",
+   "kw": "숭실대학교기념품",
+   "vol": 30,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "NUTRITIONTREATS",
-   "vol": 25,
-   "comp": "낮음",
+   "kw": "차렵이불베개세트",
+   "vol": 30,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "펫밀",
-   "vol": 25,
-   "comp": "중간",
+   "kw": "시어서커이불세트",
+   "vol": 30,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애견뿌리는치약",
+   "kw": "이불풀세트",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침구류추천",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천연카페인음료",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시어서커홑이불",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차렵이불브랜드",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수능100일선물",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "코발라민멀티플정",
+   "kw": "우먼스트레스프리",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "새끼고양이샴푸",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "강아지순한샴푸",
+   "kw": "김장매트추천",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지사료기호성테스트",
+   "kw": "유아여름가디건",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "레날어드밴스독스",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "애완견샴푸",
+   "kw": "백화점이불세트",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오라맥스",
+   "kw": "200ML페트병",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "프렌치불독샴푸",
+   "kw": "먼지없는극세사",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "천연강아지샴푸",
+   "kw": "고등학생피로회복제",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "PETFOOD",
+   "kw": "키즈기모트레이닝세트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동아노락",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발열침구",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코튼베딩",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아반팔티셔츠",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취방이불",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱글침대침구",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "간절기침구세트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "면침구세트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슬림차렵이불",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천연염색이불",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이옷사이트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급물병",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "먼지없는침구",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "킹침대이불",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매트리스세트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스무디잔",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싼이불",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퀸차렵이불세트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름침구",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인견홑이불",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "북유럽이불",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알러지케어커버",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "풍기인견여름이불",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "진드기차단이불",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "누비지오모달이불",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "각인텀블러제작",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불세트SS",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "간절기침구",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기숙사용이불",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베스트현수막",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페비품",
    "vol": 20,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "속옷정기배송",
+   "kw": "수능백일선물",
    "vol": 15,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "메이웰코리아",
+   "kw": "고마워핫팩",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동방한복",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "루첸스테인레스이중머그",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나만의텀블러만들기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반려견텀블러",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울이불세일",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경페트병",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "테이크아웃보틀",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "찹쌀떡이불",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "프로바이오틱라이브",
+   "kw": "극세사이불솜",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "하루한첩",
+   "kw": "키즈봄점퍼",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "세미극세사이불",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고등학생피로회복",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수험생액상비타민",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브랜드아동복",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아하와이안셔츠",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프린팅이불",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어패딩바지",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아봄점퍼",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사패드킹사이즈",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "FATBURN",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "맥시가드",
+   "kw": "세종대기념품",
    "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신세계기프트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이지침구",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "호텔납품",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기장선물세트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불특가",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "K이불",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보온병비교",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차렵침구세트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "누빔이불세트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비염침구",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기숙사차렵이불",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디자인침구",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "봄침구세트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물수건업체",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "술용기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싱글이불패드세트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차렵이불LK",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등여아반팔티",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침구사이트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "100수침구",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아민소매",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "풍기인견이불세트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름이불추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름순면이불",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슈퍼싱글여름이불",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "침구할인",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빈티지침구",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드리온무선보조배터리",
+   "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "스카가",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "고양이스프레이치약",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "동물병원용품",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고양이무향샴푸",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "힐스하이포트릿",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강아지사료무료샘플",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "티티펫",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "새끼강아지샴푸",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다솜코퍼레이션",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "마스코타펫티슈",
-   "vol": 10,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "오이쇼브라렛",
+   "kw": "골프스코어수첩",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "CANDIOLI",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "TEARSTAIN",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "YUUP",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "ZYLKENE",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "견공본가",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "팻푸드",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "토닛파우더",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "애견천연샴푸",
+   "kw": "수능판촉물",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바이랄리스",
+   "kw": "스마트톡도매",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "판촉물그립톡",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강아지고양이샴푸",
+   "kw": "PVC그립톡",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오로자임스트립",
+   "kw": "초등학교보온병",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "보온병기념품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나만의텀블러",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커스텀텀블러제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러로고각인",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러소량인쇄",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러자체제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "TEASCAFE",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "청소년체력",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등여아봄옷",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여름극세사이불",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "칼플렉스",
+   "kw": "자가발열양면토퍼",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "남아봄잠바",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "어린이봄잠바",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유아봄점퍼",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "주니어봄점퍼",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "키즈봄아우터",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "키즈봄잠바",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "엠디펫",
+   "kw": "스승의날답례품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기린넨가디건",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날답례품",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "프리미엄베딩",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아주니어의류브랜드",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어봄옷",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "겨울이불셋트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "봄맞이침구",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여름싱글이불",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "집꾸미기쇼핑몰",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안방침구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아봄옷",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "감성침구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기숙사이불추천",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불대량구매",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4계절침구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "킹사이즈여름이불",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대학기숙사이불",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "시어서커침구",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "봄맞이이불",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "차렵침구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차렵세트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "봄침구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1500원선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "광주게릴라현수막",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "교회학교현수막",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "피그먼트여름이불",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름이불퀸",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슈퍼킹침구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경침구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "북유럽침구세트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "봄토퍼",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "봄여름이불",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차캘린더",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "중철수첩",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "컵홀더공장",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파카볼펜가격",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "린넨홑이불",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "진드기방지침구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냉감모달이불",
    "vol": 10,
    "comp": "낮음",
    "hint": false
