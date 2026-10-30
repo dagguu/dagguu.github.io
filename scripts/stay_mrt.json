@@ -1,10 +1,21 @@
 {
+ "busan-matie-harbor": {
+  "mname": "마티에 부산하버시티",
+  "price": 561000,
+  "orig": 561000,
+  "rate": 0,
+  "u": "https://myrealt.rip/z9bS5e",
+  "checkIn": "2026-11-07",
+  "at": "2026-10-30",
+  "score": "4.7",
+  "reviews": 48
+ },
  "gangneung-takenomori": {
   "mname": "강릉 다케노모리글램핑&료칸",
   "price": 216000,
   "orig": 399000,
   "rate": 46,
-  "u": "https://myrealt.rip/z9aM93",
+  "u": "https://myrealt.rip/z9bU06",
   "checkIn": "2026-11-07",
   "at": "2026-10-30",
   "score": "0.0",
@@ -15,10 +26,32 @@
   "price": 299000,
   "orig": 299000,
   "rate": 0,
-  "u": "https://myrealt.rip/z9aP70",
+  "u": "https://myrealt.rip/z9bW82",
   "checkIn": "2026-11-07",
   "at": "2026-10-30",
   "score": "0.0",
   "reviews": 0
+ },
+ "pohang-daytona": {
+  "mname": "포항 데이토나풀빌라",
+  "price": 189000,
+  "orig": 399000,
+  "rate": 53,
+  "u": "https://myrealt.rip/z9bx7a",
+  "checkIn": "2026-11-07",
+  "at": "2026-10-30",
+  "score": "3.3",
+  "reviews": 4
+ },
+ "seonjae-seonjaedam": {
+  "mname": "대부도(선재도) 선재담글램핑&카라반리조트",
+  "price": 300000,
+  "orig": 650000,
+  "rate": 54,
+  "u": "https://myrealt.rip/z9c175",
+  "checkIn": "2026-11-07",
+  "at": "2026-10-30",
+  "score": "5.0",
+  "reviews": 1
  }
 }

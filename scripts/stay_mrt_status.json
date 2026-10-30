@@ -1,49 +1,163 @@
 {
- "at": "2026-10-30 09:43",
+ "at": "2026-10-30 09:45",
  "checkIn": "2026-11-07",
  "stays": {
   "busan-matie-harbor": {
    "name": "마티에 부산하버시티",
    "city": "부산",
    "auto": [],
-   "pages": 3,
-   "region": "부산"
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "부산",
+     "region": "부산",
+     "type": "CITY",
+     "pages": 6,
+     "n": 297,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 1929
+    }
+   ],
+   "hit": "마티에 부산하버시티"
   },
   "gangneung-takenomori": {
    "name": "강릉 다케노모리글램핑&료칸",
    "city": "강릉",
    "auto": [],
-   "pages": 5,
-   "region": "강릉",
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "주문진",
+     "region": "주문진항",
+     "type": "POINT_OF_INTEREST",
+     "pages": 1,
+     "n": 50,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 1495
+    }
+   ],
    "hit": "강릉 다케노모리글램핑&료칸"
   },
   "gapyeong-glamhavana": {
    "name": "글램하바나",
    "city": "가평",
    "auto": [],
-   "pages": 1,
-   "region": "가평",
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "가평",
+     "region": "가평",
+     "type": "CITY",
+     "pages": 1,
+     "n": 50,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 1911
+    }
+   ],
    "hit": "가평 글램하바나"
   },
   "gyeongju-snb-poolvilla": {
    "name": "경주 에스앤비풀빌라",
    "city": "경주",
    "auto": [],
-   "pages": 1,
-   "region": "경주"
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "경주",
+     "region": "경주",
+     "type": "CITY",
+     "pages": 12,
+     "n": 594,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 1865
+    },
+    {
+     "kw": "경북",
+     "region": "경주",
+     "type": "CITY",
+     "pages": 12,
+     "n": 594,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 1865
+    },
+    {
+     "kw": "경북",
+     "region": "포항",
+     "type": "CITY",
+     "pages": 12,
+     "n": 583,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 913
+    }
+   ]
   },
   "pohang-daytona": {
    "name": "데이토나풀빌라",
    "city": "포항",
    "auto": [],
-   "pages": 1,
-   "region": "포항"
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "포항",
+     "region": "포항",
+     "type": "CITY",
+     "pages": 2,
+     "n": 96,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 913
+    }
+   ],
+   "hit": "포항 데이토나풀빌라"
   },
   "seonjae-seonjaedam": {
    "name": "선재담 글램핑&카라반 리조트",
    "city": "옹진",
    "auto": [],
-   "pages": 0
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "인천",
+     "region": "인천",
+     "type": "CITY",
+     "pages": 2,
+     "n": 100,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 2361
+    }
+   ],
+   "hit": "대부도(선재도) 선재담글램핑&카라반리조트"
   }
  }
 }
