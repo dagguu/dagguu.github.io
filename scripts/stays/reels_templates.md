@@ -237,3 +237,4 @@ json 의 type·theme·points·fit·tags 글자로 판단, 여러 개면 시온�
 - AI 영상(kie Veo)의 무빙은 사진을 왼쪽·오른쪽으로 미는(2D 팬·슬라이드·줌) 게 아니라, 사람이 스마트폰 짐벌을 들고 그 공간 안을 실제로 걸어가며 왼쪽→오른쪽으로 돌아 찍은 것처럼: 가까운 물건이 뒤 배경보다 빨리 지나가는 시차(패럴랙스), 가구·벽·창밖이 다른 각도로 새로 보이는 공간감, 짐벌처럼 부드럽되 걷는 느낌이 아주 살짝.
 - kie_scenes.py·kie_video.py 가 모든 영상 프롬프트에 GIMBAL 문장을 자동으로 붙인다. 장면 프롬프트에는 "slider move" 대신 "slow gimbal walk arcing from left to right around …", "gimbal walk forward through the room toward …" 처럼 카메라가 공간 안에서 움직이는 말로 쓴다. 드론 컷도 실제로 날아가며 시차가 생기게.
 - 편집(reel_make.py)에서 영상 컷에 좌우 밀기·줌을 더하지 않는다(지금도 안 함).
+- 2026-10-30 19:58 시온님 "영상에 드론이랑 짐벌 절대 나오게 하지마": Veo 는 프롬프트의 drone·gimbal·crane·slider·smartphone 같은 장비 이름을 화면에 그려 넣는다 → 영상 프롬프트(kie_prompts prompt·tts/carousel vp)에 장비 이름을 쓰지 않는다. "aerial glide forward", "smooth walk-through glide arcing left to right", "slow rise", "push forward" 처럼 움직임만 쓴다. GIMBAL 문장 끝에 "no drones, gimbals, cameras, phones, tripods or any filming equipment appear" 가 붙는다.
