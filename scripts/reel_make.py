@@ -121,10 +121,10 @@ L = ["[Script Info]", "ScriptType: v4.00+", "PlayResX: 1080", "PlayResY: 1920", 
      "Style: T,"+FAM+",118,&H00FFFFFF,&H00000000,&H90000000,1,1,6,5,8,50,50,330", "", "[Events]",  # T = 처음 1.6초 큰 제목(흰 글씨 두 줄)
      "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
 TT = J.get("title") or []
-if TT and J.get("titleInVideo", True):  # 2026-10-30 21:52 시온님 "큰 제목도 처음에만 잠깐": 맨 처음 1.6초만 위쪽 흰 글씨 두 줄(예전 2.8초·노란 둘째 줄·기울임은 옛 기록)
+if TT and J.get("titleInVideo", True):  # 2026-10-30 22:04 시온님 "처음 0.5~1초만": 맨 처음 0.8초만 위쪽 흰 글씨 두 줄(예전 2.8초·노란 둘째 줄·기울임은 옛 기록)
     t1 = "\\N".join(TT[:2])
     if FU.get("family") and not FU.get("hasSpace"): t1 = t1.replace(" ", "{\\fnNoto Sans CJK KR Black} {\\fn" + FAM + "}")
-    L.append(f"Dialogue: 1,{ts(0)},{ts(min(1.6, dur))},T,,0,0,0,,{{\\fad(0,200)}}{t1}")
+    L.append(f"Dialogue: 1,{ts(0)},{ts(min(0.8, dur))},T,,0,0,0,,{{\\fad(0,120)}}{t1}")
 def chunk(ws):
     # 2026-10-27 시온님 "네 명이 가면 문장이 잘렸어": 숫자·세는 말(한/두/세/네/다섯…/숫자)과 1글자 말은 다음 말과 붙여 둔다, 쉼표·마침표에서 끊는다
     NUM = re.compile(r"^(한|두|세|네|다섯|여섯|일곱|여덟|아홉|열|스무|몇|\d[\d,]*)$")
@@ -140,7 +140,7 @@ def chunk(ws):
 for i, s in enumerate(SC):
     ws = wsc[i]; chunks = chunk(ws)
     for c, ch in enumerate(chunks):
-        a0 = (1.6 if TT and J.get("titleInVideo", True) else 0.0) if (i == 0 and c == 0) else max(ch[0]["start"], 1.6 if TT and J.get("titleInVideo", True) else 0)  # 첫 자막은 0초부터(2026-10-28 선재담 첫 프레임에 글자 없음 → 건너뛰기 84.9%)
+        a0 = 0.0 if (i == 0 and c == 0) else ch[0]["start"]  # 2026-10-30 22:04 시온님: 제목이 떠 있어도 자막은 TTS 그대로  # 첫 자막은 0초부터(2026-10-28 선재담 첫 프레임에 글자 없음 → 건너뛰기 84.9%)
         a1 = chunks[c + 1][0]["start"] if c + 1 < len(chunks) else (ends[i] if i + 1 < len(SC) else dur)
         txt = " ".join(w["text"].rstrip(",.") for w in ch)
         for h in s.get("hl", []): txt = txt.replace(h, "{\\c&H0080FF&}" + h + "{\\c&HFFFFFF&}")
