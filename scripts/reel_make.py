@@ -117,7 +117,7 @@ os.replace(OUT + "/list.txt", OUT + "/cuts/list.txt")
 def ts(t): t = max(0, t); return f"{int(t//3600)}:{int(t%3600//60):02d}:{t%60:05.2f}"
 L = ["[Script Info]", "ScriptType: v4.00+", "PlayResX: 1080", "PlayResY: 1920", "", "[V4+ Styles]",
      "Format: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV",
-     "Style: D,Noto Sans CJK KR,64,&H00FFFFFF,&H50000000,&H78000000,0,1,1.6,2,5,60,60,0",  # 2026-10-30 시온님: 작고 가는 흰 글씨 한 줄(참고 릴스)
+     "Style: D,"+FAM+",80,&H00FFFFFF,&H00000000,&H64000000,1,1,6,3,5,60,60,0",  # 2026-10-30 22:02 시온님 "원래대로, 글씨 크기만 중간으로" (104 → 80)
      "Style: T,"+FAM+",118,&H00FFFFFF,&H00000000,&H90000000,1,1,6,5,8,50,50,330", "", "[Events]",  # T = 처음 1.6초 큰 제목(흰 글씨 두 줄)
      "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
 TT = J.get("title") or []
@@ -133,8 +133,8 @@ def chunk(ws):
     for w in ws:
         n = len("".join(x["text"] for x in cur + [w]))
         if cur and cur[-1]["text"].endswith((",", ".", "?", "!")): out.append(cur); cur = []
-        elif cur and not glue(cur[-1]["text"]) and (len(cur) >= 3 or n > 13): out.append(cur); cur = []  # 2026-10-30 시온님 참고 릴스: 한 줄에 2~4단어(13자 안팎)
-        elif cur and len(cur) >= 4: out.append(cur); cur = []
+        elif cur and not glue(cur[-1]["text"]) and (len(cur) >= 2 or n > 9): out.append(cur); cur = []
+        elif cur and len(cur) >= 3: out.append(cur); cur = []
         cur.append(w)
     return out + ([cur] if cur else [])
 for i, s in enumerate(SC):
@@ -143,7 +143,9 @@ for i, s in enumerate(SC):
         a0 = (1.6 if TT and J.get("titleInVideo", True) else 0.0) if (i == 0 and c == 0) else max(ch[0]["start"], 1.6 if TT and J.get("titleInVideo", True) else 0)  # 첫 자막은 0초부터(2026-10-28 선재담 첫 프레임에 글자 없음 → 건너뛰기 84.9%)
         a1 = chunks[c + 1][0]["start"] if c + 1 < len(chunks) else (ends[i] if i + 1 < len(SC) else dur)
         txt = " ".join(w["text"].rstrip(",.") for w in ch)
-        L.append(f"Dialogue: 0,{ts(a0)},{ts(a1)},D,,0,0,0,,{{\\pos(540,700)}}{txt}")  # 2026-10-30 시온님: 강조색·기울임 없이 가는 흰 글씨, 화면 위쪽 1/3  # 2026-10-28 시온님 "자막을 중앙에서 1cm 정도 위로" (화면 높이 1920 ≈ 휴대폰 14.5cm → 1cm ≈ 130px)
+        for h in s.get("hl", []): txt = txt.replace(h, "{\\c&H0080FF&}" + h + "{\\c&HFFFFFF&}")
+        if FU.get("family") and not FU.get("hasSpace"): txt = txt.replace(" ", "{\\fnNoto Sans CJK KR Black} {\\fn" + FAM + "}")  # 잘난체 웹폰트엔 띄어쓰기 글자가 없음
+        L.append(f"Dialogue: 0,{ts(a0)},{ts(a1)},D,,0,0,0,,{{\\i1\\pos(540,830)}}{txt}")  # 2026-10-30 시온님: 강조색·기울임 없이 가는 흰 글씨, 화면 위쪽 1/3  # 2026-10-28 시온님 "자막을 중앙에서 1cm 정도 위로" (화면 높이 1920 ≈ 휴대폰 14.5cm → 1cm ≈ 130px)
 open(OUT + "/sub.ass", "w", encoding="utf-8").write("\n".join(L) + "\n")
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", OUT + "/cuts/list.txt", "-i", OUT + "/voice.mp3",
                 "-vf", "eq=brightness=0.035:contrast=1.03:saturation=1.12:gamma=1.04,colorbalance=rs=0.04:gs=0.015:bs=-0.05:rm=0.03:bm=-0.03," + f"subtitles={OUT}/sub.ass:fontsdir=" + os.path.expanduser("~/.fonts"), "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
