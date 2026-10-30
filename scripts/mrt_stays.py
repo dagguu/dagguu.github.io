@@ -51,17 +51,26 @@ def main():
             for k, v in ac.items():
                 if isinstance(v, list):
                     for x in v[:8]: st["auto"].append({kk: x.get(kk) for kk in ("type", "name", "regionName", "regionId", "itemId", "id") if x.get(kk) is not None})
-            # 2) 시·군 지역 검색에서 이름 맞추기
-            rs = (M.post("/v1/products/accommodation/region-autocomplete", {"keyword": city, "isDomestic": True}, 0.4) or {}).get("regions") or []
-            r = next((x for x in rs if x.get("type") == "CITY"), rs[0] if rs else None)
-            if r:
-                st["region"] = r.get("name") or r.get("regionName")
-                for page in range(8):
-                    data = M.post("/v1/products/accommodation/search", {"regionId": r["regionId"], "checkIn": cin, "checkOut": cout, "adultCount": 2, "page": page, "size": 50}) or {}
-                    items = data.get("items") or []
-                    st["pages"] = page + 1
-                    hit = next((it for it in items if same(it.get("itemName"), name)), None)
-                    if hit or len(items) < 50: break
+            # 2) 지역 검색에서 이름 맞추기: 괄호 속 동네(감포·선재도) → 시·군 → 도
+            keys = []
+            for k in re.findall(r"\((.*?)\)", P.get("area", "")) + [city] + P.get("area", "").split()[:1]:
+                k = re.sub(r"\(.*?\)", "", k).strip()
+                if k and k not in keys: keys.append(k)
+            st["tried"] = []
+            for kw in keys:
+                if hit: break
+                rs = (M.post("/v1/products/accommodation/region-autocomplete", {"keyword": kw, "isDomestic": True}, 0.4) or {}).get("regions") or []
+                for r in [x for x in rs if x.get("type") == "CITY"][:2] or rs[:1]:
+                    if hit: break
+                    tr = {"kw": kw, "region": r.get("name") or r.get("regionName"), "type": r.get("type"), "pages": 0, "n": 0}
+                    st["tried"].append(tr)
+                    for page in range(12):
+                        data = M.post("/v1/products/accommodation/search", {"regionId": r["regionId"], "checkIn": cin, "checkOut": cout, "adultCount": 2, "page": page, "size": 50}) or {}
+                        items = data.get("items") or []
+                        if page == 0: tr["keys"] = [k for k in data.keys() if k != "items"]; tr["total"] = data.get("totalCount") or data.get("total")
+                        tr["pages"] = page + 1; tr["n"] += len(items)
+                        hit = next((it for it in items if same(it.get("itemName"), name)), None)
+                        if hit or not items: break
         except SystemExit: raise
         except Exception as ex:
             st["err"] = str(ex)[:150]
