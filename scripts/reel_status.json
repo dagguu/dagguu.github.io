@@ -1,5 +1,5 @@
 {
- "at": "2026-10-30T08:24:35.365387",
+ "at": "2026-10-30T09:39:31.764647",
  "name": "sancheong-andforet",
  "font": "Jalnan",
  "fontInfo": {
@@ -10,7 +10,7 @@
   "family": "Jalnan",
   "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
  },
- "dur": 22.52,
+ "dur": 24.48,
  "cuts": 19,
  "plan": [
   {
@@ -18,79 +18,79 @@
    "t": "사진만 보면 북유럽 숲속 같죠?",
    "img": "ai:1",
    "start": 0.0,
-   "end": 2.29,
+   "end": 2.55,
    "cuts": 2
   },
   {
    "video": true,
    "t": "산청 지리산 아래 생긴 신상 글램핑이에요.",
    "img": "ai:2",
-   "start": 2.29,
-   "end": 4.94,
+   "start": 2.55,
+   "end": 5.15,
    "cuts": 2
   },
   {
    "video": true,
    "t": "객실마다 바비큐 자리가 따로 있고,",
    "img": "ai:3",
-   "start": 4.94,
-   "end": 6.98,
-   "cuts": 2
+   "start": 5.15,
+   "end": 7.02,
+   "cuts": 1
   },
   {
    "video": true,
    "t": "통창 너머로는 산이 꽉 차요.",
    "img": "ai:4",
-   "start": 6.98,
-   "end": 8.74,
-   "cuts": 1
+   "start": 7.02,
+   "end": 9.66,
+   "cuts": 2
   },
   {
    "video": true,
    "t": "삼각 창 앞에 앉아 숲 보며 쉬고,",
    "img": "ai:5",
-   "start": 8.74,
-   "end": 10.7,
+   "start": 9.66,
+   "end": 11.68,
    "cuts": 2
   },
   {
-   "video": false,
+   "video": true,
    "t": "전 객실이 복층이라",
    "img": "ai:6",
-   "start": 10.7,
-   "end": 11.7,
+   "start": 11.68,
+   "end": 12.72,
    "cuts": 1
   },
   {
-   "video": false,
+   "video": true,
    "t": "넓게 쓸 수 있거든요.",
    "img": "ai:7",
-   "start": 11.7,
-   "end": 12.92,
+   "start": 12.72,
+   "end": 14.4,
    "cuts": 1
   },
   {
-   "video": false,
+   "video": true,
    "t": "거기다 객실마다 작은 수영장이 있는데,",
    "img": "ai:8",
-   "start": 12.92,
-   "end": 15.21,
+   "start": 14.4,
+   "end": 16.86,
    "cuts": 2
   },
   {
-   "video": false,
+   "video": true,
    "t": "따뜻한 물로 바꿀 수 있어서 밖은 추워도 물속은 따뜻해요.",
-   "img": "ai:8",
-   "start": 15.21,
-   "end": 18.74,
+   "img": "ai:9",
+   "start": 16.86,
+   "end": 20.61,
    "cuts": 3
   },
   {
    "video": true,
    "t": "멀리 안 가도 숲속에서 조용히 쉬기 좋은 곳이에요.",
-   "img": "ai:1",
-   "start": 18.74,
-   "end": 22.52,
+   "img": "ai:10",
+   "start": 20.61,
+   "end": 24.48,
    "cuts": 3
   }
  ],
