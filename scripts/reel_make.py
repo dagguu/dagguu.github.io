@@ -60,6 +60,14 @@ if not a.thumb_only and W:
         W = [dict(w, start=mp(w["start"]), end=mp(w["end"])) for w in W]
         st["gapCut"] = round(sum(b0 - a0 for a0, b0 in cut_), 2)
         dur = W[-1]["end"] + 0.6
+# 제목과 자막 겹치지 않게(2026-10-30 22:14 시온님 "동시에 나오게 하지 말아줘"): 제목이 있으면 목소리를 제목 시간(TD)만큼 늦게 시작
+TT0 = J.get("title") or []
+TD = 0.8 if (TT0 and J.get("titleInVideo", True) and not a.thumb_only) else 0.0
+if TD:
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", OUT + "/voice.mp3", "-af", f"adelay={int(TD*1000)}:all=1", "-c:a", "libmp3lame", "-b:a", "192k", OUT + "/voice2.mp3"], check=True)
+    os.replace(OUT + "/voice2.mp3", OUT + "/voice.mp3")
+    W = [dict(w, start=w["start"] + TD, end=w["end"] + TD) for w in W]
+    dur += TD
 # 장면 시작 시간: 단어를 순서대로 세어 맞춤
 idx, starts, wsc = 0, [], []
 for s in SC:
@@ -122,7 +130,7 @@ L = ["[Script Info]", "ScriptType: v4.00+", "PlayResX: 1080", "PlayResY: 1920", 
      "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
 TT = J.get("title") or []
 if TT and J.get("titleInVideo", True):  # 2026-10-30 22:04 시온님 "처음 0.5~1초만": 맨 처음 0.8초만 위쪽 흰 글씨 두 줄(예전 2.8초·노란 둘째 줄·기울임은 옛 기록)
-    t1 = "\\N".join(TT[:2])
+    t1 = TT[0] + ("\\N{\\c&H00FFFF&}" + TT[1] if len(TT) > 1 else "")  # 2026-10-30 22:14 시온님 "썸네일처럼 아래줄 색깔": 둘째 줄 노란색
     if FU.get("family") and not FU.get("hasSpace"): t1 = t1.replace(" ", "{\\fnNoto Sans CJK KR Black} {\\fn" + FAM + "}")
     L.append(f"Dialogue: 1,{ts(0)},{ts(min(0.8, dur))},T,,0,0,0,,{{\\fad(0,120)}}{t1}")
 def chunk(ws):
@@ -140,7 +148,7 @@ def chunk(ws):
 for i, s in enumerate(SC):
     ws = wsc[i]; chunks = chunk(ws)
     for c, ch in enumerate(chunks):
-        a0 = 0.0 if (i == 0 and c == 0) else ch[0]["start"]  # 2026-10-30 22:04 시온님: 제목이 떠 있어도 자막은 TTS 그대로  # 첫 자막은 0초부터(2026-10-28 선재담 첫 프레임에 글자 없음 → 건너뛰기 84.9%)
+        a0 = TD if (i == 0 and c == 0) else ch[0]["start"]  # 2026-10-30 22:04 시온님: 제목이 떠 있어도 자막은 TTS 그대로  # 첫 자막은 0초부터(2026-10-28 선재담 첫 프레임에 글자 없음 → 건너뛰기 84.9%)
         a1 = chunks[c + 1][0]["start"] if c + 1 < len(chunks) else (ends[i] if i + 1 < len(SC) else dur)
         txt = " ".join(w["text"].rstrip(",.") for w in ch)
         for h in s.get("hl", []): txt = txt.replace(h, "{\\c&H0080FF&}" + h + "{\\c&HFFFFFF&}")
@@ -148,7 +156,7 @@ for i, s in enumerate(SC):
         L.append(f"Dialogue: 0,{ts(a0)},{ts(a1)},D,,0,0,0,,{{\\i1\\pos(540,830)}}{txt}")  # 2026-10-30 시온님: 강조색·기울임 없이 가는 흰 글씨, 화면 위쪽 1/3  # 2026-10-28 시온님 "자막을 중앙에서 1cm 정도 위로" (화면 높이 1920 ≈ 휴대폰 14.5cm → 1cm ≈ 130px)
 open(OUT + "/sub.ass", "w", encoding="utf-8").write("\n".join(L) + "\n")
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", OUT + "/cuts/list.txt", "-i", OUT + "/voice.mp3",
-                "-vf", "eq=brightness=0.035:contrast=1.03:saturation=1.12:gamma=1.04,colorbalance=rs=0.04:gs=0.015:bs=-0.05:rm=0.03:bm=-0.03," + f"subtitles={OUT}/sub.ass:fontsdir=" + os.path.expanduser("~/.fonts"), "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
+                "-vf", "eq=brightness=0.03:contrast=1.10:saturation=1.14:gamma=1.02,unsharp=5:5:0.8:5:5:0.0,colorbalance=rs=0.04:gs=0.015:bs=-0.05:rm=0.03:bm=-0.03," + f"subtitles={OUT}/sub.ass:fontsdir=" + os.path.expanduser("~/.fonts"), "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
                 "-c:a", "aac", "-b:a", "192k", "-t", f"{dur:.2f}", "-movflags", "+faststart", OUT + "/reel.mp4"], check=True)
 thumb()  # 썸네일(표지) = thumb.img(기본 첫 풍경 장면) 영상/사진 + 제목 2줄
 import shutil; shutil.rmtree(OUT + "/cuts"); [os.remove(f"{OUT}/{f}") for f in os.listdir(OUT) if f.startswith(("src_", "clip_"))]
