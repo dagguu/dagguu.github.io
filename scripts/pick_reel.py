@@ -10,7 +10,7 @@
 python3 scripts/pick_reel.py [개수=5] → 후보를 순서대로 출력. 1번이 쿠팡트래블에 없거나 사진이 부족하면 다음 후보."""
 import json, os, re, sys, random, datetime, subprocess
 import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
-from yeogi_top import is_top, search_bonus
+from yeogi_top import is_top, search_bonus, signals, openrun_extra
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KST = datetime.timezone(datetime.timedelta(hours=9))
 TODAY = datetime.datetime.now(KST).strftime("%Y-%m-%d")
@@ -32,7 +32,7 @@ WARM = re.compile(r"온천|스파|노천|온수|료칸|히노끼|자쿠지|월�
 HOOK = re.compile(r"한옥|료칸|일본|인피니티|오션|바다|계곡|독채|글램핑|카라반|낚시|동굴|섬|기차|루프탑|숲")
 def score(x):
     s = " ".join(str(x.get(f) or "") for f in ("name", "area", "memo", "tags", "note"))
-    v = (3 if WARM.search(s) else 0) + min(3, len(set(HOOK.findall(s)))) + (2 if is_top(x.get("name")) else 0) + search_bonus(x.get("name"))   # 여기어때 잘 팔리는 숙소 +2
+    v = (3 if WARM.search(s) else 0) + min(3, len(set(HOOK.findall(s)))) + signals(x.get("name"), x.get("slug"))[0]   # 여기어때 잘 팔림·검색량·오픈런·마이리얼트립·쿠팡 할인(yeogi_top.signals)
     city = (x.get("area") or "").split(" ")[-1]
     if city and any(city in a for a in recent_area): v -= 2
     v -= len(set(HOOK.findall(s)) & recent_words)
@@ -40,5 +40,7 @@ def score(x):
 todo = [x for x in L if not x.get("kind") and x.get("slug") not in made and not str(x.get("done", "")).startswith(("쿠팡에 없음", "사진 부족"))]
 rnd = random.Random("reel" + TODAY); rnd.shuffle(todo)
 todo.sort(key=lambda x: -score(x))
-print(json.dumps([dict(x, score=score(x)) for x in todo[:n]], ensure_ascii=False, indent=1))
+print(json.dumps([dict(x, score=score(x), why=signals(x.get("name"), x.get("slug"))[1]) for x in todo[:n]], ensure_ascii=False, indent=1))
+ex = openrun_extra()
+if ex: print("# 숙찾남 목록에 없는 여기어때 오픈런 숙소(감성숙소면 후보로 검토):", ", ".join(f"{x['name']} {x['start'][5:]}~{x['end'][5:]} {x.get('rate')}%" for x in ex), file=sys.stderr)
 print(f"# 릴스 후보 {len(todo)}곳 (이미 만든 릴스 {len(made)}개 제외)", file=sys.stderr)

@@ -92,4 +92,43 @@ def main():
     json.dump(status, open(os.path.join(ROOT, "scripts", "stay_mrt_status.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(f"::notice::감성숙소 마이리얼트립 {len(out)}곳")
 
-if __name__ == "__main__": main()
+def cand(limit=40, pages=12):
+    """숙소 고르기용(2026-10-30 시온님 "마이리얼트립 프로모션 숙소도 확인해서 골라줘"): 숙찾남 목록(stay_list.json) 후보 중
+    신호 점수·계절 숙소가 높은 limit 곳을 지역별로 묶어 검색(지역 결과는 한 번만 받아 같이 씀)하고, 이름이 맞으면 할인율만 남긴다(링크 X).
+    → scripts/stay_mrt_cand.json {"at","checkIn","items":{목록 이름:{mname,price,orig,rate}}}"""
+    if not M.KEY: print("MRT_API_KEY 없음"); return
+    from yeogi_top import signals
+    now = datetime.now(KST)
+    sat = now + timedelta(days=(5 - now.weekday()) % 7 or 7)
+    if (sat - now).days < 4: sat += timedelta(days=7)
+    cin, cout = sat.strftime("%Y-%m-%d"), (sat + timedelta(days=1)).strftime("%Y-%m-%d")
+    L = json.load(open(os.path.join(ROOT, "scripts", "stay_list.json"), encoding="utf-8"))
+    L = [x for x in (L if isinstance(L, list) else (L.get("list") or L.get("items") or [])) if isinstance(x, dict) and not x.get("kind") and x.get("area")]
+    warm = re.compile(r"온천|스파|노천|온수|료칸|히노끼|자쿠지|사우나|족욕|탕")
+    L.sort(key=lambda x: -(signals(x["name"])[0] + (3 if warm.search(x["name"] + " " + str(x.get("memo") or "")) else 0)))
+    L = L[:limit]
+    regions, out = {}, {}
+    for x in L:
+        city = city_of(x)
+        if city not in regions:
+            items = []
+            try:
+                rs = (M.post("/v1/products/accommodation/region-autocomplete", {"keyword": city, "isDomestic": True}, 0.4) or {}).get("regions") or []
+                r = next((y for y in rs if y.get("type") == "CITY"), rs[0] if rs else None)
+                for page in range(pages if r else 0):
+                    got = (M.post("/v1/products/accommodation/search", {"regionId": r["regionId"], "checkIn": cin, "checkOut": cout, "adultCount": 2, "page": page, "size": 50}) or {}).get("items") or []
+                    items += got
+                    if not got: break
+            except SystemExit: raise
+            except Exception as ex: print("지역 검색 실패", city, ex)
+            regions[city] = items
+        hit = next((it for it in regions[city] if same(it.get("itemName"), x["name"])), None)
+        if hit:
+            sp, op = int(hit.get("salePrice") or 0), int(hit.get("originalPrice") or 0)
+            out[x["name"]] = {"mname": hit.get("itemName"), "price": sp, "orig": op, "rate": round((op - sp) * 100 / op) if op > sp else 0}
+        print(x["name"], "→", out.get(x["name"], {}).get("rate", "못 찾음"))
+    json.dump({"at": now.strftime("%Y-%m-%d %H:%M"), "checkIn": cin, "n": len(L), "items": out}, open(os.path.join(ROOT, "scripts", "stay_mrt_cand.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"::notice::후보 {len(L)}곳 중 마이리얼트립에서 찾은 곳 {len(out)}")
+
+if __name__ == "__main__":
+    cand() if "--cand" in sys.argv else main()

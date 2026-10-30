@@ -6,7 +6,7 @@ scripts/stay_list.json 에서 국내 숙소(kind 없음)·아직 안 쓴 것(don
 python3 scripts/pick_stay.py [개수=5]  → 후보를 순서대로 출력(1번이 쿠팡트래블에 없으면 다음 후보로)."""
 import json, os, re, sys, random, datetime
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from yeogi_top import is_top, search_bonus   # 여기어때 잘 팔리는 숙소(2026-10-30)
+from yeogi_top import is_top, search_bonus, signals   # 여기어때 잘 팔리는 숙소(2026-10-30)
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TODAY = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).strftime("%Y-%m-%d")
 n = int(sys.argv[1]) if len(sys.argv) > 1 else 5
@@ -34,7 +34,8 @@ def warm(x, it=None):
 first = sorted([(camp(x), x) for x in todo if camp(x)], key=lambda t: (t[0]["end"] <= TODAY, not warm(t[1], t[0]), t[0]["end"]))  # 오늘 마감은 뒤로(글이 오후에 올라가서)
 rest = [x for x in todo if not camp(x)]
 random.Random(TODAY).shuffle(rest)
-rest.sort(key=lambda x: (not warm(x), -(2 * is_top(x.get("name")) + search_bonus(x.get("name")))))  # 섞은 뒤 계절 숙소를 앞으로(안정 정렬이라 그 안에서는 무작위)
+rest.sort(key=lambda x: (not warm(x), -signals(x.get("name"), x.get("slug"))[0]))  # 섞은 뒤 계절 숙소를 앞으로(안정 정렬이라 그 안에서는 무작위)
 out = [dict(x, camp=c["id"], campEnd=c["end"], pid=c.get("coupangPid") or "") for c, x in first] + rest
+out = [dict(x, why=signals(x.get("name"), x.get("slug"))[1]) for x in out]
 print(json.dumps(out[:n], ensure_ascii=False, indent=1))
 print(f"# 모집 중 체험단이 있는 후보 {len(first)}곳 · 남은 국내 후보 {len(todo)}곳", file=sys.stderr)
