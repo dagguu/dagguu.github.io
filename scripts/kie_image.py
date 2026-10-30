@@ -27,6 +27,7 @@ status["slug"] = slug
 PL = json.load(open(f"scripts/kie_prompts/{slug}.json", encoding="utf-8"))
 imgp = {x["n"]: x["img"] for x in PL if x.get("img")}
 photos = P.get("photos", [])
+srcs = {int(x["n"]): x["src"] for x in PL if x.get("src")}  # 장면별 사진 주소(여기어때·마이리얼트립 숙소 사진 등)
 nums = [int(x) for x in a.only.split(",") if x.strip()] if a.only else sorted(imgp)
 def call(url, body=None):
     req = urllib.request.Request(url, data=json.dumps(body).encode() if body is not None else None,
@@ -71,8 +72,9 @@ if a.tasks:
         n, tid = t.split(":"); j = {"n": int(n), "taskId": tid.strip(), "state": "submitted"}; jobs.append(j); status["images"].append(j)
     nums = []
 for n in nums:
-    if n not in imgp or n < 1 or n > len(photos): continue
-    r = call(API + "/createTask", body(imgp[n], photos[n - 1]["src"]))
+    # 장면마다 kie_prompts 의 "src"(여기어때·마이리얼트립 숙소 페이지에서 고른 감성 사진 주소, 2026-10-30 시온님)가 있으면 그 사진, 없으면 감성숙소 json photos[n-1]
+    if n not in imgp or n < 1 or (n > len(photos) and n not in srcs): continue
+    r = call(API + "/createTask", body(imgp[n], srcs.get(n) or photos[n - 1]["src"]))
     tid = (r.get("data") or {}).get("taskId") if isinstance(r.get("data"), dict) else None
     j = {"n": n, "taskId": tid, "state": "submitted" if tid else "error"}
     if not tid: j["msg"] = str(r.get("msg") or r)[:300]
@@ -87,7 +89,7 @@ while time.time() < end and any(j["state"] not in ("success", "fail", "error") f
         if j["state"] == "fail": j["msg"] = str(d.get("failMsg"))[:300]
         if j["state"] == "success":
             j["credits"] = d.get("creditsConsumed")
-            u = (result_imgs(d) or [None])[0]; j["src_url_is_input"] = u in [p["src"] for p in photos]
+            u = (result_imgs(d) or [None])[0]; j["src_url_is_input"] = u in [p["src"] for p in photos] + list(srcs.values())
             if u:
                 os.makedirs(f"kie_img/{TODAY}/{slug}", exist_ok=True)
                 tag = "pro" if "pro" in a.model else ("edit" if "edit" in a.model and "nano" in a.model else "sd")
