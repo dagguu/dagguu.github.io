@@ -63,7 +63,7 @@ def score(x):
     if city and any(city in a for a in recent_area): v -= 2
     v -= len(set(HOOK.findall(s)) & recent_words)
     return v
-todo = [x for x in L if not x.get("kind") and x.get("slug") not in made and not str(x.get("done", "")).startswith(("쿠팡에 없음", "사진 부족", "링크 없음"))]
+todo = [x for x in L if not x.get("kind") and x.get("slug") not in made and not str(x.get("done", "")).startswith(("쿠팡에 없음", "사진 부족", "링크 없음", "패스"))]
 rnd = random.Random("reel" + TODAY); rnd.shuffle(todo)
 todo.sort(key=lambda x: -score(x))
 
