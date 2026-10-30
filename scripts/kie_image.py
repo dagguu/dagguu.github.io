@@ -28,7 +28,8 @@ PL = json.load(open(f"scripts/kie_prompts/{slug}.json", encoding="utf-8"))
 imgp = {x["n"]: x["img"] for x in PL if x.get("img")}
 photos = P.get("photos", [])
 srcs = {int(x["n"]): x["src"] for x in PL if x.get("src")}
-times = {int(x["n"]): x.get("time", "day") for x in PL}  # 2026-10-31 시온님: 하루 흐름(낮 → 노을 → 밤), 장면마다 "time": day|sunset|night  # 장면별 사진 주소(여기어때·마이리얼트립 숙소 사진 등)
+LOOK0 = next((x.get("look") for x in PL if x.get("look")), "day")  # 숙소 기본 색감(첫 항목 등에 "look": day|moody|warm|pastel)
+times = {int(x["n"]): x.get("time") or LOOK0 for x in PL}  # 2026-10-31 시온님: 하루 흐름(낮 → 노을 → 밤), 장면마다 "time": day|sunset|night  # 장면별 사진 주소(여기어때·마이리얼트립 숙소 사진 등)
 nums = [int(x) for x in a.only.split(",") if x.strip()] if a.only else sorted(imgp)
 def call(url, body=None):
     req = urllib.request.Request(url, data=json.dumps(body).encode() if body is not None else None,
@@ -60,7 +61,11 @@ OUTFIT = " Outfit (always): the woman wears a long flowing white skirt (ankle-le
 TONE = " Color and light (autumn tone): clear sunny midday - a vivid deep-blue sky with a few small white clouds wherever sky is visible, bright direct sunlight, crisp clean colors, fresh saturated green trees with some orange autumn leaves, bright clean whites indoors with daylight through the windows; vivid but natural, not dark, hazy, golden-hour or gloomy, keep the real place unchanged."  # 2026-10-30 23:48 시온님 "맑은 날 한낮 파란 하늘" (예전 21:52 밝은 가을톤)
 TONE_T = {  # 하루 흐름 장면용 (기본 day = TONE)
     "sunset": " Color and light (autumn tone): late-afternoon sunset - warm orange and pink sky glow over the hills, soft low golden sunlight, warm lights starting to glow inside, gentle steam over warm water; still bright and clear, not dark or murky, keep the real place unchanged.",
-    "night": " Color and light (autumn tone): early night (blue hour) - deep navy sky with a few stars, warm yellow lights glowing from windows and lanterns, soft reflections on water, gentle steam; clean and clear, details still visible, not pitch-black or noisy, keep the real place unchanged."}
+    "night": " Color and light (autumn tone): early night (blue hour) - deep navy sky with a few stars, warm yellow lights glowing from windows and lanterns, soft reflections on water, gentle steam; clean and clear, details still visible, not pitch-black or noisy, keep the real place unchanged.",
+    # 2026-10-31 시온님 "숙소마다 특색이 있으니 색감은 알아서": 숙소 콘셉트별 색감
+    "moody": " Color and light (autumn tone): keep the place's own dark, moody concept lighting - deep shadows, dark stone, wood and walls, warm amber indirect lights, lanterns and candles glowing, soft reflections on water and gentle steam; rich and cinematic, details still visible, do NOT brighten it into daylight, keep the real place unchanged.",
+    "warm": " Color and light (autumn tone): cozy warm interior light - soft warm lamps and indirect lighting, honey-toned wood, gentle evening window light, calm and inviting, clean and clear, not dim or murky, keep the real place unchanged.",
+    "pastel": " Color and light (autumn tone): soft bright airy daylight - creamy whites, gentle pastel colors (pale blue, pink, beige), diffused sunlight through sheer curtains, light and dreamy like a boutique hotel photo, not harsh, not dark, keep the real place unchanged."}
 SIZE = " Make the image in a vertical 9:16 size (portrait, 9:16 aspect ratio, full-bleed, no borders or letterboxing)."  # 2026-10-29 시온님: 프롬프트에 "9:16 사이즈로" 꼭
 def body(prompt, src, tm="day"):
     if "woman" in prompt.lower(): prompt = prompt + OUTFIT  # 사람 없는 프롬프트(바다 채우기 등)엔 안 붙임

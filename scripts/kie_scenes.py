@@ -12,13 +12,17 @@ if not KEY: st["error"] = "KIE_API_KEY 없음"; save(); sys.exit(0)
 J = json.load(open(a.src or f"scripts/tts/{a.name}.json", encoding="utf-8")); stay, day = J["stay"], J["imgDate"]
 P = json.load(open(f"scripts/stays/{stay}.json", encoding="utf-8"))
 pf = f"scripts/kie_prompts/{stay}.json"; KP = {x["n"]: x for x in (json.load(open(pf, encoding="utf-8")) if os.path.exists(pf) else [])}
+LOOK0 = next((x.get("look") for x in KP.values() if x.get("look")), "day")  # 숙소 기본 색감
 TAIL_P = " Keep the exact same Korean person from the image with the same face, hair and clothes (long white skirt); she stays turned away (back view or slight side profile), never turns her head toward the camera, no face close-up. Keep the room, architecture and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."
 # 2026-10-30 시온님 "사진을 좌우로 미는 게 아니라 스마트폰 짐벌로 직접 걸어가며 찍은 것처럼 공간감 있게": 모든 장면 프롬프트에 붙임
 GIMBAL = " Make it look like real filmed video, not a still photo: a slow, gentle camera drift (a subtle push-in or a slow sideways glide through the space with real parallax depth, small and smooth), plus natural living motion inside the scene - steam rising from warm water, soft water ripples, leaves swaying or drifting down, warm lights glowing, curtains moving slightly. {TONE} This is NOT a 2D pan, slide or zoom across a flat photo. IMPORTANT: no drones, gimbals, cameras, phones, tripods or any filming equipment appear anywhere in the frame - show only the place itself."  # 2026-10-30 21:52 시온님: 영상처럼 보이게(작은 카메라 움직임 + 김·물결·나뭇잎 같은 살아 있는 움직임) + 밝은 가을 톤
 LOOK = {"day": " Clear sunny midday look: vivid deep-blue sky with a few white clouds wherever sky shows, bright direct sunlight, crisp saturated greens with some orange autumn leaves, clean bright whites indoors; not dark, hazy, golden-hour or gloomy.",
         "sunset": " Late-afternoon sunset look: warm orange-pink sky over the hills, low golden light, window lights starting to glow, steam over warm water; bright and clear, not murky.",
-        "night": " Early-night blue-hour look: deep navy sky, warm yellow window and lantern lights, soft reflections on water, gentle steam; clean and clear, details visible, not pitch-black."}  # 2026-10-31 시온님: 하루 흐름(낮 → 노을 → 밤)
-def gimbal(tm): return GIMBAL.replace(" {TONE}", LOOK.get(tm or "day", LOOK["day"]))
+        "night": " Early-night blue-hour look: deep navy sky, warm yellow window and lantern lights, soft reflections on water, gentle steam; clean and clear, details visible, not pitch-black.",
+        "moody": " Keep the place's own dark moody concept lighting: deep shadows, dark stone and wood, warm amber indirect lights, lanterns glowing, reflections and steam; cinematic, details visible, do not brighten into daylight.",
+        "warm": " Cozy warm interior look: soft warm lamps and indirect light, honey-toned wood, calm and inviting, clear not murky.",
+        "pastel": " Soft bright airy look: creamy whites, gentle pastel colors, diffused sunlight through sheer curtains, light and dreamy, not harsh or dark."}  # 2026-10-31 시온님: 숙소 콘셉트별 색감  # 2026-10-31 시온님: 하루 흐름(낮 → 노을 → 밤)
+def gimbal(tm): return GIMBAL.replace(" {TONE}", LOOK.get(tm or globals().get("LOOK0") or "day", LOOK["day"]))
 TAIL = " No people. Keep the original architecture, rooms and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."
 RAW = "https://raw.githubusercontent.com/dagguu/dagguu.github.io/insta/"
 def call(url, body=None):

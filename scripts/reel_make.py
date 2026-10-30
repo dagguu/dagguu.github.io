@@ -14,6 +14,11 @@ def save(): json.dump(st, open("scripts/reel_status.json", "w", encoding="utf-8"
 st["font"] = FAM; st["fontInfo"] = FU
 J = json.load(open(f"scripts/tts/{a.name}.json", encoding="utf-8")); SC = J["scenes"]
 P = json.load(open(f"scripts/stays/{J['stay']}.json", encoding="utf-8"))
+# 2026-10-31 시온님 "숙소마다 특색이 있으니 색감은 알아서": tts json "look" 으로 마지막 보정을 숙소 콘셉트에 맞춤
+GRADE = {"day": "eq=brightness=0.03:contrast=1.10:saturation=1.14:gamma=1.02,unsharp=5:5:0.8:5:5:0.0,colorbalance=rs=0.01:gs=0.01:bs=0.02:rm=0.01:bm=0.01",
+         "moody": "eq=brightness=0.0:contrast=1.08:saturation=1.06:gamma=1.0,unsharp=5:5:0.6:5:5:0.0,colorbalance=rs=0.03:gs=0.01:bs=-0.02:rh=0.02",
+         "warm": "eq=brightness=0.02:contrast=1.06:saturation=1.08:gamma=1.02,unsharp=5:5:0.6:5:5:0.0,colorbalance=rs=0.03:gs=0.01:bs=-0.02",
+         "pastel": "eq=brightness=0.04:contrast=1.02:saturation=0.96:gamma=1.04,unsharp=5:5:0.5:5:5:0.0"}
 OUT = f"reel_out/{a.name}"; os.makedirs(OUT + "/cuts", exist_ok=True)
 if a.thumb_only: THUMB_ONLY = True
 elif not KEY: st["error"] = "TYPECAST_API_KEY 없음"; save(); sys.exit(0)
@@ -156,7 +161,7 @@ for i, s in enumerate(SC):
         L.append(f"Dialogue: 0,{ts(a0)},{ts(a1)},D,,0,0,0,,{{\\i1\\pos(540,830)}}{txt}")  # 2026-10-30 시온님: 강조색·기울임 없이 가는 흰 글씨, 화면 위쪽 1/3  # 2026-10-28 시온님 "자막을 중앙에서 1cm 정도 위로" (화면 높이 1920 ≈ 휴대폰 14.5cm → 1cm ≈ 130px)
 open(OUT + "/sub.ass", "w", encoding="utf-8").write("\n".join(L) + "\n")
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", OUT + "/cuts/list.txt", "-i", OUT + "/voice.mp3",
-                "-vf", "eq=brightness=0.03:contrast=1.10:saturation=1.14:gamma=1.02,unsharp=5:5:0.8:5:5:0.0,colorbalance=rs=0.01:gs=0.01:bs=0.02:rm=0.01:bm=0.01," + f"subtitles={OUT}/sub.ass:fontsdir=" + os.path.expanduser("~/.fonts"), "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
+                "-vf", GRADE.get(J.get("look") or "day", GRADE["day"]) + "," + f"subtitles={OUT}/sub.ass:fontsdir=" + os.path.expanduser("~/.fonts"), "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
                 "-c:a", "aac", "-b:a", "192k", "-t", f"{dur:.2f}", "-movflags", "+faststart", OUT + "/reel.mp4"], check=True)
 thumb()  # 썸네일(표지) = thumb.img(기본 첫 풍경 장면) 영상/사진 + 제목 2줄
 import shutil; shutil.rmtree(OUT + "/cuts"); [os.remove(f"{OUT}/{f}") for f in os.listdir(OUT) if f.startswith(("src_", "clip_"))]
