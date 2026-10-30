@@ -419,7 +419,7 @@ function tickerHtml(open){
   return '<div class="tkr" aria-live="off"><div class="tkw"><div class="tkl">'+L.map(function(x){ return '<a class="tki" href="'+x[2]+'"><span class="tke">'+x[0]+'</span><span class="tkt">'+x[1]+'</span></a>'; }).join("")+'</div></div><span class="tka" aria-hidden="true">⌃<br>⌄</span></div>';
 }
 var tkT; function tkInit(){ clearInterval(tkT); var l=document.querySelector(".tkl"); if(!l) return; var n=l.children.length, i=0; if(n<2) return; tkT=setInterval(function(){ if(!document.body.contains(l)){ clearInterval(tkT); return; } i=(i+1)%n; l.style.transform="translateY(-"+(i*44)+"px)"; },3200); }
-function travelAds(){
+function travelAds(inMag){
   // 여행 제휴 배너(2026-10-30 시온님이 준 공식 배너 코드): 트립닷컴 iframe + 마이리얼트립 g.js(전용 iframe srcdoc 안에서 실행). 값은 data.json travelAds.
   var t=seed.travelAds||{}, h="", fr=document.getElementById("view"), W=Math.max(280,((fr&&fr.clientWidth)||window.innerWidth)-32);
   var tr=t.trip||{};
@@ -434,7 +434,7 @@ function travelAds(){
     h+='<div class="tvad" data-tv="mrt"><iframe srcdoc="'+esc(doc)+'" title="마이리얼트립 여행 특가" width="'+w+'" height="'+(hh+4)+'" frameborder="0" scrolling="no" loading="lazy"></iframe></div>';
   }
   if(!h) return "";
-  return '<section class="hsec tvads"><div class="hsh"><h2>✈️ <em>여행</em> 특가 둘러보기</h2></div>'+h+'</section>';
+  return '<section class="hsec tvads'+(inMag?' tvmag':'')+'"><div class="hsh"><h2>✈️ <em>여행</em> 특가 둘러보기</h2></div>'+h+'</section>';
 }
 function homeView(){
   var td=ymd(today()), open=seed.items.filter(function(it){ return statusOf(it).key==="open"; });
@@ -1173,7 +1173,7 @@ function guideFill(){
     var h=(STAYM.length?'<section class="gdbox"><div class="gdh"><b>국내 감성숙소 추천</b><a href="#/mag?t=s">전체 ›</a></div>'+STAYM.slice(0,3).map(stayRow).join("")+'</section>':"")+(GUIDES.length?'<section class="gdbox"><div class="gdh"><b>체험단 가이드</b><a href="#/mag?t=g">전체 ›</a></div>'+GUIDES.slice(0,3).map(guideRow).join("")+'</section>':"")+
       (PICKS.length?'<section class="gdbox"><div class="gdh"><b>다꾸 추천 모음</b><a href="#/mag?t=p">전체 ›</a></div>'+PICKS.slice(0,3).map(pickRow).join("")+'</section>':"");
     [].forEach.call(B,function(b){ b.innerHTML=h; });
-    if(M){ var L=state.magT==="p"?PICKS:state.magT==="s"?STAYM:GUIDES; M.innerHTML=(state.magT==="s"?reelsHtml():'')+(L.length?(state.magT==="s"?'<div class="stsrch"><input id="stq" type="search" placeholder="번호 또는 숙소 이름·지역 검색 (예: 3, 가평)" autocomplete="off" enterkeyhint="search"></div>':'')+'<div class="maglist">'+L.map(state.magT==="p"?pickRow:state.magT==="s"?stayRow:guideRow).join("")+'</div>'+(state.magT==="s"?'<p class="smgnone" id="stnone" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p>':''):'<div class="empty">곧 새 글이 올라와요</div>'); if(state.magT==="s") reelsInit(M);
+    if(M){ var L=state.magT==="p"?PICKS:state.magT==="s"?STAYM:GUIDES; M.innerHTML=(state.magT==="s"?reelsHtml()+(PMODE?'':travelAds(true)):'')+(L.length?(state.magT==="s"?'<div class="stsrch"><input id="stq" type="search" placeholder="번호 또는 숙소 이름·지역 검색 (예: 3, 가평)" autocomplete="off" enterkeyhint="search"></div>':'')+'<div class="maglist">'+L.map(state.magT==="p"?pickRow:state.magT==="s"?stayRow:guideRow).join("")+'</div>'+(state.magT==="s"?'<p class="smgnone" id="stnone" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p>':''):'<div class="empty">곧 새 글이 올라와요</div>'); if(state.magT==="s") reelsInit(M);
       var sq=document.getElementById("stq"); if(sq){ var run=function(){ var v=sq.value.trim().toLowerCase().replace(/[\[\]]/g,"").replace(/^no\.?\s*/,"").replace(/^#/,""),hit=0; [].forEach.call(M.querySelectorAll(".smg"),function(a){ var ok=!v||(/^\d+$/.test(v)?a.getAttribute("data-no")===String(+v):a.getAttribute("data-q").indexOf(v)>=0); a.style.display=ok?"":"none"; if(ok)hit++; }); document.getElementById("stnone").hidden=!!hit||!v; }; sq.addEventListener("input",run); if(qs0("n")){ sq.value=qs0("n"); run(); } } }
     if(window.dkMagPaint) window.dkMagPaint();
   });
