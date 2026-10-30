@@ -1091,10 +1091,9 @@ function reelsInit(M){
    릴스 2개마다 광고 1장(골드박스 판매율 높은 것 ↔ 마이리얼트립 국내 숙소 할인 번갈아). 광고는 "상품 보러가기" 버튼만 링크(화면 아무 데나 눌러서 넘어가지 않게, 쿠팡 운영정책 4.1-2). */
 var RF={mute:false,filter:"all",io:null};
 function rfAds(){
-  var day=Math.floor(Date.now()/864e5), G=(Array.isArray(seed.goldAll)?seed.goldAll:[]).filter(function(x){ return safeUrl(x.u)&&safeUrl(x.img)&&(parseInt(x.rate,10)||0)>=10&&!(x.endAt&&Date.parse(x.endAt)<=Date.now()); })
-    .sort(function(a,b){ return (b.sold||0)-(a.sold||0) || (parseInt(b.rate,10)||0)-(parseInt(a.rate,10)||0); }).slice(0,30);
+  var day=Math.floor(Date.now()/864e5), G=goldList().filter(function(x){ return safeUrl(x.img); }).slice(0,30);
   var M=(Array.isArray(seed.mrtDeals)?seed.mrtDeals:[]).filter(function(x){ return x.dom&&safeUrl(x.u)&&safeUrl(x.img)&&(x.rate||0)>=15; }).sort(function(a,b){ return (b.rate||0)-(a.rate||0); }).slice(0,20);
-  var rot=function(L){ return L.length?L.slice(day%L.length).concat(L.slice(0,day%L.length)):L; }; G=rot(G); M=rot(M);
+  var rot=function(L){ return L.length?L.slice(day%L.length).concat(L.slice(0,day%L.length)):L; }; M=rot(M);
   var out=[], i=0;
   while(i<Math.max(G.length,M.length)){ if(G[i]) out.push({k:"gold",x:G[i]}); if(M[i]) out.push({k:"mrt",x:M[i]}); i++; }
   return out;
