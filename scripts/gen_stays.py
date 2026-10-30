@@ -83,10 +83,25 @@ def _list_inf():
         return {}
 LIST_INF = _list_inf()
 
+def _list_links():
+    # stay_list.json 에 시온님이 준 링크(yeogi·infUrl)를 숙소 이름(띄어쓰기 무시)으로 찾기 — 매거진 글이 생기기 전에 받은 링크
+    try:
+        sl = json.load(open(os.path.join(ROOT, "scripts", "stay_list.json"), encoding="utf-8"))
+        arr = sl if isinstance(sl, list) else (sl.get("list") or sl.get("items") or [])
+        return {re.sub(r"\s+", "", e["name"]): e for e in arr if isinstance(e, dict) and e.get("name") and (e.get("yeogi") or e.get("infUrl"))}
+    except Exception:
+        return {}
+LIST_LK = _list_links()
+
+def list_lk(P):
+    for k in (P.get("listName"), P.get("name")):
+        if k and re.sub(r"\s+", "", k) in LIST_LK: return LIST_LK[re.sub(r"\s+", "", k)]
+    return {}
+
 def link_of(P):
     # 인플루언서 링크(시온님이 준 것) → links infUrl → stay_list.json 같은 pid 의 infUrl → 파트너스 u
     x = (d.get("links") or {}).get("stay-" + P["slug"]) or {}
-    return x.get("infUrl") or LIST_INF.get(str(P.get("pid") or "")) or x.get("u") or ""
+    return x.get("infUrl") or LIST_INF.get(str(P.get("pid") or "")) or list_lk(P).get("infUrl") or x.get("u") or ""
 
 def open_stays(region, n=5):
     def worth(it):
@@ -158,6 +173,7 @@ def deal_box(P):
         else: pr = f'<strong>{c["price"]:,}원부터</strong>'
         rows.append(f'<div class="dr"><span class="dl"><small>쿠팡트래블 · {cond}</small>{pr}</span><a href="{e(cu)}" target="_blank" rel="noopener noreferrer sponsored" id="cpgo">보러가기</a></div>')
     x = (d.get("links") or {}).get("stay-" + P["slug"]) or {}
+    if not x.get("yeogi") and list_lk(P).get("yeogi"): x = dict(x, yeogi=list_lk(P)["yeogi"])
     if x.get("yeogi"):   # 시온님이 여기어때 파트너센터에서 만든 이 숙소 링크
         rows.append(f'<div class="dr"><span class="dl"><small>여기어때</small><span>여기어때에서도 이 숙소를 볼 수 있어요</span></span><a class="yg" href="{e(x["yeogi"])}" target="_blank" rel="noopener noreferrer sponsored" id="yeogigo">보러가기</a></div>')
     cp = next((y for y in (d.get("yeogi") or []) if "쿠폰" in (y.get("t") or "") and (y.get("until") or "9999") >= TODAY and y.get("u")), None)
@@ -270,7 +286,7 @@ if __name__ == "__main__":
             if o[3]:
                 dd = datetime.date.fromisoformat(o[3]); cd = f"{dd.month}/{dd.day}({WD[dd.weekday()]}) 1박 조회 기준"
             offs.append({"src": o[2], "price": o[0], "rate": o[1] if o[1] >= 3 else 0, "cond": cd, "u": o[4]})
-        yg = ((d.get("links") or {}).get("stay-" + x["slug"]) or {}).get("yeogi")
+        yg = ((d.get("links") or {}).get("stay-" + x["slug"]) or {}).get("yeogi") or list_lk(x).get("yeogi")
         if yg: offs.append({"src": "여기어때", "price": 0, "rate": 0, "cond": "여기어때에서 이 숙소 보기", "u": yg})
         if offs: r["offers"] = offs
         if opts:
