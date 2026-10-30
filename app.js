@@ -1110,7 +1110,7 @@ function soonHtml(){
   var md=function(v){ var t=new Date(v+"T00:00:00+09:00"); return (t.getMonth()+1)+'/'+t.getDate()+'('+"일월화수목금토"[t.getDay()]+')'; };
   return '<section class="snsec"><div class="rlhd"><h2>알림 받고 놓치지 마세요</h2><small>여기어때 오픈런 특가 · 오픈하는 날 카카오톡 채널 소식으로 알려드려요</small></div><div class="sng">'+S.map(function(x){
     var on=x.start<=td, badge=on?'오픈 중 · '+md(x.end)+'까지':md(x.start)+' 오픈';
-    var btn=on?'<a class="snb go" '+ext(safeUrl(x.u))+' data-sngo="'+esc(x.name)+'">여기어때에서 보기 ↗</a>':(kk?'<a class="snb" '+ext(kk)+' data-snk="'+esc(x.name)+'">🔔 알림받기</a>':'');
+    var btn=on?(safeUrl(x.u)?'<a class="snb go" '+ext(safeUrl(x.u))+' data-sngo="'+esc(x.name)+'">여기어때에서 보기 ↗</a>':''):(kk?'<a class="snb" '+ext(kk)+' data-snk="'+esc(x.name)+'">🔔 알림받기</a>':'');
     return '<div class="snc"><div class="snim">'+(safeUrl(x.img)?'<img src="'+esc(x.img)+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<em class="snbd'+(on?' on':'')+'">'+esc(badge)+'</em><span class="snk">'+esc(x.kind||"")+'</span></div>'+
       '<div class="snt"><b>'+esc(x.name)+'</b><p>'+(x.rate?'<i>최대 '+x.rate+'%</i>':'')+(x.price?' '+rfWon(x.price)+'~':'')+'</p><small>'+esc(x.src||"")+' 안내 기준</small></div>'+btn+'</div>';
   }).join("")+'</div><p class="snnote">가격·할인은 여기어때 오픈런 안내 기준이라 날짜·객실마다 달라요. 오픈 시각은 여기어때에서 확인해 주세요.</p></section>';
