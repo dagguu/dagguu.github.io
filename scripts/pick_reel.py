@@ -33,9 +33,12 @@ recent_words = set(w for v in recent for w in v.get("words", []))  # 사흘 안�
 MON = int(TODAY[5:7])
 WARM = re.compile(r"온천|스파|노천|온수|료칸|히노끼|자쿠지|월풀(?!빌라)|사우나|족욕|단풍|탕") if MON in (10, 11, 12, 1, 2, 3) else re.compile(r"수영장|풀빌라|오션|계곡|바다|워터")
 HOOK = re.compile(r"한옥|료칸|일본|인피니티|오션|바다|계곡|독채|글램핑|카라반|낚시|동굴|섬|기차|루프탑|숲")
+NEW_SINCE = (datetime.datetime.now(KST) - datetime.timedelta(days=365)).strftime("%Y-%m")
+def is_new(x):   # 신상숙소 = stay_list.json 의 open(YYYY-MM, 출처 openSrc 로 확인한 첫 오픈 달)이 최근 12개월 안 (2026-10-30 시온님 "신상숙소 우선")
+    return bool(x.get("open")) and x["open"] >= NEW_SINCE
 def score(x):
     s = " ".join(str(x.get(f) or "") for f in ("name", "area", "memo", "tags", "note"))
-    v = (3 if WARM.search(s) else 0) + min(3, len(set(HOOK.findall(s)))) + signals(x.get("name"), x.get("slug"))[0]   # 여기어때 잘 팔림·검색량·오픈런·마이리얼트립·쿠팡 할인(yeogi_top.signals)
+    v = (6 if is_new(x) else 0) + (3 if WARM.search(s) else 0) + min(3, len(set(HOOK.findall(s)))) + signals(x.get("name"), x.get("slug"))[0]   # 여기어때 잘 팔림·검색량·오픈런·마이리얼트립·쿠팡 할인(yeogi_top.signals)
     city = (x.get("area") or "").split(" ")[-1]
     if city and any(city in a for a in recent_area): v -= 2
     v -= len(set(HOOK.findall(s)) & recent_words)
@@ -68,9 +71,9 @@ if "--plan" in sys.argv:   # 앞으로 만들 영상 목록(2026-10-30 시온님
             return score(x) - 3 * len(w & recent_words) - (4 if x["name"].split()[0] in used else 0)
         pool.sort(key=lambda x: -ps(x)); x = pool.pop(0)
         s_ = " ".join(str(x.get(f) or "") for f in ("name", "area", "memo", "tags", "note"))
-        words = sorted(set(HOOK.findall(s_)) | set(WARM.findall(s_)))
+        words = sorted(set(HOOK.findall(s_)) | set(WARM.findall(s_)) | ({"신상"} if is_new(x) else set()))
         plan.append({"date": day, "name": x["name"], "area": x.get("area", ""), "slug": x.get("slug", ""), "words": words,
-                     "score": score(x), "why": signals(x.get("name"), x.get("slug"))[1], "status": "예정"})
+                     "score": score(x), "why": (["신상 " + x["open"] + " 오픈"] if is_new(x) else []) + signals(x.get("name"), x.get("slug"))[1], "status": "예정"})
         hist.append({"area": x.get("area", ""), "words": words, "name": x["name"]})
     out = {"at": TODAY, "rule": "python3 scripts/pick_reel.py --plan 14 는 이미 정해 둔 날짜는 그대로 두고 빈 날만 채운다. 17:07 릴스 작업은 오늘 날짜 줄의 숙소로 만든다. 쿠팡트래블에 없거나 사진이 부족하면 status 에 이유를 적고 pick_reel.py 다음 후보로. 시온님이 순서·숙소를 바꾸면 이 파일을 고친다.", "plan": plan}
     json.dump(out, open(os.path.join(ROOT, "scripts", "reel_plan.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
