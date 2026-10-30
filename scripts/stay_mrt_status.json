@@ -1,5 +1,5 @@
 {
- "at": "2026-10-30 17:17",
+ "at": "2026-10-30 17:36",
  "checkIn": "2026-11-07",
  "stays": {
   "busan-matie-harbor": {
@@ -22,7 +22,19 @@
      "total": 1929
     }
    ],
-   "hit": "마티에 부산하버시티"
+   "hit": "마티에 부산하버시티",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
   },
   "gangneung-takenomori": {
    "name": "강릉 다케노모리글램핑&료칸",
@@ -44,7 +56,19 @@
      "total": 1495
     }
    ],
-   "hit": "강릉 다케노모리글램핑&료칸"
+   "hit": "강릉 다케노모리글램핑&료칸",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
   },
   "gapyeong-glamhavana": {
    "name": "글램하바나",
@@ -66,7 +90,19 @@
      "total": 1911
     }
    ],
-   "hit": "가평 글램하바나"
+   "hit": "가평 글램하바나",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
   },
   "goseong-stage-poolvilla": {
    "name": "스테이지풀빌라",
@@ -148,7 +184,19 @@
      "total": 1865
     }
    ],
-   "hit": "경주 에스앤비풀빌라"
+   "hit": "경주 에스앤비풀빌라",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
   },
   "pohang-daytona": {
    "name": "데이토나풀빌라",
@@ -170,7 +218,19 @@
      "total": 913
     }
    ],
-   "hit": "포항 데이토나풀빌라"
+   "hit": "포항 데이토나풀빌라",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
   },
   "sancheong-andforet": {
    "name": "앤더포레 글램핑",
@@ -192,7 +252,19 @@
      "total": 163
     }
    ],
-   "hit": "산청 앤더포레 글램핑"
+   "hit": "산청 앤더포레 글램핑",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
   },
   "seonjae-seonjaedam": {
    "name": "선재담 글램핑&카라반 리조트",
@@ -214,7 +286,19 @@
      "total": 2362
     }
    ],
-   "hit": "대부도(선재도) 선재담글램핑&카라반리조트"
+   "hit": "대부도(선재도) 선재담글램핑&카라반리조트",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
   }
  }
 }
