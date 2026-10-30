@@ -1,5 +1,5 @@
 {
- "at": "2026-10-30T11:03:12.484230",
+ "at": "2026-10-30T11:14:00.057016",
  "name": "sancheong-andforet",
  "font": "Jalnan",
  "fontInfo": {
@@ -10,90 +10,6 @@
   "family": "Jalnan",
   "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
  },
- "gapCut": 3.06,
- "dur": 20.26,
- "cuts": 15,
- "plan": [
-  {
-   "video": true,
-   "t": "사진만 보면 북유럽 숲속 같죠?",
-   "img": "ai:1",
-   "start": 0.0,
-   "end": 1.69,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "t": "산청 지리산 아래 생긴 신상 글램핑이에요.",
-   "img": "ai:2",
-   "start": 1.69,
-   "end": 4.14,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "객실마다 바비큐 자리가 따로 있고,",
-   "img": "ai:3",
-   "start": 4.14,
-   "end": 5.88,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "t": "통창 너머로는 산이 꽉 차요.",
-   "img": "ai:4",
-   "start": 5.88,
-   "end": 7.55,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "t": "삼각 창 앞에 앉아 숲 보며 쉬고,",
-   "img": "ai:5",
-   "start": 7.55,
-   "end": 9.38,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "t": "전 객실이 복층이라",
-   "img": "ai:6",
-   "start": 9.38,
-   "end": 10.49,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "t": "넓게 쓸 수 있거든요.",
-   "img": "ai:7",
-   "start": 10.49,
-   "end": 11.56,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "t": "거기다 객실마다 작은 수영장이 있는데,",
-   "img": "ai:8",
-   "start": 11.56,
-   "end": 13.64,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "따뜻한 물로 바꿀 수 있어서 밖은 추워도 물속은 따뜻해요.",
-   "img": "ai:9",
-   "start": 13.64,
-   "end": 16.88,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "멀리 안 가도 숲속에서 조용히 쉬기 좋은 곳이에요.",
-   "img": "ai:10",
-   "start": 16.88,
-   "end": 20.26,
-   "cuts": 3
-  }
- ],
- "file": "reels/sancheong-andforet/reel.mp4"
+ "thumbOnly": true,
+ "file": "reels/sancheong-andforet/thumb.jpg"
 }
