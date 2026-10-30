@@ -1,5 +1,5 @@
 {
- "at": "2026-10-30 11:24",
+ "at": "2026-10-30 16:38",
  "checkIn": "2026-11-07",
  "stays": {
   "busan-matie-harbor": {
@@ -67,6 +67,66 @@
     }
    ],
    "hit": "가평 글램하바나"
+  },
+  "goseong-stage-poolvilla": {
+   "name": "스테이지풀빌라",
+   "city": "고성",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "고성",
+     "region": "고성",
+     "type": "CITY",
+     "pages": 10,
+     "n": 422,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 430
+    },
+    {
+     "kw": "고성",
+     "region": "고성",
+     "type": "CITY",
+     "pages": 4,
+     "n": 100,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 103
+    },
+    {
+     "kw": "강원",
+     "region": "강릉",
+     "type": "CITY",
+     "pages": 30,
+     "n": 1416,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 1432
+    },
+    {
+     "kw": "강원",
+     "region": "평창",
+     "type": "CITY",
+     "pages": 11,
+     "n": 453,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 465
+    }
+   ]
   },
   "gyeongju-snb-poolvilla": {
    "name": "경주 에스앤비풀빌라",
