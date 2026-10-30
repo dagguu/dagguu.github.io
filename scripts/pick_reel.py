@@ -33,14 +33,32 @@ recent_words = set(w for v in recent for w in v.get("words", []))  # 사흘 안�
 MON = int(TODAY[5:7])
 WARM = re.compile(r"온천|스파|노천|온수|료칸|히노끼|자쿠지|월풀(?!빌라)|사우나|족욕|단풍|탕") if MON in (10, 11, 12, 1, 2, 3) else re.compile(r"수영장|풀빌라|오션|계곡|바다|워터")
 HOOK = re.compile(r"한옥|료칸|일본|인피니티|오션|바다|계곡|독채|글램핑|카라반|낚시|동굴|섬|기차|루프탑|숲")
-NEW_SINCE = (datetime.datetime.now(KST) - datetime.timedelta(days=365)).strftime("%Y-%m")
+NEW_SINCE = str(int(TODAY[:4]) - 1) + "-01"   # 신상 = 작년(1월)부터 오픈한 감성숙소 (2026-10-30 시온님 "작년에 오픈했으면 1년이 넘어도 다 포함")
 def is_new(x):   # 신상숙소 = stay_list.json 의 open(YYYY-MM, 출처 openSrc 로 확인한 첫 오픈 달)이 최근 12개월 안 (2026-10-30 시온님 "신상숙소 우선")
     # openClaim = 숙소가 판매 페이지에서 직접 '신규 오픈·GRAND OPEN'이라고 밝힌 곳(달은 릴스 만들 때 쿠팡트래블·공지에서 다시 확인)
+    if str(x.get("openNote", "")).startswith("리모델링"): return False   # 리모델링·리브랜딩은 신상 아님
     return (bool(x.get("open")) and x["open"] >= NEW_SINCE) or bool(x.get("openClaim"))
+# 신상 순서 (2026-10-30 시온님): 1 가을 분위기+신상 2 온천+신상 3 료칸+신상 4 신상, 같은 칸 안에서는 5 숙찾남 목록 6 여기어때 잘 팔림 7 할인 중 8 체험단 모집 중
+AUTUMN = re.compile(r"단풍|가을|숲|포레|산속|계곡|불멍|캐빈|글램핑|캠핑|억새")
+ONSEN = re.compile(r"온천|스파|노천|온수|히노끼|사우나|자쿠지|월풀(?!빌라)")
+RYOKAN = re.compile(r"료칸|일본")
+try:
+    _D = json.load(open(os.path.join(ROOT, "data.json"), encoding="utf-8"))
+    _K = lambda t: re.sub(r"[^가-힣a-z0-9]", "", re.sub(r"\(.*?\)", "", str(t).lower()))
+    OPEN_CAMP = [_K(it.get("name")) for it in _D.get("items", []) if it.get("cat") == "stay" and str(it.get("end") or "") >= TODAY and not it.get("closed")]
+except Exception: OPEN_CAMP = []
+def new_rank(x):
+    lvl = 2 if is_new(x) else 1 if x.get("newHint") else 0
+    if not lvl: return 0, ""
+    s = " ".join(str(x.get(f) or "") for f in ("name", "area", "memo", "tags", "note"))
+    tier, lab = (4, "가을+신상") if AUTUMN.search(s) else (3, "온천+신상") if ONSEN.search(s) else (2, "료칸+신상") if RYOKAN.search(s) else (1, "신상")
+    why = signals(x.get("name"), x.get("slug"))[1]
+    a = _K(x["name"]) if OPEN_CAMP else ""
+    tb = 8 + (4 if is_top(x.get("name")) else 0) + (2 if any("할인" in w for w in why) else 0) + (1 if a and len(a) >= 3 and any(a in b for b in OPEN_CAMP) else 0)
+    return lvl * 1000 + tier * 100 + tb, lab
 def score(x):
     s = " ".join(str(x.get(f) or "") for f in ("name", "area", "memo", "tags", "note"))
-    v = (20 if is_new(x) else 10 if x.get("newHint") else 0) + (   # 신상 확인 > 신상 가능성 > 나머지 (2026-10-30 시온님 "1년 안 된 숙소 다 포함")
-        3 if WARM.search(s) else 0) + min(3, len(set(HOOK.findall(s)))) + signals(x.get("name"), x.get("slug"))[0]   # 여기어때 잘 팔림·검색량·오픈런·마이리얼트립·쿠팡 할인(yeogi_top.signals)
+    v = new_rank(x)[0] + (3 if WARM.search(s) else 0) + min(3, len(set(HOOK.findall(s)))) + signals(x.get("name"), x.get("slug"))[0]   # 여기어때 잘 팔림·검색량·오픈런·마이리얼트립·쿠팡 할인(yeogi_top.signals)
     city = (x.get("area") or "").split(" ")[-1]
     if city and any(city in a for a in recent_area): v -= 2
     v -= len(set(HOOK.findall(s)) & recent_words)
@@ -75,7 +93,7 @@ if "--plan" in sys.argv:   # 앞으로 만들 영상 목록(2026-10-30 시온님
         s_ = " ".join(str(x.get(f) or "") for f in ("name", "area", "memo", "tags", "note"))
         words = sorted(set(HOOK.findall(s_)) | set(WARM.findall(s_)) | ({"신상"} if is_new(x) else set()))
         plan.append({"date": day, "name": x["name"], "area": x.get("area", ""), "slug": x.get("slug", ""), "words": words,
-                     "score": score(x), "why": ([("신상 " + x["open"] + " 오픈") if x.get("open") else "신상(숙소가 신규 오픈 표시)"] if is_new(x) else ["신상 가능성(오픈 달 확인 필요)"] if x.get("newHint") else []) + signals(x.get("name"), x.get("slug"))[1], "status": "예정"})
+                     "score": score(x), "why": (([new_rank(x)[1] + " · " + (("오픈 " + x["open"]) if x.get("open") else "숙소가 신규 오픈 표시")] if is_new(x) else [new_rank(x)[1].replace("신상", "신상 가능성") + " · 오픈 달 확인 필요"] if x.get("newHint") else [])) + signals(x.get("name"), x.get("slug"))[1], "status": "예정"})
         hist.append({"area": x.get("area", ""), "words": words, "name": x["name"]})
     out = {"at": TODAY, "rule": "python3 scripts/pick_reel.py --plan 14 는 이미 정해 둔 날짜는 그대로 두고 빈 날만 채운다. 17:07 릴스 작업은 오늘 날짜 줄의 숙소로 만든다. 쿠팡트래블에 없거나 사진이 부족하면 status 에 이유를 적고 pick_reel.py 다음 후보로. 시온님이 순서·숙소를 바꾸면 이 파일을 고친다.", "plan": plan}
     json.dump(out, open(os.path.join(ROOT, "scripts", "reel_plan.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
