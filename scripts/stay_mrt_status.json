@@ -1,5 +1,5 @@
 {
- "at": "2026-10-30 09:45",
+ "at": "2026-10-30 09:49",
  "checkIn": "2026-11-07",
  "stays": {
   "busan-matie-harbor": {
@@ -78,42 +78,17 @@
      "kw": "경주",
      "region": "경주",
      "type": "CITY",
-     "pages": 12,
-     "n": 594,
+     "pages": 14,
+     "n": 692,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
      "total": 1865
-    },
-    {
-     "kw": "경북",
-     "region": "경주",
-     "type": "CITY",
-     "pages": 12,
-     "n": 594,
-     "keys": [
-      "totalCount",
-      "page",
-      "size"
-     ],
-     "total": 1865
-    },
-    {
-     "kw": "경북",
-     "region": "포항",
-     "type": "CITY",
-     "pages": 12,
-     "n": 583,
-     "keys": [
-      "totalCount",
-      "page",
-      "size"
-     ],
-     "total": 913
     }
-   ]
+   ],
+   "hit": "경주 에스앤비풀빌라"
   },
   "pohang-daytona": {
    "name": "데이토나풀빌라",
