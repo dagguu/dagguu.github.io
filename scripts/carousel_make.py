@@ -40,10 +40,10 @@ body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans CJK KR','
 .tg{font-size:30px;font-weight:600;opacity:.92;margin-bottom:14px;text-shadow:0 2px 8px rgba(0,0,0,.5)}
 .t{font-size:84px;font-weight:900;line-height:1.2;text-shadow:0 3px 14px rgba(0,0,0,.55)}
 .ln{white-space:nowrap}
-.cap{position:absolute;left:90px;right:90px;top:59%;transform:translateY(-50%);background:rgba(238,238,238,.9);border:2px solid rgba(40,40,40,.75);
+.cap{position:absolute;left:90px;right:90px;bottom:120px;background:rgba(238,238,238,.9);border:2px solid rgba(40,40,40,.75);
  padding:30px 34px;text-align:center;color:#222;font-size:40px;font-weight:500;line-height:1.45;letter-spacing:-.5px;word-break:keep-all}
 .cap b{font-weight:800;color:#111}.cap .red{display:block;color:#e2463c;font-weight:800;margin-bottom:6px}
-.cwm{position:absolute;left:0;right:0;top:72%;text-align:center;font-size:30px;font-weight:500;color:rgba(255,255,255,.55);text-shadow:0 1px 4px rgba(0,0,0,.25)}"""
+"""
 import re
 def capfmt(t):
     """2장부터 자막 상자 글(2026-10-30 시온님 룸투어 피드 참고): 줄바꿈 \\n, **굵게**, {"red": 빨간 첫 줄, "t": 글}."""
@@ -65,7 +65,7 @@ with sync_playwright() as pw:
     pages = [("cover.png", cover_html), ("wm.png", wm_html)]
     for i, sc in enumerate(J["scenes"][:5], 1):
         if i > 1 and sc.get("cap"):
-            pages.append((f"cap{i}.png", f"<html><head><meta charset='utf-8'><style>{CSS}</style></head><body><div class='s'><div class='cap'>{capfmt(sc['cap'])}</div><div class='cwm'>{e(handle)}</div></div></body></html>"))
+            pages.append((f"cap{i}.png", f"<html><head><meta charset='utf-8'><style>{CSS}</style></head><body><div class='s'><div class='cap'>{capfmt(sc['cap'])}</div><div class='wm'>{e(handle)}</div></div></body></html>"))
     for name, h in pages:
         pg.set_content(h); pg.wait_for_timeout(300)
         if name == "cover.png": pg.evaluate(FIT)

@@ -10,6 +10,8 @@ scripts/insta_queue.json 의 각 항목을 읽어 insta_out/<날짜>/<id>/1~3.jp
 """
 import json, os, re, sys, base64, html, urllib.request, datetime as dt
 from playwright.sync_api import sync_playwright
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'cards'))
+from stickers import STICKER_HEAD, STICKER_CSS, stickers_html  # MZ 스티커(2026-10-30 시온님)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KST = dt.timezone(dt.timedelta(hours=9))
@@ -86,10 +88,9 @@ body{width:1080px;height:1350px;overflow:hidden;font-family:'Noto Sans CJK KR','
 .pill{background:rgba(20,16,40,.62);backdrop-filter:blur(6px);border-radius:22px;padding:22px 30px;font-size:40px;font-weight:700;line-height:1.35}
 .pill small{display:block;font-size:28px;font-weight:600;opacity:.8;margin-bottom:4px}
 /* 2장부터 자막 상자 (2026-10-30 시온님이 보여준 룸투어 피드 느낌): 반투명 밝은 회색 상자 + 얇은 테두리 + 가운데 정렬 2줄 */
-.cap{position:absolute;left:90px;right:90px;top:59%;transform:translateY(-50%);background:rgba(238,238,238,.9);border:2px solid rgba(40,40,40,.75);
+.cap{position:absolute;left:90px;right:90px;bottom:120px;background:rgba(238,238,238,.9);border:2px solid rgba(40,40,40,.75);
  padding:30px 34px;text-align:center;color:#222;font-size:40px;font-weight:500;line-height:1.45;letter-spacing:-.5px;word-break:keep-all}
 .cap b{font-weight:800;color:#111}.cap .red{display:block;color:#e2463c;font-weight:800;margin-bottom:6px}
-.cwm{position:absolute;left:0;right:0;top:72%;text-align:center;font-size:30px;font-weight:500;color:rgba(255,255,255,.55);text-shadow:0 1px 4px rgba(0,0,0,.25)}
 """
 def capfmt(t):
     """자막 상자 글: 줄바꿈 \\n, **굵게**, {"red": 빨간 첫 줄, "t": 글} 도 됨."""
@@ -99,7 +100,7 @@ def capfmt(t):
     h = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', h)
     return (f"<span class='red'>{e(red)}</span>" if red else '') + h
 
-def page(inner): return f"<html><head><meta charset='utf-8'><style>{CSS}</style></head><body>{inner}</body></html>"
+def page(inner): return f"<html><head><meta charset='utf-8'>{STICKER_HEAD}<style>{CSS}{STICKER_CSS}</style></head><body>{inner}</body></html>"
 
 def build(q):
     it = items.get(q['id']) or {'name': q['id']}  # m-<slug> = 감성숙소 매거진 (data.json items 에 없음)
@@ -108,18 +109,21 @@ def build(q):
     col = q.get('color', '#ffe14d')
     ph = [data_uri(p) for p in q['photos']]
     slides = []
+    stk = q.get('stickers') or []
     slides.append(page(f"""<div class='s' style="background-image:url({ph[0]})"><div class='g'></div>
 <div class='wm'>{e(q.get('handle','@dagguu.trip'))}</div><div class='box'><div class='tg'>{e(q.get('tags',''))}</div>
-<div class='t'><div class='ln'>{e(q['l1'])}</div><div class='ln' style='color:{col}'>{e(q['l2'])}</div></div></div></div>"""))
+<div class='t'><div class='ln'>{e(q['l1'])}</div><div class='ln' style='color:{col}'>{e(q['l2'])}</div></div></div>{stickers_html(stk[0] if stk else [])}</div>"""))
     # 2~3장: 사진 + 우상단 @dagguu.trip 만 (글씨 없음, 시온님 요청 2026-10-15)
     # caps 가 있으면 2장부터 장마다 자막 상자 + 가운데 아래 흐린 @dagguu.trip (2026-10-30 시온님 "두번째 이미지부터 이런 느낌")
     caps = q.get('caps') or []
+    # stickers: 사진 순서대로 장마다 스티커 목록(0 = 표지). scripts/cards/stickers.py 머리말 참고
+
     for i, p in enumerate(ph[1:]):
         hd = e(q.get('handle','@dagguu.trip'))
         if i < len(caps) and caps[i]:
-            slides.append(page(f"""<div class='s' style="background-image:url({p})"><div class='cap'>{capfmt(caps[i])}</div><div class='cwm'>{hd}</div></div>"""))
+            slides.append(page(f"""<div class='s' style="background-image:url({p})"><div class='cap'>{capfmt(caps[i])}</div><div class='wm'>{hd}</div>{stickers_html(stk[i+1] if i+1 < len(stk) else [])}</div>"""))
         else:
-            slides.append(page(f"""<div class='s' style="background-image:url({p})"><div class='wm'>{hd}</div></div>"""))
+            slides.append(page(f"""<div class='s' style="background-image:url({p})"><div class='wm'>{hd}</div>{stickers_html(stk[i+1] if i+1 < len(stk) else [])}</div>"""))
     return slides
 
 with sync_playwright() as pw:
@@ -129,7 +133,7 @@ with sync_playwright() as pw:
         out = os.path.join(ROOT, 'insta_out', day, q['id'])
         os.makedirs(out, exist_ok=True)
         for n, h in enumerate(build(q), 1):
-            pg.set_content(h); pg.wait_for_timeout(300)
+            pg.set_content(h, wait_until='networkidle'); pg.evaluate('async()=>{await document.fonts.ready}'); pg.wait_for_timeout(400)
             # 표지 글씨는 꼭 두 줄: 넘치면 끝의 하트(이모지)를 지우고, 그래도 넘치면 글씨를 줄인다
             pg.evaluate("""()=>{const t=document.querySelector('.t'); if(!t) return; const L=[...t.querySelectorAll('.ln')], max=t.clientWidth;
               const over=()=>L.some(l=>l.scrollWidth>max+1);
