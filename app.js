@@ -1068,7 +1068,7 @@ function stayRow(x){ return '<a class="gdi pki smg" href="/m/'+esc(x.slug)+'.htm
    카드 = 세로 영상(화면에 보이면 소리 없이 자동 재생) + 왼쪽 위 배지 + 아래 이름·한 줄·가격(조회 날짜·출처 표시). 영상을 누르면 소리 켜고 크게, 글씨를 누르면 감성숙소 글. */
 function reelsHtml(){
   if(!REELS||!REELS.length) return "";
-  return '<section class="rlsec"><div class="rlhd"><h2>영상으로 다음 여행을 찾아보세요</h2><small>다꾸가 직접 만든 숙소 소개 영상이에요</small></div><div class="rlg">'+REELS.map(function(x,i){
+  return '<section class="rlsec"><div class="rlhd"><h2>영상으로 다음 여행을 찾아보세요</h2><small>다꾸가 직접 만든 숙소 소개 영상이에요 · 누르면 위아래로 넘겨 볼 수 있어요</small></div><div class="rlg">'+REELS.map(function(x,i){
     var dl=x.campEnd?Math.round((Date.parse(x.campEnd+"T00:00:00+09:00")-Date.parse(ymd(today())+"T00:00:00+09:00"))/864e5):-1;
     var badge=dl>=0?'🚨 체험단 모집중 '+(dl===0?'D-DAY':'D-'+dl):'['+String(x.no||"").padStart(3,"0")+']';
     var pr=x.price?'<span class="rlp">'+(x.rate?'<em>'+x.rate+'%</em>':'')+'<b>'+Number(x.price).toLocaleString("ko-KR")+'원~</b></span><span class="rlsrc">'+esc(x.src||"")+' 조회 기준</span>':'';
@@ -1086,16 +1086,83 @@ function reelsInit(M){
     [].forEach.call(vs,function(v){ RLOBS.observe(v); });
   }
 }
+/* 릴스 세로 피드 (2026-10-30 시온님이 마이리얼트립 지금특가 영상 화면 4장 보여주며 "스크롤로 내려서 내 릴스를 볼 수 있게, 릴스 2개 보고 광고 하나 — 쿠팡 골드박스나 숙박여행 상품").
+   전체 화면 세로 스크롤(한 장씩 딱 맞게) · 위 ← / 전체·체험단 모집중 / 소리 · 아래 배지·이름·한 줄·공유·"다꾸 님이 추천해요" 줄·가격 카드·진행 막대.
+   릴스 2개마다 광고 1장(골드박스 판매율 높은 것 ↔ 마이리얼트립 국내 숙소 할인 번갈아). 광고는 "상품 보러가기" 버튼만 링크(화면 아무 데나 눌러서 넘어가지 않게, 쿠팡 운영정책 4.1-2). */
+var RF={mute:false,filter:"all",io:null};
+function rfAds(){
+  var day=Math.floor(Date.now()/864e5), G=(Array.isArray(seed.goldAll)?seed.goldAll:[]).filter(function(x){ return safeUrl(x.u)&&safeUrl(x.img)&&(parseInt(x.rate,10)||0)>=10&&!(x.endAt&&Date.parse(x.endAt)<=Date.now()); })
+    .sort(function(a,b){ return (b.sold||0)-(a.sold||0) || (parseInt(b.rate,10)||0)-(parseInt(a.rate,10)||0); }).slice(0,30);
+  var M=(Array.isArray(seed.mrtDeals)?seed.mrtDeals:[]).filter(function(x){ return x.dom&&safeUrl(x.u)&&safeUrl(x.img)&&(x.rate||0)>=15; }).sort(function(a,b){ return (b.rate||0)-(a.rate||0); }).slice(0,20);
+  var rot=function(L){ return L.length?L.slice(day%L.length).concat(L.slice(0,day%L.length)):L; }; G=rot(G); M=rot(M);
+  var out=[], i=0;
+  while(i<Math.max(G.length,M.length)){ if(G[i]) out.push({k:"gold",x:G[i]}); if(M[i]) out.push({k:"mrt",x:M[i]}); i++; }
+  return out;
+}
+function rfWon(v){ var n=typeof v==="number"?v:parseInt(String(v||"").replace(/[^0-9]/g,""),10); return n?n.toLocaleString("ko-KR")+"원":""; }
+function rfReelSlide(x,i){
+  var dl=x.campEnd?Math.round((Date.parse(x.campEnd+"T00:00:00+09:00")-Date.parse(ymd(today())+"T00:00:00+09:00"))/864e5):-1, ed=x.campEnd?new Date(x.campEnd+"T00:00:00+09:00"):null;
+  var badge=dl>=0?(ed.getMonth()+1)+'/'+ed.getDate()+'('+"일월화수목금토"[ed.getDay()]+')까지 체험단 모집':'감성숙소 추천 ['+String(x.no||"").padStart(3,"0")+']';
+  var pu=safeUrl(x.pu), card=x.price?'<a class="rfcard" '+(pu?ext(pu)+' data-rfgo="'+esc(x.slug)+'"':'href="/m/'+esc(x.slug)+'.html"')+'><img src="'+esc(x.img)+'" alt="" loading="lazy"><span><b>'+esc(x.name)+'</b><em>'+(x.rate?'<i>'+x.rate+'%</i>':'')+rfWon(x.price)+'~</em><small>'+esc(x.src||"")+' 조회 기준 ↗</small></span></a>':'';
+  return '<section class="rfs" data-i="'+i+'"><video playsinline loop preload="none" poster="'+esc(x.img)+'" data-src="'+esc(x.v)+'"></video><div class="rfshade"></div>'+
+    '<div class="rfbot"><em class="rfbadge'+(dl>=0?' hot':'')+'">'+esc(badge)+'</em>'+
+    '<div class="rfti"><a href="/m/'+esc(x.slug)+'.html" data-rlgo="'+esc(x.slug)+'"><b>'+esc(x.name)+' ›</b><small>'+esc((x.h||[]).join(" "))+'</small></a><button class="rfsh" data-rfshare="'+esc(x.slug)+'" aria-label="공유하기"><svg viewBox="0 0 24 24" width="18" height="18"><path d="'+I.share+'" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button></div>'+
+    '<div class="rfpick"><img src="/icons/icon-192.png" alt=""><span>다꾸 님이 추천해요!</span><em>다꾸 PICK ✓</em></div>'+card+'</div><div class="rfbar"><i></i></div></section>';
+}
+function rfAdSlide(a){
+  var x=a.x, g=a.k==="gold", info=seed.mrtInfo||{}, ci=info.checkIn?new Date(info.checkIn+"T00:00:00+09:00"):null;
+  var top=g?'쿠팡 골드박스 · 내일 오전 7시까지 특가':'마이리얼트립 국내 숙소 할인'+(ci?' · '+(ci.getMonth()+1)+'/'+ci.getDate()+'('+"일월화수목금토"[ci.getDay()]+') 1박':'');
+  var img=g?String(x.img).replace("492x492ex","1000x1000ex"):x.img, rate=parseInt(x.rate,10)||0;
+  return '<section class="rfs rfad"><div class="rfadbg" style="background-image:url(\''+esc(img)+'\')"></div><div class="rfadin"><small class="rfadk">'+esc(top)+'</small>'+
+    '<div class="rfadimg"><img src="'+esc(img)+'" alt="" loading="lazy" referrerpolicy="no-referrer"></div><b class="rfadn">'+esc(x.name)+'</b>'+
+    '<p class="rfadp">'+(rate?'<i>'+rate+'%</i>':'')+'<strong>'+rfWon(x.price)+(g?'':'~')+'</strong>'+(x.orig&&rate?'<s>'+rfWon(x.orig)+'</s>':'')+'</p>'+
+    (g&&x.sold?'<div class="rfsold"><span style="width:'+Math.min(100,x.sold)+'%"></span><em>'+x.sold+'% 판매됨</em></div>':'')+
+    '<p class="rfadnote">'+(g?'가격·판매율은 수집 시점 기준이라 쿠팡에서 다를 수 있어요':'가격은 조회 시점 기준이라 날짜·객실마다 달라요')+'</p>'+
+    '<a class="rfadgo" '+ext(safeUrl(x.u))+' data-rfad="'+a.k+'">상품 보러가기 ↗</a></div><em class="rfadtag">AD</em></section>';
+}
 function reelOpen(i){
-  var x=(REELS||[])[i]; if(!x) return;
+  var all=REELS||[]; if(!all[i]) return;
   [].forEach.call(document.querySelectorAll(".rlv video"),function(v){ v.pause(); });
-  var d=document.createElement("div"); d.className="rlfs"; d.setAttribute("role","dialog"); d.setAttribute("aria-label",x.name+" 영상");
-  d.innerHTML='<video src="'+esc(x.v)+'" poster="'+esc(x.img)+'" playsinline autoplay controls loop></video><button class="rlx" aria-label="닫기">✕</button><a class="rlgo" href="/m/'+esc(x.slug)+'.html" data-rlgo="'+esc(x.slug)+'"><span><small>'+esc(x.area)+'</small><b>'+esc(x.name)+'</b></span><em>숙소 소개 보기 ›</em></a>';
+  var old=document.querySelector(".rf"); if(old) old.remove();
+  var L=RF.filter==="camp"?all.filter(function(x){ return x.campEnd && x.campEnd>=ymd(today()); }):all; if(!L.length){ RF.filter="all"; L=all; }
+  var start=Math.max(0,L.indexOf(all[i])), ads=rfAds(), h="", n=0;
+  L.forEach(function(x,k){ h+=rfReelSlide(x,all.indexOf(x)); if(++n%2===0&&ads.length) h+=rfAdSlide(ads[(n/2-1)%ads.length]); });
+  var d=document.createElement("div"); d.className="rf"; d.setAttribute("role","dialog"); d.setAttribute("aria-label","감성숙소 영상");
+  d.innerHTML='<div class="rftop"><button class="rfbk" aria-label="닫기"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M19 12H5m6-6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'+
+    '<div class="rfsel"><button class="rffil">'+(RF.filter==="camp"?"체험단 모집중":"전체")+' ▾</button><div class="rfmenu" hidden><button data-rff="all">전체</button><button data-rff="camp">체험단 모집중</button></div></div>'+
+    '<button class="rfsnd" aria-label="소리">'+(RF.mute?'🔇':'🔊')+'</button></div><div class="rfsc">'+h+'</div>';
   document.body.appendChild(d); document.body.style.overflow="hidden";
-  var v=d.querySelector("video"); v.muted=false; var p=v.play(); if(p&&p.catch) p.catch(function(){ v.muted=true; v.play(); });
-  var close=function(){ v.pause(); d.remove(); document.body.style.overflow=""; };
-  d.querySelector(".rlx").onclick=close; d.addEventListener("click",function(e){ if(e.target===d) close(); });
-  try{ if(window.gtag) gtag("event","reel_play",{item_name:x.name}); }catch(e){}
+  var sc=d.querySelector(".rfsc"), slides=sc.querySelectorAll(".rfs");
+  var target=sc.querySelector('.rfs[data-i="'+i+'"]'); if(target) sc.scrollTop=target.offsetTop;
+  var cur=null;
+  var act=function(sl){
+    if(cur===sl) return; cur=sl;
+    [].forEach.call(sc.querySelectorAll("video"),function(v){ if(v.closest(".rfs")!==sl){ v.pause(); } });
+    var v=sl.querySelector("video"); if(!v) return;
+    if(!v.src) v.src=v.dataset.src; v.muted=RF.mute; v.currentTime=0;
+    var p=v.play(); if(p&&p.catch) p.catch(function(){ v.muted=true; RF.mute=true; d.querySelector(".rfsnd").textContent="🔇"; v.play().catch(function(){}); });
+    var bar=sl.querySelector(".rfbar i"); v.ontimeupdate=function(){ if(bar&&v.duration) bar.style.width=(v.currentTime/v.duration*100)+"%"; };
+    var j=sl.dataset.i; if(j!=null){ try{ if(window.gtag) gtag("event","reel_play",{item_name:(all[+j]||{}).name}); }catch(e){} } else { try{ if(window.gtag) gtag("event","reel_ad_view",{}); }catch(e){} }
+    var nx=sl.nextElementSibling&&sl.nextElementSibling.querySelector("video"); if(nx&&!nx.src){ nx.src=nx.dataset.src; nx.preload="auto"; }
+  };
+  if("IntersectionObserver" in window){ RF.io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting&&e.intersectionRatio>=0.6) act(e.target); }); },{root:sc,threshold:[0.6]}); [].forEach.call(slides,function(s){ RF.io.observe(s); }); }
+  setTimeout(function(){ act(target||slides[0]); },60);
+  var sv=0; try{ sv=localStorage.getItem("dakku-rf-hint"); }catch(e){}
+  if(!sv){ var hn=document.createElement("div"); hn.className="rfhint"; hn.innerHTML='<span class="rfph"><i></i></span><p>화면을 위 아래로 넘겨<br>더 많은 영상을 확인해보세요.</p>'; d.appendChild(hn); var off=function(){ hn.remove(); }; setTimeout(off,2600); hn.onclick=off; sc.addEventListener("scroll",off,{once:true}); try{ localStorage.setItem("dakku-rf-hint","1"); }catch(e){} }
+  var close=function(fromPop){ if(RF.io){ RF.io.disconnect(); RF.io=null; } [].forEach.call(sc.querySelectorAll("video"),function(v){ v.pause(); v.removeAttribute("src"); v.load(); }); d.remove(); document.body.style.overflow=""; window.removeEventListener("popstate",onPop); if(!fromPop&&history.state&&history.state.rf) history.back(); };
+  var onPop=function(){ close(true); };
+  try{ history.pushState({rf:1},"",location.href); }catch(e){} window.addEventListener("popstate",onPop);
+  d.querySelector(".rfbk").onclick=function(){ close(false); };
+  d.querySelector(".rfsnd").onclick=function(){ RF.mute=!RF.mute; this.textContent=RF.mute?"🔇":"🔊"; var v=cur&&cur.querySelector("video"); if(v){ v.muted=RF.mute; if(v.paused) v.play().catch(function(){}); } };
+  var menu=d.querySelector(".rfmenu"); d.querySelector(".rffil").onclick=function(){ menu.hidden=!menu.hidden; };
+  [].forEach.call(d.querySelectorAll("[data-rff]"),function(b){ b.onclick=function(){ RF.filter=b.dataset.rff; var keep=all[i]; close(false); var L2=RF.filter==="camp"?all.filter(function(x){ return x.campEnd&&x.campEnd>=ymd(today()); }):all; setTimeout(function(){ reelOpen(all.indexOf(L2.indexOf(keep)>=0?keep:(L2[0]||keep))); },80); }; });
+  sc.addEventListener("click",function(e){
+    var sh=e.target.closest("[data-rfshare]"); if(sh){ e.preventDefault(); var u=location.origin+"/m/"+sh.dataset.rfshare+".html", t=(all.filter(function(x){ return x.slug===sh.dataset.rfshare; })[0]||{}).name||"다꾸 감성숙소";
+      if(navigator.share) navigator.share({title:t,url:u}).catch(function(){}); else if(navigator.clipboard){ navigator.clipboard.writeText(u); toast&&toast("링크를 복사했어요"); } try{ if(window.gtag) gtag("event","share",{place:"reel_feed"}); }catch(_){} return; }
+    var ad=e.target.closest("[data-rfad]"); if(ad){ try{ if(window.gtag) gtag("event",ad.dataset.rfad==="gold"?"coupang_click":"mrt_click",{place:"reel_feed_ad"}); }catch(_){} return; }
+    var go=e.target.closest("[data-rfgo]"); if(go){ try{ if(window.gtag) gtag("event","reel_price_click",{slug:go.dataset.rfgo}); }catch(_){} return; }
+    var v=e.target.closest(".rfs")&&!e.target.closest("a,button")&&e.target.closest(".rfs").querySelector("video"); if(v){ if(v.paused) v.play().catch(function(){}); else v.pause(); }
+  });
 }
 document.addEventListener("click",function(e){
   var b=e.target.closest&&e.target.closest("[data-rl]"); if(b){ e.preventDefault(); reelOpen(+b.dataset.rl); return; }

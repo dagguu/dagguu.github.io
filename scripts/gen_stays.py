@@ -261,13 +261,14 @@ if __name__ == "__main__":
              "v": "/v/" + x["slug"] + ".mp4", "img": "/v/" + x["slug"] + ".jpg"}
         m, c = MRT.get(x["slug"]) or {}, CPP.get(x["slug"]) or {}
         opts = []
-        if m.get("price"): opts.append((m["price"], m.get("rate", 0) if m.get("orig", 0) > m["price"] else 0, "마이리얼트립", m.get("checkIn", "")))
-        if c.get("price"): opts.append((c["price"], round((c["orig"] - c["price"]) * 100 / c["orig"]) if c.get("orig", 0) > c["price"] else 0, "쿠팡트래블", c.get("checkIn", "")))
+        PP = next((Q for Q in allP if Q["slug"] == x["slug"]), {})
+        if m.get("price") and m.get("u"): opts.append((m["price"], m.get("rate", 0) if m.get("orig", 0) > m["price"] else 0, "마이리얼트립", m.get("checkIn", ""), m["u"]))
+        if c.get("price") and PP and link_of(PP): opts.append((c["price"], round((c["orig"] - c["price"]) * 100 / c["orig"]) if c.get("orig", 0) > c["price"] else 0, "쿠팡트래블", c.get("checkIn", ""), link_of(PP)))
         if opts:
-            pr, rt, src, ci = sorted(opts, key=lambda o: (-(o[1] >= 3), o[0]))[0]
+            pr, rt, src, ci, pu = sorted(opts, key=lambda o: (-(o[1] >= 3), o[0]))[0]
             if ci:
                 dd = datetime.date.fromisoformat(ci); src += f" · {dd.month}/{dd.day}({WD[dd.weekday()]}) 1박"
-            r.update({"price": pr, "rate": rt if rt >= 3 else 0, "src": src})
+            r.update({"price": pr, "rate": rt if rt >= 3 else 0, "src": src, "pu": pu})
         reels.append(r)
     reels.sort(key=lambda r: -int(r.get("no") or 0))
     json.dump(reels, open(os.path.join(ROOT, "m", "reels.json"), "w", encoding="utf-8"), ensure_ascii=False)
