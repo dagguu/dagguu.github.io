@@ -27,7 +27,8 @@ status["slug"] = slug
 PL = json.load(open(f"scripts/kie_prompts/{slug}.json", encoding="utf-8"))
 imgp = {x["n"]: x["img"] for x in PL if x.get("img")}
 photos = P.get("photos", [])
-srcs = {int(x["n"]): x["src"] for x in PL if x.get("src")}  # 장면별 사진 주소(여기어때·마이리얼트립 숙소 사진 등)
+srcs = {int(x["n"]): x["src"] for x in PL if x.get("src")}
+times = {int(x["n"]): x.get("time", "day") for x in PL}  # 2026-10-31 시온님: 하루 흐름(낮 → 노을 → 밤), 장면마다 "time": day|sunset|night  # 장면별 사진 주소(여기어때·마이리얼트립 숙소 사진 등)
 nums = [int(x) for x in a.only.split(",") if x.strip()] if a.only else sorted(imgp)
 def call(url, body=None):
     req = urllib.request.Request(url, data=json.dumps(body).encode() if body is not None else None,
@@ -57,10 +58,13 @@ def result_imgs(d):
     return u or find_imgs({k: v for k, v in d.items() if k not in ("param", "input")})
 OUTFIT = " Outfit (always): the woman wears a long flowing white skirt (ankle-length) with a simple top suited to the season; keep this white long skirt clearly visible."  # 2026-10-26 시온님: 여자는 항상 흰색 긴 치마
 TONE = " Color and light (autumn tone): clear sunny midday - a vivid deep-blue sky with a few small white clouds wherever sky is visible, bright direct sunlight, crisp clean colors, fresh saturated green trees with some orange autumn leaves, bright clean whites indoors with daylight through the windows; vivid but natural, not dark, hazy, golden-hour or gloomy, keep the real place unchanged."  # 2026-10-30 23:48 시온님 "맑은 날 한낮 파란 하늘" (예전 21:52 밝은 가을톤)
+TONE_T = {  # 하루 흐름 장면용 (기본 day = TONE)
+    "sunset": " Color and light (autumn tone): late-afternoon sunset - warm orange and pink sky glow over the hills, soft low golden sunlight, warm lights starting to glow inside, gentle steam over warm water; still bright and clear, not dark or murky, keep the real place unchanged.",
+    "night": " Color and light (autumn tone): early night (blue hour) - deep navy sky with a few stars, warm yellow lights glowing from windows and lanterns, soft reflections on water, gentle steam; clean and clear, details still visible, not pitch-black or noisy, keep the real place unchanged."}
 SIZE = " Make the image in a vertical 9:16 size (portrait, 9:16 aspect ratio, full-bleed, no borders or letterboxing)."  # 2026-10-29 시온님: 프롬프트에 "9:16 사이즈로" 꼭
-def body(prompt, src):
+def body(prompt, src, tm="day"):
     if "woman" in prompt.lower(): prompt = prompt + OUTFIT  # 사람 없는 프롬프트(바다 채우기 등)엔 안 붙임
-    if "autumn tone" not in prompt: prompt = prompt + TONE
+    if "autumn tone" not in prompt: prompt = prompt + TONE_T.get(tm, TONE)
     if "9:16" not in prompt: prompt = prompt + SIZE
     if "nano-banana-edit" in a.model:
         return {"model": a.model, "input": {"prompt": prompt, "image_urls": [src], "output_format": "jpeg", "image_size": "9:16"}}
@@ -76,7 +80,7 @@ if a.tasks:
 for n in nums:
     # 장면마다 kie_prompts 의 "src"(여기어때·마이리얼트립 숙소 페이지에서 고른 감성 사진 주소, 2026-10-30 시온님)가 있으면 그 사진, 없으면 감성숙소 json photos[n-1]
     if n not in imgp or n < 1 or (n > len(photos) and n not in srcs): continue
-    r = call(API + "/createTask", body(imgp[n], srcs.get(n) or photos[n - 1]["src"]))
+    r = call(API + "/createTask", body(imgp[n], srcs.get(n) or photos[n - 1]["src"], times.get(n, "day")))
     tid = (r.get("data") or {}).get("taskId") if isinstance(r.get("data"), dict) else None
     j = {"n": n, "taskId": tid, "state": "submitted" if tid else "error"}
     if not tid: j["msg"] = str(r.get("msg") or r)[:300]
