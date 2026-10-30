@@ -1,27 +1,19 @@
 {
- "at": "2026-10-30 18:32",
+ "at": "2026-10-30 18:34",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
    "n": 4,
-   "taskId": "e4920b839528a5f970d3dccdb87671d1",
+   "taskId": "db22e846c9e0e1ecc516ebed98fe04a5",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
    "file": "img/2026-10-30/sancheong-andforet/4_edit.jpg"
   },
   {
-   "n": 5,
-   "taskId": "81d6f5b1e3f4fca39ff2be5015323882",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-10-30/sancheong-andforet/5_edit.jpg"
-  },
-  {
    "n": 6,
-   "taskId": "87a68b7a8b25ad4025f78279cd8f2dac",
+   "taskId": "e7ec55308ba2b10596cc199a029a1d9b",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
@@ -29,35 +21,11 @@
   },
   {
    "n": 7,
-   "taskId": "b592ef77b540d5e3735fcb265d19c844",
+   "taskId": "8c0e5bc9f5041e1f4691886b195bc748",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
    "file": "img/2026-10-30/sancheong-andforet/7_edit.jpg"
-  },
-  {
-   "n": 8,
-   "taskId": "4f3ff91dc518f0ad176284572f53c501",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-10-30/sancheong-andforet/8_edit.jpg"
-  },
-  {
-   "n": 9,
-   "taskId": "80ff62737439c05ce15eec57fe3d8fcf",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-10-30/sancheong-andforet/9_edit.jpg"
-  },
-  {
-   "n": 10,
-   "taskId": "8c1392c8a5d6248b4d31ab08ab1250b7",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-10-30/sancheong-andforet/10_edit.jpg"
   }
  ],
  "slug": "sancheong-andforet"
