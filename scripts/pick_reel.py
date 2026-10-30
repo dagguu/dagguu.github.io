@@ -39,7 +39,8 @@ def is_new(x):   # 신상숙소 = stay_list.json 의 open(YYYY-MM, 출처 openSr
     return (bool(x.get("open")) and x["open"] >= NEW_SINCE) or bool(x.get("openClaim"))
 def score(x):
     s = " ".join(str(x.get(f) or "") for f in ("name", "area", "memo", "tags", "note"))
-    v = (6 if is_new(x) else 3 if x.get("newHint") else 0) + (3 if WARM.search(s) else 0) + min(3, len(set(HOOK.findall(s)))) + signals(x.get("name"), x.get("slug"))[0]   # 여기어때 잘 팔림·검색량·오픈런·마이리얼트립·쿠팡 할인(yeogi_top.signals)
+    v = (20 if is_new(x) else 10 if x.get("newHint") else 0) + (   # 신상 확인 > 신상 가능성 > 나머지 (2026-10-30 시온님 "1년 안 된 숙소 다 포함")
+        3 if WARM.search(s) else 0) + min(3, len(set(HOOK.findall(s)))) + signals(x.get("name"), x.get("slug"))[0]   # 여기어때 잘 팔림·검색량·오픈런·마이리얼트립·쿠팡 할인(yeogi_top.signals)
     city = (x.get("area") or "").split(" ")[-1]
     if city and any(city in a for a in recent_area): v -= 2
     v -= len(set(HOOK.findall(s)) & recent_words)
