@@ -468,7 +468,7 @@ function homeView(){
   if(!PMODE){ var ta=travelAds(); if(ta) h+=ta; }
   var gd=groceryDeal(); if(gd) h+='<div class="hpad">'+gd+'</div>';
   var wx=wxSection(); if(wx) h+='<div class="hpad">'+wx+'</div>';
-  var hd=hotDeal(); if(hd) h+='<div class="hpad">'+hd+'</div>'; var lh=lifeHot(); if(lh) h+='<div class="hpad">'+lh+'</div>'; var cb=cheapBtn(); if(cb) h+='<div class="hpad">'+cb+'</div>'; // 오늘의 특가(골드박스)는 홈에서 숨김 (2026-10-14 시온님 요청)
+  var hd=hotDeal(); if(hd) h+='<div class="hpad">'+hd+'</div>'; var lh=lifeHot(); if(lh) h+='<div class="hpad">'+lh+'</div>';  // 오늘의 특가(골드박스)는 홈에서 숨김 (2026-10-14 시온님 요청)
   var up=CAT_ORDER.filter(function(m){ return !isOpenCat(m.k) && UPCOMING.some(function(u){ return u.k===m.k||u.t===m.t; }); });
   if(up.length) h+='<a class="upbox" '+ext(kakaoUrl())+'><span class="ul"><small>곧 열려요 ✨</small><b>'+up.map(function(m){ return m.em+' '+esc(m.t); }).join(" · ")+' 체험단</b></span><span class="ug">🔔 오픈 알림</span></a>';
   if(!pushOn()) h+=pushBox().replace('class="pushbox"','class="pushbox hpb"');
@@ -2113,7 +2113,7 @@ function wxSection(){
     (T.wx?'':'')+'<p class="wxsrc">'+(w&&w.src?'날씨 정보: '+esc(w.src)+' · ':'')+'쿠팡 검색 결과</p>'+'</section>';
 }
 function dealsView(){
-  var h=slideBanners(false,dealSlides())+'<div class="pg"><h1>오늘의 특가 🔥</h1>'+cheapBtn()+shopBtn()+dealSearch()+topDealsHtml()+groceryDeal()+wxSection()+recentDeals();
+  var h=slideBanners(false,dealSlides())+'<div class="pg"><h1>오늘의 특가 🔥</h1>'+dealSearch()+topDealsHtml()+groceryDeal()+wxSection()+recentDeals();
   h+=goldSec();
   h+=cpBanner();
   if(ADS.length){
