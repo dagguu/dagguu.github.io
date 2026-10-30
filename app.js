@@ -221,7 +221,7 @@ function route(){
   if(tab==="event") state.evAbr=qs.t==="abroad";
   if(tab==="trip") state.tq=qs.q||"";
   if(tab==="map") state.mapC=qs.c==="stay"||qs.c==="etc"||qs.c==="mag"?qs.c:"";
-  if(tab==="mag") state.magT=qs.t==="p"?"p":qs.t==="g"?"g":"s";
+  if(tab==="mag") state.magT=qs.t==="p"?"p":qs.t==="g"?"g":qs.t==="d"?"d":"s";
   if(tab==="tix") state.tixI=qs.i||"";
   if(tab==="checkout") state.coK=qs.c||"";
   if(tab==="pjob") state.pjId=qs.id||"";
@@ -1095,7 +1095,7 @@ function tdList(){
 function tdHtml(lim){
   var L=tdList(); if(!L.length) return ""; var all=L.length; if(lim) L=L.slice(0,lim);
   var td=ymd(today()), md=function(v){ var t=new Date(v+"T00:00:00+09:00"); return (t.getMonth()+1)+'/'+t.getDate()+'('+"일월화수목금토"[t.getDay()]+')'; };
-  return '<section class="snsec tdsec"><div class="rlhd'+(lim?' rlhh':'')+'"><h2>여행 특가</h2>'+(lim&&all>lim?'<a href="#/mag?t=s">더 보기 ›</a>':'')+'<small>판매 마감일이 가까운 특가부터 보여드려요</small></div><div class="sng">'+L.map(function(x){
+  return '<section class="snsec tdsec"><div class="rlhd'+(lim?' rlhh':'')+'"><h2>여행 특가</h2>'+(lim?'<a href="#/mag?t=d">더 보기 ›</a>':'')+'<small>판매 마감일이 가까운 특가부터 보여드려요</small></div><div class="sng">'+L.map(function(x){
     var hot=x.until&&x.until<=ymd(new Date(today().getTime()+864e5));
     var badge=x.until?(x.until===td?'오늘 마감':md(x.until)+'까지'):'';
     return '<div class="snc"><div class="snim">'+(safeUrl(x.img)?'<img src="'+esc(x.img)+'" alt="" loading="lazy" referrerpolicy="no-referrer"'+(x.pos?' style="object-position:'+esc(x.pos)+'"':'')+'>':'')+(badge?'<em class="snbd'+(hot?' on':'')+'">'+esc(badge)+'</em>':'')+'<span class="snk">'+esc(x.kind||"")+'</span></div>'+
@@ -1246,7 +1246,8 @@ function guideFill(){
     var h=(STAYM.length?'<section class="gdbox"><div class="gdh"><b>국내 감성숙소 추천</b><a href="#/mag?t=s">전체 ›</a></div>'+STAYM.slice(0,3).map(stayRow).join("")+'</section>':"")+(GUIDES.length?'<section class="gdbox"><div class="gdh"><b>체험단 가이드</b><a href="#/mag?t=g">전체 ›</a></div>'+GUIDES.slice(0,3).map(guideRow).join("")+'</section>':"")+
       (PICKS.length?'<section class="gdbox"><div class="gdh"><b>다꾸 추천 모음</b><a href="#/mag?t=p">전체 ›</a></div>'+PICKS.slice(0,3).map(pickRow).join("")+'</section>':"");
     [].forEach.call(B,function(b){ b.innerHTML=h; });
-    if(M){ var L=state.magT==="p"?PICKS:state.magT==="s"?STAYM:GUIDES; M.innerHTML=(state.magT==="s"?reelsHtml()+(PMODE?'':tdHtml()+soonHtml()+travelAds(true)):'')+(L.length?(state.magT==="s"?'<div class="stsrch"><input id="stq" type="search" placeholder="번호 또는 숙소 이름·지역 검색 (예: 3, 가평)" autocomplete="off" enterkeyhint="search"></div>':'')+'<div class="maglist">'+L.map(state.magT==="p"?pickRow:state.magT==="s"?stayRow:guideRow).join("")+'</div>'+(state.magT==="s"?'<p class="smgnone" id="stnone" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p>':''):'<div class="empty">곧 새 글이 올라와요</div>'); if(state.magT==="s") reelsInit(M);
+    if(M&&state.magT==="d"){ var dh=PMODE?'':tdHtml()+soonHtml(); M.innerHTML=dh||'<div class="empty">지금 올라온 여행 특가가 없어요. 곧 새 특가를 올릴게요</div>'; return; }   // 다꾸 매거진 '여행 특가' 탭 (2026-10-30 시온님)
+    if(M){ var L=state.magT==="p"?PICKS:state.magT==="s"?STAYM:GUIDES; M.innerHTML=(state.magT==="s"?reelsHtml()+(PMODE?'':travelAds(true)):'')+(L.length?(state.magT==="s"?'<div class="stsrch"><input id="stq" type="search" placeholder="번호 또는 숙소 이름·지역 검색 (예: 3, 가평)" autocomplete="off" enterkeyhint="search"></div>':'')+'<div class="maglist">'+L.map(state.magT==="p"?pickRow:state.magT==="s"?stayRow:guideRow).join("")+'</div>'+(state.magT==="s"?'<p class="smgnone" id="stnone" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p>':''):'<div class="empty">곧 새 글이 올라와요</div>'); if(state.magT==="s") reelsInit(M);
       var sq=document.getElementById("stq"); if(sq){ var run=function(){ var v=sq.value.trim().toLowerCase().replace(/[\[\]]/g,"").replace(/^no\.?\s*/,"").replace(/^#/,""),hit=0; [].forEach.call(M.querySelectorAll(".smg"),function(a){ var ok=!v||(/^\d+$/.test(v)?a.getAttribute("data-no")===String(+v):a.getAttribute("data-q").indexOf(v)>=0); a.style.display=ok?"":"none"; if(ok)hit++; }); document.getElementById("stnone").hidden=!!hit||!v; }; sq.addEventListener("input",run); if(qs0("n")){ sq.value=qs0("n"); run(); } } }
     if(window.dkMagPaint) window.dkMagPaint();
   });
@@ -1293,9 +1294,9 @@ document.addEventListener("click",function(e){
   if((a=t.closest&&t.closest("[data-sitego]"))) ga("site_go",{site:a.dataset.sitego});
 });
 function magView(){
-  var t=state.magT==="p"?"p":state.magT==="g"?"g":"s";
-  return '<div class="pg mag"><h1>다꾸 매거진</h1><p class="pgsub">감성숙소 추천 · 체험단 가이드 · 추천 모음을 모아 봤어요</p>'+
-    '<div class="magtabs"><a href="#/mag"'+(t==="s"?' class="on"':'')+'>감성숙소 추천</a><a href="#/mag?t=g"'+(t==="g"?' class="on"':'')+'>체험단 가이드</a><a href="#/mag?t=p"'+(t==="p"?' class="on"':'')+'>추천 모음</a></div>'+
+  var t=state.magT==="p"?"p":state.magT==="g"?"g":state.magT==="d"?"d":"s";
+  return '<div class="pg mag"><h1>다꾸 매거진</h1><p class="pgsub">감성숙소 추천 · 여행 특가 · 체험단 가이드 · 추천 모음을 모아 봤어요</p>'+
+    '<div class="magtabs"><a href="#/mag"'+(t==="s"?' class="on"':'')+'>감성숙소 추천</a>'+(PMODE?'':'<a href="#/mag?t=d"'+(t==="d"?' class="on"':'')+'>여행 특가</a>')+'<a href="#/mag?t=g"'+(t==="g"?' class="on"':'')+'>체험단 가이드</a><a href="#/mag?t=p"'+(t==="p"?' class="on"':'')+'>추천 모음</a></div>'+
     (t==="p"?'<p class="magnote">'+"추천 모음"+'의 링크는 쿠팡 파트너스 활동으로 수수료를 받을 수 있어요.</p>':'')+
     '<div id="magbody"><div class="empty">불러오는 중…</div></div></div>';
 }
