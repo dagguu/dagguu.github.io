@@ -1223,7 +1223,7 @@ function magView(){
   var t=state.magT==="p"?"p":state.magT==="g"?"g":"s";
   return '<div class="pg mag"><h1>다꾸 매거진</h1><p class="pgsub">감성숙소 추천 · 체험단 가이드 · 추천 모음을 모아 봤어요</p>'+
     '<div class="magtabs"><a href="#/mag"'+(t==="s"?' class="on"':'')+'>감성숙소 추천</a><a href="#/mag?t=g"'+(t==="g"?' class="on"':'')+'>체험단 가이드</a><a href="#/mag?t=p"'+(t==="p"?' class="on"':'')+'>추천 모음</a></div>'+
-    (t!=="g"?'<p class="magnote">'+(t==="s"?"감성숙소 추천":"추천 모음")+'의 링크는 쿠팡 파트너스 활동으로 수수료를 받을 수 있어요.</p>':'')+
+    (t==="p"?'<p class="magnote">'+"추천 모음"+'의 링크는 쿠팡 파트너스 활동으로 수수료를 받을 수 있어요.</p>':'')+
     '<div id="magbody"><div class="empty">불러오는 중…</div></div></div>';
 }
 function benefitView(){
