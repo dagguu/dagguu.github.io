@@ -56,7 +56,7 @@ def result_imgs(d):
     u = find_imgs((rj or {}).get("resultUrls") or rj or [])
     return u or find_imgs({k: v for k, v in d.items() if k not in ("param", "input")})
 OUTFIT = " Outfit (always): the woman wears a long flowing white skirt (ankle-length) with a simple top suited to the season; keep this white long skirt clearly visible."  # 2026-10-26 시온님: 여자는 항상 흰색 긴 치마
-TONE = " Color and light: bright, airy warm autumn tone - soft golden daylight, warm whites, gentle autumn foliage colors where outdoors; not dark or gloomy, keep the real place unchanged."  # 2026-10-30 21:52 시온님 "밝은 가을톤"
+TONE = " Color and light (autumn tone): clear sunny midday - a vivid deep-blue sky with a few small white clouds wherever sky is visible, bright direct sunlight, crisp clean colors, fresh saturated green trees with some orange autumn leaves, bright clean whites indoors with daylight through the windows; vivid but natural, not dark, hazy, golden-hour or gloomy, keep the real place unchanged."  # 2026-10-30 23:48 시온님 "맑은 날 한낮 파란 하늘" (예전 21:52 밝은 가을톤)
 SIZE = " Make the image in a vertical 9:16 size (portrait, 9:16 aspect ratio, full-bleed, no borders or letterboxing)."  # 2026-10-29 시온님: 프롬프트에 "9:16 사이즈로" 꼭
 def body(prompt, src):
     if "woman" in prompt.lower(): prompt = prompt + OUTFIT  # 사람 없는 프롬프트(바다 채우기 등)엔 안 붙임

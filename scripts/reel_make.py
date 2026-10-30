@@ -156,7 +156,7 @@ for i, s in enumerate(SC):
         L.append(f"Dialogue: 0,{ts(a0)},{ts(a1)},D,,0,0,0,,{{\\i1\\pos(540,830)}}{txt}")  # 2026-10-30 시온님: 강조색·기울임 없이 가는 흰 글씨, 화면 위쪽 1/3  # 2026-10-28 시온님 "자막을 중앙에서 1cm 정도 위로" (화면 높이 1920 ≈ 휴대폰 14.5cm → 1cm ≈ 130px)
 open(OUT + "/sub.ass", "w", encoding="utf-8").write("\n".join(L) + "\n")
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", OUT + "/cuts/list.txt", "-i", OUT + "/voice.mp3",
-                "-vf", "eq=brightness=0.03:contrast=1.10:saturation=1.14:gamma=1.02,unsharp=5:5:0.8:5:5:0.0,colorbalance=rs=0.04:gs=0.015:bs=-0.05:rm=0.03:bm=-0.03," + f"subtitles={OUT}/sub.ass:fontsdir=" + os.path.expanduser("~/.fonts"), "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
+                "-vf", "eq=brightness=0.03:contrast=1.10:saturation=1.14:gamma=1.02,unsharp=5:5:0.8:5:5:0.0,colorbalance=rs=0.01:gs=0.01:bs=0.02:rm=0.01:bm=0.01," + f"subtitles={OUT}/sub.ass:fontsdir=" + os.path.expanduser("~/.fonts"), "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
                 "-c:a", "aac", "-b:a", "192k", "-t", f"{dur:.2f}", "-movflags", "+faststart", OUT + "/reel.mp4"], check=True)
 thumb()  # 썸네일(표지) = thumb.img(기본 첫 풍경 장면) 영상/사진 + 제목 2줄
 import shutil; shutil.rmtree(OUT + "/cuts"); [os.remove(f"{OUT}/{f}") for f in os.listdir(OUT) if f.startswith(("src_", "clip_"))]
