@@ -15,3 +15,15 @@ except Exception:
 def is_top(name):
     a = _k(name)
     return len(a) >= 3 and any(len(t) >= 3 and (a in t or t in a) for t in TOP)
+
+# 네이버 숙소 검색량(scripts/stay_kw.json, stay-kw.yml 매일 07:05): 숙소 이름 → (월간 검색 수, 7일 상승 배수)
+try:
+    _S = json.load(open(os.path.join(_ROOT, "scripts", "stay_kw.json"), encoding="utf-8")).get("stays", [])
+    _SK = {r["name"]: (r.get("vol") or 0, r.get("jump") or 0) for r in _S}
+except Exception:
+    _SK = {}
+def search_of(name):
+    return _SK.get(name, (0, 0))
+def search_bonus(name):
+    v, j = search_of(name)
+    return (2 if v >= 10000 else 1 if v >= 2000 else 0) + (2 if j >= 1.3 and v >= 500 else 0)

@@ -10,7 +10,7 @@
 python3 scripts/pick_reel.py [개수=5] → 후보를 순서대로 출력. 1번이 쿠팡트래블에 없거나 사진이 부족하면 다음 후보."""
 import json, os, re, sys, random, datetime, subprocess
 import sys as _s, os as _o; _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
-from yeogi_top import is_top
+from yeogi_top import is_top, search_bonus
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KST = datetime.timezone(datetime.timedelta(hours=9))
 TODAY = datetime.datetime.now(KST).strftime("%Y-%m-%d")
@@ -32,7 +32,7 @@ WARM = re.compile(r"온천|스파|노천|온수|료칸|히노끼|자쿠지|월�
 HOOK = re.compile(r"한옥|료칸|일본|인피니티|오션|바다|계곡|독채|글램핑|카라반|낚시|동굴|섬|기차|루프탑|숲")
 def score(x):
     s = " ".join(str(x.get(f) or "") for f in ("name", "area", "memo", "tags", "note"))
-    v = (3 if WARM.search(s) else 0) + min(3, len(set(HOOK.findall(s)))) + (2 if is_top(x.get("name")) else 0)   # 여기어때 잘 팔리는 숙소 +2
+    v = (3 if WARM.search(s) else 0) + min(3, len(set(HOOK.findall(s)))) + (2 if is_top(x.get("name")) else 0) + search_bonus(x.get("name"))   # 여기어때 잘 팔리는 숙소 +2
     city = (x.get("area") or "").split(" ")[-1]
     if city and any(city in a for a in recent_area): v -= 2
     v -= len(set(HOOK.findall(s)) & recent_words)
