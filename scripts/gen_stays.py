@@ -88,7 +88,7 @@ def _list_links():
     try:
         sl = json.load(open(os.path.join(ROOT, "scripts", "stay_list.json"), encoding="utf-8"))
         arr = sl if isinstance(sl, list) else (sl.get("list") or sl.get("items") or [])
-        return {re.sub(r"\s+", "", e["name"]): e for e in arr if isinstance(e, dict) and e.get("name") and (e.get("yeogi") or e.get("infUrl"))}
+        return {re.sub(r"\s+", "", e["name"]): e for e in arr if isinstance(e, dict) and e.get("name") and (e.get("yeogi") or e.get("infUrl") or e.get("yanolja"))}
     except Exception:
         return {}
 LIST_LK = _list_links()
@@ -179,6 +179,9 @@ def deal_box(P):
         rows.append(f'<div class="dr"><span class="dl"><small>쿠팡트래블 · {cond}</small>{pr}</span><a href="{e(cu)}" target="_blank" rel="noopener noreferrer sponsored" id="cpgo">보러가기</a></div>')
     x = (d.get("links") or {}).get("stay-" + P["slug"]) or {}
     if not x.get("yeogi") and list_lk(P).get("yeogi"): x = dict(x, yeogi=list_lk(P)["yeogi"])
+    yn = x.get("yanolja") or list_lk(P).get("yanolja")
+    if yn:   # 시온님이 준 야놀자 제휴 링크(3ha.in, 2026-10-30)
+        rows.append(f'<div class="dr"><span class="dl"><small>야놀자</small><span>야놀자에서도 이 숙소를 볼 수 있어요</span></span><a class="yg" href="{e(yn)}" target="_blank" rel="noopener noreferrer sponsored" id="yanoljago">보러가기</a></div>')
     if x.get("yeogi"):   # 시온님이 여기어때 파트너센터에서 만든 이 숙소 링크
         rows.append(f'<div class="dr"><span class="dl"><small>여기어때</small><span>여기어때에서도 이 숙소를 볼 수 있어요</span></span><a class="yg" href="{e(x["yeogi"])}" target="_blank" rel="noopener noreferrer sponsored" id="yeogigo">보러가기</a></div>')
     cp = next((y for y in (d.get("yeogi") or []) if "쿠폰" in (y.get("t") or "") and (y.get("until") or "9999") >= TODAY and y.get("u")), None)
@@ -214,7 +217,7 @@ def head(title, desc, canon, img):
 <link rel="icon" href="/icons/icon-192.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>{CSS}</style>'''
 
-TOP = ('<p class="disc">이 페이지는 쿠팡 파트너스·마이리얼트립·여기어때 제휴 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>'
+TOP = ('<p class="disc">이 페이지는 쿠팡 파트너스·마이리얼트립·여기어때·야놀자 제휴 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>'
        '<header><span class="hl"><button class="bk" type="button" aria-label="뒤로 가기" onclick="if(history.length>1&&document.referrer)history.back();else location.href=\'/\'">‹</button>'
        '<a class="logo" href="/">다꾸<i>체험단</i></a></span><a class="app" href="/m/">감성숙소 추천 더 보기 ›</a></header>')
 
@@ -263,7 +266,7 @@ def build(P, allP):
 {more}
 <footer>다꾸체험단 · 국내 감성숙소 추천 매거진<br><a href="/m/">감성숙소 추천 전체 보기</a> · <a href="/">www.dagguu.com</a></footer>
 </div>{bar}
-<script>document.addEventListener("click",function(ev){{if(!window.gtag)return;var nm={json.dumps(P["name"], ensure_ascii=False)};if(ev.target.closest("#go,#cpgo"))gtag("event","coupang_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#mrtgo,#mrtcp"))gtag("event","mrt_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#yeogigo,#yeogicp"))gtag("event","yeogi_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#kakaogo"))gtag("event","kakao_add",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#campgo"))gtag("event","camp_click",{{place:"stay_mag",item_name:nm}});}});</script>{DDJS}{MAPJS if P.get("geo") else ""}
+<script>document.addEventListener("click",function(ev){{if(!window.gtag)return;var nm={json.dumps(P["name"], ensure_ascii=False)};if(ev.target.closest("#go,#cpgo"))gtag("event","coupang_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#mrtgo,#mrtcp"))gtag("event","mrt_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#yanoljago"))gtag("event","yanolja_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#yeogigo,#yeogicp"))gtag("event","yeogi_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#kakaogo"))gtag("event","kakao_add",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#campgo"))gtag("event","camp_click",{{place:"stay_mag",item_name:nm}});}});</script>{DDJS}{MAPJS if P.get("geo") else ""}
 </body></html>
 '''
     open(os.path.join(ROOT, "m", slug + ".html"), "w", encoding="utf-8").write(out)
@@ -293,6 +296,8 @@ if __name__ == "__main__":
             offs.append({"src": o[2], "price": o[0], "rate": o[1] if o[1] >= 3 else 0, "cond": cd, "u": o[4]})
         yg = ((d.get("links") or {}).get("stay-" + x["slug"]) or {}).get("yeogi") or list_lk(x).get("yeogi")
         if yg: offs.append({"src": "여기어때", "price": 0, "rate": 0, "cond": "여기어때에서 이 숙소 보기", "u": yg})
+        yn = ((d.get("links") or {}).get("stay-" + x["slug"]) or {}).get("yanolja") or list_lk(x).get("yanolja")
+        if yn: offs.append({"src": "야놀자", "price": 0, "rate": 0, "cond": "야놀자에서 이 숙소 보기", "u": yn})
         if offs: r["offers"] = offs
         if opts:
             pr, rt, src, ci, pu = sorted(opts, key=lambda o: (-(o[1] >= 3), o[0]))[0]

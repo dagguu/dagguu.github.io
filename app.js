@@ -167,7 +167,7 @@ var NAVN=0; window.addEventListener("hashchange",function(){ NAVN++; });
 document.addEventListener("click",function(e){ if(!e.target.closest("#backbtn")) return; e.preventDefault(); if(NAVN>0){ NAVN=Math.max(0,NAVN-2); history.back(); } else location.hash="#/"; });
 function shell(){
   app.innerHTML=
-    (PMODE?'':'<div class="disclose">이 사이트는 쿠팡 파트너스, 토스쇼핑 쉐어링크, 여기어때, 마이리얼트립, 트립닷컴 등 제휴 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.</div>')+
+    (PMODE?'':'<div class="disclose">이 사이트는 쿠팡 파트너스, 토스쇼핑 쉐어링크, 여기어때, 야놀자, 마이리얼트립, 트립닷컴 등 제휴 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.</div>')+
     '<div class="frame">'+
       '<header class="appbar"><span class="abl"><button class="backbtn" id="backbtn" aria-label="뒤로 가기" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><a class="logo" href="#/" id="logo"></a></span><span class="hbtns"><span class="kch" id="kakao-talk-channel-add-button" data-channel-public-id="_xkqEFX" data-size="small" data-support-multiple-densities="true"></span>'+(PMODE?'':'<a class="iconbtn" href="#/list" data-focus="q" aria-label="체험단 검색">'+ico(I.search)+'</a>')+'<a class="iconbtn mebtn" href="#/my" id="mebtn" aria-label="마이 다꾸">'+ico(I.user)+'</a></span></header>'+
       '<main id="view" class="view"></main>'+
@@ -1177,12 +1177,12 @@ function rfOffPop(d,x){
   var old=d.querySelector(".rfpop"); if(old) old.remove();
   var p=document.createElement("div"); p.className="rfpop";
   p.innerHTML='<div class="rfpopc" role="dialog" aria-label="가격 비교"><div class="rfpoph"><b>'+esc(x.name)+'</b><button class="rfpopx" aria-label="닫기">✕</button></div>'+
-    offs.map(function(o){ var k=o.src==="쿠팡트래블"?"coupang":o.src==="마이리얼트립"?"mrt":"yeogi";
+    offs.map(function(o){ var k=o.src==="쿠팡트래블"?"coupang":o.src==="마이리얼트립"?"mrt":o.src==="야놀자"?"yanolja":"yeogi";
       return '<div class="rfoff"><img src="'+esc(x.img)+'" alt="" loading="lazy"><span class="rfoffi"><small>'+esc(o.src)+'</small>'+(o.price?'<em>'+(o.rate?'<i>'+o.rate+'%</i>':'')+rfWon(o.price)+'~</em>':'<em class="rfoffy">숙소 보기</em>')+(o.cond?'<small class="rfoffc">'+esc(o.cond)+'</small>':'')+'</span><a class="rfoffgo" '+ext(safeUrl(o.u))+' data-rfok="'+k+'">보러가기 ↗</a></div>'; }).join("")+
     '<p class="rfpopn">가격은 조회 시점 기준이라 날짜·객실마다 달라요</p></div>';
   d.appendChild(p);
   p.addEventListener("click",function(e){
-    var g=e.target.closest("[data-rfok]"); if(g){ try{ if(window.gtag) gtag("event",g.dataset.rfok==="coupang"?"coupang_click":g.dataset.rfok==="mrt"?"mrt_click":"yeogi_click",{place:"reel_feed_offers",item_name:x.name}); }catch(_){} return; }
+    var g=e.target.closest("[data-rfok]"); if(g){ try{ if(window.gtag) gtag("event",g.dataset.rfok==="coupang"?"coupang_click":g.dataset.rfok==="mrt"?"mrt_click":g.dataset.rfok==="yanolja"?"yanolja_click":"yeogi_click",{place:"reel_feed_offers",item_name:x.name}); }catch(_){} return; }
     if(e.target===p||e.target.closest(".rfpopx")) p.remove();
   });
 }
