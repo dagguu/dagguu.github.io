@@ -43,6 +43,10 @@ header .app{font-size:13px;font-weight:700;color:#6a3fc8;border:1px solid #e3dbf
 .bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #eee;padding:10px 16px max(22px,calc(12px + env(safe-area-inset-bottom)));z-index:40}.bar a{display:block;max-width:608px;margin:0 auto;text-align:center;padding:15px;border-radius:14px;background:#6a3fc8;color:#fff;font-weight:800;font-size:15.5px}.bar a::after{content:" ↗"}
 .mine{margin-top:22px;padding:16px 16px 14px;border-radius:16px}.mine b{display:block;font-size:15.5px;margin-bottom:4px}.mine p{margin:0 0 12px;font-size:13.5px;line-height:1.6;color:#4d4c5a}.mine small{color:#8a8994}
 .mine a{display:block;text-align:center;padding:13px;border-radius:12px;font-weight:800;font-size:14.5px}.mine.on{background:#f4f0ff}.mine.on a{background:#6a3fc8;color:#fff}.mine.off{background:#fff8d6}.mine.off a{background:#fee500;color:#191600}
+.deal{margin-top:22px;padding:16px;border:1.5px solid #ececf2;border-radius:16px}.deal>b{display:block;font-size:15.5px;margin-bottom:10px}
+.dr{display:flex;align-items:center;gap:10px;padding:12px 0;border-top:1px solid #f1f1f4}.dr:first-of-type{border-top:0;padding-top:2px}.dr .dl{flex:1;min-width:0}.dr .dl small{display:block;font-size:12px;color:#8a8994;margin-bottom:3px}.dr .dl strong{font-size:17px;letter-spacing:-.02em}.dr .dl s{font-size:12.5px;color:#a3a2ad;margin-left:6px}.dr .dl em{font-style:normal;color:#ff2d55;font-weight:900;font-size:15px;margin-right:5px}.dr .dl span{font-size:14px;font-weight:700;line-height:1.45}
+.dr a{flex:none;font-size:13px;font-weight:800;border-radius:10px;padding:10px 12px;background:#16151c;color:#fff}.dr a::after{content:" ↗"}.dr a.yg{background:#ff1468}
+.deal p{margin:8px 0 0;font-size:11.5px;color:#9a99a6;line-height:1.55}
 .note{font-size:12px;color:#8a8994;line-height:1.6;margin:14px 0 0}
 footer{margin-top:40px;font-size:12px;color:#8a8994;line-height:1.7;text-align:center}footer a{color:#6a3fc8;font-weight:700}
 .lst{display:flex;flex-direction:column;gap:12px;margin-top:18px}.lc{display:flex;gap:12px;align-items:center;border:1px solid #ececf2;border-radius:16px;padding:10px}.lc img{width:84px;height:84px;border-radius:12px;object-fit:cover;flex:none;background:#f4f4f7}.lc b{display:block;font-size:15px;line-height:1.4;margin-bottom:4px}.lc small{font-size:12.5px;color:#6b6a7a;line-height:1.5}.lc em{display:inline-block;font-style:normal;font-size:11px;font-weight:800;color:#6a3fc8;background:#f4f0ff;border-radius:6px;padding:2px 6px;margin-bottom:5px}
@@ -128,6 +132,33 @@ def stay_camp(P):
     return ('<section class="mine off"><b>이 숙소 체험단은 모집이 끝났어요</b><p>다꾸체험단 카카오톡 채널을 추가하면 새 숙박 체험단 소식을 받아 볼 수 있어요.</p>'
             f'<a href="{e(KAKAO)}" target="_blank" rel="noopener noreferrer" id="kakaogo">🔔 알림받기 (카카오톡 채널 추가)</a></section>')
 
+try: MRT = json.load(open(os.path.join(ROOT, "scripts", "stay_mrt.json"), encoding="utf-8"))
+except Exception: MRT = {}
+WD = "월화수목금토일"
+def deal_box(P):
+    """할인 정보(2026-10-30 시온님): 마이리얼트립 공식 API 로 찾은 이 숙소 가격·할인 + 수익 링크, 여기어때는 시온님이 준 링크만."""
+    rows = []
+    m = MRT.get(P["slug"])
+    if m and m.get("u") and m.get("price"):
+        dd = datetime.date.fromisoformat(m["checkIn"])
+        cond = f'{dd.month}/{dd.day}({WD[dd.weekday()]}) 1박 · 성인 2명'
+        pr = f'<em>{m["rate"]}%</em><strong>{m["price"]:,}원</strong><s>{m["orig"]:,}원</s>' if m.get("rate", 0) >= 3 and m.get("orig", 0) > m["price"] else f'<strong>{m["price"]:,}원부터</strong>'
+        rows.append(f'<div class="dr"><span class="dl"><small>마이리얼트립 · {cond}</small>{pr}</span><a href="{e(m["u"])}" target="_blank" rel="noopener noreferrer sponsored" id="mrtgo">보러가기</a></div>')
+    x = (d.get("links") or {}).get("stay-" + P["slug"]) or {}
+    if x.get("yeogi"):   # 시온님이 여기어때 파트너센터에서 만든 이 숙소 링크
+        rows.append(f'<div class="dr"><span class="dl"><small>여기어때</small><span>여기어때에서도 이 숙소를 볼 수 있어요</span></span><a class="yg" href="{e(x["yeogi"])}" target="_blank" rel="noopener noreferrer sponsored" id="yeogigo">보러가기</a></div>')
+    cp = next((y for y in (d.get("yeogi") or []) if "쿠폰" in (y.get("t") or "") and (y.get("until") or "9999") >= TODAY and y.get("u")), None)
+    if cp:
+        ut = f' · {int(cp["until"][5:7])}/{int(cp["until"][8:10])}까지' if cp.get("until") else ""
+        rows.append(f'<div class="dr"><span class="dl"><small>여기어때 할인 쿠폰{ut}</small><span>{e(cp.get("t"))}</span></span><a class="yg" href="{e(cp["u"])}" target="_blank" rel="noopener noreferrer sponsored" id="yeogicp">쿠폰 받기</a></div>')
+    if not rows: return ""
+    note = ""
+    if m and m.get("at"):
+        note = f'<p>마이리얼트립 가격은 {int(m["at"][5:7])}월 {int(m["at"][8:10])}일 조회 기준이에요. 날짜·객실·쿠폰에 따라 달라지니 예약 화면에서 꼭 확인해 주세요. 쿠폰은 국내 숙소 공용 쿠폰이라 이 숙소에 쓸 수 있는지는 여기어때에서 확인해 주세요.</p>' if cp else f'<p>{int(m["at"][5:7])}월 {int(m["at"][8:10])}일 조회 기준이에요. 날짜·객실·쿠폰에 따라 달라지니 예약 화면에서 꼭 확인해 주세요.</p>'
+    elif cp:
+        note = '<p>국내 숙소 공용 쿠폰이라 이 숙소에 쓸 수 있는지는 여기어때에서 확인해 주세요.</p>'
+    return f'<section class="deal"><b>🏷️ 할인 정보</b>{"".join(rows)}{note}</section>'
+
 def head(title, desc, canon, img):
     return f'''<!doctype html>
 <html lang="ko"><head><meta charset="utf-8">{GA}
@@ -137,7 +168,7 @@ def head(title, desc, canon, img):
 <link rel="icon" href="/icons/icon-192.png"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>{CSS}</style>'''
 
-TOP = ('<p class="disc">이 페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>'
+TOP = ('<p class="disc">이 페이지는 쿠팡 파트너스·마이리얼트립·여기어때 제휴 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>'
        '<header><span class="hl"><button class="bk" type="button" aria-label="뒤로 가기" onclick="if(history.length>1&&document.referrer)history.back();else location.href=\'/\'">‹</button>'
        '<a class="logo" href="/">다꾸<i>체험단</i></a></span><a class="app" href="/m/">감성숙소 추천 더 보기 ›</a></header>')
 
@@ -173,6 +204,7 @@ def build(P, allP):
 <section class="cov"><img src="{e(cov["src"])}" alt="{e(P["name"])}" referrerpolicy="no-referrer">{rbadge(camp_end(P))}<div class="tx"><small>No.{e(P.get("no",""))} · {e(THEME.get(P.get("theme"), "감성숙소 추천"))} · {e(P["area"])}</small><h1>{e(P["h1"][0])}<br>{e(P["h1"][1])}</h1><p>{e(P["name"])}</p></div></section>
 <p class="lead">{e(P["lead"])}</p>
 {stay_camp(P)}
+{deal_box(P)}
 <div class="pts">{pts}</div>
 <section class="gal"><h2>공간 둘러보기</h2>{gal}<p class="src">사진: 쿠팡트래블 숙소 정보</p></section>
 <section class="sec"><h2>기본 정보</h2><table class="inf">{inf}</table></section>
@@ -184,7 +216,7 @@ def build(P, allP):
 {more}
 <footer>다꾸체험단 · 국내 감성숙소 추천 매거진<br><a href="/m/">감성숙소 추천 전체 보기</a> · <a href="/">www.dagguu.com</a></footer>
 </div>{bar}
-<script>document.addEventListener("click",function(ev){{if(!window.gtag)return;var nm={json.dumps(P["name"], ensure_ascii=False)};if(ev.target.closest("#go"))gtag("event","coupang_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#kakaogo"))gtag("event","kakao_add",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#campgo"))gtag("event","camp_click",{{place:"stay_mag",item_name:nm}});}});</script>{DDJS}
+<script>document.addEventListener("click",function(ev){{if(!window.gtag)return;var nm={json.dumps(P["name"], ensure_ascii=False)};if(ev.target.closest("#go"))gtag("event","coupang_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#mrtgo"))gtag("event","mrt_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#yeogigo,#yeogicp"))gtag("event","yeogi_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#kakaogo"))gtag("event","kakao_add",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#campgo"))gtag("event","camp_click",{{place:"stay_mag",item_name:nm}});}});</script>{DDJS}
 </body></html>
 '''
     open(os.path.join(ROOT, "m", slug + ".html"), "w", encoding="utf-8").write(out)

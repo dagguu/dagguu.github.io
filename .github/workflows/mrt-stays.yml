@@ -1,0 +1,35 @@
+name: 감성숙소 마이리얼트립 할인
+on:
+  schedule:
+    - cron: "55 21 * * *"   # 매일 오전 6:55 (한국)
+  push:
+    paths: ["scripts/stays/*.json"]
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency: { group: mrt, cancel-in-progress: false }
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: 숙소별 할인 정보 찾기
+        env:
+          MRT_API_KEY: ${{ secrets.MRT_API_KEY }}
+        run: python3 scripts/mrt_stays.py
+      - name: 저장
+        run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          for i in 1 2 3; do
+            git add scripts/stay_mrt.json scripts/stay_mrt_status.json
+            git stash -q || true
+            git pull --rebase -q || true
+            git stash pop -q || true
+            python3 scripts/gen_stays.py
+            git add scripts/stay_mrt.json scripts/stay_mrt_status.json m/ index.html sitemap.xml
+            git diff --cached --quiet && break
+            git commit -qm "감성숙소 마이리얼트립 할인 $(TZ=Asia/Seoul date +%F)" && git push && break
+            sleep 5
+          done
