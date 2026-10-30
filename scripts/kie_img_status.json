@@ -1,11 +1,11 @@
 {
- "at": "2026-10-30 17:17",
+ "at": "2026-10-30 17:48",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
    "n": 1,
-   "taskId": "7379103e5df5a9d028b49ca7d6593afe",
+   "taskId": "6965554d0e708ccf2ce8ed88bbe12f79",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
@@ -13,7 +13,7 @@
   },
   {
    "n": 2,
-   "taskId": "610c43be963de254191e61aa4951833d",
+   "taskId": "457c0f1d9243638f4b5dcca60a7ace0e",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
@@ -21,7 +21,7 @@
   },
   {
    "n": 3,
-   "taskId": "ff947d1644d7041be4c0b238f43acf0d",
+   "taskId": "aae0e575a3c1b4749fa4b433c15df3c4",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
@@ -29,7 +29,7 @@
   },
   {
    "n": 4,
-   "taskId": "3eebbddac174f9b1e06a364ba7999cfd",
+   "taskId": "772f283bcb490f63c51dc8670341b0e0",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
@@ -37,35 +37,39 @@
   },
   {
    "n": 5,
-   "taskId": "04ebcab71eb8724be0d2ba12358e7539",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-10-30/sancheong-andforet/5_edit.jpg"
+   "taskId": null,
+   "state": "error",
+   "msg": "Credits insufficient : Your current balance isn’t enough to run this request. Please top up to continue."
   },
   {
    "n": 6,
-   "taskId": "ae5396626610541864047b022facae6c",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-10-30/sancheong-andforet/6_edit.jpg"
+   "taskId": null,
+   "state": "error",
+   "msg": "Credits insufficient : Your current balance isn’t enough to run this request. Please top up to continue."
   },
   {
    "n": 7,
-   "taskId": "21e11e0f68405226eb414cca632d829d",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-10-30/sancheong-andforet/7_edit.jpg"
+   "taskId": null,
+   "state": "error",
+   "msg": "Credits insufficient : Your current balance isn’t enough to run this request. Please top up to continue."
   },
   {
    "n": 8,
-   "taskId": "bb9c5ea3a285961e41c5b2b17ba6600f",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-10-30/sancheong-andforet/8_edit.jpg"
+   "taskId": null,
+   "state": "error",
+   "msg": "Credits insufficient : Your current balance isn’t enough to run this request. Please top up to continue."
+  },
+  {
+   "n": 9,
+   "taskId": null,
+   "state": "error",
+   "msg": "Credits insufficient : Your current balance isn’t enough to run this request. Please top up to continue."
+  },
+  {
+   "n": 10,
+   "taskId": null,
+   "state": "error",
+   "msg": "Credits insufficient : Your current balance isn’t enough to run this request. Please top up to continue."
   }
  ],
  "slug": "sancheong-andforet"
