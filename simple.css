@@ -1269,3 +1269,5 @@ input,select,textarea{font-size:16px!important}
 .snt p{margin:3px 0 0;font-size:14px;font-weight:800}.snt p i{font-style:normal;color:#ff3b4f}.snt small{display:block;font-size:11px;color:#9a99a6;margin-top:2px}
 .snb{display:block;margin:4px 10px 10px;text-align:center;background:#2f80ed;color:#fff;font-size:13.5px;font-weight:800;padding:10px 6px;border-radius:999px;text-decoration:none}.snb.go{background:#16151c}
 .snnote{font-size:11px;color:#9a99a6;margin:10px 0 0}
+
+.tdo{font-size:12px;color:#a8a7b3;font-weight:500;margin-left:2px}.tdsec .snt small+small{margin-top:1px}
