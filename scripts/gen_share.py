@@ -19,6 +19,7 @@ KST = timezone(timedelta(hours=9))
 NOW = datetime.now(KST)
 TODAY = NOW.strftime("%Y-%m-%d")
 import subprocess as _sp, sys as _sy; _sp.run([_sy.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "prune_ended.py")], check=False)  # 마감 체험단 지우기 (2026-10-27)
+_sp.run([_sy.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "gen_soon.py")], check=False)  # 오픈 예정 알림받기 (2026-10-30)
 d = json.load(open(os.path.join(ROOT, "data.json"), encoding="utf-8"))
 e = lambda s: html.escape(str(s or ""), quote=True)
 

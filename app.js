@@ -1078,6 +1078,21 @@ function reelsHtml(lim){
   }).join("")+'</div></section>';
 }
 var RLOBS=null;
+/* 오픈 예정 알림받기(2026-10-30 시온님 "알림받기를 누르면 카카오톡 알림받기로, 알림 날짜에 카카오톡 메시지에 넣어줘").
+   data.json soon(scripts/gen_soon.py ← 여기어때 오픈런 안내). 오픈 전: "🔔 알림받기" → 카카오톡 채널 추가(오픈 날 채널 소식에 넣음).
+   오픈 중: "여기어때에서 보기 ↗"(파트너 링크). 오픈 시각은 안내에 없어서 날짜만. */
+function soonHtml(){
+  var S=(seed.soon&&seed.soon.items)||[], td=ymd(today()); S=S.filter(function(x){ return (x.end||x.start)>=td; });
+  if(!S.length) return "";
+  var kk=String(seed.kakao||"").replace(/^http:/,"https:"); if(!safeUrl(kk)) kk="";
+  var md=function(v){ var t=new Date(v+"T00:00:00+09:00"); return (t.getMonth()+1)+'/'+t.getDate()+'('+"일월화수목금토"[t.getDay()]+')'; };
+  return '<section class="snsec"><div class="rlhd"><h2>알림 받고 놓치지 마세요</h2><small>여기어때 오픈런 특가 · 오픈하는 날 카카오톡 채널 소식으로 알려드려요</small></div><div class="sng">'+S.map(function(x){
+    var on=x.start<=td, badge=on?'오픈 중 · '+md(x.end)+'까지':md(x.start)+' 오픈';
+    var btn=on?'<a class="snb go" '+ext(safeUrl(x.u))+' data-sngo="'+esc(x.name)+'">여기어때에서 보기 ↗</a>':(kk?'<a class="snb" '+ext(kk)+' data-snk="'+esc(x.name)+'">🔔 알림받기</a>':'');
+    return '<div class="snc"><div class="snim">'+(safeUrl(x.img)?'<img src="'+esc(x.img)+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<em class="snbd'+(on?' on':'')+'">'+esc(badge)+'</em><span class="snk">'+esc(x.kind||"")+'</span></div>'+
+      '<div class="snt"><b>'+esc(x.name)+'</b><p>'+(x.rate?'<i>최대 '+x.rate+'%</i>':'')+(x.price?' '+rfWon(x.price)+'~':'')+'</p><small>'+esc(x.src||"")+' 안내 기준</small></div>'+btn+'</div>';
+  }).join("")+'</div><p class="snnote">가격·할인은 여기어때 오픈런 안내 기준이라 날짜·객실마다 달라요. 오픈 시각은 여기어때에서 확인해 주세요.</p></section>';
+}
 function homeReels(){
   // 홈 여행 특가 배너 아래 릴스 3개(2026-10-30 시온님). 누르면 세로 피드, 더 보기는 여행 탭.
   var put=function(){ var B=document.getElementById("hreels"); if(!B) return; var x=reelsHtml(3); if(!x){ B.remove(); return; } B.innerHTML=x; reelsInit(B); };
@@ -1200,6 +1215,7 @@ function reelOpen(i){
 document.addEventListener("click",function(e){
   var b=e.target.closest&&e.target.closest("[data-rl]"); if(b){ e.preventDefault(); reelOpen(+b.dataset.rl); return; }
   var g=e.target.closest&&e.target.closest("[data-rlgo]"); if(g){ try{ if(window.gtag) gtag("event","reel_open",{slug:g.dataset.rlgo}); }catch(_){} }
+  var sk=e.target.closest&&e.target.closest("[data-snk],[data-sngo]"); if(sk){ try{ if(window.gtag) gtag("event",sk.dataset.snk?"kakao_add":"yeogi_click",{place:"soon",item_name:sk.dataset.snk||sk.dataset.sngo}); }catch(_){} }
 });
 function guideFill(){
   var B=document.querySelectorAll("[data-guides]"), M=document.getElementById("magbody"); if(!B.length&&!M) return;
@@ -1207,7 +1223,7 @@ function guideFill(){
     var h=(STAYM.length?'<section class="gdbox"><div class="gdh"><b>국내 감성숙소 추천</b><a href="#/mag?t=s">전체 ›</a></div>'+STAYM.slice(0,3).map(stayRow).join("")+'</section>':"")+(GUIDES.length?'<section class="gdbox"><div class="gdh"><b>체험단 가이드</b><a href="#/mag?t=g">전체 ›</a></div>'+GUIDES.slice(0,3).map(guideRow).join("")+'</section>':"")+
       (PICKS.length?'<section class="gdbox"><div class="gdh"><b>다꾸 추천 모음</b><a href="#/mag?t=p">전체 ›</a></div>'+PICKS.slice(0,3).map(pickRow).join("")+'</section>':"");
     [].forEach.call(B,function(b){ b.innerHTML=h; });
-    if(M){ var L=state.magT==="p"?PICKS:state.magT==="s"?STAYM:GUIDES; M.innerHTML=(state.magT==="s"?reelsHtml()+(PMODE?'':travelAds(true)):'')+(L.length?(state.magT==="s"?'<div class="stsrch"><input id="stq" type="search" placeholder="번호 또는 숙소 이름·지역 검색 (예: 3, 가평)" autocomplete="off" enterkeyhint="search"></div>':'')+'<div class="maglist">'+L.map(state.magT==="p"?pickRow:state.magT==="s"?stayRow:guideRow).join("")+'</div>'+(state.magT==="s"?'<p class="smgnone" id="stnone" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p>':''):'<div class="empty">곧 새 글이 올라와요</div>'); if(state.magT==="s") reelsInit(M);
+    if(M){ var L=state.magT==="p"?PICKS:state.magT==="s"?STAYM:GUIDES; M.innerHTML=(state.magT==="s"?reelsHtml()+(PMODE?'':soonHtml()+travelAds(true)):'')+(L.length?(state.magT==="s"?'<div class="stsrch"><input id="stq" type="search" placeholder="번호 또는 숙소 이름·지역 검색 (예: 3, 가평)" autocomplete="off" enterkeyhint="search"></div>':'')+'<div class="maglist">'+L.map(state.magT==="p"?pickRow:state.magT==="s"?stayRow:guideRow).join("")+'</div>'+(state.magT==="s"?'<p class="smgnone" id="stnone" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p>':''):'<div class="empty">곧 새 글이 올라와요</div>'); if(state.magT==="s") reelsInit(M);
       var sq=document.getElementById("stq"); if(sq){ var run=function(){ var v=sq.value.trim().toLowerCase().replace(/[\[\]]/g,"").replace(/^no\.?\s*/,"").replace(/^#/,""),hit=0; [].forEach.call(M.querySelectorAll(".smg"),function(a){ var ok=!v||(/^\d+$/.test(v)?a.getAttribute("data-no")===String(+v):a.getAttribute("data-q").indexOf(v)>=0); a.style.display=ok?"":"none"; if(ok)hit++; }); document.getElementById("stnone").hidden=!!hit||!v; }; sq.addEventListener("input",run); if(qs0("n")){ sq.value=qs0("n"); run(); } } }
     if(window.dkMagPaint) window.dkMagPaint();
   });
