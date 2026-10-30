@@ -166,7 +166,7 @@ def deal_box(P):
     if mc.get("u") and (mc.get("until") or "9999") >= TODAY:   # 마이리얼트립 숙박세일 페스타 쿠폰(시온님이 준 링크, 모든 숙소 공용)
         ud = datetime.date.fromisoformat(mc["until"]) if mc.get("until") else None
         ut = f' · {ud.month}/{ud.day}까지' if ud else ''
-        rows.append(f'<div class="dr"><span class="dl"><small>마이리얼트립 할인 쿠폰{ut}</small><span>{e(mc.get("t"))}</span></span><a href="{e(mc["u"])}" target="_blank" rel="noopener noreferrer sponsored" id="mrtcp">쿠폰 받기</a></div>')
+        rows.append(f'<div class="dr"><span class="dl"><small>마이리얼트립 할인 쿠폰{ut}</small><span>{e(mc.get("t"))}</span></span><a href="{e(mc["u"])}" target="_blank" rel="noopener noreferrer sponsored" id="mrtcp">쿠폰 다운받기</a></div>')
     c = CPP.get(P["slug"]); cu = link_of(P)
     if c and c.get("price") and cu:   # 쿠팡트래블 같은 날짜 객실표(scripts/stay_cp.json, 브라우저로 읽음)
         dd = datetime.date.fromisoformat(c["checkIn"])

@@ -1099,7 +1099,7 @@ function tdList(){
 function mrtCpHtml(){   // 마이리얼트립 숙박세일 페스타 쿠폰 (data.json mrtCoupon, 2026-10-30 시온님)
   var c=seed.mrtCoupon||{}; if(!safeUrl(c.u)||(c.until&&c.until<ymd(today())))return "";
   var ud=c.until?(+c.until.slice(5,7))+"/"+(+c.until.slice(8,10))+"까지":"";
-  return '<a class="mcp" href="'+esc(c.u)+'" target="_blank" rel="noopener noreferrer sponsored" onclick="window.gtag&&gtag(\'event\',\'mrt_click\',{place:\'mrt_coupon\'})"><span><small>마이리얼트립 할인 쿠폰'+(ud?' · '+ud:'')+'</small><b>'+esc(c.t||"")+'</b><em>'+esc(c.d||"")+'</em></span><i>쿠폰 받기 ↗</i></a>';
+  return '<a class="mcp" href="'+esc(c.u)+'" target="_blank" rel="noopener noreferrer sponsored" onclick="window.gtag&&gtag(\'event\',\'mrt_click\',{place:\'mrt_coupon\'})"><span><small>마이리얼트립 할인 쿠폰'+(ud?' · '+ud:'')+'</small><b>'+esc(c.t||"")+'</b><em>'+esc(c.d||"")+'</em></span><i>쿠폰 다운받기 ↗</i></a>';
 }
 function tdHtml(lim){
   var L=tdList(); if(!L.length) return ""; var all=L.length; if(lim) L=L.slice(0,lim);
