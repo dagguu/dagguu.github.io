@@ -12,14 +12,14 @@ try: s = json.load(open(os.path.join(R, "scripts", "stay_signals.json"), encodin
 except Exception: s = {}
 today = (datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(hours=9)).date().isoformat()
 base = next((y.get("u") for y in (d.get("yeogi") or []) if "vim9vp86" in (y.get("u") or "")), "https://yeogi.onelink.me/SECZ/vim9vp86")
-links = d.get("soonLinks") or {}
+links = d.get("soonLinks") or {}   # 시온님이 준 상품 링크만 쓴다, 없으면 u 빈 값 (2026-10-30 "링크 없는 곳은 링크 걸지 말아줘")
 out = []
 for x in s.get("items") or []:
     if not x.get("start") or (x.get("end") or x["start"]) < today: continue
     if "해외" in str(x.get("kind", "")) or "해외" in str(x.get("name", "")): continue   # 해외숙소는 빼고 국내숙소·레저티켓만 (2026-10-30 시온님)
     out.append({"name": x["name"], "kind": x.get("kind", ""), "start": x["start"], "end": x.get("end", x["start"]),
                 "rate": x.get("rate", 0), "price": x.get("price", 0), "img": x.get("img", ""),
-                "u": links.get(x["name"]) or "",   # 시온님이 준 상품 링크만 (2026-10-30 "링크 없는 곳은 링크 걸지 말아줘") "own": bool(links.get(x["name"])), "src": "여기어때 오픈런"})
+                "u": links.get(x["name"]) or "", "own": bool(links.get(x["name"])), "src": "여기어때 오픈런"})
 out.sort(key=lambda x: (x["start"], -(x["rate"] or 0)))
 new = {"at": s.get("at", ""), "items": out}
 if d.get("soon") != new:
