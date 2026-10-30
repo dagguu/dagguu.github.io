@@ -5,37 +5,38 @@ PlayResY: 1920
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV
-Style: D,Jalnan,104,&H00FFFFFF,&H00000000,&H64000000,1,1,8,3,5,60,60,0
-Style: T,Jalnan,112,&H00FFFFFF,&H00000000,&H78000000,1,1,8,4,8,50,50,300
+Style: D,Noto Sans CJK KR,60,&H00FFFFFF,&H50000000,&H78000000,0,1,1.6,2,5,60,60,0
+Style: T,Jalnan,118,&H00FFFFFF,&H00000000,&H90000000,1,1,6,5,8,50,50,330
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,0:00:00.77,D,,0,0,0,,{\i1\pos(540,830)}사진만{\fnNoto Sans CJK KR Black} {\fnJalnan}보면
-Dialogue: 0,0:00:00.77,0:00:01.40,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}북유럽{\c&HFFFFFF&}{\fnNoto Sans CJK KR Black} {\fnJalnan}숲속
-Dialogue: 0,0:00:01.40,0:00:01.69,D,,0,0,0,,{\i1\pos(540,830)}같죠?
-Dialogue: 0,0:00:01.74,0:00:02.49,D,,0,0,0,,{\i1\pos(540,830)}산청{\fnNoto Sans CJK KR Black} {\fnJalnan}지리산
-Dialogue: 0,0:00:02.49,0:00:03.05,D,,0,0,0,,{\i1\pos(540,830)}아래{\fnNoto Sans CJK KR Black} {\fnJalnan}생긴
-Dialogue: 0,0:00:03.05,0:00:04.14,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}신상{\fnNoto Sans CJK KR Black} {\fnJalnan}글램핑{\c&HFFFFFF&}이에요
-Dialogue: 0,0:00:04.19,0:00:05.15,D,,0,0,0,,{\i1\pos(540,830)}객실마다{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}바비큐{\c&HFFFFFF&}
-Dialogue: 0,0:00:05.15,0:00:05.62,D,,0,0,0,,{\i1\pos(540,830)}자리가{\fnNoto Sans CJK KR Black} {\fnJalnan}따로
-Dialogue: 0,0:00:05.62,0:00:05.88,D,,0,0,0,,{\i1\pos(540,830)}있고
-Dialogue: 0,0:00:05.93,0:00:06.81,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}통창{\c&HFFFFFF&}{\fnNoto Sans CJK KR Black} {\fnJalnan}너머로는
-Dialogue: 0,0:00:06.81,0:00:07.55,D,,0,0,0,,{\i1\pos(540,830)}산이{\fnNoto Sans CJK KR Black} {\fnJalnan}꽉{\fnNoto Sans CJK KR Black} {\fnJalnan}차요
-Dialogue: 0,0:00:07.60,0:00:08.32,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}삼각{\fnNoto Sans CJK KR Black} {\fnJalnan}창{\c&HFFFFFF&}{\fnNoto Sans CJK KR Black} {\fnJalnan}앞에
-Dialogue: 0,0:00:08.32,0:00:09.09,D,,0,0,0,,{\i1\pos(540,830)}앉아{\fnNoto Sans CJK KR Black} {\fnJalnan}숲{\fnNoto Sans CJK KR Black} {\fnJalnan}보며
-Dialogue: 0,0:00:09.09,0:00:09.38,D,,0,0,0,,{\i1\pos(540,830)}쉬고
-Dialogue: 0,0:00:09.43,0:00:09.96,D,,0,0,0,,{\i1\pos(540,830)}전{\fnNoto Sans CJK KR Black} {\fnJalnan}객실이
-Dialogue: 0,0:00:09.96,0:00:10.49,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}복층{\c&HFFFFFF&}이라
-Dialogue: 0,0:00:10.54,0:00:11.09,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}넓게{\c&HFFFFFF&}{\fnNoto Sans CJK KR Black} {\fnJalnan}쓸{\fnNoto Sans CJK KR Black} {\fnJalnan}수
-Dialogue: 0,0:00:11.09,0:00:11.56,D,,0,0,0,,{\i1\pos(540,830)}있거든요
-Dialogue: 0,0:00:11.62,0:00:12.50,D,,0,0,0,,{\i1\pos(540,830)}거기다{\fnNoto Sans CJK KR Black} {\fnJalnan}객실마다
-Dialogue: 0,0:00:12.50,0:00:13.27,D,,0,0,0,,{\i1\pos(540,830)}작은{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}수영장{\c&HFFFFFF&}이
-Dialogue: 0,0:00:13.27,0:00:13.64,D,,0,0,0,,{\i1\pos(540,830)}있는데
-Dialogue: 0,0:00:13.69,0:00:14.42,D,,0,0,0,,{\i1\pos(540,830)}따뜻한{\fnNoto Sans CJK KR Black} {\fnJalnan}물로
-Dialogue: 0,0:00:14.42,0:00:15.20,D,,0,0,0,,{\i1\pos(540,830)}바꿀{\fnNoto Sans CJK KR Black} {\fnJalnan}수{\fnNoto Sans CJK KR Black} {\fnJalnan}있어서
-Dialogue: 0,0:00:15.20,0:00:15.99,D,,0,0,0,,{\i1\pos(540,830)}밖은{\fnNoto Sans CJK KR Black} {\fnJalnan}추워도
-Dialogue: 0,0:00:15.99,0:00:16.88,D,,0,0,0,,{\i1\pos(540,830)}물속은{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}따뜻해요{\c&HFFFFFF&}
-Dialogue: 0,0:00:16.93,0:00:17.58,D,,0,0,0,,{\i1\pos(540,830)}멀리{\fnNoto Sans CJK KR Black} {\fnJalnan}안{\fnNoto Sans CJK KR Black} {\fnJalnan}가도
-Dialogue: 0,0:00:17.58,0:00:18.51,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}숲속{\c&HFFFFFF&}에서{\fnNoto Sans CJK KR Black} {\fnJalnan}조용히
-Dialogue: 0,0:00:18.51,0:00:19.01,D,,0,0,0,,{\i1\pos(540,830)}쉬기{\fnNoto Sans CJK KR Black} {\fnJalnan}좋은
-Dialogue: 0,0:00:19.01,0:00:20.26,D,,0,0,0,,{\i1\pos(540,830)}곳이에요
+Dialogue: 1,0:00:00.00,0:00:01.60,T,,0,0,0,,{\fad(0,200)}지리산{\fnNoto Sans CJK KR Black} {\fnJalnan}숲속\N신상{\fnNoto Sans CJK KR Black} {\fnJalnan}글램핑
+Dialogue: 0,0:00:01.60,0:00:00.89,D,,0,0,0,,{\pos(540,700)}사진만 보면
+Dialogue: 0,0:00:01.60,0:00:01.67,D,,0,0,0,,{\pos(540,700)}북유럽 숲속
+Dialogue: 0,0:00:01.67,0:00:01.98,D,,0,0,0,,{\pos(540,700)}같죠?
+Dialogue: 0,0:00:02.03,0:00:02.86,D,,0,0,0,,{\pos(540,700)}산청 지리산
+Dialogue: 0,0:00:02.86,0:00:03.30,D,,0,0,0,,{\pos(540,700)}아래 생긴
+Dialogue: 0,0:00:03.30,0:00:04.50,D,,0,0,0,,{\pos(540,700)}신상 글램핑이에요
+Dialogue: 0,0:00:04.55,0:00:05.44,D,,0,0,0,,{\pos(540,700)}객실마다 바비큐
+Dialogue: 0,0:00:05.44,0:00:05.92,D,,0,0,0,,{\pos(540,700)}자리가 따로
+Dialogue: 0,0:00:05.92,0:00:06.21,D,,0,0,0,,{\pos(540,700)}있고
+Dialogue: 0,0:00:06.26,0:00:07.20,D,,0,0,0,,{\pos(540,700)}통창 너머로는
+Dialogue: 0,0:00:07.20,0:00:07.96,D,,0,0,0,,{\pos(540,700)}산이 꽉 차요
+Dialogue: 0,0:00:08.01,0:00:08.85,D,,0,0,0,,{\pos(540,700)}삼각 창 앞에
+Dialogue: 0,0:00:08.85,0:00:09.70,D,,0,0,0,,{\pos(540,700)}앉아 숲 보며
+Dialogue: 0,0:00:09.70,0:00:09.99,D,,0,0,0,,{\pos(540,700)}쉬고
+Dialogue: 0,0:00:10.04,0:00:10.77,D,,0,0,0,,{\pos(540,700)}전 객실이
+Dialogue: 0,0:00:10.77,0:00:11.31,D,,0,0,0,,{\pos(540,700)}복층이라
+Dialogue: 0,0:00:11.36,0:00:12.14,D,,0,0,0,,{\pos(540,700)}넓게 쓸 수
+Dialogue: 0,0:00:12.14,0:00:12.58,D,,0,0,0,,{\pos(540,700)}있거든요
+Dialogue: 0,0:00:12.63,0:00:13.72,D,,0,0,0,,{\pos(540,700)}거기다 객실마다
+Dialogue: 0,0:00:13.72,0:00:14.45,D,,0,0,0,,{\pos(540,700)}작은 수영장이
+Dialogue: 0,0:00:14.45,0:00:14.76,D,,0,0,0,,{\pos(540,700)}있는데
+Dialogue: 0,0:00:14.81,0:00:15.53,D,,0,0,0,,{\pos(540,700)}따뜻한 물로
+Dialogue: 0,0:00:15.53,0:00:16.23,D,,0,0,0,,{\pos(540,700)}바꿀 수 있어서
+Dialogue: 0,0:00:16.23,0:00:16.94,D,,0,0,0,,{\pos(540,700)}밖은 추워도
+Dialogue: 0,0:00:16.94,0:00:17.73,D,,0,0,0,,{\pos(540,700)}물속은 따뜻해요
+Dialogue: 0,0:00:17.78,0:00:18.56,D,,0,0,0,,{\pos(540,700)}멀리 안 가도
+Dialogue: 0,0:00:18.56,0:00:19.48,D,,0,0,0,,{\pos(540,700)}숲속에서 조용히
+Dialogue: 0,0:00:19.48,0:00:19.97,D,,0,0,0,,{\pos(540,700)}쉬기 좋은
+Dialogue: 0,0:00:19.97,0:00:21.19,D,,0,0,0,,{\pos(540,700)}곳이에요
