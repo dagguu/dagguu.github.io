@@ -465,7 +465,7 @@ function homeView(){
   if(!regs.length){ var cnt={}; open.forEach(function(it){ if(it.region) cnt[it.region]=(cnt[it.region]||0)+1; }); var top=Object.keys(cnt).sort(function(x,y){ return cnt[y]-cnt[x]; })[0]; if(top) regs=[top]; regTitle='📍 지금 <em>'+esc(regs[0]||"")+'</em> 체험단이 많아요'; }
   else regTitle='📍 <em>관심 지역</em>의 체험단이에요';
   if(regs.length) h+=hrow(regTitle,'#/list?cat=stay&s=open&r='+encodeURIComponent(regs.join(",")),open.filter(function(it){ return regs.indexOf(it.region)>=0; }).sort(byDeadline));
-  if(!PMODE){ var ta=travelAds(); if(ta) h+=ta; }
+  if(!PMODE){ var ta=travelAds(); if(ta) h+=ta; } if(!PMODE){ h+='<div class="hpad" id="hreels"></div>'; setTimeout(homeReels,0); }
   var gd=groceryDeal(); if(gd) h+='<div class="hpad">'+gd+'</div>';
   var wx=wxSection(); if(wx) h+='<div class="hpad">'+wx+'</div>';
   var hd=hotDeal(); if(hd) h+='<div class="hpad">'+hd+'</div>'; var lh=lifeHot(); if(lh) h+='<div class="hpad">'+lh+'</div>';  // 오늘의 특가(골드박스)는 홈에서 숨김 (2026-10-14 시온님 요청)
@@ -1066,9 +1066,10 @@ function pickRow(x){ return '<a class="gdi pki" href="/p/'+esc(x.slug)+'.html">'
 function stayRow(x){ return '<a class="gdi pki smg" href="/m/'+esc(x.slug)+'.html" data-no="'+esc(x.no||"")+'" data-q="'+esc((x.name+" "+x.area+" "+x.t).toLowerCase())+'">'+(x.no?'<i class="sno">'+esc(x.no)+'</i>':'')+(safeUrl(x.img)?'<img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<span><b>'+esc(x.t)+'</b><small>'+esc(x.name)+' · '+esc(x.area)+'</small>'+gDate(x.date)+mvTag("m:"+x.slug)+'</span></a>'; }
 /* 여행 탭 릴스 카드 (2026-10-30 시온님 "내가 만든 릴스를 마이리얼트립 지금특가처럼 넣어줘"): m/reels.json(gen_stays.py) + v/<slug>.mp4.
    카드 = 세로 영상(화면에 보이면 소리 없이 자동 재생) + 왼쪽 위 배지 + 아래 이름·한 줄·가격(조회 날짜·출처 표시). 영상을 누르면 소리 켜고 크게, 글씨를 누르면 감성숙소 글. */
-function reelsHtml(){
+function reelsHtml(lim){
   if(!REELS||!REELS.length) return "";
-  return '<section class="rlsec"><div class="rlhd"><h2>영상으로 다음 여행을 찾아보세요</h2><small>다꾸가 직접 만든 숙소 소개 영상이에요 · 누르면 위아래로 넘겨 볼 수 있어요</small></div><div class="rlg">'+REELS.map(function(x,i){
+  var hd=lim?'<div class="rlhd rlhh"><h2>영상으로 다음 여행을 찾아보세요</h2><a href="#/mag?t=s">더 보기 ›</a></div>':'<div class="rlhd"><h2>영상으로 다음 여행을 찾아보세요</h2><small>다꾸가 직접 만든 숙소 소개 영상이에요 · 누르면 위아래로 넘겨 볼 수 있어요</small></div>';
+  return '<section class="rlsec'+(lim?' rlhome':'')+'">'+hd+'<div class="rlg">'+(lim?REELS.slice(0,lim):REELS).map(function(x,i){
     var dl=x.campEnd?Math.round((Date.parse(x.campEnd+"T00:00:00+09:00")-Date.parse(ymd(today())+"T00:00:00+09:00"))/864e5):-1;
     var badge=dl>=0?'🚨 체험단 모집중 '+(dl===0?'D-DAY':'D-'+dl):'['+String(x.no||"").padStart(3,"0")+']';
     var pr=x.price?'<span class="rlp">'+(x.rate?'<em>'+x.rate+'%</em>':'')+'<b>'+Number(x.price).toLocaleString("ko-KR")+'원~</b></span><span class="rlsrc">'+esc(x.src||"")+' 조회 기준</span>':'';
@@ -1077,6 +1078,11 @@ function reelsHtml(){
   }).join("")+'</div></section>';
 }
 var RLOBS=null;
+function homeReels(){
+  // 홈 여행 특가 배너 아래 릴스 3개(2026-10-30 시온님). 누르면 세로 피드, 더 보기는 여행 탭.
+  var put=function(){ var B=document.getElementById("hreels"); if(!B) return; var x=reelsHtml(3); if(!x){ B.remove(); return; } B.innerHTML=x; reelsInit(B); };
+  if(REELS) put(); else fetch((BASE||"/")+"m/reels.json",{cache:"no-cache"}).then(function(r){ return r.ok?r.json():[]; }).then(function(L){ REELS=L||[]; put(); }).catch(function(){ REELS=[]; put(); });
+}
 function reelsInit(M){
   if(RLOBS){ RLOBS.disconnect(); RLOBS=null; }
   var vs=M.querySelectorAll(".rlv video"); if(!vs.length) return;
