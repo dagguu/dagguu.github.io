@@ -135,6 +135,9 @@ def stay_camp(P):
 try: MRT = json.load(open(os.path.join(ROOT, "scripts", "stay_mrt.json"), encoding="utf-8"))
 except Exception: MRT = {}
 WD = "월화수목금토일"
+try: CPP = json.load(open(os.path.join(ROOT, "scripts", "stay_cp.json"), encoding="utf-8"))
+except Exception: CPP = {}
+
 def deal_box(P):
     """할인 정보(2026-10-30 시온님): 마이리얼트립 공식 API 로 찾은 이 숙소 가격·할인 + 수익 링크, 여기어때는 시온님이 준 링크만."""
     rows = []
@@ -144,6 +147,16 @@ def deal_box(P):
         cond = f'{dd.month}/{dd.day}({WD[dd.weekday()]}) 1박 · 성인 2명'
         pr = f'<em>{m["rate"]}%</em><strong>{m["price"]:,}원</strong><s>{m["orig"]:,}원</s>' if m.get("rate", 0) >= 3 and m.get("orig", 0) > m["price"] else f'<strong>{m["price"]:,}원부터</strong>'
         rows.append(f'<div class="dr"><span class="dl"><small>마이리얼트립 · {cond}</small>{pr}</span><a href="{e(m["u"])}" target="_blank" rel="noopener noreferrer sponsored" id="mrtgo">보러가기</a></div>')
+    c = CPP.get(P["slug"]); cu = link_of(P)
+    if c and c.get("price") and cu:   # 쿠팡트래블 같은 날짜 객실표(scripts/stay_cp.json, 브라우저로 읽음)
+        dd = datetime.date.fromisoformat(c["checkIn"])
+        cond = f'{dd.month}/{dd.day}({WD[dd.weekday()]}) 1박 · 기준 {c.get("base", 2)}인'
+        if c.get("orig", 0) > c["price"]:
+            r = round((c["orig"] - c["price"]) * 100 / c["orig"])
+            pr = f'<em>{r}%</em><strong>{c["price"]:,}원</strong><s>{c["orig"]:,}원</s>'
+            if c.get("tag"): cond += f' · {e(c["tag"])}'
+        else: pr = f'<strong>{c["price"]:,}원부터</strong>'
+        rows.append(f'<div class="dr"><span class="dl"><small>쿠팡트래블 · {cond}</small>{pr}</span><a href="{e(cu)}" target="_blank" rel="noopener noreferrer sponsored" id="cpgo">보러가기</a></div>')
     x = (d.get("links") or {}).get("stay-" + P["slug"]) or {}
     if x.get("yeogi"):   # 시온님이 여기어때 파트너센터에서 만든 이 숙소 링크
         rows.append(f'<div class="dr"><span class="dl"><small>여기어때</small><span>여기어때에서도 이 숙소를 볼 수 있어요</span></span><a class="yg" href="{e(x["yeogi"])}" target="_blank" rel="noopener noreferrer sponsored" id="yeogigo">보러가기</a></div>')
@@ -153,8 +166,9 @@ def deal_box(P):
         rows.append(f'<div class="dr"><span class="dl"><small>여기어때 할인 쿠폰{ut}</small><span>{e(cp.get("t"))}</span></span><a class="yg" href="{e(cp["u"])}" target="_blank" rel="noopener noreferrer sponsored" id="yeogicp">쿠폰 받기</a></div>')
     if not rows: return ""
     note = ""
+    if not (m and m.get("at")) and c and c.get("at"): m = c
     if m and m.get("at"):
-        note = f'<p>마이리얼트립 가격은 {int(m["at"][5:7])}월 {int(m["at"][8:10])}일 조회 기준이에요. 날짜·객실·쿠폰에 따라 달라지니 예약 화면에서 꼭 확인해 주세요. 쿠폰은 국내 숙소 공용 쿠폰이라 이 숙소에 쓸 수 있는지는 여기어때에서 확인해 주세요.</p>' if cp else f'<p>{int(m["at"][5:7])}월 {int(m["at"][8:10])}일 조회 기준이에요. 날짜·객실·쿠폰에 따라 달라지니 예약 화면에서 꼭 확인해 주세요.</p>'
+        note = f'<p>가격은 {int(m["at"][5:7])}월 {int(m["at"][8:10])}일 조회 기준이에요. 날짜·객실·쿠폰에 따라 달라지니 예약 화면에서 꼭 확인해 주세요. 쿠폰은 국내 숙소 공용 쿠폰이라 이 숙소에 쓸 수 있는지는 여기어때에서 확인해 주세요.</p>' if cp else f'<p>{int(m["at"][5:7])}월 {int(m["at"][8:10])}일 조회 기준이에요. 날짜·객실·쿠폰에 따라 달라지니 예약 화면에서 꼭 확인해 주세요.</p>'
     elif cp:
         note = '<p>국내 숙소 공용 쿠폰이라 이 숙소에 쓸 수 있는지는 여기어때에서 확인해 주세요.</p>'
     return f'<section class="deal"><b>🏷️ 할인 정보</b>{"".join(rows)}{note}</section>'
@@ -216,7 +230,7 @@ def build(P, allP):
 {more}
 <footer>다꾸체험단 · 국내 감성숙소 추천 매거진<br><a href="/m/">감성숙소 추천 전체 보기</a> · <a href="/">www.dagguu.com</a></footer>
 </div>{bar}
-<script>document.addEventListener("click",function(ev){{if(!window.gtag)return;var nm={json.dumps(P["name"], ensure_ascii=False)};if(ev.target.closest("#go"))gtag("event","coupang_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#mrtgo"))gtag("event","mrt_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#yeogigo,#yeogicp"))gtag("event","yeogi_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#kakaogo"))gtag("event","kakao_add",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#campgo"))gtag("event","camp_click",{{place:"stay_mag",item_name:nm}});}});</script>{DDJS}
+<script>document.addEventListener("click",function(ev){{if(!window.gtag)return;var nm={json.dumps(P["name"], ensure_ascii=False)};if(ev.target.closest("#go,#cpgo"))gtag("event","coupang_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#mrtgo"))gtag("event","mrt_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#yeogigo,#yeogicp"))gtag("event","yeogi_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#kakaogo"))gtag("event","kakao_add",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#campgo"))gtag("event","camp_click",{{place:"stay_mag",item_name:nm}});}});</script>{DDJS}
 </body></html>
 '''
     open(os.path.join(ROOT, "m", slug + ".html"), "w", encoding="utf-8").write(out)
