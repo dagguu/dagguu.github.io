@@ -418,6 +418,23 @@ function tickerHtml(open){
   return '<div class="tkr" aria-live="off"><div class="tkw"><div class="tkl">'+L.map(function(x){ return '<a class="tki" href="'+x[2]+'"><span class="tke">'+x[0]+'</span><span class="tkt">'+x[1]+'</span></a>'; }).join("")+'</div></div><span class="tka" aria-hidden="true">⌃<br>⌄</span></div>';
 }
 var tkT; function tkInit(){ clearInterval(tkT); var l=document.querySelector(".tkl"); if(!l) return; var n=l.children.length, i=0; if(n<2) return; tkT=setInterval(function(){ if(!document.body.contains(l)){ clearInterval(tkT); return; } i=(i+1)%n; l.style.transform="translateY(-"+(i*44)+"px)"; },3200); }
+function travelAds(){
+  // 여행 제휴 배너(2026-10-30 시온님이 준 공식 배너 코드): 트립닷컴 iframe + 마이리얼트립 g.js(전용 iframe srcdoc 안에서 실행). 값은 data.json travelAds.
+  var t=seed.travelAds||{}, h="", fr=document.getElementById("view"), W=Math.max(280,((fr&&fr.clientWidth)||window.innerWidth)-32);
+  var tr=t.trip||{};
+  if(/^DB\d+$/.test(tr.id||"")&&/^\d+$/.test(String(tr.aid||""))&&/^\d+$/.test(String(tr.sid||""))){
+    var sc=Math.min(1,W/728), src="https://kr.trip.com/partners/ad/"+tr.id+"?Allianceid="+tr.aid+"&SID="+tr.sid+"&trip_sub1="+encodeURIComponent(tr.sub||"1");
+    h+='<div class="tvad tvtrip" data-tv="trip" style="height:'+Math.ceil(90*sc)+'px"><iframe src="'+esc(src)+'" title="트립닷컴 여행 특가" width="728" height="90" frameborder="0" scrolling="no" loading="lazy" style="transform:scale('+sc.toFixed(4)+')"></iframe></div>';
+  }
+  var m=t.mrt||{};
+  if(/^\d+$/.test(String(m.id||""))&&/^MRTW-[0-9a-f]+$/.test(m.code||"")){
+    var w=Math.min(680,W), hh=200, tpl=/^[a-z]+$/.test(m.template||"")?m.template:"carousel";
+    var doc='<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><style>html,body{margin:0;padding:0;overflow:hidden;background:transparent}</style></head><body><script src="https://ads-partners.myrealtrip.com/g.js"><\/script><script>new MrtPartners.G({id:'+m.id+',trackingCode:"'+m.code+'",template:"'+tpl+'",width:'+w+',height:'+hh+',bordered:true});<\/script></body></html>';
+    h+='<div class="tvad" data-tv="mrt"><iframe srcdoc="'+esc(doc)+'" title="마이리얼트립 여행 특가" width="'+w+'" height="'+(hh+4)+'" frameborder="0" scrolling="no" loading="lazy"></iframe></div>';
+  }
+  if(!h) return "";
+  return '<section class="hsec tvads"><div class="hsh"><h2>✈️ <em>여행</em> 특가 둘러보기</h2></div>'+h+'</section>';
+}
 function homeView(){
   var td=ymd(today()), open=seed.items.filter(function(it){ return statusOf(it).key==="open"; });
   var h=tickerHtml(open)+slideBanners(false);
@@ -447,6 +464,7 @@ function homeView(){
   if(!regs.length){ var cnt={}; open.forEach(function(it){ if(it.region) cnt[it.region]=(cnt[it.region]||0)+1; }); var top=Object.keys(cnt).sort(function(x,y){ return cnt[y]-cnt[x]; })[0]; if(top) regs=[top]; regTitle='📍 지금 <em>'+esc(regs[0]||"")+'</em> 체험단이 많아요'; }
   else regTitle='📍 <em>관심 지역</em>의 체험단이에요';
   if(regs.length) h+=hrow(regTitle,'#/list?cat=stay&s=open&r='+encodeURIComponent(regs.join(",")),open.filter(function(it){ return regs.indexOf(it.region)>=0; }).sort(byDeadline));
+  if(!PMODE){ var ta=travelAds(); if(ta) h+=ta; }
   var gd=groceryDeal(); if(gd) h+='<div class="hpad">'+gd+'</div>';
   var wx=wxSection(); if(wx) h+='<div class="hpad">'+wx+'</div>';
   var hd=hotDeal(); if(hd) h+='<div class="hpad">'+hd+'</div>'; var lh=lifeHot(); if(lh) h+='<div class="hpad">'+lh+'</div>'; var cb=cheapBtn(); if(cb) h+='<div class="hpad">'+cb+'</div>'; // 오늘의 특가(골드박스)는 홈에서 숨김 (2026-10-14 시온님 요청)

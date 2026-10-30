@@ -1182,3 +1182,6 @@ input,select,textarea{font-size:16px!important}
 /* 마이 다이어리뷰 → 다꾸체험단 바로가기 (2026-10-29) */
 .pgomain{display:flex;align-items:center;gap:10px;margin:4px 0 14px;padding:12px 14px;border:1.5px solid #5b3fd0;border-radius:14px;background:#f5f2ff;color:#1b1340;text-decoration:none}
 .pgomain span{display:flex;flex:none}.pgomain b{font-size:15px;white-space:nowrap}.pgomain small{color:#6b6390;font-size:12px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.pgomain i{font-style:normal;font-size:20px;color:#5b3fd0}
+
+/* 여행 제휴 배너(2026-10-30) */
+.tvads .tvad{margin:0 16px 12px;overflow:hidden;border-radius:12px;display:flex;justify-content:center}.tvads .tvtrip{display:block}.tvads .tvtrip iframe{transform-origin:0 0;border:0;display:block}.tvads .tvad iframe{border:0;max-width:none}
