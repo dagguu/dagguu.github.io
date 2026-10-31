@@ -1,24 +1,48 @@
 {
- "at": "2026-10-31 03:16",
+ "at": "2026-10-31 23:05",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 7,
-   "taskId": "0868a9ee1faf7e4a77457170c9a50a36",
+   "n": 1,
+   "taskId": "2639cae09177a05ee9b05c1ac767e8bf",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-10-31/gapyeong-hanoktake/7_edit.jpg"
+   "file": "img/2026-10-31/ongjin-campnomad/1_edit.jpg"
   },
   {
-   "n": 12,
-   "taskId": "367cee35d115821f4999dc914e230fb1",
+   "n": 2,
+   "taskId": "b0e7c17a41e455ae53ca4f5cbdb31af7",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-10-31/gapyeong-hanoktake/12_edit.jpg"
+   "file": "img/2026-10-31/ongjin-campnomad/2_edit.jpg"
+  },
+  {
+   "n": 3,
+   "taskId": "8ddb163de323ed9b1643e0ef14d46610",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-31/ongjin-campnomad/3_edit.jpg"
+  },
+  {
+   "n": 4,
+   "taskId": "3a25bfc44e58d4210b0a91483ae2fc15",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-31/ongjin-campnomad/4_edit.jpg"
+  },
+  {
+   "n": 7,
+   "taskId": "8ef82303914d23e52f1f1ed272c471cc",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-10-31/ongjin-campnomad/7_edit.jpg"
   }
  ],
- "slug": "gapyeong-hanoktake"
+ "slug": "ongjin-campnomad"
 }
