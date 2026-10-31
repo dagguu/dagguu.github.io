@@ -1,5 +1,5 @@
 {
- "at": "2026-10-31T00:26:50.907871",
+ "at": "2026-10-31T01:29:18.304449",
  "name": "gapyeong-hanoktake",
  "font": "Jalnan",
  "fontInfo": {
@@ -10,120 +10,120 @@
   "family": "Jalnan",
   "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
  },
- "gapCut": 3.62,
- "dur": 22.78,
- "cuts": 25,
+ "gapCut": 4.32,
+ "dur": 22.08,
+ "cuts": 23,
  "plan": [
   {
    "video": true,
    "t": "핀란드 안 가도",
    "img": "ai:2",
    "start": 0.0,
-   "end": 1.7,
+   "end": 1.52,
    "cuts": 2
   },
   {
    "video": true,
    "t": "되는 숲속 사우나 독채예요.",
    "img": "ai:1",
-   "start": 1.7,
-   "end": 3.5,
+   "start": 1.52,
+   "end": 3.38,
    "cuts": 2
   },
   {
    "video": true,
    "t": "숙소끼리 50미터 넘게 떨어져서",
    "img": "ai:3",
-   "start": 3.5,
-   "end": 5.3,
+   "start": 3.38,
+   "end": 5.12,
    "cuts": 2
   },
   {
    "video": true,
    "t": "창밖 숲 보며 조용히 쉬고,",
    "img": "ai:4",
-   "start": 5.3,
-   "end": 6.78,
-   "cuts": 1
+   "start": 5.12,
+   "end": 6.76,
+   "cuts": 2
   },
   {
    "video": true,
    "t": "우리끼리만 쓰는 마당도 있어요.",
    "img": "ai:5",
-   "start": 6.78,
-   "end": 8.32,
-   "cuts": 2
+   "start": 6.76,
+   "end": 8.24,
+   "cuts": 1
   },
   {
    "video": true,
    "t": "해 질 녘엔 핀란드 사우나,",
    "img": "ai:6",
-   "start": 8.32,
-   "end": 9.83,
-   "cuts": 2
+   "start": 8.24,
+   "end": 9.69,
+   "cuts": 1
   },
   {
    "video": true,
    "t": "밖은 쌀쌀해도 몸은 따뜻해요.",
    "img": "ai:6",
-   "start": 9.83,
-   "end": 11.69,
+   "start": 9.69,
+   "end": 11.39,
    "cuts": 2
   },
   {
    "video": true,
    "t": "장작불로 데우는 화덕 자쿠지에",
    "img": "ai:7",
-   "start": 11.69,
-   "end": 13.53,
+   "start": 11.39,
+   "end": 13.13,
    "cuts": 2
   },
   {
    "video": true,
    "t": "김 모락모락 몸 담그고,",
    "img": "ai:7",
-   "start": 13.53,
-   "end": 15.07,
-   "cuts": 2
+   "start": 13.13,
+   "end": 14.47,
+   "cuts": 1
   },
   {
    "video": true,
    "t": "밤엔 불빛이 하나둘 켜져요.",
    "img": "ai:8",
-   "start": 15.07,
-   "end": 16.85,
+   "start": 14.47,
+   "end": 16.15,
    "cuts": 2
   },
   {
    "video": true,
    "t": "조명 아래 온수 자쿠지,",
    "img": "ai:9",
-   "start": 16.85,
-   "end": 18.17,
+   "start": 16.15,
+   "end": 17.53,
    "cuts": 1
   },
   {
    "video": true,
    "t": "마당에선 불멍까지.",
    "img": "ai:10",
-   "start": 18.17,
-   "end": 19.35,
+   "start": 17.53,
+   "end": 18.75,
    "cuts": 1
   },
   {
    "video": true,
    "t": "멀리 안 가도",
    "img": "ai:11",
-   "start": 19.35,
-   "end": 20.05,
+   "start": 18.75,
+   "end": 19.43,
    "cuts": 1
   },
   {
    "video": true,
    "t": "숲속에서 푹 쉬기 좋은 곳이에요.",
    "img": "ai:11",
-   "start": 20.05,
-   "end": 22.78,
+   "start": 19.43,
+   "end": 22.08,
    "cuts": 3
   }
  ],
