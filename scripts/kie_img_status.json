@@ -1,35 +1,11 @@
 {
- "at": "2026-10-31 23:05",
+ "at": "2026-10-31 23:09",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 1,
-   "taskId": "2639cae09177a05ee9b05c1ac767e8bf",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-10-31/ongjin-campnomad/1_edit.jpg"
-  },
-  {
-   "n": 2,
-   "taskId": "b0e7c17a41e455ae53ca4f5cbdb31af7",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-10-31/ongjin-campnomad/2_edit.jpg"
-  },
-  {
-   "n": 3,
-   "taskId": "8ddb163de323ed9b1643e0ef14d46610",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-10-31/ongjin-campnomad/3_edit.jpg"
-  },
-  {
    "n": 4,
-   "taskId": "3a25bfc44e58d4210b0a91483ae2fc15",
+   "taskId": "4597b28c2914917888621f4cedffe3ce",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
@@ -37,7 +13,7 @@
   },
   {
    "n": 7,
-   "taskId": "8ef82303914d23e52f1f1ed272c471cc",
+   "taskId": "bffadebd1f48cee2ab6299a681ba9a0f",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
