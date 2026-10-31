@@ -1,5 +1,5 @@
 {
- "at": "2026-10-30 17:36",
+ "at": "2026-10-31 23:27",
  "checkIn": "2026-11-07",
  "stays": {
   "busan-matie-harbor": {
@@ -12,14 +12,14 @@
      "kw": "부산",
      "region": "부산",
      "type": "CITY",
-     "pages": 6,
-     "n": 297,
+     "pages": 7,
+     "n": 344,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1929
+     "total": 1945
     }
    ],
    "hit": "마티에 부산하버시티",
@@ -53,7 +53,7 @@
       "page",
       "size"
      ],
-     "total": 1495
+     "total": 1502
     }
    ],
    "hit": "강릉 다케노모리글램핑&료칸",
@@ -87,10 +87,44 @@
       "page",
       "size"
      ],
-     "total": 1911
+     "total": 1915
     }
    ],
    "hit": "가평 글램하바나",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
+  },
+  "gapyeong-hanoktake": {
+   "name": "하녹타케",
+   "city": "가평",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "가평",
+     "region": "가평",
+     "type": "CITY",
+     "pages": 28,
+     "n": 1398,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 1915
+    }
+   ],
+   "hit": "가평 하녹타케 펜션",
    "hitKeys": [
     "deepLink",
     "imageUrl",
@@ -141,26 +175,26 @@
      "region": "강릉",
      "type": "CITY",
      "pages": 30,
-     "n": 1416,
+     "n": 1423,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1432
+     "total": 1439
     },
     {
      "kw": "강원",
      "region": "평창",
      "type": "CITY",
      "pages": 11,
-     "n": 453,
+     "n": 454,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 465
+     "total": 466
     }
    ]
   },
@@ -181,10 +215,44 @@
       "page",
       "size"
      ],
-     "total": 1865
+     "total": 1872
     }
    ],
    "hit": "경주 에스앤비풀빌라",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
+  },
+  "ongjin-campnomad": {
+   "name": "캠프노마드",
+   "city": "옹진",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "영흥도",
+     "region": "영흥도 해군 기념비",
+     "type": "POINT_OF_INTEREST",
+     "pages": 1,
+     "n": 50,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 1136
+    }
+   ],
+   "hit": "인천 캠프노마드",
    "hitKeys": [
     "deepLink",
     "imageUrl",
@@ -215,7 +283,7 @@
       "page",
       "size"
      ],
-     "total": 913
+     "total": 914
     }
    ],
    "hit": "포항 데이토나풀빌라",
@@ -283,7 +351,7 @@
       "page",
       "size"
      ],
-     "total": 2362
+     "total": 2376
     }
    ],
    "hit": "대부도(선재도) 선재담글램핑&카라반리조트",
