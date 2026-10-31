@@ -128,14 +128,15 @@ open(OUT + "/list.txt", "w").write("".join(f"file '{os.path.basename(c)}'\n" for
 os.replace(OUT + "/list.txt", OUT + "/cuts/list.txt")
 # 자막 (ASS)
 def ts(t): t = max(0, t); return f"{int(t//3600)}:{int(t%3600//60):02d}:{t%60:05.2f}"
-L = ["[Script Info]", "ScriptType: v4.00+", "PlayResX: 1080", "PlayResY: 1920", "", "[V4+ Styles]",
+L = ["[Script Info]", "ScriptType: v4.00+", "WrapStyle: 2", "PlayResX: 1080", "PlayResY: 1920", "", "[V4+ Styles]",
      "Format: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV",
      "Style: D,"+FAM+",80,&H00FFFFFF,&H00000000,&H64000000,1,1,6,3,5,60,60,0",  # 2026-10-30 22:02 시온님 "원래대로, 글씨 크기만 중간으로" (104 → 80)
      "Style: T,"+FAM+",118,&H00FFFFFF,&H00000000,&H90000000,1,1,6,5,8,50,50,330", "", "[Events]",  # T = 처음 1.6초 큰 제목(흰 글씨 두 줄)
      "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
 TT = J.get("title") or []
 if TT and J.get("titleInVideo", True):  # 2026-10-30 22:04 시온님 "처음 0.5~1초만": 맨 처음 0.8초만 위쪽 흰 글씨 두 줄(예전 2.8초·노란 둘째 줄·기울임은 옛 기록)
-    t1 = TT[0] + ("\\N{\\c&H00FFFF&}" + TT[1] if len(TT) > 1 else "")  # 2026-10-30 22:14 시온님 "썸네일처럼 아래줄 색깔": 둘째 줄 노란색
+    TFS = min(118, int(930 / max(1, max(len(x.replace(" ", "")) + 0.4 * x.count(" ") for x in TT[:2]))))  # 2026-10-31 시온님 "제목 3줄 → 2줄": 줄마다 화면 폭에 맞춰 글씨를 줄여 한 줄로
+    t1 = f"{{\\fs{TFS}}}" + TT[0] + ("\\N{\\c&H00FFFF&}" + TT[1] if len(TT) > 1 else "")  # 2026-10-30 22:14 시온님 "썸네일처럼 아래줄 색깔": 둘째 줄 노란색
     if FU.get("family") and not FU.get("hasSpace"): t1 = t1.replace(" ", "{\\fnNoto Sans CJK KR Black} {\\fn" + FAM + "}")
     L.append(f"Dialogue: 1,{ts(0)},{ts(min(0.8, dur))},T,,0,0,0,,{{\\fad(0,120)}}{t1}")
 def chunk(ws):
