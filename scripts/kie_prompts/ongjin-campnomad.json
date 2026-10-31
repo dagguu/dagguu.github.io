@@ -1,0 +1,17 @@
+[
+ {"n": 1, "time": "day", "look": "day",
+  "img": "Keep the place exactly as it is (same glass dome roof, same pool, same tiles, same white chairs and loungers, same layout); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (more of the curved glass dome roof with blue sky through it) and below (more pool deck). Bright clear daylight.",
+  "prompt": "Slow push forward along the warm blue pool under the curved glass dome, soft steam over the water and light ripples on the tiles."},
+ {"n": 2, "time": "day",
+  "img": "Keep the place exactly as it is (same caravans, same pool, same palm trees, same pine forest, same layout); do not add new buildings, vehicles, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (more pine forest and blue sky) and below (more lawn). Never mirror or flip the image. Bright clear daylight.",
+  "prompt": "Slow aerial glide forward over the pine forest toward the row of caravans and the blue pool, treetops swaying gently."},
+ {"n": 3, "time": "day", "people": true,
+  "img": "Edit this photo into a vertical 9:16 frame: add one young Korean woman in her late 20s with long straight black hair, wearing a cream knit cardigan, standing on the wooden deck of the nearest glamping tent holding a warm mug, seen from behind or from the side, looking out at the pine forest, never facing the camera. Keep the glamping tents, decks, railings, pine trees and sky exactly the same; do not add, remove or move any object. Extend naturally above (pine trees and blue sky) and below (forest slope). Photorealistic, bright natural daylight.",
+  "prompt": "Slow glide forward along the row of glamping tents in the pine forest toward the woman on the deck, leaves drifting down softly."},
+ {"n": 4, "time": "day",
+  "img": "Keep the place exactly as it is (same white space caravan with large curved glass window, same wooden deck, same fire pit, same trees); do not add new objects, signs, text or logos and keep the existing small letters on the caravan unchanged. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (pine trees and blue sky) and below (more deck and gravel). Bright clear daylight.",
+  "prompt": "Slow sideways glide past the white space caravan with its curved glass window, reflections sliding across the glass."},
+ {"n": 7, "time": "night",
+  "img": "Keep the place exactly as it is (same campsite, same buildings, same lights, same road, same forest hill); do not add new buildings, vehicles, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (deep navy evening sky over the forest hill) and below (more of the lit campsite). Never mirror or flip the image. Early-night blue hour, warm lights glowing.",
+  "prompt": "Slow aerial drift forward over the glowing campsite at blue hour, warm lights twinkling under the dark forest hill."}
+]
