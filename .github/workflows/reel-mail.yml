@@ -1,0 +1,25 @@
+name: 릴스 메일 보내기
+# 오늘 릴스 영상·썸네일 + 대본·캡션을 시온님 네이버 메일로 보낸다(2026-10-31 시온님 "메일로 보내줘").
+# 글은 저장소에 넣지 않고 실행 입력(base64)으로만 넘긴다.
+on:
+  workflow_dispatch:
+    inputs:
+      name: { description: "scripts/tts/<name> (insta 브랜치 reels/<name>/)", required: true }
+      body: { description: "메일 본문(base64 UTF-8)", required: true }
+      subject: { description: "제목", required: false, default: "" }
+permissions: { contents: read }
+jobs:
+  mail:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: sudo apt-get install -y -qq ffmpeg >/dev/null
+      - run: git fetch -q origin insta && python scripts/mail_reel.py
+        env:
+          NAVER_MAIL_ID: ${{ secrets.NAVER_MAIL_ID }}
+          NAVER_MAIL_PW: ${{ secrets.NAVER_MAIL_PW }}
+          NAME: ${{ inputs.name }}
+          BODY: ${{ inputs.body }}
+          SUBJECT: ${{ inputs.subject }}
