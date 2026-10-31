@@ -71,7 +71,7 @@ def load_all():
             if P.get("date", "9999") <= TODAY: L.append(P)   # 예약해 둔 날짜가 지난 글만 공개
         except Exception as ex:
             print("숙소 글 읽기 실패", f, ex)
-    L.sort(key=lambda P: P["date"], reverse=True)
+    L.sort(key=lambda P: (-int(P.get("no") or 0), P["date"]))  # 2026-10-31 시온님 "번호 순서대로" — 번호 큰 것(최신)부터
     return L
 
 def _list_inf():
