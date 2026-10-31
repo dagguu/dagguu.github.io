@@ -1,42 +1,21 @@
 {
- "at": "2026-10-31T14:12:40.564103",
+ "at": "2026-10-31T14:16:17.777789",
  "name": "ongjin-campnomad",
  "jobs": [
   {
-   "img": "ai:1",
-   "taskId": "78086b5f390738ab7e8008d6c98fed9a",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-10-31/ongjin-campnomad/clip_ai1.mp4"
-  },
-  {
-   "img": "ai:2",
-   "taskId": "913373915588b3870b505b36b8828bcd",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-10-31/ongjin-campnomad/clip_ai2.mp4"
-  },
-  {
    "img": "ai:3",
-   "taskId": "d42d98812a33651106127c1e15de31fc",
+   "taskId": "cf20b8e725a62634fbf796c0a92b19b9",
    "state": "success",
    "credits": 35.0,
    "file": "video/2026-10-31/ongjin-campnomad/clip_ai3.mp4"
   },
   {
    "img": "ai:4",
-   "taskId": "212f99a6d49bedaa6198875d932d169d",
+   "taskId": "8cb9f497a6831ad92aee28c89663bb50",
    "state": "success",
    "credits": 35.0,
    "file": "video/2026-10-31/ongjin-campnomad/clip_ai4.mp4"
-  },
-  {
-   "img": "ai:7",
-   "taskId": "61f3812dfb6780170a80fb868b5e28ed",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-10-31/ongjin-campnomad/clip_ai7.mp4"
   }
  ],
- "credits_total": 175.0
+ "credits_total": 70.0
 }
