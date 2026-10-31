@@ -16,12 +16,7 @@
   {
    "img": "ai:2",
    "y": 0.5,
-   "cap": "6,000평 넘는 **소나무숲** 사이에\n카라반과 수영장이 모여 있어요 🌲"
-  },
-  {
-   "img": "ai:3",
-   "y": 0.5,
-   "cap": "숲 언덕 위 **글램핑 G**는\n화장실·샤워실이 따로 있어요 ⛺",
+   "cap": "6,000평 넘는 **소나무숲** 사이에\n카라반과 수영장이 모여 있어요 🌲",
    "stickers": [
     {
      "k": "hand",
@@ -31,24 +26,43 @@
      "r": -6,
      "a": "dr"
     }
-   ],
-   "vp": "Very slow gentle push-in toward the woman standing still on the deck of the nearest glamping tent; she stays visible in the frame the whole time, only her hair and skirt move slightly in the breeze; pine branches sway softly. Do not add falling leaves in front of the camera, no fog or smoke."
+   ]
+  },
+  {
+   "img": "ai:3",
+   "y": 0.5,
+   "cap": "숲 언덕 위 **글램핑 G**는\n화장실·샤워실이 따로 있어요 ⛺",
+   "vp": "Very slow gentle push-in toward the woman standing still on the deck of the nearest glamping tent; she stays visible in the frame the whole time, only her hair and skirt move slightly in the breeze; pine branches sway softly. Do not add falling leaves in front of the camera, no fog or smoke.",
+   "stickers": [
+    {
+     "k": "tag",
+     "t": "복층 글램핑도 있어요",
+     "x": 30,
+     "y": 10,
+     "r": -4,
+     "c": "#e7f6c8"
+    }
+   ]
   },
   {
    "img": "ai:4",
    "y": 0.5,
    "cap": "둥근 통창이 있는\n**스페이스카라반**도 있어요 🛸",
+   "vp": "Very slow sideways glide past the white rounded space caravan on its wooden deck, reflections sliding across the curved glass window, pine branches swaying. Keep the ground exactly as in the image: only the wooden deck, artificial grass and gravel. Do not add any pool, pond, water, hot tub, steam or new objects.",
    "stickers": [
     {
-     "k": "tag",
-     "t": "복층 글램핑도 있어요",
-     "x": 68,
+     "k": "cloud",
+     "t": "우주선 같아 🛸",
+     "x": 64,
      "y": 12,
-     "r": 4,
-     "c": "#e7f6c8"
+     "r": -3
+    },
+    {
+     "k": "spark",
+     "x": 20,
+     "y": 20
     }
-   ],
-   "vp": "Very slow sideways glide past the white rounded space caravan on its wooden deck, reflections sliding across the curved glass window, pine branches swaying. Keep the ground exactly as in the image: only the wooden deck, artificial grass and gravel. Do not add any pool, pond, water, hot tub, steam or new objects."
+   ]
   },
   {
    "img": "ai:7",
@@ -59,16 +73,17 @@
    },
    "stickers": [
     {
-     "k": "cloud",
-     "t": "우주선 같아 🛸",
-     "x": 64,
-     "y": 16,
-     "r": -3
+     "k": "star",
+     "x": 16,
+     "y": 12,
+     "c": "#ffe14d"
     },
     {
-     "k": "spark",
-     "x": 20,
-     "y": 24
+     "k": "hand",
+     "t": "불 켜진 밤 캠핑장",
+     "x": 62,
+     "y": 14,
+     "r": 5
     }
    ]
   }
