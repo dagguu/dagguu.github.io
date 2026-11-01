@@ -1,0 +1,42 @@
+[Script Info]
+ScriptType: v4.00+
+WrapStyle: 2
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV
+Style: D,Jalnan,80,&H00FFFFFF,&H00000000,&H64000000,1,1,6,3,5,60,60,0
+Style: T,Jalnan,118,&H00FFFFFF,&H00000000,&H90000000,1,1,6,5,8,50,50,330
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.00,0:00:00.80,T,,0,0,0,,{\fad(0,120)}{\fs113}일본{\fnNoto Sans CJK KR Black} {\fnJalnan}안{\fnNoto Sans CJK KR Black} {\fnJalnan}가도{\fnNoto Sans CJK KR Black} {\fnJalnan}되는\N{\c&H00FFFF&}동두천{\fnNoto Sans CJK KR Black} {\fnJalnan}료칸{\fnNoto Sans CJK KR Black} {\fnJalnan}마을
+Dialogue: 0,0:00:00.80,0:00:01.50,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}일본{\c&HFFFFFF&}{\fnNoto Sans CJK KR Black} {\fnJalnan}안{\fnNoto Sans CJK KR Black} {\fnJalnan}가도
+Dialogue: 0,0:00:01.55,0:00:02.43,D,,0,0,0,,{\i1\pos(540,830)}되는{\fnNoto Sans CJK KR Black} {\fnJalnan}동두천
+Dialogue: 0,0:00:02.43,0:00:03.16,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}료칸{\fnNoto Sans CJK KR Black} {\fnJalnan}마을{\c&HFFFFFF&}이에요
+Dialogue: 0,0:00:03.21,0:00:03.93,D,,0,0,0,,{\i1\pos(540,830)}지금은{\fnNoto Sans CJK KR Black} {\fnJalnan}가을
+Dialogue: 0,0:00:03.93,0:00:04.62,D,,0,0,0,,{\i1\pos(540,830)}축제{\fnNoto Sans CJK KR Black} {\fnJalnan}기간이라
+Dialogue: 0,0:00:04.67,0:00:05.43,D,,0,0,0,,{\i1\pos(540,830)}밤엔{\fnNoto Sans CJK KR Black} {\fnJalnan}등불이
+Dialogue: 0,0:00:05.43,0:00:06.39,D,,0,0,0,,{\i1\pos(540,830)}켜지고{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}불꽃놀이{\c&HFFFFFF&}도
+Dialogue: 0,0:00:06.39,0:00:06.64,D,,0,0,0,,{\i1\pos(540,830)}해요
+Dialogue: 0,0:00:06.69,0:00:07.29,D,,0,0,0,,{\i1\pos(540,830)}방은{\fnNoto Sans CJK KR Black} {\fnJalnan}모두
+Dialogue: 0,0:00:07.29,0:00:08.01,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}다다미방{\c&HFFFFFF&}이고
+Dialogue: 0,0:00:08.06,0:00:08.82,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}100년{\c&HFFFFFF&}{\fnNoto Sans CJK KR Black} {\fnJalnan}넘은
+Dialogue: 0,0:00:08.82,0:00:09.41,D,,0,0,0,,{\i1\pos(540,830)}옛{\fnNoto Sans CJK KR Black} {\fnJalnan}소품들로
+Dialogue: 0,0:00:09.46,0:00:10.17,D,,0,0,0,,{\i1\pos(540,830)}꾸며져{\fnNoto Sans CJK KR Black} {\fnJalnan}있어요
+Dialogue: 0,0:00:10.22,0:00:11.28,D,,0,0,0,,{\i1\pos(540,830)}방마다{\fnNoto Sans CJK KR Black} {\fnJalnan}편백나무
+Dialogue: 0,0:00:11.28,0:00:12.19,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}히노끼탕{\c&HFFFFFF&}이{\fnNoto Sans CJK KR Black} {\fnJalnan}있어서
+Dialogue: 0,0:00:12.24,0:00:12.92,D,,0,0,0,,{\i1\pos(540,830)}따뜻한{\fnNoto Sans CJK KR Black} {\fnJalnan}물에
+Dialogue: 0,0:00:12.92,0:00:13.47,D,,0,0,0,,{\i1\pos(540,830)}푹{\fnNoto Sans CJK KR Black} {\fnJalnan}쉬고
+Dialogue: 0,0:00:13.52,0:00:14.28,D,,0,0,0,,{\i1\pos(540,830)}다도{\fnNoto Sans CJK KR Black} {\fnJalnan}세트랑
+Dialogue: 0,0:00:14.28,0:00:15.13,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}유카타{\c&HFFFFFF&}도{\fnNoto Sans CJK KR Black} {\fnJalnan}있어요
+Dialogue: 0,0:00:15.18,0:00:15.94,D,,0,0,0,,{\i1\pos(540,830)}아침엔{\fnNoto Sans CJK KR Black} {\fnJalnan}일본
+Dialogue: 0,0:00:15.94,0:00:16.75,D,,0,0,0,,{\i1\pos(540,830)}가정식이{\fnNoto Sans CJK KR Black} {\fnJalnan}나오고
+Dialogue: 0,0:00:16.80,0:00:17.38,D,,0,0,0,,{\i1\pos(540,830)}묵는{\fnNoto Sans CJK KR Black} {\fnJalnan}동안
+Dialogue: 0,0:00:17.38,0:00:18.20,D,,0,0,0,,{\i1\pos(540,830)}마을도{\fnNoto Sans CJK KR Black} {\fnJalnan}자유롭게
+Dialogue: 0,0:00:18.20,0:00:18.53,D,,0,0,0,,{\i1\pos(540,830)}다녀요
+Dialogue: 0,0:00:18.58,0:00:19.27,D,,0,0,0,,{\i1\pos(540,830)}멀리{\fnNoto Sans CJK KR Black} {\fnJalnan}안{\fnNoto Sans CJK KR Black} {\fnJalnan}가도
+Dialogue: 0,0:00:19.32,0:00:20.09,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}일본{\c&HFFFFFF&}{\fnNoto Sans CJK KR Black} {\fnJalnan}온{\fnNoto Sans CJK KR Black} {\fnJalnan}기분
+Dialogue: 0,0:00:20.09,0:00:20.81,D,,0,0,0,,{\i1\pos(540,830)}내기{\fnNoto Sans CJK KR Black} {\fnJalnan}딱{\fnNoto Sans CJK KR Black} {\fnJalnan}좋은
+Dialogue: 0,0:00:20.81,0:00:21.97,D,,0,0,0,,{\i1\pos(540,830)}곳이에요
