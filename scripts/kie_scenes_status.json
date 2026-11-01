@@ -1,21 +1,91 @@
 {
- "at": "2026-10-31T14:16:17.777789",
- "name": "ongjin-campnomad",
+ "at": "2026-11-01T06:19:23.819131",
+ "name": "dongducheon-nijimori-ryokan",
  "jobs": [
   {
-   "img": "ai:3",
-   "taskId": "cf20b8e725a62634fbf796c0a92b19b9",
+   "img": "ai:1",
+   "taskId": "2bd7b25a9964c8427c17690058d6ce20",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-10-31/ongjin-campnomad/clip_ai3.mp4"
+   "file": "video/2026-11-01/dongducheon-nijimori-ryokan/clip_ai1.mp4"
+  },
+  {
+   "img": "ai:2",
+   "taskId": "36e1341a5e811f1a8bec91387c7545a3",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-01/dongducheon-nijimori-ryokan/clip_ai2.mp4"
+  },
+  {
+   "img": "ai:3",
+   "taskId": "eeb9fa6bf6f597419ff78588cf170336",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-01/dongducheon-nijimori-ryokan/clip_ai3.mp4"
   },
   {
    "img": "ai:4",
-   "taskId": "8cb9f497a6831ad92aee28c89663bb50",
+   "taskId": "5a0c0d2e0576b209c7d3b57a10d06c9a",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-10-31/ongjin-campnomad/clip_ai4.mp4"
+   "file": "video/2026-11-01/dongducheon-nijimori-ryokan/clip_ai4.mp4"
+  },
+  {
+   "img": "ai:5",
+   "taskId": "67a2a791ad80dbd4f864ca9540630e3b",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-01/dongducheon-nijimori-ryokan/clip_ai5.mp4"
+  },
+  {
+   "img": "ai:6",
+   "taskId": "c6c30b61220f091c319f3ca7f7438bb9",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-01/dongducheon-nijimori-ryokan/clip_ai6.mp4"
+  },
+  {
+   "img": "ai:7",
+   "taskId": "41b832a9a5586382d85665fadf115a68",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-01/dongducheon-nijimori-ryokan/clip_ai7.mp4"
+  },
+  {
+   "img": "ai:8",
+   "taskId": "94fca5085b64b8602fc5d4163feccccd",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-01/dongducheon-nijimori-ryokan/clip_ai8.mp4"
+  },
+  {
+   "img": "ai:9",
+   "taskId": "1f9b9c1a2d4537d0d3bfd9991c5c4fc7",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-01/dongducheon-nijimori-ryokan/clip_ai9.mp4"
+  },
+  {
+   "img": "ai:10",
+   "taskId": "739b7dcc81f2ecf72b90f4fcb0f5677f",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-01/dongducheon-nijimori-ryokan/clip_ai10.mp4"
+  },
+  {
+   "img": "ai:11",
+   "taskId": "379a32e45a94c05621bc124ed85d1fe4",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-01/dongducheon-nijimori-ryokan/clip_ai11.mp4"
+  },
+  {
+   "img": "ai:12",
+   "taskId": "de94a4f6eaafce485418af15f71b0829",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-01/dongducheon-nijimori-ryokan/clip_ai12.mp4"
   }
  ],
- "credits_total": 70.0
+ "credits_total": 420.0
 }
