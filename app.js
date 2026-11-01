@@ -922,7 +922,7 @@ function mapSheet(S){
   var b=document.getElementById("mapsheet"); if(!b) return;
   var L=S.L.slice().sort(function(a,c){ return (c.mag?1:0)-(a.mag?1:0)||daysLeft(a)-daysLeft(c); });
   b.innerHTML='<div class="mshd"><b>'+(S.g[2]==="c"?"이 지역":"이곳")+(L.every(function(x){return x.mag;})?' 감성숙소 ':' 숙소·체험단 ')+L.length+'곳</b><button type="button" data-mclose aria-label="닫기">✕</button></div><div class="msl">'+L.map(function(it){ if(it.mag){ var cd=it.campEnd?Math.round((parseDate(it.campEnd)-today())/864e5):-1, im=safeUrl(it.image);
-      return '<a class="msi msmag" href="/m/'+encodeURIComponent(it.slug)+'.html" data-mapmag="'+esc(it.slug)+'">'+(im?'<img src="'+esc(im)+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'<span class="noimg"></span>')+'<span><i class="mtag">💜 감성숙소 추천 ['+("00"+(+it.no||0)).slice(-3)+']</i><b>'+esc(it.name)+' · '+esc(it.area||"")+'</b><small>'+esc(it.t||"")+'</small>'+(cd>=0?'<em>🚨체험단 모집중 '+(cd===0?"D-DAY":"D-"+cd)+'</em>':'<em class="mgo">숙소 소개 보기 ›</em>')+'</span></a>'; }
+      return '<a class="msi msmag" href="/m/'+encodeURIComponent(it.slug)+'.html" data-mapmag="'+esc(it.slug)+'">'+(im?'<img src="'+esc(im)+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'<span class="noimg"></span>')+'<span><i class="mtag">💜 감성숙소 추천 ['+("00"+(+it.no||0)).slice(-3)+']</i><b>'+(it.name?esc(it.name)+' · ':'')+esc(it.area||"")+'</b><small>'+esc(it.t||"")+'</small>'+(cd>=0?'<em>🚨체험단 모집중 '+(cd===0?"D-DAY":"D-"+cd)+'</em>':'<em class="mgo">숙소 소개 보기 ›</em>')+'</span></a>'; }
     var d=daysLeft(it), img=safeUrl(it.image);
     return '<a class="msi" href="#/item?id='+encodeURIComponent(it.id)+'">'+(img?'<img src="'+esc(img)+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'<span class="noimg"></span>')+'<span><b>'+esc(it.name)+'</b><small>'+esc(String(it.benefit||"").slice(0,48))+'</small><em>'+(d<=0?"오늘 마감":"D-"+d)+(it.source?' · '+esc(it.source):'')+'</em></span></a>'; }).join("")+'</div>';
   b.hidden=false;
@@ -1063,7 +1063,8 @@ function gDate(d){ return d?'<em class="gdt">'+esc(String(d).replace(/-/g,"."))+
 function mvTag(k){ return '<em class="mvc" data-mv="'+esc(k)+'" hidden></em>'; }
 function guideRow(g){ return '<a class="gdi" href="/g/'+esc(g.slug)+'.html"><b>'+esc(g.t)+'</b><small>'+esc(g.d)+'</small>'+gDate(g.date)+mvTag("g:"+g.slug)+'</a>'; }
 function pickRow(x){ return '<a class="gdi pki" href="/p/'+esc(x.slug)+'.html">'+(safeUrl(x.img)?'<img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<span><b>'+esc(x.h||x.t)+'</b><small>'+esc(x.d)+'</small>'+gDate(x.date)+mvTag("p:"+x.slug)+'</span></a>'; }
-function stayRow(x){ return '<a class="gdi pki smg" href="/m/'+esc(x.slug)+'.html" data-no="'+esc(x.no||"")+'" data-q="'+esc((x.name+" "+x.area+" "+x.t).toLowerCase())+'">'+(x.no?'<i class="sno">'+esc(x.no)+'</i>':'')+(safeUrl(x.img)?'<img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<span><b>'+esc(x.t)+'</b><small>'+esc(x.name)+' · '+esc(x.area)+'</small>'+gDate(x.date)+mvTag("m:"+x.slug)+'</span></a>'; }
+function stNm(x){ return x.name||(x.h||x.tl||[]).join(" ")||x.t||""; } /* 2026-11-01 시온님: 감성숙소 이름은 링크 누르기 전엔 안 보임 → 한 줄 소개로 */
+function stayRow(x){ return '<a class="gdi pki smg" href="/m/'+esc(x.slug)+'.html" data-no="'+esc(x.no||"")+'" data-q="'+esc(((x.q||x.name||"")+" "+x.area+" "+x.t).toLowerCase())+'">'+(x.no?'<i class="sno">'+esc(x.no)+'</i>':'')+(safeUrl(x.img)?'<img src="'+esc(safeUrl(x.img))+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'<span><b>'+esc(x.t)+'</b><small>'+(x.name?esc(x.name)+' · ':'')+esc(x.area)+'</small>'+gDate(x.date)+mvTag("m:"+x.slug)+'</span></a>'; }
 /* 여행 탭 릴스 카드 (2026-10-30 시온님 "내가 만든 릴스를 마이리얼트립 지금특가처럼 넣어줘"): m/reels.json(gen_stays.py) + v/<slug>.mp4.
    카드 = 세로 영상(화면에 보이면 소리 없이 자동 재생) + 왼쪽 위 배지 + 아래 이름·한 줄·가격(조회 날짜·출처 표시). 영상을 누르면 소리 켜고 크게, 글씨를 누르면 감성숙소 글. */
 function reelsHtml(lim){
@@ -1073,8 +1074,8 @@ function reelsHtml(lim){
     var dl=x.campEnd?Math.round((Date.parse(x.campEnd+"T00:00:00+09:00")-Date.parse(ymd(today())+"T00:00:00+09:00"))/864e5):-1;
     var badge='<span class="rlbs"><em class="rlb">['+String(x.no||"").padStart(3,"0")+']</em>'+(dl>=0?'<em class="rlb hot">🚨 체험단 모집중 '+(dl===0?'D-DAY':'D-'+dl)+'</em>':'')+'</span>';
     var pr=x.price?'<span class="rlp">'+(x.rate?'<em>'+x.rate+'%</em>':'')+'<b>'+Number(x.price).toLocaleString("ko-KR")+'원~</b></span><span class="rlsrc">'+esc(x.src||"")+' 조회 기준</span>':'';
-    return '<div class="rlc"><button class="rlv" data-rl="'+i+'" aria-label="'+esc(x.name)+' 영상 크게 보기"><video muted loop playsinline preload="none" poster="'+esc(x.img)+'" data-src="'+esc(x.v)+'"></video>'+badge+'<span class="rlpk">💜 다꾸 PICK</span><span class="rlpl" aria-hidden="true">▶</span></button>'+
-      '<a class="rlt" href="/m/'+esc(x.slug)+'.html" data-rlgo="'+esc(x.slug)+'"><b>'+esc(x.name)+'</b><small>'+esc((x.h||[]).join(" "))+'</small>'+pr+'<span class="rla">'+esc(x.area)+'</span></a></div>';
+    return '<div class="rlc"><button class="rlv" data-rl="'+i+'" aria-label="'+esc(stNm(x))+' 영상 크게 보기"><video muted loop playsinline preload="none" poster="'+esc(x.img)+'" data-src="'+esc(x.v)+'"></video>'+badge+'<span class="rlpk">💜 다꾸 PICK</span><span class="rlpl" aria-hidden="true">▶</span></button>'+
+      '<a class="rlt" href="/m/'+esc(x.slug)+'.html" data-rlgo="'+esc(x.slug)+'"><b>'+esc(stNm(x))+'</b>'+(x.name?'<small>'+esc((x.h||[]).join(" "))+'</small>':'')+pr+'<span class="rla">'+esc(x.area)+'</span></a></div>';
   }).join("")+'</div></section>';
 }
 var RLOBS=null;
@@ -1158,11 +1159,11 @@ function rfReelSlide(x,i){
   var pu=safeUrl(x.pu), offs=(x.offers||[]).filter(function(o){ return safeUrl(o.u); }), card;
   if(offs.length>=2){
     var o0=offs[0];
-    card='<button class="rfcard rfstack" data-rfoff="'+i+'"><img src="'+esc(x.img)+'" alt="" loading="lazy"><span><b>'+esc(x.name)+'</b><em>'+(o0.rate?'<i>'+o0.rate+'%</i>':'')+(o0.price?rfWon(o0.price)+'~':'가격 보기')+'</em><small>'+esc(o0.src)+' 외 '+(offs.length-1)+'곳 · 눌러서 비교해 보세요</small></span><span class="rfarr" aria-hidden="true">›</span></button>';
-  } else card=x.price?'<a class="rfcard" '+(pu?ext(pu)+' data-rfgo="'+esc(x.slug)+'"':'href="/m/'+esc(x.slug)+'.html"')+'><img src="'+esc(x.img)+'" alt="" loading="lazy"><span><b>'+esc(x.name)+'</b><em>'+(x.rate?'<i>'+x.rate+'%</i>':'')+rfWon(x.price)+'~</em><small>'+esc(x.src||"")+' 조회 기준 ↗</small></span></a>':'';
+    card='<button class="rfcard rfstack" data-rfoff="'+i+'"><img src="'+esc(x.img)+'" alt="" loading="lazy"><span><b>'+esc(x.name||"객실 가격 비교")+'</b><em>'+(o0.rate?'<i>'+o0.rate+'%</i>':'')+(o0.price?rfWon(o0.price)+'~':'가격 보기')+'</em><small>'+esc(o0.src)+' 외 '+(offs.length-1)+'곳 · 눌러서 비교해 보세요</small></span><span class="rfarr" aria-hidden="true">›</span></button>';
+  } else card=x.price?'<a class="rfcard" '+(pu?ext(pu)+' data-rfgo="'+esc(x.slug)+'"':'href="/m/'+esc(x.slug)+'.html"')+'><img src="'+esc(x.img)+'" alt="" loading="lazy"><span><b>'+esc(x.name||"객실 가격 보기")+'</b><em>'+(x.rate?'<i>'+x.rate+'%</i>':'')+rfWon(x.price)+'~</em><small>'+esc(x.src||"")+' 조회 기준 ↗</small></span></a>':'';
   return '<section class="rfs" data-i="'+i+'"><video playsinline loop preload="none" poster="'+esc(x.img)+'" data-src="'+esc(x.v)+'"></video><div class="rfshade"></div>'+
     '<div class="rfbot"><em class="rfbadge'+(dl>=0?' hot':'')+'">'+esc(badge)+'</em>'+
-    '<div class="rfti"><a href="/m/'+esc(x.slug)+'.html" data-rlgo="'+esc(x.slug)+'"><b>'+esc(x.name)+' ›</b><small>'+esc((x.h||[]).join(" "))+'</small></a><button class="rfsh" data-rfshare="'+esc(x.slug)+'" aria-label="공유하기"><svg viewBox="0 0 24 24" width="18" height="18"><path d="'+I.share+'" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button></div>'+
+    '<div class="rfti"><a href="/m/'+esc(x.slug)+'.html" data-rlgo="'+esc(x.slug)+'"><b>'+esc(stNm(x))+' ›</b>'+(x.name?'<small>'+esc((x.h||[]).join(" "))+'</small>':'')+'</a><button class="rfsh" data-rfshare="'+esc(x.slug)+'" aria-label="공유하기"><svg viewBox="0 0 24 24" width="18" height="18"><path d="'+I.share+'" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button></div>'+
     '<div class="rfpick"><img src="/icons/icon-192.png" alt=""><span>다꾸 님이 추천해요!</span><em>다꾸 PICK ✓</em></div>'+card+'</div><div class="rfbar"><i></i></div></section>';
 }
 function rfGold3(xs){
@@ -1176,7 +1177,7 @@ function rfOffPop(d,x){
   var offs=(x.offers||[]).filter(function(o){ return safeUrl(o.u); }); if(!offs.length) return;
   var old=d.querySelector(".rfpop"); if(old) old.remove();
   var p=document.createElement("div"); p.className="rfpop";
-  p.innerHTML='<div class="rfpopc" role="dialog" aria-label="가격 비교"><div class="rfpoph"><b>'+esc(x.name)+'</b><button class="rfpopx" aria-label="닫기">✕</button></div>'+
+  p.innerHTML='<div class="rfpopc" role="dialog" aria-label="가격 비교"><div class="rfpoph"><b>'+esc(x.name||"가격 비교")+'</b><button class="rfpopx" aria-label="닫기">✕</button></div>'+
     offs.map(function(o){ var k=o.src==="쿠팡트래블"?"coupang":o.src==="마이리얼트립"?"mrt":o.src==="야놀자"?"yanolja":"yeogi";
       return '<div class="rfoff"><img src="'+esc(x.img)+'" alt="" loading="lazy"><span class="rfoffi"><small>'+esc(o.src)+(o.bp?' <b class="rfbp">최저가 보장제 적용</b>':'')+'</small>'+(o.price?'<em>'+(o.rate?'<i>'+o.rate+'%</i>':'')+rfWon(o.price)+'~</em>':'<em class="rfoffy">숙소 보기</em>')+(o.cond?'<small class="rfoffc">'+esc(o.cond)+'</small>':'')+(o.bp?'<small class="rfoffc">보장 조건은 마이리얼트립 안내 기준</small>':'')+'</span><a class="rfoffgo" '+ext(safeUrl(o.u))+' data-rfok="'+k+'">'+(k==="yanolja"||k==="yeogi"?"특가 보러가기":"보러가기")+' ↗</a></div>'; }).join("")+
     '<p class="rfpopn">가격은 조회 시점 기준이라 날짜·객실마다 달라요</p></div>';
@@ -1465,7 +1466,7 @@ function stayPopup(T){
   if(state.tab!=="home"||document.querySelector(".promom")) return;
   try{ if(sessionStorage.getItem("dakku-promo")) return; var td=new Date().toISOString().slice(0,10); if(localStorage.getItem("dakku-promo-hide")===td) return; sessionStorage.setItem("dakku-promo","1"); }catch(e){ return; }
   var w=document.createElement("div"); w.className="modal promom stpop"; w.setAttribute("role","dialog"); w.setAttribute("aria-modal","true"); w.setAttribute("aria-label","오늘의 감성숙소");
-  w.innerHTML='<div class="psheet2"><a class="stpc" href="'+stayHref(T)+'" data-stgo="popup"><img src="'+esc(T.img)+'" alt="" referrerpolicy="no-referrer"><span class="stpt"><small>오늘의 감성숙소 ['+stayNo(T)+']</small><b>'+stayTitle(T)+'</b><em>'+esc(T.name)+' · '+esc(T.area||"")+'</em><i>숙소 소개 보러가기 ›</i></span></a>'+
+  w.innerHTML='<div class="psheet2"><a class="stpc" href="'+stayHref(T)+'" data-stgo="popup"><img src="'+esc(T.img)+'" alt="" referrerpolicy="no-referrer"><span class="stpt"><small>오늘의 감성숙소 ['+stayNo(T)+']</small><b>'+stayTitle(T)+'</b><em>'+(T.name?esc(T.name)+' · ':'')+esc(T.area||"")+'</em><i>숙소 소개 보러가기 ›</i></span></a>'+
     '<div class="pfoot"><button data-p="hide">오늘 그만보기</button><button data-p="x">닫기</button></div></div>';
   function close(){ w.classList.add("out"); setTimeout(function(){ w.remove(); },250); }
   w.addEventListener("click",function(e){ if(e.target===w) return close(); var b=e.target.closest("[data-p]"); if(b){ if(b.dataset.p==="hide"){ try{ localStorage.setItem("dakku-promo-hide",new Date().toISOString().slice(0,10)); }catch(er){} } close(); } else if(e.target.closest("a")) setTimeout(close,300); });
@@ -1488,7 +1489,7 @@ function promoPopup(){
 window.afterIntro=function(){ promoPopup(); };
 function heroSlides(){
   var s=[], ig=safeUrl((seed.sns||{}).instagram), oc=safeUrl(seed.openchat);
-  var ST=stayToday(); if(ST) s.push({bg:"#1a0b3d",photo:ST.img,k:"오늘의 감성숙소 ["+stayNo(ST)+"]",t:stayTitle(ST),d:esc(ST.name)+" · "+esc(ST.area||""),b:"숙소 소개 보기",h:stayHref(ST),noart:1,st:1});
+  var ST=stayToday(); if(ST) s.push({bg:"#1a0b3d",photo:ST.img,k:"오늘의 감성숙소 ["+stayNo(ST)+"]",t:stayTitle(ST),d:(ST.name?esc(ST.name)+" · ":"")+esc(ST.area||""),b:"숙소 소개 보기",h:stayHref(ST),noart:1,st:1});
   s.push({bg:"radial-gradient(120% 90% at 50% 20%,#5b2fd6 0%,#3a1aa8 45%,#1d0b5c 100%)",t:"이제 <span>공짜여행</span>이 시작된다!",d:"아직도 몰랐어? 여행 무료 체험단<br>여행도 다니고 돈도 아끼고!",b:"지금 바로가기",h:"#/trip",art:"images/free-trip.svg",ft:1});
   /* 다꾸 수익화 배너는 2026-10-21 시온님 요청으로 뺌 */ //s.push({bg:"linear-gradient(120deg,#3a1670,#8a3fd0 55%,#d46fd8)",t:"<span>다꾸 수익화</span> 1:1 코칭",d:"한번 배우면 평생 써먹는<br>블로그 수익화",b:"자세히 보기",h:"#/edu",e:["🧑‍🏫","📈","✍️"]});
   var P=promoOn(); if(P) s.push({bg:"linear-gradient(120deg,#3a1670,#8a3fd0 55%,#b558d6)",t:P.t,d:P.d,b:P.b,h:P.u,x:1,art:P.art});
@@ -1534,7 +1535,7 @@ var slideT;
 /* 가로 기획전 배너(2026-10-19 시온님 요청, 트립비토즈 '비토즈위크 24시간 특가' 띠 배너 참고): 홈 메뉴 아래 예전 "오늘 마감" 줄 자리. 슬라이드 + "1 / N" */
 function wideBanners(open,closing){
   var W=[], st=open.filter(function(it){ return catOf(it)==="stay"; });
-  var ST=stayToday(); if(ST) W.push({h:stayHref(ST),st:1,bg:"linear-gradient(90deg,#1a0b3d 0%,#3a1a8a 60%,#6a3fd6 100%)",s:"오늘의 감성숙소 ["+stayNo(ST)+"] · "+esc(ST.area||""),t:esc(ST.name)+" <em>보러가기</em>",art:ST.img});
+  var ST=stayToday(); if(ST) W.push({h:stayHref(ST),st:1,bg:"linear-gradient(90deg,#1a0b3d 0%,#3a1a8a 60%,#6a3fd6 100%)",s:"오늘의 감성숙소 ["+stayNo(ST)+"] · "+esc(ST.area||""),t:esc(ST.name||(ST.tl||[]).join(" ")||ST.t||"")+" <em>보러가기</em>",art:ST.img});
   W.push({h:"#/trip",bg:"linear-gradient(90deg,#12063f 0%,#2a0f8a 55%,#5b3fd6 100%)",s:"아직도 몰랐어? 여행 무료 체험단",t:"이제 <em>공짜여행</em>이 시작된다!",art:"images/free-trip.svg"});
   /* 다꾸 수익화 배너는 2026-10-21 시온님 요청으로 뺌 */ //W.push({h:"#/edu",bg:"linear-gradient(90deg,#3a1670 0%,#8a3fd0 60%,#d46fd8 100%)",s:"한번 배우면 평생 써먹는 블로그 수익화",t:"다꾸체험단에서 <em>알려드려요!</em>",e:"🧑‍🏫"});
   if(closing.length) W.push({h:"#/list?cat=all&s=todayClose",bg:"linear-gradient(90deg,#2b1055 0%,#5a1f8f 60%,#a43f9f 100%)",s:'오늘 밤 12시까지 · ⏳ <span id="stripcd">'+clock(msToMidnight())+'</span>',t:"오늘 마감 체험단 <em>"+closing.length+"곳</em>",e:"⏰"});

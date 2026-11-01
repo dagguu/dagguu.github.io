@@ -243,10 +243,28 @@ TOP = ('<p class="disc">이 페이지는 쿠팡 파트너스·마이리얼트립
        '<header><span class="hl"><button class="bk" type="button" aria-label="뒤로 가기" onclick="if(history.length>1&&document.referrer)history.back();else location.href=\'/\'">‹</button>'
        '<a class="logo" href="/">다꾸<i>체험단</i></a></span><a class="app" href="/m/">감성숙소 추천 더 보기 ›</a></header>')
 
+
+# 2026-11-01 시온님 "숙소는 링크 클릭하기 전에는 숙소 이름 노출하지 않을래": 매거진 글·목록·릴스 카드·오늘의 감성숙소에 숙소 이름을 쓰지 않는다.
+# 이름은 "객실·가격 보기"(쿠팡트래블 등) 링크를 눌러야 보인다. 글 json 의 name 은 그대로 두고(링크·검색용) 화면에 나가는 글만 가린다.
+GENERIC = {"글램핑", "리조트", "풀빌라", "호텔", "료칸", "펜션", "스테이", "카라반", "캠핑장", "독채", "한옥", "by", "아늑", "스파", "온천", "&"}
+def name_tokens(P):
+    area = re.sub(r"[()]", " ", P.get("area", "")).split()
+    out = set()
+    for nm in (P.get("name"), P.get("listName")):
+        if not nm: continue
+        out.add(nm); out.add(nm.replace(" ", ""))
+        for t in re.split(r"[\s&]+", nm):
+            t = t.strip()
+            if len(t) >= 3 and t not in GENERIC and t not in area and not re.fullmatch(r"[가-힣]{2}(시|군|구|도)", t): out.add(t)
+    return sorted(out, key=len, reverse=True)
+def mask(P, txt):
+    for t in name_tokens(P): txt = txt.replace(t, "이 숙소")
+    txt = re.sub(r"#이 숙소\S*\s*", "", txt)
+    return txt.replace("이 숙소 이 숙소", "이 숙소")
 def build(P, allP):
     slug = P["slug"]; canon = f"{SITE}/m/{slug}.html"
     ph = P["photos"]; cov = ph[0]
-    title = P.get("title") or f'No.{P.get("no","")} {P["name"]} · {P["area"]} {P.get("type","숙소")} | 다꾸 감성숙소 추천'
+    title = P.get("title") or f'No.{P.get("no","")} {" ".join(P["h1"])} · {P["area"]} {P.get("type","숙소")} | 다꾸 감성숙소 추천'
     desc = P.get("desc") or P["lead"][:110]
     u = link_of(P)
     mm, dd = int(P["date"][5:7]), int(P["date"][8:10])
@@ -266,13 +284,13 @@ def build(P, allP):
     more = ""
     if others:
         more = '<section class="more2"><h2>다른 감성숙소 추천</h2><div class="ml">' + "".join(
-            f'<a href="/m/{e(Q["slug"])}.html"><img src="{e(Q["photos"][0]["src"])}" alt="" loading="lazy" referrerpolicy="no-referrer"><b>{e(Q["name"])}</b><small>{e(Q["area"])}</small></a>' for Q in others) + '</div></section>'
+            f'<a href="/m/{e(Q["slug"])}.html"><img src="{e(Q["photos"][0]["src"])}" alt="" loading="lazy" referrerpolicy="no-referrer"><b>{e(" ".join(Q["h1"]))}</b><small>{e(Q["area"])}</small></a>' for Q in others) + '</div></section>'
     ld = {"@context": "https://schema.org", "@type": "Article", "headline": " ".join(P["h1"]), "datePublished": P["date"], "image": [x["src"] for x in ph[:3]],
-          "about": {"@type": "LodgingBusiness", "name": P["name"], "address": next((b for a, b in P.get("info", []) if a == "주소"), P["area"])},
+          "about": {"@type": "LodgingBusiness", "address": next((b for a, b in P.get("info", []) if a == "주소"), P["area"])},
           "publisher": {"@type": "Organization", "name": "다꾸체험단", "url": SITE}}
     bar = f'<div class="bar"><a href="{e(u)}" target="_blank" rel="noopener noreferrer sponsored" id="go">객실·가격 보기</a></div>' if u else ""
     out = head(title, desc, canon, (SITE + "/images/og/m-" + slug + ".jpg" if os.path.exists("images/og/m-" + slug + ".jpg") else cov["src"])) + f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script></head><body><div class="w">{TOP}' + f'''
-<section class="cov"><img src="{e(cov["src"])}" alt="{e(P["name"])}" referrerpolicy="no-referrer">{rbadge(camp_end(P))}<div class="tx"><small>No.{e(P.get("no",""))} · {e(THEME.get(P.get("theme"), "감성숙소 추천"))} · {e(P["area"])}</small><h1>{e(P["h1"][0])}<br>{e(P["h1"][1])}</h1><p>{e(P["name"])}</p></div></section>
+<section class="cov"><img src="{e(cov["src"])}" alt="{e(P["name"])}" referrerpolicy="no-referrer">{rbadge(camp_end(P))}<div class="tx"><small>No.{e(P.get("no",""))} · {e(THEME.get(P.get("theme"), "감성숙소 추천"))} · {e(P["area"])}</small><h1>{e(P["h1"][0])}<br>{e(P["h1"][1])}</h1></div></section>
 <p class="lead">{e(P["lead"])}</p>
 {stay_camp(P)}
 {deal_box(P)}
@@ -288,11 +306,12 @@ def build(P, allP):
 {more}
 <footer>다꾸체험단 · 국내 감성숙소 추천 매거진<br><a href="/m/">감성숙소 추천 전체 보기</a> · <a href="/">www.dagguu.com</a></footer>
 </div>{bar}
-<script>document.addEventListener("click",function(ev){{if(!window.gtag)return;var nm={json.dumps(P["name"], ensure_ascii=False)};if(ev.target.closest("#go,#cpgo"))gtag("event","coupang_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#mrtgo,#mrtcp"))gtag("event","mrt_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#yanoljago"))gtag("event","yanolja_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#yeogigo,#yeogicp"))gtag("event","yeogi_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#kakaogo"))gtag("event","kakao_add",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#campgo"))gtag("event","camp_click",{{place:"stay_mag",item_name:nm}});}});</script>{DDJS}{MAPJS if P.get("geo") else ""}
+<script>document.addEventListener("click",function(ev){{if(!window.gtag)return;var nm={json.dumps(slug, ensure_ascii=False)};if(ev.target.closest("#go,#cpgo"))gtag("event","coupang_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#mrtgo,#mrtcp"))gtag("event","mrt_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#yanoljago"))gtag("event","yanolja_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#yeogigo,#yeogicp"))gtag("event","yeogi_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#kakaogo"))gtag("event","kakao_add",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#campgo"))gtag("event","camp_click",{{place:"stay_mag",item_name:nm}});}});</script>{DDJS}{MAPJS if P.get("geo") else ""}
 </body></html>
 '''
+    out = mask(P, out)
     open(os.path.join(ROOT, "m", slug + ".html"), "w", encoding="utf-8").write(out)
-    return {"no": P.get("no", 0), "slug": slug, "name": P["name"], "area": P["area"], "theme": P.get("theme", ""), "t": " ".join(P["h1"]), "tl": P["h1"], "d": P["lead"][:80], "date": P["date"], "img": cov["src"], "campEnd": camp_end(P)}
+    return {"no": P.get("no", 0), "slug": slug, "name": "", "q": P["name"], "area": P["area"], "theme": P.get("theme", ""), "t": " ".join(P["h1"]), "tl": P["h1"], "d": mask(P, P["lead"])[:80], "date": P["date"], "img": cov["src"], "campEnd": camp_end(P)}
 
 if __name__ == "__main__":
     os.makedirs(os.path.join(ROOT, "m"), exist_ok=True)
@@ -303,7 +322,7 @@ if __name__ == "__main__":
     reels = []
     for x in done:
         if not os.path.exists(os.path.join(ROOT, "v", x["slug"] + ".mp4")): continue
-        r = {"slug": x["slug"], "no": x["no"], "name": x["name"], "area": x["area"], "h": x["tl"], "campEnd": x.get("campEnd", ""),
+        r = {"slug": x["slug"], "no": x["no"], "name": "", "q": x.get("q", ""), "area": x["area"], "h": x["tl"], "campEnd": x.get("campEnd", ""),
              "v": "/v/" + x["slug"] + ".mp4", "img": "/v/" + x["slug"] + ".jpg"}
         m, c = MRT.get(x["slug"]) or {}, CPP.get(x["slug"]) or {}
         opts = []
@@ -334,7 +353,7 @@ if __name__ == "__main__":
         reels.append(r)
     reels.sort(key=lambda r: -int(r.get("no") or 0))
     json.dump(reels, open(os.path.join(ROOT, "m", "reels.json"), "w", encoding="utf-8"), ensure_ascii=False)
-    lis = "".join(f'<a class="lc" href="/m/{e(x["slug"])}.html" data-no="{e(x["no"])}" data-q="{e((x["name"]+" "+x["area"]+" "+x["t"]).lower())}"><i class="no">{e(x["no"])}</i><span class="lim"><img src="{e(x["img"])}" alt="" loading="lazy" referrerpolicy="no-referrer">{rbadge(x.get("campEnd",""), "rb sm")}</span><span><em>{e(THEME.get(x["theme"], "감성숙소 추천"))} · {e(x["area"])}</em><b>{e(x["t"])}</b><small>{e(x["name"])}</small><em class="mvc" data-mv="m:{e(x["slug"])}" hidden></em></span></a>' for x in done)
+    lis = "".join(f'<a class="lc" href="/m/{e(x["slug"])}.html" data-no="{e(x["no"])}" data-q="{e((x.get("q","")+" "+x["area"]+" "+x["t"]).lower())}"><i class="no">{e(x["no"])}</i><span class="lim"><img src="{e(x["img"])}" alt="" loading="lazy" referrerpolicy="no-referrer">{rbadge(x.get("campEnd",""), "rb sm")}</span><span><em>{e(THEME.get(x["theme"], "감성숙소 추천"))} · {e(x["area"])}</em><b>{e(x["t"])}</b><em class="mvc" data-mv="m:{e(x["slug"])}" hidden></em></span></a>' for x in done)
     idx = head("국내 감성숙소 추천 · 매일 한 곳씩 | 다꾸체험단", "요즘 인기 있는 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 사진과 함께 소개해요.", SITE + "/m/", done[0]["img"] if done else SITE + "/images/og.png") + \
         f'</head><body><div class="w">{TOP.replace("감성숙소 추천 더 보기 ›", "다꾸 매거진 ›").replace("/m/", "/#/mag?t=s", 1)}<h1 class="ix">국내 감성숙소 추천</h1><p class="lead" style="margin-top:6px">요즘 인기 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 소개해요. 번호나 숙소 이름·지역으로 찾아보세요.</p>{SEARCH}<div class="lst" id="lst">{lis or "<p>곧 첫 글이 올라와요</p>"}</div><p class="nores" id="nores" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p><footer><a href="/">다꾸체험단 홈</a></footer></div>{SEARCH_JS}{DDJS}</body></html>'
     open(os.path.join(ROOT, "m", "index.html"), "w", encoding="utf-8").write(idx)
