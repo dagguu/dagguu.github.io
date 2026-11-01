@@ -1,6 +1,14 @@
 {
- "at": "2026-11-01T13:01:51.807817",
+ "at": "2026-11-01T13:03:53.615449",
  "name": "cheorwon-thegallery",
- "jobs": [],
- "credits_total": 0
+ "jobs": [
+  {
+   "img": "ai:3",
+   "taskId": "680ca68d9b6a34c3c0bd910b15fc5d76",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-01/cheorwon-thegallery/clip_ai3.mp4"
+  }
+ ],
+ "credits_total": 35.0
 }
