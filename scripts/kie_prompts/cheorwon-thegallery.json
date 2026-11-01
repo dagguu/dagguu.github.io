@@ -1,0 +1,38 @@
+[
+ {
+  "n": 1,
+  "time": "night",
+  "look": "warm",
+  "img": "Keep the place exactly as it is (same four red-brick gabled cabins with large glass windows, same warm lights, same pool, same loungers and plants, same forest behind); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (dark forest hill and deep blue evening sky) and below (more pool deck). Never mirror or flip the image.",
+  "prompt": "Very slow push forward toward the four lit red-brick cabins at dusk, warm window lights glowing, soft reflections rippling on the water, tree leaves moving slightly. Do not add steam or fog."
+ },
+ {
+  "n": 2,
+  "time": "day",
+  "look": "day",
+  "img": "Keep the room exactly as it is (same tall gabled glass window, same white walls and high ceiling, same long white table and chairs, same stairs to the loft, same flowers); do not add new furniture, signs, text or logos; keep the TV screen dark and plain. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (more high white ceiling) and below (more light wooden floor). Never mirror or flip the image. Bright soft daylight from the window.",
+  "prompt": "Slow walk-through glide forward toward the tall gabled glass window, daylight streaming in, green trees outside swaying gently."
+ },
+ {
+  "n": 3,
+  "time": "day",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same red-brick cabin roofs with dark metal roofing, same pine trees, same mountains and town in the distance); do not add new buildings, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (deep blue sky with a few white clouds) and below (more brick walls). Never mirror or flip the image. Bright clear daylight, a few orange autumn leaves on the trees.",
+  "prompt": "Slow rise above the red-brick roofs revealing the mountain range behind, pine branches swaying in a light breeze."
+ },
+ {
+  "n": 4,
+  "time": "day",
+  "look": "day",
+  "people": true,
+  "img": "Edit this photo into a vertical 9:16 frame: add one young Korean woman in her late 20s with long straight black hair, wearing a cream knit cardigan and a long white ankle-length skirt, walking slowly away from the camera down the narrow red-brick alley toward the green trees, seen from behind, never facing the camera. Keep the brick walls, floor, plants and trees exactly the same; do not add, remove or move any object, no signs, text or logos. Extend naturally above (more brick walls and sky) and below (more brick floor). Never mirror or flip the image. Photorealistic, bright natural daylight.",
+  "prompt": "Slow push forward following the woman walking away down the narrow red-brick alley toward the green trees, her hair and skirt moving slightly."
+ },
+ {
+  "n": 5,
+  "time": "night",
+  "look": "warm",
+  "img": "Keep the place exactly as it is (same narrow alley between warm-lit brick walls, same lights along the floor, same water fountain and pool glow at the end, same dark forest); do not add new objects, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (dark night sky over the forest) and below (more lit floor). Never mirror or flip the image.",
+  "prompt": "Slow push forward through the warm-lit brick alley toward the glowing water at the end, the fountain spraying softly. Do not add steam or fog."
+ }
+]
