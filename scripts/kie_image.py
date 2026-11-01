@@ -67,8 +67,9 @@ TONE_T = {  # 하루 흐름 장면용 (기본 day = TONE)
     "warm": " Color and light (autumn tone): cozy warm interior light - soft warm lamps and indirect lighting, honey-toned wood, gentle evening window light, calm and inviting, clean and clear, not dim or murky, keep the real place unchanged.",
     "pastel": " Color and light (autumn tone): soft bright airy daylight - creamy whites, gentle pastel colors (pale blue, pink, beige), diffused sunlight through sheer curtains, light and dreamy like a boutique hotel photo, not harsh, not dark, keep the real place unchanged."}
 SIZE = " Make the image in a vertical 9:16 size (portrait, 9:16 aspect ratio, full-bleed, no borders or letterboxing)."  # 2026-10-29 시온님: 프롬프트에 "9:16 사이즈로" 꼭
-def body(prompt, src, tm="day"):
-    if "woman" in prompt.lower(): prompt = prompt + OUTFIT  # 사람 없는 프롬프트(바다 채우기 등)엔 안 붙임
+OUTF = {int(x["n"]): x["outfit"] for x in PL if x.get("outfit")}  # 2026-11-01 시온님: 장면별 옷("outfit")이 있으면 흰 긴 치마 대신 그 옷(예: 니지모리 기모노)
+def body(prompt, src, tm="day", n=0):
+    if "woman" in prompt.lower(): prompt = prompt + ((" Outfit: " + OUTF[n]) if n in OUTF else OUTFIT)  # 사람 없는 프롬프트(바다 채우기 등)엔 안 붙임
     if "autumn tone" not in prompt: prompt = prompt + TONE_T.get(tm, TONE)
     if "9:16" not in prompt: prompt = prompt + SIZE
     if "nano-banana-edit" in a.model:
@@ -85,7 +86,7 @@ if a.tasks:
 for n in nums:
     # 장면마다 kie_prompts 의 "src"(여기어때·마이리얼트립 숙소 페이지에서 고른 감성 사진 주소, 2026-10-30 시온님)가 있으면 그 사진, 없으면 감성숙소 json photos[n-1]
     if n not in imgp or n < 1 or (n > len(photos) and n not in srcs): continue
-    r = call(API + "/createTask", body(imgp[n], srcs.get(n) or photos[n - 1]["src"], times.get(n, "day")))
+    r = call(API + "/createTask", body(imgp[n], srcs.get(n) or photos[n - 1]["src"], times.get(n, "day"), n))
     tid = (r.get("data") or {}).get("taskId") if isinstance(r.get("data"), dict) else None
     j = {"n": n, "taskId": tid, "state": "submitted" if tid else "error"}
     if not tid: j["msg"] = str(r.get("msg") or r)[:300]
