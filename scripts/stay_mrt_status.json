@@ -1,5 +1,5 @@
 {
- "at": "2026-10-31 23:27",
+ "at": "2026-11-01 15:12",
  "checkIn": "2026-11-07",
  "stays": {
   "busan-matie-harbor": {
@@ -19,10 +19,44 @@
       "page",
       "size"
      ],
-     "total": 1945
+     "total": 1947
     }
    ],
    "hit": "마티에 부산하버시티",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
+  },
+  "dongducheon-nijimori-ryokan": {
+   "name": "니지모리스튜디오 료칸",
+   "city": "동두천",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "동두천",
+     "region": "동두천",
+     "type": "CITY",
+     "pages": 1,
+     "n": 50,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 52
+    }
+   ],
+   "hit": "니지모리 스튜디오 료칸",
    "hitKeys": [
     "deepLink",
     "imageUrl",
@@ -87,7 +121,7 @@
       "page",
       "size"
      ],
-     "total": 1915
+     "total": 1916
     }
    ],
    "hit": "가평 글램하바나",
@@ -121,7 +155,7 @@
       "page",
       "size"
      ],
-     "total": 1915
+     "total": 1916
     }
    ],
    "hit": "가평 하녹타케 펜션",
@@ -149,13 +183,13 @@
      "region": "고성",
      "type": "CITY",
      "pages": 10,
-     "n": 422,
+     "n": 423,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 430
+     "total": 431
     },
     {
      "kw": "고성",
@@ -188,13 +222,13 @@
      "region": "평창",
      "type": "CITY",
      "pages": 11,
-     "n": 454,
+     "n": 455,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 466
+     "total": 467
     }
    ]
   },
@@ -215,7 +249,7 @@
       "page",
       "size"
      ],
-     "total": 1872
+     "total": 1874
     }
    ],
    "hit": "경주 에스앤비풀빌라",
@@ -351,7 +385,7 @@
       "page",
       "size"
      ],
-     "total": 2376
+     "total": 2377
     }
    ],
    "hit": "대부도(선재도) 선재담글램핑&카라반리조트",
