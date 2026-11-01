@@ -182,6 +182,8 @@ def deal_box(P):
         rows.append(f'<div class="dr"><span class="dl"><small>마이리얼트립 · {cond}</small>{pr}</span><a href="{e(m["u"])}" target="_blank" rel="noopener noreferrer sponsored" id="mrtgo">보러가기</a></div>')
         if BP.get(P["slug"]):
             rows.append(f'<p class="bpn"><b>마이리얼트립 최저가 보장제 적용</b> · 보장 조건은 <a href="{BP_URL}" target="_blank" rel="noopener noreferrer">마이리얼트립 안내</a> 기준이에요 ({int(BP[P["slug"]]["at"][5:7])}/{int(BP[P["slug"]]["at"][8:10])} 숙소 페이지 확인)</p>')
+    elif m and m.get("u"):   # 2026-11-01 시온님 "마이리얼트립 링크도 넣어줘": 조회 날짜에 빈 객실이 없어 가격이 안 잡혀도 링크는 보여 줌
+        rows.append(f'<div class="dr"><span class="dl"><small>마이리얼트립</small><span>날짜를 바꿔 빈 객실을 확인해 보세요</span></span><a href="{e(m["u"])}" target="_blank" rel="noopener noreferrer sponsored" id="mrtgo">보러가기</a></div>')
     mc = d.get("mrtCoupon") or {}
     if mc.get("u") and (mc.get("until") or "9999") >= TODAY:   # 마이리얼트립 숙박세일 페스타 쿠폰(시온님이 준 링크, 모든 숙소 공용)
         ud = datetime.date.fromisoformat(mc["until"]) if mc.get("until") else None
@@ -315,6 +317,8 @@ if __name__ == "__main__":
                 dd = datetime.date.fromisoformat(o[3]); cd = f"{dd.month}/{dd.day}({WD[dd.weekday()]}) 1박 조회 기준"
             offs.append({"src": o[2], "price": o[0], "rate": o[1] if o[1] >= 3 else 0, "cond": cd, "u": o[4]})
             if o[2] == "마이리얼트립" and BP.get(x["slug"]): offs[-1]["bp"] = 1
+        if not any(o["src"] == "마이리얼트립" for o in offs) and m.get("u"):
+            offs.append({"src": "마이리얼트립", "price": 0, "rate": 0, "cond": "마이리얼트립에서 이 숙소 보기", "u": m["u"]})
         if not any(o["src"] == "쿠팡트래블" for o in offs) and PP and link_of(PP):
             offs.append({"src": "쿠팡트래블", "price": 0, "rate": 0, "cond": "쿠팡트래블에서 이 숙소 보기", "u": link_of(PP)})
         yg = ((d.get("links") or {}).get("stay-" + x["slug"]) or {}).get("yeogi") or list_lk(PP or x).get("yeogi")
