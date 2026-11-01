@@ -1,42 +1,6 @@
 {
- "at": "2026-11-01T12:57:50.028309",
+ "at": "2026-11-01T13:01:51.807817",
  "name": "cheorwon-thegallery",
- "jobs": [
-  {
-   "img": "ai:1",
-   "taskId": "e2b72a3665e870086f45d97bf4d34e03",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-01/cheorwon-thegallery/clip_ai1.mp4"
-  },
-  {
-   "img": "ai:2",
-   "taskId": "f7d270a28e28652871858dfe324ead2d",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-01/cheorwon-thegallery/clip_ai2.mp4"
-  },
-  {
-   "img": "ai:3",
-   "taskId": "a328e4ef2bf97c26883d2671da11da0d",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-01/cheorwon-thegallery/clip_ai3.mp4"
-  },
-  {
-   "img": "ai:4",
-   "taskId": "76bf8e23bb94b649773433180fcf5d09",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-01/cheorwon-thegallery/clip_ai4.mp4"
-  },
-  {
-   "img": "ai:5",
-   "taskId": "5523fd4820361a3c3c96abc32deaa4b1",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-01/cheorwon-thegallery/clip_ai5.mp4"
-  }
- ],
- "credits_total": 175.0
+ "jobs": [],
+ "credits_total": 0
 }
