@@ -1,103 +1,15 @@
 {
- "at": "2026-11-01 15:12",
+ "at": "2026-11-01 15:16",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 1,
-   "taskId": "5b6dd87b422e4588cf6ed66dba4bc0a1",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-01/dongducheon-nijimori-ryokan/1_edit.jpg"
-  },
-  {
-   "n": 2,
-   "taskId": "a6b002b8f30b1792bf583fc1a916ffd6",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-01/dongducheon-nijimori-ryokan/2_edit.jpg"
-  },
-  {
    "n": 3,
-   "taskId": "cf23990056743348ee98213907751ff1",
+   "taskId": "78ab97445353f500fcebd5f118a7d3b7",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
    "file": "img/2026-11-01/dongducheon-nijimori-ryokan/3_edit.jpg"
-  },
-  {
-   "n": 4,
-   "taskId": "f61cb197cad2e5bddbbfc0b9641f55b4",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-01/dongducheon-nijimori-ryokan/4_edit.jpg"
-  },
-  {
-   "n": 5,
-   "taskId": "acfa7a2585aecd7e5cfa5d5984545191",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-01/dongducheon-nijimori-ryokan/5_edit.jpg"
-  },
-  {
-   "n": 6,
-   "taskId": "c7725d5d4c1bf6188e089c92ffffc875",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-01/dongducheon-nijimori-ryokan/6_edit.jpg"
-  },
-  {
-   "n": 7,
-   "taskId": "cb164c3a70be7cadfaad03fcf250832f",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-01/dongducheon-nijimori-ryokan/7_edit.jpg"
-  },
-  {
-   "n": 8,
-   "taskId": "c85d6f54c52707ed61f43bf9e632b885",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-01/dongducheon-nijimori-ryokan/8_edit.jpg"
-  },
-  {
-   "n": 9,
-   "taskId": "04539367e7a2f19b1c5717010b027e30",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-01/dongducheon-nijimori-ryokan/9_edit.jpg"
-  },
-  {
-   "n": 10,
-   "taskId": "9ff26948829519f8578ec27a032d5d2f",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-01/dongducheon-nijimori-ryokan/10_edit.jpg"
-  },
-  {
-   "n": 11,
-   "taskId": "c667a0f6d64324e729ae0a65d86f7708",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-01/dongducheon-nijimori-ryokan/11_edit.jpg"
-  },
-  {
-   "n": 12,
-   "taskId": "a747976a6be99310701a8e13ce4edf6d",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-01/dongducheon-nijimori-ryokan/12_edit.jpg"
   }
  ],
  "slug": "dongducheon-nijimori-ryokan"
