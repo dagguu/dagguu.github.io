@@ -1,16 +1,48 @@
 {
- "at": "2026-11-01 15:16",
+ "at": "2026-11-01 21:50",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 3,
-   "taskId": "78ab97445353f500fcebd5f118a7d3b7",
+   "n": 1,
+   "taskId": "559a53c3775a55f84c6817a777dd0a72",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-01/dongducheon-nijimori-ryokan/3_edit.jpg"
+   "file": "img/2026-11-01/cheorwon-thegallery/1_edit.jpg"
+  },
+  {
+   "n": 2,
+   "taskId": "dcdda19a809c354a7e2134ac7dd95440",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-01/cheorwon-thegallery/2_edit.jpg"
+  },
+  {
+   "n": 3,
+   "taskId": "a24833bb105cec67bd287a49457f2646",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-01/cheorwon-thegallery/3_edit.jpg"
+  },
+  {
+   "n": 4,
+   "taskId": "e937839579732e8eb324a4a3b1481186",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-01/cheorwon-thegallery/4_edit.jpg"
+  },
+  {
+   "n": 5,
+   "taskId": "b07b8307260df9a017128281c7c94dc0",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-01/cheorwon-thegallery/5_edit.jpg"
   }
  ],
- "slug": "dongducheon-nijimori-ryokan"
+ "slug": "cheorwon-thegallery"
 }
