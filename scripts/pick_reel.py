@@ -103,6 +103,8 @@ if "--plan" in sys.argv:   # 앞으로 만들 영상 목록(2026-10-30 시온님
         plan.append({"date": day, "name": x["name"], "area": x.get("area", ""), "slug": x.get("slug", ""), "words": words,
                      "score": score(x), "why": (([new_rank(x)[1] + " · " + (("오픈 " + x["open"]) if x.get("open") else "숙소가 신규 오픈 표시")] if is_new(x) else [new_rank(x)[1].replace("신상", "신상 가능성") + " · 오픈 달 확인 필요"] if x.get("newHint") else [])) + signals(x.get("name"), x.get("slug"))[1], "status": "예정"})
         hist.append({"area": x.get("area", ""), "words": words, "name": x["name"]})
+    got = {p_["date"] for p_ in plan}   # 14일 뒤로 미리 정해 둔 날짜도 지우지 않는다(2026-11-02 11/17~ 목록이 잘린 일)
+    plan += [keep[k] for k in sorted(keep) if k not in got]
     out = {"at": TODAY, "rule": "python3 scripts/pick_reel.py --plan 14 는 이미 정해 둔 날짜는 그대로 두고 빈 날만 채운다. 17:07 릴스 작업은 오늘 날짜 줄의 숙소로 만든다. 쿠팡트래블에 없거나 사진이 부족하면 status 에 이유를 적고 pick_reel.py 다음 후보로. 시온님이 순서·숙소를 바꾸면 이 파일을 고친다.", "plan": plan}
     json.dump(out, open(os.path.join(ROOT, "scripts", "reel_plan.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     for p_ in plan: print(p_["date"], p_["name"], p_["area"], "·", ", ".join(p_["why"] + p_["words"]))
