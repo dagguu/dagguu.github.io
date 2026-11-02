@@ -28,7 +28,7 @@ def who_tail(k):
         return TAIL
     return base + "".join(WHO_T[w] for w in ws)
 # 2026-10-30 시온님 "사진을 좌우로 미는 게 아니라 스마트폰 짐벌로 직접 걸어가며 찍은 것처럼 공간감 있게": 모든 장면 프롬프트에 붙임
-GIMBAL = " Make it look like real filmed video, not a still photo: a slow, gentle camera drift (a subtle push-in or a slow sideways glide through the space with real parallax depth, small and smooth), plus natural living motion inside the scene - steam rising from warm water, soft water ripples, leaves swaying or drifting down, warm lights glowing, curtains moving slightly. {TONE} This is NOT a 2D pan, slide or zoom across a flat photo. IMPORTANT: no drones, gimbals, cameras, phones, tripods or any filming equipment appear anywhere in the frame - show only the place itself."  # 2026-10-30 21:52 시온님: 영상처럼 보이게(작은 카메라 움직임 + 김·물결·나뭇잎 같은 살아 있는 움직임) + 밝은 가을 톤
+GIMBAL = " Make it look like real filmed video, not a still photo: a slow, gentle camera drift (a very slow steady push-in into the space with real parallax depth, small and smooth, no sudden zoom), plus natural living motion inside the scene - steam rising from warm water, soft water ripples, leaves swaying or drifting down, warm lights glowing, curtains moving slightly. {TONE} This is NOT a 2D pan, slide or zoom across a flat photo. IMPORTANT: no drones, gimbals, cameras, phones, tripods or any filming equipment appear anywhere in the frame - show only the place itself."  # 2026-10-30 21:52 시온님: 영상처럼 보이게(작은 카메라 움직임 + 김·물결·나뭇잎 같은 살아 있는 움직임) + 밝은 가을 톤
 LOOK = {"day": " Clear sunny midday look: vivid deep-blue sky with a few white clouds wherever sky shows, bright direct sunlight, crisp saturated greens with some orange autumn leaves, clean bright whites indoors; not dark, hazy, golden-hour or gloomy.",
         "sunset": " Late-afternoon sunset look: warm orange-pink sky over the hills, low golden light, window lights starting to glow, steam over warm water; bright and clear, not murky.",
         "night": " Early-night blue-hour look: deep navy sky, warm yellow window and lantern lights, soft reflections on water, gentle steam; clean and clear, details visible, not pitch-black.",
@@ -36,9 +36,11 @@ LOOK = {"day": " Clear sunny midday look: vivid deep-blue sky with a few white c
         "warm": " Cozy warm interior look: soft warm lamps and indirect light, honey-toned wood, calm and inviting, clear not murky.",
         "pastel": " Soft bright airy look: creamy whites, gentle pastel colors, diffused sunlight through sheer curtains, light and dreamy, not harsh or dark."}  # 2026-10-31 시온님: 숙소 콘셉트별 색감  # 2026-10-31 시온님: 하루 흐름(낮 → 노을 → 밤)
 # 2026-11-02 시온님 "힉스필드처럼 크래시줌·돌리·오빗·휩팬": kie_prompts 항목 "move": "dolly"|"orbit"|"crash" 면 느린 드리프트 대신 그 카메라 움직임(장비 이름은 쓰지 않음)
-MOVE = {"dolly": "a smooth continuous dolly-in: the camera travels steadily forward deep into the space at walking speed, strong parallax as near objects pass by",
-        "orbit": "a smooth half orbit: the camera circles around the main subject in an arc from left to right, keeping it centered, background sliding behind it with strong parallax",
-        "crash": "a fast crash zoom: in the first second the camera rushes quickly toward the main subject, then settles and holds steady; the building and objects keep their exact shape and do not warp"}
+# 2026-11-02 시온님 "갑자기 확 커지는 확대샷 하지 말고 아주 천천히 안쪽으로 들어가는 느낌으로": crash 는 쓰지 않고(옛 json 은 slowin 으로 처리), 기본 움직임도 아주 느린 전진
+SLOWIN = "a very slow, steady, continuous push-in: the camera creeps gently forward into the space at a constant speed for the whole clip, the frame grows only slightly, no sudden zoom, no speed change, real parallax depth"
+MOVE = {"slowin": SLOWIN, "crash": SLOWIN,
+        "dolly": "a very slow, steady dolly-in: the camera glides gently forward deep into the space at a constant speed, with soft parallax as near objects pass by, no sudden zoom or speed change",
+        "orbit": "a smooth slow half orbit: the camera circles gently around the main subject in an arc from left to right, keeping it centered, background sliding behind it with soft parallax"}
 def gimbal(tm, mv=None):
     g = GIMBAL.replace(" {TONE}", LOOK.get(tm or globals().get("LOOK0") or "day", LOOK["day"]))
     if mv in MOVE: g = re.sub(r"a slow, gentle camera drift \([^)]*\)", MOVE[mv], g)
