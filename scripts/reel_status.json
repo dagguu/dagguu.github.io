@@ -1,5 +1,5 @@
 {
- "at": "2026-11-02T08:51:57.522384",
+ "at": "2026-11-02T08:56:36.875643",
  "name": "gurye-dohwa-onsen",
  "font": "Jalnan",
  "fontInfo": {
@@ -10,9 +10,9 @@
   "family": "Jalnan",
   "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
  },
- "gapCut": 5.61,
- "dur": 26.19,
- "cuts": 28,
+ "gapCut": 4.13,
+ "dur": 22.35,
+ "cuts": 25,
  "plan": [
   {
    "video": true,
@@ -20,7 +20,7 @@
    "t": "수영장 물이 온천물이라구요?",
    "img": "ai:1",
    "start": 0.0,
-   "end": 2.38,
+   "end": 2.42,
    "cuts": 2
   },
   {
@@ -28,8 +28,8 @@
    "tr": false,
    "t": "지리산 아래 독채 풀빌라인데요,",
    "img": "ai:2",
-   "start": 2.38,
-   "end": 4.08,
+   "start": 2.42,
+   "end": 4.1,
    "cuts": 2
   },
   {
@@ -37,7 +37,7 @@
    "tr": false,
    "t": "땅속 온천물을 바로 끌어다 쓰거든요.",
    "img": "ai:3",
-   "start": 4.08,
+   "start": 4.1,
    "end": 6.06,
    "cuts": 2
   },
@@ -47,7 +47,7 @@
    "t": "집 한 채를 통째로 쓰는 곳이라",
    "img": "ai:4",
    "start": 6.06,
-   "end": 7.74,
+   "end": 7.63,
    "cuts": 1
   },
   {
@@ -55,26 +55,17 @@
    "tr": false,
    "t": "거실도 침실도 우리끼리만 써요.",
    "img": "ai:5",
-   "start": 7.74,
-   "end": 9.62,
+   "start": 7.63,
+   "end": 9.39,
    "cuts": 2
-  },
-  {
-   "video": true,
-   "tr": false,
-   "t": "특히 이 수영장은요,",
-   "img": "ai:6",
-   "start": 9.62,
-   "end": 10.8,
-   "cuts": 1
   },
   {
    "video": true,
    "tr": false,
    "t": "매일 새 온천물로 갈아 줘요.",
    "img": "ai:6",
-   "start": 10.8,
-   "end": 12.36,
+   "start": 9.39,
+   "end": 10.99,
    "cuts": 2
   },
   {
@@ -82,8 +73,8 @@
    "tr": false,
    "t": "노천탕도 따로 있어서",
    "img": "ai:7",
-   "start": 12.36,
-   "end": 13.72,
+   "start": 10.99,
+   "end": 12.21,
    "cuts": 1
   },
   {
@@ -91,8 +82,8 @@
    "tr": false,
    "t": "밖은 추워도 몸은 따뜻해요.",
    "img": "ai:8",
-   "start": 13.72,
-   "end": 15.34,
+   "start": 12.21,
+   "end": 14.03,
    "cuts": 2
   },
   {
@@ -100,8 +91,8 @@
    "tr": false,
    "t": "해 질 녘 수영장은 이런 분위기고요,",
    "img": "ai:9",
-   "start": 15.34,
-   "end": 16.92,
+   "start": 14.03,
+   "end": 15.89,
    "cuts": 2
   },
   {
@@ -109,17 +100,8 @@
    "tr": true,
    "t": "밤이 되면 골목에 등불이 켜져요.",
    "img": "ai:10",
-   "start": 16.92,
-   "end": 19.04,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "tr": false,
-   "t": "걷기만 해도 사진이 되는 곳이에요.",
-   "img": "ai:10",
-   "start": 19.04,
-   "end": 20.82,
+   "start": 15.89,
+   "end": 17.97,
    "cuts": 2
   },
   {
@@ -127,18 +109,18 @@
    "tr": false,
    "t": "여기 일본 골목 같지 않나요?",
    "img": "ai:11",
-   "start": 20.82,
-   "end": 22.3,
-   "cuts": 1
+   "start": 17.97,
+   "end": 19.57,
+   "cuts": 2
   },
   {
    "video": true,
    "tr": false,
-   "t": "멀리 안 가도 지리산 밑에서 푹 쉬기 좋은 곳이에요.",
+   "t": "멀리 안 가도 푹 쉬기 좋은 곳이에요.",
    "img": "ai:12",
-   "start": 22.3,
-   "end": 26.19,
-   "cuts": 4
+   "start": 19.57,
+   "end": 22.35,
+   "cuts": 3
   }
  ],
  "file": "reels/gurye-dohwa-onsen/reel.mp4"
