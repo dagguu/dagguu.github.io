@@ -1,5 +1,5 @@
 {
- "at": "2026-11-01 19:47",
+ "at": "2026-11-02 23:14",
  "checkIn": "2026-11-07",
  "stays": {
   "busan-matie-harbor": {
@@ -19,10 +19,44 @@
       "page",
       "size"
      ],
-     "total": 1947
+     "total": 1946
     }
    ],
    "hit": "마티에 부산하버시티",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
+  },
+  "cheorwon-thegallery": {
+   "name": "더갤러리펜션",
+   "city": "철원",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "철원",
+     "region": "철원",
+     "type": "CITY",
+     "pages": 1,
+     "n": 47,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 100
+    }
+   ],
+   "hit": "철원 더 갤러리펜션",
    "hitKeys": [
     "deepLink",
     "imageUrl",
@@ -121,7 +155,7 @@
       "page",
       "size"
      ],
-     "total": 1916
+     "total": 1918
     }
    ],
    "hit": "가평 글램하바나",
@@ -155,7 +189,7 @@
       "page",
       "size"
      ],
-     "total": 1916
+     "total": 1918
     }
    ],
    "hit": "가평 하녹타케 펜션",
@@ -222,14 +256,48 @@
      "region": "평창",
      "type": "CITY",
      "pages": 11,
-     "n": 455,
+     "n": 454,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 467
+     "total": 466
     }
+   ]
+  },
+  "gurye-dohwa-onsen": {
+   "name": "도화온천풀빌라",
+   "city": "구례",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "구례",
+     "region": "구례",
+     "type": "CITY",
+     "pages": 2,
+     "n": 94,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 173
+    }
+   ],
+   "hit": "구례 도화풀빌라",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
    ]
   },
   "gyeongju-snb-poolvilla": {
@@ -249,7 +317,7 @@
       "page",
       "size"
      ],
-     "total": 1874
+     "total": 1873
     }
    ],
    "hit": "경주 에스앤비풀빌라",
@@ -310,14 +378,14 @@
      "kw": "포항",
      "region": "포항",
      "type": "CITY",
-     "pages": 2,
-     "n": 96,
+     "pages": 3,
+     "n": 145,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 914
+     "total": 915
     }
    ],
    "hit": "포항 데이토나풀빌라",
@@ -385,7 +453,7 @@
       "page",
       "size"
      ],
-     "total": 2377
+     "total": 2378
     }
    ],
    "hit": "대부도(선재도) 선재담글램핑&카라반리조트",
