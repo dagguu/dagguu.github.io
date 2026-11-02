@@ -1,6 +1,6 @@
 {
- "at": "2026-11-01T06:23:21.994036",
- "name": "dongducheon-nijimori-ryokan",
+ "at": "2026-11-02T08:51:57.522384",
+ "name": "gurye-dohwa-onsen",
  "font": "Jalnan",
  "fontInfo": {
   "error": [],
@@ -10,122 +10,136 @@
   "family": "Jalnan",
   "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
  },
- "gapCut": 2.95,
- "dur": 21.97,
- "cuts": 23,
+ "gapCut": 5.61,
+ "dur": 26.19,
+ "cuts": 28,
  "plan": [
   {
    "video": true,
-   "t": "일본 안 가도",
+   "tr": false,
+   "t": "수영장 물이 온천물이라구요?",
    "img": "ai:1",
    "start": 0.0,
-   "end": 1.5,
+   "end": 2.38,
    "cuts": 2
   },
   {
    "video": true,
-   "t": "되는 동두천 료칸 마을이에요.",
-   "img": "ai:1",
-   "start": 1.5,
-   "end": 3.16,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "지금은 가을 축제 기간이라",
+   "tr": false,
+   "t": "지리산 아래 독채 풀빌라인데요,",
    "img": "ai:2",
-   "start": 3.16,
-   "end": 4.62,
-   "cuts": 1
+   "start": 2.38,
+   "end": 4.08,
+   "cuts": 2
   },
   {
    "video": true,
-   "t": "밤엔 등불이 켜지고 불꽃놀이도 해요.",
+   "tr": false,
+   "t": "땅속 온천물을 바로 끌어다 쓰거든요.",
    "img": "ai:3",
-   "start": 4.62,
-   "end": 6.64,
+   "start": 4.08,
+   "end": 6.06,
    "cuts": 2
   },
   {
    "video": true,
-   "t": "방은 모두 다다미방이고,",
+   "tr": true,
+   "t": "집 한 채를 통째로 쓰는 곳이라",
    "img": "ai:4",
-   "start": 6.64,
-   "end": 8.01,
+   "start": 6.06,
+   "end": 7.74,
    "cuts": 1
   },
   {
    "video": true,
-   "t": "100년 넘은 옛 소품들로",
+   "tr": false,
+   "t": "거실도 침실도 우리끼리만 써요.",
    "img": "ai:5",
-   "start": 8.01,
-   "end": 9.41,
-   "cuts": 1
+   "start": 7.74,
+   "end": 9.62,
+   "cuts": 2
   },
   {
    "video": true,
-   "t": "꾸며져 있어요.",
+   "tr": false,
+   "t": "특히 이 수영장은요,",
    "img": "ai:6",
-   "start": 9.41,
-   "end": 10.17,
+   "start": 9.62,
+   "end": 10.8,
    "cuts": 1
   },
   {
    "video": true,
-   "t": "방마다 편백나무 히노끼탕이 있어서",
+   "tr": false,
+   "t": "매일 새 온천물로 갈아 줘요.",
+   "img": "ai:6",
+   "start": 10.8,
+   "end": 12.36,
+   "cuts": 2
+  },
+  {
+   "video": true,
+   "tr": false,
+   "t": "노천탕도 따로 있어서",
    "img": "ai:7",
-   "start": 10.17,
-   "end": 12.19,
-   "cuts": 2
+   "start": 12.36,
+   "end": 13.72,
+   "cuts": 1
   },
   {
    "video": true,
-   "t": "따뜻한 물에 푹 쉬고,",
+   "tr": false,
+   "t": "밖은 추워도 몸은 따뜻해요.",
    "img": "ai:8",
-   "start": 12.19,
-   "end": 13.47,
-   "cuts": 1
+   "start": 13.72,
+   "end": 15.34,
+   "cuts": 2
   },
   {
    "video": true,
-   "t": "다도 세트랑 유카타도 있어요.",
+   "tr": false,
+   "t": "해 질 녘 수영장은 이런 분위기고요,",
    "img": "ai:9",
-   "start": 13.47,
-   "end": 15.13,
+   "start": 15.34,
+   "end": 16.92,
    "cuts": 2
   },
   {
    "video": true,
-   "t": "아침엔 일본 가정식이 나오고,",
+   "tr": true,
+   "t": "밤이 되면 골목에 등불이 켜져요.",
    "img": "ai:10",
-   "start": 15.13,
-   "end": 16.75,
+   "start": 16.92,
+   "end": 19.04,
    "cuts": 2
   },
   {
    "video": true,
-   "t": "묵는 동안 마을도 자유롭게 다녀요.",
+   "tr": false,
+   "t": "걷기만 해도 사진이 되는 곳이에요.",
+   "img": "ai:10",
+   "start": 19.04,
+   "end": 20.82,
+   "cuts": 2
+  },
+  {
+   "video": true,
+   "tr": false,
+   "t": "여기 일본 골목 같지 않나요?",
    "img": "ai:11",
-   "start": 16.75,
-   "end": 18.53,
-   "cuts": 2
-  },
-  {
-   "video": true,
-   "t": "멀리 안 가도",
-   "img": "ai:12",
-   "start": 18.53,
-   "end": 19.27,
+   "start": 20.82,
+   "end": 22.3,
    "cuts": 1
   },
   {
    "video": true,
-   "t": "일본 온 기분 내기 딱 좋은 곳이에요.",
+   "tr": false,
+   "t": "멀리 안 가도 지리산 밑에서 푹 쉬기 좋은 곳이에요.",
    "img": "ai:12",
-   "start": 19.27,
-   "end": 21.97,
-   "cuts": 3
+   "start": 22.3,
+   "end": 26.19,
+   "cuts": 4
   }
  ],
- "file": "reels/dongducheon-nijimori-ryokan/reel.mp4"
+ "file": "reels/gurye-dohwa-onsen/reel.mp4"
 }
