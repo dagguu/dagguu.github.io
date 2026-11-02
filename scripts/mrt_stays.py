@@ -69,7 +69,7 @@ def main():
                         items = data.get("items") or []
                         if page == 0: tr["keys"] = [k for k in data.keys() if k != "items"]; tr["total"] = data.get("totalCount") or data.get("total")
                         tr["pages"] = page + 1; tr["n"] += len(items)
-                        hit = next((it for it in items if same(it.get("itemName"), name)), None)
+                        hit = next((it for it in items if same(it.get("itemName"), name) or same(it.get("itemName"), P.get("listName"))), None)  # 2026-11-02: 판매처 이름이 달라도(도화온천풀빌라 ↔ 구례 도화풀빌라) 목록 이름으로 찾음
                         if hit or not items: break
         except SystemExit: raise
         except Exception as ex:
