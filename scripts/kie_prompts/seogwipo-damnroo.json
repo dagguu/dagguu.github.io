@@ -1,0 +1,38 @@
+[
+ {
+  "n": 1,
+  "time": "sunset",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same stone-edged hot jacuzzi, same wooden deck bench, same railing, same palm trees and same buildings); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (more pink and purple sunset sky) and below (more wooden deck). Never mirror or flip the image.",
+  "prompt": "Very slow push forward toward the steaming jacuzzi at sunset, water bubbling gently, soft steam rising, palm leaves moving slightly."
+ },
+ {
+  "n": 2,
+  "time": "day",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same infinity pool edge, same glass railing, same palm trees, same sea horizon and same building at the right); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (more deep blue sky with a few white clouds) and below (more calm pool water). Never mirror or flip the image.",
+  "prompt": "Slow glide forward over the infinity pool toward the sea horizon, water rippling softly, clouds drifting slowly."
+ },
+ {
+  "n": 3,
+  "time": "sunset",
+  "look": "day",
+  "people": true,
+  "img": "Keep the place exactly as it is (same long infinity pool, same railing, same buildings, same sun position and sea horizon); do not add new buildings, furniture, signs, text or logos. Add one Korean woman standing at the pool edge seen only from behind, looking at the sunset, her face and profile completely hidden. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (more orange sunset sky with clouds) and below (more pool deck). Never mirror or flip the image.",
+  "prompt": "Very slow gentle push forward; the woman in a long white skirt stands still looking at the sunset and never turns around; her skirt and hair move slightly in the breeze; the water reflects the sky."
+ },
+ {
+  "n": 4,
+  "time": "day",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same bed and bedding, same wooden ceiling, same wall TV kept dark and plain, same sliding glass door and view); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (more wooden ceiling) and below (more light floor). Never mirror or flip the image.",
+  "prompt": "Slow walk-through glide forward toward the big glass door, daylight streaming in, the sheer curtain moving slightly, trees outside swaying gently."
+ },
+ {
+  "n": 5,
+  "time": "night",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same glowing blue pool, same underwater lights, same buildings with warm windows, same palm trees); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (more deep blue night sky) and below (more glowing pool water). Never mirror or flip the image.",
+  "prompt": "Very slow push forward over the glowing blue pool at night, gentle ripples, reflections of warm building lights shimmering."
+ }
+]
