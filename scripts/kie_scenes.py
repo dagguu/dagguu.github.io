@@ -2,7 +2,7 @@
 # 입력 scripts/tts/<name>.json scenes 의 img(겹치면 한 번만): "ai:N" = insta 브랜치 img/<imgDate>/<stay>/N_pro|_edit.jpg (raw 주소),
 #   "p:N" = 감성숙소 json 사진 N. 프롬프트: 장면 vp → kie_prompts/<stay>.json 의 prompt(n) → 사진 설명.
 # 결과 kie_out/<imgDate>/<stay>/clip_<kind><N>.mp4 (워크플로가 insta 브랜치 video/ 로) — reel_make.py 가 있으면 사진 대신 이 영상을 씀.
-import json, os, sys, time, glob, datetime, urllib.request, urllib.error, argparse, subprocess
+import re, json, os, sys, time, glob, datetime, urllib.request, urllib.error, argparse, subprocess
 ap = argparse.ArgumentParser(); ap.add_argument("--name", default="daytona"); ap.add_argument("--only", default=""); ap.add_argument("--tier", default="veo3_lite"); ap.add_argument("--fetch", default=""); ap.add_argument("--src", default="")  # 장면 json 경로(비우면 scripts/tts/<name>.json, 인스타 영상 피드는 scripts/carousel/<slug>.json)  # 1 = 지난 상태 파일의 작업만 다시 받기(크레딧 안 씀)
 a = ap.parse_args()
 KEY = os.environ.get("KIE_API_KEY", "").strip(); API = "https://api.kie.ai/api/v1/jobs"
@@ -35,7 +35,14 @@ LOOK = {"day": " Clear sunny midday look: vivid deep-blue sky with a few white c
         "moody": " Keep the place's own dark moody concept lighting: deep shadows, dark stone and wood, warm amber indirect lights, lanterns glowing, reflections and steam; cinematic, details visible, do not brighten into daylight.",
         "warm": " Cozy warm interior look: soft warm lamps and indirect light, honey-toned wood, calm and inviting, clear not murky.",
         "pastel": " Soft bright airy look: creamy whites, gentle pastel colors, diffused sunlight through sheer curtains, light and dreamy, not harsh or dark."}  # 2026-10-31 시온님: 숙소 콘셉트별 색감  # 2026-10-31 시온님: 하루 흐름(낮 → 노을 → 밤)
-def gimbal(tm): return GIMBAL.replace(" {TONE}", LOOK.get(tm or globals().get("LOOK0") or "day", LOOK["day"]))
+# 2026-11-02 시온님 "힉스필드처럼 크래시줌·돌리·오빗·휩팬": kie_prompts 항목 "move": "dolly"|"orbit"|"crash" 면 느린 드리프트 대신 그 카메라 움직임(장비 이름은 쓰지 않음)
+MOVE = {"dolly": "a smooth continuous dolly-in: the camera travels steadily forward deep into the space at walking speed, strong parallax as near objects pass by",
+        "orbit": "a smooth half orbit: the camera circles around the main subject in an arc from left to right, keeping it centered, background sliding behind it with strong parallax",
+        "crash": "a fast crash zoom: in the first second the camera rushes quickly toward the main subject, then settles and holds steady; the building and objects keep their exact shape and do not warp"}
+def gimbal(tm, mv=None):
+    g = GIMBAL.replace(" {TONE}", LOOK.get(tm or globals().get("LOOK0") or "day", LOOK["day"]))
+    if mv in MOVE: g = re.sub(r"a slow, gentle camera drift \([^)]*\)", MOVE[mv], g)
+    return g
 TAIL = " No people. Keep the original architecture, rooms and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."
 RAW = "https://raw.githubusercontent.com/dagguu/dagguu.github.io/insta/"
 def call(url, body=None):
@@ -68,7 +75,7 @@ for s in J["scenes"]:
     if kind == "ai":
         path = next((f"img/{day}/{stay}/{n}{suf}.jpg" for suf in ("_pro", "_edit") if subprocess.run(["git", "cat-file", "-e", f"origin/insta:img/{day}/{stay}/{n}{suf}.jpg"]).returncode == 0), None)
         if not path: st["jobs"].append({"img": s["img"], "state": "error", "msg": "AI 이미지 없음"}); save(); continue
-        src = RAW + path; pr = (s.get("vp") or KP.get(n, {}).get("prompt") or "Slow push-in camera move.") + gimbal(s.get("time") or KP.get(n, {}).get("time")) + who_tail(KP.get(n, {}))  # 2026-10-28: 사람 없는 AI 이미지에도 TAIL_P 를 붙여서 Veo 가 여자를 만들어 넣었음
+        src = RAW + path; pr = (s.get("vp") or KP.get(n, {}).get("prompt") or "Slow push-in camera move.") + gimbal(s.get("time") or KP.get(n, {}).get("time"), s.get("move") or KP.get(n, {}).get("move")) + who_tail(KP.get(n, {}))  # 2026-10-28: 사람 없는 AI 이미지에도 TAIL_P 를 붙여서 Veo 가 여자를 만들어 넣었음
     else:
         src = P["photos"][n - 1]["src"]; pr = (s.get("vp") or "Slow push-in camera move. " + P["photos"][n - 1].get("cap", "")) + gimbal(s.get("time")) + TAIL
     body = {"model": "veo-3-1", "input": {"prompt": pr, "image_urls": [src], "aspect_ratio": "9:16", "resolution": "1080p", "duration": 4,
@@ -76,6 +83,25 @@ for s in J["scenes"]:
     r = call(API + "/createTask", body)
     tid = (r.get("data") or {}).get("taskId") if isinstance(r.get("data"), dict) else None
     st["jobs"].append({"img": s["img"], "taskId": tid, "state": "submitted" if tid else "error", **({} if tid else {"msg": str(r.get("msg") or r)[:300]})}); save(); time.sleep(1)
+# 2026-11-02 시온님 "휩팬·돌진 같은 효과": tts 장면에 "tr": "whip"|"rush" 가 있으면 앞 장면 AI 이미지(끝)와 이 장면 AI 이미지(처음)를 이어 주는 전환 영상을 하나 더 만든다(clip_tr<번호>.mp4) → reel_make.py 가 그 장면 맨 앞에 0.5초로 빨리 감아 넣는다.
+TRP = {"whip": "A fast whip pan transition: the camera swings quickly sideways from the first scene with strong motion blur, then lands smoothly on the second scene and holds. Real camera motion only, no graphic effects, no text, no people.",
+       "rush": "A fast forward rush transition: the camera dashes quickly forward through the first scene with motion blur and arrives in the second scene, then slows and holds. Real camera motion only, no graphic effects, no text, no people."}
+def ai_src(img):
+    k, n = img.split(":")
+    if k != "ai": return None
+    path = next((f"img/{day}/{stay}/{n}{suf}.jpg" for suf in ("_pro", "_edit") if subprocess.run(["git", "cat-file", "-e", f"origin/insta:img/{day}/{stay}/{n}{suf}.jpg"]).returncode == 0), None)
+    return RAW + path if path else None
+for i, s in enumerate(J["scenes"]):
+    if i == 0 or s.get("tr") not in TRP or s["img"] == J["scenes"][i - 1]["img"]: continue
+    key = "tr:" + s["img"].split(":")[1]
+    if only and key not in only and s["img"] not in only: continue
+    a0, a1 = ai_src(J["scenes"][i - 1]["img"]), ai_src(s["img"])
+    if not (a0 and a1): st["jobs"].append({"img": key, "state": "error", "msg": "전환용 AI 이미지 없음"}); save(); continue
+    body = {"model": "veo-3-1", "input": {"prompt": TRP[s["tr"]], "image_urls": [a0, a1], "aspect_ratio": "9:16", "resolution": "1080p", "duration": 4,
+            "generation_type": "FIRST_AND_LAST_FRAMES_2_VIDEO", "model": a.tier, "enable_translation": True}}
+    r = call(API + "/createTask", body)
+    tid = (r.get("data") or {}).get("taskId") if isinstance(r.get("data"), dict) else None
+    st["jobs"].append({"img": key, "taskId": tid, "state": "submitted" if tid else "error", **({} if tid else {"msg": str(r.get("msg") or r)[:300]})}); save(); time.sleep(1)
 end = time.time() + 22 * 60
 while time.time() < end and any(j["state"] not in ("success", "fail", "error") for j in st["jobs"]):
     time.sleep(15)

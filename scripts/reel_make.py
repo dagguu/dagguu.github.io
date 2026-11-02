@@ -117,13 +117,20 @@ if a.thumb_only:
 used = {}
 cuts, plan, k = [], [], 0
 for i, s in enumerate(SC):
-    d = ends[i] - starts[i]; parts = max(1, round(d / 1.0)) if d > 1.4 else 1  # 2026-10-30 시온님이 보여준 숙소 릴스(20초 19컷): 컷을 1초 안팎으로
+    d = ends[i] - starts[i]
+    tv = clip("tr:" + s["img"].split(":")[1]) if s.get("tr") and i > 0 else None  # 2026-11-02 시온님 "휩팬·돌진": 앞 장면 → 이 장면 전환 영상을 맨 앞에 짧게
+    if tv:
+        tt = min(0.55, d * 0.4); o = f"{OUT}/cuts/{len(cuts):02d}.mp4"
+        tl = float(subprocess.run(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",tv],capture_output=True,text=True).stdout or 4)
+        subprocess.run(["ffmpeg","-y","-loglevel","error","-i",tv,"-vf",f"scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setpts=PTS*{tt/tl:.4f},fps=30,format=yuv420p","-t",f"{tt:.3f}","-an","-r","30","-c:v","libx264","-preset","veryfast","-crf","18",o],check=True)
+        cuts.append(o); d -= tt
+    parts = max(1, round(d / 1.0)) if d > 1.4 else 1  # 2026-10-30 시온님이 보여준 숙소 릴스(20초 19컷): 컷을 1초 안팎으로
     for j in range(parts):
         o = f"{OUT}/cuts/{len(cuts):02d}.mp4"; v = clip(s["img"])
         if v: ss = used.get(s["img"], 0.0); vcut(v, ss, d / parts, j % 2 == 1, o); used[s["img"]] = ss + d / parts
         else: cut(src(s["img"]), d / parts, MOV[k % 4], j % 2 == 1, o)
         cuts.append(o); k += 1
-    plan.append({"video": bool(clip(s["img"])), "t": s["t"], "img": s["img"], "start": round(starts[i], 2), "end": round(ends[i], 2), "cuts": parts})
+    plan.append({"video": bool(clip(s["img"])), "tr": bool(tv), "t": s["t"], "img": s["img"], "start": round(starts[i], 2), "end": round(ends[i], 2), "cuts": parts})
 open(OUT + "/list.txt", "w").write("".join(f"file '{os.path.basename(c)}'\n" for c in cuts))
 os.replace(OUT + "/list.txt", OUT + "/cuts/list.txt")
 # 자막 (ASS)
