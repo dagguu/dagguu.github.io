@@ -1,5 +1,5 @@
 {
- "at": "2026-11-02 23:59",
+ "at": "2026-11-03 01:17",
  "checkIn": "2026-11-07",
  "stays": {
   "busan-matie-harbor": {
@@ -423,6 +423,40 @@
     }
    ],
    "hit": "산청 앤더포레 글램핑",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
+  },
+  "seogwipo-damnroo": {
+   "name": "담앤루 리조트",
+   "city": "서귀포",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "서귀포",
+     "region": "서귀포",
+     "type": "CITY",
+     "pages": 1,
+     "n": 50,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 1499
+    }
+   ],
+   "hit": "담앤루리조트",
    "hitKeys": [
     "deepLink",
     "imageUrl",
