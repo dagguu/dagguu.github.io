@@ -1,21 +1,42 @@
 {
- "at": "2026-11-02T08:48:26.615265",
- "name": "gurye-dohwa-onsen",
+ "at": "2026-11-02T16:24:56.321554",
+ "name": "seogwipo-damnroo",
  "jobs": [
   {
-   "img": "ai:10",
-   "taskId": "cf854c3af05077402884ed57ea12d8aa",
+   "img": "ai:1",
+   "taskId": "71c94afa921721735e51f8611fa7d1fc",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-02/gurye-dohwa-onsen/clip_ai10.mp4"
+   "file": "video/2026-11-03/seogwipo-damnroo/clip_ai1.mp4"
   },
   {
-   "img": "tr:10",
-   "taskId": "a8e7daae27046fc82fcaf51be27bc2da",
+   "img": "ai:2",
+   "taskId": "3c125ca383661dee88635501dae8e060",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-02/gurye-dohwa-onsen/clip_tr10.mp4"
+   "file": "video/2026-11-03/seogwipo-damnroo/clip_ai2.mp4"
+  },
+  {
+   "img": "ai:3",
+   "taskId": "f3f5b46b6d4e1a94c439627981c3f0d4",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-03/seogwipo-damnroo/clip_ai3.mp4"
+  },
+  {
+   "img": "ai:4",
+   "taskId": "42f1c2050422ab20421847834bb01c32",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-03/seogwipo-damnroo/clip_ai4.mp4"
+  },
+  {
+   "img": "ai:5",
+   "taskId": "45a3637d3810410f46e8782703face34",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-03/seogwipo-damnroo/clip_ai5.mp4"
   }
  ],
- "credits_total": 70.0
+ "credits_total": 175.0
 }
