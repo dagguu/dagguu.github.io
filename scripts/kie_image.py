@@ -68,16 +68,27 @@ TONE_T = {  # 하루 흐름 장면용 (기본 day = TONE)
     "pastel": " Color and light (autumn tone): soft bright airy daylight - creamy whites, gentle pastel colors (pale blue, pink, beige), diffused sunlight through sheer curtains, light and dreamy like a boutique hotel photo, not harsh, not dark, keep the real place unchanged."}
 SIZE = " Make the image in a vertical 9:16 size (portrait, 9:16 aspect ratio, full-bleed, no borders or letterboxing)."  # 2026-10-29 시온님: 프롬프트에 "9:16 사이즈로" 꼭
 OUTF = {int(x["n"]): x["outfit"] for x in PL if x.get("outfit")}  # 2026-11-01 시온님: 장면별 옷("outfit")이 있으면 흰 긴 치마 대신 그 옷(예: 니지모리 기모노)
+# 2026-11-02 시온님: 애견 가능 숙소는 우리집 강아지(크림색 포메라니안), 키즈풀빌라는 아이 뒷모습, 가끔 아빠 한 장면.
+# kie_prompts 항목 "who": "dog" | "kid" | "dad" (여러 명이면 "kid,dad") → 아래 문장이 붙고, dog 는 참고 사진(REF)을 두 번째 이미지로 같이 보낸다.
+REF = {"dog": "https://raw.githubusercontent.com/dagguu/dagguu.github.io/insta/img/src/ref/dog.jpg"}
+WHO = {"dog": " Add one small fluffy cream-and-light-orange Pomeranian dog that looks exactly like the dog in the second reference image (same fur color, round fluffy face, small pointed ears, plumed tail); the dog sits or trots naturally in the scene at a realistic small size. Use the second image only for the dog; keep the place from the first image unchanged.",
+       "kid": " Add one Korean child about 4 years old with short black hair, seen fully from behind (back of the head only), face completely hidden, never facing the camera, wearing simple casual kids clothes suited to the season.",
+       "dad": " Add one Korean man in his 30s with short black hair, seen from behind or from the side, face not visible and never facing the camera, wearing a plain white or light shirt and casual pants."}
+WHOS = {int(x["n"]): [w.strip() for w in str(x["who"]).split(",") if w.strip() in WHO] for x in PL if x.get("who")}
 def body(prompt, src, tm="day", n=0):
     if "woman" in prompt.lower(): prompt = prompt + ((" Outfit: " + OUTF[n]) if n in OUTF else OUTFIT)  # 사람 없는 프롬프트(바다 채우기 등)엔 안 붙임
+    refs = []
+    for w in WHOS.get(n, []):
+        prompt += WHO[w]
+        if w in REF: refs.append(REF[w])
     if "autumn tone" not in prompt: prompt = prompt + TONE_T.get(tm, TONE)
     if "9:16" not in prompt: prompt = prompt + SIZE
     if "nano-banana-edit" in a.model:
-        return {"model": a.model, "input": {"prompt": prompt, "image_urls": [src], "output_format": "jpeg", "image_size": "9:16"}}
+        return {"model": a.model, "input": {"prompt": prompt, "image_urls": [src] + refs, "output_format": "jpeg", "image_size": "9:16"}}
     if "seedream" in a.model:
-        return {"model": a.model, "input": {"prompt": prompt, "image_urls": [src], "image_size": "portrait_16_9",
+        return {"model": a.model, "input": {"prompt": prompt, "image_urls": [src] + refs, "image_size": "portrait_16_9",
                 "image_resolution": a.res, "max_images": 1}}
-    return {"model": a.model, "input": {"prompt": prompt, "image_input": [src], "aspect_ratio": "9:16", "resolution": a.res}}
+    return {"model": a.model, "input": {"prompt": prompt, "image_input": [src] + refs, "aspect_ratio": "9:16", "resolution": a.res}}
 jobs = []
 if a.tasks:
     for t in a.tasks.split(","):

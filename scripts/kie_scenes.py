@@ -14,6 +14,19 @@ P = json.load(open(f"scripts/stays/{stay}.json", encoding="utf-8"))
 pf = f"scripts/kie_prompts/{stay}.json"; KP = {x["n"]: x for x in (json.load(open(pf, encoding="utf-8")) if os.path.exists(pf) else [])}
 LOOK0 = next((x.get("look") for x in KP.values() if x.get("look")), "day")  # 숙소 기본 색감
 TAIL_P = " Keep the exact same Korean person from the image with the same face, hair and clothes (long white skirt); she stays turned away (back view or slight side profile), never turns her head toward the camera, no face close-up. Keep the room, architecture and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."
+# 2026-11-02 시온님: 강아지·아이·아빠 장면(kie_prompts "who")은 그 모습을 유지하는 꼬리말
+WHO_T = {"dog": " Keep the same small fluffy cream Pomeranian dog from the image; it moves naturally and gently (tail wagging, sniffing, trotting a few steps), stays the same size and look.",
+         "kid": " Keep the same Korean child from the image seen from behind; the child never turns toward the camera, face never visible, moves naturally (walking, looking around).",
+         "dad": " Keep the same Korean man from the image seen from behind or side; he never turns toward the camera, face never visible."}
+def who_tail(k):
+    ws = [w.strip() for w in str(k.get("who") or "").split(",") if w.strip() in WHO_T]
+    if k.get("people"):
+        base = TAIL_P.replace("(long white skirt)", "(" + k["outfit"] + ")") if k.get("outfit") else TAIL_P
+    elif ws:
+        base = " Keep the room, architecture and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."
+    else:
+        return TAIL
+    return base + "".join(WHO_T[w] for w in ws)
 # 2026-10-30 시온님 "사진을 좌우로 미는 게 아니라 스마트폰 짐벌로 직접 걸어가며 찍은 것처럼 공간감 있게": 모든 장면 프롬프트에 붙임
 GIMBAL = " Make it look like real filmed video, not a still photo: a slow, gentle camera drift (a subtle push-in or a slow sideways glide through the space with real parallax depth, small and smooth), plus natural living motion inside the scene - steam rising from warm water, soft water ripples, leaves swaying or drifting down, warm lights glowing, curtains moving slightly. {TONE} This is NOT a 2D pan, slide or zoom across a flat photo. IMPORTANT: no drones, gimbals, cameras, phones, tripods or any filming equipment appear anywhere in the frame - show only the place itself."  # 2026-10-30 21:52 시온님: 영상처럼 보이게(작은 카메라 움직임 + 김·물결·나뭇잎 같은 살아 있는 움직임) + 밝은 가을 톤
 LOOK = {"day": " Clear sunny midday look: vivid deep-blue sky with a few white clouds wherever sky shows, bright direct sunlight, crisp saturated greens with some orange autumn leaves, clean bright whites indoors; not dark, hazy, golden-hour or gloomy.",
@@ -55,7 +68,7 @@ for s in J["scenes"]:
     if kind == "ai":
         path = next((f"img/{day}/{stay}/{n}{suf}.jpg" for suf in ("_pro", "_edit") if subprocess.run(["git", "cat-file", "-e", f"origin/insta:img/{day}/{stay}/{n}{suf}.jpg"]).returncode == 0), None)
         if not path: st["jobs"].append({"img": s["img"], "state": "error", "msg": "AI 이미지 없음"}); save(); continue
-        src = RAW + path; pr = (s.get("vp") or KP.get(n, {}).get("prompt") or "Slow push-in camera move.") + gimbal(s.get("time") or KP.get(n, {}).get("time")) + ((TAIL_P.replace("(long white skirt)", "(" + KP[n]["outfit"] + ")") if KP.get(n, {}).get("outfit") else TAIL_P) if KP.get(n, {}).get("people") else TAIL)  # 2026-10-28: 사람 없는 AI 이미지에도 TAIL_P 를 붙여서 Veo 가 여자를 만들어 넣었음
+        src = RAW + path; pr = (s.get("vp") or KP.get(n, {}).get("prompt") or "Slow push-in camera move.") + gimbal(s.get("time") or KP.get(n, {}).get("time")) + who_tail(KP.get(n, {}))  # 2026-10-28: 사람 없는 AI 이미지에도 TAIL_P 를 붙여서 Veo 가 여자를 만들어 넣었음
     else:
         src = P["photos"][n - 1]["src"]; pr = (s.get("vp") or "Slow push-in camera move. " + P["photos"][n - 1].get("cap", "")) + gimbal(s.get("time")) + TAIL
     body = {"model": "veo-3-1", "input": {"prompt": pr, "image_urls": [src], "aspect_ratio": "9:16", "resolution": "1080p", "duration": 4,
