@@ -313,4 +313,5 @@ json 의 type·theme·points·fit·tags 글자로 판단, 여러 개면 시온�
 
 ## 확대샷 = 아주 천천히 안쪽으로 (2026-11-02 시온님, 11/3 릴스부터, 바로 위 규칙보다 우선)
 - 갑자기 확 커지는 확대샷을 쓰지 않는다: "move": "crash"·전환 "tr": "rush" 금지. 카메라는 아주 천천히 일정한 속도로 안쪽으로 들어가는 느낌(기본값). kie_scenes.py 기본 움직임·dolly·"slowin" 이 모두 이렇게 바뀌었고, 옛 json 의 crash 도 slowin 으로 처리된다.
-- 첫 장면은 "move" 없이(또는 "slowin"). dolly·orbit 은 천천히 쓸 수 있고, 전환은 쓰더라도 whip 만.
+- 첫 장면은 "move" 없이(또는 "slowin"). dolly·orbit 은 천천히 쓸 수 있다.
+- 장면 사이 AI 전환은 쓰지 않는다(2026-11-03 시온님 "옆으로 휙 넘어가는 것도 빼줘"): tts json 에 "tr" 을 넣지 않고, 장면은 그냥 컷으로 잇는다. kie_scenes.py 도 tr 을 무시한다.

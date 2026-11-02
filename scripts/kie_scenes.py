@@ -93,6 +93,7 @@ def ai_src(img):
     if k != "ai": return None
     path = next((f"img/{day}/{stay}/{n}{suf}.jpg" for suf in ("_pro", "_edit") if subprocess.run(["git", "cat-file", "-e", f"origin/insta:img/{day}/{stay}/{n}{suf}.jpg"]).returncode == 0), None)
     return RAW + path if path else None
+TRP = {}  # 2026-11-03 시온님 "옆으로 휙 넘어가는 것도 빼줘": AI 전환(whip·rush)을 만들지 않는다. tts json 에 tr 이 남아 있어도 무시
 for i, s in enumerate(J["scenes"]):
     if i == 0 or s.get("tr") not in TRP or s["img"] == J["scenes"][i - 1]["img"]: continue
     key = "tr:" + s["img"].split(":")[1]
