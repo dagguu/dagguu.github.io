@@ -1,14 +1,105 @@
 {
- "at": "2026-11-01T13:03:53.615449",
- "name": "cheorwon-thegallery",
+ "at": "2026-11-02T08:43:16.089256",
+ "name": "gurye-dohwa-onsen",
  "jobs": [
   {
-   "img": "ai:3",
-   "taskId": "680ca68d9b6a34c3c0bd910b15fc5d76",
+   "img": "ai:1",
+   "taskId": "f2068194d46829f0c3b0709def7f8ab6",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-01/cheorwon-thegallery/clip_ai3.mp4"
+   "file": "video/2026-11-02/gurye-dohwa-onsen/clip_ai1.mp4"
+  },
+  {
+   "img": "ai:2",
+   "taskId": "016c98e73e6a332e2a291bdd845d917d",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-02/gurye-dohwa-onsen/clip_ai2.mp4"
+  },
+  {
+   "img": "ai:3",
+   "taskId": "85be5babb34cc9522d8a69c627956998",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-02/gurye-dohwa-onsen/clip_ai3.mp4"
+  },
+  {
+   "img": "ai:4",
+   "taskId": "68629aa334e49bb2deb0146eae8a55c4",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-02/gurye-dohwa-onsen/clip_ai4.mp4"
+  },
+  {
+   "img": "ai:5",
+   "taskId": "14228e6d0d8b24a8f428beb495775cf4",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-02/gurye-dohwa-onsen/clip_ai5.mp4"
+  },
+  {
+   "img": "ai:6",
+   "taskId": "59aef3586a72b2e0bdd8bea17cf728e1",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-02/gurye-dohwa-onsen/clip_ai6.mp4"
+  },
+  {
+   "img": "ai:7",
+   "taskId": "9bb38f8d0aeaabb37dc23df6b13a57e1",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-02/gurye-dohwa-onsen/clip_ai7.mp4"
+  },
+  {
+   "img": "ai:8",
+   "taskId": "a55e69b0512126e53df7bdadf4c72a4f",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-02/gurye-dohwa-onsen/clip_ai8.mp4"
+  },
+  {
+   "img": "ai:9",
+   "taskId": "57a5d693d5bb91a4d0878e57b63ad766",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-02/gurye-dohwa-onsen/clip_ai9.mp4"
+  },
+  {
+   "img": "ai:10",
+   "taskId": "aaa0e1021e738399a38e0ecdf39bc714",
+   "state": "fail",
+   "credits": 0.0,
+   "msg": "Internal Error"
+  },
+  {
+   "img": "ai:11",
+   "taskId": "9dd8e410fb6ea142185f41d6d8d7e092",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-02/gurye-dohwa-onsen/clip_ai11.mp4"
+  },
+  {
+   "img": "ai:12",
+   "taskId": "5457a30074891b70260b7095f0783c68",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-02/gurye-dohwa-onsen/clip_ai12.mp4"
+  },
+  {
+   "img": "tr:4",
+   "taskId": "cf4d00987a25b18eb76b50348e277975",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-02/gurye-dohwa-onsen/clip_tr4.mp4"
+  },
+  {
+   "img": "tr:10",
+   "taskId": "52b9b871705fe557105c181662ed0fcb",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-02/gurye-dohwa-onsen/clip_tr10.mp4"
   }
  ],
- "credits_total": 35.0
+ "credits_total": 455.0
 }
