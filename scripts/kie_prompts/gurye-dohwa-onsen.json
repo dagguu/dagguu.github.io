@@ -1,0 +1,94 @@
+[
+ {
+  "n": 1,
+  "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/e8c32548-e46b-4492-b7db-72fb405c6ef0.jpg",
+  "time": "day",
+  "look": "day",
+  "move": "crash",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same bamboo, same lanterns, same layout); do not add new buildings, signs, text or logos. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. Wide view of the row of white private villas at the foot of the Jirisan mountains with clouds resting on the ridge, two slim trees in the foreground.",
+  "prompt": "Clouds drift slowly along the mountain ridge, tree leaves sway; the camera rushes toward the row of villas."
+ },
+ {
+  "n": 2,
+  "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/c9612dc7-053b-4ee7-a116-606b10d41821.jpg",
+  "time": "day",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same bamboo, same lanterns, same layout); do not add new buildings, signs, text or logos. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. Field of orange flowers in front, the white villas behind it, mountains and a big blue sky with white clouds.",
+  "prompt": "Orange flowers sway in the breeze, clouds drift; slow push forward over the flowers toward the villas."
+ },
+ {
+  "n": 3,
+  "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/5e8d2df4-f042-4ccd-b6cc-ddb66320a6f7.jpg",
+  "time": "day",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same bamboo, same lanterns, same layout); do not add new buildings, signs, text or logos. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. The private terrace: small hot-spring bath, bamboo fence, stone lantern, woven baskets, checkered floor, skylight.",
+  "prompt": "Gentle steam rises from the warm bath, bamboo leaves sway; slow sideways glide around the terrace."
+ },
+ {
+  "n": 4,
+  "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/14e43e80-dff2-4658-82b0-97f3050dcbef.jpg",
+  "time": "day",
+  "move": "dolly",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same bamboo, same lanterns, same layout); do not add new buildings, signs, text or logos. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. Bright living room with a cream sofa, wooden table and large glass doors looking onto the bamboo terrace.",
+  "prompt": "Moving forward through the living room toward the glass doors; curtains move slightly, bamboo outside sways."
+ },
+ {
+  "n": 5,
+  "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/638aea8f-bd4a-4841-9dd9-91d01aa25167.jpg",
+  "time": "day",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same bamboo, same lanterns, same layout); do not add new buildings, signs, text or logos. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. Bedroom with wooden slat wall, white bedding, warm wall light and an arched mirror.",
+  "prompt": "Slow push-in toward the bed; curtains move slightly in soft daylight."
+ },
+ {
+  "n": 6,
+  "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/e7d9a308-ea93-44a7-9679-7d000ee55601.jpg",
+  "time": "day",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same bamboo, same lanterns, same layout); do not add new buildings, signs, text or logos. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. The private pool seen from above with clear blue-green water, bamboo fence along one side and a wooden deck.",
+  "prompt": "Clear water ripples softly and catches the sunlight, thin steam over the surface, bamboo leaves sway; slow rise looking down over the pool."
+ },
+ {
+  "n": 7,
+  "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/9e245d74-49ee-46e5-a7d4-fcc6580bad2b.jpg",
+  "time": "sunset",
+  "move": "orbit",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same bamboo, same lanterns, same layout); do not add new buildings, signs, text or logos. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. Hot-spring open-air bath beside the bamboo fence with a lantern on the stone edge and warm wall lamps.",
+  "prompt": "Steam rises from the warm water and small ripples spread; the lantern glows, camera circles around the bath."
+ },
+ {
+  "n": 8,
+  "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/72dc732d-8819-4322-8a75-20159ac255b5.jpg",
+  "time": "sunset",
+  "move": "orbit",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same bamboo, same lanterns, same layout); do not add new buildings, signs, text or logos. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. Open-air bath filled with warm water and thick steam, bamboo fence with a glowing lantern, checkered floor.",
+  "prompt": "Thick steam curls up from the water, lantern glows; camera circles around the bath."
+ },
+ {
+  "n": 9,
+  "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/cfd9168b-a52c-46d0-a467-5ba24c514c00.jpg",
+  "time": "sunset",
+  "people": true,
+  "img": "Keep the place exactly as it is (same buildings, same walls, same bamboo, same lanterns, same layout); do not add new buildings, signs, text or logos. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. One young Korean woman in her late 20s, Korean facial features, black hair, seen from behind (back view, face and profile completely hidden, never facing the camera), is sitting on the edge of the long private pool looking along the water toward the far wall. The pool, walls, lamps and checkered deck stay exactly the same.",
+  "prompt": "She sits still on the pool edge, seen from behind, gentle ripples spread on the glowing blue water, wall lamps glow; slow push forward."
+ },
+ {
+  "n": 10,
+  "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/4619185d-01c3-4b6a-ba30-56d2a88a7168.jpg",
+  "time": "night",
+  "people": true,
+  "move": "dolly",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same bamboo, same lanterns, same layout); do not add new buildings, signs, text or logos. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. One young Korean woman in her late 20s, Korean facial features, black hair, seen from behind (back view, face completely hidden, never facing the camera), is walking away down the middle of the lantern-lit lane between the villas, under the strings of round paper lanterns. The lanterns, buildings and stone walls stay exactly the same.",
+  "prompt": "She walks slowly away down the lane, seen from behind; paper lanterns sway gently overhead and glow; the camera moves forward behind her."
+ },
+ {
+  "n": 11,
+  "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/caaca443-12b8-4c68-9465-25325833d0c1.jpg",
+  "time": "night",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same bamboo, same lanterns, same layout); do not add new buildings, signs, text or logos. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. The narrow lane with tall hanging fabric banners and glowing paper lanterns between bamboo walls, starry night sky.",
+  "prompt": "Fabric banners sway gently in the night breeze, lanterns glow; slow push forward between them."
+ },
+ {
+  "n": 12,
+  "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/18c8cf9b-cab3-490c-b6cf-80f2f1734b18.jpg",
+  "time": "night",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same bamboo, same lanterns, same layout); do not add new buildings, signs, text or logos. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. Night view from high above of the lit white villas and their glowing pools on dark ground, stars above.",
+  "prompt": "Slow aerial glide forward over the lit villas; pool water and lights shimmer softly."
+ }
+]
