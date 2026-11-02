@@ -10,11 +10,9 @@ permissions:
 concurrency: { group: mrt, cancel-in-progress: false }
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, mrt]   # 오라클 도쿄 고정 IP 150.230.201.109 (마이리얼트립 API IP 등록, 2026-11-02)
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: { python-version: "3.12" }
       - name: 숙소별 할인 정보 찾기
         env:
           MRT_API_KEY: ${{ secrets.MRT_API_KEY }}
