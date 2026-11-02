@@ -1,56 +1,48 @@
 {
- "at": "2026-11-02 17:39",
+ "at": "2026-11-03 01:17",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 4,
-   "taskId": "2aa337f83cae089b0cad48c1c4a1dc89",
+   "n": 1,
+   "taskId": "b1c9d55ad2472889b648c0aa92c28c52",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-02/gurye-dohwa-onsen/4_edit.jpg"
+   "file": "img/2026-11-03/seogwipo-damnroo/1_edit.jpg"
+  },
+  {
+   "n": 2,
+   "taskId": "b9b82b3629fb5419f4b89bcd15ea5ad9",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-03/seogwipo-damnroo/2_edit.jpg"
+  },
+  {
+   "n": 3,
+   "taskId": "1afe7c6018402fb38d4aeb1d9c9a58a5",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-03/seogwipo-damnroo/3_edit.jpg"
+  },
+  {
+   "n": 4,
+   "taskId": "afff6411dc2650edae7673bb962874f5",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-03/seogwipo-damnroo/4_edit.jpg"
   },
   {
    "n": 5,
-   "taskId": "d9ce9da5ad2f4290a58875a42cd2e128",
+   "taskId": "16ee3e067a24a6a8e584a15c7096fc4b",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-02/gurye-dohwa-onsen/5_edit.jpg"
-  },
-  {
-   "n": 7,
-   "taskId": "48dfba7868faaadd7cc83f205d274bbe",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-02/gurye-dohwa-onsen/7_edit.jpg"
-  },
-  {
-   "n": 8,
-   "taskId": "5f632d03684a80a6f32779204dffdab0",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-02/gurye-dohwa-onsen/8_edit.jpg"
-  },
-  {
-   "n": 11,
-   "taskId": "b8951ec19185e69e7dca4f1a489dd3ed",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-02/gurye-dohwa-onsen/11_edit.jpg"
-  },
-  {
-   "n": 12,
-   "taskId": "8109e3e2cc8518bbab7869cfce2cf065",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-02/gurye-dohwa-onsen/12_edit.jpg"
+   "file": "img/2026-11-03/seogwipo-damnroo/5_edit.jpg"
   }
  ],
- "slug": "gurye-dohwa-onsen"
+ "slug": "seogwipo-damnroo"
 }
