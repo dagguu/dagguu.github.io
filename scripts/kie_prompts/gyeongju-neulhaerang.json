@@ -1,0 +1,38 @@
+[
+ {
+  "n": 1,
+  "time": "night",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same buildings, same windows, same stone-paved terrace, same railing, same furniture and same sea view); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (more deep blue starry dusk sky) and below (more stone-paved terrace). Never mirror or flip the image.",
+  "prompt": "Very slow glide forward toward the small fire bowl on the terrace, flames flickering gently, the sea lights far behind stay still, stars steady in the sky."
+ },
+ {
+  "n": 2,
+  "time": "day",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same buildings, same windows, same stone-paved terrace, same railing, same furniture and same sea view); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (more clear blue sky and the wooded hill) and below (more paved terrace). Never mirror or flip the image.",
+  "prompt": "Very slow glide forward toward the white buildings and the pool, pool water rippling softly, trees on the hill moving slightly, clouds drifting slowly."
+ },
+ {
+  "n": 3,
+  "time": "sunset",
+  "look": "day",
+  "people": true,
+  "img": "Keep the place exactly as it is (same buildings, same windows, same stone-paved terrace, same railing, same furniture and same sea view); do not add new buildings, furniture, signs, text or logos. Add one Korean woman sitting in the terrace chair seen only from behind, relaxing, her face completely hidden, not looking at the camera. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (more purple twilight sky) and below (more stone-paved terrace). Never mirror or flip the image.",
+  "prompt": "Very slow glide forward across the terrace toward the bright glass doors, fire flickering in the fire bowl, warm indoor light steady. The woman stays seated with her back to the camera and does not turn around."
+ },
+ {
+  "n": 4,
+  "time": "sunset",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same buildings, same windows, same stone-paved terrace, same railing, same furniture and same sea view); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (more soft pink and purple sunset sky) and below (more stone-paved terrace). Never mirror or flip the image.",
+  "prompt": "Very slow glide along the terrace toward the white building, soft clouds drifting in the sunset sky, window lights steady."
+ },
+ {
+  "n": 5,
+  "time": "day",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same white buildings, same caravans, same road, same beach and same sea); do not add new buildings, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (more blue sky over the sea) and below (more green hillside). Never mirror or flip the image.",
+  "prompt": "Slow high aerial glide forward toward the beach and the sea, waves rolling softly onto the sand, clouds drifting slowly."
+ }
+]
