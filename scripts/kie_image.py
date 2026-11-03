@@ -57,15 +57,16 @@ def result_imgs(d):
         except Exception: rj = {}
     u = find_imgs((rj or {}).get("resultUrls") or rj or [])
     return u or find_imgs({k: v for k, v in d.items() if k not in ("param", "input")})
-OUTFIT = " Outfit (always): the woman wears a long flowing white skirt (ankle-length) with a simple top suited to the season; keep this white long skirt clearly visible."  # 2026-10-26 시온님: 여자는 항상 흰색 긴 치마
-TONE = " Color and light (autumn tone): clear sunny midday - a vivid deep-blue sky with a few small white clouds wherever sky is visible, bright direct sunlight, crisp clean colors, fresh saturated green trees with some orange autumn leaves, bright clean whites indoors with daylight through the windows; vivid but natural, not dark, hazy, golden-hour or gloomy, keep the real place unchanged."  # 2026-10-30 23:48 시온님 "맑은 날 한낮 파란 하늘" (예전 21:52 밝은 가을톤)
+OUTFIT = " Outfit (always): the woman wears a long flowing white skirt (ankle-length) with a warm winter top or coat (the coat stays short enough to show the skirt); keep this white long skirt clearly visible."  # 2026-10-26 시온님: 여자는 항상 흰색 긴 치마
+WINTER = " Winter scene: fresh natural white snow lies on the ground, roofs, trees and mountains wherever the outdoors is visible, including through windows; bare or snow-covered trees, no green leaves and no autumn leaves. Buildings, rooms and furniture stay exactly the same; no snow indoors. Pools and hot baths stay liquid and steaming, never frozen or covered with snow. The snow looks real and even, like a real winter photo."  # 2026-11-03 시온님 "내일부터 겨울이니까 눈 내린 겨울 느낌으로"
+TONE = " Color and light (winter tone): clear bright winter day - a vivid deep-blue sky with a few small white clouds wherever sky is visible, bright direct sunlight, crisp clean colors, bright clean whites indoors with daylight through the windows; not dark, hazy, golden-hour or gloomy, keep the real place unchanged." + WINTER
 TONE_T = {  # 하루 흐름 장면용 (기본 day = TONE)
-    "sunset": " Color and light (autumn tone): late-afternoon sunset - warm orange and pink sky glow over the hills, soft low golden sunlight, warm lights starting to glow inside, gentle steam over warm water; still bright and clear, not dark or murky, keep the real place unchanged.",
-    "night": " Color and light (autumn tone): early night (blue hour) - deep navy sky with a few stars, warm yellow lights glowing from windows and lanterns, soft reflections on water, gentle steam; clean and clear, details still visible, not pitch-black or noisy, keep the real place unchanged.",
+    "sunset": " Color and light (winter tone): late-afternoon sunset - warm orange and pink sky glow over the snowy hills, soft low sunlight, warm lights starting to glow inside, gentle steam over warm water; still bright and clear, not dark or murky, keep the real place unchanged." + WINTER,
+    "night": " Color and light (winter tone): early night (blue hour) - deep navy sky with a few stars, warm yellow lights glowing from windows and lanterns, soft reflections on water, gentle steam; clean and clear, details still visible, not pitch-black or noisy, keep the real place unchanged." + WINTER,
     # 2026-10-31 시온님 "숙소마다 특색이 있으니 색감은 알아서": 숙소 콘셉트별 색감
-    "moody": " Color and light (autumn tone): keep the place's own dark, moody concept lighting - deep shadows, dark stone, wood and walls, warm amber indirect lights, lanterns and candles glowing, soft reflections on water and gentle steam; rich and cinematic, details still visible, do NOT brighten it into daylight, keep the real place unchanged.",
-    "warm": " Color and light (autumn tone): cozy warm interior light - soft warm lamps and indirect lighting, honey-toned wood, gentle evening window light, calm and inviting, clean and clear, not dim or murky, keep the real place unchanged.",
-    "pastel": " Color and light (autumn tone): soft bright airy daylight - creamy whites, gentle pastel colors (pale blue, pink, beige), diffused sunlight through sheer curtains, light and dreamy like a boutique hotel photo, not harsh, not dark, keep the real place unchanged."}
+    "moody": " Color and light (winter tone): keep the place's own dark, moody concept lighting - deep shadows, dark stone, wood and walls, warm amber indirect lights, lanterns and candles glowing, soft reflections on water and gentle steam; rich and cinematic, details still visible, do NOT brighten it into daylight, keep the real place unchanged." + WINTER,
+    "warm": " Color and light (winter tone): cozy warm interior light - soft warm lamps and indirect lighting, honey-toned wood, gentle evening window light, calm and inviting, clean and clear, not dim or murky, keep the real place unchanged." + WINTER,
+    "pastel": " Color and light (winter tone): soft bright airy daylight - creamy whites, gentle pastel colors (pale blue, pink, beige), diffused sunlight through sheer curtains, light and dreamy like a boutique hotel photo, not harsh, not dark, keep the real place unchanged." + WINTER}
 SIZE = " Make the image in a vertical 9:16 size (portrait, 9:16 aspect ratio, full-bleed, no borders or letterboxing)."  # 2026-10-29 시온님: 프롬프트에 "9:16 사이즈로" 꼭
 OUTF = {int(x["n"]): x["outfit"] for x in PL if x.get("outfit")}  # 2026-11-01 시온님: 장면별 옷("outfit")이 있으면 흰 긴 치마 대신 그 옷(예: 니지모리 기모노)
 # 2026-11-02 시온님: 애견 가능 숙소는 우리집 강아지(크림색 포메라니안), 키즈풀빌라는 아이 뒷모습, 가끔 아빠 한 장면.
@@ -81,7 +82,7 @@ def body(prompt, src, tm="day", n=0):
     for w in WHOS.get(n, []):
         prompt += WHO[w]
         if w in REF: refs.append(REF[w])
-    if "autumn tone" not in prompt: prompt = prompt + TONE_T.get(tm, TONE)
+    if "winter tone" not in prompt: prompt = prompt + TONE_T.get(tm, TONE)
     if "9:16" not in prompt: prompt = prompt + SIZE
     if "nano-banana-edit" in a.model:
         return {"model": a.model, "input": {"prompt": prompt, "image_urls": [src] + refs, "output_format": "jpeg", "image_size": "9:16"}}
