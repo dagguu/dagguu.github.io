@@ -57,7 +57,7 @@ def result_imgs(d):
         except Exception: rj = {}
     u = find_imgs((rj or {}).get("resultUrls") or rj or [])
     return u or find_imgs({k: v for k, v in d.items() if k not in ("param", "input")})
-OUTFIT = " Outfit (always): the woman wears a long flowing white skirt (ankle-length) with a warm winter top or coat (the coat stays short enough to show the skirt); keep this white long skirt clearly visible."  # 2026-10-26 시온님: 여자는 항상 흰색 긴 치마
+HUMAN = " Person rules (always): she stands, small in the frame and well away from the camera, seen from behind; both hands are hidden or relaxed at her sides, no close-up of hands, fingers, feet or legs. She does not sit on chairs and never touches or rests on furniture, tables, fire pits, grills or hot objects. Natural human proportions."  # 2026-11-03 시온님: 손 모양 이상·화로에 다리 올림 = 누가 봐도 AI\nOUTFIT = " Outfit (always): the woman wears a long flowing white skirt (ankle-length) with a warm winter top or coat (the coat stays short enough to show the skirt); keep this white long skirt clearly visible."  # 2026-10-26 시온님: 여자는 항상 흰색 긴 치마
 WINTER = " Winter scene: fresh natural white snow lies on the ground, roofs, trees and mountains wherever the outdoors is visible, including through windows; bare or snow-covered trees, no green leaves and no autumn leaves. Buildings, rooms and furniture stay exactly the same; no snow indoors. Pools and hot baths stay liquid and steaming, never frozen or covered with snow. The snow looks real and even, like a real winter photo."  # 2026-11-03 시온님 "내일부터 겨울이니까 눈 내린 겨울 느낌으로"
 TONE = " Color and light (winter tone): clear bright winter day - a vivid deep-blue sky with a few small white clouds wherever sky is visible, bright direct sunlight, crisp clean colors, bright clean whites indoors with daylight through the windows; not dark, hazy, golden-hour or gloomy, keep the real place unchanged." + WINTER
 TONE_T = {  # 하루 흐름 장면용 (기본 day = TONE)
@@ -77,7 +77,7 @@ WHO = {"dog": " Add one small fluffy cream-and-light-orange Pomeranian dog that 
        "dad": " Add one Korean man in his 30s with short black hair, seen from behind or from the side, face not visible and never facing the camera, wearing a plain white or light shirt and casual pants."}
 WHOS = {int(x["n"]): [w.strip() for w in str(x["who"]).split(",") if w.strip() in WHO] for x in PL if x.get("who")}
 def body(prompt, src, tm="day", n=0):
-    if "woman" in prompt.lower(): prompt = prompt + ((" Outfit: " + OUTF[n]) if n in OUTF else OUTFIT)  # 사람 없는 프롬프트(바다 채우기 등)엔 안 붙임
+    if "woman" in prompt.lower(): prompt = prompt + HUMAN + ((" Outfit: " + OUTF[n]) if n in OUTF else OUTFIT)  # 사람 없는 프롬프트(바다 채우기 등)엔 안 붙임
     refs = []
     for w in WHOS.get(n, []):
         prompt += WHO[w]

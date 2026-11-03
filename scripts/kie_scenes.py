@@ -13,7 +13,7 @@ J = json.load(open(a.src or f"scripts/tts/{a.name}.json", encoding="utf-8")); st
 P = json.load(open(f"scripts/stays/{stay}.json", encoding="utf-8"))
 pf = f"scripts/kie_prompts/{stay}.json"; KP = {x["n"]: x for x in (json.load(open(pf, encoding="utf-8")) if os.path.exists(pf) else [])}
 LOOK0 = next((x.get("look") for x in KP.values() if x.get("look")), "day")  # 숙소 기본 색감
-TAIL_P = " Keep the exact same Korean person from the image with the same face, hair and clothes (long white skirt); she stays turned away (back view or slight side profile), never turns her head toward the camera, no face close-up. Keep the room, architecture and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."
+TAIL_P = " Keep the exact same Korean person from the image with the same face, hair and clothes (long white skirt); she stays turned away (back view or slight side profile), never turns her head toward the camera, no face close-up. She stays standing, keeps her hands still and natural, and never touches furniture, tables, fire pits or hot objects. Keep the room, architecture and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."
 # 2026-11-02 시온님: 강아지·아이·아빠 장면(kie_prompts "who")은 그 모습을 유지하는 꼬리말
 WHO_T = {"dog": " Keep the same small fluffy cream Pomeranian dog from the image; it moves naturally and gently (tail wagging, sniffing, trotting a few steps), stays the same size and look.",
          "kid": " Keep the same Korean child from the image seen from behind; the child never turns toward the camera, face never visible, moves naturally (walking, looking around).",
