@@ -1,5 +1,5 @@
 {
- "at": "2026-11-03T09:55:56.739318",
+ "at": "2026-11-03T12:06:59.280549",
  "name": "wanju-boheme-spa",
  "font": "Jalnan",
  "fontInfo": {
@@ -10,9 +10,9 @@
   "family": "Jalnan",
   "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
  },
- "gapCut": 4.95,
- "dur": 23.57,
- "cuts": 27,
+ "gapCut": 3.71,
+ "dur": 22.49,
+ "cuts": 14,
  "plan": [
   {
    "video": true,
@@ -20,25 +20,25 @@
    "t": "이 산속에 뭐가 있게요?",
    "img": "ai:1",
    "start": 0.0,
-   "end": 1.94,
-   "cuts": 2
+   "end": 1.86,
+   "cuts": 1
   },
   {
    "video": true,
    "tr": false,
    "t": "완주의 유황 온천 리조트인데요,",
    "img": "ai:2",
-   "start": 1.94,
-   "end": 3.72,
-   "cuts": 2
+   "start": 1.86,
+   "end": 3.56,
+   "cuts": 1
   },
   {
    "video": true,
    "tr": false,
    "t": "온천으로 유명한 동네거든요.",
    "img": "ai:3",
-   "start": 3.72,
-   "end": 5.02,
+   "start": 3.56,
+   "end": 4.84,
    "cuts": 1
   },
   {
@@ -46,35 +46,35 @@
    "tr": false,
    "t": "창 너머로 수영장이 보이고요,",
    "img": "ai:4",
-   "start": 5.02,
-   "end": 6.6,
-   "cuts": 2
+   "start": 4.84,
+   "end": 6.28,
+   "cuts": 1
   },
   {
    "video": true,
    "tr": false,
    "t": "큰 창 밖엔 산이 펼쳐져요.",
    "img": "ai:5",
-   "start": 6.6,
-   "end": 8.45,
-   "cuts": 2
+   "start": 6.28,
+   "end": 7.88,
+   "cuts": 1
   },
   {
    "video": true,
    "tr": false,
    "t": "심지어 방 안에 텐트가 있어요.",
    "img": "ai:6",
-   "start": 8.45,
-   "end": 10.04,
-   "cuts": 2
+   "start": 7.88,
+   "end": 9.55,
+   "cuts": 1
   },
   {
    "video": true,
    "tr": false,
    "t": "복층 방도 있고요,",
    "img": "ai:7",
-   "start": 10.04,
-   "end": 11.05,
+   "start": 9.55,
+   "end": 10.55,
    "cuts": 1
   },
   {
@@ -82,63 +82,63 @@
    "tr": false,
    "t": "진짜는 저 동그란 수영장인데요,",
    "img": "ai:8",
-   "start": 11.05,
-   "end": 12.66,
-   "cuts": 2
+   "start": 10.55,
+   "end": 12.2,
+   "cuts": 1
   },
   {
    "video": true,
    "tr": false,
    "t": "유황 온천물이라 사계절 들어가요.",
    "img": "ai:9",
-   "start": 12.66,
-   "end": 14.55,
-   "cuts": 2
+   "start": 12.2,
+   "end": 13.89,
+   "cuts": 1
   },
   {
    "video": true,
    "tr": false,
    "t": "찬 바람 불어도 몸은 뜨끈해요.",
    "img": "ai:9",
-   "start": 14.55,
-   "end": 16.18,
-   "cuts": 2
+   "start": 13.89,
+   "end": 15.39,
+   "cuts": 1
   },
   {
    "video": true,
    "tr": false,
    "t": "우리만 쓰는 온천 자쿠지도 있고요,",
    "img": "ai:10",
-   "start": 16.18,
-   "end": 17.84,
-   "cuts": 2
+   "start": 15.39,
+   "end": 17.08,
+   "cuts": 1
   },
   {
    "video": true,
    "tr": false,
    "t": "밤에는 불멍까지 즐겨요.",
    "img": "ai:11",
-   "start": 17.84,
-   "end": 19.42,
-   "cuts": 2
+   "start": 17.08,
+   "end": 18.49,
+   "cuts": 1
   },
   {
    "video": true,
    "tr": false,
    "t": "후기엔 깨끗하다는 말이 많아요.",
    "img": "ai:12",
-   "start": 19.42,
-   "end": 20.95,
-   "cuts": 2
+   "start": 18.49,
+   "end": 19.87,
+   "cuts": 1
   },
   {
    "video": true,
    "tr": false,
    "t": "멀리 안 가도 온천 여행 되는 곳이에요.",
    "img": "ai:12",
-   "start": 20.95,
-   "end": 23.57,
-   "cuts": 3
+   "start": 19.87,
+   "end": 22.49,
+   "cuts": 1
   }
  ],
  "file": "reels/wanju-boheme-spa/reel.mp4"
