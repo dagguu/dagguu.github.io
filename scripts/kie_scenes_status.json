@@ -1,91 +1,14 @@
 {
- "at": "2026-11-03T11:59:27.840245",
+ "at": "2026-11-03T12:09:49.535753",
  "name": "wanju-boheme-spa",
  "jobs": [
   {
-   "img": "ai:1",
-   "taskId": "ae3a049fc502eef38f72f6eae00fad24",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-03/wanju-boheme-spa/clip_ai1.mp4"
-  },
-  {
-   "img": "ai:2",
-   "taskId": "babc0632c0386c32216bd048d1b9f0f7",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-03/wanju-boheme-spa/clip_ai2.mp4"
-  },
-  {
-   "img": "ai:3",
-   "taskId": "5afa9474cd4a8cba47e6b5bbc0cdd0a9",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-03/wanju-boheme-spa/clip_ai3.mp4"
-  },
-  {
-   "img": "ai:4",
-   "taskId": "a9965be0db4061021e6a5617b65791fc",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-03/wanju-boheme-spa/clip_ai4.mp4"
-  },
-  {
-   "img": "ai:5",
-   "taskId": "c4d1e7b99b93b1c75231aeb8b83a6903",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-03/wanju-boheme-spa/clip_ai5.mp4"
-  },
-  {
-   "img": "ai:6",
-   "taskId": "36b2a2b695272b868d8b0e3bff079af2",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-03/wanju-boheme-spa/clip_ai6.mp4"
-  },
-  {
-   "img": "ai:7",
-   "taskId": "1844b15daeb5e0335772b2c23e3bfa4d",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-03/wanju-boheme-spa/clip_ai7.mp4"
-  },
-  {
-   "img": "ai:8",
-   "taskId": "84e640505724453a20280f2045c1fb15",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-03/wanju-boheme-spa/clip_ai8.mp4"
-  },
-  {
    "img": "ai:9",
-   "taskId": "03106aeec268416b37e2831a6e160153",
+   "taskId": "f00ad937c8c35207ed504c9f8ade800e",
    "state": "fail",
    "credits": 0.0,
    "msg": "Request blocked: The input content was flagged for containing a prominent public figure."
-  },
-  {
-   "img": "ai:10",
-   "taskId": "38a70ab57f359b71830b2bc63185b59b",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-03/wanju-boheme-spa/clip_ai10.mp4"
-  },
-  {
-   "img": "ai:11",
-   "taskId": "9387a8cd435e895d5c484f4b2e60c025",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-03/wanju-boheme-spa/clip_ai11.mp4"
-  },
-  {
-   "img": "ai:12",
-   "taskId": "ab3c19248be63d830ed842a0804efa5e",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-03/wanju-boheme-spa/clip_ai12.mp4"
   }
  ],
- "credits_total": 385.0
+ "credits_total": 0
 }
