@@ -1,6 +1,6 @@
 {
- "at": "2026-11-02T08:56:36.875643",
- "name": "gurye-dohwa-onsen",
+ "at": "2026-11-03T09:55:56.739318",
+ "name": "wanju-boheme-spa",
  "font": "Jalnan",
  "fontInfo": {
   "error": [],
@@ -10,118 +10,136 @@
   "family": "Jalnan",
   "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
  },
- "gapCut": 4.13,
- "dur": 22.35,
- "cuts": 25,
+ "gapCut": 4.95,
+ "dur": 23.57,
+ "cuts": 27,
  "plan": [
   {
    "video": true,
    "tr": false,
-   "t": "수영장 물이 온천물이라구요?",
+   "t": "이 산속에 뭐가 있게요?",
    "img": "ai:1",
    "start": 0.0,
-   "end": 2.42,
+   "end": 1.94,
    "cuts": 2
   },
   {
    "video": true,
    "tr": false,
-   "t": "지리산 아래 독채 풀빌라인데요,",
+   "t": "완주의 유황 온천 리조트인데요,",
    "img": "ai:2",
-   "start": 2.42,
-   "end": 4.1,
+   "start": 1.94,
+   "end": 3.72,
    "cuts": 2
   },
   {
    "video": true,
    "tr": false,
-   "t": "땅속 온천물을 바로 끌어다 쓰거든요.",
+   "t": "온천으로 유명한 동네거든요.",
    "img": "ai:3",
-   "start": 4.1,
-   "end": 6.06,
-   "cuts": 2
+   "start": 3.72,
+   "end": 5.02,
+   "cuts": 1
   },
   {
    "video": true,
-   "tr": true,
-   "t": "집 한 채를 통째로 쓰는 곳이라",
+   "tr": false,
+   "t": "창 너머로 수영장이 보이고요,",
    "img": "ai:4",
-   "start": 6.06,
-   "end": 7.63,
-   "cuts": 1
+   "start": 5.02,
+   "end": 6.6,
+   "cuts": 2
   },
   {
    "video": true,
    "tr": false,
-   "t": "거실도 침실도 우리끼리만 써요.",
+   "t": "큰 창 밖엔 산이 펼쳐져요.",
    "img": "ai:5",
-   "start": 7.63,
-   "end": 9.39,
+   "start": 6.6,
+   "end": 8.45,
    "cuts": 2
   },
   {
    "video": true,
    "tr": false,
-   "t": "매일 새 온천물로 갈아 줘요.",
+   "t": "심지어 방 안에 텐트가 있어요.",
    "img": "ai:6",
-   "start": 9.39,
-   "end": 10.99,
+   "start": 8.45,
+   "end": 10.04,
    "cuts": 2
   },
   {
    "video": true,
    "tr": false,
-   "t": "노천탕도 따로 있어서",
+   "t": "복층 방도 있고요,",
    "img": "ai:7",
-   "start": 10.99,
-   "end": 12.21,
+   "start": 10.04,
+   "end": 11.05,
    "cuts": 1
   },
   {
    "video": true,
    "tr": false,
-   "t": "밖은 추워도 몸은 따뜻해요.",
+   "t": "진짜는 저 동그란 수영장인데요,",
    "img": "ai:8",
-   "start": 12.21,
-   "end": 14.03,
+   "start": 11.05,
+   "end": 12.66,
    "cuts": 2
   },
   {
    "video": true,
    "tr": false,
-   "t": "해 질 녘 수영장은 이런 분위기고요,",
+   "t": "유황 온천물이라 사계절 들어가요.",
    "img": "ai:9",
-   "start": 14.03,
-   "end": 15.89,
+   "start": 12.66,
+   "end": 14.55,
    "cuts": 2
   },
   {
    "video": true,
-   "tr": true,
-   "t": "밤이 되면 골목에 등불이 켜져요.",
+   "tr": false,
+   "t": "찬 바람 불어도 몸은 뜨끈해요.",
+   "img": "ai:9",
+   "start": 14.55,
+   "end": 16.18,
+   "cuts": 2
+  },
+  {
+   "video": true,
+   "tr": false,
+   "t": "우리만 쓰는 온천 자쿠지도 있고요,",
    "img": "ai:10",
-   "start": 15.89,
-   "end": 17.97,
+   "start": 16.18,
+   "end": 17.84,
    "cuts": 2
   },
   {
    "video": true,
    "tr": false,
-   "t": "여기 일본 골목 같지 않나요?",
+   "t": "밤에는 불멍까지 즐겨요.",
    "img": "ai:11",
-   "start": 17.97,
-   "end": 19.57,
+   "start": 17.84,
+   "end": 19.42,
    "cuts": 2
   },
   {
    "video": true,
    "tr": false,
-   "t": "멀리 안 가도 푹 쉬기 좋은 곳이에요.",
+   "t": "후기엔 깨끗하다는 말이 많아요.",
    "img": "ai:12",
-   "start": 19.57,
-   "end": 22.35,
+   "start": 19.42,
+   "end": 20.95,
+   "cuts": 2
+  },
+  {
+   "video": true,
+   "tr": false,
+   "t": "멀리 안 가도 온천 여행 되는 곳이에요.",
+   "img": "ai:12",
+   "start": 20.95,
+   "end": 23.57,
    "cuts": 3
   }
  ],
- "file": "reels/gurye-dohwa-onsen/reel.mp4"
+ "file": "reels/wanju-boheme-spa/reel.mp4"
 }
