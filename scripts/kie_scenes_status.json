@@ -1,14 +1,14 @@
 {
- "at": "2026-11-03T12:09:49.535753",
+ "at": "2026-11-03T12:17:17.743989",
  "name": "wanju-boheme-spa",
  "jobs": [
   {
    "img": "ai:9",
-   "taskId": "f00ad937c8c35207ed504c9f8ade800e",
-   "state": "fail",
-   "credits": 0.0,
-   "msg": "Request blocked: The input content was flagged for containing a prominent public figure."
+   "taskId": "29c49def7308b91dc069189f7be2d19e",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-03/wanju-boheme-spa/clip_ai9.mp4"
   }
  ],
- "credits_total": 0
+ "credits_total": 35.0
 }
