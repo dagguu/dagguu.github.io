@@ -4,7 +4,7 @@
   "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/f4b3c148-5848-4d3f-b2d4-4a358f9048cb.jpg",
   "time": "day",
   "move": "reveal",
-  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. Wide aerial establishing view of the entire resort and its surroundings in winter, the rows of dark roofed villas with snow on the roofs, the blue pools with steam, snow-covered mountain slopes around it, resort centered in the lower-middle third, sharp, high detail.",
+  "img": "Turn this aerial photo into a real snowy winter aerial photograph. Keep the same buildings, pools, villa rows and layout. The whole 9:16 frame is one single continuous aerial photograph from top to bottom: above the resort continue the snow-covered mountains and a small strip of blue sky at the very top; below the resort continue the snowy slope and snow-dusted forest. No bands, no strips, no pasted photo edges, no sky below the resort. Thick white snow covers every roof, the ground, the road and all trees and mountains; the pools stay blue and liquid with thin steam. No people. No text or logos.",
   "prompt": "A slow rise from low behind the snowy trees, higher and further back until the whole resort and the snow-covered mountains around it are revealed; thin steam over the pools.",
   "look": "day"
  },
@@ -27,7 +27,7 @@
   "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/fb0776e0-402b-41b3-b667-1e62a70f758c.jpg",
   "time": "warm",
   "move": "dolly",
-  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. Warm wood room with a big picture window framing the blue pool and mountains outside, sofa on the left and wooden shelves on the right.",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. Warm wood room with a big picture window framing the blue pool and mountains outside, sofa on the left and wooden shelves on the right. Keep the view through the window as the same pool and mountains with snow. The building seen outside has no lettering, no sign, no logo. No plant in front of the window.",
   "prompt": "Moving forward through the room toward the big window; water outside shimmers softly."
  },
  {
@@ -49,7 +49,7 @@
   "n": 7,
   "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/be963793-4747-4ba5-91e6-3ac30936e42c.jpg",
   "time": "warm",
-  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. Duplex room with a wood-slat ceiling, wooden dining table and chairs, a staircase on the right and glass doors at the far end.",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. Duplex room with a wood-slat ceiling, wooden dining table and chairs, a staircase on the right and glass doors at the far end. The glass doors at the far end show only plain snowy ground and bare trees outside; do NOT add any pool, hot tub or new object outside.",
   "prompt": "Very slow steady move forward past the dining table toward the glass doors."
  },
  {
@@ -72,7 +72,7 @@
   "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/38e552ca-c6ff-4647-84a0-18e5385b5c4b.jpg",
   "time": "sunset",
   "move": "orbit",
-  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. Private stone-edged outdoor jacuzzi filled with warm water and thin steam, wooden fence on one side and pale concrete wall on the other. Remove any lettering on the wall.",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. Private stone-edged outdoor jacuzzi filled with warm water and thin steam, wooden fence on one side and pale concrete wall on the other. Remove any lettering on the wall. Above the wall and wooden fence show only the same sky with a little snow on the fence; do NOT add mountains, valleys or any new landscape.",
   "prompt": "Steam curls up from the warm water and small ripples spread; camera circles slowly around the bath."
  },
  {
