@@ -21,11 +21,11 @@
  "scenes": [
   {
    "img": "ai:1",
-   "y": 0.72
+   "y": 0.85
   },
   {
    "img": "ai:2",
-   "y": 0.55,
+   "y": 1,
    "cap": "하얀 건물 앞에 **수영장**이\n붙어 있는 풀빌라예요 🏊",
    "stickers": [
     {
@@ -40,11 +40,12 @@
      "x": 20,
      "y": 18
     }
-   ]
+   ],
+   "vp": "Very slow glide forward toward the white buildings, pool water rippling softly behind the glass, pine trees on the hill barely moving, small white clouds drifting slowly. Absolutely nothing enters, falls or flies through the frame: no branches, no leaves, no autumn leaves, no birds, no steam, no smoke, no fog, no new trees, no new fire. Keep every building, window, fence and the sky unchanged."
   },
   {
    "img": "ai:3",
-   "y": 0.72,
+   "y": 0.8,
    "cap": "해가 지면 **통창** 불빛이\n테라스까지 번져요 🌙",
    "stickers": [
     {
@@ -56,11 +57,12 @@
      "c": "#ffe9b8"
     }
    ],
-   "people": true
+   "people": true,
+   "vp": "Very slight slow push forward only, the camera stays far back so the woman in the chair stays fully inside the frame the whole time. The woman sits completely still with her back to the camera and her head facing away toward the house; she never turns her head. The low table beside her stays empty with no fire on it. Warm indoor light steady, soft clouds drifting slowly. Absolutely nothing enters, falls or flies through the frame: no branches, no leaves, no autumn leaves, no birds, no steam, no smoke, no fog, no new trees, no new fire. Keep every building, window, fence and the sky unchanged."
   },
   {
    "img": "ai:4",
-   "y": 0.65,
+   "y": 0.75,
    "cap": "**노을** 지는 저녁엔\n테라스 바비큐도 할 수 있어요 🥩",
    "stickers": [
     {
@@ -74,7 +76,7 @@
   },
   {
    "img": "ai:5",
-   "y": 0.55,
+   "y": 0.5,
    "cap": {
     "red": "📌 숙소 정보가 궁금하다면",
     "t": "프로필 링크에서 **[016]**번을\n검색해 주세요!"
