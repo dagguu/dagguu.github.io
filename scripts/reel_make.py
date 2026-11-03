@@ -106,10 +106,10 @@ def clip(img):
     if q.returncode == 0 and len(q.stdout) > 1000: open(p, "wb").write(q.stdout); return p
     return None
 def vlen(v): return float(subprocess.run(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",v],capture_output=True,text=True).stdout or 4)
-def vcut(v, ss, d, rate, out):
+def vcut(v, ss, d, rate, out, zoom=1.0):
     # 2026-11-03 시온님 "마지막 이미지가 확대축소 반복, 천천히 앞으로 전진하는 느낌으로": 컷마다 1배↔1.25배로 번갈아 확대하지 않고, 되감지도 않는다.
     # 같은 영상을 이어 쓰면 앞으로만 흐르고, 모자라면 조금 느리게(rate) 늘린다
-    vf = f"scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setpts={rate:.4f}*(PTS-STARTPTS),fps=30,format=yuv420p,tpad=stop_mode=clone:stop_duration=0.3"
+    vf = f"scale={round(1080*zoom)}:{round(1920*zoom)}:force_original_aspect_ratio=increase,crop=1080:1920,setpts={rate:.4f}*(PTS-STARTPTS),fps=30,format=yuv420p,tpad=stop_mode=clone:stop_duration=0.3"
     subprocess.run(["ffmpeg","-y","-loglevel","error","-ss",f"{ss:.3f}","-i",v,"-t",f"{d:.3f}","-vf",vf,"-an","-r","30","-c:v","libx264","-preset","veryfast","-crf","18",out],check=True)
 if a.thumb_only:
     thumb(); [os.remove(f"{OUT}/{f}") for f in os.listdir(OUT) if f.startswith(("src_", "clip_"))]; os.rmdir(OUT + "/cuts")
@@ -130,7 +130,7 @@ for i, s in enumerate(SC):
     parts = 1 if v0 else (max(1, round(d / 1.0)) if d > 1.4 else 1)  # 영상 장면은 한 번에 이어서(2026-11-03), 사진만 있을 때는 컷을 1초 안팎으로(2026-10-30)
     for j in range(parts):
         o = f"{OUT}/cuts/{len(cuts):02d}.mp4"; v = v0
-        if v: ss = used.get(s["img"], 0.0); rate = max(1.0, total[s["img"]] / vlen(v)); vcut(v, ss, d, rate, o); used[s["img"]] = ss + d / rate
+        if v: ss = used.get(s["img"], 0.0); rate = max(1.0, total[s["img"]] / vlen(v)); vcut(v, ss, d, rate, o, float(s.get("zoom") or 1)); used[s["img"]] = ss + d / rate
         else: cut(src(s["img"]), d / parts, MOV[k % 4], j % 2 == 1, o)
         cuts.append(o); k += 1
     plan.append({"video": bool(clip(s["img"])), "tr": bool(tv), "t": s["t"], "img": s["img"], "start": round(starts[i], 2), "end": round(ends[i], 2), "cuts": parts})
