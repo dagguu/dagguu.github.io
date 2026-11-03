@@ -1,42 +1,21 @@
 {
- "at": "2026-11-03T11:13:05.768770",
+ "at": "2026-11-03T11:33:36.451480",
  "name": "gyeongju-neulhaerang",
  "jobs": [
   {
-   "img": "ai:1",
-   "taskId": "7372f000dfc3578fcf24adc9c832d2f9",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-03/gyeongju-neulhaerang/clip_ai1.mp4"
-  },
-  {
    "img": "ai:2",
-   "taskId": "dc2c75cd36ab2a12d0789ee3f71e5976",
+   "taskId": "719050579ba6e5047d797251854cf6ac",
    "state": "success",
    "credits": 35.0,
    "file": "video/2026-11-03/gyeongju-neulhaerang/clip_ai2.mp4"
   },
   {
    "img": "ai:3",
-   "taskId": "394239b36966aa0824af36a946137b0c",
+   "taskId": "4cb19b6d86ac193aefe040b90b64ae46",
    "state": "success",
    "credits": 35.0,
    "file": "video/2026-11-03/gyeongju-neulhaerang/clip_ai3.mp4"
-  },
-  {
-   "img": "ai:4",
-   "taskId": "3d3c781ce1a8fcad592d4bdc22231534",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-03/gyeongju-neulhaerang/clip_ai4.mp4"
-  },
-  {
-   "img": "ai:5",
-   "taskId": "caa7eebde069192f31f2c261bf6b6dc6",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-03/gyeongju-neulhaerang/clip_ai5.mp4"
   }
  ],
- "credits_total": 175.0
+ "credits_total": 70.0
 }
