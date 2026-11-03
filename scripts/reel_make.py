@@ -105,29 +105,32 @@ def clip(img):
     q = subprocess.run(["git", "show", f"origin/insta:video/{J['imgDate']}/{J['stay']}/clip_{kind}{n}.mp4"], capture_output=True)
     if q.returncode == 0 and len(q.stdout) > 1000: open(p, "wb").write(q.stdout); return p
     return None
-def vcut(v, ss, d, close, out):
-    vlen = float(subprocess.run(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",v],capture_output=True,text=True).stdout or 4)
-    if ss + d > vlen: ss = max(0, vlen - d)
-    sc = "scale=1350:2400:force_original_aspect_ratio=increase,crop=1080:1920" if close else "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920"
-    vf = f"{sc},setpts=PTS-STARTPTS,fps=30,format=yuv420p" + (f",tpad=stop_mode=clone:stop_duration={d}" if ss + d > vlen else "")
-    subprocess.run(["ffmpeg","-y","-loglevel","error","-ss",f"{ss:.2f}","-i",v,"-t",f"{d:.3f}","-vf",vf,"-an","-r","30","-c:v","libx264","-preset","veryfast","-crf","18",out],check=True)
+def vlen(v): return float(subprocess.run(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",v],capture_output=True,text=True).stdout or 4)
+def vcut(v, ss, d, rate, out):
+    # 2026-11-03 시온님 "마지막 이미지가 확대축소 반복, 천천히 앞으로 전진하는 느낌으로": 컷마다 1배↔1.25배로 번갈아 확대하지 않고, 되감지도 않는다.
+    # 같은 영상을 이어 쓰면 앞으로만 흐르고, 모자라면 조금 느리게(rate) 늘린다
+    vf = f"scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setpts={rate:.4f}*(PTS-STARTPTS),fps=30,format=yuv420p,tpad=stop_mode=clone:stop_duration=0.3"
+    subprocess.run(["ffmpeg","-y","-loglevel","error","-ss",f"{ss:.3f}","-i",v,"-t",f"{d:.3f}","-vf",vf,"-an","-r","30","-c:v","libx264","-preset","veryfast","-crf","18",out],check=True)
 if a.thumb_only:
     thumb(); [os.remove(f"{OUT}/{f}") for f in os.listdir(OUT) if f.startswith(("src_", "clip_"))]; os.rmdir(OUT + "/cuts")
     st.update({"thumbOnly": True, "file": f"reels/{a.name}/thumb.jpg"}); save(); sys.exit(0)
 used = {}
+total = {}
+for i, s in enumerate(SC): total[s["img"]] = total.get(s["img"], 0) + ends[i] - starts[i]
 cuts, plan, k = [], [], 0
 for i, s in enumerate(SC):
     d = ends[i] - starts[i]
     tv = clip("tr:" + s["img"].split(":")[1]) if s.get("tr") and i > 0 else None  # 2026-11-02 시온님 "휩팬·돌진": 앞 장면 → 이 장면 전환 영상을 맨 앞에 짧게
     if tv:
         tt = min(0.55, d * 0.4); o = f"{OUT}/cuts/{len(cuts):02d}.mp4"
-        tl = float(subprocess.run(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",tv],capture_output=True,text=True).stdout or 4)
+        tl = vlen(tv)
         subprocess.run(["ffmpeg","-y","-loglevel","error","-i",tv,"-vf",f"scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setpts=PTS*{tt/tl:.4f},fps=30,format=yuv420p","-t",f"{tt:.3f}","-an","-r","30","-c:v","libx264","-preset","veryfast","-crf","18",o],check=True)
         cuts.append(o); d -= tt
-    parts = max(1, round(d / 1.0)) if d > 1.4 else 1  # 2026-10-30 시온님이 보여준 숙소 릴스(20초 19컷): 컷을 1초 안팎으로
+    v0 = clip(s["img"])
+    parts = 1 if v0 else (max(1, round(d / 1.0)) if d > 1.4 else 1)  # 영상 장면은 한 번에 이어서(2026-11-03), 사진만 있을 때는 컷을 1초 안팎으로(2026-10-30)
     for j in range(parts):
-        o = f"{OUT}/cuts/{len(cuts):02d}.mp4"; v = clip(s["img"])
-        if v: ss = used.get(s["img"], 0.0); vcut(v, ss, d / parts, j % 2 == 1, o); used[s["img"]] = ss + d / parts
+        o = f"{OUT}/cuts/{len(cuts):02d}.mp4"; v = v0
+        if v: ss = used.get(s["img"], 0.0); rate = max(1.0, total[s["img"]] / vlen(v)); vcut(v, ss, d, rate, o); used[s["img"]] = ss + d / rate
         else: cut(src(s["img"]), d / parts, MOV[k % 4], j % 2 == 1, o)
         cuts.append(o); k += 1
     plan.append({"video": bool(clip(s["img"])), "tr": bool(tv), "t": s["t"], "img": s["img"], "start": round(starts[i], 2), "end": round(ends[i], 2), "cuts": parts})
