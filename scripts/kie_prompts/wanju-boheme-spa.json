@@ -34,7 +34,7 @@
   "n": 5,
   "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/1f3e5cce-e0d2-4ffc-9aad-6d5e2de42d2a.jpg",
   "time": "day",
-  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. Bright room with a tent-shaped ceiling and dark drapes, camping chairs and table in front of a tall glass door looking at the green mountain.",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is a fully indoor room. The whole top of the vertical frame must be the same white and tent-shaped indoor ceiling with the black steel beam and lights, continued upward; the whole bottom is the same glossy floor. Absolutely no sky, no clouds and no roof opening above the room; the only outdoor view is through the tall glass door. Bright room with dark drapes, camping chairs and a table in front of the tall glass door looking at the green mountain.",
   "prompt": "Drapes move slightly; slow walk forward toward the tall glass door and the mountain view."
  },
  {
@@ -56,7 +56,7 @@
   "n": 8,
   "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/99d8bad6-642f-4659-93dd-73ca7ec4b2a2.jpg",
   "time": "sunset",
-  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. Straight-down overhead view of the perfectly round blue pool with the two dolphin mosaic and yellow parasols beside it.",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. A true straight-down top view from directly above: the whole frame looks vertically down at the ground. No horizon, no sky, no mountains anywhere. Above and below the round pool extend only the same gray pebble paving, wooden deck and yellow parasols seen from above. The perfectly round blue pool with the two dolphin mosaic stays centered.",
   "prompt": "Thin steam rises off the warm round pool, water ripples softly; slow rise looking straight down."
  },
  {
@@ -64,8 +64,8 @@
   "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/83723e58-325b-4b84-8c31-28d1248935a4.jpg",
   "time": "sunset",
   "people": true,
-  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. One young Korean woman in her late 20s, Korean facial features, black hair, seen from behind (back view, face and profile completely hidden, never facing the camera), is standing waist-deep in the round warm pool looking toward the mountains, thin steam rising from the water. The pool, mosaic, parasols, big tree and buildings stay exactly the same.",
-  "prompt": "She stays still in the warm water, seen from behind, steam rises and small ripples spread around her; slow push forward."
+  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. One young Korean woman in her late 20s, Korean facial features, black hair, seen from behind (back view, face and profile completely hidden, never facing the camera), is sitting on the stone edge of the round pool closest to the camera with her legs in the water, looking across the water toward the mountains, thin steam rising from the warm water. She sits on the edge and is not standing on the water. The pool, mosaic, parasols, big tree and buildings stay exactly the same.",
+  "prompt": "She sits still on the pool edge, seen from behind, never turning, steam rises and small ripples spread around her legs; slow push forward."
  },
  {
   "n": 10,
