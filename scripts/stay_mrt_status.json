@@ -1,5 +1,5 @@
 {
- "at": "2026-11-03 01:17",
+ "at": "2026-11-03 20:08",
  "checkIn": "2026-11-07",
  "stays": {
   "busan-matie-harbor": {
@@ -19,7 +19,7 @@
       "page",
       "size"
      ],
-     "total": 1946
+     "total": 1948
     }
    ],
    "hit": "마티에 부산하버시티",
@@ -114,14 +114,14 @@
      "kw": "주문진",
      "region": "주문진항",
      "type": "POINT_OF_INTEREST",
-     "pages": 1,
-     "n": 50,
+     "pages": 2,
+     "n": 100,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1502
+     "total": 1501
     }
    ],
    "hit": "강릉 다케노모리글램핑&료칸",
@@ -155,7 +155,7 @@
       "page",
       "size"
      ],
-     "total": 1918
+     "total": 1917
     }
    ],
    "hit": "가평 글램하바나",
@@ -189,7 +189,7 @@
       "page",
       "size"
      ],
-     "total": 1918
+     "total": 1917
     }
    ],
    "hit": "가평 하녹타케 펜션",
@@ -230,26 +230,26 @@
      "region": "고성",
      "type": "CITY",
      "pages": 4,
-     "n": 100,
+     "n": 101,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 103
+     "total": 104
     },
     {
      "kw": "강원",
      "region": "강릉",
      "type": "CITY",
      "pages": 30,
-     "n": 1423,
+     "n": 1422,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1439
+     "total": 1438
     },
     {
      "kw": "강원",
@@ -300,6 +300,40 @@
     "starRating"
    ]
   },
+  "gyeongju-neulhaerang": {
+   "name": "늘해랑",
+   "city": "경주",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "경주",
+     "region": "경주",
+     "type": "CITY",
+     "pages": 18,
+     "n": 888,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 1870
+    }
+   ],
+   "hit": "경주 늘해랑",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
+  },
   "gyeongju-snb-poolvilla": {
    "name": "경주 에스앤비풀빌라",
    "city": "경주",
@@ -317,7 +351,7 @@
       "page",
       "size"
      ],
-     "total": 1873
+     "total": 1870
     }
    ],
    "hit": "경주 에스앤비풀빌라",
@@ -351,7 +385,7 @@
       "page",
       "size"
      ],
-     "total": 1136
+     "total": 1138
     }
    ],
    "hit": "인천 캠프노마드",
@@ -487,7 +521,7 @@
       "page",
       "size"
      ],
-     "total": 2378
+     "total": 2375
     }
    ],
    "hit": "대부도(선재도) 선재담글램핑&카라반리조트",
@@ -502,6 +536,53 @@
     "reviewScore",
     "salePrice",
     "starRating"
+   ]
+  },
+  "wanju-boheme-spa": {
+   "name": "보엠 유황스파앤리조트",
+   "city": "완주",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "완주",
+     "region": "완주",
+     "type": "CITY",
+     "pages": 5,
+     "n": 187,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 190
+    },
+    {
+     "kw": "전북",
+     "region": "전주",
+     "type": "CITY",
+     "pages": 16,
+     "n": 723,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 732
+    },
+    {
+     "kw": "전북",
+     "region": "군산",
+     "type": "CITY",
+     "pages": 6,
+     "n": 238,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 239
+    }
    ]
   }
  }
