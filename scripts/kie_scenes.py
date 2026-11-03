@@ -40,6 +40,7 @@ LOOK = {"day": " Clear sunny midday look: vivid deep-blue sky with a few white c
 SLOWIN = "a very slow, steady, continuous push-in: the camera creeps gently forward into the space at a constant speed for the whole clip, the frame grows only slightly, no sudden zoom, no speed change, real parallax depth"
 MOVE = {"slowin": SLOWIN, "crash": SLOWIN,
         "dolly": "a very slow, steady dolly-in: the camera glides gently forward deep into the space at a constant speed, with soft parallax as near objects pass by, no sudden zoom or speed change",
+        "reveal": "a slow, majestic aerial reveal: the camera starts low and close behind foreground trees, water or rooftops and rises smoothly upward and slightly backward at a constant speed, uncovering the whole building in its full setting (mountains, sea, forest or fields around it) so the viewer gasps at the view; the entire property is visible and centered by the end, one continuous move, no sudden zoom",  # 2026-11-03 시온님: 첫 장면 = 건물 전체 드론샷, 우와~ 감탄·어딘지 궁금하게
         "orbit": "a smooth slow half orbit: the camera circles gently around the main subject in an arc from left to right, keeping it centered, background sliding behind it with soft parallax"}
 def gimbal(tm, mv=None):
     g = GIMBAL.replace(" {TONE}", LOOK.get(tm or globals().get("LOOK0") or "day", LOOK["day"]))
