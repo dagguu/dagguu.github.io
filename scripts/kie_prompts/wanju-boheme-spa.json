@@ -4,23 +4,23 @@
   "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/f4b3c148-5848-4d3f-b2d4-4a358f9048cb.jpg",
   "time": "day",
   "move": "reveal",
-  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. Wide aerial establishing view of the entire resort and its surroundings, the rows of dark roofed villas, the blue pools with yellow parasols, green mountain slopes around it, resort centered in the lower-middle third, sharp, high detail.",
-  "prompt": "A slow rise from low behind the trees, higher and further back until the whole resort and the mountains around it are revealed; tree leaves sway gently and pool water shimmers.",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. Wide aerial establishing view of the entire resort and its surroundings in winter, the rows of dark roofed villas with snow on the roofs, the blue pools with steam, snow-covered mountain slopes around it, resort centered in the lower-middle third, sharp, high detail.",
+  "prompt": "A slow rise from low behind the snowy trees, higher and further back until the whole resort and the snow-covered mountains around it are revealed; thin steam over the pools.",
   "look": "day"
  },
  {
   "n": 2,
   "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/4969dab3-2f4b-4df2-b8da-08484e102ad4.jpg",
   "time": "day",
-  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. The row of wood-clad villas on pale gravel with green mountains and big white clouds in a deep blue sky.",
-  "prompt": "Clouds drift slowly over the mountain, light moves over the gravel; slow steady move toward the wooden villas."
+  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. The curved edge of the big blue pool, snow lying on the ground around it and on the mountains behind, deep blue sky.",
+  "prompt": "Water ripples softly; very slow steady move forward along the pool."
  },
  {
   "n": 3,
   "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/8b224d65-361d-491c-969e-41bb1f8a57a1.jpg",
   "time": "day",
-  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. The big old tree shading the terrace tables and yellow parasols in front of the low white building.",
-  "prompt": "Tree leaves and parasols sway gently in the breeze, dappled light moves on the ground; slow glide past the tree trunk."
+  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. The big old bare tree with snow on its branches above the terrace tables and closed parasols, in front of the low white building, snow on the ground.",
+  "prompt": "Everything stays still; very slow steady move forward toward the terrace."
  },
  {
   "n": 4,
@@ -28,14 +28,14 @@
   "time": "warm",
   "move": "dolly",
   "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. Warm wood room with a big picture window framing the blue pool and mountains outside, sofa on the left and wooden shelves on the right.",
-  "prompt": "Moving forward through the room toward the big window; pool water outside shimmers."
+  "prompt": "Moving forward through the room toward the big window; water outside shimmers softly."
  },
  {
   "n": 5,
   "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/1f3e5cce-e0d2-4ffc-9aad-6d5e2de42d2a.jpg",
   "time": "day",
-  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is a fully indoor room. The whole top of the vertical frame must be the same white and tent-shaped indoor ceiling with the black steel beam and lights, continued upward; the whole bottom is the same glossy floor. Absolutely no sky, no clouds and no roof opening above the room; the only outdoor view is through the tall glass door. Bright room with dark drapes, camping chairs and a table in front of the tall glass door looking at the green mountain.",
-  "prompt": "Drapes move slightly; slow walk forward toward the tall glass door and the mountain view."
+  "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is a fully indoor room. The whole top of the vertical frame must be the same white and tent-shaped indoor ceiling with the black steel beam and lights, continued upward; the whole bottom is the same glossy floor. Absolutely no sky, no clouds and no roof opening above the room; the only outdoor view is through the tall glass door. Bright room with dark drapes, camping chairs and a table in front of the tall glass door looking at the snow-covered mountain.",
+  "prompt": "Very slow walk forward toward the tall glass door and the snowy mountain view."
  },
  {
   "n": 6,
@@ -43,21 +43,21 @@
   "time": "warm",
   "move": "dolly",
   "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. Tall indoor room with a canvas glamping tent standing on the floor with a bed inside, grey sofa beside it and a dark staircase on the right. The wall on the left is a plain dark grey wall with no text and no logo at all.",
-  "prompt": "Moving slowly into the room toward the tent; warm light inside the tent glows softly."
+  "prompt": "Moving slowly into the room toward the tent; warm light inside the tent stays soft."
  },
  {
   "n": 7,
   "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/be963793-4747-4ba5-91e6-3ac30936e42c.jpg",
   "time": "warm",
   "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. Duplex room with a wood-slat ceiling, wooden dining table and chairs, a staircase on the right and glass doors at the far end.",
-  "prompt": "Slow steady move forward past the dining table toward the glass doors; soft daylight."
+  "prompt": "Very slow steady move forward past the dining table toward the glass doors."
  },
  {
   "n": 8,
   "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/99d8bad6-642f-4659-93dd-73ca7ec4b2a2.jpg",
   "time": "sunset",
   "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. A true straight-down top view from directly above: the whole frame looks vertically down at the ground. No horizon, no sky, no mountains anywhere. Above and below the round pool extend only the same gray pebble paving, wooden deck and yellow parasols seen from above. The perfectly round blue pool with the two dolphin mosaic stays centered.",
-  "prompt": "Thin steam rises off the warm round pool, water ripples softly; slow rise looking straight down."
+  "prompt": "Thin steam rises off the warm round pool, water ripples softly; slow steady move straight down toward the pool."
  },
  {
   "n": 9,
@@ -65,7 +65,7 @@
   "time": "sunset",
   "people": true,
   "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. One young Korean woman in her late 20s, Korean facial features, black hair, seen from behind (back view, face and profile completely hidden, never facing the camera), is sitting on the stone edge of the round pool closest to the camera with her legs in the water, looking across the water toward the mountains, thin steam rising from the warm water. She sits on the edge and is not standing on the water. The pool, mosaic, parasols, big tree and buildings stay exactly the same.",
-  "prompt": "She sits still on the pool edge, seen from behind, never turning, steam rises and small ripples spread around her legs; slow push forward."
+  "prompt": "She sits still on the pool edge, seen from behind, never turning, steam rises and small ripples spread around her legs; very slow move forward."
  },
  {
   "n": 10,
@@ -81,13 +81,13 @@
   "time": "night",
   "people": true,
   "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. One young Korean woman in her late 20s, Korean facial features, black hair, seen from behind (back view, face and profile completely hidden, never facing the camera), is sitting on the round wooden bench by the fire pit looking at the flames. The fire pit, hanging tripod and wooden seating stay exactly the same.",
-  "prompt": "Flames flicker and sparks drift up, she stays seated, seen from behind, never turning; slow push forward."
+  "prompt": "Flames flicker, she stays seated, seen from behind, never turning; very slow move forward."
  },
  {
   "n": 12,
   "src": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/cc104c2b-393f-4d37-bf81-77ea5c147b8f.jpg",
   "time": "night",
   "img": "Keep the place exactly as it is (same buildings, same walls, same pool shape and mosaic, same trees, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. Wide night view of the long pool reflecting the warmly lit low building, stars above the dark mountain ridge. Extend only plain water below and night sky above.",
-  "prompt": "Pool water and reflected lights shimmer softly, stars twinkle faintly; slow aerial glide forward over the water."
+  "prompt": "Pool water and reflected lights shimmer softly with thin steam; very slow steady move forward over the water."
  }
 ]
