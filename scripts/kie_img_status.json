@@ -1,103 +1,39 @@
 {
- "at": "2026-11-03 20:41",
+ "at": "2026-11-03 20:47",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
    "n": 1,
-   "taskId": "828961df2c51ee3d2ec440b77ceee026",
+   "taskId": "0ff65f979de0ad0bc5ed904073b76e4a",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
    "file": "img/2026-11-03/wanju-boheme-spa/1_edit.jpg"
   },
   {
-   "n": 2,
-   "taskId": "9c54445d786cffda99947bf473057a54",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-03/wanju-boheme-spa/2_edit.jpg"
-  },
-  {
-   "n": 3,
-   "taskId": "a2c8d24c8068e9de25b19b166dd69a41",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-03/wanju-boheme-spa/3_edit.jpg"
-  },
-  {
    "n": 4,
-   "taskId": "eb812d5ad4258876f0b3d5e99f518098",
+   "taskId": "683527edb0c2d6e7926c2f19991029c8",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
    "file": "img/2026-11-03/wanju-boheme-spa/4_edit.jpg"
   },
   {
-   "n": 5,
-   "taskId": "e4fa8648e7dfa56d2cd3f4b9a94f95c8",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-03/wanju-boheme-spa/5_edit.jpg"
-  },
-  {
-   "n": 6,
-   "taskId": "4579b4600e57c0dc649ebe4f06c6c8ed",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-03/wanju-boheme-spa/6_edit.jpg"
-  },
-  {
    "n": 7,
-   "taskId": "e91d061dcc7e6d18d6abc9980efb5e16",
+   "taskId": "c0097e6a8a0baa09b90122a21e83f19d",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
    "file": "img/2026-11-03/wanju-boheme-spa/7_edit.jpg"
   },
   {
-   "n": 8,
-   "taskId": "99b064fec69d2a7cc424ef7ca05aff38",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-03/wanju-boheme-spa/8_edit.jpg"
-  },
-  {
-   "n": 9,
-   "taskId": "c76b7bc847bdcb14ba4a1268358d259e",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-03/wanju-boheme-spa/9_edit.jpg"
-  },
-  {
    "n": 10,
-   "taskId": "75374060c51f2f4649fb224a0e2c6021",
+   "taskId": "8a59802759cd2b976c1b90cfc8a2696a",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
    "file": "img/2026-11-03/wanju-boheme-spa/10_edit.jpg"
-  },
-  {
-   "n": 11,
-   "taskId": "0033a079cea25c8bf2bf2deb1ffc1021",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-03/wanju-boheme-spa/11_edit.jpg"
-  },
-  {
-   "n": 12,
-   "taskId": "8a58499a54dfd50c9750a0bce1a7dbb8",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-03/wanju-boheme-spa/12_edit.jpg"
   }
  ],
  "slug": "wanju-boheme-spa"
