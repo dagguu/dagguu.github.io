@@ -1,48 +1,104 @@
 {
- "at": "2026-11-03 20:08",
+ "at": "2026-11-03 20:41",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
    "n": 1,
-   "taskId": "3e59eb0d38e7f709086982732628f000",
+   "taskId": "828961df2c51ee3d2ec440b77ceee026",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-03/gyeongju-neulhaerang/1_edit.jpg"
+   "file": "img/2026-11-03/wanju-boheme-spa/1_edit.jpg"
   },
   {
    "n": 2,
-   "taskId": "d947f84f71da03948a3bfea6a0641699",
+   "taskId": "9c54445d786cffda99947bf473057a54",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-03/gyeongju-neulhaerang/2_edit.jpg"
+   "file": "img/2026-11-03/wanju-boheme-spa/2_edit.jpg"
   },
   {
    "n": 3,
-   "taskId": "2c40dc50e0dd8d65d07d6de5f5cfeee6",
+   "taskId": "a2c8d24c8068e9de25b19b166dd69a41",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-03/gyeongju-neulhaerang/3_edit.jpg"
+   "file": "img/2026-11-03/wanju-boheme-spa/3_edit.jpg"
   },
   {
    "n": 4,
-   "taskId": "6c4a2dd4d3cc56b722761f1be7b89557",
+   "taskId": "eb812d5ad4258876f0b3d5e99f518098",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-03/gyeongju-neulhaerang/4_edit.jpg"
+   "file": "img/2026-11-03/wanju-boheme-spa/4_edit.jpg"
   },
   {
    "n": 5,
-   "taskId": "ad94ea8df1aa881d6dcc63ae04d2d0ca",
+   "taskId": "e4fa8648e7dfa56d2cd3f4b9a94f95c8",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-03/gyeongju-neulhaerang/5_edit.jpg"
+   "file": "img/2026-11-03/wanju-boheme-spa/5_edit.jpg"
+  },
+  {
+   "n": 6,
+   "taskId": "4579b4600e57c0dc649ebe4f06c6c8ed",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-03/wanju-boheme-spa/6_edit.jpg"
+  },
+  {
+   "n": 7,
+   "taskId": "e91d061dcc7e6d18d6abc9980efb5e16",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-03/wanju-boheme-spa/7_edit.jpg"
+  },
+  {
+   "n": 8,
+   "taskId": "99b064fec69d2a7cc424ef7ca05aff38",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-03/wanju-boheme-spa/8_edit.jpg"
+  },
+  {
+   "n": 9,
+   "taskId": "c76b7bc847bdcb14ba4a1268358d259e",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-03/wanju-boheme-spa/9_edit.jpg"
+  },
+  {
+   "n": 10,
+   "taskId": "75374060c51f2f4649fb224a0e2c6021",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-03/wanju-boheme-spa/10_edit.jpg"
+  },
+  {
+   "n": 11,
+   "taskId": "0033a079cea25c8bf2bf2deb1ffc1021",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-03/wanju-boheme-spa/11_edit.jpg"
+  },
+  {
+   "n": 12,
+   "taskId": "8a58499a54dfd50c9750a0bce1a7dbb8",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-03/wanju-boheme-spa/12_edit.jpg"
   }
  ],
- "slug": "gyeongju-neulhaerang"
+ "slug": "wanju-boheme-spa"
 }
