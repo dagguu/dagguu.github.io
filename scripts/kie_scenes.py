@@ -13,7 +13,7 @@ J = json.load(open(a.src or f"scripts/tts/{a.name}.json", encoding="utf-8")); st
 P = json.load(open(f"scripts/stays/{stay}.json", encoding="utf-8"))
 pf = f"scripts/kie_prompts/{stay}.json"; KP = {x["n"]: x for x in (json.load(open(pf, encoding="utf-8")) if os.path.exists(pf) else [])}
 LOOK0 = next((x.get("look") for x in KP.values() if x.get("look")), "day")  # 숙소 기본 색감
-TAIL_P = " Keep the exact same Korean person from the image with the same face, hair and clothes (long white skirt); she stays turned away (back view or slight side profile), never turns her head toward the camera, no face close-up. She stays standing, keeps her hands still and natural, and never touches furniture, tables, fire pits or hot objects. Keep the room, architecture and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."
+TAIL_P = " Keep the exact same Korean person from the image with the same face, hair and clothes (long white skirt); she stays turned away (back view or slight side profile), never turns her head toward the camera, no face close-up. She stays standing, keeps her hands still and natural, and never touches furniture, tables, fire pits or hot objects. Keep the room, architecture and view exactly unchanged. Natural handheld motion, natural light, no text."
 # 2026-11-02 시온님: 강아지·아이·아빠 장면(kie_prompts "who")은 그 모습을 유지하는 꼬리말
 WHO_T = {"dog": " Keep the same small fluffy cream Pomeranian dog from the image; it moves naturally and gently (tail wagging, sniffing, trotting a few steps), stays the same size and look.",
          "kid": " Keep the same Korean child from the image seen from behind; the child never turns toward the camera, face never visible, moves naturally (walking, looking around).",
@@ -23,12 +23,12 @@ def who_tail(k):
     if k.get("people"):
         base = TAIL_P.replace("(long white skirt)", "(" + k["outfit"] + ")") if k.get("outfit") else TAIL_P
     elif ws:
-        base = " Keep the room, architecture and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."
+        base = " Keep the room, architecture and view exactly unchanged. Natural handheld motion, natural light, no text."
     else:
         return TAIL
     return base + "".join(WHO_T[w] for w in ws)
 # 2026-10-30 시온님 "사진을 좌우로 미는 게 아니라 스마트폰 짐벌로 직접 걸어가며 찍은 것처럼 공간감 있게": 모든 장면 프롬프트에 붙임
-GIMBAL = " Make it look like real filmed video, not a still photo: a slow, gentle camera drift (a very slow steady push-in into the space with real parallax depth, small and smooth, no sudden zoom), plus natural living motion inside the scene - only steam rising from warm water, soft water ripples and warm lights glowing. Curtains, drapes, fabric, parasols, plants and trees stay completely still: no wind, no fluttering, no swaying, nothing floating or falling, no falling leaves, petals, particles or snowflakes. If the scene has no water, nothing in it moves; only the camera moves, like a real quiet video. {TONE} This is NOT a 2D pan, slide or zoom across a flat photo. IMPORTANT: no drones, gimbals, cameras, phones, tripods or any filming equipment appear anywhere in the frame - show only the place itself."  # 2026-10-30 21:52 시온님: 영상처럼 보이게(작은 카메라 움직임 + 김·물결·나뭇잎 같은 살아 있는 움직임) + 밝은 가을 톤
+GIMBAL = " Make it look like real filmed video, not a still photo: a slow, gentle camera drift (handheld footage shot at chest height by a person walking slowly forward into the space: a tiny natural hand sway and very slight walking bob, real parallax depth, no sudden zoom, not perfectly smooth, not a stabilized cinematic move), plus natural living motion inside the scene - only steam rising from warm water, soft water ripples and warm lights glowing. Curtains, drapes, fabric, parasols, plants and trees stay completely still: no wind, no fluttering, no swaying, nothing floating or falling, no falling leaves, petals, particles or snowflakes. If the scene has no water, nothing in it moves; only the camera moves, like a real quiet video. {TONE} This is NOT a 2D pan, slide or zoom across a flat photo. IMPORTANT: no drones, gimbals, cameras, phones, tripods or any filming equipment appear anywhere in the frame - show only the place itself."  # 2026-10-30 21:52 시온님: 영상처럼 보이게(작은 카메라 움직임 + 김·물결·나뭇잎 같은 살아 있는 움직임) + 밝은 가을 톤
 LOOK = {"day": " Snowy winter day look: clear deep-blue sky, bright sunlight, fresh white snow already lying still on the ground, roofs, trees and mountains, bare or snow-covered trees, clean bright whites indoors; no green leaves or autumn leaves, not dark, hazy or gloomy.",
         "sunset": " Winter sunset look: warm orange-pink sky over snow-covered hills, snow lying still on the ground and roofs, window lights starting to glow, steam over warm water; bright and clear, not murky.",
         "night": " Winter night blue-hour look: deep navy sky, snow lying still on the ground and roofs, warm yellow window and lantern lights, soft reflections on water, gentle steam; clean and clear, details visible, not pitch-black.",
@@ -37,16 +37,16 @@ LOOK = {"day": " Snowy winter day look: clear deep-blue sky, bright sunlight, fr
         "pastel": " Soft bright airy look: creamy whites, gentle pastel colors, diffused sunlight, snow visible outside any window, light and dreamy, not harsh or dark."}  # 2026-10-31 시온님: 숙소 콘셉트별 색감  # 2026-10-31 시온님: 하루 흐름(낮 → 노을 → 밤)
 # 2026-11-02 시온님 "힉스필드처럼 크래시줌·돌리·오빗·휩팬": kie_prompts 항목 "move": "dolly"|"orbit"|"crash" 면 느린 드리프트 대신 그 카메라 움직임(장비 이름은 쓰지 않음)
 # 2026-11-02 시온님 "갑자기 확 커지는 확대샷 하지 말고 아주 천천히 안쪽으로 들어가는 느낌으로": crash 는 쓰지 않고(옛 json 은 slowin 으로 처리), 기본 움직임도 아주 느린 전진
-SLOWIN = "a very slow, steady, continuous push-in: the camera creeps gently forward into the space at a constant speed for the whole clip, the frame grows only slightly, no sudden zoom, no speed change, real parallax depth"
+SLOWIN = "handheld footage of a person walking very slowly forward into the space at chest height: a tiny natural hand sway and very slight walking bob, the frame grows only slightly, no sudden zoom, real parallax depth, not a stabilized cinematic move"
 MOVE = {"slowin": SLOWIN, "crash": SLOWIN,
-        "dolly": "a very slow, steady dolly-in: the camera glides gently forward deep into the space at a constant speed, with soft parallax as near objects pass by, no sudden zoom or speed change",
+        "dolly": "handheld footage of a person walking slowly forward deep into the space at chest height, a tiny natural hand sway and slight walking bob, soft parallax as near objects pass by, no sudden zoom, not a stabilized cinematic move",
         "reveal": "a slow, majestic aerial reveal: the camera starts low and close behind foreground trees, water or rooftops and rises smoothly upward and slightly backward at a constant speed, uncovering the whole building in its full setting (mountains, sea, forest or fields around it) so the viewer gasps at the view; the entire property is visible and centered by the end, one continuous move, no sudden zoom",  # 2026-11-03 시온님: 첫 장면 = 건물 전체 드론샷, 우와~ 감탄·어딘지 궁금하게
-        "orbit": "a smooth slow half orbit: the camera circles gently around the main subject in an arc from left to right, keeping it centered, background sliding behind it with soft parallax"}
+        "orbit": "handheld footage of a person slowly walking a short arc around the main subject from left to right at chest height, a tiny natural hand sway, background sliding behind it with soft parallax, not a stabilized cinematic move"}
 def gimbal(tm, mv=None):
     g = GIMBAL.replace(" {TONE}", LOOK.get(tm or globals().get("LOOK0") or "day", LOOK["day"]))
     if mv in MOVE: g = re.sub(r"a slow, gentle camera drift \([^)]*\)", MOVE[mv], g)
     return g
-TAIL = " No people. Keep the original architecture, rooms and view exactly unchanged. Smooth cinematic camera motion, natural light, no text."
+TAIL = " No people. Keep the original architecture, rooms and view exactly unchanged. Natural handheld motion, natural light, no text."
 RAW = "https://raw.githubusercontent.com/dagguu/dagguu.github.io/insta/"
 def call(url, body=None):
     req = urllib.request.Request(url, data=json.dumps(body).encode() if body is not None else None,

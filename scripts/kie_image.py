@@ -83,7 +83,7 @@ def body(prompt, src, tm="day", n=0):
     for w in WHOS.get(n, []):
         prompt += WHO[w]
         if w in REF: refs.append(REF[w])
-    if "winter tone" not in prompt: prompt = prompt + TONE_T.get(tm, TONE)
+    if "winter tone" not in prompt: prompt = prompt + TONE_T.get(tm, TONE) + SNAP
     if "9:16" not in prompt: prompt = prompt + SIZE
     if "nano-banana-edit" in a.model:
         return {"model": a.model, "input": {"prompt": prompt, "image_urls": [src] + refs, "output_format": "jpeg", "image_size": "9:16"}}

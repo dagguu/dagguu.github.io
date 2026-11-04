@@ -15,9 +15,9 @@ st["font"] = FAM; st["fontInfo"] = FU
 J = json.load(open(f"scripts/tts/{a.name}.json", encoding="utf-8")); SC = J["scenes"]
 P = json.load(open(f"scripts/stays/{J['stay']}.json", encoding="utf-8"))
 # 2026-10-31 시온님 "숙소마다 특색이 있으니 색감은 알아서": tts json "look" 으로 마지막 보정을 숙소 콘셉트에 맞춤
-GRADE = {"day": "eq=brightness=0.03:contrast=1.10:saturation=1.14:gamma=1.02,unsharp=5:5:0.8:5:5:0.0,colorbalance=rs=0.01:gs=0.01:bs=0.02:rm=0.01:bm=0.01",
-         "moody": "eq=brightness=0.0:contrast=1.08:saturation=1.06:gamma=1.0,unsharp=5:5:0.6:5:5:0.0,colorbalance=rs=0.03:gs=0.01:bs=-0.02:rh=0.02",
-         "warm": "eq=brightness=0.02:contrast=1.06:saturation=1.08:gamma=1.02,unsharp=5:5:0.6:5:5:0.0,colorbalance=rs=0.03:gs=0.01:bs=-0.02",
+GRADE = {"day": "eq=brightness=0.01:contrast=1.03:saturation=1.03",
+         "moody": "eq=contrast=1.04:saturation=1.03,colorbalance=rs=0.02:bs=-0.01",
+         "warm": "eq=brightness=0.01:contrast=1.03:saturation=1.04,colorbalance=rs=0.02:bs=-0.01",
          "pastel": "eq=brightness=0.04:contrast=1.02:saturation=0.96:gamma=1.04,unsharp=5:5:0.5:5:5:0.0"}
 OUT = f"reel_out/{a.name}"; os.makedirs(OUT + "/cuts", exist_ok=True)
 if a.thumb_only: THUMB_ONLY = True
@@ -106,10 +106,11 @@ def clip(img):
     if q.returncode == 0 and len(q.stdout) > 1000: open(p, "wb").write(q.stdout); return p
     return None
 def vlen(v): return float(subprocess.run(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",v],capture_output=True,text=True).stdout or 4)
-def vcut(v, ss, d, rate, out, zoom=1.0):
+def vcut(v, ss, d, rate, out, zoom=1.0, shake=True):
     # 2026-11-03 시온님 "마지막 이미지가 확대축소 반복, 천천히 앞으로 전진하는 느낌으로": 컷마다 1배↔1.25배로 번갈아 확대하지 않고, 되감지도 않는다.
     # 같은 영상을 이어 쓰면 앞으로만 흐르고, 모자라면 조금 느리게(rate) 늘린다
-    vf = f"scale={round(1080*zoom)}:{round(1920*zoom)}:force_original_aspect_ratio=increase,crop=1080:1920,setpts={rate:.4f}*(PTS-STARTPTS),fps=30,format=yuv420p,tpad=stop_mode=clone:stop_duration=0.3"
+    z2 = zoom * (1.035 if shake else 1); hs = f":x='(iw-1080)/2+9*sin(t*1.7)+5*sin(t*3.3+1)':y='(ih-1920)/2+8*sin(t*2.1+2)+4*sin(t*3.9)'" if shake else ""  # 손에 든 듯 아주 작은 흔들림(첫 드론 장면 빼고)
+    vf = f"scale={round(1080*z2)}:{round(1920*z2)}:force_original_aspect_ratio=increase,crop=1080:1920{hs},setpts={rate:.4f}*(PTS-STARTPTS),fps=30,format=yuv420p,tpad=stop_mode=clone:stop_duration=0.3"
     subprocess.run(["ffmpeg","-y","-loglevel","error","-ss",f"{ss:.3f}","-i",v,"-t",f"{d:.3f}","-vf",vf,"-an","-r","30","-c:v","libx264","-preset","veryfast","-crf","18",out],check=True)
 if a.thumb_only:
     thumb(); [os.remove(f"{OUT}/{f}") for f in os.listdir(OUT) if f.startswith(("src_", "clip_"))]; os.rmdir(OUT + "/cuts")
@@ -130,7 +131,7 @@ for i, s in enumerate(SC):
     parts = 1 if v0 else (max(1, round(d / 1.0)) if d > 1.4 else 1)  # 영상 장면은 한 번에 이어서(2026-11-03), 사진만 있을 때는 컷을 1초 안팎으로(2026-10-30)
     for j in range(parts):
         o = f"{OUT}/cuts/{len(cuts):02d}.mp4"; v = v0
-        if v: ss = used.get(s["img"], 0.0); rate = max(1.0, total[s["img"]] / vlen(v)); vcut(v, ss, d, rate, o, float(s.get("zoom") or 1)); used[s["img"]] = ss + d / rate
+        if v: ss = used.get(s["img"], 0.0); rate = max(1.0, total[s["img"]] / vlen(v)); vcut(v, ss, d, rate, o, float(s.get("zoom") or 1), i > 0); used[s["img"]] = ss + d / rate
         else: cut(src(s["img"]), d / parts, MOV[k % 4], j % 2 == 1, o)
         cuts.append(o); k += 1
     plan.append({"video": bool(clip(s["img"])), "tr": bool(tv), "t": s["t"], "img": s["img"], "start": round(starts[i], 2), "end": round(ends[i], 2), "cuts": parts})
