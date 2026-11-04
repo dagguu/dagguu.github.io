@@ -1,5 +1,5 @@
 {
- "at": "2026-11-04 07:25",
+ "at": "2026-11-04 17:22",
  "checkIn": "2026-11-14",
  "stays": {
   "busan-matie-harbor": {
@@ -121,7 +121,7 @@
       "page",
       "size"
      ],
-     "total": 1500
+     "total": 1501
     }
    ],
    "hit": "강릉 다케노모리글램핑&료칸",
@@ -155,7 +155,7 @@
       "page",
       "size"
      ],
-     "total": 1916
+     "total": 1917
     }
    ],
    "hit": "가평 글램하바나",
@@ -189,7 +189,7 @@
       "page",
       "size"
      ],
-     "total": 1916
+     "total": 1917
     }
    ],
    "hit": "가평 하녹타케 펜션",
@@ -217,13 +217,13 @@
      "region": "고성",
      "type": "CITY",
      "pages": 10,
-     "n": 423,
+     "n": 424,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 431
+     "total": 432
     },
     {
      "kw": "고성",
@@ -243,13 +243,13 @@
      "region": "강릉",
      "type": "CITY",
      "pages": 30,
-     "n": 1421,
+     "n": 1422,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1437
+     "total": 1438
     },
     {
      "kw": "강원",
@@ -311,7 +311,7 @@
      "region": "경주",
      "type": "CITY",
      "pages": 18,
-     "n": 887,
+     "n": 888,
      "keys": [
       "totalCount",
       "page",
@@ -344,8 +344,8 @@
      "kw": "경주",
      "region": "경주",
      "type": "CITY",
-     "pages": 14,
-     "n": 691,
+     "pages": 13,
+     "n": 642,
      "keys": [
       "totalCount",
       "page",
@@ -355,6 +355,40 @@
     }
    ],
    "hit": "경주 에스앤비풀빌라",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
+  },
+  "gyeongju-tomonoya": {
+   "name": "토모노야 호텔 & 료칸 경주",
+   "city": "경주",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "경주",
+     "region": "경주",
+     "type": "CITY",
+     "pages": 1,
+     "n": 49,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 1873
+    }
+   ],
+   "hit": "토모노야 호텔&료칸 경주",
    "hitKeys": [
     "deepLink",
     "imageUrl",
@@ -385,7 +419,7 @@
       "page",
       "size"
      ],
-     "total": 1139
+     "total": 1140
     }
    ],
    "hit": "인천 캠프노마드",
@@ -419,7 +453,7 @@
       "page",
       "size"
      ],
-     "total": 916
+     "total": 917
     }
    ],
    "hit": "포항 데이토나풀빌라",
@@ -521,7 +555,7 @@
       "page",
       "size"
      ],
-     "total": 2373
+     "total": 2374
     }
    ],
    "hit": "대부도(선재도) 선재담글램핑&카라반리조트",
