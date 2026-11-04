@@ -88,5 +88,12 @@
   "time": "night",
   "img": "Keep the place exactly as it is: same two hotel wings, same garden pines, same paths, same small blue roofs, same parking area; do not add ponds, pools or new buildings, and keep the garden in the foreground exactly as in the photo. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. The same view at night from slightly above, every window and balcony glowing warm yellow, a thin layer of snow on the roofs, garden pines and hills, deep navy sky with a few stars. Remove the large vertical letters from the building wall: that slatted wall is completely plain with no characters at all.",
   "prompt": "The windows glow warm; everything stays still; very slow steady move forward toward the lit building."
+ },
+ {
+  "n": 13,
+  "src": "https://image.withstatic.com/420/263/165/464e3f84dd0a47879117d5b80e5e3309.jpg",
+  "time": "day",
+  "img": "Keep the place exactly as it is (same bathroom, same wooden walls, same hinoki bath, same glass door, same railing); do not add signs, text or logos. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. This is a room with a solid wooden ceiling: extend only the same wooden ceiling above and the same floor below; sky only beyond the balcony. The big hinoki wood bath filled with hot water and thin steam in the foreground, the open glass door and the balcony on the left. The balcony floor is clean and dry with no snow on it. The hills beyond the railing are completely white, covered in snow with bare white trees, no green, under a deep blue sky. No people anywhere.",
+  "prompt": "Thin steam rises from the hot water in the wooden bath and the water ripples softly; very slow steady move forward past the bath toward the balcony and the snowy hills."
  }
 ]
