@@ -1,19 +1,11 @@
 {
- "at": "2026-11-04 17:41",
+ "at": "2026-11-04 17:45",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 1,
-   "taskId": "8bcb6bb99900288099a405c399e8bd2f",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-04/gyeongju-tomonoya/1_edit.jpg"
-  },
-  {
    "n": 2,
-   "taskId": "9dceffa1eefb82b60a3cce3fdf047c19",
+   "taskId": "3c49aaa8446ad85df774c3b6299cc011",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
@@ -21,55 +13,31 @@
   },
   {
    "n": 3,
-   "taskId": "f9fc8b18aea6fa58e56eb9ee978be957",
+   "taskId": "de75c99043f5891327a378bbd20e05a5",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
    "file": "img/2026-11-04/gyeongju-tomonoya/3_edit.jpg"
   },
   {
-   "n": 4,
-   "taskId": "7967b00e4fdb43677b5f6b1717813355",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-04/gyeongju-tomonoya/4_edit.jpg"
-  },
-  {
    "n": 5,
-   "taskId": "b7f78139832191085f49589e3ff44c95",
+   "taskId": "5149983702dc54d5a71394656f0a1362",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
    "file": "img/2026-11-04/gyeongju-tomonoya/5_edit.jpg"
   },
   {
-   "n": 6,
-   "taskId": "19bfd29286ccef2ed30ddc077cd7d9db",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-04/gyeongju-tomonoya/6_edit.jpg"
-  },
-  {
    "n": 7,
-   "taskId": "138d84f149aa4263080a45f4a090f25f",
+   "taskId": "a36a19fc454b57686defea734edc4bdd",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
    "file": "img/2026-11-04/gyeongju-tomonoya/7_edit.jpg"
   },
   {
-   "n": 8,
-   "taskId": "f78d1851f84e3817fc69ad9efd823e60",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-04/gyeongju-tomonoya/8_edit.jpg"
-  },
-  {
    "n": 9,
-   "taskId": "305717e142db72ccfa29da4c071781a1",
+   "taskId": "54348c1aa6ea14d133d964fbb65e3d16",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
@@ -77,7 +45,7 @@
   },
   {
    "n": 10,
-   "taskId": "56aba729ef0768d3ee4bfe077f7d3fe0",
+   "taskId": "533baef53c891aa8e624cbe481a3019b",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
@@ -85,7 +53,7 @@
   },
   {
    "n": 11,
-   "taskId": "c638032d593ca1590bc17d7d61a13358",
+   "taskId": "a4b8a2eff1e367e1b6f8980d019a7f1a",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
@@ -93,7 +61,7 @@
   },
   {
    "n": 12,
-   "taskId": "9459ff753554f87472f875fa64400f76",
+   "taskId": "80b57a82b91f245638bd399630cc09d4",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
