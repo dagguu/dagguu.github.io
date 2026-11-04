@@ -46,7 +46,7 @@
   },
   {
    "img": "ai:5",
-   "y": 0.6,
+   "y": 0.45,
    "people": true,
    "cap": "큰 통창 앞에 서면\n**동해**가 한눈에 들어와요 🪟",
    "stickers": [
@@ -67,11 +67,12 @@
    "cap": "통창 옆 침대에서 **바다**를\n바라보며 쉬어요 🛏️",
    "stickers": [
     {
-     "k": "hand",
+     "k": "tag",
      "t": "이불 속 바다뷰",
-     "x": 30,
-     "y": 12,
-     "r": 5
+     "x": 28,
+     "y": 11,
+     "r": 4,
+     "c": "#d9f2ff"
     }
    ],
    "vp": "Very slow walk-through glide forward toward the big glass windows, bright daylight streaming in, sea outside stays still. Keep the bed, sofa and room unchanged. Absolutely nothing enters, falls or flies through the frame: no leaves, no birds, no snowflakes, no new trees. Keep every wall, window and piece of furniture unchanged."
