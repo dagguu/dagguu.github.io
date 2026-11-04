@@ -1,0 +1,45 @@
+[Script Info]
+ScriptType: v4.00+
+WrapStyle: 2
+PlayResX: 1080
+PlayResY: 1920
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, OutlineColour, BackColour, Bold, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV
+Style: D,Jalnan,80,&H00FFFFFF,&H00000000,&H64000000,1,1,6,3,5,60,60,0
+Style: T,Jalnan,118,&H00FFFFFF,&H00000000,&H90000000,1,1,6,5,8,50,50,330
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.00,0:00:00.80,T,,0,0,0,,{\fad(0,120)}{\fs113}일본{\fnNoto Sans CJK KR Black} {\fnJalnan}안{\fnNoto Sans CJK KR Black} {\fnJalnan}가도{\fnNoto Sans CJK KR Black} {\fnJalnan}되는\N{\c&H00FFFF&}히노끼탕{\fnNoto Sans CJK KR Black} {\fnJalnan}료칸
+Dialogue: 0,0:00:00.80,0:00:01.35,D,,0,0,0,,{\i1\pos(540,830)}여기{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}일본{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.35,0:00:01.72,D,,0,0,0,,{\i1\pos(540,830)}아니에요?
+Dialogue: 0,0:00:01.77,0:00:02.65,D,,0,0,0,,{\i1\pos(540,830)}경주{\fnNoto Sans CJK KR Black} {\fnJalnan}산과
+Dialogue: 0,0:00:02.65,0:00:03.19,D,,0,0,0,,{\i1\pos(540,830)}바다{\fnNoto Sans CJK KR Black} {\fnJalnan}사이
+Dialogue: 0,0:00:03.19,0:00:03.92,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}료칸{\c&HFFFFFF&}이거든요
+Dialogue: 0,0:00:03.97,0:00:04.99,D,,0,0,0,,{\i1\pos(540,830)}들어서면{\fnNoto Sans CJK KR Black} {\fnJalnan}둥근
+Dialogue: 0,0:00:04.99,0:00:05.51,D,,0,0,0,,{\i1\pos(540,830)}창{\fnNoto Sans CJK KR Black} {\fnJalnan}앞에
+Dialogue: 0,0:00:05.51,0:00:06.28,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}소나무{\c&HFFFFFF&}가{\fnNoto Sans CJK KR Black} {\fnJalnan}있고요
+Dialogue: 0,0:00:06.33,0:00:07.48,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}나막신{\c&HFFFFFF&}도{\fnNoto Sans CJK KR Black} {\fnJalnan}쪼르르
+Dialogue: 0,0:00:07.48,0:00:08.09,D,,0,0,0,,{\i1\pos(540,830)}놓여{\fnNoto Sans CJK KR Black} {\fnJalnan}있어요
+Dialogue: 0,0:00:08.14,0:00:08.96,D,,0,0,0,,{\i1\pos(540,830)}방은{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}다다미{\c&HFFFFFF&}
+Dialogue: 0,0:00:08.96,0:00:09.33,D,,0,0,0,,{\i1\pos(540,830)}거실에
+Dialogue: 0,0:00:09.38,0:00:10.04,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}침대{\c&HFFFFFF&}{\fnNoto Sans CJK KR Black} {\fnJalnan}방까지
+Dialogue: 0,0:00:10.04,0:00:10.75,D,,0,0,0,,{\i1\pos(540,830)}따로{\fnNoto Sans CJK KR Black} {\fnJalnan}있는데요
+Dialogue: 0,0:00:10.80,0:00:11.91,D,,0,0,0,,{\i1\pos(540,830)}진짜는{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}욕실{\c&HFFFFFF&}이에요
+Dialogue: 0,0:00:11.96,0:00:12.72,D,,0,0,0,,{\i1\pos(540,830)}모든{\fnNoto Sans CJK KR Black} {\fnJalnan}객실에
+Dialogue: 0,0:00:12.72,0:00:13.28,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}히노끼탕{\c&HFFFFFF&}이
+Dialogue: 0,0:00:13.28,0:00:13.75,D,,0,0,0,,{\i1\pos(540,830)}있거든요
+Dialogue: 0,0:00:13.80,0:00:14.62,D,,0,0,0,,{\i1\pos(540,830)}후기에도{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}일본{\c&HFFFFFF&}
+Dialogue: 0,0:00:14.62,0:00:15.16,D,,0,0,0,,{\i1\pos(540,830)}온{\fnNoto Sans CJK KR Black} {\fnJalnan}것{\fnNoto Sans CJK KR Black} {\fnJalnan}같다는
+Dialogue: 0,0:00:15.16,0:00:15.69,D,,0,0,0,,{\i1\pos(540,830)}말이{\fnNoto Sans CJK KR Black} {\fnJalnan}많아요
+Dialogue: 0,0:00:15.74,0:00:16.46,D,,0,0,0,,{\i1\pos(540,830)}야외{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}온수풀{\c&HFFFFFF&}도
+Dialogue: 0,0:00:16.46,0:00:16.79,D,,0,0,0,,{\i1\pos(540,830)}있고요
+Dialogue: 0,0:00:16.84,0:00:17.92,D,,0,0,0,,{\i1\pos(540,830)}저녁이면{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}불빛{\c&HFFFFFF&}이
+Dialogue: 0,0:00:17.92,0:00:18.97,D,,0,0,0,,{\i1\pos(540,830)}켜져서{\fnNoto Sans CJK KR Black} {\fnJalnan}더{\fnNoto Sans CJK KR Black} {\fnJalnan}예뻐요
+Dialogue: 0,0:00:19.02,0:00:19.90,D,,0,0,0,,{\i1\pos(540,830)}밤에는{\fnNoto Sans CJK KR Black} {\fnJalnan}{\c&H0080FF&}조용히{\c&HFFFFFF&}
+Dialogue: 0,0:00:19.90,0:00:20.46,D,,0,0,0,,{\i1\pos(540,830)}쉬기{\fnNoto Sans CJK KR Black} {\fnJalnan}좋고
+Dialogue: 0,0:00:20.51,0:00:21.23,D,,0,0,0,,{\i1\pos(540,830)}멀리{\fnNoto Sans CJK KR Black} {\fnJalnan}안{\fnNoto Sans CJK KR Black} {\fnJalnan}가도
+Dialogue: 0,0:00:21.23,0:00:21.83,D,,0,0,0,,{\i1\pos(540,830)}{\c&H0080FF&}일본{\fnNoto Sans CJK KR Black} {\fnJalnan}여행{\c&HFFFFFF&}
+Dialogue: 0,0:00:21.83,0:00:22.33,D,,0,0,0,,{\i1\pos(540,830)}기분{\fnNoto Sans CJK KR Black} {\fnJalnan}나는
+Dialogue: 0,0:00:22.33,0:00:23.51,D,,0,0,0,,{\i1\pos(540,830)}곳이에요
