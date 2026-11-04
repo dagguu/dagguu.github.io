@@ -1,14 +1,42 @@
 {
- "at": "2026-11-04T08:57:49.037725",
- "name": "gyeongju-tomonoya",
+ "at": "2026-11-04T10:55:11.256449",
+ "name": "goseong-stage-poolvilla",
  "jobs": [
   {
-   "img": "ai:13",
-   "taskId": "a115ce67f5184a91c2bbd8a566bb0adc",
+   "img": "ai:1",
+   "taskId": "9fbe616b55ea2d93f4fd8bc3c137edf1",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-04/gyeongju-tomonoya/clip_ai13.mp4"
+   "file": "video/2026-11-04/goseong-stage-poolvilla/clip_ai1.mp4"
+  },
+  {
+   "img": "ai:6",
+   "taskId": "c9e3443bad80dd426854ac14eb9bb273",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-04/goseong-stage-poolvilla/clip_ai6.mp4"
+  },
+  {
+   "img": "ai:5",
+   "taskId": "e3ed8ec784783dda70e68ae68ac78d51",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-04/goseong-stage-poolvilla/clip_ai5.mp4"
+  },
+  {
+   "img": "ai:4",
+   "taskId": "8a8257daab6a67d598f2a6913faeedc3",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-04/goseong-stage-poolvilla/clip_ai4.mp4"
+  },
+  {
+   "img": "ai:2",
+   "taskId": "c4f99055a4ad0d73201a2dd708a26b1c",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-04/goseong-stage-poolvilla/clip_ai2.mp4"
   }
  ],
- "credits_total": 35.0
+ "credits_total": 175.0
 }
