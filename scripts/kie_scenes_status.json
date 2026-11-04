@@ -1,77 +1,14 @@
 {
- "at": "2026-11-04T08:50:33.556842",
+ "at": "2026-11-04T08:57:49.037725",
  "name": "gyeongju-tomonoya",
  "jobs": [
   {
-   "img": "ai:1",
-   "taskId": "bbae16c0c042878ebd7fa0638161b6c7",
+   "img": "ai:13",
+   "taskId": "a115ce67f5184a91c2bbd8a566bb0adc",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-04/gyeongju-tomonoya/clip_ai1.mp4"
-  },
-  {
-   "img": "ai:2",
-   "taskId": "6cf38cf7202ffa88807e930f62e9ff63",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-04/gyeongju-tomonoya/clip_ai2.mp4"
-  },
-  {
-   "img": "ai:3",
-   "taskId": "bde04398317db362c9a09d76cc5b74df",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-04/gyeongju-tomonoya/clip_ai3.mp4"
-  },
-  {
-   "img": "ai:4",
-   "taskId": "b447b4f6065bcf71aa2c607abf65a5d3",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-04/gyeongju-tomonoya/clip_ai4.mp4"
-  },
-  {
-   "img": "ai:11",
-   "taskId": "4c0f99e0dfb53abd0e7e007e07437a0b",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-04/gyeongju-tomonoya/clip_ai11.mp4"
-  },
-  {
-   "img": "ai:6",
-   "taskId": "36cdf7881ac360b0efc17c2ea9772dfb",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-04/gyeongju-tomonoya/clip_ai6.mp4"
-  },
-  {
-   "img": "ai:7",
-   "taskId": "076d9ba54f4afcc5c8e9861cd79bbdb7",
-   "state": "fail",
-   "credits": 0.0,
-   "msg": "Request blocked: The input content was flagged for containing a prominent public figure."
-  },
-  {
-   "img": "ai:8",
-   "taskId": "a41481e90cb08f4479ad84765775b924",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-04/gyeongju-tomonoya/clip_ai8.mp4"
-  },
-  {
-   "img": "ai:10",
-   "taskId": "1f71814b3065a114887fc6ce24416b0d",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-04/gyeongju-tomonoya/clip_ai10.mp4"
-  },
-  {
-   "img": "ai:12",
-   "taskId": "7b31dd722b4ddaf38aeec1b96d5a4d96",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-04/gyeongju-tomonoya/clip_ai12.mp4"
+   "file": "video/2026-11-04/gyeongju-tomonoya/clip_ai13.mp4"
   }
  ],
- "credits_total": 315.0
+ "credits_total": 35.0
 }
