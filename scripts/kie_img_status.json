@@ -1,16 +1,104 @@
 {
- "at": "2026-11-03 21:13",
+ "at": "2026-11-04 17:41",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 9,
-   "taskId": "db9ce4a71b92a99e2904ed9ad0ab7a8f",
+   "n": 1,
+   "taskId": "8bcb6bb99900288099a405c399e8bd2f",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-03/wanju-boheme-spa/9_edit.jpg"
+   "file": "img/2026-11-04/gyeongju-tomonoya/1_edit.jpg"
+  },
+  {
+   "n": 2,
+   "taskId": "9dceffa1eefb82b60a3cce3fdf047c19",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-04/gyeongju-tomonoya/2_edit.jpg"
+  },
+  {
+   "n": 3,
+   "taskId": "f9fc8b18aea6fa58e56eb9ee978be957",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-04/gyeongju-tomonoya/3_edit.jpg"
+  },
+  {
+   "n": 4,
+   "taskId": "7967b00e4fdb43677b5f6b1717813355",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-04/gyeongju-tomonoya/4_edit.jpg"
+  },
+  {
+   "n": 5,
+   "taskId": "b7f78139832191085f49589e3ff44c95",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-04/gyeongju-tomonoya/5_edit.jpg"
+  },
+  {
+   "n": 6,
+   "taskId": "19bfd29286ccef2ed30ddc077cd7d9db",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-04/gyeongju-tomonoya/6_edit.jpg"
+  },
+  {
+   "n": 7,
+   "taskId": "138d84f149aa4263080a45f4a090f25f",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-04/gyeongju-tomonoya/7_edit.jpg"
+  },
+  {
+   "n": 8,
+   "taskId": "f78d1851f84e3817fc69ad9efd823e60",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-04/gyeongju-tomonoya/8_edit.jpg"
+  },
+  {
+   "n": 9,
+   "taskId": "305717e142db72ccfa29da4c071781a1",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-04/gyeongju-tomonoya/9_edit.jpg"
+  },
+  {
+   "n": 10,
+   "taskId": "56aba729ef0768d3ee4bfe077f7d3fe0",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-04/gyeongju-tomonoya/10_edit.jpg"
+  },
+  {
+   "n": 11,
+   "taskId": "c638032d593ca1590bc17d7d61a13358",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-04/gyeongju-tomonoya/11_edit.jpg"
+  },
+  {
+   "n": 12,
+   "taskId": "9459ff753554f87472f875fa64400f76",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-04/gyeongju-tomonoya/12_edit.jpg"
   }
  ],
- "slug": "wanju-boheme-spa"
+ "slug": "gyeongju-tomonoya"
 }
