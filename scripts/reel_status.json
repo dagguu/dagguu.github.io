@@ -1,6 +1,6 @@
 {
- "at": "2026-11-03T12:20:44.294669",
- "name": "wanju-boheme-spa",
+ "at": "2026-11-04T09:01:03.187330",
+ "name": "gyeongju-tomonoya",
  "font": "Jalnan",
  "fontInfo": {
   "error": [],
@@ -10,136 +10,127 @@
   "family": "Jalnan",
   "src": "https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff"
  },
- "gapCut": 3.95,
- "dur": 22.53,
- "cuts": 14,
+ "gapCut": 4.33,
+ "dur": 23.51,
+ "cuts": 13,
  "plan": [
   {
    "video": true,
    "tr": false,
-   "t": "이 산속에 뭐가 있게요?",
+   "t": "여기 일본 아니에요?",
    "img": "ai:1",
    "start": 0.0,
-   "end": 1.8,
+   "end": 1.72,
    "cuts": 1
   },
   {
    "video": true,
    "tr": false,
-   "t": "완주의 유황 온천 리조트인데요,",
+   "t": "경주 산과 바다 사이 료칸이거든요.",
    "img": "ai:2",
-   "start": 1.8,
-   "end": 3.31,
+   "start": 1.72,
+   "end": 3.92,
    "cuts": 1
   },
   {
    "video": true,
    "tr": false,
-   "t": "온천으로 유명한 동네거든요.",
+   "t": "들어서면 둥근 창 앞에 소나무가 있고요,",
    "img": "ai:3",
-   "start": 3.31,
-   "end": 4.55,
+   "start": 3.92,
+   "end": 6.28,
    "cuts": 1
   },
   {
    "video": true,
    "tr": false,
-   "t": "창 너머로 수영장이 보이고요,",
+   "t": "나막신도 쪼르르 놓여 있어요.",
    "img": "ai:4",
-   "start": 4.55,
-   "end": 5.94,
+   "start": 6.28,
+   "end": 8.09,
    "cuts": 1
   },
   {
    "video": true,
    "tr": false,
-   "t": "큰 창 밖엔 산이 펼쳐져요.",
-   "img": "ai:5",
-   "start": 5.94,
-   "end": 7.65,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "tr": false,
-   "t": "심지어 방 안에 텐트가 있어요.",
-   "img": "ai:6",
-   "start": 7.65,
-   "end": 9.5,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "tr": false,
-   "t": "복층 방도 있고요,",
-   "img": "ai:7",
-   "start": 9.5,
-   "end": 10.49,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "tr": false,
-   "t": "진짜는 저 동그란 수영장인데요,",
-   "img": "ai:8",
-   "start": 10.49,
-   "end": 12.14,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "tr": false,
-   "t": "유황 온천물이라 사계절 들어가요.",
-   "img": "ai:9",
-   "start": 12.14,
-   "end": 13.85,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "tr": false,
-   "t": "찬 바람 불어도 몸은 뜨끈해요.",
-   "img": "ai:9",
-   "start": 13.85,
-   "end": 15.2,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "tr": false,
-   "t": "우리만 쓰는 온천 자쿠지도 있고요,",
-   "img": "ai:10",
-   "start": 15.2,
-   "end": 16.97,
-   "cuts": 1
-  },
-  {
-   "video": true,
-   "tr": false,
-   "t": "밤에는 불멍까지 즐겨요.",
+   "t": "방은 다다미 거실에,",
    "img": "ai:11",
-   "start": 16.97,
-   "end": 18.37,
+   "start": 8.09,
+   "end": 9.33,
    "cuts": 1
   },
   {
    "video": true,
    "tr": false,
-   "t": "후기엔 깨끗하다는 말이 많아요.",
-   "img": "ai:12",
-   "start": 18.37,
-   "end": 19.98,
+   "t": "침대 방까지 따로 있는데요,",
+   "img": "ai:6",
+   "start": 9.33,
+   "end": 10.75,
    "cuts": 1
   },
   {
    "video": true,
    "tr": false,
-   "t": "멀리 안 가도 온천 여행 되는 곳이에요.",
+   "t": "진짜는 욕실이에요.",
+   "img": "ai:13",
+   "start": 10.75,
+   "end": 11.91,
+   "cuts": 1
+  },
+  {
+   "video": true,
+   "tr": false,
+   "t": "모든 객실에 히노끼탕이 있거든요.",
+   "img": "ai:13",
+   "start": 11.91,
+   "end": 13.75,
+   "cuts": 1
+  },
+  {
+   "video": true,
+   "tr": false,
+   "t": "후기에도 일본 온 것 같다는 말이 많아요.",
+   "img": "ai:8",
+   "start": 13.75,
+   "end": 15.69,
+   "cuts": 1
+  },
+  {
+   "video": true,
+   "tr": false,
+   "t": "야외 온수풀도 있고요,",
+   "img": "ai:10",
+   "start": 15.69,
+   "end": 16.79,
+   "cuts": 1
+  },
+  {
+   "video": true,
+   "tr": false,
+   "t": "저녁이면 불빛이 켜져서 더 예뻐요.",
+   "img": "ai:10",
+   "start": 16.79,
+   "end": 18.97,
+   "cuts": 1
+  },
+  {
+   "video": true,
+   "tr": false,
+   "t": "밤에는 조용히 쉬기 좋고,",
    "img": "ai:12",
-   "start": 19.98,
-   "end": 22.53,
+   "start": 18.97,
+   "end": 20.46,
+   "cuts": 1
+  },
+  {
+   "video": true,
+   "tr": false,
+   "t": "멀리 안 가도 일본 여행 기분 나는 곳이에요.",
+   "img": "ai:12",
+   "start": 20.46,
+   "end": 23.51,
    "cuts": 1
   }
  ],
- "file": "reels/wanju-boheme-spa/reel.mp4"
+ "file": "reels/gyeongju-tomonoya/reel.mp4"
 }
