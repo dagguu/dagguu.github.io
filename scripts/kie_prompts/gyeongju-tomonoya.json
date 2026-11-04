@@ -12,7 +12,7 @@
   "n": 2,
   "src": "https://image.withstatic.com/269/454/34/50eb56c56c934192b7f8801e0742a2b4.jpg",
   "time": "day",
-  "img": "Keep the place exactly as it is (same buildings, same walls, same layout, same furniture); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. The two dark wood-and-stone hotel wings seen from slightly above, snow on the roofs, on the garden pines and on the hills behind, deep blue sky, the courtyard paths swept clear.",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same layout, same furniture); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. The two dark wood-and-stone hotel wings seen from slightly above, snow on the roofs, on the garden pines and on the hills behind, deep blue sky, the courtyard paths swept clear. Remove the large vertical letters from the building wall: that slatted wall is completely plain with no characters at all.",
   "prompt": "Everything stays still; very slow steady move forward toward the building."
  },
  {
@@ -20,7 +20,7 @@
   "src": "https://image.withstatic.com/377/182/88/389e705e25714342ad4231d17d5879e1.jpg",
   "time": "warm",
   "move": "dolly",
-  "img": "Keep the place exactly as it is (same buildings, same walls, same layout, same furniture); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. The white wall with the round moon window and the small pine bonsai in the warm wooden entrance hall, warm indirect lighting.",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same layout, same furniture); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. The white wall with the round slatted circle and the small pine bonsai; the round circle has only plain vertical wooden slats with absolutely no letters, no calligraphy and no logo on it, and the wall sign beside it is blank; in the warm wooden entrance hall, warm indirect lighting.",
   "prompt": "Warm lights glow; very slow steady walk forward toward the round window and the small pine."
  },
  {
@@ -35,7 +35,7 @@
   "src": "https://image.withstatic.com/374/488/363/34f563bbd7294c04999d3143e1ecf9b3.jpg",
   "time": "warm",
   "move": "dolly",
-  "img": "Keep the place exactly as it is (same buildings, same walls, same layout, same furniture); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. The bright tatami living room with the low table and legless chairs, paper screen windows glowing, warm ceiling light.",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same layout, same furniture); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. The bright tatami living room with the low table and legless chairs, every paper screen and window stays closed exactly as in the photo with no view outside, soft white daylight glowing through the paper screens, warm ceiling light.",
   "prompt": "Everything stays still; very slow steady walk forward across the tatami room toward the paper windows."
  },
  {
@@ -50,7 +50,7 @@
   "src": "https://image.withstatic.com/420/263/165/464e3f84dd0a47879117d5b80e5e3309.jpg",
   "time": "day",
   "people": true,
-  "img": "Keep the place exactly as it is (same buildings, same walls, same layout, same furniture); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. This is a room with a solid wooden ceiling: extend only the same wooden ceiling above and the same floor below inside the room; sky only beyond the balcony. The big hinoki wood bath filled with hot water and thin steam in the foreground, the open glass door and the balcony on the left, the same hills beyond it now covered in snow under a deep blue sky. A Korean woman in her late 20s with black hair stands far away out on the balcony, small in the frame, seen from behind, looking at the snowy hills.",
+  "img": "Keep the place exactly as it is (same bathroom, same wooden walls, same hinoki bath, same glass door, same railing); do not add signs, text or logos. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. This is a room with a solid wooden ceiling: extend only the same wooden ceiling above and the same floor below; sky only beyond the balcony. The big hinoki wood bath filled with hot water and thin steam in the foreground, the open glass door and the balcony on the left. The balcony floor is clean and dry with no snow on it. The hills beyond the railing are completely white, covered in snow with bare white trees, no green, under a deep blue sky. A Korean woman in her late 20s with black hair stands far away at the balcony railing, small in the frame (about one fifth of the frame height), seen from behind, wearing simple winter boots, looking at the snowy hills.",
   "prompt": "Thin steam rises from the hot water in the wooden bath and the water ripples softly; very slow steady move forward past the bath toward the balcony and the snowy hills."
  },
  {
@@ -65,28 +65,28 @@
   "src": "https://image.withstatic.com/306/26/496/c42cfa2fb589425f90db7029de54f57a.jpg",
   "time": "sunset",
   "people": true,
-  "img": "Keep the place exactly as it is (same buildings, same walls, same layout, same furniture); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. The outdoor pool with stones along its edge, the tall bamboo fence on the right and the lit building behind at dusk, snow lying on the stones and the ground around the pool, warm lanterns on, thin steam over the water. A Korean woman in her late 20s with black hair stands far away on the far side of the pool, small in the frame, seen from behind.",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same layout, same furniture); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. The outdoor pool with stones along its edge, the tall bamboo fence on the right and the lit building behind at dusk, snow lying on the stones and the ground around the pool, warm lanterns on, thin steam over the water. A Korean woman in her late 20s with black hair stands far away on the dry stone path on the far side of the pool beside the parasols, on solid ground and not in the water, small in the frame (about one sixth of the frame height), seen from behind, wearing simple winter boots. Remove the large vertical letters from the building wall: that slatted wall is completely plain with no characters at all.",
   "prompt": "Thin steam drifts over the water and soft ripples spread, the lanterns glow; very slow steady move forward along the pool."
  },
  {
   "n": 10,
   "src": "https://image.withstatic.com/398/381/32/cfab7c168836490ab1d8d40b091dcf69.jpg",
   "time": "sunset",
-  "img": "Keep the place exactly as it is (same buildings, same walls, same layout, same furniture); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. The pool at dusk in front of the wooden terrace, parasols closed, warm lights on along the fence and on the building, snow on the stones and the hills behind, soft pink and orange sky reflected in the water.",
+  "img": "Keep the place exactly as it is (same buildings, same walls, same layout, same furniture); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. The pool at dusk in front of the wooden terrace, parasols closed, warm lights on along the fence and on the building, snow on the stones and the hills behind, soft pink and orange sky reflected in the water. Remove the large vertical letters from the building wall: that slatted wall is completely plain with no characters at all.",
   "prompt": "Water ripples softly and the warm lights glow; very slow steady move forward over the water."
  },
  {
   "n": 11,
-  "src": "https://image.withstatic.com/170/261/21/ad5f321bed464f81a022c6b87c45d36f.jpg",
-  "time": "night",
-  "img": "Keep the place exactly as it is (same buildings, same walls, same layout, same furniture); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. The tatami room with the round decoration in the alcove at night, only warm indirect lamps on, cozy and quiet, windows dark.",
-  "prompt": "The warm lamps glow softly; everything else stays still; very slow steady move forward toward the alcove."
+  "src": "https://image.withstatic.com/74/217/114/73f5124f48ef4e619f840dae485f6299.jpg",
+  "time": "warm",
+  "img": "Keep the place exactly as it is (same room, same tatami, same low tables, same chairs, same alcove); do not add new furniture, signs, text or logos. Photorealistic and sharp. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. The same wide tatami room in the evening: warm indirect lamps and the ceiling light strip on, the paper screens dark outside, clean and sharp, not hazy, not orange-tinted.",
+  "prompt": "The warm lamps glow softly; everything else stays still; very slow steady walk forward across the tatami room."
  },
  {
   "n": 12,
   "src": "https://image.withstatic.com/269/454/34/50eb56c56c934192b7f8801e0742a2b4.jpg",
   "time": "night",
-  "img": "Keep the place exactly as it is (same buildings, same walls, same layout, same furniture); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. The same two hotel wings at night seen from slightly above, every window and balcony glowing warm yellow, snow on the roofs, garden pines and hills, deep navy sky with a few stars.",
+  "img": "Keep the place exactly as it is: same two hotel wings, same garden pines, same paths, same small blue roofs, same parking area; do not add ponds, pools or new buildings, and keep the garden in the foreground exactly as in the photo. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. The same view at night from slightly above, every window and balcony glowing warm yellow, a thin layer of snow on the roofs, garden pines and hills, deep navy sky with a few stars. Remove the large vertical letters from the building wall: that slatted wall is completely plain with no characters at all.",
   "prompt": "The windows glow warm; everything stays still; very slow steady move forward toward the lit building."
  }
 ]
