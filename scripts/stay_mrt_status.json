@@ -1,5 +1,5 @@
 {
- "at": "2026-11-05 07:32",
+ "at": "2026-11-06 07:49",
  "checkIn": "2026-11-14",
  "stays": {
   "busan-matie-harbor": {
@@ -13,13 +13,13 @@
      "region": "부산",
      "type": "CITY",
      "pages": 7,
-     "n": 344,
+     "n": 343,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1950
+     "total": 1953
     }
    ],
    "hit": "마티에 부산하버시티",
@@ -53,10 +53,44 @@
       "page",
       "size"
      ],
-     "total": 101
+     "total": 102
     }
    ],
    "hit": "철원 더 갤러리펜션",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
+  },
+  "daejeon-kinosaki-ryokan": {
+   "name": "대전 유천 스테이 패스포트 키노사키 료칸 by 아늑",
+   "city": "대전",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "대전",
+     "region": "대전",
+     "type": "CITY",
+     "pages": 8,
+     "n": 398,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 499
+    }
+   ],
+   "hit": "대전 유천 스테이 패스포트 키노사키 료칸 by 아늑",
    "hitKeys": [
     "deepLink",
     "imageUrl",
@@ -121,7 +155,7 @@
       "page",
       "size"
      ],
-     "total": 1503
+     "total": 1506
     }
    ],
    "hit": "강릉 다케노모리글램핑&료칸",
@@ -155,7 +189,7 @@
       "page",
       "size"
      ],
-     "total": 1924
+     "total": 1926
     }
    ],
    "hit": "가평 글램하바나",
@@ -189,7 +223,7 @@
       "page",
       "size"
      ],
-     "total": 1924
+     "total": 1926
     }
    ],
    "hit": "가평 하녹타케 펜션",
@@ -217,13 +251,13 @@
      "region": "고성",
      "type": "CITY",
      "pages": 10,
-     "n": 426,
+     "n": 427,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 434
+     "total": 435
     },
     {
      "kw": "고성",
@@ -243,13 +277,13 @@
      "region": "강릉",
      "type": "CITY",
      "pages": 30,
-     "n": 1426,
+     "n": 1430,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1442
+     "total": 1446
     },
     {
      "kw": "강원",
@@ -311,39 +345,39 @@
      "region": "경주",
      "type": "CITY",
      "pages": 39,
-     "n": 1861,
+     "n": 1864,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1877
+     "total": 1880
     },
     {
      "kw": "경북",
      "region": "경주",
      "type": "CITY",
      "pages": 39,
-     "n": 1861,
+     "n": 1864,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1877
+     "total": 1880
     },
     {
      "kw": "경북",
      "region": "포항",
      "type": "CITY",
      "pages": 20,
-     "n": 897,
+     "n": 896,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 916
+     "total": 915
     }
    ],
    "kept": true
@@ -365,7 +399,7 @@
       "page",
       "size"
      ],
-     "total": 1877
+     "total": 1880
     }
    ],
    "hit": "경주 에스앤비풀빌라",
@@ -399,7 +433,7 @@
       "page",
       "size"
      ],
-     "total": 1877
+     "total": 1880
     }
    ],
    "hit": "토모노야 호텔&료칸 경주",
@@ -433,7 +467,7 @@
       "page",
       "size"
      ],
-     "total": 1149
+     "total": 1152
     }
    ],
    "hit": "인천 캠프노마드",
@@ -467,7 +501,7 @@
       "page",
       "size"
      ],
-     "total": 916
+     "total": 915
     }
    ],
    "hit": "포항 데이토나풀빌라",
@@ -501,7 +535,7 @@
       "page",
       "size"
      ],
-     "total": 163
+     "total": 162
     }
    ],
    "hit": "산청 앤더포레 글램핑",
@@ -535,7 +569,7 @@
       "page",
       "size"
      ],
-     "total": 1500
+     "total": 1504
     }
    ],
    "hit": "담앤루리조트",
@@ -569,7 +603,7 @@
       "page",
       "size"
      ],
-     "total": 2377
+     "total": 2380
     }
    ],
    "hit": "대부도(선재도) 선재담글램핑&카라반리조트",
@@ -597,13 +631,13 @@
      "region": "완주",
      "type": "CITY",
      "pages": 5,
-     "n": 188,
+     "n": 187,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 191
+     "total": 190
     },
     {
      "kw": "전북",
