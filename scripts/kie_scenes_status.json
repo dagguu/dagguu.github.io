@@ -1,6 +1,14 @@
 {
- "at": "2026-11-05T22:45:36.719601",
+ "at": "2026-11-05T22:46:43.296849",
  "name": "daejeon-kinosaki-ryokan",
- "jobs": [],
+ "jobs": [
+  {
+   "img": "ai:12",
+   "taskId": "68b215b490f319e63ca04a052a9c7148",
+   "state": "fail",
+   "credits": 0.0,
+   "msg": "Internal Error, Please try again later."
+  }
+ ],
  "credits_total": 0
 }
