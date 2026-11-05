@@ -1,0 +1,91 @@
+[
+ {
+  "n": 1,
+  "src": "https://image.withstatic.com/property/2026/08/27/03/0374e40d045e4d66a59d0d9780547bbe.jpg",
+  "time": "day",
+  "img": "Keep the place exactly as it is (same walls, same wood, same bath shape, same furniture, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. The small two-storey Japanese-style building on a quiet Korean street, dark tiled roof, white walls and brick base, the round bamboo emblem on the white curtain stays plain without any letters. Light snow lies on the roof edges and on the street; deep blue winter sky above.",
+  "prompt": "Very slow steady move forward toward the entrance; everything stays still.",
+  "look": "warm"
+ },
+ {
+  "n": 2,
+  "src": "https://image.withstatic.com/property/2026/08/27/bf/bf2d7a6e5d7b4a5c8eedb8c72e82656f.jpg",
+  "time": "day",
+  "img": "Keep the place exactly as it is (same walls, same wood, same bath shape, same furniture, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. Warm wooden entrance hallway with shoji-style paper screens, wood shelves on the left and a soft lit corridor ahead. Remove any screen text.",
+  "prompt": "Very slow walk forward down the wooden hallway."
+ },
+ {
+  "n": 3,
+  "src": "https://image.withstatic.com/property/2026/08/27/25/2531b1fc71f24ce9982e445f6b0d00a2.jpg",
+  "time": "warm",
+  "img": "Keep the place exactly as it is (same walls, same wood, same bath shape, same furniture, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. Calm ryokan-style bedroom with a big white paper lantern, two neatly made beds with brown runners and wooden walls.",
+  "prompt": "Moving slowly into the room under the paper lantern; light stays soft.",
+  "move": "dolly"
+ },
+ {
+  "n": 4,
+  "src": "https://image.withstatic.com/property/2026/08/27/f1/f1c942267125427094c06ed662d0d936.jpg",
+  "time": "warm",
+  "img": "Keep the place exactly as it is (same walls, same wood, same bath shape, same furniture, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. Bedroom with a large round shoji window above two beds, soft warm light.",
+  "prompt": "Very slow steady move forward toward the round window."
+ },
+ {
+  "n": 5,
+  "src": "https://image.withstatic.com/property/2026/08/27/69/69c1cb01ae684f44aeeae8dbf2cc6b62.jpg",
+  "time": "warm",
+  "img": "Keep the place exactly as it is (same walls, same wood, same bath shape, same furniture, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. Wooden dining nook with a low warm light, wooden table and chairs, a tea set on the table.",
+  "prompt": "Very slow move forward toward the table; steam rises gently from the teacups."
+ },
+ {
+  "n": 6,
+  "src": "https://image.withstatic.com/property/2026/08/27/ed/edb5961e4e6c4d29b2504c487ca24a3a.jpg",
+  "time": "warm",
+  "img": "Keep the place exactly as it is (same walls, same wood, same bath shape, same furniture, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. Private hinoki wood dry sauna with pale cedar walls and benches, warm light strips under the benches.",
+  "prompt": "Moving slowly into the cedar sauna; warm light glows under the benches.",
+  "move": "dolly"
+ },
+ {
+  "n": 7,
+  "src": "https://image.withstatic.com/property/2026/08/27/b8/b875e45c13fb47f9b7dd94fd758cf72e.jpg",
+  "time": "warm",
+  "img": "Keep the place exactly as it is (same walls, same wood, same bath shape, same furniture, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. This is an indoor room with a solid ceiling: extend only the same ceiling above and the same floor below; absolutely no sky, no new windows. Indoor stone hot tub filled with clear warm water in front of a projector screen, shoji panels on the wall. The projector screen shows only a plain soft blue landscape, no words.",
+  "prompt": "Thin steam rises from the warm tub, water ripples softly; very slow move forward toward the screen."
+ },
+ {
+  "n": 8,
+  "src": "https://image.withstatic.com/property/2026/08/27/4c/4cb4f5e68db34016a7cb48edcf9701af.jpg",
+  "time": "sunset",
+  "img": "Keep the place exactly as it is (same walls, same wood, same bath shape, same furniture, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. Private outdoor courtyard with dark wooden walls, a stone hot tub glowing with warm water in front, and a big screen and wooden chairs at the far end, at dusk. A little snow lies on the top of the wooden walls.",
+  "prompt": "Steam curls up from the warm tub and small ripples spread; very slow move forward over the water."
+ },
+ {
+  "n": 9,
+  "src": "https://image.withstatic.com/property/2026/08/27/2c/2c6c1c2d42b74b3d805b1968889ddae5.jpg",
+  "time": "day",
+  "img": "Keep the place exactly as it is (same walls, same wood, same bath shape, same furniture, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. Rooftop terrace with dark wooden walls, a square stone outdoor bath with warm water, wooden lounge chairs and a white screen, under a white sail shade. A little snow lies on the top of the wooden walls. One young Korean woman in her late 20s, Korean facial features, black hair, stands far away at the back of the terrace near the screen, seen from behind (back view), small in the frame.",
+  "prompt": "Steam rises from the warm bath; she stays standing still, seen from behind; very slow move forward.",
+  "people": true
+ },
+ {
+  "n": 10,
+  "src": "https://image.withstatic.com/property/2026/08/27/7b/7b18dd70178245c29c595875a844e69e.jpg",
+  "time": "sunset",
+  "img": "Keep the place exactly as it is (same walls, same wood, same bath shape, same furniture, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. Private outdoor stone bath filled with warm water between dark wooden walls, bamboo plants on the right, soft sunset light. A little snow on top of the wooden walls.",
+  "prompt": "Steam curls up from the warm water and small ripples spread; camera circles slowly around the bath.",
+  "move": "orbit"
+ },
+ {
+  "n": 11,
+  "src": "https://image.withstatic.com/property/2026/08/27/2b/2b3860e0f2144a8387b0caeb58612691.jpg",
+  "time": "night",
+  "img": "Keep the place exactly as it is (same walls, same wood, same bath shape, same furniture, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. Outdoor stone bath glowing with warm underwater light at night, a big screen above the dark wooden wall showing a plain soft blue landscape with no words, a few plants.",
+  "prompt": "Steam rises from the glowing bath and the water shimmers; very slow move forward toward the screen."
+ },
+ {
+  "n": 12,
+  "src": "https://image.withstatic.com/property/2026/08/27/d8/d8f7776c34e148fe842413e5258eaf5c.jpg",
+  "time": "night",
+  "img": "Keep the place exactly as it is (same walls, same wood, same bath shape, same furniture, same layout); do not add new buildings, signs, text or logos, and do not show any written brand name. Photorealistic. Keep the original photo area unchanged, only extend naturally above and below to fill a vertical 9:16 frame. No people anywhere. The small Japanese-style building at night with warm lights in every window and the entrance, dark blue night sky, light snow on the roof edges and street. The round bamboo emblem stays plain without any letters.",
+  "prompt": "Very slow steady move forward toward the lit entrance; window lights glow softly."
+ }
+]
