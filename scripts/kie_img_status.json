@@ -1,64 +1,104 @@
 {
- "at": "2026-11-04 19:48",
+ "at": "2026-11-06 07:33",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
    "n": 1,
-   "taskId": "8b5890785699302441ecd9f93ac03a73",
+   "taskId": "8c77568ef3bd8dd846f8ac14a88c0222",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-04/goseong-stage-poolvilla/1_edit.jpg"
+   "file": "img/2026-11-06/daejeon-kinosaki-ryokan/1_edit.jpg"
   },
   {
    "n": 2,
-   "taskId": "419298ad48d688e46b88daa10d3b945a",
+   "taskId": "e3cf6a82bbe19ce4beaef254bf31fcc0",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-04/goseong-stage-poolvilla/2_edit.jpg"
+   "file": "img/2026-11-06/daejeon-kinosaki-ryokan/2_edit.jpg"
   },
   {
    "n": 3,
-   "taskId": "b4c410a259f6be859fd96fba2a5a4eb6",
+   "taskId": "b5291047e755d56befb887392aff63ae",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-04/goseong-stage-poolvilla/3_edit.jpg"
+   "file": "img/2026-11-06/daejeon-kinosaki-ryokan/3_edit.jpg"
   },
   {
    "n": 4,
-   "taskId": "e5025ba80337fdf9fdea420e03581153",
+   "taskId": "753e9f286113c271d0b27a7d887d0a9c",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-04/goseong-stage-poolvilla/4_edit.jpg"
+   "file": "img/2026-11-06/daejeon-kinosaki-ryokan/4_edit.jpg"
   },
   {
    "n": 5,
-   "taskId": "d1da092606c5f7b6182c8f4c9e5bcf4e",
+   "taskId": "89906945adb6e0a3b78981b063186cd2",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-04/goseong-stage-poolvilla/5_edit.jpg"
+   "file": "img/2026-11-06/daejeon-kinosaki-ryokan/5_edit.jpg"
   },
   {
    "n": 6,
-   "taskId": "355464f1c4afc9fd634c8735b794814e",
+   "taskId": "8e498c10d73155f270fb17e5370598bd",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-04/goseong-stage-poolvilla/6_edit.jpg"
+   "file": "img/2026-11-06/daejeon-kinosaki-ryokan/6_edit.jpg"
   },
   {
    "n": 7,
-   "taskId": "0f22a5ac9e810b372ce21b26349199bb",
+   "taskId": "9296c2dafd4eb3216c06b99d38a10893",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-04/goseong-stage-poolvilla/7_edit.jpg"
+   "file": "img/2026-11-06/daejeon-kinosaki-ryokan/7_edit.jpg"
+  },
+  {
+   "n": 8,
+   "taskId": "0ccd84090ff0f4da90f7572f3bf5a721",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-06/daejeon-kinosaki-ryokan/8_edit.jpg"
+  },
+  {
+   "n": 9,
+   "taskId": "fd048cd93dff76ae08232cd1e27e8c76",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-06/daejeon-kinosaki-ryokan/9_edit.jpg"
+  },
+  {
+   "n": 10,
+   "taskId": "915116de72ebb9732f4363beedbc8eae",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-06/daejeon-kinosaki-ryokan/10_edit.jpg"
+  },
+  {
+   "n": 11,
+   "taskId": "126208b8952d7f271ec382732bc9f1be",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-06/daejeon-kinosaki-ryokan/11_edit.jpg"
+  },
+  {
+   "n": 12,
+   "taskId": "9fa864b2880e0018f2068e9dfe7d4d2f",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-06/daejeon-kinosaki-ryokan/12_edit.jpg"
   }
  ],
- "slug": "goseong-stage-poolvilla"
+ "slug": "daejeon-kinosaki-ryokan"
 }
