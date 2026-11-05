@@ -8,12 +8,16 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 seenp = os.path.join(ROOT, 'scripts', 'inflexer_seen.json')
 seen = set(json.load(open(seenp))) if os.path.exists(seenp) else set()
 M = '&'.join('media=' + m for m in ['BP_', 'BC_', 'IP_', 'IR_', 'YS_', 'YP_'])
+SHP_CATS = ['FD_', 'BT_', 'CL_', 'HG_', 'LF_', 'HB_', 'IT_', 'CA_', 'PA_', 'PT_', 'ET_']  # 2026-11-05: /search 빈 검색어 SHP 막힘 → /shipping?category=
 def get(q, t):
-    u = f'https://inflexer.net:5000/search?query={urllib.parse.quote(q)}&{M}&point=O&point=X&target=TOTAL&type={t}'
+    if t == 'SHP':
+        u = f'https://inflexer.net:5000/shipping?category={q}&{M}&type=SHP&point=O&point=X&target=TOTAL'
+    else:
+        u = f'https://inflexer.net:5000/search?query={urllib.parse.quote(q)}&{M}&point=O&point=X&target=TOTAL&type={t}'
     req = urllib.request.Request(u, headers={'User-Agent': 'Mozilla/5.0', 'Referer': 'https://inflexer.net/', 'Origin': 'https://inflexer.net'})
     return json.load(urllib.request.urlopen(req, timeout=60)).get('result', [])
 rows = []
-groups = {'SHP': [('', 'SHP')], 'VST숙박': [(k, 'VST') for k in ['펜션', '호텔', '리조트', '풀빌라', '글램핑', '캠핑', '숙박', '스테이', '독채']]}
+groups = {'SHP': [(c, 'SHP') for c in SHP_CATS], 'VST숙박': [(k, 'VST') for k in ['펜션', '호텔', '리조트', '풀빌라', '글램핑', '캠핑', '숙박', '스테이', '독채']]}
 for name, qs in groups.items():
     allr = {}
     for q, t in qs:
