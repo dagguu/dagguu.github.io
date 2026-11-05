@@ -68,6 +68,7 @@ TONE_T = {  # 하루 흐름 장면용 (기본 day = TONE)
     "moody": " Color and light (winter tone): keep the place's own dark, moody concept lighting - deep shadows, dark stone, wood and walls, warm amber indirect lights, lanterns and candles glowing, soft reflections on water and gentle steam; rich and cinematic, details still visible, do NOT brighten it into daylight, keep the real place unchanged." + WINTER,
     "warm": " Color and light (winter tone): cozy warm interior light - soft warm lamps and indirect lighting, honey-toned wood, gentle evening window light, calm and inviting, clean and clear, not dim or murky, keep the real place unchanged." + WINTER,
     "pastel": " Color and light (winter tone): soft bright airy daylight - creamy whites, gentle pastel colors (pale blue, pink, beige), diffused sunlight through sheer curtains, light and dreamy like a boutique hotel photo, not harsh, not dark, keep the real place unchanged." + WINTER}
+SNAP = " Photo style: looks like a real photo taken by hand on a smartphone at eye level, natural true-to-life colors and light, no HDR look, no over-saturation, no heavy retouching."  # 2026-11-03 시온님 "직접 스마트폰으로 찍은 느낌" (2026-11-06 정의가 빠져 있어 추가)
 SIZE = " Make the image in a vertical 9:16 size (portrait, 9:16 aspect ratio, full-bleed, no borders or letterboxing)."  # 2026-10-29 시온님: 프롬프트에 "9:16 사이즈로" 꼭
 OUTF = {int(x["n"]): x["outfit"] for x in PL if x.get("outfit")}  # 2026-11-01 시온님: 장면별 옷("outfit")이 있으면 흰 긴 치마 대신 그 옷(예: 니지모리 기모노)
 # 2026-11-02 시온님: 애견 가능 숙소는 우리집 강아지(크림색 포메라니안), 키즈풀빌라는 아이 뒷모습, 가끔 아빠 한 장면.
