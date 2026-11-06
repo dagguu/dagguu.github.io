@@ -183,19 +183,26 @@ def pick(L, n):
 
 def chat(n):
     L = deals(); P = pick(L, n)
+    # 2026-11-06 시온님: 다꾸 링크 + 판매처(쿠팡/마이리얼트립) 링크를 같이, 숙찾남 포맷과 다르게 → 번호 목록 + 공통 안내는 맨 아래 한 번만
+    NUM = "①②③④⑤⑥⑦⑧⑨"
     T = []
-    for x in P:
-        head = f'(특가) {"" if x["area"] in x["name"] else x["area"] + " "}{x["name"]}, {man(x["price"])}' + (f' · {x["rate"]}% 할인' if x.get("rate") else "")
+    for k, x in enumerate(P):
         tk = x.get("kind") == "입장권"
-        t = [head, "", f'📍 {x["area"]}', f'{"🎟️" if tk else "🏨"} {x["name"]}']
-        if x.get("score") and x.get("reviews"): t.append(f'⭐ {x["score"]} (리뷰 {x["reviews"]}개, {x["src"]} 기준)')
-        t += ["", f'📅 {x["cond"]}', f'💰 {won(x["price"])}부터' + (f' ({x["src"]} 표시 정가 {won(x["orig"])} 대비 {x["rate"]}%)' if x.get("orig") and x.get("rate") else "")]
-        t += ["", "💡 브리핑", "✅ 링크를 열고 원하는 날짜로 바꿔서 보세요", ("⚠️ 날짜·옵션마다 가격이 달라요" if tk else "⚠️ 날짜·객실마다 가격이 달라요"),
-              "────────────", f'✓ {md(x["at"][:10]) or md(TODAY)} 확인한 가격이에요 (예약 전에 다시 확인)', "✓ 안내 가격과 다르면 마감된 특가예요",
-              f'{SITE}/d/{x["key"]}.html']
+        nm = x["name"] if x["area"] in x["name"] else f'{x["name"]} ({x["area"]})'
+        t = [f'{NUM[k]} {"🎟️" if tk else "🏨"} {nm}']
+        if x.get("score") and x.get("reviews"): t.append(f'   ⭐ {x["score"]} · 리뷰 {int(x["reviews"]):,}개 ({x["src"]})')
+        t.append(f'   🗓 {x["cond"]}')
+        t.append(f'   💸 {won(x["price"])}~' + (f'  ({x["rate"]}%↓ · 정가 {won(x["orig"])})' if x.get("orig") and x.get("rate") else ""))
+        t.append(f'   📄 다꾸에서 보기 {SITE}/d/{x["key"]}.html')
+        t.append(f'   🛒 {x["src"].replace("쿠팡 골드박스", "쿠팡")}에서 보기 {x["u"]}')
         T.append("\n".join(t))
     if not T: return ""
-    txt = "\n\n".join(T) + "\n\n📢 오늘의 숙소·입장권 특가 더 보기\nhttps://www.dagguu.com/d/\n\n(이 글의 링크를 통해 예약하면 쿠팡 파트너스·마이리얼트립 활동으로 수수료를 받을 수 있어요)"
+    days = sorted({md((x.get("at") or TODAY)[:10]) for x in P if (x.get("at") or TODAY)[:10]})
+    srcs = sorted({("쿠팡 파트너스" if "쿠팡" in x["src"] else x["src"]) for x in P})
+    txt = (f'🧳 다꾸 여행 특가 모음 · {md(TODAY)}\n오늘 고른 {"숙소·입장권" if any(x.get("kind") == "입장권" for x in P) else "숙소"} 할인 {len(P)}곳이에요\n\n' + "\n\n".join(T) +
+           f'\n\n📝 알아두세요\n· 가격은 {"·".join(days) or md(TODAY)} 확인 기준이라 예약할 때 달라질 수 있어요\n· 날짜·객실(옵션)을 바꾸면 가격도 바뀌어요\n· 안내와 다르면 특가가 끝났거나 마감된 거예요'
+           f'\n\n📢 오늘의 특가 전체 보기\n{SITE}/d/'
+           f'\n\n(이 글에는 {"·".join(srcs)} 제휴 링크가 있어 예약 시 수수료를 받을 수 있어요)')
     os.makedirs(os.path.join(ROOT, "chat"), exist_ok=True)
     open(os.path.join(ROOT, "chat", f"deal-{TODAY}.txt"), "w", encoding="utf-8").write(txt)
     return txt
