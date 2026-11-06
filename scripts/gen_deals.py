@@ -183,19 +183,28 @@ def pick(L, n):
 
 def chat(n):
     L = deals(); P = pick(L, n)
-    # 2026-11-06 시온님: 숙소마다 메시지를 나눠 보냄 → 곳마다 따로 완결된 글(다꾸 링크 + 판매처 링크 + 확인일 + 대가성 문구).
-    # 숙찾남 포맷(제목 줄·브리핑·✅⚠️ 목록·구분선)과 다르게 짧은 카드형.
+    # 2026-11-06 20:46 시온님: 숙소마다 메시지 하나, 시온님이 보여준 형식(제목 줄·📍🏨⭐·📅💰·💡 브리핑·✓ 확인일)을 조금만 바꿔서.
+    # 제목 앞: 할인 50% 이상 ★특가★, 그 밖 (특가). 한줄평은 확인한 후기 문장이 없으면 넣지 않는다(지어내지 않음). 🔥 는 쓰지 않는다.
     M = []
     for x in P:
         tk = x.get("kind") == "입장권"
-        nm = x["name"] if x["area"] in x["name"] else f'{x["name"]} ({x["area"]})'
+        tag = "★특가★" if (x.get("rate") or 0) >= 50 else "(특가)"
+        nm = x["name"] if x["area"] in x["name"] else f'{x["area"]} {x["name"]}'
         sv = x["src"].replace("쿠팡 골드박스", "쿠팡")
-        t = [f'{"🎟️" if tk else "🏨"} [다꾸 {"입장권" if tk else "여행"} 특가] {nm}', ""]
-        if x.get("score") and x.get("reviews"): t.append(f'⭐ {x["score"]} · 리뷰 {int(x["reviews"]):,}개 ({x["src"]})')
-        t.append(f'🗓 {x["cond"]}')
-        t.append(f'💸 {won(x["price"])}~' + (f' ({x["rate"]}%↓ · 정가 {won(x["orig"])})' if x.get("orig") and x.get("rate") else ""))
-        t += ["", "📄 다꾸에서 자세히 보기", f'{SITE}/d/{x["key"]}.html', f'🛒 {sv}에서 보기', x["u"], ""]
-        t.append(f'※ {md((x.get("at") or TODAY)[:10]) or md(TODAY)} 확인 가격이에요. 날짜·{"옵션" if tk else "객실"}마다 다르고, 안내와 다르면 마감된 특가예요.')
+        two = "성인 2명" in x["cond"]
+        t = [f'{tag} {nm}, {man(x["price"])}부터' + (f' ({x["rate"]}%↓)' if x.get("rate") else ""), ""]
+        t.append(f'📍 {x["area"]}')
+        t.append(f'{"🎟️" if tk else "🏨"} {x["name"]}')
+        if x.get("score") and x.get("reviews"): t.append(f'⭐ {x["score"]} ({x["src"]} 리뷰 {int(x["reviews"]):,}개)')
+        t += ["", f'📅 {x["cond"]}']
+        t.append(f'💰 {man(x["price"])}부터' + (f' (2명이면 1인당 {man(int(float(x["price"])) // 2)})' if two and not tk else ""))
+        if x.get("orig") and x.get("rate"): t.append(f'💰 {sv} 표시 정가 {won(x["orig"])} → {won(x["price"])}')
+        t += ["", "💡 브리핑", "✅ 링크 열면 날짜를 원하는 날로 바꿔서 보세요", "✅ 날짜별 가격은 링크에서 확인",
+              f'⚠️ {"옵션" if tk else "객실·인원"}에 따라 가격이 달라요']
+        if tk: pass
+        elif "골드박스" in x["src"]: t.append("⚠️ 골드박스 특가는 다음 날 오전 7시에 끝나요")
+        t += ["─ ─ ─ ─ ─ ─ ─ ─", f'✓ {md((x.get("at") or TODAY)[:10]) or md(TODAY)} 확인한 가격이에요 (예약 전에 다시 확인)', "✓ 안내 가격과 다르면 마감된 특가예요", ""]
+        t += [f'📄 다꾸에서 자세히 보기', f'{SITE}/d/{x["key"]}.html', f'🛒 {sv}에서 보기', x["u"], ""]
         t.append(f'({"쿠팡 파트너스" if "쿠팡" in x["src"] else x["src"]} 제휴 링크로 예약하면 수수료를 받을 수 있어요)')
         M.append("\n".join(t))
     if not M: return ""
