@@ -1116,7 +1116,7 @@ function tdHtml(lim){
     var hot=x.until&&x.until<=ymd(new Date(today().getTime()+864e5));
     var badge=x.untilTxt||(x.until?(x.until===td?'오늘 마감':md(x.until)+'까지'):'');
     return '<div class="snc"><div class="snim">'+(safeUrl(x.img)?'<img src="'+esc(x.img)+'" alt="" loading="lazy" referrerpolicy="no-referrer"'+(x.pos?' style="object-position:'+esc(x.pos)+'"':'')+'>':'')+(badge?'<em class="snbd'+(hot?' on':'')+'">'+esc(badge)+'</em>':'')+'<span class="snk">'+esc(x.kind||"")+'</span></div>'+
-      '<div class="snt"><b>'+esc(x.name)+'</b><p>'+(x._r?'<i>'+x._r+'%</i> ':'')+rfWon(x.price)+(x.orig?' <s class="tdo">'+rfWon(x.orig)+'</s>':'')+'</p><small>'+esc((x.area?x.area+' · ':'')+(x.cond||""))+'</small><small>'+esc(x.src||"")+' · '+esc(md(x.at||td))+' 조회 기준</small></div>'+
+      '<div class="snt"><b>'+esc(x.name)+'</b><p>'+(x.orig&&x.orig>x.price?'<s class="tdo">'+rfWon(x.orig)+'</s> → ':'')+rfWon(x.price)+'~'+(x._r?' <i>'+x._r+'%</i>':'')+'</p><small>'+esc((x.area?x.area+' · ':'')+(x.cond||""))+'</small><small>'+esc(x.src||"")+' · '+esc(md(x.at||td))+' 조회 기준</small></div>'+
       '<a class="snb go" '+ext(safeUrl(x.u))+' data-tdgo="'+esc(x.name)+'"'+(x.gold?' data-tdcp="1"':'')+'>특가 보러가기 ↗</a></div>';
   }).join("")+'</div><p class="snnote">가격은 조회한 날짜·조건 기준이라 날짜·객실·쿠폰에 따라 달라질 수 있어요.</p></section>';
 }
