@@ -1,14 +1,84 @@
 {
- "at": "2026-11-06T01:26:27.820365",
+ "at": "2026-11-06T01:29:34.349685",
  "name": "daejeon-kinosaki-ryokan",
  "jobs": [
   {
-   "img": "ai:12",
-   "taskId": "17bf1c08ec9b0f0b5fbdf6da84d5e79c",
+   "img": "ai:1",
+   "taskId": "99ff4fd0f77d5ed40682d95a6f4de02c",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-06/daejeon-kinosaki-ryokan/clip_ai12.mp4"
+   "file": "video/2026-11-06/daejeon-kinosaki-ryokan/clip_ai1.mp4"
+  },
+  {
+   "img": "ai:2",
+   "taskId": "53a9c093dae9d919b39e7decd01cf4f1",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-06/daejeon-kinosaki-ryokan/clip_ai2.mp4"
+  },
+  {
+   "img": "ai:3",
+   "taskId": "8a3636aec3da01c2b015269bcac0197f",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-06/daejeon-kinosaki-ryokan/clip_ai3.mp4"
+  },
+  {
+   "img": "ai:4",
+   "taskId": "972df58496830b9b6c585ce2408fe332",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-06/daejeon-kinosaki-ryokan/clip_ai4.mp4"
+  },
+  {
+   "img": "ai:5",
+   "taskId": "0de49f4026d6fb50c3077195052e1231",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-06/daejeon-kinosaki-ryokan/clip_ai5.mp4"
+  },
+  {
+   "img": "ai:6",
+   "taskId": "b3ca9a5d6856eeefe8e4b9fc9fe4b583",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-06/daejeon-kinosaki-ryokan/clip_ai6.mp4"
+  },
+  {
+   "img": "ai:7",
+   "taskId": "7f65992b73df258e180160ce34be4d36",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-06/daejeon-kinosaki-ryokan/clip_ai7.mp4"
+  },
+  {
+   "img": "ai:8",
+   "taskId": "403eae3af0776f6fc11c36ee973e8647",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-06/daejeon-kinosaki-ryokan/clip_ai8.mp4"
+  },
+  {
+   "img": "ai:9",
+   "taskId": "1a6f61b98f1f4af5e4851221c8a7ba2a",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-06/daejeon-kinosaki-ryokan/clip_ai9.mp4"
+  },
+  {
+   "img": "ai:10",
+   "taskId": "3fadcf978aaff395e0276e286d1e31a4",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-06/daejeon-kinosaki-ryokan/clip_ai10.mp4"
+  },
+  {
+   "img": "ai:11",
+   "taskId": "812ea446d327b967bbc748e50d9cecd1",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-06/daejeon-kinosaki-ryokan/clip_ai11.mp4"
   }
  ],
- "credits_total": 35.0
+ "credits_total": 385.0
 }
