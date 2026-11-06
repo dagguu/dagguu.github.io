@@ -56,11 +56,14 @@ def deals():
                     "score": x.get("score"), "reviews": x.get("reviews"), "u": x["u"], "pu": x.get("pu", ""),
                     "cond": f"{md(mi.get('checkIn'))} 1박 · 성인 {mi.get('adults', 2)}명", "at": (mi.get("updated") or "")[:16],
                     "until": mi.get("checkOut") or ""})
+    def num(v):
+        v = re.sub(r"\D", "", str(v or ""))
+        return int(v) if v else None
     for x in d.get("goldTravel") or []:
         if x.get("kind") not in ("숙소", "레저 티켓") or not x.get("u") or (x.get("endAt") or "") < NOW.isoformat()[:19]: continue
         pid = (re.search(r"/products/(\d+)", x.get("cpUrl", "")) or [None, h8(x["name"])])[1]
         out.append({"pu": x.get("cpUrl", ""), "key": "g-" + pid, "kind": "입장권" if x.get("kind") == "레저 티켓" else "숙소", "src": "쿠팡 골드박스", "name": x["name"], "area": x.get("area", ""), "img": x.get("img", ""),
-                    "price": x.get("price"), "orig": x.get("orig"), "rate": x.get("rate"), "u": x["u"],
+                    "price": num(x.get("price")), "orig": num(x.get("orig")), "rate": num(x.get("rate")), "u": x["u"],
                     "cond": "골드박스 특가 (다음 날 오전 7시까지)", "at": (d.get("goldSoldAt") or "")[:16], "until": (x.get("endAt") or "")[:10]})
     for x in d.get("travelDeals") or []:
         if (x.get("until") or "9999") < TODAY or not x.get("u"): continue
