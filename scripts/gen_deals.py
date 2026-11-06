@@ -53,13 +53,13 @@ def deals():
         if not x.get("dom") or not x.get("u") or not x.get("price"): continue
         out.append({"key": "m-" + h8(x["name"]), "kind": "숙소", "src": "마이리얼트립", "name": x["name"], "area": x.get("region", ""), "img": x.get("img", ""),
                     "price": x.get("price"), "orig": x.get("orig"), "rate": x.get("rate"),
-                    "score": x.get("score"), "reviews": x.get("reviews"), "u": x["u"],
+                    "score": x.get("score"), "reviews": x.get("reviews"), "u": x["u"], "pu": x.get("pu", ""),
                     "cond": f"{md(mi.get('checkIn'))} 1박 · 성인 {mi.get('adults', 2)}명", "at": (mi.get("updated") or "")[:16],
                     "until": mi.get("checkOut") or ""})
     for x in d.get("goldTravel") or []:
         if x.get("kind") not in ("숙소", "레저 티켓") or not x.get("u") or (x.get("endAt") or "") < NOW.isoformat()[:19]: continue
         pid = (re.search(r"/products/(\d+)", x.get("cpUrl", "")) or [None, h8(x["name"])])[1]
-        out.append({"key": "g-" + pid, "kind": "입장권" if x.get("kind") == "레저 티켓" else "숙소", "src": "쿠팡 골드박스", "name": x["name"], "area": x.get("area", ""), "img": x.get("img", ""),
+        out.append({"pu": x.get("cpUrl", ""), "key": "g-" + pid, "kind": "입장권" if x.get("kind") == "레저 티켓" else "숙소", "src": "쿠팡 골드박스", "name": x["name"], "area": x.get("area", ""), "img": x.get("img", ""),
                     "price": x.get("price"), "orig": x.get("orig"), "rate": x.get("rate"), "u": x["u"],
                     "cond": "골드박스 특가 (다음 날 오전 7시까지)", "at": (d.get("goldSoldAt") or "")[:16], "until": (x.get("endAt") or "")[:10]})
     for x in d.get("travelDeals") or []:
@@ -163,6 +163,9 @@ def pick(L, n):
     sent_p = os.path.join(ROOT, "scripts", "deal_chat_sent.json")
     try: sent = json.load(open(sent_p, encoding="utf-8"))
     except Exception: sent = {}
+    if sent.get(TODAY):  # 오늘 이미 고른 게 있으면 그대로(--pick 다음 --chat 이 같은 곳을 쓰게)
+        keep = [x for k in sent[TODAY] for x in L if x["key"] == k]
+        if keep: return keep
     recent = {k for day, ks in sent.items() if day != TODAY and day >= (NOW - dt.timedelta(days=3)).strftime("%Y-%m-%d") for k in ks}
     C = [x for x in L if (x.get("rate") or 0) >= 15 and x["key"] not in recent and (not x.get("reviews") or x["reviews"] >= 5) and (not x.get("score") or float(x["score"]) >= 4.0)]
     C.sort(key=lambda x: (-(x.get("rate") or 0)))
@@ -183,28 +186,41 @@ def pick(L, n):
 
 def chat(n):
     L = deals(); P = pick(L, n)
-    # 2026-11-06 20:46 시온님: 숙소마다 메시지 하나, 시온님이 보여준 형식(제목 줄·📍🏨⭐·📅💰·💡 브리핑·✓ 확인일)을 조금만 바꿔서.
-    # 제목 앞: 할인 50% 이상 ★특가★, 그 밖 (특가). 한줄평은 확인한 후기 문장이 없으면 넣지 않는다(지어내지 않음). 🔥 는 쓰지 않는다.
+    # 2026-11-06 20:49 시온님: 숙찾남과 너무 똑같지 않게, 시온님이 보여준 마이리얼트립 휘닉스 아일랜드 안내글 같은 "소개형" 글로.
+    # 숙소 소개·주변·좋은 점은 scripts/deal_notes.json {key:{hook, intro, near, why_t, points[], end}} 에서만 가져온다
+    # (예약 작업이 판매 페이지·공식 안내로 확인한 사실만 적음). 없으면 그 칸은 빼고 가격·조건만 쓴다.
+    try: notes = json.load(open(os.path.join(ROOT, "scripts", "deal_notes.json"), encoding="utf-8"))
+    except Exception: notes = {}
+    SEA = "제주|서귀포|부산|해운대|광안리|강릉|속초|양양|고성|삼척|동해|여수|통영|거제|남해|태안|보령|포항|경주|인천|강화"
+    OPEN = ["{e} {a} 여행 계획 중이라면? {n} 특가 확인해 보세요!", "{e} 이번에 {a} 가신다면, {n} 할인 소식 먼저 보고 가세요!",
+            "{e} {a} 숙소 고민 중이세요? 오늘은 {n} 특가 소식이에요!", "{e} {a}에서 하룻밤 어떠세요? {n} 할인 중이에요!"]
+    END = ["이번 {a} 여행, {n}에서 시작해 보세요 💙", "{a} 여행 계획 있으신 분들은 저장해 두세요 💜", "날짜만 맞으면 {a}에서 편하게 쉬다 오세요 🤍"]
+    DI = NOW.toordinal()
     M = []
-    for x in P:
+    for k, x in enumerate(P):
         tk = x.get("kind") == "입장권"
         tag = "★특가★" if (x.get("rate") or 0) >= 50 else "(특가)"
-        nm = x["name"] if x["area"] in x["name"] else f'{x["area"]} {x["name"]}'
+        n = notes.get(x["key"]) or {}
         sv = x["src"].replace("쿠팡 골드박스", "쿠팡")
-        two = "성인 2명" in x["cond"]
-        t = [f'{tag} {nm}, {man(x["price"])}부터' + (f' ({x["rate"]}%↓)' if x.get("rate") else ""), ""]
-        t.append(f'📍 {x["area"]}')
-        t.append(f'{"🎟️" if tk else "🏨"} {x["name"]}')
-        if x.get("score") and x.get("reviews"): t.append(f'⭐ {x["score"]} ({x["src"]} 리뷰 {int(x["reviews"]):,}개)')
-        t += ["", f'📅 {x["cond"]}']
-        t.append(f'💰 {man(x["price"])}부터' + (f' (2명이면 1인당 {man(int(float(x["price"])) // 2)})' if two and not tk else ""))
-        if x.get("orig") and x.get("rate"): t.append(f'💰 {sv} 표시 정가 {won(x["orig"])} → {won(x["price"])}')
-        t += ["", "💡 브리핑", "✅ 링크 열면 날짜를 원하는 날로 바꿔서 보세요", "✅ 날짜별 가격은 링크에서 확인",
-              f'⚠️ {"옵션" if tk else "객실·인원"}에 따라 가격이 달라요']
-        if tk: pass
-        elif "골드박스" in x["src"]: t.append("⚠️ 골드박스 특가는 다음 날 오전 7시에 끝나요")
-        t += ["─ ─ ─ ─ ─ ─ ─ ─", f'✓ {md((x.get("at") or TODAY)[:10]) or md(TODAY)} 확인한 가격이에요 (예약 전에 다시 확인)', "✓ 안내 가격과 다르면 마감된 특가예요", ""]
-        t += [f'📄 다꾸에서 자세히 보기', f'{SITE}/d/{x["key"]}.html', f'🛒 {sv}에서 보기', x["u"], ""]
+        area = x["area"]
+        em = "🎟️" if tk else ("🌊" if re.search(SEA, area + x["name"]) else "🌿")
+        t = [f'{tag} ' + (n.get("hook") or OPEN[(DI + k) % len(OPEN)].format(e=em, a=area, n=x["name"])), ""]
+        t.append(f'{"🎟️" if tk else "🏨"} {n.get("intro") or ((x["name"] if area in x["name"] else area + " " + x["name"]) + ", " + x["src"].replace("쿠팡 골드박스", "쿠팡") + "에서 할인 판매 중이에요!")}')
+        if n.get("intro2"): t.append(n["intro2"])
+        if n.get("near"): t += ["", f'🗺 {n["near"]}']
+        if n.get("points"):
+            t += ["", n.get("why_t") or "✨ 이런 점이 좋아요"] + [f'✅ {p}' for p in n["points"][:5]]
+        t.append("")
+        t.append(f'💰 {x["cond"]} {won(x["price"])}부터' + (f' ({x["rate"]}%↓)' if x.get("rate") else ""))
+        if x.get("orig") and x.get("rate"): t.append(f'   {sv} 표시 정가 {won(x["orig"])}')
+        if x.get("score") and x.get("reviews"): t.append(f'⭐ 평점 {x["score"]} · 리뷰 {int(x["reviews"]):,}개 ({x["src"]})')
+        if "성인 2명" in x["cond"] and not tk: t.append(f'👫 2명이면 1인당 {man(int(float(x["price"])) // 2)}')
+        t.append("")
+        if "골드박스" in x["src"]: t.append("⏰ 골드박스 특가는 다음 날 오전 7시에 끝나요")
+        elif x.get("until") and n.get("sale_until"): t.append(f'⏰ 판매는 {md(n["sale_until"])}까지예요')
+        t.append(f'📌 {md((x.get("at") or TODAY)[:10]) or md(TODAY)} 확인 가격이라 날짜·{"옵션" if tk else "객실"}마다 다르고, 다르면 마감된 특가예요')
+        t += ["", n.get("end") or END[(DI + k) % len(END)].format(a=area, n=x["name"])]
+        t += ["", f'🔗 다꾸에서 자세히 보기', f'{SITE}/d/{x["key"]}.html', f'🔗 {sv} {"입장권" if tk else ""}특가 바로가기'.replace("  ", " "), x["u"], ""]
         t.append(f'({"쿠팡 파트너스" if "쿠팡" in x["src"] else x["src"]} 제휴 링크로 예약하면 수수료를 받을 수 있어요)')
         M.append("\n".join(t))
     if not M: return ""
@@ -215,6 +231,10 @@ def chat(n):
 
 if __name__ == "__main__":
     build()
+    if "--pick" in sys.argv:  # 오늘 보낼 곳을 고르고 사실 확인용 정보만 출력(예약 작업이 deal_notes.json 을 채운 뒤 --chat)
+        i = sys.argv.index("--pick"); n = int(sys.argv[i + 1]) if len(sys.argv) > i + 1 and sys.argv[i + 1].isdigit() else 3
+        for x in pick(deals(), n):
+            print(json.dumps({k: x.get(k) for k in ("key", "kind", "name", "area", "src", "cond", "price", "orig", "rate", "score", "reviews", "pu", "until")}, ensure_ascii=False))
     if "--chat" in sys.argv:
         i = sys.argv.index("--chat"); n = int(sys.argv[i + 1]) if len(sys.argv) > i + 1 and sys.argv[i + 1].isdigit() else 3
         print(chat(n))

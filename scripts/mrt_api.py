@@ -60,7 +60,7 @@ def main():
                 if not ml: continue
                 out.append({"dom": dom, "region": name, "name": it.get("itemName", ""), "img": it.get("imageUrl"),
                     "price": int(it["salePrice"]), "orig": int(it["originalPrice"]), "rate": rate,
-                    "star": it.get("starRating"), "score": it.get("reviewScore"), "reviews": it.get("reviewCount"), "u": ml})
+                    "star": it.get("starRating"), "score": it.get("reviewScore"), "reviews": it.get("reviewCount"), "u": ml, "pu": it.get("productUrl") or ""})  # pu = 원래 상품 주소(단톡방 글 사실 확인용, 2026-11-06)
             print(f"{name}: 후보 {len(cand)} → {min(len(cand), PER)}개")
     if not out: print("::warning::마이리얼트립 특가를 하나도 못 모음(기존 목록 유지)"); return
     p = os.path.join(ROOT, "data.json"); d = json.load(open(p, encoding="utf-8"))
