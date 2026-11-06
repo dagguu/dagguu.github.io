@@ -29,4 +29,14 @@ jobs:
         run: |
           git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
           git add -A
-          git diff --cached --quiet || (git commit -m "쿠팡 자동 업데이트 $(TZ=Asia/Seoul date +%F)" && for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done)
+          git diff --cached --quiet && exit 0
+          git commit -qm "쿠팡 자동 업데이트 $(TZ=Asia/Seoul date +%F)"
+          # data.json push 때 split.yml 이 data-live.json 을 먼저 올려 충돌하던 것(2026-11-06) → 겹친 곳은 이쪽 것을 쓰고 data-live 를 다시 나눔
+          for i in 1 2 3 4; do
+            if git pull --rebase -q -X theirs origin main; then
+              python3 scripts/split_data.py && git add data-live.json data-past.json && (git diff --cached --quiet || git commit -qm "data-live 나누기")
+              git push -q && exit 0
+            else git rebase --abort || true; fi
+            sleep 7
+          done
+          exit 1
