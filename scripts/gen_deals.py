@@ -208,6 +208,7 @@ def chat(n):
         t.append(f'{"🎟️" if tk else "🏨"} {n.get("intro") or ((x["name"] if area in x["name"] else area + " " + x["name"]) + ", " + x["src"].replace("쿠팡 골드박스", "쿠팡") + "에서 할인 판매 중이에요!")}')
         if n.get("intro2"): t.append(n["intro2"])
         if n.get("near"): t += ["", f'🗺 {n["near"]}']
+        t += ["", f'🔗 {sv} {"입장권 " if tk else ""}특가 바로가기', x["u"]]  # 2026-11-06 시온님: 바로가기 링크는 "이런 점이 좋아요" 위
         if n.get("points"):
             t += ["", n.get("why_t") or "✨ 이런 점이 좋아요"] + [f'✅ {p}' for p in n["points"][:5]]
         t.append("")
@@ -220,7 +221,7 @@ def chat(n):
         elif x.get("until") and n.get("sale_until"): t.append(f'⏰ 판매는 {md(n["sale_until"])}까지예요')
         t.append(f'📌 {md((x.get("at") or TODAY)[:10]) or md(TODAY)} 확인 가격이라 날짜·{"옵션" if tk else "객실"}마다 다르고, 다르면 마감된 특가예요')
         t += ["", n.get("end") or END[(DI + k) % len(END)].format(a=area, n=x["name"])]
-        t += ["", f'🔗 다꾸에서 자세히 보기', f'{SITE}/d/{x["key"]}.html', f'🔗 {sv} {"입장권" if tk else ""}특가 바로가기'.replace("  ", " "), x["u"], ""]
+        t += ["", "🔗 여행 특가 더 보기", f'{SITE}/d/', ""]  # 맨 아래 다꾸 주소
         t.append(f'({"쿠팡 파트너스" if "쿠팡" in x["src"] else x["src"]} 제휴 링크로 예약하면 수수료를 받을 수 있어요)')
         M.append("\n".join(t))
     if not M: return ""
