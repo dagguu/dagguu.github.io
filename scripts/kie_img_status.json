@@ -1,40 +1,48 @@
 {
- "at": "2026-11-06 07:37",
+ "at": "2026-11-06 19:51",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
+   "n": 1,
+   "taskId": "73144f66f98136e40cee49c1a5771b60",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-06/gapyeong-sugar-glamping/1_edit.jpg"
+  },
+  {
+   "n": 2,
+   "taskId": "1bd708818ff43792c17a5aabd1a42315",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-06/gapyeong-sugar-glamping/2_edit.jpg"
+  },
+  {
    "n": 3,
-   "taskId": "f9ee50a440e816bdc653f2352bf81b28",
+   "taskId": "88de6a49692b293c82085c3e30c193a6",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-06/daejeon-kinosaki-ryokan/3_edit.jpg"
+   "file": "img/2026-11-06/gapyeong-sugar-glamping/3_edit.jpg"
   },
   {
-   "n": 8,
-   "taskId": "69cb9601d5835e29f8f20236f046c754",
+   "n": 4,
+   "taskId": "42f51476aac2fa74d6f90ec4ab2998b8",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-06/daejeon-kinosaki-ryokan/8_edit.jpg"
+   "file": "img/2026-11-06/gapyeong-sugar-glamping/4_edit.jpg"
   },
   {
-   "n": 10,
-   "taskId": "e6e41275d993f73a7895e755f3d6b4dc",
+   "n": 5,
+   "taskId": "4e855ce10b77d1eb1dbd32df57550ed9",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-06/daejeon-kinosaki-ryokan/10_edit.jpg"
-  },
-  {
-   "n": 11,
-   "taskId": "17d8f4440a88a103670dfdeb4f61d3b5",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-06/daejeon-kinosaki-ryokan/11_edit.jpg"
+   "file": "img/2026-11-06/gapyeong-sugar-glamping/5_edit.jpg"
   }
  ],
- "slug": "daejeon-kinosaki-ryokan"
+ "slug": "gapyeong-sugar-glamping"
 }
