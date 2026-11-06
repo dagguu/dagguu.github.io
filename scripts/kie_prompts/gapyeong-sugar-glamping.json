@@ -1,0 +1,34 @@
+[
+ {
+  "n": 1,
+  "time": "night",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same red chimney-style fire pit with burning logs, same wooden deck, same railing, same glamping tent roof frame, same dark mountains); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (more tent roof and deep night sky) and below (more wooden deck boards). Never mirror or flip the image.",
+  "prompt": "Very slow move forward toward the red fire pit on the terrace, flames flickering softly inside it, faint smoke rising, warm firelight dancing on the deck."
+ },
+ {
+  "n": 2,
+  "time": "day",
+  "img": "Keep the place exactly as it is (same blue-lit spa tub, same stone-pattern walls, same small window, same faucet, same ceiling); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (more ceiling) and below (more spa water and tub edge). Never mirror or flip the image.",
+  "prompt": "Very slow move forward over the bubbling spa tub toward the window, water churning gently, soft steam rising, small lights glowing in the water."
+ },
+ {
+  "n": 3,
+  "time": "day",
+  "people": true,
+  "img": "Keep the place exactly as it is (same brick-patterned terrace floor, same round table and chairs, same wooden fence, same mountains); do not add new buildings, furniture, signs, text or logos. Add one Korean woman standing far away at the fence, seen fully from behind, small in the frame, looking at the mountains, not touching any furniture. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (more clear sky) and below (more brick floor). Never mirror or flip the image.",
+  "prompt": "Slow walking forward across the terrace toward the fence and the mountains, clouds drifting slowly."
+ },
+ {
+  "n": 4,
+  "time": "day",
+  "img": "Keep the place exactly as it is (same white tent ceiling, same green vine garland, same green sofa, same patterned rug, same plants, same TV and same doors); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (more white tent ceiling) and below (more patterned rug and floor). Never mirror or flip the image.",
+  "prompt": "Very slow walk-through move forward into the living room toward the green sofa, soft daylight, plants nearly still."
+ },
+ {
+  "n": 5,
+  "time": "day",
+  "img": "Keep the place exactly as it is (same row of cream glamping tents, same wooden decks, same garden, same forested mountain slope); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above (more mountain and sky) and below (more garden path). Never mirror or flip the image.",
+  "prompt": "Slow move forward along the path toward the row of glamping tents, faint smoke rising from one chimney, clouds drifting slowly."
+ }
+]
