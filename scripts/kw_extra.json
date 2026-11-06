@@ -1,173 +1,185 @@
 {
- "updated": "2026-11-05 16:16",
+ "updated": "2026-11-06 16:14",
  "hints": [
-  "수면양말",
   "크리스마스선물",
+  "자석블럭",
+  "빨대컵",
   "밀폐용기",
-  "아기샴푸",
-  "자석블럭"
+  "아기세제"
  ],
  "rows": [
   {
    "kw": "스탠리텀블러",
-   "vol": 150600,
+   "vol": 153000,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "찜질방",
-   "vol": 147000,
+   "vol": 148050,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "음식물처리기",
-   "vol": 137200,
+   "vol": 136300,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "잠옷",
-   "vol": 81600,
+   "vol": 81900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세탁세제",
+   "vol": 67000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "더블하트",
+   "vol": 56810,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "경기도가볼만한곳",
-   "vol": 53710,
+   "vol": 53060,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "크로스백",
-   "vol": 50630,
+   "vol": 50580,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "집들이선물",
-   "vol": 43700,
+   "vol": 43400,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "결혼식답례품",
-   "vol": 38630,
+   "vol": 38540,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "글라스락",
-   "vol": 38270,
+   "vol": 38030,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "상견례선물",
-   "vol": 33190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울놀거리",
-   "vol": 32310,
+   "vol": 32820,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "지갑",
-   "vol": 32230,
+   "vol": 32560,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "양산",
-   "vol": 31160,
+   "kw": "서울놀거리",
+   "vol": 32190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "설거지",
+   "vol": 31560,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "명품가방",
-   "vol": 30400,
+   "vol": 30330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "압박스타킹",
-   "vol": 30010,
-   "comp": "높음",
+   "kw": "주방세제",
+   "vol": 29040,
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "집들이선물추천",
-   "vol": 27890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "그래놀라",
-   "vol": 26880,
+   "vol": 27800,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "장갑",
-   "vol": 26570,
+   "vol": 27170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "임부복",
-   "vol": 24660,
+   "kw": "그래놀라",
+   "vol": 26820,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수면양말",
-   "vol": 23330,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "락앤락텀블러",
-   "vol": 23010,
+   "kw": "니트릴장갑",
+   "vol": 24690,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "스포츠양말",
-   "vol": 21560,
-   "comp": "높음",
+   "kw": "중성세제",
+   "vol": 24080,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "워크자켓",
-   "vol": 21550,
-   "comp": "높음",
+   "kw": "락앤락텀블러",
+   "vol": 22990,
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "여성가방",
-   "vol": 21520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플잠옷",
-   "vol": 18710,
+   "vol": 21500,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "크리스마스장식",
-   "vol": 18670,
+   "vol": 20190,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "바디드라이어",
-   "vol": 18640,
+   "vol": 18720,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플잠옷",
+   "vol": 18600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지퍼백",
+   "vol": 18370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세제",
+   "vol": 18360,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -177,38 +189,44 @@
    "hint": false
   },
   {
-   "kw": "음식물분쇄기",
-   "vol": 15980,
-   "comp": "중간",
+   "kw": "수능선물추천",
+   "vol": 16000,
+   "comp": "높음",
    "hint": false
   },
   {
    "kw": "키링제작",
-   "vol": 15960,
+   "vol": 15850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식물분쇄기",
+   "vol": 15840,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "서울찜질방",
-   "vol": 15150,
+   "vol": 15270,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "수능선물추천",
-   "vol": 14680,
-   "comp": "높음",
+   "kw": "젖병",
+   "vol": 15270,
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "결혼답례품",
-   "vol": 14480,
+   "vol": 14380,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "서울근교갈만한곳",
-   "vol": 14290,
+   "vol": 14070,
    "comp": "높음",
    "hint": false
   },
@@ -220,157 +238,163 @@
   },
   {
    "kw": "서울데이트",
-   "vol": 13850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기로션",
-   "vol": 12530,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "여성잠옷",
-   "vol": 12360,
+   "vol": 13820,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "크리스마스리스",
-   "vol": 12050,
+   "vol": 13010,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "의료용압박스타킹",
-   "vol": 11970,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "남자잠옷",
-   "vol": 11760,
+   "kw": "여성잠옷",
+   "vol": 12240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스트랩",
-   "vol": 11490,
+   "kw": "아기세제",
+   "vol": 12050,
    "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "남자잠옷",
+   "vol": 11840,
+   "comp": "높음",
    "hint": false
   },
   {
    "kw": "가죽가방",
-   "vol": 11480,
+   "vol": 11600,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "티코스터",
-   "vol": 11380,
+   "vol": 11400,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "종아리압박밴드",
+   "kw": "방한장갑",
    "vol": 11250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서울찜질방추천",
-   "vol": 11100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
    "kw": "니치향수",
-   "vol": 11060,
+   "vol": 11210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "밀폐용기",
-   "vol": 11010,
+   "kw": "서울찜질방추천",
+   "vol": 11210,
    "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "방한장갑",
-   "vol": 10910,
-   "comp": "높음",
    "hint": false
   },
   {
    "kw": "김치통",
-   "vol": 10880,
+   "vol": 11160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "밀폐용기",
+   "vol": 11090,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "설거지비누",
+   "vol": 10500,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "후라이팬추천",
-   "vol": 10300,
+   "vol": 10260,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "냉동밥보관용기",
-   "vol": 10250,
+   "vol": 10200,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "퍼퓸드말리",
-   "vol": 9910,
+   "vol": 9960,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "서류가방",
-   "vol": 9830,
+   "vol": 9920,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "홈웨어",
-   "vol": 9680,
+   "vol": 9710,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "비오는날데이트",
-   "vol": 9300,
+   "vol": 9400,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "마블런",
-   "vol": 9260,
+   "vol": 9160,
    "comp": "중간",
    "hint": false
   },
   {
+   "kw": "수능응원선물",
+   "vol": 9060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "락앤락반찬통",
-   "vol": 8860,
+   "vol": 8780,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "원피스잠옷",
-   "vol": 8720,
+   "vol": 8760,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수능응원선물",
-   "vol": 8510,
-   "comp": "높음",
+   "kw": "빨대컵",
+   "vol": 8720,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "릿첼빨대컵",
+   "vol": 8650,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "크리스마스트리장식",
+   "vol": 8620,
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "자석블럭",
-   "vol": 8400,
+   "vol": 8590,
    "comp": "중간",
    "hint": true
   },
@@ -381,153 +405,153 @@
    "hint": false
   },
   {
-   "kw": "크리스마스트리장식",
-   "vol": 8280,
-   "comp": "중간",
-   "hint": false
-  },
-  {
    "kw": "진공밀폐용기",
-   "vol": 8180,
+   "vol": 8210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무압박양말",
-   "vol": 8170,
-   "comp": "중간",
+   "kw": "실내데이트",
+   "vol": 8200,
+   "comp": "높음",
    "hint": false
   },
   {
    "kw": "음식물쓰레기처리기",
-   "vol": 8090,
+   "vol": 8020,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "실내데이트",
-   "vol": 8070,
+   "kw": "아기빨대컵",
+   "vol": 7940,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "추석선물세트",
-   "vol": 7950,
+   "vol": 7770,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "추석선물",
-   "vol": 7830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "퇴사선물",
-   "vol": 7700,
+   "vol": 7770,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "맥포머스",
-   "vol": 7660,
+   "vol": 7710,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "IBC탱크",
-   "vol": 7540,
+   "kw": "그로미미빨대컵",
+   "vol": 7700,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쿨매트",
+   "vol": 7690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "발가락수면양말",
-   "vol": 7440,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "양념통",
-   "vol": 7230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "이유식용기",
-   "vol": 7220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "선물세트",
-   "vol": 7210,
+   "kw": "퇴사선물",
+   "vol": 7680,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "미니트리",
+   "vol": 7620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "IBC탱크",
+   "vol": 7580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "크리스마스선물",
+   "vol": 7320,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "이유식용기",
+   "vol": 7190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "양념통",
+   "vol": 7180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "선물세트",
+   "vol": 7180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수능선물세트",
    "vol": 7030,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "키링만들기",
-   "vol": 6970,
+   "vol": 6910,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "임산부레깅스",
-   "vol": 6960,
+   "kw": "크리스마스소품",
+   "vol": 6730,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스선물",
-   "vol": 6830,
+   "kw": "크리스마스오너먼트",
+   "vol": 6580,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
    "kw": "신상명품가방",
-   "vol": 6540,
+   "vol": 6580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스텐김치통",
+   "vol": 6580,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "여자잠옷",
-   "vol": 6510,
+   "vol": 6570,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "캠핑용장갑",
-   "vol": 6450,
+   "vol": 6520,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "스텐김치통",
-   "vol": 6430,
-   "comp": "높음",
    "hint": false
   },
   {
    "kw": "향수추천",
-   "vol": 6400,
+   "vol": 6490,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "메리노울양말",
-   "vol": 6390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수능선물세트",
-   "vol": 6370,
-   "comp": "높음",
    "hint": false
   },
   {
@@ -544,19 +568,13 @@
   },
   {
    "kw": "이사선물",
-   "vol": 6230,
+   "vol": 6290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스소품",
+   "kw": "겨울장갑",
    "vol": 6230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스오너먼트",
-   "vol": 6120,
    "comp": "높음",
    "hint": false
   },
@@ -567,284 +585,278 @@
    "hint": false
   },
   {
-   "kw": "겨울장갑",
+   "kw": "트리오너먼트",
    "vol": 6070,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "생일선물추천",
+   "vol": 5950,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "아빠생일선물",
-   "vol": 5920,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "생일선물추천",
-   "vol": 5910,
+   "vol": 5950,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "향수브랜드",
-   "vol": 5900,
+   "vol": 5930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세탁세제추천",
+   "vol": 5750,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "이지앤프리",
-   "vol": 5720,
+   "vol": 5680,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "겨울양말",
-   "vol": 5650,
+   "kw": "잠옷브랜드",
+   "vol": 5640,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "실크잠옷",
-   "vol": 5630,
+   "vol": 5640,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "잠옷브랜드",
-   "vol": 5620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임산부압박스타킹",
-   "vol": 5580,
+   "kw": "엄마생일선물",
+   "vol": 5540,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "스텐락",
-   "vol": 5580,
+   "vol": 5510,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "발열양말",
-   "vol": 5570,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "트리오너먼트",
-   "vol": 5530,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "30대여자생일선물",
-   "vol": 5460,
+   "kw": "아기세탁세제",
+   "vol": 5500,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "피보나치수열",
-   "vol": 5410,
+   "vol": 5450,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "전자렌지용기",
-   "vol": 5400,
+   "vol": 5420,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기바디워시",
-   "vol": 5390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이색데이트",
-   "vol": 5330,
+   "kw": "30대여자생일선물",
+   "vol": 5370,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "레이저줄자",
-   "vol": 5330,
+   "vol": 5370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이색데이트",
+   "vol": 5340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "추빨대",
+   "vol": 5200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수험생선물",
+   "vol": 5170,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "부모님생신선물",
-   "vol": 5190,
+   "vol": 5160,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종아리압박스타킹",
-   "vol": 5130,
-   "comp": "중간",
    "hint": false
   },
   {
    "kw": "냉동밥용기",
-   "vol": 5120,
+   "vol": 5090,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "남자수면양말",
-   "vol": 5010,
-   "comp": "높음",
    "hint": false
   },
   {
    "kw": "찜질방추천",
-   "vol": 4970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아로션",
-   "vol": 4930,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "여성반코트",
-   "vol": 4930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엘보",
-   "vol": 4910,
+   "vol": 5040,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "스텐밀폐용기",
+   "vol": 4970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아젖병",
    "vol": 4900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수험생선물",
-   "vol": 4860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "포장용기",
-   "vol": 4720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미생물음식물처리기",
-   "vol": 4600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기엉덩이클렌저",
-   "vol": 4540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자명품가방",
-   "vol": 4510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유리밀폐용기",
-   "vol": 4480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수비드머신",
-   "vol": 4460,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "명품백",
-   "vol": 4450,
+   "kw": "엘보",
+   "vol": 4890,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "수능찹쌀떡",
-   "vol": 4400,
+   "vol": 4820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "액체세제",
+   "vol": 4790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "포장용기",
+   "vol": 4750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유리밀폐용기",
+   "vol": 4590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미생물음식물처리기",
+   "vol": 4590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유리젖병",
+   "vol": 4560,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자기주도컵",
+   "vol": 4540,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여자명품가방",
+   "vol": 4490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수비드머신",
+   "vol": 4470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "명품백",
+   "vol": 4430,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "신촌놀거리",
-   "vol": 4390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모달잠옷",
-   "vol": 4390,
+   "vol": 4400,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "잠옷세트",
-   "vol": 4350,
+   "vol": 4370,
    "comp": "높음",
    "hint": false
   },
   {
+   "kw": "드럼세탁기세제",
+   "vol": 4370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
    "kw": "부모님선물",
+   "vol": 4340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모달잠옷",
+   "vol": 4340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주방세제추천",
    "vol": 4260,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "플라스틱용기",
-   "vol": 4220,
+   "vol": 4160,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "울양말",
-   "vol": 4180,
-   "comp": "중간",
    "hint": false
   },
   {
    "kw": "페트병",
-   "vol": 4160,
+   "vol": 4130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "명품사이트",
-   "vol": 4100,
+   "kw": "테라리움만들기",
+   "vol": 4110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "테라리움만들기",
+   "kw": "명품사이트",
    "vol": 4070,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기샴푸",
-   "vol": 4020,
-   "comp": "중간",
-   "hint": true
+   "kw": "크리스마스데이트",
+   "vol": 4060,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "두꺼운양말",
-   "vol": 3950,
+   "kw": "아기섬유유연제",
+   "vol": 3920,
    "comp": "중간",
    "hint": false
   },
@@ -855,63 +867,63 @@
    "hint": false
   },
   {
-   "kw": "크리스마스데이트",
-   "vol": 3900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "가죽장갑",
-   "vol": 3700,
+   "vol": 3820,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베이비파우더",
-   "vol": 3670,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장품용기",
-   "vol": 3640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임산부무압박양말",
-   "vol": 3640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수비드",
-   "vol": 3580,
+   "kw": "아기주방세제",
+   "vol": 3740,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "글라스락밀폐용기",
-   "vol": 3580,
+   "vol": 3660,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "향수쇼핑몰",
+   "kw": "아이머그컵",
+   "vol": 3630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장품용기",
+   "vol": 3620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "푸고",
+   "vol": 3600,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수비드",
    "vol": 3570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "압박니삭스",
-   "vol": 3560,
+   "kw": "향수쇼핑몰",
+   "vol": 3550,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "퍼퓸",
-   "vol": 3480,
+   "vol": 3540,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실리콘컵",
+   "vol": 3540,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -922,102 +934,108 @@
   },
   {
    "kw": "냉장고정리",
-   "vol": 3440,
+   "vol": 3410,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "기름통",
-   "vol": 3430,
+   "vol": 3410,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "남자명품가방",
-   "vol": 3390,
+   "vol": 3330,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젖병추천",
+   "vol": 3310,
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "명품미니백",
-   "vol": 3310,
+   "vol": 3270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈샴푸",
+   "kw": "수능마카롱",
    "vol": 3260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젖꼭지",
+   "vol": 3210,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "버선",
-   "vol": 3260,
-   "comp": "높음",
+   "kw": "아기물병",
+   "vol": 3200,
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "30대여자선물",
-   "vol": 3230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "40대남자생일선물",
-   "vol": 3180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일회용용기",
-   "vol": 3160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "개파카",
-   "vol": 3150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "여자수면양말",
-   "vol": 3130,
+   "vol": 3200,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "헤스트라장갑",
-   "vol": 3100,
+   "vol": 3150,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "그릇건조대",
+   "kw": "40대남자생일선물",
+   "vol": 3140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일회용용기",
+   "vol": 3110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퇴사답례품",
    "vol": 3080,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "도시락용기",
-   "vol": 3060,
+   "vol": 3050,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "냉동용기",
-   "vol": 3050,
+   "vol": 3040,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퇴사답례품",
-   "vol": 3050,
+   "kw": "보냉파우치",
+   "vol": 3020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젖병세정제",
+   "vol": 3020,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "베이비로션",
+   "kw": "락앤락유리용기",
    "vol": 3020,
    "comp": "높음",
    "hint": false
@@ -1029,32 +1047,14 @@
    "hint": false
   },
   {
-   "kw": "수능마카롱",
-   "vol": 2960,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "위생장갑",
-   "vol": 2940,
+   "vol": 2960,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "내열유리용기",
+   "kw": "락앤락밀폐용기",
    "vol": 2910,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "다리베개",
-   "vol": 2870,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "타비양말",
-   "vol": 2870,
    "comp": "중간",
    "hint": false
   },
@@ -1065,111 +1065,117 @@
    "hint": false
   },
   {
-   "kw": "락앤락밀폐용기",
-   "vol": 2820,
+   "kw": "내열유리용기",
+   "vol": 2840,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유리반찬통",
-   "vol": 2760,
+   "kw": "배앓이젖병",
+   "vol": 2840,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "기모양말",
-   "vol": 2750,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "손가락장갑",
-   "vol": 2750,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기바디로션",
-   "vol": 2730,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "소마큐브",
-   "vol": 2710,
+   "kw": "수능떡",
+   "vol": 2800,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "남자가죽장갑",
-   "vol": 2690,
+   "vol": 2780,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아퍼즐",
-   "vol": 2670,
-   "comp": "중간",
    "hint": false
   },
   {
    "kw": "남자장갑",
-   "vol": 2630,
+   "vol": 2770,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신혼부부커플잠옷",
-   "vol": 2630,
+   "kw": "손가락장갑",
+   "vol": 2770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유리반찬통",
+   "vol": 2750,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소마큐브",
+   "vol": 2740,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "호호에미",
+   "vol": 2740,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아퍼즐",
+   "vol": 2720,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "크린백",
+   "vol": 2600,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "플라스틱통",
-   "vol": 2610,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "무압박수면양말",
-   "vol": 2610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크린백",
-   "vol": 2590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수능떡",
    "vol": 2580,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "골프니삭스",
-   "vol": 2560,
+   "kw": "연말선물",
+   "vol": 2570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수족냉증양말",
-   "vol": 2490,
+   "kw": "신혼부부커플잠옷",
+   "vol": 2570,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "헤스트라",
-   "vol": 2480,
+   "vol": 2500,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "듀라렉스",
-   "vol": 2420,
+   "kw": "트리장식",
+   "vol": 2500,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "친환경주방세제",
+   "vol": 2430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스파우트컵",
+   "vol": 2410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "교보재",
+   "vol": 2370,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -1179,20 +1185,14 @@
    "hint": false
   },
   {
-   "kw": "교보재",
+   "kw": "생리혈지우기",
    "vol": 2360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연말선물",
-   "vol": 2350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리장식",
-   "vol": 2350,
+   "kw": "아기물컵",
+   "vol": 2340,
    "comp": "중간",
    "hint": false
   },
@@ -1204,43 +1204,25 @@
   },
   {
    "kw": "디자이너브랜드가방",
-   "vol": 2320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "존슨즈베이비",
-   "vol": 2310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "캐시미어양말",
    "vol": 2280,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "제리캔",
-   "vol": 2240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스양말",
-   "vol": 2240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캠핑양념통",
-   "vol": 2240,
+   "vol": 2220,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "후라이팬세트",
-   "vol": 2230,
+   "vol": 2210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "크리스마스선물추천",
+   "vol": 2190,
    "comp": "높음",
    "hint": false
   },
@@ -1251,164 +1233,194 @@
    "hint": false
   },
   {
-   "kw": "신혼부부집들이선물",
-   "vol": 2160,
+   "kw": "고농축섬유유연제",
+   "vol": 2180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기젖병",
+   "vol": 2170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "조미료통",
-   "vol": 2160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플잠옷세트",
+   "kw": "캠핑양념통",
    "vol": 2150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "압박밴드",
+   "kw": "조미료통",
    "vol": 2140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스선물추천",
-   "vol": 2070,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "크리스마스용품",
-   "vol": 2070,
+   "vol": 2130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플잠옷세트",
+   "vol": 2130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집준비물",
+   "vol": 2120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빨래세제",
+   "vol": 2100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼부부집들이선물",
+   "vol": 2090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경제품",
+   "vol": 2040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내건조세탁세제",
+   "vol": 1970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용진공포장기",
+   "vol": 1960,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "명품구두",
-   "vol": 1980,
+   "vol": 1960,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이샴푸",
+   "kw": "써모스빨대컵",
    "vol": 1960,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "업소용진공포장기",
-   "vol": 1950,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아바디워시",
-   "vol": 1930,
+   "kw": "대용량주방세제",
+   "vol": 1890,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "압박스타킹효과",
-   "vol": 1900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "압박양말",
+   "kw": "오란다답례품",
    "vol": 1870,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오란다답례품",
-   "vol": 1860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이솝핸드밤",
-   "vol": 1860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "니트양말",
-   "vol": 1850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "명품가방쇼핑몰",
-   "vol": 1840,
+   "vol": 1830,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "반찬통추천",
-   "vol": 1840,
+   "vol": 1830,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유아로션",
-   "vol": 1820,
+   "kw": "이솝핸드밤",
+   "vol": 1830,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "냉장고정리함",
+   "kw": "설거지바",
    "vol": 1800,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플파자마",
-   "vol": 1770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수비드기계",
-   "vol": 1740,
+   "kw": "대용량세탁세제",
+   "vol": 1790,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "커피선물세트",
-   "vol": 1720,
+   "vol": 1790,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "방한양말",
-   "vol": 1720,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "진공팩",
-   "vol": 1700,
+   "kw": "냉장고정리함",
+   "vol": 1790,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무릎밴드",
-   "vol": 1700,
+   "kw": "크리스마스트리오너먼트",
+   "vol": 1780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플파자마",
+   "vol": 1760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이유식기",
+   "vol": 1760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아젖병추천",
+   "vol": 1740,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수비드기계",
+   "vol": 1730,
+   "comp": "높음",
    "hint": false
   },
   {
    "kw": "블럭장난감",
-   "vol": 1690,
+   "vol": 1720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "진공팩",
+   "vol": 1710,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "3만원대선물",
-   "vol": 1690,
+   "vol": 1700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수제그래놀라",
+   "vol": 1700,
    "comp": "높음",
    "hint": false
   },
@@ -1419,38 +1431,38 @@
    "hint": false
   },
   {
-   "kw": "빅사이즈양말",
+   "kw": "드라이백",
    "vol": 1660,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스트리오너먼트",
-   "vol": 1650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수제그래놀라",
-   "vol": 1630,
-   "comp": "높음",
+   "kw": "무향섬유유연제",
+   "vol": 1660,
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "일회용비닐장갑",
-   "vol": 1630,
+   "vol": 1660,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "임산부양말",
-   "vol": 1620,
+   "kw": "어린이집물병",
+   "vol": 1650,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "버블건",
+   "vol": 1640,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "일회용포장용기",
-   "vol": 1590,
+   "vol": 1600,
    "comp": "높음",
    "hint": false
   },
@@ -1461,68 +1473,80 @@
    "hint": false
   },
   {
-   "kw": "신슐레이트패딩",
-   "vol": 1590,
-   "comp": "높음",
+   "kw": "아기텀블러",
+   "vol": 1580,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "쌓기나무",
+   "kw": "친환경세탁세제",
    "vol": 1570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "논슬립축구양말",
+   "kw": "무향세탁세제",
+   "vol": 1570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "속옷세제",
    "vol": 1570,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "20대남자친구생일선물",
-   "vol": 1560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일회용도시락",
+   "kw": "신생아세탁세제",
    "vol": 1550,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "명함제작업체",
-   "vol": 1540,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "서울이색체험",
+   "vol": 1550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쌓기나무",
    "vol": 1540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기로션추천",
+   "kw": "일회용도시락",
    "vol": 1530,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "탑투토워시",
+   "kw": "명함제작업체",
+   "vol": 1520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20대남자친구생일선물",
    "vol": 1520,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "락앤락비스프리",
-   "vol": 1510,
+   "vol": 1520,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유아샴푸",
+   "kw": "아기세제추천",
    "vol": 1500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "위생팩",
+   "vol": 1490,
    "comp": "중간",
    "hint": false
   },
@@ -1533,49 +1557,91 @@
    "hint": false
   },
   {
+   "kw": "아기컵",
+   "vol": 1480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "엄마생신선물",
    "vol": 1480,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "위생팩",
-   "vol": 1480,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "요술버선",
+   "kw": "2만원대선물",
    "vol": 1460,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "롤팩",
-   "vol": 1450,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "2만원대선물",
-   "vol": 1430,
+   "kw": "롤팩",
+   "vol": 1460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기젖병세제",
+   "vol": 1460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일회용장갑",
+   "vol": 1460,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "찜질방데이트",
+   "vol": 1450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "과일세정제",
+   "vol": 1440,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주방세제리필",
+   "vol": 1440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자친구크리스마스선물",
    "vol": 1430,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크라프트용기",
+   "kw": "스마트폰터치장갑",
+   "vol": 1430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향기좋은섬유유연제",
+   "vol": 1430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기름병",
    "vol": 1420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스마트폰터치장갑",
+   "kw": "크라프트용기",
+   "vol": 1410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소프트블럭",
    "vol": 1410,
    "comp": "높음",
    "hint": false
@@ -1587,21 +1653,21 @@
    "hint": false
   },
   {
-   "kw": "소프트블럭",
+   "kw": "크리스마스포토존",
    "vol": 1400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소스용기",
+   "kw": "블랑101아기세제",
    "vol": 1390,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "허벅지압박스타킹",
+   "kw": "돌아기빨대컵",
    "vol": 1390,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
@@ -1611,38 +1677,44 @@
    "hint": false
   },
   {
+   "kw": "천연주방세제",
+   "vol": 1390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아용품리스트",
+   "vol": 1370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소스용기",
+   "vol": 1360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날선물",
+   "vol": 1350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내건조섬유유연제",
+   "vol": 1350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
    "kw": "양념통세트",
    "vol": 1350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가을양말",
-   "vol": 1340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이로션",
-   "vol": 1340,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "남자친구크리스마스선물",
-   "vol": 1330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈바디워시",
-   "vol": 1320,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "무릎양말",
-   "vol": 1320,
+   "kw": "여자친구크리스마스선물",
+   "vol": 1310,
    "comp": "높음",
    "hint": false
   },
@@ -1653,25 +1725,61 @@
    "hint": false
   },
   {
-   "kw": "유아바디워시",
-   "vol": 1300,
+   "kw": "20만원대선물",
+   "vol": 1310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스포토존",
+   "kw": "연말선물추천",
+   "vol": 1290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천연세탁세제",
+   "vol": 1290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빨대세척솔",
+   "vol": 1290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주말데이트",
    "vol": 1280,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "커플스파",
-   "vol": 1260,
+   "vol": 1270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어버이날선물",
+   "kw": "친환경섬유유연제",
+   "vol": 1270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼집집들이선물",
+   "vol": 1270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샌드위치용기",
+   "vol": 1250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자석큐브",
    "vol": 1250,
    "comp": "높음",
    "hint": false
@@ -1683,26 +1791,26 @@
    "hint": false
   },
   {
-   "kw": "여성백",
-   "vol": 1240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "샌드위치용기",
-   "vol": 1230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자석큐브",
-   "vol": 1230,
+   "kw": "천연섬유유연제",
+   "vol": 1250,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "30만원대선물",
-   "vol": 1230,
+   "vol": 1240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "크리스마스꾸미기",
+   "vol": 1240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "위생랩",
+   "vol": 1240,
    "comp": "높음",
    "hint": false
   },
@@ -1713,111 +1821,75 @@
    "hint": false
   },
   {
-   "kw": "주말데이트",
+   "kw": "하바",
    "vol": 1230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "하바",
+   "kw": "일회용반찬용기",
    "vol": 1220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자친구크리스마스선물",
-   "vol": 1210,
-   "comp": "높음",
+   "kw": "유아세제",
+   "vol": 1200,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "일회용반찬용기",
-   "vol": 1210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈로션",
-   "vol": 1190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보온양말",
-   "vol": 1180,
+   "kw": "대용량밀폐용기",
+   "vol": 1200,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "펄프용기",
+   "vol": 1190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퍼기빨대컵",
+   "vol": 1170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "10만원대선물",
    "vol": 1170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연말선물추천",
-   "vol": 1160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동대문양말",
-   "vol": 1150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기목욕",
+   "kw": "겨울선물",
    "vol": 1140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블랑세제",
+   "vol": 1120,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "위생랩",
-   "vol": 1140,
-   "comp": "높음",
    "hint": false
   },
   {
    "kw": "샌드위치포장용기",
-   "vol": 1130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스꾸미기",
    "vol": 1120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "골지",
-   "vol": 1120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자가점착밴드",
+   "kw": "PPSU젖병",
    "vol": 1120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스구디백",
+   "kw": "유아빨대컵",
    "vol": 1110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "락앤락텀블러뚜껑",
-   "vol": 1110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "샐러드용기",
-   "vol": 1100,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
@@ -1827,37 +1899,55 @@
    "hint": false
   },
   {
-   "kw": "대용량밀폐용기",
+   "kw": "릿첼첫걸음빨대컵",
+   "vol": 1100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "효소세제",
+   "vol": 1100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "락앤락텀블러뚜껑",
    "vol": 1100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "겨울선물",
-   "vol": 1090,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자겨울양말",
+   "kw": "샐러드용기",
    "vol": 1080,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "잘때압박스타킹",
-   "vol": 1070,
+   "kw": "락앤락물통",
+   "vol": 1060,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "락앤락물통",
+   "kw": "남편크리스마스선물",
    "vol": 1050,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바디건조기",
+   "kw": "부모님크리스마스선물",
+   "vol": 1050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밀폐용기추천",
+   "vol": 1040,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "업사이클링제품",
    "vol": 1040,
    "comp": "높음",
    "hint": false
@@ -1869,26 +1959,50 @@
    "hint": false
   },
   {
-   "kw": "임산부수면양말",
+   "kw": "바디건조기",
    "vol": 1030,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무실방한용품",
-   "vol": 1020,
+   "kw": "세제추천",
+   "vol": 1010,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "밀폐용기추천",
+   "kw": "크리스마스인테리어",
+   "vol": 1000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이스쿨러",
    "vol": 1000,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "국산수면양말",
+   "kw": "유아물병",
+   "vol": 1000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "위생롤팩",
+   "vol": 1000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실리콘컵뚜껑",
    "vol": 990,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "생활용품도매",
+   "vol": 980,
    "comp": "높음",
    "hint": false
   },
@@ -1899,19 +2013,19 @@
    "hint": false
   },
   {
-   "kw": "생활용품도매",
-   "vol": 970,
+   "kw": "3만원대선물세트",
+   "vol": 980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원물병",
+   "vol": 980,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "명절선물세트",
-   "vol": 970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "양모양말",
    "vol": 970,
    "comp": "높음",
    "hint": false
@@ -1923,38 +2037,26 @@
    "hint": false
   },
   {
-   "kw": "위생롤팩",
-   "vol": 970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아로션추천",
-   "vol": 970,
+   "kw": "푸고빨대컵",
+   "vol": 960,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남편크리스마스선물",
-   "vol": 960,
+   "kw": "40대크리스마스선물",
+   "vol": 950,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스인테리어",
-   "vol": 960,
+   "kw": "2주년선물",
+   "vol": 940,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "압박스타킹추천",
-   "vol": 960,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부모님크리스마스선물",
-   "vol": 960,
+   "kw": "아내크리스마스선물",
+   "vol": 935,
    "comp": "높음",
    "hint": false
   },
@@ -1965,27 +2067,15 @@
    "hint": false
   },
   {
-   "kw": "초등학생샴푸",
+   "kw": "유아체육교구",
    "vol": 930,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아샴푸",
-   "vol": 930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈바디로션",
-   "vol": 930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "20L말통",
+   "kw": "PE드럼",
    "vol": 920,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
@@ -1995,45 +2085,33 @@
    "hint": false
   },
   {
-   "kw": "유아체육교구",
+   "kw": "겨울데이트",
    "vol": 920,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "PE드럼",
+   "kw": "신생아준비물",
+   "vol": 920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼집들이선물",
+   "vol": 910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20L말통",
+   "vol": 910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오픈드럼통",
    "vol": 910,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "이직선물",
-   "vol": 910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3만원대선물세트",
-   "vol": 910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "롱수면양말",
-   "vol": 910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "온열양말",
-   "vol": 910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "양발",
-   "vol": 910,
-   "comp": "높음",
    "hint": false
   },
   {
@@ -2043,8 +2121,8 @@
    "hint": false
   },
   {
-   "kw": "스키양말",
-   "vol": 910,
+   "kw": "이직선물",
+   "vol": 900,
    "comp": "높음",
    "hint": false
   },
@@ -2055,55 +2133,67 @@
    "hint": false
   },
   {
-   "kw": "신혼집들이선물",
-   "vol": 890,
+   "kw": "친구크리스마스선물",
+   "vol": 900,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "겨울데이트",
-   "vol": 890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "입덧음식",
-   "vol": 890,
+   "kw": "50대크리스마스선물",
+   "vol": 895,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "남자명품선물",
-   "vol": 870,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청소년샴푸추천",
-   "vol": 870,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노트북가방브랜드",
-   "vol": 870,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보온장갑",
-   "vol": 870,
+   "vol": 880,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "가정용실링기",
-   "vol": 860,
+   "vol": 880,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "40대크리스마스선물",
+   "kw": "보온장갑",
+   "vol": 880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기념일선물추천",
+   "vol": 880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프라스틱용기",
+   "vol": 880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조노돔",
+   "vol": 880,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아컵",
+   "vol": 870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "입덧음식",
+   "vol": 870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트리렌탈",
    "vol": 860,
    "comp": "높음",
    "hint": false
@@ -2115,19 +2205,25 @@
    "hint": false
   },
   {
-   "kw": "아내크리스마스선물",
-   "vol": 855,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "양말중목",
-   "vol": 850,
+   "kw": "추석선물추천",
+   "vol": 860,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "힐링데이트",
+   "vol": 840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실링용기",
+   "vol": 840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자석장난감",
    "vol": 840,
    "comp": "높음",
    "hint": false
@@ -2139,13 +2235,31 @@
    "hint": false
   },
   {
-   "kw": "기념일선물추천",
+   "kw": "크린지퍼백",
    "vol": 840,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자석장난감",
+   "kw": "주방비누",
+   "vol": 840,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아세제",
+   "vol": 830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블랑101세탁세제",
+   "vol": 830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성장갑",
    "vol": 830,
    "comp": "높음",
    "hint": false
@@ -2163,140 +2277,50 @@
    "hint": false
   },
   {
-   "kw": "등산울양말",
-   "vol": 830,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크린지퍼백",
-   "vol": 830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친구크리스마스선물",
-   "vol": 830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실링용기",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리렌탈",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "순면양말",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오픈드럼통",
-   "vol": 820,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "종아리압박밴드효과",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "추석선물추천",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "서펜티나",
    "vol": 820,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자겨울양말",
+   "kw": "들기름병",
    "vol": 820,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "수면덧신",
+   "kw": "모기팔찌",
    "vol": 810,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울덧버선",
-   "vol": 810,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남성장갑",
-   "vol": 800,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고탄력스타킹",
-   "vol": 800,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "미니블럭",
-   "vol": 800,
+   "vol": 810,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "나무블럭",
-   "vol": 800,
+   "vol": 810,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "체인백팩",
-   "vol": 790,
+   "kw": "1종주방세제",
+   "vol": 810,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인미끄럼방지양말",
-   "vol": 790,
+   "kw": "아기브랜드",
+   "vol": 810,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "나이키축구양말",
+   "kw": "명품샵",
    "vol": 790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "들기름병",
-   "vol": 790,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "봄양말",
-   "vol": 790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "김밥용기",
-   "vol": 780,
    "comp": "높음",
    "hint": false
   },
@@ -2307,15 +2331,33 @@
    "hint": false
   },
   {
-   "kw": "명품샵",
+   "kw": "친환경세제",
    "vol": 780,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "의료용압박밴드",
+   "kw": "천연세제",
+   "vol": 770,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아세탁세제",
    "vol": 760,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "김밥용기",
+   "vol": 760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실리콘젖병",
+   "vol": 760,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -2331,43 +2373,79 @@
    "hint": false
   },
   {
-   "kw": "아동퍼즐",
+   "kw": "홀리데이에디션",
    "vol": 750,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홀리데이에디션",
-   "vol": 720,
+   "kw": "남자겨울장갑",
+   "vol": 750,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자겨울장갑",
-   "vol": 720,
+   "kw": "드럼세제",
+   "vol": 750,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "육아정보",
+   "vol": 750,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "남성가죽장갑",
-   "vol": 710,
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트리리본",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동퍼즐",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "서울찜질방데이트",
+   "vol": 720,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "간장병",
-   "vol": 710,
+   "vol": 720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미끄럼방지수면양말",
-   "vol": 710,
+   "kw": "유아브랜드",
+   "vol": 720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자단목양말",
+   "kw": "과일세척제",
+   "vol": 720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냉장고정리용기",
+   "vol": 720,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "홀리데이컬렉션",
    "vol": 710,
    "comp": "높음",
    "hint": false
@@ -2379,38 +2457,32 @@
    "hint": false
   },
   {
-   "kw": "다리보호대",
+   "kw": "공드럼",
    "vol": 700,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "지오보드",
-   "vol": 700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전자렌지용용기",
+   "kw": "빨대컵추천",
    "vol": 700,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "샌드위치케이스",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자렌지용용기",
    "vol": 690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "털양말",
+   "kw": "아기젖병추천",
    "vol": 690,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울찜질방데이트",
-   "vol": 680,
    "comp": "높음",
    "hint": false
   },
@@ -2421,27 +2493,21 @@
    "hint": false
   },
   {
-   "kw": "수면용압박스타킹",
+   "kw": "지오보드",
    "vol": 680,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홀리데이컬렉션",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종아리압박양말",
+   "kw": "배앓이방지젖병",
    "vol": 670,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "압박스타킹의료용",
+   "kw": "접이식부채",
    "vol": 660,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
@@ -2451,133 +2517,97 @@
    "hint": false
   },
   {
-   "kw": "네오플램글라쎄Z",
+   "kw": "명함주문제작",
    "vol": 660,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "트리리본",
-   "vol": 660,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이바디워시",
-   "vol": 660,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아바디로션",
-   "vol": 660,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크린롤백",
-   "vol": 660,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "공드럼",
-   "vol": 650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성겨울양말",
-   "vol": 650,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "명품부츠",
-   "vol": 640,
+   "vol": 650,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명함주문제작",
-   "vol": 640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신혼부부잠옷",
-   "vol": 640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "30대여자생일선물추천",
-   "vol": 640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울수면양말",
-   "vol": 630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아바디로션",
-   "vol": 630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "김밥포장",
-   "vol": 620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유리오일병",
-   "vol": 620,
-   "comp": "높음",
+   "kw": "네오플램글라쎄Z",
+   "vol": 650,
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "크리스마스케이크만들기",
-   "vol": 620,
+   "vol": 650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마트폰장갑",
+   "vol": 650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "크린롤백",
+   "vol": 650,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "30대여자생일선물추천",
+   "vol": 650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빨대물병",
+   "vol": 650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빨래방세제",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비건주방세제",
+   "vol": 640,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "숫자퍼즐",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유리오일병",
+   "vol": 630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼부부잠옷",
+   "vol": 630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아젖병",
    "vol": 620,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보습력좋은아기로션",
-   "vol": 620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "김밥포장지",
-   "vol": 610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "투명밀폐용기",
-   "vol": 610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "심리스양말",
+   "kw": "어린이집빨대컵",
    "vol": 610,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "스마트폰장갑",
+   "kw": "김밥포장",
    "vol": 610,
    "comp": "높음",
    "hint": false
@@ -2589,37 +2619,61 @@
    "hint": false
   },
   {
-   "kw": "시트러스향수",
-   "vol": 600,
-   "comp": "중간",
+   "kw": "여자친구연말선물",
+   "vol": 605,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "털덧신",
+   "kw": "김밥포장지",
    "vol": 600,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "마이리틀타이거블럭",
-   "vol": 590,
+   "vol": 600,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오란다선물세트",
-   "vol": 590,
+   "kw": "투명밀폐용기",
+   "vol": 600,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등샴푸",
+   "kw": "아기빨대컵추천",
+   "vol": 600,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아섬유유연제",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "둘째출산선물",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자친구연말선물",
+   "vol": 595,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시트러스향수",
    "vol": 590,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "보부상크로스백",
+   "kw": "토비앤몰리빨대컵",
    "vol": 590,
    "comp": "높음",
    "hint": false
@@ -2631,19 +2685,43 @@
    "hint": false
   },
   {
-   "kw": "어린이바디로션",
-   "vol": 570,
+   "kw": "사슴가죽장갑",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "액체세탁세제",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드럼세탁기세제추천",
+   "vol": 580,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남성겨울양말",
+   "kw": "유아물통",
    "vol": 570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사슴가죽장갑",
+   "kw": "PPSU",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "요거트용기",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아섬유유연제",
    "vol": 560,
    "comp": "높음",
    "hint": false
@@ -2655,69 +2733,69 @@
    "hint": false
   },
   {
-   "kw": "빅사이즈수면양말",
-   "vol": 560,
+   "kw": "어린이집물통",
+   "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "양털양말",
-   "vol": 560,
+   "kw": "운동복세제",
+   "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자친구연말선물",
-   "vol": 555,
+   "kw": "원터치밀폐용기",
+   "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "숏머플러",
+   "kw": "스낵컵",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헤스트라매장",
    "vol": 540,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "킨토빨대컵",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5세남아선물",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초밥용기",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오란다선물세트",
+   "vol": 530,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "냉동실용기",
-   "vol": 540,
+   "vol": 530,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "원터치밀폐용기",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수면양말추천",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자친구연말선물",
-   "vol": 535,
-   "comp": "높음",
    "hint": false
   },
   {
    "kw": "향수사이트",
-   "vol": 530,
+   "vol": 520,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종아리압박",
-   "vol": 530,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "헤스트라매장",
-   "vol": 530,
-   "comp": "중간",
    "hint": false
   },
   {
@@ -2727,55 +2805,91 @@
    "hint": false
   },
   {
-   "kw": "초밥용기",
+   "kw": "크리스마스트리리본",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젖병브랜드",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명품장갑",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국민아기세제",
    "vol": 510,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "압박용밴드",
+   "kw": "아기세제비교",
+   "vol": 510,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "산소표백제",
+   "vol": 510,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "청소세제",
+   "vol": 510,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주방용품파는곳",
    "vol": 510,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "레그슬리브",
-   "vol": 510,
-   "comp": "높음",
+   "kw": "여성속옷세제",
+   "vol": 500,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "간호사압박스타킹",
+   "kw": "유아블럭",
    "vol": 500,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고급도시락용기",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "배너주문제작",
+   "kw": "블랑101세제",
    "vol": 490,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "비욘드키즈",
+   "kw": "겨울방한장갑",
    "vol": 490,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목긴양말",
+   "kw": "백화점선물",
    "vol": 490,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아화장품",
+   "kw": "투명용기",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급도시락용기",
    "vol": 480,
    "comp": "높음",
    "hint": false
@@ -2787,31 +2901,31 @@
    "hint": false
   },
   {
-   "kw": "백화점선물",
+   "kw": "배너주문제작",
    "vol": 480,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "밀봉기",
+   "kw": "모기퇴치팔찌",
    "vol": 470,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스트리리본",
+   "kw": "크리스마스수건",
    "vol": 470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "글라쎄Z",
+   "kw": "아기섬유유연제추천",
    "vol": 470,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기워시",
+   "kw": "장갑추천",
    "vol": 470,
    "comp": "높음",
    "hint": false
@@ -2829,73 +2943,79 @@
    "hint": false
   },
   {
-   "kw": "자동버블건",
+   "kw": "간장통",
    "vol": 470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "코스터제작",
+   "kw": "밀봉기",
+   "vol": 460,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "크리스마스트리풀세트",
    "vol": 460,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보온덧신",
+   "kw": "글라쎄Z",
    "vol": 460,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남성수면양말",
-   "vol": 450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기바스앤샴푸",
-   "vol": 450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울방한장갑",
-   "vol": 450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유니클로히트텍양말",
-   "vol": 450,
+   "kw": "써모스푸고빨대컵",
+   "vol": 460,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "원목블럭",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동버블건",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코스터제작",
    "vol": 450,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "당뇨양말",
-   "vol": 440,
+   "kw": "블랑아기세제",
+   "vol": 450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이컵",
+   "vol": 450,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "의료용압박양말",
-   "vol": 440,
+   "kw": "업소용주방세제",
+   "vol": 450,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명품가방사이트",
-   "vol": 440,
-   "comp": "높음",
+   "kw": "액상세제",
+   "vol": 450,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스수면양말",
+   "kw": "크리스마스단체선물",
    "vol": 440,
    "comp": "높음",
    "hint": false
@@ -2907,19 +3027,19 @@
    "hint": false
   },
   {
-   "kw": "장갑추천",
-   "vol": 440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "양념통추천",
    "vol": 440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "티코스터제작",
+   "kw": "화이트데이선물",
+   "vol": 435,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명품가방사이트",
    "vol": 430,
    "comp": "높음",
    "hint": false
@@ -2931,21 +3051,15 @@
    "hint": false
   },
   {
-   "kw": "아이로션",
+   "kw": "세탁세제대용량",
    "vol": 430,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "진공밀페용기",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베이비샴푸",
-   "vol": 420,
-   "comp": "높음",
+   "kw": "대용량세제",
+   "vol": 430,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -2955,7 +3069,25 @@
    "hint": false
   },
   {
+   "kw": "티코스터제작",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "회사퇴사선물",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "PET병",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수건세제",
    "vol": 420,
    "comp": "높음",
    "hint": false
@@ -2973,43 +3105,19 @@
    "hint": false
   },
   {
-   "kw": "조립장난감",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화이트데이선물",
-   "vol": 415,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스단체선물",
+   "kw": "크리스마스파티용품",
    "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "도시락포장용기",
+   "kw": "진공밀페용기",
    "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리풀세트",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "회사퇴사선물",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울니삭스",
+   "kw": "어버이날선물추천",
    "vol": 410,
    "comp": "높음",
    "hint": false
@@ -3021,25 +3129,25 @@
    "hint": false
   },
   {
-   "kw": "여성검정양말",
+   "kw": "조립장난감",
    "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스파티용품",
+   "kw": "과일세척주방세제",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향수편집샵",
    "vol": 400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "의료용종아리압박밴드",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스수건",
+   "kw": "도시락포장용기",
    "vol": 400,
    "comp": "높음",
    "hint": false
@@ -3057,20 +3165,38 @@
    "hint": false
   },
   {
+   "kw": "김장김치통",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스텐레스김치통",
+   "vol": 400,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스테인레스반찬통",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "플라스틱반찬통",
    "vol": 400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "향수편집샵",
-   "vol": 390,
-   "comp": "높음",
+   "kw": "설거지세제",
+   "vol": 400,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "향수직구",
-   "vol": 390,
+   "kw": "PA젖병",
+   "vol": 400,
    "comp": "높음",
    "hint": false
   },
@@ -3081,15 +3207,9 @@
    "hint": false
   },
   {
-   "kw": "사각플라스틱용기",
+   "kw": "유아물컵",
    "vol": 390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "투명반찬통",
-   "vol": 390,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
@@ -3099,55 +3219,7 @@
    "hint": false
   },
   {
-   "kw": "히트텍양말",
-   "vol": 390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형젠가",
-   "vol": 390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원형밀폐용기",
-   "vol": 390,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "보관용기",
-   "vol": 390,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "국산여자양말",
-   "vol": 390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스테인레스반찬통",
-   "vol": 390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울버선",
-   "vol": 390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "소스컵",
-   "vol": 390,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "시럽병",
    "vol": 390,
    "comp": "중간",
    "hint": false
@@ -3159,33 +3231,33 @@
    "hint": false
   },
   {
-   "kw": "골프압박스타킹",
+   "kw": "브릭쿨코리아",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "테라리움DIY",
-   "vol": 380,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "종아리밴드",
+   "kw": "부직포보냉백",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "빅블럭",
+   "kw": "향수직구",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기바디워시추천",
+   "kw": "어린이집텀블러",
    "vol": 380,
-   "comp": "중간",
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "투명반찬통",
+   "vol": 380,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -3195,13 +3267,37 @@
    "hint": false
   },
   {
-   "kw": "스텐레스김치통",
+   "kw": "대형젠가",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원형밀폐용기",
    "vol": 380,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "브릭쿨코리아",
+   "kw": "보관용기",
+   "vol": 380,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "밀폐용기세트",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유리젖병추천",
+   "vol": 380,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "사각플라스틱용기",
    "vol": 370,
    "comp": "높음",
    "hint": false
@@ -3213,33 +3309,21 @@
    "hint": false
   },
   {
-   "kw": "어버이날선물추천",
+   "kw": "빅블럭",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "두꺼운수면양말",
+   "kw": "속옷전용세제",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "김장김치통",
+   "kw": "시럽병",
    "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌돌이양말",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밀폐용기세트",
-   "vol": 370,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
@@ -3267,13 +3351,19 @@
    "hint": false
   },
   {
-   "kw": "아기자석장난감",
+   "kw": "실용적인선물",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실용적인선물",
+   "kw": "중성세제추천",
+   "vol": 360,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "중성세탁세제",
    "vol": 360,
    "comp": "높음",
    "hint": false
@@ -3285,25 +3375,31 @@
    "hint": false
   },
   {
-   "kw": "아디다스축구양말",
+   "kw": "신생아배앓이젖병",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
+   "kw": "양가죽장갑",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도시락케이스",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기자석장난감",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "일회용사각용기",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "귀여운수면양말",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "따뜻한양말",
    "vol": 350,
    "comp": "높음",
    "hint": false
@@ -3321,38 +3417,20 @@
    "hint": false
   },
   {
-   "kw": "전통굿즈",
-   "vol": 340,
+   "kw": "속옷빨래",
+   "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "도시락케이스",
-   "vol": 340,
-   "comp": "높음",
+   "kw": "고체주방세제",
+   "vol": 350,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "여성수면양말",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기모덧신",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두툼한양말",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "글라스락세트",
-   "vol": 340,
+   "kw": "유리김치통",
+   "vol": 350,
    "comp": "높음",
    "hint": false
   },
@@ -3369,9 +3447,9 @@
    "hint": false
   },
   {
-   "kw": "남자압박스타킹",
-   "vol": 330,
-   "comp": "중간",
+   "kw": "크리스마스선물순위",
+   "vol": 335,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -3381,13 +3459,19 @@
    "hint": false
   },
   {
-   "kw": "플라스틱밀폐용기",
+   "kw": "테라리움DIY",
    "vol": 330,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "원형용기",
+   "kw": "빨대물통",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기컵",
    "vol": 330,
    "comp": "높음",
    "hint": false
@@ -3399,8 +3483,44 @@
    "hint": false
   },
   {
+   "kw": "글라스락세트",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "글라스락원형",
    "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기쇼핑몰",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전통굿즈",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PE드럼통",
+   "vol": 320,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소량머그컵제작",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원형용기",
+   "vol": 320,
    "comp": "높음",
    "hint": false
   },
@@ -3411,21 +3531,21 @@
    "hint": false
   },
   {
-   "kw": "원형쿠키통",
+   "kw": "포디프레임",
+   "vol": 320,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소근육장난감",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성긴양말",
+   "kw": "락앤락용기",
    "vol": 320,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "포디프레임",
-   "vol": 320,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
@@ -3435,13 +3555,31 @@
    "hint": false
   },
   {
-   "kw": "주니어샴푸",
+   "kw": "배달포장용기",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "PE드럼통",
+   "kw": "플라스틱밀폐용기",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기빨대",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "우유빨대컵",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기드링킹컵",
    "vol": 310,
    "comp": "중간",
    "hint": false
@@ -3453,8 +3591,26 @@
    "hint": false
   },
   {
-   "kw": "크리스마스선물순위",
-   "vol": 305,
+   "kw": "베이비브랜드",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1종세제",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원형쿠키통",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "크리스마스답례품",
+   "vol": 300,
    "comp": "높음",
    "hint": false
   },
@@ -3465,7 +3621,19 @@
    "hint": false
   },
   {
-   "kw": "도자기세트",
+   "kw": "통돌이세탁기세제",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무향세제",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패턴블럭",
    "vol": 300,
    "comp": "높음",
    "hint": false
@@ -3477,13 +3645,7 @@
    "hint": false
   },
   {
-   "kw": "수학사랑쇼핑몰",
-   "vol": 300,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "청소년정수리샴푸",
+   "kw": "스테인레스밀폐용기",
    "vol": 300,
    "comp": "높음",
    "hint": false
@@ -3495,13 +3657,19 @@
    "hint": false
   },
   {
-   "kw": "배달포장용기",
+   "kw": "크리스마스굿즈",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "청소년삼푸",
+   "kw": "헤겐올라운더컵",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도자기세트",
    "vol": 290,
    "comp": "높음",
    "hint": false
@@ -3513,9 +3681,39 @@
    "hint": false
   },
   {
-   "kw": "블록놀이",
-   "vol": 280,
+   "kw": "수학사랑쇼핑몰",
+   "vol": 290,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "비누자석홀더",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "르주르주방세제",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이킹몰드",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주방용품세트",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사각포장용기",
+   "vol": 280,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -3525,37 +3723,7 @@
    "hint": false
   },
   {
-   "kw": "유리양념병",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "극세사양말",
-   "vol": 280,
-   "comp": "중간",
-   "hint": false
-  },
-  {
    "kw": "키친툴세트",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "도톰한양말",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "발목조임없는양말",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "패턴블럭",
    "vol": 280,
    "comp": "높음",
    "hint": false
@@ -3567,57 +3735,45 @@
    "hint": false
   },
   {
-   "kw": "크리스마스답례품",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스굿즈",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사각포장용기",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키티수면양말",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보카시양말",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "니삭스양말",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리본양말",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "일회용샐러드용기",
-   "vol": 260,
+   "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "특별한생일선물",
-   "vol": 260,
+   "kw": "블록놀이",
+   "vol": 270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "실리콘빨대컵",
+   "vol": 270,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원입학선물",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유리양념병",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모유실감젖꼭지",
+   "vol": 270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "블랑세탁세제",
+   "vol": 260,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -3627,13 +3783,13 @@
    "hint": false
   },
   {
-   "kw": "종아리스타킹",
+   "kw": "주방세정제",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈헤어에센스",
+   "kw": "여자명품선물",
    "vol": 260,
    "comp": "높음",
    "hint": false
@@ -3645,19 +3801,13 @@
    "hint": false
   },
   {
-   "kw": "설선물세트",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "PET용기",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유치원입학선물",
+   "kw": "특별한생일선물",
    "vol": 250,
    "comp": "높음",
    "hint": false
@@ -3669,25 +3819,25 @@
    "hint": false
   },
   {
-   "kw": "긴수면양말",
+   "kw": "물세제",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베이비바디로션",
+   "kw": "출산아기용품",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "따뜻한장갑",
+   "kw": "과일야채세정제",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유기농아기로션",
+   "kw": "죽그릇",
    "vol": 250,
    "comp": "높음",
    "hint": false
@@ -3699,13 +3849,31 @@
    "hint": false
   },
   {
+   "kw": "크리스마스츄리",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "투명통",
    "vol": 240,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "투명소스용기",
+   "kw": "5세생일선물",
+   "vol": 240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기블록",
+   "vol": 240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "따뜻한장갑",
    "vol": 240,
    "comp": "높음",
    "hint": false
@@ -3717,31 +3885,19 @@
    "hint": false
   },
   {
-   "kw": "유아로션추천",
+   "kw": "수학퍼즐",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아헤어미스트",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "NBA양말",
-   "vol": 240,
+   "kw": "설선물세트",
+   "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "가정용진공포장지",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "베이비바디워시",
    "vol": 230,
    "comp": "중간",
    "hint": false
@@ -3753,43 +3909,13 @@
    "hint": false
   },
   {
-   "kw": "크리스마스츄리",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "하지정맥스타킹",
+   "kw": "유아보온병",
    "vol": 230,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "5세생일선물",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "앙고라양말",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "슈펜양말",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기블록",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전자레인지용그릇",
+   "kw": "임산부섬유유연제",
    "vol": 230,
    "comp": "높음",
    "hint": false
@@ -3801,37 +3927,31 @@
    "hint": false
   },
   {
-   "kw": "수학퍼즐",
+   "kw": "보관통",
    "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베이비워시",
-   "vol": 220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "하지정맥류압박스타킹",
+   "kw": "원예키트",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다리밴드",
+   "kw": "아기옷세제",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "발목수면양말",
+   "kw": "다용도세정제",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "살림템",
+   "kw": "유기농세탁세제",
    "vol": 220,
    "comp": "높음",
    "hint": false
@@ -3855,31 +3975,19 @@
    "hint": false
   },
   {
-   "kw": "마도바장갑",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "기모압박스타킹",
+   "kw": "아동브랜드",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아토피샴푸",
+   "kw": "전자레인지용그릇",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원형플라스틱용기",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원예키트",
+   "kw": "아기세제블랑",
    "vol": 210,
    "comp": "높음",
    "hint": false
@@ -3897,13 +4005,31 @@
    "hint": false
   },
   {
-   "kw": "신생아올인원워시",
+   "kw": "세제종류",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "조리원양말",
+   "kw": "살림템",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마도바장갑",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "투명소스용기",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원형플라스틱용기",
    "vol": 210,
    "comp": "높음",
    "hint": false
@@ -3915,13 +4041,19 @@
    "hint": false
   },
   {
-   "kw": "업소용밀폐용기",
+   "kw": "신생아세제추천",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유리소스병",
+   "kw": "세탁용품",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "액체세제추천",
    "vol": 200,
    "comp": "높음",
    "hint": false
@@ -3939,25 +4071,31 @@
    "hint": false
   },
   {
-   "kw": "청소년두피샴푸",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스양말선물",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "HABA",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "샐러드포장용기",
+   "kw": "주방세제1종",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원형반찬통",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밀폐유리용기",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용밀폐용기",
    "vol": 190,
    "comp": "높음",
    "hint": false
@@ -3969,25 +4107,25 @@
    "hint": false
   },
   {
-   "kw": "중학생샴푸",
+   "kw": "크리스마스선물세트",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "산모양말",
+   "kw": "아기빨대물병",
    "vol": 190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기바스",
+   "kw": "유리소스병",
    "vol": 190,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바닥두꺼운양말",
+   "kw": "젖병세정제추천",
    "vol": 190,
    "comp": "높음",
    "hint": false
@@ -3999,25 +4137,37 @@
    "hint": false
   },
   {
-   "kw": "락앤락비스프리세트",
+   "kw": "남자방한장갑",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
+   "kw": "장갑브랜드",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "참기름통",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "보온빨대컵",
+   "vol": 185,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샐러드포장용기",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "초밥포장용기",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사각일회용기",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스선물세트",
    "vol": 180,
    "comp": "높음",
    "hint": false
@@ -4029,31 +4179,19 @@
    "hint": false
   },
   {
-   "kw": "수족냉증수면양말",
+   "kw": "고농축세제",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수면양말선물",
+   "kw": "비건세제",
    "vol": 180,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아이샴푸",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자방한장갑",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등샴푸추천",
+   "kw": "유아주방세제",
    "vol": 180,
    "comp": "높음",
    "hint": false
@@ -4065,13 +4203,13 @@
    "hint": false
   },
   {
-   "kw": "여성양말추천",
+   "kw": "락앤락비스프리세트",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장갑브랜드",
+   "kw": "여자장갑선물",
    "vol": 180,
    "comp": "높음",
    "hint": false
@@ -4089,7 +4227,13 @@
    "hint": false
   },
   {
-   "kw": "설선물",
+   "kw": "크리스마스귀걸이",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사각일회용기",
    "vol": 170,
    "comp": "높음",
    "hint": false
@@ -4101,19 +4245,13 @@
    "hint": false
   },
   {
-   "kw": "할머니버선",
+   "kw": "아기빨래세제",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성울양말",
-   "vol": 170,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "무압박장목양말",
+   "kw": "아기전용세제",
    "vol": 170,
    "comp": "높음",
    "hint": false
@@ -4125,33 +4263,51 @@
    "hint": false
   },
   {
+   "kw": "아동쇼핑몰",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기설거지세제",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥포머스브레인마스터",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "성탄선물",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "비누제작",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스귀걸이",
+   "kw": "유아세제추천",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "샐러드보관용기",
+   "kw": "안새는빨대컵",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "설선물",
    "vol": 160,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "압박스타킹일본",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "냉장고용기",
-   "vol": 160,
-   "comp": "중간",
    "hint": false
   },
   {
@@ -4161,19 +4317,19 @@
    "hint": false
   },
   {
-   "kw": "논슬립수면양말",
+   "kw": "르주르중성세제",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "양털수면양말",
+   "kw": "흰옷세제",
    "vol": 160,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "여성기모양말",
+   "kw": "EM세제",
    "vol": 160,
    "comp": "높음",
    "hint": false
@@ -4197,19 +4353,7 @@
    "hint": false
   },
   {
-   "kw": "얇은축구양말",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "방한버선",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무향로션",
+   "kw": "젖병세트",
    "vol": 160,
    "comp": "높음",
    "hint": false
@@ -4221,49 +4365,37 @@
    "hint": false
   },
   {
-   "kw": "여자장갑선물",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "하지정맥압박스타킹",
+   "kw": "트리용품",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "승무원압박스타킹",
+   "kw": "샐러드보관용기",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마이리틀타이거블록",
+   "kw": "냉장고용기",
    "vol": 150,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유아워시",
+   "kw": "유기농세제",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "GROSMIMI",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바스앤샴푸",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "융털양말",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울긴양말",
+   "kw": "아기우유병",
    "vol": 150,
    "comp": "높음",
    "hint": false
@@ -4281,19 +4413,19 @@
    "hint": false
   },
   {
+   "kw": "여자30대선물",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전사컵",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "성탄절선물",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄선물",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리용품",
    "vol": 140,
    "comp": "높음",
    "hint": false
@@ -4311,37 +4443,31 @@
    "hint": false
   },
   {
-   "kw": "수면양말덧신",
+   "kw": "아기실리콘컵",
    "vol": 140,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "얇은수면양말",
+   "kw": "천연아기세제",
    "vol": 140,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "니트삭스",
+   "kw": "마이리틀타이거블록",
    "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메리노울니삭스",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "울삭스",
-   "vol": 140,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "아하토이",
+   "vol": 140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "HESTRA장갑",
    "vol": 140,
    "comp": "중간",
    "hint": false
@@ -4365,33 +4491,51 @@
    "hint": false
   },
   {
-   "kw": "병원압박스타킹",
-   "vol": 130,
+   "kw": "식기세제",
+   "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "발목편한양말",
+   "kw": "유아스푼",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "속옷빨래세제",
+   "vol": 135,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자크리스마스선물",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "청소년지성샴푸",
+   "kw": "서울겨울데이트",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등남아샴푸",
+   "kw": "아토피세제",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "프로캄베베",
+   "kw": "순한세탁세제",
    "vol": 130,
-   "comp": "중간",
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비건섬유유연제",
+   "vol": 130,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -4401,25 +4545,19 @@
    "hint": false
   },
   {
-   "kw": "키즈컨디셔너",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "명품가죽장갑",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "HESTRA장갑",
+   "kw": "메롤라장갑",
    "vol": 130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "꽈배기양말",
+   "kw": "면생리대세탁",
    "vol": 130,
    "comp": "높음",
    "hint": false
@@ -4443,13 +4581,31 @@
    "hint": false
   },
   {
-   "kw": "오픈드럼",
-   "vol": 120,
+   "kw": "애기젖병",
+   "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자크리스마스선물",
+   "kw": "일회용죽통",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국산젖병",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생리혈세탁",
+   "vol": 125,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오픈드럼",
    "vol": 120,
    "comp": "높음",
    "hint": false
@@ -4467,43 +4623,13 @@
    "hint": false
   },
   {
-   "kw": "수면양말제작",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수입향수",
+   "kw": "아기용세제",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "일회용밥용기",
-   "vol": 120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "털버선",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "건강양말",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "그래놀라답례품",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메롤라장갑",
    "vol": 120,
    "comp": "중간",
    "hint": false
@@ -4521,26 +4647,20 @@
    "hint": false
   },
   {
-   "kw": "어린이스툴",
+   "kw": "주방세트",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이과자선물세트",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "쿠션스툴",
+   "kw": "페트용기",
    "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베이비케어",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울겨울데이트",
-   "vol": 110,
    "comp": "높음",
    "hint": false
   },
@@ -4551,25 +4671,37 @@
    "hint": false
   },
   {
-   "kw": "팬티형압박스타킹",
+   "kw": "락앤락보냉가방",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "의료압박스타킹",
+   "kw": "여자친구크리스마스선물추천",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "극세사수면양말",
+   "kw": "클립선풍기",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수면양말세트",
+   "kw": "수입향수",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퍼퓸세제",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "액상세탁세제",
    "vol": 110,
    "comp": "높음",
    "hint": false
@@ -4587,13 +4719,7 @@
    "hint": false
   },
   {
-   "kw": "남자기모양말",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두꺼운겨울양말",
+   "kw": "주방용세제",
    "vol": 110,
    "comp": "높음",
    "hint": false
@@ -4605,25 +4731,25 @@
    "hint": false
   },
   {
-   "kw": "키즈워시",
+   "kw": "그래놀라답례품",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성양말중목",
+   "kw": "EM주방세제",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "직각양말",
+   "kw": "어린이스툴",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스텐레스밀폐용기",
+   "kw": "쿠션스툴",
    "vol": 110,
    "comp": "높음",
    "hint": false
@@ -4631,6 +4757,30 @@
   {
    "kw": "남자친구명품선물",
    "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "속옷세탁세제",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생분해지퍼백",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냉장고밀폐용기",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향좋은세제",
+   "vol": 105,
    "comp": "높음",
    "hint": false
   },
@@ -4647,7 +4797,7 @@
    "hint": false
   },
   {
-   "kw": "여자친구크리스마스선물추천",
+   "kw": "유아용세제",
    "vol": 100,
    "comp": "높음",
    "hint": false
@@ -4659,37 +4809,7 @@
    "hint": false
   },
   {
-   "kw": "유아용품브랜드",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장목수면양말",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "고급수면양말",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울여자양말",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울장목양말",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "울캐시미어양말",
+   "kw": "요거트소분용기",
    "vol": 100,
    "comp": "높음",
    "hint": false
@@ -4707,7 +4827,7 @@
    "hint": false
   },
   {
-   "kw": "브리스틀블럭",
+   "kw": "블록종류",
    "vol": 100,
    "comp": "높음",
    "hint": false
@@ -4719,19 +4839,7 @@
    "hint": false
   },
   {
-   "kw": "세제세트",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "남자가죽장갑브랜드",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아화장품",
    "vol": 100,
    "comp": "높음",
    "hint": false
@@ -4743,13 +4851,7 @@
    "hint": false
   },
   {
-   "kw": "아기보습",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "남성골지양말",
+   "kw": "스텐레스밀폐용기",
    "vol": 100,
    "comp": "높음",
    "hint": false
@@ -4761,31 +4863,37 @@
    "hint": false
   },
   {
-   "kw": "신생아스킨케어",
+   "kw": "밀폐통",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성두꺼운양말",
+   "kw": "식품파우치",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보습바디크림",
+   "kw": "학습준비물",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등고학년샴푸",
+   "kw": "생리혈세제",
    "vol": 95,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
    "kw": "그래놀라선물세트",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부직포보냉가방",
    "vol": 90,
    "comp": "높음",
    "hint": false
@@ -4797,49 +4905,19 @@
    "hint": false
   },
   {
-   "kw": "마이리틀타이거블럭테이블",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "의료용압박스타킹허벅지",
+   "kw": "어린이빨대컵",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남성압박스타킹",
+   "kw": "르주르아기세제",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남녀공용수면양말",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울여성양말",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "발열버선",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청소년정수리냄새샴푸",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "요거트소분용기",
+   "kw": "세제세트",
    "vol": 90,
    "comp": "높음",
    "hint": false
@@ -4857,19 +4935,7 @@
    "hint": false
   },
   {
-   "kw": "블록종류",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베이지색양말",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베이지양말",
+   "kw": "브리스틀블럭",
    "vol": 90,
    "comp": "높음",
    "hint": false
@@ -4899,14 +4965,32 @@
    "hint": false
   },
   {
-   "kw": "교구사이트",
+   "kw": "헥시아몬드",
    "vol": 90,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "코멕스반찬통",
    "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아블록",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세척쉬운빨대컵",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이세제",
+   "vol": 85,
    "comp": "높음",
    "hint": false
   },
@@ -4917,19 +5001,25 @@
    "hint": false
   },
   {
-   "kw": "남자발마칸",
+   "kw": "마이리틀타이거블럭테이블",
    "vol": 80,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "컵받침제작",
+   "kw": "세제브랜드",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "발렌타인데이선물",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경청소세제",
    "vol": 80,
    "comp": "높음",
    "hint": false
@@ -4947,24 +5037,6 @@
    "hint": false
   },
   {
-   "kw": "수족냉증선물",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기모덧버선",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로베르토양말",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "유치원블럭",
    "vol": 80,
    "comp": "높음",
@@ -4977,55 +5049,13 @@
    "hint": false
   },
   {
-   "kw": "겨울울양말",
+   "kw": "신생아물품",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "겨울무릎양말",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무지니삭스",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "국산겨울양말",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기로션브랜드",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "양말만들기",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "핑크양말",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "헥시아몬드",
-   "vol": 80,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "GREENBLISS",
+   "kw": "교구사이트",
    "vol": 80,
    "comp": "높음",
    "hint": false
@@ -5043,9 +5073,21 @@
    "hint": false
   },
   {
-   "kw": "키즈세안제",
+   "kw": "냉장고반찬통",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아스푼포크세트",
    "vol": 75,
-   "comp": "높음",
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "벅스락",
+   "vol": 70,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -5073,9 +5115,21 @@
    "hint": false
   },
   {
+   "kw": "컵받침제작",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "블록놀이테이블",
    "vol": 70,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기물병추천",
+   "vol": 70,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -5085,31 +5139,13 @@
    "hint": false
   },
   {
-   "kw": "남녀공용양말",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남성기모양말",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한미프로캄베베",
+   "kw": "베이비세제",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "샐러드소분용기",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스선물양말",
+   "kw": "옥수수컵",
    "vol": 70,
    "comp": "높음",
    "hint": false
@@ -5127,12 +5163,6 @@
    "hint": false
   },
   {
-   "kw": "레그워머양말",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "대형블록",
    "vol": 70,
    "comp": "높음",
@@ -5145,79 +5175,67 @@
    "hint": false
   },
   {
-   "kw": "사각배달용기",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주황색양말",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "위생비닐장갑",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "죽용기특대",
+   "kw": "설겆이바",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "두꺼운축구양말",
+   "kw": "지퍼팩제작",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "밀봉기계",
-   "vol": 65,
+   "kw": "글라스락선물세트",
+   "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이보리양말",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용샴푸",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EDTOY",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초딩샴푸",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베이비로션추천",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "레그베이스",
+   "kw": "역류방지빨대컵",
    "vol": 65,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "초등학생비듬샴푸",
+   "kw": "어린이세제",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기옷세탁세제",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이세탁세제",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비섬유유연제",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "EM세탁세제",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "팬티세제",
    "vol": 65,
    "comp": "높음",
    "hint": false
@@ -5247,13 +5265,7 @@
    "hint": false
   },
   {
-   "kw": "카카오프렌즈수면양말",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부드러운양말",
+   "kw": "크리스마스반지",
    "vol": 60,
    "comp": "높음",
    "hint": false
@@ -5265,15 +5277,9 @@
    "hint": false
   },
   {
-   "kw": "남자울양말",
+   "kw": "셈셈눈썰매장",
    "vol": 60,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캐시미어울양말",
-   "vol": 60,
-   "comp": "중간",
    "hint": false
   },
   {
@@ -5283,13 +5289,25 @@
    "hint": false
   },
   {
+   "kw": "샐러드소분용기",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오메가장갑",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
    "kw": "남자장갑브랜드",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종이몰드",
+   "kw": "사각배달용기",
    "vol": 60,
    "comp": "높음",
    "hint": false
@@ -5301,19 +5319,7 @@
    "hint": false
   },
   {
-   "kw": "남자방한양말",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자양말장목",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밀폐병",
+   "kw": "죽용기특대",
    "vol": 60,
    "comp": "높음",
    "hint": false
@@ -5325,19 +5331,25 @@
    "hint": false
   },
   {
-   "kw": "영유아로션",
+   "kw": "12면체",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아동샴푸",
-   "vol": 55,
+   "kw": "공구도매",
+   "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종아리압박붕대",
+   "kw": "유아포크",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밀봉기계",
    "vol": 55,
    "comp": "높음",
    "hint": false
@@ -5349,43 +5361,43 @@
    "hint": false
   },
   {
-   "kw": "예쁜수면양말",
-   "vol": 55,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "아토피바디워시추천",
+   "kw": "애기빨대컵",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "학생샴푸",
+   "kw": "하이비빨대컵",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아오돌토돌",
-   "vol": 55,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "흰색긴양말",
+   "kw": "올포레",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마른파이브양말",
+   "kw": "EDTOY",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등생샴푸",
+   "kw": "글라스락답례품",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "속옷전용비누",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스펙트라PA젖병",
    "vol": 55,
    "comp": "높음",
    "hint": false
@@ -5421,13 +5433,25 @@
    "hint": false
   },
   {
-   "kw": "크리스마스반지",
+   "kw": "정품향수",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "알루미늄포장용기",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "야채진공포장",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용세탁세제",
    "vol": 50,
    "comp": "높음",
    "hint": false
@@ -5445,7 +5469,7 @@
    "hint": false
   },
   {
-   "kw": "헐렁한양말",
+   "kw": "세탁세제브랜드",
    "vol": 50,
    "comp": "높음",
    "hint": false
@@ -5458,24 +5482,6 @@
   },
   {
    "kw": "배달음식용기",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아목욕용품",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보온버선",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셈셈눈썰매장",
    "vol": 50,
    "comp": "높음",
    "hint": false
@@ -5499,37 +5505,13 @@
    "hint": false
   },
   {
-   "kw": "사각투명용기",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "원형투명용기",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오메가장갑",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어린이블록",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장목골지양말",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사춘기비듬샴푸",
+   "kw": "종이몰드",
    "vol": 50,
    "comp": "높음",
    "hint": false
@@ -5547,7 +5529,31 @@
    "hint": false
   },
   {
+   "kw": "밀폐병",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "유리기름병",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니죽용기",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식품용용기",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원형죽용기",
    "vol": 50,
    "comp": "높음",
    "hint": false
@@ -5577,19 +5583,7 @@
    "hint": false
   },
   {
-   "kw": "여자기모양말",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동바디워시",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아보습제",
+   "kw": "아기실리콘빨대컵",
    "vol": 45,
    "comp": "높음",
    "hint": false
@@ -5607,7 +5601,7 @@
    "hint": false
   },
   {
-   "kw": "아기스킨케어",
+   "kw": "사각투명용기",
    "vol": 45,
    "comp": "높음",
    "hint": false
@@ -5619,37 +5613,31 @@
    "hint": false
   },
   {
-   "kw": "작은발양말",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "여성명품장갑",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "글라스락답례품",
+   "kw": "실리콘스낵컵",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여자아이브랜드",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카키색양말",
+   "kw": "머랭쿠키통",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유기농면팬티",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유리간장병",
+   "kw": "유리찬통",
    "vol": 45,
    "comp": "높음",
    "hint": false
@@ -5661,25 +5649,19 @@
    "hint": false
   },
   {
-   "kw": "메뉴판제작업체",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "착한선물",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "정품향수",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "스칸디아모스만들기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디저트통",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비세탁세제",
    "vol": 40,
    "comp": "높음",
    "hint": false
@@ -5688,24 +5670,6 @@
    "kw": "소마큐브워크북",
    "vol": 40,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "사춘기지성샴푸",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남성여름양말",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울남성양말",
-   "vol": 40,
-   "comp": "높음",
    "hint": false
   },
   {
@@ -5733,14 +5697,38 @@
    "hint": false
   },
   {
-   "kw": "후레쉬백",
+   "kw": "어린이블록",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사각쿠키통",
+   "kw": "유아스낵컵",
    "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "투명플라스틱병",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드링킹자",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여친크리스마스선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에코보냉백",
+   "vol": 35,
    "comp": "높음",
    "hint": false
   },
@@ -5757,31 +5745,37 @@
    "hint": false
   },
   {
-   "kw": "야채진공포장",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탁텔수면양말",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "소마블럭",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "잔츠큐브",
+   "kw": "르주르유아세제",
    "vol": 35,
-   "comp": "중간",
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용섬유유연제",
+   "vol": 35,
+   "comp": "높음",
    "hint": false
   },
   {
    "kw": "조이매스소마큐브",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퍼퓸세탁세제",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프리미엄세탁세제",
    "vol": 35,
    "comp": "높음",
    "hint": false
@@ -5793,25 +5787,13 @@
    "hint": false
   },
   {
-   "kw": "일회용포장용기파는곳",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "꽃무늬버선",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "할머니덧버선",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "1회용밀폐용기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기젖병브랜드",
    "vol": 35,
    "comp": "높음",
    "hint": false
@@ -5823,21 +5805,15 @@
    "hint": false
   },
   {
-   "kw": "엘르여성양말",
+   "kw": "아이용품",
    "vol": 35,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "골지반스타킹",
+   "kw": "프리미엄주방세제",
    "vol": 35,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마리안양말",
-   "vol": 35,
-   "comp": "낮음",
    "hint": false
   },
   {
@@ -5853,13 +5829,13 @@
    "hint": false
   },
   {
-   "kw": "프라다선물",
+   "kw": "유아동쇼핑몰",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다리압박붕대",
+   "kw": "프라다선물",
    "vol": 35,
    "comp": "높음",
    "hint": false
@@ -5871,13 +5847,25 @@
    "hint": false
   },
   {
-   "kw": "두꺼운긴양말",
+   "kw": "사각쿠키통",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미니죽용기",
+   "kw": "유리간장병",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레몬에이드세제",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "플라스틱용기업체",
    "vol": 35,
    "comp": "높음",
    "hint": false
@@ -5895,6 +5883,18 @@
    "hint": false
   },
   {
+   "kw": "메뉴판제작업체",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "착한선물",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "누출방지파레트",
    "vol": 30,
    "comp": "높음",
@@ -5907,33 +5907,21 @@
    "hint": false
   },
   {
-   "kw": "디저트통",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "크리스마스판촉물",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수면양말브랜드",
+   "kw": "큐블로리틀몬스터",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "천연유기농샴푸",
+   "kw": "아기용섬유유연제",
    "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어르신덧신",
-   "vol": 30,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
@@ -5949,19 +5937,25 @@
    "hint": false
   },
   {
-   "kw": "유아용화장품",
+   "kw": "후레쉬백",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사계절양말",
+   "kw": "1종세척제",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "교실환경구성",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니노어유리젖병",
    "vol": 30,
    "comp": "높음",
    "hint": false
@@ -5985,6 +5979,36 @@
    "hint": false
   },
   {
+   "kw": "락앤락메트로투웨이텀블러355ML",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밀폐용기선물세트",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종이큐브",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "락앤락슬림핏원터치텀블러",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용물병",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "30대여자크리스마스선물",
    "vol": 25,
    "comp": "높음",
@@ -5997,31 +6021,13 @@
    "hint": false
   },
   {
-   "kw": "여친크리스마스선물",
+   "kw": "아기세제선물",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "정맥류스타킹",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "림프부종스타킹",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여름수면양말",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부종스타킹",
+   "kw": "프리미엄세제",
    "vol": 25,
    "comp": "높음",
    "hint": false
@@ -6039,13 +6045,37 @@
    "hint": false
   },
   {
-   "kw": "산타수면양말",
+   "kw": "잔츠큐브",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "블랑101세탁세제무향",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "큐블로리틀몬스터",
+   "kw": "유아전용세제",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중성세제사용법",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급세제",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "착한세제",
    "vol": 25,
    "comp": "높음",
    "hint": false
@@ -6057,7 +6087,7 @@
    "hint": false
   },
   {
-   "kw": "애기샴푸",
+   "kw": "일회용포장용기파는곳",
    "vol": 25,
    "comp": "높음",
    "hint": false
@@ -6066,24 +6096,6 @@
    "kw": "맥포머스브레인",
    "vol": 25,
    "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "방한덧버선",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아파우더",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사춘기정수리샴푸",
-   "vol": 25,
-   "comp": "높음",
    "hint": false
   },
   {
@@ -6123,25 +6135,7 @@
    "hint": false
   },
   {
-   "kw": "고등학생샴푸",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수분크림보습크림",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울양말세트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베이직양말",
+   "kw": "비브롱젖병",
    "vol": 25,
    "comp": "높음",
    "hint": false
@@ -6153,55 +6147,13 @@
    "hint": false
   },
   {
-   "kw": "족욕양말",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중목골지양말",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케이블양말",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "과수원까마귀",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "중목여성양말",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "10대샴푸",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오렌지양말",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고무줄없는양말",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자흰색양말",
+   "kw": "안전한주방세제",
    "vol": 25,
    "comp": "높음",
    "hint": false
@@ -6213,27 +6165,51 @@
    "hint": false
   },
   {
-   "kw": "두꺼운운동양말",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물집양말",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "포켓섬유향수",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아양말선물세트",
+   "kw": "신생아출산용품",
    "vol": 25,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주방세제브랜드",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "르주르속옷세제",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경주방비누",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사각오일병",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "푸딩통",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그래놀라세트",
+   "vol": 25,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -6244,6 +6220,12 @@
   },
   {
    "kw": "PVC드럼",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "연필씨앗",
    "vol": 20,
    "comp": "높음",
    "hint": false
@@ -6285,12 +6267,6 @@
    "hint": false
   },
   {
-   "kw": "베이비스킨케어",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "양말짝맞추기",
    "vol": 20,
    "comp": "높음",
@@ -6303,19 +6279,7 @@
    "hint": false
   },
   {
-   "kw": "영유아화장품",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "PP밀폐용기",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블럭추천",
    "vol": 20,
    "comp": "높음",
    "hint": false
@@ -6323,12 +6287,6 @@
   {
    "kw": "발렌타인선물",
    "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베이비화장품",
-   "vol": 15,
    "comp": "높음",
    "hint": false
   },
@@ -6369,9 +6327,9 @@
    "hint": false
   },
   {
-   "kw": "고당몰",
+   "kw": "아동물병",
    "vol": 15,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
@@ -6411,13 +6369,37 @@
    "hint": false
   },
   {
+   "kw": "조지루시빨대컵",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "소마큐브보드게임",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베이비바스앤샴푸",
+   "kw": "애기섬유유연제",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "세탁세제선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "계면활성제없는세제",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세제공장",
    "vol": 15,
    "comp": "높음",
    "hint": false
@@ -6429,9 +6411,9 @@
    "hint": false
   },
   {
-   "kw": "유아용바디워시",
+   "kw": "TKFD-200",
    "vol": 15,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
@@ -6465,6 +6447,12 @@
    "hint": false
   },
   {
+   "kw": "일식용기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "일회용식품용기",
    "vol": 15,
    "comp": "높음",
@@ -6483,19 +6471,7 @@
    "hint": false
   },
   {
-   "kw": "유아클렌저",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "발열양말추천",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바이오글로리우스",
+   "kw": "라이프인네이처",
    "vol": 15,
    "comp": "중간",
    "hint": false
@@ -6507,37 +6483,13 @@
    "hint": false
   },
   {
-   "kw": "루돌프양말",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄양말",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "친환경죽용기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자울양말",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
    "kw": "용기포장",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사춘기아들샴푸",
    "vol": 15,
    "comp": "높음",
    "hint": false
@@ -6549,13 +6501,13 @@
    "hint": false
   },
   {
-   "kw": "프로캄베베베이비로션",
+   "kw": "과일소분통",
    "vol": 15,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "과일소분통",
+   "kw": "명품젖병",
    "vol": 15,
    "comp": "높음",
    "hint": false
@@ -6573,13 +6525,13 @@
    "hint": false
   },
   {
-   "kw": "교육완구",
+   "kw": "벽면교구",
    "vol": 15,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "사춘기정수리냄새샴푸",
+   "kw": "교육완구",
    "vol": 15,
    "comp": "높음",
    "hint": false
@@ -6597,9 +6549,9 @@
    "hint": false
   },
   {
-   "kw": "무압박임산부양말",
+   "kw": "비브롱",
    "vol": 15,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
@@ -6639,25 +6591,7 @@
    "hint": false
   },
   {
-   "kw": "BEEFF양말",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아화장품브랜드",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여름면양말",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "무봉제러닝양말",
+   "kw": "육아용품사이트",
    "vol": 15,
    "comp": "높음",
    "hint": false
@@ -6669,43 +6603,19 @@
    "hint": false
   },
   {
-   "kw": "양말도매가",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "사각쿠키케이스",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "하지정맥류밴드",
+   "kw": "친환경주방용품",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "4D랜드",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "의료용탄력스타킹",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "오가닉코튼양말",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친환경패션",
    "vol": 15,
    "comp": "중간",
    "hint": false
@@ -6735,6 +6645,12 @@
    "hint": false
   },
   {
+   "kw": "유아용품쇼핑몰",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "용기실링",
    "vol": 15,
    "comp": "높음",
@@ -6747,13 +6663,67 @@
    "hint": false
   },
   {
+   "kw": "블럭추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "사각쿠키용기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아바디",
+   "kw": "모양조각",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "락앤락할인",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레몬에이드세정제",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "제로웨이스트답례품",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "교실환경미화",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생분해롤백",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "과자포장용기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자레인지파우치",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "락앤락처비텀블러",
    "vol": 15,
    "comp": "높음",
    "hint": false
@@ -6771,9 +6741,15 @@
    "hint": false
   },
   {
-   "kw": "여름용압박스타킹",
+   "kw": "모기팔찌제작",
    "vol": 10,
-   "comp": "높음",
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "애기세제",
+   "vol": 10,
+   "comp": "낮음",
    "hint": false
   },
   {
@@ -6796,12 +6772,6 @@
   },
   {
    "kw": "선물대행",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여름압박스타킹",
    "vol": 10,
    "comp": "높음",
    "hint": false
@@ -6861,6 +6831,30 @@
    "hint": false
   },
   {
+   "kw": "아가세제",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "아기세제르주르",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세제용품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안심세제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "쌓기교구",
    "vol": 10,
    "comp": "높음",
@@ -6903,12 +6897,6 @@
    "hint": false
   },
   {
-   "kw": "일식용기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "일회용기제작",
    "vol": 10,
    "comp": "높음",
@@ -6921,9 +6909,9 @@
    "hint": false
   },
   {
-   "kw": "따뜻한기모양말",
+   "kw": "올포레세제",
    "vol": 10,
-   "comp": "낮음",
+   "comp": "중간",
    "hint": false
   },
   {
@@ -6957,7 +6945,7 @@
    "hint": false
   },
   {
-   "kw": "유아스킨케어",
+   "kw": "기업출산선물",
    "vol": 10,
    "comp": "높음",
    "hint": false
@@ -6975,31 +6963,19 @@
    "hint": false
   },
   {
-   "kw": "벽면교구",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
    "kw": "아동완구",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "패션양말추천",
+   "kw": "미세먼지세탁세제",
    "vol": 10,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
    "kw": "남성가죽장갑추천",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임산부돌돌이양말",
    "vol": 10,
    "comp": "높음",
    "hint": false
@@ -7026,12 +7002,6 @@
    "kw": "화이트데이선물추천",
    "vol": 10,
    "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "다이노탱양말",
-   "vol": 10,
-   "comp": "중간",
    "hint": false
   },
   {
@@ -7083,6 +7053,12 @@
    "hint": false
   },
   {
+   "kw": "애기용품점",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
    "kw": "헥서스디럭스",
    "vol": 10,
    "comp": "높음",
@@ -7107,33 +7083,21 @@
    "hint": false
   },
   {
-   "kw": "무압박여름양말",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
    "kw": "발렌타인데이선물추천",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "여름장목양말",
+   "kw": "친환경1종주방세제",
    "vol": 10,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
    "kw": "포디블록",
    "vol": 10,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기로션",
-   "vol": 10,
-   "comp": "낮음",
    "hint": false
   },
   {
@@ -7146,12 +7110,6 @@
    "kw": "포디큐브",
    "vol": 10,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "여름여성양말",
-   "vol": 10,
-   "comp": "높음",
    "hint": false
   },
   {
@@ -7173,24 +7131,6 @@
    "hint": false
   },
   {
-   "kw": "애드나인스포츠양말",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "운동발목양말",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "패션중목양말",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
    "kw": "락앤락판촉물",
    "vol": 10,
    "comp": "높음",
@@ -7206,6 +7146,66 @@
    "kw": "밸런타인데이선물",
    "vol": 10,
    "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "자석패턴블럭",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패턴블록스티커",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오더리사각형",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스마일몰드",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대량풍선",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원형PP용기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "락앤락기념품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "락앤락텀블러주문제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생활용품도매시장",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생활용품도매업체",
+   "vol": 10,
+   "comp": "높음",
    "hint": false
   }
  ]
