@@ -1283,3 +1283,4 @@ input,select,textarea{font-size:16px!important}
 .mcp.ycp{background:#fff1f3;border-color:#ffd0d8}.mcp.ycp small{color:#e5163a}
 
 .dthl{display:block;width:100%;height:100%;position:relative}.dthm{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.55);color:#fff;font-size:12.5px;font-weight:600;padding:6px 10px;border-radius:999px;line-height:1}
+.thx{position:absolute;left:5px;bottom:5px;background:rgba(0,0,0,.55);color:#fff;font-size:10.5px;font-weight:600;padding:3px 7px;border-radius:999px;line-height:1.2;pointer-events:none}.th:has(.thx) .pks{bottom:28px}

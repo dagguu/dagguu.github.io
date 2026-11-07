@@ -195,6 +195,7 @@ document.addEventListener("click",function(e){
   else if((a=t.closest('.applym [data-m="go"]'))) ga("apply_go",{item_id:state.itemId||""});
   else if((a=t.closest(".dbar .dbl"))) ga("coupang_click",{place:"detail",item_id:state.itemId});
   else if((a=t.closest(".dthl"))) ga("coupang_click",{place:"detail_photo",item_id:state.itemId});
+  else if((a=t.closest(".th a.thc"))){ var fb=a.closest(".th").querySelector("[data-fav]"); ga("coupang_click",{place:"card_photo",item_id:fb?fb.dataset.fav:""}); }
   else if((a=t.closest(".promom .phead,.promom .pmart"))) ga("promo_click",{place:"popup",promo:(seed.promo||{}).link||""});
   else if((a=t.closest(".promom .pmc"))) ga("promo_click",{place:"popup_item",item_name:(a.querySelector(".pmn")||{}).textContent||""});
   else if((a=t.closest(".pmband .phead"))) ga("promo_click",{place:"mid_banner",promo:(seed.promo||{}).link||""});
@@ -283,11 +284,13 @@ function plainHeads(v){ [].forEach.call(v.querySelectorAll("h1,h2"),function(h){
 var NEWOK=null;
 function newOk(){ if(NEWOK!==null) return NEWOK; var open=seed.items.filter(function(it){ return statusOf(it).key==="open"; }); var n=open.filter(function(it){ return (Date.now()-(it.createdAt||0))<864e5; }).length; NEWOK=open.length>0 && n/open.length<0.4; return NEWOK; }
 function thumb(it,cls){
-  var s=statusOf(it), img=safeUrl(it.image), view=safeUrl(it.infUrl||it.viewUrl);
+  var s=statusOf(it), img=safeUrl(it.image), view=safeUrl(it.infUrl||it.viewUrl), pu="";
   var isNew=newOk() && (Date.now()-(it.createdAt||0))<864e5 && s.key!=="closed";
   return '<div class="th '+(cls||"")+(s.hot&&s.key==="open"?" hotth":"")+'">'+
-    '<a href="'+itemHref(it)+'" aria-label="'+esc(it.name)+' 자세히 보기">'+
+    /* 사진은 쿠팡 사진 보기로 (2026-11-07 시온님 "사진에는 무조건 다 쿠팡링크"), 쿠팡 링크 없거나 마감이면 상세 페이지 */
+    ((pu=s.key!=="closed"&&img?priceUrl(it):"")?'<a class="thc" '+ext(pu)+' aria-label="'+esc(it.name)+' 사진 더 보기 (쿠팡)">':'<a href="'+itemHref(it)+'" aria-label="'+esc(it.name)+' 자세히 보기">')+
       '<span class="ph">'+esc(it.region||"")+'</span>'+(img?'<img src="'+esc(img)+'" alt="'+esc(it.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">':'')+
+      (pu?'<span class="thx">📷 사진 ↗</span>':'')+
     '</a>'+
     (it.region?'<span class="rgs">📍 '+esc(it.region)+'</span>':'')+
     (isTodayEnd(it)?'<span class="cdst"><em>⏰ 오늘 마감</em><b data-cdx>'+clock(msToMidnight())+'</b></span>':'<span class="dd '+(s.key==="closed"?"off":(s.hot?"hot":""))+'">'+esc(s.dday)+'</span>')+
