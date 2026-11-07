@@ -1,0 +1,34 @@
+[
+ {
+  "n": 1,
+  "time": "night",
+  "look": "warm",
+  "img": "Keep the place exactly as it is (same hanok building with wooden lattice railings and warm hanging lights, same square outdoor jacuzzi with pale stone edge, same wooden deck); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below (more night sky with stars above, more jacuzzi water and stone edge below). Never mirror or flip the image.",
+  "prompt": "Very slow move forward toward the glowing jacuzzi in front of the hanok, gentle steam rising from the warm water, soft ripples catching the warm lantern light."
+ },
+ {
+  "n": 2,
+  "time": "day",
+  "img": "Keep the place exactly as it is (same square outdoor jacuzzi, same stone and wooden deck, same wooden pavilion roof, same mountain ridge behind); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below (more clear blue sky above, more jacuzzi water and deck below). Never mirror or flip the image.",
+  "prompt": "Slow walk forward along the deck toward the jacuzzi and the mountains, light steam drifting over the water surface."
+ },
+ {
+  "n": 3,
+  "time": "day",
+  "people": true,
+  "img": "Keep the place exactly as it is (same white glamping tent frame and roof, same jacuzzi inside the tent, same green tiled floor, same lounge chairs and table); do not add new buildings, furniture, signs, text or logos. Add one Korean woman standing far away at the open edge of the tent looking out at the view, seen fully from behind, small in the frame, not touching any furniture. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below (more tent roof above, more green tile floor and jacuzzi edge below). Never mirror or flip the image.",
+  "prompt": "Slow walk forward into the glamping tent past the jacuzzi, gentle steam on the water, the woman stays still looking outside."
+ },
+ {
+  "n": 4,
+  "time": "day",
+  "img": "Keep the place exactly as it is (same hanok room with wooden lattice doors and wooden beams, same white walls, same bed and floor); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below (more wooden ceiling beams above, more floor below). Never mirror or flip the image.",
+  "prompt": "Very slow walk forward through the hanok room toward the bed, soft daylight from the doors."
+ },
+ {
+  "n": 5,
+  "time": "day",
+  "img": "Keep the place exactly as it is (same glamping lounge with blue patterned cushioned chairs, same table, same tent frame, same mountain view); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below (more tent roof above, more green tile floor below). Never mirror or flip the image.",
+  "prompt": "Slow walk forward through the lounge toward the open side and the mountain view, clouds drifting slowly."
+ }
+]
