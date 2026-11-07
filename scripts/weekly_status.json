@@ -1,67 +1,91 @@
 {
- "date": "2026-11-01",
+ "date": "2026-11-08",
  "cuts": [
   {
    "n": 1,
-   "slug": "gyeongju-snb-poolvilla",
-   "cut": "ai:4",
+   "slug": "gyeongju-tomonoya",
+   "cut": "ai:13",
    "kind": "video"
   },
   {
    "n": 1,
-   "slug": "gyeongju-snb-poolvilla",
+   "slug": "gyeongju-tomonoya",
+   "cut": "ai:10",
+   "kind": "video"
+  },
+  {
+   "n": 2,
+   "slug": "gurye-dohwa-onsen",
    "cut": "ai:7",
    "kind": "video"
   },
   {
    "n": 2,
-   "slug": "pohang-daytona",
-   "cut": "vp:1",
-   "kind": "video"
-  },
-  {
-   "n": 2,
-   "slug": "pohang-daytona",
-   "cut": "ai:4",
+   "slug": "gurye-dohwa-onsen",
+   "cut": "ai:12",
    "kind": "video"
   },
   {
    "n": 3,
-   "slug": "seonjae-seonjaedam",
-   "cut": "vp:1",
+   "slug": "gapyeong-sugar-glamping",
+   "cut": "ai:1",
    "kind": "video"
   },
   {
    "n": 3,
-   "slug": "seonjae-seonjaedam",
-   "cut": "vp:8",
+   "slug": "gapyeong-sugar-glamping",
+   "cut": "ai:2",
    "kind": "video"
   },
   {
    "n": 4,
-   "slug": "busan-matie-harbor",
-   "cut": "vp:1",
+   "slug": "wanju-boheme-spa",
+   "cut": "ai:2",
    "kind": "video"
   },
   {
    "n": 4,
-   "slug": "busan-matie-harbor",
-   "cut": "vp:3",
+   "slug": "wanju-boheme-spa",
+   "cut": "ai:10",
    "kind": "video"
   },
   {
    "n": 5,
-   "slug": "gapyeong-glamhavana",
-   "cut": "p:1",
-   "kind": "photo"
+   "slug": "dongducheon-nijimori-ryokan",
+   "cut": "ai:3",
+   "kind": "video"
   },
   {
    "n": 5,
-   "slug": "gapyeong-glamhavana",
-   "cut": "p:3",
-   "kind": "photo"
+   "slug": "dongducheon-nijimori-ryokan",
+   "cut": "ai:8",
+   "kind": "video"
+  },
+  {
+   "n": 6,
+   "slug": "seogwipo-damnroo",
+   "cut": "ai:3",
+   "kind": "video"
+  },
+  {
+   "n": 6,
+   "slug": "seogwipo-damnroo",
+   "cut": "ai:5",
+   "kind": "video"
+  },
+  {
+   "n": 7,
+   "slug": "cheorwon-thegallery",
+   "cut": "ai:2",
+   "kind": "video"
+  },
+  {
+   "n": 7,
+   "slug": "cheorwon-thegallery",
+   "cut": "ai:3",
+   "kind": "video"
   }
  ],
  "errors": [],
- "sec": 13.2
+ "sec": 18.0
 }
