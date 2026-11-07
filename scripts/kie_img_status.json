@@ -1,23 +1,23 @@
 {
- "at": "2026-11-07 19:55",
- "model": "google/nano-banana-edit",
+ "at": "2026-11-07 19:57",
+ "model": "nano-banana-pro",
  "res": "2K",
  "images": [
   {
    "n": 2,
-   "taskId": "557fc3aff9f3051c48dc624fd53c9fbf",
+   "taskId": "b5f21662424217359c937772b2c83529",
    "state": "success",
-   "credits": 4.0,
+   "credits": 18.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-07/sancheong-ostay/2_edit.jpg"
+   "file": "img/2026-11-07/sancheong-ostay/2_pro.jpg"
   },
   {
    "n": 3,
-   "taskId": "5f33ec19572e9676f8b3656cbcd2bfdc",
+   "taskId": "eda1c4bc3159a3a560d90089df6a62bf",
    "state": "success",
-   "credits": 4.0,
+   "credits": 18.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-07/sancheong-ostay/3_edit.jpg"
+   "file": "img/2026-11-07/sancheong-ostay/3_pro.jpg"
   }
  ],
  "slug": "sancheong-ostay"
