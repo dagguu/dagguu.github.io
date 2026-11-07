@@ -280,7 +280,7 @@ for it in items:
     HEART = '<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>'
     SEND = '<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3 10.2 13.8M21 3l-6.6 18-4.2-7.2L3 9.6Z"/></svg>'
     body = '<div class="pg dpg">'
-    body += '<div class="dthimg">' + (f'<span class="dcd" id="dcd"><b data-dcd="{e(endd)}"></b> 남음</span>' if op and endd else '') + (f'<img src="{e(img)}" alt="{e(name)}" referrerpolicy="no-referrer" onerror="this.remove()">' if img else '') + '</div>'
+    body += '<div class="dthimg">' + (f'<span class="dcd" id="dcd"><b data-dcd="{e(endd)}"></b> 남음</span>' if op and endd else '') + ((f'<a class="dthl" href="{e(view)}" target="_blank" rel="sponsored nofollow noopener">' if view else '') + f'<img src="{e(img)}" alt="{e(name)}" referrerpolicy="no-referrer" onerror="this.remove()">' + (f'<span class="dthm">📷 {"숙소" if cat == "stay" else "제품"} 사진 더 보기 ↗</span></a>' if view else '') if img else '') + '</div>'
     body += f'<div class="dhd">{badge_html}<h1>{e(name)}</h1><div class="dico"><span class="shtip">친구에게도 공유하기</span><button class="shb" id="shb" aria-label="공유하기">{SEND}</button></div></div>'
     if op and endd: body += f'<span class="dcd dcdfix" id="dcdfix" aria-hidden="true"><b data-dcd="{e(endd)}"></b> 남음</span>'
     body += f'<dl class="dtl">{rows2}</dl>' + fee + ai

@@ -194,6 +194,7 @@ document.addEventListener("click",function(e){
   if((a=t.closest("[data-apply]"))) ga("apply_open",{item_id:a.getAttribute("data-apply")});
   else if((a=t.closest('.applym [data-m="go"]'))) ga("apply_go",{item_id:state.itemId||""});
   else if((a=t.closest(".dbar .dbl"))) ga("coupang_click",{place:"detail",item_id:state.itemId});
+  else if((a=t.closest(".dthl"))) ga("coupang_click",{place:"detail_photo",item_id:state.itemId});
   else if((a=t.closest(".promom .phead,.promom .pmart"))) ga("promo_click",{place:"popup",promo:(seed.promo||{}).link||""});
   else if((a=t.closest(".promom .pmc"))) ga("promo_click",{place:"popup_item",item_name:(a.querySelector(".pmn")||{}).textContent||""});
   else if((a=t.closest(".pmband .phead"))) ga("promo_click",{place:"mid_banner",promo:(seed.promo||{}).link||""});
@@ -812,7 +813,7 @@ function itemView(){
     '<dt>모집 사이트</dt><dd>'+esc(src)+'</dd>'+
     (it.region?'<dt>지역</dt><dd>'+esc(it.region)+'</dd>':'')+'</dl>';
   return '<div class="pg dpg">'+
-    '<div class="dthimg">'+(closed?'':'<span class="dcd" id="dcd"><b data-dcd="'+esc(it.end)+'">'+dcdText(it.end)+'</b> 남음</span>')+(img?'<img src="'+esc(img)+'" alt="'+esc(it.name)+'" referrerpolicy="no-referrer" onerror="this.remove()">':'')+'</div>'+
+    '<div class="dthimg">'+(closed?'':'<span class="dcd" id="dcd"><b data-dcd="'+esc(it.end)+'">'+dcdText(it.end)+'</b> 남음</span>')+(img?(priceUrl(it)?'<a class="dthl" '+ext(priceUrl(it))+' aria-label="'+(stay?'숙소':'제품')+' 사진 더 보기">':'')+'<img src="'+esc(img)+'" alt="'+esc(it.name)+'" referrerpolicy="no-referrer" onerror="this.remove()">'+(priceUrl(it)?'<span class="dthm">📷 '+(stay?'숙소':'제품')+' 사진 더 보기 ↗</span></a>':''):'')+'</div>'+
     '<div class="dhd">'+(chTip(it)?'<span class="chtip" id="chtip">'+esc(chTip(it))+'</span>':'')+chBadges(it)+'<h1>'+esc(it.name)+'</h1>'+'<div class="dico"><span class="shtip">친구에게도 공유하기</span><button class="shb" data-ishare="'+esc(it.id)+'" aria-label="공유하기">'+ico(I.send)+'</button></div></div>'+
     (closed?'':'<span class="dcd dcdfix" id="dcdfix" aria-hidden="true"><b data-dcd="'+esc(it.end)+'">'+dcdText(it.end)+'</b> 남음</span>')+
     rows+feeBox(it)+aiSum(it)+'<p class="srcnote">다꾸체험단은 모집 정보를 모아 보여 주는 서비스로 '+esc(it.source||"모집 사이트")+'와 무관해요. 신청·선정·진행은 '+esc(it.source||"해당 사이트")+'에서 이뤄져요.</p>'+

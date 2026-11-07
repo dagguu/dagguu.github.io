@@ -1281,3 +1281,5 @@ input,select,textarea{font-size:16px!important}
 .smg .stcp{display:inline-block;align-self:flex-start;margin:0 0 4px;padding:2px 8px;border-radius:6px;background:#ff3b30;color:#fff;font-style:normal;font-size:11.5px;font-weight:800;line-height:1.5;width:max-content}
 
 .mcp.ycp{background:#fff1f3;border-color:#ffd0d8}.mcp.ycp small{color:#e5163a}
+
+.dthl{display:block;width:100%;height:100%;position:relative}.dthm{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.55);color:#fff;font-size:12.5px;font-weight:600;padding:6px 10px;border-radius:999px;line-height:1}
