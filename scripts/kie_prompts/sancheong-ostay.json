@@ -9,15 +9,14 @@
  {
   "n": 2,
   "time": "day",
-  "img": "Keep the place exactly as it is (same square outdoor jacuzzi, same stone and wooden deck, same wooden pavilion roof, same mountain ridge behind); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below (more clear blue sky above, more jacuzzi water and deck below). Never mirror or flip the image.",
+  "img": "Keep the place exactly as it is (same square outdoor jacuzzi, same stone and wooden deck, same wooden pavilion roof, same mountain ridge behind); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged; extend above with clear blue sky and extend below with more of the pale stone deck and gravel ground in front of the jacuzzi (real ground, not water, not a reflection). Never mirror or flip the image. Make ONE single continuous photograph — no collage, no split panels, no stacked images, no mirrored reflection of the scene, no upside-down copy.",
   "prompt": "Slow walk forward along the deck toward the jacuzzi and the mountains, light steam drifting over the water surface."
  },
  {
   "n": 3,
   "time": "day",
-  "people": true,
-  "img": "Keep the place exactly as it is (same white glamping tent frame and roof, same jacuzzi inside the tent, same green tiled floor, same lounge chairs and table); do not add new buildings, furniture, signs, text or logos. Add one Korean woman standing far away at the open edge of the tent looking out at the view, seen fully from behind, small in the frame, not touching any furniture. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below (more tent roof above, more green tile floor and jacuzzi edge below). Never mirror or flip the image.",
-  "prompt": "Slow walk forward into the glamping tent past the jacuzzi, gentle steam on the water, the woman stays still looking outside."
+  "img": "Keep the place exactly as it is (same white glamping tent frame and roof, same jacuzzi in front of the tent, same green tiled floor, same lounge chairs and table inside); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged; extend above with more tent roof and sky and extend below with more green tile floor and the jacuzzi edge, as the same scene seen from slightly farther back. Never mirror or flip the image. Make ONE single continuous photograph — no collage, no split panels, no stacked images, no mirrored reflection of the scene, no upside-down copy.",
+  "prompt": "Slow walk forward toward the glamping tent past the jacuzzi, gentle steam on the water."
  },
  {
   "n": 4,
