@@ -1,5 +1,5 @@
 {
- "at": "2026-11-07 07:26",
+ "at": "2026-11-07 19:50",
  "checkIn": "2026-11-14",
  "stays": {
   "busan-matie-harbor": {
@@ -19,7 +19,7 @@
       "page",
       "size"
      ],
-     "total": 1964
+     "total": 1976
     }
    ],
    "hit": "마티에 부산하버시티",
@@ -87,7 +87,7 @@
       "page",
       "size"
      ],
-     "total": 503
+     "total": 507
     }
    ],
    "hit": "대전 유천 스테이 패스포트 키노사키 료칸 by 아늑",
@@ -121,7 +121,7 @@
       "page",
       "size"
      ],
-     "total": 53
+     "total": 55
     }
    ],
    "hit": "니지모리 스튜디오 료칸",
@@ -155,7 +155,7 @@
       "page",
       "size"
      ],
-     "total": 1512
+     "total": 1513
     }
    ],
    "hit": "강릉 다케노모리글램핑&료칸",
@@ -324,13 +324,13 @@
      "region": "강릉",
      "type": "CITY",
      "pages": 31,
-     "n": 1436,
+     "n": 1439,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1452
+     "total": 1455
     },
     {
      "kw": "강원",
@@ -392,39 +392,39 @@
      "region": "경주",
      "type": "CITY",
      "pages": 39,
-     "n": 1868,
+     "n": 1875,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1884
+     "total": 1891
     },
     {
      "kw": "경북",
      "region": "경주",
      "type": "CITY",
      "pages": 39,
-     "n": 1868,
+     "n": 1875,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1884
+     "total": 1891
     },
     {
      "kw": "경북",
      "region": "포항",
      "type": "CITY",
      "pages": 20,
-     "n": 900,
+     "n": 915,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 919
+     "total": 934
     }
    ],
    "kept": true
@@ -446,7 +446,7 @@
       "page",
       "size"
      ],
-     "total": 1884
+     "total": 1891
     }
    ],
    "hit": "경주 에스앤비풀빌라",
@@ -480,7 +480,7 @@
       "page",
       "size"
      ],
-     "total": 1884
+     "total": 1891
     }
    ],
    "hit": "토모노야 호텔&료칸 경주",
@@ -514,7 +514,7 @@
       "page",
       "size"
      ],
-     "total": 1156
+     "total": 1157
     }
    ],
    "hit": "인천 캠프노마드",
@@ -548,7 +548,7 @@
       "page",
       "size"
      ],
-     "total": 919
+     "total": 934
     }
    ],
    "hit": "포항 데이토나풀빌라",
@@ -599,6 +599,40 @@
     "starRating"
    ]
   },
+  "sancheong-ostay": {
+   "name": "산청 오스테이펜션n글램핑",
+   "city": "산청",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "산청",
+     "region": "산청",
+     "type": "CITY",
+     "pages": 1,
+     "n": 49,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 162
+    }
+   ],
+   "hit": "산청 오스테이펜션n글램핑",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
+  },
   "seogwipo-damnroo": {
    "name": "담앤루 리조트",
    "city": "서귀포",
@@ -616,7 +650,7 @@
       "page",
       "size"
      ],
-     "total": 1516
+     "total": 1518
     }
    ],
    "hit": "담앤루리조트",
@@ -650,7 +684,7 @@
       "page",
       "size"
      ],
-     "total": 2391
+     "total": 2411
     }
    ],
    "hit": "대부도(선재도) 선재담글램핑&카라반리조트",
@@ -678,39 +712,39 @@
      "region": "완주",
      "type": "CITY",
      "pages": 5,
-     "n": 191,
+     "n": 193,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 194
+     "total": 196
     },
     {
      "kw": "전북",
      "region": "전주",
      "type": "CITY",
      "pages": 16,
-     "n": 733,
+     "n": 738,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 742
+     "total": 747
     },
     {
      "kw": "전북",
      "region": "군산",
      "type": "CITY",
-     "pages": 6,
-     "n": 239,
+     "pages": 7,
+     "n": 253,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 240
+     "total": 254
     }
    ]
   }
