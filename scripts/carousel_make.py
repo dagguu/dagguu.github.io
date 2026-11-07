@@ -80,8 +80,10 @@ with sync_playwright() as pw:
     b.close()
 
 # 9:16(1080x1920) → 가운데 4:5(1080x1350). 장면 json 에 "y": 0~1 을 넣으면 자르는 높이 위치(0 위, 0.5 가운데, 1 아래)
-def render(src, ov, dst, y=0.5, sec=4.0):
-    vf = f"scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,crop=1080:1350:0:(ih-1350)*{y},setsar=1,fps=30"
+# "z": 1~1.6 이면 그만큼 확대한 뒤 자른다(AI 가 위·아래를 이상하게 늘린 장면에서 그 부분을 빼려고, 2026-11-07)
+def render(src, ov, dst, y=0.5, sec=4.0, z=1.0):
+    W, H = int(1080 * z) // 2 * 2, int(1920 * z) // 2 * 2
+    vf = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},crop=1080:1350:(iw-1080)/2:(ih-1350)*{y},setsar=1,fps=30"
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", src]
     if ov:
         cmd += ["-i", ov, "-filter_complex", f"[0:v]{vf}[v];[v][1:v]overlay=0:0,format=yuv420p[o]", "-map", "[o]"]
@@ -95,9 +97,9 @@ for i, s in enumerate(J["scenes"][:5], 1):
     if not src: st["slides"].append({"n": i, "img": s["img"], "error": "장면 영상 없음"}); continue
     y = s.get("y", 0.5)
     ov = "cover.png" if i == 1 else (f"ov{i}.png" if (s.get("cap") or s.get("stickers")) else "wm.png")
-    render(src, os.path.join(tmp, ov), os.path.join(out, f"{i}.mp4"), y)
+    render(src, os.path.join(tmp, ov), os.path.join(out, f"{i}.mp4"), y, z=float(s.get("z", 1)))
     if i == 1:
-        render(src, os.path.join(tmp, "wm.png"), os.path.join(out, "1_notext.mp4"), y)
+        render(src, os.path.join(tmp, "wm.png"), os.path.join(out, "1_notext.mp4"), y, z=float(s.get("z", 1)))
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "0.3", "-i", os.path.join(out, "1.mp4"), "-frames:v", "1", "-q:v", "2", os.path.join(out, "cover.jpg")], check=True)
     st["slides"].append({"n": i, "img": s["img"], "mb": round(os.path.getsize(os.path.join(out, f"{i}.mp4")) / 1e6, 1)})
 subprocess.run(["rm", "-rf", tmp])
