@@ -1,19 +1,11 @@
 {
- "at": "2026-11-07 19:50",
+ "at": "2026-11-07 19:55",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 1,
-   "taskId": "8a40845afb08198fd18c10c1cb5d7d36",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-07/sancheong-ostay/1_edit.jpg"
-  },
-  {
    "n": 2,
-   "taskId": "59526a2405f07cfd028ce6ceabd148b3",
+   "taskId": "557fc3aff9f3051c48dc624fd53c9fbf",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
@@ -21,27 +13,11 @@
   },
   {
    "n": 3,
-   "taskId": "5b94765db43847ffbcce02ca7aaca836",
+   "taskId": "5f33ec19572e9676f8b3656cbcd2bfdc",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
    "file": "img/2026-11-07/sancheong-ostay/3_edit.jpg"
-  },
-  {
-   "n": 4,
-   "taskId": "efb22bba80c2fd7f0285661f04ad499c",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-07/sancheong-ostay/4_edit.jpg"
-  },
-  {
-   "n": 5,
-   "taskId": "ce6f12f363a2feb378fb45e611f119c3",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-07/sancheong-ostay/5_edit.jpg"
   }
  ],
  "slug": "sancheong-ostay"
