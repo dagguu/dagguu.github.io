@@ -1,4595 +1,3581 @@
 {
- "updated": "2026-11-07 16:17",
+ "updated": "2026-11-08 16:16",
  "hints": [
-  "어린이크리스마스선물",
-  "유아크리스마스선물",
-  "아이크리스마스선물",
-  "크리스마스선물",
-  "백일선물"
+  "보온병",
+  "유아보온병",
+  "보온도시락",
+  "욕실화",
+  "자석블럭"
  ],
  "rows": [
   {
-   "kw": "찜질방",
-   "vol": 150460,
+   "kw": "슬리퍼",
+   "vol": 82900,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "음식물처리기",
-   "vol": 135600,
+   "kw": "보온도시락",
+   "vol": 42880,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "써모스텀블러",
+   "vol": 33400,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "잠옷",
-   "vol": 83200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경기도가볼만한곳",
-   "vol": 52390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크로스백",
-   "vol": 51610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "집들이선물",
-   "vol": 43200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디퓨저",
-   "vol": 39200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "결혼식답례품",
-   "vol": 38460,
+   "kw": "혈당측정기",
+   "vol": 26200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "담요",
-   "vol": 36740,
+   "kw": "써모스보온도시락",
+   "vol": 22600,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "캠핑용품",
-   "vol": 35840,
+   "kw": "도시락통",
+   "vol": 21730,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "지갑",
-   "vol": 32770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "상견례선물",
-   "vol": 32400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울놀거리",
-   "vol": 32180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명품가방",
-   "vol": 30420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장갑",
-   "vol": 28650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치답례품",
-   "vol": 28640,
+   "kw": "실내화",
+   "vol": 21670,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "집들이선물추천",
-   "vol": 27640,
-   "comp": "높음",
-   "hint": false
+   "kw": "보온병",
+   "vol": 20420,
+   "comp": "중간",
+   "hint": true
   },
   {
-   "kw": "그래놀라",
-   "vol": 26770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미아방지목걸이",
-   "vol": 26450,
+   "kw": "수능도시락",
+   "vol": 16850,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "돗자리",
-   "vol": 26310,
+   "kw": "물병",
+   "vol": 15610,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "출산선물",
-   "vol": 24700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식",
-   "vol": 21900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성가방",
-   "vol": 21630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고무장갑",
-   "vol": 19300,
+   "kw": "젖병",
+   "vol": 15370,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "바디드라이어",
-   "vol": 18700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플잠옷",
-   "vol": 18580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무릎담요",
-   "vol": 18200,
+   "kw": "현관신발장",
+   "vol": 13440,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기유산균",
-   "vol": 17710,
+   "kw": "보온텀블러",
+   "vol": 12660,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "수능선물추천",
-   "vol": 17290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장난감",
-   "vol": 17280,
+   "kw": "써모스보온병",
+   "vol": 12620,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "토스트기",
-   "vol": 17270,
+   "kw": "실내슬리퍼",
+   "vol": 11610,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "낙산균",
-   "vol": 16960,
+   "kw": "보온도시락통",
+   "vol": 11250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니텀블러",
+   "vol": 10530,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "키링제작",
-   "vol": 15790,
+   "kw": "욕실화",
+   "vol": 10460,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "PVC",
+   "vol": 10260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냉동밥보관용기",
+   "vol": 10260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발열도시락",
+   "vol": 9250,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "음식물분쇄기",
-   "vol": 15670,
+   "kw": "스텐텀블러",
+   "vol": 9170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물통",
+   "vol": 9130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "서울찜질방",
-   "vol": 15500,
+   "kw": "쿠션슬리퍼",
+   "vol": 9060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마블런",
+   "vol": 8950,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "튼살크림",
-   "vol": 14930,
-   "comp": "높음",
-   "hint": false
+   "kw": "자석블럭",
+   "vol": 8930,
+   "comp": "중간",
+   "hint": true
   },
   {
-   "kw": "돌답례품",
-   "vol": 14630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "결혼답례품",
-   "vol": 14340,
+   "kw": "빨대컵",
+   "vol": 8810,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "생일선물",
-   "vol": 14320,
+   "kw": "도시락배달",
+   "vol": 8230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "일산가볼만한곳",
-   "vol": 14050,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스리스",
-   "vol": 13940,
+   "kw": "트라이탄물병",
+   "vol": 8190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "서울데이트",
-   "vol": 13910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울근교갈만한곳",
-   "vol": 13830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "극세사담요",
-   "vol": 13410,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "굿즈제작",
-   "vol": 12530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아선물",
-   "vol": 12490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성잠옷",
-   "vol": 12320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자잠옷",
-   "vol": 11920,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "방한장갑",
-   "vol": 11720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가죽가방",
-   "vol": 11630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울찜질방추천",
-   "vol": 11390,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "니치향수",
-   "vol": 11310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서류가방",
-   "vol": 10000,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "퍼퓸드말리",
-   "vol": 10000,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "은팔찌",
-   "vol": 9900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈웨어",
-   "vol": 9680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수능응원선물",
-   "vol": 9530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비오는날데이트",
-   "vol": 9460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공룡종류",
-   "vol": 9040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무용품",
-   "vol": 8970,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리장식",
-   "vol": 8960,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "원피스잠옷",
-   "vol": 8800,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실내데이트",
-   "vol": 8670,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌아기선물",
-   "vol": 8630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밍크담요",
-   "vol": 8420,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미니트리",
+   "kw": "화장실선반",
    "vol": 8150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "결혼선물",
-   "vol": 8130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기백일선물",
-   "vol": 8040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "추석선물",
-   "vol": 7980,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "음식물쓰레기처리기",
-   "vol": 7960,
+   "kw": "맥포머스",
+   "vol": 8090,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스선물",
-   "vol": 7870,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "추석선물세트",
-   "vol": 7870,
+   "kw": "아기빨대컵",
+   "vol": 7820,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기돌선물",
-   "vol": 7860,
+   "kw": "유리병",
+   "vol": 6910,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이자전거",
-   "vol": 7800,
+   "kw": "유치원소풍도시락",
+   "vol": 6770,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퇴사선물",
-   "vol": 7630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수능선물세트",
-   "vol": 7590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스마켓",
-   "vol": 7400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌선물",
-   "vol": 7380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌아기장난감",
-   "vol": 7300,
+   "kw": "욕실슬리퍼",
+   "vol": 6220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스소품",
-   "vol": 7290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아유산균",
-   "vol": 7200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "선물세트",
-   "vol": 7130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미아방지팔찌",
-   "vol": 7010,
+   "kw": "보온죽통",
+   "vol": 6030,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스오너먼트",
-   "vol": 6990,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키링만들기",
-   "vol": 6870,
+   "kw": "직장인도시락통",
+   "vol": 6000,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기비타민D",
-   "vol": 6800,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "DIY키트",
-   "vol": 6750,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집생일선물",
-   "vol": 6690,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아자전거",
-   "vol": 6660,
+   "kw": "피보나치수열",
+   "vol": 5500,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "여자잠옷",
-   "vol": 6630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신상명품가방",
-   "vol": 6610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "향수추천",
-   "vol": 6600,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "캠핑용장갑",
-   "vol": 6590,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "트리오너먼트",
-   "vol": 6550,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "겨울장갑",
-   "vol": 6470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바디드라이기",
-   "vol": 6370,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "100일선물",
-   "vol": 6330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신혼부부선물",
-   "vol": 6290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이사선물",
-   "vol": 6260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "면잠옷",
-   "vol": 6060,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아빠생일선물",
-   "vol": 5960,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스오르골",
-   "vol": 5950,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유치원문방구",
-   "vol": 5900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "향수브랜드",
-   "vol": 5900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "생일선물추천",
-   "vol": 5900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벽트리",
-   "vol": 5820,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "임산부샴푸",
-   "vol": 5740,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "잠옷브랜드",
-   "vol": 5630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캠핑이불",
-   "vol": 5620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실크잠옷",
-   "vol": 5610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엄마생일선물",
-   "vol": 5580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인형꽃다발",
-   "vol": 5560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "병문안선물",
-   "vol": 5510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수험생선물",
-   "vol": 5470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이색데이트",
-   "vol": 5410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치선물",
+   "kw": "빨대텀블러",
    "vol": 5380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "30대여자생일선물",
-   "vol": 5320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아비타민D",
-   "vol": 5320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "찜질방추천",
-   "vol": 5190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수능찹쌀떡",
-   "vol": 5180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부모님생신선물",
-   "vol": 5140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스가랜드",
-   "vol": 4830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미생물음식물처리기",
-   "vol": 4600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임신선물",
-   "vol": 4570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기념품제작",
-   "vol": 4520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "판촉",
-   "vol": 4500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자명품가방",
-   "vol": 4440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친구결혼선물",
-   "vol": 4440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신촌놀거리",
-   "vol": 4430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부모님선물",
-   "vol": 4430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명품백",
-   "vol": 4410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "판촉물제작",
-   "vol": 4380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잠옷세트",
-   "vol": 4360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사운드북",
-   "vol": 4280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모달잠옷",
-   "vol": 4270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "육아",
-   "vol": 4230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스데이트",
-   "vol": 4220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기100일선물",
-   "vol": 4210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생선물",
-   "vol": 4170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테라리움만들기",
-   "vol": 4110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청소용품",
-   "vol": 4050,
+   "kw": "수능보온도시락",
+   "vol": 5290,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "명품사이트",
-   "vol": 4050,
+   "kw": "유리물병",
+   "vol": 5220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대용량텀블러",
+   "vol": 5010,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가죽장갑",
-   "vol": 3970,
+   "kw": "보온물병",
+   "vol": 4900,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "실내화거치대",
+   "vol": 4890,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아젖병",
+   "vol": 4830,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "락앤락보온도시락",
+   "vol": 4810,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "친구출산선물",
-   "vol": 3940,
+   "kw": "수능도시락통",
+   "vol": 4750,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "포장용기",
+   "vol": 4640,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마이크로자전거",
-   "vol": 3760,
+   "kw": "유리젖병",
+   "vol": 4590,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스텐물병",
+   "vol": 4490,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "텀블러세척",
+   "vol": 4250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "향수쇼핑몰",
-   "vol": 3600,
+   "kw": "여행용슬리퍼",
+   "vol": 4240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥포머스자석블럭",
+   "vol": 4030,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "보온물통",
+   "vol": 3930,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아이머그컵",
+   "vol": 3870,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퍼퓸",
-   "vol": 3550,
+   "kw": "샐러드정기배송",
+   "vol": 3840,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수능마카롱",
-   "vol": 3530,
+   "kw": "락앤락도시락통",
+   "vol": 3710,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기념일선물",
+   "kw": "발열팩",
+   "vol": 3630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "푸고",
+   "vol": 3620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "도시락정기배송",
+   "vol": 3610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트라이탄",
+   "vol": 3590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식칼",
+   "vol": 3470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "식도",
+   "vol": 3470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "EVA슬리퍼",
    "vol": 3470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일선물",
-   "vol": 3450,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "만들기키트",
-   "vol": 3440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기선물",
+   "kw": "리유저블컵",
    "vol": 3430,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "등산용품",
+   "kw": "스텐반찬통",
    "vol": 3360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "드시모네베이비스텝2",
-   "vol": 3300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자명품가방",
-   "vol": 3280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명품미니백",
-   "vol": 3250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "헤스트라장갑",
-   "vol": 3230,
+   "kw": "젖병추천",
+   "vol": 3330,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "각인",
-   "vol": 3220,
+   "kw": "아기물병",
+   "vol": 3240,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "차박용품",
-   "vol": 3210,
+   "kw": "대용량보온병",
+   "vol": 3120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "30대여자선물",
-   "vol": 3180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스카드",
-   "vol": 3130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "40대남자생일선물",
-   "vol": 3110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "퇴사답례품",
+   "kw": "텀블러제작",
    "vol": 3090,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "100일아기선물",
-   "vol": 3060,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홍보물품",
+   "kw": "보온도시락추천",
+   "vol": 3080,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "역할놀이",
    "vol": 3050,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수능떡",
-   "vol": 3030,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오브제화환",
+   "kw": "일회용용기",
    "vol": 3020,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장난감매장",
-   "vol": 2960,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자장갑",
-   "vol": 2940,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스무드등",
-   "vol": 2940,
+   "kw": "락앤락쌀통",
+   "vol": 3000,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "여자친구100일선물",
-   "vol": 2930,
+   "kw": "BOTTLE",
+   "vol": 2980,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자가죽장갑",
-   "vol": 2910,
+   "kw": "EVA실내화",
+   "vol": 2970,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사은품",
-   "vol": 2870,
+   "kw": "도시락용기",
+   "vol": 2950,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잡이",
-   "vol": 2850,
+   "kw": "미끄럼방지신발",
+   "vol": 2950,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아용품",
-   "vol": 2850,
+   "kw": "대형물통",
+   "vol": 2880,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "욕실용품",
+   "vol": 2860,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "본식부케",
+   "kw": "보온병추천",
+   "vol": 2860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보냉도시락가방",
    "vol": 2810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피크닉도시락",
+   "vol": 2770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아퍼즐",
+   "vol": 2720,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "밍크이불",
-   "vol": 2790,
-   "comp": "높음",
+   "kw": "쉐이커보틀",
+   "vol": 2700,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "연말선물",
-   "vol": 2760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소량인쇄",
-   "vol": 2730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조카돌선물",
-   "vol": 2680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캠핑러그",
+   "kw": "소마큐브",
    "vol": 2680,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "트리장식",
-   "vol": 2670,
+   "kw": "스텐도시락",
+   "vol": 2540,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "서포터즈",
-   "vol": 2660,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌답례품수건",
-   "vol": 2600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신혼부부커플잠옷",
-   "vol": 2560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "헤스트라",
-   "vol": 2550,
+   "kw": "플라스틱통",
+   "vol": 2540,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "메달제작",
+   "kw": "THERMOS",
+   "vol": 2530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쉐이크통",
    "vol": 2500,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여성슬리퍼",
+   "vol": 2480,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기념품샵",
+   "kw": "라면용기",
    "vol": 2470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기영양제",
-   "vol": 2410,
+   "kw": "화장실슬리퍼",
+   "vol": 2430,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스리스만들기",
-   "vol": 2400,
+   "kw": "실리콘물병",
+   "vol": 2350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명품향수",
-   "vol": 2400,
+   "kw": "보온통",
+   "vol": 2340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스선물추천",
-   "vol": 2320,
+   "kw": "학교슬리퍼",
+   "vol": 2330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "레이저각인",
-   "vol": 2320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아출산선물",
+   "kw": "교보재",
    "vol": 2310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잔치수건",
+   "kw": "서울대굿즈샵",
    "vol": 2300,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스트리만들기",
+   "kw": "일회용도시락용기",
    "vol": 2290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홍보물",
+   "kw": "블렌더보틀",
    "vol": 2290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "팝튜브",
-   "vol": 2290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식소품",
-   "vol": 2270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아유산균",
-   "vol": 2270,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "디자이너브랜드가방",
+   "kw": "텀블러브랜드",
    "vol": 2270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스스티커",
-   "vol": 2230,
+   "kw": "보틀주문제작",
+   "vol": 2240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "임신출산육아대백과",
-   "vol": 2230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기목걸이",
-   "vol": 2210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스용품",
-   "vol": 2200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주문제작",
-   "vol": 2200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "16인치자전거",
+   "kw": "자전거물통",
    "vol": 2170,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "네발자전거",
-   "vol": 2140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아유산균비타민D",
-   "vol": 2140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플잠옷세트",
+   "kw": "아기젖병",
    "vol": 2140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "팔순답례품",
-   "vol": 2100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신혼부부집들이선물",
+   "kw": "샐러드배달",
    "vol": 2070,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기미아방지목걸이",
-   "vol": 2060,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기유산균비타민D",
+   "kw": "배달도시락",
    "vol": 2050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실리콘도시락",
+   "vol": 2020,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "두돌아기선물",
+   "kw": "푹신한슬리퍼",
    "vol": 2000,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "삐뽀삐뽀119이유식",
-   "vol": 2000,
+   "kw": "미끄럼방지슬리퍼",
+   "vol": 1990,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기책",
-   "vol": 1980,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두돌선물",
+   "kw": "휴대용텀블러",
    "vol": 1970,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명품구두",
-   "vol": 1950,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "양털담요",
-   "vol": 1940,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친구선물",
-   "vol": 1930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집크리스마스선물",
-   "vol": 1900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스데코",
+   "kw": "욕실미끄럼방지",
    "vol": 1890,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스텐레스욕실선반",
+   "vol": 1880,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "냉장고물병",
+   "vol": 1880,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캠핑물통",
+   "vol": 1880,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피선물세트",
-   "vol": 1860,
+   "kw": "내열유리",
+   "vol": 1870,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오란다답례품",
-   "vol": 1860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학교입학선물",
+   "kw": "스펙트라젖병",
    "vol": 1850,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리오너먼트",
-   "vol": 1850,
+   "kw": "텀블러파우치",
+   "vol": 1840,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명품가방쇼핑몰",
-   "vol": 1830,
+   "kw": "THERMOS텀블러",
+   "vol": 1820,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수제그래놀라",
-   "vol": 1780,
-   "comp": "높음",
+   "kw": "보냉텀블러",
+   "vol": 1810,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스만들기",
+   "kw": "마인크래프트자석블럭",
+   "vol": 1800,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "프로틴쉐이커",
+   "vol": 1790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "삼선슬리퍼",
+   "vol": 1790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스텐보온도시락",
    "vol": 1760,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플파자마",
+   "kw": "원목화분받침대",
    "vol": 1760,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3만원대선물",
-   "vol": 1720,
+   "kw": "수능보온도시락추천",
+   "vol": 1750,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "13개월아기발달",
-   "vol": 1710,
+   "kw": "아이스박스추천",
+   "vol": 1730,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "블럭장난감",
+   "vol": 1700,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성향수",
-   "vol": 1670,
+   "kw": "대용량보온도시락",
+   "vol": 1660,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "담요제작",
-   "vol": 1670,
-   "comp": "높음",
+   "kw": "미니아이스박스",
+   "vol": 1650,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "6개월아기선물",
+   "kw": "써모스도시락",
    "vol": 1640,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "각인선물",
+   "kw": "슬리퍼추천",
    "vol": 1620,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이방꾸미기",
-   "vol": 1620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기선물",
+   "kw": "락앤락물병",
    "vol": 1600,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "화장실바닥매트",
+   "vol": 1590,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "일회용포장용기",
+   "vol": 1570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자친구크리스마스선물",
+   "kw": "슬리퍼거치대",
    "vol": 1550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "블랑켓",
+   "kw": "여성실내슬리퍼",
+   "vol": 1550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헬스물통",
+   "vol": 1550,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "락앤락보온병",
    "vol": 1540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서울이색체험",
-   "vol": 1530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스포토존",
+   "kw": "국산텀블러",
    "vol": 1520,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "20대남자친구생일선물",
+   "kw": "미끄럼방지욕실화",
    "vol": 1510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스마트폰터치장갑",
-   "vol": 1510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기전집",
-   "vol": 1510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명함제작업체",
-   "vol": 1500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엄마생신선물",
-   "vol": 1500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실내식물",
-   "vol": 1490,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "리스만들기",
+   "kw": "샐러드구독",
+   "vol": 1510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니보온병",
+   "vol": 1510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴대용물병",
+   "vol": 1510,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "락앤락도시락",
+   "vol": 1510,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "김밥도시락",
    "vol": 1490,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "2만원대선물",
+   "kw": "쌓기나무",
    "vol": 1480,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "찜질방데이트",
-   "vol": 1480,
+   "kw": "일회용도시락",
+   "vol": 1470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아비타민D유산균",
-   "vol": 1480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌아기유산균",
+   "kw": "반찬용기",
    "vol": 1450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스텐보온병",
+   "vol": 1440,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "어버이날선물",
+   "kw": "소프트블럭",
    "vol": 1440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자친구크리스마스선물",
+   "kw": "이유식보온통",
    "vol": 1420,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "4살장난감",
-   "vol": 1410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5살장난감",
+   "kw": "텀블러각인",
    "vol": 1400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "조카백일선물",
-   "vol": 1400,
+   "kw": "유아도시락통",
+   "vol": 1390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자석블록",
+   "vol": 1380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "4살여아선물",
+   "kw": "점심도시락배달",
+   "vol": 1380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "등산도시락",
+   "vol": 1380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기빨대컵",
    "vol": 1370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "산타모자",
-   "vol": 1360,
+   "kw": "욕실정리함",
+   "vol": 1370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연말선물추천",
-   "vol": 1350,
+   "kw": "써머스",
+   "vol": 1320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리꾸미기",
-   "vol": 1350,
+   "kw": "키네틱아트",
+   "vol": 1320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "로봇장난감",
-   "vol": 1330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스꾸미기",
-   "vol": 1330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "20만원대선물",
-   "vol": 1310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주말데이트",
+   "kw": "자석큐브",
    "vol": 1300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "드시모네유산균베이비",
-   "vol": 1290,
-   "comp": "높음",
+   "kw": "아이스백",
+   "vol": 1300,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유치원선물",
-   "vol": 1290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남아돌선물",
-   "vol": 1280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플스파",
-   "vol": 1280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신혼집집들이선물",
+   "kw": "샐러드배송",
    "vol": 1270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "5살여아선물",
-   "vol": 1260,
+   "kw": "진공보온병",
+   "vol": 1270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등학생크리스마스선물",
-   "vol": 1240,
-   "comp": "높음",
+   "kw": "스테인리스텀블러",
+   "vol": 1250,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스구디백",
-   "vol": 1240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌수건",
-   "vol": 1240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치답례품수건",
-   "vol": 1240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소파덮개",
-   "vol": 1230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5살선물",
-   "vol": 1230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "30만원대선물",
-   "vol": 1230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자명품운동화",
-   "vol": 1220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스머리띠",
-   "vol": 1220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "킨더마켓",
+   "kw": "하바",
    "vol": 1210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "욕실수납선반",
+   "vol": 1190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "욕실수납",
+   "vol": 1190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주식회사지원",
+   "vol": 1190,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "4살선물",
-   "vol": 1200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공룡그림",
-   "vol": 1200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여아돌선물",
-   "vol": 1190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "액상유산균",
-   "vol": 1190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이선물",
+   "kw": "양말추천",
    "vol": 1180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "겨울선물",
-   "vol": 1180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "10만원대선물",
-   "vol": 1180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3살선물",
-   "vol": 1170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5살남아선물",
-   "vol": 1170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아목걸이",
-   "vol": 1160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이목걸이",
-   "vol": 1160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남편크리스마스선물",
+   "kw": "TKLH-1500",
    "vol": 1150,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "부모님크리스마스선물",
+   "kw": "접이식물통",
    "vol": 1140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "센스있는집들이선물",
-   "vol": 1140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2살선물",
-   "vol": 1130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조카100일선물",
-   "vol": 1130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자명품구두",
-   "vol": 1130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스포장지",
-   "vol": 1120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "첫돌선물",
-   "vol": 1120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고속터미널크리스마스",
-   "vol": 1120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스풍선",
-   "vol": 1120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기사운드북",
-   "vol": 1120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "3살책",
-   "vol": 1120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2살아기선물",
-   "vol": 1110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3살여아선물",
-   "vol": 1110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쇼파블랭킷",
-   "vol": 1100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기은목걸이",
+   "kw": "정기도시락",
    "vol": 1100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기팔찌",
-   "vol": 1090,
+   "kw": "사보타지보드게임",
+   "vol": 1100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3만원대선물세트",
-   "vol": 1090,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이유산균",
+   "kw": "욕실실내화",
    "vol": 1080,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "창문트리",
-   "vol": 1070,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스인테리어",
-   "vol": 1060,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "콜드크림",
-   "vol": 1060,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스만들기키트",
+   "kw": "락앤락물통",
    "vol": 1050,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "40대크리스마스선물",
-   "vol": 1050,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아내크리스마스선물",
-   "vol": 1045,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스노우볼만들기",
-   "vol": 1040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기돌목걸이",
-   "vol": 1040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스인형",
-   "vol": 1040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울데이트",
+   "kw": "욕실디스펜서",
    "vol": 1030,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바디건조기",
+   "kw": "고급도시락",
    "vol": 1020,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "6살여아선물",
+   "kw": "가죽슬리퍼",
    "vol": 1010,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아책",
-   "vol": 1010,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미아방지은목걸이",
+   "kw": "좁은현관신발장",
    "vol": 1000,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "돌아기책",
-   "vol": 1000,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친구크리스마스선물",
-   "vol": 1000,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "50대크리스마스선물",
-   "vol": 995,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "순금선물",
-   "vol": 990,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미아방지",
+   "kw": "20온즈",
    "vol": 990,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기백일선물추천",
+   "kw": "시계추천",
    "vol": 990,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "생활용품도매",
-   "vol": 980,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비건샴푸",
-   "vol": 980,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "산모애샴푸",
-   "vol": 980,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "명품여성로퍼",
+   "kw": "1단서랍장",
    "vol": 980,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명절선물세트",
+   "kw": "일회용기",
    "vol": 970,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "조카돌잔치선물",
+   "kw": "행사도시락",
    "vol": 960,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "드시모네베이비",
-   "vol": 960,
+   "kw": "매일도시락배달",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비화식",
+   "vol": 950,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유치원졸업선물",
+   "kw": "도시락통추천",
+   "vol": 950,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "과일도시락통",
    "vol": 940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "도시락업체",
+   "vol": 920,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "7세여아선물",
-   "vol": 940,
+   "kw": "유아체육교구",
+   "vol": 920,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기스티커북",
-   "vol": 940,
+   "kw": "써모스텀블러350",
+   "vol": 920,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "써모스미니텀블러",
+   "vol": 920,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수학책",
-   "vol": 940,
-   "comp": "높음",
+   "kw": "등산보온병",
+   "vol": 920,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "친구돌잔치선물",
-   "vol": 930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일아기선물",
-   "vol": 930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기프트몰",
-   "vol": 930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보온장갑",
-   "vol": 930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2주년선물",
-   "vol": 930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이직선물",
-   "vol": 910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "4살남아선물",
-   "vol": 910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "6세여아선물",
-   "vol": 910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기념일선물추천",
-   "vol": 910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캠핑장갑",
+   "kw": "조노돔",
    "vol": 910,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신혼집들이선물",
+   "kw": "욕실수건선반",
    "vol": 900,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "시흥꽃집",
+   "kw": "라디오추천",
    "vol": 900,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스컵",
+   "kw": "보냉병",
    "vol": 890,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "1000일선물",
+   "kw": "편한슬리퍼",
    "vol": 880,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "추석선물추천",
+   "kw": "선불교통카드",
    "vol": 880,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스엽서",
+   "kw": "캐릭터텀블러",
    "vol": 870,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자명품선물",
+   "kw": "실링용기",
    "vol": 870,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남성장갑",
-   "vol": 870,
-   "comp": "높음",
+   "kw": "자석장난감",
+   "vol": 860,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스토퍼",
-   "vol": 870,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리렌탈",
+   "kw": "트라이탄보틀",
    "vol": 860,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "입덧음식",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기동화책",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셀티아이베이비",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "선물용쿠키",
+   "kw": "발등낮은욕실화",
    "vol": 850,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스초",
+   "kw": "쿠션실내화",
    "vol": 850,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "힐링데이트",
-   "vol": 840,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기저귀크림",
-   "vol": 840,
+   "kw": "트라이탄텀블러",
+   "vol": 850,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "육아템",
+   "kw": "루첸텀블러",
    "vol": 840,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "환갑꽃다발",
+   "kw": "서펜티나",
    "vol": 830,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "프로포즈꽃",
-   "vol": 830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스키링",
+   "kw": "나무블럭",
    "vol": 820,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "꾸러미",
-   "vol": 820,
-   "comp": "중간",
+   "kw": "트라이탄물통",
+   "vol": 810,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "엉덩이땀띠",
-   "vol": 820,
-   "comp": "중간",
+   "kw": "출석부",
+   "vol": 810,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기유산균추천",
+   "kw": "도시락구독",
    "vol": 800,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌아기비타민D",
+   "kw": "화장실수납",
    "vol": 800,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명품샵",
+   "kw": "미니블럭",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜도시락",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "써모스텀블러500",
    "vol": 790,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아수학",
-   "vol": 790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남성가죽장갑",
+   "kw": "욕실악세사리",
    "vol": 780,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홀리데이에디션",
+   "kw": "PET필름",
    "vol": 780,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리리본",
+   "kw": "캠핑용물통",
    "vol": 780,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자겨울장갑",
-   "vol": 780,
-   "comp": "높음",
+   "kw": "욕실화추천",
+   "vol": 770,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스모루",
-   "vol": 780,
-   "comp": "높음",
+   "kw": "써모스물병",
+   "vol": 770,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "육아정보",
-   "vol": 780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스DIY",
+   "kw": "24OZ",
    "vol": 770,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스오브제",
+   "kw": "유아자석블럭",
    "vol": 770,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3살남아선물",
-   "vol": 770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교수님선물",
-   "vol": 770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두돌아기책",
+   "kw": "아기블럭",
    "vol": 760,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌아기전집",
-   "vol": 760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명품슬리퍼",
-   "vol": 760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1살아기선물",
-   "vol": 750,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스카드만들기",
+   "kw": "아치실내화",
    "vol": 740,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "6살남아선물",
+   "kw": "프랙탈구조",
    "vol": 730,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "터치장갑",
-   "vol": 730,
-   "comp": "높음",
+   "kw": "클린켄틴",
+   "vol": 720,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "은퇴선물",
+   "kw": "아동퍼즐",
    "vol": 720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서울찜질방데이트",
+   "kw": "족저근막슬리퍼",
    "vol": 720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홀리데이컬렉션",
+   "kw": "워터보틀",
    "vol": 720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리만들기",
+   "kw": "욕실슬라이딩장",
    "vol": 710,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스케이크만들기",
+   "kw": "500ML텀블러",
    "vol": 700,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "5세여아선물",
+   "kw": "유아슬리퍼",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이소일회용도시락용기",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "욕실수납함",
    "vol": 690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스창문스티커",
+   "kw": "가죽실내화",
+   "vol": 690,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "지오보드",
    "vol": 690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "6세남아선물",
+   "kw": "어린이물병",
    "vol": 680,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명함주문제작",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌아기책추천",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임신축하꽃",
+   "kw": "병원실내화",
    "vol": 670,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "뜨개질DIY",
-   "vol": 670,
-   "comp": "높음",
+   "kw": "돈까스용기",
+   "vol": 660,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "동화책추천",
-   "vol": 670,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "14K미아방지목걸이",
+   "kw": "플라스틱병",
    "vol": 660,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스마트폰장갑",
-   "vol": 660,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리그림",
+   "kw": "등산물병",
    "vol": 650,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "30대여자생일선물추천",
+   "kw": "스포츠물병",
+   "vol": 650,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈텀블러",
    "vol": 650,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명품부츠",
+   "kw": "숫자퍼즐",
    "vol": 640,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈목걸이",
+   "kw": "빨대물병",
    "vol": 640,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "쌍둥이선물",
+   "kw": "예쁜텀블러",
+   "vol": 630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "홈슬리퍼",
    "vol": 630,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "첫월급선물",
-   "vol": 630,
-   "comp": "높음",
+   "kw": "마이리틀타이거블럭",
+   "vol": 620,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스모자",
-   "vol": 630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스볼",
-   "vol": 630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집크리스마스행사",
-   "vol": 630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실버미아방지목걸이",
+   "kw": "화장실정리대",
    "vol": 620,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신혼부부잠옷",
-   "vol": 620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "40대와이프생일선물",
+   "kw": "자석놀이",
    "vol": 610,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "사슴가죽장갑",
-   "vol": 610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두피간지러움",
-   "vol": 610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자친구연말선물",
-   "vol": 605,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌지난아기선물",
-   "vol": 600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "축영전",
-   "vol": 600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한글놀이",
-   "vol": 600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조카선물",
-   "vol": 600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "24개월장난감",
+   "kw": "어린이집빨대컵",
    "vol": 600,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "드롭유산균",
+   "kw": "아기욕실화",
    "vol": 600,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자친구연말선물",
-   "vol": 595,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "200일아기선물",
+   "kw": "써모스도시락통",
    "vol": 590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "두돌여아선물",
-   "vol": 590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "시트러스향수",
+   "kw": "4D프레임",
    "vol": 590,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "8개월아기선물",
+   "kw": "논슬립슬리퍼",
    "vol": 590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "둘째출산선물",
-   "vol": 590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스키트",
+   "kw": "텀블러꾸미기",
    "vol": 580,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수학동화",
+   "kw": "낮은욕실슬리퍼",
    "vol": 580,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유치원크리스마스선물",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아선물",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기은팔찌",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스양말주머니",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "출산산모선물",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자아기돌선물",
-   "vol": 560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5개월아기선물",
-   "vol": 560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리리본",
-   "vol": 560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리별",
-   "vol": 560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책육아",
-   "vol": 560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "7살남아선물",
-   "vol": 560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "FED유산균",
-   "vol": 550,
+   "kw": "학생실내화",
+   "vol": 580,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "헤스트라매장",
-   "vol": 550,
+   "kw": "화장실정리함",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발열용기",
+   "vol": 580,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "잠옷쇼핑몰",
+   "kw": "철제화분받침대",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지원팩",
+   "vol": 570,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "써모스컵",
    "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스소품샵",
+   "kw": "텀플러",
    "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "두꺼운고무장갑",
-   "vol": 550,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "3만원선물",
+   "kw": "화장실실내화",
    "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니보온도시락",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "써모스머그컵",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이스박스파는곳",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경욕실화",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코스모스보온병",
+   "vol": 530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "발열제",
+   "vol": 530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "휴대용물통",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "낮은욕실화",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장지걸이",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안미끄러운슬리퍼",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이유식보냉가방",
+   "vol": 520,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "5세남아선물",
-   "vol": 540,
+   "vol": 520,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "7세남아선물",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기엄마선물",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기그림책",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명품장갑",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식품",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5세장난감",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마니또선물",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스모빌",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "출산선물세트",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "향수사이트",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "6개월아기유산균",
+   "kw": "보온보냉병",
    "vol": 510,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "집들이선물세트",
+   "kw": "무지선반",
+   "vol": 510,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "전동쉐이커",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내화추천",
    "vol": 500,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "겨울방한장갑",
+   "kw": "화장실서랍장",
    "vol": 500,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아미아방지목걸이",
+   "kw": "예쁜도시락통",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러스티커",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아블럭",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냉면용기",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명품텀블러",
    "vol": 490,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자아기돌선물",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스수건",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "배너주문제작",
-   "vol": 480,
+   "kw": "다이소욕실슬리퍼",
+   "vol": 490,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스트리풀세트",
-   "vol": 480,
+   "kw": "써모스보온병500",
+   "vol": 490,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이팔찌",
-   "vol": 480,
+   "kw": "플라스틱텀블러",
+   "vol": 490,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "곤충도감",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스단체선물",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오란다선물세트",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스집꾸미기",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장갑추천",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백화점선물",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쌍둥이출산선물",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베이비유산균",
-   "vol": 460,
+   "kw": "등산용보온병",
+   "vol": 490,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "이케아크리스마스장식",
-   "vol": 460,
+   "kw": "대형보온병",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러답례품",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슬림퍼",
+   "vol": 470,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남성겨울장갑",
+   "kw": "고급도시락용기",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "직장인도시락통추천",
    "vol": 460,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인턴퇴사선물",
+   "kw": "원목블럭",
    "vol": 460,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "화이트데이선물",
-   "vol": 455,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "4세여아선물",
+   "kw": "찬합도시락",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일회용도시락통",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자석블럭추천",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "클린켄틴텀블러",
    "vol": 450,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스워터볼",
+   "kw": "샐러드정기구독",
    "vol": 450,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기용품선물",
+   "kw": "족저근막염아치슬리퍼",
    "vol": 450,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "의류도매",
+   "kw": "아이스쿨러백",
    "vol": 450,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고급선물",
-   "vol": 450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아유산균추천",
-   "vol": 450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기종합영양제",
-   "vol": 450,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "병문안꽃",
+   "kw": "초등학생물병",
    "vol": 440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기미아방지팔찌",
+   "kw": "슬리퍼걸이",
    "vol": 440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베럴향수",
-   "vol": 430,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기교구",
-   "vol": 430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티용품",
+   "kw": "화장실용품",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3살아기선물",
+   "kw": "리유저블텀블러",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명품가방사이트",
+   "kw": "이케아욕실선반",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "회사퇴사선물",
+   "kw": "플라스틱물병",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "포항이동꽃집",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "루돌프머리띠",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스시트지",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "내친구호비",
+   "kw": "철제바스켓",
    "vol": 420,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "어버이날선물추천",
+   "kw": "조립장난감",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수원도시락",
    "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스오너먼트만들기",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아써지컬목걸이",
+   "kw": "욕실화걸이",
    "vol": 410,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "6개월아기책",
+   "kw": "원터치보온병",
    "vol": 400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "7개월아기유산균",
+   "kw": "등산물통",
    "vol": 400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "7살생일선물",
+   "kw": "대형주사위",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도시락포장용기",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "향수편집샵",
+   "kw": "PA젖병",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "향수직구",
+   "kw": "흡착식욕실선반",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "감성캠핑용품",
+   "kw": "모던우산꽂이",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명품선물",
+   "kw": "플라스틱물통",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브릭쿨코리아",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "루돌프코스프레",
+   "kw": "도시락박스",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "산타양말",
+   "kw": "지오맥",
+   "vol": 380,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커스텀텀블러",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헬스물병",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자석소마큐브",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스리스DIY",
+   "kw": "화장실거울수납장",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "양가죽장갑",
+   "kw": "아기자석장난감",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실용적인선물",
+   "kw": "자전거물병",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빅블럭",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미끄럼방지실내화",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용혈당측정기",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "은박도시락",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보틀제작",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "회포장용기",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보틀샵",
+   "vol": 370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "비스프리",
+   "vol": 370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "텀블러사이트",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "루돌프코",
+   "kw": "실내화슬리퍼",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오너먼트만들기",
+   "kw": "대형젠가",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스퍼즐",
+   "kw": "업소용물병",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시에르핀스키삼각형",
+   "vol": 360,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유아욕실화",
    "vol": 350,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "결혼식답례",
+   "kw": "돈까스도시락",
    "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "10개월아기선물",
+   "kw": "욕실용품정리",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스트로우텀블러",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러선물",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일체형보온도시락",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스쇼핑백",
+   "kw": "빨대물통",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "임신축하",
+   "kw": "욕실서랍장",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "숫자놀이",
+   "kw": "도시락포장",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "알파벳발음",
+   "kw": "큐볼루션",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스선물순위",
-   "vol": 335,
+   "kw": "돈까스포장",
+   "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "꽃다발케이크",
-   "vol": 330,
+   "kw": "오보틀",
+   "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잡이책",
+   "kw": "나노블록",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슬리퍼정리대",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알루미늄컵",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자석큐브블럭",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "욕실미끄럼방지슬리퍼",
    "vol": 330,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스DIY키트",
+   "kw": "도시락케이스",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리용품",
+   "kw": "완구점",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이챌린지호비",
-   "vol": 330,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아비타민",
+   "kw": "소프트블록",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자아기선물",
+   "kw": "소근육장난감",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫도그트레이",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도시락정기배달",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "향수선물",
+   "kw": "논슬립욕실화",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미니트리만들기",
+   "kw": "스포츠물통",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무실이전선물",
+   "kw": "포디프레임",
+   "vol": 320,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "참치포장",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "4세장난감",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아그림책",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스답례품",
+   "kw": "거름망텀블러",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퇴사자선물",
+   "kw": "어린이보온도시락",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패턴블럭",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돈까스접시",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스포츠텀블러",
    "vol": 310,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "미아방지은팔찌",
+   "kw": "1회용용기",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신기한장난감",
+   "kw": "접이식물병",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소전집",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수능선물마카롱",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영어교구",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이크리스마스선물",
-   "vol": 300,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "5살여자아이선물",
+   "kw": "베이비브랜드",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전통굿즈",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스굿즈",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테라리움DIY",
+   "kw": "베란다슬리퍼",
    "vol": 300,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스문장식",
+   "kw": "욕실신발",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스비즈",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두돌전집",
+   "kw": "곰서방도시락",
    "vol": 300,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "4개월아기선물",
+   "kw": "욕실수납장선반",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베이비몬테소리교구",
+   "kw": "원터치물병",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3세여아선물",
+   "kw": "1리터보온병",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러인쇄",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "울트라씬",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜일회용도시락용기",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패턴블록",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보틀물병",
+   "vol": 300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "보틀파우치",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "배달도시락용기",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "졸업식꽃",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생목걸이",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이생일선물",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스미니어처",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친구임신축하선물",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원입학선물",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "4세남아선물",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동목걸이",
-   "vol": 270,
+   "kw": "아기드링킹컵",
+   "vol": 290,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "돌애기선물",
+   "kw": "스탠텀블러",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실화거치대",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "배달포장용기",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "철제정리함",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보틀판촉물",
+   "vol": 285,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블록장난감",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리유저블컵제작",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "클린캔틴",
+   "vol": 280,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "푹신한실내화",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "락앤락보온물병",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원목실내화거치대",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수학사랑쇼핑몰",
+   "vol": 280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "젖병소재물병",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플라스틱욕실장",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "KLEANKANTEEN",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기가루유산균",
+   "kw": "헤겐올라운더컵",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "6살여자아이선물",
+   "kw": "정기도시락배달",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "투명물병",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플라스틱보틀",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플라스틱포장용기",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블록놀이",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "욕실선반3단",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대학입학선물",
+   "kw": "EVA욕실화",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스츄리",
+   "kw": "키친아트보온병",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자아이선물",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3세여아장난감",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스택",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자명품선물",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "7살여자아이선물",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스목도리",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "8세여아선물",
+   "kw": "대형블럭",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자아기선물",
+   "kw": "욕실청소도구정리",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잡이전집",
+   "kw": "화장실선반장",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "레이저인쇄",
+   "kw": "보온도시락통추천",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "겨울만들기",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강남꽃도매상가",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이사집들이선물",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다이소크리스마스소품",
+   "kw": "아기블록",
    "vol": 250,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "여자애기선물",
+   "kw": "일식도시락",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "따뜻한장갑",
+   "kw": "3칸도시락",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영어전집",
+   "kw": "임호텝",
    "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영유아책",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수능응원마카롱",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스냅킨",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장난감",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5살생일선물",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "특별한생일선물",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식만들기",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "선물꾸러미",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이케아크리스마스소품",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조카생일선물",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5세남아생일선물",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "4세여아장난감",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "36개월장난감",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "18개월아기책",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스마트터치장갑",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집크리스마스",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "24개월아기선물",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남성선물",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "설선물세트",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목사님선물",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타장식",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동물카드",
-   "vol": 230,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마도바장갑",
-   "vol": 230,
+   "kw": "6살장난감",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장실신발",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "회사점심도시락",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "욕실정리선반",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보냉물병",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "호텔실내화",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5칸도시락용기",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3칸도시락용기",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지오픽스",
+   "vol": 240,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유아크리스마스선물",
-   "vol": 220,
+   "kw": "슬리퍼제작",
+   "vol": 240,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수학퍼즐",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑텀블러",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아보온병",
+   "vol": 230,
+   "comp": "중간",
    "hint": true
   },
   {
-   "kw": "아기크리스마스선물",
+   "kw": "안산도시락",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보온보냉물통",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "욕실청소도구함",
+   "vol": 230,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "5세생일선물",
+   "vol": 230,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유리보틀",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원터치용기",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "7세장난감",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "문에안걸리는욕실화",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "9개월아기선물",
+   "kw": "텀블러굿즈",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스봉투",
+   "kw": "아동욕실화",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "HESTRA",
+   "kw": "보온용기",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스테인레스물병",
    "vol": 220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스문구",
+   "kw": "초등장난감",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "산타머리띠",
+   "kw": "군대수료식선물",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스종이컵",
+   "kw": "돈가스용기",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "주일학교",
+   "kw": "2단도시락",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마켓더치",
+   "kw": "보틀병",
    "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유리병제작",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실링포장",
+   "vol": 210,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "여성명품구두",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스리본끈",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2살여아선물",
+   "kw": "트라이탄컵제작",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원예키트",
+   "kw": "감자탕용기",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "온가족샴푸",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친구돌선물",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "말놀이",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자아이선물",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자장갑선물",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디지털북",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "8개월아기유산균",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌아기교구",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이은팔찌",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학원크리스마스선물",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스선물세트",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "각인서비스",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자방한장갑",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장갑브랜드",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "생활용품도매사이트",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "4세남아장난감",
+   "kw": "블럭테이블",
    "vol": 200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "인터넷꽃시장",
+   "kw": "인천도시락",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러만들기",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "국산욕실화",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하바보드게임",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "투명보틀",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다회용용기",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피보온병",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "첫출근선물",
-   "vol": 190,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "졸업꽃",
-   "vol": 190,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "4살생일선물",
+   "kw": "작은보온병",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스대여",
+   "kw": "국산실내화",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스블럭",
+   "kw": "예쁜보냉백",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리소품",
+   "kw": "메쉬현수막",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이의뇌",
+   "kw": "HABA",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "닥터프로바",
+   "kw": "발열도시락용기",
    "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핫도그케이스",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "낮은슬리퍼",
+   "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스어린이집선물",
+   "kw": "목욕탕슬리퍼",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "6살선물",
+   "kw": "THERMOS보온병",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "실내슬리퍼추천",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "쌍둥이돌선물",
+   "kw": "텀블러종류",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스입체카드",
+   "kw": "디어커스누볼라",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "노래자랑현수막",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스무드등만들기",
+   "kw": "슬리퍼꽂이",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스귀걸이",
+   "kw": "1리터물통",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "삼각김밥도시락통",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "손잡이물병",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스소품만들기",
+   "kw": "스티로폼용기",
    "vol": 180,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "탁상용트리",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장갑선물",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울장갑추천",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "20개월아기책",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "20개월아기선물",
+   "kw": "욕실가구",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "4살여자아이선물",
+   "kw": "수원도시락배달",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키링제작업체",
+   "kw": "락앤락보온도시락통",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커플텀블러",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기업굿즈",
+   "kw": "텀블러소량제작",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌전집",
+   "kw": "6세남아장난감",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "칠순화분",
+   "kw": "예쁜슬리퍼",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여아목걸이",
+   "kw": "4칸도시락용기",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어르신생신선물",
+   "kw": "맥포머스브레인마스터",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌쟁이선물",
+   "kw": "낚시용의자",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "손주돌선물",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3개월아기선물",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스야외장식",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식업체",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "6세선물",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소리나는책",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "8개월아기책",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아람전집",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생여자선물",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄선물",
+   "kw": "GROSMIMI",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리용품",
+   "kw": "욕실타올걸이",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서울겨울데이트",
+   "kw": "빨대보온병",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아보리덤",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "설선물",
+   "kw": "미끄럼방지욕실슬리퍼",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리장식세트",
+   "kw": "샤바스욕실화",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리장식볼",
+   "kw": "아기욕실슬리퍼",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자친구옷선물",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "토이북",
+   "kw": "유아욕실슬리퍼",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애기팔찌",
-   "vol": 155,
+   "kw": "고급실내화",
+   "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "성탄절선물",
+   "kw": "블럭쌓기",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "철바구니",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물병주문제작",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "등산용물통",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "투명물통",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캐릭터욕실화",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애기100일선물",
+   "kw": "안양도시락",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이블럭",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물빠짐욕실화",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편안한슬리퍼",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마이리틀타이거블록",
    "vol": 150,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "추모꽃다발",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비누제작",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "700일선물",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영전선물",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스브로치",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스카드제작",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리가랜드",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "15개월아기책",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자30대선물",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이유식유산균",
+   "kw": "센스풋욕실화",
    "vol": 150,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "여자명품슬리퍼",
+   "kw": "이쁜모자",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "그래놀라다이어트",
+   "kw": "1회용도시락",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등크리스마스선물",
+   "kw": "욕실행거",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "따뜻한도시락",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "7살장난감",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프리미엄도시락용기",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "500ML물병",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스위스밀리터리텀블러",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형보온병",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아100일선물",
+   "kw": "안미끄러운욕실화",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "관엽화분",
+   "kw": "보온보냉",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이선물",
+   "kw": "실리콘슬리퍼",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스볼펜",
+   "kw": "보온보냉물병",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스양초",
+   "kw": "고등학생텀블러",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "메롤라장갑",
+   "kw": "욕실용품세트",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아하토이",
    "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "두돌여자아기선물",
+   "kw": "빅블록",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "10개월아기책",
+   "kw": "돈까스포장용기",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "만2세학습지",
+   "kw": "6칸도시락",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "몬테소리베이비",
+   "kw": "락앤락보틀",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파닉스카드",
+   "kw": "송년회현수막문구",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "만3세학습지",
-   "vol": 140,
+   "kw": "안산도시락배달",
+   "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기생일선물",
+   "kw": "욕실소품",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병원도시락",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가벼운보온병",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "써모스보냉병",
    "vol": 130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남자크리스마스선물",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대량생산",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두살아기선물",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "손녀백일선물",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리DIY",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리키트",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스포장스티커",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명품가죽장갑",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "HESTRA장갑",
+   "kw": "슈퍼라이노",
    "vol": 130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "출산용품세트",
+   "kw": "1회용도시락용기",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유치원친구생일선물",
+   "kw": "예쁜일회용도시락",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5칸도시락",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장난감블럭",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슬라이딩욕실수납장",
    "vol": 130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "9개월아기유산균",
-   "vol": 125,
+   "kw": "에코젠물병",
+   "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아배앓이유산균",
-   "vol": 125,
+   "kw": "500ML보틀",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스테인레스물통",
+   "vol": 130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유아생일선물",
+   "kw": "키친아트텀블러",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가블리트가블러즈",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "과일도시락용기",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "락앤락포켓텀블러",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "귀여운욕실화",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3살조카선물",
+   "kw": "정기배송도시락",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자친구크리스마스선물추천",
+   "kw": "센스풋",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리파는곳",
+   "kw": "EVA신발",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스파티소품",
+   "kw": "욕실청소도구정리함",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스용품도매",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스가렌더",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탁상트리",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여아생일선물",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "그래놀라답례품",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기소전집",
+   "kw": "돈가스도시락",
    "vol": 120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "성탄카드",
+   "kw": "소풍일회용도시락",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수입향수",
-   "vol": 110,
+   "kw": "4칸도시락",
+   "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "벽트리만들기",
-   "vol": 110,
+   "kw": "쿠션스툴",
+   "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "12개월아기선물",
-   "vol": 110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어린이집크리스마스선물추천",
-   "vol": 110,
+   "kw": "사각물병",
+   "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스선물포장지",
-   "vol": 110,
+   "kw": "과일포장상자",
+   "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영유아선물",
-   "vol": 110,
+   "kw": "독도뱃지",
+   "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자가죽장갑브랜드",
-   "vol": 110,
+   "kw": "뚜껑있는도자기그릇",
+   "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "5세선물",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아전집",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수학놀이",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집친구선물",
+   "kw": "스티로폼도시락",
    "vol": 110,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "고무장갑왼손",
+   "kw": "누볼라욕실화",
    "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성장갑추천",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명품샌들",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아프로바이오틱스",
-   "vol": 105,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "성남도시락",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장실욕실화",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "컵보온병",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동실내슬리퍼",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원프로그램",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알루미늄도시락",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜실내화",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이스툴",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에코젠보틀",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "운동물병",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미피블럭",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "점심구독",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도시락배달용기",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "서울도시락배달",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편한실내화",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "국산슬리퍼",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이쁜냄비",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "구슬놀이",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "구슬블럭",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "블록종류",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급슬리퍼",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국산물병",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "300ML보틀",
+   "vol": 100,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -4599,2613 +3585,3627 @@
    "hint": false
   },
   {
-   "kw": "남자애기선물",
+   "kw": "승화전사컵",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3세남아선물",
+   "kw": "자전거보냉물통",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연예인선물",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중년여성선물",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로고각인",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스포장봉투",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "승진축하메세지",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "발렌타인데이선물",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3살생일선물",
+   "kw": "짐월드",
    "vol": 100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "한살아기선물",
+   "kw": "녹차텀블러",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "겨울소품",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스미니장식",
+   "kw": "학원실내화",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자장갑추천",
+   "kw": "각인해주는곳",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "18개월아기유산균",
-   "vol": 100,
+   "kw": "욕실용품점",
+   "vol": 95,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "피엘라벤장갑",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "16개월아기책",
-   "vol": 100,
+   "kw": "돈까스도시락용기",
+   "vol": 95,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "24개월아기책",
-   "vol": 100,
+   "kw": "무지보틀",
+   "vol": 95,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "출산용품선물",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자친구명품선물",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명품플랫",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "당뇨시리얼",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기미아방지",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "키즈주얼리",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기액상유산균",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여아크리스마스선물",
+   "kw": "도시락정기구독",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "2돌선물",
+   "kw": "욕실슬리퍼추천",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "그래놀라선물세트",
+   "kw": "욕실용슬리퍼",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "축하오브제",
+   "kw": "써모스쿨러백",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "임원승진선물",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "야외크리스마스장식",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집크리스마스카드",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식인형",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스도매",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스케이크초",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용장갑",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "헤스트라가죽장갑",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아음악",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "천일선물",
+   "kw": "할리갈리링엘딩",
    "vol": 90,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "백일답례",
+   "kw": "어린이집블럭",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여아백일선물",
+   "kw": "스텐레스물병",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플라스틱도시락",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헥시아몬드",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "플라스틱케이스제작",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오더리삼각형",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아스툴",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학습준비물",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물병제작",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "북밴드제작",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종이컵도안",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이케아욕실화",
+   "vol": 85,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "고급욕실화",
    "vol": 85,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기오감놀이",
+   "kw": "거실화정리대",
+   "vol": 85,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "배달반찬용기",
    "vol": 85,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "조카크리스마스선물",
+   "kw": "신생아물품",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영아크리스마스선물",
+   "kw": "마이리틀타이거블럭테이블",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "하나원비즈",
+   "kw": "미끄럼방지화장실슬리퍼",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화장실미끄럼방지슬리퍼",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빅사이즈욕실화",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전통쇼핑백",
    "vol": 80,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "편백샴푸",
+   "kw": "유치원블럭",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전시회화환문구",
+   "kw": "브리스틀블럭",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리도매",
+   "kw": "소주잔만들기",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "눈사람모형",
+   "kw": "다회용도시락",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "도자기오너먼트",
+   "kw": "원목슬리퍼거치대",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "루돌프장식",
+   "kw": "교구사이트",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "산타소품",
+   "kw": "2칸도시락용기",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "산타스티커",
+   "kw": "학원슬리퍼",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3세선물",
+   "kw": "핫도그포장",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유치원크리스마스행사",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가죽장갑브랜드",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성양가죽장갑",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자명품장갑",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오트시리얼",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "딸임신선물",
-   "vol": 75,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "모야몽",
+   "kw": "목욕탕신발",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스어린이선물",
+   "kw": "오보틀텀블러",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "점심정기배송",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "7세크리스마스선물",
+   "kw": "옥수수컵",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자아이돌선물",
+   "kw": "욕실정리용품",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스장식세트",
+   "kw": "강남도시락정기배송",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종이컵소량제작",
+   "kw": "일회용보온도시락",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성의날선물",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "비건향수",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스케이크데코",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스오너먼트제작",
+   "kw": "블록놀이테이블",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "여자어린이선물",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조카두돌선물",
+   "kw": "오우투욕실화",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "장식전구",
+   "kw": "서머스",
    "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스디폼블럭",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스뱃지",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집입학선물",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "놀이교구",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사슴장갑",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일여아선물",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주방용고무장갑",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영유아전집",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스종이트리",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "결혼식답례선물",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기첫돌선물",
-   "vol": 65,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "자연유래샴푸",
-   "vol": 65,
+   "kw": "퀸센스보온병",
+   "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "비건샴푸추천",
-   "vol": 65,
+   "kw": "사진텀블러",
+   "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자친구명품선물",
-   "vol": 65,
+   "kw": "에코컵",
+   "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명품구두추천",
-   "vol": 65,
-   "comp": "중간",
+   "kw": "친환경물병",
+   "vol": 70,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아비즈목걸이",
+   "kw": "써모스텀블러각인",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가죽실내슬리퍼",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형블록",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사각도시락용기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음료보틀",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "투명도시락",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트라이탄보틀350",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일회용배달용기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생선구이포장용기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마니또선물3만원",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실링포장용기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PP실링용기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜욕실화",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남아목걸이",
+   "kw": "유아도시락싸기",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "4살크리스마스선물",
+   "kw": "4구도시락용기",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보온도시락용기",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "5살크리스마스선물",
+   "kw": "소형보온도시락",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "7살크리스마스선물",
+   "kw": "텀블러굿즈제작",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스학원선물",
+   "kw": "셈셈눈썰매장",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스목걸이",
+   "kw": "포장도시락",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스반지",
+   "kw": "이쁜슬리퍼",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자크리스마스선물",
+   "kw": "원형도시락용기",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "생화꽃목걸이",
+   "kw": "물통제작",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홀리데이선물",
+   "kw": "등산용물병",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스기념품",
+   "kw": "12면체",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "경품사이트",
+   "kw": "옷걸이주문제작",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "굿즈발주",
+   "kw": "에코보틀",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고속터미널꽃바구니",
+   "kw": "프라스틱물통",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어르신생일선물",
+   "kw": "1회용포장용기",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고모선물",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "판촉회사",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중학생크리스마스선물",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2세여아선물",
+   "kw": "식품보관용기",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스넥타이",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가게크리스마스장식",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니트리세트",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스세트",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스유리장식",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스풍선세트",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타선물",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스포장상자",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스선물주머니",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오메가장갑",
+   "kw": "하이퍼스페이스",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남자장갑브랜드",
+   "kw": "밀크보틀",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "플라스틱반찬용기",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "한글놀이교구",
+   "kw": "금속노조조끼",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "공구도매",
+   "kw": "일회용종이도시락",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장난감선물",
+   "kw": "보자기도매",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아놀이집",
+   "kw": "베이비보틀",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PS용기",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국산욕실슬리퍼",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미산성샴푸",
+   "kw": "페이퍼플레인욕실화",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "4살조카선물",
+   "kw": "777큐브",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "몬스터매스챌린지",
-   "vol": 55,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어린이집크리스마스단체선물",
+   "kw": "EDTOY",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스미니소품",
+   "kw": "350ML물병",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아람책",
+   "kw": "업소용이쑤시개",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "925은",
+   "kw": "대용량보틀",
    "vol": 55,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "6세크리스마스선물",
+   "kw": "깡총깡총아기토끼",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "점심구독서비스",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "6살크리스마스선물",
+   "kw": "고급실내슬리퍼",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "13개월아기선물",
+   "kw": "호텔욕실화",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "그래놀라선물",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장미선물",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "창원판촉물",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "손목시계제작",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "정품향수",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2살조카선물",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교회성탄장식",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스소품도매",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스카드DIY",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스연필",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스양말만들기",
+   "kw": "오우투",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스윈도우스티커",
+   "kw": "루첸스페셜기프트세트",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아동선물",
+   "kw": "보냉보온병",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여름실내화",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "두돌아기선물추천",
+   "kw": "어린이블록",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스노우볼주문제작",
+   "kw": "일회용보틀",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스라벨",
+   "kw": "9칸도시락용기",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성명품장갑",
+   "kw": "김밥도시락용기",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스교구",
+   "kw": "14온즈컵",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영유아도서",
+   "kw": "밀크텀블러",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "겨울여자장갑",
+   "kw": "나침반추천",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "답례커피",
+   "kw": "볶음밥용기",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스리스만들기재료",
+   "kw": "생선구이용기",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전시회꽃선물",
-   "vol": 45,
+   "kw": "10만원이내선물",
+   "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "성탄절데코",
-   "vol": 45,
+   "kw": "30년근속",
+   "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등학교구디백",
-   "vol": 45,
+   "kw": "스탬프집",
+   "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "6세아이선물",
-   "vol": 45,
+   "kw": "종이컵7온스",
+   "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영어유치원생일선물",
-   "vol": 45,
+   "kw": "배달음식용기",
+   "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3살아이선물",
+   "kw": "지오보드고무줄",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식포장박스",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젖병소재보틀",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "타이거블럭",
    "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "베이비레벨",
+   "kw": "클린칸틴",
    "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "엄마장갑",
+   "kw": "목욕슬리퍼",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유산균유아",
+   "kw": "소마블럭",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기도서",
+   "kw": "이케아욕실슬리퍼",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기유산균아연",
+   "kw": "고급큐브",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이악세사리",
+   "kw": "발등낮은슬리퍼",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3세크리스마스선물",
+   "kw": "곰팡이안생기는욕실화",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용보온도시락",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스위스밀리터리도시락",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가죽거실화",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자거실슬리퍼",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "롤릿",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "돈가스포장용기",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스텐보온컵",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3구도시락",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슬림보틀",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물병500ML",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "감자튀김트레이",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도장이미지제작",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급도시락통",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "EVA욕실슬리퍼",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3살크리스마스선물",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이들크리스마스선물",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "7세여아크리스마스선물",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스선물어린이집",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집크리스마스만들기",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스칸디아모스만들기",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소리펜",
+   "kw": "소마큐브워크북",
    "vol": 40,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스판촉물",
+   "kw": "리유저블컵주문제작",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자아기백일선물",
+   "kw": "리유저블텀블러제작",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기장난감선물",
+   "kw": "플라스틱도시락통",
    "vol": 40,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "독특한선물",
+   "kw": "도시락포장지",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스안경",
+   "kw": "욕실용품전문",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이크리스마스양말",
+   "kw": "7세교구",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스데코레이션",
+   "kw": "디저트통",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스선물어린이",
+   "kw": "도시락일회용기",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "성탄절카드",
+   "kw": "도시락일회용용기",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미트장갑",
+   "kw": "2칸도시락",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가죽장갑추천",
+   "kw": "7칸도시락",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "메롤라",
+   "kw": "스텐락스텐물병",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "36개월유산균",
+   "kw": "보틀용기",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "다회용도시락용기",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3세한글",
+   "kw": "보냉보온텀블러",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자20대선물",
+   "kw": "은티스푼",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스썬캐쳐",
+   "kw": "전자렌지일회용기",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3세영어",
+   "kw": "감자탕포장용기",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스아기선물",
+   "kw": "단체슬리퍼",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라텍스현수막",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스텐레이저각인",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핸드폰충전기타입",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜욕실슬리퍼",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이백일선물",
+   "kw": "타이거블록",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이집크리스마스구디백",
+   "kw": "마그넷블록스",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여친크리스마스선물",
+   "kw": "미끄러지지않는욕실화",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "30대남자크리스마스선물",
+   "kw": "도시락서비스",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3살동화책",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "돌잡이바나펜",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "한글전집",
+   "kw": "곰돌이욕실화",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자아기100일선물",
+   "kw": "욕실슬리퍼미끄럼방지",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "17개월아기유산균",
+   "kw": "목욕탕실내화",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "프라다선물",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌유산균",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두돌아기학습지",
+   "kw": "발리나욕실화",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기피부유산균",
+   "kw": "안걸리는욕실화",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무한대목걸이",
+   "kw": "화장실낮은슬리퍼",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈금목걸이",
+   "kw": "욕조슬리퍼",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이크리스마스선물",
-   "vol": 30,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "5세크리스마스선물",
-   "vol": 30,
+   "kw": "안미끄러지는욕실화",
+   "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스유아선물",
-   "vol": 30,
+   "kw": "베란다실내화",
+   "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스파티장식",
-   "vol": 30,
+   "kw": "써모스텀블러500ML",
+   "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스유치원선물",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "7세남아크리스마스선물",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "와이프크리스마스선물",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스여자친구선물",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메뉴판제작업체",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "착한선물",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장인어른생일선물",
-   "vol": 30,
+   "kw": "월식사",
+   "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스장식물",
+   "kw": "업소용도시락용기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "완구백화점",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유리컵만들기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2구도시락",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜도시락용기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급신발",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이쁜실내화",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "MYBOTTLE",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "단체도시락용기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트라이탄물병350",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트라이탄물병500ML",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초밥케이스",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도시락일회용",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에코물병",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이스보틀",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "7칸도시락용기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한국기념선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "우맛도",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "판촉물물병",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴대용스텐물병",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물병판촉물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "몰타의관문보드게임",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "밸런스빈즈",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "사무라이보드게임",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임호텝보드게임",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "튼튼한파우치",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1회용종이접시",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "각인물병",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용도시락",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주사위세트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식배달용기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디용품선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냉면포장용기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키양말도매",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "배달포장",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "원형찜용기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "논슬립욕실슬리퍼",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잡이맘",
+   "kw": "편한슬리퍼추천",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스어린이양말",
+   "kw": "큐블로리틀몬스터",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "디폼블럭크리스마스",
+   "kw": "스텐텀블러제작",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수면양말도매",
+   "kw": "숭실대학교기념품",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스대형가랜드",
+   "kw": "플라스틱도시락용기",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스선물꾸러미",
+   "kw": "6점도미노",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스스티커제작",
+   "kw": "공룡은보석을좋아해",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스실내장식",
+   "kw": "피크닉도시락용기",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리판매",
+   "kw": "교실환경구성",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아소전집",
+   "kw": "딤섬용기",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "발렌타인선물",
+   "kw": "기하판",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스선물가방",
+   "kw": "사출냉면용기",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아도서전집",
+   "kw": "도시락제작",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "귀마개만들기",
+   "kw": "서강대기념품",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미니크리스마스트리만들기",
+   "kw": "플라잉팬케이크",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "4세크리스마스선물",
+   "kw": "보틀로만텀블러",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "16온스투명컵",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슬리퍼로고",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경도시락용기",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑보조가방",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급거실실내화",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이성탄선물",
+   "kw": "미끄럽지않은욕실화",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에듀쉐이프",
+   "kw": "욕실미끄럼방지신발",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등여아크리스마스선물",
+   "kw": "3X3X3큐브",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "4살여아크리스마스선물",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이크리스마스선물추천",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스펜",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "30대여자크리스마스선물",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신기한선물",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "센스있는돌선물",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "회사선배선물",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3세아기선물",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스LED반지",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스선물유치원",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스선물학원",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스코사지",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스아동양말",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3세아이선물",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다섯살선물",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스선물초등",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스선물만들기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스소품장식",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두돌아기교육",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자아기100일선물",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명품가방선물",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스커플선물",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호비챌린지",
+   "kw": "잔츠큐브",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남자장갑선물",
+   "kw": "푹신한욕실화",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3살아기유산균",
+   "kw": "욕실실내화추천",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3세수학",
+   "kw": "국내산슬리퍼",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "그래놀라세트",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가정의달선물",
+   "kw": "국내산욕실화",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베이비클렌징워터",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아향수",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "닥터아돌베이비",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "손목시계주문제작",
+   "kw": "자연주의욕실화",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "답례품콜드브루",
+   "kw": "물때안끼는욕실화",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자50대선물",
+   "kw": "미끄럼방지욕실실내화",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영유아크리스마스선물",
+   "kw": "항균욕실화",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물잘빠지는욕실화",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조이매스소마큐브",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "200ML페트병",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소마큐브자석",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도시락주문제작",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥포머스브레인",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "포비든데저트",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "6살여자아이장난감",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6세남자아이선물",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인성교육자료",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "창의력장난감",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급물병",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스무디잔",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일회용도시락용기파는곳",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돈까스배달용기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1회용도시락통",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "과수원까마귀",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "녹차물병",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "예쁜거실실내화",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "욕실수납장전문",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돈까스트레이",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이보틀",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "김밥일회용도시락",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도시락팩",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "500보틀",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "탬플러",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "반찬도시락용기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "놀이쿠션",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블럭쿠션",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "350ML보틀",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "9칸도시락",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거름망물병",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트라이탄보틀주문제작",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보틀300",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5구도시락용기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도시락트레이",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일회용도시락케이스",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조노돔시스템",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물통주문제작",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "IP211",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "배달보온도시락",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반찬가게반찬통",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레오보드게임",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쌤쌤보드게임",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "토끼와거북이보드게임",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실슬리퍼",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "삼선쓰레빠",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "반찬배달용기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반찬케이스",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "DW-006",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "답례품당일",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대전에이플러스",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "변색우산",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생일선물주문제작",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집학부모선물",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "물병보틀",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "참치포장용기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식당포장용기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주문제작맥주잔",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안전실내화",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "큰솔스토밍",
+   "kw": "보온병제작",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "회장님선물",
+   "kw": "고급문진",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "행사용도시락",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하바게임",
    "vol": 20,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "가방굿즈제작",
+   "kw": "보온병비교",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "문구굿즈",
+   "kw": "교구구매",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전시회축하화환문구",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "선물상자장식",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "연말파티용품",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스쇼핑몰",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식도매",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스엽서제작",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명함셀프디자인",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스기프트",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남성양가죽장갑",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자가죽장갑추천",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화인기획",
+   "kw": "베스트현수막",
    "vol": 20,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스입체카드만들기",
+   "kw": "카페비품",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스카드만들기세트",
+   "kw": "도시락통제작",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "친구승진선물",
+   "kw": "양말짝맞추기",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "2살크리스마스선물",
-   "vol": 15,
+   "kw": "2단용기",
+   "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자아이크리스마스선물",
-   "vol": 15,
+   "kw": "8칸도시락용기",
+   "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "6세여아크리스마스선물",
-   "vol": 15,
+   "kw": "송파기프트",
+   "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "5세남아크리스마스선물",
-   "vol": 15,
+   "kw": "PSP도시락",
+   "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자아이크리스마스선물",
-   "vol": 15,
+   "kw": "고무판주문제작",
+   "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스아이선물",
-   "vol": 15,
+   "kw": "종이큐브",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "트라이탄보틀제작",
+   "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스여아선물",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "5살여아크리스마스선물",
-   "vol": 15,
+   "kw": "텀블러수입",
+   "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스장난감선물",
-   "vol": 15,
+   "kw": "안경케이스주문제작",
+   "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈카페블럭",
-   "vol": 15,
+   "kw": "25000원선물",
+   "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈카페용품",
-   "vol": 15,
+   "kw": "디지털소량인쇄",
+   "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영유아블럭",
-   "vol": 15,
+   "kw": "웰컴키트구성",
+   "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스학용품",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "3세블럭",
-   "vol": 15,
+   "kw": "입사선물세트",
+   "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남아크리스마스선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학교크리스마스선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기크리스마스선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "4세여자아이선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "4살남아크리스마스선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "4세남자아이선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "4세여아크리스마스선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종이컵소량인쇄",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스여자선물",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "편백수샴푸",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스여친선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "연인크리스마스선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스남자친구선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄절단체선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스연인선물",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "발령화분",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "판촉샵",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원생크리스마스선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스선물여자친구",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌꽃바구니",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노인생일선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "입택선물",
+   "kw": "TKFD-200",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "3살여아크리스마스선물",
+   "kw": "발등낮은욕실슬리퍼",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학교보온병",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "산타볼펜",
+   "kw": "EVA거실실내화",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "문에안걸리는슬리퍼",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "욕실화디어커스",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "친환경욕실슬리퍼",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "큐브쇼핑몰",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경슬리퍼",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "욕실화1+1",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다용도실슬리퍼",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "더살림욕실화",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "문안걸리는욕실화",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "호텔욕실슬리퍼",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소마큐브카드",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "욕실화290",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "280욕실화",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "욕실화물때",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "물때욕실화",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소마큐브보드게임",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나만의텀블러",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나만의텀블러만들기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반려견텀블러",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러로고각인",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "욕실화빅사이즈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "테이크아웃보틀",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "290욕실화",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "곰팡이없는욕실화",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스교회선물",
+   "kw": "원목소마큐브",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "두살선물",
+   "kw": "쌓기나무교재",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잡이스마트박스",
+   "kw": "소마큐브만들기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스선물유아",
+   "kw": "세종대기념품",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이성탄절선물",
+   "kw": "벽면교구",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이집크리스마스카드만들기",
+   "kw": "교육완구",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유치원크리스마스단체선물",
+   "kw": "휴대용혈당측정기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유치원크리스마스만들기",
+   "kw": "물수건업체",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스세일",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학원크리스마스행사",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스초등학생선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두돌교육",
+   "kw": "술용기",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "성탄스티커",
+   "kw": "배달용도시락",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "구구베베",
+   "kw": "자동차캘린더",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도시락용기6칸",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편의점도시락용기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형보냉병",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급일회용도시락",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꼬마큐브",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보드게임서펜티나",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반사현수막",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급호텔슬리퍼",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일회용도시락박스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조리사선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창의력교구",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마이보틀텀블러",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플라스틱상자제작",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트라이탄물병500",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4D랜드",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "동물병풍",
+   "kw": "단체물병",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수제장갑",
+   "kw": "도시락포장기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지오픽스정다면체",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블럭추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방산시장도시락용기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6구도시락용기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3구도시락용기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쌀국수용기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모양조각",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보틀350",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포장도시락용기",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "페커리가죽",
+   "kw": "교실환경미화",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "핸드메이드장갑",
+   "kw": "마이보틀주문제작",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "쌍둥이돌잔치선물",
+   "kw": "물병인쇄",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영아도서",
+   "kw": "주문제작물병",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자친구화이트데이선물",
+   "kw": "친환경보틀",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기명품선물",
+   "kw": "8칸도시락",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성명품샌들",
+   "kw": "큰발슬리퍼",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도시락실링기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PP도시락",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "각인물통",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물통각인",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식기제작",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식판형도시락",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헥사플렉스",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "각인손목시계",
+   "kw": "3칸포장용기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "몽스쿨",
+   "kw": "전자렌지포장용기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스꾸미기재료",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스모자만들기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스부직포가방",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "특별한선물세트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집겨울만들기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "몬테소리언어교구",
+   "kw": "한솥도시락용기",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "명품여자장갑",
+   "kw": "2칸포장용기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기주얼리",
+   "kw": "GD500-1",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "성탄절어린이선물",
+   "kw": "JH-2호",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원터치포장용기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물병공장",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보드게임사무라이",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "졸리앤로저",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "플라잉팬케이크보드게임",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "멜라민접시제작",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자제품도매",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강화유리판매",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안전용품구매",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "앨범판매점",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캐릭터명함꽂이",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조각케익포장",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코코도르추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페컵디자인",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일회용우동용기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "덮밥도시락용기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BD-001",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "슬리퍼도매",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "우드락도시락",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "찜포장용기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사은품텀블러",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피찌꺼기컵",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "플라스틱쿠키통",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "깃발출력",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "내열유리주문제작",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방산시장파우치",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시노글라스양념병",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일회용실링용기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반찬일회용기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보틀300ML",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "도자기그릇제작",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "토네이도텀블러",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이쁜욕실화",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강남병원도시락",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자석장난감만들기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "볼넓은욕실화",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "3세여아크리스마스선물",
+   "kw": "오우투슬리퍼",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실화제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이비슬리퍼",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "초등생크리스마스선물",
+   "kw": "보온병기념품",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스조카선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3살아기크리스마스선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자어린이크리스마스선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3살남아크리스마스선물",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "40대여자크리스마스선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "패키지선물",
+   "kw": "OHOO2",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "기프트7",
+   "kw": "문에안걸리는욕실슬리퍼",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발등낮은화장실슬리퍼",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퓨메노",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "루첸스테인레스이중머그",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "곰팡이욕실화",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "각인텀블러제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커스텀텀블러제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러소량인쇄",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러자체제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보온병각인",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "TEASCAFE",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "접시굿즈",
+   "kw": "친환경페트병",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "8세여아크리스마스선물",
+   "kw": "쌓기교구",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스선물목걸이",
+   "kw": "등산용보온물병",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신규입사자선물",
+   "kw": "빅사이즈욕실슬리퍼",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어버이날금선물",
+   "kw": "써모스텀블러제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물빠짐신발",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "선물대행",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "10살크리스마스선물",
+   "kw": "물잘빠지는슬리퍼",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "20대여자크리스마스선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성크리스마스선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "30대여자친구크리스마스선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "와이프크리스마스선물추천",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "20대여성크리스마스선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "40대여성크리스마스선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3살애기선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "의미있는선물추천",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생크리스마스단체선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5살어린이날선물",
+   "kw": "답례품락앤락텀블러",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "5세어린이날선물",
+   "kw": "무독성욕실화",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "6살어린이날선물",
+   "kw": "모델하우스실내화",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도시락용기업체",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도시락통도매",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름산행도시락",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도시락용기제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신세계기프트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자전거주문제작",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "7살어린이날선물",
+   "kw": "아동완구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1500원선물",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "크리스마스카드인쇄",
+   "kw": "광주게릴라현수막",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "교회학교현수막",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "중철수첩",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "컵홀더공장",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파카볼펜가격",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도시락통주문제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일회용피크닉도시락",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "롯데마트선물셋트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "피크닉일회용도시락",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "답례품보틀",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "보드게임슈퍼라이노",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파리채보드게임",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "해적들의징검다리",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "일회용도시락포장용기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물병주문",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경일회용도시락",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "런치박스제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PP도시락용기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헥서스디럭스",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트라이탄보틀500ML",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카네이션머그컵",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "포디블록",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자바라물병",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포디큐브",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "만원크리스마스선물",
+   "kw": "유아블록놀이",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영아생일선물",
+   "kw": "미니지오픽스",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블랜더보틀코리아",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5OZ종이컵",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보틀각인",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자석패턴블럭",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패턴블록스티커",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보틀인쇄",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "투명보틀제작",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "어린이집산타선물",
+   "kw": "보온병주문제작",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등학교5학년크리스마스선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스카드내용",
+   "kw": "5찬용기",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "크리스마스카드파는곳",
+   "kw": "단체급식용기",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "단체선물문구",
+   "kw": "거꾸로물병",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오르골도매",
+   "kw": "보틀도매",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등5학년크리스마스선물",
+   "kw": "오더리사각형",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스만들기재료",
+   "kw": "외교선물",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스카드재료",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기생일선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스카드봉투",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애인크리스마스선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스아내선물",
+   "kw": "어버이날머그컵",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "크리스마스특별한선물",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "엄마크리스마스선물",
+   "kw": "마이보틀제작",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "호비STEP5",
+   "kw": "PET보틀",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트라이탄제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "판촉물병",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "단체물통",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제작물병",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보틀판촉",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광주프랑카드",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보틀굿즈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보틀증정",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커스텀보틀",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "물통인쇄",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슈퍼포디프레임",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기념품보틀",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "에스기프트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "보틀소량제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식판제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트라이탄물병제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조노돔하이퍼스페이스",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3칸일회용도시락",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도시락박스제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제과포장용기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원카페트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텀블러제조",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "JH-2",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다용도컵70파이",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실링제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알루미늄일회용기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스트링아트시계",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "클린켄틴TK와이드",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "클린켄틴캐니스터",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "참치용기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보드게임레오",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "암호놀이",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "각인보틀",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "속지텀블러",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홍보용텀블러",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물병판촉",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보틀대량주문",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "멜라민접시인쇄",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일회용전자렌지",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자레인지일회용",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "배달일회용기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식점포장용기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식품종이포장지",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PP보틀",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보틀주문",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가스치환용기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "10주년기념문구",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "강화유리인쇄",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "노트북파우치사이트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "녹색어머니회복장",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "니켈뱃지",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대봉투1000장",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방산시장에코백",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베개프린팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슬로건업체",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지퍼백실크인쇄",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파카21만년필",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "105파이밥용기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주문제작보틀",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "만원대설선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수학교재교구",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "알약보틀",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남성가죽장갑추천",
+   "kw": "보틀공장",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "엘크가죽",
+   "kw": "마이보틀350ML",
    "vol": 10,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스선물장갑",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "해스트라",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "화이트데이선물추천",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "아기면역유산균",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "발렌타인데이선물추천",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "출산선물배달",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아동전집",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "그라놀로지선물세트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밸런타인데이선물",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "유아교육업체",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "생활용품도매시장",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "생활용품도매업체",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "감성판촉",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "와이프화이트데이선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성겨울장갑추천",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화이트데이반지",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "쎌티아이베이비",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스위빙",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스토퍼만들기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이크리스마스만들기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이미아방지",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공룡AR카드",
-   "vol": 10,
-   "comp": "낮음",
    "hint": false
   }
  ]
