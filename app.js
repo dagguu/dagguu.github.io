@@ -287,8 +287,8 @@ function thumb(it,cls){
   var s=statusOf(it), img=safeUrl(it.image), view=safeUrl(it.infUrl||it.viewUrl), pu="";
   var isNew=newOk() && (Date.now()-(it.createdAt||0))<864e5 && s.key!=="closed";
   return '<div class="th '+(cls||"")+(s.hot&&s.key==="open"?" hotth":"")+'">'+
-    /* 사진은 쿠팡 사진 보기로 (2026-11-07 시온님 "사진에는 무조건 다 쿠팡링크"), 쿠팡 링크 없거나 마감이면 상세 페이지 */
-    ((pu=s.key!=="closed"&&img?priceUrl(it):"")?'<a class="thc" '+ext(pu)+' aria-label="'+esc(it.name)+' 사진 더 보기 (쿠팡)">':'<a href="'+itemHref(it)+'" aria-label="'+esc(it.name)+' 자세히 보기">')+
+    /* 카드 사진은 상세 페이지로 (2026-11-08 시온님 "여기 사진에는 쿠팡링크 넣지 말고 상세페이지에만"). 쿠팡 링크는 상세 페이지 큰 사진(.dthl)·아래 버튼에만 */
+    ((pu="")?'<a class="thc" '+ext(pu)+' aria-label="'+esc(it.name)+' 사진 더 보기 (쿠팡)">':'<a href="'+itemHref(it)+'" aria-label="'+esc(it.name)+' 자세히 보기">')+
       '<span class="ph">'+esc(it.region||"")+'</span>'+(img?'<img src="'+esc(img)+'" alt="'+esc(it.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">':'')+
       (pu?'<span class="thx">📷 사진 ↗</span>':'')+
     '</a>'+
