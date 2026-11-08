@@ -1,5 +1,5 @@
 {
- "at": "2026-11-08 07:21",
+ "at": "2026-11-09 07:22",
  "checkIn": "2026-11-14",
  "stays": {
   "busan-matie-harbor": {
@@ -19,7 +19,7 @@
       "page",
       "size"
      ],
-     "total": 1956
+     "total": 1959
     }
    ],
    "hit": "마티에 부산하버시티",
@@ -311,26 +311,26 @@
      "region": "고성",
      "type": "CITY",
      "pages": 4,
-     "n": 100,
+     "n": 99,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 103
+     "total": 102
     },
     {
      "kw": "강원",
      "region": "강릉",
      "type": "CITY",
      "pages": 30,
-     "n": 1424,
+     "n": 1425,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1440
+     "total": 1441
     },
     {
      "kw": "강원",
@@ -392,39 +392,39 @@
      "region": "경주",
      "type": "CITY",
      "pages": 39,
-     "n": 1870,
+     "n": 1872,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1886
+     "total": 1888
     },
     {
      "kw": "경북",
      "region": "경주",
      "type": "CITY",
      "pages": 39,
-     "n": 1870,
+     "n": 1872,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1886
+     "total": 1888
     },
     {
      "kw": "경북",
      "region": "포항",
      "type": "CITY",
      "pages": 20,
-     "n": 915,
+     "n": 916,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 934
+     "total": 935
     }
    ],
    "kept": true
@@ -446,7 +446,7 @@
       "page",
       "size"
      ],
-     "total": 1886
+     "total": 1888
     }
    ],
    "hit": "경주 에스앤비풀빌라",
@@ -480,7 +480,7 @@
       "page",
       "size"
      ],
-     "total": 1886
+     "total": 1888
     }
    ],
    "hit": "토모노야 호텔&료칸 경주",
@@ -548,7 +548,7 @@
       "page",
       "size"
      ],
-     "total": 934
+     "total": 935
     }
    ],
    "hit": "포항 데이토나풀빌라",
