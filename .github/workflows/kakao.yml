@@ -18,8 +18,8 @@ jobs:
           pip install -q playwright && python -m playwright install --with-deps chromium >/dev/null
           # 배달의민족 주아체(Jua)·검은고딕 간판체(Black Han Sans) — 구글 폰트(OFL)
           mkdir -p ~/.local/share/fonts
-          curl -sSLf -o ~/.local/share/fonts/Jua-Regular.ttf https://github.com/google/fonts/raw/main/ofl/jua/Jua-Regular.ttf
-          curl -sSLf -o ~/.local/share/fonts/BlackHanSans-Regular.ttf https://github.com/google/fonts/raw/main/ofl/blackhansans/BlackHanSans-Regular.ttf
+          curl -sSLf -o ~/.local/share/fonts/Jua-Regular.ttf https://github.com/google/fonts/raw/main/ofl/jua/Jua-Regular.ttf || echo "옛 카드용 폰트 받기 실패(v4 는 안 씀)"
+          curl -sSLf -o ~/.local/share/fonts/BlackHanSans-Regular.ttf https://github.com/google/fonts/raw/main/ofl/blackhansans/BlackHanSans-Regular.ttf || echo "옛 카드용 폰트 받기 실패(v4 는 안 씀)"
           # v4 카드 글씨: 프리텐다드(Pretendard, OFL)
           for f in SemiBold Bold ExtraBold; do for u in https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/public/static/Pretendard-$f.otf https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/Pretendard-$f.otf https://raw.githubusercontent.com/orioncactus/pretendard/main/packages/pretendard/dist/public/static/Pretendard-$f.otf; do curl -sSLf -o ~/.local/share/fonts/Pretendard-$f.otf $u && break; done; done; ls ~/.local/share/fonts
           fc-cache -f >/dev/null; fc-list | grep -i -e jua -e "black han" -e pretendard
