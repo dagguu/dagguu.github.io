@@ -21,7 +21,8 @@
  "scenes": [
   {
    "img": "ai:1",
-   "y": 0.4
+   "y": 0.4,
+   "vp": "Very slow aerial glide forward toward the warmly lit arched windows of the villa in the snowy village at night, window lights steady. No smoke, no steam, no chimney plumes, nothing rising into the sky; the sky stays clear with stars."
   },
   {
    "img": "ai:7",
@@ -55,7 +56,8 @@
      "r": -4,
      "c": "#d9f2c4"
     }
-   ]
+   ],
+   "vp": "Slow walk forward into the sunlit living room toward the glass doors. The woman far away near the glass doors stays standing completely still with her back to the camera the whole time; she never turns her head, never walks and never disappears. No steam, no smoke, no mist anywhere; the wooden table stays still."
   },
   {
    "img": "ai:5",
