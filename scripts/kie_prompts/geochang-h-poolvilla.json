@@ -1,0 +1,34 @@
+[
+ {
+  "n": 1,
+  "time": "night",
+  "look": "warm",
+  "img": "Keep the place exactly as it is (same red-brick villa with arched glowing windows, same small pool and courtyard wall, same snowy mountain village and roads around it); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below (more starry night sky and snowy mountains above, more snow-covered ground and road below). Never mirror or flip the image. Make ONE single continuous photograph — no collage, no split panels, no stacked images, no mirrored reflection of the scene, no upside-down copy.",
+  "prompt": "Very slow aerial glide forward and slightly down toward the warmly lit arched windows of the villa in the snowy village, faint smoke from chimneys, lights softly twinkling."
+ },
+ {
+  "n": 2,
+  "time": "night",
+  "img": "Keep the place exactly as it is (same red-brick villa with arched lit windows, same snowy trees and village houses, same mountains); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below (more snowy night sky above, more snow-covered field below). Never mirror or flip the image. Make ONE single continuous photograph — no collage, no split panels, no stacked images, no mirrored reflection of the scene, no upside-down copy.",
+  "prompt": "Slow walk forward across the snowy field toward the glowing villa, warm window light steady, gentle quiet night."
+ },
+ {
+  "n": 4,
+  "time": "day",
+  "people": true,
+  "img": "Keep the place exactly as it is (same bright living room with exposed wooden beams, chandelier, white pillar, grey sofas, wooden floor and large glass doors); do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below (more wooden-beam ceiling above, more wooden floor below). Never mirror or flip the image. Make ONE single continuous photograph — no collage, no split panels, no stacked images, no mirrored reflection of the scene, no upside-down copy. One Korean woman seen only from behind, standing far away near the glass doors looking out at the snowy view, small in the frame.",
+  "prompt": "Slow walk forward into the sunlit living room toward the glass doors, sunlight shifting softly on the floor."
+ },
+ {
+  "n": 5,
+  "time": "day",
+  "img": "Keep the place exactly as it is (same bedroom with two arched windows, same bed with white bedding, same orange leather recliner, same grey curtains and ceiling light); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below (more white ceiling above, more wooden floor below). Never mirror or flip the image. Make ONE single continuous photograph — no collage, no split panels, no stacked images, no mirrored reflection of the scene, no upside-down copy.",
+  "prompt": "Slow move forward toward the arched windows past the bed, soft daylight through the glass."
+ },
+ {
+  "n": 7,
+  "time": "sunset",
+  "img": "Keep the place exactly as it is (same round sunken stone seating with white cushions around the fire pit, same paved courtyard, same brick building on the right and trees on the left); do not add new buildings, furniture, signs, text or logos. No people. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below (more evening sky above, more paved stone ground below). Never mirror or flip the image. Make ONE single continuous photograph — no collage, no split panels, no stacked images, no mirrored reflection of the scene, no upside-down copy.",
+  "prompt": "Slow move forward toward the round fire pit, flames flickering gently and warm glow on the cushions."
+ }
+]
