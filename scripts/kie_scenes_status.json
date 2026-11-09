@@ -1,42 +1,21 @@
 {
- "at": "2026-11-09T10:56:10.762295",
+ "at": "2026-11-09T11:00:19.034708",
  "name": "geochang-h-poolvilla",
  "jobs": [
   {
    "img": "ai:1",
-   "taskId": "71ac07d05265fdcd456408dcef5cdcb0",
+   "taskId": "c9fe2436b4675c9fa2b29e686dfb0d19",
    "state": "success",
    "credits": 35.0,
    "file": "video/2026-11-09/geochang-h-poolvilla/clip_ai1.mp4"
   },
   {
-   "img": "ai:7",
-   "taskId": "94ce34eac7bf9221e9847373e7a24d23",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-09/geochang-h-poolvilla/clip_ai7.mp4"
-  },
-  {
    "img": "ai:4",
-   "taskId": "6c0c32785e017987c1e818f738db57ce",
+   "taskId": "c090e8edf2d100bf1b4ca72980da6506",
    "state": "success",
    "credits": 35.0,
    "file": "video/2026-11-09/geochang-h-poolvilla/clip_ai4.mp4"
-  },
-  {
-   "img": "ai:5",
-   "taskId": "1b06a85320942415c08ad135a2b65a66",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-09/geochang-h-poolvilla/clip_ai5.mp4"
-  },
-  {
-   "img": "ai:2",
-   "taskId": "b4ba0029d7c4b03d367fed996c5073ab",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-09/geochang-h-poolvilla/clip_ai2.mp4"
   }
  ],
- "credits_total": 175.0
+ "credits_total": 70.0
 }
