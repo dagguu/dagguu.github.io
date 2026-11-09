@@ -1,41 +1,41 @@
 {
- "at": "2026-11-07T11:01:15.784543",
- "name": "sancheong-ostay",
+ "at": "2026-11-09T10:56:10.762295",
+ "name": "geochang-h-poolvilla",
  "jobs": [
   {
    "img": "ai:1",
-   "taskId": "f6b18632618e47eada146cf65f777d94",
+   "taskId": "71ac07d05265fdcd456408dcef5cdcb0",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-07/sancheong-ostay/clip_ai1.mp4"
+   "file": "video/2026-11-09/geochang-h-poolvilla/clip_ai1.mp4"
   },
   {
-   "img": "ai:2",
-   "taskId": "20e6b9ea8bcdac7cf3e0e1776c9d2030",
+   "img": "ai:7",
+   "taskId": "94ce34eac7bf9221e9847373e7a24d23",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-07/sancheong-ostay/clip_ai2.mp4"
-  },
-  {
-   "img": "ai:3",
-   "taskId": "12c2298e3ee08becc73412d416a94d77",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-07/sancheong-ostay/clip_ai3.mp4"
+   "file": "video/2026-11-09/geochang-h-poolvilla/clip_ai7.mp4"
   },
   {
    "img": "ai:4",
-   "taskId": "c677e9e0499af975a827d417c2df2050",
+   "taskId": "6c0c32785e017987c1e818f738db57ce",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-07/sancheong-ostay/clip_ai4.mp4"
+   "file": "video/2026-11-09/geochang-h-poolvilla/clip_ai4.mp4"
   },
   {
    "img": "ai:5",
-   "taskId": "c64f500dc3a2004827b9fd3ce69cb4fe",
+   "taskId": "1b06a85320942415c08ad135a2b65a66",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-07/sancheong-ostay/clip_ai5.mp4"
+   "file": "video/2026-11-09/geochang-h-poolvilla/clip_ai5.mp4"
+  },
+  {
+   "img": "ai:2",
+   "taskId": "b4ba0029d7c4b03d367fed996c5073ab",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-09/geochang-h-poolvilla/clip_ai2.mp4"
   }
  ],
  "credits_total": 175.0
