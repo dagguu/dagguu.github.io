@@ -1,5 +1,5 @@
 {
- "at": "2026-11-09 07:22",
+ "at": "2026-11-09 19:50",
  "checkIn": "2026-11-14",
  "stays": {
   "busan-matie-harbor": {
@@ -13,13 +13,13 @@
      "region": "부산",
      "type": "CITY",
      "pages": 7,
-     "n": 343,
+     "n": 344,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1959
+     "total": 1964
     }
    ],
    "hit": "마티에 부산하버시티",
@@ -87,7 +87,7 @@
       "page",
       "size"
      ],
-     "total": 505
+     "total": 520
     }
    ],
    "hit": "대전 유천 스테이 패스포트 키노사키 료칸 by 아늑",
@@ -149,13 +149,13 @@
      "region": "주문진항",
      "type": "POINT_OF_INTEREST",
      "pages": 2,
-     "n": 100,
+     "n": 99,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1499
+     "total": 1508
     }
    ],
    "hit": "강릉 다케노모리글램핑&료칸",
@@ -287,6 +287,40 @@
     "starRating"
    ]
   },
+  "geochang-h-poolvilla": {
+   "name": "에이치(H)풀빌라",
+   "city": "거창",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "거창",
+     "region": "거창",
+     "type": "CITY",
+     "pages": 1,
+     "n": 48,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 77
+    }
+   ],
+   "hit": "거창 에이치(H)풀빌라",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
+  },
   "goseong-stage-poolvilla": {
    "name": "스테이지풀빌라",
    "city": "고성",
@@ -298,13 +332,13 @@
      "region": "고성",
      "type": "CITY",
      "pages": 10,
-     "n": 428,
+     "n": 429,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 436
+     "total": 438
     },
     {
      "kw": "고성",
@@ -324,13 +358,13 @@
      "region": "강릉",
      "type": "CITY",
      "pages": 30,
-     "n": 1425,
+     "n": 1429,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1441
+     "total": 1450
     },
     {
      "kw": "강원",
@@ -343,7 +377,7 @@
       "page",
       "size"
      ],
-     "total": 464
+     "total": 465
     }
    ]
   },
@@ -358,7 +392,7 @@
      "region": "구례",
      "type": "CITY",
      "pages": 2,
-     "n": 94,
+     "n": 93,
      "keys": [
       "totalCount",
       "page",
@@ -392,39 +426,39 @@
      "region": "경주",
      "type": "CITY",
      "pages": 39,
-     "n": 1872,
+     "n": 1873,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1888
+     "total": 1895
     },
     {
      "kw": "경북",
      "region": "경주",
      "type": "CITY",
      "pages": 39,
-     "n": 1872,
+     "n": 1873,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1888
+     "total": 1895
     },
     {
      "kw": "경북",
      "region": "포항",
      "type": "CITY",
      "pages": 20,
-     "n": 916,
+     "n": 924,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 935
+     "total": 944
     }
    ],
    "kept": true
@@ -446,7 +480,7 @@
       "page",
       "size"
      ],
-     "total": 1888
+     "total": 1895
     }
    ],
    "hit": "경주 에스앤비풀빌라",
@@ -480,7 +514,7 @@
       "page",
       "size"
      ],
-     "total": 1888
+     "total": 1895
     }
    ],
    "hit": "토모노야 호텔&료칸 경주",
@@ -542,16 +576,16 @@
      "region": "포항",
      "type": "CITY",
      "pages": 3,
-     "n": 145,
+     "n": 146,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 935
+     "total": 944
     }
    ],
-   "hit": "포항 데이토나풀빌라",
+   "hit": "데이토나 풀 빌라",
    "hitKeys": [
     "deepLink",
     "imageUrl",
@@ -650,7 +684,7 @@
       "page",
       "size"
      ],
-     "total": 1501
+     "total": 1502
     }
    ],
    "hit": "담앤루리조트",
@@ -718,27 +752,27 @@
       "page",
       "size"
      ],
-     "total": 196
+     "total": 197
     },
     {
      "kw": "전북",
      "region": "전주",
      "type": "CITY",
      "pages": 16,
-     "n": 738,
+     "n": 742,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 747
+     "total": 749
     },
     {
      "kw": "전북",
      "region": "군산",
      "type": "CITY",
      "pages": 7,
-     "n": 251,
+     "n": 250,
      "keys": [
       "totalCount",
       "page",
