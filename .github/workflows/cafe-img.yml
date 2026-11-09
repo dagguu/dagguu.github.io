@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: pip install pillow
       - name: 받기
         run: |
           python3 - <<'PY'
@@ -24,10 +25,12 @@ jobs:
                   req = urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0", "Referer": "https://cafe.naver.com/"})
                   b = urllib.request.urlopen(req, timeout=30).read()
                   open(p + ".src", "wb").write(b)
-                  subprocess.run(["convert", p + ".src", "-resize", "800x800>", "-quality", "85", p], check=True)
+                  from PIL import Image
+                  im = Image.open(p + ".src").convert("RGB"); im.thumbnail((800, 800)); im.save(p, quality=85)
                   os.remove(p + ".src"); print("ok", k, len(b))
               except Exception as e:
                   print("fail", k, e)
+                  if os.path.exists(p + ".src"): os.remove(p + ".src")
           PY
       - name: 저장
         run: |
