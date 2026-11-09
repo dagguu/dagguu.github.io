@@ -69,7 +69,7 @@ def deals():
         if (x.get("until") or "9999") < TODAY or not x.get("u"): continue
         out.append({"key": "t-" + h8(x["u"]), "kind": "입장권" if re.search("입장|티켓|이용권|레저", str(x.get("kind", ""))) else "숙소", "src": x.get("src", ""), "name": x["name"], "area": x.get("area", ""), "img": x.get("img", ""),
                     "price": x.get("price"), "orig": x.get("orig"), "rate": (round((1 - x["price"] / x["orig"]) * 100) if x.get("orig") and x.get("price") else None),
-                    "u": x["u"], "cond": x.get("cond", ""), "at": x.get("at", ""), "until": x.get("until", "")})
+                    "u": x["u"], "cond": x.get("cond", ""), "at": x.get("at", ""), "until": x.get("until", ""), "time": bool(x.get("time"))})
     return out
 
 def stays_near(area, n=3, cat="stay"):
@@ -171,7 +171,9 @@ def pick(L, n):
         if keep: return keep
     recent = {k for day, ks in sent.items() if day != TODAY and day >= (NOW - dt.timedelta(days=3)).strftime("%Y-%m-%d") for k in ks}
     C = [x for x in L if (x.get("rate") or 0) >= 15 and x["key"] not in recent and (not x.get("reviews") or x["reviews"] >= 5) and (not x.get("score") or float(x["score"]) >= 4.0)]
-    C.sort(key=lambda x: (-(x.get("rate") or 0)))
+    # 2026-11-09 시온님: 마이리얼트립 타임특가(travelDeals time:true)를 먼저 고른다. 할인율 15% 미만이어도 타임특가는 넣는다.
+    C += [x for x in L if x.get("time") and x not in C and x["key"] not in recent]
+    C.sort(key=lambda x: (not x.get("time"), -(x.get("rate") or 0)))
     # 숙소 n-1곳 + 입장권 1곳 (입장권이 없으면 숙소로 채움). 같은 지역 숙소는 하나만.
     tix = [x for x in C if x.get("kind") == "입장권"][:1]
     out, regs = [], set()
@@ -202,7 +204,7 @@ def chat(n):
     M = []
     for k, x in enumerate(P):
         tk = x.get("kind") == "입장권"
-        tag = "★특가★" if (x.get("rate") or 0) >= 50 else "(특가)"
+        tag = "★타임특가★" if x.get("time") else ("★특가★" if (x.get("rate") or 0) >= 50 else "(특가)")
         n = notes.get(x["key"]) or {}
         sv = x["src"].replace("쿠팡 골드박스", "쿠팡")
         area = x["area"]
