@@ -1,0 +1,36 @@
+name: 맘카페 사진 받기
+# scripts/cafe_img.json {id: 사진주소} 를 push 하면 images/cafe/<id>.jpg 로 저장 (2026-11-09, 작업 컨테이너는 pstatic 에 못 닿음)
+on:
+  push:
+    paths: ["scripts/cafe_img.json"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  get:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 받기
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, subprocess
+          m = json.load(open("scripts/cafe_img.json"))
+          os.makedirs("images/cafe", exist_ok=True)
+          for k, u in m.items():
+              p = f"images/cafe/{k}.jpg"
+              if os.path.exists(p): continue
+              try:
+                  req = urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0", "Referer": "https://cafe.naver.com/"})
+                  b = urllib.request.urlopen(req, timeout=30).read()
+                  open(p + ".src", "wb").write(b)
+                  subprocess.run(["convert", p + ".src", "-resize", "800x800>", "-quality", "85", p], check=True)
+                  os.remove(p + ".src"); print("ok", k, len(b))
+              except Exception as e:
+                  print("fail", k, e)
+          PY
+      - name: 저장
+        run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add images/cafe
+          git diff --cached --quiet || (git commit -m "맘카페 사진" && for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done)
