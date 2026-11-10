@@ -377,6 +377,19 @@ function kidsLoad(){
       paint();
     }).catch(function(){});
 }
+/* 쿠팡 유아동 패션(2026-11-11 시온님 "유아동복·유아양말·유아신발 카테고리별 쿠팡 수익링크"): data.json kidsCp {검색어:[상품]} — coupang.yml 매일 11:42 공식 검색 API */
+var KCP_ORDER=["유아동복","유아양말","유아신발","아기내복","유아패딩","유아모자"], KCP_SEL=0;
+function kidsCpHot(){
+  var K=seed.kidsCp||{}, tabs=KCP_ORDER.filter(function(k){ return (K[k]||[]).filter(function(x){ return safeUrl(x.u); }).length>=2; });
+  if(!tabs.length) return "";
+  if(KCP_SEL>=tabs.length) KCP_SEL=0;
+  var L=(K[tabs[KCP_SEL]]||[]).filter(function(x){ return safeUrl(x.u); });
+  return '<section class="hdl kcp" data-kcp><div class="hdh"><span class="hdk">🧦 쿠팡 유아동 패션</span><b>카테고리별 인기 상품</b><small>가격은 수집 시점('+esc(seed.kidsCpAt||"")+') 기준이라 쿠팡에서 다를 수 있어요</small></div>'+
+    '<div class="kcpt">'+tabs.map(function(k,i){ return '<button type="button" data-kcpi="'+i+'"'+(i===KCP_SEL?' class="on"':'')+'>'+esc(k)+'</button>'; }).join("")+'</div>'+
+    '<div class="hdr">'+L.map(function(x){ var img=safeUrl(x.img||"");
+      return '<a class="hdi" data-gsec="kidscp" '+ext(safeUrl(x.u))+'><span class="hdm">'+(img?'<img src="'+esc(img)+'" alt="" loading="lazy" referrerpolicy="no-referrer">':'')+'</span><span class="hdn">'+esc(x.name)+'</span><span class="hdp"><b>'+esc(x.price||"")+'</b></span></a>'; }).join("")+'</div></section>';
+}
+document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.closest("[data-kcpi]"); if(!b) return; KCP_SEL=+b.getAttribute("data-kcpi"); var sec=b.closest("[data-kcp]"); if(sec) sec.outerHTML=kidsCpHot(); });
 function lifeHot(){
   var L=lifeDeals(); if(L.length<2) return "";
   return '<section class="hdl ldl"><div class="hdh"><span class="hdk">🧺 쿠팡 골드박스</span><b>오늘의 생활용품 핫딜</b><small>⏳ 오전 7시 마감까지 <em data-hd>'+clock(nextSeven())+'</em></small></div>'+
@@ -491,7 +504,7 @@ function homeView(){
   if(!PMODE){ var ta=travelAds(); if(ta) h+=ta; } if(!PMODE){ h+='<div class="hpad" id="hreels"></div>'; setTimeout(homeReels,0); var tdh=tdHtml(4); if(tdh) h+='<div class="hpad">'+tdh+'</div>'; }
   var gd=groceryDeal(); if(gd) h+='<div class="hpad">'+gd+'</div>';
   var wx=wxSection(); if(wx) h+='<div class="hpad">'+wx+'</div>';
-  var hd=hotDeal(); if(hd) h+='<div class="hpad">'+hd+'</div>'; var lh=lifeHot(); if(lh) h+='<div class="hpad">'+lh+'</div>'; h+='<div class="hpad">'+kidsHot()+'</div>';  // 오늘의 특가(골드박스)는 홈에서 숨김 (2026-10-14 시온님 요청)
+  var hd=hotDeal(); if(hd) h+='<div class="hpad">'+hd+'</div>'; var lh=lifeHot(); if(lh) h+='<div class="hpad">'+lh+'</div>'; h+='<div class="hpad">'+kidsHot()+'</div>'; var kc=kidsCpHot(); if(kc) h+='<div class="hpad">'+kc+'</div>';  // 오늘의 특가(골드박스)는 홈에서 숨김 (2026-10-14 시온님 요청)
   var up=CAT_ORDER.filter(function(m){ return !isOpenCat(m.k) && UPCOMING.some(function(u){ return u.k===m.k||u.t===m.t; }); });
   if(up.length) h+='<a class="upbox" '+ext(kakaoUrl())+'><span class="ul"><small>곧 열려요 ✨</small><b>'+up.map(function(m){ return m.em+' '+esc(m.t); }).join(" · ")+' 체험단</b></span><span class="ug">🔔 오픈 알림</span></a>';
   if(!pushOn()) h+=pushBox().replace('class="pushbox"','class="pushbox hpb"');
@@ -2242,6 +2255,7 @@ function dealsView(){
   h+='<div id="babyhd">'+hotDeal()+'</div>';
   h+='<div id="lifehd">'+lifeHot()+'</div>';
   h+=kidsHot();
+  h+=kidsCpHot();
   if(TOSS.length) h+='<section class="sec tossec" id="toss"><div class="sh"><h2>🛒 오늘의 하루특가</h2>'+(seed.tossUpdated?'<span class="upd">'+esc(String(seed.tossUpdated).slice(11))+' 기준</span>':'')+'</div><p class="cd tcdh">⏳ 밤 12시 교체까지 <b id="tossd">'+hms(msToMidnight())+'</b> 남음</p><div class="tgrid">'+TOSS.slice(0,10).sort(byPrice).map(tossCard).join("")+'</div></section>';
   /* 오늘 많이 사는 쿠팡 인기템(moreDealsSec)은 2026-10-22 시온님 요청으로 뺌 → 골드박스 전체가 끝없이 이어짐 */
   h+='<a class="kakaobox sm" '+ext(kakaoUrl())+'><span><small>다꾸 <i>×</i> 카카오톡</small><b>🔔 새 특가 열리면 <em>가장 먼저 알려드려요!</em></b></span><span class="kg">알림 받기</span></a>';

@@ -2,11 +2,12 @@ name: 쿠팡 자동 업데이트
 on:
   schedule:
     - cron: "12 22 * * *"   # 매일 오전 7시 12분(한국시간) 골드박스
+    - cron: "42 2 * * *"    # 매일 오전 11시 42분 쿠팡 유아동 패션(유아동복·양말·신발 등)
   push:
     paths: ["data.json"]     # 새 체험단이 올라오면 쿠팡 링크 변환
   workflow_dispatch:
     inputs:
-      mode: { description: "all 또는 season(날씨·계절 추천만)", default: "all" }
+      mode: { description: "all 또는 season(날씨·계절 추천만) 또는 kids(유아동 패션)", default: "all" }
 permissions:
   contents: write
 concurrency: { group: coupang, cancel-in-progress: false }
@@ -23,7 +24,7 @@ jobs:
           COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
           COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
         run: |
-          if [ "${{ github.event_name }}" = "push" ]; then python3 scripts/coupang_api.py deeplink; elif [ "${{ github.event.inputs.mode }}" = "season" ]; then python3 scripts/weather.py; python3 scripts/coupang_api.py season; else python3 scripts/weather.py; python3 scripts/coupang_api.py; fi
+          if [ "${{ github.event_name }}" = "push" ]; then python3 scripts/coupang_api.py deeplink; elif [ "${{ github.event.schedule }}" = "42 2 * * *" ] || [ "${{ github.event.inputs.mode }}" = "kids" ]; then python3 scripts/coupang_api.py kids; elif [ "${{ github.event.inputs.mode }}" = "season" ]; then python3 scripts/weather.py; python3 scripts/coupang_api.py season; else python3 scripts/weather.py; python3 scripts/coupang_api.py; fi
           python3 scripts/gen_share.py
       - name: 저장
         run: |

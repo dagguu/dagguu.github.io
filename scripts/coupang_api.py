@@ -135,6 +135,21 @@ def main():
             d["seasonDeals"] = sd; d["seasonAt"] = datetime.now(KST).strftime("%Y-%m-%d"); changed = True
             print("계절 추천", {k: len(v) for k, v in sd.items()})
 
+    if "kids" in sys.argv[1:]:  # 쿠팡 유아동 패션 카테고리별(2026-11-11 시온님): 공식 검색 API, 하루 1번 따로(검색 한도 때문에 계절 추천과 다른 시간)
+        import urllib.parse
+        KW = ["유아동복", "유아양말", "유아신발", "아기내복", "유아패딩", "유아모자"]
+        kc = dict(d.get("kidsCp") or {}); got = 0
+        for q in KW:
+            try:
+                r = call("GET", BASE + "/products/search", "keyword=" + urllib.parse.quote(q) + "&limit=10&subId=dagguu") or {}
+                kc[q] = [{"name": i.get("productName"), "price": won(i.get("productPrice")), "img": i.get("productImage"), "u": i.get("productUrl"),
+                          "rocket": bool(i.get("isRocket"))} for i in (r.get("productData") or []) if i.get("productUrl")][:10]; got += 1
+            except Exception as e:
+                print("유아동 패션 검색 실패:", q, e); break
+        if got:
+            d["kidsCp"] = kc; d["kidsCpAt"] = datetime.now(KST).strftime("%Y-%m-%d"); changed = True
+            print("유아동 패션", {k: len(v) for k, v in kc.items()})
+
     if "deeplink" in sys.argv[1:] or len(sys.argv) == 1:
         for k, x in (d.get("links") or {}).items():  # 사이트 버튼용 쿠팡 링크 (예: 골드박스)
             if isinstance(x, dict) and x.get("cpUrl") and not x.get("u"):
