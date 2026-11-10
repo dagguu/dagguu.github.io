@@ -1,0 +1,35 @@
+[
+ {
+  "n": 1,
+  "time": "night",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same white multi-level pool villa on the hillside with warmly lit windows, same small pool, same pine forest around it); No people. Extend with more evening sky above and more pine slope below. Do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. Make ONE single continuous photograph — no collage, no split panels, no stacked images, no mirrored reflection of the scene, no upside-down copy.",
+  "prompt": "Very slow aerial glide forward toward the warmly lit white villa on the pine hillside at blue hour, window lights steady."
+ },
+ {
+  "n": 2,
+  "time": "day",
+  "img": "Keep the place exactly as it is (same wide blue-tiled pool with glass railing, same pine trees, same deck chairs, same East Sea view behind); No people. Extend with more blue sky above and more pool water and deck below. Do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. Make ONE single continuous photograph — no collage, no split panels, no stacked images, no mirrored reflection of the scene, no upside-down copy.",
+  "prompt": "Slow walk forward along the edge of the wide blue pool toward the glass railing and the sea beyond, gentle ripples and light steam on the warm water."
+ },
+ {
+  "n": 3,
+  "time": "day",
+  "who": "dog",
+  "img": "Keep the place exactly as it is (same bright living room with tall floor-to-ceiling windows, same sofa, chair and table, same sea and pine view outside); No people. Extend with more ceiling above and more floor below. Do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. Make ONE single continuous photograph — no collage, no split panels, no stacked images, no mirrored reflection of the scene, no upside-down copy.",
+  "prompt": "Slow walk forward through the bright living room toward the tall windows with the sea outside; the small dog stays calmly in place."
+ },
+ {
+  "n": 4,
+  "time": "day",
+  "img": "Keep the place exactly as it is (same white bed, same tall corner windows with sea and pine view, same curtains); No people. Extend with more ceiling above and more floor below. Do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. Make ONE single continuous photograph — no collage, no split panels, no stacked images, no mirrored reflection of the scene, no upside-down copy.",
+  "prompt": "Slow walk forward toward the bed and the corner windows with the sea view, curtains still."
+ },
+ {
+  "n": 6,
+  "time": "sunset",
+  "img": "Keep the place exactly as it is (same blue pool corner with glass railing, same pine trees, same sea view); add one Korean woman standing far away by the glass railing, small in the frame, seen from behind, looking at the sea. Extend with more sky above and more pool water below. Do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. Make ONE single continuous photograph — no collage, no split panels, no stacked images, no mirrored reflection of the scene, no upside-down copy.",
+  "prompt": "Slow walk forward beside the pool toward the glass railing and the sunset sea; the woman far away by the railing stays standing completely still with her back to the camera the whole time, never turning her head, never walking.",
+  "people": true
+ }
+]
