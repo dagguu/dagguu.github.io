@@ -1,21 +1,21 @@
 {
- "at": "2026-11-10T11:12:23.509999",
+ "at": "2026-11-10T11:14:27.140759",
  "name": "yeongdeok-poolmoon",
  "jobs": [
   {
    "img": "ai:6",
-   "taskId": "06c9d8e8884580dd69eec7564d524507",
-   "state": "fail",
-   "credits": 0.0,
-   "msg": "Internal Error, Please try again later."
+   "taskId": "c3c91c6ef66c8b6330adbf639651443c",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-10/yeongdeok-poolmoon/clip_ai6.mp4"
   },
   {
    "img": "ai:1",
-   "taskId": "faf8b75e6f7bfb19077eb92169d9f87d",
+   "taskId": "300f0d87640424c4ffc7b667e07f9aa1",
    "state": "fail",
    "credits": 0.0,
    "msg": "Internal Error, Please try again later."
   }
  ],
- "credits_total": 0
+ "credits_total": 35.0
 }
