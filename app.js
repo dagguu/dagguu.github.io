@@ -371,7 +371,7 @@ function kidsHtml(L){
 function kidsLoad(){
   var paint=function(){ [].forEach.call(document.querySelectorAll("[data-kids]"),function(el){ el.innerHTML=kidsHtml(KIDS); }); };
   if(KIDS){ paint(); return; } if(kidsLoad.busy) return; kidsLoad.busy=1;
-  fetch("https://dagguu.cafe24api.com/api/v2/products?display=T&selling=T&limit=12&order_by=created_date&sort=desc&fields=product_no,product_name,price,list_image",{headers:{"X-Cafe24-Client-Id":"JzTmuiBPItGvZ6KG8g3aPC"}})
+  fetch("https://dagguu.cafe24api.com/api/v2/products?display=T&selling=T&limit=12&sort=created_date&order=desc&fields=product_no,product_name,price,list_image",{headers:{"X-Cafe24-Client-Id":"JzTmuiBPItGvZ6KG8g3aPC"}})
     .then(function(r){ return r.json(); }).then(function(j){
       KIDS=(j.products||[]).filter(function(p){ return p.list_image&&+p.price>0; }).map(function(p){ return {no:p.product_no,name:p.product_name,img:safeUrl(p.list_image),price:(+p.price).toLocaleString("ko-KR")+"원"}; });
       paint();
