@@ -1,5 +1,5 @@
 {
- "at": "2026-11-10 07:31",
+ "at": "2026-11-10 19:51",
  "checkIn": "2026-11-14",
  "stays": {
   "busan-matie-harbor": {
@@ -19,7 +19,7 @@
       "page",
       "size"
      ],
-     "total": 1966
+     "total": 1964
     }
    ],
    "hit": "마티에 부산하버시티",
@@ -80,14 +80,14 @@
      "kw": "대전",
      "region": "대전",
      "type": "CITY",
-     "pages": 6,
-     "n": 298,
+     "pages": 9,
+     "n": 447,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 519
+     "total": 484
     }
    ],
    "hit": "대전 유천 스테이 패스포트 키노사키 료칸 by 아늑",
@@ -149,13 +149,13 @@
      "region": "주문진항",
      "type": "POINT_OF_INTEREST",
      "pages": 2,
-     "n": 99,
+     "n": 100,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1510
+     "total": 1507
     }
    ],
    "hit": "강릉 다케노모리글램핑&료칸",
@@ -189,7 +189,7 @@
       "page",
       "size"
      ],
-     "total": 1927
+     "total": 1928
     }
    ],
    "hit": "가평 글램하바나",
@@ -223,7 +223,7 @@
       "page",
       "size"
      ],
-     "total": 1927
+     "total": 1928
     }
    ],
    "hit": "가평 하녹타케 펜션",
@@ -270,7 +270,7 @@
       "page",
       "size"
      ],
-     "total": 1927
+     "total": 1928
     }
    ],
    "hit": "가평 슈가풀빌라&스파글램핑",
@@ -357,14 +357,14 @@
      "kw": "강원",
      "region": "강릉",
      "type": "CITY",
-     "pages": 31,
-     "n": 1431,
+     "pages": 30,
+     "n": 1428,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1452
+     "total": 1449
     },
     {
      "kw": "강원",
@@ -426,7 +426,7 @@
      "region": "경주",
      "type": "CITY",
      "pages": 39,
-     "n": 1876,
+     "n": 1875,
      "keys": [
       "totalCount",
       "page",
@@ -439,7 +439,7 @@
      "region": "경주",
      "type": "CITY",
      "pages": 39,
-     "n": 1876,
+     "n": 1875,
      "keys": [
       "totalCount",
       "page",
@@ -718,7 +718,7 @@
       "page",
       "size"
      ],
-     "total": 2399
+     "total": 2397
     }
    ],
    "hit": "대부도(선재도) 선재담글램핑&카라반리조트",
@@ -759,13 +759,13 @@
      "region": "전주",
      "type": "CITY",
      "pages": 16,
-     "n": 743,
+     "n": 742,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 750
+     "total": 749
     },
     {
      "kw": "전북",
@@ -780,6 +780,40 @@
      ],
      "total": 252
     }
+   ]
+  },
+  "yeongdeok-poolmoon": {
+   "name": "풀문 영덕 풀빌라",
+   "city": "영덕",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "영덕",
+     "region": "영덕",
+     "type": "CITY",
+     "pages": 4,
+     "n": 195,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 286
+    }
+   ],
+   "hit": "영덕 풀문 영덕 풀빌라",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
    ]
   }
  }

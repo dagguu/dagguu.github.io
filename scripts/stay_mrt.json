@@ -1,9 +1,9 @@
 {
  "busan-matie-harbor": {
   "mname": "마티에 부산하버시티",
-  "price": 300241,
-  "orig": 406386,
-  "rate": 26,
+  "price": 300240,
+  "orig": 417000,
+  "rate": 28,
   "u": "https://myrealt.rip/z9cw2a",
   "checkIn": "2026-11-14",
   "at": "2026-11-10",
@@ -85,9 +85,9 @@
  },
  "gapyeong-sugar-glamping": {
   "mname": "가평 슈가풀빌라&스파글램핑",
-  "price": 269100,
+  "price": 251100,
   "orig": 319000,
-  "rate": 16,
+  "rate": 21,
   "u": "https://myrealt.rip/10AfMa4",
   "checkIn": "2026-11-14",
   "at": "2026-11-10",
@@ -109,9 +109,9 @@
  },
  "gurye-dohwa-onsen": {
   "mname": "구례 도화풀빌라",
-  "price": 439000,
-  "orig": 700000,
-  "rate": 37,
+  "price": 0,
+  "orig": 0,
+  "rate": 0,
   "u": "https://myrealt.rip/ziXIef",
   "checkIn": "2026-11-14",
   "at": "2026-11-10",
@@ -226,5 +226,17 @@
   "score": "5.0",
   "reviews": 1,
   "pu": "https://accommodation.myrealtrip.com/union/products/4293990?checkIn=2026-11-14&checkOut=2026-11-15&adultCount=2&childCount=0&childAges="
+ },
+ "yeongdeok-poolmoon": {
+  "mname": "영덕 풀문 영덕 풀빌라",
+  "price": 439000,
+  "orig": 619000,
+  "rate": 29,
+  "u": "https://myrealt.rip/10U5ob3",
+  "checkIn": "2026-11-14",
+  "at": "2026-11-10",
+  "score": "0.0",
+  "reviews": 0,
+  "pu": "https://accommodation.myrealtrip.com/union/products/5615307?checkIn=2026-11-14&checkOut=2026-11-15&adultCount=2&childCount=0&childAges="
  }
 }
