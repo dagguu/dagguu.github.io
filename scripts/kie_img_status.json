@@ -1,47 +1,15 @@
 {
- "at": "2026-11-10 19:51",
+ "at": "2026-11-10 19:57",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 1,
-   "taskId": "79a3ff3c9fca0d0ef739f293819b95cb",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-10/yeongdeok-poolmoon/1_edit.jpg"
-  },
-  {
    "n": 2,
-   "taskId": "f1c9a2c4f5d7817ff3df5333cefa12ab",
+   "taskId": "9a8ffc9171460f3d4a141f34011c093a",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
    "file": "img/2026-11-10/yeongdeok-poolmoon/2_edit.jpg"
-  },
-  {
-   "n": 3,
-   "taskId": "eac450d442ffe8c4bcfbca111ccafff5",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-10/yeongdeok-poolmoon/3_edit.jpg"
-  },
-  {
-   "n": 4,
-   "taskId": "af14df8d57877be1d9d5447c16846645",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-10/yeongdeok-poolmoon/4_edit.jpg"
-  },
-  {
-   "n": 6,
-   "taskId": "dfc34fe6f21622e64e8d5ee203494567",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-10/yeongdeok-poolmoon/6_edit.jpg"
   }
  ],
  "slug": "yeongdeok-poolmoon"
