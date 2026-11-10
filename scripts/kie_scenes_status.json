@@ -1,17 +1,17 @@
 {
- "at": "2026-11-10T11:04:05.360342",
+ "at": "2026-11-10T11:09:02.460137",
  "name": "yeongdeok-poolmoon",
  "jobs": [
   {
    "img": "ai:6",
-   "taskId": "c6e5e85fcfb406868bd7c12faed3557b",
+   "taskId": "58f879c7e8c518f30151fec39173d52a",
    "state": "fail",
    "credits": 0.0,
-   "msg": "Request blocked: The input content was flagged for containing a prominent public figure."
+   "msg": "Internal Error, Please try again later."
   },
   {
    "img": "ai:1",
-   "taskId": "01e09e15a6cea7a97393343876387fee",
+   "taskId": "f6881372635ee8a52acca314aed3f39e",
    "state": "fail",
    "credits": 0.0,
    "msg": "Internal Error, Please try again later."
