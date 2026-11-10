@@ -58,7 +58,7 @@ def tclean(n):   # 판매자 문구(★오늘만…★·무료·후기·찬스 �
 gt, seen4 = [], set()
 for c in cards:
     n = str(c.get("name") or "")
-    if not c.get("pid") or not TRAVEL.search(n) or NOT_T.search(n) or not re.match(r"\s*\[", n) or n[:14] in seen4: continue
+    if not c.get("pid") or not (TRAVEL.search(n) or "/travel" in str(c.get("img") or "")) or NOT_T.search(n) or not re.match(r"\s*\[", n) or n[:14] in seen4: continue
     seen4.add(n[:14]); nm, area = tclean(n)
     tix = bool(re.search(r"입장권|이용권|티켓|자유이용|워터파크|아쿠아리움|종일권", n)) and not re.search(r"호텔|리조트|스위트|펜션|풀빌라|레지던스|숙소|객실", nm)
     cp = f"https://trip.coupang.com/tp/products/{c['pid']}"
