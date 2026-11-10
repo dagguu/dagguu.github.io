@@ -1,21 +1,42 @@
 {
- "at": "2026-11-09T11:00:19.034708",
- "name": "geochang-h-poolvilla",
+ "at": "2026-11-10T11:00:47.069331",
+ "name": "yeongdeok-poolmoon",
  "jobs": [
   {
-   "img": "ai:1",
-   "taskId": "c9fe2436b4675c9fa2b29e686dfb0d19",
+   "img": "ai:2",
+   "taskId": "d32785fc76bef79a3af28e954a869826",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-09/geochang-h-poolvilla/clip_ai1.mp4"
+   "file": "video/2026-11-10/yeongdeok-poolmoon/clip_ai2.mp4"
+  },
+  {
+   "img": "ai:3",
+   "taskId": "1c91a7abc1a27eda86d87e8ac3fe2f04",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-10/yeongdeok-poolmoon/clip_ai3.mp4"
+  },
+  {
+   "img": "ai:6",
+   "taskId": "51b793e22f9f2e799e2b76bb0f71dd29",
+   "state": "fail",
+   "credits": 0.0,
+   "msg": "Internal Error, Please try again later."
   },
   {
    "img": "ai:4",
-   "taskId": "c090e8edf2d100bf1b4ca72980da6506",
+   "taskId": "5d24710e0f7347feaba411e23e2568ee",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-09/geochang-h-poolvilla/clip_ai4.mp4"
+   "file": "video/2026-11-10/yeongdeok-poolmoon/clip_ai4.mp4"
+  },
+  {
+   "img": "ai:1",
+   "taskId": "2072b3bde1baa7523dcb914019c5bc77",
+   "state": "fail",
+   "credits": 0.0,
+   "msg": "Internal Error, Please try again later."
   }
  ],
- "credits_total": 70.0
+ "credits_total": 105.0
 }
