@@ -358,6 +358,25 @@ function hotDeal(){
 }
 /* 오늘의 생활용품 핫딜(2026-10-20 시온님 요청): data.json lifeDeals = 07:23 작업이 골드박스 화면 카드에서 생활용품만 고름(scripts/life_deals.py) */
 function lifeDeals(){ var now=Date.now(), seen={}; return (Array.isArray(seed.lifeDeals)?seed.lifeDeals:[]).filter(function(x){ var k=dkey(x.name); if(!safeUrl(x.u)||seen[k]||(x.endAt&&Date.parse(x.endAt)<=now)) return false; seen[k]=1; return true; }); }
+/* 다꾸키즈(시온님 아동복 쇼핑몰, 2026-11-11): 카페24 공개 상품 API 로 신상 12개를 그 자리에서 불러와 보여 줌 */
+var KIDS_URL="https://dagguukids.com", KIDS=null;
+function kidsGo(path){ return KIDS_URL+(path||"/")+((path||"/").indexOf("?")>=0?"&":"?")+"utm_source=dagguu&utm_medium=site"; }
+function kidsHot(){ setTimeout(kidsLoad,0); return '<div data-kids>'+(KIDS?kidsHtml(KIDS):'')+'</div>'; }
+function kidsHtml(L){
+  if(!L||L.length<2) return "";
+  return '<section class="hdl kdl"><div class="hdh"><span class="hdk">👕 다꾸키즈</span><b>매일 신상 아동복</b><small>다꾸체험단이 운영하는 아동복 쇼핑몰 · 2만원 이상 무료배송</small></div>'+
+    '<div class="hdr">'+L.map(function(x){ return '<a class="hdi" data-gsec="kids" href="'+esc(kidsGo("/product/detail.html?product_no="+x.no))+'" target="_blank" rel="noopener"><span class="hdm"><img src="'+esc(x.img)+'" alt="" loading="lazy" referrerpolicy="no-referrer"></span><span class="hdn">'+esc(x.name)+'</span><span class="hdp"><b>'+esc(x.price)+'</b></span></a>'; }).join("")+
+    '<a class="hdi kmore" href="'+esc(kidsGo("/"))+'" target="_blank" rel="noopener"><span class="hdm kmm">👕<br>전체 보기</span><span class="hdn">다꾸키즈 구경가기 ›</span></a></div></section>';
+}
+function kidsLoad(){
+  var paint=function(){ [].forEach.call(document.querySelectorAll("[data-kids]"),function(el){ el.innerHTML=kidsHtml(KIDS); }); };
+  if(KIDS){ paint(); return; } if(kidsLoad.busy) return; kidsLoad.busy=1;
+  fetch("https://dagguu.cafe24api.com/api/v2/products?display=T&selling=T&limit=12&order_by=created_date&sort=desc&fields=product_no,product_name,price,list_image",{headers:{"X-Cafe24-Client-Id":"JzTmuiBPItGvZ6KG8g3aPC"}})
+    .then(function(r){ return r.json(); }).then(function(j){
+      KIDS=(j.products||[]).filter(function(p){ return p.list_image&&+p.price>0; }).map(function(p){ return {no:p.product_no,name:p.product_name,img:safeUrl(p.list_image),price:(+p.price).toLocaleString("ko-KR")+"원"}; });
+      paint();
+    }).catch(function(){});
+}
 function lifeHot(){
   var L=lifeDeals(); if(L.length<2) return "";
   return '<section class="hdl ldl"><div class="hdh"><span class="hdk">🧺 쿠팡 골드박스</span><b>오늘의 생활용품 핫딜</b><small>⏳ 오전 7시 마감까지 <em data-hd>'+clock(nextSeven())+'</em></small></div>'+
@@ -472,7 +491,7 @@ function homeView(){
   if(!PMODE){ var ta=travelAds(); if(ta) h+=ta; } if(!PMODE){ h+='<div class="hpad" id="hreels"></div>'; setTimeout(homeReels,0); var tdh=tdHtml(4); if(tdh) h+='<div class="hpad">'+tdh+'</div>'; }
   var gd=groceryDeal(); if(gd) h+='<div class="hpad">'+gd+'</div>';
   var wx=wxSection(); if(wx) h+='<div class="hpad">'+wx+'</div>';
-  var hd=hotDeal(); if(hd) h+='<div class="hpad">'+hd+'</div>'; var lh=lifeHot(); if(lh) h+='<div class="hpad">'+lh+'</div>';  // 오늘의 특가(골드박스)는 홈에서 숨김 (2026-10-14 시온님 요청)
+  var hd=hotDeal(); if(hd) h+='<div class="hpad">'+hd+'</div>'; var lh=lifeHot(); if(lh) h+='<div class="hpad">'+lh+'</div>'; h+='<div class="hpad">'+kidsHot()+'</div>';  // 오늘의 특가(골드박스)는 홈에서 숨김 (2026-10-14 시온님 요청)
   var up=CAT_ORDER.filter(function(m){ return !isOpenCat(m.k) && UPCOMING.some(function(u){ return u.k===m.k||u.t===m.t; }); });
   if(up.length) h+='<a class="upbox" '+ext(kakaoUrl())+'><span class="ul"><small>곧 열려요 ✨</small><b>'+up.map(function(m){ return m.em+' '+esc(m.t); }).join(" · ")+' 체험단</b></span><span class="ug">🔔 오픈 알림</span></a>';
   if(!pushOn()) h+=pushBox().replace('class="pushbox"','class="pushbox hpb"');
@@ -1502,6 +1521,7 @@ function heroSlides(){
   var s=[], ig=safeUrl((seed.sns||{}).instagram), oc=safeUrl(seed.openchat);
   var ST=stayToday(); if(ST) s.push({bg:"#1a0b3d",photo:ST.img,k:"오늘의 감성숙소 ["+stayNo(ST)+"]",t:stayTitle(ST),d:(ST.name?esc(ST.name)+" · ":"")+esc(ST.area||""),b:"숙소 소개 보기",h:stayHref(ST),noart:1,st:1});
   s.push({bg:"radial-gradient(120% 90% at 50% 20%,#5b2fd6 0%,#3a1aa8 45%,#1d0b5c 100%)",t:"이제 <span>공짜여행</span>이 시작된다!",d:"아직도 몰랐어? 여행 무료 체험단<br>여행도 다니고 돈도 아끼고!",b:"지금 바로가기",h:"#/trip",art:"images/free-trip.svg",ft:1});
+  s.push({bg:"linear-gradient(120deg,#2a1866,#6a3fc8 60%,#a77bf0)",k:"다꾸체험단이 운영하는 쇼핑몰",t:"매일 신상 <span>아동복</span>은<br>다꾸키즈에서!",d:"남대문 유아동복을 집에서 편하게<br>2만원 이상 무료배송",b:"다꾸키즈 구경가기",h:kidsGo("/"),x:1,e:["👕","🧸","💜"]});
   /* 다꾸 수익화 배너는 2026-10-21 시온님 요청으로 뺌 */ //s.push({bg:"linear-gradient(120deg,#3a1670,#8a3fd0 55%,#d46fd8)",t:"<span>다꾸 수익화</span> 1:1 코칭",d:"한번 배우면 평생 써먹는<br>블로그 수익화",b:"자세히 보기",h:"#/edu",e:["🧑‍🏫","📈","✍️"]});
   var P=promoOn(); if(P) s.push({bg:"linear-gradient(120deg,#3a1670,#8a3fd0 55%,#b558d6)",t:P.t,d:P.d,b:P.b,h:P.u,x:1,art:P.art});
   var M=mrtList();
@@ -1548,6 +1568,7 @@ function wideBanners(open,closing){
   var W=[], st=open.filter(function(it){ return catOf(it)==="stay"; });
   var ST=stayToday(); if(ST) W.push({h:stayHref(ST),st:1,bg:"linear-gradient(90deg,#1a0b3d 0%,#3a1a8a 60%,#6a3fd6 100%)",s:"오늘의 감성숙소 ["+stayNo(ST)+"] · "+esc(ST.area||""),t:esc(ST.name||(ST.tl||[]).join(" ")||ST.t||"")+" <em>보러가기</em>",art:ST.img});
   W.push({h:"#/trip",bg:"linear-gradient(90deg,#12063f 0%,#2a0f8a 55%,#5b3fd6 100%)",s:"아직도 몰랐어? 여행 무료 체험단",t:"이제 <em>공짜여행</em>이 시작된다!",art:"images/free-trip.svg"});
+  W.push({h:kidsGo("/"),x:1,bg:"linear-gradient(90deg,#2a1866 0%,#6a3fc8 60%,#a77bf0 100%)",s:"다꾸체험단이 운영하는 아동복 쇼핑몰",t:"매일 신상 <em>다꾸키즈</em> 구경가기",e:"👕"});
   /* 다꾸 수익화 배너는 2026-10-21 시온님 요청으로 뺌 */ //W.push({h:"#/edu",bg:"linear-gradient(90deg,#3a1670 0%,#8a3fd0 60%,#d46fd8 100%)",s:"한번 배우면 평생 써먹는 블로그 수익화",t:"다꾸체험단에서 <em>알려드려요!</em>",e:"🧑‍🏫"});
   if(closing.length) W.push({h:"#/list?cat=all&s=todayClose",bg:"linear-gradient(90deg,#2b1055 0%,#5a1f8f 60%,#a43f9f 100%)",s:'오늘 밤 12시까지 · ⏳ <span id="stripcd">'+clock(msToMidnight())+'</span>',t:"오늘 마감 체험단 <em>"+closing.length+"곳</em>",e:"⏰"});
   else W.push({h:"#/list?cat=all&s=open",bg:"linear-gradient(90deg,#2b1055 0%,#5a1f8f 60%,#a43f9f 100%)",s:"지금 신청할 수 있어요",t:"모집 중 체험단 <em>"+open.length+"곳</em>",e:"🎟️"});
@@ -2220,6 +2241,7 @@ function dealsView(){
   (function(){ var mx=-1,bi=-1; TOSS.forEach(function(x,i){ x.best=false; var r=parseInt(x.rate,10); if(!x.soldOut&&r>mx){ mx=r; bi=i; } }); if(bi>=0) TOSS[bi].best=true; })();
   h+='<div id="babyhd">'+hotDeal()+'</div>';
   h+='<div id="lifehd">'+lifeHot()+'</div>';
+  h+=kidsHot();
   if(TOSS.length) h+='<section class="sec tossec" id="toss"><div class="sh"><h2>🛒 오늘의 하루특가</h2>'+(seed.tossUpdated?'<span class="upd">'+esc(String(seed.tossUpdated).slice(11))+' 기준</span>':'')+'</div><p class="cd tcdh">⏳ 밤 12시 교체까지 <b id="tossd">'+hms(msToMidnight())+'</b> 남음</p><div class="tgrid">'+TOSS.slice(0,10).sort(byPrice).map(tossCard).join("")+'</div></section>';
   /* 오늘 많이 사는 쿠팡 인기템(moreDealsSec)은 2026-10-22 시온님 요청으로 뺌 → 골드박스 전체가 끝없이 이어짐 */
   h+='<a class="kakaobox sm" '+ext(kakaoUrl())+'><span><small>다꾸 <i>×</i> 카카오톡</small><b>🔔 새 특가 열리면 <em>가장 먼저 알려드려요!</em></b></span><span class="kg">알림 받기</span></a>';
