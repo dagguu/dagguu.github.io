@@ -1,3357 +1,2589 @@
 {
- "updated": "2026-11-09 16:23",
+ "updated": "2026-11-10 16:25",
  "hints": [
-  "백일선물",
-  "백일상",
-  "욕실화",
-  "크리스마스장식",
-  "아기샴푸"
+  "유아방한화",
+  "아기부츠",
+  "유아부츠",
+  "키즈부츠",
+  "아기신발"
  ],
  "rows": [
   {
-   "kw": "결혼식답례품",
-   "vol": 38610,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "담요",
-   "vol": 37920,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "캠핑용품",
-   "vol": 35790,
+   "kw": "운동화",
+   "vol": 99700,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일상대여",
-   "vol": 29020,
+   "kw": "어그부츠",
+   "vol": 71470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잔치답례품",
-   "vol": 28690,
+   "kw": "키즈경량패딩",
+   "vol": 46880,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미아방지목걸이",
-   "vol": 25890,
+   "kw": "청바지",
+   "vol": 41200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스장식",
-   "vol": 24760,
+   "kw": "신발",
+   "vol": 32750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈패딩",
+   "vol": 31380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부츠",
+   "vol": 29270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기옷",
+   "vol": 29220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키키즈",
+   "vol": 26920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울슬리퍼",
+   "vol": 23020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기모자",
+   "vol": 16800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어그키즈",
+   "vol": 14480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키키즈운동화",
+   "vol": 13560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어그매장",
+   "vol": 13350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성부츠",
+   "vol": 12180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈운동화",
+   "vol": 11220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스웨이드부츠",
+   "vol": 11170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어경량패딩",
+   "vol": 11110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성앵글부츠",
+   "vol": 10950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기신발",
+   "vol": 10640,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "출산선물",
-   "vol": 24460,
+   "kw": "키즈롱패딩",
+   "vol": 10610,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돗자리",
-   "vol": 24220,
+   "kw": "유아패딩",
+   "vol": 10270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아경량패딩",
+   "vol": 8540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헌터레인부츠",
+   "vol": 8270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈어그",
+   "vol": 7440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어패딩",
+   "vol": 7220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "실내화",
-   "vol": 22100,
+   "kw": "가죽부츠",
+   "vol": 7120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울털신발",
+   "vol": 7100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미들부츠",
+   "vol": 6930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기어그",
+   "vol": 6540,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "무릎담요",
-   "vol": 18750,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기유산균",
-   "vol": 17150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "낙산균",
-   "vol": 16590,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "백일상",
-   "vol": 16020,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "크리스마스리스",
-   "vol": 15980,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "튼살크림",
-   "vol": 15430,
+   "kw": "키즈패딩조끼",
+   "vol": 5980,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌답례품",
-   "vol": 14930,
+   "kw": "겨울부츠",
+   "vol": 5870,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일떡",
-   "vol": 14740,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "생일상차림메뉴",
-   "vol": 14730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "결혼답례품",
-   "vol": 14560,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "생일선물",
-   "vol": 14440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "극세사담요",
-   "vol": 13800,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기로션",
-   "vol": 12760,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "부산베이비페어",
-   "vol": 12720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아선물",
-   "vol": 12310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "굿즈제작",
-   "vol": 12300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스조명",
-   "vol": 12200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바람떡",
-   "vol": 11920,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "답례떡",
-   "vol": 11640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실화",
-   "vol": 10620,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "백설기",
-   "vol": 10500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리대여",
-   "vol": 10380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "50일셀프촬영",
-   "vol": 9860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌상대여",
-   "vol": 9760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리장식",
-   "vol": 9750,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "은팔찌",
-   "vol": 9720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리나무",
-   "vol": 9340,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미니트리",
-   "vol": 9320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무용품",
-   "vol": 8730,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "밍크담요",
-   "vol": 8680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌아기선물",
-   "vol": 8560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스소품",
-   "vol": 8340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스오너먼트",
-   "vol": 8240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장실선반",
-   "vol": 8140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기백일선물",
-   "vol": 8020,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기돌선물",
-   "vol": 7850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리오너먼트",
-   "vol": 7830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌선물",
-   "vol": 7530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌아기장난감",
-   "vol": 7320,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아유산균",
-   "vol": 7160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄절",
-   "vol": 7110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "꿀떡",
-   "vol": 7080,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "DIY키트",
-   "vol": 7050,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스오르골",
-   "vol": 7040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리조명",
-   "vol": 6950,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미아방지팔찌",
-   "vol": 6820,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기비타민D",
-   "vol": 6790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벽트리",
-   "vol": 6740,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어린이집생일선물",
-   "vol": 6720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실슬리퍼",
-   "vol": 6390,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미니크리스마스트리",
-   "vol": 6390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "100일선물",
-   "vol": 6310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "떡종류",
-   "vol": 5950,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일상차림",
-   "vol": 5910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수수팥떡",
-   "vol": 5910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임산부샴푸",
-   "vol": 5790,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유치원문방구",
-   "vol": 5780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌사진",
-   "vol": 5780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기바디워시",
+   "kw": "걸음마신발",
    "vol": 5760,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "율마",
-   "vol": 5720,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "캠핑이불",
-   "vol": 5550,
+   "kw": "남자부츠",
+   "vol": 5750,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌떡",
-   "vol": 5530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "병문안선물",
-   "vol": 5420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치선물",
+   "kw": "털부츠",
    "vol": 5370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대형크리스마스트리",
-   "vol": 5350,
+   "kw": "아기겨울신발",
+   "vol": 5290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아비타민D",
-   "vol": 5280,
+   "kw": "아기어그부츠",
+   "vol": 5240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아구두",
+   "vol": 5060,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "100일상대여",
-   "vol": 5270,
+   "kw": "여아운동화",
+   "vol": 5030,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "털신발",
+   "vol": 4990,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리전구",
+   "kw": "키즈부츠",
    "vol": 4970,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "유아옷",
+   "vol": 4910,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신생아로션",
-   "vol": 4880,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "임신선물",
-   "vol": 4540,
+   "kw": "롱어그부츠",
+   "vol": 4830,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "판촉",
+   "kw": "아동경량패딩",
+   "vol": 4830,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남자워커",
+   "vol": 4790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기운동화",
+   "vol": 4720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스웨이드롱부츠",
+   "vol": 4660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헌터부츠",
+   "vol": 4590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학교실내화",
+   "vol": 4560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기신발",
+   "vol": 4510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈풋살화",
+   "vol": 4450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어그신발",
    "vol": 4400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기념품제작",
-   "vol": 4390,
+   "kw": "여자부츠",
+   "vol": 4300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여행용슬리퍼",
-   "vol": 4310,
+   "kw": "키즈방한화",
+   "vol": 4290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈어그부츠",
+   "vol": 4200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전술화",
+   "vol": 4060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동패딩",
+   "vol": 4060,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "판촉물제작",
-   "vol": 4240,
+   "kw": "주니어",
+   "vol": 3980,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기100일선물",
-   "vol": 4140,
+   "kw": "초등경량패딩",
+   "vol": 3890,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기샴푸",
-   "vol": 4120,
-   "comp": "중간",
+   "kw": "경량패딩키즈",
+   "vol": 3820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아경량패딩",
+   "vol": 3710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신발사이트",
+   "vol": 3550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기부츠",
+   "vol": 3470,
+   "comp": "높음",
    "hint": true
   },
   {
-   "kw": "돌상",
-   "vol": 4110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "친구출산선물",
-   "vol": 3930,
+   "kw": "여성겨울부츠",
+   "vol": 3440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남편생일상",
-   "vol": 3880,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "100일상",
-   "vol": 3780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베이비파우더",
-   "vol": 3590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일선물",
-   "vol": 3580,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "EVA슬리퍼",
-   "vol": 3500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "만들기키트",
-   "vol": 3420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스꽃",
+   "kw": "뉴발란스겨울신발",
    "vol": 3400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "첫돌",
-   "vol": 3390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기선물",
-   "vol": 3370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이케아크리스마스트리",
-   "vol": 3360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스전구",
+   "kw": "군화",
    "vol": 3340,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "셀프백일상",
-   "vol": 3260,
+   "kw": "키즈구스다운",
+   "vol": 3280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈샴푸",
+   "kw": "유아운동화",
    "vol": 3230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스무드등",
-   "vol": 3210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "드시모네베이비스텝2",
-   "vol": 3200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "떡주문",
+   "kw": "아기걸음마신발",
    "vol": 3170,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "50일촬영",
+   "kw": "어린이경량패딩",
    "vol": 3160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "각인",
-   "vol": 3150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "셀프돌상",
-   "vol": 3120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "차박용품",
+   "kw": "유비맘",
    "vol": 3100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "베이비로션",
-   "vol": 3090,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리장식",
+   "kw": "키펀트",
    "vol": 3050,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미끄럼방지신발",
-   "vol": 3040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "100일아기선물",
-   "vol": 3020,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오브제화환",
-   "vol": 3010,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리전구",
-   "vol": 3010,
+   "kw": "아동운동화",
+   "vol": 2980,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "홍보물품",
-   "vol": 2920,
+   "kw": "키즈숏패딩",
+   "vol": 2970,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일사진",
-   "vol": 2920,
+   "kw": "EVA실내화",
+   "vol": 2960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전투화",
+   "vol": 2950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기장화",
+   "vol": 2830,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "밍크이불",
-   "vol": 2890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "떡답례품",
-   "vol": 2870,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형트리",
-   "vol": 2850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자친구100일선물",
-   "vol": 2850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실용품",
-   "vol": 2840,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잡이",
-   "vol": 2820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아용품",
-   "vol": 2810,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사은품",
+   "kw": "겨울방한화",
    "vol": 2800,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스양말",
-   "vol": 2790,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "본식부케",
-   "vol": 2780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기바디로션",
-   "vol": 2760,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "여아한복",
-   "vol": 2760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "생일상메뉴",
+   "kw": "키즈방한부츠",
    "vol": 2740,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소량인쇄",
+   "kw": "여성워커",
+   "vol": 2700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자워커",
    "vol": 2690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캠핑러그",
+   "kw": "주니어롱패딩",
+   "vol": 2690,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈패딩부츠",
    "vol": 2670,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "돌답례품수건",
-   "vol": 2650,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스카페",
-   "vol": 2650,
+   "kw": "삭스부츠",
+   "vol": 2670,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스장식소품",
-   "vol": 2640,
+   "kw": "남성부츠",
+   "vol": 2620,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "조카돌선물",
-   "vol": 2630,
+   "kw": "헌터키즈",
+   "vol": 2430,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스리스만들기",
-   "vol": 2610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스스티커",
-   "vol": 2490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장실슬리퍼",
-   "vol": 2470,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "여성슬리퍼",
-   "vol": 2450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기념품샵",
-   "vol": 2420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리만들기",
-   "vol": 2410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전등갓",
+   "kw": "어그남자",
    "vol": 2390,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기영양제",
-   "vol": 2390,
+   "kw": "키즈신발",
+   "vol": 2350,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스용품",
-   "vol": 2380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "개업떡",
-   "vol": 2380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리세트",
-   "vol": 2360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셀프돌상대여",
-   "vol": 2340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셀프백일상대여",
-   "vol": 2310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치수건",
-   "vol": 2300,
+   "kw": "유아신발",
+   "vol": 2320,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "레이저각인",
+   "kw": "나이키코르테즈키즈",
    "vol": 2290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잔치한복",
-   "vol": 2280,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기한복",
-   "vol": 2280,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "이사떡",
-   "vol": 2270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아유산균",
-   "vol": 2260,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "홍보물",
+   "kw": "남아운동화",
    "vol": 2260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기사진",
-   "vol": 2250,
+   "kw": "유아부츠",
+   "vol": 2240,
    "comp": "높음",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "백일한복대여",
-   "vol": 2250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "200일셀프촬영",
+   "kw": "여성워커부츠",
    "vol": 2240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리대여",
-   "vol": 2230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주문제작",
-   "vol": 2210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기목걸이",
+   "kw": "여성미들부츠",
    "vol": 2170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌사진스튜디오",
-   "vol": 2140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일잔치",
-   "vol": 2140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아유산균비타민D",
-   "vol": 2130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스리본",
+   "kw": "어그미니",
    "vol": 2120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마끈",
-   "vol": 2080,
+   "kw": "주니어운동화",
+   "vol": 2120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리오너먼트",
-   "vol": 2080,
+   "kw": "여아부츠",
+   "vol": 2110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "팔순답례품",
+   "kw": "키즈다운패딩",
+   "vol": 2100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키코트버로우",
+   "vol": 2090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동롱패딩",
    "vol": 2080,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "어린이집크리스마스선물",
-   "vol": 2080,
+   "kw": "유아실내화",
+   "vol": 2070,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기유산균비타민D",
-   "vol": 2040,
+   "kw": "나이키베이비",
+   "vol": 2050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원실내화",
+   "vol": 2030,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "양털담요",
-   "vol": 2040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "칠순떡",
+   "kw": "유아장화",
    "vol": 2010,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기미아방지목걸이",
-   "vol": 2010,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌한복대여",
-   "vol": 2010,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미끄럼방지슬리퍼",
-   "vol": 2000,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "트리조명",
+   "kw": "나이키주니어운동화",
    "vol": 1990,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "100일떡",
+   "kw": "아동실내화",
    "vol": 1980,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "두돌아기선물",
-   "vol": 1970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스데코",
-   "vol": 1970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "푹신한슬리퍼",
-   "vol": 1970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두돌선물",
-   "vol": 1950,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일옷",
+   "kw": "워커부츠",
    "vol": 1940,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스행사",
+   "kw": "사막화",
+   "vol": 1940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "토들러",
    "vol": 1930,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이샴푸",
-   "vol": 1910,
+   "kw": "베이비어그",
+   "vol": 1880,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "스텐레스욕실선반",
-   "vol": 1910,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "욕실미끄럼방지",
-   "vol": 1910,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아바디워시",
-   "vol": 1890,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전통백일상대여",
-   "vol": 1830,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "동탄떡집",
+   "kw": "아동방한화",
    "vol": 1830,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기백일상대여",
+   "kw": "아기털신발",
+   "vol": 1830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자장화",
    "vol": 1820,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스만들기",
-   "vol": 1810,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기백일상",
-   "vol": 1810,
+   "kw": "아동장화",
+   "vol": 1820,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기범보의자",
-   "vol": 1790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리나무",
+   "kw": "남자털부츠",
    "vol": 1780,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아로션",
-   "vol": 1770,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌한복",
-   "vol": 1770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스나무",
+   "kw": "유아어그",
    "vol": 1750,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일한복",
-   "vol": 1740,
+   "kw": "남성방한부츠",
+   "vol": 1750,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "담요제작",
-   "vol": 1680,
+   "kw": "데저트부츠",
+   "vol": 1720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "각인선물",
-   "vol": 1630,
+   "kw": "여성털부츠",
+   "vol": 1720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "6개월아기선물",
-   "vol": 1620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스포토존",
-   "vol": 1620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "답례품떡",
-   "vol": 1610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장실바닥매트",
-   "vol": 1610,
+   "kw": "여아털부츠",
+   "vol": 1710,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "슬리퍼추천",
+   "kw": "아기털부츠",
+   "vol": 1710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등실내화",
+   "vol": 1690,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여아목도리",
+   "vol": 1690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아구두",
+   "vol": 1680,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈축구화",
+   "vol": 1680,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이축구화",
+   "vol": 1660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이운동화",
+   "vol": 1650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동슬리퍼",
+   "vol": 1640,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아동털부츠",
+   "vol": 1620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아장화",
+   "vol": 1620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아어그부츠",
    "vol": 1610,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "슬리퍼거치대",
+   "kw": "남아방한화",
+   "vol": 1600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키주니어",
+   "vol": 1590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화이트부츠",
+   "vol": 1590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "처카부츠",
+   "vol": 1570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아실내화",
+   "vol": 1570,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여아샌들",
    "vol": 1560,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "생일음식",
-   "vol": 1550,
-   "comp": "높음",
+   "kw": "신생아신발",
+   "vol": 1540,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "리스만들기",
-   "vol": 1550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스꾸미기",
-   "vol": 1550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리꾸미기",
+   "kw": "초등학생경량패딩",
    "vol": 1530,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "블랑켓",
-   "vol": 1520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실내식물",
-   "vol": 1510,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티",
+   "kw": "여아스타킹",
    "vol": 1510,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아샴푸",
+   "kw": "아기패딩부츠",
+   "vol": 1500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어후드집업",
    "vol": 1500,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "미끄럼방지욕실화",
-   "vol": 1500,
-   "comp": "중간",
+   "kw": "방수방한부츠",
+   "vol": 1490,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아비타민D유산균",
+   "kw": "키즈겨울신발",
+   "vol": 1480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아슬리퍼",
+   "vol": 1480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름부츠",
+   "vol": 1470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엔지니어부츠",
    "vol": 1460,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수수팥떡만들기",
+   "kw": "삑삑이신발",
+   "vol": 1450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "돌아기신발사이즈",
    "vol": 1440,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "액상유산균",
-   "vol": 1440,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "돌아기유산균",
-   "vol": 1430,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "고속터미널트리",
+   "kw": "아동샌들",
    "vol": 1420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성가죽부츠",
+   "vol": 1420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아샌들",
+   "vol": 1420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈덕다운패딩",
+   "vol": 1420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아실내화",
+   "vol": 1410,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "청라떡집",
-   "vol": 1390,
-   "comp": "낮음",
+   "kw": "어그블랙",
+   "vol": 1410,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실정리함",
+   "kw": "아기구두",
+   "vol": 1390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남자워커화",
    "vol": 1390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자작나무트리",
+   "kw": "앵클",
+   "vol": 1390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학교실내화",
+   "vol": 1390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아아쿠아슈즈",
    "vol": 1370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자털신발",
+   "vol": 1360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아털부츠",
+   "vol": 1350,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "생일떡",
-   "vol": 1360,
-   "comp": "높음",
+   "kw": "초등여아경량패딩",
+   "vol": 1340,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "100일사진",
-   "vol": 1360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고속터미널크리스마스",
-   "vol": 1360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "4살여아선물",
-   "vol": 1350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등여아선물",
+   "kw": "아기방한부츠",
    "vol": 1330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌케이크",
+   "kw": "여자앵글부츠",
    "vol": 1320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "2살선물",
-   "vol": 1310,
+   "kw": "레이스업부츠",
+   "vol": 1300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈바디워시",
-   "vol": 1290,
+   "kw": "ABC마트키즈",
+   "vol": 1300,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스벽장식",
+   "kw": "양가죽부츠",
+   "vol": 1300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생실내화",
    "vol": 1290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남아돌선물",
+   "kw": "나이키아기운동화",
    "vol": 1270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "드시모네유산균베이비",
-   "vol": 1270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아바디워시",
+   "kw": "찍찍이운동화",
    "vol": 1260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스포장지",
-   "vol": 1250,
+   "kw": "키즈덕다운",
+   "vol": 1240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잔치답례품수건",
-   "vol": 1250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가랜드제작",
-   "vol": 1230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소파덮개",
+   "kw": "나이키운동화키즈",
    "vol": 1220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌수건",
-   "vol": 1220,
+   "kw": "나이키코르테즈베이비",
+   "vol": 1210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실수납선반",
+   "kw": "키즈겨울부츠",
    "vol": 1200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실수납",
-   "vol": 1200,
+   "kw": "애기신발",
+   "vol": 1190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동부츠",
+   "vol": 1190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스인테리어",
-   "vol": 1200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여아돌선물",
+   "kw": "아기실내화",
    "vol": 1180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스인형",
-   "vol": 1180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "생일밥상",
-   "vol": 1170,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "셀프50일촬영",
-   "vol": 1170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쇼파블랭킷",
-   "vol": 1160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아목걸이",
-   "vol": 1160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이목걸이",
-   "vol": 1160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무드등만들기",
-   "vol": 1150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "백일상차리기",
-   "vol": 1150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기한복대여",
-   "vol": 1140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스쿠션",
-   "vol": 1140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제천떡집",
+   "kw": "키즈겨울운동화",
    "vol": 1130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "첫돌선물",
-   "vol": 1120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌답례떡",
-   "vol": 1120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인천떡집",
-   "vol": 1110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조카100일선물",
-   "vol": 1110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3살여아선물",
+   "kw": "아기겨울부츠",
    "vol": 1100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이유산균",
-   "vol": 1100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기은목걸이",
-   "vol": 1090,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2살아기선물",
-   "vol": 1090,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리렌탈",
-   "vol": 1080,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "욕실실내화",
+   "vol": 1100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이장화",
+   "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키베이비운동화",
    "vol": 1080,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스만들기키트",
-   "vol": 1080,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잡이대여",
-   "vol": 1080,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스노우볼만들기",
+   "kw": "초등학생운동화",
    "vol": 1070,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기팔찌",
-   "vol": 1060,
+   "kw": "유아겨울신발",
+   "vol": 1050,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다이소크리스마스장식",
-   "vol": 1060,
+   "kw": "가을부츠",
+   "vol": 1050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이부츠",
+   "vol": 1040,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "성장앨범",
+   "kw": "초등운동화",
    "vol": 1040,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실디스펜서",
-   "vol": 1040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두돌생일상",
-   "vol": 1030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스이벤트",
-   "vol": 1030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기돌목걸이",
+   "kw": "퍼부츠",
    "vol": 1020,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리꾸미기",
-   "vol": 1020,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌아기책",
+   "kw": "두돌아기신발",
    "vol": 1010,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산모애샴푸",
-   "vol": 1000,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "지끈",
+   "kw": "양털신발",
    "vol": 1000,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "셀프돌잔치",
-   "vol": 1000,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기고보습크림",
-   "vol": 1000,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "생신상",
-   "vol": 990,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "순금선물",
-   "vol": 980,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스홈파티",
-   "vol": 980,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "50일사진",
-   "vol": 980,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스조화",
-   "vol": 980,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미아방지은목걸이",
-   "vol": 970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비건샴푸",
-   "vol": 970,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미아방지",
-   "vol": 960,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "조카돌잔치선물",
-   "vol": 950,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "생신상차림",
+   "kw": "초등여아운동화",
    "vol": 940,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "친구돌잔치선물",
+   "kw": "워커신발",
    "vol": 930,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무장식트리",
+   "kw": "남자겨울부츠",
    "vol": 930,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "공단리본",
-   "vol": 920,
+   "kw": "어린이실내화",
+   "vol": 930,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "드시모네베이비",
-   "vol": 920,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "돌상차림",
-   "vol": 920,
+   "kw": "방수어그",
+   "vol": 930,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리렌탈",
+   "kw": "나이키유아운동화",
+   "vol": 930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "숏부츠",
    "vol": 910,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일아기선물",
-   "vol": 910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스모루",
-   "vol": 910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조경자재",
+   "kw": "나이키아기신발",
    "vol": 900,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기돌사진",
+   "kw": "유아풋살화",
    "vol": 900,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아샴푸",
-   "vol": 900,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "기프트몰",
+   "kw": "여아크로스백",
    "vol": 900,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "시흥꽃집",
+   "kw": "아기슬리퍼",
    "vol": 890,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "출장돌상",
-   "vol": 890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "발등낮은욕실화",
+   "kw": "유아방한부츠",
    "vol": 870,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "청소년샴푸추천",
-   "vol": 870,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여아돌한복",
-   "vol": 870,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생샴푸",
+   "kw": "어그부츠키즈",
    "vol": 860,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스러그",
+   "kw": "스티코장화",
    "vol": 860,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "편한슬리퍼",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아한복",
+   "kw": "남자어그신발",
    "vol": 850,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기사진관",
+   "kw": "유아패딩부츠",
    "vol": 840,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기돌상",
-   "vol": 840,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1000일선물",
-   "vol": 840,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쿠션실내화",
-   "vol": 840,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "결혼식답례품떡",
+   "kw": "아기방한화",
    "vol": 830,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스DIY",
+   "kw": "패딩실내화",
+   "vol": 830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "WALKER",
    "vol": 820,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "환갑꽃다발",
+   "kw": "아기층간소음실내화",
    "vol": 820,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "프로포즈꽃",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아50일촬영",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장실수납",
+   "kw": "남자발편한구두",
    "vol": 810,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스카드만들기",
+   "kw": "나이키키즈신발",
    "vol": 810,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기저귀크림",
-   "vol": 810,
+   "kw": "어린이구두",
+   "vol": 800,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스트리추천",
-   "vol": 810,
+   "kw": "남성워커부츠",
+   "vol": 800,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기유산균추천",
+   "kw": "남성겨울부츠",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈털슬리퍼",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아겨울구두",
    "vol": 790,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실화추천",
-   "vol": 780,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "포장리본",
-   "vol": 780,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "설치미술",
-   "vol": 780,
+   "kw": "세무부츠",
+   "vol": 790,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리가랜드",
-   "vol": 780,
+   "kw": "어그정품",
+   "vol": 790,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실악세사리",
-   "vol": 770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기100일사진",
-   "vol": 770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기백일",
-   "vol": 770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두돌아기책",
+   "kw": "여아신발",
    "vol": 760,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌아기전집",
+   "kw": "돌아기겨울신발",
    "vol": 760,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기100일촬영",
+   "kw": "아기삑삑이신발",
    "vol": 760,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "금사",
+   "kw": "어그키높이",
+   "vol": 760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아메리제인",
    "vol": 750,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스LED",
+   "kw": "패딩방한화",
    "vol": 750,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잔치떡",
+   "kw": "키즈다이얼운동화",
    "vol": 740,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "은퇴선물",
+   "kw": "나이키키즈코르테즈",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동신발",
    "vol": 730,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "범보의자대여",
+   "kw": "어린이집실내화",
    "vol": 730,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "집에서하는돌상",
-   "vol": 730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1살아기선물",
+   "kw": "키즈털부츠",
    "vol": 720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대형트리대여",
+   "kw": "키즈털신발",
+   "vol": 720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성털신발",
+   "vol": 720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈슬리퍼",
+   "vol": 720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이롱패딩",
+   "vol": 720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바이커부츠",
+   "vol": 720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈장화",
+   "vol": 720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아겨울부츠",
    "vol": 710,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실슬라이딩장",
+   "kw": "가죽워커",
    "vol": 710,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리별",
+   "kw": "중학생운동화",
+   "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기패딩신발",
    "vol": 700,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스볼",
+   "kw": "여아털구두",
    "vol": 700,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리별",
+   "kw": "나이키아동운동화",
    "vol": 700,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실수납함",
+   "kw": "키즈구두",
    "vol": 690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "호텔크리스마스트리",
+   "kw": "어린이신발",
    "vol": 690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스캔들",
+   "kw": "발등높은아기신발",
    "vol": 690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "출장돌상대여",
-   "vol": 690,
+   "kw": "유아겨울양말",
+   "vol": 680,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "유아슬리퍼",
-   "vol": 690,
+   "vol": 680,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "임신축하꽃",
+   "kw": "공룡신발",
    "vol": 670,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리리본",
+   "kw": "나이키키즈매장",
    "vol": 670,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "5세여아선물",
+   "kw": "아이패딩",
    "vol": 670,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기100일상",
-   "vol": 660,
+   "kw": "CHELSEABOOTS",
+   "vol": 655,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일상떡",
-   "vol": 660,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "광주백일떡",
+   "kw": "워커브랜드",
    "vol": 650,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이집크리스마스행사",
-   "vol": 650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈목걸이",
+   "kw": "유아털부츠",
    "vol": 640,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유치원크리스마스선물",
+   "kw": "겨울털신",
    "vol": 640,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스소품샵",
+   "kw": "남자앵글부츠",
    "vol": 640,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "100일잔치",
-   "vol": 640,
+   "kw": "키즈패딩슈즈",
+   "vol": 630,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "14K미아방지목걸이",
+   "kw": "키즈패딩슬립온",
    "vol": 630,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스대형트리",
+   "kw": "블랙워커",
    "vol": 620,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스키트",
+   "kw": "방한방수부츠",
    "vol": 620,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스장식품",
-   "vol": 620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쌍둥이선물",
-   "vol": 620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엄마표백일상",
-   "vol": 620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "첫월급선물",
+   "kw": "휠라패딩부츠",
    "vol": 610,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전통백일상",
-   "vol": 610,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전통돌상대여",
+   "kw": "키즈러닝화",
    "vol": 610,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이케아크리스마스장식",
+   "kw": "온열신발",
    "vol": 610,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "40대와이프생일선물",
+   "kw": "유아축구화",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아방한화",
+   "vol": 600,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "워크부츠",
    "vol": 600,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등샴푸",
-   "vol": 600,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "실버미아방지목걸이",
+   "kw": "돌아기운동화",
    "vol": 600,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌지난아기선물",
+   "kw": "패션장화",
    "vol": 600,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기욕실화",
-   "vol": 600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장실정리대",
+   "kw": "아기나이키운동화",
    "vol": 590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "200일아기선물",
-   "vol": 590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두피간지러움",
-   "vol": 590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일케이크",
-   "vol": 590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리본인쇄",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두돌여아선물",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "낮은욕실슬리퍼",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기100일",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아선물",
+   "kw": "초등여아가방",
    "vol": 570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아가100일상",
+   "kw": "워커추천",
    "vol": 570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "집에서돌잔치",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "축영전",
+   "kw": "방수워커",
    "vol": 560,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자아기돌선물",
+   "kw": "여성반부츠",
    "vol": 560,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마니또선물",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "100일촬영",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스집꾸미기",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장실실내화",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "꽃송편",
-   "vol": 540,
+   "kw": "다이얼등산화",
+   "vol": 560,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기은팔찌",
+   "kw": "여아겨울부츠",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등여아책가방",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기신발130",
+   "vol": 550,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "부츠브랜드",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자털신발",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보행기신발",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울트레킹화",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학생실내화",
+   "vol": 550,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "겨울방한부츠",
    "vol": 540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기돌상대여",
+   "kw": "키즈농구화",
    "vol": 540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌상소품",
+   "kw": "어린이패딩조끼",
    "vol": 540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스포장",
+   "kw": "어린이어그부츠",
    "vol": 530,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "낮은욕실화",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "FED유산균",
+   "kw": "두돌아기생일선물",
    "vol": 530,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스트리풀세트",
+   "kw": "키즈나이키운동화",
    "vol": 530,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "친환경욕실화",
+   "kw": "남아패딩조끼",
    "vol": 530,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "100일한복대여",
-   "vol": 530,
-   "comp": "높음",
+   "kw": "아기신발추천",
+   "vol": 520,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "화장지걸이",
+   "kw": "어그부츠사이즈",
    "vol": 520,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일촬영",
+   "kw": "가죽방한화",
    "vol": 520,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "안미끄러운슬리퍼",
+   "kw": "초등롱패딩",
    "vol": 520,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일드레스",
+   "kw": "나이키코트버로우키즈",
    "vol": 520,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기돌한복",
-   "vol": 520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기백일사진",
+   "kw": "여아겨울신발",
    "vol": 510,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리인형",
+   "kw": "경량방한화",
    "vol": 510,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌스튜디오",
+   "kw": "유아메리제인",
    "vol": 500,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실내화추천",
+   "kw": "키즈슬립온",
    "vol": 500,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "출산선물세트",
+   "kw": "UGG신발",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "경량워커",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키코트버로우로우리크래프트",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이슬리퍼",
    "vol": 490,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자친구생일상",
-   "vol": 490,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "돌사진촬영",
+   "kw": "키즈겨울패딩",
    "vol": 490,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이팔찌",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아미아방지목걸이",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기100일상대여",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "집들이선물세트",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다이소욕실슬리퍼",
-   "vol": 490,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리장식소품",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스시트지",
+   "kw": "유아털신발",
    "vol": 480,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기바스앤샴푸",
+   "kw": "스웨이드워커",
    "vol": 480,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "하얀트리",
+   "kw": "어그부츠코디",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "처커부츠",
    "vol": 480,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유아화장품",
+   "kw": "아동어그부츠",
    "vol": 470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "환갑떡",
+   "kw": "키즈로퍼",
    "vol": 470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "선물포장리본",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자아기돌선물",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비욘드키즈",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌아기한복대여",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남대문시장크리스마스",
+   "kw": "여아LED구두",
    "vol": 470,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "두돌떡",
+   "kw": "유아털모자",
    "vol": 470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "울산백일떡",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "첫돌케이크",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "슬림퍼",
-   "vol": 460,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "베이비유산균",
+   "kw": "주니어부츠",
    "vol": 460,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대형트리렌탈",
-   "vol": 460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "4세여아선물",
-   "vol": 460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "퍼라이트",
-   "vol": 460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셀프100일상",
-   "vol": 460,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치대여",
-   "vol": 460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남아백일한복",
-   "vol": 460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등생일파티음식",
-   "vol": 460,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "백일잔치식당",
-   "vol": 460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기스튜디오",
+   "kw": "여성가을부츠",
    "vol": 450,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "병문안꽃",
-   "vol": 450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스박스",
-   "vol": 450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고속터미널크리스마스트리",
+   "kw": "키즈나이키",
    "vol": 440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스리스재료",
+   "kw": "주니어농구화",
    "vol": 440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스오너먼트만들기",
-   "vol": 440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티용품",
+   "kw": "패딩키즈",
    "vol": 430,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "포항이동꽃집",
-   "vol": 430,
+   "kw": "남아구두",
+   "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잔치상차림",
-   "vol": 430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베이비샴푸",
+   "kw": "키즈실내화",
    "vol": 420,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "화장실용품",
+   "kw": "발편한워커",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3살아기선물",
+   "kw": "갈색부츠",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "포토존대여",
+   "kw": "남자방수방한화",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일사진관",
+   "kw": "유아쇼핑몰",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스가로등",
-   "vol": 420,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "돌상상차림",
+   "kw": "나이키어린이운동화",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전통돌상",
+   "kw": "베이비신발",
    "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "300일셀프촬영",
+   "kw": "아기신발브랜드",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈겨울슬리퍼",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아롱부츠",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈런닝화",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자털신",
    "vol": 400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기미아방지팔찌",
+   "kw": "초등학생롱패딩",
    "vol": 400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "성탄트리",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스종",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일상차림대여",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동한복대여",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스리스DIY",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "루돌프코",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타양말",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장실거울수납장",
+   "kw": "초등남아운동화",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여아백일한복",
+   "kw": "베이비잼구두",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기돌한복대여",
+   "kw": "보행기화",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미끄럼방지실내화",
+   "kw": "초등여아구두",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가랜드트리",
+   "kw": "베이비모자",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "천안백일떡",
-   "vol": 380,
+   "kw": "돌아기신발추천",
+   "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스퍼즐",
-   "vol": 380,
+   "kw": "유아겨울운동화",
+   "vol": 370,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "파라소",
+   "kw": "아기신발140",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인천답례떡",
+   "kw": "나이키털신발",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소형트리",
+   "kw": "남성앵글부츠",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "감성캠핑용품",
+   "kw": "부츠추천",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "북유럽백일상대여",
+   "kw": "어린이실내슬리퍼",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일셀프촬영",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인공토",
+   "kw": "어린이방한부츠",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "특별한생일",
+   "kw": "아기운동화추천",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아욕실화",
+   "kw": "스케쳐스남성방한화",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자돌아기옷",
+   "kw": "털샌들",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기셀프촬영소품",
-   "vol": 350,
+   "kw": "겨울털부츠",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "멀티코트",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "DV5456-104",
+   "vol": 360,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "3M크리스마스트리",
+   "kw": "헬로카봇신발",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기신발120",
    "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미니트리만들기",
+   "kw": "어린이겨울부츠",
    "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일아기한복",
+   "kw": "어린이방한화",
    "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일상소품",
+   "kw": "운동화부츠",
    "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고터크리스마스트리",
+   "kw": "키즈레인부츠",
    "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잡이책",
-   "vol": 340,
+   "kw": "아기셋업",
+   "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실서랍장",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임신축하",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실미끄럼방지슬리퍼",
+   "kw": "ABC키즈",
    "vol": 340,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "돌잔치상",
+   "kw": "아이신발",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리리스",
+   "kw": "베이비운동화",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "꽃다발케이크",
+   "kw": "방한방수신발",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성스웨이드부츠",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키키즈사이즈",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키코트버로우로우2",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아구두브랜드",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스선물포장",
+   "kw": "키즈롱부츠",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리모루",
+   "kw": "발소리신발",
+   "vol": 330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "편한부츠",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "주니어샴푸",
+   "kw": "나이키범고래키즈",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아실내슬리퍼",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈구스다운패딩",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아부츠",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스조형물",
+   "kw": "초등부츠",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "논슬립욕실화",
+   "kw": "남아로퍼",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스조명장식",
+   "kw": "아기샌들",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자아기선물",
+   "kw": "방한화여성",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남아돌한복대여",
+   "kw": "쿠션덧신",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌상업체",
-   "vol": 320,
+   "kw": "여아패딩부츠",
+   "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스분위기",
-   "vol": 320,
+   "kw": "초등학생신발",
+   "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "평택백일떡",
-   "vol": 320,
+   "kw": "여자아기구두",
+   "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "얀바밍",
-   "vol": 320,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리인형",
-   "vol": 320,
+   "kw": "여아어그",
+   "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베란다슬리퍼",
+   "kw": "키즈워커",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동화",
    "vol": 310,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "욕실신발",
+   "kw": "여아겨울운동화",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "야외트리",
+   "kw": "두돌아기발사이즈",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실수납장선반",
+   "kw": "겨울워커",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일상스튜디오",
+   "kw": "나이키걸음마신발",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "초등털실내화",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아보습크림",
+   "kw": "어린이거실화",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스산타",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엄마생일상",
+   "kw": "남아겨울신발",
    "vol": 300,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "사무실이전선물",
+   "kw": "워커화",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "100일한복",
+   "kw": "나이키베이비신발",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스츄리",
+   "kw": "남자겨울방한화",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리대여업체",
+   "kw": "다이얼신발",
+   "vol": 300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여아겨울코트",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "셀프백일상차림",
-   "vol": 295,
-   "comp": "높음",
+   "kw": "DV5456-106",
+   "vol": 300,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아파트크리스마스트리",
+   "kw": "키즈털운동화",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리설치",
+   "kw": "키즈방한운동화",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미아방지은팔찌",
+   "kw": "나이키토들러",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "부산백일상대여",
+   "kw": "남자부츠브랜드",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스케이크장식",
+   "kw": "여성장화추천",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "푹신한실내화",
+   "kw": "유아레인부츠",
+   "vol": 290,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "나이키유아신발",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "울산백일상대여",
+   "kw": "DV5457",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잔치옷대여",
+   "kw": "여아겨울패딩",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이생일선물",
-   "vol": 290,
+   "kw": "여아방한부츠",
+   "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "LED크리스마스트리",
-   "vol": 290,
+   "kw": "아기단화",
+   "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "졸업식꽃",
+   "kw": "키즈패딩운동화",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아털실내화",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성겨울방한화",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈운동화추천",
    "vol": 280,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "돌아기정장대여",
+   "kw": "나이키키즈농구화",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리장식볼",
+   "kw": "나이키키즈코트버로우",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아동목걸이",
+   "kw": "키즈방수부츠",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동겨울부츠",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아신발",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동어그",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로우워커",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기모신발",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기보행기신발",
    "vol": 270,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "겨울만들기",
+   "kw": "유아나이키운동화",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3세여아선물",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생목걸이",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스인테리어소품",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식만들기",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아한복",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셀프100일촬영",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기생일상",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용트리",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스창문꾸미기",
+   "kw": "어린이털실내화",
    "vol": 270,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스풍선장식",
+   "kw": "남대문여아옷",
    "vol": 270,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "생일상배달",
+   "kw": "유아털신",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "화장실신발",
+   "kw": "키즈털신",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여아어그부츠",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리설치",
+   "kw": "아이운동화",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실선반3단",
+   "kw": "여자아이구두",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스웨이드삭스부츠",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "UGG남자",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키탄준",
    "vol": 260,
    "comp": "높음",
    "hint": false
@@ -3363,3847 +2595,4027 @@
    "hint": false
   },
   {
-   "kw": "칠순답례떡",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스대형장식",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장실선반장",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집크리스마스",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일상차림떡",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스전구트리",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스종이컵",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스컨셉",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스리본끈",
+   "kw": "여아검정구두",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강남꽃도매상가",
+   "kw": "주니어신발",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실청소도구정리",
+   "kw": "갈색워커",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "100일상차림",
+   "kw": "겨울용신발",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대구백일상대여",
+   "kw": "방한화남성",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3M트리",
+   "kw": "흰색부츠",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실정리선반",
+   "kw": "나이키여아운동화",
+   "vol": 250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "나이키키즈러닝화",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잡이전집",
+   "kw": "나이키주니어농구화",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키키즈에어맥스",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아스카프",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방한샌들",
+   "vol": 250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아동방한부츠",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "리본도매",
+   "kw": "유아로퍼",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베이비워시",
+   "kw": "초등겨울신발",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자아기신발",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아겨울구두",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레이스업워커",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "덕부츠",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자미들부츠",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "털방한화",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키애기신발",
    "vol": 240,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "여자아기선물",
+   "kw": "나이키아기옷",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스대형리스",
+   "kw": "유아층간소음슬리퍼",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "성탄장식",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌상차림대여",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스눈사람",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "레이저인쇄",
+   "kw": "아동패딩부츠",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베이비바디워시",
+   "kw": "아기방수부츠",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동털실내화",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동털슬리퍼",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이털슬리퍼",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아털구두",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아신발브랜드",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "워커운동화",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성방한화추천",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "롱패딩부츠",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어어그",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코르테즈베이비",
    "vol": 230,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "목사님선물",
+   "kw": "남자첼시부츠코디",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기가족사진",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페크리스마스장식",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LED꽃다발",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄선물",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테이블트리",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "문에안걸리는욕실화",
+   "kw": "아기가을신발",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "야외크리스마스트리",
+   "kw": "아동구두",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "온가족샴푸",
+   "kw": "워카",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아동욕실화",
+   "kw": "겨울워킹화",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일대여",
+   "kw": "여자방한부츠",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "매장크리스마스장식",
+   "kw": "어린이겨울신발",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스램프",
+   "kw": "DV5458",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대전백일상대여",
+   "kw": "키즈리버시블패딩",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아올인원워시",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전주돌떡",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "120CM트리",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탁상용트리",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2살여아선물",
+   "kw": "여아워커",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "시아버지생신상",
+   "kw": "여아로퍼",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기백일한복",
+   "kw": "베이비부츠",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일상대여추천",
+   "kw": "패딩부츠키즈",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스대여",
+   "kw": "남자워커부츠",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소형크리스마스트리",
+   "kw": "여아플랫슈즈",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "순천백일떡",
+   "kw": "아기신발150",
    "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어테니스화",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아비옷",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동겨울신발",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기플랫슈즈",
+   "vol": 200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "말놀이",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치답례떡",
+   "kw": "아기털운동화",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스야외장식",
+   "kw": "어그부츠브랜드",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "승진떡",
+   "kw": "키즈샌들",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "각인서비스",
+   "kw": "검정부츠",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "국산욕실화",
+   "kw": "남자방한신발",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리캔들",
+   "kw": "겨울여성부츠",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등생일상",
+   "kw": "등산트레킹화",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스장식볼",
+   "kw": "초등학생겨울옷",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소규모출장돌상",
+   "kw": "나이키찍찍이운동화",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "저렴한백일상대여",
+   "kw": "주니어겨울패딩",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아흰티",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피카츄신발",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헬로키티신발",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아가죽부츠",
    "vol": 195,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인터넷꽃시장",
+   "kw": "초등학생겨울신발",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "환갑상",
+   "kw": "운동화키즈",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스케이크상자",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "첫출근선물",
+   "kw": "방한워커",
    "vol": 190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "목욕탕슬리퍼",
+   "kw": "여성털신",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "팔순상차림떡",
+   "kw": "남자겨울털신발",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기명품옷",
+   "kw": "여성겨울방한화",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "100일대여",
+   "kw": "통부츠",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "졸업꽃",
-   "vol": 190,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "백일의상",
+   "kw": "나이키아동화",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "국산실내화",
+   "kw": "아동숏패딩",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스LED장식",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일소품",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스아이템",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베이비한복",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부산돌상대여",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리장식볼",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "포항백일떡",
+   "kw": "여아털신발",
    "vol": 185,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "초대형트리",
-   "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "부산성장앨범",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중학생샴푸",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "낮은슬리퍼",
+   "kw": "초등학생구두",
    "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스소품만들기",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스악세사리",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일족자",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용크리스마스트리",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디어커스누볼라",
+   "kw": "초등방한화",
    "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "셀프백일촬영",
-   "vol": 175,
+   "kw": "키즈스니커즈",
+   "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "울산백일상",
-   "vol": 175,
+   "kw": "유아샌들",
+   "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애기100일선물",
+   "kw": "초등학생운동화추천",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "ABC마트부츠",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "방수겨울부츠",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이실내화",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여아겨울레깅스",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등여아롱패딩",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "조던주니어",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "LED부츠",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남아겨울부츠",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈단화",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스장식업체",
+   "kw": "워커구두",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실가구",
+   "kw": "돌신발",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌전집",
+   "kw": "조던베이비",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미끄럼방지욕실슬리퍼",
+   "kw": "스퀘어토첼시부츠",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "나이키토들러운동화",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "나이키리틀키즈",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "DV5457-105",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여아목걸이",
-   "vol": 170,
+   "kw": "초등겨울운동화",
+   "vol": 165,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기욕실슬리퍼",
-   "vol": 170,
-   "comp": "높음",
+   "kw": "키즈털실내화",
+   "vol": 165,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "전통100일상대여",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어르신생신선물",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스집",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실내슬리퍼추천",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스홈데코",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄절장식",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대구백일상",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치소품",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리LED",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실타올걸이",
+   "kw": "초등학생부츠",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "셀프칠순상",
+   "kw": "초등겨울부츠",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캐릭터욕실화",
+   "kw": "남아겨울운동화",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아보리덤",
+   "kw": "유아운동화추천",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아공주구두",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방한구두",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자워커브랜드",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "220신발",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키유아",
    "vol": 160,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아파트트리",
+   "kw": "아기나이키신발",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "칠순화분",
+   "kw": "키즈실내슬리퍼",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "샤바스욕실화",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아욕실슬리퍼",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일떡케이크",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스양초",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스촛대",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치업체",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "광주백일상대여",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벽크리스마스트리",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리별장식",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기팔찌",
+   "kw": "주니어구두",
    "vol": 155,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "진주백일떡",
-   "vol": 155,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "추모꽃다발",
+   "kw": "유아방수부츠",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "안미끄러운욕실화",
+   "kw": "어린이털부츠",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "700일선물",
+   "kw": "베이비슈즈",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "물빠짐욕실화",
+   "kw": "초등구두",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영전선물",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스매장꾸미기",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편안한슬리퍼",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "센스풋욕실화",
+   "kw": "초등신발",
    "vol": 150,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "돌상출장",
+   "kw": "어린이런닝화",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일문구",
+   "kw": "지퍼워커",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스홀더",
+   "kw": "어그부츠매장",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기촬영소품",
+   "kw": "키즈운동화230",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리볼",
+   "kw": "나이키키즈운동화사이즈",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "DV5458-105",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스리스장식",
+   "kw": "나이키코트버로우로우키즈",
    "vol": 150,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "탁상트리",
+   "kw": "카봇신발",
    "vol": 150,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "트리리본장식",
+   "kw": "카봇운동화",
    "vol": 150,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "100일상음식",
+   "kw": "초등여아부츠",
    "vol": 145,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌셀프촬영",
+   "kw": "단화부츠",
    "vol": 145,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키덩크키즈",
+   "vol": 145,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아워커",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자아기신발",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자스웨이드워커",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신발부츠",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어겨울신발",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키키즈덩크로우",
+   "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스트리업체",
+   "kw": "나이키키즈런닝화",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "관엽화분",
+   "kw": "유아층간소음실내화",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "칠순음식",
+   "kw": "아동거실화",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아100일선물",
+   "kw": "주니어기모후드티",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잡이상대여",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스별장식",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실리콘슬리퍼",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티소품",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치돌상",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스준비",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아워시",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리등",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대구돌상",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벽걸이크리스마스트리",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "첫돌상차림",
+   "kw": "여아슬립온",
    "vol": 135,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일의상대여",
+   "kw": "돌아기부츠",
    "vol": 135,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "출장백일상",
+   "kw": "키즈여아운동화",
    "vol": 135,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아생일선물",
+   "kw": "아기찍찍이운동화",
+   "vol": 135,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키초등운동화",
+   "vol": 135,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이패딩부츠",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "그래피티니팅",
+   "kw": "남아패딩부츠",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아단화",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등고학년운동화",
    "vol": 130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "나무장식",
+   "kw": "아기겨울구두",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대량생산",
+   "kw": "유아구두브랜드",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "센스풋",
+   "kw": "아동가방",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일옷대여",
+   "kw": "유아단화",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "럭셔리돌상대여",
+   "kw": "여자아이신발",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전주돌상대여",
+   "kw": "신발워커",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스LED트리",
+   "kw": "화이트워커",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "벽트리만들기",
+   "kw": "방수방한신발",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스창문",
+   "kw": "어그부츠가격",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "100일의상",
+   "kw": "나이키플렉스러너베이비",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키조던베이비",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어런닝화",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생농구화",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어러닝화",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키베이비코르테즈",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기층간소음슬리퍼",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동트레이닝복세트",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동워커",
    "vol": 125,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여아백일옷",
+   "kw": "초등여아신발",
    "vol": 125,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인천백일상대여",
+   "kw": "초등어그부츠",
    "vol": 125,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "귀여운욕실화",
+   "kw": "애기신발사이즈",
+   "vol": 125,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키키즈범고래",
+   "vol": 125,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아동로퍼",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리설치업체",
+   "kw": "초등학생방한화",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실소품",
+   "kw": "아동털신발",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "EVA신발",
+   "kw": "영유아신발",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가성비돌상",
+   "kw": "유아용신발",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌상가격",
+   "kw": "유아슬립온",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "국산슬리퍼",
+   "kw": "주니어로퍼",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원형리스",
+   "kw": "남자워커추천",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스용품도매",
+   "kw": "여성하프부츠",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잔치셀프",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리장식품",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스니스",
+   "kw": "정품어그",
    "vol": 120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "무뚜기조명",
+   "kw": "가벼운방한화",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "프리플랍",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실청소도구정리함",
+   "kw": "중학생신발",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "동탄백일상",
+   "kw": "코트버로우",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키코트버로우리크래프트",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여아트레이닝복세트",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동실내슬리퍼",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기나이키",
    "vol": 115,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "쌍둥이백일상대여",
+   "kw": "나이키키즈겨울운동화",
    "vol": 115,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "백일상출장",
+   "kw": "키키디실내화",
    "vol": 115,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "청주백일상대여",
-   "vol": 115,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리업체",
+   "kw": "아동겨울운동화",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "누볼라욕실화",
+   "kw": "5세운동화",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생털실내화",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성방한신발",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자가죽부츠",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하이부츠",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기운동화",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아베레모",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자털신",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기코르테즈",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "토들러운동화",
    "vol": 110,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "3살조카선물",
+   "kw": "나이키벨크로운동화",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대형크리스마스장식",
+   "kw": "코트버로우로우리크래프트",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스가방",
+   "kw": "DV5458-104",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "화장실욕실화",
+   "kw": "아동겨울패딩",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스미니장식",
+   "kw": "어린이레인부츠",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "편한실내화",
-   "vol": 110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치상대여",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치용품",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌상케이크",
-   "vol": 110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "돌상테이블대여",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일복",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "50일셀프촬영소품",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LED앵두전구",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울소품",
-   "vol": 110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스미니리스",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스퀼트",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쌍둥이백일상",
+   "kw": "어린이나이키운동화",
    "vol": 105,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전주백일상대여",
+   "kw": "주니어나이키운동화",
    "vol": 105,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "환갑잔치상",
+   "kw": "아기거실화",
+   "vol": 105,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아털운동화",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "로고각인",
+   "kw": "초등방한부츠",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "생일잔치음식",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "승진축하메세지",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실용슬리퍼",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일상셀프",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스캔들홀더",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교회트리",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "첫돌가랜드",
+   "kw": "4살운동화",
    "vol": 100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "5M트리",
+   "kw": "아동러닝화",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "부산백일상",
+   "kw": "워커종류",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가벼운워커",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "범보의자커버",
+   "kw": "남성방수방한화",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "상차림떡",
+   "kw": "남자부츠추천",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "야외크리스마스장식",
+   "kw": "남자스노우부츠",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리리스",
+   "kw": "브랜드방한화",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "리스장식",
+   "kw": "브랜드부츠",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스도매",
+   "kw": "캐주얼부츠",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사슴트리",
+   "kw": "걸음마신발추천",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "90CM트리",
+   "kw": "나이키신생아",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대형크리스마스리스",
+   "kw": "24개월발사이즈",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일잔치상",
+   "kw": "초등학생러닝화",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키아동",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기신발나이키",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "나이키탄준하이",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어덕다운",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남아방한부츠",
    "vol": 95,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌생일상",
-   "vol": 95,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "100일아기한복",
-   "vol": 95,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청주백일상",
-   "vol": 95,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "100일떡종류",
-   "vol": 95,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부천돌떡",
-   "vol": 95,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세종백일상대여",
+   "kw": "아이구두",
    "vol": 95,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "천안백일상",
+   "kw": "키즈운동화170",
    "vol": 95,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대구돌상대여",
+   "kw": "여아키즈운동화",
    "vol": 95,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자애기선물",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편백샴푸",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리설치업체",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "축하오브제",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "연예인선물",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전시회화환문구",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임원승진선물",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2돌선물",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용품브랜드",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미끄럼방지화장실슬리퍼",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스꽃장식",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스펠트",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니돌상",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "춘천돌상",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셀프백일상소품",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리장식품",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "눈사람모형",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수원백일상대여",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리90",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리도매",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "루돌프트리",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니트리장식",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "4M트리",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리매장",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이케아욕실화",
-   "vol": 85,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "팔순백설기",
+   "kw": "남자아이신발",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니멜리사젤리슈즈",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키조던주니어",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이층간소음실내화",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어장화",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생겨울부츠",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아운동화추천",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈신발추천",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아플랫슈즈",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동용운동화",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기모워커",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미들워커",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "앵클부츠추천",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성가죽앵글부츠",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성겨울장화",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여성삭스부츠",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발편한여성부츠",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성빅사이즈부츠",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성용부츠",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여중생운동화",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이구스다운",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아단화",
    "vol": 85,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고급욕실화",
+   "kw": "초등패딩부츠",
    "vol": 85,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일출장사진",
+   "kw": "가을워커",
    "vol": 85,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "행사장꾸미기",
-   "vol": 80,
+   "kw": "보행기슈즈",
+   "vol": 85,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스외부장식",
-   "vol": 80,
+   "kw": "아기보행기화",
+   "vol": 85,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실슬리퍼추천",
-   "vol": 80,
+   "kw": "아동나이키운동화",
+   "vol": 85,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대형트리설치",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경량토",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남편생일상차림",
-   "vol": 80,
+   "kw": "나이키120",
+   "vol": 85,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "생일케이터링",
+   "kw": "아동겨울슬리퍼",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헬로카봇부츠",
+   "vol": 85,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "꼬까모아",
+   "vol": 80,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "발소리구두",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "야외대형트리",
+   "kw": "17개월아기신발",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "겨울인테리어소품",
+   "kw": "14개월아기신발",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "산타이벤트",
+   "kw": "16개월아기신발",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아파트크리스마스장식",
+   "kw": "초등학교털실내화",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "화장실미끄럼방지슬리퍼",
+   "kw": "7세운동화",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스나무장식",
+   "kw": "빈티지워커",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스장식세트",
+   "kw": "여성가죽워커",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "빅사이즈욕실화",
+   "kw": "편한워커",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미니트리세트",
+   "kw": "남성발목부츠",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스장식리본",
+   "kw": "빅사이즈방한화",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "성탄트리장식",
+   "kw": "여성방수방한화",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자연유래샴푸",
+   "kw": "미니멜리사지그재그",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키아동신발",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키주니어신발",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등생운동화",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목욕탕신발",
+   "kw": "어린이단화",
+   "vol": 75,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈플랫슈즈",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌문구",
+   "kw": "아기스니커즈",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수원백일상",
+   "kw": "아기크록스지비츠",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일파티",
+   "kw": "키즈벨크로운동화",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대전백일상",
+   "kw": "키즈방한슈즈",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "100일촬영소품",
+   "kw": "ABC마트아기신발",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아용샴푸",
+   "kw": "여아털운동화",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아촬영소품",
+   "kw": "주니어슬리퍼",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "색동나무",
-   "vol": 70,
+   "kw": "디즈니신발",
+   "vol": 75,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "여성의날선물",
-   "vol": 70,
+   "kw": "쥬니어운동화",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아나이키",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "NIKEKIDS",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키남아운동화",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키키즈코트버로우로우",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아레인부츠",
+   "vol": 75,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "욕실정리용품",
+   "kw": "디즈니운동화",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동슬립온",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "교회크리스마스장식",
+   "kw": "남자가죽워커",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고모선물",
+   "kw": "앵클워커",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌상셀프",
+   "kw": "털워커",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오우투욕실화",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "교회성탄절장식",
+   "kw": "남자데저트부츠",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "첫돌상",
+   "kw": "베이비쨈",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리장식소품",
+   "kw": "남자부츠구두",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "교회성탄장식",
+   "kw": "DV5457-104",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "병풍돌상",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "하남파티수",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "출장돌잔치",
+   "kw": "키즈패딩세일",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리가격",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스업체",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수원돌상대여",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부산베이비유",
-   "vol": 70,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "예쁜욕실화",
+   "kw": "어린이방수부츠",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "비건샴푸추천",
+   "kw": "여아스니커즈",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기사진소품",
+   "kw": "유아스니커즈",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌상촬영",
+   "kw": "20개월아기신발",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "광주백일상",
+   "kw": "여아굽구두",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "천안백일상대여",
+   "kw": "영아신발",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈찍찍이운동화",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "안산돌떡",
+   "kw": "유아LED구두",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "출장상차림",
+   "kw": "아동메리제인",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대전돌상대여",
+   "kw": "유아신발깔창",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고속터미널꽃바구니",
+   "kw": "여성겨울털부츠",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자아기운동화",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키아기",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비나이키",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기상어크록스",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비코르테즈",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장화부츠",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키운동화베이비",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "215신발",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키키즈220",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키버로우로우",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "범고래키즈",
+   "vol": 65,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "나이키코트버로우미드",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3살운동화",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈신발브랜드",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리제작",
+   "kw": "어린이운동화추천",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어르신생일선물",
+   "kw": "키즈슈즈",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리임대",
+   "kw": "남자아기운동화",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유치원크리스마스",
+   "kw": "남자로우워커",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미군화",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스세트",
+   "kw": "여자워커추천",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잔치세트",
+   "kw": "남성방수부츠",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌상테이블",
+   "kw": "남성부츠브랜드",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌상꾸미기",
+   "kw": "주니어샌들",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스연출",
+   "kw": "성인장화",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무실트리",
+   "kw": "아동기모팬츠",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리임대",
+   "kw": "아동용실내화",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무실크리스마스트리",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타트리",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스리스만들기재료",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리재료",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리용전구",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미산성샴푸",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동샴푸",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "국산욕실슬리퍼",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "페이퍼플레인욕실화",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄절데코",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일꽃",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌상소품대여",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일상구매",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "창원백일상",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "구미백일상",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청주돌상대여",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인천출장돌상",
+   "kw": "마이삭스슈즈",
    "vol": 55,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "인천백일상",
+   "kw": "슬립온키즈",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아토피바디워시추천",
+   "kw": "아동신발브랜드",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "제주백일상",
+   "kw": "베이비잼부츠",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아젤리슈즈",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등남아신발",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동런닝화",
    "vol": 55,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "평택백일상",
+   "kw": "어린이샌들",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "반짝이전구",
+   "kw": "키즈운동화브랜드",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "생화꽃목걸이",
-   "vol": 50,
+   "kw": "베이지워커",
+   "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이집크리스마스만들기",
-   "vol": 50,
+   "kw": "통굽워커부츠",
+   "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장미선물",
-   "vol": 50,
+   "kw": "굽낮은워커",
+   "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "2살조카선물",
-   "vol": 50,
+   "kw": "빅사이즈워커",
+   "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "팔순음식",
-   "vol": 50,
+   "kw": "베이비조던",
+   "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전시회꽃선물",
-   "vol": 50,
+   "kw": "아동트레킹화",
+   "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "겨울장식",
-   "vol": 50,
+   "kw": "농구화키즈",
+   "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고급실내슬리퍼",
-   "vol": 50,
-   "comp": "높음",
+   "kw": "나이키키즈핑크",
+   "vol": 55,
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "호텔욕실화",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셀프돌잔치준비",
-   "vol": 50,
+   "kw": "아동나이키",
+   "vol": 55,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스플레이트",
-   "vol": 50,
+   "kw": "나이키어린이신발",
+   "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스홈파티꾸미기",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오우투",
-   "vol": 50,
+   "kw": "여아나이키운동화",
+   "vol": 55,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "돌상차리기",
+   "kw": "유아나이키신발",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "나이키키즈슬립온",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보메로주니어",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키에어포스1주니어",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키에어포스베이비",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이층간소음슬리퍼",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이거실실내화",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동층간소음슬리퍼",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내화245",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어머플러",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어롱스커트",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아동용축구화",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생방한부츠",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스카페인테리어",
+   "kw": "아동겨울실내화",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스재료",
+   "kw": "초등학생여아운동화",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스추리",
+   "kw": "300사이즈신발",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스소품도매",
+   "kw": "남자헌터부츠",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리조형물",
+   "kw": "패딩부츠방수",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사슴장식",
+   "kw": "아동털운동화",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미니트리꾸미기",
+   "kw": "구스방한화",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장식리본",
+   "kw": "여자가을부츠",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리60CM",
+   "kw": "남자스포츠샌들",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "경관디자인",
+   "kw": "초등남아부츠",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스교회장식",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목욕슬리퍼",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이케아욕실슬리퍼",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌대여",
+   "kw": "아동단화",
    "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "발등낮은슬리퍼",
+   "kw": "유아스노우부츠",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일상추천",
+   "kw": "12개월아기신발",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남아슬립온",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌상대여추천",
+   "kw": "초등단화",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일상세트",
+   "kw": "아동용신발",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "너의생일",
+   "kw": "아동스니커즈",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자워커브랜드",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5세여아구두",
    "vol": 45,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "돌상패키지",
+   "kw": "워커남자",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스토리베베",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "3살생일",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "백일돌상",
+   "kw": "유아스키부츠",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잔치꾸미기",
+   "kw": "ABC마트워커",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌가랜드",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "출장돌상가격",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스데코용품",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "출장돌상패키지",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인천돌상대여",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원주돌상",
+   "kw": "부츠매장",
    "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아동바디워시",
+   "kw": "여성겨울슈즈",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "천안돌상",
+   "kw": "헌터남자",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대형트리제작",
-   "vol": 40,
+   "kw": "나이키프리스쿨",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리제작",
-   "vol": 40,
+   "kw": "애기나이키신발",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리장식업체",
-   "vol": 40,
+   "kw": "아기여름신발",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인공토양",
-   "vol": 40,
+   "kw": "초등학생로퍼",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소리펜",
-   "vol": 40,
+   "kw": "초등여아머리핀",
+   "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스유아선물",
-   "vol": 40,
+   "kw": "남자양털부츠",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "EVA욕실슬리퍼",
-   "vol": 40,
+   "kw": "경량전술화",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "논슬립욕실슬리퍼",
-   "vol": 40,
+   "kw": "택티컬전술화",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "독특한선물",
-   "vol": 40,
+   "kw": "나이키런닝화키즈",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "눈꽃장식",
-   "vol": 40,
+   "kw": "초등나이키운동화",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스교실꾸미기",
-   "vol": 40,
+   "kw": "나이키초등학생운동화",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생나이키운동화",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키코트버로우핑크",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "덩크키즈",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코르테즈주니어",
+   "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스파티장식",
-   "vol": 40,
-   "comp": "높음",
+   "kw": "나이키코트버로우로우2키즈",
+   "vol": 45,
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "돌상세트",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스데코레이션",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "예쁜크리스마스트리",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스촬영소품",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셀프백일잔치",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식용품",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공공예술",
-   "vol": 40,
+   "kw": "에어포스주니어",
+   "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "백화점VMD",
-   "vol": 40,
+   "kw": "아동스키부츠",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "4살생일",
-   "vol": 40,
+   "kw": "키즈층간소음슬리퍼",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신년파티",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "별모양전구",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리전등",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교회트리장식",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니크리스마스트리만들기",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실크리스마스장식",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식LED",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스카페꾸미기",
-   "vol": 40,
+   "kw": "키즈층간소음실내화",
+   "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "탁상용크리스마스트리",
+   "kw": "여자아이부츠",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈여아",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈LED운동화",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이슬립온",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "예쁜욕실슬리퍼",
+   "kw": "캐주얼워커",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성부츠추천",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성정장부츠",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성캐주얼부츠",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자발목부츠",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈방수패딩",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동방수부츠",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리허그",
+   "kw": "유아털장화",
    "vol": 35,
-   "comp": "중간",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "미끄러지지않는욕실화",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "곰돌이욕실화",
+   "kw": "초등슬립온",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실슬리퍼미끄럼방지",
+   "kw": "두돌아기구두",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목욕탕실내화",
+   "kw": "베이비구두",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "발리나욕실화",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "안걸리는욕실화",
+   "kw": "여아방수부츠",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "화장실낮은슬리퍼",
+   "kw": "유아양털부츠",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕조슬리퍼",
+   "kw": "유아용부츠",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일잔치대여",
+   "kw": "어린이스니커즈",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "생일파티상",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스카페장식",
+   "kw": "유아용운동화",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "첫돌한복",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "성탄절꾸미기",
+   "kw": "5세신발",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "업소용트리",
+   "kw": "돌여아신발",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "셀프100일",
+   "kw": "아동방한슬리퍼",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "성탄절교회장식",
+   "kw": "여아슈즈",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유아플랫",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베란다실내화",
+   "kw": "초등학생여자운동화",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서울백일상대여",
+   "kw": "어린이신발브랜드",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애기한복대여",
+   "kw": "남자워커신발",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일상꾸미기",
+   "kw": "여아플랫",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌상구매",
+   "kw": "가죽워커부츠",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "부천백일상",
+   "kw": "남성가죽워커",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잔치출장",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄절소품",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "곰팡이안생기는욕실화",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "심플돌상",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기100일드레스",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벽장식트리",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잡이바나펜",
+   "kw": "브랜드워커",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "한글전집",
+   "kw": "여성워커화",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인천돌상",
+   "kw": "남자구두부츠",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "추리전구",
+   "kw": "헌터여성장화",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "나이키신생아신발",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "평택돌상",
+   "kw": "신생아나이키",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이색트리",
+   "kw": "베이비잼로퍼",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서울출장돌상",
+   "kw": "나이키애기운동화",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "편한슬리퍼추천",
+   "kw": "신생아운동화",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "317415-014",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "클래식클로그키즈",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "ABC마트어그부츠",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남자부츠신발",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성군화",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키키즈찍찍이",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키업템포키즈",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "덩크로우키즈",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아동수영복브랜드",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "나이키코트버로우주니어",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코트버로우리크래프트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코트버로우키즈",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여자중학생운동화",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "층간소음실내화추천",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "고등학생실내화",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남아레인부츠",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성키높이워커",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장인어른생일선물",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스실내장식",
+   "kw": "사막화워커",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스디스플레이",
+   "kw": "봄부츠",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서울베이비스튜디오",
+   "kw": "24개월신발",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리대여업체",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잡이맘",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스풍선아트",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식물",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리장식전구",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신기한선물",
+   "kw": "아동플랫슈즈",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스포장리본",
+   "kw": "아동용부츠",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "100일잔치음식",
+   "kw": "아동방한운동화",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "광명만삭사진",
+   "kw": "여아쪼리",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고급거실실내화",
+   "kw": "초등학생단화",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미끄럽지않은욕실화",
+   "kw": "2살신발사이즈",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실미끄럼방지신발",
+   "kw": "남아스니커즈",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일상가랜드",
+   "kw": "유아편한운동화",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "용인시돌상대여",
+   "kw": "6세신발",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "푹신한욕실화",
+   "kw": "초등학교운동화",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "회사선배선물",
+   "kw": "아동운동화220",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "6인치워커",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전통백일상차림",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "병원크리스마스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페크리스마스인테리어",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스용품점",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셀프돌상구매",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식꾸미기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실실내화추천",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "국내산슬리퍼",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "국내산욕실화",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자연주의욕실화",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "안미끄러지는욕실화",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모던돌상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌상추천",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물때안끼는욕실화",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전통돌잔치",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스소품파는곳",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치용품대여",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미끄럼방지욕실실내화",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울돌상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대구고운",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "항균욕실화",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치스냅영상",
+   "kw": "나이키리프트베이비",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "물잘빠지는욕실화",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "천안돌상대여",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일상센터피스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "안양백일상",
+   "kw": "굽높은워커",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스눈꽃",
+   "kw": "남성용워커",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스별전구",
+   "kw": "여성워커브랜드",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대구백일잔치",
+   "kw": "정장워커",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "부산백일잔치",
+   "kw": "남성겨울장화",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인천백일잔치",
+   "kw": "남성방한화부츠",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "교회성탄트리",
+   "kw": "남자캐주얼부츠",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "성탄소품",
+   "kw": "여성방한부츠추천",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기크리스마스소품",
+   "kw": "커플털신발",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스경관조명",
+   "kw": "나이키덩크베이비",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "호텔돌상",
+   "kw": "여아여름샌들",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "김포백일상",
+   "kw": "헬로카봇방한부츠",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전시회축하화환문구",
-   "vol": 20,
+   "kw": "겨울방수장화",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "40개월발사이즈",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신발150",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에어포스베이비",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이들신발",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키베이비슈즈",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이나이키",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여중생신발",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키플렉스러너2키즈",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "나이키코트버로우2",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소년신발",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아래쉬가드상의",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이수영복브랜드",
+   "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "병원크리스마스트리",
-   "vol": 20,
+   "kw": "키즈래쉬가드바지",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "나이키주니어런닝화",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스쇼핑몰",
-   "vol": 20,
+   "kw": "BQ5448",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연말장식",
-   "vol": 20,
+   "kw": "BQ5451",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "DV5456-105",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "DV5458-106",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스장식도매",
-   "vol": 20,
+   "kw": "나이키코트버로우화이트",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "나이키포스베이비",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "매장크리스마스트리",
-   "vol": 20,
+   "kw": "나이키피코5",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아파트트리장식",
-   "vol": 20,
+   "kw": "덩크로우주니어",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "아이층간소음실내화",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아쪼리",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스무장식트리",
-   "vol": 20,
+   "kw": "아동층간소음실내화",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리인테리어",
-   "vol": 20,
+   "kw": "등원룩추천",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "호텔크리스마스장식",
-   "vol": 20,
+   "kw": "유비맘옷",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여아면원피스",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베이비화장품",
+   "kw": "초등학생레인부츠",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아방한샌들",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키티구두",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엄마와딸커플룩",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어멜빵치마",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동스노우부츠",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "키즈여름신발",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "회장님선물",
+   "kw": "유아동신발",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4세신발",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아방수부츠",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어방수부츠",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키어린이모자",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈화",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유아삑삑이신발",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아여름신발",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이여름신발",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자초등학생운동화",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈워터슈즈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성키높이워커",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자브라운워커",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마틴워커",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울남자워커",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈여름운동화",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등여아샌들",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "워커부츠브랜드",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "아동슈즈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4인치워커",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성방한워커",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "롱워커부츠",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자키높이워커",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "워커사이즈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플워커",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엄마털부츠",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여성방한방수부츠",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성용방한부츠",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비잼샌들",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "나이키베이비리프트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아여름샌들",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키인펀트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등샌들",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생샌들",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성부츠신발",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성털방한화",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자숏부츠",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "정품어그부츠",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "레인부츠미들",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "317415-111",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "미니멜리사지그재그사이즈",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "나이키여아",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기나이키",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여고생신발",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여학생신발",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에어맥스주니어",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈덩크",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "런스타모션로우",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "코트버로우로우2",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키리프트2베이비",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키데이브레이크키즈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어수영복브랜드",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "HF6998-002",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "CW1590-100",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "FV5951-111",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "편백수샴푸",
+   "kw": "HF6998-001",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "발령화분",
+   "kw": "나이키에어포스LE",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "발등낮은욕실슬리퍼",
+   "kw": "코트버로우미드",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스조명설치",
+   "kw": "키즈범고래",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "안양베이비스튜디오",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "생신상배달",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌꽃바구니",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노인생일선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EVA거실실내화",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "문에안걸리는슬리퍼",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "욕실화디어커스",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "친환경욕실슬리퍼",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친환경슬리퍼",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라보르돌상",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "욕실화1+1",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "입택선물",
+   "kw": "테라스카우트",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "매장크리스마스",
+   "kw": "여아래쉬가드바지",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이집크리스마스꾸미기",
+   "kw": "나이키주니어테니스화",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스글자장식",
+   "kw": "실내화250",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스케익초",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티준비",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스홈파티장식",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티세트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "안전실내화",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다용도실슬리퍼",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더살림욕실화",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "문안걸리는욕실화",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호텔욕실슬리퍼",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일상판매",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "방산시장크리스마스",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "돌상대여업체",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "좌식돌상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셀프돌상차림",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌상꽃장식",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치꽃장식",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실화290",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌상용품",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "280욕실화",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전통돌상소품",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄데코",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실화물때",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "물때욕실화",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "현대식돌상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키나돌잔치",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "돌상렌탈",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스매장장식",
+   "kw": "아기복",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스데코업체",
+   "kw": "유아나시원피스",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실화빅사이즈",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌상가랜드",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "290욕실화",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "돌잡이스마트박스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "곰팡이없는욕실화",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "용인백일상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인천100일잔치",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실크리스마스꾸미기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업소용크리스마스트리",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스사이트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리구입",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학원크리스마스",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "건물크리스마스장식",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이쁜욕실화",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기프트7",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어버이날금선물",
+   "kw": "애기어그",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "행사장장식",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "볼넓은욕실화",
+   "kw": "아기여름운동화",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "오우투슬리퍼",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "거실화제작",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이비슬리퍼",
+   "kw": "여름키즈운동화",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "OHOO2",
+   "kw": "여아여름구두",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여아여름신발",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유아여름운동화",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생스니커즈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈플립플랍",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자아이샌들",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "아동젤리슈즈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이여름운동화",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "초등학교신발",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사뿐키즈",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "아동여름양말",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아메쉬운동화",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "키즈메쉬운동화",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유아매쉬운동화",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생여름신발",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "키즈매쉬운동화",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여아여름운동화",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "문에안걸리는욕실슬리퍼",
+   "kw": "초등학생여름운동화",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "발등낮은화장실슬리퍼",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌상백일상",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백일상돌상대여",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기100일상",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "의미있는선물추천",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기100일잔치",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "병원크리스마스장식",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원크리스마스꾸미기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스미니캔들",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티용품세트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스홈파티소품",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스홈파티용품",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티꾸미기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "퓨메노",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "안녕생일",
+   "kw": "남아여름운동화",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "크리스마스소품꾸미기",
+   "kw": "남자소가죽워커",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌상판매",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌상장식",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "해피뉴이어장식",
+   "kw": "CHUKKABOOT",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "전시조경",
+   "kw": "여자여름부츠",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "회사트리",
+   "kw": "BV1094-100",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "곰팡이욕실화",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "빅사이즈욕실슬리퍼",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물빠짐신발",
+   "kw": "DJ6039-010",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "물잘빠지는슬리퍼",
+   "kw": "FB5528-800",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "베이비바스앤샴푸",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "새해소품",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신년이벤트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무독성욕실화",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스알전구",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄츄리",
+   "kw": "발소리샌들",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "크리스마스기획전",
+   "kw": "초등학생여름샌들",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "회사크리스마스트리",
+   "kw": "남아여름샌들",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동여름운동화",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등남아샌들",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "FN8911-141",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자덕부츠",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성여름부츠",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "블루ABC",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "나이키코트레거시베이비",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "미니멜리사직구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코트버로우2",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "코트보로우",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "새학기프로모션",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이키키즈여름운동화",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "나이키코트보로우",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "나이키코트바로우",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "DV8996-002",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "FB7689-003",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "코르테즈SL",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "나이키쥬니어",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유치원EVA실내화",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신학기실내화",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "807471-101",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "CZ5356-010",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "CZ5356-115",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "DD0303-600",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "DM0950-107",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "DV5456-005",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈덩크로우",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니마우스튜브",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미키마우스튜브",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "남자아이샌들",
    "vol": 10,
    "comp": "높음",
    "hint": false
