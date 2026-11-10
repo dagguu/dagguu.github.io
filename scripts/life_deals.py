@@ -49,7 +49,7 @@ oldt = {x.get("cpUrl"): x.get("u") for x in d.get("goldTravel") or [] if x.get("
 def tclean(n):   # 판매자 문구(★오늘만…★·무료·후기·찬스 등)는 빼고 숙소·시설 이름만
     br = re.findall(r"\[([^\]]+)\]", n); area = br[0] if br and re.match(r"\s*\[", n) else ""
     if len(br) > 1 and not re.search(r"특가|골드박스|할로윈|가족|기획|한정|맞춤|본사|직영|와우|멤버스|공식|[도시군구]$|^(서울|경기|강원|충청|전라|경상|제주|부산|인천)", br[1].strip()): return br[1].strip(), area
-    junk = lambda w: re.search(r"무료|혜택|후기|추천|찬스|특가|최저가|만점|도보권|와우|오늘만|단하루|하루|할인|%|UP|골드박스|이가격|선착순|초특가|!|★", w)
+    junk = lambda w: re.search(r"무료|혜택|후기|추천|찬스|특가|최저가|만점|도보권|와우|오늘만|단하루|하루|할인|%|UP|골드박스|이가격|선착순|초특가|방학|포함|!|★", w)
     t = re.sub(r"★[^★]*★", " ", n); t = re.sub(r"\[[^\]]*\]", " ", t); t = t.split(",")[0].split("_")[0]
     t = " ".join(w for w in t.split() if not junk(w))
     if not t.strip(" ,·-"):   # 이름이 ★…★ 안에만 있을 때 (2026-11-09 하이원리조트)
