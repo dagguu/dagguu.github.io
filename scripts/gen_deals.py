@@ -166,11 +166,27 @@ def pick(L, n):
     sent_p = os.path.join(ROOT, "scripts", "deal_chat_sent.json")
     try: sent = json.load(open(sent_p, encoding="utf-8"))
     except Exception: sent = {}
+    def gold_extra(main, recent):
+        # 2026-11-10 시온님 "쿠팡도 골드박스에 특가있는거 같이 넣어줘": 골드박스 숙소·레저 티켓(goldTravel, 다음 날 07시까지)을
+        # 마이리얼트립 특가와 따로 최대 2곳 더 붙인다. 할인 15%↑, 판매율 높은 순 → 할인율 순, 어제 보낸 같은 상품·이미 고른 곳 제외.
+        yday = (NOW - dt.timedelta(days=1)).strftime("%Y-%m-%d")
+        seen = {x["key"] for x in main} | {k for k in sent.get(yday, []) if k.startswith("g-")}
+        G = [x for x in L if x["key"].startswith("g-") and (x.get("rate") or 0) >= 15 and x["key"] not in seen]
+        sold = {}
+        for g in d.get("goldTravel") or []:
+            pid = (re.search(r"/products/(\d+)", g.get("cpUrl", "")) or [None, ""])[1]
+            sold["g-" + pid] = g.get("sold") or 0
+        G.sort(key=lambda x: (-(sold.get(x["key"]) or 0), -(x.get("rate") or 0)))
+        return G[:2]
     if sent.get(TODAY):  # 오늘 이미 고른 게 있으면 그대로(--pick 다음 --chat 이 같은 곳을 쓰게)
-        keep = [x for k in sent[TODAY] for x in L if x["key"] == k]
-        if keep: return keep
+        keep = [x for k in sent[TODAY] for x in L if x["key"] == k and not k.startswith("g-")]
+        if keep:
+            out = keep + gold_extra(keep, set())
+            sent[TODAY] = [x["key"] for x in out]
+            json.dump(sent, open(sent_p, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+            return out
     recent = {k for day, ks in sent.items() if day != TODAY and day >= (NOW - dt.timedelta(days=3)).strftime("%Y-%m-%d") for k in ks}
-    C = [x for x in L if (x.get("rate") or 0) >= 15 and x["key"] not in recent and (not x.get("reviews") or x["reviews"] >= 5) and (not x.get("score") or float(x["score"]) >= 4.0)]
+    C = [x for x in L if not (x["key"].startswith("g-") and x.get("kind") != "입장권") and (x.get("rate") or 0) >= 15 and x["key"] not in recent and (not x.get("reviews") or x["reviews"] >= 5) and (not x.get("score") or float(x["score"]) >= 4.0)]
     # 2026-11-09 시온님: 마이리얼트립 타임특가(travelDeals time:true)를 먼저 고른다. 할인율 15% 미만이어도 타임특가는 넣는다.
     C += [x for x in L if x.get("time") and x not in C and x["key"] not in recent]
     C.sort(key=lambda x: (not x.get("time"), -(x.get("rate") or 0)))
@@ -184,6 +200,7 @@ def pick(L, n):
         out.append(x); regs.add(r)
         if len(out) >= n - len(tix): break
     out += tix
+    out += gold_extra(out, recent)
     sent[TODAY] = [x["key"] for x in out]
     sent = {k: v for k, v in sent.items() if k >= (NOW - dt.timedelta(days=14)).strftime("%Y-%m-%d")}
     json.dump(sent, open(sent_p, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
