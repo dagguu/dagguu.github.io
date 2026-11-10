@@ -1,42 +1,21 @@
 {
- "at": "2026-11-10T11:00:47.069331",
+ "at": "2026-11-10T11:04:05.360342",
  "name": "yeongdeok-poolmoon",
  "jobs": [
   {
-   "img": "ai:2",
-   "taskId": "d32785fc76bef79a3af28e954a869826",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-10/yeongdeok-poolmoon/clip_ai2.mp4"
-  },
-  {
-   "img": "ai:3",
-   "taskId": "1c91a7abc1a27eda86d87e8ac3fe2f04",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-10/yeongdeok-poolmoon/clip_ai3.mp4"
-  },
-  {
    "img": "ai:6",
-   "taskId": "51b793e22f9f2e799e2b76bb0f71dd29",
+   "taskId": "c6e5e85fcfb406868bd7c12faed3557b",
    "state": "fail",
    "credits": 0.0,
-   "msg": "Internal Error, Please try again later."
-  },
-  {
-   "img": "ai:4",
-   "taskId": "5d24710e0f7347feaba411e23e2568ee",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-10/yeongdeok-poolmoon/clip_ai4.mp4"
+   "msg": "Request blocked: The input content was flagged for containing a prominent public figure."
   },
   {
    "img": "ai:1",
-   "taskId": "2072b3bde1baa7523dcb914019c5bc77",
+   "taskId": "01e09e15a6cea7a97393343876387fee",
    "state": "fail",
    "credits": 0.0,
    "msg": "Internal Error, Please try again later."
   }
  ],
- "credits_total": 105.0
+ "credits_total": 0
 }
