@@ -156,7 +156,7 @@ var TABS=[["home","홈",I.home],["list","체험단",I.ticket],["map","지도",I.
 var PART_LIVE=true; /* partners.dagguu.com 이 열리면 true 로 바꾼다(그 전엔 www 에서 로그인·교육·광고주가 그대로 동작) */
 var PMODE=window.DK_MODE==="partners", MAIN_URL="https://www.dagguu.com/", PART_URL="https://partners.dagguu.com/", BASE=PMODE?(window.DK_BASE||MAIN_URL):"";
 var BENEFIT_ON=false; /* 룰렛·혜택(#/benefit) 메뉴·링크 숨김 — 2026-10-22 시온님. 다시 보이려면 true */
-var P_TABS=/^(home|press|pjob|padmin|contact|edu|checkout|my|privacy|benefit|reporter)$/, P_ONLY=/^(pjob|padmin|contact|edu|checkout|benefit|reporter)$/; /* 공구(#/shop)는 다꾸체험단 www 에 둔다 — 2026-10-22 시온님 */
+var P_TABS=/^(home|press|pjob|padmin|contact|edu|checkout|my|privacy|benefit|reporter|dp)$/, P_ONLY=/^(pjob|padmin|contact|edu|checkout|benefit|reporter|dp)$/; /* 공구(#/shop)는 다꾸체험단 www 에 둔다 — 2026-10-22 시온님 */
 if(PMODE) TABS=[["home","홈",I.home],["press","기자단",I.send],["edu","클래스",I.trend],["contact","광고주",I.bell],["my","마이",I.user]];
 /* TOP 버튼(2026-10-18 시온님 요청): 화면 1.5배 넘게 내려가면 톡상담 위에 보임 */
 (function(){ var raf=0; function upd(){ raf=0; var b=document.getElementById("totop"); if(b) b.hidden=window.scrollY<window.innerHeight*1.5; }
@@ -263,6 +263,7 @@ function render(){
   else if(state.tab==="press"){ v.innerHTML=PMODE?pPressView():pressView(); pjList(); }
   else if(state.tab==="pjob"){ v.innerHTML=pjobView(); pjobInit(); }
   else if(state.tab==="padmin"){ v.innerHTML=padminView(); padminInit(); }
+  else if(state.tab==="dp"){ v.innerHTML=dpView(); dpInit(); }
   else if(state.tab==="contact") v.innerHTML=contactView();
   else if(state.tab==="item") v.innerHTML=itemView();
   else if(state.tab==="my"){ v.innerHTML=myView(); pjMy(); }
@@ -1716,6 +1717,7 @@ function pHomeView(){
   return '<div class="pg phome">'+
     '<section class="phero"><small>DIARY VIEW · 다이어리뷰</small><h1>블로거와 사장님을 잇는<br><em>기자단·체험단</em> 대행</h1><p>블로거는 글을 쓰고 원고료를 받고, 사장님은 블로그 홍보를 맡기는 곳이에요.</p></section>'+
     '<div class="pgo"><a href="#/press"><i>✍️</i><span><b>블로거라면</b>기자단 신청하고 원고료 받기</span><em>›</em></a>'+
+      '<a href="#/dp"><i>🔗</i><span><b>다꾸파트너스</b>다꾸키즈 상품 소개하고 판매액 10% 적립금 받기</span><em>›</em></a>'+
       '<a href="#/contact"><i>📣</i><span><b>사장님이라면</b>기자단·체험단 홍보 맡기기</span><em>›</em></a>'+
       '<a href="#/edu"><i>🎓</i><span><b>블로그를 키우고 싶다면</b>블로그 수익화 1:1 클래스</span><em>›</em></a></div>'+
     '<div id="pjlist" class="pjlist" data-h="모집 중인 기자단" hidden></div>'+
@@ -1742,6 +1744,104 @@ function pMyView(){
   h+='<div class="myfoot"><a href="#/privacy">개인정보처리방침</a> · <button class="lnk" data-unreg>회원 탈퇴</button><br><button class="lnk myuid" data-copy="'+esc(USER.id)+'">회원 번호 복사</button></div>';
   return h+'</div>';
 }
+/* ── 다꾸파트너스(2026-11-11 시온님): 다꾸키즈 상품별 수익 링크 → 판매액 10% 다꾸키즈 적립금. DB = supabase/dp_partners.sql
+   쇼핑몰 쪽: 카페24 스킨 footer.html 스크립트가 ?pt=코드 를 24시간 쿠키로 기억 + dp_click, 주문완료(order_result.html #dkpt-order)에서 dp_order. */
+var DP_RATE=10, DP_SHOP="https://dagguukids.com", DP_ITEMS=null, DP_Q="";
+function dpView(){ return '<div class="pg dp" id="dpv"><div class="empty">불러오는 중…</div></div>'; }
+function dpHero(){ return '<section class="dphero"><small>🔗 다꾸파트너스</small><h1>다꾸키즈 상품을 소개하고<br><em>판매액 '+DP_RATE+'%</em> 적립금 받아요</h1><p>내 수익 링크로 들어온 손님이 24시간 안에 다꾸키즈에서 주문하면, 배송이 끝난 뒤 상품 금액의 '+DP_RATE+'%를 다꾸키즈 적립금으로 드려요.</p></section>'+
+  '<div class="prhow"><div><b>1</b><span>파트너 가입</span></div><div><b>2</b><span>상품별 수익 링크로 소개</span></div><div><b>3</b><span>배송완료 뒤 적립금</span></div></div>'; }
+function dpRules(){ return '<section class="pjsec"><h2>꼭 확인해 주세요</h2><ul class="pjrule">'+
+  '<li>소개 글 제목이나 첫 줄 맨 앞에 <b>#광고</b>를 꼭 적어요(공정위 추천·보증 심사지침).</li>'+
+  '<li>보상은 다꾸키즈 적립금이에요. 다꾸키즈에서 5만원 이상 구매 시 사용할 수 있고, 현금으로 바꿀 수 없어요.</li>'+
+  '<li>상품 금액(배송비 제외) 기준 '+DP_RATE+'%, 배송완료되고 취소·반품이 없는 주문만 적립돼요.</li>'+
+  '<li>본인 주문은 적립되지 않아요.</li>'+
+  '<li>링크를 누른 뒤 24시간 안의 주문이 내 실적이에요. 다른 파트너 링크를 나중에 누르면 그 파트너 실적이 돼요.</li>'+
+  '<li>사실과 다른 후기·과장 광고, 원치 않는 사람에게 링크 보내기(스팸)는 안 돼요. 어기면 적립이 취소될 수 있어요.</li></ul></section>'; }
+function dpInit(){
+  var v=document.getElementById("dpv"); if(!v) return;
+  pjWait(function(){
+    if(!SB||!USER){ v.innerHTML=dpHero()+dpRules()+'<div class="dbar pjbar"><button class="b" data-pjlogin>카카오로 로그인하고 시작하기</button></div>'; plainHeads(v); return; }
+    SB.from("dp_partners").select("*").eq("user_id",USER.id).maybeSingle().then(function(r){
+      if(r.error){ v.innerHTML=dpHero()+'<div class="empty">준비 중이에요. 잠시 후 다시 열어 주세요.</div>'; return; }
+      var me=r.data;
+      if(!me){
+        v.innerHTML=dpHero()+dpRules()+'<section class="pjsec"><h2>파트너 가입</h2><form id="dpjoin" class="pjf">'+
+          '<label class="fl" for="dp-code">내 링크 이름 <i>*</i></label><input id="dp-code" class="fi" maxlength="20" placeholder="영문 소문자·숫자·밑줄 3~20자 (예: dakku_mom)" autocapitalize="off" autocomplete="off">'+
+          '<p class="dpnote">링크에 들어가는 이름이에요. 한 번 정하면 바꿀 수 없어요.</p>'+
+          '<label class="fl" for="dp-shop">다꾸키즈 회원 아이디 <i>*</i></label><input id="dp-shop" class="fi" maxlength="40" placeholder="적립금을 받을 다꾸키즈 아이디">'+
+          '<p class="dpnote">아직 회원이 아니면 <a href="'+DP_SHOP+'/member/join.html" target="_blank" rel="noopener">다꾸키즈에서 가입</a>한 뒤 적어 주세요.</p>'+
+          '<label class="ck"><input type="checkbox" id="dp-ok"><span>위 안내(#광고 표시·적립금 보상·본인 주문 제외)를 확인했어요</span></label>'+
+          '<button class="b pri wide" type="submit">다꾸파트너스 시작하기</button></form></section>';
+        plainHeads(v);
+        document.getElementById("dpjoin").addEventListener("submit",function(e){ e.preventDefault();
+          var c=document.getElementById("dp-code").value.trim().toLowerCase(), sh=document.getElementById("dp-shop").value.trim();
+          if(!/^[a-z0-9_]{3,20}$/.test(c)){ toast("링크 이름은 영문 소문자·숫자·밑줄 3~20자로 적어 주세요"); return; }
+          if(sh.length<2){ toast("다꾸키즈 회원 아이디를 적어 주세요"); return; }
+          if(!document.getElementById("dp-ok").checked){ toast("안내 확인에 체크해 주세요"); return; }
+          SB.rpc("dp_join",{p_code:c,p_shop:sh}).then(function(x){ if(x.error){ var m=x.error.message||""; toast(/taken/.test(m)?"이미 쓰는 링크 이름이에요. 다른 이름으로 적어 주세요":/code/.test(m)?"링크 이름을 확인해 주세요":/shop/.test(m)?"다꾸키즈 아이디를 확인해 주세요":"가입하지 못했어요"); return; }
+            toast("✅ 다꾸파트너스 가입 완료"); ga("dp_join",{}); dpInit(); }); });
+        return;
+      }
+      dpHome(v,me);
+    });
+  });
+}
+function dpLink(me,pno){ return DP_SHOP+(pno?"/product/detail.html?product_no="+pno+"&pt=":"/?pt=")+me.code; }
+function dpHome(v,me){
+  v.innerHTML='<section class="dphero sm"><small>🔗 다꾸파트너스</small><h1>'+esc(nick())+'님의 수익 링크</h1><p>적립금 받는 다꾸키즈 아이디: <b>'+esc(me.shop_id)+'</b> <button class="lnk" data-dpshop>바꾸기</button></p></section>'+
+    '<div class="dpstat" id="dpstat"><div><b>-</b><span>최근 30일 클릭</span></div><div><b>-</b><span>주문</span></div><div><b>-</b><span>적립 예정</span></div><div><b>-</b><span>지급 완료</span></div></div>'+
+    (me.status!=="active"?'<div class="empty">지금은 링크가 멈춰 있어요. 카톡 채널로 문의해 주세요.</div>':'')+
+    '<section class="pjsec"><h2>쇼핑몰 전체 링크</h2><div class="dplk"><code>'+esc(dpLink(me))+'</code><button class="b" data-dpcopy="'+esc(dpLink(me))+'">복사</button></div></section>'+
+    '<section class="pjsec"><h2>상품별 수익 링크</h2><input id="dpq" class="fi" placeholder="상품 이름·브랜드 검색 (예: 피피, 후드)" value="'+esc(DP_Q)+'"><div id="dpitems" class="dpitems"><div class="empty">상품 불러오는 중…</div></div></section>'+
+    '<section class="pjsec"><h2>최근 주문</h2><div id="dporders"><div class="empty">불러오는 중…</div></div></section>'+dpRules();
+  plainHeads(v);
+  SB.rpc("dp_stats").then(function(r){ var d=r.data||{}, el=document.getElementById("dpstat"); if(!el) return;
+    el.innerHTML='<div><b>'+(d.clicks30||0)+'</b><span>최근 30일 클릭</span></div><div><b>'+(d.orders||0)+'</b><span>주문</span></div><div><b>'+won(d.approved)+'</b><span>적립 예정</span></div><div><b>'+won(d.paid)+'</b><span>지급 완료</span></div>'; });
+  SB.from("dp_orders").select("order_id,amount,status,reward,created_at").order("created_at",{ascending:false}).limit(20).then(function(r){ var el=document.getElementById("dporders"); if(!el) return; var L=r.data||[];
+    var ST={pending:"확인 중",approved:"적립 예정",paid:"적립금 지급",rejected:"제외"};
+    el.innerHTML=L.length?L.map(function(o){ return '<div class="pjmyr"><span><b>'+esc(String(o.created_at).slice(0,10))+' 주문</b><small>상품 '+won(o.amount)+(o.reward?' · 적립 '+won(o.reward):'')+'</small></span><i class="st-'+esc(o.status)+'">'+esc(ST[o.status]||o.status)+'</i></div>'; }).join(""):'<div class="empty">아직 주문이 없어요. 링크를 소개해 보세요!</div>'; });
+  dpItems(me);
+  var q=document.getElementById("dpq"); if(q) q.addEventListener("input",function(){ DP_Q=q.value; dpPaint(me); });
+}
+function dpItems(me){
+  if(DP_ITEMS){ dpPaint(me); return; }
+  fetch("https://dagguu.cafe24api.com/api/v2/products?display=T&selling=T&limit=100&sort=created_date&order=desc&fields=product_no,product_name,price,list_image",{headers:{"X-Cafe24-Client-Id":"JzTmuiBPItGvZ6KG8g3aPC"}})
+    .then(function(r){ return r.json(); }).then(function(j){
+      DP_ITEMS=(j.products||[]).filter(function(p){ return +p.price>0; }).map(function(p){ return {no:p.product_no,name:p.product_name,img:safeUrl(p.list_image),price:+p.price}; });
+      dpPaint(me);
+    }).catch(function(){ var el=document.getElementById("dpitems"); if(el) el.innerHTML='<div class="empty">상품을 불러오지 못했어요. 잠시 후 다시 열어 주세요.</div>'; });
+}
+function dpPaint(me){
+  var el=document.getElementById("dpitems"); if(!el||!DP_ITEMS) return;
+  var q=DP_Q.trim().toLowerCase(), L=DP_ITEMS.filter(function(p){ return !q||p.name.toLowerCase().indexOf(q)>=0; }).slice(0,60);
+  el.innerHTML=L.length?L.map(function(p){ var u=dpLink(me,p.no);
+    return '<div class="dpit">'+(p.img?'<img src="'+esc(p.img)+'" alt="" loading="lazy">':'<span class="dpno"></span>')+'<div><b>'+esc(p.name)+'</b><small>'+won(p.price)+' · 적립 약 '+won(Math.floor(p.price*DP_RATE/1000)*10)+'</small>'+
+      '<div class="dpbt"><button class="b pri" data-dpcopy="'+esc(u)+'">수익 링크 복사</button><a class="b" href="'+esc(DP_SHOP+"/product/detail.html?product_no="+p.no)+'" target="_blank" rel="noopener">상품 보기</a></div></div></div>'; }).join(""):'<div class="empty">맞는 상품이 없어요</div>';
+}
+document.addEventListener("click",function(e){
+  var c=e.target.closest&&e.target.closest("[data-dpcopy]");
+  if(c){ e.preventDefault(); var u=c.getAttribute("data-dpcopy"), ok=function(){ toast("🔗 수익 링크를 복사했어요. 글 맨 앞 #광고 잊지 마세요"); ga("dp_copy",{}); };
+    if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(u).then(ok,function(){ prompt("링크를 복사해 주세요",u); }); else prompt("링크를 복사해 주세요",u); return; }
+  var s=e.target.closest&&e.target.closest("[data-dpshop]");
+  if(s){ e.preventDefault(); var id=prompt("적립금 받을 다꾸키즈 회원 아이디",""); if(!id) return;
+    SB.rpc("dp_join",{p_code:"",p_shop:id.trim()}).then(function(x){ if(x.error){ toast("바꾸지 못했어요"); return; } toast("✅ 바꿨어요"); dpInit(); }); }
+});
+/* 다꾸파트너스 관리자: 카페24 주문 관리에서 배송완료·취소/반품 없음·본인 주문 아님 확인 → 승인(적립 확정) → 카페24 회원 적립금 지급 → 지급 완료 */
+function dpAdmin(v){
+  if(!SB) return; var sec=document.createElement("section"); sec.className="pane"; sec.id="dpadm"; sec.innerHTML='<h2>다꾸파트너스 주문</h2><div class="empty">불러오는 중…</div>'; v.insertBefore(sec,v.children[1]||null);
+  Promise.all([SB.from("dp_orders").select("*").neq("status","paid").order("created_at",{ascending:false}).limit(200), SB.from("dp_partners").select("*")]).then(function(R){
+    if(R[0].error){ sec.innerHTML='<h2>다꾸파트너스 주문</h2><div class="empty">supabase/dp_partners.sql 을 SQL Editor 에서 실행해 주세요</div>'; return; }
+    var P={}; (R[1].data||[]).forEach(function(p){ P[p.code]=p; }); var L=R[0].data||[];
+    var ST={pending:"확인 중",approved:"적립 예정",rejected:"제외",paid:"지급 완료"};
+    sec.innerHTML='<h2>다꾸파트너스 주문 ('+L.length+')</h2><p class="mysub">카페24 주문 관리에서 배송완료·취소/반품 없음·본인 주문 아님을 확인하고 승인 → 카페24 고객 관리에서 그 아이디에 적립금 지급 → "지급 완료". 파트너 '+(R[1].data||[]).length+'명</p>'+
+      (L.length?L.map(function(o){ var pt=P[o.code]||{}, bt=function(s,t){ return '<button class="b" data-dpa="'+esc(o.order_id)+'" data-s="'+s+'">'+t+'</button>'; };
+        return '<div class="paap"><p><b>'+esc(o.order_id)+'</b> <i class="st-'+esc(o.status)+'">'+esc(ST[o.status])+'</i><br>'+esc(String(o.created_at).slice(0,16).replace("T"," "))+' · 상품 '+won(o.amount)+' · 적립 '+won(o.reward||Math.floor(o.amount*DP_RATE/1000)*10)+'<br>파트너 '+esc(o.code)+' → 다꾸키즈 아이디 <b>'+esc(pt.shop_id||"?")+'</b> <button class="lnk" data-copy="'+esc(pt.shop_id||"")+'">복사</button></p>'+
+          '<div class="pjrow">'+(o.status==="pending"?bt("approved","승인(적립 확정)")+bt("rejected","제외"):o.status==="approved"?bt("paid","적립금 지급 완료")+bt("rejected","제외"):bt("pending","다시 확인 중으로"))+'</div></div>'; }).join(""):'<div class="empty">처리할 주문이 없어요</div>');
+  });
+}
+document.addEventListener("click",function(e){ var t=e.target.closest&&e.target.closest("[data-dpa]"); if(!t||!SB) return; e.preventDefault();
+  var note=t.dataset.s==="rejected"?(prompt("제외 이유(파트너에게는 안 보여요)","")||""):"";
+  SB.rpc("dp_admin_set",{p_order:t.dataset.dpa,p_status:t.dataset.s,p_note:note}).then(function(x){ if(x.error){ toast("처리하지 못했어요"); return; } toast("✅ 처리했어요"); padminInit(); }); });
 function pjobView(){ return '<div class="pg pjob" id="pjob"><a class="back" href="#/press">'+ico(I.back)+'<span>기자단</span></a><div class="empty">불러오는 중…</div></div>'; }
 function pjobInit(){
   var v=document.getElementById("pjob"), id=+state.pjId; if(!v) return;
@@ -1887,7 +1987,7 @@ function padminInit(){
               A.map(function(a){ var st=a.status, bt=function(s,t){ return '<button class="b" data-paa="'+a.id+'" data-s="'+s+'">'+t+'</button>'; };
                 return '<div class="paap"><p><b>'+esc(nm[a.user_id]||"회원")+'</b> <i class="st-'+st+'">'+esc(PJ_ST[st])+'</i><br><a href="'+esc(safeUrl(a.blog_url))+'" target="_blank" rel="noopener noreferrer">'+esc(a.blog_url)+'</a>'+(a.msg?'<br><small>'+esc(a.msg)+'</small>':'')+(a.post_url?'<br>글: <a href="'+esc(safeUrl(a.post_url))+'" target="_blank" rel="noopener noreferrer">'+esc(a.post_url)+'</a>':'')+'</p>'+
                   '<div class="pjrow">'+(st==="applied"?bt("selected","선정")+bt("rejected","미선정"):st==="submitted"?bt("approved","승인(원고료 적립)")+bt("returned","수정 요청"):st==="rejected"?bt("selected","선정으로 바꾸기"):"")+'</div></div>'; }).join("")+'</section>'; }).join("");
-          v.innerHTML=h;
+          v.innerHTML=h; dpAdmin(v);
           document.getElementById("pjnew").addEventListener("submit",function(e){ e.preventDefault(); var f=e.target, g=function(n){ return String(f.elements[n].value||"").trim(); };
             SB.from("press_jobs").insert({title:g("title"),biz:g("biz")||null,region:g("region")||null,kw:g("kw")||null,guide:g("guide")||null,pay:+g("pay"),slots:+g("slots"),ends:g("ends")}).select("id").single().then(function(x){
               if(x.error){ toast("올리지 못했어요: "+x.error.message); return; }
@@ -2700,7 +2800,7 @@ function goLogin(msg){ if(msg) toast(msg); ls("dakku-after-login",location.hash|
 function login(provider){
   if(!SB){ toast("잠시 후 다시 눌러 주세요"); initAuth(); return; }
   var _g=ls("dakku-after-login");  // 다이어리뷰에서 그냥 로그인하면 다꾸체험단 마이페이지로(2026-10-29 시온님), 결제·수강·기자단 신청 중이면 그 화면으로
-  if(PMODE){ if(!/^#\/(checkout|edu|pjob|padmin|contact)/.test(_g||"")) ls("dakku-after-login","www"); } else if(!_g) ls("dakku-after-login","#/my");
+  if(PMODE){ if(!/^#\/(checkout|edu|pjob|padmin|contact|dp)/.test(_g||"")) ls("dakku-after-login","www"); } else if(!_g) ls("dakku-after-login","#/my");
   SB.auth.signInWithOAuth({provider:provider,options:{redirectTo:location.origin+location.pathname}}).then(function(r){ if(r.error) toast("로그인을 시작하지 못했어요. 잠시 후 다시 시도해 주세요."); });
 }
 function sbErr(r){ if(r&&r.error){ console.warn("[dakku]",r.error.message); return true; } return false; }

@@ -698,9 +698,9 @@ input,select,textarea{font-size:16px!important}
 .press .prhero h1{margin:6px 0 8px;font-size:23px;line-height:1.35;color:#fff}
 .press .prhero h1 em{font-style:normal;color:#ffe14d}
 .press .prhero p{margin:0;font-size:14px;line-height:1.55;color:#f3e9ff}
-.press .prhow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px}
-.press .prhow div{background:#faf3fd;border-radius:14px;padding:12px 8px;text-align:center;font-size:13px;line-height:1.35;color:#3a1670}
-.press .prhow b{display:block;width:24px;height:24px;line-height:24px;margin:0 auto 6px;border-radius:50%;background:#9b3fd0;color:#fff;font-size:13px}
+.press .prhow,.dp .prhow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px}
+.press .prhow div,.dp .prhow div{background:#faf3fd;border-radius:14px;padding:12px 8px;text-align:center;font-size:13px;line-height:1.35;color:#3a1670}
+.press .prhow b,.dp .prhow b{display:block;width:24px;height:24px;line-height:24px;margin:0 auto 6px;border-radius:50%;background:#9b3fd0;color:#fff;font-size:13px}
 .press .prh{font-size:18px;margin:6px 0 10px}
 .press .prh small{font-size:13px;font-weight:600;color:#9b3fd0;margin-left:4px}
 .press .prc{display:flex;gap:12px;padding:12px;border:1px solid #eee;border-radius:16px;margin-bottom:10px;background:#fff;color:inherit;text-decoration:none}
@@ -1290,3 +1290,16 @@ input,select,textarea{font-size:16px!important}
 .kcp .kcpt::-webkit-scrollbar{display:none}
 .kcp .kcpt button{flex:0 0 auto;border:1px solid #e3e3e3;background:#fff;border-radius:20px;padding:6px 12px;font-size:12.5px;color:#333}
 .kcp .kcpt button.on{background:#6a3fc8;border-color:#6a3fc8;color:#fff;font-weight:700}
+/* 다꾸파트너스 (#/dp, 2026-11-11) */
+.dphero{background:linear-gradient(135deg,#3a1670,#8a3fd0);color:#fff;border-radius:18px;padding:22px 18px;margin:8px 0 12px}
+.dphero small{font-size:12px;opacity:.85}.dphero h1{font-size:22px;line-height:1.35;margin:6px 0 8px;color:#fff}.dphero h1 em{font-style:normal;color:#ffe14d}
+.dphero p{font-size:13px;line-height:1.6;margin:0;opacity:.92}.dphero.sm h1{font-size:19px}.dphero .lnk{color:#ffe14d}
+.dpstat{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:0 0 6px}
+.dpstat div{background:#f6f2fb;border-radius:12px;padding:10px 4px;text-align:center}.dpstat b{display:block;font-size:15px;font-weight:800}.dpstat span{font-size:11px;color:#777}
+.dplk{display:flex;gap:8px;align-items:center}.dplk code{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:#f4f4f4;border-radius:10px;padding:10px;font-size:12px}
+.dpitems{display:grid;gap:10px;margin-top:10px}
+.dpit{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line,#eee);border-radius:14px;padding:10px}
+.dpit img,.dpit .dpno{width:76px;height:96px;object-fit:cover;border-radius:10px;background:#f2f2f2;flex:none}
+.dpit>div{flex:1;min-width:0}.dpit b{display:block;font-size:14px;line-height:1.4}.dpit small{display:block;color:#888;font-size:12px;margin:3px 0 8px}
+.dpbt{display:flex;gap:6px}.dpbt .b{padding:7px 10px;font-size:13px;border-radius:10px}
+.dpnote{font-size:12px;color:#888;margin:-4px 0 10px}
