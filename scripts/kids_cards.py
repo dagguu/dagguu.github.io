@@ -86,35 +86,45 @@ def e(s):
     return html.escape(s or "")
 
 
-# ── 배너 (1200x800, 카드뉴스 느낌: 파스텔 바탕 + 큰 제목 + 사진 3장 겹침 + 스티커) ──
+# ── 배너 (1200x800) ──
+# 2026-11-11 시온님이 보여준 인스타 카드뉴스 두 장 느낌: 상품 사진 한 장 꽉 채움 + 아래 그늘
+#  A형 = 큰 흰 글씨 2줄, 첫 줄 앞 낱말만 노란 상자 강조 + 작은 설명
+#  B형 = 연두/흰 글자 칸 꼬리표 + 둥근 흰 손글씨 느낌 큰 글씨 + 오른쪽 위 작은 연두 스티커
 BAN = [
-    ("B1", 54, "#f6f0ff", "#6a3fc8", "new in 🧸", "오늘 들어온\n따끈한 신상 🛍️", "매일 아침 새 아이옷이 올라와요"),
-    ("B2", 24, "#eef4ff", "#3a5fc8", "winter mood ☃️", "찬바람 불기 전\n포근한 아우터 🧥", "지금 입히기 좋은 겨울 아우터"),
-    ("B3", 52, "#fff1f4", "#d2557a", "baby pick 🍼", "우리 아기\n첫 데일리룩 🌷", "0~2세 아기옷 모아보기"),
-    ("B4", 47, "#f1f8f1", "#3f8f5a", "brand 🏷️", "포근한 감성\n아오스타 💚", "아오스타 아동복 모음"),
+    ("B1", 54, "A", dict(hl="오늘 신상", rest=" 도착", l2="먼저 구경해요", sub="매일 아침 새 아이옷이 올라와요 🧸")),
+    ("B2", 24, "B", dict(tiles="겨울준비", t="입으면 포근포근\n겨울 아우터", st="찬바람 대비 ☃️")),
+    ("B3", 52, "A", dict(hl="우리 아기", rest=" 첫 데일리룩", l2="이렇게 입혀봐요", sub="0~2세 아기옷 모아보기 🍼")),
+    ("B4", 47, "B", dict(tiles="아오스타", t="포근한 감성\n아오스타 코디", st="브랜드 픽 💚")),
 ]
+FONT_LINK = "<link href='https://fonts.googleapis.com/css2?family=Jua&display=block' rel='stylesheet'>"
 
 
 def banner_html(theme, ps):
-    key, cat, bg, pt, tag, title, sub = theme
-    t = "<br>".join(e(x) for x in title.split("\n"))
-    imgs = ps[:3]
-    pos = [(610, 120, 300, 420, -4), (840, 70, 300, 420, 5), (720, 330, 300, 400, -1)]
-    ph = "".join(
-        f"<div style='position:absolute;left:{x}px;top:{y}px;width:{w}px;height:{h}px;transform:rotate({r}deg);background:#fff;padding:12px 12px 46px;border-radius:24px;box-shadow:0 18px 40px rgba(0,0,0,.12)'>"
-        f"<div class='ph' style='width:100%;height:100%;border-radius:16px;background-image:url(\"{p['img']}\")'></div>"
-        f"<div style='position:absolute;left:16px;right:16px;bottom:12px;font-size:16px;font-weight:700;color:#333;white-space:nowrap;overflow:hidden;text-overflow:ellipsis'>{e(p['name'])}</div></div>"
-        for p, (x, y, w, h, r) in zip(imgs, pos))
-    body = (f"<div style='position:relative;width:1200px;height:800px;background:{bg};overflow:hidden'>"
-            f"<div style='position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:#fff;opacity:.55'></div>"
-            f"<div style='position:absolute;left:70px;top:150px'>"
-            f"<span class='pill' style='padding:10px 22px;background:#fff;color:{pt};font-size:24px'>{e(tag)}</span>"
-            f"<div style='margin-top:30px;font-size:68px;line-height:1.22;font-weight:900;color:#1d1530;letter-spacing:-1.5px'>{t}</div>"
-            f"<div style='margin-top:22px;font-size:28px;font-weight:600;color:#6b6380'>{e(sub)}</div>"
-            f"<span class='pill' style='margin-top:40px;padding:14px 28px;background:{pt};color:#fff;font-size:26px'>보러가기 ›</span></div>"
-            f"<div class='handle' style='left:72px;bottom:56px;font-size:24px;color:{pt}'>@dagguukids</div>"
-            f"{ph}</div>")
-    return page(1200, 800, body)
+    key, cat, kind, c = theme
+    p = ps[0]
+    shade = ("<div style='position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 38%,rgba(0,0,0,.18) 58%,rgba(0,0,0,.62) 100%)'></div>")
+    photo = f"<div style='position:absolute;inset:0;background:#eee url(\"{p['img']}\") center 28%/cover no-repeat'></div>"
+    tagname = f"<div style='position:absolute;right:34px;bottom:26px;font-size:20px;font-weight:700;color:rgba(255,255,255,.85)'>@dagguukids</div>"
+    if kind == "A":
+        txt = (f"<div style='position:absolute;left:0;right:0;bottom:70px;text-align:center;color:#fff;font-weight:900;letter-spacing:-2px'>"
+               f"<div style='font-size:84px;line-height:1.2;text-shadow:0 3px 14px rgba(0,0,0,.35)'>"
+               f"<span style='background:#ffe94d;color:#111;padding:0 16px;text-shadow:none'>{e(c['hl'])}</span>{e(c['rest'])}</div>"
+               f"<div style='font-size:84px;line-height:1.25;text-shadow:0 3px 14px rgba(0,0,0,.35)'>{e(c['l2'])}</div>"
+               f"<div style='margin-top:18px;font-size:30px;font-weight:600;letter-spacing:-.5px;opacity:.95'>{e(c['sub'])}</div></div>")
+        extra = ""
+    else:
+        tiles = "".join(f"<span style='display:inline-block;width:54px;height:58px;line-height:58px;text-align:center;margin-right:6px;"
+                        f"background:{'#d8eaa8' if i % 2 == 0 else '#fff'};color:#222;font-size:30px;font-weight:700'>{e(ch)}</span>"
+                        for i, ch in enumerate(c['tiles']))
+        t = "<br>".join(e(x) for x in c['t'].split("\n"))
+        txt = (f"<div style='position:absolute;left:80px;bottom:76px'>"
+               f"<div>{tiles}</div>"
+               f"<div style='margin-top:20px;font-family:Jua,sans-serif;font-size:96px;line-height:1.12;color:#fff;letter-spacing:-1px;"
+               f"text-shadow:0 0 2px rgba(0,0,0,.25),0 4px 16px rgba(0,0,0,.35)'>{t}</div></div>")
+        extra = (f"<div style='position:absolute;right:70px;top:70px;padding:12px 22px;background:#d8eaa8;border:2px solid #333;"
+                 f"font-size:26px;font-weight:700;color:#222'>{e(c['st'])}</div>")
+    body = f"<div style='position:relative;width:1200px;height:800px;overflow:hidden'>{photo}{shade}{extra}{txt}{tagname}</div>"
+    return page(1200, 800, body).replace("<head>", "<head>" + FONT_LINK, 1)
 
 
 # ── 카드뉴스 (1080x1350) ──
@@ -193,7 +203,7 @@ def main():
     for th in BAN:
         pool = products(th[1], 200) or allp
         ps = pick(pool, 3, used)
-        if len(ps) < 2:
+        if len(ps) < 1:
             ps = pick(allp, 3, used)
         used |= {p["no"] for p in ps}  # 배너끼리 같은 사진 안 겹치게
         bp[f"{th[0]}.jpg"] = (1200, 800, banner_html(th, ps))
