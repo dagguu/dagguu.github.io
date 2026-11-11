@@ -163,7 +163,7 @@ def last_html():
     body = ("<div style='position:relative;width:1080px;height:1350px;background:#6a3fc8;color:#fff;padding:110px 80px'>"
             "<div style='font-size:120px'>🛍️</div>"
             "<div style='margin-top:30px;font-size:80px;font-weight:900;line-height:1.2;letter-spacing:-2px'>더 많은 신상은<br>다꾸키즈에서 💜</div>"
-            "<div style='margin-top:50px;font-size:38px;line-height:1.7;font-weight:600'>🚚 2만원 이상 무료배송<br>🎁 신규가입 쿠폰 바로 지급<br>📦 평일 오후 3시 전 주문 당일 발주</div>"
+            "<div style='margin-top:50px;font-size:38px;line-height:1.7;font-weight:600'>🚚 5만원 이상 무료배송<br>🎁 신규가입 쿠폰 바로 지급<br>📦 평일 오후 3시 전 주문 당일 발주</div>"
             "<span class='pill' style='margin-top:70px;padding:22px 40px;background:#fff;color:#6a3fc8;font-size:40px'>프로필 링크 → dagguukids.com</span>"
             "<div class='handle' style='left:80px;bottom:60px;font-size:30px;color:#e7dcff'>@dagguukids</div></div>")
     return page(1080, 1350, body)
@@ -173,7 +173,7 @@ def caption(ps):
     lines = [f"오늘 다꾸키즈에 들어온 아이옷 {len(ps)}가지 🧸✨", ""]
     for i, p in enumerate(ps, 1):
         lines.append(f"{i}. {p['name']} · {won(p['price'])}")
-    lines += ["", "🚚 2만원 이상 무료배송", "🎁 신규가입 쿠폰 바로 지급", "", "👉 프로필 링크(dagguukids.com)에서 바로 볼 수 있어요",
+    lines += ["", "🚚 5만원 이상 무료배송", "🎁 신규가입 쿠폰 바로 지급", "", "👉 프로필 링크(dagguukids.com)에서 바로 볼 수 있어요",
               "저장해두고 꺼내보세요 💜 @dagguukids", "",
               "#아동복 #유아복 #아기옷 #남대문아동복 #키즈룩 #" + " #".join(sorted({p['brand'] for p in ps}))[:200]]
     return "\n".join(lines)
