@@ -217,7 +217,7 @@ function route(){
   (parts[1]||"").split("&").forEach(function(p){ var kv=p.split("="); if(kv[0]) qs[decodeURIComponent(kv[0])]=decodeURIComponent(kv[1]||""); });
   if(!PMODE&&PART_LIVE&&P_ONLY.test(tab)){ location.replace(PART_URL+"#/"+h); return; }
   if(PMODE&&!P_TABS.test(tab)){ location.replace(MAIN_URL+"#/"+h); return; }
-  if(!/^(home|list|fav|map|benefit|shop|mag|tix|deals|reporter|press|contact|item|my|privacy|price|event|trip|edu|checkout|pjob|padmin|sites|season)$/.test(tab)) tab="home";
+  if(!/^(home|list|fav|map|benefit|shop|mag|tix|deals|reporter|press|contact|item|my|privacy|price|event|trip|edu|checkout|pjob|padmin|dp|sites|season)$/.test(tab)) tab="home";
   state.tab=tab;
   if(tab==="item") state.itemId=qs.id||"";
   if(tab==="event") state.evAbr=qs.t==="abroad";
