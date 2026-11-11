@@ -1,0 +1,42 @@
+name: 다꾸키즈 카드뉴스·홈 배너
+# 2026-11-11 시온님: 슬라이딩 배너를 카드뉴스 느낌 이미지로 + 인스타 카드뉴스 매일. 매일 09:41 KST(00:41 UTC).
+on:
+  schedule:
+    - cron: "41 0 * * *"
+  workflow_dispatch:
+    inputs:
+      mail: { description: "메일 보내기 (y/n)", default: "y" }
+permissions: { contents: write }
+concurrency: kids-cards
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk fonts-noto-color-emoji >/dev/null
+          pip install -q playwright && python -m playwright install --with-deps chromium >/dev/null
+          mkdir -p ~/.local/share/fonts
+          for f in SemiBold Bold ExtraBold Black; do for u in https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/public/static/Pretendard-$f.otf https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/Pretendard-$f.otf; do curl -sSLf -o ~/.local/share/fonts/Pretendard-$f.otf $u && break; done; done
+          fc-cache -f >/dev/null
+      - run: python scripts/kids_cards.py
+      - name: 배너는 main(사이트), 카드뉴스는 insta 브랜치
+        run: |
+          git config user.name "dagguu"; git config user.email "dagguu@users.noreply.github.com"
+          D=$(ls kids_out | tail -1); mv kids_out /tmp/kids_out
+          git add kids/banner scripts/kids_cards_done.json
+          git commit -qm "다꾸키즈 홈 배너 $D" || true
+          for i in 1 2 3; do git push -q origin HEAD:main && break; git pull -q --rebase origin main; done
+          git fetch -q origin insta && git checkout -q -B insta origin/insta
+          rm -rf "kids/$D"; mkdir -p "kids/$D"; cp /tmp/kids_out/$D/* "kids/$D"/
+          git add -A "kids/$D" && git commit -qm "다꾸키즈 카드뉴스 $D" || true
+          for i in 1 2 3; do git push -q origin insta && break; git pull -q --rebase origin insta; done
+          echo "D=$D" >> $GITHUB_ENV
+      - if: ${{ github.event_name == 'schedule' || github.event.inputs.mail != 'n' }}
+        run: python scripts/mail_kids.py "/tmp/kids_out/$D"
+        env:
+          NAVER_MAIL_ID: ${{ secrets.NAVER_MAIL_ID }}
+          NAVER_MAIL_PW: ${{ secrets.NAVER_MAIL_PW }}
