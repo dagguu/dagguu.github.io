@@ -1750,7 +1750,7 @@ function pjobInit(){
       var open=j.status==="open"&&j.ends>=ymd(today());
       var head='<a class="back" href="#/press">'+ico(I.back)+'<span>기자단</span></a>'+
         '<div class="pjh"><small>다이어리뷰 기자단 · '+esc(j.region||"")+'</small><h1>'+esc(j.title)+'</h1><div class="pjpay"><b>'+esc(pjPayTxt(j))+'</b><span>'+(pjRw(j)?'1편 보상 (현금 아님)':'1편 원고료 (세전)')+'</span></div></div>'+
-        '<table class="pjtb"><tr><th>모집 인원</th><td>'+j.slots+'명</td></tr><tr><th>신청 마감</th><td>'+esc(j.ends)+' ('+pjDd(j.ends)+')</td></tr>'+(j.kw?'<tr><th>키워드</th><td>'+esc(j.kw)+'</td></tr>':'')+(j.biz?'<tr><th>업체</th><td>'+esc(j.biz)+'</td></tr>':'')+'<tr><th>작성 채널</th><td>네이버 블로그</td></tr></table>'+
+        '<table class="pjtb"><tr><th>모집 인원</th><td>'+j.slots+'명</td></tr><tr><th>신청 마감</th><td>'+esc(j.ends)+' ('+pjDd(j.ends)+')</td></tr>'+(j.kw?'<tr><th>키워드</th><td>'+esc(j.kw)+'</td></tr>':'')+(j.biz?'<tr><th>업체</th><td>'+esc(j.biz)+'</td></tr>':'')+'<tr><th>작성 채널</th><td>'+(pjRw(j)?'블로그 또는 인스타그램':'네이버 블로그')+'</td></tr></table>'+
         (j.guide?'<section class="pjsec"><h2>무엇을 쓰나요</h2><p class="pjg">'+esc(j.guide).replace(/\n/g,"<br>")+'</p></section>':'')+
         '<section class="pjsec"><h2>꼭 지켜 주세요</h2><ul class="pjrule"><li>광고주가 준 원고·사진 자료로 쓰는 소개 글이에요.</li>'+(pjRw(j)?'<li>글 제목이나 첫 줄 맨 앞에 <b>#광고</b>를 꼭 적어요(공정위 추천·보증 심사지침).</li>':'<li>글 첫 부분에 원고료를 받고 쓴 글이라는 문구를 꼭 넣어요(공정위 추천·보증 심사지침).</li>')+'<li>글은 올린 날부터 3개월 동안 지우지 않아요.</li>'+(pjRw(j)?'<li>보상은 검수 승인 뒤 드려요. 현금이 아니라 안내된 보상(적립금 등)으로 드리고, 현금으로 바꿀 수 없어요.</li>':'<li>원고료는 검수 승인 뒤 적립되고, 1만원부터 출금할 수 있어요. 출금할 때 3.3%(소득세·지방소득세)를 떼고 입금해요.</li>')+'</ul></section>';
       if(!USER){ v.innerHTML=head+'<div class="dbar pjbar"><button class="b" data-pjlogin>카카오로 로그인하고 신청하기</button></div>'; return; }
@@ -1763,15 +1763,15 @@ function pjobInit(){
           v.innerHTML=h; plainHeads(v);
           if(/selected|submitted|returned|approved/.test(ap.status)) SB.from("press_files").select("url,memo").eq("job_id",id).maybeSingle().then(function(f){ var el=document.getElementById("pjfiles"); if(el&&f.data&&safeUrl(f.data.url)) el.innerHTML='<a class="b pjfile" href="'+esc(safeUrl(f.data.url))+'" target="_blank" rel="noopener noreferrer">📁 원고·사진 자료 받기 ↗</a>'+(f.data.memo?'<p class="pjsm">'+esc(f.data.memo)+'</p>':''); });
           var sf=document.getElementById("pjsubmit"); if(sf) sf.addEventListener("submit",function(e){ e.preventDefault(); var u=document.getElementById("pj-post").value.trim();
-            SB.rpc("press_submit",{p_app:ap.id,p_url:u}).then(function(x){ if(x.error){ toast(pjErr(x.error)); return; } toast("✅ 제출했어요. 검수 후 원고료가 적립돼요"); ga("press_submit",{}); pjobInit(); }); });
+            SB.rpc("press_submit",{p_app:ap.id,p_url:u}).then(function(x){ if(x.error){ toast(pjErr(x.error)); return; } toast(pjRw(j)?"✅ 제출했어요. 검수 후 보상을 드려요":"✅ 제출했어요. 검수 후 원고료가 적립돼요"); ga("press_submit",{}); pjobInit(); }); });
           return;
         }
         if(!open){ v.innerHTML=h+'<div class="empty">모집이 끝났어요</div>'; plainHeads(v); return; }
         var bl=(myChs().blogs||[]);
         h+='<section class="pjsec"><h2>신청하기</h2><form id="pjapply" class="pjf">'+
-          '<label class="fl" for="pj-blog">블로그 주소 <i>*</i></label>'+(bl.length?'<select id="pj-blog" class="fi">'+bl.map(function(b){ return '<option>'+esc(b)+'</option>'; }).join("")+'<option value="">직접 입력</option></select><input id="pj-blog2" class="fi" type="url" inputmode="url" placeholder="https://blog.naver.com/아이디" hidden>':'<input id="pj-blog2" class="fi" type="url" inputmode="url" placeholder="https://blog.naver.com/아이디" required>')+
-          '<label class="fl" for="pj-msg">하고 싶은 말</label><textarea id="pj-msg" class="fi ta" maxlength="500" placeholder="주로 쓰는 주제, 하루 방문자 등"></textarea>'+
-          '<label class="ck"><input type="checkbox" id="pj-ok"><span>위 안내(대가성 문구·3개월 유지·3.3% 원천징수)를 확인했어요</span></label>'+
+          '<label class="fl" for="pj-blog">'+(pjRw(j)?'블로그 또는 인스타그램 주소':'블로그 주소')+' <i>*</i></label>'+(bl.length?'<select id="pj-blog" class="fi">'+bl.map(function(b){ return '<option>'+esc(b)+'</option>'; }).join("")+'<option value="">직접 입력</option></select><input id="pj-blog2" class="fi" type="url" inputmode="url" placeholder="https://blog.naver.com/아이디" hidden>':'<input id="pj-blog2" class="fi" type="url" inputmode="url" placeholder="https://blog.naver.com/아이디" required>')+
+          '<label class="fl" for="pj-msg">하고 싶은 말</label><textarea id="pj-msg" class="fi ta" maxlength="500" placeholder="'+(pjRw(j)?'다꾸키즈 회원 아이디(필수), 주로 쓰는 주제 등':'주로 쓰는 주제, 하루 방문자 등')+'"></textarea>'+
+          '<label class="ck"><input type="checkbox" id="pj-ok"><span>'+(pjRw(j)?'위 안내(#광고 표시·3개월 유지·보상은 현금 아님)를 확인했어요':'위 안내(대가성 문구·3개월 유지·3.3% 원천징수)를 확인했어요')+'</span></label>'+
           '<button class="b pri wide" type="submit">기자단 신청하기</button></form></section>';
         v.innerHTML=h; plainHeads(v);
         var sel=document.getElementById("pj-blog"), b2=document.getElementById("pj-blog2");
