@@ -26,7 +26,7 @@ jobs:
       - name: 배너는 main(사이트), 카드뉴스는 insta 브랜치
         run: |
           git config user.name "dagguu"; git config user.email "dagguu@users.noreply.github.com"
-          D=$(ls kids_out | tail -1); mv kids_out /tmp/kids_out
+          D=$(ls kids_out | tail -1); mv kids_out /tmp/kids_out; cp scripts/mail_kids.py /tmp/mail_kids.py
           git add kids/banner scripts/kids_cards_done.json
           git commit -qm "다꾸키즈 홈 배너 $D" || true
           for i in 1 2 3; do git push -q origin HEAD:main && break; git pull -q --rebase origin main; done
@@ -36,7 +36,7 @@ jobs:
           for i in 1 2 3; do git push -q origin insta && break; git pull -q --rebase origin insta; done
           echo "D=$D" >> $GITHUB_ENV
       - if: ${{ github.event_name == 'schedule' || github.event.inputs.mail != 'n' }}
-        run: python scripts/mail_kids.py "/tmp/kids_out/$D"
+        run: python /tmp/mail_kids.py "/tmp/kids_out/$D"
         env:
           NAVER_MAIL_ID: ${{ secrets.NAVER_MAIL_ID }}
           NAVER_MAIL_PW: ${{ secrets.NAVER_MAIL_PW }}
