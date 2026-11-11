@@ -284,7 +284,8 @@ for it in items:
     body += f'<div class="dhd">{badge_html}<h1>{e(name)}</h1><div class="dico"><span class="shtip">친구에게도 공유하기</span><button class="shb" id="shb" aria-label="공유하기">{SEND}</button></div></div>'
     if op and endd: body += f'<span class="dcd dcdfix" id="dcdfix" aria-hidden="true"><b data-dcd="{e(endd)}"></b> 남음</span>'
     body += f'<dl class="dtl">{rows2}</dl>' + fee + ai
-    if op: body += f'<p class="dnote">신청은 {e(src)}에서 진행돼요. 리뷰 조건·체험 가능일을 꼭 확인해 주세요.</p>'
+    if op and it.get("own"): body += f'<p class="dnote">다꾸체험단 운영사(플랜비)가 운영하는 쇼핑몰 {e(src)}에서 직접 모집하는 체험단이에요. 신청·선정·페이백은 {e(src)}에서 진행해요.</p>'
+    elif op: body += f'<p class="dnote">신청은 {e(src)}에서 진행돼요. 리뷰 조건·체험 가능일을 꼭 확인해 주세요.</p>'
     else: body += f'<div class="dclosed"><b>모집이 끝난 체험단이에요</b><span>같은 {"숙소" if cat == "stay" else "제품"}가 다시 모집하면 다꾸 앱에서 알림으로 알려드려요.</span></div>'
     body += f'<div class="dbar"><a class="fv dbfav" href="/#/item?id={e(iid)}" aria-label="다꾸 앱에서 찜하기">{HEART}</a>'
     if view: body += f'<a class="dbl" href="{e(view)}" target="_blank" rel="sponsored nofollow noopener">{plab}</a>'
