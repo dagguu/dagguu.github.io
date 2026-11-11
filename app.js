@@ -1792,6 +1792,7 @@ function dpHome(v,me){
     '<div class="dpstat" id="dpstat"><div><b>-</b><span>최근 30일 클릭</span></div><div><b>-</b><span>주문</span></div><div><b>-</b><span>적립 예정</span></div><div><b>-</b><span>지급 완료</span></div></div>'+
     (me.status!=="active"?'<div class="empty">지금은 링크가 멈춰 있어요. 카톡 채널로 문의해 주세요.</div>':'')+
     '<section class="pjsec"><h2>쇼핑몰 전체 링크</h2><div class="dplk"><code>'+esc(dpLink(me))+'</code><button class="b" data-dpcopy="'+esc(dpLink(me))+'">복사</button></div></section>'+
+    '<section class="pjsec"><h2>다꾸키즈에서 바로 공유하기</h2><p class="dpnote">아래 버튼을 한 번 누르면, 이 휴대폰으로 다꾸키즈 상품을 볼 때마다 구매 버튼 아래에 <b>내 수익 링크 복사·공유</b> 버튼이 생겨요. 휴대폰·브라우저마다 한 번씩 눌러 주세요.</p><a class="b" style="display:block;text-align:center;margin-top:8px" target="_blank" rel="noopener" href="'+esc(DP_SHOP+"/?dpme="+me.code)+'">다꾸키즈에서 공유 버튼 켜기 ›</a></section>'+
     '<section class="pjsec"><h2>상품별 수익 링크</h2><input id="dpq" class="fi" placeholder="상품 이름·브랜드 검색 (예: 피피, 후드)" value="'+esc(DP_Q)+'"><div id="dpitems" class="dpitems"><div class="empty">상품 불러오는 중…</div></div></section>'+
     '<section class="pjsec"><h2>최근 주문</h2><div id="dporders"><div class="empty">불러오는 중…</div></div></section>'+dpRules();
   plainHeads(v);
