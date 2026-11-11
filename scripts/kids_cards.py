@@ -29,9 +29,15 @@ F = "fields=product_no,product_name,price,detail_image,list_image,summary_descri
 
 
 def products(cat=None, n=60):
-    q = f"{F}&limit={n}&sort=created_date&order=desc" + (f"&category={cat}" if cat else "")
+    raw = []
+    for off in range(0, n, 100):  # 최근 상품이 양말뿐인 날도 있어서 넉넉히 읽음
+        q = f"{F}&limit={min(100, n - off)}&offset={off}&sort=created_date&order=desc" + (f"&category={cat}" if cat else "")
+        got = get(q)
+        raw += got
+        if len(got) < 100:
+            break
     out = []
-    for p in get(q):
+    for p in raw:
         img = p.get("detail_image") or p.get("list_image")
         if not img:
             continue
@@ -181,11 +187,11 @@ def main():
     done = json.load(open(DONE_P)) if os.path.exists(DONE_P) else {}
     used = set(n for v in list(done.values())[-5:] for n in v)
     banner_used = set(used)
-    allp = products(None, 100)
+    allp = products(None, 400)
     # 배너
     bp = {}
     for th in BAN:
-        pool = products(th[1], 40) or allp
+        pool = products(th[1], 200) or allp
         ps = pick(pool, 3, used)
         if len(ps) < 2:
             ps = pick(allp, 3, used)
