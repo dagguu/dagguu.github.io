@@ -1,4 +1,4 @@
--- 다꾸파트너스 (2026-11-11 시온님): 다꾸키즈 상품 수익 링크 → 판매액 10% 다꾸키즈 적립금
+-- 다꾸파트너스 (2026-11-11 시온님): 다꾸키즈 상품 수익 링크 → 판매액 3%(2026-11-11 시온님, 처음 10%) 다꾸키즈 적립금
 -- 시온님이 Supabase SQL Editor 에서 한 번 실행. press_jobs.sql(is_press_admin) 을 먼저 실행해 둔 상태여야 함.
 -- 흐름: 파트너 가입(dp_join) → 링크 dagguukids.com/...?pt=코드 → 쇼핑몰 스크립트가 클릭(dp_click)·주문완료(dp_order) 기록
 --      → 관리자가 카페24 에서 배송완료·반품 없음·본인 구매 아님 확인 → 승인(적립 확정) → 카페24 적립금 지급 → 지급 완료.
@@ -103,7 +103,7 @@ language sql stable security definer set search_path = public as $$
 $$;
 grant execute on function public.dp_stats() to authenticated;
 
--- 관리자: 승인(적립금 = 상품 금액 10%, 10원 단위 버림) / 반려 / 적립금 지급 완료
+-- 관리자: 승인(적립금 = 상품 금액 3%, 10원 단위 버림) / 반려 / 적립금 지급 완료
 create or replace function public.dp_admin_set(p_order text, p_status text, p_note text) returns void
 language plpgsql security definer set search_path = public as $$
 declare r public.dp_orders;
@@ -113,7 +113,7 @@ begin
   select * into r from public.dp_orders where order_id = p_order;
   if r.order_id is null then raise exception 'none'; end if;
   update public.dp_orders set status = p_status,
-    reward = case when p_status in ('approved','paid') then coalesce(reward, (floor(amount * 0.10 / 10) * 10)::int) else null end,
+    reward = case when p_status in ('approved','paid') then coalesce(reward, (floor(amount * 0.03 / 10) * 10)::int) else null end,
     note = nullif(trim(coalesce(p_note,'')),''), decided_at = now()
   where order_id = p_order;
 end $$;

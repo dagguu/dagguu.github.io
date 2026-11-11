@@ -1717,7 +1717,7 @@ function pHomeView(){
   return '<div class="pg phome">'+
     '<section class="phero"><small>DAKKU PARTNERS · 다꾸파트너스</small><h1>블로거와 사장님을 잇는<br><em>기자단·체험단</em> 대행</h1><p>블로거는 글을 쓰고 원고료를 받고, 사장님은 블로그 홍보를 맡기는 곳이에요.</p></section>'+
     '<div class="pgo"><a href="#/press"><i>✍️</i><span><b>블로거라면</b>기자단 신청하고 원고료 받기</span><em>›</em></a>'+
-      '<a href="#/dp"><i>🔗</i><span><b>다꾸키즈 수익 링크</b>다꾸키즈 상품 소개하고 판매액 10% 적립금 받기</span><em>›</em></a>'+
+      '<a href="#/dp"><i>🔗</i><span><b>다꾸키즈 수익 링크</b>다꾸키즈 상품 소개하고 판매액 3% 적립금 받기</span><em>›</em></a>'+
       '<a href="#/contact"><i>📣</i><span><b>사장님이라면</b>기자단·체험단 홍보 맡기기</span><em>›</em></a>'+
       '<a href="#/edu"><i>🎓</i><span><b>블로그를 키우고 싶다면</b>블로그 수익화 1:1 클래스</span><em>›</em></a></div>'+
     '<div id="pjlist" class="pjlist" data-h="모집 중인 기자단" hidden></div>'+
@@ -1744,9 +1744,9 @@ function pMyView(){
   h+='<div class="myfoot"><a href="#/privacy">개인정보처리방침</a> · <button class="lnk" data-unreg>회원 탈퇴</button><br><button class="lnk myuid" data-copy="'+esc(USER.id)+'">회원 번호 복사</button></div>';
   return h+'</div>';
 }
-/* ── 다꾸파트너스(2026-11-11 시온님): 다꾸키즈 상품별 수익 링크 → 판매액 10% 다꾸키즈 적립금. DB = supabase/dp_partners.sql
+/* ── 다꾸파트너스(2026-11-11 시온님): 다꾸키즈 상품별 수익 링크 → 판매액 3% 다꾸키즈 적립금(2026-11-11 시온님 10%→3%). DB = supabase/dp_partners.sql
    쇼핑몰 쪽: 카페24 스킨 footer.html 스크립트가 ?pt=코드 를 24시간 쿠키로 기억 + dp_click, 주문완료(order_result.html #dkpt-order)에서 dp_order. */
-var DP_RATE=10, DP_SHOP="https://dagguukids.com", DP_ITEMS=null, DP_Q="";
+var DP_RATE=3, DP_SHOP="https://dagguukids.com", DP_ITEMS=null, DP_Q="";
 function dpView(){ return '<div class="pg dp" id="dpv"><div class="empty">불러오는 중…</div></div>'; }
 function dpHero(){ return '<section class="dphero"><small>🔗 다꾸키즈 수익 링크</small><h1>다꾸키즈 상품을 소개하고<br><em>판매액 '+DP_RATE+'%</em> 적립금 받아요</h1><p>내 수익 링크로 들어온 손님이 24시간 안에 다꾸키즈에서 주문하면, 배송이 끝난 뒤 상품 금액의 '+DP_RATE+'%를 다꾸키즈 적립금으로 드려요.</p></section>'+
   '<div class="prhow"><div><b>1</b><span>파트너 가입</span></div><div><b>2</b><span>상품별 수익 링크로 소개</span></div><div><b>3</b><span>배송완료 뒤 적립금</span></div></div>'; }
