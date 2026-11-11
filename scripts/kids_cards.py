@@ -8,7 +8,7 @@
 - 같은 상품이 며칠 연속 나오지 않게 scripts/kids_cards_done.json 에 최근 쓴 상품 번호를 남긴다.
 문구 원칙: 실제 판매가·상품명만, 할인·최저가·"품절임박" 같은 말 안 씀, 지어낸 후기 X.
 """
-import os, sys, json, random, datetime, urllib.request, html
+import os, re, sys, json, random, datetime, urllib.request, html
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CID = "JzTmuiBPItGvZ6KG8g3aPC"
@@ -48,8 +48,11 @@ def won(n):
 def pick(pool, k, used, avoid_socks=True):
     """브랜드·종류가 겹치지 않게 k개. 최근 쓴 상품은 뒤로."""
     fresh = [p for p in pool if p["no"] not in used] + [p for p in pool if p["no"] in used]
+    sock = lambda p: bool(re.search("양말|삭스|타이즈|레그워머|버선|레깅스", p["name"]))
+    fresh = [p for p in fresh if "품절" not in p["name"]]
     if avoid_socks:
-        fresh = [p for p in fresh if "양말" not in p["name"]] + [p for p in fresh if "양말" in p["name"]]
+        ns = [p for p in fresh if not sock(p)]
+        fresh = ns if len(ns) >= k else ns + [p for p in fresh if sock(p)]
     out, brands = [], {}
     for p in fresh:
         if brands.get(p["brand"], 0) >= 2:
@@ -82,7 +85,7 @@ BAN = [
     ("B1", 54, "#f6f0ff", "#6a3fc8", "new in 🧸", "오늘 들어온\n따끈한 신상 🛍️", "매일 아침 새 아이옷이 올라와요"),
     ("B2", 24, "#eef4ff", "#3a5fc8", "winter mood ☃️", "찬바람 불기 전\n포근한 아우터 🧥", "지금 입히기 좋은 겨울 아우터"),
     ("B3", 52, "#fff1f4", "#d2557a", "baby pick 🍼", "우리 아기\n첫 데일리룩 🌷", "0~2세 아기옷 모아보기"),
-    ("B4", 47, "#f1f8f1", "#3f8f5a", "brand 🏷️", "엄마들이 찾는\n아오스타 💚", "아오스타 아동복 모음"),
+    ("B4", 47, "#f1f8f1", "#3f8f5a", "brand 🏷️", "포근한 감성\n아오스타 💚", "아오스타 아동복 모음"),
 ]
 
 
@@ -177,14 +180,16 @@ def shoot(pages, outdir):
 def main():
     done = json.load(open(DONE_P)) if os.path.exists(DONE_P) else {}
     used = set(n for v in list(done.values())[-5:] for n in v)
+    banner_used = set(used)
     allp = products(None, 100)
     # 배너
     bp = {}
     for th in BAN:
         pool = products(th[1], 40) or allp
         ps = pick(pool, 3, used)
-        if len(ps) < 3:
+        if len(ps) < 2:
             ps = pick(allp, 3, used)
+        used |= {p["no"] for p in ps}  # 배너끼리 같은 사진 안 겹치게
         bp[f"{th[0]}.jpg"] = (1200, 800, banner_html(th, ps))
     shoot(bp, os.path.join(ROOT, "kids", "banner"))
     # 카드뉴스
