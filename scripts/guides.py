@@ -42,10 +42,10 @@ GUIDES = [
 <p class="go"><a href="/c/insta.html">인스타 체험단 바로가기 ›</a> <a href="/c/reels.html">릴스 체험단 바로가기 ›</a></p>
 
 <h2>📚 1:1로 제대로 배우고 싶다면</h2>
-<p>체험단 선정이 잘 안 되거나 블로그를 처음 시작해서 막막하다면, 블로그 셋팅부터 체험단 신청·후기 작성까지 1:1로 같이 봐 드리는 다이어리뷰 수익화 클래스가 있어요.</p>
-<p class="go"><a href="https://partners.dagguu.com/#/edu">더 알아보기 › 다이어리뷰 수익화 클래스 수강생 모집</a></p>
+<p>체험단 선정이 잘 안 되거나 블로그를 처음 시작해서 막막하다면, 블로그 셋팅부터 체험단 신청·후기 작성까지 1:1로 같이 봐 드리는 다꾸파트너스 수익화 클래스가 있어요.</p>
+<p class="go"><a href="https://partners.dagguu.com/#/edu">더 알아보기 › 다꾸파트너스 수익화 클래스 수강생 모집</a></p>
 """,
-"related": [("다이어리뷰 수익화 클래스 수강생 모집", "https://partners.dagguu.com/#/edu"), ("블로그 체험단 모음", "/c/blog.html"), ("인스타 체험단 모음", "/c/insta.html"), ("숙박 체험단 모음", "/c/stay.html")],
+"related": [("다꾸파트너스 수익화 클래스 수강생 모집", "https://partners.dagguu.com/#/edu"), ("블로그 체험단 모음", "/c/blog.html"), ("인스타 체험단 모음", "/c/insta.html"), ("숙박 체험단 모음", "/c/stay.html")],
 },
 {
 "slug": "blog-index",
@@ -74,10 +74,10 @@ GUIDES = [
 <p>체험단 후기를 쓸 때는 제목이나 글 첫 부분에 협찬 사실을 꼭 밝혀 주세요(공정위 추천·보증 심사지침).</p>
 
 <h2>📚 1:1로 제대로 배우고 싶다면</h2>
-<p>블로그를 처음 시작하거나 글이 검색에 잘 안 보인다면, 블로그 셋팅·포스팅하는 법부터 1:1로 같이 봐 드리는 다이어리뷰 수익화 클래스가 있어요.</p>
-<p class="go"><a href="https://partners.dagguu.com/#/edu">더 알아보기 › 다이어리뷰 수익화 클래스 수강생 모집</a></p>
+<p>블로그를 처음 시작하거나 글이 검색에 잘 안 보인다면, 블로그 셋팅·포스팅하는 법부터 1:1로 같이 봐 드리는 다꾸파트너스 수익화 클래스가 있어요.</p>
+<p class="go"><a href="https://partners.dagguu.com/#/edu">더 알아보기 › 다꾸파트너스 수익화 클래스 수강생 모집</a></p>
 """,
-"related": [("다이어리뷰 수익화 클래스 수강생 모집", "https://partners.dagguu.com/#/edu"), ("블로그 협찬 받는 법", "/g/blog-sponsor.html"), ("블로그 체험단 모음", "/c/blog.html"), ("육아 체험단 모음", "/c/baby.html")],
+"related": [("다꾸파트너스 수익화 클래스 수강생 모집", "https://partners.dagguu.com/#/edu"), ("블로그 협찬 받는 법", "/g/blog-sponsor.html"), ("블로그 체험단 모음", "/c/blog.html"), ("육아 체험단 모음", "/c/baby.html")],
 },
 {
 "slug": "blog-income",
@@ -118,10 +118,10 @@ GUIDES = [
 </ul>
 
 <h2>📚 1:1로 제대로 배우고 싶다면</h2>
-<p>블로그 시작부터 체험단·기자단·제휴 링크로 수익을 내는 방법까지 1:1로 배우고 싶다면 다이어리뷰 수익화 클래스가 있어요.</p>
-<p class="go"><a href="https://partners.dagguu.com/#/edu">더 알아보기 › 다이어리뷰 수익화 클래스 수강생 모집</a></p>
+<p>블로그 시작부터 체험단·기자단·제휴 링크로 수익을 내는 방법까지 1:1로 배우고 싶다면 다꾸파트너스 수익화 클래스가 있어요.</p>
+<p class="go"><a href="https://partners.dagguu.com/#/edu">더 알아보기 › 다꾸파트너스 수익화 클래스 수강생 모집</a></p>
 """,
-"related": [("다이어리뷰 수익화 클래스 수강생 모집", "https://partners.dagguu.com/#/edu"), ("블로그 협찬 받는 법", "/g/blog-sponsor.html"), ("구매평·페이백 체험단 모음", "/c/review.html"), ("블로그 체험단 모음", "/c/blog.html")],
+"related": [("다꾸파트너스 수익화 클래스 수강생 모집", "https://partners.dagguu.com/#/edu"), ("블로그 협찬 받는 법", "/g/blog-sponsor.html"), ("구매평·페이백 체험단 모음", "/c/review.html"), ("블로그 체험단 모음", "/c/blog.html")],
 },
 {
 "slug": "insta-sponsor",
@@ -178,10 +178,10 @@ GUIDES = [
 <p class="go"><a href="/c/index.html">분야별 체험단 모아보기 ›</a></p>
 
 <h2>📚 1:1로 제대로 배우고 싶다면</h2>
-<p>블로그·인스타로 협찬을 시작하고 싶은데 어디서부터 해야 할지 모르겠다면, 1:1로 같이 봐 드리는 다이어리뷰 수익화 클래스가 있어요.</p>
-<p class="go"><a href="https://partners.dagguu.com/#/edu">더 알아보기 › 다이어리뷰 수익화 클래스 수강생 모집</a></p>
+<p>블로그·인스타로 협찬을 시작하고 싶은데 어디서부터 해야 할지 모르겠다면, 1:1로 같이 봐 드리는 다꾸파트너스 수익화 클래스가 있어요.</p>
+<p class="go"><a href="https://partners.dagguu.com/#/edu">더 알아보기 › 다꾸파트너스 수익화 클래스 수강생 모집</a></p>
 """,
-"related": [("다이어리뷰 수익화 클래스 수강생 모집", "https://partners.dagguu.com/#/edu"), ("인스타 체험단 모음", "/c/insta.html"), ("릴스 체험단 모음", "/c/reels.html"), ("블로그 협찬 받는 법", "/g/blog-sponsor.html")],
+"related": [("다꾸파트너스 수익화 클래스 수강생 모집", "https://partners.dagguu.com/#/edu"), ("인스타 체험단 모음", "/c/insta.html"), ("릴스 체험단 모음", "/c/reels.html"), ("블로그 협찬 받는 법", "/g/blog-sponsor.html")],
 },
 {
 "slug": "coupang-influencer-pick",
@@ -263,9 +263,9 @@ GUIDES = [
 
 <h2>📚 SNS로 협찬·수익을 제대로 시작하고 싶다면</h2>
 <p>인플루언서 픽처럼 SNS 계정 하나로 받을 수 있는 협찬이 점점 늘고 있어요. 블로그·인스타로 체험단을 시작하고, 콘텐츠를 수익으로 연결하는 방법을 처음부터 1:1로 배우고 싶다면 다꾸 수익화 클래스를 확인해 보세요.</p>
-<p class="go"><a href="https://partners.dagguu.com/#/edu">더 알아보기 › 다이어리뷰 수익화 클래스 수강생 모집</a></p>
+<p class="go"><a href="https://partners.dagguu.com/#/edu">더 알아보기 › 다꾸파트너스 수익화 클래스 수강생 모집</a></p>
 """,
-"related": [("다이어리뷰 수익화 클래스 수강생 모집", "https://partners.dagguu.com/#/edu"), ("인스타 협찬 받는 법", "/g/insta-sponsor.html"), ("가전·가구 체험단 모음", "/c/elec.html")],
+"related": [("다꾸파트너스 수익화 클래스 수강생 모집", "https://partners.dagguu.com/#/edu"), ("인스타 협찬 받는 법", "/g/insta-sponsor.html"), ("가전·가구 체험단 모음", "/c/elec.html")],
 },
 {
 "slug": "korail-train-refund",

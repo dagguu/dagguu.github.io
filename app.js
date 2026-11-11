@@ -171,7 +171,7 @@ function shell(){
     '<div class="frame">'+
       '<header class="appbar"><span class="abl"><button class="backbtn" id="backbtn" aria-label="뒤로 가기" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><a class="logo" href="#/" id="logo"></a></span><span class="hbtns"><span class="kch" id="kakao-talk-channel-add-button" data-channel-public-id="_xkqEFX" data-size="small" data-support-multiple-densities="true"></span>'+(PMODE?'':'<a class="iconbtn" href="#/list" data-focus="q" aria-label="체험단 검색">'+ico(I.search)+'</a>')+'<a class="iconbtn mebtn" href="#/my" id="mebtn" aria-label="마이 다꾸">'+ico(I.user)+'</a></span></header>'+
       '<main id="view" class="view"></main>'+
-      (PMODE?'<footer class="foot"><a class="flink" href="#/contact">광고주 마케팅 상담 문의</a><br><a '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>💬 카카오톡 채널 ‘다꾸체험단’</a><p>다이어리뷰 · 블로그 기자단·체험단 대행 · <a href="'+MAIN_URL+'">다꾸체험단(체험단 모아보기)</a></p></footer>':'<footer class="foot"><a class="flink" href="#/contact">광고주 마케팅 상담 문의</a><br><a '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>💬 카카오톡 채널 ‘다꾸체험단’</a><div id="bizline"></div><a class="flink" href="/ad-notice.html">광고 및 콘텐츠 표시 안내</a><p>'+SITE+' · 다꾸체험단은 여러 체험단 사이트의 모집 정보를 모아 보여 주는 서비스로, 각 체험단 사이트와 무관해요. 신청·선정·진행은 해당 사이트에서 이뤄져요. 모집 정보는 각 모집처의 공지를 기준으로 하며, 신청 조건과 일정은 바뀔 수 있어요.</p></footer>')+
+      (PMODE?'<footer class="foot"><a class="flink" href="#/contact">광고주 마케팅 상담 문의</a><br><a '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>💬 카카오톡 채널 ‘다꾸체험단’</a><p>다꾸파트너스 · 블로그 기자단·체험단 대행 · <a href="'+MAIN_URL+'">다꾸체험단(체험단 모아보기)</a></p></footer>':'<footer class="foot"><a class="flink" href="#/contact">광고주 마케팅 상담 문의</a><br><a '+ext(safeUrl(seed.kakao)||"http://pf.kakao.com/_xkqEFX/friend")+'>💬 카카오톡 채널 ‘다꾸체험단’</a><div id="bizline"></div><a class="flink" href="/ad-notice.html">광고 및 콘텐츠 표시 안내</a><p>'+SITE+' · 다꾸체험단은 여러 체험단 사이트의 모집 정보를 모아 보여 주는 서비스로, 각 체험단 사이트와 무관해요. 신청·선정·진행은 해당 사이트에서 이뤄져요. 모집 정보는 각 모집처의 공지를 기준으로 하며, 신청 조건과 일정은 바뀔 수 있어요.</p></footer>')+
     '</div>'+
     '<button class="totop" id="totop" aria-label="맨 위로" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 14l6-6 6 6"/></svg><span>TOP</span></button>'+
     '<div class="kchat" id="kakao-talk-channel-chat-button" data-channel-public-id="_xkqEFX" data-title="consult" data-size="small" data-color="yellow" data-shape="mobile" data-support-multiple-densities="true"></div>'+
@@ -181,7 +181,7 @@ function shell(){
   app.addEventListener("input",function(e){ if(e.target.dataset&&e.target.dataset.etc){ var r=e.target.parentNode.querySelector("input[type=radio]"); if(r) r.checked=true; } if(e.target.id==="q"){ state.q=e.target.value; renderListGrid(); } });
   app.addEventListener("change",function(e){ if(e.target.dataset && e.target.dataset.th!==undefined){ var tv=e.target.dataset.th; if(!tv) state.themes=[]; else { var tk=state.themes.indexOf(tv); if(e.target.checked&&tk<0) state.themes.push(tv); if(!e.target.checked&&tk>=0) state.themes.splice(tk,1); } var tb=document.getElementById("thbox"); if(tb) tb.innerHTML=themeChecks(); renderListGrid(); return; } if(e.target.dataset && e.target.dataset.chk!==undefined){ var v=e.target.dataset.chk; if(!v) state.chs=[]; else { var k=state.chs.indexOf(v); if(e.target.checked&&k<0) state.chs.push(v); if(!e.target.checked&&k>=0) state.chs.splice(k,1); } paintChs(); renderListGrid(); return; } if(e.target.dataset && e.target.dataset.pet!==undefined){ state.pet=e.target.dataset.pet; saveUi(); var pb=document.getElementById("petbox"); if(pb) pb.innerHTML=petChecks(); renderListGrid(); return; } if(e.target.dataset && e.target.dataset.rg!==undefined){ var v=e.target.dataset.rg; if(v==="전체") state.regions=[]; else { var i=state.regions.indexOf(v); if(e.target.checked&&i<0) state.regions.push(v); if(!e.target.checked&&i>=0) state.regions.splice(i,1); } saveUi(); paintRegions(); renderListGrid(); } });
 }
-function paintLogo(){ var l=document.getElementById("logo"); if(l) l.innerHTML=logoSvg(30)+'<b class="wm">'+(PMODE?'다이어리뷰':'다꾸체험단')+'</b><span class="sr">'+SITE+'</span>'+(LOGO.name?'<em class="logo-ev">'+esc(LOGO.name)+'</em>':''); }
+function paintLogo(){ var l=document.getElementById("logo"); if(l) l.innerHTML=logoSvg(30)+'<b class="wm">'+(PMODE?'다꾸파트너스':'다꾸체험단')+'</b><span class="sr">'+SITE+'</span>'+(LOGO.name?'<em class="logo-ev">'+esc(LOGO.name)+'</em>':''); }
 
 /* 구글 애널리틱스 GA4(2026-10-18, 측정 ID G-NK2TCS1QHH, index.html head): 화면 이동은 page_view 를 직접 보내고, 주요 버튼은 이벤트로 */
 function ga(ev,p){ try{ if(window.gtag) window.gtag("event",ev,p||{}); }catch(e){} }
@@ -1708,16 +1708,16 @@ function pjList(){
   var box=document.getElementById("pjlist"), a=seed.auth||{}; if(!box) return;
   if(!safeUrl(a.url)||!a.key){ box.hidden=!PMODE; return; }
   fetch(a.url+"/rest/v1/press_jobs?select=id,title,region,kw,pay,slots,ends&status=eq.open&ends=gte."+ymd(today())+"&order=ends",{headers:{apikey:a.key,Authorization:"Bearer "+a.key}}).then(function(r){ return r.ok?r.json():[]; }).catch(function(){ return []; }).then(function(L){
-    var hd=box.dataset.h||"다꾸 기자단 모집", sub=PMODE?"신청·글 제출·원고료 적립까지 다이어리뷰에서 해요.":"다이어리뷰가 직접 모집해요. 신청은 다이어리뷰에서 해요.";
+    var hd=box.dataset.h||"다꾸 기자단 모집", sub=PMODE?"신청·글 제출·원고료 적립까지 다꾸파트너스에서 해요.":"다꾸파트너스가 직접 모집해요. 신청은 다꾸파트너스에서 해요.";
     if(!L||!L.length){ if(PMODE){ box.innerHTML='<h2 class="prh">'+hd+'</h2><div class="empty pjempty">지금 모집 중인 기자단이 없어요<br><small>새 모집이 열리면 카카오톡 채널로 알려드려요</small></div>'; box.hidden=false; } else box.hidden=true; return; }
     box.innerHTML='<h2 class="prh">'+hd+'</h2><p class="pjsub">'+sub+'</p>'+L.map(pjCard).join(""); box.hidden=false; plainHeads(box); });
 }
 /* 다이어리뷰(partners) 홈·기자단·마이 */
 function pHomeView(){
   return '<div class="pg phome">'+
-    '<section class="phero"><small>DIARY VIEW · 다이어리뷰</small><h1>블로거와 사장님을 잇는<br><em>기자단·체험단</em> 대행</h1><p>블로거는 글을 쓰고 원고료를 받고, 사장님은 블로그 홍보를 맡기는 곳이에요.</p></section>'+
+    '<section class="phero"><small>DAKKU PARTNERS · 다꾸파트너스</small><h1>블로거와 사장님을 잇는<br><em>기자단·체험단</em> 대행</h1><p>블로거는 글을 쓰고 원고료를 받고, 사장님은 블로그 홍보를 맡기는 곳이에요.</p></section>'+
     '<div class="pgo"><a href="#/press"><i>✍️</i><span><b>블로거라면</b>기자단 신청하고 원고료 받기</span><em>›</em></a>'+
-      '<a href="#/dp"><i>🔗</i><span><b>다꾸파트너스</b>다꾸키즈 상품 소개하고 판매액 10% 적립금 받기</span><em>›</em></a>'+
+      '<a href="#/dp"><i>🔗</i><span><b>다꾸키즈 수익 링크</b>다꾸키즈 상품 소개하고 판매액 10% 적립금 받기</span><em>›</em></a>'+
       '<a href="#/contact"><i>📣</i><span><b>사장님이라면</b>기자단·체험단 홍보 맡기기</span><em>›</em></a>'+
       '<a href="#/edu"><i>🎓</i><span><b>블로그를 키우고 싶다면</b>블로그 수익화 1:1 클래스</span><em>›</em></a></div>'+
     '<div id="pjlist" class="pjlist" data-h="모집 중인 기자단" hidden></div>'+
@@ -1726,13 +1726,13 @@ function pHomeView(){
 }
 function pPressView(){
   return '<div class="pg press">'+
-    '<div class="prhero"><small>✍️ 다이어리뷰 기자단</small><h1>받은 자료로 글 쓰고<br><em>원고료</em> 받아요</h1><p>방문하거나 제품을 받지 않아도 돼요. 광고주가 준 원고·사진으로 블로그 글을 쓰면 원고료가 적립되고, 1만원부터 출금할 수 있어요.</p><p class="prfine">고용 계약이 아니라 글 한 편마다 원고료를 받는 방식이에요. 출금할 때 3.3%(소득세·지방소득세)를 떼고 입금해요.</p></div>'+
+    '<div class="prhero"><small>✍️ 다꾸파트너스 기자단</small><h1>받은 자료로 글 쓰고<br><em>원고료</em> 받아요</h1><p>방문하거나 제품을 받지 않아도 돼요. 광고주가 준 원고·사진으로 블로그 글을 쓰면 원고료가 적립되고, 1만원부터 출금할 수 있어요.</p><p class="prfine">고용 계약이 아니라 글 한 편마다 원고료를 받는 방식이에요. 출금할 때 3.3%(소득세·지방소득세)를 떼고 입금해요.</p></div>'+
     '<div class="prhow"><div><b>1</b><span>모집 글 보고 신청</span></div><div><b>2</b><span>선정되면 자료 받아 글 쓰기</span></div><div><b>3</b><span>검수 후 원고료 적립</span></div></div>'+
     '<div id="pjlist" class="pjlist" data-h="모집 중인 기자단" hidden></div>'+
   '</div>';
 }
 function pMyView(){
-  var a=authCfg(), h='<div class="pg my"><h1>마이 다이어리뷰</h1><a class="pgomain" href="'+MAIN_URL+'#/my" onclick="ga(\'main_go\',{place:\'pmy\'})"><span>'+logoSvg(26)+'</span><b>다꾸체험단 바로가기</b><small>모집 중 체험단 모아보기</small><i>›</i></a>';  // 2026-10-29 시온님
+  var a=authCfg(), h='<div class="pg my"><h1>마이 다꾸파트너스</h1><a class="pgomain" href="'+MAIN_URL+'#/my" onclick="ga(\'main_go\',{place:\'pmy\'})"><span>'+logoSvg(26)+'</span><b>다꾸체험단 바로가기</b><small>모집 중 체험단 모아보기</small><i>›</i></a>';  // 2026-10-29 시온님
   if(!USER){
     return h+'<section class="lgcard"><div class="mlogo">'+logoSvg(44)+'</div><b>로그인하고 기자단에<br>참여해 보세요</b>'+
       '<ul class="lgben"><li>✍️ 기자단 신청 · 글 제출</li><li>💰 원고료 적립 · 출금 신청</li><li>📝 내 블로그·인스타 주소 등록</li><li>🎓 블로그 수익화 클래스 수강 신청</li></ul>'+
@@ -1748,7 +1748,7 @@ function pMyView(){
    쇼핑몰 쪽: 카페24 스킨 footer.html 스크립트가 ?pt=코드 를 24시간 쿠키로 기억 + dp_click, 주문완료(order_result.html #dkpt-order)에서 dp_order. */
 var DP_RATE=10, DP_SHOP="https://dagguukids.com", DP_ITEMS=null, DP_Q="";
 function dpView(){ return '<div class="pg dp" id="dpv"><div class="empty">불러오는 중…</div></div>'; }
-function dpHero(){ return '<section class="dphero"><small>🔗 다꾸파트너스</small><h1>다꾸키즈 상품을 소개하고<br><em>판매액 '+DP_RATE+'%</em> 적립금 받아요</h1><p>내 수익 링크로 들어온 손님이 24시간 안에 다꾸키즈에서 주문하면, 배송이 끝난 뒤 상품 금액의 '+DP_RATE+'%를 다꾸키즈 적립금으로 드려요.</p></section>'+
+function dpHero(){ return '<section class="dphero"><small>🔗 다꾸키즈 수익 링크</small><h1>다꾸키즈 상품을 소개하고<br><em>판매액 '+DP_RATE+'%</em> 적립금 받아요</h1><p>내 수익 링크로 들어온 손님이 24시간 안에 다꾸키즈에서 주문하면, 배송이 끝난 뒤 상품 금액의 '+DP_RATE+'%를 다꾸키즈 적립금으로 드려요.</p></section>'+
   '<div class="prhow"><div><b>1</b><span>파트너 가입</span></div><div><b>2</b><span>상품별 수익 링크로 소개</span></div><div><b>3</b><span>배송완료 뒤 적립금</span></div></div>'; }
 function dpRules(){ return '<section class="pjsec"><h2>꼭 확인해 주세요</h2><ul class="pjrule">'+
   '<li>소개 글 제목이나 첫 줄 맨 앞에 <b>#광고</b>를 꼭 적어요(공정위 추천·보증 심사지침).</li>'+
@@ -1771,7 +1771,7 @@ function dpInit(){
           '<label class="fl" for="dp-shop">다꾸키즈 회원 아이디 <i>*</i></label><input id="dp-shop" class="fi" maxlength="40" placeholder="적립금을 받을 다꾸키즈 아이디">'+
           '<p class="dpnote">아직 회원이 아니면 <a href="'+DP_SHOP+'/member/join.html" target="_blank" rel="noopener">다꾸키즈에서 가입</a>한 뒤 적어 주세요.</p>'+
           '<label class="ck"><input type="checkbox" id="dp-ok"><span>위 안내(#광고 표시·적립금 보상·본인 주문 제외)를 확인했어요</span></label>'+
-          '<button class="b pri wide" type="submit">다꾸파트너스 시작하기</button></form></section>';
+          '<button class="b pri wide" type="submit">수익 링크 시작하기</button></form></section>';
         plainHeads(v);
         document.getElementById("dpjoin").addEventListener("submit",function(e){ e.preventDefault();
           var c=document.getElementById("dp-code").value.trim().toLowerCase(), sh=document.getElementById("dp-shop").value.trim();
@@ -1779,7 +1779,7 @@ function dpInit(){
           if(sh.length<2){ toast("다꾸키즈 회원 아이디를 적어 주세요"); return; }
           if(!document.getElementById("dp-ok").checked){ toast("안내 확인에 체크해 주세요"); return; }
           SB.rpc("dp_join",{p_code:c,p_shop:sh}).then(function(x){ if(x.error){ var m=x.error.message||""; toast(/taken/.test(m)?"이미 쓰는 링크 이름이에요. 다른 이름으로 적어 주세요":/code/.test(m)?"링크 이름을 확인해 주세요":/shop/.test(m)?"다꾸키즈 아이디를 확인해 주세요":"가입하지 못했어요"); return; }
-            toast("✅ 다꾸파트너스 가입 완료"); ga("dp_join",{}); dpInit(); }); });
+            toast("✅ 수익 링크 가입 완료"); ga("dp_join",{}); dpInit(); }); });
         return;
       }
       dpHome(v,me);
@@ -1788,7 +1788,7 @@ function dpInit(){
 }
 function dpLink(me,pno){ return DP_SHOP+(pno?"/product/detail.html?product_no="+pno+"&pt=":"/?pt=")+me.code; }
 function dpHome(v,me){
-  v.innerHTML='<section class="dphero sm"><small>🔗 다꾸파트너스</small><h1>'+esc(nick())+'님의 수익 링크</h1><p>적립금 받는 다꾸키즈 아이디: <b>'+esc(me.shop_id)+'</b> <button class="lnk" data-dpshop>바꾸기</button></p></section>'+
+  v.innerHTML='<section class="dphero sm"><small>🔗 다꾸키즈 수익 링크</small><h1>'+esc(nick())+'님의 수익 링크</h1><p>적립금 받는 다꾸키즈 아이디: <b>'+esc(me.shop_id)+'</b> <button class="lnk" data-dpshop>바꾸기</button></p></section>'+
     '<div class="dpstat" id="dpstat"><div><b>-</b><span>최근 30일 클릭</span></div><div><b>-</b><span>주문</span></div><div><b>-</b><span>적립 예정</span></div><div><b>-</b><span>지급 완료</span></div></div>'+
     (me.status!=="active"?'<div class="empty">지금은 링크가 멈춰 있어요. 카톡 채널로 문의해 주세요.</div>':'')+
     '<section class="pjsec"><h2>쇼핑몰 전체 링크</h2><div class="dplk"><code>'+esc(dpLink(me))+'</code><button class="b" data-dpcopy="'+esc(dpLink(me))+'">복사</button></div></section>'+
@@ -1828,12 +1828,12 @@ document.addEventListener("click",function(e){
 });
 /* 다꾸파트너스 관리자: 카페24 주문 관리에서 배송완료·취소/반품 없음·본인 주문 아님 확인 → 승인(적립 확정) → 카페24 회원 적립금 지급 → 지급 완료 */
 function dpAdmin(v){
-  if(!SB) return; var sec=document.createElement("section"); sec.className="pane"; sec.id="dpadm"; sec.innerHTML='<h2>다꾸파트너스 주문</h2><div class="empty">불러오는 중…</div>'; v.insertBefore(sec,v.children[1]||null);
+  if(!SB) return; var sec=document.createElement("section"); sec.className="pane"; sec.id="dpadm"; sec.innerHTML='<h2>다꾸키즈 수익 링크 주문</h2><div class="empty">불러오는 중…</div>'; v.insertBefore(sec,v.children[1]||null);
   Promise.all([SB.from("dp_orders").select("*").neq("status","paid").order("created_at",{ascending:false}).limit(200), SB.from("dp_partners").select("*")]).then(function(R){
-    if(R[0].error){ sec.innerHTML='<h2>다꾸파트너스 주문</h2><div class="empty">supabase/dp_partners.sql 을 SQL Editor 에서 실행해 주세요</div>'; return; }
+    if(R[0].error){ sec.innerHTML='<h2>다꾸키즈 수익 링크 주문</h2><div class="empty">supabase/dp_partners.sql 을 SQL Editor 에서 실행해 주세요</div>'; return; }
     var P={}; (R[1].data||[]).forEach(function(p){ P[p.code]=p; }); var L=R[0].data||[];
     var ST={pending:"확인 중",approved:"적립 예정",rejected:"제외",paid:"지급 완료"};
-    sec.innerHTML='<h2>다꾸파트너스 주문 ('+L.length+')</h2><p class="mysub">카페24 주문 관리에서 배송완료·취소/반품 없음·본인 주문 아님을 확인하고 승인 → 카페24 고객 관리에서 그 아이디에 적립금 지급 → "지급 완료". 파트너 '+(R[1].data||[]).length+'명</p>'+
+    sec.innerHTML='<h2>다꾸키즈 수익 링크 주문 ('+L.length+')</h2><p class="mysub">카페24 주문 관리에서 배송완료·취소/반품 없음·본인 주문 아님을 확인하고 승인 → 카페24 고객 관리에서 그 아이디에 적립금 지급 → "지급 완료". 파트너 '+(R[1].data||[]).length+'명</p>'+
       (L.length?L.map(function(o){ var pt=P[o.code]||{}, bt=function(s,t){ return '<button class="b" data-dpa="'+esc(o.order_id)+'" data-s="'+s+'">'+t+'</button>'; };
         return '<div class="paap"><p><b>'+esc(o.order_id)+'</b> <i class="st-'+esc(o.status)+'">'+esc(ST[o.status])+'</i><br>'+esc(String(o.created_at).slice(0,16).replace("T"," "))+' · 상품 '+won(o.amount)+' · 적립 '+won(o.reward||Math.floor(o.amount*DP_RATE/1000)*10)+'<br>파트너 '+esc(o.code)+' → 다꾸키즈 아이디 <b>'+esc(pt.shop_id||"?")+'</b> <button class="lnk" data-copy="'+esc(pt.shop_id||"")+'">복사</button></p>'+
           '<div class="pjrow">'+(o.status==="pending"?bt("approved","승인(적립 확정)")+bt("rejected","제외"):o.status==="approved"?bt("paid","적립금 지급 완료")+bt("rejected","제외"):bt("pending","다시 확인 중으로"))+'</div></div>'; }).join(""):'<div class="empty">처리할 주문이 없어요</div>');
@@ -1851,7 +1851,7 @@ function pjobInit(){
       var j=r.data; if(sbErr(r)||!j){ v.innerHTML='<a class="back" href="#/press">'+ico(I.back)+'<span>기자단</span></a><div class="empty">모집 글을 찾을 수 없어요</div>'; return; }
       var open=j.status==="open"&&j.ends>=ymd(today());
       var head='<a class="back" href="#/press">'+ico(I.back)+'<span>기자단</span></a>'+
-        '<div class="pjh"><small>다이어리뷰 기자단 · '+esc(j.region||"")+'</small><h1>'+esc(j.title)+'</h1><div class="pjpay"><b>'+esc(pjPayTxt(j))+'</b><span>'+(pjRw(j)?'1편 보상 (현금 아님)':'1편 원고료 (세전)')+'</span></div></div>'+
+        '<div class="pjh"><small>다꾸파트너스 기자단 · '+esc(j.region||"")+'</small><h1>'+esc(j.title)+'</h1><div class="pjpay"><b>'+esc(pjPayTxt(j))+'</b><span>'+(pjRw(j)?'1편 보상 (현금 아님)':'1편 원고료 (세전)')+'</span></div></div>'+
         '<table class="pjtb"><tr><th>모집 인원</th><td>'+j.slots+'명</td></tr><tr><th>신청 마감</th><td>'+esc(j.ends)+' ('+pjDd(j.ends)+')</td></tr>'+(j.kw&&!pjRw(j)?'<tr><th>키워드</th><td>'+esc(j.kw)+'</td></tr>':'')+(j.biz?'<tr><th>업체</th><td>'+esc(j.biz)+'</td></tr>':'')+'<tr><th>작성 채널</th><td>'+(pjRw(j)?'블로그 또는 인스타그램':'네이버 블로그')+'</td></tr></table>'+
         (j.guide?'<section class="pjsec"><h2>무엇을 쓰나요</h2><p class="pjg">'+esc(j.guide).replace(/\n/g,"<br>")+'</p></section>':'')+
         '<section class="pjsec"><h2>꼭 지켜 주세요</h2><ul class="pjrule">'+(pjRw(j)?'<li>가이드에 따라 진행해주세요.</li>':'<li>광고주가 준 원고·사진 자료로 쓰는 소개 글이에요.</li>')+''+(pjRw(j)?'<li>글 제목이나 첫 줄 맨 앞에 <b>#광고</b>를 꼭 적어요(공정위 추천·보증 심사지침).</li>':'<li>글 첫 부분에 원고료를 받고 쓴 글이라는 문구를 꼭 넣어요(공정위 추천·보증 심사지침).</li>')+'<li>글은 올린 날부터 '+pjKeep(j)+' 동안 지우지 않아요.</li>'+(pjRw(j)?'<li>보상은 검수 승인 뒤 드려요. 현금이 아니라 안내된 보상(적립금 등)으로 드리고, 현금으로 바꿀 수 없어요.</li>':'<li>원고료는 검수 승인 뒤 적립되고, 1만원부터 출금할 수 있어요. 출금할 때 3.3%(소득세·지방소득세)를 떼고 입금해요.</li>')+'</ul></section>';
@@ -2894,7 +2894,7 @@ function myView(){
       (a?'<button class="b kakaolg wide" data-login="kakao"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#191600" d="M12 4C7 4 3 7.2 3 11.1c0 2.5 1.7 4.7 4.2 6l-.9 3.4c-.1.3.3.6.6.4l4-2.7h1.1c5 0 9-3.2 9-7.1S17 4 12 4Z"/></svg>카카오로 3초 만에 시작하기</button>'+
          ((a.naver)?'<button class="b naverlg wide" data-login="'+esc(a.naver)+'"><b>N</b>네이버로 시작하기</button>':'')+
          '<p class="lgnote">시작하면 <a href="#/privacy">개인정보처리방침</a>에 동의하는 것으로 봐요.</p>'
-       :'<p class="lgsoon">찜·최근 본 체험단은 이 기기에 저장돼요.<br>기자단 신청·원고료·수익화 클래스 같은 회원 기능은 <b>다이어리뷰</b>에서 할 수 있어요.</p><a class="b pri wide" href="'+PART_URL+'#/my">다이어리뷰 로그인 ›</a>')+'</section>';
+       :'<p class="lgsoon">찜·최근 본 체험단은 이 기기에 저장돼요.<br>기자단 신청·원고료·수익화 클래스 같은 회원 기능은 <b>다꾸파트너스</b>에서 할 수 있어요.</p><a class="b pri wide" href="'+PART_URL+'#/my">다이어리뷰 로그인 ›</a>')+'</section>';
     h+='<div class="mytiles"><a href="#/fav"><b>'+favN+'</b><span>찜</span></a><a href="#/my" data-jump="applied"><b>'+APPLIED.length+'</b><span>신청한</span></a><a href="#/fav"><b>'+SEEN.length+'</b><span>최근 본</span></a></div>';
     h+=mySites();
     h+=pushBox()+appliedSection()+recentSection();
