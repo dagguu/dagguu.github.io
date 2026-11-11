@@ -1768,7 +1768,7 @@ function dpInit(){
         v.innerHTML=dpHero()+dpRules()+'<section class="pjsec"><h2>파트너 가입</h2><form id="dpjoin" class="pjf">'+
           '<label class="fl" for="dp-code">내 링크 이름 <i>*</i></label><input id="dp-code" class="fi" maxlength="20" placeholder="영문 소문자·숫자·밑줄 3~20자 (예: dakku_mom)" autocapitalize="off" autocomplete="off">'+
           '<p class="dpnote">링크에 들어가는 이름이에요. 한 번 정하면 바꿀 수 없어요.</p>'+
-          '<label class="fl" for="dp-shop">다꾸키즈 회원 아이디 <i>*</i></label><input id="dp-shop" class="fi" maxlength="40" placeholder="적립금을 받을 다꾸키즈 아이디">'+
+          '<label class="fl" for="dp-shop">다꾸키즈 아이디 또는 휴대폰 번호 <i>*</i></label><input id="dp-shop" class="fi" maxlength="40" placeholder="예: dagguu123 또는 010-1234-5678"><p class="dpnote">카카오로 가입했다면 다꾸키즈에 등록한 휴대폰 번호를 적어 주세요. 그 번호로 회원을 찾아 적립금을 넣어 드려요.</p>'+
           '<p class="dpnote">아직 회원이 아니면 <a href="'+DP_SHOP+'/member/join.html" target="_blank" rel="noopener">다꾸키즈에서 가입</a>한 뒤 적어 주세요.</p>'+
           '<label class="ck"><input type="checkbox" id="dp-ok"><span>위 안내(#광고 표시·적립금 보상·본인 주문 제외)를 확인했어요</span></label>'+
           '<button class="b pri wide" type="submit">수익 링크 시작하기</button></form></section>';
@@ -1776,7 +1776,7 @@ function dpInit(){
         document.getElementById("dpjoin").addEventListener("submit",function(e){ e.preventDefault();
           var c=document.getElementById("dp-code").value.trim().toLowerCase(), sh=document.getElementById("dp-shop").value.trim();
           if(!/^[a-z0-9_]{3,20}$/.test(c)){ toast("링크 이름은 영문 소문자·숫자·밑줄 3~20자로 적어 주세요"); return; }
-          if(sh.length<2){ toast("다꾸키즈 회원 아이디를 적어 주세요"); return; }
+          if(sh.length<2){ toast("다꾸키즈 아이디 또는 휴대폰 번호를 적어 주세요"); return; }
           if(!document.getElementById("dp-ok").checked){ toast("안내 확인에 체크해 주세요"); return; }
           SB.rpc("dp_join",{p_code:c,p_shop:sh}).then(function(x){ if(x.error){ var m=x.error.message||""; toast(/taken/.test(m)?"이미 쓰는 링크 이름이에요. 다른 이름으로 적어 주세요":/code/.test(m)?"링크 이름을 확인해 주세요":/shop/.test(m)?"다꾸키즈 아이디를 확인해 주세요":"가입하지 못했어요"); return; }
             toast("✅ 수익 링크 가입 완료"); ga("dp_join",{}); dpInit(); }); });
@@ -1788,7 +1788,7 @@ function dpInit(){
 }
 function dpLink(me,pno){ return DP_SHOP+(pno?"/product/detail.html?product_no="+pno+"&pt=":"/?pt=")+me.code; }
 function dpHome(v,me){
-  v.innerHTML='<section class="dphero sm"><small>🔗 다꾸키즈 수익 링크</small><h1>'+esc(nick())+'님의 수익 링크</h1><p>적립금 받는 다꾸키즈 아이디: <b>'+esc(me.shop_id)+'</b> <button class="lnk" data-dpshop>바꾸기</button></p></section>'+
+  v.innerHTML='<section class="dphero sm"><small>🔗 다꾸키즈 수익 링크</small><h1>'+esc(nick())+'님의 수익 링크</h1><p>적립금 받는 다꾸키즈 회원: <b>'+esc(me.shop_id)+'</b> <button class="lnk" data-dpshop>바꾸기</button></p></section>'+
     '<div class="dpstat" id="dpstat"><div><b>-</b><span>최근 30일 클릭</span></div><div><b>-</b><span>주문</span></div><div><b>-</b><span>적립 예정</span></div><div><b>-</b><span>지급 완료</span></div></div>'+
     (me.status!=="active"?'<div class="empty">지금은 링크가 멈춰 있어요. 카톡 채널로 문의해 주세요.</div>':'')+
     '<section class="pjsec"><h2>쇼핑몰 전체 링크</h2><div class="dplk"><code>'+esc(dpLink(me))+'</code><button class="b" data-dpcopy="'+esc(dpLink(me))+'">복사</button></div></section>'+
@@ -1823,7 +1823,7 @@ document.addEventListener("click",function(e){
   if(c){ e.preventDefault(); var u=c.getAttribute("data-dpcopy"), ok=function(){ toast("🔗 수익 링크를 복사했어요. 글 맨 앞 #광고 잊지 마세요"); ga("dp_copy",{}); };
     if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(u).then(ok,function(){ prompt("링크를 복사해 주세요",u); }); else prompt("링크를 복사해 주세요",u); return; }
   var s=e.target.closest&&e.target.closest("[data-dpshop]");
-  if(s){ e.preventDefault(); var id=prompt("적립금 받을 다꾸키즈 회원 아이디",""); if(!id) return;
+  if(s){ e.preventDefault(); var id=prompt("적립금 받을 다꾸키즈 아이디 또는 휴대폰 번호 (카카오 가입이면 휴대폰 번호)",""); if(!id) return;
     SB.rpc("dp_join",{p_code:"",p_shop:id.trim()}).then(function(x){ if(x.error){ toast("바꾸지 못했어요"); return; } toast("✅ 바꿨어요"); dpInit(); }); }
 });
 /* 다꾸파트너스 관리자: 카페24 주문 관리에서 배송완료·취소/반품 없음·본인 주문 아님 확인 → 승인(적립 확정) → 카페24 회원 적립금 지급 → 지급 완료 */
@@ -1872,7 +1872,7 @@ function pjobInit(){
         var bl=(myChs().blogs||[]);
         h+='<section class="pjsec"><h2>신청하기</h2><form id="pjapply" class="pjf">'+
           '<label class="fl" for="pj-blog">'+(pjRw(j)?'블로그 또는 인스타그램 주소':'블로그 주소')+' <i>*</i></label>'+(bl.length?'<select id="pj-blog" class="fi">'+bl.map(function(b){ return '<option>'+esc(b)+'</option>'; }).join("")+'<option value="">직접 입력</option></select><input id="pj-blog2" class="fi" type="url" inputmode="url" placeholder="https://blog.naver.com/아이디" hidden>':'<input id="pj-blog2" class="fi" type="url" inputmode="url" placeholder="https://blog.naver.com/아이디" required>')+
-          '<label class="fl" for="pj-msg">하고 싶은 말</label><textarea id="pj-msg" class="fi ta" maxlength="500" placeholder="'+(pjRw(j)?'다꾸키즈 회원 아이디(필수), 주로 쓰는 주제 등':'주로 쓰는 주제, 하루 방문자 등')+'"></textarea>'+
+          '<label class="fl" for="pj-msg">하고 싶은 말</label><textarea id="pj-msg" class="fi ta" maxlength="500" placeholder="'+(pjRw(j)?'다꾸키즈 아이디 또는 휴대폰 번호(필수, 카카오 가입이면 휴대폰 번호), 주로 쓰는 주제 등':'주로 쓰는 주제, 하루 방문자 등')+'"></textarea>'+
           '<label class="ck"><input type="checkbox" id="pj-ok"><span>'+(pjRw(j)?'위 안내(#광고 표시·'+pjKeep(j)+' 유지·보상은 현금 아님)를 확인했어요':'위 안내(대가성 문구·'+pjKeep(j)+' 유지·3.3% 원천징수)를 확인했어요')+'</span></label>'+
           '<button class="b pri wide" type="submit">기자단 신청하기</button></form></section>';
         v.innerHTML=h; plainHeads(v);
