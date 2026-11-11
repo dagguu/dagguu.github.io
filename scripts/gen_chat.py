@@ -127,7 +127,11 @@ def added(cat):
 stays, babies = pick('stay', N_STAY), pick('baby', N_BABY)
 stays = added('stay') + [i for i in stays if i['id'] not in ADD]
 babies = added('baby') + [i for i in babies if i['id'] not in ADD]
-if not stays and not babies:
+# 그날만 붙이는 공지(scripts/chat_notice.json [{dates:[YYYY-MM-DD], rooms:[stay,baby], text}], 2026-11-11 다꾸키즈 기자단 모집)
+try: NOTICES = [n for n in json.load(open(os.path.join(ROOT, 'scripts', 'chat_notice.json'), encoding='utf-8')) if day in n.get('dates', [])]
+except Exception: NOTICES = []
+def notice(room): return ''.join('\n\n' + '─' * 20 + '\n\n' + n['text'] for n in NOTICES if room in n.get('rooms', ['stay', 'baby']))
+if not stays and not babies and not NOTICES:
     print('오늘 새로 올라온 숙박·육아 체험단이 없어요'); sys.exit(0)
 
 SEP = '\n\n' + '─' * 20 + '\n\n'
@@ -138,8 +142,8 @@ def share_url(it):
 
 
 MORE = '\n\n📢 더 많은 체험단 소식은 다꾸체험단에서 확인하세요!\nhttps://www.dagguu.com'
-if stays: out.append('■ 여행협찬 단톡방\n\n' + SEP.join(stay_post(i) for i in stays) + MORE)
-if babies: out.append('■ 육아협찬 단톡방\n\n' + SEP.join(baby_post(i) for i in babies) + MORE)
+if stays or notice('stay'): out.append('■ 여행협찬 단톡방\n\n' + ((SEP.join(stay_post(i) for i in stays) + MORE + notice('stay')) if stays else notice('stay').lstrip('\n─')))
+if babies or notice('baby'): out.append('■ 육아협찬 단톡방\n\n' + ((SEP.join(baby_post(i) for i in babies) + MORE + notice('baby')) if babies else notice('baby').lstrip('\n─')))
 text = ('\n\n' + '═' * 20 + '\n\n').join(out) + '\n'
 os.makedirs(os.path.join(ROOT, 'chat'), exist_ok=True)
 path = os.path.join(ROOT, 'chat', f'{day}.txt')
