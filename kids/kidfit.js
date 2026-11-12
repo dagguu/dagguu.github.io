@@ -283,7 +283,7 @@
         .then(function(r){ return r.json(); }).then(function(j){
           var ps = j.products || [];
           all = all.concat(ps.map(function(x){ return { n: x.product_no, nm: x.product_name, p: Math.round(parseFloat(x.price) || 0), im: x.list_image, so: x.sold_out }; }));
-          if (ps.length === 100 && off < 400) { setTimeout(function(){ page(off + 100); }, 400); return; }
+          if (ps.length === 100 && off < 900) { setTimeout(function(){ page(off + 100); }, 400); return; }
           try { sessionStorage.setItem("dk_prods", JSON.stringify({ t: Date.now(), l: all })); } catch(e){}
           cb(all);
         }).catch(function(){ if (all.length) cb(all); });
