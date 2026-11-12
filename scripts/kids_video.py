@@ -213,11 +213,9 @@ def make(p, hook=None):
     covers = [cover(im) for im in ims]
     covers[0].save(f"{OUT}/{no}.jpg", quality=86)
     arrs = [np.asarray(c, dtype=np.uint8) for c in covers]
-    render(frames_swipe(arrs), f"{OUT}/{no}.mp4")
-    render(frames_cut(arrs), f"{OUT}/{no}_cut.mp4")
+    render(frames_cut(arrs), f"{OUT}/{no}.mp4")  # 2026-11-12 시온님 결정: 효과 없이 1초컷
     return {"no": no, "name": full, "brand": brand, "price": price, "img": p.get("list_image"),
-            "video": f"https://www.dagguu.com/{OUT}/{no}.mp4", "cut": f"https://www.dagguu.com/{OUT}/{no}_cut.mp4",
-            "poster": f"https://www.dagguu.com/{OUT}/{no}.jpg",
+            "video": f"https://www.dagguu.com/{OUT}/{no}.mp4",             "poster": f"https://www.dagguu.com/{OUT}/{no}.jpg",
             "url": f"{SHOP}/product/detail.html?product_no={no}"}
 
 
@@ -260,13 +258,11 @@ def make_brand(brand, ps, k=8):
     key = "b" + str(BRAND_CAT.get(brand, abs(hash(brand)) % 100000))
     covers[0].save(f"{OUT}/{key}.jpg", quality=86)
     arrs = [np.asarray(c, dtype=np.uint8) for c in covers]
-    render(frames_swipe(arrs), f"{OUT}/{key}.mp4")
-    render(frames_cut(arrs), f"{OUT}/{key}_cut.mp4")
+    render(frames_cut(arrs), f"{OUT}/{key}.mp4")
     cat = BRAND_CAT.get(brand)
     return {"no": key, "type": "brand", "brand": brand, "name": f"{brand} 신상 {len(items)}종", "price": min(i["price"] for i in items),
-            "img": items[0]["img"], "items": items, "seg": HOLD + SWIPE,
-            "video": f"https://www.dagguu.com/{OUT}/{key}.mp4", "cut": f"https://www.dagguu.com/{OUT}/{key}_cut.mp4",
-            "poster": f"https://www.dagguu.com/{OUT}/{key}.jpg",
+            "img": items[0]["img"], "items": items, "seg": HOLD,
+            "video": f"https://www.dagguu.com/{OUT}/{key}.mp4",             "poster": f"https://www.dagguu.com/{OUT}/{key}.jpg",
             "url": f"{SHOP}/product/list.html?cate_no={cat}" if cat else f"{SHOP}/product/search.html?keyword={brand}"}
 
 
