@@ -3,7 +3,7 @@
 
 .github/workflows/kids-cards.yml 이 매일 아침 돌린다.
 - 상품: 카페24 공개 상품 API(Client ID 는 공개값). 판매·진열 중인 것만.
-- 배너 4장(1200x800): kids/banner/B1~B4.jpg → www.dagguu.com/kids/banner/B?.jpg (다꾸키즈 스킨 index.html 슬라이드가 이 주소를 씀, 매일 새 상품으로 바뀜)
+- 배너 4장: PC kids/banner/B1~B4.jpg(1600x900, 16:9) + 모바일 B1m~B4m.jpg(900x1200, 3:4) → www.dagguu.com/kids/banner/B?.jpg (다꾸키즈 스킨 index.html 슬라이드가 이 주소를 씀, 매일 새 상품으로 바뀜)
 - 카드뉴스(1080x1350): kids_out/<날짜>/1~6.jpg + caption.txt → insta 브랜치 kids/<날짜>/ + 메일(mail_kids.py)
 - 같은 상품이 며칠 연속 나오지 않게 scripts/kids_cards_done.json 에 최근 쓴 상품 번호를 남긴다.
 문구 원칙: 실제 판매가·상품명만, 할인·최저가·"품절임박" 같은 말 안 씀, 지어낸 후기 X.
@@ -99,18 +99,25 @@ BAN = [
 FONT_LINK = "<link href='https://fonts.googleapis.com/css2?family=Jua&display=block' rel='stylesheet'>"
 
 
-def banner_html(theme, ps):
+def banner_html(theme, ps, W=1600, H=900):
+    """2026-11-12 시온님: PC 16:9 가로(1600x900, 사진 3장 나란히) / 모바일 3:4 세로(900x1200, 사진 1장)."""
     key, cat, kind, c = theme
     p = ps[0]
+    wide = W > H
+    k = 1.0 if wide else 0.86
     shade = ("<div style='position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 38%,rgba(0,0,0,.18) 58%,rgba(0,0,0,.62) 100%)'></div>")
-    photo = f"<div style='position:absolute;inset:0;background:#eee url(\"{p['img']}\") center 28%/cover no-repeat'></div>"
+    if wide and len(ps) >= 3:
+        cw = W / 3
+        photo = "".join(f"<div style='position:absolute;top:0;bottom:0;left:{i * cw:.1f}px;width:{cw + 1:.1f}px;background:#eee url(\"{q['img']}\") center 22%/cover no-repeat'></div>" for i, q in enumerate(ps[:3]))
+    else:
+        photo = f"<div style='position:absolute;inset:0;background:#eee url(\"{p['img']}\") center 25%/cover no-repeat'></div>"
     tagname = f"<div style='position:absolute;right:34px;bottom:26px;font-size:20px;font-weight:700;color:rgba(255,255,255,.85)'>@dagguukids</div>"
     if kind == "A":
-        txt = (f"<div style='position:absolute;left:0;right:0;bottom:70px;text-align:center;color:#fff;font-weight:900;letter-spacing:-2px'>"
-               f"<div style='font-size:84px;line-height:1.2;text-shadow:0 3px 14px rgba(0,0,0,.35)'>"
+        txt = (f"<div style='position:absolute;left:0;right:0;bottom:{70 if wide else 90}px;text-align:center;color:#fff;font-weight:900;letter-spacing:-2px'>"
+               f"<div style='font-size:{round(84*k)}px;line-height:1.2;text-shadow:0 3px 14px rgba(0,0,0,.35)'>"
                f"<span style='background:#ffe94d;color:#111;padding:0 16px;text-shadow:none'>{e(c['hl'])}</span>{e(c['rest'])}</div>"
-               f"<div style='font-size:84px;line-height:1.25;text-shadow:0 3px 14px rgba(0,0,0,.35)'>{e(c['l2'])}</div>"
-               f"<div style='margin-top:18px;font-size:30px;font-weight:600;letter-spacing:-.5px;opacity:.95'>{e(c['sub'])}</div></div>")
+               f"<div style='font-size:{round(84*k)}px;line-height:1.25;text-shadow:0 3px 14px rgba(0,0,0,.35)'>{e(c['l2'])}</div>"
+               f"<div style='margin-top:18px;font-size:{round(30*k)}px;font-weight:600;letter-spacing:-.5px;opacity:.95'>{e(c['sub'])}</div></div>")
         extra = ""
     else:
         tiles = "".join(f"<span style='display:inline-block;width:54px;height:58px;line-height:58px;text-align:center;margin-right:6px;"
@@ -123,8 +130,8 @@ def banner_html(theme, ps):
                f"text-shadow:0 0 2px rgba(0,0,0,.25),0 4px 16px rgba(0,0,0,.35)'>{t}</div></div>")
         extra = (f"<div style='position:absolute;right:70px;top:70px;padding:12px 22px;background:#d8eaa8;border:2px solid #333;"
                  f"font-size:26px;font-weight:700;color:#222'>{e(c['st'])}</div>")
-    body = f"<div style='position:relative;width:1200px;height:800px;overflow:hidden'>{photo}{shade}{extra}{txt}{tagname}</div>"
-    return page(1200, 800, body).replace("<head>", "<head>" + FONT_LINK, 1)
+    body = f"<div style='position:relative;width:{W}px;height:{H}px;overflow:hidden'>{photo}{shade}{extra}{txt}{tagname}</div>"
+    return page(W, H, body).replace("<head>", "<head>" + FONT_LINK, 1)
 
 
 # ── 카드뉴스 (1080x1350) ──
@@ -206,7 +213,8 @@ def main():
         if len(ps) < 1:
             ps = pick(allp, 3, used)
         used |= {p["no"] for p in ps}  # 배너끼리 같은 사진 안 겹치게
-        bp[f"{th[0]}.jpg"] = (1200, 800, banner_html(th, ps))
+        bp[f"{th[0]}.jpg"] = (1600, 900, banner_html(th, ps, 1600, 900))
+        bp[f"{th[0]}m.jpg"] = (900, 1200, banner_html(th, ps, 900, 1200))
     shoot(bp, os.path.join(ROOT, "kids", "banner"))
     # 카드뉴스
     ps = pick(allp, 4, used)
