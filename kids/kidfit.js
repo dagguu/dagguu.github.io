@@ -637,9 +637,9 @@
       var st = "<style>#dk-hv{background:#f6f3ee;margin:36px 0 10px;padding:34px 0 30px;text-align:center}" +
         "#dk-hv .hh{font-size:22px;letter-spacing:3px;font-weight:600;color:#111;margin:0}#dk-hv .hs{font-size:13px;color:#888;margin:6px 0 18px}" +
         "#dk-hv .hvr{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px calc(50% - min(31vw,150px)) 6px;-webkit-overflow-scrolling:touch;scrollbar-width:none}#dk-hv .hvr::-webkit-scrollbar{display:none}" +
-        "#dk-hv .hvc{flex:0 0 min(62vw,300px);scroll-snap-align:center;cursor:pointer;text-decoration:none;color:#222;transition:transform .35s,opacity .35s;transform:scale(.88);opacity:.55}" +
-        "#dk-hv .hvc.on{transform:scale(1);opacity:1}" +
-        "@media(min-width:1025px){#dk-hv .hvr{max-width:1240px;margin:0 auto;padding:4px 20px 6px;scroll-snap-type:x proximity}#dk-hv .hvc{flex:0 0 calc((100% - 56px)/5);scroll-snap-align:start;transform:none;opacity:1}}" +
+        "#dk-hv .hvc{flex:0 0 min(62vw,300px);scroll-snap-align:center;cursor:pointer;text-decoration:none;color:#222;transition:opacity .35s;opacity:.75}" +
+        "#dk-hv .hvc.on{opacity:1}#dk-hv .hvc,#dk-hv .hvv{box-sizing:border-box}#dk-hv .hvv{height:auto}" +
+        "@media(min-width:1025px){#dk-hv .hvr{max-width:1240px;margin:0 auto;padding:4px 20px 6px;scroll-snap-type:x proximity}#dk-hv .hvc{flex:0 0 calc((100% - 56px)/5);scroll-snap-align:start;opacity:1}}" +
         "#dk-hv .hvv{display:block;position:relative;width:100%;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:#e9e4dc}#dk-hv .hvv video{width:100%;height:100%;object-fit:cover;display:block}" +
         "#dk-hv .hvb{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);background:rgba(20,20,20,.72);color:#fff;font-size:12px;font-weight:700;border-radius:999px;padding:7px 14px;white-space:nowrap}" +
         "#dk-hv .hvm{display:flex;align-items:center;gap:8px;margin:10px 4px 0;text-align:left}#dk-hv .hvm img{width:30px;height:30px;border-radius:50%;object-fit:cover;flex:0 0 auto;background:#ddd}" +
