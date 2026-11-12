@@ -277,12 +277,18 @@
   function typ(n){ for (var i = 0; i < TY.length; i++) for (var j = 0; j < TY[i][1].length; j++) if (n.indexOf(TY[i][1][j]) >= 0) return TY[i][0]; return "etc"; }
   function prods(cb){
     try { var c = JSON.parse(sessionStorage.getItem("dk_prods") || "null"); if (c && Date.now() - c.t < 1800000 && c.l && c.l.length) return cb(c.l); } catch(e){}
-    fetch("https://dagguu.cafe24api.com/api/v2/products?display=T&selling=T&limit=100&fields=product_no,product_name,price,list_image,sold_out", { headers: { "X-Cafe24-Client-Id": CID } })
-      .then(function(r){ return r.json(); }).then(function(j){
-        var l = (j.products || []).map(function(x){ return { n: x.product_no, nm: x.product_name, p: Math.round(parseFloat(x.price) || 0), im: x.list_image, so: x.sold_out }; });
-        try { sessionStorage.setItem("dk_prods", JSON.stringify({ t: Date.now(), l: l })); } catch(e){}
-        cb(l);
-      }).catch(function(){});
+    var all = [];
+    function page(off){
+      fetch("https://dagguu.cafe24api.com/api/v2/products?display=T&selling=T&limit=100&offset=" + off + "&fields=product_no,product_name,price,list_image,sold_out", { headers: { "X-Cafe24-Client-Id": CID } })
+        .then(function(r){ return r.json(); }).then(function(j){
+          var ps = j.products || [];
+          all = all.concat(ps.map(function(x){ return { n: x.product_no, nm: x.product_name, p: Math.round(parseFloat(x.price) || 0), im: x.list_image, so: x.sold_out }; }));
+          if (ps.length === 100 && off < 400) { setTimeout(function(){ page(off + 100); }, 400); return; }
+          try { sessionStorage.setItem("dk_prods", JSON.stringify({ t: Date.now(), l: all })); } catch(e){}
+          cb(all);
+        }).catch(function(){ if (all.length) cb(all); });
+    }
+    page(0);
   }
   function similar(){
     if (document.getElementById("dk-sim")) return;
