@@ -646,10 +646,11 @@
         "#dk-hvf{position:fixed;inset:0;z-index:100000;background:#000;display:none}#dk-hvf .fs{height:100%;overflow-y:auto;scroll-snap-type:y mandatory}#dk-hvf .fs::-webkit-scrollbar{display:none}" +
         "#dk-hvf .sl{position:relative;height:100%;scroll-snap-align:start;display:flex;align-items:center;justify-content:center}#dk-hvf video{max-width:100%;max-height:100%;width:auto;height:100%;object-fit:contain}" +
         "#dk-hvf .pc{position:absolute;left:12px;right:12px;bottom:max(16px,env(safe-area-inset-bottom));max-width:480px;margin:0 auto;display:flex;gap:10px;align-items:center;background:#fff;border-radius:12px;padding:10px;text-decoration:none;color:#222}" +
+        "#dk-hvf .bw{position:absolute;left:0;right:0;bottom:max(14px,env(safe-area-inset-bottom));max-width:520px;margin:0 auto;padding:0 12px}#dk-hvf .bt{display:flex;justify-content:space-between;align-items:center;color:#fff;font-size:13px;margin-bottom:8px;text-shadow:0 1px 4px rgba(0,0,0,.6)}#dk-hvf .bt a{background:#fff;color:#111;font-size:12px;font-weight:800;border-radius:999px;padding:6px 12px;text-decoration:none;text-shadow:none}#dk-hvf .bl{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}#dk-hvf .bl::-webkit-scrollbar{display:none}#dk-hvf .bi{flex:0 0 108px;background:#fff;border-radius:10px;padding:6px;text-decoration:none;color:#222;border:2px solid transparent;transition:border-color .2s}#dk-hvf .bi.on{border-color:#6a3fc8}#dk-hvf .bi img{width:100%;height:110px;object-fit:cover;border-radius:6px;display:block}#dk-hvf .bi span{display:block;font-size:11px;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#dk-hvf .bi b{font-size:12px}" +
         "#dk-hvf .tb{position:absolute;top:max(12px,env(safe-area-inset-top));left:0;right:0;display:flex;justify-content:space-between;padding:0 14px;z-index:2}#dk-hvf .tb a{color:#fff;font-size:26px;text-decoration:none;line-height:1;text-shadow:0 1px 4px rgba(0,0,0,.6)}</style>";
       var h = st + "<h3 class='hh'>SHORTS PICK</h3><p class='hs'>다꾸키즈가 직접 보고 고른 이번 주 신상</p><div class='hvr'>";
-      l.forEach(function(x, i){ h += "<a class='hvc' data-i='" + i + "'><span class='hvv'><video muted playsinline loop preload='none' poster='" + x.poster + "' data-src='" + x.video + "'></video><span class='hvb'>상품 보기</span></span>" +
-        "<span class='hvm'><img src='" + x.img + "' alt=''><span style='min-width:0'><b>" + String(x.brand || "").replace(/</g, "") + "</b><span>" + String(x.name).replace(/</g, "&lt;") + " · " + won(x.price) + "</span></span></span></a>"; });
+      l.forEach(function(x, i){ h += "<a class='hvc' data-i='" + i + "'><span class='hvv'><video muted playsinline loop preload='none' poster='" + x.poster + "' data-src='" + x.video + "'></video><span class='hvb'>" + (x.type === "brand" ? "브랜드 바로가기" : "상품 보기") + "</span></span>" +
+        "<span class='hvm'><img src='" + x.img + "' alt=''><span style='min-width:0'><b>" + String(x.brand || "").replace(/</g, "") + "</b><span>" + (x.type === "brand" ? "신상 " + x.items.length + "종 · " + won(x.price) + "~" : String(x.name).replace(/</g, "&lt;") + " · " + won(x.price)) + "</span></span></span></a>"; });
       sec.innerHTML = h + "</div>";
       var row = sec.querySelector(".hvr"), cards = sec.querySelectorAll(".hvc"), cur = -1, vis = false;
       function pick(){
@@ -668,12 +669,22 @@
     var f = document.getElementById("dk-hvf");
     if (!f) { f = document.createElement("div"); f.id = "dk-hvf"; document.body.appendChild(f); }
     var h = "<div class='tb'><a href='#none' class='mu'>🔇</a><a href='#none' class='x'>✕</a></div><div class='fs'>";
-    l.forEach(function(x){ h += "<div class='sl'><video playsinline loop muted preload='none' poster='" + x.poster + "' data-src='" + x.video + "'></video>" +
+    l.forEach(function(x){
+      if (x.type === "brand") {
+        h += "<div class='sl'><video playsinline loop muted preload='none' poster='" + x.poster + "' data-src='" + x.video + "' data-seg='" + (x.seg || 1.32) + "'></video>" +
+          "<div class='bw'><div class='bt'><b>" + String(x.brand).replace(/</g, "") + " · 영상 속 상품 " + x.items.length + "</b><a href='" + x.url + "'>브랜드 바로가기 ›</a></div><div class='bl'>" +
+          x.items.map(function(it, j){ return "<a class='bi' data-j='" + j + "' href='" + it.url + "'><img src='" + it.img + "' alt=''><span>" + String(it.name).replace(/</g, "&lt;") + "</span><b>" + won(it.price) + "</b></a>"; }).join("") + "</div></div></div>";
+        return;
+      }
+      h += "<div class='sl'><video playsinline loop muted preload='none' poster='" + x.poster + "' data-src='" + x.video + "'></video>" +
       "<a class='pc' href='" + x.url + "'><img src='" + x.img + "' alt='' style='width:52px;height:64px;object-fit:cover;border-radius:8px;flex:0 0 auto'><span style='flex:1;min-width:0'><span style='display:block;font-size:11px;color:#888'>영상 속 상품</span><span style='display:block;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis'>" + String(x.name).replace(/</g, "&lt;") + "</span><b style='font-size:15px'>" + won(x.price) + "</b></span><span style='flex:0 0 auto;background:#111;color:#fff;font-size:12px;font-weight:700;border-radius:8px;padding:8px 12px'>바로가기</span></a></div>"; });
     f.innerHTML = h + "</div>"; f.style.display = "block"; document.documentElement.style.overflow = "hidden";
     var fs = f.querySelector(".fs"), vs = f.querySelectorAll("video"), muted = true;
     function playVis(){ [].forEach.call(vs, function(v){ var r = v.parentNode.getBoundingClientRect(); if (Math.abs(r.top) < r.height / 2) { if (!v.src) v.src = v.getAttribute("data-src"); v.muted = muted; var p = v.play(); if (p && p.catch) p.catch(function(){ v.muted = true; v.play(); }); } else v.pause(); }); }
     fs.scrollTop = start * fs.clientHeight; setTimeout(playVis, 60);
+    [].forEach.call(vs, function(v){ var seg = parseFloat(v.getAttribute("data-seg") || "0"); if (!seg) return; var last = -1, bis = v.parentNode.querySelectorAll(".bi");
+      v.addEventListener("timeupdate", function(){ var j = Math.min(bis.length - 1, Math.floor(v.currentTime / seg)); if (j === last) return; last = j;
+        [].forEach.call(bis, function(b, k){ b.classList.toggle("on", k === j); }); var b = bis[j]; if (b) { var bl = b.parentNode; bl.scrollTo({ left: b.offsetLeft - bl.clientWidth / 2 + b.clientWidth / 2, behavior: "smooth" }); } }); });
     var t; fs.addEventListener("scroll", function(){ clearTimeout(t); t = setTimeout(playVis, 120); });
     f.querySelector(".x").onclick = function(e){ e.preventDefault(); [].forEach.call(vs, function(v){ v.pause(); }); f.style.display = "none"; document.documentElement.style.overflow = ""; };
     f.querySelector(".mu").onclick = function(e){ e.preventDefault(); muted = !muted; this.textContent = muted ? "🔇" : "🔊"; playVis(); };
