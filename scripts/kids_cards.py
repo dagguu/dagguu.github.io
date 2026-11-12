@@ -112,7 +112,7 @@ def banner_html(theme, ps, W=1600, H=900):
         photo = "".join(f"<div style='position:absolute;top:0;bottom:0;left:{i * cw:.1f}px;width:{cw + 1:.1f}px;background:#eee url(\"{q['img']}\") center 22%/cover no-repeat'></div>" for i, q in enumerate(ps[:n]))
     else:
         photo = f"<div style='position:absolute;inset:0;background:#eee url(\"{p['img']}\") center 25%/cover no-repeat'></div>"
-    tagname = f"<div style='position:absolute;right:34px;bottom:26px;font-size:20px;font-weight:700;color:rgba(255,255,255,.85)'>@dagguukids</div>"
+    tagname = f"<div style='position:absolute;right:34px;bottom:26px;font-size:20px;font-weight:700;color:rgba(255,255,255,.85)'>@dagguu.kids</div>"
     if kind == "A":
         txt = (f"<div style='position:absolute;left:0;right:0;bottom:{70 if wide else 90}px;text-align:center;color:#fff;font-weight:900;letter-spacing:-2px'>"
                f"<div style='font-size:{round(84*k)}px;line-height:1.2;text-shadow:0 3px 14px rgba(0,0,0,.35)'>"
@@ -145,7 +145,7 @@ def cover_html(ps, day):
             f"<div style='margin-top:34px;font-size:84px;line-height:1.18;font-weight:900;color:#1d1530;letter-spacing:-2px'>오늘 들어온<br>다꾸키즈 아이옷 🛒</div>"
             f"<div style='margin-top:20px;font-size:32px;color:#6b6380;font-weight:600'>다꾸키즈 오늘의 아이옷 {len(ps)}가지 ✨ 넘겨보세요 →</div>"
             f"<div style='position:absolute;left:70px;right:70px;bottom:120px;height:640px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:18px'>{grid}</div>"
-            f"<div class='handle' style='left:70px;bottom:52px;font-size:30px'>@dagguukids</div>"
+            f"<div class='handle' style='left:70px;bottom:52px;font-size:30px'>@dagguu.kids</div>"
             f"<div style='position:absolute;right:70px;bottom:50px;font-size:28px;color:#9a8fc0;font-weight:700'>dagguukids.com</div></div>")
     return page(1080, 1350, body)
 
@@ -163,7 +163,7 @@ def item_html(p, i, n):
             f"<div style='margin-top:10px;font-size:54px;font-weight:900;color:#1d1530;letter-spacing:-1px;line-height:1.2'>{e(' '.join(p['name'].split()[1:]) or p['name'])}</div>"
             f"{col}"
             f"<div style='margin-top:18px;font-size:44px;font-weight:900;color:#1d1530'>{won(p['price'])}</div></div>"
-            f"<div class='handle' style='right:60px;bottom:50px;font-size:28px'>@dagguukids</div></div>")
+            f"<div class='handle' style='right:60px;bottom:50px;font-size:28px'>@dagguu.kids</div></div>")
     return page(1080, 1350, body)
 
 
@@ -173,7 +173,7 @@ def last_html():
             "<div style='margin-top:30px;font-size:80px;font-weight:900;line-height:1.2;letter-spacing:-2px'>더 많은 신상은<br>다꾸키즈에서 💜</div>"
             "<div style='margin-top:50px;font-size:38px;line-height:1.7;font-weight:600'>🚚 5만원 이상 무료배송<br>🎁 신규가입 쿠폰 바로 지급<br>📦 평일 오후 3시 전 주문 당일 발주</div>"
             "<span class='pill' style='margin-top:70px;padding:22px 40px;background:#fff;color:#6a3fc8;font-size:40px'>프로필 링크 → dagguukids.com</span>"
-            "<div class='handle' style='left:80px;bottom:60px;font-size:30px;color:#e7dcff'>@dagguukids</div></div>")
+            "<div class='handle' style='left:80px;bottom:60px;font-size:30px;color:#e7dcff'>@dagguu.kids</div></div>")
     return page(1080, 1350, body)
 
 
@@ -182,7 +182,7 @@ def caption(ps):
     for i, p in enumerate(ps, 1):
         lines.append(f"{i}. {p['name']} · {won(p['price'])}")
     lines += ["", "🚚 5만원 이상 무료배송", "🎁 신규가입 쿠폰 바로 지급", "", "👉 프로필 링크(dagguukids.com)에서 바로 볼 수 있어요",
-              "저장해두고 꺼내보세요 💜 @dagguukids", "",
+              "저장해두고 꺼내보세요 💜 @dagguu.kids", "",
               "#아동복 #유아복 #아기옷 #남대문아동복 #키즈룩 #" + " #".join(sorted({p['brand'] for p in ps}))[:200]]
     return "\n".join(lines)
 
