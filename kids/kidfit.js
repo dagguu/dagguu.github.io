@@ -695,6 +695,17 @@
 
   /* ---------- ⑪ 검색창 인기 검색어 바로 보이기 (2026-11-12 시온님 "서치에서 바로 확인할 수 있게") ---------- */
   var KW2 = ["아오스타", "피피", "제니베이직", "데일리베베", "가디건", "원피스", "기모", "후리스", "바지", "실내복"];
+  /* 2026-11-12 시온님: 홈 친구 초대 배너 → 마이페이지 맨 위(우리 아이 정보 위)에 초대 칸 */
+  function inviteTop(){
+    if (location.pathname.indexOf("/myshop/index.html") !== 0 && location.pathname !== "/myshop/") return;
+    var kb = document.getElementById("dk-kidbox"); if (!kb || document.getElementById("dk-invite")) return;
+    var iv = [].filter.call(document.querySelectorAll("div.invite"), function(x){ return x.offsetParent && x.querySelector("input"); })[0]; if (!iv) return;
+    iv.id = "dk-invite"; iv.style.cssText += ";max-width:720px;margin:16px auto 20px;padding:18px 16px;border:2px solid #e3d8ff;border-radius:14px;background:#faf7ff;box-sizing:border-box";
+    var hd = document.createElement("div"); hd.style.cssText = "font-size:16px;font-weight:900;color:#6a3fc8;margin-bottom:8px;text-align:center"; hd.textContent = "🎁 친구 초대 이벤트 · 친구도 나도 500원 적립";
+    iv.insertBefore(hd, iv.firstChild);
+    kb.parentNode.insertBefore(iv, kb);
+    if (location.hash === "#dk-invite") setTimeout(function(){ iv.scrollIntoView({ behavior: "smooth", block: "center" }); }, 200);
+  }
   var MENU_KW = ["양말", "실내복"];
   function kwAlways(){
     if (!document.getElementById("dk-kw2-css")) { var st = document.createElement("style"); st.id = "dk-kw2-css"; st.textContent = ".dk-kw{display:none!important}.xans-layout-searchheader{background:#fff!important;height:auto!important;max-height:100vh;overflow-y:auto;padding-bottom:40px!important;box-shadow:0 8px 20px rgba(0,0,0,.08)}"; document.head.appendChild(st); }
@@ -752,7 +763,7 @@
     setTimeout(near, 800);
   }
 
-  function run(){ kwAlways(); infList(); homeVideos(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  function run(){ kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
