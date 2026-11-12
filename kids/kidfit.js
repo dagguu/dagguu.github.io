@@ -817,7 +817,226 @@
     setTimeout(near, 600);
   }
 
-  function run(){ kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  /* ---------- ⑫ 홈 새 구성 (2026-11-13 시온님이 바잇미 모바일 화면 6장 보여주며 "홈페이지 디자인 이렇게") ----------
+     구성만 참고하고 그림·글은 다꾸키즈 것: ① 혜택 카드(로그인 전 = 가입 혜택, 로그인 후 = 친구 초대) ② 둥근 슬라이드 배너(다꾸 kids-cards.yml 이 매일 만드는 B1~B4)
+     ③ 동그란 네모 아이콘 2줄(5칸) ④ "오늘의 신상 할인"(카페24 신상 3일 5% 혜택이 걸린 상품 = 목록 페이지의 할인 기간·최적할인가 그대로, 끝나는 시간 가까운 순 3개)
+     ⑤ 휴대폰 아래 고정 탭(홈·카테고리·장바구니·관심·MY) ⑥ 카테고리 창(카테고리/브랜드 탭, 왼쪽 목록 + 이 카테고리 인기상품) ⑦ 홈 아래 팝업(오늘 하루 보지 않기).
+     숫자는 카페24 화면 값만 쓰고 지어내지 않는다. */
+  var BM_ICONS = [
+    ["💜", "신상품", "/product/list.html?cate_no=54", "#efe7ff"],
+    ["🔥", "인기상품", "/product/list.html?cate_no=55", "#ffe9e1"],
+    ["🎁", "1+1", "/product/search.html?keyword=1%2B1", "#ffe4ec"],
+    ["🎄", "크리스마스", "/product/search.html?keyword=%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4", "#e3f4e6"],
+    ["⏰", "신상할인", "#dk-deal", "#fff3cf"],
+    ["🍼", "BABY", "/product/list.html?cate_no=52", "#e6f1ff"],
+    ["🧒", "KIDS", "/product/list.html?cate_no=53", "#e8f7f3"],
+    ["👩", "MOM", "/product/list.html?cate_no=23", "#fbe9f4"],
+    ["📏", "사이즈표", "/product/brand_size.html", "#f1f1f1"],
+    ["☕", "이벤트", "/product/coffee.html", "#f4ece3"]
+  ];
+  var BM_BAN = [["1", "/product/list.html?cate_no=54"], ["2", "/product/list.html?cate_no=24"], ["3", "/product/list.html?cate_no=52"], ["4", "/product/list.html?cate_no=47"]];
+  var BM_CATS = [
+    ["신상품", 54], ["인기상품", 55], ["1+1", "q:1+1"], ["🎄크리스마스", "q:크리스마스"], ["BABY", 52], ["KIDS", 53], ["여아", 50], ["남아", 51], ["MOM", 23],
+    ["아우터", 24], ["상의", 25], ["원피스", 26], ["하의", 27], ["잡화", 28], ["양말", "q:양말"], ["실내복", "q:실내복"]
+  ];
+  var BM_QBRANDS = ["콘", "보니토", "비비드아이", "비다이어리", "소이빈", "고유", "라라랜드", "미니로브", "아토메메", "디그린", "니니벨로", "테테코", "바코드", "몽베베", "오뜨베베", "소예"];
+  function bmHome(){ var p = location.pathname; return p === "/" || p === "/index.html"; }
+  function bmMobile(){ return !(window.matchMedia && matchMedia("(min-width:1025px)").matches); }
+  function bmUrl(v){ return typeof v === "number" ? "/product/list.html?cate_no=" + v : "/product/search.html?keyword=" + encodeURIComponent(String(v).slice(2)); }
+  function bmCss(){
+    if (document.getElementById("dk-bm-css")) return;
+    var st = document.createElement("style"); st.id = "dk-bm-css";
+    st.textContent =
+      "#dk-bm{max-width:1240px;margin:0 auto;padding:14px 16px 4px;box-sizing:border-box}#dk-bm *{box-sizing:border-box}" +
+      "#dk-bm .bc{display:flex;align-items:center;gap:12px;background:#f7f2ff;border:1px solid #e6dbff;border-radius:14px;padding:12px 14px;text-decoration:none;color:#222}" +
+      "#dk-bm .bc i{flex:0 0 44px;height:44px;border-radius:10px;background:#6a3fc8;color:#fff;font-style:normal;font-size:22px;display:flex;align-items:center;justify-content:center}" +
+      "#dk-bm .bc b{display:block;font-size:15px;font-weight:800;line-height:1.35}#dk-bm .bc span{display:block;font-size:12px;color:#777;margin-top:2px}#dk-bm .bc em{margin-left:auto;flex:0 0 auto;font-style:normal;background:#6a3fc8;color:#fff;font-size:13px;font-weight:800;border-radius:8px;padding:8px 12px}" +
+      "#dk-bm .bn{position:relative;margin-top:12px;border-radius:16px;overflow:hidden;background:#eee;aspect-ratio:4/3}#dk-bm .bnr{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}#dk-bm .bnr::-webkit-scrollbar{display:none}" +
+      "#dk-bm .bnr a{flex:0 0 100%;height:100%;scroll-snap-align:start}#dk-bm .bnr img{width:100%;height:100%;object-fit:cover;display:block}" +
+      "#dk-bm .bnc{position:absolute;right:12px;bottom:12px;background:rgba(0,0,0,.45);color:#fff;font-size:12px;font-weight:700;border-radius:999px;padding:4px 10px}" +
+      "@media(min-width:1025px){#dk-bm .bn{aspect-ratio:16/6}}" +
+      "#dk-bm .ic{display:grid;grid-template-columns:repeat(5,1fr);gap:14px 8px;margin:20px 0 6px}@media(min-width:1025px){#dk-bm .ic{grid-template-columns:repeat(10,1fr)}}" +
+      "#dk-bm .ic a{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:#222;font-size:12.5px;font-weight:600;text-align:center;line-height:1.3;word-break:keep-all}" +
+      "#dk-bm .ic span{width:100%;max-width:72px;aspect-ratio:1;border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:30px;margin-bottom:7px}" +
+      "#dk-bm .dl{margin-top:22px}#dk-bm .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}#dk-bm .hd h3{font-size:20px;font-weight:800;margin:0;color:#111}#dk-bm .hd a{font-size:20px;color:#bbb;text-decoration:none;line-height:1}" +
+      "#dk-bm .dli{display:flex;flex-direction:column;gap:16px}@media(min-width:1025px){#dk-bm .dli{display:grid;grid-template-columns:repeat(3,1fr)}}" +
+      "#dk-bm .di{display:flex;gap:14px;text-decoration:none;color:#222;align-items:flex-start}#dk-bm .di .im{flex:0 0 42%;max-width:220px;aspect-ratio:1;border-radius:6px;overflow:hidden;background:#f2f2f2;position:relative}#dk-bm .di .im img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}" +
+      "#dk-bm .di .im u{position:absolute;left:6px;bottom:6px;text-decoration:none;background:#6a3fc8;color:#fff;font-size:11px;font-weight:800;border-radius:6px;padding:3px 7px}" +
+      "#dk-bm .di .tx{flex:1;min-width:0}#dk-bm .di .tm{display:inline-block;background:#f3f3f3;color:#e0513b;font-size:13px;font-weight:700;padding:3px 9px;border-radius:4px;font-variant-numeric:tabular-nums}" +
+      "#dk-bm .di .pc{display:block;color:#e0513b;font-size:24px;font-weight:900;margin:6px 0 2px}#dk-bm .di .nm{font-size:14px;color:#444;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}" +
+      "#dk-bm .di .pr{margin-top:6px;font-size:17px;font-weight:800}#dk-bm .di .pr s{font-size:13px;color:#aaa;font-weight:400;margin-left:5px}#dk-bm .di .tg{margin-top:7px;display:flex;gap:5px;flex-wrap:wrap}#dk-bm .di .tg b{font-size:11.5px;font-weight:700;border-radius:4px;padding:3px 7px;background:#f3effb;color:#6a3fc8}#dk-bm .di .tg b.r{background:#ffeef0;color:#e0245e}" +
+      "#dk-tab{display:none}@media(max-width:1024px){#dk-tab{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:9990;background:#fff;border-top:1px solid #eee;padding:6px 0 max(6px,env(safe-area-inset-bottom))}" +
+      "#dk-tab a{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;text-decoration:none;color:#555;font-size:11px;position:relative}#dk-tab a svg{width:24px;height:24px}#dk-tab a.on{color:#6a3fc8}" +
+      "#dk-tab a i{position:absolute;top:-2px;left:calc(50% + 6px);min-width:16px;height:16px;border-radius:8px;background:#6a3fc8;color:#fff;font-size:10px;font-style:normal;font-weight:700;line-height:16px;text-align:center;padding:0 4px}" +
+      "body.dk-hastab{padding-bottom:64px}body.dk-hastab #footer{padding-bottom:70px}}" +
+      "#dk-cat{position:fixed;inset:0;z-index:100001;background:#fff;display:none;flex-direction:column}#dk-cat.on{display:flex}#dk-cat .ct{display:flex;align-items:center;border-bottom:1px solid #eee;padding:0 8px 0 18px;flex:0 0 auto}" +
+      "#dk-cat .ct a{padding:16px 10px 14px;margin-right:14px;font-size:17px;font-weight:800;color:#999;text-decoration:none;border-bottom:3px solid transparent}#dk-cat .ct a.on{color:#6a3fc8;border-color:#6a3fc8}#dk-cat .ct .x{margin-left:auto;margin-right:0;font-size:24px;color:#333;border:0;font-weight:400}" +
+      "#dk-cat .cb{flex:1;display:flex;min-height:0}#dk-cat .cl{flex:0 0 34%;max-width:170px;background:#f5f5f5;overflow-y:auto}#dk-cat .cl a{display:block;padding:15px 16px;font-size:15px;color:#555;text-decoration:none}#dk-cat .cl a.on{background:#fff;color:#6a3fc8;font-weight:800}" +
+      "#dk-cat .cr{flex:1;overflow-y:auto;padding:6px 18px 90px}#dk-cat .ca{display:flex;justify-content:space-between;align-items:center;padding:16px 0;font-size:17px;font-weight:800;color:#222;text-decoration:none;border-bottom:1px solid #eee}" +
+      "#dk-cat .cp h4{font-size:16px;font-weight:800;margin:20px 0 12px}#dk-cat .cg{display:grid;grid-template-columns:1fr 1fr;gap:14px 10px}#dk-cat .cg a{text-decoration:none;color:#222}#dk-cat .cg img{width:100%;aspect-ratio:1;object-fit:cover;object-position:center top;border-radius:4px;background:#f2f2f2;display:block}" +
+      "#dk-cat .cg span{display:block;font-size:12.5px;line-height:1.4;margin-top:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}#dk-cat .cg b{display:block;font-size:13px;margin-top:3px}#dk-cat .cg b em{font-style:normal;color:#e0513b;margin-right:4px}" +
+      "#dk-cat .cs{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}#dk-cat .cs a{padding:13px 0;font-size:15px;color:#333;text-decoration:none}" +
+      "#dk-pop{position:fixed;inset:0;z-index:100002;background:rgba(0,0,0,.45);display:flex;align-items:flex-end;justify-content:center}#dk-pop .pw{width:100%;max-width:520px;background:#fff;border-radius:20px 20px 0 0;overflow:hidden}" +
+      "#dk-pop .pa{display:block;text-decoration:none;color:#3b1f86;background:linear-gradient(160deg,#f1e9ff,#ffe9f3);padding:30px 26px 34px;position:relative}#dk-pop .pa small{display:block;font-size:14px;font-weight:800;color:#6a3fc8}" +
+      "#dk-pop .pa b{display:block;font-size:30px;font-weight:900;line-height:1.3;margin:10px 0 12px;letter-spacing:-1px}#dk-pop .pa b em{font-style:normal;color:#e0245e}#dk-pop .pa span{display:block;font-size:13px;color:#6b5a99;line-height:1.6}" +
+      "#dk-pop .pa i{position:absolute;right:20px;top:24px;font-size:56px;font-style:normal}#dk-pop .pa u{display:inline-block;margin-top:16px;text-decoration:none;background:#6a3fc8;color:#fff;font-size:14px;font-weight:800;border-radius:10px;padding:11px 18px}" +
+      "#dk-pop .pf{display:flex;justify-content:space-between;padding:16px 22px max(16px,env(safe-area-inset-bottom))}#dk-pop .pf a{font-size:15px;color:#888;text-decoration:none}#dk-pop .pf a.c{color:#222;font-weight:700}" +
+      "@media(min-width:1025px){#dk-pop{align-items:center}#dk-pop .pw{border-radius:20px}}";
+    document.head.appendChild(st);
+  }
+  function bmTick(){
+    if (window.dkBmT) return;
+    window.dkBmT = setInterval(function(){
+      [].forEach.call(document.querySelectorAll("#dk-bm [data-end]"), function(e){
+        var s = Math.floor((+e.getAttribute("data-end") - Date.now()) / 1000);
+        if (s <= 0) { var c = e.closest(".di"); if (c) c.parentNode.removeChild(c); return; }
+        var d = Math.floor(s / 86400), hh = Math.floor(s % 86400 / 3600), mm = Math.floor(s % 3600 / 60), ss = s % 60;
+        e.textContent = "남은시간 " + (d ? d + "일 " : "") + ("0" + hh).slice(-2) + ":" + ("0" + mm).slice(-2) + ":" + ("0" + ss).slice(-2);
+      });
+    }, 1000);
+  }
+  function bmName(t){ return String(t || "").replace(/ [0-9]{2}(봄|여름|가을|겨울) .*$/, "").trim(); }
+  function bmDeals(box){
+    fetch("/product/list.html?cate_no=54", { credentials: "include" }).then(function(r){ return r.text(); }).then(function(h){
+      var d = new DOMParser().parseFromString(h, "text/html"), out = [];
+      [].forEach.call(d.querySelectorAll(".xans-product-normalpackage ul.prdList > li"), function(li){
+        var per = li.querySelector(".layerDiscountPeriod"); if (!per) return;
+        var tx = per.textContent.replace(/ +/g, " ");
+        var m = tx.match(/~ *([0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2})/); if (!m) return;
+        var end = kst(m[1]); if (!end || end < Date.now() + 60000) return;
+        var a = li.querySelector(".name a"), img = li.querySelector(".thumbnail img, .prdImg img");
+        var price = 0, sale = 0;
+        [].forEach.call(li.querySelectorAll(".spec li"), function(x){ var t = x.textContent.replace(/ +/g, " "); if (/판매가/.test(t)) price = num(t.split(":")[1]); if (/최적할인가/.test(t)) sale = num(t.split(":")[1]); });
+        if (!price || !sale || sale >= price || !a) return;
+        var nm = a.textContent.replace(/상품명 *:/, "").trim();
+        out.push({ u: a.getAttribute("href"), im: img ? (img.getAttribute("ec-data-src") || img.getAttribute("src")) : "", nm: bmName(nm), p: price, s: sale, end: end });
+      });
+      out.sort(function(x, y){ return x.end - y.end; });
+      out = out.slice(0, bmMobile() ? 3 : 6);
+      if (!out.length) { box.parentNode && box.parentNode.removeChild(box); return; }
+      box.innerHTML = "<div class='hd'><h3>오늘의 신상 할인</h3><a href='/product/list.html?cate_no=54' aria-label='신상품 전체'>›</a></div><div class='dli'>" + out.map(function(x){
+        var pc = Math.round((1 - x.s / x.p) * 100);
+        return "<a class='di' href='" + x.u + "'><span class='im'><img src='" + x.im + "' alt='' loading='lazy'><u>NEW</u></span><span class='tx'><span class='tm' data-end='" + x.end + "'></span>" +
+          "<span class='pc'>" + pc + "%</span><span class='nm'>" + esc(x.nm) + "</span><div class='pr'>" + won(x.s) + "<s>" + won(x.p).replace("원", "") + "</s></div><div class='tg'><b class='r'>신상할인</b><b>3일 한정</b></div></span></a>";
+      }).join("") + "</div>";
+      bmTick();
+    }).catch(function(){ if (box.parentNode) box.parentNode.removeChild(box); });
+  }
+  function bmBuild(){
+    if (!bmHome() || document.getElementById("dk-bm")) return;
+    var wrap = document.querySelector(".dk-wrap"); if (!wrap) return;
+    bmCss();
+    var sec = document.createElement("section"); sec.id = "dk-bm";
+    var logged = isLogged();
+    var bc = logged
+      ? "<a class='bc' href='/myshop/index.html#dk-invite'><i>💌</i><span style='min-width:0'><b>친구 초대하고 500원 적립</b><span>친구가 내 초대 링크로 가입하면 둘 다 적립금 500원</span></span><em>초대하기</em></a>"
+      : "<a class='bc' href='/member/agreement.html'><i>🎁</i><span style='min-width:0'><b>가입하면 적립금 1,000원</b><span>수신 동의 시 5% 쿠폰도 함께</span></span><em>가입하기</em></a>";
+    var day = new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10), sfx = bmMobile() ? "m" : "";
+    var bn = "<div class='bn'><div class='bnr'>" + BM_BAN.map(function(b, i){ return "<a href='" + b[1] + "'><img src='https://www.dagguu.com/kids/banner/B" + b[0] + sfx + ".jpg?d=" + day + "' alt='' " + (i ? "loading='lazy'" : "") + "></a>"; }).join("") + "</div><span class='bnc'>1 / " + BM_BAN.length + "</span></div>";
+    var ic = "<div class='ic'>" + BM_ICONS.map(function(x){ return "<a href='" + x[2] + "'><span style='background:" + x[3] + "'>" + x[0] + "</span>" + x[1] + "</a>"; }).join("") + "</div>";
+    sec.innerHTML = bc + bn + ic + "<div class='dl' id='dk-deal'></div>";
+    wrap.insertBefore(sec, wrap.firstChild);
+    var r = sec.querySelector(".bnr"), cnt = sec.querySelector(".bnc"), n = BM_BAN.length;
+    function cur(){ return Math.round(r.scrollLeft / Math.max(1, r.clientWidth)); }
+    r.addEventListener("scroll", function(){ cnt.textContent = (cur() + 1) + " / " + n; }, { passive: true });
+    var hold = false; r.addEventListener("touchstart", function(){ hold = true; }, { passive: true }); r.addEventListener("touchend", function(){ setTimeout(function(){ hold = false; }, 3000); });
+    r.addEventListener("mouseenter", function(){ hold = true; }); r.addEventListener("mouseleave", function(){ hold = false; });
+    setInterval(function(){ if (hold || document.hidden) return; var i = (cur() + 1) % n; r.scrollTo({ left: i * r.clientWidth, behavior: "smooth" }); }, 4000);
+    var dk = sec.querySelector("a[href='#dk-deal']"); if (dk) dk.onclick = function(e){ e.preventDefault(); var t = document.getElementById("dk-deal"); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" }); };
+    bmDeals(sec.querySelector("#dk-deal"));
+  }
+  var BM_SVG = {
+    home: "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8'><path d='M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z'/></svg>",
+    cat: "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8'><rect x='4' y='4' width='6.5' height='6.5' rx='1.5'/><rect x='13.5' y='4' width='6.5' height='6.5' rx='1.5'/><rect x='4' y='13.5' width='6.5' height='6.5' rx='1.5'/><rect x='13.5' y='13.5' width='6.5' height='6.5' rx='1.5'/></svg>",
+    cart: "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8'><path d='M3 4h2.5l2 11h10.5l2-8H6.5'/><circle cx='9' cy='19.5' r='1.4'/><circle cx='17' cy='19.5' r='1.4'/></svg>",
+    wish: "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8'><path d='M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z'/></svg>",
+    my: "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8'><circle cx='12' cy='8.5' r='4'/><path d='M4.5 20.5c1.2-3.6 4-5.5 7.5-5.5s6.3 1.9 7.5 5.5'/></svg>"
+  };
+  function bmTab(){
+    if (document.getElementById("dk-tab") || !document.body) return;
+    bmCss();
+    var p = location.pathname, on = function(k){ return (k === "home" && bmHome()) || (k === "cart" && /basket/.test(p)) || (k === "wish" && /wish/.test(p)) || (k === "my" && /myshop|member/.test(p) && !/wish/.test(p)) ? " class='on'" : ""; };
+    var t = document.createElement("nav"); t.id = "dk-tab";
+    t.innerHTML = "<a href='/'" + on("home") + ">" + BM_SVG.home + "홈</a><a href='#none' data-cat='1'>" + BM_SVG.cat + "카테고리</a><a href='/order/basket.html'" + on("cart") + ">" + BM_SVG.cart + "장바구니<i style='display:none'></i></a><a href='/myshop/wish_list.html'" + on("wish") + ">" + BM_SVG.wish + "관심</a><a href='/myshop/index.html'" + on("my") + ">" + BM_SVG.my + "MY</a>";
+    document.body.appendChild(t); document.body.classList.add("dk-hastab");
+    t.querySelector("[data-cat]").onclick = function(e){ e.preventDefault(); bmCat(); };
+    function cnt(){ var c = document.querySelector(".xans-layout-orderbasketcount .count, .EC-Layout-Basket-count, #xans_myshop_basket_cnt"); var n = c ? num(c.textContent) : 0; var i = t.querySelector("i"); i.textContent = n; i.style.display = n ? "block" : "none"; }
+    cnt(); setTimeout(cnt, 1500);
+    /* 휴대폰 위 ☰ 도 같은 카테고리 창으로 (PC 는 원래 전체메뉴) */
+    document.addEventListener("click", function(e){ var b = e.target.closest && e.target.closest(".eNavFold"); if (b && bmMobile()) { e.preventDefault(); e.stopPropagation(); bmCat(); } }, true);
+  }
+  function bmCat(){
+    bmCss();
+    var c = document.getElementById("dk-cat");
+    if (!c) {
+      c = document.createElement("div"); c.id = "dk-cat";
+      c.innerHTML = "<div class='ct'><a href='#none' class='on' data-t='c'>카테고리</a><a href='#none' data-t='b'>브랜드</a><a href='#none' class='x' aria-label='닫기'>✕</a></div><div class='cb'><div class='cl'></div><div class='cr'></div></div>";
+      document.body.appendChild(c);
+      c.querySelector(".x").onclick = function(e){ e.preventDefault(); c.classList.remove("on"); document.documentElement.style.overflow = ""; };
+      [].forEach.call(c.querySelectorAll("[data-t]"), function(a){ a.onclick = function(e){ e.preventDefault(); [].forEach.call(c.querySelectorAll("[data-t]"), function(x){ x.classList.toggle("on", x === a); }); bmCatTab(c, a.getAttribute("data-t")); }; });
+      bmCatTab(c, "c");
+    }
+    c.classList.add("on"); document.documentElement.style.overflow = "hidden";
+  }
+  function bmCatTab(c, t){
+    var L = c.querySelector(".cl"), R2 = c.querySelector(".cr");
+    if (t === "c") {
+      L.innerHTML = BM_CATS.map(function(x, i){ return "<a href='#none' data-i='" + i + "'" + (i ? "" : " class='on'") + ">" + x[0] + "</a>"; }).join("");
+      [].forEach.call(L.querySelectorAll("a"), function(a){ a.onclick = function(e){ e.preventDefault(); [].forEach.call(L.querySelectorAll("a"), function(x){ x.classList.toggle("on", x === a); }); bmCatRight(R2, BM_CATS[+a.getAttribute("data-i")]); }; });
+      bmCatRight(R2, BM_CATS[0]);
+      return;
+    }
+    L.innerHTML = "<a href='#none' class='on'>전체 브랜드</a>";
+    R2.innerHTML = "<a class='ca' href='/product/brand_size.html'>브랜드별 사이즈표 <span>›</span></a><div class='cs'></div>";
+    var cs = R2.querySelector(".cs"), seen = {};
+    function add(nm, url){ if (seen[nm]) return; seen[nm] = 1; var a = document.createElement("a"); a.href = url; a.textContent = nm; cs.appendChild(a); }
+    fetch("https://dagguu.cafe24api.com/api/v2/categories?parent_category_no=42&limit=100&fields=category_no,category_name", { headers: { "X-Cafe24-Client-Id": CID } }).then(function(r){ return r.json(); })
+      .then(function(j){ (j.categories || []).forEach(function(x){ add(x.category_name, "/product/list.html?cate_no=" + x.category_no); }); })
+      .catch(function(){}).then(function(){ BM_QBRANDS.forEach(function(b){ add(b, "/product/search.html?keyword=" + encodeURIComponent(b)); }); });
+  }
+  function bmCatRight(R2, x){
+    var url = bmUrl(x[1]);
+    R2.innerHTML = "<a class='ca' href='" + url + "'>" + x[0] + " 전체보기 <span>›</span></a><div class='cp'><h4>이 카테고리 상품</h4><div class='cg'><span style='grid-column:1/-1;font-size:13px;color:#999'>불러오는 중…</span></div></div>";
+    var g = R2.querySelector(".cg");
+    fetch(url, { credentials: "include" }).then(function(r){ return r.text(); }).then(function(h){
+      var d = new DOMParser().parseFromString(h, "text/html"), lis = d.querySelectorAll(".xans-product-normalpackage ul.prdList > li, .xans-product-listnormal ul.prdList > li, ul.prdList > li"), out = [];
+      var sn = {};
+      [].some.call(lis, function(li){
+        var a = li.querySelector(".name a"), img = li.querySelector(".thumbnail img, .prdImg img"); if (!a || !img) return false;
+        var hk = (a.getAttribute("href") || "").replace(/[/]category[/].*$/, ""); if (sn[hk]) return false; sn[hk] = 1;
+        var price = 0, sale = 0;
+        [].forEach.call(li.querySelectorAll(".spec li"), function(y){ var t = y.textContent.replace(/ +/g, " "); if (/판매가/.test(t)) price = num(t.split(":")[1]); if (/최적할인가/.test(t)) sale = num(t.split(":")[1]); });
+        out.push("<a href='" + a.getAttribute("href") + "'><img src='" + (img.getAttribute("ec-data-src") || img.getAttribute("src")) + "' alt='' loading='lazy'><span>" + esc(bmName(a.textContent.replace(/상품명 *:/, ""))) + "</span><b>" +
+          (sale && sale < price ? "<em>" + Math.round((1 - sale / price) * 100) + "%</em>" + won(sale) : won(price)) + "</b></a>");
+        return out.length >= 6;
+      });
+      g.innerHTML = out.length ? out.join("") : "<span style='grid-column:1/-1;font-size:13px;color:#999'>상품을 준비하고 있어요</span>";
+    }).catch(function(){ g.innerHTML = ""; });
+  }
+  function bmPop(){
+    if (!bmHome() || document.getElementById("dk-pop") || window.dkBmPop) return;
+    var day = new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10);
+    try { if (localStorage.getItem("dk_pop_hide") === day || sessionStorage.getItem("dk_pop_seen")) return; } catch(e){}
+    window.dkBmPop = 1;
+    setTimeout(function(){
+      bmCss();
+      var logged = isLogged();
+      var body = logged
+        ? "<a class='pa' href='/product/coffee.html'><i>☕</i><small>@dagguu.kids 태그 이벤트</small><b>태그하고<br><em>커피</em> 받아가세요</b><span>우리 아이 코디 사진에 @dagguu.kids 를 태그해 주시면<br>매달 선착순 30분께 커피를 보내 드려요</span><u>참여 방법 보기</u></a>"
+        : "<a class='pa' href='/member/agreement.html'><i>🎁</i><small>다꾸키즈 첫 가입 혜택</small><b>가입하면<br>적립금 <em>1,000원</em><br>바로 드려요!</b><span>쇼핑정보 수신 동의 시 5% 할인 쿠폰도 함께 지급<br>적립금은 5만원 이상 구매 시 사용할 수 있어요</span><u>3초 만에 가입하기</u></a>";
+      var p = document.createElement("div"); p.id = "dk-pop";
+      p.innerHTML = "<div class='pw'>" + body + "<div class='pf'><a href='#none' class='h'>오늘 하루 보지 않기</a><a href='#none' class='c'>닫기</a></div></div>";
+      document.body.appendChild(p);
+      try { sessionStorage.setItem("dk_pop_seen", "1"); } catch(e){}
+      function close(){ if (p.parentNode) p.parentNode.removeChild(p); }
+      p.querySelector(".c").onclick = function(e){ e.preventDefault(); close(); };
+      p.querySelector(".h").onclick = function(e){ e.preventDefault(); try { localStorage.setItem("dk_pop_hide", day); } catch(x){} close(); };
+      p.onclick = function(e){ if (e.target === p) close(); };
+    }, 1500);
+  }
+  function homeBM(){ try { bmBuild(); } catch(e){} try { bmTab(); } catch(e){} try { bmPop(); } catch(e){} }
+
+  function run(){ homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
