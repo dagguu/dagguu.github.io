@@ -316,7 +316,43 @@
     });
   }
 
-  function run(){ mypage(); if (document.getElementById("orderFixArea")) { lowest(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  /* ---------- ⑥ 장바구니: 무료배송 게이지 + 남은 금액만큼 채울 상품 (2026-11-12 시온님, 알파업셀 '프로모션' 참고) ---------- */
+  function cartBox(){
+    if (location.pathname.indexOf("/order/basket") < 0 || document.getElementById("dk-cartfree")) return;
+    var pk = document.querySelector(".xans-order-basketpackage"); if (!pk) return;
+    var bp = document.getElementById("xans_myshop_basket_price"); var cart = bp ? num(bp.textContent) : 0;
+    if (!cart) return;
+    var inCart = {}; [].forEach.call(pk.querySelectorAll('a[href*="product_no="]'), function(a){ var m = a.href.match(/product_no=([0-9]+)/); if (m) inCart[m[1]] = 1; });
+    var left = FREE - cart, pct = Math.min(100, Math.round(cart / FREE * 100));
+    var box = document.createElement("div"); box.id = "dk-cartfree";
+    box.style.cssText = "margin:0 0 20px;padding:18px 18px 14px;border:1px solid #ece6fb;border-radius:16px;background:#fff;box-shadow:0 4px 16px rgba(106,63,200,.08);color:#222";
+    var head = left > 0
+      ? "💜 <b style='font-size:16px'>" + won(left) + "</b> 더 담으면 <b style='color:#6a3fc8'>무료배송!</b>"
+      : "💜 <b style='color:#6a3fc8'>무료배송 조건을 채웠어요!</b> 배송비 없이 받아 보세요";
+    box.innerHTML = "<div style='font-size:14px'>" + head + "</div>" +
+      "<div style='margin-top:10px;height:8px;border-radius:4px;background:#ece6fb;overflow:hidden'><div style='height:100%;width:" + pct + "%;background:#6a3fc8;border-radius:4px;transition:width .6s'></div></div>" +
+      "<div style='display:flex;justify-content:space-between;margin-top:5px;font-size:11px;color:#999'><span>장바구니 " + won(cart) + "</span><span>" + won(FREE) + " 이상 무료배송</span></div>" +
+      "<div id='dk-cartrec'></div>";
+    var tab = pk.querySelector(".xans-order-tabinfo");
+    if (tab && tab.nextSibling) pk.insertBefore(box, tab.nextSibling); else pk.insertBefore(box, pk.firstChild);
+    if (left <= 0) return;
+    prods(function(l){
+      var c = l.filter(function(x){ return !inCart[String(x.n)] && x.so !== "T" && x.p >= left; });
+      c.sort(function(a, b){ return a.p - b.p; });
+      c = c.slice(0, 10); if (c.length < 2) return;
+      var h = "<div style='margin-top:14px;font-size:13px;font-weight:800'>이 상품 하나만 더 담으면 무료배송이에요</div>" +
+        "<div style='display:flex;gap:10px;overflow-x:auto;padding:10px 0 4px;-webkit-overflow-scrolling:touch'>";
+      c.forEach(function(x){
+        h += "<a href='/product/detail.html?product_no=" + x.n + "' style='flex:0 0 112px;text-decoration:none;color:#222'>" +
+          "<img src='" + x.im + "' alt='' loading='lazy' style='width:112px;height:112px;object-fit:cover;border:1px solid #eee;border-radius:12px;background:#f5f5f5;display:block'>" +
+          "<div style='font-size:12px;line-height:1.35;margin-top:6px;height:32px;overflow:hidden'>" + String(x.nm).replace(/</g, "&lt;") + "</div>" +
+          "<div style='font-size:13px;font-weight:800;margin-top:2px'>" + won(x.p) + "</div></a>";
+      });
+      document.getElementById("dk-cartrec").innerHTML = h + "</div>";
+    });
+  }
+
+  function run(){ mypage(); cartBox(); if (document.getElementById("orderFixArea")) { lowest(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
