@@ -1294,7 +1294,7 @@ input,select,textarea{font-size:16px!important}
 .dphero{background:linear-gradient(135deg,#3a1670,#8a3fd0);color:#fff;border-radius:18px;padding:22px 18px;margin:8px 0 12px}
 .dphero small{font-size:12px;opacity:.85}.dphero h1{font-size:22px;line-height:1.35;margin:6px 0 8px;color:#fff}.dphero h1 em{font-style:normal;color:#ffe14d}
 .dphero p{font-size:13px;line-height:1.6;margin:0;opacity:.92}.dphero.sm h1{font-size:19px}.dphero .lnk{color:#ffe14d}
-.dpstat{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:0 0 6px}
+.dpstat{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:6px;margin:0 0 6px}
 .dpstat div{background:#f6f2fb;border-radius:12px;padding:10px 4px;text-align:center}.dpstat b{display:block;font-size:15px;font-weight:800}.dpstat span{font-size:11px;color:#777}
 .dplk{display:flex;gap:8px;align-items:center}.dplk code{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:#f4f4f4;border-radius:10px;padding:10px;font-size:12px}
 .dpitems{display:grid;gap:10px;margin-top:10px}

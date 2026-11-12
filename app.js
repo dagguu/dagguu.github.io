@@ -1745,17 +1745,19 @@ function pMyView(){
   return h+'</div>';
 }
 /* ── 다꾸파트너스(2026-11-11 시온님): 다꾸키즈 상품별 수익 링크 → 판매액 3% 다꾸키즈 적립금(2026-11-11 시온님 10%→3%). DB = supabase/dp_partners.sql
-   쇼핑몰 쪽: 카페24 스킨 footer.html 스크립트가 ?pt=코드 를 24시간 쿠키로 기억 + dp_click, 주문완료(order_result.html #dkpt-order)에서 dp_order. */
+   쇼핑몰 쪽: 카페24 스킨 footer.html 스크립트가 ?pt=코드 를 7일 쿠키로 기억 + dp_click + 로그인 회원 연결(dp_link), 주문완료(order_result.html #dkpt-order)에서 dp_order2(쿠키 또는 연결 회원, 마지막 주문 후 12개월). supabase/dp_members.sql (2026-11-12). */
 var DP_RATE=3, DP_SHOP="https://dagguukids.com", DP_ITEMS=null, DP_Q="";
 function dpView(){ return '<div class="pg dp" id="dpv"><div class="empty">불러오는 중…</div></div>'; }
-function dpHero(){ return '<section class="dphero"><small>🔗 다꾸키즈 수익 링크</small><h1>다꾸키즈 상품을 소개하고<br><em>판매액 '+DP_RATE+'%</em> 적립금 받아요</h1><p>내 수익 링크로 들어온 손님이 24시간 안에 다꾸키즈에서 주문하면, 배송이 끝난 뒤 상품 금액의 '+DP_RATE+'%를 다꾸키즈 적립금으로 드려요.</p></section>'+
+function dpHero(){ return '<section class="dphero"><small>🔗 다꾸키즈 수익 링크</small><h1>다꾸키즈 상품을 소개하고<br><em>판매액 '+DP_RATE+'%</em> 적립금 받아요</h1><p>내 수익 링크로 들어온 손님이 7일 안에 다꾸키즈에서 주문하면, 배송이 끝난 뒤 상품 금액의 '+DP_RATE+'%를 다꾸키즈 적립금으로 드려요. 내 링크로 가입한 친구는 그 뒤로 사는 옷도 계속 적립돼요.</p></section>'+
   '<div class="prhow"><div><b>1</b><span>파트너 가입</span></div><div><b>2</b><span>상품별 수익 링크로 소개</span></div><div><b>3</b><span>배송완료 뒤 적립금</span></div></div>'; }
 function dpRules(){ return '<section class="pjsec"><h2>꼭 확인해 주세요</h2><ul class="pjrule">'+
   '<li>소개 글 제목이나 첫 줄 맨 앞에 <b>#광고</b>를 꼭 적어요(공정위 추천·보증 심사지침).</li>'+
   '<li>보상은 다꾸키즈 적립금이에요. 다꾸키즈에서 5만원 이상 구매 시 사용할 수 있고, 현금으로 바꿀 수 없어요.</li>'+
   '<li>상품 금액(배송비 제외) 기준 '+DP_RATE+'%, 배송완료되고 취소·반품이 없는 주문만 적립돼요.</li>'+
   '<li>본인 주문은 적립되지 않아요.</li>'+
-  '<li>링크를 누른 뒤 24시간 안의 주문이 내 실적이에요. 다른 파트너 링크를 나중에 누르면 그 파트너 실적이 돼요.</li>'+
+  '<li>링크를 누른 뒤 7일 안의 주문이 내 실적이에요(같은 휴대폰·같은 앱 기준). 다른 파트너 링크를 나중에 누르면 그 파트너 실적이 돼요.</li>'+
+  '<li>내 링크로 들어와 회원가입(또는 로그인)한 친구는 나와 연결돼요. 연결된 친구는 네이버 검색·다른 기기로 들어와 사도 내 실적이에요.</li>'+
+  '<li>연결은 친구가 마지막으로 산 날부터 12개월 동안 유지돼요. 친구가 살 때마다 12개월이 다시 시작되고, 1년 동안 한 번도 사지 않으면 연결이 끝나요.</li>'+
   '<li>사실과 다른 후기·과장 광고, 원치 않는 사람에게 링크 보내기(스팸)는 안 돼요. 어기면 적립이 취소될 수 있어요.</li></ul></section>'; }
 function dpInit(){
   var v=document.getElementById("dpv"); if(!v) return;
@@ -1797,7 +1799,7 @@ function dpHome(v,me){
     '<section class="pjsec"><h2>최근 주문</h2><div id="dporders"><div class="empty">불러오는 중…</div></div></section>'+dpRules();
   plainHeads(v);
   SB.rpc("dp_stats").then(function(r){ var d=r.data||{}, el=document.getElementById("dpstat"); if(!el) return;
-    el.innerHTML='<div><b>'+(d.clicks30||0)+'</b><span>최근 30일 클릭</span></div><div><b>'+(d.orders||0)+'</b><span>주문</span></div><div><b>'+won(d.approved)+'</b><span>적립 예정</span></div><div><b>'+won(d.paid)+'</b><span>지급 완료</span></div>'; });
+    el.innerHTML='<div><b>'+(d.clicks30||0)+'</b><span>최근 30일 클릭</span></div>'+(d.members!=null?'<div><b>'+d.members+'명</b><span>연결된 친구</span></div>':'')+'<div><b>'+(d.orders||0)+'</b><span>주문</span></div><div><b>'+won(d.approved)+'</b><span>적립 예정</span></div><div><b>'+won(d.paid)+'</b><span>지급 완료</span></div>'; });
   SB.from("dp_orders").select("order_id,amount,status,reward,created_at").order("created_at",{ascending:false}).limit(20).then(function(r){ var el=document.getElementById("dporders"); if(!el) return; var L=r.data||[];
     var ST={pending:"확인 중",approved:"적립 예정",paid:"적립금 지급",rejected:"제외"};
     el.innerHTML=L.length?L.map(function(o){ return '<div class="pjmyr"><span><b>'+esc(String(o.created_at).slice(0,10))+' 주문</b><small>상품 '+won(o.amount)+(o.reward?' · 적립 '+won(o.reward):'')+'</small></span><i class="st-'+esc(o.status)+'">'+esc(ST[o.status]||o.status)+'</i></div>'; }).join(""):'<div class="empty">아직 주문이 없어요. 링크를 소개해 보세요!</div>'; });
@@ -1836,7 +1838,7 @@ function dpAdmin(v){
     var ST={pending:"확인 중",approved:"적립 예정",rejected:"제외",paid:"지급 완료"};
     sec.innerHTML='<h2>다꾸키즈 수익 링크 주문 ('+L.length+')</h2><p class="mysub">카페24 주문 관리에서 배송완료·취소/반품 없음·본인 주문 아님을 확인하고 승인 → 카페24 고객 관리에서 그 아이디에 적립금 지급 → "지급 완료". 파트너 '+(R[1].data||[]).length+'명</p>'+
       (L.length?L.map(function(o){ var pt=P[o.code]||{}, bt=function(s,t){ return '<button class="b" data-dpa="'+esc(o.order_id)+'" data-s="'+s+'">'+t+'</button>'; };
-        return '<div class="paap"><p><b>'+esc(o.order_id)+'</b> <i class="st-'+esc(o.status)+'">'+esc(ST[o.status])+'</i><br>'+esc(String(o.created_at).slice(0,16).replace("T"," "))+' · 상품 '+won(o.amount)+' · 적립 '+won(o.reward||Math.floor(o.amount*DP_RATE/1000)*10)+'<br>파트너 '+esc(o.code)+' → 다꾸키즈 아이디 <b>'+esc(pt.shop_id||"?")+'</b> <button class="lnk" data-copy="'+esc(pt.shop_id||"")+'">복사</button></p>'+
+        return '<div class="paap"><p><b>'+esc(o.order_id)+'</b> <i class="st-'+esc(o.status)+'">'+esc(ST[o.status])+'</i><br>'+esc(String(o.created_at).slice(0,16).replace("T"," "))+' · 상품 '+won(o.amount)+(o.src==='member'?' · 연결된 회원 주문':o.src==='link'?' · 링크(7일) 주문':'')+' · 적립 '+won(o.reward||Math.floor(o.amount*DP_RATE/1000)*10)+'<br>파트너 '+esc(o.code)+' → 다꾸키즈 아이디 <b>'+esc(pt.shop_id||"?")+'</b> <button class="lnk" data-copy="'+esc(pt.shop_id||"")+'">복사</button></p>'+
           '<div class="pjrow">'+(o.status==="pending"?bt("approved","승인(적립 확정)")+bt("rejected","제외"):o.status==="approved"?bt("paid","적립금 지급 완료")+bt("rejected","제외"):bt("pending","다시 확인 중으로"))+'</div></div>'; }).join(""):'<div class="empty">처리할 주문이 없어요</div>');
   });
 }
