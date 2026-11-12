@@ -459,9 +459,9 @@
     box.style.cssText = "margin:12px 0;padding:14px 16px;border:1px solid #f1d4d2;border-radius:12px;background:#fff;font-size:13px;color:#333;line-height:1.6";
     an.parentNode.insertBefore(box, an);
     if (!isLogged()) {
-      var off0 = Math.max(Math.floor(p * 0.05 / 10) * 10, 1000);
+      var off0 = Math.floor(p * 0.05 / 10) * 10;  /* 2026-11-12 1,000원 가입 쿠폰 삭제 → 수신동의 5% 쿠폰만 */
       box.innerHTML = "<div style='display:flex;justify-content:space-between;align-items:center'><b style='color:#e8312f'>🎟 가입 쿠폰 적용 시</b><b style='font-size:17px;color:#111'>" + won(p - off0) + "</b></div>" +
-        "<div style='font-size:12px;color:#888;margin-top:2px'>회원가입하면 1,000원 쿠폰, 쇼핑정보 수신 동의하면 5% 쿠폰을 바로 드려요 (주문당 1장)</div>" +
+        "<div style='font-size:12px;color:#888;margin-top:2px'>쇼핑정보 수신에 동의하고 가입하면 5% 쿠폰, 가입 적립금 1,000원도 바로 드려요</div>" +
         "<a href='/member/agreement.html' style='display:block;margin-top:8px;padding:9px;border-radius:8px;background:#e8312f;color:#fff;text-align:center;font-weight:800;text-decoration:none'>회원가입하고 쿠폰 받기</a>";
       return;
     }
