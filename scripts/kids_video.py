@@ -5,6 +5,7 @@
 1080x1920 세로 14초 mp4 를 만든다. 소리 없음(음악은 편집 앱에서). AI 로 사진을 바꾸지 않는다.
 결과: kids/v/<상품번호>.mp4 · .jpg(표지) · kids/v/list.json
 """
+import hashlib
 import json, os, re, subprocess, sys, tempfile
 from io import BytesIO
 import requests
@@ -255,7 +256,7 @@ def make_brand(brand, ps, k=8):
     if len(items) < 3:
         print("브랜드 사진 부족", brand, len(items))
         return None
-    key = "b" + str(BRAND_CAT.get(brand, abs(hash(brand)) % 100000))
+    key = "b" + str(BRAND_CAT.get(brand, int(hashlib.md5(brand.encode()).hexdigest()[:8], 16) % 100000))  # 실행마다 같은 번호(2026-11-12)
     covers[0].save(f"{OUT}/{key}.jpg", quality=86)
     arrs = [np.asarray(c, dtype=np.uint8) for c in covers]
     render(frames_cut(arrs), f"{OUT}/{key}.mp4")
