@@ -1,299 +1,137 @@
 {
- "updated": "2026-11-12 16:17",
+ "updated": "2026-11-12 19:16",
  "hints": [
-  "크리스마스장식",
-  "크리스마스리스",
-  "욕실화",
-  "유아책상",
-  "유아칫솔"
+  "마르비니",
+  "차바이오",
+  "닥터리쥬올",
+  "GRN",
+  "로렌츠",
+  "오베르",
+  "콜튼",
+  "에코너",
+  "크레샤",
+  "로렌드",
+  "바이오젠트라",
+  "닥터토비아",
+  "센텔라모어",
+  "피치홀릭",
+  "루미덤",
+  "머그비",
+  "이알하나",
+  "비타젠",
+  "장작캠프",
+  "라코세차",
+  "카피어랜드",
+  "안국건강",
+  "리포데이"
  ],
  "rows": [
   {
-   "kw": "슬리퍼",
-   "vol": 80000,
+   "kw": "A4용지",
+   "vol": 36500,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "칫솔",
-   "vol": 52270,
+   "kw": "애니박스",
+   "vol": 28100,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "강아지간식",
+   "vol": 26040,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스장식",
-   "vol": 30480,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "실내화",
-   "vol": 23140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스리스",
-   "vol": 20050,
+   "kw": "리포데이",
+   "vol": 22210,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "피젯토이",
-   "vol": 15230,
+   "kw": "위임장양식",
+   "vol": 17520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이어트보조제",
+   "vol": 17400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뱃살빼는법",
+   "vol": 17360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국약품",
+   "vol": 11480,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스조명",
-   "vol": 14570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실내슬리퍼",
-   "vol": 12980,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리대여",
-   "vol": 11680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니트리",
-   "vol": 11590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스선물",
-   "vol": 11500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리장식",
-   "vol": 11450,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스마켓",
-   "vol": 11180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생책상",
-   "vol": 11140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기칫솔",
-   "vol": 11060,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실화",
-   "vol": 10870,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "고등학생책상",
-   "vol": 10820,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스오너먼트",
-   "vol": 10310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스소품",
-   "vol": 10290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리나무",
+   "kw": "기초대사량",
    "vol": 10050,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "트리오너먼트",
-   "vol": 9910,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "높이조절책상",
-   "vol": 9890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "코도모칫솔",
-   "vol": 9330,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "DIY",
-   "vol": 8650,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "대나무",
-   "vol": 8610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벽트리",
-   "vol": 8560,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스오르골",
-   "vol": 8550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서재책상",
-   "vol": 8550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이칫솔",
-   "vol": 8470,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어린이책상",
-   "vol": 8420,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "학생책상",
-   "vol": 8160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장실선반",
-   "vol": 8000,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리조명",
-   "vol": 7930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "DIY키트",
-   "vol": 7880,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리180",
-   "vol": 7680,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "돌아기장난감",
-   "vol": 7430,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "성탄절",
-   "vol": 7390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터노아칫솔",
-   "vol": 7390,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미니크리스마스트리",
-   "vol": 7240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스가랜드",
-   "vol": 7170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아책상",
-   "vol": 7060,
+   "kw": "이알하나",
+   "vol": 9980,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "아기미끄럼틀",
-   "vol": 7040,
+   "kw": "NK세포",
+   "vol": 9410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "책상세트",
-   "vol": 7000,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기책상",
-   "vol": 6740,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실슬리퍼",
-   "vol": 6740,
+   "kw": "가르시니아",
+   "vol": 9180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스벽트리",
-   "vol": 6680,
+   "kw": "내장지방빼는법",
+   "vol": 9160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가죽공예",
-   "vol": 6520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리전구",
-   "vol": 6200,
+   "kw": "심으뜸",
+   "vol": 8950,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "안국건강",
+   "vol": 7850,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "체지방줄이는법",
+   "vol": 7470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "혈당스파이크증상",
+   "vol": 6430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "붓기빼는법",
+   "vol": 6300,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -303,6909 +141,3945 @@
    "hint": false
   },
   {
-   "kw": "대형크리스마스트리",
-   "vol": 6070,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이용전동칫솔",
-   "vol": 5995,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "율마",
-   "vol": 5760,
+   "kw": "식단",
+   "vol": 5970,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기크리스마스옷",
-   "vol": 5700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모루인형",
+   "kw": "말토덱스트린",
    "vol": 5640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "CD",
+   "vol": 4730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "단기간다이어트",
+   "vol": 4670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "난소화성말토덱스트린",
+   "vol": 4570,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "명화그리기",
-   "vol": 5020,
+   "kw": "카테킨",
+   "vol": 4430,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "살",
+   "vol": 4350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리PE",
-   "vol": 4820,
+   "kw": "살빼는법",
+   "vol": 4350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아칫솔",
-   "vol": 4650,
+   "kw": "펠렛",
+   "vol": 4290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옆구리",
+   "vol": 4210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터리쥬올",
+   "vol": 4160,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "크라프트지",
+   "vol": 4150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카피어랜드",
+   "vol": 4110,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "다이어트방법",
+   "vol": 3970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기초대사량높이는방법",
+   "vol": 3950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오베르",
+   "vol": 3800,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "아기독서대",
-   "vol": 4630,
+   "kw": "면역력주사",
+   "vol": 3790,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여행용슬리퍼",
-   "vol": 4490,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "초등책상",
-   "vol": 4480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "DIY명화그리기",
-   "vol": 4430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리150",
-   "vol": 4420,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "산타할아버지",
-   "vol": 4180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스꽃",
-   "vol": 4030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스전구",
-   "vol": 3960,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "플레이테이블",
-   "vol": 3900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유화그리기세트",
-   "vol": 3890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스무드등",
-   "vol": 3820,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "태양열조명",
-   "vol": 3810,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "트리장식",
-   "vol": 3760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스양말",
+   "kw": "안국건강루테인",
    "vol": 3610,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "EVA슬리퍼",
-   "vol": 3600,
-   "comp": "높음",
+   "kw": "다이어트식품",
+   "vol": 3580,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스축제",
+   "kw": "칼로리",
    "vol": 3570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "만들기키트",
-   "vol": 3560,
+   "kw": "DIET",
+   "vol": 3360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고급크리스마스트리",
-   "vol": 3550,
+   "kw": "차바이오줄기세포",
+   "vol": 3350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "중학생책상",
-   "vol": 3540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이케아크리스마스트리",
-   "vol": 3520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리전구",
-   "vol": 3450,
+   "kw": "다이어트보조제추천",
+   "vol": 3290,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "대형트리",
-   "vol": 3410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식소품",
-   "vol": 3360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스카페",
-   "vol": 3360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스리스만들기",
-   "vol": 3340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미끄럼방지신발",
-   "vol": 3310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리스커트",
-   "vol": 3300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스스티커",
+   "kw": "뱃살",
    "vol": 3170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "모루인형만들기",
-   "vol": 3060,
+   "kw": "기초대사량높이기",
+   "vol": 3080,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이집크리스마스선물",
-   "vol": 2930,
+   "kw": "얼굴살빼는법",
+   "vol": 2970,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실용품",
-   "vol": 2790,
-   "comp": "높음",
+   "kw": "분리대두단백",
+   "vol": 2910,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스미니트리",
+   "kw": "잔티젠",
    "vol": 2760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스리본",
-   "vol": 2680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리대여",
-   "vol": 2660,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스용품",
-   "vol": 2650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리세트",
-   "vol": 2630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아책상의자세트",
-   "vol": 2610,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "높낮이조절책상",
+   "kw": "로렌츠",
+   "vol": 2640,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "내화벽돌",
    "vol": 2610,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리만들기",
+   "kw": "하루비움",
    "vol": 2600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공부책상",
-   "vol": 2580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리조명",
-   "vol": 2490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "레고테이블",
-   "vol": 2490,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스코스튬",
-   "vol": 2480,
+   "kw": "내장지방",
+   "vol": 2510,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "화장실슬리퍼",
-   "vol": 2460,
+   "kw": "다이어트환",
+   "vol": 2470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "갱년기다이어트",
+   "vol": 2280,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스트리오너먼트",
-   "vol": 2420,
+   "kw": "체지방",
+   "vol": 2180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스행사",
-   "vol": 2420,
+   "kw": "GRN",
+   "vol": 2090,
    "comp": "높음",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "여성슬리퍼",
-   "vol": 2410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전등갓",
-   "vol": 2390,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스만들기",
-   "vol": 2300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조화화분",
-   "vol": 2230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스데코",
-   "vol": 2130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마끈",
-   "vol": 2120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아트공구",
-   "vol": 2120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스포토존",
-   "vol": 2100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이책상",
-   "vol": 2080,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스화분",
-   "vol": 2080,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스꾸미기",
-   "vol": 2040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "빛축제",
-   "vol": 2040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리나무",
+   "kw": "혈당스파이크방지",
    "vol": 2020,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미끄럼방지슬리퍼",
-   "vol": 2020,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "트리꾸미기",
-   "vol": 2000,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스나무",
-   "vol": 1980,
+   "kw": "내열유리",
+   "vol": 1960,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스텐레스욕실선반",
+   "kw": "줄기세포시술",
+   "vol": 1940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "갈색지방",
+   "vol": 1930,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "녹차카테킨",
    "vol": 1920,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스옷",
-   "vol": 1910,
-   "comp": "높음",
+   "kw": "차움",
+   "vol": 1900,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "산타모자",
+   "kw": "체지방빼는법",
    "vol": 1900,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실미끄럼방지",
-   "vol": 1870,
+   "kw": "머그비",
+   "vol": 1880,
+   "comp": "낮음",
+   "hint": true
+  },
+  {
+   "kw": "초록이",
+   "vol": 1820,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "혼자놀기",
-   "vol": 1860,
+   "kw": "볼살빼는법",
+   "vol": 1820,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "푹신한슬리퍼",
-   "vol": 1850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리스만들기",
-   "vol": 1830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티",
-   "vol": 1790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스스노우볼",
-   "vol": 1760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈책상",
-   "vol": 1740,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스머리띠",
-   "vol": 1710,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고속터미널트리",
-   "vol": 1700,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자작나무트리",
-   "vol": 1700,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "창문트리",
+   "kw": "레몬밤효능",
    "vol": 1700,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다이소크리스마스장식",
-   "vol": 1690,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어린이전동칫솔",
+   "kw": "안국약품루테인",
    "vol": 1680,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아독서대",
-   "vol": 1670,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스풍선",
-   "vol": 1670,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전나무트리",
+   "kw": "체지방컷팅제",
+   "vol": 1670,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "차바이오",
    "vol": 1660,
    "comp": "높음",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "아기책상의자",
-   "vol": 1650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장실바닥매트",
+   "kw": "신콘레이저레벨기",
    "vol": 1650,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "고속터미널크리스마스",
-   "vol": 1650,
+   "kw": "NKCELL",
+   "vol": 1630,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스포장지",
-   "vol": 1640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "슬리퍼거치대",
+   "kw": "똥배빼는법",
    "vol": 1620,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스벽장식",
-   "vol": 1600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벽걸이트리",
-   "vol": 1600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "슬리퍼추천",
-   "vol": 1560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스의상",
-   "vol": 1550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이책상의자",
-   "vol": 1510,
+   "kw": "혈당스파이크졸음",
+   "vol": 1570,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스인형",
-   "vol": 1500,
+   "kw": "토비콤",
+   "vol": 1550,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "줄기세포앰플",
+   "vol": 1540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성실내슬리퍼",
-   "vol": 1490,
+   "kw": "2주다이어트",
+   "vol": 1480,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "산타복",
+   "kw": "루테인지아잔틴미니",
    "vol": 1470,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "PE크리스마스트리",
-   "vol": 1460,
+   "kw": "카테킨효능",
+   "vol": 1430,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈칫솔",
-   "vol": 1450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스센터피스",
-   "vol": 1440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미끄럼방지욕실화",
-   "vol": 1440,
+   "kw": "나이트번내돈내산",
+   "vol": 1430,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스인테리어",
+   "kw": "안국루테인",
    "vol": 1410,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "욕실정리함",
-   "vol": 1410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가렌드",
-   "vol": 1410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타인형",
-   "vol": 1410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스쿠션",
+   "kw": "내장지방분해",
    "vol": 1400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "래디어스칫솔",
-   "vol": 1380,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "트리오너먼트세트",
+   "kw": "뱃살다이어트",
    "vol": 1340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가정용크리스마스트리",
-   "vol": 1320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "PE트리",
-   "vol": 1320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스만들기키트",
+   "kw": "탄수화물컷팅제",
    "vol": 1310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "두돌아기책상",
-   "vol": 1310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고급트리",
-   "vol": 1300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리렌탈",
-   "vol": 1290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스이벤트",
-   "vol": 1280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스조화",
-   "vol": 1270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실수납선반",
-   "vol": 1260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가랜드제작",
-   "vol": 1260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스홈파티",
-   "vol": 1250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리리본",
+   "kw": "배관내시경카메라",
    "vol": 1240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가죽공예키트",
+   "kw": "안국제약루테인",
    "vol": 1230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스노우볼만들기",
-   "vol": 1230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리꾸미기",
-   "vol": 1220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스초",
-   "vol": 1220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스카드만들기",
-   "vol": 1210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "각도조절책상",
-   "vol": 1210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스모루",
-   "vol": 1210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실수납",
-   "vol": 1200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "무드등만들기",
-   "vol": 1200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "트리만들기",
-   "vol": 1140,
+   "kw": "식욕억제",
+   "vol": 1180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리렌탈",
-   "vol": 1130,
+   "kw": "다이어트차추천",
+   "vol": 1180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실실내화",
+   "kw": "남자다이어트보조제",
+   "vol": 1160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식욕",
+   "vol": 1120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터토비아",
+   "vol": 1120,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "복부지방빼는법",
    "vol": 1100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등학교책상",
+   "kw": "체감환",
    "vol": 1100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "꼬마전구",
-   "vol": 1100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "꽃리스",
-   "vol": 1100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아크리스마스옷",
-   "vol": 1080,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조아트트리",
+   "kw": "체중감량",
    "vol": 1050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국제약",
+   "vol": 1040,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기테이블",
-   "vol": 1040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타옷",
-   "vol": 1040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기산타옷",
-   "vol": 1040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스DIY",
-   "vol": 1030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "지끈",
-   "vol": 1030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가죽슬리퍼",
-   "vol": 1010,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스러그",
-   "vol": 1000,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스원피스",
-   "vol": 990,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모루인형키트",
+   "kw": "마르비니",
    "vol": 980,
-   "comp": "높음",
-   "hint": false
+   "comp": "낮음",
+   "hint": true
   },
   {
-   "kw": "공단리본",
-   "vol": 970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실디스펜서",
-   "vol": 970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여아크리스마스원피스",
+   "kw": "일주일다이어트",
    "vol": 960,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실수건선반",
+   "kw": "다이어트영양제",
    "vol": 960,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스모자",
-   "vol": 950,
-   "comp": "높음",
+   "kw": "연예인다이어트",
+   "vol": 900,
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "무장식트리",
-   "vol": 950,
-   "comp": "높음",
+   "kw": "공복혈당105",
+   "vol": 900,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "조경자재",
-   "vol": 940,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리가랜드",
-   "vol": 940,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타풍선",
-   "vol": 940,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원크리스마스선물",
-   "vol": 930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "만들기재료",
-   "vol": 930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리추천",
-   "vol": 930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌아기칫솔",
-   "vol": 910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리별",
-   "vol": 910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "그림그리기세트",
+   "kw": "붓기약",
    "vol": 900,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "친환경칫솔",
+   "kw": "만안문구",
    "vol": 900,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "발등낮은욕실화",
-   "vol": 890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등입학선물",
-   "vol": 890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리미니",
-   "vol": 890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리별",
+   "kw": "폴리덱스트로스",
    "vol": 870,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아용의자",
-   "vol": 870,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아전동칫솔",
-   "vol": 870,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스캔들",
+   "kw": "올리브영다이어트보조제",
    "vol": 860,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스양말주머니",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아책상의자",
-   "vol": 850,
+   "kw": "가르시니아캄보지아",
+   "vol": 800,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "포장리본",
-   "vol": 850,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "루돌프옷",
-   "vol": 850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "하프트리",
-   "vol": 850,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "리더스칫솔",
-   "vol": 850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리180",
-   "vol": 850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스LED",
-   "vol": 830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "설치미술",
-   "vol": 830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집크리스마스행사",
-   "vol": 830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리리본",
-   "vol": 830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모루인형옷",
-   "vol": 830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편한슬리퍼",
-   "vol": 830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형트리대여",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스볼",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아테이블",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쿠션실내화",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타복장",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장실수납",
-   "vol": 810,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백화점크리스마스트리",
-   "vol": 810,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니전구",
+   "kw": "뱃살빼기",
    "vol": 800,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스키트",
+   "kw": "살빠지는차",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "상체살빼기",
    "vol": 790,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카페크리스마스트리",
-   "vol": 790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실화추천",
-   "vol": 780,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스룩",
+   "kw": "가르시니아효능",
    "vol": 780,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스대형트리",
-   "vol": 770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스소품샵",
-   "vol": 770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이케아크리스마스장식",
-   "vol": 770,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "반쪽트리",
-   "vol": 770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식품",
-   "vol": 760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호텔크리스마스트리",
-   "vol": 760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실악세사리",
-   "vol": 750,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "금사",
-   "vol": 740,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터치카",
-   "vol": 730,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "산타코스튬",
-   "vol": 730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커튼조명",
+   "kw": "혈당컷다이어트",
    "vol": 720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전구트리",
-   "vol": 720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가죽실내화",
-   "vol": 720,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스집꾸미기",
+   "kw": "칼로리컷",
    "vol": 710,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실슬라이딩장",
-   "vol": 710,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타망토",
-   "vol": 710,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스코스프레",
-   "vol": 710,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실수납함",
+   "kw": "건강한다이어트",
    "vol": 700,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "병원실내화",
-   "vol": 700,
+   "kw": "EGCG",
+   "vol": 690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "포인세티아조화",
+   "kw": "다이어트보조제순위",
+   "vol": 680,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "40대다이어트",
    "vol": 680,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홈슬리퍼",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인천크리스마스",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스포장",
+   "kw": "녹차의효능",
    "vol": 670,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "리본인쇄",
+   "kw": "도자기가마",
    "vol": 670,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "LED트리",
-   "vol": 670,
+   "kw": "여자다이어트보조제",
+   "vol": 665,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스시트지",
+   "kw": "칼로리컷팅제",
    "vol": 660,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기크리스마스모자",
-   "vol": 660,
-   "comp": "높음",
+   "kw": "가르시니아추천",
+   "vol": 640,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "트리받침대",
-   "vol": 660,
-   "comp": "높음",
+   "kw": "분홍이초록이",
+   "vol": 630,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스트리장식소품",
-   "vol": 650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원책상",
+   "kw": "다이어트에좋은음식",
    "vol": 630,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아슬리퍼",
+   "kw": "샤넬스티커",
    "vol": 630,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "트리인형",
-   "vol": 620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리풀세트",
-   "vol": 610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기욕실화",
-   "vol": 610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "얀바밍",
-   "vol": 600,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "화장실정리대",
+   "kw": "올리브영다이어트",
    "vol": 600,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "화장실정리함",
+   "kw": "녹차추출물",
    "vol": 600,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스가로등",
+   "kw": "안국건강루테인미니",
    "vol": 590,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "트리150",
-   "vol": 590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "낮은욕실슬리퍼",
+   "kw": "고함량가르시니아",
    "vol": 580,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이책상세트",
-   "vol": 570,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "초등학생칫솔",
+   "kw": "항노화",
    "vol": 570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리세트",
+   "kw": "중년다이어트",
    "vol": 570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아밸런스보드",
+   "kw": "쿠레타케붓펜22호",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지알엔",
+   "vol": 560,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "초록이분홍이",
+   "vol": 560,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "다꾸스탬프",
    "vol": 560,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스리본장식",
-   "vol": 560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리210",
-   "vol": 560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄트리",
+   "kw": "지방분해",
    "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스리스재료",
+   "kw": "술배빼는법",
    "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "눈사람인형",
+   "kw": "맛있는다이어트음식",
    "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "루돌프머리띠",
+   "kw": "잔티젠다이어트",
    "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스박스",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스오너먼트만들기",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "별조명",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스테이블장식",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "헬로키티굿즈",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남대문시장크리스마스",
-   "vol": 530,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "낮은욕실화",
+   "kw": "식단관리",
    "vol": 530,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "화장지걸이",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친환경욕실화",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형트리렌탈",
+   "kw": "토비콤루테인지아잔틴",
    "vol": 520,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실내화추천",
-   "vol": 520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "안미끄러운슬리퍼",
-   "vol": 520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타코스프레",
-   "vol": 520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티용품",
+   "kw": "그린몬스터다이어트",
    "vol": 510,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "화장실실내화",
-   "vol": 510,
+   "kw": "단기다이어트",
+   "vol": 500,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아동책상",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고속터미널크리스마스트리",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가랜드트리",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학생실내화",
-   "vol": 510,
+   "kw": "분홍이",
+   "vol": 490,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "라이온칫솔",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스테이블러너",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스리스DIY",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집책상",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "하얀트리",
-   "vol": 500,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "LED꼬마전구",
-   "vol": 500,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "조명트리",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장실서랍장",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "선물포장리본",
+   "kw": "아이원루테인",
    "vol": 490,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퍼라이트",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타양말",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "루돌프코",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스종",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형크리스마스트리대여",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈의자",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다이소욕실슬리퍼",
-   "vol": 470,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "오너먼트세트",
+   "kw": "카테킨아세로라",
    "vol": 470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "포토존대여",
+   "kw": "살빼는방법",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "콜튼",
+   "vol": 470,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "OKI",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식욕억제보조제",
    "vol": 460,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스오너먼트세트",
-   "vol": 460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스퍼즐",
-   "vol": 460,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "소형트리",
-   "vol": 450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리리스",
-   "vol": 450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "작은트리",
-   "vol": 450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이용소파",
-   "vol": 445,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미니트리만들기",
-   "vol": 440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스가렌드",
-   "vol": 440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "슬림퍼",
+   "kw": "그린몬스터가르시니아",
    "vol": 440,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "원데이클래스어플",
+   "kw": "50대다이어트",
    "vol": 440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가죽공예DIY",
+   "kw": "아이원루테인지아잔틴미니",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국루테인미니",
    "vol": 430,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스선물포장",
-   "vol": 430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리모루",
-   "vol": 430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실화걸이",
-   "vol": 430,
+   "kw": "나이트번후기",
+   "vol": 420,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스분위기",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장실거울수납장",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이책상의자세트",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고터크리스마스트리",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장실용품",
+   "kw": "가르시니아먹는법",
    "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목공DIY",
+   "kw": "이지슬림",
    "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "거실공부방",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리풀세트",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스츄리",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이높이조절책상",
-   "vol": 400,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "미끄럼방지실내화",
+   "kw": "남성다이어트보조제",
    "vol": 400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대형산타",
+   "kw": "비타젠",
    "vol": 400,
-   "comp": "높음",
-   "hint": false
+   "comp": "낮음",
+   "hint": true
   },
   {
-   "kw": "아기대나무칫솔",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이케아욕실선반",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모루인형키링",
+   "kw": "일본줄기세포",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스복장",
+   "kw": "다이어트보조식품",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "LED트리전구",
+   "kw": "안국건강루테인지아잔틴",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "흡착식욕실선반",
-   "vol": 390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리용품",
+   "kw": "OKI프린터",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스조형물",
+   "kw": "모나미스테이션",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "야외트리",
-   "vol": 380,
-   "comp": "높음",
+   "kw": "오다클리닉",
+   "vol": 370,
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리인형",
-   "vol": 380,
-   "comp": "높음",
+   "kw": "체지방빼기",
+   "vol": 370,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스산타",
-   "vol": 380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스등",
-   "vol": 380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스풍선장식",
-   "vol": 380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "180트리",
-   "vol": 380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인공토",
+   "kw": "다이어트프로그램",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파라소",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울만들기",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아욕실화",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "은하수전구",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3M크리스마스트리",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스별",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여아크리스마스옷",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스전등",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백화점트리",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5세책상",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리추천",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부산트리대여",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스인테리어소품",
+   "kw": "클로로겐산",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "LED크리스마스트리",
+   "kw": "에코너",
    "vol": 360,
    "comp": "높음",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "가정용트리",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타장식",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리장식오너먼트",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생입학선물",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스냅킨",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리설치",
+   "kw": "체지방감소영양제",
    "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스장식만들기",
+   "kw": "고도비만다이어트",
    "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스케이크장식",
+   "kw": "살빼는운동",
    "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카페크리스마스장식",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미소덴탈칫솔",
+   "kw": "안국루테인지아잔틴미니",
    "vol": 350,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "6세책상",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실서랍장",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실미끄럼방지슬리퍼",
-   "vol": 350,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "LED와이어전구",
-   "vol": 350,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스창문장식",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실내화슬리퍼",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "PE트리180",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리소품",
+   "kw": "효과좋은다이어트보조제",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이집크리스마스",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아파트크리스마스트리",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미술키트",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "DIY그림그리기",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스창문꾸미기",
+   "kw": "HCA",
    "vol": 340,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스코디",
+   "kw": "체지방감소",
    "vol": 340,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "루돌프인형",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스핀",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스대형장식",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이테이블",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터노아대나무칫솔",
+   "kw": "GRN초록이",
    "vol": 330,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "7세책상",
+   "kw": "체지방분해보조제",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "부산크리스마스트리",
+   "kw": "건조기중고",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스천장장식",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3M트리",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스대형리스",
+   "kw": "다이어트제품",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스종이컵",
+   "kw": "남자다이어트",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리대여업체",
+   "kw": "콜튼고압세척기",
    "vol": 320,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "산타머리띠",
-   "vol": 320,
-   "comp": "높음",
+   "kw": "가르니시아",
+   "vol": 310,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "대형리스",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리모자",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스패키지",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄장식",
+   "kw": "50대다이어트방법",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스사슴",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스조명장식",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스리본끈",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이칫솔",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "논슬립욕실화",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스전구트리",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리장식볼",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리3M",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "풍선트리",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실신발",
+   "kw": "카테킨다이어트",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실수납장선반",
+   "kw": "팰렛",
    "vol": 300,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스컨셉",
+   "kw": "에이원더",
    "vol": 300,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "체지방분해제",
+   "vol": 295,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "투명오너먼트",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "별오너먼트",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티룩",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5살책상",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리설치",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "매장크리스마스장식",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베란다슬리퍼",
+   "kw": "그린커피빈",
    "vol": 290,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "공예키트",
+   "kw": "오키프린터",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가죽DIY",
-   "vol": 290,
+   "kw": "단기다이어트보조제",
+   "vol": 285,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈가구",
-   "vol": 290,
+   "kw": "잔티젠효과",
+   "vol": 285,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가죽공예재료",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테이블트리",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화이트크리스마스트리",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주니어칫솔",
-   "vol": 290,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "키즈전동칫솔",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형크리스마스트리",
+   "kw": "녹차다이어트",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "탁상용트리",
+   "kw": "탄수화물차단제",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실선반3단",
+   "kw": "잔티움나이트버닝",
    "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장실선반장",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리대형",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "거실공부방인테리어",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "야외크리스마스트리",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈테이블",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미소덴탈",
-   "vol": 270,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "리본도매",
+   "kw": "연예인다이어트보조제",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스눈사람",
+   "kw": "센텔라모어",
    "vol": 270,
-   "comp": "높음",
-   "hint": false
+   "comp": "중간",
+   "hint": true
   },
   {
-   "kw": "LED꽃다발",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄선물",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "푹신한실내화",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "건전지전구",
-   "vol": 270,
+   "kw": "중고유압실린더",
+   "vol": 260,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스램프",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공예체험",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실정리선반",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리소품",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호텔실내화",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "루돌프모자",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영유아칫솔",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "180CM트리",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장실신발",
+   "kw": "가르시니아효과",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "EVA욕실화",
+   "kw": "하체다이어트",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실청소도구정리",
+   "kw": "혈당스틱",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "40대취미",
+   "kw": "안국건강루테인지아잔틴미니",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리장식볼",
-   "vol": 250,
+   "kw": "가르시니아캄보지아추출물",
+   "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스전구장식",
-   "vol": 250,
+   "kw": "내장비만",
+   "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기크리스마스망토",
-   "vol": 250,
+   "kw": "캐릭터샵",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수면다이어트",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지알앤",
+   "vol": 230,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "7살책상",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기쇼파",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식업체",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리볼",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스소품만들기",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스야외장식",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식볼",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스아이템",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이방책상",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "만들기DIY",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스케이크상자",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "직장인취미추천",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스니스",
-   "vol": 240,
+   "kw": "바이오젠트라",
+   "vol": 230,
    "comp": "중간",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "120CM트리",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리별장식",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스대여",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타할아버지옷",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리탑별",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리풍선",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실청소도구함",
-   "vol": 240,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리오너먼트세트",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리용품",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리캔들",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄절장식",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스악세사리",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스LED장식",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스가방",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리구매",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스행잉",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스앞치마",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스테이블",
+   "kw": "체지방감소보조제",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미술학원책상",
+   "kw": "내살을부탁해",
+   "vol": 220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "식욕억제차",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리LED",
+   "kw": "운동보조제",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "LED크리스마스",
+   "kw": "중고유압프레스",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기책상추천",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원생책상",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "야외트리전구",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스양초",
+   "kw": "체지방줄이는식단",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스집",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스홈데코",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "문에안걸리는욕실화",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초대형트리",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "레진아트키트",
+   "kw": "복부다이어트",
    "vol": 210,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아동욕실화",
+   "kw": "체지방분해",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "벽크리스마스트리",
-   "vol": 210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리별장식",
+   "kw": "장디톡스",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아파트트리",
+   "kw": "포용계",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일본중입자치료",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아용책상",
+   "kw": "보조제",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "저학년책상",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스가랜드만들기",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스홀더",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "국산욕실화",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리볼",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리가랜드",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벽트리만들기",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스리스장식",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탁상트리",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리리본장식",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리장식세트",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티의상",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아높이조절책상",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리LED",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대구크리스마스트리",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흰색트리",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스촛대",
+   "kw": "다이어트보조제내돈내산",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실가구",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "낮은슬리퍼",
+   "kw": "가르시니아다이어트",
    "vol": 190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "초등학생책상세트",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여아책상",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목욕탕슬리퍼",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벽걸이크리스마스트리",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "레드오너먼트",
+   "kw": "절연애자",
    "vol": 190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스가렌더",
+   "kw": "제환기",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리구매",
+   "kw": "캐시퐁",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "프레스온",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "코팅종이",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "산타클로스인형",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스줄조명",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스매장꾸미기",
+   "kw": "파킨슨줄기세포치료",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실타올걸이",
+   "kw": "효과좋은단기간다이어트",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "샤바스욕실화",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리등",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실내슬리퍼추천",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "국산실내화",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타수염",
+   "kw": "남자체지방",
    "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스트리사진",
+   "kw": "갱년기다이어트보조제",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리장식세트",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LED트리조명",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스랜턴",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조화가랜드",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디어커스누볼라",
+   "kw": "COLTON",
    "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기놀이테이블",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어린이좌식책상",
+   "kw": "파워프레스",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리DIY",
+   "kw": "안국루테인지아잔틴",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "광주크리스마스트리",
+   "kw": "안국약품루테인지아잔틴",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인형트리",
+   "kw": "다꾸스티커팩",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "PE트리150",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스소품대여",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스별장식",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티소품",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미끄럼방지욕실슬리퍼",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무뚜기조명",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스창문",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무뚜기전구",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타분장",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리풍선",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "움직이는산타인형",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LION칫솔",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "눈사람트리",
+   "kw": "로렌츠스틱",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "어린이어금니칫솔",
+   "kw": "줄기세포배양액",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리장식품",
-   "vol": 160,
+   "kw": "지방분해제",
+   "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캐릭터욕실화",
-   "vol": 160,
+   "kw": "중학생다이어트",
+   "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대형크리스마스장식",
-   "vol": 160,
+   "kw": "다이어트센터",
+   "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이만들기체험",
-   "vol": 160,
+   "kw": "10키로감량",
+   "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "물빠짐욕실화",
-   "vol": 160,
+   "kw": "체지방다이어트",
+   "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기욕실슬리퍼",
-   "vol": 160,
+   "kw": "단식다이어트",
+   "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아욕실슬리퍼",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스LED트리",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편안한슬리퍼",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울소품",
-   "vol": 160,
+   "kw": "차전자피가르시니아",
+   "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "눈꽃전구",
+   "kw": "전동청소기",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수압측정기",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쿠루토가샤프심",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잔티움",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "슈퍼오메가3",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이어트샵",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리파는곳",
+   "kw": "쾌변주스",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "예쁜트리",
+   "kw": "물에타먹는다이어트",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "2M트리",
+   "kw": "중고집진기",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무대장식",
+   "kw": "전산용품",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "움직이는산타",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대전크리스마스트리",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스야외조명",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리업체",
+   "kw": "부산줄기세포",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리설치업체",
+   "kw": "지방분해알약",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "그래피티니팅",
-   "vol": 150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스준비",
+   "kw": "호르몬다이어트",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "안미끄러운욕실화",
+   "kw": "다이어트건강기능식품",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이책상추천",
+   "kw": "레이저수평",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어르신만들기",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "센스풋욕실화",
+   "kw": "한국오키시스템즈",
    "vol": 150,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "미니트리전구",
+   "kw": "문구몰",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스장식조명",
+   "kw": "루테인안국건강",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고급실내화",
+   "kw": "루테인지아잔틴플러스",
    "vol": 150,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스미니장식",
+   "kw": "체지방약",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스용품도매",
+   "kw": "중년뱃살",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "모루인형만들기키트",
+   "kw": "칼로리커트",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이책상의자",
+   "kw": "탄수화물분해",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아책상세트",
+   "kw": "다이어트가르시니아",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중년여성다이어트",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디톡스환",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "후코잔틴",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비글로어",
    "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "만들기취미",
+   "kw": "비료공장",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "교구만들기",
+   "kw": "커팅매트A2",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스방꾸미기",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "사슴트리",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스미니리스",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스일회용접시",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "눈사람장식",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타의상",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리1.5M",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고드름조명",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄절트리",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백화점크리스마스장식",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실용품세트",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리선물상자",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실행거",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타행사",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈모션데스크",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아체어",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "원형리스",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "나무장식",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등저학년책상",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "취미키트",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생전동칫솔",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캐릭터칫솔",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EVA신발",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "눈사람모형",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "야외크리스마스장식",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LED앵두전구",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형크리스마스리스",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스퀼트",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실리콘슬리퍼",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형눈사람",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5M트리",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타원피스",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물방울조명",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아크리스마스원피스",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈책상의자",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3미터트리",
+   "kw": "지방컷팅제",
    "vol": 130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스트리가정용",
+   "kw": "체지방감량",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리업체",
+   "kw": "리셋다이어트",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "내장지방제거",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이어트관리",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한혜진다이어트",
+   "vol": 130,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "단기간다이어트식단",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "차전자피다이어트",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "로렌드",
+   "vol": 130,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "아스타진틴",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "나이트버닝",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국건강아이원루테인지아잔틴미니",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가르시아효과",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리장식품",
+   "kw": "탄수화물억제제",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스외부장식",
+   "kw": "등살빼기",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스꽃장식",
+   "kw": "해독환",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스펠트",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교회트리",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "귀여운욕실화",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공예DIY",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등책상세트",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "퀼트DIY",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실소품",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "센스풋",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "루돌프트리",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니트리장식",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리리스",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리도매",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "4M트리",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "국산슬리퍼",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "그물전구",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스별조명",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "루돌프장식",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "별전구",
+   "kw": "에버핏다이어트",
    "vol": 120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "장난감테이블",
+   "kw": "다이어트캡슐",
    "vol": 120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "산타소품",
+   "kw": "기초대사량영양제",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "산타걸복장",
+   "kw": "뱃살제거",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스파티복",
+   "kw": "다이어트비타민",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아동실내슬리퍼",
+   "kw": "재팬나인",
    "vol": 120,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스풍선세트",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벽면트리",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "210트리",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리150CM",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타이벤트",
+   "kw": "NK세포치료",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스캔들홀더",
+   "kw": "혈액줄기세포",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스나무장식",
+   "kw": "다이어트컷",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스장식리본",
+   "kw": "RISO",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "토비콤아이포커스",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "안국제약루테인지아잔틴",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리설치업체",
+   "kw": "안국눈영양제",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "화장실욕실화",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리스장식",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스도매",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "90CM트리",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리180CM",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스벽걸이",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리90",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "메리크리스마스가랜드",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울조화",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실청소도구정리함",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리3M",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타할아버지인형",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "토끼말랑이",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실용품점",
-   "vol": 105,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니트리세트",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울인테리어소품",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원크리스마스",
+   "kw": "차병원줄기세포",
    "vol": 100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "트리장식소품",
+   "kw": "항암면역치료",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "누볼라욕실화",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "모루인형재료",
+   "kw": "가르시아나",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "만들기활동",
+   "kw": "남자뱃살빼는약",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실용슬리퍼",
+   "kw": "워터믹스",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "성탄트리장식",
+   "kw": "장작캠프",
    "vol": 100,
    "comp": "높음",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "크리스마스트리매장",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소나무트리",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리재료",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타클로스옷",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기크리스마스의상",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "높이조절아기책상",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스산타풍선",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "광주트리",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "야외용트리",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공부방테이블",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리임대",
+   "kw": "일본암치료",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "야외대형트리",
+   "kw": "카테킨바나바",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아파트크리스마스장식",
+   "kw": "탄수화물다이어트",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "교회성탄장식",
+   "kw": "체중관리",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스장식세트",
+   "kw": "그린빈커피",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "U자형칫솔",
+   "kw": "혈당건강바나바",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등DIY",
+   "kw": "중고믹서기",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "편한실내화",
+   "kw": "펜라이",
    "vol": 90,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스LED전구",
+   "kw": "안국제약루테인미니",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "60CM트리",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리가격",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스가랜더",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식전구",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "8살책상",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "야외트리조명",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형트리장식",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리도매",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이치과칫솔",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "루돌프풍선",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대구트리",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스사슴장식",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용쇼파",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타조형물",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고급욕실화",
+   "kw": "뱃살다이어트보조제",
    "vol": 85,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대형트리설치",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실트리",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교회크리스마스장식",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "색동나무",
+   "kw": "GRN분홍이",
    "vol": 80,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "행사장꾸미기",
+   "kw": "컷팅제",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "체지방컷팅",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스세트",
+   "kw": "체지방컷",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "내장지방약",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스홈파티꾸미기",
+   "kw": "잔티바발포비타민",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가르시니아유산균",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "교회성탄절장식",
+   "kw": "세라믹튜브",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "성탄리스",
+   "kw": "타일공장",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "취미DIY",
+   "kw": "크라프트보드",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실슬리퍼추천",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "집에서취미",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경량토",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미술재료도매",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미끄럼방지화장실슬리퍼",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스업체",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리60CM",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리재료",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탁상용크리스마스트리",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄트리전구",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "눈꽃오너먼트",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스연출",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "빅사이즈욕실화",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이책상침대세트",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리240",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리2M",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가죽실내슬리퍼",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리축제",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리180CM",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이전동칫솔",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목욕탕신발",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이케아욕실화",
+   "kw": "안국루테인지아잔틴플러스",
    "vol": 75,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "고급오너먼트",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영유아책상",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터노아아기칫솔",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "4세어린이집생일선물",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스추리",
+   "kw": "NK면역세포",
    "vol": 70,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "트리임대",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실크리스마스트리",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리제작",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄절데코",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스재료",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집크리스마스만들기",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집테이블",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아놀이테이블",
+   "kw": "헬스컷",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "오우투욕실화",
+   "kw": "탄수화물컷",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그린몬스터녹차카테킨",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "미니트리꾸미기",
+   "kw": "복부비만다이어트",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "산타트리",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스리스만들기재료",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스카페꾸미기",
+   "kw": "아모레퍼시픽다이어트",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "트리용전구",
+   "kw": "종아리살빼기",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "화장실미끄럼방지슬리퍼",
+   "kw": "남자다이어트보조제추천",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "핑크오너먼트",
+   "kw": "살빠지는음료",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자산타복",
+   "kw": "집진기중고",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리1M",
+   "kw": "VESUVIUS",
+   "vol": 70,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "내화판",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리몰",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타옷대여",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스펠트가랜드",
+   "kw": "안국건강몰",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "트리조형물",
+   "kw": "수면다이어트보조제",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리5M",
+   "kw": "안국약품루테인미니",
    "vol": 70,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유치원칫솔",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스대형풍선",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리90CM",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스테이블웨어",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리고급",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "예쁜욕실화",
+   "kw": "50대다이어트보조제",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "페이퍼플레인욕실화",
+   "kw": "발포다이어트",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "반짝이전구",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아2인책상",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동책상의자세트",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기높이조절책상",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동책상의자",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스교회장식",
+   "kw": "GRN분홍이초록이",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "겨울장식",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스교실꾸미기",
+   "kw": "줄기세포회사",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스카페인테리어",
+   "kw": "녹차카테킨효능",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스촬영소품",
+   "kw": "녹차카테킨다이어트",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실정리용품",
+   "kw": "체지방보조제",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아동용책상",
+   "kw": "다이어트보조",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "호텔욕실화",
+   "kw": "다이어트업체",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스소품도매",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니크리스마스트리만들기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실크리스마스장식",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탁상용미니트리",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스산타모자",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "예쁜크리스마스트리",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스꼬마전구",
+   "kw": "젤리다이어트",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "LED눈사람",
+   "kw": "크레샤",
+   "vol": 60,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "록스스프링청소기",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "리스가랜드",
+   "kw": "록스스프링",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "LED크리스마스전구",
+   "kw": "중고유압펌프",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초대형크리스마스트리",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리4M",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형트리전구",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티풍선",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "눈사람풍선",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교구책상",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동대문트리",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터치카칫솔",
+   "kw": "황토벽돌기계",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유아용소파",
+   "kw": "세라믹봉",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "울산크리스마스트리",
+   "kw": "단조프레스",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "머리작은칫솔",
+   "kw": "쿠루토",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아파트크리스마스",
+   "kw": "안국약품눈영양제",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리300",
+   "kw": "버닝다이어트",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스데코용품",
+   "kw": "GRN다이어트",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3세칫솔",
+   "kw": "미국다이어트보조제",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미소칫솔",
-   "vol": 55,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "목욕슬리퍼",
+   "kw": "다이어트보조제효과",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "발등낮은슬리퍼",
+   "kw": "올영다이어트",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아산타복",
+   "kw": "변비다이어트",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "창원크리스마스트리",
+   "kw": "루테인지아잔틴안국",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "나이트다이어트",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아원형테이블",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가죽거실화",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자거실슬리퍼",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수원트리",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이전동칫솔추천",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형트리제작",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리제작",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리장식업체",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "눈꽃장식",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스플레이트",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티장식",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스카페장식",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공예용품",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "퇴근후취미",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스유아선물",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고급실내슬리퍼",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "별모양전구",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사슴장식",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리전등",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오우투",
+   "kw": "커팅제",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "교회트리장식",
+   "kw": "체지방관리",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장식리본",
+   "kw": "기초대사량다이어트",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리장식전구",
+   "kw": "그린커피빈추출물",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스대형가랜드",
+   "kw": "체중조절",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신년파티",
+   "kw": "지대포장기",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리완제품",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업소용트리",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "코튼볼조명",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타클로스복장",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벽장식트리",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리250",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목좌식책상",
+   "kw": "레이몬드밀",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스집게핀",
+   "kw": "벽난로유리",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스장식풍선",
+   "kw": "세라믹애자",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리포토존",
+   "kw": "유압프레스중고",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "나무전구",
+   "kw": "피치홀릭",
+   "vol": 50,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "문구류사이트",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스대형트리대여",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "국산대나무칫솔",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "야외용크리스마스트리",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자취방트리",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스물품",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "거실크리스마스트리",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리나무장식",
+   "kw": "마이스크린",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "매장트리",
+   "kw": "엽서프린터",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이각도조절책상",
+   "kw": "기업전용쇼핑몰",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "경관디자인",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄절꾸미기",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄절교회장식",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용책상의자",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EVA욕실슬리퍼",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "국산욕실슬리퍼",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이색트리",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수입오너먼트",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벽트리전구",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아산타모자",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동크리스마스옷",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄절의상대여",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아크리스마스의상",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기원목테이블",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아놀이책상",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교회장식",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주니어책상세트",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스데코레이션",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식용품",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페크리스마스인테리어",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스실내장식",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄절소품",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공공예술",
-   "vol": 40,
+   "kw": "안국몰",
+   "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "인공토양",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈책상세트",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "논슬립욕실슬리퍼",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "연말장식",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식LED",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식물",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스매장",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "앵두전구트리",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스헬륨풍선",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "눈사람소품",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스디스플레이",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "백화점VMD",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리1.8M",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전구장식",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리대여업체",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타할아버지복장",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스산타복",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식가랜드",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여름실내화",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5미터트리",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영아책상",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "프리미엄트리",
-   "vol": 40,
+   "kw": "안국건강루테인지아잔틴플러스",
+   "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "외부트리",
-   "vol": 40,
+   "kw": "안국건강아이원루테인미니",
+   "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "나무트리조명",
-   "vol": 40,
+   "kw": "내장지방다이어트",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스야외트리",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스외벽장식",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실용품전문",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "지네전구1600",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스배경현수막",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리허그",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "병원크리스마스",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스용품점",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식꾸미기",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "예쁜욕실슬리퍼",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미끄러지지않는욕실화",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가죽공예DIY키트",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실슬리퍼미끄럼방지",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "발리나욕실화",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "안걸리는욕실화",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이케아욕실슬리퍼",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장실낮은슬리퍼",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "추리전구",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스눈꽃",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교회성탄트리",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베란다실내화",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자산타옷",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물잘빠지는욕실화",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아크리스마스망토",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "곰팡이안생기는욕실화",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성산타복",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아산타옷",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아원형책상",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보드책상",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "클레이책상",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "반달책상",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타할아버지풍선",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스사슴인형",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "20개월아기칫솔",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오랄비바이탈리티키즈",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "꽃트리",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스조경",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스조명설치",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집크리스마스꾸미기",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티세트",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스소품파는곳",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스포장리본",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "토탈공예재료",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "DIY공예",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "혼자하는취미",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미술치료재료",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편한슬리퍼추천",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "푹신한욕실화",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스장식도매",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실크리스마스꾸미기",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기크리스마스소품",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아파트트리장식",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스무장식트리",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리인테리어",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호텔크리스마스장식",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스풍선아트",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어린이산타복",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LED사슴",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티옷",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이산타망토",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스경관조명",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "병원트리",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리판매",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리조형물",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "선물상자장식",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부산대형트리",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "천안크리스마스트리",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "방산시장크리스마스",
-   "vol": 25,
+   "kw": "안국건강잔티움",
+   "vol": 45,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "유치원테이블",
-   "vol": 25,
+   "kw": "안국토비콤",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가계부스티커",
+   "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마리모아",
+   "kw": "INKT",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "줄기세포보관",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체질다이어트",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이어트건강식품",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이어트식욕억제",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오늘은그린커피빈",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "인슐린다이어트",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사이클다이어트",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "60대다이어트",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성다이어트",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "루미덤",
+   "vol": 40,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "리소인쇄기",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "명함프린터",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국지아잔틴",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "못난이채소껌",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "식전다이어트보조제",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "탄수화물컷팅",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체지방컷팅제추천",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "칼로리컷팅",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체지방감소건강기능식품",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이어트컷팅",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세라컷",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "비비랩다이어트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비비랩혈당컷",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "중년여성뱃살",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "클로로겐산커피",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바나바잎다이어트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이어트혈당",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "당뇨보조식품",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "혈당억제제",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도자기가마중고",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캘리재료",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "ES9411DN",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국약품아스타잔틴",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "안국건강눈영양제",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "안국약품루테인지아잔틴미니",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도무송도안",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체지방분해유산균",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "CTC검사",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "줄기세포연구소",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "셀뱅킹",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "체지방감량보조제",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이어트브랜드",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잔티바",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "돌외에빠지다",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "좋은습관애사비",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "그린커피빈다이어트",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고볼밀",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "중고유압유니트",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "내화갑",
+   "vol": 30,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "안국루테인미니100",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "GRN초록이분홍이",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유치원책상의자",
+   "kw": "초록이다이어트",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이스터디책상",
+   "kw": "슬림밸런스",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "곰돌이욕실화",
+   "kw": "하체다이어트보조제",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목욕탕실내화",
+   "kw": "가르시니아HCA",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고급거실실내화",
+   "kw": "가르시니아보조제",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕실미끄럼방지신발",
+   "kw": "다이어트컷팅제",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스별전구",
+   "kw": "수용성가르시니아",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕조슬리퍼",
+   "kw": "커피빈다이어트",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "성탄소품",
+   "kw": "식욕억제다이어트",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "업소용크리스마스트리",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "욕실실내화추천",
+   "kw": "올리브영보조제",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "국내산슬리퍼",
+   "kw": "홈다이어트",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "국내산욕실화",
+   "kw": "체중감량보조제",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자연주의욕실화",
+   "kw": "지방컷",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마산크리스마스",
+   "kw": "내장지방보조제",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "안미끄러지는욕실화",
+   "kw": "녹차추출물다이어트",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "트리완제품",
+   "kw": "닥터다이어트",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "항균욕실화",
+   "kw": "다이어트식품쇼핑몰",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이산타옷",
+   "kw": "다이어트콜라겐",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "산타클로스모자",
+   "kw": "가르시니아차전자피",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이크리스마스의상",
+   "kw": "그린빈다이어트",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이집좌식책상",
+   "kw": "칼로리컷트",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아책걸상",
+   "kw": "남성다이어트보조제추천",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아동책상",
+   "kw": "잔티젠내돈내산",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "메리크리스마스풍선",
+   "kw": "아모레다이어트",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아낮은책상",
+   "kw": "비타민차",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "풍선크리스마스트리",
+   "kw": "하체비만보조제",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아원목테이블",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스루돌프머리띠",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스건물장식",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리270",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "높이조절학생책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "닥터노아키즈치약",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스종이접시",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주니어전동칫솔",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스고급트리",
+   "kw": "율무원액",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스전나무트리",
+   "kw": "혈당관리다이어트",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아동소파",
+   "kw": "하이생녹차로빼",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "RK-700",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "각도높이조절책상",
+   "kw": "록스전동스프링청소기",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스글자장식",
+   "kw": "마스터인쇄기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유화쇼핑몰",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국제약루테인지아잔틴미니",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잔티젠나이트버닝",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "세포은행",
+   "vol": 20,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "다이어트비대면",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스쇼핑몰",
+   "kw": "중고전기로",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "취미박스",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "매장크리스마스트리",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "병원크리스마스트리",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "연말파티장식",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄가랜드",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리구입",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "연말파티소품",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리장식전구",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "폭포수LED",
+   "kw": "스프레이드라이",
    "vol": 20,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "산타의상대여",
+   "kw": "리소프린터",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스데코업체",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리시공",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모델하우스실내화",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "눈사람머리띠",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리월드",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "매장크리스마스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스케익초",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티준비",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스홈파티장식",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티꾸미기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄데코",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "회사트리",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스매장장식",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마리모아칫솔",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원책걸상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집책상의자",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치부책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "발등낮은욕실슬리퍼",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원책상세트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "간단한DIY",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미끄럽지않은욕실화",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EVA거실실내화",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "문에안걸리는슬리퍼",
+   "kw": "줄기세포뱅킹",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "친환경욕실슬리퍼",
+   "kw": "NK바이오",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "친환경슬리퍼",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실화1+1",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스사이트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리구입",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학원크리스마스",
+   "kw": "줄기세포연구원",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "안전실내화",
+   "kw": "짜먹는펫치즈",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "다용도실슬리퍼",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더살림욕실화",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "문안걸리는욕실화",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호텔욕실슬리퍼",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신년이벤트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물때안끼는욕실화",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실화290",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미끄럼방지욕실실내화",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "280욕실화",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실화물때",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "물때욕실화",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아빠산타복",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타할아버지모자",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "성탄절망토",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자산타옷",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타복세트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스의류",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "욕실화빅사이즈",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "290욕실화",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "곰팡이없는욕실화",
+   "kw": "주식회사티지알앤",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "건물크리스마스장식",
+   "kw": "초록이액티브클린",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이책걸상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "해피뉴이어가랜드",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형크리스마스트리렌탈",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기테이블",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집좌식테이블",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스은박풍선",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이학원책상",
+   "kw": "다이어트초록이",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "트리장식업체",
+   "kw": "초록이시즌4",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스트리머리띠",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산타벨트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스트리완성품",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈책상추천",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "트리선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "DR.NOAH",
+   "kw": "다이어트분홍이",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "닥터노아고체치약",
+   "kw": "지알엔분홍이",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아용원목의자",
+   "kw": "다이어트건기식",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "발레코어트리",
+   "kw": "지방분해성분",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "행사장장식",
-   "vol": 10,
+   "kw": "가르시니아추출물",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "병원크리스마스장식",
-   "vol": 10,
+   "kw": "탄수화물억제",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유치원크리스마스꾸미기",
-   "vol": 10,
+   "kw": "식후다이어트보조제",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스미니캔들",
-   "vol": 10,
+   "kw": "체지방커팅제",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스파티용품세트",
-   "vol": 10,
+   "kw": "가르시아캄보지아",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스홈파티소품",
-   "vol": 10,
+   "kw": "탄수화물흡수억제",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스홈파티용품",
-   "vol": 10,
+   "kw": "경남제약리셋다이어트",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "가르시니아함량",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "카테킨가르시니아",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스소품꾸미기",
-   "vol": 10,
+   "kw": "체중조절식품",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "해피뉴이어장식",
+   "kw": "내돈내산다이어트",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "천연식욕억제",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뱃살체지방",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "효과적인다이어트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가르시니아효소",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뉴트리원혈당",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이어트남자",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "풋사과추출물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "콜라겐다이어트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비비랩사이클다이어트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가르시니아발포",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "가르시니아가루",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "혈액순환다이어트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "혈당케어다이어트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카테킨분말",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "혈당스파이크다이어트",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "발포가르시니아",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "다이어트원료",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "타먹는다이어트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "혈당케어바나바잎",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바나바잎추출",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발포비타민다이어트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이어트식이요법",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가르시니아음료",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기초대사량증가",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애플페논다이어트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "메디바디",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독일산비타민",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름차",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "숙면다이어트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "녹차로빼",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "RK-650",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "RK650",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "RK1200",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사다몰",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "한라누수탐지기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "RK700",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고도자기가마",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "록스전동청소기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세라믹로라",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "리본배합기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "토르말린볼",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "벌집내화벽돌",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "엽서인쇄기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캐논디지털인쇄기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인터넷문방구",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쿠루토가0.5",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국약품지아잔틴",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "루테인지아잔틴안국건강",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국건강지아잔틴",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이어트나이트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오키프린트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다꾸스티커쇼핑몰",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국건강루테인미니100",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잔티젠추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "(주)티지알앤",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "전시조경",
+   "kw": "GRN시즌4",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "다이어트보조제초록이",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "초록이슬림밸런스",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이쁜욕실화",
+   "kw": "GRN벨리곰",
    "vol": 10,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "영어유치원책상",
+   "kw": "분홍이다이어트",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "볼넓은욕실화",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "오우투슬리퍼",
+   "kw": "분홍이슬림밸런스",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "거실화제작",
+   "kw": "분홍이시즌4",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "칼로리커팅",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이비슬리퍼",
+   "kw": "헬스컷팅제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가르시니아체지방",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "욕실화디어커스",
+   "kw": "체지방감소가르시니아",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지방커팅제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "칼로리커팅제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카테킨보조제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체지방감소제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "탄수화물커트",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "OHOO2",
+   "kw": "탄수화물커팅제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체지방감소다이어트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가르시니아고함량",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "케어플러스리셋다이어트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "EGCG카테킨",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건기식다이어트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식후다이어트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피트니엘",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "카테킨함량",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "녹차카테킨추천",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "녹차추출물건강기능식품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사이클다이어트그린",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "다이어트커팅제",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "경남제약다이어트",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "문에안걸리는욕실슬리퍼",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "발등낮은화장실슬리퍼",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스알전구",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성탄츄리",
+   "kw": "휘게클렌즈다이어트",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "크리스마스기획전",
+   "kw": "건강기능식품다이어트",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "회사크리스마스트리",
+   "kw": "운동선수다이어트",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퓨메노",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스소품매장",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크리스마스파티룸꾸미기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "새해소품",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이용테이블",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "곰팡이욕실화",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성인산타망토",
+   "kw": "아래뱃살빼기",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "빅사이즈욕실슬리퍼",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물빠짐신발",
+   "kw": "국가대표다이어트보조제",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "물잘빠지는슬리퍼",
+   "kw": "지방커팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가르시니아프로바이오틱스",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비비랩사이클다이어트그린",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "신년가랜드",
+   "kw": "비비랩혈당컷다이어트",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무독성욕실화",
+   "kw": "차주영다이어트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "카테킨가루",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "새해장식",
+   "kw": "다이어트기능식품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사이클다이어트레드",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스파티머리띠",
+   "kw": "체지방건강기능식품",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영아용책상",
+   "kw": "남자체지방컷팅제",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "지역아동센터책상",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "새해풍선",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "중고원목책상",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실리콘치약걸이",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노원구풍선",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "도봉구풍선",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아용좌식테이블",
+   "kw": "비비랩사이클",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "기숙사수납장",
+   "kw": "식탐억제",
    "vol": 10,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성뱃살다이어트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "가르시니아분말",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가르시니아제품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가르시니아액상",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자디톡스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "내츄럴플러스에버핏",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마시는가르시니아",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "에버핏유산균다이어트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자뱃살다이어트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레몬밤카테킨",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "뉴트리원혈당컷",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "제지방다이어트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "다이어트패키지",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자다이어트식품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자다이어트영양제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자체지방감소",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "칼로비스가녀릴소다",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "코스바디",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "혈당조절건강식품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "롯데헬스케어필팟",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "필팟",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "CLA추천",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리즈슬림",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "노바렉스잔티젠",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "RK-1000",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공성전동스프링청소기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프레스중고",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "RS-30",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "RSM-10",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고리본믹서",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고제환기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "롤분쇄기",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "중고당의기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고내화벽돌",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리본믹서중고",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대형전기로",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소성가마",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동적재장치",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "함마분쇄기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고파워프레스",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라코세차",
+   "vol": 10,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "캘리그라피쇼핑몰",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주보인쇄기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AGMALL",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "AG몰",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "안심캡슐",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "루테인지아잔틴빌베리",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안국건강나이트버닝",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "안국건강잔티움나이트버닝",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "안국건강잔티젠",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잔티움버닝",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "안국약품영양제",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AWONDER",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "안국루테인츄",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "안국건강루테인츄",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유전자다이어트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "신소재다이어트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "자기전다이어트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "다이어트신소재",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오키프린터토너",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인스만들기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "수면앤다이어트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "푸응다이어트버닝",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "잔티젠성분",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "WCS잔티젠",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "미역추출물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "칼라크라프트지",
+   "vol": 10,
+   "comp": "낮음",
    "hint": false
   }
  ]
