@@ -130,40 +130,49 @@ def text_layer(brand, name, price, hook):
     return L
 
 
-def make(p, hook):
+def cover(im):
+    """사진 그대로(효과 없음) 9:16 꽉 채우기 — 넘치는 쪽만 잘라냄(세로는 위쪽 기준)."""
+    r = max(W / im.width, H / im.height)
+    im = im.resize((int(im.width * r + 0.5), int(im.height * r + 0.5)), Image.LANCZOS)
+    x = (im.width - W) // 2
+    y = int((im.height - H) * 0.25)
+    return im.crop((x, y, x + W, y + H))
+
+
+HOLD = 3.0   # 사진 한 장 보여 주는 시간
+SLIDE = 0.45  # 왼쪽으로 넘어가는 시간
+
+
+def make(p, hook=None):
+    """2026-11-12 시온님: 확대·축소 없이 사진 그대로, 사진만 왼쪽으로 넘어가게. 글자 없음(깔끔하게, 상품 정보는 쇼핑몰 화면이 보여 줌)."""
     no = p["product_no"]
     full = p["product_name"].strip()
     brand = full.split(" ")[0]
-    name = full[len(brand):].strip() or full
     price = int(float(p["price"]))
     ims = pick_images(p)
     if len(ims) < 3:
         print("사진 부족", no, full, len(ims))
         return None
     tmp = tempfile.mkdtemp()
-    text_layer(brand, name, price, hook).save(f"{tmp}/t.png")
-    segs = []
-    n = int(SEG * FPS)
+    cmd = ["ffmpeg", "-y", "-loglevel", "error"]
     for i, im in enumerate(ims):
-        st = still(im)
-        st.save(f"{tmp}/s{i}.jpg", quality=92)
+        c = cover(im)
+        c.save(f"{tmp}/s{i}.jpg", quality=92)
         if i == 0:
-            cv = st.resize((W, H)).convert("RGBA")
-            cv.alpha_composite(Image.open(f"{tmp}/t.png"))
-            cv.convert("RGB").save(f"{OUT}/{no}.jpg", quality=86)
-        zin = i % 2 == 0
-        z = f"1+0.10*on/{n}" if zin else f"1.10-0.10*on/{n}"
-        cmd = ["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-i", f"{tmp}/s{i}.jpg", "-i", f"{tmp}/t.png",
-               "-filter_complex",
-               f"[0:v]scale={int(W*1.12)}:{int(H*1.12)},zoompan=z='{z}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={n}:s={W}x{H}:fps={FPS}[v];[v][1:v]overlay=0:0,format=yuv420p",
-               "-frames:v", str(n), "-c:v", "libx264", "-preset", "medium", "-crf", "27", f"{tmp}/g{i}.mp4"]
-        subprocess.run(cmd, check=True)
-        segs.append(f"{tmp}/g{i}.mp4")
-    with open(f"{tmp}/l.txt", "w") as f:
-        for s in segs:
-            f.write(f"file '{s}'\n")
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", f"{tmp}/l.txt",
-                    "-c", "copy", "-movflags", "+faststart", f"{OUT}/{no}.mp4"], check=True)
+            c.save(f"{OUT}/{no}.jpg", quality=86)
+        cmd += ["-loop", "1", "-framerate", str(FPS), "-t", str(HOLD + SLIDE), "-i", f"{tmp}/s{i}.jpg"]
+    fc, last = [], "[0:v]"
+    for i in range(len(ims)):
+        fc.append(f"[{i}:v]fps={FPS},format=yuv420p,setsar=1[v{i}]")
+    last = "[v0]"
+    for i in range(1, len(ims)):
+        off = round(i * HOLD - (i - 1) * 0 , 3)
+        off = round(i * HOLD, 3)
+        fc.append(f"{last}[v{i}]xfade=transition=slideleft:duration={SLIDE}:offset={off}[x{i}]")
+        last = f"[x{i}]"
+    cmd += ["-filter_complex", ";".join(fc), "-map", last, "-c:v", "libx264", "-preset", "medium", "-crf", "26",
+            "-pix_fmt", "yuv420p", "-movflags", "+faststart", f"{OUT}/{no}.mp4"]
+    subprocess.run(cmd, check=True)
     return {"no": no, "name": full, "brand": brand, "price": price, "img": p.get("list_image"),
             "video": f"https://www.dagguu.com/{OUT}/{no}.mp4", "poster": f"https://www.dagguu.com/{OUT}/{no}.jpg",
             "url": f"{SHOP}/product/detail.html?product_no={no}"}
