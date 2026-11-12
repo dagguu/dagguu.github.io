@@ -6,7 +6,6 @@
   "price": 56000,
   "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261110/1f766712c81f698b6de21c6bdbb7d552.jpg",
   "video": "https://www.dagguu.com/kids/v/25.mp4",
-  "cut": "https://www.dagguu.com/kids/v/25_cut.mp4",
   "poster": "https://www.dagguu.com/kids/v/25.jpg",
   "url": "https://dagguukids.com/product/detail.html?product_no=25"
  },
@@ -17,7 +16,6 @@
   "price": 24000,
   "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261111/beae83f55095660e2ddb954b90f75c29.jpg",
   "video": "https://www.dagguu.com/kids/v/117.mp4",
-  "cut": "https://www.dagguu.com/kids/v/117_cut.mp4",
   "poster": "https://www.dagguu.com/kids/v/117.jpg",
   "url": "https://dagguukids.com/product/detail.html?product_no=117"
  },
@@ -28,7 +26,6 @@
   "price": 22400,
   "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261111/78b2aaa4fc8f9afafd685977e6075312.jpg",
   "video": "https://www.dagguu.com/kids/v/122.mp4",
-  "cut": "https://www.dagguu.com/kids/v/122_cut.mp4",
   "poster": "https://www.dagguu.com/kids/v/122.jpg",
   "url": "https://dagguukids.com/product/detail.html?product_no=122"
  },
@@ -39,7 +36,6 @@
   "price": 20800,
   "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261112/05b4702ca69d3fcbf57fac19cfb9901c.jpg",
   "video": "https://www.dagguu.com/kids/v/460.mp4",
-  "cut": "https://www.dagguu.com/kids/v/460_cut.mp4",
   "poster": "https://www.dagguu.com/kids/v/460.jpg",
   "url": "https://dagguukids.com/product/detail.html?product_no=460"
  },
@@ -50,7 +46,6 @@
   "price": 35200,
   "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261112/28a2fb240b3cefea749ed36a55c02f64.jpg",
   "video": "https://www.dagguu.com/kids/v/462.mp4",
-  "cut": "https://www.dagguu.com/kids/v/462_cut.mp4",
   "poster": "https://www.dagguu.com/kids/v/462.jpg",
   "url": "https://dagguukids.com/product/detail.html?product_no=462"
  },
@@ -119,9 +114,8 @@
     "url": "https://dagguukids.com/product/detail.html?product_no=133"
    }
   ],
-  "seg": 1.32,
+  "seg": 1.0,
   "video": "https://www.dagguu.com/kids/v/b44.mp4",
-  "cut": "https://www.dagguu.com/kids/v/b44_cut.mp4",
   "poster": "https://www.dagguu.com/kids/v/b44.jpg",
   "url": "https://dagguukids.com/product/list.html?cate_no=44"
  },
@@ -190,9 +184,8 @@
     "url": "https://dagguukids.com/product/detail.html?product_no=456"
    }
   ],
-  "seg": 1.32,
+  "seg": 1.0,
   "video": "https://www.dagguu.com/kids/v/b47.mp4",
-  "cut": "https://www.dagguu.com/kids/v/b47_cut.mp4",
   "poster": "https://www.dagguu.com/kids/v/b47.jpg",
   "url": "https://dagguukids.com/product/list.html?cate_no=47"
  }
