@@ -435,7 +435,7 @@
       var L = my.concat(dl); if (!L.length) return;
       [].forEach.call(items, function(d){
         if (d.getAttribute("data-dkcp2")) return;
-        var p = parseInt(d.getAttribute("ec-data-price") || "0", 10); if (!p) return;
+        var p = parseInt((d.getAttribute("ec-data-price") || "0").split(",").join(""), 10); if (!p) return;
         var lis = d.querySelectorAll("ul.spec > li"), priceLi = null, sale = false;
         for (var j = 0; j < lis.length; j++) { var tt = (lis[j].querySelector(".title") || {}).textContent || ""; if (/판매가/.test(tt) && !priceLi) priceLi = lis[j]; if (/할인 ?기간/.test(tt) && (!window.dkNewSale || window.dkNewSale(lis[j]))) sale = true; }
         if (d.querySelector("li.dk-ns")) sale = true;
