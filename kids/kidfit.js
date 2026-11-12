@@ -248,7 +248,69 @@
     document.getElementById("dk-low-t").onclick = function(e){ e.preventDefault(); var b = document.getElementById("dk-low-b"); b.style.display = b.style.display === "none" ? "block" : "none"; };
   }
 
-  function run(){ mypage(); if (document.getElementById("orderFixArea")) { lowest(); recLine(); bubble(); } }
+  /* ---------- ⑤ 무료배송까지 남은 금액 + 비슷한 상품 (2026-11-12 시온님, 알파업셀 참고·직접 만듦, "AI" 라고 부르지 않음) ---------- */
+  var FREE = 50000, CID = "JzTmuiBPItGvZ6KG8g3aPC";
+  function num(t){ return parseInt(String(t || "").replace(/[^0-9]/g, ""), 10) || 0; }
+  function myNo(){ var m = location.search.match(/product_no=([0-9]+)/) || location.pathname.match(/\/([0-9]+)\/(category|display|$)/); return m ? m[1] : ""; }
+  function shipBar(){
+    var act = document.querySelector(".infoArea .productAction"); if (!act) return;
+    var bp = document.getElementById("xans_myshop_basket_price");
+    var cart = bp ? num(bp.textContent) : 0;
+    var sp = document.getElementById("span_product_price_text"); var me = sp ? num(sp.textContent) : 0;
+    var d = document.getElementById("dk-ship");
+    if (!d) { d = document.createElement("div"); d.id = "dk-ship"; d.style.cssText = "margin:12px 0 0;padding:12px 14px;border-radius:12px;background:#f6f2ff;font-size:13px;color:#333;line-height:1.5"; act.parentNode.insertBefore(d, act.nextSibling); }
+    var left = FREE - cart, pct = Math.min(100, Math.round(cart / FREE * 100)), msg;
+    if (left <= 0) msg = "🚚 장바구니 " + won(cart) + " · <b style='color:#6a3fc8'>무료배송 조건을 채웠어요!</b>";
+    else if (me && cart + me >= FREE) msg = "🚚 장바구니 " + won(cart) + " · <b style='color:#6a3fc8'>이 상품을 담으면 무료배송이에요!</b>";
+    else msg = "🚚 " + (cart ? "장바구니 " + won(cart) + " · " : "") + "<b style='color:#6a3fc8'>" + won(left) + "</b> 더 담으면 무료배송";
+    d.innerHTML = msg + "<div style='margin-top:8px;height:6px;border-radius:3px;background:#e4dbfa;overflow:hidden'><div style='height:100%;width:" + pct + "%;background:#6a3fc8;border-radius:3px'></div></div>" +
+      "<div style='margin-top:4px;font-size:11px;color:#999'>5만원 이상 무료배송 · 배송비 3,000원</div>";
+  }
+  var TY = [
+    ["dress", ["원피스", "점프슈트", "롬퍼", "바디수트"]],
+    ["acc", ["양말", "모자", "비니", "신발", "운동화", "부츠", "가방", "머리띠", "헤어", "장갑", "목도리", "넥워머", "바라클라바", "턱받이", "스카프"]],
+    ["inner", ["실내복", "내복", "잠옷", "파자마", "홈웨어"]],
+    ["bottom", ["바지", "팬츠", "레깅스", "스커트", "치마", "조거", "데님", "청바지", "슬랙스", "멜빵"]],
+    ["outer", ["점퍼", "자켓", "재킷", "집업", "가디건", "코트", "패딩", "베스트", "조끼", "아노락", "바람막이", "무스탕", "후리스", "플리스"]],
+    ["top", ["티셔츠", "맨투맨", "후드티", "니트", "블라우스", "셔츠", "탑", "티", "폴라", "나시"]]
+  ];
+  function typ(n){ for (var i = 0; i < TY.length; i++) for (var j = 0; j < TY[i][1].length; j++) if (n.indexOf(TY[i][1][j]) >= 0) return TY[i][0]; return "etc"; }
+  function prods(cb){
+    try { var c = JSON.parse(sessionStorage.getItem("dk_prods") || "null"); if (c && Date.now() - c.t < 1800000 && c.l && c.l.length) return cb(c.l); } catch(e){}
+    fetch("https://dagguu.cafe24api.com/api/v2/products?display=T&selling=T&limit=100&fields=product_no,product_name,price,list_image,sold_out", { headers: { "X-Cafe24-Client-Id": CID } })
+      .then(function(r){ return r.json(); }).then(function(j){
+        var l = (j.products || []).map(function(x){ return { n: x.product_no, nm: x.product_name, p: Math.round(parseFloat(x.price) || 0), im: x.list_image, so: x.sold_out }; });
+        try { sessionStorage.setItem("dk_prods", JSON.stringify({ t: Date.now(), l: l })); } catch(e){}
+        cb(l);
+      }).catch(function(){});
+  }
+  function similar(){
+    if (document.getElementById("dk-sim")) return;
+    var no = pno(); if (!no) return;
+    var ship = document.getElementById("dk-ship"); if (!ship) return;
+    var holder = document.createElement("div"); holder.id = "dk-sim"; ship.parentNode.insertBefore(holder, ship.nextSibling);
+    prods(function(l){
+      var me = l.filter(function(x){ return String(x.n) === no; })[0];
+      var sp = document.getElementById("span_product_price_text");
+      var nm = me ? me.nm : ((document.querySelector('meta[property="og:title"]') || {}).content || "");
+      var p = me ? me.p : (sp ? num(sp.textContent) : 0), t = typ(nm), mm = isMom();
+      var c = l.filter(function(x){ return String(x.n) !== no && x.so !== "T" && x.p > 0 && typ(x.nm) === t && (momSet.indexOf(String(x.n)) >= 0) === mm; });
+      c.sort(function(a, b){ return Math.abs(a.p - p) - Math.abs(b.p - p); });
+      c = c.slice(0, 8); if (c.length < 2) { holder.parentNode.removeChild(holder); return; }
+      var h = "<div style='margin:16px 0 0;padding:14px 0 4px;border-top:1px solid #eee'><div style='font-size:14px;font-weight:800;color:#222;margin-bottom:10px'>보고 있는 상품과 비슷한 상품이에요</div>" +
+        "<div style='display:flex;gap:10px;overflow-x:auto;padding-bottom:8px;-webkit-overflow-scrolling:touch'>";
+      c.forEach(function(x){
+        h += "<a href='/product/detail.html?product_no=" + x.n + "' style='flex:0 0 108px;text-decoration:none;color:#222'>" +
+          "<img src='" + x.im + "' alt='' loading='lazy' style='width:108px;height:135px;object-fit:cover;border-radius:10px;background:#f2f2f2;display:block'>" +
+          "<div style='font-size:12px;line-height:1.35;margin-top:6px;height:32px;overflow:hidden'>" + String(x.nm).replace(/</g, "&lt;") + "</div>" +
+          "<div style='font-size:13px;font-weight:800;margin-top:2px'>" + won(x.p) + "</div>" +
+          "<div style='margin-top:6px;padding:6px 0;border:1px solid #ddd;border-radius:8px;text-align:center;font-size:12px;color:#555'>보러가기</div></a>";
+      });
+      holder.innerHTML = h + "</div></div>";
+    });
+  }
+
+  function run(){ mypage(); if (document.getElementById("orderFixArea")) { lowest(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
