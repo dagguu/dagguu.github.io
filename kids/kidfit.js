@@ -258,13 +258,15 @@
     var cart = bp ? num(bp.textContent) : 0;
     var sp = document.getElementById("span_product_price_text"); var me = sp ? num(sp.textContent) : 0;
     var low = document.getElementById("dk-low"); if (!low || !low.parentNode) return;
-    var d = document.getElementById("dk-ship");
-    if (!d) { d = document.createElement("div"); d.id = "dk-ship"; d.style.cssText = "margin:0 0 12px;padding:11px 14px;border-radius:12px;background:#f6f2ff;font-size:13px;color:#333;line-height:1.5"; low.parentNode.insertBefore(d, low.nextSibling); }
+    /* 2026-11-12: id 를 dk-freebar 로(배송 안내 칸 shipnotice 가 dk-ship 을 써서 겹쳐 덮어쓰던 것 고침), 최저가 보장제 바로 위에 작게 */
+    var d = document.getElementById("dk-freebar");
+    if (!d) { d = document.createElement("div"); d.id = "dk-freebar"; d.style.cssText = "margin:0 0 8px;padding:8px 12px;border-radius:10px;background:#f6f2ff;font-size:12px;color:#333;line-height:1.45"; }
+    if (d.nextSibling !== low) low.parentNode.insertBefore(d, low);
     var left = FREE - cart, pct = Math.min(100, Math.round(cart / FREE * 100)), msg;
     if (left <= 0) msg = "🚚 <b style='color:#6a3fc8'>무료배송 조건을 채웠어요!</b> <span style='color:#888'>(장바구니 " + won(cart) + ")</span>";
     else if (me && cart + me >= FREE) msg = "🚚 <b style='color:#6a3fc8'>이 상품을 담으면 무료배송이에요!</b>" + (cart ? " <span style='color:#888'>(장바구니 " + won(cart) + ")</span>" : "");
     else msg = "🚚 <b style='color:#6a3fc8'>" + won(left) + "</b> 더 담으면 무료배송" + (cart ? " <span style='color:#888'>(장바구니 " + won(cart) + ")</span>" : "");
-    d.innerHTML = msg + "<div style='margin-top:6px;height:5px;border-radius:3px;background:#e4dbfa;overflow:hidden'><div style='height:100%;width:" + pct + "%;background:#6a3fc8;border-radius:3px'></div></div>";
+    d.innerHTML = msg + "<div style='margin-top:5px;height:4px;border-radius:2px;background:#e4dbfa;overflow:hidden'><div style='height:100%;width:" + pct + "%;background:#6a3fc8;border-radius:3px'></div></div>";
   }
   var TY = [
     ["dress", ["원피스", "점프슈트", "롬퍼", "바디수트"]],
