@@ -832,7 +832,7 @@
     ["🧒", "KIDS", "/product/list.html?cate_no=53", "#e8f7f3"],
     ["👩", "MOM", "/product/list.html?cate_no=23", "#fbe9f4"],
     ["📏", "사이즈표", "/product/brand_size.html", "#f1f1f1"],
-    ["☕", "커피 이벤트", "/product/coffee.html", "#f4ece3"]
+    ["☕", "이벤트", "/product/coffee.html", "#f4ece3"]
   ];
   var BM_BAN = [["1", "/product/list.html?cate_no=54"], ["2", "/product/list.html?cate_no=24"], ["3", "/product/list.html?cate_no=52"], ["4", "/product/list.html?cate_no=47"]];
   var BM_CATS = [
@@ -930,7 +930,7 @@
     var logged = isLogged();
     var bc = logged
       ? "<a class='bc' href='/myshop/index.html#dk-invite'><i>💌</i><span style='min-width:0'><b>친구 초대하고 500원 적립</b><span>친구가 내 초대 링크로 가입하면 둘 다 적립금 500원</span></span><em>초대하기</em></a>"
-      : "<a class='bc' href='/member/agreement.html'><i>🎁</i><span style='min-width:0'><b>가입하면 적립금 1,000원 바로 지급</b><span>쇼핑정보 수신 동의하면 5% 할인 쿠폰도 함께</span></span><em>가입하기</em></a>";
+      : "<a class='bc' href='/member/agreement.html'><i>🎁</i><span style='min-width:0'><b>가입하면 적립금 1,000원</b><span>수신 동의 시 5% 쿠폰도 함께</span></span><em>가입하기</em></a>";
     var day = new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10), sfx = bmMobile() ? "m" : "";
     var bn = "<div class='bn'><div class='bnr'>" + BM_BAN.map(function(b, i){ return "<a href='" + b[1] + "'><img src='https://www.dagguu.com/kids/banner/B" + b[0] + sfx + ".jpg?d=" + day + "' alt='' " + (i ? "loading='lazy'" : "") + "></a>"; }).join("") + "</div><span class='bnc'>1 / " + BM_BAN.length + "</span></div>";
     var ic = "<div class='ic'>" + BM_ICONS.map(function(x){ return "<a href='" + x[2] + "'><span style='background:" + x[3] + "'>" + x[0] + "</span>" + x[1] + "</a>"; }).join("") + "</div>";
@@ -996,12 +996,14 @@
   }
   function bmCatRight(R2, x){
     var url = bmUrl(x[1]);
-    R2.innerHTML = "<a class='ca' href='" + url + "'>" + x[0] + " 전체보기 <span>›</span></a><div class='cp'><h4>이 카테고리의 인기상품</h4><div class='cg'><span style='grid-column:1/-1;font-size:13px;color:#999'>불러오는 중…</span></div></div>";
+    R2.innerHTML = "<a class='ca' href='" + url + "'>" + x[0] + " 전체보기 <span>›</span></a><div class='cp'><h4>이 카테고리 상품</h4><div class='cg'><span style='grid-column:1/-1;font-size:13px;color:#999'>불러오는 중…</span></div></div>";
     var g = R2.querySelector(".cg");
     fetch(url, { credentials: "include" }).then(function(r){ return r.text(); }).then(function(h){
       var d = new DOMParser().parseFromString(h, "text/html"), lis = d.querySelectorAll(".xans-product-normalpackage ul.prdList > li, .xans-product-listnormal ul.prdList > li, ul.prdList > li"), out = [];
+      var sn = {};
       [].some.call(lis, function(li){
         var a = li.querySelector(".name a"), img = li.querySelector(".thumbnail img, .prdImg img"); if (!a || !img) return false;
+        var hk = (a.getAttribute("href") || "").replace(/[/]category[/].*$/, ""); if (sn[hk]) return false; sn[hk] = 1;
         var price = 0, sale = 0;
         [].forEach.call(li.querySelectorAll(".spec li"), function(y){ var t = y.textContent.replace(/ +/g, " "); if (/판매가/.test(t)) price = num(t.split(":")[1]); if (/최적할인가/.test(t)) sale = num(t.split(":")[1]); });
         out.push("<a href='" + a.getAttribute("href") + "'><img src='" + (img.getAttribute("ec-data-src") || img.getAttribute("src")) + "' alt='' loading='lazy'><span>" + esc(bmName(a.textContent.replace(/상품명 *:/, ""))) + "</span><b>" +
