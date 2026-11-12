@@ -359,7 +359,18 @@
     });
   }
 
-  function run(){ pcCss(); mypage(); cartBox(); if (document.getElementById("orderFixArea")) { lowest(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  /* ---------- ⑦ 쇼핑정보 수신 동의 옆 "동의하면 매달 할인쿠폰" (2026-11-12 시온님) ---------- */
+  function consentNote(){
+    if (document.getElementById("dk-mkt")) return;
+    var at = document.querySelector('label[for="sMarketingAgreeAllChecked"].check');
+    if (!at) { var sms = document.querySelector('input[name="is_sms"]'); if (!sms) return; at = document.querySelector('label.check[for="' + sms.id + '"]') || sms.parentNode; }
+    var b = document.createElement("span"); b.id = "dk-mkt";
+    b.style.cssText = "display:inline-block;margin-left:8px;padding:3px 10px;border-radius:999px;background:#6a3fc8;color:#fff;font-size:12px;font-weight:700;vertical-align:middle;line-height:1.6";
+    b.textContent = "🎁 동의하면 매달 할인쿠폰";
+    at.parentNode.insertBefore(b, at.nextSibling);
+  }
+
+  function run(){ consentNote(); pcCss(); mypage(); cartBox(); if (document.getElementById("orderFixArea")) { lowest(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
