@@ -6,6 +6,7 @@
   "price": 56000,
   "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261110/1f766712c81f698b6de21c6bdbb7d552.jpg",
   "video": "https://www.dagguu.com/kids/v/25.mp4",
+  "cut": "https://www.dagguu.com/kids/v/25_cut.mp4",
   "poster": "https://www.dagguu.com/kids/v/25.jpg",
   "url": "https://dagguukids.com/product/detail.html?product_no=25"
  },
@@ -16,6 +17,7 @@
   "price": 24000,
   "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261111/beae83f55095660e2ddb954b90f75c29.jpg",
   "video": "https://www.dagguu.com/kids/v/117.mp4",
+  "cut": "https://www.dagguu.com/kids/v/117_cut.mp4",
   "poster": "https://www.dagguu.com/kids/v/117.jpg",
   "url": "https://dagguukids.com/product/detail.html?product_no=117"
  },
@@ -26,6 +28,7 @@
   "price": 22400,
   "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261111/78b2aaa4fc8f9afafd685977e6075312.jpg",
   "video": "https://www.dagguu.com/kids/v/122.mp4",
+  "cut": "https://www.dagguu.com/kids/v/122_cut.mp4",
   "poster": "https://www.dagguu.com/kids/v/122.jpg",
   "url": "https://dagguukids.com/product/detail.html?product_no=122"
  },
@@ -36,6 +39,7 @@
   "price": 20800,
   "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261112/05b4702ca69d3fcbf57fac19cfb9901c.jpg",
   "video": "https://www.dagguu.com/kids/v/460.mp4",
+  "cut": "https://www.dagguu.com/kids/v/460_cut.mp4",
   "poster": "https://www.dagguu.com/kids/v/460.jpg",
   "url": "https://dagguukids.com/product/detail.html?product_no=460"
  },
@@ -46,7 +50,150 @@
   "price": 35200,
   "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261112/28a2fb240b3cefea749ed36a55c02f64.jpg",
   "video": "https://www.dagguu.com/kids/v/462.mp4",
+  "cut": "https://www.dagguu.com/kids/v/462_cut.mp4",
   "poster": "https://www.dagguu.com/kids/v/462.jpg",
   "url": "https://dagguukids.com/product/detail.html?product_no=462"
+ },
+ {
+  "no": "b44",
+  "type": "brand",
+  "brand": "피피",
+  "name": "피피 신상 8종",
+  "price": 8000,
+  "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261111/c40a420d7cdcfbdc45365307c2ef00f4.jpg",
+  "items": [
+   {
+    "no": 140,
+    "name": "피피 피피양말",
+    "price": 8000,
+    "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261111/c40a420d7cdcfbdc45365307c2ef00f4.jpg",
+    "url": "https://dagguukids.com/product/detail.html?product_no=140"
+   },
+   {
+    "no": 139,
+    "name": "피피 키치단작티",
+    "price": 19200,
+    "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261111/ac2e52b59405cc7e98d4e0916d35e3a2.jpg",
+    "url": "https://dagguukids.com/product/detail.html?product_no=139"
+   },
+   {
+    "no": 138,
+    "name": "피피 나그랑배색티",
+    "price": 16000,
+    "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261111/97c0e5fd38ba6685e1b6309dbbe3b968.jpg",
+    "url": "https://dagguukids.com/product/detail.html?product_no=138"
+   },
+   {
+    "no": 137,
+    "name": "피피 골지티",
+    "price": 14400,
+    "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261111/52b342ec2a301eb0ac60f4f568a03451.jpg",
+    "url": "https://dagguukids.com/product/detail.html?product_no=137"
+   },
+   {
+    "no": 136,
+    "name": "피피 단가라호박바지",
+    "price": 20800,
+    "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261111/71e8299f12d3b52495db1dc3d23a9dcc.jpg",
+    "url": "https://dagguukids.com/product/detail.html?product_no=136"
+   },
+   {
+    "no": 135,
+    "name": "피피 파프리카바지",
+    "price": 19200,
+    "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261111/252d8f8de7b1fc1ee14d461a35be91ca.jpg",
+    "url": "https://dagguukids.com/product/detail.html?product_no=135"
+   },
+   {
+    "no": 134,
+    "name": "피피 피피팬츠",
+    "price": 25600,
+    "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261111/403f2c0a46473d4a8809c2444084f714.jpg",
+    "url": "https://dagguukids.com/product/detail.html?product_no=134"
+   },
+   {
+    "no": 133,
+    "name": "피피 소프트바지",
+    "price": 19200,
+    "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261111/2e04940419ab469ac5aa7178df9af219.jpg",
+    "url": "https://dagguukids.com/product/detail.html?product_no=133"
+   }
+  ],
+  "seg": 1.32,
+  "video": "https://www.dagguu.com/kids/v/b44.mp4",
+  "cut": "https://www.dagguu.com/kids/v/b44_cut.mp4",
+  "poster": "https://www.dagguu.com/kids/v/b44.jpg",
+  "url": "https://dagguukids.com/product/list.html?cate_no=44"
+ },
+ {
+  "no": "b47",
+  "type": "brand",
+  "brand": "아오스타",
+  "name": "아오스타 신상 8종",
+  "price": 12800,
+  "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261112/ee3c5c0f31aeb693eef875c52656797e.jpg",
+  "items": [
+   {
+    "no": 463,
+    "name": "아오스타 딸기팬츠",
+    "price": 16000,
+    "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261112/ee3c5c0f31aeb693eef875c52656797e.jpg",
+    "url": "https://dagguukids.com/product/detail.html?product_no=463"
+   },
+   {
+    "no": 462,
+    "name": "아오스타 니트쿠키베스트",
+    "price": 35200,
+    "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261112/28a2fb240b3cefea749ed36a55c02f64.jpg",
+    "url": "https://dagguukids.com/product/detail.html?product_no=462"
+   },
+   {
+    "no": 461,
+    "name": "아오스타 까멜리아티",
+    "price": 19200,
+    "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261112/523d5a57be5ad848625660fda1a9a9d7.jpg",
+    "url": "https://dagguukids.com/product/detail.html?product_no=461"
+   },
+   {
+    "no": 460,
+    "name": "아오스타 레이스제니오픈베스트",
+    "price": 20800,
+    "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261112/05b4702ca69d3fcbf57fac19cfb9901c.jpg",
+    "url": "https://dagguukids.com/product/detail.html?product_no=460"
+   },
+   {
+    "no": 459,
+    "name": "아오스타 엔젤프릴티",
+    "price": 16000,
+    "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261112/c1aa81f6ce712e3590368c2558a99ea9.jpg",
+    "url": "https://dagguukids.com/product/detail.html?product_no=459"
+   },
+   {
+    "no": 458,
+    "name": "아오스타 에브리데이티",
+    "price": 16000,
+    "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261112/fe87b0ac025bf9346cfd4aa21b9b0cbc.jpg",
+    "url": "https://dagguukids.com/product/detail.html?product_no=458"
+   },
+   {
+    "no": 457,
+    "name": "아오스타 니트베레모",
+    "price": 12800,
+    "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261112/a95bbd2b59aef9987ad792aa3c406eec.jpg",
+    "url": "https://dagguukids.com/product/detail.html?product_no=457"
+   },
+   {
+    "no": 456,
+    "name": "아오스타 버터티",
+    "price": 16000,
+    "img": "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/product/medium/20261112/54ab52d603de07f43190f8d303fc5e00.jpg",
+    "url": "https://dagguukids.com/product/detail.html?product_no=456"
+   }
+  ],
+  "seg": 1.32,
+  "video": "https://www.dagguu.com/kids/v/b47.mp4",
+  "cut": "https://www.dagguu.com/kids/v/b47_cut.mp4",
+  "poster": "https://www.dagguu.com/kids/v/b47.jpg",
+  "url": "https://dagguukids.com/product/list.html?cate_no=47"
  }
 ]
