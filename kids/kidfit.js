@@ -526,7 +526,102 @@
     });
   }
 
-  function run(){ consentNote(); cpPage(); cpList(); pcCss(); mypage(); cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  /* ---------- ⑨ 오타·한영·초성·비슷한 말 검색 (2026-11-12 시온님) ----------
+     검색창에 치는 동안 아래에 상품을 바로 보여 줌. rkelrjs → 가디건(한영 전환), ㄱㄷㄱ(초성), 바지=팬츠(비슷한 말).
+     상품 목록은 prods()(공개 API, 30분 캐시). Enter 때 원래 글자로 찾을 게 없고 한영 전환 글자로 있으면 바꿔서 검색. */
+  var KM = { q:"ㅂ",w:"ㅈ",e:"ㄷ",r:"ㄱ",t:"ㅅ",y:"ㅛ",u:"ㅕ",i:"ㅑ",o:"ㅐ",p:"ㅔ",a:"ㅁ",s:"ㄴ",d:"ㅇ",f:"ㄹ",g:"ㅎ",h:"ㅗ",j:"ㅓ",k:"ㅏ",l:"ㅣ",z:"ㅋ",x:"ㅌ",c:"ㅊ",v:"ㅍ",b:"ㅠ",n:"ㅜ",m:"ㅡ",Q:"ㅃ",W:"ㅉ",E:"ㄸ",R:"ㄲ",T:"ㅆ",O:"ㅒ",P:"ㅖ" };
+  var CHO = "ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ", JUNG = "ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ", JONG = " ㄱㄲㄳㄴㄵㄶㄷㄹㄺㄻㄼㄽㄾㄿㅀㅁㅂㅄㅅㅆㅇㅈㅊㅋㅌㅍㅎ";
+  var VV = { "ㅗㅏ":"ㅘ","ㅗㅐ":"ㅙ","ㅗㅣ":"ㅚ","ㅜㅓ":"ㅝ","ㅜㅔ":"ㅞ","ㅜㅣ":"ㅟ","ㅡㅣ":"ㅢ" };
+  var CC = { "ㄱㅅ":"ㄳ","ㄴㅈ":"ㄵ","ㄴㅎ":"ㄶ","ㄹㄱ":"ㄺ","ㄹㅁ":"ㄻ","ㄹㅂ":"ㄼ","ㄹㅅ":"ㄽ","ㄹㅌ":"ㄾ","ㄹㅍ":"ㄿ","ㄹㅎ":"ㅀ","ㅂㅅ":"ㅄ" };
+  function isV(j){ return JUNG.indexOf(j) >= 0; }
+  function eng2kor(s){
+    var js = [], out = "", i;
+    for (i = 0; i < s.length; i++) { var c = s[i], k = KM[c] || KM[c.toLowerCase()]; js.push(k || c); }
+    var cho = "", jung = "", jong = "";
+    function flush(){ if (cho && jung) out += String.fromCharCode(0xAC00 + (CHO.indexOf(cho) * 21 + JUNG.indexOf(jung)) * 28 + JONG.indexOf(jong || " ")); else out += cho + jung + jong; cho = jung = jong = ""; }
+    for (i = 0; i < js.length; i++) {
+      var j = js[i];
+      if (!/[ㄱ-ㅣ]/.test(j)) { flush(); out += j; continue; }
+      if (isV(j)) {
+        if (jong) { var last = jong, keep = ""; for (var k2 in CC) if (CC[k2] === jong) { keep = k2[0]; last = k2[1]; }
+          if (keep) { jong = keep; flush(); cho = last; jung = j; } else { jong = ""; flush(); cho = last; jung = j; } }
+        else if (cho && jung) { if (VV[jung + j]) jung = VV[jung + j]; else { flush(); jung = j; } }
+        else if (cho) jung = j;
+        else { if (jung && VV[jung + j]) jung = VV[jung + j]; else { flush(); jung = j; } }
+      } else {
+        if (cho && jung) {
+          if (!jong) { if (JONG.indexOf(j) > 0) jong = j; else { flush(); cho = j; } }
+          else if (CC[jong + j]) jong = CC[jong + j];
+          else { flush(); cho = j; }
+        } else { flush(); cho = j; }
+      }
+    }
+    flush(); return out;
+  }
+  function chosung(s){ var o = ""; for (var i = 0; i < s.length; i++) { var c = s.charCodeAt(i) - 0xAC00; o += (c >= 0 && c < 11172) ? CHO[Math.floor(c / 588)] : s[i]; } return o; }
+  var SYN = [["후드","후디","후드티"],["바지","팬츠"],["트레이닝","츄리닝","추리닝"],["레깅스","쫄바지"],["맨투맨","스웨트셔츠","mtm"],["점퍼","잠바","자켓","재킷"],["패딩","덕다운","구스"],["원피스","드레스"],["실내복","내복","잠옷","파자마","홈웨어"],["가디건","카디건"],["조끼","베스트"],["양말","삭스"],["모자","비니","캡"],["니트","스웨터"],["후리스","플리스"],["셔츠","남방"],["치마","스커트"],["기모","융털"],["상하복","세트","셋업"]];
+  function sKey(s){ return String(s || "").toLowerCase().replace(/\s+/g, ""); }
+  function sTerms(q){
+    var raw = sKey(q), t = [{ w: raw, why: "" }];
+    if (/[a-z]/i.test(q) && !/[가-힣]/.test(q)) { var k = sKey(eng2kor(q.trim())); if (/[가-힣]/.test(k)) t.push({ w: k, why: "kor" }); }
+    t.slice().forEach(function(x){ SYN.forEach(function(g){ g.forEach(function(a){ if (x.w.indexOf(a) >= 0) g.forEach(function(b){ if (b !== a) t.push({ w: x.w.replace(a, b), why: x.why || "syn", from: a, to: b }); }); }); }); });
+    return t;
+  }
+  function sMatch(l, q){
+    var terms = sTerms(q), raw = sKey(q), out = [], used = {};
+    var onlyCho = /^[ㄱ-ㅎ]+$/.test(raw);
+    l.forEach(function(x){
+      if (x.so === "T") return;
+      var n = sKey(x.nm), hit = null;
+      for (var i = 0; i < terms.length && !hit; i++) if (terms[i].w.length && n.indexOf(terms[i].w) >= 0) hit = terms[i];
+      if (!hit && onlyCho && raw.length >= 2 && chosung(n).indexOf(raw) >= 0) hit = { w: raw, why: "cho" };
+      if (hit) { out.push({ x: x, h: hit }); used[hit.why] = hit; }
+    });
+    out.sort(function(a, b){ return (a.h.why ? 1 : 0) - (b.h.why ? 1 : 0); });
+    return { list: out, used: used, kor: terms.filter(function(t){ return t.why === "kor"; })[0] };
+  }
+  function sBox(inp){
+    if (inp.getAttribute("data-dksr")) return; inp.setAttribute("data-dksr", "1");
+    var host = inp.parentNode; if (getComputedStyle(host).position === "static") host.style.position = "relative";
+    var d = document.createElement("div"); d.className = "dk-sug";
+    d.style.cssText = "display:none;position:absolute;left:0;right:0;top:100%;z-index:10000;margin-top:6px;background:#fff;border:1px solid #e5e5e5;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);padding:10px 0;text-align:left;min-width:280px;max-height:70vh;overflow:auto";
+    host.appendChild(d);
+    var timer = null, last = null;
+    function draw(){
+      var q = inp.value.trim(); if (!q) { d.style.display = "none"; return; }
+      prods(function(l){
+        if (inp.value.trim() !== q) return;
+        var r = sMatch(l, q); last = r;
+        var h = "";
+        if (r.kor && r.used.kor) h += "<div style='margin:0 12px 8px;padding:10px 12px;border-radius:10px;background:#f3efff;font-size:13px'><span style='color:#aaa;text-decoration:line-through'>" + q.replace(/</g, "&lt;") + "</span> → <b>" + r.kor.w + "</b><div style='font-size:11px;color:#6a3fc8;margin-top:2px'>한영 전환으로 찾았어요</div></div>";
+        else if (r.used.cho) h += "<div style='margin:0 12px 8px;font-size:12px;color:#6a3fc8'>초성으로 찾았어요</div>";
+        else if (r.used.syn) h += "<div style='margin:0 12px 8px;font-size:12px;color:#6a3fc8'>'" + r.used.syn.from + "' 비슷한 말 '" + r.used.syn.to + "'도 같이 찾았어요</div>";
+        if (!r.list.length) h += "<div style='padding:6px 14px;font-size:13px;color:#999'>찾는 상품이 없어요. 다른 말로 검색해 보세요.</div>";
+        else {
+          h += "<div style='padding:0 14px 4px;font-size:12px;font-weight:800;color:#999'>상품 " + r.list.length + "개</div>";
+          r.list.slice(0, 6).forEach(function(o){ var x = o.x;
+            h += "<a href='/product/detail.html?product_no=" + x.n + "' style='display:flex;gap:10px;align-items:center;padding:7px 14px;text-decoration:none;color:#222'>" +
+              "<span class='dk-pc' style='flex:0 0 48px;width:48px;height:60px;border-radius:8px'><img src='" + x.im + "' alt=''></span>" +
+              "<span style='flex:1;min-width:0'><span style='display:block;font-size:13px;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis'>" + String(x.nm).replace(/</g, "&lt;") + "</span>" +
+              "<b style='font-size:13px'>" + won(x.p) + "</b>" + (o.h.why ? " <span style='font-size:10px;color:#888;border:1px solid #ddd;border-radius:4px;padding:0 4px;margin-left:4px'>" + ({ kor: "한영 전환", cho: "초성", syn: "비슷한 말" })[o.h.why] + "</span>" : "") + "</span></a>";
+          });
+          if (r.list.length > 6) h += "<a href='#none' class='dk-sug-all' style='display:block;margin:6px 14px 0;padding:8px;border-radius:8px;background:#f5f5f5;text-align:center;font-size:12px;color:#333;text-decoration:none'>검색 결과 전체 보기 ›</a>";
+        }
+        d.innerHTML = h; d.style.display = "block";
+      });
+    }
+    function target(){ var q = inp.value.trim(); if (last && last.kor && last.used.kor && !last.list.some(function(o){ return !o.h.why; })) return last.kor.w; return q; }
+    inp.addEventListener("input", function(){ clearTimeout(timer); timer = setTimeout(draw, 180); });
+    inp.addEventListener("focus", function(){ if (inp.value.trim()) draw(); });
+    inp.addEventListener("blur", function(){ setTimeout(function(){ d.style.display = "none"; }, 200); });
+    d.addEventListener("mousedown", function(e){ var a = e.target.closest("a"); if (!a) return; e.preventDefault(); if (a.className === "dk-sug-all") location.href = "/product/search.html?keyword=" + encodeURIComponent(target()); else location.href = a.getAttribute("href"); });
+    var f = inp.form;
+    if (f) f.addEventListener("submit", function(){ var t = target(); if (t && t !== inp.value.trim()) inp.value = t; }, true);
+    inp.addEventListener("keydown", function(e){ if (e.key === "Enter") { var t = target(); if (t && t !== inp.value.trim()) inp.value = t; } });
+  }
+  function searchSug(){ pcCss(); [].forEach.call(document.querySelectorAll("input[name=keyword]"), sBox); }
+
+  function run(){ searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
