@@ -685,7 +685,7 @@
     if (!document.getElementById("dk-kw2-css")) { var st = document.createElement("style"); st.id = "dk-kw2-css"; st.textContent = ".dk-kw{display:none!important}"; document.head.appendChild(st); }
     [].forEach.call(document.querySelectorAll("input[name=keyword]"), function(inp){
       if (inp.getAttribute("data-dkkw2")) return; inp.setAttribute("data-dkkw2", "1");
-      var host = inp.closest("form") || inp.parentNode; if (!host || !host.parentNode) return;
+      var host = inp.closest("fieldset") || inp.parentNode; if (!host || !host.parentNode) return;
       var d = document.createElement("div"); d.className = "dk-kw2";
       d.style.cssText = "max-width:650px;margin:22px auto 0;padding:0 4px;text-align:left";
       var h = "<div style='font-size:14px;font-weight:800;color:#222;margin-bottom:12px'>🔥 인기 검색어</div><div style='display:grid;grid-template-columns:1fr 1fr;gap:8px 18px'>";
