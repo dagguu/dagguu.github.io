@@ -370,7 +370,163 @@
     at.parentNode.insertBefore(b, at.nextSibling);
   }
 
-  function run(){ consentNote(); pcCss(); mypage(); cartBox(); if (document.getElementById("orderFixArea")) { lowest(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  /* ---------- ⑧ 쿠폰: 예상 최저가(목록·상세)·장바구니 쿠폰 혜택·내 쿠폰함 (2026-11-12 시온님, 1초쿠폰 참고·직접 만듦) ----------
+     내 쿠폰 = /myshop/coupon/coupon.html 표를 읽음(로그인). 받을 수 있는 쿠폰 = 상품 상세의 쿠폰 다운로드 칸을 읽음.
+     주문당 쿠폰 1장 → 가장 큰 1장만 계산. 신상 할인 중인 상품은 쿠폰을 같이 못 써서(혜택 '모든 쿠폰 사용제한') 쿠폰가를 붙이지 않음. */
+  function isLogged(){ var a = document.querySelectorAll("a"); for (var i = 0; i < a.length; i++) { var t = (a[i].textContent || "").trim(); if (t === "로그아웃" || t === "LOGOUT") return true; } return false; }
+  function kst(s){ var m = String(s || "").match(/([0-9]{4})-([0-9]{2})-([0-9]{2}) ([0-9]{2}):([0-9]{2})/); return m ? Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4] - 9, +m[5]) : 0; }
+  function minOf(t){ t = String(t || "").replace(/\s/g, ""); var m = t.match(/([0-9]+)만원이상/); if (m) return +m[1] * 10000; m = t.match(/([0-9,]+)원이상/); return m ? num(m[1]) : 0; }
+  function cpOff(c, p){ return c.pct ? Math.floor(p * c.pct / 100 / 10) * 10 : Math.min(c.amt || 0, p); }
+  function myCps(cb){
+    if (!isLogged()) return cb([]);
+    try { var c = JSON.parse(sessionStorage.getItem("dk_mycp") || "null"); if (c && Date.now() - c.t < 300000) return cb(c.l); } catch(e){}
+    fetch("/myshop/coupon/coupon.html", { credentials: "include" }).then(function(r){ return r.text(); }).then(function(h){
+      var d = new DOMParser().parseFromString(h, "text/html"), out = [];
+      [].forEach.call(d.querySelectorAll(".xans-myshop-couponlist tbody"), function(tb){
+        var nmEl = tb.querySelector("td.coupon_name"); if (!nmEl) return;
+        var f = {}; [].forEach.call(tb.querySelectorAll("li"), function(li){ var s = li.querySelector("strong"), v = li.querySelector(".content"); if (s && v) f[s.textContent.trim()] = v.textContent.replace(/\s+/g, " ").trim(); });
+        var dc = f["할인액(률)"] || "", c = { nm: nmEl.textContent.replace("쿠폰명", "").trim(), own: 1 };
+        if (/%/.test(dc)) c.pct = parseFloat(dc); else if (/원/.test(dc)) c.amt = num(dc); else return;
+        c.min = /제한/.test(f["구매금액"] || "제한") ? 0 : minOf(f["구매금액"]) || num(f["구매금액"]);
+        var per = (f["사용가능 기간"] || "").split("~"); c.end = kst(per[1]);
+        c.all = /전체/.test(f["쿠폰적용상품"] || "전체");
+        if (c.all && (!c.end || c.end > Date.now())) out.push(c);
+      });
+      try { sessionStorage.setItem("dk_mycp", JSON.stringify({ t: Date.now(), l: out })); } catch(e){}
+      cb(out);
+    }).catch(function(){ cb([]); });
+  }
+  function dlCps(cb){
+    try { var c = JSON.parse(sessionStorage.getItem("dk_dlcp") || "null"); if (c && Date.now() - c.t < 600000) return cb(c.l); } catch(e){}
+    function parse(root){
+      var out = [];
+      [].forEach.call(root.querySelectorAll(".xans-coupon-productdetailajax .couponSkinArea li, .couponSkinArea li"), function(li){
+        var a = li.querySelector('a[href*="IssueDownload"]'); if (!a) return;
+        var m = a.getAttribute("href").match(/coupon_no=([0-9]+)/); if (!m) return;
+        var t = (li.querySelector(".title") || {}).textContent || "", dc = (li.querySelector(".discount") || {}).textContent || "";
+        var c = { no: m[1], nm: t.trim(), per: ((li.querySelector(".period") || {}).textContent || "").trim(), min: minOf(t), all: 1 };
+        if (/%/.test(dc)) c.pct = parseFloat(dc); else if (/원/.test(dc)) c.amt = num(dc); else return;
+        if (!out.some(function(x){ return x.no === c.no; })) out.push(c);
+      });
+      return out;
+    }
+    var here = document.querySelector(".xans-coupon-productdetailajax");
+    if (here && here.querySelector('a[href*="IssueDownload"]')) { var l0 = parse(document); try { sessionStorage.setItem("dk_dlcp", JSON.stringify({ t: Date.now(), l: l0 })); } catch(e){} return cb(l0); }
+    prods(function(l){
+      var no = (l[0] || {}).n; if (!no) return cb([]);
+      fetch("/product/detail.html?product_no=" + no).then(function(r){ return r.text(); }).then(function(h){
+        var l1 = parse(new DOMParser().parseFromString(h, "text/html"));
+        try { sessionStorage.setItem("dk_dlcp", JSON.stringify({ t: Date.now(), l: l1 })); } catch(e){}
+        cb(l1);
+      }).catch(function(){ cb([]); });
+    });
+  }
+  function allCps(cb){ myCps(function(my){ dlCps(function(dl){
+    var own = my.map(function(x){ return x.nm.replace(/\s|\.\.\./g, ""); });
+    var rest = dl.filter(function(d){ var k = d.nm.replace(/\s|\.\.\./g, ""); return !own.some(function(o){ return o.indexOf(k) === 0 || k.indexOf(o) === 0; }); });
+    cb(my, rest);
+  }); }); }
+  function bestCp(p, list){ var b = null; list.forEach(function(c){ if (c.min && c.min > p) return; var o = cpOff(c, p); if (o > 0 && (!b || o > b.off)) b = { off: o, c: c }; }); return b; }
+  function basePrice(p){ var g = grp(); return GP[g] ? Math.floor(p * GP[g] / 10) * 10 : p; }
+  function saleRow(){ var trs = document.querySelectorAll("tr"); for (var i = 0; i < trs.length; i++) { var th = trs[i].querySelector("th"); if (th && /할인 기간/.test(th.textContent || "")) return window.dkNewSale ? window.dkNewSale(trs[i]) : trs[i]; } return null; }
+  function cpList(){
+    if (!isLogged()) return;
+    var items = document.querySelectorAll(".prdList li .description"); if (!items.length) return;
+    allCps(function(my, dl){
+      var L = my.concat(dl); if (!L.length) return;
+      [].forEach.call(items, function(d){
+        if (d.getAttribute("data-dkcp2")) return;
+        var p = parseInt(d.getAttribute("ec-data-price") || "0", 10); if (!p) return;
+        var lis = d.querySelectorAll("ul.spec > li"), priceLi = null, sale = false;
+        for (var j = 0; j < lis.length; j++) { var tt = (lis[j].querySelector(".title") || {}).textContent || ""; if (/판매가/.test(tt) && !priceLi) priceLi = lis[j]; if (/할인 ?기간/.test(tt) && (!window.dkNewSale || window.dkNewSale(lis[j]))) sale = true; }
+        if (d.querySelector("li.dk-ns")) sale = true;
+        if (!priceLi || sale) return;
+        var bp = basePrice(p), b = bestCp(bp, L); if (!b) return;
+        d.setAttribute("data-dkcp2", "1");
+        var li = document.createElement("li"); li.className = "dk-cp2";
+        li.innerHTML = '<span style="display:inline-block;margin-top:3px;font-size:12px;font-weight:800;color:#e8312f">🎟 예상 최저가 ' + won(bp - b.off) + '</span>';
+        var after = d.querySelector("li.dk-gp") || priceLi; after.parentNode.insertBefore(li, after.nextSibling);
+      });
+    });
+  }
+  function cpDetail(){
+    var sp = document.getElementById("span_product_price_text"); if (!sp) return;
+    var old = document.getElementById("dk-cpd");
+    if (saleRow() || document.querySelector(".dk-nsd")) { if (old) old.parentNode.removeChild(old); return; }
+    if (old) return;
+    var p = num(sp.textContent); if (!p) return;
+    var an = document.getElementById("dk-low") || sp.closest("table"); if (!an || !an.parentNode) return;
+    var box = document.createElement("div"); box.id = "dk-cpd";
+    box.style.cssText = "margin:12px 0;padding:14px 16px;border:1px solid #f1d4d2;border-radius:12px;background:#fff;font-size:13px;color:#333;line-height:1.6";
+    an.parentNode.insertBefore(box, an);
+    if (!isLogged()) {
+      var off0 = Math.max(Math.floor(p * 0.05 / 10) * 10, 1000);
+      box.innerHTML = "<div style='display:flex;justify-content:space-between;align-items:center'><b style='color:#e8312f'>🎟 가입 쿠폰 적용 시</b><b style='font-size:17px;color:#111'>" + won(p - off0) + "</b></div>" +
+        "<div style='font-size:12px;color:#888;margin-top:2px'>회원가입하면 1,000원 쿠폰, 쇼핑정보 수신 동의하면 5% 쿠폰을 바로 드려요 (주문당 1장)</div>" +
+        "<a href='/member/agreement.html' style='display:block;margin-top:8px;padding:9px;border-radius:8px;background:#e8312f;color:#fff;text-align:center;font-weight:800;text-decoration:none'>회원가입하고 쿠폰 받기</a>";
+      return;
+    }
+    allCps(function(my, dl){
+      var bp = basePrice(p), b = bestCp(bp, my.concat(dl));
+      if (!b) { box.parentNode.removeChild(box); return; }
+      var fin = bp - b.off, g = grp(), r = R[g] || R[1], pt = (!r[1] || fin >= r[1]) ? Math.floor(fin * r[0] / 100 / 10) * 10 : 0;
+      box.innerHTML = "<div style='display:flex;justify-content:space-between;align-items:center'><b style='color:#e8312f'>🎟 내 쿠폰 혜택</b><span style='font-size:11px;color:#fff;background:#e8312f;border-radius:999px;padding:1px 8px'>" + (b.c.own ? "보유 쿠폰" : "받을 수 있는 쿠폰") + "</span></div>" +
+        "<div style='display:flex;justify-content:space-between;align-items:baseline;margin-top:6px'><span>예상 최저가</span><b style='font-size:18px;color:#111'>" + won(fin) + "</b></div>" +
+        "<div style='display:flex;justify-content:space-between;color:#666'><span>최대 할인 쿠폰 · " + String(b.c.nm).replace(/</g, "&lt;") + "</span><span style='color:#e8312f'>-" + won(b.off) + "</span></div>" +
+        (pt ? "<div style='display:flex;justify-content:space-between;color:#666'><span>결제 시 적립금</span><span>" + won(pt) + "</span></div>" : "") +
+        (b.c.own ? "" : "<a href='/exec/front/newcoupon/IssueDownload?coupon_no=" + b.c.no + "&opener_url=" + encodeURIComponent(location.href) + "' style='display:block;margin-top:8px;padding:9px;border-radius:8px;background:#e8312f;color:#fff;text-align:center;font-weight:800;text-decoration:none'>쿠폰 받고 이 가격에 사기</a>") +
+        "<div style='font-size:11px;color:#999;margin-top:4px'>주문당 쿠폰 1장 기준 예상 금액이에요. 쿠폰 조건·옵션 금액에 따라 달라질 수 있어요.</div>";
+    });
+  }
+  function cpCart(){
+    var box = document.getElementById("dk-cartfree"); if (!box || document.getElementById("dk-cartcp")) return;
+    var bp = document.getElementById("xans_myshop_basket_price"); var cart = basePrice(bp ? num(bp.textContent) : 0); if (!cart) return;
+    var w = document.createElement("div"); w.id = "dk-cartcp"; box.appendChild(w);
+    allCps(function(my, dl){
+      var L = my.concat(dl), b = bestCp(cart, L), next = null;
+      L.forEach(function(c){ if (c.min > cart) { var o = cpOff(c, c.min); if (!next || c.min < next.c.min) next = { c: c, off: o }; } });
+      var h = "";
+      if (next) h += "<div style='margin-top:12px;padding:10px 12px;border-radius:10px;background:#fff6f5;font-size:13px'>🎟 <b>" + won(next.c.min) + " 이상 쿠폰</b>까지 <b style='color:#e8312f'>" + won(next.c.min - cart) + "</b> 남았어요 · 담으면 " + (next.c.pct ? next.c.pct + "% 할인" : won(next.c.amt) + " 할인") + (next.c.own ? "" : " <a href='/exec/front/newcoupon/IssueDownload?coupon_no=" + next.c.no + "&opener_url=" + encodeURIComponent(location.href) + "' style='color:#e8312f;font-weight:800'>쿠폰 받기 ›</a>") + "</div>";
+      if (b) h += "<div style='margin-top:10px;border:1px solid #f1d4d2;border-radius:10px;overflow:hidden'><div style='background:#e8312f;color:#fff;font-weight:800;padding:7px 12px;font-size:13px'>🎟 내 쿠폰 혜택</div>" +
+        "<div style='padding:10px 12px;font-size:13px;line-height:1.8'><div style='display:flex;justify-content:space-between'><span>상품 금액" + (GP[grp()] ? " (회원가)" : "") + "</span><span>" + won(cart) + "</span></div>" +
+        "<div style='display:flex;justify-content:space-between'><span>최대 할인 쿠폰</span><span style='color:#e8312f'>" + String(b.c.nm).replace(/</g, "&lt;") + " -" + won(b.off) + "</span></div>" +
+        "<div style='display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid #eee;margin-top:4px;padding-top:6px'><b>예상 결제 금액</b><b style='font-size:18px;color:#e8312f'>" + won(cart - b.off) + "</b></div>" +
+        "<div style='font-size:11px;color:#999'>배송비는 주문서에서 따로 계산돼요. 신상 할인 상품은 쿠폰이 적용되지 않아요." + (b.c.own ? "" : " 쿠폰을 먼저 받아 주세요.") + "</div>" +
+        (b.c.own ? "" : "<a href='/exec/front/newcoupon/IssueDownload?coupon_no=" + b.c.no + "&opener_url=" + encodeURIComponent(location.href) + "' style='display:block;margin-top:6px;padding:8px;border-radius:8px;background:#e8312f;color:#fff;text-align:center;font-weight:800;text-decoration:none'>쿠폰 받기</a>") + "</div></div>";
+      w.innerHTML = h;
+    });
+  }
+  function cpPage(){
+    if (location.pathname.indexOf("/myshop/coupon/coupon") < 0 || document.getElementById("dk-cpz")) return;
+    var list = document.querySelector(".xans-myshop-couponlist"); if (!list) return;
+    var z = document.createElement("div"); z.id = "dk-cpz"; z.style.cssText = "max-width:720px;margin:0 auto 24px;color:#222";
+    list.parentNode.insertBefore(z, list);
+    try { sessionStorage.removeItem("dk_mycp"); } catch(e){}
+    allCps(function(my, dl){
+      var now = Date.now(), soon = my.filter(function(c){ return c.end && c.end - now < 3 * 86400000; }).sort(function(a, b){ return a.end - b.end; });
+      var rest = my.filter(function(c){ return soon.indexOf(c) < 0; }).sort(function(a, b){ return (a.end || 9e15) - (b.end || 9e15); });
+      function card(c, btn){
+        var left = c.end ? c.end - now : 0, dd = Math.ceil(left / 86400000), dt = c.end ? new Date(c.end + 9 * 3600000) : null;
+        var when = !c.end ? (c.per || "") : (left < 3 * 86400000 ? "<span data-dkend='" + c.end + "' style='color:#e8312f;font-weight:800'></span> 남음" : (dt.getUTCMonth() + 1) + "/" + dt.getUTCDate() + "까지 (D-" + dd + ")");
+        return "<div style='display:flex;align-items:center;gap:12px;padding:14px 16px;margin:0 0 10px;border:1px solid #eee;border-radius:12px;background:#fff'>" +
+          "<div style='flex:1;min-width:0'><div style='font-size:18px;font-weight:900'><span style='color:#e8312f'>" + (c.pct ? c.pct + "%" : won(c.amt)) + "</span> 쿠폰</div>" +
+          "<div style='font-size:12px;color:#666;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis'>" + String(c.nm).replace(/</g, "&lt;") + (c.min ? " · " + won(c.min) + " 이상" : "") + "</div>" +
+          "<div style='font-size:12px;color:#888;margin-top:2px'>⏱ " + when + "</div></div>" + btn + "</div>";
+      }
+      var go = "<a href='/product/list.html?cate_no=54' style='flex:0 0 auto;padding:8px 12px;border-radius:999px;background:#111;color:#fff;font-size:12px;font-weight:700;text-decoration:none'>쓰러 가기 ›</a>";
+      var h = "<div style='padding:18px 18px 16px;border-radius:14px;background:#151515;color:#fff;margin-bottom:16px'><div style='font-size:20px;font-weight:900'>🎟 내 쿠폰함</div><div style='font-size:13px;color:#bbb;margin-top:4px'>기한 지나기 전에 쿠폰을 확인하세요 · 주문당 1장 사용</div></div>";
+      if (soon.length) h += "<div style='font-size:14px;font-weight:800;margin:6px 0 8px'>3일 안에 써야 해요 " + soon.length + "장</div>" + soon.map(function(c){ return card(c, go); }).join("");
+      h += "<div style='font-size:14px;font-weight:800;margin:14px 0 8px'>보유 쿠폰 " + rest.length + "장</div>" + (rest.length ? rest.map(function(c){ return card(c, go); }).join("") : "<div style='padding:14px;color:#999;font-size:13px'>" + (soon.length ? "다른 쿠폰은 없어요." : "아직 받은 쿠폰이 없어요.") + "</div>");
+      if (dl.length) h += "<div style='font-size:14px;font-weight:800;margin:14px 0 8px'>받을 수 있는 쿠폰 " + dl.length + "장 <span style='color:#e8312f'>●</span></div>" + dl.map(function(c){
+        return card(c, "<a href='/exec/front/newcoupon/IssueDownload?coupon_no=" + c.no + "&opener_url=" + encodeURIComponent(location.href) + "' style='flex:0 0 auto;padding:8px 12px;border-radius:999px;background:#e8312f;color:#fff;font-size:12px;font-weight:700;text-decoration:none'>받기 ⤓</a>");
+      }).join("");
+      z.innerHTML = h;
+      list.style.display = "none"; var pg = document.querySelector(".xans-myshop-couponlistpaging"); if (pg) pg.style.display = "none";
+      if (window.dkTick) window.dkTick();
+    });
+  }
+
+  function run(){ consentNote(); cpPage(); cpList(); pcCss(); mypage(); cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
