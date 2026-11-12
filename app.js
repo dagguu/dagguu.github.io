@@ -1756,7 +1756,7 @@ function dpRules(){ return '<section class="pjsec"><h2>꼭 확인해 주세요</
   '<li>상품 금액(배송비 제외) 기준 '+DP_RATE+'%, 배송완료되고 취소·반품이 없는 주문만 적립돼요.</li>'+
   '<li>본인 주문은 적립되지 않아요.</li>'+
   '<li>링크를 누른 뒤 7일 안의 주문이 내 실적이에요(같은 휴대폰·같은 앱 기준). 다른 파트너 링크를 나중에 누르면 그 파트너 실적이 돼요.</li>'+
-  '<li>내 링크로 들어와 회원가입(또는 로그인)한 친구는 나와 연결돼요. 연결된 친구는 네이버 검색·다른 기기로 들어와 사도 내 실적이에요.</li>'+
+  '<li>친구가 다꾸키즈에 회원가입할 때 <b>추천인 아이디</b> 칸에 내 다꾸키즈 아이디를 쓰거나, 내 링크로 들어와 가입(또는 로그인)하면 나와 연결돼요. 연결된 친구는 네이버 검색·다른 기기로 들어와 사도 내 실적이에요.</li>'+
   '<li>연결은 친구가 마지막으로 산 날부터 12개월 동안 유지돼요. 친구가 살 때마다 12개월이 다시 시작되고, 1년 동안 한 번도 사지 않으면 연결이 끝나요.</li>'+
   '<li>사실과 다른 후기·과장 광고, 원치 않는 사람에게 링크 보내기(스팸)는 안 돼요. 어기면 적립이 취소될 수 있어요.</li></ul></section>'; }
 function dpInit(){
@@ -1770,7 +1770,7 @@ function dpInit(){
         v.innerHTML=dpHero()+dpRules()+'<section class="pjsec"><h2>파트너 가입</h2><form id="dpjoin" class="pjf">'+
           '<label class="fl" for="dp-code">내 링크 이름 <i>*</i></label><input id="dp-code" class="fi" maxlength="20" placeholder="영문 소문자·숫자·밑줄 3~20자 (예: dakku_mom)" autocapitalize="off" autocomplete="off">'+
           '<p class="dpnote">링크에 들어가는 이름이에요. 한 번 정하면 바꿀 수 없어요.</p>'+
-          '<label class="fl" for="dp-shop">다꾸키즈 아이디 또는 휴대폰 번호 <i>*</i></label><input id="dp-shop" class="fi" maxlength="40" placeholder="예: dagguu123 또는 010-1234-5678"><p class="dpnote">카카오로 가입했다면 다꾸키즈에 등록한 휴대폰 번호를 적어 주세요. 그 번호로 회원을 찾아 적립금을 넣어 드려요.</p>'+
+          '<label class="fl" for="dp-shop">다꾸키즈 아이디 또는 휴대폰 번호 <i>*</i></label><input id="dp-shop" class="fi" maxlength="40" placeholder="예: dagguu123 또는 010-1234-5678"><p class="dpnote">친구가 가입할 때 <b>추천인 아이디</b> 칸에 이 아이디를 쓰면 나와 연결돼요. 그래서 휴대폰 번호보다 <b>다꾸키즈 아이디</b>를 추천해요. 카카오로 가입해 아이디를 모르면 다꾸키즈 마이페이지 친구 초대 칸 주소의 <b>reco_id=</b> 뒤 글자가 내 아이디예요. 휴대폰 번호를 적으면 링크 적립만 되고 추천인 연결은 안 돼요.</p>'+
           '<p class="dpnote">아직 회원이 아니면 <a href="'+DP_SHOP+'/member/join.html" target="_blank" rel="noopener">다꾸키즈에서 가입</a>한 뒤 적어 주세요.</p>'+
           '<label class="ck"><input type="checkbox" id="dp-ok"><span>위 안내(#광고 표시·적립금 보상·본인 주문 제외)를 확인했어요</span></label>'+
           '<button class="b pri wide" type="submit">수익 링크 시작하기</button></form></section>';

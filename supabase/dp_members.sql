@@ -94,3 +94,23 @@ language sql stable security definer set search_path = public as $$
   )
 $$;
 grant execute on function public.dp_stats() to authenticated;
+
+-- 추천인 아이디로 연결(2026-11-12 시온님 "추천인에 아이디 쓰는거로"): 회원가입 때 추천인 아이디 칸(또는 ?reco_id= 초대 링크)에
+-- 파트너의 다꾸키즈 아이디(dp_partners.shop_id)를 쓰면 그 파트너와 연결. 이미 다른 파트너와 살아 있는 연결이 있으면 그대로.
+create or replace function public.dp_link_reco(p_member text, p_reco text) returns void
+language plpgsql security definer set search_path = public as $$
+declare m text := left(trim(coalesce(p_member,'')), 80); rid text := lower(trim(coalesce(p_reco,''))); c text; r public.dp_members;
+begin
+  if m !~ '^[0-9A-Za-z_@.-]{2,80}$' or length(rid) < 2 or lower(m) = rid then return; end if;
+  select code into c from public.dp_partners where lower(shop_id) = rid and status = 'active' limit 1;
+  if c is null then return; end if;
+  select * into r from public.dp_members where member_id = m;
+  if r.member_id is null then
+    insert into public.dp_members(member_id, code) values (m, c) on conflict (member_id) do nothing;
+  elsif r.code = c then
+    update public.dp_members set linked_at = now() where member_id = m;
+  elsif not public.dp_alive(r) then
+    update public.dp_members set code = c, linked_at = now(), last_order_at = null where member_id = m;
+  end if;
+end $$;
+grant execute on function public.dp_link_reco(text, text) to anon, authenticated;
