@@ -33,7 +33,7 @@ def font(size, weight="ExtraBold"):
 
 def products():
     out, off = [], 0
-    while off < 1000:
+    while off < 4000:
         r = requests.get(f"{API}/products", params={"display": "T", "selling": "T", "limit": 100, "offset": off,
                          "fields": "product_no,product_name,price,detail_image,list_image,sold_out,created_date"},
                          headers={"X-Cafe24-Client-Id": CID}, timeout=30)
