@@ -726,8 +726,10 @@
         if (next && sen.getBoundingClientRect().top < innerHeight + 900) load();
       }).catch(function(){ busy = false; sen.innerHTML = "<a href='" + next + "' style='color:#6a3fc8'>다음 상품 보기 ›</a>"; next = null; });
     }
-    try { new IntersectionObserver(function(es){ if (es[0].isIntersecting) load(); }, { rootMargin: "900px 0px" }).observe(sen); }
-    catch(e){ addEventListener("scroll", function(){ if (sen.getBoundingClientRect().top < innerHeight + 900) load(); }); }
+    function near(){ if (sen.getBoundingClientRect().top < innerHeight + 900) load(); }
+    try { new IntersectionObserver(function(es){ if (es[0].isIntersecting) load(); }, { rootMargin: "900px 0px" }).observe(sen); } catch(e){}
+    addEventListener("scroll", function(){ clearTimeout(window.dkInfT); window.dkInfT = setTimeout(near, 120); }, { passive: true });
+    setTimeout(near, 800);
   }
 
   function run(){ kwAlways(); infList(); homeVideos(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
