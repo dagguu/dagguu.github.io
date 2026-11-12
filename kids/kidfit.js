@@ -629,14 +629,17 @@
   function homeVideos(){
     var p = location.pathname; if (!(p === "/" || p === "/index.html")) return;
     if (document.getElementById("dk-hv")) return;
+    /* 2026-11-12 시온님 "shorts pick 을 맨 위로": 홈 맨 위 신상 칸(#dk-new) 바로 앞에 */
+    var top = document.getElementById("dk-new");
     var at = document.getElementById("dk-brands") || document.querySelector(".dk-brands") || document.querySelector(".dk-hdbox");
-    if (!at || !at.parentNode) return;
+    if (!(top && top.parentNode) && !(at && at.parentNode)) return;
     var sec = document.createElement("section"); sec.id = "dk-hv";
-    if (at.classList && at.classList.contains("dk-hdbox")) at.parentNode.insertBefore(sec, at); else at.parentNode.insertBefore(sec, at.nextSibling);
+    if (top && top.parentNode) top.parentNode.insertBefore(sec, top);
+    else if (at.classList && at.classList.contains("dk-hdbox")) at.parentNode.insertBefore(sec, at); else at.parentNode.insertBefore(sec, at.nextSibling);
     fetch(HV + "?d=" + new Date().toISOString().slice(0, 13)).then(function(r){ return r.json(); }).then(function(l){
       l = (l || []).slice(0, 12); if (!l.length) { sec.parentNode.removeChild(sec); return; }
       /* 2026-11-12 시온님 "깔끔한 느낌으로"(CREATOR PICK 참고): 가운데 카드 크게, 양옆 살짝 보이게, 아래 '상품 보기' */
-      var st = "<style>#dk-hv{background:#f6f3ee;margin:36px 0 10px;padding:34px 0 30px;text-align:center}" +
+      var st = "<style>#dk-hv{background:#f6f3ee;margin:0 0 10px;padding:28px 0 26px;text-align:center}" +
         "#dk-hv .hh{font-size:22px;letter-spacing:3px;font-weight:600;color:#111;margin:0}#dk-hv .hs{font-size:13px;color:#888;margin:6px 0 18px}" +
         "#dk-hv .hvr{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px calc(50% - min(31vw,150px)) 6px;-webkit-overflow-scrolling:touch;scrollbar-width:none}#dk-hv .hvr::-webkit-scrollbar{display:none}" +
         "#dk-hv .hvc{flex:0 0 min(62vw,300px);width:min(62vw,300px);scroll-snap-align:center;cursor:pointer;text-decoration:none;color:#222;transition:opacity .35s;opacity:.75}" +
