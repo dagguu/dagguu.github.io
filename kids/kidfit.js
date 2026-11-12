@@ -725,7 +725,7 @@
     kb.parentNode.insertBefore(iv, kb);
     if (location.hash === "#dk-invite") setTimeout(function(){ window.scrollTo({ top: iv.getBoundingClientRect().top + window.pageYOffset - 140, behavior: "smooth" }); }, 300);
   }
-  var MENU_KW = ["양말", "실내복", "1+1"];
+  var MENU_KW = ["양말", "실내복", "1+1", "크리스마스"];
   function kwAlways(){
     if (!document.getElementById("dk-kw2-css")) { var st = document.createElement("style"); st.id = "dk-kw2-css"; st.textContent = ".dk-kw{display:none!important}.xans-layout-searchheader{background:#fff!important;height:auto!important;max-height:100vh;overflow-y:auto;padding-bottom:40px!important;box-shadow:0 8px 20px rgba(0,0,0,.08)}"; document.head.appendChild(st); }
     /* 2026-11-12 시온님: 상단 메뉴(양말·실내복)로 들어온 검색 결과 화면에는 '상품검색' 칸을 숨김 */
