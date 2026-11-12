@@ -1,5 +1,5 @@
 {
- "at": "2026-11-12 07:38",
+ "at": "2026-11-12 19:51",
  "checkIn": "2026-11-21",
  "stays": {
   "busan-matie-harbor": {
@@ -19,7 +19,7 @@
       "page",
       "size"
      ],
-     "total": 1776
+     "total": 1773
     }
    ],
    "hit": "마티에 부산하버시티",
@@ -80,14 +80,14 @@
      "kw": "대전",
      "region": "대전",
      "type": "CITY",
-     "pages": 9,
-     "n": 431,
+     "pages": 5,
+     "n": 248,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 434
+     "total": 432
     }
    ],
    "hit": "대전 유천 스테이 패스포트 키노사키 료칸 by 아늑",
@@ -115,13 +115,13 @@
      "region": "동두천",
      "type": "CITY",
      "pages": 1,
-     "n": 47,
+     "n": 46,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 47
+     "total": 46
     }
    ],
    "hit": "니지모리 스튜디오 료칸",
@@ -149,7 +149,7 @@
      "region": "주문진항",
      "type": "POINT_OF_INTEREST",
      "pages": 2,
-     "n": 100,
+     "n": 99,
      "keys": [
       "totalCount",
       "page",
@@ -321,6 +321,40 @@
     "starRating"
    ]
   },
+  "goseong-072stay": {
+   "name": "072스테이",
+   "city": "고성",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "고성",
+     "region": "고성",
+     "type": "CITY",
+     "pages": 4,
+     "n": 195,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 362
+    }
+   ],
+   "hit": "고성 072스테이",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
+  },
   "goseong-stage-poolvilla": {
    "name": "스테이지풀빌라",
    "city": "고성",
@@ -392,13 +426,13 @@
      "region": "구례",
      "type": "CITY",
      "pages": 2,
-     "n": 93,
+     "n": 94,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 154
+     "total": 153
     }
    ],
    "hit": "구례 도화풀빌라",
@@ -426,39 +460,39 @@
      "region": "경주",
      "type": "CITY",
      "pages": 35,
-     "n": 1641,
+     "n": 1640,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1665
+     "total": 1663
     },
     {
      "kw": "경북",
      "region": "경주",
      "type": "CITY",
      "pages": 35,
-     "n": 1641,
+     "n": 1640,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1665
+     "total": 1663
     },
     {
      "kw": "경북",
      "region": "포항",
      "type": "CITY",
      "pages": 18,
-     "n": 807,
+     "n": 806,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 828
+     "total": 827
     }
    ],
    "kept": true
@@ -474,13 +508,13 @@
      "region": "경주",
      "type": "CITY",
      "pages": 13,
-     "n": 642,
+     "n": 641,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1665
+     "total": 1663
     }
    ],
    "hit": "경주 에스앤비풀빌라",
@@ -514,7 +548,7 @@
       "page",
       "size"
      ],
-     "total": 1665
+     "total": 1663
     }
    ],
    "hit": "토모노야 호텔&료칸 경주",
@@ -575,14 +609,14 @@
      "kw": "포항",
      "region": "포항",
      "type": "CITY",
-     "pages": 2,
-     "n": 97,
+     "pages": 3,
+     "n": 146,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 828
+     "total": 827
     }
    ],
    "hit": "데이토나 풀 빌라",
@@ -684,7 +718,7 @@
       "page",
       "size"
      ],
-     "total": 1369
+     "total": 1363
     }
    ],
    "hit": "담앤루리조트",
@@ -718,7 +752,7 @@
       "page",
       "size"
      ],
-     "total": 2048
+     "total": 2046
     }
    ],
    "hit": "대부도(선재도) 선재담글램핑&카라반리조트",
