@@ -1,0 +1,38 @@
+[
+ {
+  "n": 1,
+  "time": "night",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same white two-storey villa, same tall glass window with the lit indoor pool inside, same terrace and lights, same starry night sky). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. No people.",
+  "prompt": "Very slow push forward toward the tall glass window with the glowing indoor pool, water shimmering softly inside, light steam on the glass, stars still."
+ },
+ {
+  "n": 2,
+  "time": "day",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same rooftop railing, same sea horizon, same sun rising over the East Sea, same buildings below). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. No people.",
+  "prompt": "Slow push forward toward the sea horizon as the sun rises, sea surface glittering gently, thin clouds drifting slowly."
+ },
+ {
+  "n": 3,
+  "time": "day",
+  "look": "day",
+  "people": true,
+  "img": "Keep the place exactly as it is (same white villa, same walled yard, same small outdoor pool, same parasol). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. Add one Korean woman standing far away and small on the yard, seen only from behind, looking at the villa, her face and profile completely hidden, not touching anything.",
+  "prompt": "Very slow gentle push forward; the woman stands still looking at the white villa and never turns around; her skirt moves slightly in the breeze; clouds drift slowly."
+ },
+ {
+  "n": 4,
+  "time": "day",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same white kitchen, same refrigerator, same pendant lights, same white dining table and chairs, same window). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. No people.",
+  "prompt": "Slow walk-through glide forward toward the dining table, soft daylight from the window, pendant lights glowing warmly."
+ },
+ {
+  "n": 5,
+  "time": "day",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same aerial view of the white villa with two wings, same rooftops, same yard and road, same surrounding land). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. No people.",
+  "prompt": "Slow aerial rise looking down at the white villa, the whole building and its surroundings gradually revealed, light breeze."
+ }
+]
