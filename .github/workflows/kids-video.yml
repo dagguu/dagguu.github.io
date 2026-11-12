@@ -5,6 +5,7 @@ on:
     inputs:
       count: { description: "몇 개 (자동 고르기)", default: "5" }
       nos: { description: "상품번호 직접 (쉼표, 비우면 자동)", default: "" }
+      brands: { description: "브랜드 영상 (쉼표, 예: 아오스타,피피)", default: "" }
 permissions: { contents: write }
 concurrency: kids-video
 jobs:
@@ -17,7 +18,7 @@ jobs:
         with: { python-version: "3.12" }
       - run: |
           (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null) || echo apt실패
-          pip install -q requests pillow
+          pip install -q requests pillow numpy
           mkdir -p ~/.local/share/fonts
           for f in SemiBold Bold ExtraBold; do for u in https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/public/static/Pretendard-$f.otf https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/Pretendard-$f.otf; do curl -sSLf -o ~/.local/share/fonts/Pretendard-$f.otf $u && break; done; done
           curl -sSLf -o ~/.local/share/fonts/NotoSansKR.otf https://cdn.jsdelivr.net/gh/notofonts/noto-cjk@main/Sans/SubsetOTF/KR/NotoSansKR-Bold.otf || true
@@ -26,6 +27,7 @@ jobs:
         env:
           COUNT: ${{ github.event.inputs.count }}
           NOS: ${{ github.event.inputs.nos }}
+          BRANDS: ${{ github.event.inputs.brands }}
       - run: |
           git config user.name "dagguu"; git config user.email "dagguu@users.noreply.github.com"
           git add kids/v

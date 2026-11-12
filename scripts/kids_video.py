@@ -74,14 +74,14 @@ def pick_images(p):
         if w < 500 or w / h > 1.25:  # 작거나 가로로 긴 것(사이즈표·글씨)은 뺌
             continue
         ims.append(im)
-        if len(ims) >= 4:
+        if len(ims) >= 6:
             break
     if len(ims) < 3 and p.get("detail_image"):
         try:
             ims.insert(0, load(p["detail_image"]))
         except Exception:
             pass
-    return ims[:4]
+    return ims[:6]
 
 
 def still(im, scale=1.12):
@@ -139,12 +139,69 @@ def cover(im):
     return im.crop((x, y, x + W, y + H))
 
 
-HOLD = 3.0   # 사진 한 장 보여 주는 시간
-SLIDE = 0.45  # 왼쪽으로 넘어가는 시간
+HOLD = 1.0    # 2026-11-12 시온님 "1초 정도"
+SWIPE = 0.32  # 손으로 휙 넘기는 시간
+
+
+def ease(t):
+    """손으로 넘기는 느낌: 처음 빠르게 끌고 끝에서 살짝 감속(easeOutCubic 에 약간의 가속 시작)."""
+    t = max(0.0, min(1.0, t))
+    return 1 - (1 - t) ** 3 if t > 0.12 else (t / 0.12) ** 2 * (1 - (1 - 0.12) ** 3)
+
+
+def render(frames_iter, path):
+    p = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
+                          "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "medium", "-crf", "26",
+                          "-pix_fmt", "yuv420p", "-movflags", "+faststart", path], stdin=subprocess.PIPE)
+    for f in frames_iter:
+        p.stdin.write(f)
+    p.stdin.close()
+    if p.wait() != 0:
+        raise RuntimeError("ffmpeg 실패")
+
+
+def frames_swipe(arrs):
+    import numpy as np
+    hold, sw = int(HOLD * FPS), int(SWIPE * FPS)
+    prev_e = 0.0
+    for i, a in enumerate(arrs):
+        fb = a.tobytes()
+        for _ in range(hold if i < len(arrs) - 1 else hold + FPS // 2):
+            yield fb
+        if i == len(arrs) - 1:
+            break
+        b = arrs[i + 1]
+        prev_e = 0.0
+        for k in range(1, sw + 1):
+            e = ease(k / sw)
+            off = int(round(e * W))
+            fr = np.empty_like(a)
+            fr[:, :W - off] = a[:, off:]
+            fr[:, W - off:] = b[:, :off]
+            v = (e - prev_e) * W  # 이번 프레임 이동 픽셀
+            prev_e = e
+            n = int(min(9, v / 18))  # 빠를수록 가로로 번짐(모션 블러)
+            if n >= 2:
+                acc = fr.astype(np.uint16)
+                step = max(1, int(v / n / 2))
+                for j in range(1, n):
+                    sh = np.empty_like(fr); sh[:, j * step:] = fr[:, :W - j * step]; sh[:, :j * step] = fr[:, :1]
+                    acc += sh
+                fr = (acc // n).astype(np.uint8)
+            yield fr.tobytes()
+
+
+def frames_cut(arrs):
+    hold = int(HOLD * FPS)
+    for i, a in enumerate(arrs):
+        fb = a.tobytes()
+        for _ in range(hold if i < len(arrs) - 1 else hold + FPS // 2):
+            yield fb
 
 
 def make(p, hook=None):
-    """2026-11-12 시온님: 확대·축소 없이 사진 그대로, 사진만 왼쪽으로 넘어가게. 글자 없음(깔끔하게, 상품 정보는 쇼핑몰 화면이 보여 줌)."""
+    """2026-11-12 시온님: 사진 그대로(확대·축소 없음), 1초마다 손으로 휙 넘기듯(<번호>.mp4) / 효과 없이 사진만 바뀜(<번호>_cut.mp4). 글자 없음."""
+    import numpy as np
     no = p["product_no"]
     full = p["product_name"].strip()
     brand = full.split(" ")[0]
@@ -153,29 +210,64 @@ def make(p, hook=None):
     if len(ims) < 3:
         print("사진 부족", no, full, len(ims))
         return None
-    tmp = tempfile.mkdtemp()
-    cmd = ["ffmpeg", "-y", "-loglevel", "error"]
-    for i, im in enumerate(ims):
-        c = cover(im)
-        c.save(f"{tmp}/s{i}.jpg", quality=92)
-        if i == 0:
-            c.save(f"{OUT}/{no}.jpg", quality=86)
-        cmd += ["-loop", "1", "-framerate", str(FPS), "-t", str(HOLD + SLIDE), "-i", f"{tmp}/s{i}.jpg"]
-    fc, last = [], "[0:v]"
-    for i in range(len(ims)):
-        fc.append(f"[{i}:v]fps={FPS},format=yuv420p,setsar=1[v{i}]")
-    last = "[v0]"
-    for i in range(1, len(ims)):
-        off = round(i * HOLD - (i - 1) * 0 , 3)
-        off = round(i * HOLD, 3)
-        fc.append(f"{last}[v{i}]xfade=transition=slideleft:duration={SLIDE}:offset={off}[x{i}]")
-        last = f"[x{i}]"
-    cmd += ["-filter_complex", ";".join(fc), "-map", last, "-c:v", "libx264", "-preset", "medium", "-crf", "26",
-            "-pix_fmt", "yuv420p", "-movflags", "+faststart", f"{OUT}/{no}.mp4"]
-    subprocess.run(cmd, check=True)
+    covers = [cover(im) for im in ims]
+    covers[0].save(f"{OUT}/{no}.jpg", quality=86)
+    arrs = [np.asarray(c, dtype=np.uint8) for c in covers]
+    render(frames_swipe(arrs), f"{OUT}/{no}.mp4")
+    render(frames_cut(arrs), f"{OUT}/{no}_cut.mp4")
     return {"no": no, "name": full, "brand": brand, "price": price, "img": p.get("list_image"),
-            "video": f"https://www.dagguu.com/{OUT}/{no}.mp4", "poster": f"https://www.dagguu.com/{OUT}/{no}.jpg",
+            "video": f"https://www.dagguu.com/{OUT}/{no}.mp4", "cut": f"https://www.dagguu.com/{OUT}/{no}_cut.mp4",
+            "poster": f"https://www.dagguu.com/{OUT}/{no}.jpg",
             "url": f"{SHOP}/product/detail.html?product_no={no}"}
+
+
+BRAND_CAT = {"데일리베베": 43, "피피": 44, "오호": 45, "알라딘": 46, "아오스타": 47, "에스크미애니띵": 48, "제니베이직": 49}
+
+
+def one_image(p):
+    for u in desc_images(p["product_no"])[:6]:
+        try:
+            im = load(u)
+        except Exception:
+            continue
+        if im.width >= 500 and im.width / im.height <= 1.25:
+            return im
+    try:
+        return load(p["detail_image"]) if p.get("detail_image") else None
+    except Exception:
+        return None
+
+
+def make_brand(brand, ps, k=8):
+    """브랜드 영상(2026-11-12 시온님): 그 브랜드 상품 여러 개를 한 장씩 → 1초마다 넘김. 영상 위에 영상 속 상품 여러 개 + 브랜드 바로가기."""
+    import numpy as np
+    mine = [p for p in ps if p["product_name"].split(" ")[0] == brand]
+    mine.sort(key=lambda p: (p.get("created_date") or "", p["product_no"]), reverse=True)
+    items, covers = [], []
+    for p in mine:
+        im = one_image(p)
+        if not im:
+            continue
+        covers.append(cover(im))
+        full = p["product_name"].strip()
+        items.append({"no": p["product_no"], "name": full, "price": int(float(p["price"])), "img": p.get("list_image"),
+                      "url": f"{SHOP}/product/detail.html?product_no={p['product_no']}"})
+        if len(items) >= k:
+            break
+    if len(items) < 3:
+        print("브랜드 사진 부족", brand, len(items))
+        return None
+    key = "b" + str(BRAND_CAT.get(brand, abs(hash(brand)) % 100000))
+    covers[0].save(f"{OUT}/{key}.jpg", quality=86)
+    arrs = [np.asarray(c, dtype=np.uint8) for c in covers]
+    render(frames_swipe(arrs), f"{OUT}/{key}.mp4")
+    render(frames_cut(arrs), f"{OUT}/{key}_cut.mp4")
+    cat = BRAND_CAT.get(brand)
+    return {"no": key, "type": "brand", "brand": brand, "name": f"{brand} 신상 {len(items)}종", "price": min(i["price"] for i in items),
+            "img": items[0]["img"], "items": items, "seg": HOLD + SWIPE,
+            "video": f"https://www.dagguu.com/{OUT}/{key}.mp4", "cut": f"https://www.dagguu.com/{OUT}/{key}_cut.mp4",
+            "poster": f"https://www.dagguu.com/{OUT}/{key}.jpg",
+            "url": f"{SHOP}/product/list.html?cate_no={cat}" if cat else f"{SHOP}/product/search.html?keyword={brand}"}
 
 
 def choose(ps, k):
@@ -206,12 +298,23 @@ def main():
     nos = [int(x) for x in re.findall(r"[0-9]+", os.environ.get("NOS", ""))]
     ps = products()
     print("상품", len(ps))
-    cand = [p for p in ps if p["product_no"] in nos] if nos else choose(ps, k)
     lst_path = f"{OUT}/list.json"
     lst = json.load(open(lst_path)) if os.path.exists(lst_path) else []
     done = []
+    brands = [b.strip() for b in os.environ.get("BRANDS", "").split(",") if b.strip()]
+    for b in brands:
+        try:
+            r = make_brand(b, ps)
+        except Exception as e:
+            print("브랜드 실패", b, e); r = None
+        if r:
+            done.append(r); lst = [x for x in lst if x["no"] != r["no"]]; lst.insert(0, r); print("브랜드 만듦", b, len(r["items"]))
+    if brands and not nos and os.environ.get("COUNT", "") in ("", "0"):
+        json.dump(lst[:30], open(lst_path, "w"), ensure_ascii=False, indent=1)
+        print("완료", len(done)); sys.exit(0 if done else 1)
+    cand = [p for p in ps if p["product_no"] in nos] if nos else choose(ps, k)
     for p in cand:
-        if len(done) >= (len(nos) if nos else k):
+        if len([x for x in done if x.get("type") != "brand"]) >= (len(nos) if nos else k):
             break
         try:
             hook = "이번 주 신상 아우터" if any(w in p["product_name"] for w in OUTER) else "오늘의 신상"
