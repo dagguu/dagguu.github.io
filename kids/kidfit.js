@@ -682,7 +682,7 @@
   /* ---------- ⑪ 검색창 인기 검색어 바로 보이기 (2026-11-12 시온님 "서치에서 바로 확인할 수 있게") ---------- */
   var KW2 = ["아오스타", "피피", "제니베이직", "데일리베베", "가디건", "원피스", "기모", "후리스", "바지", "실내복"];
   function kwAlways(){
-    if (!document.getElementById("dk-kw2-css")) { var st = document.createElement("style"); st.id = "dk-kw2-css"; st.textContent = ".dk-kw{display:none!important}"; document.head.appendChild(st); }
+    if (!document.getElementById("dk-kw2-css")) { var st = document.createElement("style"); st.id = "dk-kw2-css"; st.textContent = ".dk-kw{display:none!important}.xans-layout-searchheader{background:#fff!important;padding-bottom:28px!important}"; document.head.appendChild(st); }
     [].forEach.call(document.querySelectorAll("input[name=keyword]"), function(inp){
       if (inp.getAttribute("data-dkkw2")) return; inp.setAttribute("data-dkkw2", "1");
       var host = inp.closest("fieldset") || inp.parentNode; if (!host || !host.parentNode) return;
