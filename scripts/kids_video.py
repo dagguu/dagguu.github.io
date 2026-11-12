@@ -91,9 +91,9 @@ def still(im, scale=1.12):
     r = max(SW / bg.width, SH / bg.height)
     bg = bg.resize((int(bg.width * r) + 1, int(bg.height * r) + 1)).crop((0, 0, SW, SH)).filter(ImageFilter.GaussianBlur(40))
     bg = Image.eval(bg, lambda v: int(v * 0.82))
-    r2 = min(SW / im.width, SH * 0.82 / im.height)
+    r2 = min(SW * 0.94 / im.width, SH * 0.68 / im.height)
     fg = im.resize((int(im.width * r2), int(im.height * r2)), Image.LANCZOS)
-    bg.paste(fg, ((SW - fg.width) // 2, int(SH * 0.06)))
+    bg.paste(fg, ((SW - fg.width) // 2, int(SH * 0.075)))
     return bg
 
 
@@ -109,7 +109,7 @@ def text_layer(brand, name, price, hook):
     # 아래 그늘
     grad = Image.new("L", (1, 620))
     for y in range(620):
-        grad.putpixel((0, y), int(230 * (y / 620) ** 1.4))
+        grad.putpixel((0, y), int(250 * min(1, (y / 380)) ** 1.2))
     sh = Image.new("RGBA", (W, 620), (0, 0, 0, 255))
     sh.putalpha(grad.resize((W, 620)))
     L.alpha_composite(sh, (0, H - 620))
