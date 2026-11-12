@@ -653,6 +653,20 @@
       l.forEach(function(x, i){ h += "<a class='hvc' data-i='" + i + "'><span class='hvv'><video muted playsinline loop preload='none' poster='" + x.poster + "' data-src='" + x.video + "'></video><span class='hvb'>" + (x.type === "brand" ? "브랜드 바로가기" : "상품 보기") + "</span></span>" +
         "<span class='hvm'><img src='" + x.img + "' alt=''><span style='min-width:0'><b>" + String(x.brand || "").replace(/</g, "") + "</b><span>" + (x.type === "brand" ? "신상 " + x.items.length + "종 · " + won(x.price) + "~" : String(x.name).replace(/</g, "&lt;") + " · " + won(x.price)) + "</span></span></span></a>"; });
       sec.innerHTML = h + "</div>";
+      /* 2026-11-12 시온님: PC 는 스와이프가 안 돼서 양쪽 화살표 + 4초마다 자동으로 한 칸씩(마우스 올리면 멈춤) */
+      if (window.matchMedia && matchMedia("(min-width:1025px)").matches) {
+        var wr = document.createElement("div"); wr.style.cssText = "position:relative;max-width:1240px;margin:0 auto";
+        var rw = sec.querySelector(".hvr"); rw.parentNode.insertBefore(wr, rw); wr.appendChild(rw);
+        var ab = "position:absolute;top:38%;z-index:3;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.95);box-shadow:0 2px 10px rgba(0,0,0,.15);font-size:22px;color:#222;cursor:pointer;line-height:44px;padding:0";
+        var bl = document.createElement("button"); bl.type = "button"; bl.textContent = "‹"; bl.setAttribute("aria-label", "이전"); bl.style.cssText = ab + ";left:4px";
+        var br = document.createElement("button"); br.type = "button"; br.textContent = "›"; br.setAttribute("aria-label", "다음"); br.style.cssText = ab + ";right:4px";
+        wr.appendChild(bl); wr.appendChild(br);
+        function step(d){ var c = rw.querySelector(".hvc"); var w = c ? c.getBoundingClientRect().width + 14 : 260; var max = rw.scrollWidth - rw.clientWidth - 4;
+          if (d > 0 && rw.scrollLeft >= max) rw.scrollTo({ left: 0, behavior: "smooth" }); else if (d < 0 && rw.scrollLeft <= 4) rw.scrollTo({ left: max + 4, behavior: "smooth" }); else rw.scrollBy({ left: d * w, behavior: "smooth" }); }
+        bl.onclick = function(){ step(-1); }; br.onclick = function(){ step(1); };
+        var hov = false; wr.addEventListener("mouseenter", function(){ hov = true; }); wr.addEventListener("mouseleave", function(){ hov = false; });
+        setInterval(function(){ if (!hov && !document.hidden && document.getElementById("dk-hvf") === null || (!hov && !document.hidden && document.getElementById("dk-hvf").style.display !== "block")) step(1); }, 4000);
+      }
       var row = sec.querySelector(".hvr"), cards = sec.querySelectorAll(".hvc"), cur = -1, vis = false;
       var PC = window.matchMedia && matchMedia("(min-width:1025px)").matches;
       function pick(){
