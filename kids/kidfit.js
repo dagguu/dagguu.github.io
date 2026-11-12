@@ -404,7 +404,7 @@
         var a = li.querySelector('a[href*="IssueDownload"]'); if (!a) return;
         var m = a.getAttribute("href").match(/coupon_no=([0-9]+)/); if (!m) return;
         var t = (li.querySelector(".title") || {}).textContent || "", dc = (li.querySelector(".discount") || {}).textContent || "";
-        var c = { no: m[1], nm: t.trim(), per: ((li.querySelector(".period") || {}).textContent || "").trim(), min: minOf(t), all: 1 };
+        var c = { no: m[1], nm: t.replace(/\s*\.\.\.\s*$/, "").trim(), per: ((li.querySelector(".period") || {}).textContent || "").trim(), min: minOf(t), all: 1 };
         if (/%/.test(dc)) c.pct = parseFloat(dc); else if (/원/.test(dc)) c.amt = num(dc); else return;
         if (!out.some(function(x){ return x.no === c.no; })) out.push(c);
       });
