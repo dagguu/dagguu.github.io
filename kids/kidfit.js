@@ -704,7 +704,7 @@
     var hd = document.createElement("div"); hd.style.cssText = "font-size:16px;font-weight:900;color:#6a3fc8;margin-bottom:8px;text-align:center"; hd.textContent = "🎁 친구 초대 이벤트 · 친구도 나도 500원 적립";
     iv.insertBefore(hd, iv.firstChild);
     kb.parentNode.insertBefore(iv, kb);
-    if (location.hash === "#dk-invite") setTimeout(function(){ iv.scrollIntoView({ behavior: "smooth", block: "center" }); }, 200);
+    if (location.hash === "#dk-invite") setTimeout(function(){ window.scrollTo({ top: iv.getBoundingClientRect().top + window.pageYOffset - 140, behavior: "smooth" }); }, 300);
   }
   var MENU_KW = ["양말", "실내복"];
   function kwAlways(){
@@ -712,7 +712,7 @@
     /* 2026-11-12 시온님: 상단 메뉴(양말·실내복)로 들어온 검색 결과 화면에는 '상품검색' 칸을 숨김 */
     if (location.pathname.indexOf("/product/search.html") === 0) {
       var q = ""; try { q = new URLSearchParams(location.search).get("keyword") || ""; } catch(e){}
-      if (MENU_KW.indexOf(q.trim()) >= 0) { var sd = document.querySelector(".xans-product-searchdata"); if (sd && !sd.getAttribute("data-dkhide")) { sd.setAttribute("data-dkhide", "1"); [].forEach.call(sd.children, function(c){ if (!c.querySelector(".xans-search-result, .prdList") && !/searchContent/.test(c.id)) c.style.display = "none"; }); var sf = sd.querySelector("form.searchField"); if (sf) sf.style.display = "none"; } }
+      if (MENU_KW.indexOf(q.trim()) >= 0 && !document.documentElement.getAttribute("data-dkmenu")) { document.documentElement.setAttribute("data-dkmenu", "1"); var sf = document.querySelector("form.searchField"); if (sf) sf.style.display = "none"; var h2 = document.querySelector(".titleArea h2"); if (h2) h2.textContent = q.trim(); }
     }
     [].forEach.call(document.querySelectorAll(".dk-kw2"), function(d){ if (!d.closest(".xans-layout-searchheader")) d.parentNode.removeChild(d); });
     var lay = document.querySelector(".xans-layout-searchheader"); if (!lay) return;
