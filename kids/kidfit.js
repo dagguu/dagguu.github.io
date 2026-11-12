@@ -230,7 +230,25 @@
     b.innerHTML = html + "<i style='position:absolute;left:24px;bottom:-6px;width:12px;height:12px;background:#6a3fc8;transform:rotate(45deg)'></i>";
   }
 
-  function run(){ mypage(); if (document.getElementById("orderFixArea")) { recLine(); bubble(); } }
+  /* ---------- ④ 최저가 보장제 (2026-11-12 시온님: 판가 기준·구매 후 7일·카톡 캡처·차액 환불) ---------- */
+  function lowest(){
+    var sp = document.getElementById("span_product_price_text"); if (!sp || document.getElementById("dk-low")) return;
+    var an = sp.closest("table") || sp.closest(".xans-product-detaildesign") || sp.parentNode; if (!an || !an.parentNode) return;
+    var d = document.createElement("div"); d.id = "dk-low";
+    d.style.cssText = "margin:12px 0;padding:12px 14px;border:1px solid #e3dbfb;border-radius:12px;background:#fff;font-size:13px;color:#333;line-height:1.6";
+    d.innerHTML = "<a href='#none' id='dk-low-t' style='display:flex;justify-content:space-between;align-items:center;text-decoration:none;color:#333'><span>🏷️ <b style='color:#6a3fc8'>최저가 보장제</b> · 더 싼 곳이 있으면 <b>차액 환불</b></span><span style='font-size:12px;color:#999'>자세히 ▾</span></a>" +
+      "<div id='dk-low-b' style='display:none;margin-top:8px;padding-top:8px;border-top:1px dashed #e3dbfb;font-size:12.5px;color:#555'>" +
+      "다꾸키즈는 최저가 보장제를 운영해요. 같은 상품(같은 브랜드·상품·옵션)을 다른 온라인몰에서 판매가 기준으로 더 싸게 팔고 있으면 차액을 돌려드려요." +
+      "<ul style='margin:6px 0 0;padding-left:16px'>" +
+      "<li>비교 기준: 판매가 (쿠폰·적립금·카드 할인·배송비, 회원 전용가·품절·중고·해외 상품은 제외)</li>" +
+      "<li>신청 기간: 구매 후 7일 안</li>" +
+      "<li>신청 방법: 카카오톡 채널 <a href='https://pf.kakao.com/_xhihNX' target='_blank' style='color:#6a3fc8;font-weight:700'>다꾸키즈</a>로 주문번호와 다른 몰 상품 화면 캡처 보내기</li>" +
+      "<li>돌려드리는 것: 판매가 차액</li></ul></div>";
+    an.parentNode.insertBefore(d, an.nextSibling);
+    document.getElementById("dk-low-t").onclick = function(e){ e.preventDefault(); var b = document.getElementById("dk-low-b"); b.style.display = b.style.display === "none" ? "block" : "none"; };
+  }
+
+  function run(){ mypage(); if (document.getElementById("orderFixArea")) { lowest(); recLine(); bubble(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
