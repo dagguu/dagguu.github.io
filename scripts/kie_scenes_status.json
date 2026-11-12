@@ -1,14 +1,42 @@
 {
- "at": "2026-11-10T11:17:58.197356",
- "name": "yeongdeok-poolmoon",
+ "at": "2026-11-12T11:00:50.370735",
+ "name": "goseong-072stay",
  "jobs": [
   {
    "img": "ai:1",
-   "taskId": "4279b838a9ce4b61de56f4eb2e90e960",
+   "taskId": "6a60904abd6522636693acc4842746aa",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-10/yeongdeok-poolmoon/clip_ai1.mp4"
+   "file": "video/2026-11-12/goseong-072stay/clip_ai1.mp4"
+  },
+  {
+   "img": "ai:2",
+   "taskId": "f9b543dd9261eb7d5ee62fcd8c6969a3",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-12/goseong-072stay/clip_ai2.mp4"
+  },
+  {
+   "img": "ai:3",
+   "taskId": "dbfc69063739846e98ddc37ae3b29e77",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-12/goseong-072stay/clip_ai3.mp4"
+  },
+  {
+   "img": "ai:4",
+   "taskId": "c1c83e6a548b3b5c0b81e7862dc92e8c",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-12/goseong-072stay/clip_ai4.mp4"
+  },
+  {
+   "img": "ai:5",
+   "taskId": "a2577e8bebc44c84f13d211af6e9e24c",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-12/goseong-072stay/clip_ai5.mp4"
   }
  ],
- "credits_total": 35.0
+ "credits_total": 175.0
 }
