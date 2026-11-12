@@ -257,10 +257,9 @@
     var bp = document.getElementById("xans_myshop_basket_price");
     var cart = bp ? num(bp.textContent) : 0;
     var sp = document.getElementById("span_product_price_text"); var me = sp ? num(sp.textContent) : 0;
-    var th = [].filter.call(document.querySelectorAll(".infoArea th"), function(t){ return t.textContent.trim() === "배송비"; })[0];
-    var host = th && th.nextElementSibling; if (!host) return;
+    var low = document.getElementById("dk-low"); if (!low || !low.parentNode) return;
     var d = document.getElementById("dk-ship");
-    if (!d) { d = document.createElement("div"); d.id = "dk-ship"; d.style.cssText = "margin:8px 0 2px;padding:10px 12px;border-radius:10px;background:#f6f2ff;font-size:12.5px;color:#333;line-height:1.5;max-width:340px"; host.appendChild(d); }
+    if (!d) { d = document.createElement("div"); d.id = "dk-ship"; d.style.cssText = "margin:0 0 12px;padding:11px 14px;border-radius:12px;background:#f6f2ff;font-size:13px;color:#333;line-height:1.5"; low.parentNode.insertBefore(d, low.nextSibling); }
     var left = FREE - cart, pct = Math.min(100, Math.round(cart / FREE * 100)), msg;
     if (left <= 0) msg = "🚚 <b style='color:#6a3fc8'>무료배송 조건을 채웠어요!</b> <span style='color:#888'>(장바구니 " + won(cart) + ")</span>";
     else if (me && cart + me >= FREE) msg = "🚚 <b style='color:#6a3fc8'>이 상품을 담으면 무료배송이에요!</b>" + (cart ? " <span style='color:#888'>(장바구니 " + won(cart) + ")</span>" : "");
@@ -300,8 +299,8 @@
   function similar(){
     if (document.getElementById("dk-sim")) return;
     var no = pno(); if (!no) return;
-    var act = document.querySelector(".infoArea .productAction"); if (!act) return;
-    var holder = document.createElement("div"); holder.id = "dk-sim"; act.parentNode.insertBefore(holder, act.nextSibling);
+    var top = document.getElementById("tabProduct") || document.getElementById("prdDetail"); if (!top || !top.parentNode) return;
+    var holder = document.createElement("div"); holder.id = "dk-sim"; holder.style.cssText = "max-width:1200px;margin:24px auto 8px;padding:0 16px"; top.parentNode.insertBefore(holder, top);
     prods(function(l){
       var me = l.filter(function(x){ return String(x.n) === no; })[0];
       var sp = document.getElementById("span_product_price_text");
@@ -680,7 +679,58 @@
     f.querySelector(".mu").onclick = function(e){ e.preventDefault(); muted = !muted; this.textContent = muted ? "🔇" : "🔊"; playVis(); };
   }
 
-  function run(){ homeVideos(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  /* ---------- ⑪ 검색창 인기 검색어 바로 보이기 (2026-11-12 시온님 "서치에서 바로 확인할 수 있게") ---------- */
+  var KW2 = ["아오스타", "피피", "제니베이직", "데일리베베", "가디건", "원피스", "기모", "후리스", "바지", "실내복"];
+  function kwAlways(){
+    if (!document.getElementById("dk-kw2-css")) { var st = document.createElement("style"); st.id = "dk-kw2-css"; st.textContent = ".dk-kw{display:none!important}"; document.head.appendChild(st); }
+    [].forEach.call(document.querySelectorAll("input[name=keyword]"), function(inp){
+      if (inp.getAttribute("data-dkkw2")) return; inp.setAttribute("data-dkkw2", "1");
+      var host = inp.closest("form") || inp.parentNode; if (!host || !host.parentNode) return;
+      var d = document.createElement("div"); d.className = "dk-kw2";
+      d.style.cssText = "max-width:650px;margin:22px auto 0;padding:0 4px;text-align:left";
+      var h = "<div style='font-size:14px;font-weight:800;color:#222;margin-bottom:12px'>🔥 인기 검색어</div><div style='display:grid;grid-template-columns:1fr 1fr;gap:8px 18px'>";
+      KW2.forEach(function(k, i){ h += "<a href='/product/search.html?keyword=" + encodeURIComponent(k) + "' style='display:flex;gap:10px;align-items:center;font-size:14px;color:#333;text-decoration:none;padding:4px 0'><b style='width:18px;color:" + (i < 3 ? "#6a3fc8" : "#aaa") + "'>" + (i + 1) + "</b>" + k + "</a>"; });
+      d.innerHTML = h + "</div>";
+      host.parentNode.insertBefore(d, host.nextSibling);
+      function upd(){ d.style.display = inp.value.trim() ? "none" : "block"; }
+      inp.addEventListener("input", upd); upd();
+    });
+  }
+  /* ---------- ⑫ 상품 목록 끝없이 이어 보기 (2026-11-12 시온님 "페이지 안 넘겨도 계속 스크롤하면 상품") ---------- */
+  function infList(){
+    if (window.dkInf) return;
+    var pg = document.querySelector(".xans-product-normalpaging, .xans-search-paging");
+    var ul = document.querySelector(".xans-product-normalpackage ul.prdList, .xans-search-result ul.prdList");
+    if (!pg || !ul) return;
+    function nextOf(root){ var a = [].filter.call(root.querySelectorAll("a"), function(x){ return /다음 페이지/.test(x.textContent); })[0]; var href = a && a.getAttribute("href"); if (!href || href === "#none") return null; var u = new URL(href, location.href); return u.href; }
+    var next = nextOf(pg); if (!next) return;
+    window.dkInf = 1;
+    var curPage = (location.search.match(/[?&]page=([0-9]+)/) || [0, 1])[1];
+    pg.style.display = "none";
+    var sen = document.createElement("div"); sen.id = "dk-inf"; sen.style.cssText = "padding:24px 0 40px;text-align:center;font-size:13px;color:#999";
+    sen.textContent = "상품을 더 불러오는 중…";
+    pg.parentNode.insertBefore(sen, pg.nextSibling);
+    var busy = false;
+    function load(){
+      if (busy || !next) return; busy = true;
+      fetch(next, { credentials: "include" }).then(function(r){ return r.text(); }).then(function(h){
+        var d = new DOMParser().parseFromString(h, "text/html");
+        var lis = d.querySelectorAll(".xans-product-normalpackage ul.prdList > li, .xans-search-result ul.prdList > li");
+        var seen = {}; [].forEach.call(ul.querySelectorAll(":scope > li[id]"), function(li){ seen[li.id] = 1; });
+        [].forEach.call(lis, function(li){ if (li.id && seen[li.id]) return; ul.appendChild(document.importNode(li, true)); });
+        var p2 = d.querySelector(".xans-product-normalpaging, .xans-search-paging");
+        next = p2 ? nextOf(p2) : null;
+        busy = false;
+        if (!next) sen.textContent = "모든 상품을 다 봤어요 💜";
+        try { cpList(); } catch(e){}
+        if (next && sen.getBoundingClientRect().top < innerHeight + 900) load();
+      }).catch(function(){ busy = false; sen.innerHTML = "<a href='" + next + "' style='color:#6a3fc8'>다음 상품 보기 ›</a>"; next = null; });
+    }
+    try { new IntersectionObserver(function(es){ if (es[0].isIntersecting) load(); }, { rootMargin: "900px 0px" }).observe(sen); }
+    catch(e){ addEventListener("scroll", function(){ if (sen.getBoundingClientRect().top < innerHeight + 900) load(); }); }
+  }
+
+  function run(){ kwAlways(); infList(); homeVideos(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
