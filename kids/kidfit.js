@@ -621,7 +621,56 @@
   }
   function searchSug(){ pcCss(); [].forEach.call(document.querySelectorAll("input[name=keyword]"), sBox); }
 
-  function run(){ searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  /* ---------- ⑩ 홈 숏폼 영상 칸 + 영상 속 상품 (2026-11-12 시온님) ----------
+     영상 = 다꾸 저장소 kids-video.yml 이 상품 사진으로 만든 kids/v/*.mp4 (list.json). 홈 브랜드 칸 아래 가로 카드(보이면 소리 없이 재생),
+     누르면 전체 화면 세로 피드(위아래로 넘김) + 아래 상품 카드(사진·이름·가격·바로가기). */
+  var HV = "https://www.dagguu.com/kids/v/list.json";
+  function homeVideos(){
+    var p = location.pathname; if (!(p === "/" || p === "/index.html")) return;
+    if (document.getElementById("dk-hv")) return;
+    var at = document.getElementById("dk-brands") || document.querySelector(".dk-brands") || document.querySelector(".dk-hdbox");
+    if (!at || !at.parentNode) return;
+    var sec = document.createElement("section"); sec.id = "dk-hv";
+    sec.style.cssText = "max-width:1200px;margin:34px auto 10px;padding:0 16px;font-family:inherit";
+    if (at.classList && at.classList.contains("dk-hdbox")) at.parentNode.insertBefore(sec, at); else at.parentNode.insertBefore(sec, at.nextSibling);
+    fetch(HV + "?d=" + new Date().toISOString().slice(0, 13)).then(function(r){ return r.json(); }).then(function(l){
+      l = (l || []).slice(0, 12); if (!l.length) { sec.parentNode.removeChild(sec); return; }
+      var st = "<style>#dk-hv .hvr{display:flex;gap:10px;overflow-x:auto;padding:4px 0 10px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}#dk-hv .hvr::-webkit-scrollbar{display:none}" +
+        "#dk-hv .hvc{flex:0 0 calc((100% - 30px)/3.4);max-width:220px;min-width:130px;scroll-snap-align:start;cursor:pointer;color:#222;text-decoration:none}" +
+        "#dk-hv .hvv{position:relative;width:100%;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#eee}#dk-hv .hvv video{width:100%;height:100%;object-fit:cover;display:block}" +
+        "#dk-hv .hvb{position:absolute;left:8px;bottom:8px;right:8px;color:#fff;font-size:11px;font-weight:700;text-shadow:0 1px 4px rgba(0,0,0,.5)}" +
+        "#dk-hvf{position:fixed;inset:0;z-index:100000;background:#000;display:none}#dk-hvf .fs{height:100%;overflow-y:auto;scroll-snap-type:y mandatory}#dk-hvf .fs::-webkit-scrollbar{display:none}" +
+        "#dk-hvf .sl{position:relative;height:100%;scroll-snap-align:start;display:flex;align-items:center;justify-content:center}#dk-hvf video{max-width:100%;max-height:100%;width:auto;height:100%;object-fit:contain}" +
+        "#dk-hvf .pc{position:absolute;left:12px;right:12px;bottom:max(16px,env(safe-area-inset-bottom));max-width:480px;margin:0 auto;display:flex;gap:10px;align-items:center;background:#fff;border-radius:12px;padding:10px;text-decoration:none;color:#222}" +
+        "#dk-hvf .tb{position:absolute;top:max(12px,env(safe-area-inset-top));left:0;right:0;display:flex;justify-content:space-between;padding:0 14px;z-index:2}#dk-hvf .tb a{color:#fff;font-size:26px;text-decoration:none;line-height:1;text-shadow:0 1px 4px rgba(0,0,0,.6)}</style>";
+      var h = st + "<div style='display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:10px'><div><div style='font-size:12px;letter-spacing:2px;color:#999;font-weight:700'>SHORTS</div><h3 style='font-size:20px;font-weight:800;margin:2px 0 0'>영상으로 보는 신상 🎬</h3></div></div><div class='hvr'>";
+      l.forEach(function(x, i){ h += "<a class='hvc' data-i='" + i + "'><span class='hvv'><video muted playsinline loop preload='none' poster='" + x.poster + "' data-src='" + x.video + "'></video><span class='hvb'>▶ " + String(x.brand || "").replace(/</g, "") + "</span></span>" +
+        "<span style='display:block;font-size:13px;margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis'>" + String(x.name).replace(/</g, "&lt;") + "</span><b style='font-size:14px'>" + won(x.price) + "</b></a>"; });
+      sec.innerHTML = h + "</div>";
+      var vids = sec.querySelectorAll("video");
+      try {
+        var io = new IntersectionObserver(function(es){ es.forEach(function(e){ var v = e.target; if (e.isIntersecting) { if (!v.src) v.src = v.getAttribute("data-src"); var pr = v.play(); if (pr && pr.catch) pr.catch(function(){}); } else v.pause(); }); }, { threshold: 0.6 });
+        [].forEach.call(vids, function(v){ io.observe(v); });
+      } catch(e){}
+      [].forEach.call(sec.querySelectorAll(".hvc"), function(a){ a.onclick = function(e){ e.preventDefault(); hvOpen(l, +a.getAttribute("data-i")); }; });
+    }).catch(function(){ if (sec.parentNode) sec.parentNode.removeChild(sec); });
+  }
+  function hvOpen(l, start){
+    var f = document.getElementById("dk-hvf");
+    if (!f) { f = document.createElement("div"); f.id = "dk-hvf"; document.body.appendChild(f); }
+    var h = "<div class='tb'><a href='#none' class='mu'>🔇</a><a href='#none' class='x'>✕</a></div><div class='fs'>";
+    l.forEach(function(x){ h += "<div class='sl'><video playsinline loop muted preload='none' poster='" + x.poster + "' data-src='" + x.video + "'></video>" +
+      "<a class='pc' href='" + x.url + "'><img src='" + x.img + "' alt='' style='width:52px;height:64px;object-fit:cover;border-radius:8px;flex:0 0 auto'><span style='flex:1;min-width:0'><span style='display:block;font-size:11px;color:#888'>영상 속 상품</span><span style='display:block;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis'>" + String(x.name).replace(/</g, "&lt;") + "</span><b style='font-size:15px'>" + won(x.price) + "</b></span><span style='flex:0 0 auto;background:#111;color:#fff;font-size:12px;font-weight:700;border-radius:8px;padding:8px 12px'>바로가기</span></a></div>"; });
+    f.innerHTML = h + "</div>"; f.style.display = "block"; document.documentElement.style.overflow = "hidden";
+    var fs = f.querySelector(".fs"), vs = f.querySelectorAll("video"), muted = true;
+    function playVis(){ [].forEach.call(vs, function(v){ var r = v.parentNode.getBoundingClientRect(); if (Math.abs(r.top) < r.height / 2) { if (!v.src) v.src = v.getAttribute("data-src"); v.muted = muted; var p = v.play(); if (p && p.catch) p.catch(function(){ v.muted = true; v.play(); }); } else v.pause(); }); }
+    fs.scrollTop = start * fs.clientHeight; setTimeout(playVis, 60);
+    var t; fs.addEventListener("scroll", function(){ clearTimeout(t); t = setTimeout(playVis, 120); });
+    f.querySelector(".x").onclick = function(e){ e.preventDefault(); [].forEach.call(vs, function(v){ v.pause(); }); f.style.display = "none"; document.documentElement.style.overflow = ""; };
+    f.querySelector(".mu").onclick = function(e){ e.preventDefault(); muted = !muted; this.textContent = muted ? "🔇" : "🔊"; playVis(); };
+  }
+
+  function run(){ homeVideos(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
