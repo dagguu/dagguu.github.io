@@ -665,7 +665,7 @@
           if (d > 0 && rw.scrollLeft >= max) rw.scrollTo({ left: 0, behavior: "smooth" }); else if (d < 0 && rw.scrollLeft <= 4) rw.scrollTo({ left: max + 4, behavior: "smooth" }); else rw.scrollBy({ left: d * w, behavior: "smooth" }); }
         bl.onclick = function(){ step(-1); }; br.onclick = function(){ step(1); };
         var hov = false; wr.addEventListener("mouseenter", function(){ hov = true; }); wr.addEventListener("mouseleave", function(){ hov = false; });
-        setInterval(function(){ if (!hov && !document.hidden && document.getElementById("dk-hvf") === null || (!hov && !document.hidden && document.getElementById("dk-hvf").style.display !== "block")) step(1); }, 4000);
+        setInterval(function(){ var ff = document.getElementById("dk-hvf"); if (!hov && !document.hidden && !(ff && ff.style.display === "block")) step(1); }, 4000);
       }
       var row = sec.querySelector(".hvr"), cards = sec.querySelectorAll(".hvc"), cur = -1, vis = false;
       var PC = window.matchMedia && matchMedia("(min-width:1025px)").matches;
