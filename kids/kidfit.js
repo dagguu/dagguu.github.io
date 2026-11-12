@@ -782,7 +782,42 @@
     setTimeout(near, 800);
   }
 
-  function run(){ kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  /* ---------- ⑪ 홈 끝없는 상품 목록 (2026-11-12 시온님 "홈화면에서 스크롤이 멈추지 않도록 상품을 계속") ----------
+     홈 마지막 상품 칸 아래에 "전체 상품" 칸을 만들고, 신상품 분류(54) 목록 페이지를 차례로 읽어 카드를 이어 붙임. 홈에 이미 있는 상품은 건너뜀. */
+  function homeInf(){
+    var p = location.pathname; if (!(p === "/" || p === "/index.html") || document.getElementById("dk-all")) return;
+    var secs = [].filter.call(document.querySelectorAll(".dk-sec"), function(s){ return s.querySelector("ul.prdList"); });
+    if (!secs.length) return;
+    var last = secs[secs.length - 1], cls = (last.querySelector("ul.prdList").className || "prdList grid4");
+    var sec = document.createElement("section"); sec.className = "dk-sec"; sec.id = "dk-all";
+    sec.innerHTML = "<h2>🛍️ 다꾸키즈 <em>전체 상품</em></h2><p>내리면 상품이 계속 나와요</p><div class='ec-base-product'><ul class='" + cls + "'></ul></div>";
+    last.parentNode.insertBefore(sec, last.nextSibling);
+    var ul = sec.querySelector("ul");
+    var sen = document.createElement("div"); sen.style.cssText = "padding:24px 0 40px;text-align:center;font-size:13px;color:#999"; sen.textContent = "상품을 더 불러오는 중…";
+    sec.appendChild(sen);
+    var page = 1, busy = false, done = false, seen = {};
+    function idOf(li){ var m = String(li.id || "").match(/([0-9]+)$/); if (m) return m[1]; var a = li.querySelector("a[href*='product_no='],a[href*='/product/']"); var h = a ? a.getAttribute("href") : ""; m = h.match(/product_no=([0-9]+)/) || h.match(/[/]([0-9]+)[/]category[/]/); return m ? m[1] : ""; }
+    [].forEach.call(document.querySelectorAll(".dk-sec ul.prdList > li"), function(li){ var k = idOf(li); if (k) seen[k] = 1; });
+    function load(){
+      if (busy || done) return; busy = true;
+      fetch("/product/list.html?cate_no=54&page=" + page, { credentials: "include" }).then(function(r){ return r.text(); }).then(function(h){
+        var d = new DOMParser().parseFromString(h, "text/html");
+        var lis = d.querySelectorAll(".xans-product-normalpackage ul.prdList > li");
+        var add = 0;
+        [].forEach.call(lis, function(li){ var k = idOf(li); if (!k || seen[k]) return; seen[k] = 1; ul.appendChild(document.importNode(li, true)); add++; });
+        page++; busy = false;
+        if (!lis.length || page > 60) { done = true; sen.textContent = "모든 상품을 다 봤어요 💜"; return; }
+        try { cpList(); } catch(e){}
+        if (sen.getBoundingClientRect().top < innerHeight + 1200) load();
+      }).catch(function(){ busy = false; done = true; sen.innerHTML = "<a href='/product/list.html?cate_no=54' style='color:#6a3fc8'>전체 상품 보러가기 ›</a>"; });
+    }
+    function near(){ if (sen.getBoundingClientRect().top < innerHeight + 1200) load(); }
+    try { new IntersectionObserver(function(es){ if (es[0].isIntersecting) load(); }, { rootMargin: "1200px 0px" }).observe(sen); } catch(e){}
+    addEventListener("scroll", function(){ clearTimeout(window.dkHiT); window.dkHiT = setTimeout(near, 120); }, { passive: true });
+    setTimeout(near, 600);
+  }
+
+  function run(){ kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
