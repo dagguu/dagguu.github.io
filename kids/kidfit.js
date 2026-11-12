@@ -291,6 +291,12 @@
     }
     page(0);
   }
+  function pcCss(){
+    if (document.getElementById("dk-pc-css")) return;
+    var st = document.createElement("style"); st.id = "dk-pc-css";
+    st.textContent = ".dk-pc{display:block!important;position:relative;overflow:hidden;border-radius:10px;background:#f2f2f2;border:1px solid #eee;box-sizing:border-box}.dk-pc img{position:absolute!important;left:0;top:0;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:center top;margin:0!important}";
+    document.head.appendChild(st);
+  }
   function similar(){
     if (document.getElementById("dk-sim")) return;
     var no = pno(); if (!no) return;
@@ -308,7 +314,7 @@
         "<div style='display:flex;gap:10px;overflow-x:auto;padding-bottom:8px;-webkit-overflow-scrolling:touch'>";
       c.forEach(function(x){
         h += "<a href='/product/detail.html?product_no=" + x.n + "' style='flex:0 0 108px;text-decoration:none;color:#222'>" +
-          "<img src='" + x.im + "' alt='' loading='lazy' style='width:108px;height:135px;object-fit:cover;border-radius:10px;background:#f2f2f2;display:block'>" +
+          "<span class='dk-pc' style='width:108px;height:135px'><img src='" + x.im + "' alt='' loading='lazy'></span>" +
           "<div style='font-size:12px;line-height:1.35;margin-top:6px;height:32px;overflow:hidden'>" + String(x.nm).replace(/</g, "&lt;") + "</div>" +
           "<div style='font-size:13px;font-weight:800;margin-top:2px'>" + won(x.p) + "</div>" +
           "<div style='margin-top:6px;padding:6px 0;border:1px solid #ddd;border-radius:8px;text-align:center;font-size:12px;color:#555'>보러가기</div></a>";
@@ -345,7 +351,7 @@
         "<div style='display:flex;gap:10px;overflow-x:auto;padding:10px 0 4px;-webkit-overflow-scrolling:touch'>";
       c.forEach(function(x){
         h += "<a href='/product/detail.html?product_no=" + x.n + "' style='flex:0 0 112px;text-decoration:none;color:#222'>" +
-          "<img src='" + x.im + "' alt='' loading='lazy' style='width:112px;height:112px;object-fit:cover;border:1px solid #eee;border-radius:12px;background:#f5f5f5;display:block'>" +
+          "<span class='dk-pc' style='width:112px;height:140px'><img src='" + x.im + "' alt='' loading='lazy'></span>" +
           "<div style='font-size:12px;line-height:1.35;margin-top:6px;height:32px;overflow:hidden'>" + String(x.nm).replace(/</g, "&lt;") + "</div>" +
           "<div style='font-size:13px;font-weight:800;margin-top:2px'>" + won(x.p) + "</div></a>";
       });
@@ -353,7 +359,7 @@
     });
   }
 
-  function run(){ mypage(); cartBox(); if (document.getElementById("orderFixArea")) { lowest(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  function run(){ pcCss(); mypage(); cartBox(); if (document.getElementById("orderFixArea")) { lowest(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
