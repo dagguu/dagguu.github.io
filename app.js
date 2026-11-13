@@ -2956,7 +2956,7 @@ function myView(){
       (a?'<button class="b kakaolg wide" data-login="kakao"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#191600" d="M12 4C7 4 3 7.2 3 11.1c0 2.5 1.7 4.7 4.2 6l-.9 3.4c-.1.3.3.6.6.4l4-2.7h1.1c5 0 9-3.2 9-7.1S17 4 12 4Z"/></svg>카카오로 3초 만에 시작하기</button>'+
          ((a.naver)?'<button class="b naverlg wide" data-login="'+esc(a.naver)+'"><b>N</b>네이버로 시작하기</button>':'')+
          '<p class="lgnote">시작하면 <a href="#/privacy">개인정보처리방침</a>에 동의하는 것으로 봐요.</p>'
-       :'<p class="lgsoon">찜·최근 본 체험단은 이 기기에 저장돼요.<br>기자단 신청·원고료·수익화 클래스 같은 회원 기능은 <b>다꾸파트너스</b>에서 할 수 있어요.</p><a class="b pri wide" href="'+PART_URL+'#/my">다이어리뷰 로그인 ›</a>')+'</section>';
+       :'<p class="lgsoon">찜·최근 본 체험단은 이 기기에 저장돼요.<br>기자단 신청·원고료·수익화 클래스 같은 회원 기능은 <b>다꾸파트너스</b>에서 할 수 있어요.</p><a class="b pri wide" href="'+PART_URL+'#/my">다꾸파트너스 로그인 ›</a>')+'</section>';
     h+='<div class="mytiles"><a href="#/fav"><b>'+favN+'</b><span>찜</span></a><a href="#/my" data-jump="applied"><b>'+APPLIED.length+'</b><span>신청한</span></a><a href="#/fav"><b>'+SEEN.length+'</b><span>최근 본</span></a></div>';
     h+=mySites();
     h+=pushBox()+appliedSection()+recentSection();
