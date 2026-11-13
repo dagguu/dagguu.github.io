@@ -1,0 +1,176 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="Layout_Dummy"></div>
+<!-- 다꾸키즈 인스타 태그 커피 이벤트 (2026-11-12 시온님: 누구나 참여, 매달 선착순 30명, 커피 기프티콘 1,900원, 인스타 @dagguu.kids).
+     원본: 저장소 design/coffee.html → 스킨 1 /product/coffee.html (화면추가). 신청은 카톡 채널로.
+     인스타 제한 이력 때문에 "후기 쓰면 커피" 같은 대가성 후기 표현은 쓰지 않고 "태그해서 소개해 주시면 감사의 커피". 참여 게시물엔 #광고 필수(공정위).
+     스킨 JS 에는 역슬래시를 쓰지 않는다. 주석에 body 닫는 태그 글자를 쓰지 않는다. -->
+<style>
+.cf{max-width:720px;margin:0 auto;padding:0 0 110px;color:#222;font-size:15px;line-height:1.7;word-break:keep-all;background:#fff}
+.cf .in{padding:0 20px}
+.cf .sl{position:relative;aspect-ratio:1/1;background:#f3f1f6;overflow:hidden}
+.cf .slr{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.cf .slr::-webkit-scrollbar{display:none}
+.cf .slr a{flex:0 0 100%;height:100%;scroll-snap-align:start;display:block}
+.cf .slr img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}
+.cf .slg{position:absolute;left:14px;bottom:16px;background:rgba(40,40,40,.62);color:#fff;font-size:14px;font-weight:700;border-radius:6px;padding:6px 12px;text-decoration:none}
+.cf .sld{position:absolute;left:0;right:0;bottom:22px;text-align:center;pointer-events:none}
+.cf .sld i{display:inline-block;width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.75);margin:0 4px}
+.cf .sld i.on{background:#6a3fc8}
+.cf .sl .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:70px}
+.cf .br{display:flex;align-items:center;gap:14px;padding:18px 20px;border-bottom:1px solid #eee}
+.cf .br .lg{flex:0 0 56px;height:56px;border-radius:50%;border:1px solid #e5e5e5;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:22px;color:#fff;background:#6a3fc8}
+.cf .br b{display:block;font-size:17px;font-weight:800}
+.cf .br span{display:block;font-size:13px;color:#888;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cf .br .fl{flex:0 0 auto;margin-left:auto;text-align:center;color:#6a3fc8;font-size:12px;font-weight:700;text-decoration:none;line-height:1.2}
+.cf .br .fl em{display:block;font-style:normal;font-size:24px}
+.cf .br > div{min-width:0;flex:1}
+.cf .tt{padding:26px 20px 20px;border-bottom:1px solid #eee}
+.cf .tt h1{font-size:21px;font-weight:800;line-height:1.4;margin:0 0 16px}
+.cf .bar{height:9px;border-radius:9px;background:#eee;overflow:hidden}
+.cf .bar i{display:block;height:100%;border-radius:9px;background:#6a3fc8;width:0}
+.cf .tt .dd{font-size:14px;color:#777;margin-top:8px}
+.cf .tb{margin:0;padding:20px;border-bottom:1px solid #eee}
+.cf .tb div{display:flex;gap:12px;font-size:15px;margin:7px 0}
+.cf .tb dt{flex:0 0 92px;color:#888}
+.cf .tb dd{margin:0;color:#333}
+.cf .tb dd em{font-style:normal;color:#6a3fc8;font-weight:800}
+.cf .tb dd small{display:block;font-size:12px;color:#999}
+.cf .nt{padding:20px;border-bottom:10px solid #f4f4f4}
+.cf .nt li{margin:5px 0;font-size:14.5px;color:#444}
+.cf .nt ul{padding-left:18px;margin:0}
+.cf h2{font-size:18px;font-weight:800;margin:28px 0 10px}
+.cf h2 small{font-size:11px;color:#999;letter-spacing:2px;margin-right:6px}
+.cf ol,.cf ul{padding-left:20px;margin:0}
+.cf li{margin:5px 0}
+.cf .tag{display:inline-block;background:#f5f2fb;color:#4b2a9a;font-weight:800;border-radius:6px;padding:0 6px}
+.cf .hl{color:#6a3fc8;font-weight:800}
+.cf .ex{background:#fafafa;border:1px solid #eee;border-radius:12px;padding:14px;font-size:14px}
+.cf .note{font-size:13px;color:#666}
+.cf form{background:#fff;border:1px solid #ddd;border-radius:16px;padding:18px}
+.cf label{display:block;font-size:13px;font-weight:700;margin:12px 0 4px}
+.cf input{width:100%;box-sizing:border-box;border:1px solid #ddd;border-radius:10px;padding:11px 12px;font-size:16px;background:#fff;color:#222}
+.cf .ck{display:flex;gap:8px;align-items:flex-start;font-size:13px;font-weight:400;margin-top:14px}
+.cf .ck input{width:auto;margin-top:4px}
+.cf button{width:100%;height:52px;border:0;border-radius:12px;background:#6a3fc8;color:#fff;font-size:16px;font-weight:800;margin-top:16px;cursor:pointer}
+.cf .done{display:none;background:#f5f2fb;border-radius:12px;padding:14px;margin-top:12px;font-size:14px}
+.cf a.ig{color:#6a3fc8;font-weight:800}
+.cf .fx{position:fixed;left:0;right:0;bottom:0;z-index:900;background:#fff;border-top:1px solid #eee;padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+.cf .fx a{display:block;max-width:688px;margin:0 auto;height:52px;line-height:52px;text-align:center;border-radius:999px;background:#6a3fc8;color:#fff;font-size:17px;font-weight:800;text-decoration:none}
+.cf .fx a.off{background:#aaa;pointer-events:none}
+</style>
+<div class="cf">
+  <div class="sl" id="cfSl"><div class="ph">☕</div></div>
+  <div class="br">
+    <div class="lg">D</div>
+    <div><b>다꾸키즈 DAGGUU KIDS</b><span>남대문 아동복을 집에서 편하게, 매일 신상 아동복·유아복</span></div>
+    <a class="fl" href="https://www.instagram.com/dagguu.kids/" target="_blank" rel="noopener"><em>♡</em>@dagguu.kids</a>
+  </div>
+  <div class="tt">
+    <h1>☕ 다꾸키즈 태그하고 커피 받기<br>인스타 코디 체험단</h1>
+    <div class="bar"><i id="cfBar"></i></div>
+    <div class="dd" id="cfDd">모집 종료까지 D-0 남음</div>
+  </div>
+  <dl class="tb">
+    <div><dt>모집 현황</dt><dd><em>매달 선착순 30명</em> 모집</dd></div>
+    <div><dt>모집 기간</dt><dd id="cfPer">매달 1일 ~ 말일</dd></div>
+    <div><dt>참여 대상</dt><dd>누구나 (구매하지 않아도 OK)<small>아이 일상을 꾸준히 올리는 육아 계정</small></dd></div>
+    <div><dt>혜택</dt><dd>커피 기프티콘 1잔</dd></div>
+    <div><dt>커피 발송</dt><dd>확인 후 영업일 3일 이내<small>카카오톡으로 보내 드려요</small></dd></div>
+    <div><dt>올리는 곳</dt><dd>인스타그램 스토리 또는 피드</dd></div>
+  </dl>
+  <div class="nt"><ul>
+    <li>우리 아이 <b>일상 사진</b>에 <b>오늘의 코디</b>와 <b>아이 스펙</b>(개월 수·키·몸무게·입은 사이즈)을 적어 주세요. 얼굴은 안 나와도 괜찮아요.</li>
+    <li><span class="hl">@dagguu.kids</span> 를 태그하고 <span class="hl">#다꾸키즈 #다꾸체험단</span> 과 좋아하는 브랜드 해시태그를 넣어 주세요.</li>
+    <li>글 맨 앞에 <span class="hl">#광고</span> 를 꼭 넣어 주세요. (커피를 받는 참여라 표시가 필요해요)</li>
+    <li>올린 화면을 캡처해서 아래 신청서와 함께 카카오톡 채널 <b>다꾸키즈</b>로 보내 주세요.</li>
+    <li>한 분당 한 번만 참여할 수 있어요. (인스타 아이디·휴대폰 번호 기준)</li>
+    <li>올린 피드는 삭제하지 않아요. 지우면 다음 이벤트 참여와 다꾸파트너스 적립에서 제외될 수 있어요.</li>
+  </ul></div>
+  <div class="in">
+  <h2><small>EXAMPLE</small>이렇게 올려 주세요</h2>
+  <div class="ex">
+    <b>#광고</b> 오늘은 놀이터 가는 날 🛝<br>
+    👕 코디: 아이보리 니트 가디건 + 연청 데님 바지 + 흰 운동화<br>
+    👶 아이 스펙: 24개월 · 88cm · 12kg · 상의 S / 하의 M 착용<br>
+    찬바람 불 땐 니트 가디건 하나면 든든해요 🧸<br>
+    <span class="tag">@dagguu.kids</span><br>
+    #다꾸키즈 #다꾸체험단 #아오스타
+    <p class="note" style="margin:8px 0 0">다꾸키즈에서 산 옷이면 상품 이름을 같이 적어 주세요. 마지막 해시태그는 좋아하는 브랜드로 바꿔 주세요(예: #아오스타 #피피). 문구는 자유롭게 써 주세요.</p>
+  </div>
+
+
+  <h2><small>PLUS</small>링크까지 넣으면 3% 적립도 받아요</h2>
+  <div class="ex" style="background:#f5f2fb;border-color:#e3d8ff">
+    <b style="color:#4b2a9a">💜 다꾸파트너스</b>는 다꾸키즈 상품을 소개하고 적립금을 받는 <b>내 수익 링크</b> 서비스예요.
+    <ol style="margin-top:8px">
+      <li><a class="ig" href="https://partners.dagguu.com/#/dp" target="_blank" rel="noopener">다꾸파트너스</a>에서 1분 가입하고 <b>내 수익 링크</b>를 발급받아요.</li>
+      <li>인스타그램 스토리 링크 스티커나 프로필 링크에 내 수익 링크를 넣어요.</li>
+      <li>내 링크로 들어온 친구가 구매하면 <b>상품 금액의 3%</b>가 <b>나에게</b> 다꾸키즈 적립금으로 쌓여요. 친구가 내 링크로 <b>회원가입</b>하면 그 뒤로 사는 옷도 계속 3%가 쌓여요.</li>
+      <li>지인·동료·가족·친구에게 링크를 보내 수익을 만들어 보세요. 다꾸키즈 <b>마이페이지 친구 초대 링크</b>로 회원가입하면 <b>친구도 나도 500원씩</b> 적립돼요.</li>
+    </ol>
+    <p class="note" style="margin:8px 0 0">가입하지 않은 친구는 링크를 누른 뒤 7일 안의 구매만, 가입한 친구는 마지막 구매 후 1년 동안 사지 않으면 연결이 끝나요. 배송 완료 후 확인해서 적립돼요. 본인 구매·취소·반품 주문은 제외돼요. 링크를 넣은 게시물에도 <b>#광고</b> 를 꼭 넣어 주세요.</p>
+    <a href="https://partners.dagguu.com/#/dp" target="_blank" rel="noopener" style="display:block;margin-top:12px;text-align:center;background:#6a3fc8;color:#fff;font-weight:800;border-radius:10px;padding:12px;text-decoration:none">다꾸파트너스에서 내 수익 링크 만들기 ›</a>
+  </div>
+
+  <h2><small>NOTICE</small>꼭 확인해 주세요</h2>
+  <ul class="note">
+    <li>매달 선착순 30명이에요. 마감되면 다음 달 1일에 다시 열려요.</li>
+    <li>비공개 계정도 괜찮아요. <b>@dagguu.kids</b> 와 맞팔하면 확인할 수 있어요.</li>
+    <li>아이 일상을 꾸준히 올리고 있는 <b>육아 계정</b>만 참여할 수 있어요. 이벤트를 위해 새로 만든 계정은 안 돼요.</li>
+    <li><b>#광고</b> 표시가 없거나, 다른 사람 게시물을 캡처한 경우, 아이디를 여러 개 쓴 경우는 커피를 보내 드리지 않아요.</li>
+    <li>커피 기프티콘 종류는 바뀔 수 있어요.</li>
+  </ul>
+
+  <h2 id="cfApply"><small>APPLY</small>신청서</h2>
+  <form id="cfForm" onsubmit="return false">
+    <label>인스타그램 아이디</label><input id="cfIg" placeholder="예: @dagguu.mom">
+    <label>기프티콘 받을 휴대폰 번호</label><input id="cfPh" inputmode="tel" placeholder="010-0000-0000">
+    <label class="ck"><input type="checkbox" id="cfOk"> 위 안내를 확인했고, 게시물 맨 앞에 #광고 를 넣었어요. 기프티콘 발송을 위해 휴대폰 번호를 보내는 데 동의해요(발송 후 파기).</label>
+    <button type="button" id="cfGo">신청 내용 복사하고 카카오톡으로 보내기</button>
+    <div class="done" id="cfDone">신청 내용이 복사됐어요. 열리는 카카오톡 채팅창에 <b>붙여넣기</b> 하고, 올린 게시물 <b>캡처 사진</b>도 같이 보내 주세요. 창이 안 열리면 카카오톡에서 <b>다꾸키즈</b> 채널을 찾아 주세요.</div>
+  </form>
+  <p class="note" style="text-align:center;margin-top:18px" id="cfApplyEnd">다꾸키즈 인스타그램 <a class="ig" href="https://www.instagram.com/dagguu.kids/" target="_blank" rel="noopener">@dagguu.kids</a></p>
+  </div>
+  <div class="fx"><a href="#cfForm" id="cfFx">신청하기</a></div>
+</div>
+<script>
+(function () {
+  function kst() { return new Date(Date.now() + 9 * 3600000); }
+  var k = kst(), y = k.getUTCFullYear(), mo = k.getUTCMonth(), d = k.getUTCDate();
+  var last = new Date(Date.UTC(y, mo + 1, 0)).getUTCDate();
+  var W = "일월화수목금토";
+  function f(day) { var t = new Date(Date.UTC(y, mo, day)); return y + "." + ("0" + (mo + 1)).slice(-2) + "." + ("0" + day).slice(-2) + "(" + W.charAt(t.getUTCDay()) + ")"; }
+  document.getElementById("cfPer").textContent = f(1) + " ~ " + f(last);
+  var left = last - d;
+  document.getElementById("cfDd").textContent = left ? "모집 종료까지 D-" + left + " 남음" : "오늘 모집 마감 (D-DAY)";
+  setTimeout(function () { document.getElementById("cfBar").style.cssText = "width:" + Math.max(6, Math.round(d / last * 100)) + "%;transition:width .8s"; }, 200);
+  var fx = document.getElementById("cfFx");
+  fx.onclick = function (e) { e.preventDefault(); document.getElementById("cfApply").scrollIntoView({ behavior: "smooth", block: "start" }); };
+  var sl = document.getElementById("cfSl");
+  fetch("https://dagguu.cafe24api.com/api/v2/products?category=55&display=T&selling=T&limit=40&fields=product_no,product_name,detail_image", { headers: { "X-Cafe24-Client-Id": "JzTmuiBPItGvZ6KG8g3aPC" } })
+    .then(function (r) { return r.json(); }).then(function (j) {
+      var ps = (j.products || []).filter(function (p) { return p.detail_image && p.product_name.indexOf("양말") < 0; });
+      var seen = {}, pick = [];
+      ps.forEach(function (p) { var b = p.product_name.split(" ")[0]; if ((seen[b] || 0) < 2 && pick.length < 7) { seen[b] = (seen[b] || 0) + 1; pick.push(p); } });
+      if (!pick.length) return;
+      sl.innerHTML = "<div class='slr'>" + pick.map(function (p) { return "<a href='/product/detail.html?product_no=" + p.product_no + "'><img src='" + p.detail_image + "' alt=''></a>"; }).join("") + "</div>" +
+        "<a class='slg' id='cfGoP' href='/product/detail.html?product_no=" + pick[0].product_no + "'>상품 보러가기</a><div class='sld'>" + pick.map(function (p, i) { return "<i" + (i ? "" : " class='on'") + "></i>"; }).join("") + "</div>";
+      var r = sl.querySelector(".slr"), dots = sl.querySelectorAll(".sld i"), gp = document.getElementById("cfGoP");
+      r.addEventListener("scroll", function () { var i = Math.round(r.scrollLeft / Math.max(1, r.clientWidth)); for (var n = 0; n < dots.length; n++) dots[n].className = n === i ? "on" : ""; if (pick[i]) gp.href = "/product/detail.html?product_no=" + pick[i].product_no; }, { passive: true });
+    }).catch(function () {});
+})();
+(function () {
+  var KAKAO = "https://pf.kakao.com/_xhihNX/chat";
+  var NL = String.fromCharCode(10);
+  function v(id) { return (document.getElementById(id).value || "").trim(); }
+  document.getElementById("cfGo").onclick = function () {
+    if (!v("cfIg") || !v("cfPh")) { alert("인스타그램 아이디와 휴대폰 번호를 적어 주세요."); return; }
+    if (!document.getElementById("cfOk").checked) { alert("안내 확인에 체크해 주세요."); return; }
+    var m = new Date(Date.now() + 9 * 3600000).getUTCMonth() + 1;
+    var txt = "[다꾸키즈 태그 커피 이벤트 " + m + "월]" + NL + "인스타: " + v("cfIg") + NL + "휴대폰: " + v("cfPh") + NL + "(게시물 캡처 사진 같이 보내요)";
+    var go = function () { document.getElementById("cfDone").style.display = "block"; window.open(KAKAO, "_blank"); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(go, function () { prompt("아래 내용을 복사해 주세요", txt); go(); });
+    else { prompt("아래 내용을 복사해 주세요", txt); go(); }
+  };
+})();
+</script>
