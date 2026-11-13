@@ -789,18 +789,21 @@
     var secs = [].filter.call(document.querySelectorAll(".dk-sec"), function(s){ return s.querySelector("ul.prdList"); });
     if (!secs.length) return;
     var last = secs[secs.length - 1], cls = (last.querySelector("ul.prdList").className || "prdList grid4");
+    var ag = ageGet(), cate = ag ? AGE[ag][1] : 54;
     var sec = document.createElement("section"); sec.className = "dk-sec"; sec.id = "dk-all";
-    sec.innerHTML = "<h2>🛍️ 다꾸키즈 <em>전체 상품</em></h2><p>내리면 상품이 계속 나와요</p><div class='ec-base-product'><ul class='" + cls + "'></ul></div>";
-    last.parentNode.insertBefore(sec, last.nextSibling);
+    sec.innerHTML = ag ? "<h2>" + AGE[ag][2] + " " + AGE[ag][0] + " <em>신상품</em></h2><p>" + AGE[ag][3] + " 아이옷만 모아 봤어요 · 내리면 계속 나와요</p><div class='ec-base-product'><ul class='" + cls + "'></ul></div>"
+      : "<h2>🛍️ 다꾸키즈 <em>전체 상품</em></h2><p>내리면 상품이 계속 나와요</p><div class='ec-base-product'><ul class='" + cls + "'></ul></div>";
+    if (ag) { secs[0].parentNode.insertBefore(sec, secs[0]); secs.forEach(function(x){ x.style.display = "none"; }); }
+    else last.parentNode.insertBefore(sec, last.nextSibling);
     var ul = sec.querySelector("ul");
     var sen = document.createElement("div"); sen.style.cssText = "padding:24px 0 40px;text-align:center;font-size:13px;color:#999"; sen.textContent = "상품을 더 불러오는 중…";
     sec.appendChild(sen);
     var page = 1, busy = false, done = false, seen = {};
     function idOf(li){ var m = String(li.id || "").match(/([0-9]+)$/); if (m) return m[1]; var a = li.querySelector("a[href*='product_no='],a[href*='/product/']"); var h = a ? a.getAttribute("href") : ""; m = h.match(/product_no=([0-9]+)/) || h.match(/[/]([0-9]+)[/]category[/]/); return m ? m[1] : ""; }
-    [].forEach.call(document.querySelectorAll(".dk-sec ul.prdList > li"), function(li){ var k = idOf(li); if (k) seen[k] = 1; });
+    if (!ag) [].forEach.call(document.querySelectorAll(".dk-sec ul.prdList > li"), function(li){ var k = idOf(li); if (k) seen[k] = 1; });
     function load(){
       if (busy || done) return; busy = true;
-      fetch("/product/list.html?cate_no=54&page=" + page, { credentials: "include" }).then(function(r){ return r.text(); }).then(function(h){
+      fetch("/product/list.html?cate_no=" + cate + "&page=" + page, { credentials: "include" }).then(function(r){ return r.text(); }).then(function(h){
         var d = new DOMParser().parseFromString(h, "text/html");
         var lis = d.querySelectorAll(".xans-product-normalpackage ul.prdList > li");
         var add = 0;
@@ -860,15 +863,15 @@
       "#dk-bm{max-width:1240px;margin:0 auto;padding:14px 16px 4px;box-sizing:border-box}#dk-bm *{box-sizing:border-box}" +
       "#dk-bm .bc{display:flex;align-items:center;gap:12px;background:#f7f2ff;border:1px solid #e6dbff;border-radius:14px;padding:12px 14px;text-decoration:none;color:#222}" +
       "#dk-bm .bc i{flex:0 0 44px;height:44px;border-radius:10px;background:#6a3fc8;color:#fff;font-style:normal;font-size:22px;display:flex;align-items:center;justify-content:center}" +
-      "#dk-bm .bc b{display:block;font-size:14.5px;white-space:nowrap;font-weight:800;line-height:1.35}#dk-bm .bc span{display:block;font-size:12px;color:#777;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#dk-bm .bc em{margin-left:auto;flex:0 0 auto;font-style:normal;background:#6a3fc8;color:#fff;font-size:13px;font-weight:800;border-radius:8px;padding:8px 12px}" +
+      "#dk-bm .bc b{display:block;font-size:15px;white-space:nowrap;font-weight:600;line-height:1.35}#dk-bm .bc span{display:block;font-size:12px;color:#777;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#dk-bm .bc em{margin-left:auto;flex:0 0 auto;font-style:normal;background:#6a3fc8;color:#fff;font-size:13px;font-weight:500;border-radius:8px;padding:8px 12px}" +
       "#dk-bm .bn{position:relative;margin-top:12px;border-radius:16px;overflow:hidden;background:#eee;aspect-ratio:8/5}#dk-bm .bnr{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}#dk-bm .bnr::-webkit-scrollbar{display:none}" +
       "#dk-bm .bnr a{flex:0 0 100%;height:100%;scroll-snap-align:start}#dk-bm .bnr img{width:100%;height:100%;object-fit:cover;display:block}" +
       "#dk-bm .bnc{position:absolute;right:12px;bottom:12px;background:rgba(0,0,0,.45);color:#fff;font-size:12px;font-weight:700;border-radius:999px;padding:4px 10px}" +
       "@media(min-width:1025px){#dk-bm .bn{aspect-ratio:16/6}}" +
       "#dk-bm .ic{display:grid;grid-template-columns:repeat(5,1fr);gap:14px 8px;margin:20px 0 6px}@media(min-width:1025px){#dk-bm .ic{grid-template-columns:repeat(10,1fr)}}" +
-      "#dk-bm .ic a{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:#222;font-size:12.5px;font-weight:600;text-align:center;line-height:1.3;word-break:keep-all}" +
+      "#dk-bm .ic a{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:#222;font-size:13px;font-weight:400;text-align:center;line-height:1.3;word-break:keep-all}" +
       "#dk-bm .ic span{width:100%;max-width:72px;aspect-ratio:1;border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:7px;overflow:hidden}#dk-bm .ic span svg{display:block}" +
-      "#dk-bm .dl{margin-top:22px}#dk-bm .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}#dk-bm .hd h3{font-size:20px;font-weight:800;margin:0;color:#111}#dk-bm .hd a{font-size:20px;color:#bbb;text-decoration:none;line-height:1}" +
+      "#dk-bm .dl{margin-top:22px}#dk-bm .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}#dk-bm .hd h3{font-size:20px;font-weight:700;margin:0;color:#111}#dk-bm .hd a{font-size:20px;color:#bbb;text-decoration:none;line-height:1}" +
       "#dk-bm .dli{display:flex;flex-direction:column;gap:16px}@media(min-width:1025px){#dk-bm .dli{display:grid;grid-template-columns:repeat(3,1fr)}}" +
       "#dk-bm .di{display:flex;gap:14px;text-decoration:none;color:#222;align-items:flex-start}#dk-bm .di .im{flex:0 0 42%;max-width:220px;aspect-ratio:1;border-radius:6px;overflow:hidden;background:#f2f2f2;position:relative}#dk-bm .di .im img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}" +
       "#dk-bm .di .im u{position:absolute;left:6px;bottom:6px;text-decoration:none;background:#6a3fc8;color:#fff;font-size:11px;font-weight:800;border-radius:6px;padding:3px 7px}" +
@@ -1055,10 +1058,10 @@
     if (!document.getElementById("dk-bms-css")) {
       var st = document.createElement("style"); st.id = "dk-bms-css";
       st.textContent =
-        ".main_top_banner{background:#fff35c!important}.main_top_banner .top_banner_text a{color:#5b2fc0!important;font-weight:700!important}.main_top_banner{position:relative}" +
+        ".main_top_banner{background:#fff35c!important}.main_top_banner .top_banner_text a{color:#5b2fc0!important;font-weight:500!important}.main_top_banner{position:relative}" +
         ".main_top_banner .top_banner_close{display:none!important}#dk-tbx{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;background:none;font-size:20px;line-height:28px;color:#333;cursor:pointer;padding:0;z-index:2}" +
-        ".dk-mnav{border-bottom:1px solid #eee!important}.dk-mnav a{font-size:15.5px!important;font-weight:600!important;color:#222!important;padding:12px 4px 11px!important;border-bottom:3px solid transparent}.dk-mnav a.dk-n{color:#6a3fc8!important;border-bottom-color:#6a3fc8}" +
-        "@media(min-width:1025px){.top_category>ul>li>a{font-size:15px!important;font-weight:600!important;color:#222}}" +
+        ".dk-mnav{border-bottom:1px solid #eee!important}.dk-mnav a{font-size:15.5px!important;font-weight:400!important;color:#222!important;padding:12px 4px 11px!important;border-bottom:3px solid transparent}.dk-mnav a.dk-n{font-weight:600!important;color:#6a3fc8!important;border-bottom-color:#6a3fc8}" +
+        "@media(min-width:1025px){.top_category>ul>li>a{font-size:15px!important;font-weight:500!important;color:#222}}" +
         "ul.prdList>li .thumbnail{position:relative;overflow:hidden;border-radius:6px;background:#f4f4f4}ul.prdList>li .thumbnail>a{display:block;aspect-ratio:1/1}ul.prdList>li .thumbnail>a img{width:100%!important;height:100%!important;object-fit:cover;object-position:center top}" +
         "ul.prdList>li .description .name{margin-top:9px!important}ul.prdList>li .description .name a span:not(.title){font-size:14px!important;color:#444!important;line-height:1.45!important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}" +
         "ul.prdList>li .description .spec li.dk-ns span{font-size:17px!important}ul.prdList>li .description .spec li>span[style*='font-weight:bold']{font-size:16px!important}ul.prdList>li .description .spec li>span[style*='line-through']{font-size:13px!important}" +
@@ -1102,7 +1105,33 @@
   }
   (function(){ var tm2; try { new MutationObserver(function(){ clearTimeout(tm2); tm2 = setTimeout(function(){ try { shareTip(); shareCard(); } catch(e){} }, 60); }).observe(document.documentElement, { childList: true, subtree: true }); } catch(e){} })();
 
-  function run(){ try { bmStyle(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  /* ---------- ⑭ 베베·키즈 고르기 (2026-11-13 시온님이 바잇미 로고 옆 "강아지 ⌄ / 고양이" 보여주며 "베베, 키즈 따로") ----------
+     로고 오른쪽 "전체 ⌄" → 베베(0~2세)·키즈(3세~)·전체. 이 기기 localStorage dk_age. 고르면 홈의 상품 목록이 그 분류(52 BABY / 53 KIDS) 상품으로
+     바뀌고(위 신상·아우터 등 전체 상품 칸은 숨김), 모바일 글자 메뉴 첫 칸 "신상품"도 그 분류로 간다. */
+  var AGE = { baby: ["베베", 52, "👶", "0~2세"], kids: ["키즈", 53, "🧒", "3세~"] };
+  function ageGet(){ try { var v = localStorage.getItem("dk_age") || ""; return AGE[v] ? v : ""; } catch(e){ return ""; } }
+  function ageSel(){
+    var lg = document.querySelector(".top_logo"); if (!lg || document.getElementById("dk-age")) return;
+    if (!document.getElementById("dk-age-css")) { var st = document.createElement("style"); st.id = "dk-age-css";
+      st.textContent = "#dk-age{position:relative;display:inline-flex;align-items:center;vertical-align:middle;margin-left:8px;z-index:1200}#dk-age>button{border:0;background:none;padding:4px 2px;color:#6a3fc8;font-size:17px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:4px;font-family:inherit}#dk-age>button i{display:inline-flex;width:18px;height:18px;border:1.6px solid #6a3fc8;border-radius:50%;align-items:center;justify-content:center;font-style:normal;font-size:10px;line-height:1;transition:transform .2s}#dk-age.on>button i{transform:rotate(180deg)}#dk-age ul{display:none;position:absolute;left:50%;top:100%;transform:translateX(-50%);margin:6px 0 0;padding:0;list-style:none;background:#fff;border:1px solid #e6e1f3;border-radius:14px;box-shadow:0 10px 24px rgba(0,0,0,.12);min-width:118px;overflow:hidden}#dk-age.on ul{display:block}#dk-age li a{display:block;padding:12px 16px;font-size:15px;color:#999;text-decoration:none;text-align:center;white-space:nowrap;border-top:1px solid #f1f1f1}#dk-age li:first-child a{border-top:0}#dk-age li a.cur{color:#6a3fc8;font-weight:600}#dk-age li a small{display:block;font-size:11px;color:#aaa;margin-top:1px}" +
+        ".top_nav_box .top_logo{display:inline-flex!important;align-items:center}";
+      document.head.appendChild(st); }
+    var cur = ageGet();
+    var w = document.createElement("span"); w.id = "dk-age";
+    var li = function(k, t, sub){ return "<li><a href='#' data-age='" + k + "' class='" + (cur === k ? "cur" : "") + "'>" + t + (sub ? "<small>" + sub + "</small>" : "") + "</a></li>"; };
+    w.innerHTML = "<button type='button'>" + (cur ? AGE[cur][0] : "전체") + " <i>⌄</i></button><ul>" + li("baby", "베베", "0~2세") + li("kids", "키즈", "3세~") + li("", "전체", "") + "</ul>";
+    lg.appendChild(w);
+    w.querySelector("button").addEventListener("click", function(e){ e.preventDefault(); e.stopPropagation(); w.classList.toggle("on"); });
+    [].forEach.call(w.querySelectorAll("a[data-age]"), function(a){ a.addEventListener("click", function(e){
+      e.preventDefault(); e.stopPropagation();
+      try { localStorage.setItem("dk_age", a.getAttribute("data-age")); } catch(x){}
+      var p = location.pathname; location.href = (p === "/" || p === "/index.html") ? "/?age=" + (a.getAttribute("data-age") || "all") : "/";
+    }); });
+    document.addEventListener("click", function(){ w.classList.remove("on"); });
+    if (cur) { var mn = document.querySelector(".dk-mnav a"); if (mn) { mn.setAttribute("href", "/product/list.html?cate_no=" + AGE[cur][1]); mn.textContent = AGE[cur][2] + AGE[cur][0] + " 신상"; } }
+  }
+
+  function run(){ try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
