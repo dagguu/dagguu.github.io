@@ -1759,22 +1759,81 @@ function dpRules(){ return '<section class="pjsec"><h2>꼭 확인해 주세요</
   '<li>친구가 다꾸키즈에 회원가입할 때 <b>추천인 아이디</b> 칸에 내 다꾸키즈 아이디를 쓰거나, 내 링크로 들어와 가입(또는 로그인)하면 나와 연결돼요. 연결된 친구는 네이버 검색·다른 기기로 들어와 사도 내 실적이에요.</li>'+
   '<li>연결은 친구가 마지막으로 산 날부터 12개월 동안 유지돼요. 친구가 살 때마다 12개월이 다시 시작되고, 1년 동안 한 번도 사지 않으면 연결이 끝나요.</li>'+
   '<li>사실과 다른 후기·과장 광고, 원치 않는 사람에게 링크 보내기(스팸)는 안 돼요. 어기면 적립이 취소될 수 있어요.</li></ul></section>'; }
+/* 다꾸파트너스 안내 화면(2026-11-13 시온님이 바잇미 크리에이터 프로그램 화면 보여주며 "이런 느낌으로"): 구성만 참고, 그림·글은 다꾸 것.
+   큰 제목 → 직접 그린 그림 → 보라 띠(함께하기) → 기본 가이드 → 리워드 가이드 → FAQ → 동의 창(만 14세 이상·개인정보 수집·이용 필수, 자세히). */
+var DP_CSS='<style id="dp-land-css">.dpl{margin:0 -16px}.dpl *{box-sizing:border-box}.dpl .s1{padding:44px 22px 30px;text-align:center}.dpl .s1 small{display:block;font-size:15px;font-weight:800;color:#333}.dpl .s1 h1{font-size:34px;line-height:1.28;font-weight:900;letter-spacing:-1.2px;margin:18px 0 18px;color:#111}.dpl .s1 p{font-size:15px;line-height:1.75;color:#444;margin:0}'+
+ '.dpl .art{margin:24px 22px 0;background:#f1edf9;border-radius:22px;padding:26px 0 0;display:flex;justify-content:center;overflow:hidden}.dpl .art svg{width:78%;max-width:300px;display:block}'+
+ '.dpl .s2{background:#6a3fc8;color:#fff;text-align:center;padding:52px 22px 56px;margin-top:40px}.dpl .s2 h2{font-size:29px;line-height:1.3;font-weight:900;letter-spacing:-1px;margin:0 0 18px;color:#fff}.dpl .s2 p{font-size:15px;line-height:1.75;color:#efe9ff;margin:0}.dpl .s2 button{margin-top:30px;width:min(100%,320px);height:58px;border:0;border-radius:12px;background:#fff;color:#6a3fc8;font-size:17px;font-weight:900;cursor:pointer}'+
+ '.dpl .s3{padding:52px 22px 40px}.dpl .pill{display:table;margin:0 auto 16px;background:#eee;border-radius:999px;padding:8px 18px;font-size:14px;font-weight:700;color:#333}.dpl .s3 h3{text-align:center;font-size:22px;font-weight:900;margin:0 0 26px;letter-spacing:-.5px}.dpl ol{margin:0;padding-left:22px}.dpl ol li{font-size:15.5px;font-weight:700;line-height:1.6;margin:0 0 18px;color:#222}'+
+ '.dpl .mock{display:flex;gap:10px;margin:12px 0 4px}.dpl .mock div{flex:1;background:#fff;border:1px solid #eee;border-radius:14px;padding:12px;box-shadow:0 4px 14px rgba(0,0,0,.05);font-weight:500}.dpl .mock b{display:block;font-size:12.5px;margin-bottom:8px}.dpl .mock i{display:inline-block;font-style:normal;font-size:10.5px;font-weight:800;background:#efe7ff;color:#6a3fc8;border-radius:6px;padding:2px 6px}.dpl .mock code{display:block;margin-top:6px;font-size:10px;color:#777;background:#f6f6f6;border-radius:6px;padding:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.dpl .mock em{display:block;font-style:normal;font-size:11px;color:#666;margin-top:6px}.dpl .mock strong{display:block;color:#6a3fc8;font-size:16px;margin-top:2px}'+
+ '.dpl .s4{background:#f3f3f3;padding:48px 22px}.dpl .s4 h3,.dpl .s5 h3{text-align:center;font-size:28px;font-weight:900;margin:0 0 24px;letter-spacing:-1px}.dpl .s4 ul{margin:0;padding-left:18px}.dpl .s4 li{font-size:14.5px;line-height:1.75;margin:0 0 10px;color:#333}.dpl .s4 li b{color:#111}'+
+ '.dpl .s5{padding:48px 22px 30px}.dpl .faq{background:#f4f4f5;border-radius:16px;margin:0 0 12px;overflow:hidden}.dpl .faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:20px 20px;font-size:16px;font-weight:800;cursor:pointer}.dpl .faq summary::-webkit-details-marker{display:none}.dpl .faq summary:after{content:"+";font-size:26px;font-weight:300;line-height:1}.dpl .faq[open] summary:after{content:"✕";font-size:18px;font-weight:800}.dpl .faq p{margin:0;padding:0 20px 20px;font-size:14.5px;line-height:1.7;color:#555}'+
+ '#dpcs{position:fixed;inset:0;z-index:100005;background:rgba(0,0,0,.4);display:flex;align-items:flex-end;justify-content:center}#dpcs .w{width:100%;max-width:560px;background:#fff;border-radius:20px 20px 0 0;padding:0 0 max(18px,env(safe-area-inset-bottom))}#dpcs .t{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid #eee;font-size:16px;color:#555}#dpcs .t button{border:0;background:none;font-size:22px;cursor:pointer}'+
+ '#dpcs .c{padding:16px 20px 6px}#dpcs .c small{display:block;font-size:13px;font-weight:700;color:#888;margin-bottom:12px}#dpcs label{display:flex;align-items:center;gap:10px;font-size:15px;padding:6px 0}#dpcs label input{width:20px;height:20px;accent-color:#6a3fc8}#dpcs label a{margin-left:auto;font-size:13.5px;color:#888;text-decoration:underline}#dpcs .go{display:block;width:calc(100% - 40px);margin:16px 20px 4px;height:54px;border:0;border-radius:10px;background:#eee;color:#999;font-size:16px;font-weight:800}#dpcs .go.on{background:#6a3fc8;color:#fff;cursor:pointer}'+
+ '#dpcs .d{padding:18px 22px 10px;font-size:14px;line-height:1.75;color:#333;max-height:60vh;overflow:auto}</style>';
+var DP_ART='<svg viewBox="0 0 300 300"><rect x="70" y="20" width="160" height="300" rx="28" fill="#222"/><rect x="80" y="30" width="140" height="290" rx="20" fill="#fff"/><rect x="118" y="30" width="64" height="16" rx="8" fill="#222"/><text x="150" y="68" text-anchor="middle" font-size="11" font-weight="700" fill="#777">dagguukids.com</text><rect x="92" y="78" width="116" height="150" rx="12" fill="#ffe7b8"/>'+
+ '<circle cx="150" cy="138" r="34" fill="#fff" stroke="#3b2a7a" stroke-width="4"/><circle cx="139" cy="134" r="3.5" fill="#3b2a7a"/><circle cx="161" cy="134" r="3.5" fill="#3b2a7a"/><path d="M140 147q10 9 20 0" fill="none" stroke="#3b2a7a" stroke-width="3.5" stroke-linecap="round"/><path d="M118 196q32-26 64 0v32h-64z" fill="#6a3fc8"/><text x="150" y="218" text-anchor="middle" font-size="13" font-weight="900" fill="#fff">DAKKU</text>'+
+ '<text x="98" y="250" font-size="11.5" font-weight="800" fill="#4b55c9">#광고 #다꾸키즈</text><path d="M100 268c0-6 9-6 9 0 0-6 9-6 9 0 0 6-9 11-9 11s-9-5-9-11z" fill="#e8312f"/><circle cx="135" cy="268" r="6" fill="none" stroke="#333" stroke-width="2.2"/><path d="m152 262 12 6-12 6 3-6z" fill="none" stroke="#333" stroke-width="2.2" stroke-linejoin="round"/>'+
+ '<g stroke="#3b2a7a" stroke-width="4"><circle cx="64" cy="96" r="30" fill="#ffd84d"/><circle cx="246" cy="70" r="26" fill="#ffd84d"/><circle cx="252" cy="196" r="24" fill="#ffd84d"/><circle cx="56" cy="214" r="22" fill="#ffd84d"/></g><g font-weight="900" fill="#3b2a7a" text-anchor="middle"><text x="64" y="104" font-size="22">3%</text><text x="246" y="78" font-size="20">P</text><text x="252" y="203" font-size="17">₩</text><text x="56" y="221" font-size="16">D</text></g>'+
+ '<g fill="#3b2a7a"><path d="m40 40 4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/><path d="m262 128 3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/><path d="m200 250 3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/></g></svg>';
+function dpLand(state){
+  var cta=state==="guest"?"다꾸파트너스 함께하기":"수익 링크 만들기";
+  return DP_CSS+'<div class="dpl">'+
+   '<section class="s1"><small>다꾸파트너스 프로그램</small><h1>다꾸키즈와 함께 할<br>파트너를<br>모집합니다.</h1><p>다꾸파트너스는 다꾸키즈 회원이라면<br>누구나 참여할 수 있는 적립 프로그램이에요.<br>SNS, 블로그, 카페, 단톡방 등에<br>링크를 공유하고 적립금을 받아 보세요!</p><div class="art">'+DP_ART+'</div></section>'+
+   '<section class="s2"><h2>상품 링크를 공유하고,<br>적립금을 받아 보세요!</h2><p>상품 상세 화면의 공유 버튼이나 이 화면에서<br>내 수익 링크를 복사해 공유하면, 그 링크로<br>팔린 상품 금액의 '+DP_RATE+'%가 적립금으로 쌓여요.</p><button type="button" data-dpgo="'+state+'">'+cta+'</button></section>'+
+   '<section class="s3"><span class="pill">기본 가이드</span><h3>수익 링크는 이렇게 복사해요!</h3><ol><li>다꾸키즈 상품 화면의 <b>공유하기</b> 버튼 또는 다꾸파트너스 마이 화면에서 발급받기<div class="mock"><div><b>제품 공유하기</b><i>'+DP_RATE+'% 적립</i><code>dagguukids.com/…&amp;pt=내이름</code><em>🔗 링크 복사하기<br>💬 카카오톡 공유하기</em></div><div><b>다꾸파트너스</b><em>적립 예정</em><strong>3,240원</strong><em>최근 30일 클릭 · 주문</em></div></div><p style="margin:6px 0 0;font-size:11.5px;font-weight:400;color:#999">* 화면 예시예요. 실제 숫자가 아니에요.</p></li><li>내가 운영하는 SNS, 블로그, 카페, 단톡방 등에 복사한 링크를 공유하면 끝!</li></ol></section>'+
+   '<section class="s4"><h3>리워드 가이드</h3><ul>'+
+    '<li>적립금은 <b>상품 금액(배송비 제외)의 '+DP_RATE+'%</b>예요.</li>'+
+    '<li><b>배송이 끝나고 취소·반품이 없는 주문</b>을 확인한 뒤 적립돼요.</li>'+
+    '<li><b>링크를 누른 뒤 7일 안의 주문</b>이 내 실적이에요. 다른 파트너 링크를 나중에 누르면 그 파트너 실적이 돼요.</li>'+
+    '<li>내 링크로 들어와 <b>가입한 친구</b>는 마지막으로 산 날부터 <b>12개월 동안</b> 사는 옷도 계속 내 실적이에요.</li>'+
+    '<li><b>본인 주문</b>은 적립되지 않아요.</li>'+
+    '<li>적립금은 <b>다꾸키즈에서 5만원 이상 구매할 때 사용</b>할 수 있고, 현금으로 바꿀 수 없어요.</li></ul></section>'+
+   '<section class="s5"><h3>FAQ<br>자주 묻는 질문</h3>'+
+    '<details class="faq"><summary>다꾸파트너스 활동에 이용료가 있나요?</summary><p>아니요. 별도 이용료 없이 다꾸키즈 회원이라면 무료로 수익 링크를 쓸 수 있어요.</p></details>'+
+    '<details class="faq"><summary>일반인도 가입할 수 있나요?</summary><p>물론이에요. 만 14세 이상 다꾸키즈 회원이면 누구나 참여할 수 있어요.</p></details>'+
+    '<details class="faq"><summary>대가성 문구를 넣어야 하나요?</summary><p>네. 링크로 판매가 생기면 적립금(경제적 대가)을 받기 때문에, 글 제목이나 첫 줄 맨 앞에 <b>#광고</b> 같은 대가성 문구를 꼭 적어야 해요.</p></details>'+
+    '<details class="faq"><summary>언제 적립금을 받나요?</summary><p>링크로 들어온 주문의 배송이 끝나고 취소·반품이 없는 것을 확인한 뒤 다꾸키즈 적립금으로 넣어 드려요.</p></details>'+
+    '<details class="faq"><summary>하면 안 되는 것이 있나요?</summary><p>사실과 다른 후기·과장 광고, 원하지 않는 사람에게 링크 보내기(스팸), 본인·가족 주문으로 적립받기는 안 돼요. 어기면 적립이 취소될 수 있어요.</p></details>'+
+   '</section></div>';
+}
+function dpConsent(state){
+  var o=document.getElementById("dpcs"); if(o) o.remove();
+  o=document.createElement("div"); o.id="dpcs";
+  o.innerHTML='<div class="w"><div class="t"><span>파트너로 참여하려면 동의가 필요해요.</span><button type="button" data-x aria-label="닫기">✕</button></div><div class="c"><small>만 14세 이상 참여 가능</small><label><input type="checkbox" id="dpc1">개인정보 수집 및 이용 동의 (필수)<a href="#none" data-more>자세히</a></label></div><button type="button" class="go">동의하고 진행하기</button></div>';
+  document.body.appendChild(o);
+  var go=o.querySelector(".go"), cb=o.querySelector("#dpc1");
+  cb.addEventListener("change",function(){ go.classList.toggle("on",cb.checked); });
+  o.querySelector("[data-x]").onclick=function(){ o.remove(); };
+  o.onclick=function(e){ if(e.target===o) o.remove(); };
+  o.querySelector("[data-more]").onclick=function(e){ e.preventDefault();
+    o.querySelector(".w").innerHTML='<div class="t"><button type="button" data-back aria-label="뒤로">‹</button><b style="color:#111">개인정보 수집 및 이용 동의</b><span style="width:22px"></span></div><div class="d">'+
+     '- 목적: 다꾸파트너스(다꾸키즈 수익 링크) 참여, 수익 링크 제공, 클릭·주문 실적 확인 및 적립금 지급<br>- 항목: 카카오 로그인 정보(닉네임), 다꾸키즈 아이디 또는 휴대폰 번호, 링크 이름, 내 링크의 클릭·주문 기록(주문번호·상품 금액)<br>- 이용 내용: 수익 링크 발급, 실적 집계(구매·취소·반품 여부), 적립금 산정·지급, 부정 이용 확인<br>- 보관 기간: 다꾸파트너스 탈퇴 시까지(적립·지급 기록은 관련 법에 따라 정해진 기간 동안 보관)<br>- 동의 거부 시: 다꾸파트너스 이용과 적립금 지급은 제한되지만, 다꾸키즈 쇼핑은 그대로 이용할 수 있어요.<br><br>동의한 뒤에도 언제든 다꾸파트너스 이용을 그만둘 수 있어요.</div><button type="button" class="go on" data-back>확인</button>';
+    [].forEach.call(o.querySelectorAll("[data-back]"),function(b){ b.onclick=function(){ dpConsent(state); var c=document.getElementById("dpc1"); if(c){ c.checked=true; c.dispatchEvent(new Event("change")); } }; });
+  };
+  go.onclick=function(){ if(!cb.checked){ toast("필수 동의에 체크해 주세요"); return; }
+    ls("dakku-dp-ok",new Date().toISOString()); ga("dp_consent",{}); o.remove();
+    if(state==="guest"){ ls("dakku-after-login",location.hash); login("kakao"); return; }
+    var f=document.getElementById("dpjoin-sec"); if(f){ f.style.display=""; f.scrollIntoView({behavior:"smooth",block:"start"}); } };
+}
+document.addEventListener("click",function(e){ var b=e.target.closest&&e.target.closest("[data-dpgo]"); if(!b) return; e.preventDefault(); var st=b.getAttribute("data-dpgo");
+  if(st!=="guest"&&ls("dakku-dp-ok")){ var f=document.getElementById("dpjoin-sec"); if(f){ f.style.display=""; f.scrollIntoView({behavior:"smooth",block:"start"}); } return; }
+  dpConsent(st); });
 function dpInit(){
   var v=document.getElementById("dpv"); if(!v) return;
   pjWait(function(){
-    if(!SB||!USER){ v.innerHTML=dpHero()+dpRules()+'<div class="dbar pjbar"><button class="b" data-pjlogin>카카오로 로그인하고 시작하기</button></div>'; plainHeads(v); return; }
+    if(!SB||!USER){ v.innerHTML=dpLand("guest")+'<div class="dbar pjbar"><button class="b" data-dpgo="guest">다꾸파트너스 함께하기</button></div>'; return; }
     SB.from("dp_partners").select("*").eq("user_id",USER.id).maybeSingle().then(function(r){
       if(r.error){ v.innerHTML=dpHero()+'<div class="empty">준비 중이에요. 잠시 후 다시 열어 주세요.</div>'; return; }
       var me=r.data;
       if(!me){
-        v.innerHTML=dpHero()+dpRules()+'<section class="pjsec"><h2>파트너 가입</h2><form id="dpjoin" class="pjf">'+
+        v.innerHTML=dpLand("join")+'<section class="pjsec" id="dpjoin-sec"'+(ls("dakku-dp-ok")?'':' style="display:none"')+'><h2>파트너 가입</h2><form id="dpjoin" class="pjf">'+
           '<label class="fl" for="dp-code">내 링크 이름 <i>*</i></label><input id="dp-code" class="fi" maxlength="20" placeholder="영문 소문자·숫자·밑줄 3~20자 (예: dakku_mom)" autocapitalize="off" autocomplete="off">'+
           '<p class="dpnote">링크에 들어가는 이름이에요. 한 번 정하면 바꿀 수 없어요.</p>'+
           '<label class="fl" for="dp-shop">다꾸키즈 아이디 또는 휴대폰 번호 <i>*</i></label><input id="dp-shop" class="fi" maxlength="40" placeholder="예: dagguu123 또는 010-1234-5678"><p class="dpnote">친구가 가입할 때 <b>추천인 아이디</b> 칸에 이 아이디를 쓰면 나와 연결돼요. 그래서 휴대폰 번호보다 <b>다꾸키즈 아이디</b>를 추천해요. 카카오로 가입해 아이디를 모르면 다꾸키즈 마이페이지 친구 초대 칸 주소의 <b>reco_id=</b> 뒤 글자가 내 아이디예요. 휴대폰 번호를 적으면 링크 적립만 되고 추천인 연결은 안 돼요.</p>'+
           '<p class="dpnote">아직 회원이 아니면 <a href="'+DP_SHOP+'/member/join.html" target="_blank" rel="noopener">다꾸키즈에서 가입</a>한 뒤 적어 주세요.</p>'+
           '<label class="ck"><input type="checkbox" id="dp-ok"><span>위 안내(#광고 표시·적립금 보상·본인 주문 제외)를 확인했어요</span></label>'+
-          '<button class="b pri wide" type="submit">수익 링크 시작하기</button></form></section>';
-        plainHeads(v);
+          '<button class="b pri wide" type="submit">수익 링크 시작하기</button></form></section>'+(ls("dakku-dp-ok")?'':'<div class="dbar pjbar"><button class="b" data-dpgo="join">수익 링크 만들기</button></div>');
         document.getElementById("dpjoin").addEventListener("submit",function(e){ e.preventDefault();
           var c=document.getElementById("dp-code").value.trim().toLowerCase(), sh=document.getElementById("dp-shop").value.trim();
           if(!/^[a-z0-9_]{3,20}$/.test(c)){ toast("링크 이름은 영문 소문자·숫자·밑줄 3~20자로 적어 주세요"); return; }
