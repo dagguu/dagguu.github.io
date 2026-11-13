@@ -1036,7 +1036,9 @@
   }
   function homeBM(){ try { bmBuild(); } catch(e){} try { bmTab(); } catch(e){} try { bmPop(); } catch(e){} }
 
-  function run(){ homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  /* 로그인 화면 PC: 위로 옮긴 카카오 로그인 칸이 왼쪽에 붙던 것(2026-11-13 시온님) → 아이디 칸과 같은 폭으로 가운데 */
+  function loginFix(){ var s = document.querySelector(".xans-member-login .login__sns.dk-top"); if (!s) return; ["max-width:400px", "margin-left:auto", "margin-right:auto"].forEach(function(x){ var k = x.split(":"); s.style.setProperty(k[0], k[1], "important"); }); }
+  function run(){ loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
