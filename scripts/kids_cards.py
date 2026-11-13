@@ -71,7 +71,7 @@ def model_img(p):
         print("얼굴 찾기 못 씀:", e)
         return None
     best, bs = None, 0
-    for u in urls[:10]:
+    for u in urls[:16]:
         try:
             raw = urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=30).read()
             im = cv2.imdecode(np.frombuffer(raw, np.uint8), cv2.IMREAD_COLOR)
@@ -83,7 +83,7 @@ def model_img(p):
         if ww < 600 or ww / hh > 1.1:  # 작거나 가로로 긴 것(사이즈표·글씨) 뺌
             continue
         g = cv2.cvtColor(cv2.resize(im, (480, int(480 * hh / ww))), cv2.COLOR_BGR2GRAY)
-        fs = casc.detectMultiScale(g, 1.1, 6, minSize=(28, 28))
+        fs = casc.detectMultiScale(g, 1.08, 4, minSize=(24, 24))
         if len(fs) == 0:
             continue
         sc = max(w * h for (x, y, w, h) in fs) + (2000 if hh >= ww else 0)
@@ -247,7 +247,7 @@ def main():
     bp = {}
     for th in BAN:
         pool = products(th[1], 200) or allp
-        cand = pick(pool, 12, used, maxb=2 if th[1] == 55 else 12)
+        cand = pick(pool, 30, used, maxb=4 if th[1] == 55 else 30)
         ps = []
         for q in cand:
             m = model_img(q)
