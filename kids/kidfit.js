@@ -1101,7 +1101,7 @@
     bmNames();
   }
   function bmNames(){
-    [].forEach.call(document.querySelectorAll("ul.prdList>li .description .name a span:not(.title), #dk-cat .cg span"), function(sp){
+    [].forEach.call(document.querySelectorAll("ul.prdList>li .description .name a span:not(.title), #dk-cat .cg span, .infoArea .headingArea h1, .infoArea .headingArea h2"), function(sp){
       if (sp.getAttribute("data-dkn")) return; var t = sp.textContent, n = bmName(t); if (n && n !== t) { sp.setAttribute("title", t); sp.textContent = n; } sp.setAttribute("data-dkn", "1");
     });
   }
@@ -1165,6 +1165,52 @@
     r.querySelector(".dk-shbtn").onclick = function(e){ e.preventDefault(); shOpen(); };
   }
   (function(){ var tm2; try { new MutationObserver(function(){ clearTimeout(tm2); tm2 = setTimeout(function(){ try { shareRow(); } catch(e){} }, 80); }).observe(document.documentElement, { childList: true, subtree: true }); } catch(e){} })();
+
+  /* ---------- ⑯ 상품 상세 혜택 띠 배너 (2026-11-13 시온님이 바잇미 상품 화면 아래 배너 5줄 보여주며 "이런 느낌으로 배너 더") ----------
+     그림 대신 글씨·도형으로 직접 그림(바잇미 그림·문구 안 씀). 사실만: 가입 적립금 1,000원·수신 동의 5% 쿠폰, 5만원 이상 무료배송, 수익 링크 3%, 카톡 채널, 커피 이벤트.
+     위치 = 상세 탭(상세정보·구매안내…) 바로 위, 위에 브랜드 줄(브랜드 이름 · 브랜드 상품보기 ›). */
+  function promoStack(){
+    if (!document.querySelector(".xans-product-detail") || document.getElementById("dk-promo")) return;
+    var at = document.querySelector("#tabProduct, .xans-product-additional, #prdDetail"); if (!at) return;
+    if (!document.getElementById("dk-promo-css")) { var st = document.createElement("style"); st.id = "dk-promo-css";
+      st.textContent = "#dk-promo{margin:18px 0 26px}#dk-promo .pbr{display:flex;align-items:center;gap:12px;padding:14px 2px 16px;border-bottom:1px solid #eee;margin-bottom:14px}#dk-promo .pbr i{flex:0 0 46px;height:46px;border-radius:50%;background:#6a3fc8;color:#fff;font-style:normal;font-weight:800;font-size:19px;display:flex;align-items:center;justify-content:center}#dk-promo .pbr b{font-size:16px;font-weight:600;color:#222}#dk-promo .pbr small{display:block;font-size:12.5px;color:#888;margin-top:2px}#dk-promo .pbr a{margin-left:auto;font-size:14px;color:#6a3fc8;text-decoration:none;white-space:nowrap}" +
+        "#dk-promo .pb{position:relative;display:flex;align-items:center;height:96px;border-radius:12px;overflow:hidden;margin-bottom:10px;padding:0 0 0 22px;text-decoration:none;box-sizing:border-box}#dk-promo .pb .t{position:relative;z-index:2;font-size:16.5px;line-height:1.4;letter-spacing:-.4px;font-weight:500}#dk-promo .pb .t b{font-weight:800}#dk-promo .pb .t small{display:block;font-size:12.5px;font-weight:500;opacity:.85;margin-bottom:2px}#dk-promo .pb .r{position:absolute;right:0;top:0;bottom:0;width:38%;z-index:1}" +
+        "#dk-promo .p1{background:#111;color:#fff}#dk-promo .p1 .t b{color:#ffe94d}#dk-promo .p1 .r:before{content:'';position:absolute;right:-30px;top:-20px;width:170px;height:170px;border-radius:50%;background:#2b2b2b}#dk-promo .p1 .c1{position:absolute;right:46px;top:8px;transform:rotate(-14deg);background:#fff;color:#111;border-radius:10px;padding:7px 10px;font-size:11px;font-weight:700;line-height:1.1;text-align:center}#dk-promo .p1 .c1 em{display:block;font-style:normal;font-size:19px;font-weight:900}#dk-promo .p1 .c2{position:absolute;right:8px;bottom:-4px;transform:rotate(12deg);background:#ffe94d;color:#111;border-radius:10px;padding:6px 10px;font-size:11px;font-weight:700;line-height:1.1;text-align:center}#dk-promo .p1 .c2 em{display:block;font-style:normal;font-size:20px;font-weight:900}" +
+        "#dk-promo .p2{background:#7b4fd6;color:#fff}#dk-promo .p2 .t b{color:#fff}#dk-promo .p2 .r{background:#fff;width:30%;right:18px;top:12px;bottom:0;border-radius:8px 8px 0 0;color:#3b1f86;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:11.5px;font-weight:600}#dk-promo .p2 .r em{font-style:normal;font-size:22px;font-weight:900;letter-spacing:-1px}" +
+        "#dk-promo .p3{background:#f7ddcf;color:#c2410c}#dk-promo .p3 .t{font-size:20px;font-weight:800}#dk-promo .p3 .t small{color:#d9541a}#dk-promo .p3 .r{display:flex;align-items:center;justify-content:center;gap:0}#dk-promo .p3 .r i{width:38px;height:38px;border-radius:50%;background:#f5b91e;border:3px solid #e89a00;margin-left:-12px;font-style:normal;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:15px;box-shadow:0 3px 6px rgba(0,0,0,.12)}" +
+        "#dk-promo .p4{background:#fee500;color:#191919}#dk-promo .p4 .r{display:flex;align-items:center;justify-content:center}#dk-promo .p4 .r i{width:60px;height:60px;border-radius:50%;background:#3c1e1e;color:#fee500;font-style:normal;display:flex;align-items:center;justify-content:center;font-size:30px}" +
+        "#dk-promo .p5{background:#efe4d6;color:#4a2f1b}#dk-promo .p5 .t b{color:#8a4b1f}#dk-promo .p5 .r{display:flex;align-items:center;justify-content:center;font-size:52px}";
+      document.head.appendChild(st); }
+    var nm = ((document.querySelector(".infoArea .headingArea h1, .infoArea .headingArea h2") || {}).textContent || "").trim(), br = nm.split(/\s+/)[0] || "";
+    var logged = isLogged();
+    var h = "<div id='dk-promo'>" + (br ? "<div class='pbr'><i>" + br.charAt(0) + "</i><div><b>" + br + "</b><small>다꾸키즈에서 만나는 " + br + " 아이옷</small></div><a href='/product/search.html?keyword=" + encodeURIComponent(br) + "'>브랜드상품보기 ›</a></div>" : "") +
+      (logged
+        ? "<a class='pb p1' href='/myshop/index.html#dk-invite'><span class='t'>친구에게 다꾸키즈 알려주고<br><b>친구도 나도 적립금 500원</b></span><span class='r'><span class='c1'>친구 초대<em>500원</em></span><span class='c2'>나도<em>500원</em></span></span></a>"
+        : "<a class='pb p1' href='/member/agreement.html'><span class='t'>아직 <b>회원가입</b> 안 했다면?<br>가입하면 <b>적립금 1,000원</b> 바로 지급</span><span class='r'><span class='c1'>가입 즉시<em>1,000원</em></span><span class='c2'>수신 동의<em>5% 쿠폰</em></span></span></a>") +
+      "<a class='pb p2' href='/product/list.html?cate_no=54'><span class='t'>남대문 아동복을 집에서 편하게<br><b>5만원 이상 무료배송</b></span><span class='r'>5만원 이상<em>무료배송</em></span></a>" +
+      "<a class='pb p3' href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'><span class='t'><small>친구가 내 링크로 사면</small>포인트 3% 쏙쏙 받기 ›</span><span class='r'><i>P</i><i>P</i><i>P</i></span></a>" +
+      "<a class='pb p4' href='https://pf.kakao.com/_xhihNX' target='_blank' rel='noopener'><span class='t'>카카오톡 채널 친구 추가하고<br><b>신상·할인 소식 먼저 받기</b></span><span class='r'><i>💬</i></span></a>" +
+      "<a class='pb p5' href='/product/coffee.html'><span class='t'><small>매달 선착순 30명</small><b>@dagguu.kids 태그하고<br>커피 받아가세요 ›</b></span><span class='r'>☕</span></a></div>";
+    var w = document.createElement("div"); w.innerHTML = h; at.parentNode.insertBefore(w.firstChild, at);
+  }
+  (function(){ var tm3; try { new MutationObserver(function(){ clearTimeout(tm3); tm3 = setTimeout(function(){ try { promoStack(); } catch(e){} }, 120); }).observe(document.documentElement, { childList: true, subtree: true }); } catch(e){} })();
+
+  /* ---------- ⑰ 상품 상세 깔끔하게 (2026-11-13 시온님 "바잇미가 더 깔끔, 제목 사이즈 줄이고 정리") ----------
+     제목 19px·보통 굵기(이름 뒤 검색어 꼬리 뗌), 정보표에서 상품요약정보·국내·해외배송·최적할인가 줄 숨김, 표 글씨 14px·회색 이름, 말풍선 작게. */
+  function detailTidy(){
+    if (!document.querySelector(".xans-product-detail")) return;
+    if (!document.getElementById("dk-tidy-css")) { var st = document.createElement("style"); st.id = "dk-tidy-css";
+      st.textContent = ".infoArea .headingArea h1,.infoArea .headingArea h2{font-size:19px!important;font-weight:500!important;line-height:1.45!important;letter-spacing:-.3px!important;margin:4px 0 10px!important}" +
+        ".infoArea .xans-product-detaildesign th,.infoArea .xans-product-detaildesign td{font-size:14px!important;padding-top:5px!important;padding-bottom:5px!important}.infoArea .xans-product-detaildesign th{color:#888!important;font-weight:400!important}" +
+        ".infoArea tr.dk-hide{display:none!important}.dk-shtip{font-size:12.5px!important;padding:7px 11px!important;border-radius:9px!important}";
+      document.head.appendChild(st); }
+    [].forEach.call(document.querySelectorAll(".infoArea .xans-product-detaildesign tr"), function(tr){
+      if (tr.getAttribute("data-dkt")) return; tr.setAttribute("data-dkt", "1");
+      var th = ((tr.querySelector("th") || {}).textContent || "").replace(/\s/g, "");
+      if (/상품요약정보|국내.?해외배송|최적할인가/.test(th)) tr.classList.add("dk-hide");
+    });
+  }
+  (function(){ var tm4; try { new MutationObserver(function(){ clearTimeout(tm4); tm4 = setTimeout(function(){ try { detailTidy(); } catch(e){} }, 120); }).observe(document.documentElement, { childList: true, subtree: true }); } catch(e){} })();
 
   /* ---------- ⑭ 베베·키즈 고르기 (2026-11-13 시온님이 바잇미 로고 옆 "강아지 ⌄ / 고양이" 보여주며 "베베, 키즈 따로") ----------
      로고 오른쪽 "전체 ⌄" → 베베(0~2세)·키즈(3세~)·전체. 이 기기 localStorage dk_age. 고르면 홈의 상품 목록이 그 분류(52 BABY / 53 KIDS) 상품으로
