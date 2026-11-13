@@ -62,7 +62,7 @@
     return "<div class='dkk-row' style='position:relative;margin-top:12px;padding:14px;border:1px solid #ece6fb;border-radius:12px;background:#fff'>" +
       "<div style='font-size:13px;font-weight:800;color:#6a3fc8'>아이 " + (i + 1) + "</div>" +
       "<button type='button' class='dkk-del' style='position:absolute;right:10px;top:10px;border:0;background:none;font-size:13px;color:#aaa;cursor:pointer'>삭제 ✕</button>" +
-      "<div style='display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:8px'>" +
+      "<div class='dkk-g' style='display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:8px'>" +
         "<label style='font-size:12px;color:#555'>이름(선택)<input class='dkk-n' style='" + INP + "' placeholder='예: 하린' value='" + esc(k.name) + "'></label>" +
         "<label style='font-size:12px;color:#555'>성별<select class='dkk-s' style='" + INP + "'><option value='g'" + (k.sex === "b" ? "" : " selected") + ">여아</option><option value='b'" + (k.sex === "b" ? " selected" : "") + ">남아</option></select></label>" +
         "<label style='font-size:12px;color:#555'>태어난 달<input class='dkk-b' type='month' style='" + INP + "' value='" + esc(k.birth) + "'></label>" +
@@ -74,6 +74,13 @@
     if (!/myshop.index/.test(location.pathname) || document.getElementById("dk-kidbox")) return;
     var host = document.querySelector(".section.benefit") || document.querySelector("#contents");
     if (!host) return;
+    if (!document.getElementById("dk-kb-css")) { var kst = document.createElement("style"); kst.id = "dk-kb-css";  /* 2026-11-14 시온님 "네모칸이 삐뚤빼뚤": 카페24 기본 label·input 여백 무시, 2칸 격자 고정 */
+      kst.textContent = "#dk-kidbox .dkk-g{display:grid!important;grid-template-columns:1fr 1fr!important;gap:12px 10px!important}" +
+        "#dk-kidbox label{display:block!important;margin:0!important;padding:0!important;min-width:0!important;width:auto!important;float:none!important;text-indent:0!important;font-size:12px;color:#555}" +
+        "#dk-kidbox label input,#dk-kidbox label select{display:block!important;width:100%!important;max-width:100%!important;min-width:0!important;height:44px!important;margin:4px 0 0!important;padding:0 12px!important;line-height:44px!important;border:1px solid #ddd!important;border-radius:8px!important;background:#fff!important;font-size:16px!important;color:#222!important;box-sizing:border-box!important;-webkit-appearance:none;appearance:none;float:none!important}" +
+        "#dk-kidbox label select{background-image:linear-gradient(45deg,transparent 50%,#888 50%),linear-gradient(135deg,#888 50%,transparent 50%)!important;background-position:calc(100% - 18px) 19px,calc(100% - 13px) 19px!important;background-size:5px 5px!important;background-repeat:no-repeat!important;padding-right:30px!important}" +
+        "#dk-kidbox input[type=month]::-webkit-date-and-time-value{text-align:left}";
+      document.head.appendChild(kst); }
     var d = document.createElement("div"); d.id = "dk-kidbox";
     d.style.cssText = "max-width:720px;margin:20px auto;padding:20px;border:1px solid #eee;border-radius:16px;background:#faf8ff;font-family:inherit;box-sizing:border-box";
     host.parentNode.insertBefore(d, host.nextSibling);
@@ -84,7 +91,7 @@
       var mm = momInfo() || {};
       var tops = "<option value=''>모름</option>"; for (var t = 0; t < MS.length; t++) tops += "<option value='" + MS[t][0] + "'" + (mm.top === MS[t][0] ? " selected" : "") + ">" + MS[t][0] + " (" + MS[t][1] + ")</option>";
       var momBox = "<div style='margin-top:18px;padding:14px;border:1px solid #ece6fb;border-radius:12px;background:#fff'><div style='font-size:13px;font-weight:800;color:#6a3fc8'>👩 엄마 사이즈</div>" +
-        "<div style='display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:8px'>" +
+        "<div class='dkk-g' style='display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:8px'>" +
         "<label style='font-size:12px;color:#555'>키(cm)<input id='dkm-h' type='number' inputmode='decimal' style='" + INP + "' value='" + (mm.h || "") + "'></label>" +
         "<label style='font-size:12px;color:#555'>몸무게(kg)<input id='dkm-w' type='number' inputmode='decimal' style='" + INP + "' value='" + (mm.w || "") + "'></label>" +
         "<label style='font-size:12px;color:#555'>평소 상의 사이즈<select id='dkm-t' style='" + INP + "'>" + tops + "</select></label>" +
