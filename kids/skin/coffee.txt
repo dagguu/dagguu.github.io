@@ -66,7 +66,7 @@
     <a class="fl" href="https://www.instagram.com/dagguu.kids/" target="_blank" rel="noopener"><em>♡</em>@dagguu.kids</a>
   </div>
   <div class="tt">
-    <h1>☕ 다꾸키즈 태그하고 커피 받기<br>인스타 코디 체험단</h1>
+    <h1>📸 다꾸키즈 태그하고 적립금 5,000원 받기<br>인스타 코디 체험단</h1>
     <div class="bar"><i id="cfBar"></i></div>
     <div class="dd" id="cfDd">모집 종료까지 D-0 남음</div>
   </div>
@@ -74,14 +74,14 @@
     <div><dt>모집 현황</dt><dd><em>매달 선착순 30명</em> 모집</dd></div>
     <div><dt>모집 기간</dt><dd id="cfPer">매달 1일 ~ 말일</dd></div>
     <div><dt>참여 대상</dt><dd>누구나 (구매하지 않아도 OK)<small>아이 일상을 꾸준히 올리는 육아 계정</small></dd></div>
-    <div><dt>혜택</dt><dd>커피 기프티콘 1잔</dd></div>
-    <div><dt>커피 발송</dt><dd>확인 후 영업일 3일 이내<small>카카오톡으로 보내 드려요</small></dd></div>
+    <div><dt>혜택</dt><dd>다꾸키즈 적립금 5,000원<small>5만원 이상 구매할 때 쓸 수 있어요</small></dd></div>
+    <div><dt>적립금 지급</dt><dd>확인 후 영업일 3일 이내<small>다꾸키즈 회원 계정에 넣어 드려요</small></dd></div>
     <div><dt>올리는 곳</dt><dd>인스타그램 스토리 또는 피드</dd></div>
   </dl>
   <div class="nt"><ul>
     <li>우리 아이 <b>일상 사진</b>에 <b>오늘의 코디</b>와 <b>아이 스펙</b>(개월 수·키·몸무게·입은 사이즈)을 적어 주세요. 얼굴은 안 나와도 괜찮아요.</li>
     <li><span class="hl">@dagguu.kids</span> 를 태그하고 <span class="hl">#다꾸키즈 #다꾸체험단</span> 과 좋아하는 브랜드 해시태그를 넣어 주세요.</li>
-    <li>글 맨 앞에 <span class="hl">#광고</span> 를 꼭 넣어 주세요. (커피를 받는 참여라 표시가 필요해요)</li>
+    <li>글 맨 앞에 <span class="hl">#광고</span> 를 꼭 넣어 주세요. (적립금을 받는 참여라 표시가 필요해요)</li>
     <li>올린 화면을 캡처해서 아래 신청서와 함께 카카오톡 채널 <b>다꾸키즈</b>로 보내 주세요.</li>
     <li>한 달에 한 번씩 참여할 수 있어요. (인스타 아이디·휴대폰 번호 기준)</li>
     <li>올린 피드는 삭제하지 않아요. 지우면 다음 이벤트 참여와 다꾸파트너스 적립에서 제외될 수 있어요.</li>
@@ -117,15 +117,15 @@
     <li>매달 선착순 30명이에요. 마감되면 다음 달 1일에 다시 열려요.</li>
     <li>비공개 계정도 괜찮아요. <b>@dagguu.kids</b> 와 맞팔하면 확인할 수 있어요.</li>
     <li>아이 일상을 꾸준히 올리고 있는 <b>육아 계정</b>만 참여할 수 있어요. 이벤트를 위해 새로 만든 계정은 안 돼요.</li>
-    <li><b>#광고</b> 표시가 없거나, 다른 사람 게시물을 캡처한 경우, 아이디를 여러 개 쓴 경우는 커피를 보내 드리지 않아요.</li>
-    <li>커피 기프티콘 종류는 바뀔 수 있어요.</li>
+    <li><b>#광고</b> 표시가 없거나, 다른 사람 게시물을 캡처한 경우, 아이디를 여러 개 쓴 경우는 적립금을 드리지 않아요.</li>
+    <li>적립금은 현금으로 바꿀 수 없고, 5만원 이상 구매할 때 쓸 수 있어요.</li>
   </ul>
 
   <h2 id="cfApply"><small>APPLY</small>신청서</h2>
   <form id="cfForm" onsubmit="return false">
     <label>인스타그램 아이디</label><input id="cfIg" placeholder="예: @dagguu.mom">
-    <label>기프티콘 받을 휴대폰 번호</label><input id="cfPh" inputmode="tel" placeholder="010-0000-0000">
-    <label class="ck"><input type="checkbox" id="cfOk"> 위 안내를 확인했고, 게시물 맨 앞에 #광고 를 넣었어요. 기프티콘 발송을 위해 휴대폰 번호를 보내는 데 동의해요(발송 후 파기).</label>
+    <label>다꾸키즈 아이디 또는 가입한 휴대폰 번호</label><input id="cfPh" inputmode="tel" placeholder="010-0000-0000">
+    <label class="ck"><input type="checkbox" id="cfOk"> 위 안내를 확인했고, 게시물 맨 앞에 #광고 를 넣었어요. 적립금 지급을 위해 아이디·휴대폰 번호를 보내는 데 동의해요(지급 후 파기).</label>
     <button type="button" id="cfGo">신청 내용 복사하고 카카오톡으로 보내기</button>
     <div class="done" id="cfDone">신청 내용이 복사됐어요. 열리는 카카오톡 채팅창에 <b>붙여넣기</b> 하고, 올린 게시물 <b>캡처 사진</b>도 같이 보내 주세요. 창이 안 열리면 카카오톡에서 <b>다꾸키즈</b> 채널을 찾아 주세요.</div>
   </form>
@@ -167,7 +167,7 @@
     if (!v("cfIg") || !v("cfPh")) { alert("인스타그램 아이디와 휴대폰 번호를 적어 주세요."); return; }
     if (!document.getElementById("cfOk").checked) { alert("안내 확인에 체크해 주세요."); return; }
     var m = new Date(Date.now() + 9 * 3600000).getUTCMonth() + 1;
-    var txt = "[다꾸키즈 태그 커피 이벤트 " + m + "월]" + NL + "인스타: " + v("cfIg") + NL + "휴대폰: " + v("cfPh") + NL + "(게시물 캡처 사진 같이 보내요)";
+    var txt = "[다꾸키즈 태그 적립금 이벤트 " + m + "월]" + NL + "인스타: " + v("cfIg") + NL + "아이디/휴대폰: " + v("cfPh") + NL + "(게시물 캡처 사진 같이 보내요)";
     var go = function () { document.getElementById("cfDone").style.display = "block"; window.open(KAKAO, "_blank"); };
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(go, function () { prompt("아래 내용을 복사해 주세요", txt); go(); });
     else { prompt("아래 내용을 복사해 주세요", txt); go(); }

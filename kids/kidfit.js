@@ -1041,7 +1041,7 @@
       var PH1 = "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/upload/NNEditor/20261111/ad12ac6c63c584e8930f3661cb526942.jpg";
       var PH2 = "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/upload/NNEditor/20261111/9b57e1866ba44d2bf1be89f7bb018101.jpg";
       var first = logged
-        ? "<a class='ps' href='/product/coffee.html' style='background-image:url(" + PH2 + ")'><i class='s1'>☕ 커피 이벤트</i><i class='s2'>매달 30명</i><span class='tx'><b>@dagguu.kids 태그하고<br>커피 받아가세요</b><small>우리 아이 코디 사진에 태그만 하면 돼요</small></span></a>"
+        ? "<a class='ps' href='/product/coffee.html' style='background-image:url(" + PH2 + ")'><i class='s1'>📸 태그 이벤트</i><i class='s2'>매달 30명</i><span class='tx'><b>@dagguu.kids 태그하고<br>적립금 5,000원 받기</b><small>우리 아이 코디 사진에 태그만 하면 돼요</small></span></a>"
         : "<a class='ps' href='/member/agreement.html' style='background-image:url(" + PH1 + ")'><i class='s1'>🎁 첫 가입 혜택</i><i class='s2'>바로 지급</i><span class='tx'><b>가입하면 적립금 1,000원<br>바로 드려요!</b><small>수신 동의 시 5% 할인 쿠폰도 함께</small></span></a>";
       var dd = new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10).replace(/-/g, "");
       var bans = BM_BAN.map(function(x){ return "<a class='ps' href='" + x[1] + "' style='background-image:url(https://www.dagguu.com/kids/banner/B" + x[0] + "m.jpg?d=" + dd + "v2)'></a>"; }).join("");
@@ -1190,7 +1190,7 @@
       "<a class='pb p2' href='/product/list.html?cate_no=54'><span class='t'>남대문 아동복을 집에서 편하게<br><b>5만원 이상 무료배송</b></span><span class='r'>5만원 이상<em>무료배송</em></span></a>" +
       "<a class='pb p3' href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'><span class='t'><small>친구가 내 링크로 사면</small>포인트 3% 쏙쏙 받기 ›</span><span class='r'><i>P</i><i>P</i><i>P</i></span></a>" +
       "<a class='pb p4' href='https://pf.kakao.com/_xhihNX' target='_blank' rel='noopener'><span class='t'>카카오톡 채널 친구 추가하고<br><b>신상·할인 소식 먼저 받기</b></span><span class='r'><i>💬</i></span></a>" +
-      "<a class='pb p5' href='/product/coffee.html'><span class='t'><small>매달 선착순 30명</small><b>@dagguu.kids 태그하고<br>커피 받아가세요 ›</b></span><span class='r'>☕</span></a></div>";
+      "<a class='pb p5' href='/product/coffee.html'><span class='t'><small>매달 선착순 30명</small><b>@dagguu.kids 태그하고<br>적립금 5,000원 받기 ›</b></span><span class='r'>📸</span></a></div>";
     var w = document.createElement("div"); w.innerHTML = h; at.parentNode.insertBefore(w.firstChild, at);
   }
   (function(){ var tm3; try { new MutationObserver(function(){ clearTimeout(tm3); tm3 = setTimeout(function(){ try { promoStack(); } catch(e){} }, 120); }).observe(document.documentElement, { childList: true, subtree: true }); } catch(e){} })();
@@ -1238,7 +1238,8 @@
     if (cur) { var mn = document.querySelector(".dk-mnav a"); if (mn) { mn.setAttribute("href", "/product/list.html?cate_no=" + AGE[cur][1]); mn.textContent = AGE[cur][2] + AGE[cur][0] + " 신상"; } }
   }
 
-  function coffeeFix(){ if (location.pathname.indexOf("/product/coffee.html") !== 0) return; var li = document.querySelectorAll("li"); for (var i = 0; i < li.length; i++) { if (li[i].textContent.indexOf("한 분당 한 번만 참여") >= 0) li[i].textContent = "한 달에 한 번씩 참여할 수 있어요. (인스타 아이디·휴대폰 번호 기준)"; } }
+  var CF_P = [["한 분당 한 번만 참여할 수 있어요.", "한 달에 한 번씩 참여할 수 있어요."], ["☕ 다꾸키즈 태그하고 커피 받기", "📸 다꾸키즈 태그하고 적립금 5,000원 받기"], ["커피 기프티콘 1잔", "다꾸키즈 적립금 5,000원 (5만원 이상 구매 시 사용)"], ["커피 발송", "적립금 지급"], ["카카오톡으로 보내 드려요", "다꾸키즈 회원 계정에 넣어 드려요"], ["(커피를 받는 참여라 표시가 필요해요)", "(적립금을 받는 참여라 표시가 필요해요)"], ["는 커피를 보내 드리지 않아요.", "는 적립금을 드리지 않아요."], ["커피 기프티콘 종류는 바뀔 수 있어요.", "적립금은 현금으로 바꿀 수 없고, 5만원 이상 구매할 때 쓸 수 있어요."], ["기프티콘 받을 휴대폰 번호", "다꾸키즈 아이디 또는 가입한 휴대폰 번호"], ["기프티콘 발송을 위해 휴대폰 번호를 보내는 데 동의해요(발송 후 파기).", "적립금 지급을 위해 아이디·휴대폰 번호를 보내는 데 동의해요(지급 후 파기)."]];
+  function coffeeFix(){ var a = document.querySelectorAll("a.dk-coffee"); for (var q = 0; q < a.length; q++) { var h = a[q].innerHTML; if (h.indexOf("커피") >= 0) a[q].innerHTML = h.split("커피 받아가세요").join("적립금 5,000원 받기").split("커피").join("적립금").split("☕").join("📸"); } if (location.pathname.indexOf("/product/coffee.html") !== 0) return; var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n, t; while ((n = w.nextNode())) { t = n.nodeValue; if (!t || t.length < 3) continue; for (var k = 0; k < CF_P.length; k++) if (t.indexOf(CF_P[k][0]) >= 0) t = t.split(CF_P[k][0]).join(CF_P[k][1]); if (t !== n.nodeValue) n.nodeValue = t; } }
   function run(){ try { coffeeFix(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
