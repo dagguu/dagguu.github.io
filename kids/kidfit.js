@@ -719,9 +719,43 @@
     if (location.pathname.indexOf("/myshop/index.html") !== 0 && location.pathname !== "/myshop/") return;
     var kb = document.getElementById("dk-kidbox"); if (!kb || document.getElementById("dk-invite")) return;
     var iv = [].filter.call(document.querySelectorAll("div.invite"), function(x){ return x.offsetParent && x.querySelector("input"); })[0]; if (!iv) return;
-    iv.id = "dk-invite"; iv.style.cssText += ";max-width:720px;margin:16px auto 20px;padding:18px 16px;border:2px solid #e3d8ff;border-radius:14px;background:#faf7ff;box-sizing:border-box";
-    var hd = document.createElement("div"); hd.style.cssText = "font-size:16px;font-weight:900;color:#6a3fc8;margin-bottom:8px;text-align:center"; hd.textContent = "🎁 친구 초대 이벤트 · 친구도 나도 500원 적립";
-    iv.insertBefore(hd, iv.firstChild);
+    var inp = iv.querySelector("input"); if (!inp) return;
+    /* 2026-11-14 시온님: 상품 공유 창(💌 이 옷 친구에게 알려주기)처럼 다시 그림. 카페24 기본 칸(주소·주소복사·안내)은 숨기고 주소 값만 씀. */
+    if (!document.getElementById("dk-iv-css")) { var st = document.createElement("style"); st.id = "dk-iv-css"; st.textContent =
+      "#dk-invite{max-width:720px;margin:16px auto 20px!important;padding:20px 16px 18px!important;border:0!important;border-radius:22px!important;background:#fff!important;box-shadow:0 4px 18px rgba(80,40,160,.10);box-sizing:border-box;text-align:center}" +
+      "#dk-invite>*:not(.dkiv){display:none!important}" +
+      "#dk-invite .ivtop{display:flex;align-items:center;gap:10px;padding:14px 14px 14px 16px;border:1px solid #ebe4ff;border-radius:16px;text-align:left;box-shadow:0 2px 10px rgba(80,40,160,.06)}" +
+      "#dk-invite .ivtop b{flex:1;font-size:15px;font-weight:700;color:#222;line-height:1.4}" +
+      "#dk-invite .ivtop a{flex:0 0 auto;background:#6a3fc8;color:#fff;font-size:14px;font-weight:700;border-radius:999px;padding:9px 16px;text-decoration:none}" +
+      "#dk-invite .ivico{font-size:40px;margin:18px 0 4px}" +
+      "#dk-invite h3{font-size:21px;font-weight:800;margin:0 0 6px;color:#222}" +
+      "#dk-invite .ivsub{font-size:14px;color:#777;margin:0 0 16px}" +
+      "#dk-invite .ivbtn{display:flex;align-items:center;gap:14px;width:100%;box-sizing:border-box;border:0;border-radius:18px;padding:16px 18px;margin:0 0 10px;text-align:left;cursor:pointer;text-decoration:none;font-family:inherit}" +
+      "#dk-invite .ivbtn i{font-style:normal;font-size:30px;flex:0 0 auto}" +
+      "#dk-invite .ivbtn b{display:block;font-size:17px;font-weight:800}" +
+      "#dk-invite .ivbtn small{display:block;font-size:13px;margin-top:2px}" +
+      "#dk-invite .ivg{background:#f3f3f5;color:#222}#dk-invite .ivg small{color:#777}" +
+      "#dk-invite .ivp{background:#6a3fc8;color:#fff}#dk-invite .ivp small{color:#e6dcff}" +
+      "#dk-invite .ivnote{font-size:12px;color:#999;line-height:1.6;margin:6px 0 0}";
+      document.head.appendChild(st); }
+    iv.id = "dk-invite";
+    var code = ""; try { code = localStorage.getItem("dk_dpme") || ""; } catch (e) {}
+    var w = document.createElement("div"); w.className = "dkiv";
+    w.innerHTML = "<div class='ivtop'><b>링크 공유하고, 최대 3% 포인트 받기</b><a href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'>자세히 보기</a></div>" +
+      "<div class='ivico'>💌</div><h3>친구 초대하고 함께 적립받기</h3><p class='ivsub'>친구가 내 링크로 가입하면 친구도 나도 500원</p>" +
+      "<button type='button' class='ivbtn ivg' data-iv='share'><i>💬</i><span><b>친구 초대하기</b><small>카톡·문자로 초대 링크를 바로 보내요</small></span></button>" +
+      (code ? "<button type='button' class='ivbtn ivp' data-iv='copy'><i>🎁</i><span><b>공유하고 3% 적립받기</b><small>내 링크(" + code + ")를 복사해요</small></span></button>"
+            : "<a class='ivbtn ivp' href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'><i>🎁</i><span><b>공유하고 3% 적립받기</b><small>1분 가입하고 내 수익 링크 만들기</small></span></a>") +
+      "<p class='ivnote'>" + (code ? "친구가 링크를 누른 날부터 30일 동안 사는 옷 모두 3% 적립 · 링크를 다시 보내면 30일이 다시 시작돼요" : "가입하면 내 링크로 친구가 산 옷의 3%가 적립돼요") + "</p>";
+    iv.insertBefore(w, iv.firstChild);
+    function url(){ var u = inp.value || location.origin + "/"; if (code && u.indexOf("pt=") < 0) u += (u.indexOf("?") < 0 ? "?" : "&") + "pt=" + code; return u.replace(/^http:/, "https:"); }
+    function toast(t){ try { shCss(); shToast(t); } catch (e) { alert(t); } }
+    function copy(){ var u = url(); if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(u).then(function(){ toast("링크를 복사했어요 💜"); }, function(){ prompt("아래 링크를 복사해 주세요", u); }); else prompt("아래 링크를 복사해 주세요", u); }
+    w.addEventListener("click", function(e){
+      var b = e.target.closest("[data-iv]"); if (!b) return;
+      if (b.getAttribute("data-iv") === "share" && navigator.share) { navigator.share({ title: "다꾸키즈", text: "다꾸키즈에 가입하면 적립금 500원을 받아요 💜", url: url() }).catch(function(){}); }
+      else copy();
+    });
     kb.parentNode.insertBefore(iv, kb);
     if (location.hash === "#dk-invite") setTimeout(function(){ window.scrollTo({ top: iv.getBoundingClientRect().top + window.pageYOffset - 140, behavior: "smooth" }); }, 300);
   }
