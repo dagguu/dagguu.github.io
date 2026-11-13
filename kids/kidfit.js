@@ -1084,26 +1084,64 @@
   }
   (function(){ var tm; try { new MutationObserver(function(){ clearTimeout(tm); tm = setTimeout(bmNames, 200); }).observe(document.documentElement, { childList: true, subtree: true }); } catch(e){} })();
 
-  /* ---------- ⑭ 상품 공유 버튼 말풍선 + 공유 창 위 안내 카드 (2026-11-13 시온님이 바잇미 "상품 링크 공유하고 5% 캐시백 받기" 화면 보여주며) ----------
-     버튼은 footer.html dp_track.js 가 만든 #dk-dpshare. 말풍선 "상품 링크 공유하고 최대 3% 포인트 받기"(위아래로 살짝), 공유 창(#dk-sharepop)이 열리면 맨 위에
-     "링크 공유하고, 최대 3% 포인트 받기 [자세히 보기]"(다꾸파트너스 안내 화면). 포인트 = 다꾸키즈 적립금(상품 금액 3%). */
-  function shareTip(){
-    var box = document.getElementById("dk-dpshare"); if (!box || document.getElementById("dk-sharetip")) return;
-    if (!document.getElementById("dk-sharetip-css")) { var st = document.createElement("style"); st.id = "dk-sharetip-css";
-      st.textContent = "#dk-dpshare{position:relative}#dk-sharetip{position:absolute;right:8px;bottom:calc(100% + 10px);z-index:5;background:#6a3fc8;color:#fff;font-size:13px;font-weight:800;line-height:1.35;border-radius:10px;padding:9px 12px;box-shadow:0 6px 16px rgba(106,63,200,.3);pointer-events:none;animation:dktip 1.6s ease-in-out infinite;white-space:nowrap}#dk-sharetip:after{content:'';position:absolute;right:26px;top:100%;border:7px solid transparent;border-top-color:#6a3fc8}@keyframes dktip{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}" +
-        "#dk-sharecard{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #ece6fb;border-radius:14px;padding:12px 12px 12px 14px;margin:0 0 14px;text-align:left;box-shadow:0 4px 14px rgba(0,0,0,.06)}#dk-sharecard b{flex:1;font-size:14px;color:#222}#dk-sharecard a{flex:0 0 auto;background:#6a3fc8;color:#fff;font-size:13px;font-weight:800;border-radius:999px;padding:8px 14px;text-decoration:none}";
-      document.head.appendChild(st); }
-    var t = document.createElement("div"); t.id = "dk-sharetip"; t.textContent = "상품 링크 공유하고 최대 3% 포인트 받기"; box.appendChild(t);
+  /* ---------- ⑮ 상품 공유 (2026-11-13 시온님이 바잇미 상품 화면·공유 창 보여주며 "공유 모양 저 위치, 말풍선, 클릭하면 저렇게") ----------
+     상품 이름 위 줄: 왼쪽 브랜드 ›, 오른쪽 공유 아이콘 + 위에 말풍선 "상품 링크 공유하고 최대 3% 포인트 받기".
+     누르면 아래에서 올라오는 "제품 공유하기" 창: 포인트 카드(링크 칸 + 복사) · 링크 복사하기 · 카카오톡 공유하기(휴대폰 공유 창).
+     파트너 기기(localStorage dk_dpme, 다꾸파트너스 #/dp 에서 켬)면 내 수익 링크(&pt=코드), 아니면 상품 링크 + 다꾸파트너스 가입 안내.
+     예전 보라 "공유하기" 큰 버튼(footer dp_track.js #dk-dpshare)은 숨김. 포인트 = 다꾸키즈 적립금(상품 금액 3%). */
+  var SHARE_SVG = "<svg viewBox='0 0 24 24' width='26' height='26' fill='none' stroke='#9a9a9a' stroke-width='1.6' stroke-linecap='round'><circle cx='18' cy='5' r='2.6'/><circle cx='6' cy='12' r='2.6'/><circle cx='18' cy='19' r='2.6'/><path d='M8.3 10.8l7.4-4.4M8.3 13.2l7.4 4.4'/></svg>";
+  function shCss(){
+    if (document.getElementById("dk-sh-css")) return;
+    var st = document.createElement("style"); st.id = "dk-sh-css";
+    st.textContent = "#dk-dpshare{display:none!important}" +
+      ".dk-shrow{display:flex;align-items:center;justify-content:space-between;margin:2px 0 6px;position:relative}.dk-shrow .br{font-size:14px;color:#666;text-decoration:none}.dk-shrow .br:after{content:' ›';color:#aaa}" +
+      ".dk-shbtn{position:relative;border:0;background:none;padding:4px;cursor:pointer;line-height:0}" +
+      ".dk-shtip{position:absolute;right:-4px;bottom:calc(100% + 10px);background:#6a3fc8;color:#fff;font-size:13.5px;font-weight:500;line-height:1.4;border-radius:10px;padding:9px 13px;white-space:nowrap;text-align:left;box-shadow:0 6px 16px rgba(106,63,200,.28);animation:dkshb 1.8s ease-in-out infinite;pointer-events:none;z-index:5}.dk-shtip:after{content:'';position:absolute;right:14px;top:100%;border:7px solid transparent;border-top-color:#6a3fc8}@keyframes dkshb{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}" +
+      "#dk-shs{position:fixed;inset:0;z-index:100000;background:rgba(0,0,0,.45);display:flex;align-items:flex-end;justify-content:center}#dk-shs .sh{width:100%;max-width:560px;background:#fff;border-radius:22px 22px 0 0;padding:22px 22px calc(26px + env(safe-area-inset-bottom));animation:dkshup .25s ease-out}@keyframes dkshup{from{transform:translateY(100%)}to{transform:none}}" +
+      "#dk-shs .tt{position:relative;text-align:center;font-size:18px;font-weight:700;color:#111;margin-bottom:18px}#dk-shs .tt button{position:absolute;right:-4px;top:-4px;border:0;background:none;font-size:26px;line-height:1;color:#333;cursor:pointer;padding:4px}" +
+      "#dk-shs .cd{background:#f4f4f6;border-radius:16px;padding:18px 18px 16px}#dk-shs .cd .hd{display:flex;align-items:center;gap:8px;margin-bottom:12px}#dk-shs .cd .hd i{font-style:normal;background:#6a3fc8;color:#fff;font-size:13px;font-weight:500;border-radius:999px;padding:4px 12px}#dk-shs .cd .hd b{color:#6a3fc8;font-size:16px;font-weight:700}" +
+      "#dk-shs .cd .ln{display:flex;gap:8px}#dk-shs .cd .ln input{flex:1;min-width:0;border:1px solid #ddd;border-radius:10px;background:#fff;padding:11px 12px;font-size:14px;color:#888}#dk-shs .cd .ln button{flex:0 0 46px;border:1px solid #ddd;border-radius:10px;background:#fff;cursor:pointer;font-size:18px;color:#333}" +
+      "#dk-shs .cd p{margin:10px 0 0;font-size:13px;color:#666}#dk-shs .cd p a{color:#6a3fc8;font-weight:600;text-decoration:underline}" +
+      "#dk-shs .rw{display:flex;align-items:center;gap:16px;width:100%;border:0;border-bottom:1px solid #eee;background:none;padding:18px 4px;font-size:16px;font-weight:600;color:#111;cursor:pointer;text-align:left}#dk-shs .rw span{width:26px;text-align:center;font-size:20px}" +
+      "#dk-shtoast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);z-index:100001;background:#222;color:#fff;font-size:14px;border-radius:999px;padding:10px 18px}";
+    document.head.appendChild(st);
   }
-  function shareCard(){
-    var w = document.getElementById("dk-sharepop"); if (!w || w.querySelector("#dk-sharecard")) return;
-    var inner = w.firstElementChild; if (!inner) return;
-    var c = document.createElement("div"); c.id = "dk-sharecard";
-    c.innerHTML = "<b>링크 공유하고, 최대 3% 포인트 받기</b><a href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'>자세히 보기</a>";
-    c.addEventListener("click", function(e){ e.stopPropagation(); });
-    inner.insertBefore(c, inner.firstChild);
+  function shToast(t){ var o = document.getElementById("dk-shtoast"); if (o) o.remove(); o = document.createElement("div"); o.id = "dk-shtoast"; o.textContent = t; document.body.appendChild(o); setTimeout(function(){ o.remove(); }, 1800); }
+  function shInfo(){
+    var n = (location.search.match(/product_no=([0-9]+)/) || [])[1] || (location.pathname.match(/[/]([0-9]+)[/]category[/]/) || [])[1] || "";
+    var me = ""; try { me = localStorage.getItem("dk_dpme") || ""; } catch(e){}
+    if (!/^[a-z0-9_]{3,20}$/.test(me)) me = "";
+    var plain = location.origin + "/product/detail.html?product_no=" + n;
+    return { n: n, me: me, link: me ? plain + "&pt=" + me : plain, title: (document.querySelector("meta[property='og:title']") || {}).content || document.title };
   }
-  (function(){ var tm2; try { new MutationObserver(function(){ clearTimeout(tm2); tm2 = setTimeout(function(){ try { shareTip(); shareCard(); } catch(e){} }, 60); }).observe(document.documentElement, { childList: true, subtree: true }); } catch(e){} })();
+  function shCopy(u){ var ok = function(){ shToast("링크를 복사했어요"); }; if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(u).then(ok, function(){ prompt("아래 링크를 복사해 주세요", u); }); else prompt("아래 링크를 복사해 주세요", u); }
+  function shOpen(){
+    shCss(); var f = shInfo(); if (!f.n) return;
+    var o = document.createElement("div"); o.id = "dk-shs";
+    o.innerHTML = "<div class='sh'><div class='tt'>제품 공유하기<button type='button' aria-label='닫기'>×</button></div>" +
+      "<div class='cd'><div class='hd'><i>포인트</i><b>" + (f.me ? "3% 적립 제공중" : "최대 3% 적립") + "</b></div>" +
+      "<div class='ln'><input readonly value='" + f.link + "'><button type='button' class='cp' aria-label='링크 복사'>⧉</button></div>" +
+      (f.me ? "<p>이 링크로 친구가 구매하면 포인트를 받을 수 있어요!</p>" : "<p>다꾸파트너스에 1분 가입하면 내 링크로 공유하고 3% 포인트를 받아요. <a href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'>가입하기 ›</a></p>") +
+      "</div><button type='button' class='rw cp'><span>🔗</span>링크 복사하기</button><button type='button' class='rw ka'><span>💬</span>카카오톡 공유하기</button></div>";
+    document.body.appendChild(o);
+    var close = function(){ o.remove(); };
+    o.addEventListener("click", function(e){ if (e.target === o) close(); });
+    o.querySelector(".tt button").onclick = close;
+    [].forEach.call(o.querySelectorAll(".cp"), function(b){ b.onclick = function(){ shCopy(f.link); }; });
+    o.querySelector(".ka").onclick = function(){ if (navigator.share) navigator.share({ title: f.title, text: f.title, url: f.link }).catch(function(){}); else { shCopy(f.link); shToast("링크를 복사했어요. 카카오톡에 붙여넣어 주세요"); } };
+    try { if (window.gtag) gtag("event", "share_open", { partner: f.me ? 1 : 0 }); } catch(e){}
+  }
+  function shareRow(){
+    var h = document.querySelector(".infoArea .headingArea"); if (!h || h.querySelector(".dk-shrow")) return;
+    shCss();
+    var nm = ((h.querySelector("h1,h2") || {}).textContent || "").trim(); var br = nm.split(/\s+/)[0] || "";
+    var r = document.createElement("div"); r.className = "dk-shrow";
+    r.innerHTML = (br ? "<a class='br' href='/product/search.html?keyword=" + encodeURIComponent(br) + "'>" + br + "</a>" : "<span></span>") +
+      "<button type='button' class='dk-shbtn' aria-label='공유하기'>" + SHARE_SVG + "<span class='dk-shtip'>상품 링크 공유하고<br>최대 3% 포인트 받기</span></button>";
+    h.insertBefore(r, h.firstChild);
+    r.querySelector(".dk-shbtn").onclick = function(e){ e.preventDefault(); shOpen(); };
+  }
+  (function(){ var tm2; try { new MutationObserver(function(){ clearTimeout(tm2); tm2 = setTimeout(function(){ try { shareRow(); } catch(e){} }, 80); }).observe(document.documentElement, { childList: true, subtree: true }); } catch(e){} })();
 
   /* ---------- ⑭ 베베·키즈 고르기 (2026-11-13 시온님이 바잇미 로고 옆 "강아지 ⌄ / 고양이" 보여주며 "베베, 키즈 따로") ----------
      로고 오른쪽 "전체 ⌄" → 베베(0~2세)·키즈(3세~)·전체. 이 기기 localStorage dk_age. 고르면 홈의 상품 목록이 그 분류(52 BABY / 53 KIDS) 상품으로
@@ -1113,8 +1151,8 @@
   function ageSel(){
     var lg = document.querySelector(".top_logo"); if (!lg || document.getElementById("dk-age")) return;
     if (!document.getElementById("dk-age-css")) { var st = document.createElement("style"); st.id = "dk-age-css";
-      st.textContent = "#dk-age{position:relative;display:inline-flex;align-items:center;vertical-align:middle;margin-left:8px;z-index:1200}#dk-age>button{border:0;background:none;padding:4px 2px;color:#6a3fc8;font-size:17px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:4px;font-family:inherit}#dk-age>button i{display:inline-flex;width:18px;height:18px;border:1.6px solid #6a3fc8;border-radius:50%;align-items:center;justify-content:center;font-style:normal;font-size:10px;line-height:1;transition:transform .2s}#dk-age.on>button i{transform:rotate(180deg)}#dk-age ul{display:none;position:absolute;left:50%;top:100%;transform:translateX(-50%);margin:6px 0 0;padding:0;list-style:none;background:#fff;border:1px solid #e6e1f3;border-radius:14px;box-shadow:0 10px 24px rgba(0,0,0,.12);min-width:118px;overflow:hidden}#dk-age.on ul{display:block}#dk-age li a{display:block!important;padding:11px 16px;font-size:15px!important;font-weight:400!important;line-height:1.3!important;letter-spacing:0!important;color:#999!important;text-decoration:none;text-align:center;white-space:nowrap;border-top:1px solid #f1f1f1}#dk-age li:first-child a{border-top:0}#dk-age li a.cur{color:#6a3fc8!important;font-weight:600!important}#dk-age li a small{display:block!important;font-size:11px!important;font-weight:400!important;color:#aaa!important;margin-top:1px}" +
-        ".top_nav_box .top_logo{display:inline-flex!important;align-items:center;overflow:visible!important}";
+      st.textContent = "#dk-age{position:relative;display:inline-flex;align-items:center;vertical-align:middle;margin-left:8px;z-index:1200}#dk-age>button{border:0;background:none;padding:4px 2px;color:#6a3fc8;font-size:15px!important;font-weight:500!important;letter-spacing:-.2px;cursor:pointer;display:flex;align-items:center;gap:4px;font-family:inherit}#dk-age>button i{display:inline-flex;width:15px;height:15px;border:1.2px solid #6a3fc8;border-radius:50%;align-items:center;justify-content:center;font-style:normal;font-size:10px;line-height:1;transition:transform .2s}#dk-age.on>button i{transform:rotate(180deg)}#dk-age ul{display:none;position:absolute;left:50%;top:100%;transform:translateX(-50%);margin:6px 0 0;padding:0;list-style:none;background:#fff;border:1px solid #e6e1f3;border-radius:14px;box-shadow:0 10px 24px rgba(0,0,0,.12);min-width:118px;overflow:hidden}#dk-age.on ul{display:block}#dk-age li a{display:block!important;padding:11px 16px;font-size:15px!important;font-weight:400!important;line-height:1.3!important;letter-spacing:0!important;color:#999!important;text-decoration:none;text-align:center;white-space:nowrap;border-top:1px solid #f1f1f1}#dk-age li:first-child a{border-top:0}#dk-age li a.cur{color:#6a3fc8!important;font-weight:600!important}#dk-age li a small{display:block!important;font-size:11px!important;font-weight:400!important;color:#aaa!important;margin-top:1px}" +
+        ".top_nav_box .top_logo{display:inline-flex!important;align-items:center;overflow:visible!important}@media(max-width:1024px){.top_nav_box{justify-content:flex-start!important}.top_nav_box>*:has(.top_logo){flex:1 1 auto!important;text-align:left!important;justify-content:flex-start!important;display:flex!important;padding-left:4px}.top_nav_box .top_logo{margin:0!important}}";
       document.head.appendChild(st); }
     var cur = ageGet();
     var w = document.createElement("span"); w.id = "dk-age";
