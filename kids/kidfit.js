@@ -1034,14 +1034,35 @@
     setTimeout(function(){
       bmCss();
       var logged = isLogged();
-      var body = logged
-        ? "<a class='pa' href='/product/coffee.html'><i>☕</i><small>@dagguu.kids 태그 이벤트</small><b>태그하고<br><em>커피</em> 받아가세요</b><span>우리 아이 코디 사진에 @dagguu.kids 를 태그해 주시면<br>매달 선착순 30분께 커피를 보내 드려요</span><u>참여 방법 보기</u></a>"
-        : "<a class='pa' href='/member/agreement.html'><i>🎁</i><small>다꾸키즈 첫 가입 혜택</small><b>가입하면<br>적립금 <em>1,000원</em><br>바로 드려요!</b><span>쇼핑정보 수신 동의 시 5% 할인 쿠폰도 함께 지급<br>적립금은 5만원 이상 구매 시 사용할 수 있어요</span><u>3초 만에 가입하기</u></a>";
+      /* 2026-11-13 시온님(바잇미 팝업 보여주며 "배경은 어떻게든 사진을 깔아줘"): 사진 꽉 채운 슬라이드 + 스티커 + 흰 글씨, 1 / N, 자동 넘김.
+         첫 장 = 가입 혜택(로그인 후 = 커피 이벤트), 다음 장 = 홈 배너(B1~B4, 다꾸 kids/banner, 매일 새로 만듦). 사진은 인기 브랜드 모델 컷(kids_banner_pick.json 과 같은 사진). */
+      var PH1 = "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/upload/NNEditor/20261111/ad12ac6c63c584e8930f3661cb526942.jpg";
+      var PH2 = "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/upload/NNEditor/20261111/9b57e1866ba44d2bf1be89f7bb018101.jpg";
+      var first = logged
+        ? "<a class='ps' href='/product/coffee.html' style='background-image:url(" + PH2 + ")'><i class='s1'>☕ 커피 이벤트</i><i class='s2'>매달 30명</i><span class='tx'><b>@dagguu.kids 태그하고<br>커피 받아가세요</b><small>우리 아이 코디 사진에 태그만 하면 돼요</small></span></a>"
+        : "<a class='ps' href='/member/agreement.html' style='background-image:url(" + PH1 + ")'><i class='s1'>🎁 첫 가입 혜택</i><i class='s2'>바로 지급</i><span class='tx'><b>가입하면 적립금 1,000원<br>바로 드려요!</b><small>수신 동의 시 5% 할인 쿠폰도 함께</small></span></a>";
+      var dd = new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10).replace(/-/g, "");
+      var bans = BM_BAN.map(function(x){ return "<a class='ps' href='" + x[1] + "' style='background-image:url(https://www.dagguu.com/kids/banner/B" + x[0] + "m.jpg?d=" + dd + "v2)'></a>"; }).join("");
+      var n = 1 + BM_BAN.length;
       var p = document.createElement("div"); p.id = "dk-pop";
-      p.innerHTML = "<div class='pw'>" + body + "<div class='pf'><a href='#none' class='h'>오늘 하루 보지 않기</a><a href='#none' class='c'>닫기</a></div></div>";
+      if (!document.getElementById("dk-pop2-css")) { var st = document.createElement("style"); st.id = "dk-pop2-css";
+        st.textContent = "#dk-pop .pr{position:relative}#dk-pop .pt{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}#dk-pop .pt::-webkit-scrollbar{display:none}" +
+          "#dk-pop .ps{flex:0 0 100%;scroll-snap-align:start;aspect-ratio:8/5;background:#ddd center 22%/cover no-repeat;position:relative;display:block;text-decoration:none;overflow:hidden}" +
+          "#dk-pop .ps:before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 72%,rgba(0,0,0,.45),rgba(0,0,0,0) 72%),linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.35))}" +
+          "#dk-pop .ps[style*='kids/banner']:before{display:none}" +
+          "#dk-pop .ps i{position:absolute;font-style:normal;font-size:13px;font-weight:700;border-radius:999px;padding:5px 12px;box-shadow:0 4px 12px rgba(0,0,0,.15)}#dk-pop .ps .s1{left:7%;top:36%;background:#6a3fc8;color:#fff}#dk-pop .ps .s2{right:7%;top:36%;background:#ffe94d;color:#2a1b55}" +
+          "#dk-pop .ps .tx{position:absolute;left:0;right:0;bottom:9%;text-align:center;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.35),0 6px 20px rgba(0,0,0,.45)}#dk-pop .ps .tx b{display:block;font-size:clamp(20px,6vw,28px);font-weight:800;line-height:1.25;letter-spacing:-1px}#dk-pop .ps .tx small{display:block;margin-top:6px;font-size:12.5px;font-weight:500;opacity:.95}" +
+          "#dk-pop .pc{position:absolute;right:12px;top:12px;background:rgba(0,0,0,.45);color:#fff;font-size:12px;font-weight:600;border-radius:999px;padding:4px 10px;pointer-events:none}";
+        document.head.appendChild(st); }
+      p.innerHTML = "<div class='pw'><div class='pr'><div class='pt'>" + first + bans + "</div><span class='pc'>1 / " + n + "</span></div><div class='pf'><a href='#none' class='h'>오늘 하루 보지 않기</a><a href='#none' class='c'>닫기</a></div></div>";
       document.body.appendChild(p);
       try { sessionStorage.setItem("dk_pop_seen", "1"); } catch(e){}
-      function close(){ if (p.parentNode) p.parentNode.removeChild(p); }
+      var tr = p.querySelector(".pt"), pc = p.querySelector(".pc"), hold = false, tm;
+      function cur(){ return Math.round(tr.scrollLeft / Math.max(1, tr.clientWidth)); }
+      tr.addEventListener("scroll", function(){ pc.textContent = (cur() + 1) + " / " + n; }, { passive: true });
+      tr.addEventListener("touchstart", function(){ hold = true; }, { passive: true });
+      tm = setInterval(function(){ if (hold || !p.parentNode) return; tr.scrollTo({ left: ((cur() + 1) % n) * tr.clientWidth, behavior: "smooth" }); }, 3500);
+      function close(){ clearInterval(tm); if (p.parentNode) p.parentNode.removeChild(p); }
       p.querySelector(".c").onclick = function(e){ e.preventDefault(); close(); };
       p.querySelector(".h").onclick = function(e){ e.preventDefault(); try { localStorage.setItem("dk_pop_hide", day); } catch(x){} close(); };
       p.onclick = function(e){ if (e.target === p) close(); };
