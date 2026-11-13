@@ -844,7 +844,7 @@
     [BM_SVGI.ruler, "사이즈표", "/product/brand_size.html", "#fff8d9"],
     [BM_SVGI.cup, "이벤트", "/product/coffee.html", "#f5ede5"]
   ];
-  var BM_BAN = [["1", "/product/list.html?cate_no=54"], ["2", "/product/list.html?cate_no=24"], ["3", "/product/list.html?cate_no=52"], ["4", "/product/list.html?cate_no=47"]];
+  var BM_BAN = [["1", "/product/list.html?cate_no=55"], ["2", "/product/list.html?cate_no=47"], ["3", "/product/list.html?cate_no=49"], ["4", "/product/list.html?cate_no=43"]];
   var BM_CATS = [
     ["신상품", 54], ["인기상품", 55], ["1+1", "q:1+1"], ["🎄크리스마스", "q:크리스마스"], ["BABY", 52], ["KIDS", 53], ["여아", 50], ["남아", 51], ["MOM", 23],
     ["아우터", 24], ["상의", 25], ["원피스", 26], ["하의", 27], ["잡화", 28], ["양말", "q:양말"], ["실내복", "q:실내복"]
@@ -861,7 +861,7 @@
       "#dk-bm .bc{display:flex;align-items:center;gap:12px;background:#f7f2ff;border:1px solid #e6dbff;border-radius:14px;padding:12px 14px;text-decoration:none;color:#222}" +
       "#dk-bm .bc i{flex:0 0 44px;height:44px;border-radius:10px;background:#6a3fc8;color:#fff;font-style:normal;font-size:22px;display:flex;align-items:center;justify-content:center}" +
       "#dk-bm .bc b{display:block;font-size:14.5px;white-space:nowrap;font-weight:800;line-height:1.35}#dk-bm .bc span{display:block;font-size:12px;color:#777;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#dk-bm .bc em{margin-left:auto;flex:0 0 auto;font-style:normal;background:#6a3fc8;color:#fff;font-size:13px;font-weight:800;border-radius:8px;padding:8px 12px}" +
-      "#dk-bm .bn{position:relative;margin-top:12px;border-radius:16px;overflow:hidden;background:#eee;aspect-ratio:4/3}#dk-bm .bnr{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}#dk-bm .bnr::-webkit-scrollbar{display:none}" +
+      "#dk-bm .bn{position:relative;margin-top:12px;border-radius:16px;overflow:hidden;background:#eee;aspect-ratio:8/5}#dk-bm .bnr{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}#dk-bm .bnr::-webkit-scrollbar{display:none}" +
       "#dk-bm .bnr a{flex:0 0 100%;height:100%;scroll-snap-align:start}#dk-bm .bnr img{width:100%;height:100%;object-fit:cover;display:block}" +
       "#dk-bm .bnc{position:absolute;right:12px;bottom:12px;background:rgba(0,0,0,.45);color:#fff;font-size:12px;font-weight:700;border-radius:999px;padding:4px 10px}" +
       "@media(min-width:1025px){#dk-bm .bn{aspect-ratio:16/6}}" +
@@ -942,7 +942,7 @@
       ? "<a class='bc' href='/myshop/index.html#dk-invite'><i>💌</i><span style='min-width:0'><b>친구 초대하고 500원 적립</b><span>친구가 내 초대 링크로 가입하면 둘 다 적립금 500원</span></span><em>초대하기</em></a>"
       : "<a class='bc' href='/member/agreement.html'><i>🎁</i><span style='min-width:0'><b>가입하면 적립금 1,000원</b><span>수신 동의 시 5% 쿠폰도 함께</span></span><em>가입하기</em></a>";
     var day = new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10), sfx = bmMobile() ? "m" : "";
-    var bn = "<div class='bn'><div class='bnr'>" + BM_BAN.map(function(b, i){ return "<a href='" + b[1] + "'><img src='https://www.dagguu.com/kids/banner/B" + b[0] + sfx + ".jpg?d=" + day + "' alt='' " + (i ? "loading='lazy'" : "") + "></a>"; }).join("") + "</div><span class='bnc'>1 / " + BM_BAN.length + "</span></div>";
+    var bn = "<div class='bn'><div class='bnr'>" + BM_BAN.map(function(b, i){ return "<a href='" + b[1] + "'><img src='https://www.dagguu.com/kids/banner/B" + b[0] + sfx + ".jpg?d=" + day + "v2' alt='' " + (i ? "loading='lazy'" : "") + "></a>"; }).join("") + "</div><span class='bnc'>1 / " + BM_BAN.length + "</span></div>";
     var ic = "<div class='ic'>" + BM_ICONS.map(function(x){ return "<a href='" + x[2] + "'><span style='background:" + x[3] + "'>" + x[0] + "</span>" + x[1] + "</a>"; }).join("") + "</div>";
     sec.innerHTML = bc + bn + ic + "<div class='dl' id='dk-deal'></div>";
     wrap.insertBefore(sec, wrap.firstChild);

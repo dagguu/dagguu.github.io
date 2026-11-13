@@ -3,7 +3,7 @@
 
 .github/workflows/kids-cards.yml 이 매일 아침 돌린다.
 - 상품: 카페24 공개 상품 API(Client ID 는 공개값). 판매·진열 중인 것만.
-- 배너 4장: PC kids/banner/B1~B4.jpg(1600x900, 16:9) + 모바일 B1m~B4m.jpg(1200x900, 4:3) → www.dagguu.com/kids/banner/B?.jpg (다꾸키즈 스킨 index.html 슬라이드가 이 주소를 씀, 매일 새 상품으로 바뀜)
+- 배너 4장: PC kids/banner/B1~B4.jpg(1600x900, 16:9) + 모바일 B1m~B4m.jpg(1200x750, 8:5) → www.dagguu.com/kids/banner/B?.jpg (다꾸키즈 스킨 index.html 슬라이드가 이 주소를 씀, 매일 새 상품으로 바뀜)
 - 카드뉴스(1080x1350): kids_out/<날짜>/1~6.jpg + caption.txt → insta 브랜치 kids/<날짜>/ + 메일(mail_kids.py)
 - 같은 상품이 며칠 연속 나오지 않게 scripts/kids_cards_done.json 에 최근 쓴 상품 번호를 남긴다.
 문구 원칙: 실제 판매가·상품명만, 할인·최저가·"품절임박" 같은 말 안 씀, 지어낸 후기 X.
@@ -51,7 +51,7 @@ def won(n):
     return f"{n:,}원"
 
 
-def pick(pool, k, used, avoid_socks=True):
+def pick(pool, k, used, avoid_socks=True, maxb=2):
     """브랜드·종류가 겹치지 않게 k개. 최근 쓴 상품은 뒤로."""
     fresh = [p for p in pool if p["no"] not in used] + [p for p in pool if p["no"] in used]
     sock = lambda p: bool(re.search("양말|삭스|타이즈|레그워머|버선|레깅스", p["name"]))
@@ -61,7 +61,7 @@ def pick(pool, k, used, avoid_socks=True):
         fresh = ns if len(ns) >= k else ns + [p for p in fresh if sock(p)]
     out, brands = [], {}
     for p in fresh:
-        if brands.get(p["brand"], 0) >= 2:
+        if brands.get(p["brand"], 0) >= maxb:
             continue
         out.append(p); brands[p["brand"]] = brands.get(p["brand"], 0) + 1
         if len(out) >= k:
@@ -90,49 +90,41 @@ def e(s):
 # 2026-11-11 시온님이 보여준 인스타 카드뉴스 두 장 느낌: 상품 사진 한 장 꽉 채움 + 아래 그늘
 #  A형 = 큰 흰 글씨 2줄, 첫 줄 앞 낱말만 노란 상자 강조 + 작은 설명
 #  (B형은 2026-11-11 23:39 시온님 요청으로 안 씀) B형 = 연두/흰 글자 칸 꼬리표 + 둥근 흰 손글씨 느낌 큰 글씨 + 오른쪽 위 작은 연두 스티커
+# 2026-11-13 시온님이 바잇미 홈 슬라이드 배너 보여주며 "이런 느낌으로, 인기 브랜드 상품 사진으로":
+#  인기 브랜드 모델 사진 꽉 채움(PC 3장·모바일 2장 나란히) + 가운데 큰 흰 글씨 2줄(그림자) + 작은 설명 + 둥근 스티커 2개(위 왼쪽·글씨 오른쪽 위).
+#  그림·문구는 다꾸키즈 것(바잇미 그림·글 안 씀). 스티커는 사실만(NEW = 최근 등록순 상품, 무료배송 = 5만원 이상).
+# (키, 분류, 스티커1, 스티커2, 윗줄, 아랫줄, 설명)
 BAN = [
-    ("B1", 54, "A", dict(hl="오늘 신상", rest=" 도착", l2="먼저 구경해요", sub="매일 아침 새 아이옷이 올라와요 🧸")),
-    ("B2", 24, "A", dict(hl="겨울 아우터", rest=" 준비", l2="입으면 포근포근", sub="찬바람 불기 전 미리 준비해요 ☃️")),
-    ("B3", 52, "A", dict(hl="우리 아기", rest=" 첫 데일리룩", l2="이렇게 입혀봐요", sub="0~2세 아기옷 모아보기 🍼")),
-    ("B4", 47, "A", dict(hl="아오스타", rest=" 코디", l2="포근한 감성 그대로", sub="아오스타 아동복 모아보기 💚")),
+    ("B1", 55, "BEST", "5만원↑ 무료배송", "콘 · 보니토 · 피피", "인기 브랜드 모아보기", "다꾸키즈 인기상품 BEST"),
+    ("B2", 47, "무료배송", "NEW", "아오스타 겨울 신상", "포근한 니트 코디 모음", "아오스타 아동복 모아보기"),
+    ("B3", 49, "5만원↑ 무료배송", "NEW", "제니베이직 겨울 신상", "매일 입기 좋은 데일리룩", "제니베이직 아동복 모아보기"),
+    ("B4", 43, "BABY · KIDS", "NEW", "데일리베베 겨울 신상", "말랑말랑 포근한 하루", "데일리베베 아기옷 모아보기"),
 ]
-FONT_LINK = "<link href='https://fonts.googleapis.com/css2?family=Jua&display=block' rel='stylesheet'>"
+FONT_LINK = ""
 
 
 def banner_html(theme, ps, W=1600, H=900):
-    """2026-11-12 시온님: PC 16:9 가로(1600x900, 사진 3장 나란히) / 모바일 4:3(1200x900, 사진 2장, 14:16 시온님 정정)."""
-    key, cat, kind, c = theme
-    p = ps[0]
-    wide = W > H
-    k = 1.0 if wide else 0.86
-    shade = ("<div style='position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 38%,rgba(0,0,0,.18) 58%,rgba(0,0,0,.62) 100%)'></div>")
-    n = 3 if W / H >= 1.6 else 2
-    if wide and len(ps) >= n:
-        cw = W / n
-        photo = "".join(f"<div style='position:absolute;top:0;bottom:0;left:{i * cw:.1f}px;width:{cw + 1:.1f}px;background:#eee url(\"{q['img']}\") center 22%/cover no-repeat'></div>" for i, q in enumerate(ps[:n]))
-    else:
-        photo = f"<div style='position:absolute;inset:0;background:#eee url(\"{p['img']}\") center 25%/cover no-repeat'></div>"
-    tagname = f"<div style='position:absolute;right:34px;bottom:26px;font-size:20px;font-weight:700;color:rgba(255,255,255,.85)'>@dagguu.kids</div>"
-    if kind == "A":
-        txt = (f"<div style='position:absolute;left:0;right:0;bottom:{70 if wide else 90}px;text-align:center;color:#fff;font-weight:900;letter-spacing:-2px'>"
-               f"<div style='font-size:{round(84*k)}px;line-height:1.2;text-shadow:0 3px 14px rgba(0,0,0,.35)'>"
-               f"<span style='background:#ffe94d;color:#111;padding:0 16px;text-shadow:none'>{e(c['hl'])}</span>{e(c['rest'])}</div>"
-               f"<div style='font-size:{round(84*k)}px;line-height:1.25;text-shadow:0 3px 14px rgba(0,0,0,.35)'>{e(c['l2'])}</div>"
-               f"<div style='margin-top:18px;font-size:{round(30*k)}px;font-weight:600;letter-spacing:-.5px;opacity:.95'>{e(c['sub'])}</div></div>")
-        extra = ""
-    else:
-        tiles = "".join(f"<span style='display:inline-block;width:54px;height:58px;line-height:58px;text-align:center;margin-right:6px;"
-                        f"background:{'#d8eaa8' if i % 2 == 0 else '#fff'};color:#222;font-size:30px;font-weight:700'>{e(ch)}</span>"
-                        for i, ch in enumerate(c['tiles']))
-        t = "<br>".join(e(x) for x in c['t'].split("\n"))
-        txt = (f"<div style='position:absolute;left:80px;bottom:76px'>"
-               f"<div>{tiles}</div>"
-               f"<div style='margin-top:20px;font-family:Jua,sans-serif;font-size:96px;line-height:1.12;color:#fff;letter-spacing:-1px;"
-               f"text-shadow:0 0 2px rgba(0,0,0,.25),0 4px 16px rgba(0,0,0,.35)'>{t}</div></div>")
-        extra = (f"<div style='position:absolute;right:70px;top:70px;padding:12px 22px;background:#d8eaa8;border:2px solid #333;"
-                 f"font-size:26px;font-weight:700;color:#222'>{e(c['st'])}</div>")
-    body = f"<div style='position:relative;width:{W}px;height:{H}px;overflow:hidden'>{photo}{shade}{extra}{txt}{tagname}</div>"
-    return page(W, H, body).replace("<head>", "<head>" + FONT_LINK, 1)
+    """PC 1600x900(사진 3장) / 모바일 1200x750(사진 2장, 8:5)."""
+    key, cat, s1, s2, l1, l2, sub = theme
+    n = 3 if W / H >= 1.7 else 2
+    n = min(n, max(1, len(ps)))
+    cw = W / n
+    photo = "".join(f"<div style='position:absolute;top:0;bottom:0;left:{i * cw:.1f}px;width:{cw + 1:.1f}px;background:#eee url(\"{q['img']}\") center 18%/cover no-repeat'></div>" for i, q in enumerate(ps[:n]))
+    shade = ("<div style='position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 66%,rgba(0,0,0,.42),rgba(0,0,0,0) 72%),"
+             "linear-gradient(180deg,rgba(0,0,0,.08) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,.10) 55%,rgba(0,0,0,.40) 100%)'></div>")
+    k = W / 1600 if n == 3 else W / 1100
+    fs = round(78 * k); pill = round(34 * k)
+    def st(t, bg, fg, css):
+        return (f"<div style='position:absolute;{css};padding:{round(pill*.32)}px {round(pill*.7)}px;border-radius:999px;background:{bg};color:{fg};"
+                f"font-size:{pill}px;font-weight:900;letter-spacing:-.5px;box-shadow:0 6px 18px rgba(0,0,0,.18)'>{e(t)}</div>")
+    stick = st(s1, "#6a3fc8", "#fff", f"left:{round(W*.17)}px;top:{round(H*.47)}px") + st(s2, "#ffe94d", "#2a1b55", f"right:{round(W*.15)}px;top:{round(H*.555)}px")
+    sh = "0 2px 4px rgba(0,0,0,.35),0 6px 24px rgba(0,0,0,.45)"
+    txt = (f"<div style='position:absolute;left:0;right:0;top:{round(H*.60)}px;text-align:center;color:#fff;font-weight:900;letter-spacing:-2px;text-shadow:{sh}'>"
+           f"<div style='font-size:{fs}px;line-height:1.18'>{e(l1)}</div>"
+           f"<div style='font-size:{fs}px;line-height:1.18'>{e(l2)}</div>"
+           f"<div style='margin-top:{round(14*k)}px;font-size:{round(30*k)}px;font-weight:700;letter-spacing:-.5px;opacity:.92'>{e(sub)}</div></div>")
+    body = f"<div style='position:relative;width:{W}px;height:{H}px;overflow:hidden'>{photo}{shade}{txt}{stick}</div>"
+    return page(W, H, body)
 
 
 # ── 카드뉴스 (1080x1350) ──
@@ -210,12 +202,12 @@ def main():
     bp = {}
     for th in BAN:
         pool = products(th[1], 200) or allp
-        ps = pick(pool, 3, used)
+        ps = pick(pool, 3, used, maxb=1 if th[1] == 55 else 3)
         if len(ps) < 1:
             ps = pick(allp, 3, used)
         used |= {p["no"] for p in ps}  # 배너끼리 같은 사진 안 겹치게
         bp[f"{th[0]}.jpg"] = (1600, 900, banner_html(th, ps, 1600, 900))
-        bp[f"{th[0]}m.jpg"] = (1200, 900, banner_html(th, ps, 1200, 900))
+        bp[f"{th[0]}m.jpg"] = (1200, 750, banner_html(th, ps, 1200, 750))
     shoot(bp, os.path.join(ROOT, "kids", "banner"))
     # 카드뉴스
     ps = pick(allp, 4, used)
