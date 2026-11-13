@@ -47,6 +47,47 @@ def products(cat=None, n=60):
     return out
 
 
+# 2026-11-13 시온님 "인기 브랜드 상품 사진으로(모델)": 대표 사진이 누끼·바닥컷인 상품이 많아서, 상품 상세 설명 사진 중
+# 얼굴(OpenCV)이 보이는 모델 컷을 찾아 배너에 쓴다. 못 찾으면 대표 사진.
+def model_img(p):
+    try:
+        import cv2, numpy as np
+    except Exception:
+        return None
+    try:
+        req = urllib.request.Request(f"{SHOP}/product/detail.html?product_no={p['no']}", headers={"User-Agent": "Mozilla/5.0"})
+        h = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "ignore")
+    except Exception:
+        return None
+    i = h.find('id="prdDetail"')
+    h = h[i:] if i >= 0 else h
+    urls = []
+    for u in re.findall(r'ec-data-src="(https://ecimg\.cafe24img\.com/[^"]+/web/upload/NNEditor/[^"]+)"', h):
+        if u not in urls:
+            urls.append(u)
+    casc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+    best, bs = None, 0
+    for u in urls[:10]:
+        try:
+            raw = urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=30).read()
+            im = cv2.imdecode(np.frombuffer(raw, np.uint8), cv2.IMREAD_COLOR)
+        except Exception:
+            continue
+        if im is None:
+            continue
+        hh, ww = im.shape[:2]
+        if ww < 600 or ww / hh > 1.1:  # 작거나 가로로 긴 것(사이즈표·글씨) 뺌
+            continue
+        g = cv2.cvtColor(cv2.resize(im, (480, int(480 * hh / ww))), cv2.COLOR_BGR2GRAY)
+        fs = casc.detectMultiScale(g, 1.1, 6, minSize=(28, 28))
+        if len(fs) == 0:
+            continue
+        sc = max(w * h for (x, y, w, h) in fs) + (2000 if hh >= ww else 0)
+        if sc > bs:
+            best, bs = u, sc
+    return best
+
+
 def won(n):
     return f"{n:,}원"
 
@@ -202,7 +243,16 @@ def main():
     bp = {}
     for th in BAN:
         pool = products(th[1], 200) or allp
-        ps = pick(pool, 3, used, maxb=1 if th[1] == 55 else 3)
+        cand = pick(pool, 12, used, maxb=2 if th[1] == 55 else 12)
+        ps = []
+        for q in cand:
+            m = model_img(q)
+            if m:
+                ps.append(dict(q, img=m))
+            if len(ps) >= 3:
+                break
+        if len(ps) < 3:
+            ps += [q for q in cand if q["no"] not in {x["no"] for x in ps}][:3 - len(ps)]
         if len(ps) < 1:
             ps = pick(allp, 3, used)
         used |= {p["no"] for p in ps}  # 배너끼리 같은 사진 안 겹치게
