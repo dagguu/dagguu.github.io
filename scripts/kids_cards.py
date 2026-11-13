@@ -165,7 +165,7 @@ def banner_html(theme, ps, W=1600, H=900):
     def st(t, bg, fg, css):
         return (f"<div style='position:absolute;{css};padding:{round(pill*.32)}px {round(pill*.7)}px;border-radius:999px;background:{bg};color:{fg};"
                 f"font-size:{pill}px;font-weight:900;letter-spacing:-.5px;box-shadow:0 6px 18px rgba(0,0,0,.18)'>{e(t)}</div>")
-    stick = st(s1, "#6a3fc8", "#fff", f"left:{round(W*.17)}px;top:{round(H*.47)}px") + st(s2, "#ffe94d", "#2a1b55", f"right:{round(W*.15)}px;top:{round(H*.555)}px")
+    stick = st(s1, "#6a3fc8", "#fff", f"left:{round(W*.17)}px;top:{round(H*.47)}px") + st(s2, "#ffe94d", "#2a1b55", f"right:{round(W*.17)}px;top:{round(H*.46)}px")
     sh = "0 2px 4px rgba(0,0,0,.35),0 6px 24px rgba(0,0,0,.45)"
     txt = (f"<div style='position:absolute;left:0;right:0;top:{round(H*.60)}px;text-align:center;color:#fff;font-weight:900;letter-spacing:-2px;text-shadow:{sh}'>"
            f"<div style='font-size:{fs}px;line-height:1.18'>{e(l1)}</div>"
