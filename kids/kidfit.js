@@ -1081,6 +1081,27 @@
   }
   (function(){ var tm; try { new MutationObserver(function(){ clearTimeout(tm); tm = setTimeout(bmNames, 200); }).observe(document.documentElement, { childList: true, subtree: true }); } catch(e){} })();
 
+  /* ---------- ⑭ 상품 공유 버튼 말풍선 + 공유 창 위 안내 카드 (2026-11-13 시온님이 바잇미 "상품 링크 공유하고 5% 캐시백 받기" 화면 보여주며) ----------
+     버튼은 footer.html dp_track.js 가 만든 #dk-dpshare. 말풍선 "상품 링크 공유하고 최대 3% 포인트 받기"(위아래로 살짝), 공유 창(#dk-sharepop)이 열리면 맨 위에
+     "링크 공유하고, 최대 3% 포인트 받기 [자세히 보기]"(다꾸파트너스 안내 화면). 포인트 = 다꾸키즈 적립금(상품 금액 3%). */
+  function shareTip(){
+    var box = document.getElementById("dk-dpshare"); if (!box || document.getElementById("dk-sharetip")) return;
+    if (!document.getElementById("dk-sharetip-css")) { var st = document.createElement("style"); st.id = "dk-sharetip-css";
+      st.textContent = "#dk-dpshare{position:relative}#dk-sharetip{position:absolute;right:8px;bottom:calc(100% + 10px);z-index:5;background:#6a3fc8;color:#fff;font-size:13px;font-weight:800;line-height:1.35;border-radius:10px;padding:9px 12px;box-shadow:0 6px 16px rgba(106,63,200,.3);pointer-events:none;animation:dktip 1.6s ease-in-out infinite;white-space:nowrap}#dk-sharetip:after{content:'';position:absolute;right:26px;top:100%;border:7px solid transparent;border-top-color:#6a3fc8}@keyframes dktip{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}" +
+        "#dk-sharecard{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #ece6fb;border-radius:14px;padding:12px 12px 12px 14px;margin:0 0 14px;text-align:left;box-shadow:0 4px 14px rgba(0,0,0,.06)}#dk-sharecard b{flex:1;font-size:14px;color:#222}#dk-sharecard a{flex:0 0 auto;background:#6a3fc8;color:#fff;font-size:13px;font-weight:800;border-radius:999px;padding:8px 14px;text-decoration:none}";
+      document.head.appendChild(st); }
+    var t = document.createElement("div"); t.id = "dk-sharetip"; t.textContent = "상품 링크 공유하고 최대 3% 포인트 받기"; box.appendChild(t);
+  }
+  function shareCard(){
+    var w = document.getElementById("dk-sharepop"); if (!w || w.querySelector("#dk-sharecard")) return;
+    var inner = w.firstElementChild; if (!inner) return;
+    var c = document.createElement("div"); c.id = "dk-sharecard";
+    c.innerHTML = "<b>링크 공유하고, 최대 3% 포인트 받기</b><a href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'>자세히 보기</a>";
+    c.addEventListener("click", function(e){ e.stopPropagation(); });
+    inner.insertBefore(c, inner.firstChild);
+  }
+  (function(){ var tm2; try { new MutationObserver(function(){ clearTimeout(tm2); tm2 = setTimeout(function(){ try { shareTip(); shareCard(); } catch(e){} }, 60); }).observe(document.documentElement, { childList: true, subtree: true }); } catch(e){} })();
+
   function run(){ try { bmStyle(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
