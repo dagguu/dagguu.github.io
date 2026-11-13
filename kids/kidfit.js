@@ -1238,7 +1238,8 @@
     if (cur) { var mn = document.querySelector(".dk-mnav a"); if (mn) { mn.setAttribute("href", "/product/list.html?cate_no=" + AGE[cur][1]); mn.textContent = AGE[cur][2] + AGE[cur][0] + " 신상"; } }
   }
 
-  function run(){ try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  function coffeeFix(){ if (location.pathname.indexOf("/product/coffee.html") !== 0) return; var li = document.querySelectorAll("li"); for (var i = 0; i < li.length; i++) { if (li[i].textContent.indexOf("한 분당 한 번만 참여") >= 0) li[i].textContent = "한 달에 한 번씩 참여할 수 있어요. (인스타 아이디·휴대폰 번호 기준)"; } }
+  function run(){ try { coffeeFix(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
