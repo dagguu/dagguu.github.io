@@ -822,17 +822,27 @@
      ③ 동그란 네모 아이콘 2줄(5칸) ④ "오늘의 신상 할인"(카페24 신상 3일 5% 혜택이 걸린 상품 = 목록 페이지의 할인 기간·최적할인가 그대로, 끝나는 시간 가까운 순 3개)
      ⑤ 휴대폰 아래 고정 탭(홈·카테고리·장바구니·관심·MY) ⑥ 카테고리 창(카테고리/브랜드 탭, 왼쪽 목록 + 이 카테고리 인기상품) ⑦ 홈 아래 팝업(오늘 하루 보지 않기).
      숫자는 카페24 화면 값만 쓰고 지어내지 않는다. */
+  /* 아이콘 = 직접 그린 SVG(2026-11-13 시온님 "바잇미처럼"): 첫 줄은 진한 남보라 칸 + 형광 글자, 둘째 줄은 연한 칸 + 그림 */
+  function bmTx(t, fs, c2){ return "<svg viewBox='0 0 64 64' width='100%' height='100%'><g fill='#d9ff3d' opacity='.85'><circle cx='12' cy='13' r='1.6'/><circle cx='53' cy='18' r='1.3'/><circle cx='49' cy='52' r='1.6'/><circle cx='14' cy='50' r='1.2'/></g><text x='32' y='" + (fs > 18 ? 40 : 38) + "' text-anchor='middle' font-family='Pretendard,Apple SD Gothic Neo,sans-serif' font-size='" + fs + "' font-weight='900' fill='" + (c2 || "#d9ff3d") + "' letter-spacing='-0.5'>" + t + "</text></svg>"; }
+  var BM_SVGI = {
+    tree: "<svg viewBox='0 0 64 64' width='78%' height='78%'><rect x='28' y='48' width='8' height='9' rx='2' fill='#9b6a43'/><path d='M32 14 14 34h9L11 48h42L41 34h9z' fill='#3fae5a'/><path d='M32 14 21 26.5h22z' fill='#57c46f'/><circle cx='26' cy='36' r='2.6' fill='#ff5a6e'/><circle cx='38' cy='41' r='2.6' fill='#ffd23f'/><circle cx='34' cy='29' r='2.2' fill='#ff5a6e'/><circle cx='22' cy='44' r='2.2' fill='#ffd23f'/><circle cx='43' cy='45' r='2.2' fill='#ff5a6e'/><path d='m32 5 2.6 5.4 5.9.8-4.3 4.1 1 5.8L32 18.3l-5.2 2.8 1-5.8-4.3-4.1 5.9-.8z' fill='#ffcc2e'/></svg>",
+    bottle: "<svg viewBox='0 0 64 64' width='78%' height='78%'><path d='M28 6c0-2 8-2 8 0l2 9H26z' fill='#ffc2a8'/><rect x='22' y='15' width='20' height='7' rx='3' fill='#6aa7ff'/><rect x='20' y='22' width='24' height='36' rx='9' fill='#e3efff' stroke='#6aa7ff' stroke-width='2.5'/><path d='M20 40h24v9a9 9 0 0 1-9 9h-6a9 9 0 0 1-9-9z' fill='#fff' opacity='.9'/><g stroke='#6aa7ff' stroke-width='2' stroke-linecap='round'><path d='M37 29h4M37 34h4M37 39h4'/></g></svg>",
+    tee: "<svg viewBox='0 0 64 64' width='80%' height='80%'><path d='M23 10h18l4 4 12 6-5 11-6-3v26H18V28l-6 3-5-11 12-6z' fill='#ffb84d'/><path d='M26 10a6 6 0 0 0 12 0' fill='none' stroke='#e8962a' stroke-width='3'/><circle cx='32' cy='36' r='6' fill='#fff' opacity='.9'/><circle cx='30' cy='35' r='1' fill='#555'/><circle cx='34.5' cy='35' r='1' fill='#555'/><path d='M29.5 38.2q2.5 2 5 0' stroke='#555' stroke-width='1.3' fill='none' stroke-linecap='round'/></svg>",
+    dress: "<svg viewBox='0 0 64 64' width='80%' height='80%'><path d='M25 6h3l4 6 4-6h3l1 10-4 6 12 32H16l12-32-4-6z' fill='#ff8db5'/><path d='M24 22h16' stroke='#e2628f' stroke-width='3'/><g fill='#fff' opacity='.85'><circle cx='26' cy='36' r='1.8'/><circle cx='36' cy='42' r='1.8'/><circle cx='31' cy='48' r='1.8'/><circle cx='40' cy='50' r='1.6'/><circle cx='22' cy='48' r='1.6'/></g></svg>",
+    ruler: "<svg viewBox='0 0 64 64' width='80%' height='80%'><g transform='rotate(-35 32 32)'><rect x='6' y='23' width='52' height='18' rx='3' fill='#ffd84d' stroke='#e0b52a' stroke-width='2'/><g stroke='#8a6d1a' stroke-width='2' stroke-linecap='round'><path d='M13 23v7M20 23v5M27 23v7M34 23v5M41 23v7M48 23v5'/></g></g></svg>",
+    cup: "<svg viewBox='0 0 64 64' width='80%' height='80%'><path d='M24 8q-3 4 0 8t0 8M33 8q-3 4 0 8t0 8' fill='none' stroke='#c9a98a' stroke-width='2.5' stroke-linecap='round'/><path d='M12 28h34v8a15 15 0 0 1-15 15h-4a15 15 0 0 1-15-15z' fill='#a8754d'/><path d='M46 31h4a6 6 0 0 1 0 12h-5' fill='none' stroke='#a8754d' stroke-width='4'/><rect x='8' y='52' width='42' height='5' rx='2.5' fill='#e3d2c2'/><path d='M23 36q4.5-5 9 0-4.5 6-9 0z' fill='#fff' opacity='.85'/></svg>"
+  };
   var BM_ICONS = [
-    ["💜", "신상품", "/product/list.html?cate_no=54", "#efe7ff"],
-    ["🔥", "인기상품", "/product/list.html?cate_no=55", "#ffe9e1"],
-    ["🎁", "1+1", "/product/search.html?keyword=1%2B1", "#ffe4ec"],
-    ["🎄", "크리스마스", "/product/search.html?keyword=%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4", "#e3f4e6"],
-    ["⏰", "신상할인", "#dk-deal", "#fff3cf"],
-    ["🍼", "BABY", "/product/list.html?cate_no=52", "#e6f1ff"],
-    ["🧒", "KIDS", "/product/list.html?cate_no=53", "#e8f7f3"],
-    ["👩", "MOM", "/product/list.html?cate_no=23", "#fbe9f4"],
-    ["📏", "사이즈표", "/product/brand_size.html", "#f1f1f1"],
-    ["☕", "이벤트", "/product/coffee.html", "#f4ece3"]
+    [bmTx("NEW", 19), "신상품", "/product/list.html?cate_no=54", "#241a4a"],
+    [bmTx("BEST", 17), "인기상품", "/product/list.html?cate_no=55", "#241a4a"],
+    [bmTx("1+1", 22, "#ff8db5"), "1+1", "/product/search.html?keyword=1%2B1", "#241a4a"],
+    [bmTx("SALE", 17, "#ffd84d"), "신상할인", "#dk-deal", "#241a4a"],
+    [BM_SVGI.tree, "크리스마스", "/product/search.html?keyword=%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4", "#eaf6ec"],
+    [BM_SVGI.bottle, "BABY", "/product/list.html?cate_no=52", "#eaf2ff"],
+    [BM_SVGI.tee, "KIDS", "/product/list.html?cate_no=53", "#fff2df"],
+    [BM_SVGI.dress, "MOM", "/product/list.html?cate_no=23", "#ffeaf2"],
+    [BM_SVGI.ruler, "사이즈표", "/product/brand_size.html", "#fff8d9"],
+    [BM_SVGI.cup, "이벤트", "/product/coffee.html", "#f5ede5"]
   ];
   var BM_BAN = [["1", "/product/list.html?cate_no=54"], ["2", "/product/list.html?cate_no=24"], ["3", "/product/list.html?cate_no=52"], ["4", "/product/list.html?cate_no=47"]];
   var BM_CATS = [
@@ -850,14 +860,14 @@
       "#dk-bm{max-width:1240px;margin:0 auto;padding:14px 16px 4px;box-sizing:border-box}#dk-bm *{box-sizing:border-box}" +
       "#dk-bm .bc{display:flex;align-items:center;gap:12px;background:#f7f2ff;border:1px solid #e6dbff;border-radius:14px;padding:12px 14px;text-decoration:none;color:#222}" +
       "#dk-bm .bc i{flex:0 0 44px;height:44px;border-radius:10px;background:#6a3fc8;color:#fff;font-style:normal;font-size:22px;display:flex;align-items:center;justify-content:center}" +
-      "#dk-bm .bc b{display:block;font-size:15px;font-weight:800;line-height:1.35}#dk-bm .bc span{display:block;font-size:12px;color:#777;margin-top:2px}#dk-bm .bc em{margin-left:auto;flex:0 0 auto;font-style:normal;background:#6a3fc8;color:#fff;font-size:13px;font-weight:800;border-radius:8px;padding:8px 12px}" +
+      "#dk-bm .bc b{display:block;font-size:14.5px;white-space:nowrap;font-weight:800;line-height:1.35}#dk-bm .bc span{display:block;font-size:12px;color:#777;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#dk-bm .bc em{margin-left:auto;flex:0 0 auto;font-style:normal;background:#6a3fc8;color:#fff;font-size:13px;font-weight:800;border-radius:8px;padding:8px 12px}" +
       "#dk-bm .bn{position:relative;margin-top:12px;border-radius:16px;overflow:hidden;background:#eee;aspect-ratio:4/3}#dk-bm .bnr{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}#dk-bm .bnr::-webkit-scrollbar{display:none}" +
       "#dk-bm .bnr a{flex:0 0 100%;height:100%;scroll-snap-align:start}#dk-bm .bnr img{width:100%;height:100%;object-fit:cover;display:block}" +
       "#dk-bm .bnc{position:absolute;right:12px;bottom:12px;background:rgba(0,0,0,.45);color:#fff;font-size:12px;font-weight:700;border-radius:999px;padding:4px 10px}" +
       "@media(min-width:1025px){#dk-bm .bn{aspect-ratio:16/6}}" +
       "#dk-bm .ic{display:grid;grid-template-columns:repeat(5,1fr);gap:14px 8px;margin:20px 0 6px}@media(min-width:1025px){#dk-bm .ic{grid-template-columns:repeat(10,1fr)}}" +
       "#dk-bm .ic a{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:#222;font-size:12.5px;font-weight:600;text-align:center;line-height:1.3;word-break:keep-all}" +
-      "#dk-bm .ic span{width:100%;max-width:72px;aspect-ratio:1;border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:30px;margin-bottom:7px}" +
+      "#dk-bm .ic span{width:100%;max-width:72px;aspect-ratio:1;border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:7px;overflow:hidden}#dk-bm .ic span svg{display:block}" +
       "#dk-bm .dl{margin-top:22px}#dk-bm .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}#dk-bm .hd h3{font-size:20px;font-weight:800;margin:0;color:#111}#dk-bm .hd a{font-size:20px;color:#bbb;text-decoration:none;line-height:1}" +
       "#dk-bm .dli{display:flex;flex-direction:column;gap:16px}@media(min-width:1025px){#dk-bm .dli{display:grid;grid-template-columns:repeat(3,1fr)}}" +
       "#dk-bm .di{display:flex;gap:14px;text-decoration:none;color:#222;align-items:flex-start}#dk-bm .di .im{flex:0 0 42%;max-width:220px;aspect-ratio:1;border-radius:6px;overflow:hidden;background:#f2f2f2;position:relative}#dk-bm .di .im img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}" +
@@ -1038,7 +1048,40 @@
 
   /* 로그인 화면 PC: 위로 옮긴 카카오 로그인 칸이 왼쪽에 붙던 것(2026-11-13 시온님) → 아이디 칸과 같은 폭으로 가운데 */
   function loginFix(){ var s = document.querySelector(".xans-member-login .login__sns.dk-top"); if (!s) return; ["max-width:400px", "margin-left:auto", "margin-right:auto"].forEach(function(x){ var k = x.split(":"); s.style.setProperty(k[0], k[1], "important"); }); }
-  function run(){ loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  /* ---------- ⑬ 바잇미 느낌 전체 손질 (2026-11-13 시온님 "응 그렇게해줘") ----------
+     맨 위 띠배너 밝은 노랑 + ✕(오늘 하루 숨김), 상단 글자 메뉴 굵고 크게·고른 칸 밑줄, 상품 카드 사진 정사각형·이름 2줄(상품명 뒤 검색어 꼬리는 화면에서만 뗌)·가격 크게,
+     상세·장바구니 버튼 보라 둥글게. 카페24 상품명(검색용)은 그대로 둔다. */
+  function bmStyle(){
+    if (!document.getElementById("dk-bms-css")) {
+      var st = document.createElement("style"); st.id = "dk-bms-css";
+      st.textContent =
+        ".main_top_banner{background:#fff35c!important}.main_top_banner .top_banner_text a{color:#5b2fc0!important;font-weight:700!important}.main_top_banner{position:relative}" +
+        ".main_top_banner .top_banner_close{display:none!important}#dk-tbx{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;background:none;font-size:20px;line-height:28px;color:#333;cursor:pointer;padding:0;z-index:2}" +
+        ".dk-mnav{border-bottom:1px solid #eee!important}.dk-mnav a{font-size:15.5px!important;font-weight:600!important;color:#222!important;padding:12px 4px 11px!important;border-bottom:3px solid transparent}.dk-mnav a.dk-n{color:#6a3fc8!important;border-bottom-color:#6a3fc8}" +
+        "@media(min-width:1025px){.top_category>ul>li>a{font-size:15px!important;font-weight:600!important;color:#222}}" +
+        "ul.prdList>li .thumbnail{position:relative;overflow:hidden;border-radius:6px;background:#f4f4f4}ul.prdList>li .thumbnail>a{display:block;aspect-ratio:1/1}ul.prdList>li .thumbnail>a img{width:100%!important;height:100%!important;object-fit:cover;object-position:center top}" +
+        "ul.prdList>li .description .name{margin-top:9px!important}ul.prdList>li .description .name a span:not(.title){font-size:14px!important;color:#444!important;line-height:1.45!important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}" +
+        "ul.prdList>li .description .spec li.dk-ns span{font-size:17px!important}ul.prdList>li .description .spec li>span[style*='font-weight:bold']{font-size:16px!important}ul.prdList>li .description .spec li>span[style*='line-through']{font-size:13px!important}" +
+        ".xans-product-action .btnSubmit,.xans-product-action #btnBuy,.infoArea .productAction .btnSubmit{background:#6a3fc8!important;border-color:#6a3fc8!important;border-radius:8px!important}.infoArea .productAction .btnNormal,.infoArea .productAction .btnBasic{border-radius:8px!important}" +
+        ".xans-order-totalorder .btnSubmit,.xans-order-basketpackage .btnSubmit{background:#6a3fc8!important;border-color:#6a3fc8!important;border-radius:8px!important}";
+      document.head.appendChild(st);
+    }
+    var tb = document.querySelector(".main_top_banner"), day = new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10);
+    if (tb) {
+      try { if (localStorage.getItem("dk_tb_hide") === day) tb.style.setProperty("display", "none", "important"); } catch(e){}
+      if (!document.getElementById("dk-tbx")) { var b = document.createElement("button"); b.id = "dk-tbx"; b.type = "button"; b.setAttribute("aria-label", "오늘 하루 닫기"); b.textContent = "✕"; b.onclick = function(){ tb.style.setProperty("display", "none", "important"); try { localStorage.setItem("dk_tb_hide", day); } catch(e){} setTimeout(function(){ window.dispatchEvent(new Event("resize")); }, 50); }; tb.appendChild(b); }
+    }
+    var mn = document.querySelector(".dk-mnav"); if (mn && !mn.querySelector(".dk-n")) { var f = mn.querySelector("a"); if (f) f.classList.add("dk-n"); }
+    bmNames();
+  }
+  function bmNames(){
+    [].forEach.call(document.querySelectorAll("ul.prdList>li .description .name a span:not(.title), #dk-cat .cg span"), function(sp){
+      if (sp.getAttribute("data-dkn")) return; var t = sp.textContent, n = bmName(t); if (n && n !== t) { sp.setAttribute("title", t); sp.textContent = n; } sp.setAttribute("data-dkn", "1");
+    });
+  }
+  (function(){ var tm; try { new MutationObserver(function(){ clearTimeout(tm); tm = setTimeout(bmNames, 200); }).observe(document.documentElement, { childList: true, subtree: true }); } catch(e){} })();
+
+  function run(){ try { bmStyle(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
