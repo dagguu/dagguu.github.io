@@ -967,6 +967,8 @@
   };
   function bmTab(){
     if (document.getElementById("dk-tab") || !document.body) return;
+    /* 상품 상세·주문 화면은 아래 고정 구매 버튼이 있어서 탭을 안 띄움(2026-11-13 시온님 "아래 버튼이 안 나와") */
+    if (document.querySelector(".xans-product-detail, #orderFixArea") || /^[/](order|product[/]detail)/.test(location.pathname) || /[/][0-9]+[/]category[/]/.test(location.pathname)) return;
     bmCss();
     var p = location.pathname, on = function(k){ return (k === "home" && bmHome()) || (k === "cart" && /basket/.test(p)) || (k === "wish" && /wish/.test(p)) || (k === "my" && /myshop|member/.test(p) && !/wish/.test(p)) ? " class='on'" : ""; };
     var t = document.createElement("nav"); t.id = "dk-tab";
