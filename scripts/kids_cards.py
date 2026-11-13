@@ -141,10 +141,13 @@ def e(s):
 # (키, 분류, 스티커1, 스티커2, 윗줄, 아랫줄, 설명)
 BAN = [
     ("B1", 55, "BEST", "5만원↑ 무료배송", "콘 · 보니토 · 피피", "인기 브랜드 모아보기", "다꾸키즈 인기상품 BEST"),
-    ("B2", 47, "무료배송", "NEW", "아오스타 겨울 신상", "포근한 니트 코디 모음", "아오스타 아동복 모아보기"),
-    ("B3", 49, "5만원↑ 무료배송", "NEW", "제니베이직 겨울 신상", "매일 입기 좋은 데일리룩", "제니베이직 아동복 모아보기"),
-    ("B4", 43, "BABY · KIDS", "NEW", "데일리베베 겨울 신상", "말랑말랑 포근한 하루", "데일리베베 아기옷 모아보기"),
+    ("B2", 44, "BABY", "NEW", "피피 겨울 신상", "우리 아기 데일리룩", "피피 아기옷 모아보기"),
+    ("B3", 49, "5만원↑ 무료배송", "NEW", "제니베이직 겨울 신상", "포근한 패딩 데일리룩", "제니베이직 아동복 모아보기"),
+    ("B4", 47, "무료배송", "NEW", "아오스타 겨울 신상", "포근한 니트 코디 모음", "아오스타 아동복 모아보기"),
 ]
+# 2026-11-13 시온님 "모델 사진으로": 자동 얼굴 찾기는 사이즈표·어른 셀카를 잡아서, 사진은 Claude 가 상세 사진을 직접 보고 고른
+# scripts/kids_banner_pick.json {B1:[{no,img}]} 을 먼저 쓴다(상품이 판매 중일 때만). 없거나 상품이 내려가면 아래 자동 찾기.
+PICK_P = os.path.join(ROOT, "scripts", "kids_banner_pick.json")
 FONT_LINK = ""
 
 
@@ -247,6 +250,14 @@ def main():
     bp = {}
     for th in BAN:
         pool = products(th[1], 200) or allp
+        fixed = (json.load(open(PICK_P)) if os.path.exists(PICK_P) else {}).get(th[0]) or []
+        alive = {q["no"]: q for q in allp + pool}
+        fx = [dict(alive[f["no"]], img=f["img"]) for f in fixed if f["no"] in alive]
+        if len(fx) >= 2:
+            ps = fx
+            bp[f"{th[0]}.jpg"] = (1600, 900, banner_html(th, ps, 1600, 900))
+            bp[f"{th[0]}m.jpg"] = (1200, 750, banner_html(th, ps, 1200, 750))
+            continue
         cand = pick(pool, 30, used, maxb=4 if th[1] == 55 else 30)
         ps = []
         for q in cand:

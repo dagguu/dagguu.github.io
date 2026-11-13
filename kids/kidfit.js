@@ -847,7 +847,7 @@
     [BM_SVGI.ruler, "사이즈표", "/product/brand_size.html", "#fff8d9"],
     [BM_SVGI.cup, "이벤트", "/product/coffee.html", "#f5ede5"]
   ];
-  var BM_BAN = [["1", "/product/list.html?cate_no=55"], ["2", "/product/list.html?cate_no=47"], ["3", "/product/list.html?cate_no=49"], ["4", "/product/list.html?cate_no=43"]];
+  var BM_BAN = [["1", "/product/list.html?cate_no=55"], ["2", "/product/list.html?cate_no=44"], ["3", "/product/list.html?cate_no=49"], ["4", "/product/list.html?cate_no=47"]];
   var BM_CATS = [
     ["신상품", 54], ["인기상품", 55], ["1+1", "q:1+1"], ["🎄크리스마스", "q:크리스마스"], ["BABY", 52], ["KIDS", 53], ["여아", 50], ["남아", 51], ["MOM", 23],
     ["아우터", 24], ["상의", 25], ["원피스", 26], ["하의", 27], ["잡화", 28], ["양말", "q:양말"], ["실내복", "q:실내복"]
