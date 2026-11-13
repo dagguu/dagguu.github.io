@@ -1169,7 +1169,7 @@
   /* ---------- ⑭ 베베·키즈 고르기 (2026-11-13 시온님이 바잇미 로고 옆 "강아지 ⌄ / 고양이" 보여주며 "베베, 키즈 따로") ----------
      로고 오른쪽 "전체 ⌄" → 베베(0~2세)·키즈(3세~)·전체. 이 기기 localStorage dk_age. 고르면 홈의 상품 목록이 그 분류(52 BABY / 53 KIDS) 상품으로
      바뀌고(위 신상·아우터 등 전체 상품 칸은 숨김), 모바일 글자 메뉴 첫 칸 "신상품"도 그 분류로 간다. */
-  var AGE = { baby: ["베베", 52, "👶", "0~2세"], kids: ["키즈", 53, "🧒", "3세~"] };
+  var AGE = { baby: ["베이비", 52, "👶", "0~2세"], kids: ["키즈", 53, "🧒", "3세~"] };
   function ageGet(){ try { var v = localStorage.getItem("dk_age") || ""; return AGE[v] ? v : ""; } catch(e){ return ""; } }
   function ageSel(){
     var lg = document.querySelector(".top_logo"); if (!lg || document.getElementById("dk-age")) return;
@@ -1180,7 +1180,7 @@
     var cur = ageGet();
     var w = document.createElement("span"); w.id = "dk-age";
     var li = function(k, t, sub){ return "<li><a href='#' data-age='" + k + "' class='" + (cur === k ? "cur" : "") + "'>" + t + (sub ? "<small>" + sub + "</small>" : "") + "</a></li>"; };
-    w.innerHTML = "<button type='button'>" + (cur ? AGE[cur][0] : "전체") + " <i>⌄</i></button><ul>" + li("baby", "베베", "0~2세") + li("kids", "키즈", "3세~") + li("", "전체", "") + "</ul>";
+    w.innerHTML = "<button type='button'>" + (cur ? AGE[cur][0] : "전체") + " <i>⌄</i></button><ul>" + li("baby", "베이비", "0~2세") + li("kids", "키즈", "3세~") + li("", "전체", "") + "</ul>";
     lg.appendChild(w);
     w.querySelector("button").addEventListener("click", function(e){ e.preventDefault(); e.stopPropagation(); w.classList.toggle("on"); });
     [].forEach.call(w.querySelectorAll("a[data-age]"), function(a){ a.addEventListener("click", function(e){
