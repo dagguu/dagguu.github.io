@@ -65,7 +65,11 @@ def model_img(p):
     for u in re.findall(r'ec-data-src="(https://ecimg\.cafe24img\.com/[^"]+/web/upload/NNEditor/[^"]+)"', h):
         if u not in urls:
             urls.append(u)
-    casc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+    try:
+        casc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+    except Exception as e:
+        print("얼굴 찾기 못 씀:", e)
+        return None
     best, bs = None, 0
     for u in urls[:10]:
         try:

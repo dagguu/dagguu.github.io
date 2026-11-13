@@ -19,7 +19,7 @@ jobs:
       - run: |
           # 우분투 저장소가 가끔 안 열려서(2026-11-11) 실패해도 계속, 글꼴은 아래에서 직접 받음
           (sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk fonts-noto-color-emoji >/dev/null) || echo "apt 실패 - 글꼴 직접 받음"
-          pip install -q playwright opencv-python-headless numpy && (python -m playwright install --with-deps chromium >/dev/null || python -m playwright install chromium)
+          pip install -q playwright "opencv-python-headless==4.10.0.84" "numpy<2.3" && (python -m playwright install --with-deps chromium >/dev/null || python -m playwright install chromium)
           mkdir -p ~/.local/share/fonts
           fc-list | grep -qi "Noto Color Emoji" || curl -sSLf -o ~/.local/share/fonts/NotoColorEmoji.ttf https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@main/fonts/NotoColorEmoji.ttf || true
           fc-list | grep -qi "Noto Sans CJK" || curl -sSLf -o ~/.local/share/fonts/NotoSansKR.otf https://cdn.jsdelivr.net/gh/notofonts/noto-cjk@main/Sans/SubsetOTF/KR/NotoSansKR-Bold.otf || true
