@@ -1243,7 +1243,9 @@
     if (!document.getElementById("dk-tidy-css")) { var st = document.createElement("style"); st.id = "dk-tidy-css";
       st.textContent = ".infoArea .headingArea h1,.infoArea .headingArea h2{font-size:19px!important;font-weight:500!important;line-height:1.45!important;letter-spacing:-.3px!important;margin:4px 0 10px!important}" +
         ".infoArea .xans-product-detaildesign th,.infoArea .xans-product-detaildesign td{font-size:14px!important;padding-top:5px!important;padding-bottom:5px!important}.infoArea .xans-product-detaildesign th{color:#888!important;font-weight:400!important}" +
-        ".infoArea tr.dk-hide{display:none!important}.dk-shtip{font-size:12.5px!important;padding:7px 11px!important;border-radius:9px!important}";
+        ".infoArea tr.dk-hide{display:none!important}.dk-shtip{font-size:12.5px!important;padding:7px 11px!important;border-radius:9px!important}" +
+        /* 2026-11-14 시온님 "하트 찜이 너무 작아": 큰 사진 위 찜 하트를 오른쪽 위 흰 동그라미 44px 로 */
+        ".prdImg .thumbnail .wish{position:absolute!important;left:auto!important;right:14px!important;top:14px!important;width:44px!important;height:44px!important;border-radius:50%!important;background:rgba(255,255,255,.92)!important;box-shadow:0 2px 8px rgba(0,0,0,.15);display:flex!important;align-items:center;justify-content:center;z-index:5;cursor:pointer}.prdImg .thumbnail .wish img{width:26px!important;height:26px!important;margin:0!important}";
       document.head.appendChild(st); }
     [].forEach.call(document.querySelectorAll(".infoArea .xans-product-detaildesign tr"), function(tr){
       if (tr.getAttribute("data-dkt")) return; tr.setAttribute("data-dkt", "1");
