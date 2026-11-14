@@ -545,8 +545,10 @@
   function bestCp(p, list){ var b = null; list.forEach(function(c){ if (c.min && c.min > p) return; var o = cpOff(c, p); if (o > 0 && (!b || o > b.off)) b = { off: o, c: c }; }); return b; }
   function basePrice(p){ var g = grp(); return GP[g] ? Math.floor(p * GP[g] / 10) * 10 : p; }
   function saleRow(){ var trs = document.querySelectorAll("tr"); for (var i = 0; i < trs.length; i++) { var th = trs[i].querySelector("th"); if (th && /할인 기간/.test(th.textContent || "")) return window.dkNewSale ? window.dkNewSale(trs[i]) : trs[i]; } return null; }
+  /* 2026-11-15 시온님: 가족·지인은 쿠폰 안 됨(카페24 할인 동시사용 = 회원등급 할인만), 적립금만 */
+  function noCp(){ return !!GP[grp()]; }
   function cpList(){
-    if (!isLogged()) return;
+    if (!isLogged() || noCp()) return;
     var items = document.querySelectorAll(".prdList li .description"); if (!items.length) return;
     allCps(function(my, dl){
       var L = my.concat(dl); if (!L.length) return;
@@ -570,6 +572,7 @@
     var old = document.getElementById("dk-cpd");
     if (saleRow() || document.querySelector(".dk-nsd")) { if (old) old.parentNode.removeChild(old); return; }
     if (old) return;
+    if (isLogged() && noCp()) return;
     var p = num(sp.textContent); if (!p) return;
     var an = document.getElementById("dk-low") || sp.closest("table"); if (!an || !an.parentNode) return;
     var box = document.createElement("div"); box.id = "dk-cpd";
@@ -595,7 +598,7 @@
     });
   }
   function cpCart(){
-    var box = document.getElementById("dk-cartfree"); if (!box || document.getElementById("dk-cartcp")) return;
+    var box = document.getElementById("dk-cartfree"); if (!box || document.getElementById("dk-cartcp") || noCp()) return;
     var bp = document.getElementById("xans_myshop_basket_price"); var cart = basePrice(bp ? num(bp.textContent) : 0); if (!cart) return;
     var w = document.createElement("div"); w.id = "dk-cartcp"; box.appendChild(w);
     allCps(function(my, dl){
