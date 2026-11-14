@@ -766,7 +766,7 @@
     kb.parentNode.insertBefore(iv, kb);
     if (location.hash === "#dk-invite") setTimeout(function(){ window.scrollTo({ top: iv.getBoundingClientRect().top + window.pageYOffset - 140, behavior: "smooth" }); }, 300);
   }
-  var MENU_KW = ["양말", "실내복", "1+1", "크리스마스"];
+  var MENU_KW = ["양말", "실내복", "1+1", "크리스마스", "기획"];
   function kwAlways(){
     if (!document.getElementById("dk-kw2-css")) { var st = document.createElement("style"); st.id = "dk-kw2-css"; st.textContent = ".dk-kw{display:none!important}.xans-layout-searchheader{background:#fff!important;height:auto!important;max-height:100vh;overflow-y:auto;padding-bottom:40px!important;box-shadow:0 8px 20px rgba(0,0,0,.08)}"; document.head.appendChild(st); }
     /* 2026-11-12 시온님: 상단 메뉴(양말·실내복)로 들어온 검색 결과 화면에는 '상품검색' 칸을 숨김 */
@@ -877,7 +877,7 @@
     cup: "<svg viewBox='0 0 64 64' width='80%' height='80%'><path d='M24 8q-3 4 0 8t0 8M33 8q-3 4 0 8t0 8' fill='none' stroke='#c9a98a' stroke-width='2.5' stroke-linecap='round'/><path d='M12 28h34v8a15 15 0 0 1-15 15h-4a15 15 0 0 1-15-15z' fill='#a8754d'/><path d='M46 31h4a6 6 0 0 1 0 12h-5' fill='none' stroke='#a8754d' stroke-width='4'/><rect x='8' y='52' width='42' height='5' rx='2.5' fill='#e3d2c2'/><path d='M23 36q4.5-5 9 0-4.5 6-9 0z' fill='#fff' opacity='.85'/></svg>"
   };
   var BM_ICONS = [
-    [bmTx("NEW", 19), "신상품", "/product/list.html?cate_no=54", "#241a4a"],
+    [bmTx("NEW", 19), "타임특가", "/product/list.html?cate_no=54", "#241a4a"],
     [bmTx("BEST", 17), "인기상품", "/product/list.html?cate_no=55", "#241a4a"],
     [bmTx("1+1", 22, "#ff8db5"), "1+1", "/product/search.html?keyword=1%2B1", "#241a4a"],
     [bmTx("SALE", 17, "#ffd84d"), "신상할인", "#dk-deal", "#241a4a"],
@@ -890,7 +890,7 @@
   ];
   var BM_BAN = [["1", "/product/list.html?cate_no=55"], ["2", "/product/list.html?cate_no=44"], ["3", "/product/list.html?cate_no=49"], ["4", "/product/list.html?cate_no=47"]];
   var BM_CATS = [
-    ["신상품", 54], ["인기상품", 55], ["1+1", "q:1+1"], ["🎄크리스마스", "q:크리스마스"], ["BABY", 52], ["KIDS", 53], ["여아", 50], ["남아", 51], ["MOM", 23],
+    ["⏰타임특가", 54], ["인기상품", 55], ["1+1", "q:1+1"], ["🎄크리스마스", "q:크리스마스"], ["BABY", 52], ["KIDS", 53], ["여아", 50], ["남아", 51], ["MOM", 23],
     ["아우터", 24], ["상의", 25], ["원피스", 26], ["하의", 27], ["잡화", 28], ["양말", "q:양말"], ["실내복", "q:실내복"]
   ];
   var BM_QBRANDS = ["콘", "보니토", "비비드아이", "비다이어리", "소이빈", "고유", "라라랜드", "미니로브", "아토메메", "디그린", "니니벨로", "테테코", "바코드", "몽베베", "오뜨베베", "소예"];
@@ -1312,7 +1312,28 @@
     a.onclick = function(e){ var t = document.getElementById("prdReview") || document.querySelector(".xans-product-review"); if (t) { e.preventDefault(); t.scrollIntoView({ behavior: "smooth", block: "start" }); } };
     h.parentNode.insertBefore(a, h.nextSibling);
   }
-  function run(){ try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  // 상단 메뉴(2026-11-14 시온님): 신상품 → ⏰타임특가, 1+1 다음에 0원체험단·기획상품(상품명에 "기획")
+  var MENU_ADD = [["0원체험단", "/product/coffee.html", "#e0457b"], ["기획상품", "/product/search.html?keyword=%EA%B8%B0%ED%9A%8D", ""]];
+  function menuFix(){
+    var a = document.querySelectorAll("#header a[href*='cate_no=54'], .dk-mnav a[href*='cate_no=54'], [data-ez-module^='menu-side'] a[href*='cate_no=54'], #aside a[href*='cate_no=54']"), i, w, n;
+    for (i = 0; i < a.length; i++) { w = document.createTreeWalker(a[i], NodeFilter.SHOW_TEXT, null); while ((n = w.nextNode())) { if (n.nodeValue.indexOf("신상품") >= 0) n.nodeValue = n.nodeValue.replace(/💜?신상품💜?/, "⏰타임특가"); } }
+    if (location.search.indexOf("cate_no=54") >= 0) { var hs = document.querySelectorAll(".xans-product-headcategory h2, .xans-product-headcategory h3, .titleArea h2, .title h2"); for (i = 0; i < hs.length; i++) if (hs[i].textContent.indexOf("신상품") >= 0 && !hs[i].children.length) hs[i].textContent = "⏰타임특가"; }
+    var ones = document.querySelectorAll("a[href*='keyword=1%2B1'], a[href*='keyword=1+1']");
+    for (i = 0; i < ones.length; i++) {
+      var o = ones[i]; if (o.closest("#dk-bm, #dk-cat, .dk-sug, .xans-product-listnormal, .prdList")) continue;
+      var li = o.parentNode && o.parentNode.tagName === "LI" ? o.parentNode : o;
+      if (li.getAttribute("data-dkm")) continue; li.setAttribute("data-dkm", "1");
+      var after = li;
+      for (var k = 0; k < MENU_ADD.length; k++) {
+        var c = li.cloneNode(true); c.removeAttribute("data-dkm"); c.setAttribute("data-dkm-add", "1");
+        var ca = c.tagName === "A" ? c : c.querySelector("a"); if (!ca) continue;
+        ca.href = MENU_ADD[k][1]; ca.textContent = MENU_ADD[k][0]; ca.style.color = MENU_ADD[k][2] || "";
+        var sub = c.querySelectorAll("ul, .sub, .depth2"); for (var q = 0; q < sub.length; q++) sub[q].remove();
+        after.parentNode.insertBefore(c, after.nextSibling); after = c;
+      }
+    }
+  }
+  function run(){ try { menuFix(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
