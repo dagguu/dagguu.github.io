@@ -12,7 +12,7 @@
   };
   var S = [["베베","12M","70",65,75,9],["3호","XS","80",75,85,12],["5호","S","90",85,95,14],["7호","M","100",95,105,17],["9호","L","110",105,115,20],["11호","XL","120",115,125,24],["13호","JS","130",125,135,29],["15호","JM","140",135,145,35],["17호","JL","150",145,155,42]];
   var AVG = { b: [50,76,87,96,103,110,116,122,128,133,139,145,151], g: [49,74,86,95,102,109,115,121,127,133,139,145,151] };
-  var R = { 1: [1, 0], 4: [5, 30000], 2: [7, 30000], 3: [10, 30000], 5: [1, 0], 6: [1, 0] };
+  var R = { 1: [1, 0], 4: [2, 0], 2: [3, 0], 3: [5, 0], 5: [1, 0], 6: [1, 0] };  /* 2026-11-14 시온님: 기본 1·다꾸 2·VIP 3·VVIP 5% (모나마켓과 같게, 금액 조건 없음) */
   var GP = { 5: 0.8125, 6: 0.875 };
   function won(n){ return String(n).replace(/(?=(?:[0-9]{3})+$)(?!^)/g, ",") + "원"; }
   function esc(s){ return String(s || "").replace(/[&<>"']/g, ""); }
@@ -69,6 +69,110 @@
         "<label style='font-size:12px;color:#555'>키(cm)<input class='dkk-h' type='number' inputmode='decimal' style='" + INP + "' value='" + (k.h || "") + "'></label>" +
         "<label style='font-size:12px;color:#555'>몸무게(kg)<input class='dkk-w' type='number' inputmode='decimal' style='" + INP + "' value='" + (k.w || "") + "'></label>" +
       "</div></div>";
+  }
+
+  /* ---------- ⑲ 마이페이지 바잇미식 위 칸 + 멤버십 창 (2026-11-14 시온님) ---------- */
+  var MS_G = [
+    { k: "basic", n: "기본회원", c: "B", bg: "#fff", fg: "#9a9a9a", bd: "#cfcfcf", cond: "직전 3개월 구매금액 50만원 미만", save: 1, link: 3 },
+    { k: "dakku", n: "다꾸회원", c: "D", bg: "#ede6ff", fg: "#6a3fc8", bd: "#c9b6f5", cond: "직전 3개월 구매금액 50만원 이상 100만원 미만", save: 2, link: 5 },
+    { k: "vip", n: "VIP", c: "V", bg: "#7b3fe4", fg: "#fff", bd: "#7b3fe4", cond: "직전 3개월 구매금액 100만원 이상 200만원 미만", save: 3, link: 7 },
+    { k: "vvip", n: "VVIP", c: "VV", bg: "#1d1235", fg: "#ffd86b", bd: "#1d1235", cond: "직전 3개월 구매금액 200만원 이상", save: 5, link: 10 }
+  ];
+  function msOf(name){
+    name = (name || "").replace(/\s/g, "");
+    if (/VVIP|평생/.test(name)) return MS_G[3];
+    if (/VIP|우수/.test(name)) return MS_G[2];
+    if (/다꾸/.test(name)) return MS_G[1];
+    if (/기본|일반/.test(name)) return MS_G[0];
+    return null;
+  }
+  function msBadge(g, sz){
+    sz = sz || 64;
+    if (!g) return "<span style='flex:0 0 " + sz + "px;width:" + sz + "px;height:" + sz + "px;border-radius:50%;border:3px solid #e2dcf3;background:#faf8ff;display:inline-flex;align-items:center;justify-content:center;color:#6a3fc8;font-weight:800;font-size:" + Math.round(sz * .34) + "px'>💜</span>";
+    return "<span style='flex:0 0 " + sz + "px;width:" + sz + "px;height:" + sz + "px;border-radius:50%;border:3px solid " + g.bd + ";background:" + g.bg + ";display:inline-flex;align-items:center;justify-content:center;color:" + g.fg + ";font-weight:800;font-size:" + Math.round(sz * (g.c.length > 1 ? .3 : .4)) + "px;box-sizing:border-box'>" + g.c + "</span>";
+  }
+  function msSheet(cur){
+    var old = document.getElementById("dk-ms"); if (old) old.remove();
+    var g = msOf(cur), box = "background:#f4f4f6;border-radius:10px;padding:14px 10px;text-align:center;font-size:14px;color:#333;line-height:1.45";
+    var cards = "";
+    for (var i = 0; i < MS_G.length; i++) {
+      var x = MS_G[i], me = g && g.k === x.k;
+      cards += "<div style='border:" + (me ? "2px solid #6a3fc8" : "1px solid #e5e5e5") + ";border-radius:14px;padding:18px 16px;margin:0 0 14px;background:#fff'>" +
+        "<div style='display:flex;align-items:center;gap:14px'>" + msBadge(x, 48) + "<div style='min-width:0'><div style='font-size:18px;font-weight:800;color:#222'>" + x.n + (me ? " <span style='font-size:11px;font-weight:700;color:#fff;background:#6a3fc8;border-radius:20px;padding:2px 8px;vertical-align:3px'>지금 내 등급</span>" : "") + "</div><div style='margin-top:3px;font-size:13px;color:#666'>" + x.cond + "</div></div></div>" +
+        "<div style='display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px'>" +
+          "<div style='" + box + "'>결제 시 <b>" + x.save + "%</b> 적립</div>" +
+          "<div style='" + box + "'>수익 링크 <b>" + x.link + "%</b> 적립</div>" +
+          "<div style='" + box + ";grid-column:1/3'>5만원 이상 구매 시 무료배송</div>" +
+        "</div></div>";
+    }
+    var w = document.createElement("div"); w.id = "dk-ms";
+    w.style.cssText = "position:fixed;inset:0;z-index:100000;background:#fff;overflow-y:auto;-webkit-overflow-scrolling:touch;font-family:inherit";
+    w.innerHTML = "<div style='position:sticky;top:0;background:#fff;display:flex;align-items:center;height:56px;border-bottom:1px solid #f0f0f0;z-index:1'><button type='button' id='dk-ms-x' aria-label='뒤로' style='width:56px;height:56px;border:0;background:none;font-size:26px;color:#222;cursor:pointer'>‹</button><div style='flex:1;text-align:center;font-size:18px;font-weight:800;margin-right:56px'>멤버십</div></div>" +
+      "<div style='max-width:640px;margin:0 auto;padding:0 18px 40px;box-sizing:border-box'>" +
+        "<div style='text-align:center;padding:30px 0 26px'>" + msBadge(g, 76).replace("display:inline-flex", "display:inline-flex;margin:0 auto") +
+          "<div style='margin-top:12px;font-size:24px;font-weight:800;color:#333'>" + esc(cur || "") + "</div>" +
+          "<div style='margin-top:10px;font-size:13px;color:#888;line-height:1.6'>※ 등급은 직전 3개월 구매금액으로 매월 1일에 정해져요.<br>배송 완료된 주문만, 취소·반품 금액은 빼고 계산해요.</div></div>" +
+        "<div style='height:10px;background:#f4f4f6;margin:0 -18px'></div>" +
+        "<div style='text-align:center;padding:28px 0 6px'><div style='font-size:24px;font-weight:800;color:#222'>Membership</div><div style='margin-top:6px;font-size:14px;color:#888'>등급에 따라 적립금과 수익 링크 혜택이 달라져요!</div></div>" +
+        "<div style='text-align:center;font-size:18px;font-weight:800;color:#333;margin:22px 0 16px'>등급별 혜택안내</div>" + cards +
+        "<div style='margin:24px -18px 0;background:#f4f4f6;padding:22px 18px;font-size:13px;color:#555;line-height:1.8'><div style='font-size:16px;font-weight:800;color:#222;margin-bottom:6px'>유의사항</div>" +
+          "- 직전 3개월 누적 실결제금액 기준으로 매월 1일 회원등급이 정해져요.<br>" +
+          "- 실결제금액은 배송 완료된 주문에서 쿠폰·적립금·배송비를 뺀 금액이에요. 취소·반품 금액은 빼요.<br>" +
+          "- 적립금은 배송 완료 후 들어오고, 현금으로 바꾸거나 다른 사람에게 줄 수 없어요.<br>" +
+          "- 수익 링크 적립은 다꾸파트너스에서 내 링크로 친구가 구매했을 때 받아요(본인 구매 제외).<br>" +
+          "- 회원등급별 혜택과 기준은 바뀔 수 있고, 바뀌면 미리 알려 드려요.</div>" +
+      "</div>";
+    document.body.appendChild(w);
+    var bodyOv = document.body.style.overflow; document.body.style.overflow = "hidden";
+    function close(){ w.remove(); document.body.style.overflow = bodyOv; if (location.hash === "#membership") history.replaceState(null, "", location.pathname + location.search); }
+    document.getElementById("dk-ms-x").onclick = close;
+  }
+  function myTop(){
+    if (!/myshop.index/.test(location.pathname) || document.getElementById("dk-my")) return;
+    var ben = document.querySelector(".section.benefit"); if (!ben) return;
+    var nameEl = ben.querySelector(".txtEm1"), grpEl = ben.querySelector(".user__data span");
+    var nm = nameEl ? nameEl.textContent.replace(/안녕하세요\.?\s*/, "").replace(/\s*님!?\s*$/, "").trim() : "";
+    var grp = grpEl ? grpEl.textContent.trim() : "";
+    if (!nm && !grp) return;
+    var lis = ben.querySelectorAll("li"), mil = "0", cp = "0", ord = "0원";
+    for (var i = 0; i < lis.length; i++) {
+      var a = lis[i].querySelector("a"), d = lis[i].querySelector(".data"); if (!a || !d) continue;
+      var h = a.getAttribute("href") || "";
+      if (/mileage/.test(h)) mil = d.textContent.trim().replace(/원$/, "");
+      else if (/coupon/.test(h)) cp = d.textContent.trim().replace(/개$/, "");
+      else if (/order/.test(h)) ord = d.textContent.trim().replace(/\(.*\)/, "");
+    }
+    var g = msOf(grp);
+    var t = document.querySelector("#contents .titleArea"); if (t) t.style.display = "none";
+    ben.style.display = "none";
+    var ic = function(p){ return "<svg width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='#222' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'>" + p + "</svg>"; };
+    var row = function(t, u){ return "<a href='" + u + "' style='display:flex;align-items:center;justify-content:space-between;padding:18px 18px;border-bottom:1px solid #eee;color:#222;text-decoration:none;font-size:16px'>" + t + "<span style='color:#aaa;font-size:20px'>›</span></a>"; };
+    var stat = function(t, v, u){ return "<a href='" + u + "' style='flex:1;text-align:center;padding:18px 0;color:#333;text-decoration:none;border-right:1px solid #eee'><div style='font-size:14px;color:#555'>" + t + "</div><div style='margin-top:6px;font-size:22px;font-weight:800;color:#6a3fc8'>" + esc(v) + "</div></a>"; };
+    var w = document.createElement("div"); w.id = "dk-my";
+    w.style.cssText = "max-width:720px;margin:0 auto 10px;font-family:inherit;box-sizing:border-box";
+    w.innerHTML =
+      "<a href='#dk-invite' id='dk-my-inv' style='display:flex;align-items:center;gap:12px;margin:12px 14px;padding:14px;border:1px solid #e6dbff;border-radius:14px;background:#f7f2ff;text-decoration:none;color:#222'>" +
+        "<span style='flex:0 0 44px;height:44px;border-radius:10px;background:#6a3fc8;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px'>🎁</span>" +
+        "<span style='flex:1;min-width:0'><b style='display:block;font-size:15px'>친구 초대하고 500원 적립</b><span style='font-size:12px;color:#777'>친구도 나도 적립금 500원씩 받아요!</span></span>" +
+        "<span style='flex:0 0 auto;background:#6a3fc8;color:#fff;font-size:13px;font-weight:700;border-radius:8px;padding:8px 12px'>초대하기</span></a>" +
+      "<div style='display:flex;align-items:center;gap:14px;padding:16px 18px 20px'>" + msBadge(g, 64) +
+        "<div style='flex:1;min-width:0'><div style='font-size:20px;font-weight:800;color:#222'>" + esc(nm || "회원") + "</div>" +
+        "<a href='#membership' id='dk-my-ms' style='display:inline-block;margin-top:4px;font-size:15px;color:#6a3fc8;font-weight:700;text-decoration:none'>" + esc(grp) + " <span style='color:#888;font-weight:500'>등급혜택보기 ›</span></a></div>" +
+        "<a href='/member/modify.html' aria-label='회원정보 수정' style='flex:0 0 auto;color:#888;text-decoration:none'><svg width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='#888' stroke-width='1.5'><circle cx='12' cy='12' r='3'/><path d='M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z'/></svg></a></div>" +
+      "<a href='/product/coffee.html' style='display:block;position:relative;overflow:hidden;background:linear-gradient(90deg,#f3ecff,#ffe3f1);padding:20px 18px;text-decoration:none'>" +
+        "<div style='font-size:13px;font-weight:700;color:#c2408a'>@dagguu.kids 태그하면</div><div style='margin-top:4px;font-size:22px;font-weight:800;color:#6a3fc8'>0원체험단 커피 받기! ›</div>" +
+        "<span style='position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:46px'>☕</span></a>" +
+      "<div style='display:flex;border-bottom:10px solid #f4f4f6'>" + stat("보유쿠폰", cp, "/myshop/coupon/coupon.html") + stat("적립금", mil, "/myshop/mileage/historyList.html") + stat("총주문", ord, "/myshop/order/list.html").replace("border-right:1px solid #eee", "") + "</div>" +
+      "<div style='display:flex;border-bottom:10px solid #f4f4f6'>" +
+        "<a href='/myshop/order/list.html' style='flex:1;text-align:center;padding:22px 0;color:#222;text-decoration:none;border-right:1px solid #eee'>" + ic("<path d='M1 7h13v9H1zM14 10h4l3 3v3h-7'/><circle cx='5.5' cy='17.5' r='1.8'/><circle cx='17.5' cy='17.5' r='1.8'/>") + "<div style='margin-top:8px;font-size:15px'>주문/배송</div></a>" +
+        "<a href='https://partners.dagguu.com/#/dp' style='flex:1;text-align:center;padding:22px 0;color:#222;text-decoration:none;border-right:1px solid #eee'>" + ic("<circle cx='12' cy='9' r='6'/><path d='M12 6l1 2.2 2.3.3-1.7 1.6.4 2.3-2-1.1-2 1.1.4-2.3-1.7-1.6 2.3-.3zM8 14l-2 7 4-2 2 3 1-6M16 14l2 7-4-2'/>") + "<div style='margin-top:8px;font-size:15px'>수익 링크</div></a>" +
+        "<a href='/myshop/board_list.html' style='flex:1;text-align:center;padding:22px 0;color:#222;text-decoration:none'>" + ic("<path d='M4 4h16v12H9l-5 4z'/><path d='M8 8h8M8 12h5'/>") + "<div style='margin-top:8px;font-size:15px'>리뷰</div></a></div>" +
+      row("관심상품", "/myshop/wish_list.html") + row("쿠폰내역", "/myshop/coupon/coupon.html") + row("적립금 내역", "/myshop/mileage/historyList.html") + row("배송 주소록", "/myshop/addr/list.html") +
+      "<div style='height:10px;background:#f4f4f6'></div>";
+    ben.parentNode.insertBefore(w, ben);
+    document.getElementById("dk-my-ms").onclick = function(e){ e.preventDefault(); msSheet(grp); };
+    document.getElementById("dk-my-inv").onclick = function(e){ var iv = document.getElementById("dk-invite") || document.querySelector(".myshop_recommender"); if (iv) { e.preventDefault(); iv.scrollIntoView({ behavior: "smooth", block: "center" }); } };
+    if (location.hash === "#membership") msSheet(grp);
   }
   function mypage(){
     if (!/myshop.index/.test(location.pathname) || document.getElementById("dk-kidbox")) return;
@@ -1395,7 +1499,7 @@
       }
     }
   }
-  function run(){ try { menuFix(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  function run(){ try { menuFix(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
