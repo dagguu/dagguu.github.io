@@ -890,7 +890,7 @@
   ];
   var BM_BAN = [["1", "/product/list.html?cate_no=55"], ["2", "/product/list.html?cate_no=44"], ["3", "/product/list.html?cate_no=49"], ["4", "/product/list.html?cate_no=47"]];
   var BM_CATS = [
-    ["⏰타임특가", 54], ["인기상품", 55], ["1+1", "q:1+1"], ["🎄크리스마스", "q:크리스마스"], ["BABY", 52], ["KIDS", 53], ["여아", 50], ["남아", 51], ["MOM", 23],
+    ["⏰타임특가", 54], ["인기상품", 55], ["1+1", "q:1+1"], ["🚚무료배송", 56], ["🎄크리스마스", "q:크리스마스"], ["BABY", 52], ["KIDS", 53], ["여아", 50], ["남아", 51], ["MOM", 23],
     ["아우터", 24], ["상의", 25], ["원피스", 26], ["하의", 27], ["잡화", 28], ["양말", "q:양말"], ["실내복", "q:실내복"]
   ];
   var BM_QBRANDS = ["콘", "보니토", "비비드아이", "비다이어리", "소이빈", "고유", "라라랜드", "미니로브", "아토메메", "디그린", "니니벨로", "테테코", "바코드", "몽베베", "오뜨베베", "소예"];
@@ -1313,7 +1313,7 @@
     h.parentNode.insertBefore(a, h.nextSibling);
   }
   // 상단 메뉴(2026-11-14 시온님): 신상품 → ⏰타임특가, 1+1 다음에 0원체험단·기획상품(상품명에 "기획")
-  var MENU_ADD = [["0원체험단", "/product/coffee.html", "#e0457b"], ["기획상품", "/product/search.html?keyword=%EA%B8%B0%ED%9A%8D", ""]];
+  var MENU_ADD = [["0원체험단", "/product/coffee.html", "#e0457b"], ["기획상품", "/product/search.html?keyword=%EA%B8%B0%ED%9A%8D", ""], ["🚚무료배송", "/product/list.html?cate_no=56", "#1f7a4d"]];
   function menuFix(){
     var a = document.querySelectorAll("#header a[href*='cate_no=54'], .dk-mnav a[href*='cate_no=54'], [data-ez-module^='menu-side'] a[href*='cate_no=54'], #aside a[href*='cate_no=54']"), i, w, n;
     for (i = 0; i < a.length; i++) { w = document.createTreeWalker(a[i], NodeFilter.SHOW_TEXT, null); while ((n = w.nextNode())) { if (n.nodeValue.indexOf("신상품") >= 0) n.nodeValue = n.nodeValue.replace(/💜?신상품💜?/, "⏰타임특가"); } }
