@@ -1515,7 +1515,27 @@
       }
     }
   }
-  function run(){ try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  // 카카오톡 채널 친구 추가 떠 있는 버튼(2026-11-15 시온님)
+  function kakaoFab(){
+    if (document.getElementById("dk-kfab")) return;
+    var st = document.createElement("style");
+    st.textContent = "#dk-kfab{position:fixed;right:16px;bottom:100px;z-index:9989;display:flex;align-items:center;gap:8px;text-decoration:none}" +
+      "#dk-kfab .ic{width:52px;height:52px;border-radius:50%;background:#FEE500;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.18)}" +
+      "#dk-kfab .ic svg{width:28px;height:28px}" +
+      "#dk-kfab .lb{background:#191919;color:#fff;font-size:12px;font-weight:600;border-radius:999px;padding:6px 11px;white-space:nowrap}" +
+      "@media(max-width:1024px){#dk-kfab{bottom:calc(78px + env(safe-area-inset-bottom))}#dk-kfab .lb{display:none}#dk-kfab .ic{width:48px;height:48px}}" +
+      "body.dk-pd #dk-kfab{bottom:calc(150px + env(safe-area-inset-bottom))}";
+    document.head.appendChild(st);
+    var a = document.createElement("a");
+    a.id = "dk-kfab"; a.href = "https://pf.kakao.com/_xhihNX/friend"; a.target = "_blank"; a.rel = "noopener";
+    a.setAttribute("aria-label", "카카오톡 채널 친구 추가");
+    a.innerHTML = "<span class='lb'>카톡 채널 친구 추가</span><span class='ic'><svg viewBox='0 0 24 24'><path fill='#191919' d='M12 3C6.5 3 2 6.6 2 11c0 2.8 1.8 5.3 4.6 6.7l-1 3.6c-.1.4.3.7.6.5l4.3-2.8c.5.1 1 .1 1.5.1 5.5 0 10-3.6 10-8S17.5 3 12 3z'/></svg></span>";
+    a.addEventListener("click", function(){ try { gtag("event", "kakao_add", {place: "fab"}); } catch(e){} });
+    document.body.appendChild(a);
+    if (document.getElementById("orderFixArea")) document.body.classList.add("dk-pd");
+  }
+
+  function run(){ try { kakaoFab(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
