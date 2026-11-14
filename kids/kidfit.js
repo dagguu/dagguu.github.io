@@ -1302,7 +1302,28 @@
   var RV_DONE = 0;
   function reviewPage(){ if (RV_DONE || location.search.indexOf("t=buy") < 0) return; var cf = document.querySelector(".cf"); if (!cf) return; RV_DONE = 1; cf.style.visibility = "hidden"; fetch("https://www.dagguu.com/kids/skin/review.txt?v=" + Math.floor(Date.now() / 600000)).then(function (r) { return r.text(); }).then(function (t) { var d = document.createElement("div"); d.innerHTML = t; var st = d.querySelector("style"), nb = d.querySelector(".cf"), sc = d.querySelector("script"); if (!nb) { cf.style.visibility = ""; return; } if (st) document.head.appendChild(st); cf.parentNode.replaceChild(nb, cf); document.title = "다꾸키즈 구매 인증 기자단"; if (sc) { try { (new Function(sc.textContent))(); } catch (e) {} } window.scrollTo(0, 0); }).catch(function () { cf.style.visibility = ""; }); }
   function recoFix(){ var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n; while ((n = w.nextNode())) { if (n.nodeValue && n.nodeValue.indexOf("3%") >= 0) n.nodeValue = n.nodeValue.replace(/상품 금액의 3% 적립/g, "상품 금액의 3~10% 적립(등급별)").replace(/3% 적립까지/g, "최대 10% 적립까지").replace(/구매하면 3% 적립/g, "구매하면 최대 10% 적립"); if (n.nodeValue && n.nodeValue.indexOf("12개월") >= 0 && n.nodeValue.indexOf("구매") >= 0) n.nodeValue = n.nodeValue.replace(/친구가 마지막으로 구매한 날부터 12개월 동안/g, "친구가 링크를 누른 날부터 30일 동안").replace(/12개월 동안 구매가 없으면 연결이 끝나요/g, "링크를 다시 보내면 30일이 다시 시작돼요"); } }
-  function coffeeFix(){ if (location.pathname.indexOf("/myshop") === 0) { try { recoFix(); } catch (e) {} } try { reviewPage(); } catch (e) {} if (location.pathname.indexOf("/product/coffee.html") !== 0 || location.search.indexOf("t=buy") >= 0) return; var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n, t; while ((n = w.nextNode())) { t = n.nodeValue; if (!t || t.length < 3) continue; for (var k = 0; k < CF_P.length; k++) if (t.indexOf(CF_P[k][0]) >= 0) t = t.split(CF_P[k][0]).join(CF_P[k][1]); if (t !== n.nodeValue) n.nodeValue = t; } if (!document.getElementById("dk-rvlink")) { var pl = null, hs = document.querySelectorAll(".cf h2"); for (var q = 0; q < hs.length; q++) if (hs[q].textContent.indexOf("PLUS") >= 0) pl = hs[q]; if (pl) { var a = document.createElement("a"); a.id = "dk-rvlink"; a.href = "/product/coffee.html?t=buy"; a.style.cssText = "display:block;margin:22px 0 0;background:#fff7e6;border:1px solid #ffe2a8;border-radius:14px;padding:14px 16px;color:#5a3d00;text-decoration:none;font-size:14px"; a.innerHTML = "<b style='font-size:15px'>🎁 다꾸키즈에서 옷을 사셨나요?</b><br>배송 받은 옷 입은 사진을 올리면 <b>적립금 5,000원</b>을 드려요 ›"; pl.parentNode.insertBefore(a, pl); } } }
+  function cfConsent(){
+    if (document.getElementById("dk-cfcs")) return;
+    var CS = "다꾸키즈 회원 + 쇼핑정보(문자·이메일) 수신 동의";
+    var dts = document.querySelectorAll(".tb dt"), i;
+    for (i = 0; i < dts.length; i++) if (dts[i].textContent.indexOf("참여 대상") >= 0) {
+      var dd = dts[i].nextElementSibling; if (dd) { var sm = document.createElement("small"); sm.style.color = "#6a3fc8"; sm.style.fontWeight = "700"; sm.textContent = CS + " 필수"; dd.appendChild(sm); }
+    }
+    var nt = null, hs = document.querySelectorAll("h2");
+    for (i = 0; i < hs.length; i++) if (hs[i].textContent.indexOf("꼭 확인해 주세요") >= 0) nt = hs[i].nextElementSibling;
+    if (nt && nt.tagName === "UL") { var li = document.createElement("li"); li.innerHTML = "<b>" + CS + "</b>가 되어 있어야 참여할 수 있어요. 동의 여부는 <a class='ig' href='/member/modify.html'>회원정보 수정</a>에서 확인·변경할 수 있고, 커피를 보내기 전에 확인해요. 언제든 동의를 철회할 수 있어요(철회하면 다음 참여부터 제외돼요)."; nt.insertBefore(li, nt.firstChild); }
+    var ok = document.getElementById("cfOk");
+    if (ok && ok.parentNode) { var sp = document.createElement("span"); sp.innerHTML = " <b>다꾸키즈에 가입했고 쇼핑정보(문자·이메일) 수신에 동의했어요.</b>"; ok.parentNode.appendChild(sp); }
+    var f = document.getElementById("cfForm");
+    if (f) {
+      var bx = document.createElement("div"); bx.id = "dk-cfcs";
+      bx.style.cssText = "background:#f5f2fb;border:1px solid #e3d8ff;border-radius:12px;padding:12px 14px;margin:0 0 14px;font-size:13.5px;line-height:1.6;color:#3a2a66";
+      var login = !!document.querySelector("a[href*='/exec/front/Member/logout']");
+      bx.innerHTML = "<b>📩 참여 조건</b><br>" + CS + "가 필요해요.<br>" + (login ? "<a href='/member/modify.html' style='color:#6a3fc8;font-weight:800'>내 수신 동의 확인하기 ›</a>" : "<a href='/member/agreement.html' style='color:#6a3fc8;font-weight:800'>회원가입하고 수신 동의하기 ›</a>");
+      f.insertBefore(bx, f.firstChild);
+    }
+  }
+  function coffeeFix(){ if (location.pathname.indexOf("/myshop") === 0) { try { recoFix(); } catch (e) {} } try { reviewPage(); } catch (e) {} if (location.pathname.indexOf("/product/coffee.html") !== 0 || location.search.indexOf("t=buy") >= 0) return; var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n, t; while ((n = w.nextNode())) { t = n.nodeValue; if (!t || t.length < 3) continue; for (var k = 0; k < CF_P.length; k++) if (t.indexOf(CF_P[k][0]) >= 0) t = t.split(CF_P[k][0]).join(CF_P[k][1]); if (t !== n.nodeValue) n.nodeValue = t; } try { cfConsent(); } catch (e) {} if (!document.getElementById("dk-rvlink")) { var pl = null, hs = document.querySelectorAll(".cf h2"); for (var q = 0; q < hs.length; q++) if (hs[q].textContent.indexOf("PLUS") >= 0) pl = hs[q]; if (pl) { var a = document.createElement("a"); a.id = "dk-rvlink"; a.href = "/product/coffee.html?t=buy"; a.style.cssText = "display:block;margin:22px 0 0;background:#fff7e6;border:1px solid #ffe2a8;border-radius:14px;padding:14px 16px;color:#5a3d00;text-decoration:none;font-size:14px"; a.innerHTML = "<b style='font-size:15px'>🎁 다꾸키즈에서 옷을 사셨나요?</b><br>배송 받은 옷 입은 사진을 올리면 <b>적립금 5,000원</b>을 드려요 ›"; pl.parentNode.insertBefore(a, pl); } } }
   // 리뷰 적립 배지(2026-11-14 시온님): 상품명 아래 "리뷰 쓰고 최대 1,000P 적립" → 누르면 상품후기 칸
   function reviewBadge(){
     var h = document.querySelector(".infoArea .headingArea h1, .infoArea .headingArea h2"); if (!h || document.getElementById("dk-rvb")) return;
