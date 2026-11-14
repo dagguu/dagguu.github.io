@@ -581,7 +581,7 @@
     if (!isLogged()) {
       var off0 = Math.floor(p * 0.05 / 10) * 10;  /* 2026-11-12 1,000원 가입 쿠폰 삭제 → 수신동의 5% 쿠폰만 */
       box.innerHTML = "<div style='display:flex;justify-content:space-between;align-items:center'><b style='color:#e8312f'>🎟 가입 쿠폰 적용 시</b><b style='font-size:17px;color:#111'>" + won(p - off0) + "</b></div>" +
-        "<div style='font-size:12px;color:#888;margin-top:2px'>쇼핑정보 수신에 동의하고 가입하면 5% 쿠폰, 가입 적립금 1,000원도 바로 드려요</div>" +
+        "<div style='font-size:12px;color:#888;margin-top:2px'>쇼핑정보 수신에 동의하고 가입하면 5% 쿠폰과 적립금 1,000원을 바로 드려요</div>" +
         "<a href='/member/agreement.html' style='display:block;margin-top:8px;padding:9px;border-radius:8px;background:#e8312f;color:#fff;text-align:center;font-weight:800;text-decoration:none'>회원가입하고 쿠폰 받기</a>";
       return;
     }
@@ -1095,7 +1095,7 @@
     var logged = isLogged();
     var bc = logged
       ? "<a class='bc' href='/myshop/index.html#dk-invite'><i>💌</i><span style='min-width:0'><b>친구 초대하고 500원 적립</b><span>친구가 내 초대 링크로 가입하면 둘 다 적립금 500원</span></span><em>초대하기</em></a>"
-      : "<a class='bc' href='/member/agreement.html'><i>🎁</i><span style='min-width:0'><b>가입하면 적립금 1,000원</b><span>수신 동의 시 5% 쿠폰도 함께</span></span><em>가입하기</em></a>";
+      : "<a class='bc' href='/member/agreement.html'><i>🎁</i><span style='min-width:0'><b>수신 동의하고 가입하면</b><span>적립금 1,000원 + 5% 쿠폰</span></span><em>가입하기</em></a>";
     var day = new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10), sfx = bmMobile() ? "m" : "";
     var bn = "<div class='bn'><div class='bnr'>" + BM_BAN.map(function(b, i){ return "<a href='" + b[1] + "'><img src='https://www.dagguu.com/kids/banner/B" + b[0] + sfx + ".jpg?d=" + day + "v2' alt='' " + (i ? "loading='lazy'" : "") + "></a>"; }).join("") + "</div><span class='bnc'>1 / " + BM_BAN.length + "</span></div>";
     var ic = "<div class='ic'>" + BM_ICONS.map(function(x){ return "<a href='" + x[2] + "'><span style='background:" + x[3] + "'>" + x[0] + "</span>" + x[1] + "</a>"; }).join("") + "</div>";
@@ -1194,7 +1194,7 @@
       var PH2 = "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/upload/NNEditor/20261111/9b57e1866ba44d2bf1be89f7bb018101.jpg";
       var first = logged
         ? "<a class='ps' href='/product/coffee.html' style='background-image:url(" + PH2 + ")'><i class='s1'>☕ 커피 이벤트</i><i class='s2'>매달 30명</i><span class='tx'><b>@dagguu.kids 태그하고<br>커피 받아가세요</b><small>우리 아이 코디 사진에 태그만 하면 돼요</small></span></a>"
-        : "<a class='ps' href='/member/agreement.html' style='background-image:url(" + PH1 + ")'><i class='s1'>🎁 첫 가입 혜택</i><i class='s2'>바로 지급</i><span class='tx'><b>가입하면 적립금 1,000원<br>바로 드려요!</b><small>수신 동의 시 5% 할인 쿠폰도 함께</small></span></a>";
+        : "<a class='ps' href='/member/agreement.html' style='background-image:url(" + PH1 + ")'><i class='s1'>🎁 첫 가입 혜택</i><i class='s2'>바로 지급</i><span class='tx'><b>수신 동의하고 가입하면<br>적립금 1,000원!</b><small>5% 할인 쿠폰도 함께 드려요</small></span></a>";
       var dd = new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10).replace(/-/g, "");
       var bans = BM_BAN.map(function(x){ return "<a class='ps' href='" + x[1] + "' style='background-image:url(https://www.dagguu.com/kids/banner/B" + x[0] + "m.jpg?d=" + dd + "v2)'></a>"; }).join("");
       var n = 1 + BM_BAN.length;
@@ -1319,7 +1319,7 @@
   (function(){ var tm2; try { new MutationObserver(function(){ clearTimeout(tm2); tm2 = setTimeout(function(){ try { shareRow(); } catch(e){} }, 80); }).observe(document.documentElement, { childList: true, subtree: true }); } catch(e){} })();
 
   /* ---------- ⑯ 상품 상세 혜택 띠 배너 (2026-11-13 시온님이 바잇미 상품 화면 아래 배너 5줄 보여주며 "이런 느낌으로 배너 더") ----------
-     그림 대신 글씨·도형으로 직접 그림(바잇미 그림·문구 안 씀). 사실만: 가입 적립금 1,000원·수신 동의 5% 쿠폰, 5만원 이상 무료배송, 수익 링크 3%, 카톡 채널, 커피 이벤트.
+     그림 대신 글씨·도형으로 직접 그림(바잇미 그림·문구 안 씀). 사실만: 수신 동의 적립금 1,000원·5% 쿠폰, 5만원 이상 무료배송, 수익 링크 3%, 카톡 채널, 커피 이벤트.
      위치 = 상세 탭(상세정보·구매안내…) 바로 위, 위에 브랜드 줄(브랜드 이름 · 브랜드 상품보기 ›). */
   function promoStack(){
     if (!document.querySelector(".xans-product-detail") || document.getElementById("dk-promo")) return;
@@ -1338,7 +1338,7 @@
     var h = "<div id='dk-promo'>" + (br ? "<div class='pbr'><i>" + br.charAt(0) + "</i><div><b>" + br + "</b><small>다꾸키즈에서 만나는 " + br + " 아이옷</small></div><a href='/product/search.html?keyword=" + encodeURIComponent(br) + "'>브랜드상품보기 ›</a></div>" : "") +
       (logged
         ? "<a class='pb p1' href='/myshop/index.html#dk-invite'><span class='t'>친구에게 다꾸키즈 알려주고<br><b>친구도 나도 적립금 500원</b></span><span class='r'><span class='c1'>친구 초대<em>500원</em></span><span class='c2'>나도<em>500원</em></span></span></a>"
-        : "<a class='pb p1' href='/member/agreement.html'><span class='t'>아직 <b>회원가입</b> 안 했다면?<br>가입하면 <b>적립금 1,000원</b> 바로 지급</span><span class='r'><span class='c1'>가입 즉시<em>1,000원</em></span><span class='c2'>수신 동의<em>5% 쿠폰</em></span></span></a>") +
+        : "<a class='pb p1' href='/member/agreement.html'><span class='t'>아직 <b>회원가입</b> 안 했다면?<br>수신 동의하면 <b>적립금 1,000원</b> 바로 지급</span><span class='r'><span class='c1'>수신 동의<em>1,000원</em></span><span class='c2'>수신 동의<em>5% 쿠폰</em></span></span></a>") +
       "<a class='pb p2' href='/product/list.html?cate_no=54'><span class='t'>남대문 아동복을 집에서 편하게<br><b>5만원 이상 무료배송</b></span><span class='r'>5만원 이상<em>무료배송</em></span></a>" +
       "<a class='pb p3' href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'><span class='t'><small>친구가 내 링크로 사면</small>포인트 최대 10% 쏙쏙 받기 ›</span><span class='r'><i>P</i><i>P</i><i>P</i></span></a>" +
       "<a class='pb p4' href='https://pf.kakao.com/_xhihNX' target='_blank' rel='noopener'><span class='t'>카카오톡 채널 친구 추가하고<br><b>신상·할인 소식 먼저 받기</b></span><span class='r'><i>💬</i></span></a>" +
@@ -1494,7 +1494,8 @@
   // 상단 메뉴(2026-11-14 시온님): 신상품 → ⏰타임특가, 1+1 다음에 0원체험단·기획상품(상품명에 "기획")
   var MENU_ADD = [["0원체험단", "/product/coffee.html", "#e0457b"], ["기획상품", "/product/search.html?keyword=%EA%B8%B0%ED%9A%8D", ""], ["🚚무료배송", "/product/list.html?cate_no=56", "#1f7a4d"]];
   /* 적립금 사용 조건 3만원(2026-11-15): 스킨에 박힌 '5만원 이상 구매 시 사용' 글자를 화면에서 바꿈 */
-  function mileFix(){ var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n; while ((n = w.nextNode())) { var t = n.nodeValue; if (t && t.indexOf("5만원 이상") >= 0 && /사용|쓸 수/.test(t) && t.indexOf("무료배송") < 0) n.nodeValue = t.split("5만원 이상").join("3만원 이상"); } }
+  function mileFix(){ var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n; while ((n = w.nextNode())) { var t = n.nodeValue; if (t && t.indexOf("5만원 이상") >= 0 && /사용|쓸 수/.test(t) && t.indexOf("무료배송") < 0) n.nodeValue = t.split("5만원 이상").join("3만원 이상"); } jcFix(); setTimeout(jcFix, 1800); setTimeout(jcFix, 3500); }
+  function jcFix(){ var li = document.getElementById("dk-joincp"); if (!li || li.getAttribute("data-dkm")) return; li.setAttribute("data-dkm", "1"); var t = li.querySelector(".title"), pd = li.querySelector(".period"); if (t) t.textContent = "[수신동의] 가입 적립금"; if (pd) pd.textContent = "쇼핑정보 수신 동의하고 가입하면 바로 지급 · 3만원 이상 구매 시 사용"; }
   function menuFix(){
     var a = document.querySelectorAll("#header a[href*='cate_no=54'], .dk-mnav a[href*='cate_no=54'], [data-ez-module^='menu-side'] a[href*='cate_no=54'], #aside a[href*='cate_no=54']"), i, w, n;
     for (i = 0; i < a.length; i++) { w = document.createTreeWalker(a[i], NodeFilter.SHOW_TEXT, null); while ((n = w.nextNode())) { if (n.nodeValue.indexOf("신상품") >= 0) n.nodeValue = n.nodeValue.replace(/💜?신상품💜?/, "⏰타임특가"); } }
