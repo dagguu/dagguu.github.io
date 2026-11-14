@@ -1302,6 +1302,39 @@
   var RV_DONE = 0;
   function reviewPage(){ if (RV_DONE || location.search.indexOf("t=buy") < 0) return; var cf = document.querySelector(".cf"); if (!cf) return; RV_DONE = 1; cf.style.visibility = "hidden"; fetch("https://www.dagguu.com/kids/skin/review.txt?v=" + Math.floor(Date.now() / 600000)).then(function (r) { return r.text(); }).then(function (t) { var d = document.createElement("div"); d.innerHTML = t; var st = d.querySelector("style"), nb = d.querySelector(".cf"), sc = d.querySelector("script"); if (!nb) { cf.style.visibility = ""; return; } if (st) document.head.appendChild(st); cf.parentNode.replaceChild(nb, cf); document.title = "다꾸키즈 구매 인증 기자단"; if (sc) { try { (new Function(sc.textContent))(); } catch (e) {} } window.scrollTo(0, 0); }).catch(function () { cf.style.visibility = ""; }); }
   function recoFix(){ var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n; while ((n = w.nextNode())) { if (n.nodeValue && n.nodeValue.indexOf("3%") >= 0) n.nodeValue = n.nodeValue.replace(/상품 금액의 3% 적립/g, "상품 금액의 3~10% 적립(등급별)").replace(/3% 적립까지/g, "최대 10% 적립까지").replace(/구매하면 3% 적립/g, "구매하면 최대 10% 적립"); if (n.nodeValue && n.nodeValue.indexOf("12개월") >= 0 && n.nodeValue.indexOf("구매") >= 0) n.nodeValue = n.nodeValue.replace(/친구가 마지막으로 구매한 날부터 12개월 동안/g, "친구가 링크를 누른 날부터 30일 동안").replace(/12개월 동안 구매가 없으면 연결이 끝나요/g, "링크를 다시 보내면 30일이 다시 시작돼요"); } }
+  function cfAgree(ok){
+    var lb = ok.parentNode; lb.style.display = "none";
+    var CK = [
+      ["p", "유의사항 및 참여 제한 정책 동의 (필수)", "위 '꼭 확인해 주세요'의 내용을 모두 확인했어요.<br>· 게시물 맨 앞에 <b>#광고</b> 를 넣었어요.<br>· 다른 사람의 사진·글 사용, 여러 계정·다른 사람 정보로 참여, 받은 기프티콘 판매가 확인되면 이후 이벤트 참여가 일시 또는 영구 제한될 수 있어요.<br>· 올린 피드를 지우면 다음 이벤트·다꾸파트너스 적립에서 제외될 수 있어요.<br>· 참여 제한이 생기면 회원정보의 연락처(문자·카카오톡)로 알려 드려요."],
+      ["i", "개인정보 수집·이용 동의 (필수)", "<b>수집하는 곳</b> : 다꾸키즈(플랜비)<br><b>항목</b> : 인스타그램 아이디, 휴대폰 번호, 다꾸키즈 회원 아이디<br><b>목적</b> : 참여 확인, 기프티콘 발송, 한 달 한 번 참여 여부 확인<br><b>보유 기간</b> : 참여일로부터 1년 뒤 파기<br><b>거부할 권리</b> : 동의하지 않을 수 있지만, 그 경우 이벤트에 참여할 수 없어요."],
+      ["m", "쇼핑정보(문자·이메일) 수신 동의 회원 확인 (필수)", "이 이벤트는 다꾸키즈 회원 중 쇼핑정보(문자·이메일) 수신에 동의한 분만 참여할 수 있어요. 동의 여부는 <a href='/member/modify.html' style='color:#6a3fc8;font-weight:700'>회원정보 수정</a>에서 확인·변경할 수 있고, 기프티콘을 보내기 전에 확인해요. 동의를 철회하면 다음 참여부터 제외돼요."],
+      ["r", "게시물 소개(리그램) 동의 (선택)", "올려 주신 게시물을 다꾸키즈 인스타그램(@dagguu.kids)과 쇼핑몰에서 <b>출처(인스타 아이디)를 밝히고</b> 소개할 수 있어요. 아이 얼굴이 보이는 사진은 쓰지 않거나 가려서 써요. 동의하지 않아도 참여할 수 있고, 언제든 카카오톡 채널로 철회할 수 있어요."]
+    ];
+    var w = document.createElement("div"); w.id = "dk-cfag";
+    w.style.cssText = "margin-top:16px;border-top:1px solid #eee;padding-top:14px;font-size:13.5px;color:#333";
+    var h = "<label style='display:flex;gap:10px;align-items:center;font-weight:800;font-size:15px;margin:0 0 10px;cursor:pointer'><input type='checkbox' data-ag='all' style='width:22px;height:22px;accent-color:#6a3fc8;margin:0'> 유의사항을 확인했으며, 아래 내용에 모두 동의해요.</label>";
+    for (var i = 0; i < CK.length; i++) {
+      h += "<div style='margin:0 0 8px 12px'><div style='display:flex;align-items:center;gap:8px'><label style='display:flex;gap:8px;align-items:center;flex:1;color:#666;font-size:13px;cursor:pointer;margin:0'><input type='checkbox' data-ag='" + CK[i][0] + "' style='width:18px;height:18px;accent-color:#6a3fc8;margin:0'> " + CK[i][1] + "</label><a href='#none' data-agd='" + i + "' style='color:#999;font-size:12px;text-decoration:underline;white-space:nowrap'>자세히</a></div><div data-agb='" + i + "' style='display:none;margin:8px 0 4px 26px;background:#f8f8fa;border-radius:10px;padding:10px 12px;line-height:1.65;color:#555;font-size:12.5px'>" + CK[i][2] + "</div></div>";
+    }
+    w.innerHTML = h; lb.parentNode.insertBefore(w, lb.nextSibling);
+    var boxes = w.querySelectorAll("input[data-ag]"), all = w.querySelector("input[data-ag='all']");
+    function req(){ var r = true; for (var j = 0; j < boxes.length; j++) { var k = boxes[j].getAttribute("data-ag"); if (k !== "all" && k !== "r" && !boxes[j].checked) r = false; } return r; }
+    function sync(){ var every = true; for (var j = 0; j < boxes.length; j++) if (boxes[j] !== all && !boxes[j].checked) every = false; all.checked = every; ok.checked = req(); }
+    w.addEventListener("change", function(e){ var t = e.target; if (!t.getAttribute) return; if (t.getAttribute("data-ag") === "all") { for (var j = 0; j < boxes.length; j++) boxes[j].checked = t.checked; ok.checked = req(); } else sync(); });
+    w.addEventListener("click", function(e){ var a = e.target.closest ? e.target.closest("[data-agd]") : null; if (!a) return; e.preventDefault(); var b = w.querySelector("[data-agb='" + a.getAttribute("data-agd") + "']"); b.style.display = b.style.display === "none" ? "block" : "none"; a.textContent = b.style.display === "none" ? "자세히" : "접기"; });
+    var go = document.getElementById("cfGo");
+    if (go) go.onclick = function(){
+      function v(id){ var x = document.getElementById(id); return x ? (x.value || "").trim() : ""; }
+      if (!v("cfIg") || !v("cfPh")) { alert("인스타그램 아이디와 휴대폰 번호를 적어 주세요."); return; }
+      if (!req()) { alert("필수 동의 항목에 모두 체크해 주세요."); return; }
+      var NL = String.fromCharCode(10), m = new Date(Date.now() + 9 * 3600000).getUTCMonth() + 1;
+      var rg = w.querySelector("input[data-ag='r']").checked;
+      var txt = "[다꾸키즈 0원체험단 " + m + "월]" + NL + "인스타: " + v("cfIg") + NL + "휴대폰: " + v("cfPh") + NL + "필수 동의: 유의사항·개인정보·수신동의 회원 확인" + NL + "게시물 소개(리그램): " + (rg ? "동의" : "동의 안 함") + NL + "(게시물 캡처 사진 같이 보내요)";
+      var fin = function(){ var d = document.getElementById("cfDone"); if (d) d.style.display = "block"; window.open("https://pf.kakao.com/_xhihNX/chat", "_blank"); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(fin, function(){ prompt("아래 내용을 복사해 주세요", txt); fin(); });
+      else { prompt("아래 내용을 복사해 주세요", txt); fin(); }
+    };
+  }
   function cfConsent(){
     if (document.getElementById("dk-cfcs")) return;
     var CS = "다꾸키즈 회원 + 쇼핑정보(문자·이메일) 수신 동의";
@@ -1313,7 +1346,15 @@
     for (i = 0; i < hs.length; i++) if (hs[i].textContent.indexOf("꼭 확인해 주세요") >= 0) nt = hs[i].nextElementSibling;
     if (nt && nt.tagName === "UL") { var li = document.createElement("li"); li.innerHTML = "<b>" + CS + "</b>가 되어 있어야 참여할 수 있어요. 동의 여부는 <a class='ig' href='/member/modify.html'>회원정보 수정</a>에서 확인·변경할 수 있고, 커피를 보내기 전에 확인해요. 언제든 동의를 철회할 수 있어요(철회하면 다음 참여부터 제외돼요)."; nt.insertBefore(li, nt.firstChild); }
     var ok = document.getElementById("cfOk");
-    if (ok && ok.parentNode) { var lb = ok.parentNode, sp = document.createElement("span"); sp.innerHTML = "<b>다꾸키즈에 가입했고 쇼핑정보(문자·이메일) 수신에 동의했어요.</b> "; while (ok.nextSibling) sp.appendChild(ok.nextSibling); lb.appendChild(sp); }
+    if (nt && nt.tagName === "UL") {
+      var add = ["올린 게시물 캡처와 신청서를 보낸 뒤에는 참여 내용(인스타 아이디·휴대폰 번호) 변경이 어려워요. 바꿔야 하면 카카오톡 채널로 말씀해 주세요.",
+        "휴대폰 번호를 잘못 적어 기프티콘을 받지 못한 경우 다시 보내 드리기 어려워요.",
+        "진행 일정(확인·발송)은 운영 사정에 따라 바뀔 수 있고, 바뀌면 카카오톡으로 미리 알려 드려요.",
+        "받은 기프티콘은 다른 사람에게 팔 수 없어요.",
+        "다른 사람의 사진·글을 쓰거나, 여러 계정·다른 사람 정보로 참여한 경우 이후 이벤트 참여가 제한될 수 있어요."];
+      for (var a2 = 0; a2 < add.length; a2++) { var l2 = document.createElement("li"); l2.textContent = add[a2]; nt.appendChild(l2); }
+    }
+    if (ok && ok.parentNode && !document.getElementById("dk-cfag")) cfAgree(ok);
     var f = document.getElementById("cfForm");
     if (f) {
       var bx = document.createElement("div"); bx.id = "dk-cfcs";
