@@ -1746,7 +1746,7 @@ function pMyView(){
 }
 /* ── 다꾸파트너스(2026-11-11 시온님): 다꾸키즈 상품별 수익 링크 → 판매액 3% 다꾸키즈 적립금(2026-11-11 시온님 10%→3%). DB = supabase/dp_partners.sql
    쇼핑몰 쪽: 카페24 스킨 footer.html 스크립트가 ?pt=코드 를 7일 쿠키로 기억 + dp_click + 로그인 회원 연결(dp_link), 주문완료(order_result.html #dkpt-order)에서 dp_order2(쿠키 또는 연결 회원, 마지막 링크 클릭 후 30일 — 2026-11-14 dp_members_30d.sql). supabase/dp_members.sql (2026-11-12). */
-var DP_RATE=3, DP_MY=3, DP_TIERS=[[0,3,"🌱","새싹 파트너"],[100000,5,"🌿","다꾸 파트너"],[300000,7,"🌳","우수 파트너"],[1000000,10,"👑","VIP 파트너"]], DP_SHOP="https://dagguukids.com", DP_ITEMS=null, DP_Q="";
+var DP_RATE=3, DP_MY=3, DP_TIERS=[[0,3,"B","기본회원","직전 3개월 구매 50만원 미만"],[1,5,"D","다꾸회원","50만~100만원"],[2,7,"V","VIP","100만~200만원"],[3,10,"VV","VVIP","200만원 이상"]], DP_SHOP="https://dagguukids.com", DP_ITEMS=null, DP_Q="";
 function dpView(){ return '<div class="pg dp" id="dpv"><div class="empty">불러오는 중…</div></div>'; }
 function dpHero(){ return '<section class="dphero"><small>🔗 다꾸키즈 수익 링크</small><h1>다꾸키즈 상품을 소개하고<br><em>판매액 3~10%</em> 적립금 받아요</h1><p>내 수익 링크로 들어온 손님이 7일 안에 다꾸키즈에서 주문하면, 배송이 끝난 뒤 상품 금액의 3~10%(파트너 등급별)를 다꾸키즈 적립금으로 드려요. 내 링크로 가입한 친구는 링크를 누른 날부터 30일 동안 사는 옷이 모두 적립돼요.</p></section>'+
   '<div class="prhow"><div><b>1</b><span>파트너 가입</span></div><div><b>2</b><span>상품별 수익 링크로 소개</span></div><div><b>3</b><span>배송완료 뒤 적립금</span></div></div>'; }
@@ -1783,7 +1783,7 @@ function dpLand(state){
    '<section class="s2"><h2>상품 링크를 공유하고,<br>적립금을 받아 보세요!</h2><p>상품 상세 화면의 공유 버튼이나 이 화면에서<br>내 수익 링크를 복사해 공유하면, 그 링크로<br>팔린 상품 금액의 3~10%(등급별)가 적립금으로 쌓여요.</p><button type="button" data-dpgo="'+state+'">'+cta+'</button></section>'+
    '<section class="s3"><span class="pill">기본 가이드</span><h3>수익 링크는 이렇게 복사해요!</h3><ol><li>다꾸키즈 상품 화면의 <b>공유하기</b> 버튼 또는 다꾸파트너스 마이 화면에서 발급받기<div class="mock"><div><b>제품 공유하기</b><i>최대 10% 적립</i><code>dagguukids.com/…&amp;pt=내이름</code><em>🔗 링크 복사하기<br>💬 카카오톡 공유하기</em></div><div><b>다꾸파트너스</b><em>적립 예정</em><strong>3,240원</strong><em>최근 30일 클릭 · 주문</em></div></div><p style="margin:6px 0 0;font-size:11.5px;font-weight:400;color:#999">* 화면 예시예요. 실제 숫자가 아니에요.</p></li><li>내가 운영하는 SNS, 블로그, 카페, 단톡방 등에 복사한 링크를 공유하면 끝!</li></ol></section>'+
    '<section class="s4"><h3>리워드 가이드</h3><ul>'+
-    '<li>적립금은 <b>상품 금액(배송비 제외)의 3~10%</b>예요. 내 링크로 팔린 누적 금액에 따라 등급이 올라가요.</li>'+dpTierTable()+''+
+    '<li>적립금은 <b>상품 금액(배송비 제외)의 3~10%</b>예요. 다꾸키즈 회원등급에 따라 달라져요.</li>'+dpTierTable()+''+
     '<li><b>배송이 끝나고 취소·반품이 없는 주문</b>을 확인한 뒤 적립돼요.</li>'+
     '<li><b>링크를 누른 뒤 7일 안의 주문</b>이 내 실적이에요. 다른 파트너 링크를 나중에 누르면 그 파트너 실적이 돼요.</li>'+
     '<li>내 링크로 들어와 <b>가입한 친구</b>는 링크를 누른 날부터 <b>30일 동안</b> 사는 옷이 모두 내 실적이에요. 링크를 다시 보내면 30일이 다시 시작돼요.</li>'+
@@ -1848,12 +1848,10 @@ function dpInit(){
   });
 }
 function dpLink(me,pno){ return DP_SHOP+(pno?"/product/detail.html?product_no="+pno+"&pt=":"/?pt=")+me.code; }
-function dpTierOf(sales){ var t=DP_TIERS[0]; DP_TIERS.forEach(function(x){ if(sales>=x[0]) t=x; }); return t; }
-function dpTierTable(){ return '<li style="list-style:none;margin-left:-18px"><table class="dptier"><tr><th>등급</th><th>적립</th><th>조건(내 링크로 팔린 누적 금액)</th></tr>'+DP_TIERS.map(function(x){ return '<tr><td>'+x[2]+' '+x[3]+'</td><td><b>'+x[1]+'%</b></td><td>'+(x[0]?won(x[0])+' 이상':'가입하면 바로')+'</td></tr>'; }).join("")+'</table><small style="color:#888">배송완료·취소/반품 없는 주문만 누적돼요. 오른 등급은 내려가지 않고, 등급이 오른 다음 주문부터 새 비율이 적용돼요. 1+1·특가 상품은 최대 5%, 가족·지인 회원가 주문은 적립되지 않아요.</small></li>'; }
-function dpTierBox(d){ var sales=+d.sales||0, t=dpTierOf(sales), i=DP_TIERS.indexOf(t), nx=DP_TIERS[i+1];
-  return '<section class="pjsec dptbox"><h2>'+t[2]+' 내 등급 · '+t[3]+' <b style="color:#6a3fc8">'+t[1]+'%</b></h2>'+
-    (nx?'<p class="dpnote">'+nx[2]+' '+nx[3]+'('+nx[1]+'%)까지 <b>'+won(nx[0]-sales)+'</b> 남았어요</p><div class="dpbar"><i style="width:'+Math.min(100,Math.round((sales-t[0])/(nx[0]-t[0])*100))+'%"></i></div>':'<p class="dpnote">가장 높은 등급이에요. 고마워요 💜</p>')+
-    '<p class="dpnote" style="color:#999">내 링크로 팔린 누적 금액 '+won(sales)+'</p><details class="faq"><summary>등급표 보기</summary><ul style="padding-left:18px">'+dpTierTable()+'</ul></details></section>'; }
+function dpTierOf(rate){ var t=DP_TIERS[0]; DP_TIERS.forEach(function(x){ if(Math.round((rate||0.03)*100)>=x[1]) t=x; }); return t; }
+function dpTierTable(){ return '<li style="list-style:none;margin-left:-18px"><table class="dptier"><tr><th>다꾸키즈 회원등급</th><th>수익 링크 적립</th><th>등급 기준(직전 3개월 구매금액)</th></tr>'+DP_TIERS.map(function(x){ return '<tr><td>'+x[3]+'</td><td><b>'+x[1]+'%</b></td><td>'+x[4]+'</td></tr>'; }).join("")+'</table><small style="color:#888">회원등급은 다꾸키즈 쇼핑몰 마이페이지에서 볼 수 있고, 매월 1일 직전 3개월 구매금액으로 정해져요. 적립은 주문을 승인할 때의 내 회원등급 비율로 계산해요. 배송완료·취소/반품 없는 주문만, 1+1·특가 상품은 최대 5%예요.</small></li>'; }
+function dpTierBox(d){ var t=dpTierOf(+d.rate||0.03);
+  return '<section class="dptbox"><b>내 적립 비율 '+t[1]+'%</b> <span style="color:#888;font-size:13px">('+t[3]+' 기준)</span><p class="dpnote" style="color:#999">최근 승인된 주문 기준이에요. 다꾸키즈 회원등급이 오르면 다음 주문부터 비율이 올라가요.</p><details class="faq"><summary>등급표 보기</summary><ul style="padding-left:18px">'+dpTierTable()+'</ul></details></section>'; }
 function dpHome(v,me){
   v.innerHTML='<section class="dphero sm"><small>🔗 다꾸키즈 수익 링크</small><h1>'+esc(nick())+'님의 수익 링크</h1><p>적립금 받는 다꾸키즈 회원: <b>'+esc(me.shop_id)+'</b> <button class="lnk" data-dpshop>바꾸기</button></p></section>'+
     '<div class="dpstat" id="dpstat"><div><b>-</b><span>최근 30일 클릭</span></div><div><b>-</b><span>주문</span></div><div><b>-</b><span>적립 예정</span></div><div><b>-</b><span>지급 완료</span></div></div><div id="dptier"></div>'+
@@ -1904,14 +1902,14 @@ function dpAdmin(v){
     sec.innerHTML='<h2>다꾸키즈 수익 링크 주문 ('+L.length+')</h2><p class="mysub">카페24 주문 관리에서 배송완료·취소/반품 없음·본인 주문 아님을 확인하고 승인 → 카페24 고객 관리에서 그 아이디에 적립금 지급 → "지급 완료". 파트너 '+(R[1].data||[]).length+'명</p>'+
       (L.length?L.map(function(o){ var pt=P[o.code]||{}, bt=function(s,t){ return '<button class="b" data-dpa="'+esc(o.order_id)+'" data-amt="'+(+o.amount||0)+'" data-s="'+s+'">'+t+'</button>'; };
         return '<div class="paap"><p><b>'+esc(o.order_id)+'</b> <i class="st-'+esc(o.status)+'">'+esc(ST[o.status])+'</i><br>'+esc(String(o.created_at).slice(0,16).replace("T"," "))+' · 상품 '+won(o.amount)+(o.src==='member'?' · 연결된 회원 주문':o.src==='link'?' · 링크(7일) 주문':'')+' · 적립 '+(o.reward?won(o.reward)+(o.rate?' ('+Math.round(o.rate*100)+'%)':''):'승인 때 등급 비율로 계산')+'<br>파트너 '+esc(o.code)+' → 다꾸키즈 아이디 <b>'+esc(pt.shop_id||"?")+'</b> <button class="lnk" data-copy="'+esc(pt.shop_id||"")+'">복사</button></p>'+
-          '<div class="pjrow">'+(o.status==="pending"?bt("approved","승인(등급 비율)")+bt("approved5","승인(특가 최대 5%)")+bt("rejected","제외"):o.status==="approved"?bt("paid","적립금 지급 완료")+bt("rejected","제외"):bt("pending","다시 확인 중으로"))+'</div></div>'; }).join(""):'<div class="empty">처리할 주문이 없어요</div>');
+          '<div class="pjrow">'+(o.status==="pending"?bt("ap3","승인 3% 기본")+bt("ap5","승인 5% 다꾸")+bt("ap7","승인 7% VIP")+bt("ap10","승인 10% VVIP")+bt("rejected","제외"):o.status==="approved"?bt("paid","적립금 지급 완료")+bt("rejected","제외"):bt("pending","다시 확인 중으로"))+'</div></div>'; }).join(""):'<div class="empty">처리할 주문이 없어요</div>');
   });
 }
 document.addEventListener("click",function(e){ var t=e.target.closest&&e.target.closest("[data-dpa]"); if(!t||!SB) return; e.preventDefault();
-  var st=t.dataset.s, cap=null, amt=null; if(st==="approved5"){ st="approved"; cap=0.05; }
-  if(st==="approved"){ var a0=prompt("실제 결제 상품 금액(쿠폰·할인 뺀 금액, 배송비 제외). 가족·지인 회원가 주문이면 취소하고 '제외'를 눌러 주세요.",t.dataset.amt||""); if(a0===null) return; amt=parseInt(String(a0).replace(/[^0-9]/g,""),10)||null; }
+  var st=t.dataset.s, cap=null, amt=null, rate=null; var mr=/^ap(\d+)$/.exec(st); if(mr){ st="approved"; rate=(+mr[1])/100; } if(st==="approved5"){ st="approved"; cap=0.05; }
+  if(st==="approved"){ var a0=prompt("실제 결제 상품 금액(쿠폰·할인 뺀 금액, 배송비 제외). 가족·지인 회원가 주문이면 취소하고 '제외'를 눌러 주세요.",t.dataset.amt||""); if(a0===null) return; amt=parseInt(String(a0).replace(/[^0-9]/g,""),10)||null; if(rate&&rate>0.05&&!confirm("1+1·특가 상품이면 5% 이하로 승인해 주세요. "+Math.round(rate*100)+"%로 승인할까요?")) return; }
   var note=st==="rejected"?(prompt("제외 이유(파트너에게는 안 보여요)","")||""):"";
-  SB.rpc("dp_admin_set2",{p_order:t.dataset.dpa,p_status:st,p_note:note,p_amount:amt,p_cap:cap}).then(function(x){ if(x&&x.error&&/dp_admin_set2|function/.test(x.error.message||"")) return SB.rpc("dp_admin_set",{p_order:t.dataset.dpa,p_status:st,p_note:note}); return x; }).then(function(x){ if(x.error){ toast("처리하지 못했어요"); return; } toast("✅ 처리했어요"); padminInit(); }); });
+  (rate?SB.rpc("dp_admin_set3",{p_order:t.dataset.dpa,p_status:st,p_note:note,p_amount:amt,p_rate:rate}).then(function(x){ if(x&&x.error&&/dp_admin_set3|function/.test(x.error.message||"")){ toast("supabase/dp_grade_rate.sql 을 먼저 실행해 주세요"); return {error:x.error}; } return x; }):SB.rpc("dp_admin_set2",{p_order:t.dataset.dpa,p_status:st,p_note:note,p_amount:amt,p_cap:cap})).then(function(x){ if(x&&x.error&&/dp_admin_set2|function/.test(x.error.message||"")) return SB.rpc("dp_admin_set",{p_order:t.dataset.dpa,p_status:st,p_note:note}); return x; }).then(function(x){ if(x.error){ toast("처리하지 못했어요"); return; } toast("✅ 처리했어요"); padminInit(); }); });
 function pjobView(){ return '<div class="pg pjob" id="pjob"><a class="back" href="#/press">'+ico(I.back)+'<span>기자단</span></a><div class="empty">불러오는 중…</div></div>'; }
 function pjobInit(){
   var v=document.getElementById("pjob"), id=+state.pjId; if(!v) return;
