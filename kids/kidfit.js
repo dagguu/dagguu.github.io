@@ -78,8 +78,10 @@
     { k: "vip", n: "VIP", c: "V", bg: "#7b3fe4", fg: "#fff", bd: "#7b3fe4", cond: "직전 3개월 구매금액 30만원 이상 50만원 미만", save: 3, link: 7 },
     { k: "vvip", n: "VVIP", c: "VV", bg: "#1d1235", fg: "#ffd86b", bd: "#1d1235", cond: "직전 3개월 구매금액 50만원 이상", save: 5, link: 10 }
   ];
+  var MS_P = { k: "priv", c: "💜", bg: "#faf8ff", fg: "#6a3fc8", bd: "#e2dcf3", save: 1, link: 10, priv: 1 };
   function msOf(name){
     name = (name || "").replace(/\s/g, "");
+    if (/가족|지인/.test(name)) { var p = {}; for (var k in MS_P) p[k] = MS_P[k]; p.n = /가족/.test(name) ? "가족" : "지인"; return p; }
     if (/VVIP|평생/.test(name)) return MS_G[3];
     if (/VIP|우수/.test(name)) return MS_G[2];
     if (/다꾸/.test(name)) return MS_G[1];
@@ -111,6 +113,7 @@
       "<div style='max-width:640px;margin:0 auto;padding:0 18px 40px;box-sizing:border-box'>" +
         "<div style='text-align:center;padding:30px 0 26px'>" + msBadge(g, 76).replace("display:inline-flex", "display:inline-flex;margin:0 auto") +
           "<div style='margin-top:12px;font-size:24px;font-weight:800;color:#333'>" + esc(cur || "") + "</div>" +
+          (g && g.priv ? "<div style='margin:14px auto 0;max-width:340px;display:grid;grid-template-columns:1fr 1fr;gap:8px'><div style='" + box + "'>결제 시 <b>" + g.save + "%</b> 적립</div><div style='" + box + "'>수익 링크 <b>" + g.link + "%</b> 적립</div></div>" : "") +
           "<div style='margin-top:10px;font-size:13px;color:#888;line-height:1.6'>※ 등급은 직전 3개월 구매금액으로 매월 1일에 정해져요.<br>배송 완료된 주문만, 취소·반품 금액은 빼고 계산해요.</div></div>" +
         "<div style='height:10px;background:#f4f4f6;margin:0 -18px'></div>" +
         "<div style='text-align:center;padding:28px 0 6px'><div style='font-size:24px;font-weight:800;color:#222'>Membership</div><div style='margin-top:6px;font-size:14px;color:#888'>등급에 따라 적립금과 수익 링크 혜택이 달라져요!</div></div>" +
@@ -157,7 +160,8 @@
         "<span style='flex:0 0 auto;background:#6a3fc8;color:#fff;font-size:13px;font-weight:700;border-radius:8px;padding:8px 12px'>초대하기</span></a>" +
       "<div style='display:flex;align-items:center;gap:14px;padding:16px 18px 20px'>" + msBadge(g, 64) +
         "<div style='flex:1;min-width:0'><div style='font-size:20px;font-weight:800;color:#222'>" + esc(nm || "회원") + "</div>" +
-        "<a href='#membership' id='dk-my-ms' style='display:inline-block;margin-top:4px;font-size:15px;color:#6a3fc8;font-weight:700;text-decoration:none'>" + esc(grp) + " <span style='color:#888;font-weight:500'>등급혜택보기 ›</span></a></div>" +
+        "<a href='#membership' id='dk-my-ms' style='display:inline-block;margin-top:4px;font-size:15px;color:#6a3fc8;font-weight:700;text-decoration:none'>" + esc(grp) + " <span style='color:#888;font-weight:500'>등급혜택보기 ›</span></a>" +
+        (g && g.priv ? "<div style='margin-top:4px;font-size:13px;color:#555'>수익 링크 <b style='color:#6a3fc8'>" + g.link + "%</b> 적립 · 결제 시 " + g.save + "% 적립</div>" : "") + "</div>" +
         "<a href='/member/modify.html' aria-label='회원정보 수정' style='flex:0 0 auto;color:#888;text-decoration:none'><svg width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='#888' stroke-width='1.5'><circle cx='12' cy='12' r='3'/><path d='M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z'/></svg></a></div>" +
       "<a href='/product/coffee.html' style='display:block;position:relative;overflow:hidden;background:linear-gradient(90deg,#f3ecff,#ffe3f1);padding:20px 18px;text-decoration:none'>" +
         "<div style='font-size:13px;font-weight:700;color:#c2408a'>@dagguu.kids 태그하면</div><div style='margin-top:4px;font-size:22px;font-weight:800;color:#6a3fc8'>0원체험단 커피 받기! ›</div>" +
