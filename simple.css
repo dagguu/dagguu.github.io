@@ -1303,3 +1303,6 @@ input,select,textarea{font-size:16px!important}
 .dpit>div{flex:1;min-width:0}.dpit b{display:block;font-size:14px;line-height:1.4}.dpit small{display:block;color:#888;font-size:12px;margin:3px 0 8px}
 .dpbt{display:flex;gap:6px}.dpbt .b{padding:7px 10px;font-size:13px;border-radius:10px}
 .dpnote{font-size:12px;color:#888;margin:-4px 0 10px}
+/* 다꾸키즈 수익 링크 등급(2026-11-14) */
+.dptier{width:100%;border-collapse:collapse;margin:8px 0 6px;font-size:12.5px}.dptier th,.dptier td{border-bottom:1px solid #eee;padding:7px 4px;text-align:left}.dptier th{color:#888;font-weight:500;font-size:11.5px}.dptier td b{color:#6a3fc8}
+.dptbox h2{font-size:16px}.dpbar{height:8px;border-radius:99px;background:#efe8fb;overflow:hidden;margin:6px 0 4px}.dpbar i{display:block;height:100%;background:#6a3fc8;border-radius:99px}

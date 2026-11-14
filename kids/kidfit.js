@@ -748,12 +748,12 @@
     iv.id = "dk-invite";
     var code = ""; try { code = localStorage.getItem("dk_dpme") || ""; } catch (e) {}
     var w = document.createElement("div"); w.className = "dkiv";
-    w.innerHTML = "<div class='ivtop'><b>링크 공유하고, 최대 3% 포인트 받기</b><a href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'>자세히 보기</a></div>" +
+    w.innerHTML = "<div class='ivtop'><b>링크 공유하고, 최대 10% 포인트 받기</b><a href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'>자세히 보기</a></div>" +
       "<div class='ivico'>💌</div><h3>친구 초대하고 함께 적립받기</h3><p class='ivsub'>친구가 내 링크로 가입하면 친구도 나도 500원</p>" +
       "<button type='button' class='ivbtn ivg' data-iv='share'><i>💬</i><span><b>친구 초대하기</b><small>카톡·문자로 초대 링크를 바로 보내요</small></span></button>" +
-      (code ? "<button type='button' class='ivbtn ivp' data-iv='copy'><i>🎁</i><span><b>공유하고 3% 적립받기</b><small>내 링크(" + code + ")를 복사해요</small></span></button>"
-            : "<a class='ivbtn ivp' href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'><i>🎁</i><span><b>공유하고 3% 적립받기</b><small>1분 가입하고 내 수익 링크 만들기</small></span></a>") +
-      "<p class='ivnote'>" + (code ? "친구가 링크를 누른 날부터 30일 동안 사는 옷 모두 3% 적립 · 링크를 다시 보내면 30일이 다시 시작돼요" : "가입하면 내 링크로 친구가 산 옷의 3%가 적립돼요") + "</p>";
+      (code ? "<button type='button' class='ivbtn ivp' data-iv='copy'><i>🎁</i><span><b>공유하고 최대 10% 적립받기</b><small>내 링크(" + code + ")를 복사해요</small></span></button>"
+            : "<a class='ivbtn ivp' href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'><i>🎁</i><span><b>공유하고 최대 10% 적립받기</b><small>1분 가입하고 내 수익 링크 만들기</small></span></a>") +
+      "<p class='ivnote'>" + (code ? "친구가 링크를 누른 날부터 30일 동안 사는 옷 모두 적립(등급별 3~10%) · 링크를 다시 보내면 30일이 다시 시작돼요" : "가입하면 내 링크로 친구가 산 옷의 3%가 적립돼요") + "</p>";
     iv.insertBefore(w, iv.firstChild);
     function url(){ var u = inp.value || location.origin + "/"; if (code && u.indexOf("pt=") < 0) u += (u.indexOf("?") < 0 ? "?" : "&") + "pt=" + code; return u.replace(/^http:/, "https:"); }
     function toast(t){ try { shCss(); shToast(t); } catch (e) { alert(t); } }
@@ -1183,9 +1183,9 @@
     shCss(); var f = shInfo(); if (!f.n) return;
     var o = document.createElement("div"); o.id = "dk-shs";
     o.innerHTML = "<div class='sh'><div class='tt'>제품 공유하기<button type='button' aria-label='닫기'>×</button></div>" +
-      "<div class='cd'><div class='hd'><i>포인트</i><b>" + (f.me ? "3% 적립 제공중" : "최대 3% 적립") + "</b></div>" +
+      "<div class='cd'><div class='hd'><i>포인트</i><b>" + (f.me ? "등급별 3~10% 적립" : "최대 10% 적립") + "</b></div>" +
       "<div class='ln'><input readonly value='" + f.link + "'><button type='button' class='cp' aria-label='링크 복사'>⧉</button></div>" +
-      (f.me ? "<p>이 링크로 친구가 구매하면 포인트를 받을 수 있어요!</p>" : "<p>다꾸파트너스에 1분 가입하면 내 링크로 공유하고 3% 포인트를 받아요. <a href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'>가입하기 ›</a></p>") +
+      (f.me ? "<p>이 링크로 친구가 구매하면 포인트를 받을 수 있어요!</p>" : "<p>다꾸파트너스에 1분 가입하면 내 링크로 공유하고 최대 10% 포인트를 받아요. <a href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'>가입하기 ›</a></p>") +
       "</div><button type='button' class='rw cp'><span>🔗</span>링크 복사하기</button><button type='button' class='rw ka'><span>💬</span>카카오톡 공유하기</button></div>";
     document.body.appendChild(o);
     var close = function(){ o.remove(); };
@@ -1201,7 +1201,7 @@
     var nm = ((h.querySelector("h1,h2") || {}).textContent || "").trim(); var br = nm.split(/\s+/)[0] || "";
     var r = document.createElement("div"); r.className = "dk-shrow";
     r.innerHTML = (br ? "<a class='br' href='/product/search.html?keyword=" + encodeURIComponent(br) + "'>" + br + "</a>" : "<span></span>") +
-      "<button type='button' class='dk-shbtn' aria-label='공유하기'>" + SHARE_SVG + "<span class='dk-shtip'>상품 링크 공유하고<br>최대 3% 포인트 받기</span></button>";
+      "<button type='button' class='dk-shbtn' aria-label='공유하기'>" + SHARE_SVG + "<span class='dk-shtip'>상품 링크 공유하고<br>최대 10% 포인트 받기</span></button>";
     h.insertBefore(r, h.firstChild);
     r.querySelector(".dk-shbtn").onclick = function(e){ e.preventDefault(); shOpen(); };
   }
@@ -1229,7 +1229,7 @@
         ? "<a class='pb p1' href='/myshop/index.html#dk-invite'><span class='t'>친구에게 다꾸키즈 알려주고<br><b>친구도 나도 적립금 500원</b></span><span class='r'><span class='c1'>친구 초대<em>500원</em></span><span class='c2'>나도<em>500원</em></span></span></a>"
         : "<a class='pb p1' href='/member/agreement.html'><span class='t'>아직 <b>회원가입</b> 안 했다면?<br>가입하면 <b>적립금 1,000원</b> 바로 지급</span><span class='r'><span class='c1'>가입 즉시<em>1,000원</em></span><span class='c2'>수신 동의<em>5% 쿠폰</em></span></span></a>") +
       "<a class='pb p2' href='/product/list.html?cate_no=54'><span class='t'>남대문 아동복을 집에서 편하게<br><b>5만원 이상 무료배송</b></span><span class='r'>5만원 이상<em>무료배송</em></span></a>" +
-      "<a class='pb p3' href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'><span class='t'><small>친구가 내 링크로 사면</small>포인트 3% 쏙쏙 받기 ›</span><span class='r'><i>P</i><i>P</i><i>P</i></span></a>" +
+      "<a class='pb p3' href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'><span class='t'><small>친구가 내 링크로 사면</small>포인트 최대 10% 쏙쏙 받기 ›</span><span class='r'><i>P</i><i>P</i><i>P</i></span></a>" +
       "<a class='pb p4' href='https://pf.kakao.com/_xhihNX' target='_blank' rel='noopener'><span class='t'>카카오톡 채널 친구 추가하고<br><b>신상·할인 소식 먼저 받기</b></span><span class='r'><i>💬</i></span></a>" +
       "<a class='pb p5' href='/product/coffee.html'><span class='t'><small>매달 선착순 30명</small><b>@dagguu.kids 태그하고<br>커피 받아가세요 ›</b></span><span class='r'>☕</span></a><a class='pb p5' href='/product/coffee.html?t=buy' style='background:#fff7e6'><span class='t'><small>구매 인증 기자단</small><b>산 옷 입은 사진 올리고<br>적립금 5,000원 받기 ›</b></span><span class='r'>🎁</span></a></div>";
     var w = document.createElement("div"); w.innerHTML = h; at.parentNode.insertBefore(w.firstChild, at);
@@ -1298,10 +1298,10 @@
   }
   function xmasMenuOff(){ var k = new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10); if (k <= XMAS_END) return; var a = document.querySelectorAll("a[href*='keyword=%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4'], a[href*='keyword=크리스마스']"); for (var i = 0; i < a.length; i++) { var li = a[i].closest("li"); (li || a[i]).style.display = "none"; } }
 
-  var CF_P = [["한 분당 한 번만 참여할 수 있어요.", "한 달에 한 번씩 참여할 수 있어요."], ["가입하지 않은 친구는 링크를 누른 뒤 7일 안의 구매만, 가입한 친구는 마지막 구매 후 1년 동안 사지 않으면 연결이 끝나요.", "가입하지 않은 친구는 링크를 누른 뒤 7일 안의 구매만, 가입한 친구는 링크를 누른 날부터 30일 동안의 구매가 적립돼요(링크를 다시 보내면 30일이 다시 시작돼요)."]];
+  var CF_P = [["링크까지 넣으면 3% 적립도 받아요", "링크까지 넣으면 최대 10% 적립도 받아요"], ["상품 금액의 3%", "상품 금액의 3~10%(등급별)"], ["한 분당 한 번만 참여할 수 있어요.", "한 달에 한 번씩 참여할 수 있어요."], ["가입하지 않은 친구는 링크를 누른 뒤 7일 안의 구매만, 가입한 친구는 마지막 구매 후 1년 동안 사지 않으면 연결이 끝나요.", "가입하지 않은 친구는 링크를 누른 뒤 7일 안의 구매만, 가입한 친구는 링크를 누른 날부터 30일 동안의 구매가 적립돼요(링크를 다시 보내면 30일이 다시 시작돼요)."]];
   var RV_DONE = 0;
   function reviewPage(){ if (RV_DONE || location.search.indexOf("t=buy") < 0) return; var cf = document.querySelector(".cf"); if (!cf) return; RV_DONE = 1; cf.style.visibility = "hidden"; fetch("https://www.dagguu.com/kids/skin/review.txt?v=" + Math.floor(Date.now() / 600000)).then(function (r) { return r.text(); }).then(function (t) { var d = document.createElement("div"); d.innerHTML = t; var st = d.querySelector("style"), nb = d.querySelector(".cf"), sc = d.querySelector("script"); if (!nb) { cf.style.visibility = ""; return; } if (st) document.head.appendChild(st); cf.parentNode.replaceChild(nb, cf); document.title = "다꾸키즈 구매 인증 기자단"; if (sc) { try { (new Function(sc.textContent))(); } catch (e) {} } window.scrollTo(0, 0); }).catch(function () { cf.style.visibility = ""; }); }
-  function recoFix(){ var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n; while ((n = w.nextNode())) { if (n.nodeValue && n.nodeValue.indexOf("12개월") >= 0 && n.nodeValue.indexOf("구매") >= 0) n.nodeValue = n.nodeValue.replace(/친구가 마지막으로 구매한 날부터 12개월 동안/g, "친구가 링크를 누른 날부터 30일 동안").replace(/12개월 동안 구매가 없으면 연결이 끝나요/g, "링크를 다시 보내면 30일이 다시 시작돼요"); } }
+  function recoFix(){ var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n; while ((n = w.nextNode())) { if (n.nodeValue && n.nodeValue.indexOf("3%") >= 0) n.nodeValue = n.nodeValue.replace(/상품 금액의 3% 적립/g, "상품 금액의 3~10% 적립(등급별)").replace(/3% 적립까지/g, "최대 10% 적립까지").replace(/구매하면 3% 적립/g, "구매하면 최대 10% 적립"); if (n.nodeValue && n.nodeValue.indexOf("12개월") >= 0 && n.nodeValue.indexOf("구매") >= 0) n.nodeValue = n.nodeValue.replace(/친구가 마지막으로 구매한 날부터 12개월 동안/g, "친구가 링크를 누른 날부터 30일 동안").replace(/12개월 동안 구매가 없으면 연결이 끝나요/g, "링크를 다시 보내면 30일이 다시 시작돼요"); } }
   function coffeeFix(){ if (location.pathname.indexOf("/myshop") === 0) { try { recoFix(); } catch (e) {} } try { reviewPage(); } catch (e) {} if (location.pathname.indexOf("/product/coffee.html") !== 0 || location.search.indexOf("t=buy") >= 0) return; var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n, t; while ((n = w.nextNode())) { t = n.nodeValue; if (!t || t.length < 3) continue; for (var k = 0; k < CF_P.length; k++) if (t.indexOf(CF_P[k][0]) >= 0) t = t.split(CF_P[k][0]).join(CF_P[k][1]); if (t !== n.nodeValue) n.nodeValue = t; } if (!document.getElementById("dk-rvlink")) { var pl = null, hs = document.querySelectorAll(".cf h2"); for (var q = 0; q < hs.length; q++) if (hs[q].textContent.indexOf("PLUS") >= 0) pl = hs[q]; if (pl) { var a = document.createElement("a"); a.id = "dk-rvlink"; a.href = "/product/coffee.html?t=buy"; a.style.cssText = "display:block;margin:22px 0 0;background:#fff7e6;border:1px solid #ffe2a8;border-radius:14px;padding:14px 16px;color:#5a3d00;text-decoration:none;font-size:14px"; a.innerHTML = "<b style='font-size:15px'>🎁 다꾸키즈에서 옷을 사셨나요?</b><br>배송 받은 옷 입은 사진을 올리면 <b>적립금 5,000원</b>을 드려요 ›"; pl.parentNode.insertBefore(a, pl); } } }
   // 리뷰 적립 배지(2026-11-14 시온님): 상품명 아래 "리뷰 쓰고 최대 1,000P 적립" → 누르면 상품후기 칸
   function reviewBadge(){

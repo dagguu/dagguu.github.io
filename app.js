@@ -1746,14 +1746,14 @@ function pMyView(){
 }
 /* ── 다꾸파트너스(2026-11-11 시온님): 다꾸키즈 상품별 수익 링크 → 판매액 3% 다꾸키즈 적립금(2026-11-11 시온님 10%→3%). DB = supabase/dp_partners.sql
    쇼핑몰 쪽: 카페24 스킨 footer.html 스크립트가 ?pt=코드 를 7일 쿠키로 기억 + dp_click + 로그인 회원 연결(dp_link), 주문완료(order_result.html #dkpt-order)에서 dp_order2(쿠키 또는 연결 회원, 마지막 링크 클릭 후 30일 — 2026-11-14 dp_members_30d.sql). supabase/dp_members.sql (2026-11-12). */
-var DP_RATE=3, DP_SHOP="https://dagguukids.com", DP_ITEMS=null, DP_Q="";
+var DP_RATE=3, DP_MY=3, DP_TIERS=[[0,3,"🌱","새싹 파트너"],[100000,5,"🌿","다꾸 파트너"],[300000,7,"🌳","우수 파트너"],[1000000,10,"👑","VIP 파트너"]], DP_SHOP="https://dagguukids.com", DP_ITEMS=null, DP_Q="";
 function dpView(){ return '<div class="pg dp" id="dpv"><div class="empty">불러오는 중…</div></div>'; }
-function dpHero(){ return '<section class="dphero"><small>🔗 다꾸키즈 수익 링크</small><h1>다꾸키즈 상품을 소개하고<br><em>판매액 '+DP_RATE+'%</em> 적립금 받아요</h1><p>내 수익 링크로 들어온 손님이 7일 안에 다꾸키즈에서 주문하면, 배송이 끝난 뒤 상품 금액의 '+DP_RATE+'%를 다꾸키즈 적립금으로 드려요. 내 링크로 가입한 친구는 링크를 누른 날부터 30일 동안 사는 옷이 모두 적립돼요.</p></section>'+
+function dpHero(){ return '<section class="dphero"><small>🔗 다꾸키즈 수익 링크</small><h1>다꾸키즈 상품을 소개하고<br><em>판매액 3~10%</em> 적립금 받아요</h1><p>내 수익 링크로 들어온 손님이 7일 안에 다꾸키즈에서 주문하면, 배송이 끝난 뒤 상품 금액의 3~10%(파트너 등급별)를 다꾸키즈 적립금으로 드려요. 내 링크로 가입한 친구는 링크를 누른 날부터 30일 동안 사는 옷이 모두 적립돼요.</p></section>'+
   '<div class="prhow"><div><b>1</b><span>파트너 가입</span></div><div><b>2</b><span>상품별 수익 링크로 소개</span></div><div><b>3</b><span>배송완료 뒤 적립금</span></div></div>'; }
 function dpRules(){ return '<section class="pjsec"><h2>꼭 확인해 주세요</h2><ul class="pjrule">'+
   '<li>소개 글 제목이나 첫 줄 맨 앞에 <b>#광고</b>를 꼭 적어요(공정위 추천·보증 심사지침).</li>'+
   '<li>보상은 다꾸키즈 적립금이에요. 다꾸키즈에서 5만원 이상 구매 시 사용할 수 있고, 현금으로 바꿀 수 없어요.</li>'+
-  '<li>상품 금액(배송비 제외) 기준 '+DP_RATE+'%, 배송완료되고 취소·반품이 없는 주문만 적립돼요.</li>'+
+  '<li>상품 금액(배송비 제외, 쿠폰·할인 뺀 결제 금액) 기준 등급별 3~10%, 배송완료되고 취소·반품이 없는 주문만 적립돼요.</li>'+
   '<li>본인 주문은 적립되지 않아요.</li>'+
   '<li>링크를 누른 뒤 7일 안의 주문이 내 실적이에요(같은 휴대폰·같은 앱 기준). 다른 파트너 링크를 나중에 누르면 그 파트너 실적이 돼요.</li>'+
   '<li>친구가 다꾸키즈에 회원가입할 때 <b>추천인 아이디</b> 칸에 내 다꾸키즈 아이디를 쓰거나, 내 링크로 들어와 가입(또는 로그인)하면 나와 연결돼요. 연결된 친구는 네이버 검색·다른 기기로 들어와 사도 내 실적이에요.</li>'+
@@ -1774,16 +1774,16 @@ var DP_CSS='<style id="dp-land-css">.dpl{margin:0 -16px}.dpl *{box-sizing:border
 var DP_ART='<svg viewBox="0 0 300 300"><rect x="70" y="20" width="160" height="300" rx="28" fill="#222"/><rect x="80" y="30" width="140" height="290" rx="20" fill="#fff"/><rect x="118" y="30" width="64" height="16" rx="8" fill="#222"/><text x="150" y="68" text-anchor="middle" font-size="11" font-weight="700" fill="#777">dagguukids.com</text><rect x="92" y="78" width="116" height="150" rx="12" fill="#ffe7b8"/>'+
  '<circle cx="150" cy="138" r="34" fill="#fff" stroke="#3b2a7a" stroke-width="4"/><circle cx="139" cy="134" r="3.5" fill="#3b2a7a"/><circle cx="161" cy="134" r="3.5" fill="#3b2a7a"/><path d="M140 147q10 9 20 0" fill="none" stroke="#3b2a7a" stroke-width="3.5" stroke-linecap="round"/><path d="M118 196q32-26 64 0v32h-64z" fill="#6a3fc8"/><text x="150" y="218" text-anchor="middle" font-size="13" font-weight="900" fill="#fff">DAKKU</text>'+
  '<text x="98" y="250" font-size="11.5" font-weight="800" fill="#4b55c9">#광고 #다꾸키즈</text><path d="M100 268c0-6 9-6 9 0 0-6 9-6 9 0 0 6-9 11-9 11s-9-5-9-11z" fill="#e8312f"/><circle cx="135" cy="268" r="6" fill="none" stroke="#333" stroke-width="2.2"/><path d="m152 262 12 6-12 6 3-6z" fill="none" stroke="#333" stroke-width="2.2" stroke-linejoin="round"/>'+
- '<g stroke="#3b2a7a" stroke-width="4"><circle cx="64" cy="96" r="30" fill="#ffd84d"/><circle cx="246" cy="70" r="26" fill="#ffd84d"/><circle cx="252" cy="196" r="24" fill="#ffd84d"/><circle cx="56" cy="214" r="22" fill="#ffd84d"/></g><g font-weight="900" fill="#3b2a7a" text-anchor="middle"><text x="64" y="104" font-size="22">3%</text><text x="246" y="78" font-size="20">P</text><text x="252" y="203" font-size="17">₩</text><text x="56" y="221" font-size="16">D</text></g>'+
+ '<g stroke="#3b2a7a" stroke-width="4"><circle cx="64" cy="96" r="30" fill="#ffd84d"/><circle cx="246" cy="70" r="26" fill="#ffd84d"/><circle cx="252" cy="196" r="24" fill="#ffd84d"/><circle cx="56" cy="214" r="22" fill="#ffd84d"/></g><g font-weight="900" fill="#3b2a7a" text-anchor="middle"><text x="64" y="104" font-size="19">10%</text><text x="246" y="78" font-size="20">P</text><text x="252" y="203" font-size="17">₩</text><text x="56" y="221" font-size="16">D</text></g>'+
  '<g fill="#3b2a7a"><path d="m40 40 4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/><path d="m262 128 3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/><path d="m200 250 3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/></g></svg>';
 function dpLand(state){
   var cta=state==="guest"?"다꾸파트너스 함께하기":"수익 링크 만들기";
   return DP_CSS+'<div class="dpl">'+
    '<section class="s1"><small>다꾸파트너스 프로그램</small><h1>다꾸키즈와 함께 할<br>파트너를<br>모집합니다.</h1><p>다꾸파트너스는 다꾸키즈 회원이라면<br>누구나 참여할 수 있는 적립 프로그램이에요.<br>SNS, 블로그, 카페, 단톡방 등에<br>링크를 공유하고 적립금을 받아 보세요!</p><div class="art">'+DP_ART+'</div></section>'+
-   '<section class="s2"><h2>상품 링크를 공유하고,<br>적립금을 받아 보세요!</h2><p>상품 상세 화면의 공유 버튼이나 이 화면에서<br>내 수익 링크를 복사해 공유하면, 그 링크로<br>팔린 상품 금액의 '+DP_RATE+'%가 적립금으로 쌓여요.</p><button type="button" data-dpgo="'+state+'">'+cta+'</button></section>'+
-   '<section class="s3"><span class="pill">기본 가이드</span><h3>수익 링크는 이렇게 복사해요!</h3><ol><li>다꾸키즈 상품 화면의 <b>공유하기</b> 버튼 또는 다꾸파트너스 마이 화면에서 발급받기<div class="mock"><div><b>제품 공유하기</b><i>'+DP_RATE+'% 적립</i><code>dagguukids.com/…&amp;pt=내이름</code><em>🔗 링크 복사하기<br>💬 카카오톡 공유하기</em></div><div><b>다꾸파트너스</b><em>적립 예정</em><strong>3,240원</strong><em>최근 30일 클릭 · 주문</em></div></div><p style="margin:6px 0 0;font-size:11.5px;font-weight:400;color:#999">* 화면 예시예요. 실제 숫자가 아니에요.</p></li><li>내가 운영하는 SNS, 블로그, 카페, 단톡방 등에 복사한 링크를 공유하면 끝!</li></ol></section>'+
+   '<section class="s2"><h2>상품 링크를 공유하고,<br>적립금을 받아 보세요!</h2><p>상품 상세 화면의 공유 버튼이나 이 화면에서<br>내 수익 링크를 복사해 공유하면, 그 링크로<br>팔린 상품 금액의 3~10%(등급별)가 적립금으로 쌓여요.</p><button type="button" data-dpgo="'+state+'">'+cta+'</button></section>'+
+   '<section class="s3"><span class="pill">기본 가이드</span><h3>수익 링크는 이렇게 복사해요!</h3><ol><li>다꾸키즈 상품 화면의 <b>공유하기</b> 버튼 또는 다꾸파트너스 마이 화면에서 발급받기<div class="mock"><div><b>제품 공유하기</b><i>최대 10% 적립</i><code>dagguukids.com/…&amp;pt=내이름</code><em>🔗 링크 복사하기<br>💬 카카오톡 공유하기</em></div><div><b>다꾸파트너스</b><em>적립 예정</em><strong>3,240원</strong><em>최근 30일 클릭 · 주문</em></div></div><p style="margin:6px 0 0;font-size:11.5px;font-weight:400;color:#999">* 화면 예시예요. 실제 숫자가 아니에요.</p></li><li>내가 운영하는 SNS, 블로그, 카페, 단톡방 등에 복사한 링크를 공유하면 끝!</li></ol></section>'+
    '<section class="s4"><h3>리워드 가이드</h3><ul>'+
-    '<li>적립금은 <b>상품 금액(배송비 제외)의 '+DP_RATE+'%</b>예요.</li>'+
+    '<li>적립금은 <b>상품 금액(배송비 제외)의 3~10%</b>예요. 내 링크로 팔린 누적 금액에 따라 등급이 올라가요.</li>'+dpTierTable()+''+
     '<li><b>배송이 끝나고 취소·반품이 없는 주문</b>을 확인한 뒤 적립돼요.</li>'+
     '<li><b>링크를 누른 뒤 7일 안의 주문</b>이 내 실적이에요. 다른 파트너 링크를 나중에 누르면 그 파트너 실적이 돼요.</li>'+
     '<li>내 링크로 들어와 <b>가입한 친구</b>는 링크를 누른 날부터 <b>30일 동안</b> 사는 옷이 모두 내 실적이에요. 링크를 다시 보내면 30일이 다시 시작돼요.</li>'+
@@ -1848,9 +1848,15 @@ function dpInit(){
   });
 }
 function dpLink(me,pno){ return DP_SHOP+(pno?"/product/detail.html?product_no="+pno+"&pt=":"/?pt=")+me.code; }
+function dpTierOf(sales){ var t=DP_TIERS[0]; DP_TIERS.forEach(function(x){ if(sales>=x[0]) t=x; }); return t; }
+function dpTierTable(){ return '<li style="list-style:none;margin-left:-18px"><table class="dptier"><tr><th>등급</th><th>적립</th><th>조건(내 링크로 팔린 누적 금액)</th></tr>'+DP_TIERS.map(function(x){ return '<tr><td>'+x[2]+' '+x[3]+'</td><td><b>'+x[1]+'%</b></td><td>'+(x[0]?won(x[0])+' 이상':'가입하면 바로')+'</td></tr>'; }).join("")+'</table><small style="color:#888">배송완료·취소/반품 없는 주문만 누적돼요. 오른 등급은 내려가지 않고, 등급이 오른 다음 주문부터 새 비율이 적용돼요. 1+1·특가 상품은 최대 5%, 가족·지인 회원가 주문은 적립되지 않아요.</small></li>'; }
+function dpTierBox(d){ var sales=+d.sales||0, t=dpTierOf(sales), i=DP_TIERS.indexOf(t), nx=DP_TIERS[i+1];
+  return '<section class="pjsec dptbox"><h2>'+t[2]+' 내 등급 · '+t[3]+' <b style="color:#6a3fc8">'+t[1]+'%</b></h2>'+
+    (nx?'<p class="dpnote">'+nx[2]+' '+nx[3]+'('+nx[1]+'%)까지 <b>'+won(nx[0]-sales)+'</b> 남았어요</p><div class="dpbar"><i style="width:'+Math.min(100,Math.round((sales-t[0])/(nx[0]-t[0])*100))+'%"></i></div>':'<p class="dpnote">가장 높은 등급이에요. 고마워요 💜</p>')+
+    '<p class="dpnote" style="color:#999">내 링크로 팔린 누적 금액 '+won(sales)+'</p><details class="faq"><summary>등급표 보기</summary><ul style="padding-left:18px">'+dpTierTable()+'</ul></details></section>'; }
 function dpHome(v,me){
   v.innerHTML='<section class="dphero sm"><small>🔗 다꾸키즈 수익 링크</small><h1>'+esc(nick())+'님의 수익 링크</h1><p>적립금 받는 다꾸키즈 회원: <b>'+esc(me.shop_id)+'</b> <button class="lnk" data-dpshop>바꾸기</button></p></section>'+
-    '<div class="dpstat" id="dpstat"><div><b>-</b><span>최근 30일 클릭</span></div><div><b>-</b><span>주문</span></div><div><b>-</b><span>적립 예정</span></div><div><b>-</b><span>지급 완료</span></div></div>'+
+    '<div class="dpstat" id="dpstat"><div><b>-</b><span>최근 30일 클릭</span></div><div><b>-</b><span>주문</span></div><div><b>-</b><span>적립 예정</span></div><div><b>-</b><span>지급 완료</span></div></div><div id="dptier"></div>'+
     (me.status!=="active"?'<div class="empty">지금은 링크가 멈춰 있어요. 카톡 채널로 문의해 주세요.</div>':'')+
     '<section class="pjsec"><h2>쇼핑몰 전체 링크</h2><div class="dplk"><code>'+esc(dpLink(me))+'</code><button class="b" data-dpcopy="'+esc(dpLink(me))+'">복사</button></div></section>'+
     '<section class="pjsec"><h2>다꾸키즈에서 바로 공유하기</h2><p class="dpnote">아래 버튼을 한 번 누르면, 이 휴대폰으로 다꾸키즈 상품을 볼 때마다 구매 버튼 아래에 <b>내 수익 링크 복사·공유</b> 버튼이 생겨요. 휴대폰·브라우저마다 한 번씩 눌러 주세요.</p><a class="b" style="display:block;text-align:center;margin-top:8px" target="_blank" rel="noopener" href="'+esc(DP_SHOP+"/?dpme="+me.code)+'">다꾸키즈에서 공유 버튼 켜기 ›</a></section>'+
@@ -1858,7 +1864,7 @@ function dpHome(v,me){
     '<section class="pjsec"><h2>최근 주문</h2><div id="dporders"><div class="empty">불러오는 중…</div></div></section>'+dpRules();
   plainHeads(v);
   SB.rpc("dp_stats").then(function(r){ var d=r.data||{}, el=document.getElementById("dpstat"); if(!el) return;
-    el.innerHTML='<div><b>'+(d.clicks30||0)+'</b><span>최근 30일 클릭</span></div>'+(d.members!=null?'<div><b>'+d.members+'명</b><span>연결된 친구</span></div>':'')+'<div><b>'+(d.orders||0)+'</b><span>주문</span></div><div><b>'+won(d.approved)+'</b><span>적립 예정</span></div><div><b>'+won(d.paid)+'</b><span>지급 완료</span></div>'; });
+    el.innerHTML='<div><b>'+(d.clicks30||0)+'</b><span>최근 30일 클릭</span></div>'+(d.members!=null?'<div><b>'+d.members+'명</b><span>연결된 친구</span></div>':'')+'<div><b>'+(d.orders||0)+'</b><span>주문</span></div><div><b>'+won(d.approved)+'</b><span>적립 예정</span></div><div><b>'+won(d.paid)+'</b><span>지급 완료</span></div>'; if(d.rate){ DP_MY=Math.round(+d.rate*100); dpPaint(me); } var tb=document.getElementById("dptier"); if(tb) tb.innerHTML=dpTierBox(d); });
   SB.from("dp_orders").select("order_id,amount,status,reward,created_at").order("created_at",{ascending:false}).limit(20).then(function(r){ var el=document.getElementById("dporders"); if(!el) return; var L=r.data||[];
     var ST={pending:"확인 중",approved:"적립 예정",paid:"적립금 지급",rejected:"제외"};
     el.innerHTML=L.length?L.map(function(o){ return '<div class="pjmyr"><span><b>'+esc(String(o.created_at).slice(0,10))+' 주문</b><small>상품 '+won(o.amount)+(o.reward?' · 적립 '+won(o.reward):'')+'</small></span><i class="st-'+esc(o.status)+'">'+esc(ST[o.status]||o.status)+'</i></div>'; }).join(""):'<div class="empty">아직 주문이 없어요. 링크를 소개해 보세요!</div>'; });
@@ -1877,7 +1883,7 @@ function dpPaint(me){
   var el=document.getElementById("dpitems"); if(!el||!DP_ITEMS) return;
   var q=DP_Q.trim().toLowerCase(), L=DP_ITEMS.filter(function(p){ return !q||p.name.toLowerCase().indexOf(q)>=0; }).slice(0,60);
   el.innerHTML=L.length?L.map(function(p){ var u=dpLink(me,p.no);
-    return '<div class="dpit">'+(p.img?'<img src="'+esc(p.img)+'" alt="" loading="lazy">':'<span class="dpno"></span>')+'<div><b>'+esc(p.name)+'</b><small>'+won(p.price)+' · 적립 약 '+won(Math.floor(p.price*DP_RATE/1000)*10)+'</small>'+
+    return '<div class="dpit">'+(p.img?'<img src="'+esc(p.img)+'" alt="" loading="lazy">':'<span class="dpno"></span>')+'<div><b>'+esc(p.name)+'</b><small>'+won(p.price)+' · 적립 약 '+won(Math.floor(p.price*DP_MY/1000)*10)+'</small>'+
       '<div class="dpbt"><button class="b pri" data-dpcopy="'+esc(u)+'">수익 링크 복사</button><a class="b" href="'+esc(DP_SHOP+"/product/detail.html?product_no="+p.no)+'" target="_blank" rel="noopener">상품 보기</a></div></div></div>'; }).join(""):'<div class="empty">맞는 상품이 없어요</div>';
 }
 document.addEventListener("click",function(e){
@@ -1896,14 +1902,16 @@ function dpAdmin(v){
     var P={}; (R[1].data||[]).forEach(function(p){ P[p.code]=p; }); var L=R[0].data||[];
     var ST={pending:"확인 중",approved:"적립 예정",rejected:"제외",paid:"지급 완료"};
     sec.innerHTML='<h2>다꾸키즈 수익 링크 주문 ('+L.length+')</h2><p class="mysub">카페24 주문 관리에서 배송완료·취소/반품 없음·본인 주문 아님을 확인하고 승인 → 카페24 고객 관리에서 그 아이디에 적립금 지급 → "지급 완료". 파트너 '+(R[1].data||[]).length+'명</p>'+
-      (L.length?L.map(function(o){ var pt=P[o.code]||{}, bt=function(s,t){ return '<button class="b" data-dpa="'+esc(o.order_id)+'" data-s="'+s+'">'+t+'</button>'; };
-        return '<div class="paap"><p><b>'+esc(o.order_id)+'</b> <i class="st-'+esc(o.status)+'">'+esc(ST[o.status])+'</i><br>'+esc(String(o.created_at).slice(0,16).replace("T"," "))+' · 상품 '+won(o.amount)+(o.src==='member'?' · 연결된 회원 주문':o.src==='link'?' · 링크(7일) 주문':'')+' · 적립 '+won(o.reward||Math.floor(o.amount*DP_RATE/1000)*10)+'<br>파트너 '+esc(o.code)+' → 다꾸키즈 아이디 <b>'+esc(pt.shop_id||"?")+'</b> <button class="lnk" data-copy="'+esc(pt.shop_id||"")+'">복사</button></p>'+
-          '<div class="pjrow">'+(o.status==="pending"?bt("approved","승인(적립 확정)")+bt("rejected","제외"):o.status==="approved"?bt("paid","적립금 지급 완료")+bt("rejected","제외"):bt("pending","다시 확인 중으로"))+'</div></div>'; }).join(""):'<div class="empty">처리할 주문이 없어요</div>');
+      (L.length?L.map(function(o){ var pt=P[o.code]||{}, bt=function(s,t){ return '<button class="b" data-dpa="'+esc(o.order_id)+'" data-amt="'+(+o.amount||0)+'" data-s="'+s+'">'+t+'</button>'; };
+        return '<div class="paap"><p><b>'+esc(o.order_id)+'</b> <i class="st-'+esc(o.status)+'">'+esc(ST[o.status])+'</i><br>'+esc(String(o.created_at).slice(0,16).replace("T"," "))+' · 상품 '+won(o.amount)+(o.src==='member'?' · 연결된 회원 주문':o.src==='link'?' · 링크(7일) 주문':'')+' · 적립 '+(o.reward?won(o.reward)+(o.rate?' ('+Math.round(o.rate*100)+'%)':''):'승인 때 등급 비율로 계산')+'<br>파트너 '+esc(o.code)+' → 다꾸키즈 아이디 <b>'+esc(pt.shop_id||"?")+'</b> <button class="lnk" data-copy="'+esc(pt.shop_id||"")+'">복사</button></p>'+
+          '<div class="pjrow">'+(o.status==="pending"?bt("approved","승인(등급 비율)")+bt("approved5","승인(특가 최대 5%)")+bt("rejected","제외"):o.status==="approved"?bt("paid","적립금 지급 완료")+bt("rejected","제외"):bt("pending","다시 확인 중으로"))+'</div></div>'; }).join(""):'<div class="empty">처리할 주문이 없어요</div>');
   });
 }
 document.addEventListener("click",function(e){ var t=e.target.closest&&e.target.closest("[data-dpa]"); if(!t||!SB) return; e.preventDefault();
-  var note=t.dataset.s==="rejected"?(prompt("제외 이유(파트너에게는 안 보여요)","")||""):"";
-  SB.rpc("dp_admin_set",{p_order:t.dataset.dpa,p_status:t.dataset.s,p_note:note}).then(function(x){ if(x.error){ toast("처리하지 못했어요"); return; } toast("✅ 처리했어요"); padminInit(); }); });
+  var st=t.dataset.s, cap=null, amt=null; if(st==="approved5"){ st="approved"; cap=0.05; }
+  if(st==="approved"){ var a0=prompt("실제 결제 상품 금액(쿠폰·할인 뺀 금액, 배송비 제외). 가족·지인 회원가 주문이면 취소하고 '제외'를 눌러 주세요.",t.dataset.amt||""); if(a0===null) return; amt=parseInt(String(a0).replace(/[^0-9]/g,""),10)||null; }
+  var note=st==="rejected"?(prompt("제외 이유(파트너에게는 안 보여요)","")||""):"";
+  SB.rpc("dp_admin_set2",{p_order:t.dataset.dpa,p_status:st,p_note:note,p_amount:amt,p_cap:cap}).then(function(x){ if(x&&x.error&&/dp_admin_set2|function/.test(x.error.message||"")) return SB.rpc("dp_admin_set",{p_order:t.dataset.dpa,p_status:st,p_note:note}); return x; }).then(function(x){ if(x.error){ toast("처리하지 못했어요"); return; } toast("✅ 처리했어요"); padminInit(); }); });
 function pjobView(){ return '<div class="pg pjob" id="pjob"><a class="back" href="#/press">'+ico(I.back)+'<span>기자단</span></a><div class="empty">불러오는 중…</div></div>'; }
 function pjobInit(){
   var v=document.getElementById("pjob"), id=+state.pjId; if(!v) return;
