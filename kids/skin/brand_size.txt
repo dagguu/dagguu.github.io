@@ -1,0 +1,138 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="Layout_Dummy"></div>
+<!-- 다꾸키즈 브랜드별 추천 사이즈표 (원본: 저장소 design/brand_size.html, 스킨 1 /product/brand_size.html)
+     2026-11-15: 브랜드 목록 = 판매 중 상품의 브랜드 전부(https://www.dagguu.com/kids/brand_size.json, 다꾸 저장소 kids-brandsize.yml 이 매일 만듦).
+     표 숫자 = 아래 DATA (상세 사이즈표 사진을 보고 옮겨 적음), DATA 에 없으면 그 브랜드 상품 상세의 SIZE GUIDE 사진, 둘 다 없으면 "준비 중".
+     스킨 JS 에는 역슬래시를 쓰지 않는다(저장 때 바뀜). -->
+<style>
+.dkbs{max-width:860px;margin:0 auto;padding:20px 16px 60px;color:#222;font-family:'Noto Sans KR',sans-serif}
+.dkbs .hero{background:#f5f5f5;border-radius:16px;padding:22px 20px;margin:0 0 20px}
+.dkbs .hero .k{font-size:11px;letter-spacing:3px;color:#888;font-weight:700}
+.dkbs .hero h1{font-size:22px;font-weight:800;margin:6px 0 10px}
+.dkbs .hero p{font-size:13px;color:#666;line-height:1.75;margin:0}
+.dkbs .find label{display:block;font-size:13px;font-weight:700;margin:0 0 6px}
+.dkbs .find input{width:100%;box-sizing:border-box;height:46px;border:1px solid #ddd;border-radius:10px;padding:0 14px;font-size:16px;color:#222;background:#fff}
+.dkbs .cnt{font-size:12px;color:#888;margin:6px 0 14px}
+.dkbs details{border:1px solid #e6e6e6;border-radius:14px;margin:0 0 12px;background:#fff;overflow:hidden}
+.dkbs summary{list-style:none;cursor:pointer;padding:16px 18px;font-size:16px;font-weight:800;display:flex;align-items:center;gap:8px}
+.dkbs summary::-webkit-details-marker{display:none}
+.dkbs summary:before{content:"+";display:inline-block;width:18px;font-weight:400;color:#888}
+.dkbs details[open] summary:before{content:"–"}
+.dkbs summary small{font-size:11px;font-weight:600;color:#888;letter-spacing:1px}
+.dkbs summary .tag{margin-left:auto;font-size:11px;font-weight:600;color:#999;border:1px solid #e2e2e2;border-radius:20px;padding:3px 9px}
+.dkbs .in{padding:0 18px 18px}
+.dkbs .season{font-size:12px;color:#888;margin:0 0 8px}
+.dkbs .cap{font-size:13px;font-weight:700;margin:16px 0 6px}
+.dkbs table{width:100%;border-collapse:collapse;text-align:center;font-size:13px}
+.dkbs th{background:#f2f2f2;color:#222;font-weight:700;padding:10px 4px;font-size:12.5px}
+.dkbs td{padding:10px 4px;border-bottom:1px solid #eee;color:#333;white-space:nowrap}
+.dkbs td:first-child{font-weight:700;color:#222}
+.dkbs .memo{margin-top:12px;padding:12px 14px;border-radius:10px;background:#f7f7f7;font-size:12.5px;color:#666;line-height:1.75}
+.dkbs .memo div{padding-left:12px;text-indent:-12px}
+.dkbs .none{font-size:13.5px;color:#555;background:#f5f5f5;border-radius:10px;padding:16px;line-height:1.8;text-align:center}
+.dkbs .src{font-size:12px;color:#999;margin-top:10px}
+.dkbs .src a{color:#777}
+.dkbs .empty{display:none;text-align:center;font-size:13px;color:#999;padding:30px 0}
+.dkbs .pic{margin:6px 0 0}
+.dkbs .pic img{display:block;width:100%;height:auto;border-radius:10px;margin:0 0 8px;border:1px solid #eee}
+.dkbs .pic .pn{font-size:12px;color:#888;margin:0 0 8px}
+.dkbs .chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.dkbs .chips a{font-size:12.5px;color:#555;border:1px solid #e2e2e2;border-radius:20px;padding:5px 11px;text-decoration:none;background:#fff}
+.dkbs .chips a.on{background:#222;color:#fff;border-color:#222}
+</style>
+<div class="dkbs">
+  <div class="hero">
+    <div class="k">DAGGU KIDS · SIZE GUIDE</div>
+    <h1>브랜드별 추천 사이즈표</h1>
+    <p>같은 S·M 이라도 브랜드마다 크기가 달라요. 아이의 키·몸무게와 상품 종류를 함께 확인해 주세요.<br>시즌·상품에 따라 달라질 수 있으니, 상품 상세의 실측을 먼저 확인해 주세요.</p>
+  </div>
+  <div class="find"><label for="dkbs-q">브랜드 찾기</label><input id="dkbs-q" type="search" placeholder="예: 데일리베베, 피피" autocomplete="off"></div>
+  <div class="cnt" id="dkbs-cnt"></div>
+  <div id="dkbs-list"></div>
+  <div class="empty" id="dkbs-empty">찾는 브랜드가 없어요.</div>
+</div>
+<script>
+(function () {
+  var PARENT = 42;
+  var AVG = { cols: ["사이즈", "키", "몸무게", "나이(참고)"], rows: [
+    ["3호 (XS)", "75~85cm", "9~12kg", "12~24개월"], ["5호 (S)", "85~95cm", "12~14kg", "2~3세"], ["7호 (M)", "95~105cm", "14~17kg", "3~4세"],
+    ["9호 (L)", "105~115cm", "17~20kg", "5~6세"], ["11호 (XL)", "115~125cm", "20~24kg", "7~8세"], ["13호 (JS)", "125~135cm", "24~29kg", "8~9세"],
+    ["15호 (JM)", "135~145cm", "29~35kg", "10~11세"], ["17호 (JL)", "145~155cm", "35~42kg", "12~13세"]] };
+  // 브랜드 사이즈표 — 상세 사이즈표 사진에서 옮겨 적은 값 (season = 확인한 시즌)
+  var DATA = {
+    "데일리베베": { season: "2026 겨울", tables: [{ cap: "의류", cols: ["사이즈", "키", "몸무게"], rows: [
+        ["3호 (XS)", "75~85cm", "8~10kg"], ["5호 (S)", "85~95cm", "11~13kg"], ["7호 (M)", "95~100cm", "15~17kg"], ["9호 (L)", "100~110cm", "17~20kg"],
+        ["11호 (XL)", "110~120cm", "19~22kg"], ["13호 (JS)", "120~125cm", "23~27kg"], ["15호 (JM)", "125~135cm", "27~31kg"], ["17호 (JL)", "135~140cm", "32~35kg"]] }],
+      models: [["79cm", "10kg", "XS"], ["84cm", "11kg", "XS"], ["98cm", "14kg", "M"], ["108cm", "18.5kg", "L"]],
+      memo: ["평균 체형 기준이라 체형에 따라 차이가 날 수 있어요."] },
+    "피피": { season: "2026 겨울", tables: [{ cap: "베베 의류", cols: ["사이즈", "키", "몸무게"], rows: [
+        ["XXS (6M)", "65~70cm", "7~9kg"], ["XS (12M)", "75~80cm", "8~10kg"], ["S (18M)", "80~85cm", "10~12kg"], ["M (24M)", "85~90cm", "12~13kg"]] }],
+      models: [["78cm", "11kg", "XS"], ["82cm", "11kg", "S"], ["85cm", "11kg", "S"], ["92cm", "16kg", "M"]],
+      memo: ["재는 방법에 따라 1~2cm 차이가 있을 수 있어요.", "건조기는 줄어들 수 있어 자연 건조를 권해요."] },
+    "아오스타": { season: "2026 가을·겨울", tables: [
+        { cap: "일반 의류", cols: ["사이즈", "키", "몸무게", "나이(참고)"], rows: [["S", "약 70cm", "3~10kg", "0~1세"], ["M", "70~80cm", "7~12kg", "1~2세"], ["L", "80~95cm", "10~15kg", "2~3세"], ["XL", "90~105cm", "12~18kg", "3~4세"], ["XXL", "100~115cm", "15~24kg", "4~5세"]] },
+        { cap: "니트", cols: ["사이즈", "키", "몸무게", "나이(참고)"], rows: [["S", "약 80cm", "3~10kg", "0~2세"], ["M", "80~100cm", "10~15kg", "1~3세"], ["L", "90~115cm", "13~24kg", "3~5세"]] },
+        { cap: "슈트·블루머", cols: ["사이즈", "키", "몸무게", "나이(참고)"], rows: [["S", "약 66cm", "0~7kg", "0~6개월"], ["M", "66~73cm", "7~10kg", "6~12개월"], ["L", "73~85cm", "10~13kg", "12~24개월"]] }],
+      memo: ["아오스타는 S~XXL 표기가 일반 아동복보다 작게 나와요. 키를 기준으로 골라 주세요."] },
+    "제니베이직": { season: "2026 겨울", tables: [], models: [["162cm", "44kg", "6 사이즈"]],
+      memo: ["브랜드 사이즈표는 준비 중이에요. 모델 착용 정보를 참고해 주세요."] }
+  };
+  var list = document.getElementById("dkbs-list"), cnt = document.getElementById("dkbs-cnt"), empty = document.getElementById("dkbs-empty"), q = document.getElementById("dkbs-q");
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function table(t) {
+    return (t.cap ? '<div class="cap">' + esc(t.cap) + '</div>' : '') + '<table><tr>' + t.cols.map(function (c) { return '<th>' + esc(c) + '</th>'; }).join("") + '</tr>' +
+      t.rows.map(function (r) { return '<tr>' + r.map(function (c) { return '<td>' + esc(c) + '</td>'; }).join("") + '</tr>'; }).join("") + '</table>';
+  }
+  function models(m) {
+    if (!m || !m.length) return "";
+    return '<div class="cap">모델 착용 참고</div><table><tr><th>키</th><th>몸무게</th><th>착용 사이즈</th></tr>' +
+      m.map(function (r) { return '<tr><td>' + esc(r[0]) + '</td><td>' + esc(r[1]) + '</td><td>' + esc(r[2]) + '</td></tr>'; }).join("") + '</table>';
+  }
+  var FOOT = '<div>· 브랜드에서 권하는 사이즈라 다꾸키즈 평균 사이즈표와 다를 수 있어요.</div><div>· 고민되면 카카오톡 채널 <b>다꾸키즈</b>로 아이 키·몸무게·평소 사이즈를 알려 주세요.</div>';
+  function block(name, d, no, foot, b) {
+    var ready = d && (d.tables.length || (d.models && d.models.length));
+    var pic = !ready && b && b.img && b.img.length;
+    var body;
+    if (ready) {
+      body = '<div class="season">' + esc(d.season || "") + '</div>' + d.tables.map(table).join("") + models(d.models) +
+        '<div class="memo">' + (d.memo || []).map(function (x) { return '<div>· ' + esc(x) + '</div>'; }).join("") + (foot ? FOOT : "") + '</div>';
+    } else if (pic) {
+      body = '<div class="pic"><div class="pn">' + esc(b.pname || name) + ' 상세 사이즈표 기준이에요</div>' +
+        b.img.map(function (u) { return '<img loading="lazy" src="' + esc(u) + '" alt="' + esc(name) + ' 사이즈표">'; }).join("") + '</div>' +
+        '<div class="memo"><div>· 상품마다 실측이 다를 수 있어요. 사려는 상품 상세의 SIZE GUIDE 를 꼭 같이 확인해 주세요.</div>' + FOOT + '</div>';
+    } else {
+      body = '<div class="none">이 브랜드 사이즈표는 준비 중이에요.<br>위 <b>다꾸키즈 평균 사이즈표</b>를 참고하시고,<br>정확한 실측은 카카오톡 채널 <b>다꾸키즈</b>로 문의해 주세요.</div>';
+    }
+    if (b) {
+      var href = b.cate ? '/product/list.html?cate_no=' + b.cate : '/product/search.html?keyword=' + encodeURIComponent(name);
+      body += '<div class="src">' + (pic && b.pno ? '<a href="/product/detail.html?product_no=' + b.pno + '">사이즈표 상품 보기 ›</a> · ' : '') + '<a href="' + href + '">' + esc(name) + ' 상품 ' + b.cnt + '개 보러가기 ›</a></div>';
+    }
+    var id = no ? 'b' + no : (b ? 'n' + encodeURIComponent(name).split('%').join('') : 'bavg');
+    return '<details id="' + id + '" data-n="' + esc(name) + '" data-r="' + (ready || pic ? 1 : 0) + '"><summary>' + esc(name) + ' <small>SIZE</small>' + (ready || pic || !b ? '' : '<span class="tag">준비 중</span>') + '</summary><div class="in">' + body + '</div></details>';
+  }
+  function filter() {
+    var v = q.value.split(" ").join("").toLowerCase(), shown = 0;
+    [].forEach.call(list.querySelectorAll("details"), function (el) {
+      var ok = !v || el.getAttribute("data-n").split(" ").join("").toLowerCase().indexOf(v) >= 0;
+      el.style.display = ok ? "" : "none"; if (ok) shown++;
+      if (v && ok) el.open = true;
+    });
+    empty.style.display = shown ? "none" : "block";
+  }
+  fetch("https://www.dagguu.com/kids/brand_size.json?d=" + new Date().toISOString().slice(0, 10)).then(function (r) { return r.json(); }).then(function (j) {
+    var bs = j.brands || [];
+    bs.sort(function (a, b) {
+      var ra = (DATA[a.n] || (a.img && a.img.length)) ? 1 : 0, rb = (DATA[b.n] || (b.img && b.img.length)) ? 1 : 0;
+      return (rb - ra) || (b.cnt - a.cnt) || a.n.localeCompare(b.n, "ko");
+    });
+    list.innerHTML = block("다꾸키즈 평균 사이즈표", { season: "표준 체형 기준 평균값", tables: [AVG], memo: ["브랜드 사이즈표가 없을 때 참고해 주세요."] }, 0, false, null) +
+      bs.map(function (b) { return block(b.n, DATA[b.n], b.cate, true, b); }).join("");
+    var ok = bs.filter(function (b) { return DATA[b.n] || (b.img && b.img.length); }).length;
+    cnt.textContent = bs.length + "개 브랜드 · 사이즈표 " + ok + "개 · " + (j.at || "") + " 기준";
+    q.oninput = filter;
+    var h = location.hash, el = h && document.getElementById(h.slice(1));
+    if (el && el.tagName === "DETAILS") { el.open = true; setTimeout(function () { el.scrollIntoView(); }, 200); }
+    else { var f = list.querySelector("details"); if (f) f.open = true; }
+  });
+})();
+</script>
