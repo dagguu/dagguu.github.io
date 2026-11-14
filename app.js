@@ -1746,7 +1746,7 @@ function pMyView(){
 }
 /* ── 다꾸파트너스(2026-11-11 시온님): 다꾸키즈 상품별 수익 링크 → 판매액 3% 다꾸키즈 적립금(2026-11-11 시온님 10%→3%). DB = supabase/dp_partners.sql
    쇼핑몰 쪽: 카페24 스킨 footer.html 스크립트가 ?pt=코드 를 7일 쿠키로 기억 + dp_click + 로그인 회원 연결(dp_link), 주문완료(order_result.html #dkpt-order)에서 dp_order2(쿠키 또는 연결 회원, 마지막 링크 클릭 후 30일 — 2026-11-14 dp_members_30d.sql). supabase/dp_members.sql (2026-11-12). */
-var DP_RATE=3, DP_MY=3, DP_TIERS=[[0,3,"B","기본회원","직전 3개월 구매 10만원 미만"],[1,5,"D","다꾸회원","10만~30만원"],[2,7,"V","VIP","30만~50만원"],[3,10,"VV","VVIP","50만원 이상"]], DP_SHOP="https://dagguukids.com", DP_ITEMS=null, DP_Q="";
+var DP_RATE=3, DP_MY=3, DP_TIERS=[[0,3,"B","기본회원","직전 6개월 구매 10만원 미만"],[1,5,"D","다꾸회원","10만~30만원"],[2,7,"V","VIP","30만~50만원"],[3,10,"VV","VVIP","50만원 이상"]], DP_SHOP="https://dagguukids.com", DP_ITEMS=null, DP_Q="";
 function dpView(){ return '<div class="pg dp" id="dpv"><div class="empty">불러오는 중…</div></div>'; }
 function dpHero(){ return '<section class="dphero"><small>🔗 다꾸키즈 수익 링크</small><h1>다꾸키즈 상품을 소개하고<br><em>판매액 3~10%</em> 적립금 받아요</h1><p>내 수익 링크로 들어온 손님이 7일 안에 다꾸키즈에서 주문하면, 배송이 끝난 뒤 상품 금액의 3~10%(파트너 등급별)를 다꾸키즈 적립금으로 드려요. 내 링크로 가입한 친구는 링크를 누른 날부터 30일 동안 사는 옷이 모두 적립돼요.</p></section>'+
   '<div class="prhow"><div><b>1</b><span>파트너 가입</span></div><div><b>2</b><span>상품별 수익 링크로 소개</span></div><div><b>3</b><span>배송완료 뒤 적립금</span></div></div>'; }
@@ -1849,7 +1849,7 @@ function dpInit(){
 }
 function dpLink(me,pno){ return DP_SHOP+(pno?"/product/detail.html?product_no="+pno+"&pt=":"/?pt=")+me.code; }
 function dpTierOf(rate){ var t=DP_TIERS[0]; DP_TIERS.forEach(function(x){ if(Math.round((rate||0.03)*100)>=x[1]) t=x; }); return t; }
-function dpTierTable(){ return '<li style="list-style:none;margin-left:-18px"><table class="dptier"><tr><th>다꾸키즈 회원등급</th><th>수익 링크 적립</th><th>등급 기준(직전 3개월 구매금액)</th></tr>'+DP_TIERS.map(function(x){ return '<tr><td>'+x[3]+'</td><td><b>'+x[1]+'%</b></td><td>'+x[4]+'</td></tr>'; }).join("")+'</table><small style="color:#888">회원등급은 다꾸키즈 쇼핑몰 마이페이지에서 볼 수 있고, 매월 1일 직전 3개월 구매금액으로 정해져요. 적립은 주문을 승인할 때의 내 회원등급 비율로 계산해요. 배송완료·취소/반품 없는 주문만, 1+1·특가 상품은 최대 5%예요.</small></li>'; }
+function dpTierTable(){ return '<li style="list-style:none;margin-left:-18px"><table class="dptier"><tr><th>다꾸키즈 회원등급</th><th>수익 링크 적립</th><th>등급 기준(직전 6개월 구매금액)</th></tr>'+DP_TIERS.map(function(x){ return '<tr><td>'+x[3]+'</td><td><b>'+x[1]+'%</b></td><td>'+x[4]+'</td></tr>'; }).join("")+'</table><small style="color:#888">회원등급은 다꾸키즈 쇼핑몰 마이페이지에서 볼 수 있고, 매월 1일 직전 6개월 구매금액으로 정해져요. 적립은 주문을 승인할 때의 내 회원등급 비율로 계산해요. 배송완료·취소/반품 없는 주문만, 1+1·특가 상품은 최대 5%예요.</small></li>'; }
 function dpTierBox(d){ var t=dpTierOf(+d.rate||0.03);
   return '<section class="dptbox"><b>내 적립 비율 '+t[1]+'%</b> <span style="color:#888;font-size:13px">('+t[3]+' 기준)</span><p class="dpnote" style="color:#999">최근 승인된 주문 기준이에요. 다꾸키즈 회원등급이 오르면 다음 주문부터 비율이 올라가요.</p><details class="faq"><summary>등급표 보기</summary><ul style="padding-left:18px">'+dpTierTable()+'</ul></details></section>'; }
 function dpHome(v,me){

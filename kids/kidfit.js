@@ -73,10 +73,10 @@
 
   /* ---------- ⑲ 마이페이지 바잇미식 위 칸 + 멤버십 창 (2026-11-14 시온님) ---------- */
   var MS_G = [
-    { k: "basic", n: "기본회원", c: "B", bg: "#fff", fg: "#9a9a9a", bd: "#cfcfcf", cond: "직전 3개월 구매금액 10만원 미만", save: 1, link: 3 },
-    { k: "dakku", n: "다꾸회원", c: "D", bg: "#ede6ff", fg: "#6a3fc8", bd: "#c9b6f5", cond: "직전 3개월 구매금액 10만원 이상 30만원 미만", save: 2, link: 5 },
-    { k: "vip", n: "VIP", c: "V", bg: "#7b3fe4", fg: "#fff", bd: "#7b3fe4", cond: "직전 3개월 구매금액 30만원 이상 50만원 미만", save: 3, link: 7 },
-    { k: "vvip", n: "VVIP", c: "VV", bg: "#1d1235", fg: "#ffd86b", bd: "#1d1235", cond: "직전 3개월 구매금액 50만원 이상", save: 5, link: 10 }
+    { k: "basic", n: "기본회원", c: "B", bg: "#fff", fg: "#9a9a9a", bd: "#cfcfcf", cond: "직전 6개월 구매금액 10만원 미만", save: 1, link: 3 },
+    { k: "dakku", n: "다꾸회원", c: "D", bg: "#ede6ff", fg: "#6a3fc8", bd: "#c9b6f5", cond: "직전 6개월 구매금액 10만원 이상 30만원 미만", save: 2, link: 5 },
+    { k: "vip", n: "VIP", c: "V", bg: "#7b3fe4", fg: "#fff", bd: "#7b3fe4", cond: "직전 6개월 구매금액 30만원 이상 50만원 미만", save: 3, link: 7 },
+    { k: "vvip", n: "VVIP", c: "VV", bg: "#1d1235", fg: "#ffd86b", bd: "#1d1235", cond: "직전 6개월 구매금액 50만원 이상", save: 5, link: 10 }
   ];
   var MS_P = { k: "priv", c: "💜", bg: "#faf8ff", fg: "#6a3fc8", bd: "#e2dcf3", save: 1, link: 10, priv: 1 };
   function msOf(name){
@@ -114,12 +114,12 @@
         "<div style='text-align:center;padding:30px 0 26px'>" + msBadge(g, 76).replace("display:inline-flex", "display:inline-flex;margin:0 auto") +
           "<div style='margin-top:12px;font-size:24px;font-weight:800;color:#333'>" + esc(cur || "") + "</div>" +
           (g && g.priv ? "<div style='margin:14px auto 0;max-width:340px;display:grid;grid-template-columns:1fr 1fr;gap:8px'><div style='" + box + "'>결제 시 <b>" + g.save + "%</b> 적립</div><div style='" + box + "'>수익 링크 <b>" + g.link + "%</b> 적립</div></div>" : "") +
-          "<div style='margin-top:10px;font-size:13px;color:#888;line-height:1.6'>※ 등급은 직전 3개월 구매금액으로 매월 1일에 정해져요.<br>배송 완료된 주문만, 취소·반품 금액은 빼고 계산해요.</div></div>" +
+          "<div style='margin-top:10px;font-size:13px;color:#888;line-height:1.6'>※ 등급은 직전 6개월 구매금액으로 매월 1일에 정해져요.<br>배송 완료된 주문만, 취소·반품 금액은 빼고 계산해요.</div></div>" +
         "<div style='height:10px;background:#f4f4f6;margin:0 -18px'></div>" +
         "<div style='text-align:center;padding:28px 0 6px'><div style='font-size:24px;font-weight:800;color:#222'>Membership</div><div style='margin-top:6px;font-size:14px;color:#888'>등급에 따라 적립금과 수익 링크 혜택이 달라져요!</div></div>" +
         "<div style='text-align:center;font-size:18px;font-weight:800;color:#333;margin:22px 0 16px'>등급별 혜택안내</div>" + cards +
         "<div style='margin:24px -18px 0;background:#f4f4f6;padding:22px 18px;font-size:13px;color:#555;line-height:1.8'><div style='font-size:16px;font-weight:800;color:#222;margin-bottom:6px'>유의사항</div>" +
-          "- 직전 3개월 누적 실결제금액 기준으로 매월 1일 회원등급이 정해져요.<br>" +
+          "- 직전 6개월 누적 실결제금액 기준으로 매월 1일 회원등급이 정해져요.<br>" +
           "- 실결제금액은 배송 완료된 주문에서 쿠폰·적립금·배송비를 뺀 금액이에요. 취소·반품 금액은 빼요.<br>" +
           "- 적립금은 배송 완료 후 들어오고, 현금으로 바꾸거나 다른 사람에게 줄 수 없어요.<br>" +
           "- 수익 링크 적립은 다꾸파트너스에서 내 링크로 친구가 구매했을 때 받아요(본인 구매 제외).<br>" +
