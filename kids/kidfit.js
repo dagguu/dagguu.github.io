@@ -1535,8 +1535,7 @@
     if (document.getElementById("orderFixArea")) document.body.classList.add("dk-pd");
   }
 
-  // 검색 아이콘 아래 둥둥 말풍선 "🔥인기 검색어 1. 아오스타"(2026-11-15 시온님) — 글자는 검색창 인기 검색어(searchkw.js KW)와 같은 순서로 돌아감
-  var HOT_KW = ["아오스타", "피피", "제니베이직", "데일리베베", "가디건", "원피스", "기모", "후리스", "바지", "실내복"];
+  // 검색 아이콘 아래 둥둥 말풍선 "🔥인기 검색어"(2026-11-15 시온님, 검색어는 안 적음) — 누르면 검색창이 열리고 거기 인기 검색어 목록(searchkw.js)이 보임
   function hotBubble(){
     if (document.getElementById("dk-hkb")) return;
     var ic = document.querySelector("#header a.eSearch");
@@ -1546,34 +1545,25 @@
     st.textContent = "#dk-hkb{position:absolute;z-index:1001;transform:translateX(-50%);animation:dkhkb 2.2s ease-in-out infinite;white-space:nowrap}" +
       "@keyframes dkhkb{0%,100%{margin-top:0}50%{margin-top:-5px}}" +
       "#dk-hkb a{display:block;background:#6a3fc8;color:#fff;font-size:12px;font-weight:600;line-height:1;border-radius:999px;padding:7px 11px;text-decoration:none;box-shadow:0 4px 12px rgba(106,63,200,.3)}" +
-      "#dk-hkb a b{color:#fff35c;font-weight:700;margin-left:4px}" +
       "#dk-hkb:before{content:'';position:absolute;top:-5px;left:var(--tx,50%);transform:translateX(-50%);border:6px solid transparent;border-top:0;border-bottom-color:#6a3fc8}";
     document.head.appendChild(st);
     var w = document.createElement("div");
     w.id = "dk-hkb";
-    var i = 0;
-    w.innerHTML = "<a href='/product/search.html?keyword=" + encodeURIComponent(HOT_KW[0]) + "'>🔥인기 검색어<b>1. " + HOT_KW[0] + "</b></a>";
+    w.innerHTML = "<a href='javascript:;'>🔥인기 검색어</a>";
     if (getComputedStyle(hd).position === "static") hd.style.position = "relative";
     hd.appendChild(w);
-    var a = w.querySelector("a");
-    a.addEventListener("click", function(){ try { gtag("event", "search", {search_term: HOT_KW[i], place: "hot_bubble"}); } catch(e){} });
+    w.querySelector("a").addEventListener("click", function(e){ e.preventDefault(); try { gtag("event", "hot_bubble_click"); } catch(x){} ic.click(); });
     function place(){
       if (!ic.offsetParent) { w.style.display = "none"; return; }
       w.style.display = "";
       var r = (ic.querySelector("svg") || ic).getBoundingClientRect(), h = hd.getBoundingClientRect();
-      var cx = r.left + r.width / 2 - h.left, bw = w.offsetWidth || 150;
+      var cx = r.left + r.width / 2 - h.left, bw = w.offsetWidth || 110;
       var left = Math.min(Math.max(cx, bw / 2 + 8), h.width - bw / 2 - 8);
       w.style.left = left + "px";
       w.style.top = (r.bottom - h.top + 9) + "px";
       w.style.setProperty("--tx", (bw / 2 + cx - left) + "px");
     }
     place(); setTimeout(place, 800); window.addEventListener("resize", place);
-    setInterval(function(){
-      i = (i + 1) % HOT_KW.length;
-      a.href = "/product/search.html?keyword=" + encodeURIComponent(HOT_KW[i]);
-      a.querySelector("b").textContent = (i + 1) + ". " + HOT_KW[i];
-      place();
-    }, 2600);
   }
 
   function run(){ try { kakaoFab(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
