@@ -7,7 +7,7 @@ import json, re, time, datetime, urllib.request, urllib.parse
 API = "https://dagguu.cafe24api.com/api/v2"
 H = {"X-Cafe24-Client-Id": "JzTmuiBPItGvZ6KG8g3aPC"}
 ALIAS = {"콘con": "콘"}
-SAMPLE = 8          # 브랜드마다 사이즈표를 찾으려고 열어 보는 상품 수
+SAMPLE = 25         # 브랜드마다 사이즈표를 찾으려고 열어 보는 상품 수(최근 등록순)
 
 
 def get(path):
