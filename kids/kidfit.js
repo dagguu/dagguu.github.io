@@ -1490,6 +1490,8 @@
   }
   // 상단 메뉴(2026-11-14 시온님): 신상품 → ⏰타임특가, 1+1 다음에 0원체험단·기획상품(상품명에 "기획")
   var MENU_ADD = [["0원체험단", "/product/coffee.html", "#e0457b"], ["기획상품", "/product/search.html?keyword=%EA%B8%B0%ED%9A%8D", ""], ["🚚무료배송", "/product/list.html?cate_no=56", "#1f7a4d"]];
+  /* 적립금 사용 조건 3만원(2026-11-15): 스킨에 박힌 '5만원 이상 구매 시 사용' 글자를 화면에서 바꿈 */
+  function mileFix(){ var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n; while ((n = w.nextNode())) { var t = n.nodeValue; if (t && t.indexOf("5만원 이상") >= 0 && /사용|쓸 수/.test(t) && t.indexOf("무료배송") < 0) n.nodeValue = t.split("5만원 이상").join("3만원 이상"); } }
   function menuFix(){
     var a = document.querySelectorAll("#header a[href*='cate_no=54'], .dk-mnav a[href*='cate_no=54'], [data-ez-module^='menu-side'] a[href*='cate_no=54'], #aside a[href*='cate_no=54']"), i, w, n;
     for (i = 0; i < a.length; i++) { w = document.createTreeWalker(a[i], NodeFilter.SHOW_TEXT, null); while ((n = w.nextNode())) { if (n.nodeValue.indexOf("신상품") >= 0) n.nodeValue = n.nodeValue.replace(/💜?신상품💜?/, "⏰타임특가"); } }
@@ -1509,7 +1511,7 @@
       }
     }
   }
-  function run(){ try { menuFix(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  function run(){ try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
