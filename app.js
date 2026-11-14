@@ -1746,7 +1746,7 @@ function pMyView(){
 }
 /* ── 다꾸파트너스(2026-11-11 시온님): 다꾸키즈 상품별 수익 링크 → 판매액 3% 다꾸키즈 적립금(2026-11-11 시온님 10%→3%). DB = supabase/dp_partners.sql
    쇼핑몰 쪽: 카페24 스킨 footer.html 스크립트가 ?pt=코드 를 7일 쿠키로 기억 + dp_click + 로그인 회원 연결(dp_link), 주문완료(order_result.html #dkpt-order)에서 dp_order2(쿠키 또는 연결 회원, 마지막 링크 클릭 후 30일 — 2026-11-14 dp_members_30d.sql). supabase/dp_members.sql (2026-11-12). */
-var DP_RATE=3, DP_MY=3, DP_TIERS=[[0,3,"B","기본회원","직전 3개월 구매 50만원 미만"],[1,5,"D","다꾸회원","50만~100만원"],[2,7,"V","VIP","100만~200만원"],[3,10,"VV","VVIP","200만원 이상"]], DP_SHOP="https://dagguukids.com", DP_ITEMS=null, DP_Q="";
+var DP_RATE=3, DP_MY=3, DP_TIERS=[[0,3,"B","기본회원","직전 3개월 구매 10만원 미만"],[1,5,"D","다꾸회원","10만~30만원"],[2,7,"V","VIP","30만~50만원"],[3,10,"VV","VVIP","50만원 이상"]], DP_SHOP="https://dagguukids.com", DP_ITEMS=null, DP_Q="";
 function dpView(){ return '<div class="pg dp" id="dpv"><div class="empty">불러오는 중…</div></div>'; }
 function dpHero(){ return '<section class="dphero"><small>🔗 다꾸키즈 수익 링크</small><h1>다꾸키즈 상품을 소개하고<br><em>판매액 3~10%</em> 적립금 받아요</h1><p>내 수익 링크로 들어온 손님이 7일 안에 다꾸키즈에서 주문하면, 배송이 끝난 뒤 상품 금액의 3~10%(파트너 등급별)를 다꾸키즈 적립금으로 드려요. 내 링크로 가입한 친구는 링크를 누른 날부터 30일 동안 사는 옷이 모두 적립돼요.</p></section>'+
   '<div class="prhow"><div><b>1</b><span>파트너 가입</span></div><div><b>2</b><span>상품별 수익 링크로 소개</span></div><div><b>3</b><span>배송완료 뒤 적립금</span></div></div>'; }

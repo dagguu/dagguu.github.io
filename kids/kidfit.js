@@ -73,10 +73,10 @@
 
   /* ---------- ⑲ 마이페이지 바잇미식 위 칸 + 멤버십 창 (2026-11-14 시온님) ---------- */
   var MS_G = [
-    { k: "basic", n: "기본회원", c: "B", bg: "#fff", fg: "#9a9a9a", bd: "#cfcfcf", cond: "직전 3개월 구매금액 50만원 미만", save: 1, link: 3 },
-    { k: "dakku", n: "다꾸회원", c: "D", bg: "#ede6ff", fg: "#6a3fc8", bd: "#c9b6f5", cond: "직전 3개월 구매금액 50만원 이상 100만원 미만", save: 2, link: 5 },
-    { k: "vip", n: "VIP", c: "V", bg: "#7b3fe4", fg: "#fff", bd: "#7b3fe4", cond: "직전 3개월 구매금액 100만원 이상 200만원 미만", save: 3, link: 7 },
-    { k: "vvip", n: "VVIP", c: "VV", bg: "#1d1235", fg: "#ffd86b", bd: "#1d1235", cond: "직전 3개월 구매금액 200만원 이상", save: 5, link: 10 }
+    { k: "basic", n: "기본회원", c: "B", bg: "#fff", fg: "#9a9a9a", bd: "#cfcfcf", cond: "직전 3개월 구매금액 10만원 미만", save: 1, link: 3 },
+    { k: "dakku", n: "다꾸회원", c: "D", bg: "#ede6ff", fg: "#6a3fc8", bd: "#c9b6f5", cond: "직전 3개월 구매금액 10만원 이상 30만원 미만", save: 2, link: 5 },
+    { k: "vip", n: "VIP", c: "V", bg: "#7b3fe4", fg: "#fff", bd: "#7b3fe4", cond: "직전 3개월 구매금액 30만원 이상 50만원 미만", save: 3, link: 7 },
+    { k: "vvip", n: "VVIP", c: "VV", bg: "#1d1235", fg: "#ffd86b", bd: "#1d1235", cond: "직전 3개월 구매금액 50만원 이상", save: 5, link: 10 }
   ];
   function msOf(name){
     name = (name || "").replace(/\s/g, "");
