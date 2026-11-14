@@ -1313,7 +1313,7 @@
     for (i = 0; i < hs.length; i++) if (hs[i].textContent.indexOf("꼭 확인해 주세요") >= 0) nt = hs[i].nextElementSibling;
     if (nt && nt.tagName === "UL") { var li = document.createElement("li"); li.innerHTML = "<b>" + CS + "</b>가 되어 있어야 참여할 수 있어요. 동의 여부는 <a class='ig' href='/member/modify.html'>회원정보 수정</a>에서 확인·변경할 수 있고, 커피를 보내기 전에 확인해요. 언제든 동의를 철회할 수 있어요(철회하면 다음 참여부터 제외돼요)."; nt.insertBefore(li, nt.firstChild); }
     var ok = document.getElementById("cfOk");
-    if (ok && ok.parentNode) { var sp = document.createElement("span"); sp.innerHTML = " <b>다꾸키즈에 가입했고 쇼핑정보(문자·이메일) 수신에 동의했어요.</b>"; ok.parentNode.appendChild(sp); }
+    if (ok && ok.parentNode) { var lb = ok.parentNode, sp = document.createElement("span"); sp.innerHTML = "<b>다꾸키즈에 가입했고 쇼핑정보(문자·이메일) 수신에 동의했어요.</b> "; while (ok.nextSibling) sp.appendChild(ok.nextSibling); lb.appendChild(sp); }
     var f = document.getElementById("cfForm");
     if (f) {
       var bx = document.createElement("div"); bx.id = "dk-cfcs";
