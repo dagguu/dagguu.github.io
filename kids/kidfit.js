@@ -1450,8 +1450,14 @@
     for (i = 0; i < dts.length; i++) if (dts[i].textContent.indexOf("참여 대상") >= 0) {
       var dd = dts[i].nextElementSibling; if (dd) { var sm = document.createElement("small"); sm.style.color = "#6a3fc8"; sm.style.fontWeight = "700"; sm.textContent = CS + " 필수"; dd.appendChild(sm); }
     }
+    for (i = 0; i < dts.length; i++) if (dts[i].textContent.indexOf("혜택") >= 0) {
+      var bd = dts[i].nextElementSibling; if (bd && !bd.querySelector(".dk-cfdraw")) { var sb = document.createElement("small"); sb.className = "dk-cfdraw"; sb.style.cssText = "display:block;color:#c2408a;font-weight:700"; sb.textContent = "+ 추첨으로 다꾸키즈 아기옷 선물 🎁"; bd.appendChild(sb); }
+    }
+    var tb0 = document.querySelector(".tb");
+    if (tb0 && !document.getElementById("dk-cfgift")) { var gb = document.createElement("div"); gb.id = "dk-cfgift"; gb.style.cssText = "margin:0 0 16px;background:linear-gradient(90deg,#fff0f7,#f3ecff);border:1px solid #f3c6dd;border-radius:14px;padding:14px 16px;color:#5a2147;font-size:14px;line-height:1.6"; gb.innerHTML = "<b style='font-size:16px;color:#c2408a'>🎁 추첨 선물</b><br>인스타 코디 체험단에 참여하신 분 중 <b>추첨을 통해 다꾸키즈 아기옷</b>을 보내드려요!"; tb0.parentNode.insertBefore(gb, tb0); }
     var nt = null, hs = document.querySelectorAll("h2");
     for (i = 0; i < hs.length; i++) if (hs[i].textContent.indexOf("꼭 확인해 주세요") >= 0) nt = hs[i].nextElementSibling;
+    if (nt && nt.tagName === "UL" && !document.getElementById("dk-cfdrawli")) { var dl = document.createElement("li"); dl.id = "dk-cfdrawli"; dl.innerHTML = "<b>아기옷 추첨</b>은 그달 참여를 마친 분(커피 받은 분) 중에서 해요. 당첨되신 분께는 카카오톡 채널로 따로 연락드리고, 아이 사이즈를 여쭤본 뒤 다꾸키즈 옷을 보내드려요. 상품은 다꾸키즈가 골라요(고를 수 없어요)."; nt.appendChild(dl); }
     if (nt && nt.tagName === "UL") { var li = document.createElement("li"); li.innerHTML = "<b>" + CS + "</b>가 되어 있어야 참여할 수 있어요. 동의 여부는 <a class='ig' href='/member/modify.html'>회원정보 수정</a>에서 확인·변경할 수 있고, 커피를 보내기 전에 확인해요. 언제든 동의를 철회할 수 있어요(철회하면 다음 참여부터 제외돼요)."; nt.insertBefore(li, nt.firstChild); }
     var ok = document.getElementById("cfOk");
     if (nt && nt.tagName === "UL") {
