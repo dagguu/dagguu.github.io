@@ -1307,8 +1307,8 @@
   function reviewBadge(){
     var h = document.querySelector(".infoArea .headingArea h1, .infoArea .headingArea h2"); if (!h || document.getElementById("dk-rvb")) return;
     var a = document.createElement("a"); a.id = "dk-rvb"; a.href = "#prdReview";
-    a.style.cssText = "display:inline-flex;align-items:center;gap:6px;margin:0 0 10px;padding:6px 11px;border-radius:8px;background:#fff3e0;color:#f07a1a;font-size:13.5px;font-weight:700;text-decoration:none";
-    a.innerHTML = "<span style='display:inline-flex;width:18px;height:18px;border-radius:50%;background:#f7a046;color:#fff;font-size:11px;align-items:center;justify-content:center'>★</span>리뷰 쓰고 최대 1,000P 적립";
+    a.style.cssText = "display:flex;width:max-content;align-items:center;gap:4px;margin:2px 0 10px;padding:3px 8px;border-radius:6px;background:#fff3e0;color:#f07a1a;font-size:11.5px;font-weight:600;line-height:1.4;text-decoration:none";
+    a.innerHTML = "<span style='display:inline-flex;width:13px;height:13px;border-radius:50%;background:#f7a046;color:#fff;font-size:8px;align-items:center;justify-content:center'>★</span>리뷰 쓰고 최대 1,000P 적립";
     a.onclick = function(e){ var t = document.getElementById("prdReview") || document.querySelector(".xans-product-review"); if (t) { e.preventDefault(); t.scrollIntoView({ behavior: "smooth", block: "start" }); } };
     h.parentNode.insertBefore(a, h.nextSibling);
   }
