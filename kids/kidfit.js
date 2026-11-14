@@ -968,7 +968,7 @@
       out.sort(function(x, y){ return x.end - y.end; });
       out = out.slice(0, bmMobile() ? 3 : 6);
       if (!out.length) { box.parentNode && box.parentNode.removeChild(box); return; }
-      box.innerHTML = "<div class='hd'><h3>오늘의 신상 할인</h3><a href='/product/list.html?cate_no=54' aria-label='신상품 전체'>›</a></div><div class='dli'>" + out.map(function(x){
+      box.innerHTML = "<div class='hd'><h3>오늘의 신상 할인</h3><a href='/product/list.html?cate_no=54' aria-label='신상품 전체' style='font-size:14px;color:#888;text-decoration:none;white-space:nowrap'>더보기 ›</a></div><div class='dli'>" + out.map(function(x){
         var pc = Math.round((1 - x.s / x.p) * 100);
         return "<a class='di' href='" + x.u + "'><span class='im'><img src='" + x.im + "' alt='' loading='lazy'><u>NEW</u></span><span class='tx'><span class='tm' data-end='" + x.end + "'></span>" +
           "<span class='pc'>" + pc + "%</span><span class='nm'>" + esc(x.nm) + "</span><div class='pr'>" + won(x.s) + "<s>" + won(x.p).replace("원", "") + "</s></div><div class='tg'><b class='r'>신상할인</b><b>3일 한정</b></div></span></a>";
