@@ -2028,6 +2028,25 @@ document.addEventListener("change",function(e){ if(!e.target||e.target.id!=="pjk
   f.text().then(function(t){ var k=t.replace("DAGGUU-PAYKEY-PRIVATE","").replace(/\s+/g,""); return crypto.subtle.importKey("pkcs8",pjUnB64(k),{name:"RSA-OAEP",hash:"SHA-256"},false,["decrypt"]); })
    .then(function(k){ PJ_PRV=k; toast("🔓 출금 자료를 열었어요"); [].forEach.call(document.querySelectorAll("[data-wdenc]"),function(el){ pjDec(el.getAttribute("data-wdenc")).then(function(d){ el.innerHTML=d?'<b>'+esc(d.n)+'</b> · '+esc(d.r)+'<br>'+esc(d.b)+' '+esc(d.a)+' <button class="lnk" data-copy="'+esc(d.b+' '+d.a+' '+d.n)+'">복사</button>':'열 수 없어요(다른 키로 잠김)'; }); }); },function(){ toast("키 파일이 맞지 않아요"); });
 });
+/* 다꾸키즈 체험단 신청(2026-11-15 시온님 "신청완료, 내가 사이트에서 확인") — supabase/exp_apps.sql, 쇼핑몰 kidfit.js expPage 가 exp_apply 로 저장 */
+function expAdmin(v){
+  var box=document.getElementById("expadm"); if(!box){ box=document.createElement("div"); box.id="expadm"; box.className="pg padm"; v.parentNode.insertBefore(box,v); }
+  SB.rpc("exp_purge").then(function(){});
+  SB.rpc("exp_admin_list").then(function(r){
+    if(r.error){ box.innerHTML='<section class="pane"><h2>다꾸키즈 체험단 신청</h2><div class="empty">supabase/exp_apps.sql 을 SQL Editor 에서 먼저 실행해 주세요</div></section>'; return; }
+    var L=r.data||[], g={}; L.forEach(function(a){ (g[a.exp_id]=g[a.exp_id]||{t:a.exp_title,l:[]}).l.push(a); });
+    var ST={applied:"신청",selected:"선정",rejected:"미선정",posted:"게시 완료"};
+    var h='<h1>다꾸키즈 체험단 신청 <small style="font-size:14px;color:#888">'+L.length+'명</small></h1>';
+    if(!L.length) h+='<div class="empty">아직 신청이 없어요</div>';
+    Object.keys(g).forEach(function(k){ var o=g[k], sel=o.l.filter(function(a){ return a.status==="selected"||a.status==="posted"; }).length;
+      h+='<section class="pane"><h2>'+esc(o.t||k)+' <small style="color:#888">신청 '+o.l.length+' · 선정 '+sel+'</small></h2>'+o.l.map(function(a){
+        var ph=String(a.phone||"").replace(/^(\d{3})(\d{3,4})(\d{4})$/,"$1-$2-$3");
+        return '<div class="pawd" style="flex-wrap:wrap;gap:6px"><span style="flex:1 1 220px"><b>'+esc(a.ig)+'</b> · '+esc(ph)+(a.age?' · '+esc(a.age):'')+(a.member?' · '+esc(a.member):'')+'<br><small style="color:#888">'+new Date(a.created_at).toLocaleString("ko-KR")+' · <b style="color:#6a3fc8">'+ST[a.status]+'</b></small></span>'+
+          ['selected','rejected','posted'].map(function(st){ return '<button class="b sm'+(a.status===st?' pri':'')+'" data-expset="'+a.id+'" data-st="'+st+'">'+ST[st]+'</button>'; }).join('')+'</div>'; }).join('')+'</section>'; });
+    box.innerHTML=h;
+    box.onclick=function(e){ var t=e.target.closest("[data-expset]"); if(!t) return; SB.rpc("exp_admin_set",{p_id:+t.dataset.expset,p_status:t.dataset.st,p_note:null}).then(function(x){ if(x.error){ toast("처리하지 못했어요"); return; } toast("✅ "+ST[t.dataset.st]); expAdmin(v); }); };
+  });
+}
 /* 관리자 #/padmin (press_admins 에 있는 계정만) */
 function padminView(){ return '<div class="pg padm" id="padm"><h1>기자단 관리</h1><div class="empty">불러오는 중…</div></div>'; }
 function padminInit(){
@@ -2037,6 +2056,7 @@ function padminInit(){
     SB.rpc("is_press_admin").then(function(r){
       if(r.data) SB.rpc("press_purge").then(function(){});
       if(!r.data){ v.innerHTML='<h1>기자단 관리</h1><div class="empty">관리자만 볼 수 있어요</div>'; return; }
+      try{ expAdmin(v); }catch(e){}
       Promise.all([SB.from("press_jobs").select("*").order("created_at",{ascending:false}).limit(50), SB.from("press_apps").select("*").order("created_at",{ascending:false}).limit(500), SB.from("press_withdrawals").select("*").eq("status","requested").order("created_at"), SB.from("press_files").select("*")]).then(function(R){
         var jobs=R[0].data||[], apps=R[1].data||[], wds=R[2].data||[], files={}; (R[3].data||[]).forEach(function(f){ files[f.job_id]=f; });
         var ids=apps.map(function(a){ return a.user_id; }).concat(wds.map(function(w){ return w.user_id; }));

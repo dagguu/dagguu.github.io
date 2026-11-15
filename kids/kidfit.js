@@ -1494,7 +1494,8 @@
      신청자 수는 실제 기록이 없어 보여 주지 않는다. 신청은 카톡 채널로 복사해 보내기(커피 이벤트와 같은 방식). */
   var EXP_DONE = 0;
   function expPage(){
-    if (EXP_DONE || location.pathname.indexOf("/product/coffee.html") !== 0 || !/[?&]t=exp/.test(location.search)) return false;
+    if (location.pathname.indexOf("/product/coffee.html") !== 0 || !/[?&]t=exp/.test(location.search)) return false;
+    if (EXP_DONE) return true;
     var cf = document.querySelector(".cf"); if (!cf) return true;
     EXP_DONE = 1; cf.style.visibility = "hidden";
     var id = (location.search.match(/[?&]id=([a-z0-9-]+)/) || [])[1] || "";
@@ -1523,7 +1524,7 @@
           "<div style='padding:14px 16px 0;font-size:14px;color:#555'>체험단 <b>" + (items.length + 1) + "</b>개</div><div class='dkx-g'>" +
           "<a class='dkx-c' href='/product/coffee.html'><div class='dkx-ph' style='background:linear-gradient(135deg,#f3ecff,#ffe3f1);display:flex;align-items:center;justify-content:center;font-size:64px'>☕<span class='dkx-d'>매달 진행</span></div><div class='dkx-b'>다꾸키즈</div><div class='dkx-t'>인스타 코디 체험단 · 커피 기프티콘</div><div class='dkx-n'>매달 선착순 30명</div></a>";
         items.forEach(function(x, i){ h += "<a class='dkx-c' href='/product/coffee.html?t=exp&id=" + x.id + "'><div class='dkx-ph'><img data-i='" + i + "' alt=''><span class='dkx-d'>" + badge(x) + "</span></div><div class='dkx-b' data-b='" + i + "'>" + esc(x.brand) + "</div><div class='dkx-t' data-t='" + i + "'>" + esc(x.title) + "</div><div class='dkx-n'>" + x.n + "명 모집</div></a>"; });
-        h += "</div><div style='padding:0 16px;font-size:12.5px;color:#999;line-height:1.6'>· 다꾸키즈 회원이면 누구나 신청할 수 있어요.<br>· 선정 결과는 카카오톡 채널로 한 분씩 알려 드려요.</div></div>";
+        h += "</div><div style='padding:0 16px;font-size:12.5px;color:#999;line-height:1.6'>· 다꾸키즈 회원이면 누구나 신청할 수 있어요.<br>· 커피 이벤트에 참여하지 않아도 신청할 수 있어요.<br>· 선정 결과는 카카오톡 채널로 한 분씩 알려 드려요.</div></div>";
         var w = done(h);
         items.forEach(function(x, i){ api(x.q).then(function(p){ var im = w.querySelector("img[data-i='" + i + "']"); if (im && p) im.src = p.detail_image || p.list_image; if (p && !x.brand) { var bn = pbrand(p), be = w.querySelector("[data-b='" + i + "']"), te = w.querySelector("[data-t='" + i + "']"); if (be) be.textContent = bn; if (te && bn && x.title.indexOf(bn) < 0) te.textContent = bn + " " + x.title; } }); });
         return;
@@ -1540,11 +1541,11 @@
         "<div style='margin-top:6px;height:8px;border-radius:4px;background:#eee;overflow:hidden'><div style='height:100%;width:" + pct + "%;background:" + P + "'></div></div>") +
         "<table class='dkx-tb'><tr><th>모집 인원</th><td>" + x.n + "명</td></tr><tr><th>모집 기간</th><td>" + (always ? "상시 모집 (모집 인원이 차면 마감)" : md(x.start) + " ~ " + md(x.end) + " 23:59") + "</td></tr><tr><th>선정 발표</th><td>" + (always ? "신청 내용 확인 후" : md(x.ann)) + " · 카카오톡 채널로 한 분씩 알려 드려요</td></tr><tr><th>제품 발송</th><td>발표 후 영업일 3일 안</td></tr><tr><th>작성 기간</th><td>제품을 받은 날부터 7일 안</td></tr><tr><th>작성 채널</th><td>" + esc(x.ch) + "</td></tr></table></div><div class='dkx-hr'></div>" +
         "<div class='dkx-s'><h2>📸 이렇게 올려 주세요</h2><ul><li>인스타그램 <b>피드 1개</b>, 사진 3장 이상 (아이가 착용한 사진, 얼굴은 안 나와도 돼요)</li><li>글 첫 줄 맨 앞에 <b>#광고</b> 또는 \"다꾸키즈에서 제품을 제공받아 작성했어요\"</li><li><b>@dagguu.kids</b> 태그 + 상품 이름</li><li>해시태그 <b>#다꾸키즈" + (x.brand ? " #" + esc(x.brand) : "") + "</b> " + esc(x.tags || "") + "</li><li>올린 피드는 6개월 이상 유지해 주세요</li></ul></div><div class='dkx-hr'></div>" +
-        "<div class='dkx-s'><h2>✅ 꼭 확인해 주세요</h2><ul><li>다꾸키즈 회원만 신청할 수 있어요. 인스타그램은 공개 계정으로 참여해 주세요.</li><li><b>선정 후 상품이 품절되면 같은 브랜드의 비슷한 상품이나 다른 색상으로 바뀔 수 있어요.</b> 바뀌는 경우 보내기 전에 카카오톡으로 먼저 알려 드려요.</li><li>색상은 고를 수 없을 수 있어요. 재고에 맞춰 보내 드려요.</li><li>선정된 분께는 카카오톡으로 받는 분 이름·주소·연락처를 여쭤봐요.</li><li>작성 기간 안에 올리지 않으면 다음 체험단 선정에서 제외될 수 있어요.</li><li>신청 내용을 바꾸고 싶으면 카카오톡 채널로 말씀해 주세요.</li></ul></div><div class='dkx-hr'></div>" +
+        "<div class='dkx-s'><h2>✅ 꼭 확인해 주세요</h2><ul><li>다꾸키즈 회원만 신청할 수 있어요. 인스타그램은 공개 계정으로 참여해 주세요.</li><li><b>선정 후 상품이 품절되면 같은 브랜드의 비슷한 상품이나 다른 색상으로 바뀔 수 있어요.</b></li></ul></div><div class='dkx-hr'></div>" +
         "<div class='dkx-s' id='dkx-form'><h2>✍️ 신청하기</h2>" + (s !== "on" ? "<p style='font-size:14px;color:#888'>" + (s === "end" ? "모집이 끝났어요. 다음 체험단을 기다려 주세요 💜" : md(x.start) + " 00시부터 신청할 수 있어요.") + "</p>" :
           (logged ? "<label style='font-size:13px;color:#555'>인스타그램 아이디<input class='dkx-in' id='dkx-ig' placeholder='@아이디'></label><label style='font-size:13px;color:#555'>휴대폰 번호<input class='dkx-in' id='dkx-ph' inputmode='tel' placeholder='010-0000-0000'></label><label style='font-size:13px;color:#555'>아이 나이 (선택)<input class='dkx-in' id='dkx-age' placeholder='예: 3살'></label>" +
             "<label style='display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#444;line-height:1.5;margin:4px 0 12px'><input type='checkbox' id='dkx-ok' style='width:20px;height:20px;flex:0 0 20px;accent-color:" + P + "'><span>[필수] 위 내용을 확인했고, 체험단 진행을 위한 개인정보 수집·이용(인스타그램 아이디·휴대폰 번호·회원 정보, 선정 시 배송 주소 / 진행이 끝나고 6개월 뒤 파기)에 동의해요.</span></label>" +
-            "<button class='dkx-btn' id='dkx-send'>신청 내용 복사하고 카톡으로 보내기</button><p style='font-size:12px;color:#999;margin:8px 0 0'>버튼을 누르면 신청 내용이 복사되고 다꾸키즈 카카오톡 채널 채팅이 열려요. 붙여 넣어 보내 주시면 신청 완료예요.</p>"
+            "<button class='dkx-btn' id='dkx-send'>신청하기</button>"
           : "<p style='font-size:14px;color:#555'>다꾸키즈 회원만 신청할 수 있어요.</p><a class='dkx-btn' href='/member/login.html?returnUrl=" + encodeURIComponent(location.pathname + location.search) + "'>로그인하고 신청하기</a>")) + "</div>" +
         "<div class='dkx-s' style='padding-top:0'><a href='/product/coffee.html?t=exp' style='font-size:14px;color:" + P + ";text-decoration:none'>‹ 다른 체험단 보기</a></div>" +
         "<div class='dkx-fix'>" + (s !== "on" ? "<span class='dkx-btn dkx-off'>" + (s === "end" ? "모집 마감" : md(x.start) + " 오픈") + "</span>" : logged ? "<a class='dkx-btn' href='#dkx-form' id='dkx-fixbtn'>신청하기</a>" : "<a class='dkx-btn dkx-off' href='/member/login.html?returnUrl=" + encodeURIComponent(location.pathname + location.search) + "'>회원전용 · 로그인</a>") + "</div></div>";
@@ -1556,11 +1557,19 @@
         function v(k){ var e = document.getElementById(k); return e ? e.value.trim() : ""; }
         if (!v("dkx-ig") || !v("dkx-ph")) { alert("인스타그램 아이디와 휴대폰 번호를 적어 주세요."); return; }
         if (!document.getElementById("dkx-ok").checked) { alert("필수 동의에 체크해 주세요."); return; }
-        var me = ""; try { me = (JSON.parse(sessionStorage.getItem("dk_me") || "{}").n) || ""; } catch(e){}
-        var t = "[체험단 신청] " + x.title + "\n인스타그램: " + v("dkx-ig") + "\n휴대폰: " + v("dkx-ph") + (v("dkx-age") ? "\n아이 나이: " + v("dkx-age") : "") + (me ? "\n회원 이름: " + me : "") + "\n유의사항·개인정보 동의: 예";
-        function go(){ try { gtag("event", "exp_apply", { exp: x.id }); } catch(e){} location.href = KAKAO; }
-        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function(){ alert("신청 내용을 복사했어요. 카톡 채팅창에 붙여 넣어 보내 주세요."); go(); }, function(){ prompt("아래 내용을 복사해 카톡으로 보내 주세요.", t); go(); });
-        else { prompt("아래 내용을 복사해 카톡으로 보내 주세요.", t); go(); }
+        var me = "", mid = ""; try { me = (JSON.parse(sessionStorage.getItem("dk_me") || "{}").n) || ""; mid = sessionStorage.getItem("dk_mid") || ""; } catch(e){}
+        sb.disabled = true; sb.textContent = "신청하는 중…";
+        fetch("https://nytoxoupvaozgjpnmmdh.supabase.co/rest/v1/rpc/exp_apply", { method: "POST", headers: { apikey: "sb_publishable_i57GJzzp-hE1tNUaLGmMqA_Lw0jSJvD", Authorization: "Bearer sb_publishable_i57GJzzp-hE1tNUaLGmMqA_Lw0jSJvD", "Content-Type": "application/json" },
+          body: JSON.stringify({ p_exp: x.id, p_title: x.title, p_ig: v("dkx-ig"), p_phone: v("dkx-ph"), p_age: v("dkx-age"), p_member: [me, mid].filter(Boolean).join(" / ") }) })
+          .then(function(r){ return r.json(); }).then(function(res){
+            if (res === "ok" || res === "dup") {
+              try { gtag("event", "exp_apply", { exp: x.id }); } catch(e){}
+              var f = document.getElementById("dkx-form");
+              f.innerHTML = "<div style='text-align:center;padding:26px 6px'><div style='font-size:46px'>💜</div><h2 style='margin:10px 0 6px;font-size:20px'>" + (res === "dup" ? "이미 신청하셨어요" : "신청이 완료됐어요!") + "</h2><p style='font-size:14px;color:#666;line-height:1.6;margin:0'>선정되시면 카카오톡 채널로 연락드려요.<br>다꾸키즈 카카오톡 채널을 추가해 두시면 소식을 놓치지 않아요.</p><a class='dkx-btn' style='margin-top:16px;background:#fee500;color:#222' href='https://pf.kakao.com/_xhihNX/friend'>카카오톡 채널 추가하기</a></div>";
+              var fx = document.getElementById("dkx-fixbtn"); if (fx) { fx.textContent = "신청 완료"; fx.className = "dkx-btn dkx-off"; fx.onclick = function(e){ e.preventDefault(); }; }
+              f.scrollIntoView({ behavior: "smooth", block: "center" });
+            } else { sb.disabled = false; sb.textContent = "신청하기"; alert(res === "bad" ? "인스타그램 아이디와 휴대폰 번호를 다시 확인해 주세요." : "잠시 후 다시 시도해 주세요."); }
+          }).catch(function(){ sb.disabled = false; sb.textContent = "신청하기"; alert("신청이 저장되지 않았어요. 잠시 후 다시 시도해 주세요."); });
       };
     }).catch(function(){ cf.style.visibility = ""; });
     return true;
