@@ -1,5 +1,5 @@
 {
- "at": "2026-11-14 10:52",
+ "at": "2026-11-15 10:21",
  "checkIn": "2026-11-21",
  "stays": {
   "busan-matie-harbor": {
@@ -460,39 +460,39 @@
      "region": "경주",
      "type": "CITY",
      "pages": 34,
-     "n": 1624,
+     "n": 1625,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1647
+     "total": 1648
     },
     {
      "kw": "경북",
      "region": "경주",
      "type": "CITY",
      "pages": 34,
-     "n": 1624,
+     "n": 1625,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1647
+     "total": 1648
     },
     {
      "kw": "경북",
      "region": "포항",
      "type": "CITY",
      "pages": 18,
-     "n": 801,
+     "n": 802,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 822
+     "total": 823
     }
    ],
    "kept": true
@@ -514,7 +514,7 @@
       "page",
       "size"
      ],
-     "total": 1647
+     "total": 1648
     }
    ],
    "hit": "경주 에스앤비풀빌라",
@@ -548,7 +548,7 @@
       "page",
       "size"
      ],
-     "total": 1647
+     "total": 1648
     }
    ],
    "hit": "토모노야 호텔&료칸 경주",
@@ -575,8 +575,8 @@
      "kw": "영흥도",
      "region": "영흥도 해군 기념비",
      "type": "POINT_OF_INTEREST",
-     "pages": 1,
-     "n": 50,
+     "pages": 2,
+     "n": 100,
      "keys": [
       "totalCount",
       "page",
@@ -616,7 +616,7 @@
       "page",
       "size"
      ],
-     "total": 822
+     "total": 823
     }
    ],
    "hit": "데이토나 풀 빌라",
@@ -718,7 +718,7 @@
       "page",
       "size"
      ],
-     "total": 1354
+     "total": 1358
     }
    ],
    "hit": "담앤루리조트",
@@ -793,13 +793,13 @@
      "region": "전주",
      "type": "CITY",
      "pages": 15,
-     "n": 658,
+     "n": 659,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 665
+     "total": 666
     },
     {
      "kw": "전북",
