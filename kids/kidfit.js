@@ -1489,7 +1489,81 @@
       f.insertBefore(bx, f.firstChild);
     }
   }
-  function coffeeFix(){ if (location.pathname.indexOf("/myshop") === 0) { try { recoFix(); } catch (e) {} } try { reviewPage(); } catch (e) {} if (location.pathname.indexOf("/product/coffee.html") !== 0 || location.search.indexOf("t=buy") >= 0) return; var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n, t; while ((n = w.nextNode())) { t = n.nodeValue; if (!t || t.length < 3) continue; for (var k = 0; k < CF_P.length; k++) if (t.indexOf(CF_P[k][0]) >= 0) t = t.split(CF_P[k][0]).join(CF_P[k][1]); if (t !== n.nodeValue) n.nodeValue = t; } try { cfConsent(); } catch (e) {} if (!document.getElementById("dk-rvlink")) { var pl = null, hs = document.querySelectorAll(".cf h2"); for (var q = 0; q < hs.length; q++) if (hs[q].textContent.indexOf("PLUS") >= 0) pl = hs[q]; if (pl) { var a = document.createElement("a"); a.id = "dk-rvlink"; a.href = "/product/coffee.html?t=buy"; a.style.cssText = "display:block;margin:22px 0 0;background:#fff7e6;border:1px solid #ffe2a8;border-radius:14px;padding:14px 16px;color:#5a3d00;text-decoration:none;font-size:14px"; a.innerHTML = "<b style='font-size:15px'>🎁 다꾸키즈에서 옷을 사셨나요?</b><br>배송 받은 옷 입은 사진을 올리면 <b>적립금 5,000원</b>을 드려요 ›"; pl.parentNode.insertBefore(a, pl); } } }
+  /* ⑳ 다꾸키즈 체험단 (2026-11-15 시온님: 바닐라버니 장갑·목도리 4종 각 10명, 11/16~22, 인스타 피드).
+     /product/coffee.html?t=exp = 목록, &id= = 상세. 내용은 다꾸 저장소 kids/exp.json, 상품 사진·링크는 카페24 공개 상품 API(q 검색).
+     신청자 수는 실제 기록이 없어 보여 주지 않는다. 신청은 카톡 채널로 복사해 보내기(커피 이벤트와 같은 방식). */
+  var EXP_DONE = 0;
+  function expPage(){
+    if (EXP_DONE || location.pathname.indexOf("/product/coffee.html") !== 0 || !/[?&]t=exp/.test(location.search)) return false;
+    var cf = document.querySelector(".cf"); if (!cf) return true;
+    EXP_DONE = 1; cf.style.visibility = "hidden";
+    var id = (location.search.match(/[?&]id=([a-z0-9-]+)/) || [])[1] || "";
+    var P = "#6a3fc8", KAKAO = "https://pf.kakao.com/_xhihNX/chat";
+    function kd(s){ return new Date(s + "T00:00:00+09:00"); }
+    function md(s){ var d = kd(s); return (d.getMonth() + 1) + "." + d.getDate() + "(" + "일월화수목금토".charAt(d.getDay()) + ")"; }
+    function dleft(e){ var end = new Date(e + "T23:59:59+09:00").getTime(), now = Date.now(); if (now > end) return -1; return Math.floor((end - now) / 86400000); }
+    function state(x){ var now = Date.now(); if (now < kd(x.start).getTime()) return "soon"; return dleft(x.end) < 0 ? "end" : "on"; }
+    function badge(x){ var s = state(x), d = dleft(x.end); return s === "end" ? "모집 마감" : s === "soon" ? md(x.start) + " 오픈" : (d === 0 ? "D-DAY" : "D-" + d); }
+    function api(q){ return fetch("https://dagguu.cafe24api.com/api/v2/products?product_name=" + encodeURIComponent(q) + "&selling=T&display=T&limit=5&fields=product_no,product_name,detail_image,list_image,price", { headers: { "X-Cafe24-Client-Id": "JzTmuiBPItGvZ6KG8g3aPC" } }).then(function(r){ return r.json(); }).then(function(j){ return (j.products || [])[0] || null; }).catch(function(){ return null; }); }
+    var css = "<style id='dk-exp-css'>.dkx{max-width:720px;margin:0 auto;padding:0 0 110px;font-family:inherit;color:#222;box-sizing:border-box}.dkx *{box-sizing:border-box}" +
+      ".dkx-hd{background:#f4f4f6;padding:26px 18px 20px}.dkx-hd h1{margin:0;font-size:24px;font-weight:800;line-height:1.35}.dkx-hd p{margin:8px 0 0;font-size:13.5px;color:#666;line-height:1.6}" +
+      ".dkx-g{display:grid;grid-template-columns:1fr 1fr;gap:14px 10px;padding:16px 14px}.dkx-c{display:block;color:#222;text-decoration:none}.dkx-ph{position:relative;aspect-ratio:1/1;border-radius:12px;overflow:hidden;background:#f1eef8}.dkx-ph img{width:100%;height:100%;object-fit:cover;display:block}" +
+      ".dkx-d{position:absolute;left:8px;bottom:8px;background:#111;color:#fff;font-size:12px;font-weight:700;border-radius:6px;padding:4px 7px}.dkx-b{margin-top:8px;font-size:12px;color:#888}.dkx-t{margin-top:2px;font-size:14.5px;font-weight:700;line-height:1.4}.dkx-n{margin-top:4px;font-size:13px;color:#ff6a00;font-weight:700}" +
+      ".dkx-tb{width:100%;border-collapse:collapse;margin:14px 0 0;font-size:14px}.dkx-tb th{width:96px;text-align:left;color:#888;font-weight:500;padding:9px 0;vertical-align:top}.dkx-tb td{padding:9px 0;line-height:1.5}" +
+      ".dkx-s{padding:18px}.dkx-s h2{font-size:17px;margin:0 0 10px;font-weight:800}.dkx-s ul{margin:0;padding-left:18px;font-size:14px;line-height:1.75;color:#333}.dkx-hr{height:10px;background:#f4f4f6}" +
+      ".dkx-in{display:block;width:100%;height:46px;border:1px solid #ddd;border-radius:10px;padding:0 12px;font-size:16px;margin:6px 0 10px}.dkx-btn{display:block;width:100%;height:54px;border:0;border-radius:14px;background:" + P + ";color:#fff;font-size:17px;font-weight:800;cursor:pointer;text-align:center;line-height:54px;text-decoration:none}" +
+      ".dkx-fix{position:fixed;left:0;right:0;bottom:0;z-index:900;background:#fff;border-top:1px solid #eee;padding:10px 14px calc(10px + env(safe-area-inset-bottom))}.dkx-fix .dkx-btn{max-width:692px;margin:0 auto}.dkx-off{background:#bbb!important}</style>";
+    function done(html){ var w = document.createElement("div"); w.className = "cf"; w.innerHTML = css + html; cf.parentNode.replaceChild(w, cf); window.scrollTo(0, 0); return w; }
+    fetch("https://www.dagguu.com/kids/exp.json?v=" + Math.floor(Date.now() / 600000)).then(function(r){ return r.json(); }).then(function(data){
+      var items = data.items || [];
+      if (!id) {
+        document.title = "다꾸키즈 체험단";
+        var h = "<div class='dkx'><div class='dkx-hd'><h1>함께해요!<br>다꾸키즈 체험단</h1><p>좋아하는 브랜드 제품을 먼저 써 보고 인스타그램에 소개해 주세요.<br>선정되신 분께는 제품을 보내 드려요.</p></div>" +
+          "<div style='padding:14px 16px 0;font-size:14px;color:#555'>체험단 <b>" + items.length + "</b>개</div><div class='dkx-g'>";
+        items.forEach(function(x, i){ h += "<a class='dkx-c' href='/product/coffee.html?t=exp&id=" + x.id + "'><div class='dkx-ph'><img data-i='" + i + "' alt=''><span class='dkx-d'>" + badge(x) + "</span></div><div class='dkx-b'>" + esc(x.brand) + "</div><div class='dkx-t'>" + esc(x.title) + "</div><div class='dkx-n'>" + x.n + "명 모집</div></a>"; });
+        h += "</div><div style='padding:0 16px;font-size:12.5px;color:#999;line-height:1.6'>· 다꾸키즈 회원이면 누구나 신청할 수 있어요.<br>· 선정 결과는 카카오톡 채널로 한 분씩 알려 드려요.</div></div>";
+        var w = done(h);
+        items.forEach(function(x, i){ api(x.q).then(function(p){ var im = w.querySelector("img[data-i='" + i + "']"); if (im && p) im.src = p.detail_image || p.list_image; }); });
+        return;
+      }
+      var x = items.filter(function(it){ return it.id === id; })[0];
+      if (!x) { location.replace("/product/coffee.html?t=exp"); return; }
+      document.title = x.title + " - 다꾸키즈";
+      var s = state(x), d = dleft(x.end), tot = (new Date(x.end + "T23:59:59+09:00") - kd(x.start)) / 86400000, pct = s === "end" ? 100 : s === "soon" ? 0 : Math.min(100, Math.max(4, Math.round((1 - (d + 1) / tot) * 100)));
+      var logged = !!document.querySelector("a[href*='logout']");
+      var h = "<div class='dkx'><div class='dkx-ph' style='border-radius:0'><img id='dkx-img' alt=''><a id='dkx-go' href='#' style='display:none;position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.72);color:#fff;font-size:13px;font-weight:700;border-radius:20px;padding:8px 14px;text-decoration:none'>상품 보러가기 ›</a></div>" +
+        "<div class='dkx-s' style='padding-bottom:6px'><div style='display:flex;align-items:center;gap:10px'><span style='width:38px;height:38px;border-radius:50%;background:" + P + ";color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center'>D</span><div><b style='font-size:15px'>" + esc(x.brand) + "</b><div style='font-size:12px;color:#888'>다꾸키즈에서 만나는 브랜드</div></div></div>" +
+        "<h1 style='margin:14px 0 0;font-size:21px;font-weight:800;line-height:1.4'>" + esc(x.title) + "</h1>" +
+        "<div style='margin-top:14px;display:flex;justify-content:space-between;font-size:13px;color:#666'><span>" + (s === "end" ? "모집이 끝났어요" : s === "soon" ? md(x.start) + "에 신청이 열려요" : "<b style='color:#ff6a00'>" + (d === 0 ? "오늘 마감" : d + "일 남음") + "</b>") + "</span><span>" + x.n + "명 모집</span></div>" +
+        "<div style='margin-top:6px;height:8px;border-radius:4px;background:#eee;overflow:hidden'><div style='height:100%;width:" + pct + "%;background:" + P + "'></div></div>" +
+        "<table class='dkx-tb'><tr><th>모집 인원</th><td>" + x.n + "명</td></tr><tr><th>모집 기간</th><td>" + md(x.start) + " ~ " + md(x.end) + " 23:59</td></tr><tr><th>선정 발표</th><td>" + md(x.ann) + " · 카카오톡 채널로 한 분씩 알려 드려요</td></tr><tr><th>제품 발송</th><td>발표 후 영업일 3일 안</td></tr><tr><th>작성 기간</th><td>제품을 받은 날부터 7일 안</td></tr><tr><th>작성 채널</th><td>" + esc(x.ch) + "</td></tr></table></div><div class='dkx-hr'></div>" +
+        "<div class='dkx-s'><h2>📸 이렇게 올려 주세요</h2><ul><li>인스타그램 <b>피드 1개</b>, 사진 3장 이상 (아이가 착용한 사진, 얼굴은 안 나와도 돼요)</li><li>글 첫 줄 맨 앞에 <b>#광고</b> 또는 \"다꾸키즈에서 제품을 제공받아 작성했어요\"</li><li><b>@dagguu.kids</b> 태그 + 상품 이름</li><li>해시태그 <b>#다꾸키즈 #" + esc(x.brand) + "</b> " + esc(x.tags || "") + "</li><li>올린 피드는 6개월 이상 유지해 주세요</li></ul></div><div class='dkx-hr'></div>" +
+        "<div class='dkx-s'><h2>✅ 꼭 확인해 주세요</h2><ul><li>다꾸키즈 회원만 신청할 수 있어요. 인스타그램은 공개 계정으로 참여해 주세요.</li><li><b>선정 후 상품이 품절되면 같은 브랜드의 비슷한 상품이나 다른 색상으로 바뀔 수 있어요.</b> 바뀌는 경우 보내기 전에 카카오톡으로 먼저 알려 드려요.</li><li>색상은 고를 수 없을 수 있어요. 재고에 맞춰 보내 드려요.</li><li>선정된 분께는 카카오톡으로 받는 분 이름·주소·연락처를 여쭤봐요.</li><li>작성 기간 안에 올리지 않으면 다음 체험단 선정에서 제외될 수 있어요.</li><li>신청 내용을 바꾸고 싶으면 카카오톡 채널로 말씀해 주세요.</li></ul></div><div class='dkx-hr'></div>" +
+        "<div class='dkx-s' id='dkx-form'><h2>✍️ 신청하기</h2>" + (s !== "on" ? "<p style='font-size:14px;color:#888'>" + (s === "end" ? "모집이 끝났어요. 다음 체험단을 기다려 주세요 💜" : md(x.start) + " 00시부터 신청할 수 있어요.") + "</p>" :
+          (logged ? "<label style='font-size:13px;color:#555'>인스타그램 아이디<input class='dkx-in' id='dkx-ig' placeholder='@아이디'></label><label style='font-size:13px;color:#555'>휴대폰 번호<input class='dkx-in' id='dkx-ph' inputmode='tel' placeholder='010-0000-0000'></label><label style='font-size:13px;color:#555'>아이 나이 (선택)<input class='dkx-in' id='dkx-age' placeholder='예: 3살'></label>" +
+            "<label style='display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#444;line-height:1.5;margin:4px 0 12px'><input type='checkbox' id='dkx-ok' style='width:20px;height:20px;flex:0 0 20px;accent-color:" + P + "'><span>[필수] 위 내용을 확인했고, 체험단 진행을 위한 개인정보 수집·이용(인스타그램 아이디·휴대폰 번호·회원 정보, 선정 시 배송 주소 / 진행이 끝나고 6개월 뒤 파기)에 동의해요.</span></label>" +
+            "<button class='dkx-btn' id='dkx-send'>신청 내용 복사하고 카톡으로 보내기</button><p style='font-size:12px;color:#999;margin:8px 0 0'>버튼을 누르면 신청 내용이 복사되고 다꾸키즈 카카오톡 채널 채팅이 열려요. 붙여 넣어 보내 주시면 신청 완료예요.</p>"
+          : "<p style='font-size:14px;color:#555'>다꾸키즈 회원만 신청할 수 있어요.</p><a class='dkx-btn' href='/member/login.html?returnUrl=" + encodeURIComponent(location.pathname + location.search) + "'>로그인하고 신청하기</a>")) + "</div>" +
+        "<div class='dkx-s' style='padding-top:0'><a href='/product/coffee.html?t=exp' style='font-size:14px;color:" + P + ";text-decoration:none'>‹ 다른 체험단 보기</a></div>" +
+        "<div class='dkx-fix'>" + (s !== "on" ? "<span class='dkx-btn dkx-off'>" + (s === "end" ? "모집 마감" : md(x.start) + " 오픈") + "</span>" : logged ? "<a class='dkx-btn' href='#dkx-form' id='dkx-fixbtn'>신청하기</a>" : "<a class='dkx-btn dkx-off' href='/member/login.html?returnUrl=" + encodeURIComponent(location.pathname + location.search) + "'>회원전용 · 로그인</a>") + "</div></div>";
+      var w = done(h);
+      api(x.q).then(function(p){ if (!p) return; document.getElementById("dkx-img").src = p.detail_image || p.list_image; var g = document.getElementById("dkx-go"); g.href = "/product/detail.html?product_no=" + p.product_no; g.style.display = "inline-block"; });
+      var fb = document.getElementById("dkx-fixbtn"); if (fb) fb.onclick = function(e){ e.preventDefault(); document.getElementById("dkx-form").scrollIntoView({ behavior: "smooth" }); };
+      var sb = document.getElementById("dkx-send");
+      if (sb) sb.onclick = function(){
+        function v(k){ var e = document.getElementById(k); return e ? e.value.trim() : ""; }
+        if (!v("dkx-ig") || !v("dkx-ph")) { alert("인스타그램 아이디와 휴대폰 번호를 적어 주세요."); return; }
+        if (!document.getElementById("dkx-ok").checked) { alert("필수 동의에 체크해 주세요."); return; }
+        var me = ""; try { me = (JSON.parse(sessionStorage.getItem("dk_me") || "{}").n) || ""; } catch(e){}
+        var t = "[체험단 신청] " + x.title + "\n인스타그램: " + v("dkx-ig") + "\n휴대폰: " + v("dkx-ph") + (v("dkx-age") ? "\n아이 나이: " + v("dkx-age") : "") + (me ? "\n회원 이름: " + me : "") + "\n유의사항·개인정보 동의: 예";
+        function go(){ try { gtag("event", "exp_apply", { exp: x.id }); } catch(e){} location.href = KAKAO; }
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function(){ alert("신청 내용을 복사했어요. 카톡 채팅창에 붙여 넣어 보내 주세요."); go(); }, function(){ prompt("아래 내용을 복사해 카톡으로 보내 주세요.", t); go(); });
+        else { prompt("아래 내용을 복사해 카톡으로 보내 주세요.", t); go(); }
+      };
+    }).catch(function(){ cf.style.visibility = ""; });
+    return true;
+  }
+  function coffeeFix(){ if (expPage()) return; if (location.pathname.indexOf("/myshop") === 0) { try { recoFix(); } catch (e) {} } try { reviewPage(); } catch (e) {} if (location.pathname.indexOf("/product/coffee.html") !== 0 || location.search.indexOf("t=buy") >= 0) return; var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n, t; while ((n = w.nextNode())) { t = n.nodeValue; if (!t || t.length < 3) continue; for (var k = 0; k < CF_P.length; k++) if (t.indexOf(CF_P[k][0]) >= 0) t = t.split(CF_P[k][0]).join(CF_P[k][1]); if (t !== n.nodeValue) n.nodeValue = t; } try { cfConsent(); } catch (e) {} if (!document.getElementById("dk-rvlink")) { var pl = null, hs = document.querySelectorAll(".cf h2"); for (var q = 0; q < hs.length; q++) if (hs[q].textContent.indexOf("PLUS") >= 0) pl = hs[q]; if (pl) { var a = document.createElement("a"); a.id = "dk-rvlink"; a.href = "/product/coffee.html?t=buy"; a.style.cssText = "display:block;margin:22px 0 0;background:#fff7e6;border:1px solid #ffe2a8;border-radius:14px;padding:14px 16px;color:#5a3d00;text-decoration:none;font-size:14px"; a.innerHTML = "<b style='font-size:15px'>🎁 다꾸키즈에서 옷을 사셨나요?</b><br>배송 받은 옷 입은 사진을 올리면 <b>적립금 5,000원</b>을 드려요 ›"; pl.parentNode.insertBefore(a, pl); } } }
   // 리뷰 적립 배지(2026-11-14 시온님): 상품명 아래 "리뷰 쓰고 최대 1,000P 적립" → 누르면 상품후기 칸
   function reviewBadge(){
     var h = document.querySelector(".infoArea .headingArea h1, .infoArea .headingArea h2"); if (!h || document.getElementById("dk-rvb")) return;
