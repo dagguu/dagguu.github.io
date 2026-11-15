@@ -1,43 +1,19 @@
 {
- "at": "2026-11-15 19:51",
+ "at": "2026-11-15 19:59",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 1,
-   "taskId": "ab11f5761f840ae265b17e9df3686954",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-15/muan-amotion/1_edit.jpg"
-  },
-  {
-   "n": 2,
-   "taskId": "5d1cb7120393775e50fe84dbd9e854f3",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-15/muan-amotion/2_edit.jpg"
-  },
-  {
    "n": 3,
-   "taskId": "2ef0365dfcaef2e68349357c2bebb314",
+   "taskId": "9f0c144e0ae8cbfe69c7894492fd2776",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
    "file": "img/2026-11-15/muan-amotion/3_edit.jpg"
   },
   {
-   "n": 4,
-   "taskId": "57bd5e5140026fe56b417bbcce5604cb",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-15/muan-amotion/4_edit.jpg"
-  },
-  {
    "n": 5,
-   "taskId": "abc9bc4b61f125f19570a215caab721c",
+   "taskId": "5798a47161ca851188f2d8445896ea3e",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
