@@ -1,0 +1,38 @@
+[
+ {
+  "n": 1,
+  "time": "day",
+  "img": "Keep the place exactly as it is (same glass-walled private pool, same steel ladder, same artificial grass edge, same calm sea horizon outside the glass). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. No people.",
+  "prompt": "Very slow steady push forward along the pool toward the glass wall and the sea, water rippling softly, thin clouds drifting.",
+  "look": "day"
+ },
+ {
+  "n": 2,
+  "time": "sunset",
+  "img": "Keep the place exactly as it is (same dark window frames, same sun setting over the calm sea, same reflection on the water, same plant on the right). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. No people.",
+  "prompt": "Very slow push forward toward the window as the sun sets over the sea, water surface glittering gently, light reflections shimmering.",
+  "look": "day"
+ },
+ {
+  "n": 3,
+  "time": "sunset",
+  "img": "Keep the place exactly as it is (same long two-storey seaside building with glass pool rooms, same rooftop garden, same sunset sky). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. No people.",
+  "prompt": "Slow aerial glide along the building at sunset, the glass pool rooms glowing softly, clouds drifting slowly.",
+  "look": "day"
+ },
+ {
+  "n": 4,
+  "time": "day",
+  "people": true,
+  "img": "Keep the place exactly as it is (same living room, same grey sofa and coffee table, same open folding glass doors, same pool and sea view beyond). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. Add one Korean woman standing far away and small near the open glass doors, seen only from behind, looking out at the sea, her face and profile completely hidden, not touching anything.",
+  "prompt": "Very slow steady push forward into the living room toward the open glass doors; the woman stands still looking at the sea and never turns around; her skirt moves slightly; soft daylight.",
+  "look": "day"
+ },
+ {
+  "n": 5,
+  "time": "day",
+  "img": "Keep the place exactly as it is (same bedroom, same white bedding, same sage green walls, same door and wall lamp). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. No people.",
+  "prompt": "Very slow steady push forward toward the bed, soft daylight on the white bedding, everything calm and still.",
+  "look": "day"
+ }
+]
