@@ -1543,8 +1543,8 @@
     var hd = document.getElementById("header");
     if (!ic || !hd || !ic.offsetParent) return;
     var st = document.createElement("style");
-    st.textContent = "#dk-hkb{position:absolute;z-index:1001;transform:translateX(-50%);animation:dkhkb 2.2s ease-in-out infinite;white-space:nowrap}" +
-      "@keyframes dkhkb{0%,100%{margin-top:0}50%{margin-top:-5px}}" +
+    st.textContent = "#dk-hkb{position:absolute;z-index:1001;transform:translate3d(-50%,0,0);animation:dkhkb 2.2s ease-in-out infinite;white-space:nowrap;will-change:transform}" +
+      "@keyframes dkhkb{0%,100%{transform:translate3d(-50%,0,0)}50%{transform:translate3d(-50%,-5px,0)}}" +
       "#dk-hkb a{display:block;background:#6a3fc8;color:#fff;font-size:12px;font-weight:600;line-height:1;border-radius:999px;padding:7px 11px;text-decoration:none;box-shadow:0 4px 12px rgba(106,63,200,.3)}" +
       "#dk-hkb:before{content:'';position:absolute;top:-5px;left:var(--tx,50%);transform:translateX(-50%);border:6px solid transparent;border-top:0;border-bottom-color:#6a3fc8}";
     document.head.appendChild(st);
@@ -1564,7 +1564,10 @@
       w.style.top = (r.bottom - h.top + 9) + "px";
       w.style.setProperty("--tx", (bw / 2 + cx - left) + "px");
     }
-    place(); setTimeout(place, 800); window.addEventListener("resize", place);
+    place(); setTimeout(place, 800);
+    // 갤럭시 등 안드로이드는 스크롤할 때 주소창이 들어가며 resize 가 계속 일어남 → 폭이 바뀔 때만 다시 계산(2026-11-15 흔들림)
+    var lw = window.innerWidth;
+    window.addEventListener("resize", function(){ if (window.innerWidth !== lw) { lw = window.innerWidth; requestAnimationFrame(place); } });
   }
 
   // 상품 상세 '평균 배송 기간' 글자 바꾸기(2026-11-15 시온님: 일부 상품 바로 배송 → 3~7일, 공구 상품 → 전체 상품). 스킨 detail.html 을 고치면 지워도 됨.
