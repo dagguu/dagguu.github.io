@@ -16,7 +16,7 @@
  {
   "n": 3,
   "time": "sunset",
-  "img": "Keep the place exactly as it is (same long two-storey seaside building with glass pool rooms, same rooftop garden, same sunset sky). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. No people.",
+  "img": "Keep the place exactly as it is (same long two-storey seaside building with glass pool rooms, same rooftop garden, same sunset sky). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. One single continuous scene: show the building only once, never duplicate, repeat or stack the image; extend only open sunset sky above and the snowy garden path below. No people.",
   "prompt": "Slow aerial glide along the building at sunset, the glass pool rooms glowing softly, clouds drifting slowly.",
   "look": "day"
  },
@@ -31,7 +31,7 @@
  {
   "n": 5,
   "time": "day",
-  "img": "Keep the place exactly as it is (same bedroom, same white bedding, same sage green walls, same door and wall lamp). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. No people.",
+  "img": "Keep the place exactly as it is (same bedroom, same white bedding, same sage green walls, same door and wall lamp). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below. Never mirror or flip the image. This is an indoor bedroom: extend above with the same plain white indoor ceiling and below with the same wooden floor; no outdoor view, no roof, no sky, no snow inside the room. No people.",
   "prompt": "Very slow steady push forward toward the bed, soft daylight on the white bedding, everything calm and still.",
   "look": "day"
  }
