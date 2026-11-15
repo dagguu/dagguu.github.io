@@ -1554,7 +1554,7 @@
           row("휴대폰번호", 1, "<input class='dkx-in' id='f-ph' inputmode='numeric' placeholder=\"'-' 제외한 숫자만 입력해 주세요.\">") +
           row("이메일", 0, "<input class='dkx-in' id='f-em' inputmode='email' placeholder='이메일 (선택)'>") +
           row("인스타그램", 1, "<input class='dkx-in' id='f-ig' placeholder='인스타그램 주소 또는 @아이디'>") +
-          row("배송메모", 0, "<textarea class='dkx-in' id='f-memo' placeholder='배송일 지정은 어려워요'></textarea>") + "</div><div class='dkx-hr'></div>" +
+          row("배송메모", 0, "<textarea class='dkx-in' id='f-memo' placeholder='배송일 지정은 어려워요'></textarea>") + "<label class='dkx-ck' style='margin:4px 0 0 92px;font-size:14px'><input type='checkbox' id='f-save' checked>배송정보 저장하기 <span style='font-size:12px;color:#999'>(다음 신청 때 자동 입력)</span></label></div><div class='dkx-hr'></div>" +
           "<div class='dkx-s'><div style='display:flex;gap:14px;align-items:center'><img id='dkx-pim' alt='' style='width:96px;height:96px;object-fit:cover;background:#f1eef8;flex:0 0 96px'><div><div style='font-size:13px;color:#777' id='dkx-pb'>" + esc(x.brand) + "</div><div style='font-size:15.5px;margin-top:4px;line-height:1.45' id='dkx-pt'>" + esc(x.title) + "</div><div style='font-size:13px;color:#999;margin-top:6px'>수량 : 1개</div></div></div></div><div class='dkx-hr'></div>" +
           "<div class='dkx-s'><h2>유의사항</h2><ul><li>선정되신 분께 카카오톡으로 연락드려요.</li><li>재고에 따라 신청한 상품과 다른 상품 또는 옵션(색상)으로 바뀔 수 있어요.</li><li>제품을 받으면 인스타그램 피드에 #광고 표시와 @dagguu.kids 태그를 넣어 올려 주세요.</li></ul></div><div class='dkx-hr'></div>" +
           "<div class='dkx-s'><label class='dkx-ck'><input type='checkbox' id='ck-all'><b>유의사항을 확인했으며, 아래 내용에 모두 동의합니다.</b></label>" +
@@ -1563,6 +1563,7 @@
           "<label class='dkx-ck' style='margin-left:30px;color:#666;font-size:13.5px'><input type='checkbox' class='ck-one'>체험단 유의사항 동의(필수)</label>" +
           "<button class='dkx-btn' id='dkx-send' style='margin-top:18px'>신청완료</button></div></div>";
         var w = done(h);
+        var SHIPK = "dk_ship"; try { var sv = JSON.parse(localStorage.getItem(SHIPK) || "null"); if (sv) { [["f-name","name"],["f-zip","zip"],["f-a1","addr1"],["f-a2","addr2"],["f-ph","phone"],["f-em","email"],["f-ig","insta"],["f-memo","memo"]].forEach(function(z){ var e = document.getElementById(z[0]); if (e && sv[z[1]]) e.value = sv[z[1]]; }); } } catch(e){}
         api(x.q, x.no).then(function(p){ if (!p) return; document.getElementById("dkx-pim").src = p.list_image || p.detail_image; if (!x.brand) document.getElementById("dkx-pb").textContent = pbrand(p); document.getElementById("dkx-pt").textContent = title(x, p); });
         document.getElementById("f-zipb").onclick = function(){
           function open(){ new daum.Postcode({ oncomplete: function(r){ document.getElementById("f-zip").value = r.zonecode; document.getElementById("f-a1").value = r.roadAddress || r.jibunAddress; document.getElementById("f-a2").focus(); } }).open(); }
@@ -1582,6 +1583,7 @@
           if (v("f-ig").length < 3) { alert("인스타그램 주소를 입력해 주세요."); return; }
           if (!all.checked) { alert("필수 동의에 체크해 주세요."); return; }
           var mid = ""; try { mid = sessionStorage.getItem("dk_mid") || ""; } catch(e){}
+          try { if (document.getElementById("f-save").checked) localStorage.setItem(SHIPK, JSON.stringify({ name: v("f-name"), zip: v("f-zip"), addr1: v("f-a1"), addr2: v("f-a2"), phone: v("f-ph"), email: v("f-em"), insta: v("f-ig"), memo: v("f-memo") })); else localStorage.removeItem(SHIPK); } catch(e){}
           sb.disabled = true; sb.textContent = "신청하는 중…";
           fetch(SBU + "/rest/v1/rpc/exp_apply", { method: "POST", headers: { apikey: SBK, Authorization: "Bearer " + SBK, "Content-Type": "application/json" },
             body: JSON.stringify({ p: { exp: x.id, title: document.getElementById("dkx-pt").textContent, name: v("f-name"), zip: v("f-zip"), addr1: v("f-a1"), addr2: v("f-a2"), phone: v("f-ph"), email: v("f-em"), insta: v("f-ig"), memo: v("f-memo"), member: [me, mid].filter(Boolean).join(" / ") } }) })
