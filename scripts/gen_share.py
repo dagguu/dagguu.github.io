@@ -262,8 +262,8 @@ for it in items:
         except Exception: pass
     dday = "마감" if not op else ("오늘 마감" if dleft == 0 else (f"D-{dleft}" if dleft is not None else ""))
     rows2 = f'<dt>제공 내역</dt><dd>{e(it.get("benefit") or "")}' + (f'<br><b>{e(it["worth"])} 상당</b>' if it.get("worth") else "") + '</dd>'
-    rows2 += ('<dt>' + ('' if not op else '<i class="blink" aria-hidden="true"></i>') + '모집 기간</dt><dd>' + (e(mmdd(it.get("start"))) + ' ' if it.get("start") else '') +
-              '~ ' + e(mmdd(endd)) + f' <span class="dd2{" hot" if (dleft is not None and dleft <= 3 and op) else ""}">{e(dday)}</span></dd>')
+    rows2 += ('<dt>' + ('' if not op else '<i class="blink" aria-hidden="true"></i>') + '모집 기간</dt><dd>' + ('상시 모집</dd>' if not endd and op else (e(mmdd(it.get("start"))) + ' ' if it.get("start") else '') +
+              '~ ' + e(mmdd(endd)) + f' <span class="dd2{" hot" if (dleft is not None and dleft <= 3 and op) else ""}">{e(dday)}</span></dd>'))
     ap = it.get("ap")
     if op and isinstance(ap, list) and len(ap) >= 2 and (ap[1] or 0) > 0:
         a0, a1 = int(ap[0] or 0), int(ap[1]); r = a0 / a1
