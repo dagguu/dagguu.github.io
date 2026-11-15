@@ -1585,7 +1585,16 @@
     }, 500);
   }
 
-  function run(){ try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  // 홈 휴대폰 글자 메뉴(.dk-mnav)를 머리글(#header) 안으로 옮겨 고정 칸을 하나로(2026-11-15 갤럭시 네이버 앱에서 스크롤 끝날 때마다 화면이 40px쯤 위아래로 튐 — 고정 칸 두 개가 겹친 안드로이드 문제로 봄)
+  function mnavMerge(){
+    var nav = document.querySelector("nav.dk-mnav, .dk-mnav"), hd = document.getElementById("header");
+    if (!nav || !hd || hd.contains(nav) || window.innerWidth > 1024) return;
+    nav.style.setProperty("position", "static", "important");
+    nav.style.setProperty("top", "auto", "important");
+    hd.appendChild(nav);
+  }
+
+  function run(){ try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
