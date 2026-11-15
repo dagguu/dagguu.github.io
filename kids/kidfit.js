@@ -1594,7 +1594,36 @@
     hd.appendChild(nav);
   }
 
-  function run(){ try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  // 2026-11-15: 상품 상세 '브랜드 실측표 준비 중' 칸을 브랜드 추천 사이즈표(kids/brand_size_tbl.json)로 바꿈
+  function sizeTbl(){
+    var tries = 0;
+    (function go(){
+      var box = null;
+      [].forEach.call(document.querySelectorAll("#prdDetail div, .cont div"), function(d){ if (!box && !d.querySelector("div") && /실측표가 준비 중이에요|사이즈표가 준비 중이에요/.test(d.textContent)) box = d; });
+      if (!box) { if (++tries < 20) setTimeout(go, 500); return; }
+      var h = document.querySelector(".infoArea .headingArea h1, .infoArea .headingArea h2");
+      var nm = ((h || {}).textContent || "").trim(), br = (nm.split(/\s+/)[0] || "").replace(/con$/i, "");
+      if (!br) return;
+      fetch("https://www.dagguu.com/kids/brand_size_tbl.json?d=" + new Date().toISOString().slice(0, 10)).then(function(r){ return r.json(); }).then(function(tb){
+        var x = tb[br]; if (!x || !x.t || !x.t.length) return;
+        var e = function(v){ return String(v).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); };
+        var html = '<div id="dk-btbl" style="max-width:640px;margin:0 auto;padding:22px 12px;text-align:left;font-size:13px;line-height:1.6;color:#222">' +
+          '<div style="font-size:11px;letter-spacing:.14em;color:#888;font-weight:700">BRAND SIZE</div>' +
+          '<div style="font-size:17px;font-weight:700;margin:2px 0 4px">' + e(br) + ' 브랜드 추천 사이즈</div>' +
+          '<div style="font-size:12px;color:#888;margin-bottom:10px">' + e(x.s || "") + ' 기준 · 브랜드에서 권하는 사이즈예요</div>' +
+          x.t.map(function(t){
+            return (x.t.length > 1 || t[0] !== "의류" ? '<div style="font-weight:700;margin:12px 0 6px">' + e(t[0]) + '</div>' : '') +
+              '<table style="width:100%;border-collapse:collapse;font-size:12.5px;text-align:center"><tr>' +
+              t[1].map(function(c){ return '<th style="background:#f3f3f3;border:1px solid #e3e3e3;padding:7px 4px;font-weight:600">' + e(c) + '</th>'; }).join("") + '</tr>' +
+              t[2].map(function(r){ return '<tr>' + r.map(function(c){ return '<td style="border:1px solid #e9e9e9;padding:7px 4px">' + e(c) + '</td>'; }).join("") + '</tr>'; }).join("") + '</table>';
+          }).join("") +
+          '<div style="font-size:12px;color:#777;margin-top:10px">' + (x.m || []).map(function(m){ return '· ' + e(m) + '<br>'; }).join("") +
+          '· 상품마다 실측이 조금씩 달라요. 고민되면 카카오톡 채널 <b>다꾸키즈</b>로 아이 키·몸무게를 알려 주세요.</div></div>';
+        box.outerHTML = html;
+      }).catch(function(){});
+    })();
+  }
+  function run(){ try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
