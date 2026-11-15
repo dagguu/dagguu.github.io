@@ -1,7211 +1,1271 @@
 {
- "updated": "2026-11-15 16:16",
+ "updated": "2026-11-15 19:08",
  "hints": [
-  "분유포트",
-  "유아책상",
-  "아기세제",
-  "자석블럭",
-  "범퍼침대"
+  "아기장갑",
+  "유아장갑",
+  "아동장갑",
+  "아기목도리",
+  "유아목도리"
  ],
  "rows": [
   {
-   "kw": "베이비페어",
-   "vol": 70900,
+   "kw": "키즈경량패딩",
+   "vol": 48210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "침대프레임",
-   "vol": 63100,
+   "kw": "키즈패딩",
+   "vol": 36560,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "세탁세제",
-   "vol": 62100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기포트",
-   "vol": 57900,
+   "kw": "아기바라클라바",
+   "vol": 28910,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기침대",
-   "vol": 42650,
+   "kw": "아기패딩",
+   "vol": 27020,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "분유포트",
-   "vol": 35480,
+   "kw": "코튼봉",
+   "vol": 18990,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여아패딩",
+   "vol": 12100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아패딩",
+   "vol": 11900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기경량패딩",
+   "vol": 11710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기장갑",
+   "vol": 10900,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "설거지",
-   "vol": 31300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주방세제",
-   "vol": 30070,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "보르르분유포트",
-   "vol": 28760,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "출산선물",
-   "vol": 25850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중성세제",
-   "vol": 23770,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "휴대용분유포트",
-   "vol": 23650,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "침대가드",
-   "vol": 23490,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "세제",
-   "vol": 18680,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기세제",
-   "vol": 13750,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "아기침대가드",
-   "vol": 13580,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기범퍼침대",
-   "vol": 13250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "저상형침대",
-   "vol": 12700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "니스툴그로우",
-   "vol": 12700,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아선물",
-   "vol": 12520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기주전자",
-   "vol": 12500,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "범퍼침대",
-   "vol": 12210,
+   "kw": "아기목도리",
+   "vol": 9830,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "신생아침대",
-   "vol": 11690,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생책상",
-   "vol": 11290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고등학생책상",
-   "vol": 11080,
+   "kw": "아기어그",
+   "vol": 7230,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "높이조절책상",
-   "vol": 10330,
+   "kw": "스키장갑",
+   "vol": 6520,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "데이베드",
-   "vol": 10180,
+   "kw": "패딩우주복",
+   "vol": 6200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기겨울신발",
+   "vol": 6060,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자석블럭",
-   "vol": 10040,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "분유제조기",
-   "vol": 9390,
+   "kw": "돌아기패딩",
+   "vol": 5770,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "티포트",
-   "vol": 9320,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "맥포머스",
-   "vol": 9210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "설거지비누",
-   "vol": 8960,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어린이책상",
-   "vol": 8880,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "서재책상",
-   "vol": 8560,
+   "kw": "남아패딩",
+   "vol": 5340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보르르",
-   "vol": 8560,
+   "kw": "아동패딩",
+   "vol": 5180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "학생책상",
-   "vol": 8410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마블런",
-   "vol": 8260,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "임신축하선물",
-   "vol": 8140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이침대",
-   "vol": 7600,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기미끄럼틀",
-   "vol": 7520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아책상",
-   "vol": 7500,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "돌아기장난감",
-   "vol": 7430,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기책상",
-   "vol": 7170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "폴더매트",
-   "vol": 7090,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상세트",
-   "vol": 7080,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기침대대여",
-   "vol": 6780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기세탁세제",
-   "vol": 6550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이용책상",
-   "vol": 6400,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "무선전기포트",
-   "vol": 5970,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "책상추천",
-   "vol": 5820,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "세탁세제추천",
-   "vol": 5610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "피보나치수열",
-   "vol": 5550,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기용품",
-   "vol": 5530,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "출수형분유포트",
-   "vol": 5400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학생용책상",
-   "vol": 5020,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아침대",
-   "vol": 4980,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기섬유유연제",
+   "kw": "여아코트",
    "vol": 4930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아롱패딩",
+   "vol": 4640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6개월아기옷",
+   "vol": 4300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "우주복패딩",
+   "vol": 4280,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "초등책상",
-   "vol": 4900,
+   "kw": "아기페이크목폴라",
+   "vol": 4270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미니전기포트",
-   "vol": 4830,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기주방세제",
-   "vol": 4770,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기독서대",
-   "vol": 4660,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "액체세제",
-   "vol": 4650,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "임신선물",
-   "vol": 4630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "데이베드아기침대",
-   "vol": 4450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "젖병열탕소독",
-   "vol": 4390,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "원목아기침대",
-   "vol": 4380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "드럼세탁기세제",
-   "vol": 4370,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "맥포머스자석블럭",
-   "vol": 4340,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "학생용침대",
-   "vol": 4290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주방세제추천",
-   "vol": 4190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밥솥이유식",
-   "vol": 4180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "좌식책상",
-   "vol": 4130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기방꾸미기",
-   "vol": 4100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피포트추천",
-   "vol": 4000,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "출산준비물리스트",
-   "vol": 3950,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "플레이테이블",
-   "vol": 3940,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친구출산선물",
-   "vol": 3900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "약탕기",
+   "kw": "유아장갑",
    "vol": 3890,
    "comp": "높음",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "역할놀이",
-   "vol": 3890,
+   "kw": "유아모자",
+   "vol": 3880,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "차주전자",
-   "vol": 3820,
+   "kw": "키즈구스다운",
+   "vol": 3720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈침대",
-   "vol": 3780,
+   "kw": "유아바라클라바",
+   "vol": 3630,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "저상침대",
-   "vol": 3770,
+   "kw": "아기겨울우주복",
+   "vol": 3490,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "침대안전가드",
-   "vol": 3660,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "애기침대",
-   "vol": 3590,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기침대범퍼가드",
-   "vol": 3520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아침대대여",
-   "vol": 3520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중학생책상",
-   "vol": 3500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기매트리스",
-   "vol": 3480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친환경주방세제",
-   "vol": 3450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고농축섬유유연제",
-   "vol": 3250,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "차탕기",
-   "vol": 3180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전기포트추천",
-   "vol": 3170,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전기티포트",
-   "vol": 3170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기침대추천",
+   "kw": "아기머플러",
    "vol": 3080,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기토퍼",
-   "vol": 3080,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "초등학생침대",
-   "vol": 3050,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대용량주방세제",
-   "vol": 3000,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "젖병세정제",
-   "vol": 2930,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "대용량세탁세제",
+   "kw": "키즈바라클라바",
    "vol": 2910,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "무향섬유유연제",
-   "vol": 2790,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "호호에미",
-   "vol": 2780,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전기포터",
-   "vol": 2780,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "무향세탁세제",
-   "vol": 2750,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "올스텐전기포트",
-   "vol": 2740,
+   "kw": "키즈구스패딩",
+   "vol": 2770,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아용품",
-   "vol": 2730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아책상의자세트",
-   "vol": 2690,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "육아용품",
-   "vol": 2680,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "소마큐브",
-   "vol": 2660,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "친환경세탁세제",
-   "vol": 2650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "출산선물추천",
-   "vol": 2610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "높낮이조절책상",
+   "kw": "아동장갑",
    "vol": 2600,
    "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "돌아기장갑",
+   "vol": 2600,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "대용량전기포트",
-   "vol": 2560,
+   "kw": "유아목도리",
+   "vol": 2590,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "초등패딩",
+   "vol": 2450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈다운패딩",
+   "vol": 2450,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "공부책상",
-   "vol": 2550,
+   "kw": "어린이장갑",
+   "vol": 2370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기원목침대",
-   "vol": 2540,
+   "kw": "남아비니",
+   "vol": 2350,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유아퍼즐",
-   "vol": 2540,
+   "kw": "유아페이크목폴라",
+   "vol": 2350,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "휴대용아기침대",
-   "vol": 2530,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "니스툴그로우침대",
-   "vol": 2530,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "레고테이블",
-   "vol": 2520,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "출산준비물",
-   "vol": 2500,
+   "kw": "아동비니",
+   "vol": 2340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "향기좋은섬유유연제",
-   "vol": 2490,
+   "kw": "여아모자",
+   "vol": 2320,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "천연주방세제",
-   "vol": 2460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "천연세탁세제",
-   "vol": 2420,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아자석보드",
-   "vol": 2420,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "친환경섬유유연제",
-   "vol": 2410,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "뒤집기방지쿠션",
-   "vol": 2360,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아출산선물",
+   "kw": "아기히트텍",
    "vol": 2310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "천연섬유유연제",
-   "vol": 2300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기가드",
+   "kw": "아동목도리",
    "vol": 2290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아가습기",
+   "kw": "베이비패딩",
+   "vol": 2270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두돌아기장갑",
    "vol": 2270,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "저상형아기침대",
-   "vol": 2260,
+   "kw": "주니어장갑",
+   "vol": 2250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이유식제조기",
-   "vol": 2260,
+   "kw": "남아목도리",
+   "vol": 2220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어레깅스",
+   "vol": 2220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "교보재",
-   "vol": 2230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "범퍼가드",
-   "vol": 2190,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "무선주전자",
-   "vol": 2190,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "책상책꽂이",
-   "vol": 2190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "생리혈지우기",
-   "vol": 2180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기저상형침대",
+   "kw": "여아비니",
    "vol": 2170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "출산용품리스트",
-   "vol": 2170,
+   "kw": "남아모자",
+   "vol": 2160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "1인용전기포트",
-   "vol": 2150,
+   "kw": "주니어목도리",
+   "vol": 2080,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이책상",
-   "vol": 2130,
+   "kw": "아기방한모자",
+   "vol": 1950,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "티메이커",
-   "vol": 2130,
+   "kw": "유아겨울모자",
+   "vol": 1740,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이유식믹서기",
-   "vol": 2120,
+   "kw": "유아넥워머",
+   "vol": 1740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아롱패딩",
+   "vol": 1720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기롱패딩",
+   "vol": 1710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈비니",
+   "vol": 1630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아스타킹",
+   "vol": 1460,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "스테인리스전기포트",
-   "vol": 2100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이침대",
-   "vol": 2070,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "데이배드",
-   "vol": 2060,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "임산부출산선물",
-   "vol": 2060,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "빨래세제",
-   "vol": 2040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유리티포트",
-   "vol": 1940,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "설거지바",
-   "vol": 1930,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "실내건조세탁세제",
-   "vol": 1920,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기침대매트리스",
-   "vol": 1920,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아아기침대",
-   "vol": 1910,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "무선전기주전자",
-   "vol": 1830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이동식아기침대",
-   "vol": 1810,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마인크래프트자석블럭",
-   "vol": 1810,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "블럭장난감",
-   "vol": 1790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈책상",
-   "vol": 1780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "플레이매트",
-   "vol": 1770,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "분유포트기",
-   "vol": 1730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아독서대",
-   "vol": 1700,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "온도조절전기포트",
-   "vol": 1680,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기침대매트",
-   "vol": 1660,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기책상의자",
-   "vol": 1650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유리전기포트",
-   "vol": 1590,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "친환경제품",
-   "vol": 1590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "속옷세제",
-   "vol": 1560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소프트블럭",
-   "vol": 1560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니커피포트",
-   "vol": 1520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이책상의자",
-   "vol": 1510,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아세탁세제",
-   "vol": 1490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자석블록",
-   "vol": 1440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기세제추천",
-   "vol": 1440,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기데이베드",
-   "vol": 1440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주방세제리필",
-   "vol": 1420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "높이조절의자",
-   "vol": 1420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기침대가드쿠션",
-   "vol": 1410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "과일세정제",
-   "vol": 1410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키네틱아트",
-   "vol": 1390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자석큐브",
-   "vol": 1370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실내건조섬유유연제",
-   "vol": 1350,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "침대가드쿠션",
-   "vol": 1350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기젖병세제",
+   "kw": "키즈목도리",
    "vol": 1340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유리주전자",
-   "vol": 1330,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "효소세제",
-   "vol": 1320,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "차포트",
-   "vol": 1320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쌓기나무",
-   "vol": 1310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두돌아기책상",
+   "kw": "유아겨울신발",
    "vol": 1300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등책상추천",
-   "vol": 1300,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "내열유리주전자",
-   "vol": 1300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블랑101아기세제",
+   "kw": "키즈모자",
    "vol": 1290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기벙어리장갑",
+   "vol": 1230,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "여자신생아선물",
-   "vol": 1280,
+   "kw": "어린이바라클라바",
+   "vol": 1150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "내열유리티포트",
-   "vol": 1280,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "하바",
-   "vol": 1270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보온포트",
-   "vol": 1260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주니어침대",
-   "vol": 1250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등침대",
-   "vol": 1200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니책꽂이",
-   "vol": 1200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "각도조절책상",
-   "vol": 1190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "분유포트추천",
-   "vol": 1170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상의자세트",
-   "vol": 1170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아세제",
-   "vol": 1140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기침대캐노피",
-   "vol": 1140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미세먼지세탁세제",
-   "vol": 1135,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기저상침대",
-   "vol": 1130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학교책상",
-   "vol": 1120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중고등학생책상",
-   "vol": 1120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블랑세제",
-   "vol": 1100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "중학생책상추천",
+   "kw": "아기겨울패딩",
    "vol": 1100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사보타지보드게임",
-   "vol": 1090,
+   "kw": "아기오버롤",
+   "vol": 1100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "출산용품",
-   "vol": 1070,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기토퍼매트리스",
-   "vol": 1070,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아범퍼침대",
-   "vol": 1060,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기보온포트",
-   "vol": 1060,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "데스커책상세트",
-   "vol": 1050,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기휴대용침대",
+   "kw": "아기멜빵바지",
    "vol": 1050,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기테이블",
-   "vol": 1030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선커피포트",
-   "vol": 1030,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "공부방책상",
-   "vol": 1010,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업사이클링제품",
-   "vol": 1000,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유리전기주전자",
-   "vol": 990,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "차도구",
-   "vol": 980,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이유식밥솥",
-   "vol": 980,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "침대범퍼가드",
-   "vol": 970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조노돔",
-   "vol": 970,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "책상책장세트",
-   "vol": 970,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "장난감정리",
-   "vol": 970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기커피포트",
+   "kw": "애기패딩",
    "vol": 960,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "세제추천",
-   "vol": 950,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아체육교구",
-   "vol": 940,
+   "kw": "아동페이크목폴라",
+   "vol": 960,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등입학선물",
-   "vol": 940,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책장책상",
-   "vol": 940,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가드침대",
-   "vol": 920,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용의자",
-   "vol": 910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선포트",
-   "vol": 910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아토퍼",
-   "vol": 900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기침대렌탈",
-   "vol": 890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상책장",
-   "vol": 880,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "출석부",
-   "vol": 880,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "범퍼쿠션",
-   "vol": 870,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "나무블럭",
-   "vol": 870,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "천연세제",
-   "vol": 860,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자석장난감",
-   "vol": 860,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아준비물",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생책상추천",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유리포트",
+   "kw": "페이크폴라",
    "vol": 850,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아책상의자",
+   "kw": "배앓이내복",
    "vol": 840,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기범퍼가드",
-   "vol": 840,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성인2층침대",
-   "vol": 840,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아테이블",
+   "kw": "유아겨울양말",
    "vol": 830,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아동침대",
+   "kw": "돌아기겨울옷",
+   "vol": 830,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이넥워머",
    "vol": 830,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "육아템",
-   "vol": 830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "침대안전바",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모즈스웨덴전기포트",
-   "vol": 820,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "블랑101세탁세제",
-   "vol": 810,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서펜티나",
-   "vol": 810,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주방비누",
-   "vol": 810,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "이케아초등학생책상",
-   "vol": 810,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "만삭임산부선물",
+   "kw": "스노우보드장갑",
    "vol": 800,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아매트리스",
-   "vol": 800,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니블럭",
-   "vol": 800,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기블럭",
-   "vol": 800,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1종주방세제",
+   "kw": "아이패딩",
    "vol": 790,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아자석블럭",
-   "vol": 790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기침대안전가드",
-   "vol": 780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친환경세제",
-   "vol": 760,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기가드침대",
-   "vol": 760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용침대",
-   "vol": 760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아세제",
+   "kw": "아기멜빵",
    "vol": 750,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아동퍼즐",
-   "vol": 750,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아세탁세제",
-   "vol": 740,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "지오보드",
-   "vol": 730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스텐전기포트",
-   "vol": 730,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "한샘교구장",
-   "vol": 730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아침대가드",
-   "vol": 720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "드럼세제",
-   "vol": 720,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "과일세척제",
-   "vol": 720,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기침대프레임",
-   "vol": 720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아범퍼침대",
-   "vol": 700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기침대순위",
-   "vol": 700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수납책상",
-   "vol": 700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "프랙탈구조",
-   "vol": 700,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "티주전자",
-   "vol": 690,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사이드책상",
-   "vol": 690,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마이리틀타이거블럭",
-   "vol": 680,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아원목침대",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비건주방세제",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기포트기",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고등학생책상추천",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기분유포트",
-   "vol": 670,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "찻주전자",
-   "vol": 670,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기침대범퍼",
+   "kw": "보드장갑",
    "vol": 660,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쌍둥이선물",
-   "vol": 660,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "젖병식세기",
-   "vol": 660,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "토들러침대",
-   "vol": 650,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "자동분유제조기",
-   "vol": 630,
+   "kw": "키즈목폴라",
+   "vol": 640,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "숫자퍼즐",
-   "vol": 630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "포트기",
-   "vol": 630,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "원목데이베드",
-   "vol": 620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유리커피포트",
-   "vol": 620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기범퍼쿠션",
+   "kw": "키즈스카프",
    "vol": 610,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "앉은뱅이책상",
-   "vol": 610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원책상",
+   "kw": "아동바라클라바",
    "vol": 600,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "빨래방세제",
-   "vol": 600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "도담도담매트",
-   "vol": 600,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "여아침대",
-   "vol": 600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자석놀이",
-   "vol": 600,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "초등학생책상의자",
-   "vol": 600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "드럼세탁기세제추천",
-   "vol": 590,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "애기용품",
+   "kw": "여아겨울옷",
    "vol": 590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "4D프레임",
-   "vol": 590,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "학생책상의자",
+   "kw": "유아털모자",
    "vol": 590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "출산산모선물",
+   "kw": "어린이모자",
    "vol": 580,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이가구",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아침대가드",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "설거지비누추천",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이책상세트",
+   "kw": "아기패딩바지",
    "vol": 560,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아섬유유연제",
-   "vol": 560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아밸런스보드",
-   "vol": 550,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "범퍼침대추천",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "액체세탁세제",
-   "vol": 550,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기싱글침대",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "내열유리전기포트",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피포트기",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아섬유유연제",
+   "kw": "아기배앓이내복",
    "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기침대쿠션",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보온전기포트",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모즈전기포트",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "내열유리티팟",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "국민아기세제",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "운동복세제",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스팀소독기",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5세남아선물",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기주전자추천",
-   "vol": 530,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "학생책상세트",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아방꾸미기",
-   "vol": 520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명품아기침대",
-   "vol": 520,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "청소세제",
-   "vol": 520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목블럭",
-   "vol": 520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이방가구",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아매트리스",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집책상",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동책상",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기세제비교",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성속옷세제",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이방침대",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아블럭",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "낮은2층침대",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니포트",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기섬유유연제추천",
+   "kw": "아동넥워머",
    "vol": 490,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애기침대가드",
+   "kw": "유아구스패딩",
    "vol": 490,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "육아필수템",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈의자",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니전기주전자",
-   "vol": 490,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "접이식좌식책상",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이용소파",
-   "vol": 485,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "책장책상세트",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌아기침대",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형전기포트",
-   "vol": 470,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "주방용품파는곳",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기가구",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동출수분유포트",
+   "kw": "어린이비니",
    "vol": 460,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아침대추천",
+   "kw": "유아귀달이모자",
    "vol": 460,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "산소표백제",
+   "kw": "남자스키장갑",
    "vol": 460,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "설거지세제",
-   "vol": 460,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자석블럭추천",
-   "vol": 460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블랑101세제",
-   "vol": 450,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "여자아이방인테리어",
+   "kw": "돌아기목도리",
    "vol": 450,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전기포트순위",
-   "vol": 450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "나노블록",
-   "vol": 450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등책상의자",
-   "vol": 450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "침대가성비",
-   "vol": 450,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "중성세탁세제",
+   "kw": "여자스키장갑",
    "vol": 440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "업소용주방세제",
-   "vol": 440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "액상세제",
-   "vol": 440,
+   "kw": "유아목티",
+   "vol": 430,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기매트리스추천",
-   "vol": 440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기유리포트",
-   "vol": 440,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "형제침대",
-   "vol": 440,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "블랑아기세제",
-   "vol": 420,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어린이책상의자세트",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수건세제",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "거실공부방",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "과일세척주방세제",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "직화유리주전자",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세탁세제대용량",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아계단",
+   "kw": "남아장갑",
    "vol": 410,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "열탕소독기",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조립장난감",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청소년침대",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형주사위",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보아르휴대용분유포트",
-   "vol": 410,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어린이높이조절책상",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "지오맥",
-   "vol": 400,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "대용량세제",
-   "vol": 400,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "키즈소파",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5세책상",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자석소마큐브",
+   "kw": "아기패딩점퍼",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "빅블럭",
+   "kw": "헤스트라스키장갑",
+   "vol": 390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기겨울장갑",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등학생입학선물",
-   "vol": 390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "데이베드침대",
-   "vol": 390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유리차주전자",
-   "vol": 390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고체세제",
-   "vol": 390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "브릭쿨코리아",
+   "kw": "초등학생장갑",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기매트가드",
-   "vol": 380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산모출산선물",
-   "vol": 380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "르파파책상",
+   "kw": "키즈반목티",
    "vol": 380,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아이의자",
-   "vol": 380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기자석장난감",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자아이침대",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "내열유리포트",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인덕션유리주전자",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2층침대프레임",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중성세제추천",
-   "vol": 360,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기침대범퍼쿠션",
+   "kw": "초등장갑",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "국산분유포트",
-   "vol": 350,
+   "kw": "여아겨울모자",
+   "vol": 360,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "속옷전용세제",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소근육장난감",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보온티포트",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "코지하우스범퍼침대",
-   "vol": 340,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "6세책상",
+   "kw": "여아바라클라바",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "7세책상",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에어맘분유포트",
-   "vol": 340,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아흔들침대",
-   "vol": 340,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "큐볼루션",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "국산전기포트",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소프트블록",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기티포트추천",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고등학교책상",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자석큐브블럭",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성인이층침대",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "시에르핀스키삼각형",
-   "vol": 340,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "어린이테이블",
+   "kw": "키즈명품패딩",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기침대브랜드",
+   "kw": "유아캡모자",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대형젠가",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "포디프레임",
-   "vol": 330,
+   "kw": "유아다운패딩",
+   "vol": 310,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "6살책상",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고체주방세제",
-   "vol": 330,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "중고등책상",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "WMF믹서기",
-   "vol": 320,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어린이수납침대",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "온도조절포트",
-   "vol": 320,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "주니어책상",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쌍둥이아기침대",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유리약탕기",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미술책상",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목침대가드",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "접이식유아매트",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상의자브랜드",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가드쿠션",
+   "kw": "키즈목티",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기침대원목",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이침대가드",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올스텐커피포트",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자매침대",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5살책상",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "패턴블록",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수학사랑쇼핑몰",
+   "kw": "배앓이방지내복",
    "vol": 300,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유아퍼즐매트",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고등학생침대",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무헤드수납침대",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아가구",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈가구",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "통돌이세탁기세제",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "범퍼침대가드",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "니스툴그로우아기침대",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "속옷빨래",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스텐커피포트",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편백나무아기침대",
-   "vol": 290,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "청소년책상",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블록장난감",
+   "kw": "아기페이크폴라",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무향세제",
+   "kw": "여자아기구두",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등학생침대추천",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "완구점",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "르주르주방세제",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "티포트추천",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈테이블",
+   "kw": "키즈캡모자",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "블록놀이",
+   "kw": "아동모자",
    "vol": 270,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "출산아기용품",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기침대쿠션가드",
-   "vol": 270,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "1종세제",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "하이가드침대",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기슈퍼싱글침대",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "내열유리커피포트",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기포트1L",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기티팟",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용식탁의자",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "6살장난감",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형블럭",
+   "kw": "유아손가락장갑",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "범퍼침대특대형",
+   "kw": "키즈스키장갑",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "7살책상",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "거실공부방인테리어",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기데이베드추천",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기쇼파",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기블록",
-   "vol": 260,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "패턴블럭",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기차주전자",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임호텝",
-   "vol": 260,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "블랑세탁세제",
+   "kw": "유아용패딩",
    "vol": 250,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "다용도세정제",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물세제",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5세생일선물",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주방세정제",
-   "vol": 250,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아좌식책상",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자작나무수납장",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "H책상",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "7세장난감",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책꽂이책상",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아분유포트",
+   "kw": "유아패딩바지",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "액체세제추천",
+   "kw": "어린이스키장갑",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영유아침대",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "지오픽스",
-   "vol": 240,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "과일야채세정제",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "국산커피포트",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수학퍼즐",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기패밀리침대",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서랍형책상",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이방책상",
+   "kw": "아이장갑",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미술학원책상",
+   "kw": "아기목워머",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애기범퍼침대",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세제종류",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아원목책상",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "예쁜전기포트",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생의자추천",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기옷세제",
+   "kw": "아기방한장갑",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기책상추천",
+   "kw": "여자아기신발",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유치원생책상",
+   "kw": "돌아기등원룩",
    "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "예쁜어린이침대",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남매침대",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기세제블랑",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기범퍼",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세탁용품",
-   "vol": 210,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "거실용매트",
+   "kw": "베이비장갑",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등장난감",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "HABA",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임산부섬유유연제",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동의자",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비누자석홀더",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등고학년책상",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "프린터책상",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용책상",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "범퍼매트",
-   "vol": 200,
+   "kw": "아기반스타킹",
+   "vol": 205,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유아높이조절책상",
+   "kw": "유아방한장갑",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이침대프레임",
+   "kw": "아이모자",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "하바보드게임",
+   "kw": "여아워커",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아보드",
-   "vol": 200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "초등학생모션데스크",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중학생침대추천",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기침대대여",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아침대매트리스",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집의자",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "저학년책상",
+   "kw": "유아방수장갑",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등학생책상세트",
+   "kw": "18개월아기장갑",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여아책상",
+   "kw": "키즈버킷햇",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기쿠션가드",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아주방세제",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산후조리선물",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등생책상",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기차포트",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중등책상",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강화유리책상",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "내열주전자",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "좌식노트북책상",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이매트리스",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쁘띠베이비범퍼침대",
-   "vol": 185,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아세제추천",
+   "kw": "어린이겨울장갑",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기빨래세제",
+   "kw": "겨울아동복",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기전용세제",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기범퍼침대추천",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유기농세탁세제",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비건세제",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기놀이테이블",
+   "kw": "유아폴라티",
    "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "어린이좌식책상",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아원목침대",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "6세남아장난감",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주방세제1종",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "7살장난감",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생책상의자세트",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기포트온도조절",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피포트가격",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스텐전기주전자",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아용품대여",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥포머스브레인마스터",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성인용2층침대",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아침대프레임",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공부용책상",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홍삼기계",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블럭테이블",
+   "kw": "겨울배냇저고리",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "높이조절아기침대",
+   "kw": "아동겨울모자",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이동형아기침대",
+   "kw": "키즈반폴라",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생구두",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "쿠쿠분유포트",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "빅블록",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고무나무책상",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아원목의자",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이들책상",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "예쁜커피포트",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중학교책상",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고등학생책상세트",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이싱글침대",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올리전기포트",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니범퍼침대",
-   "vol": 165,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흰옷세제",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "범퍼침대대여",
+   "kw": "유아방한복",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아아기침대추천",
+   "kw": "유아패딩장갑",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "블럭쌓기",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "보온티팟",
+   "kw": "어린이벙어리장갑",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기설거지세제",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기원목책상",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중고생책상",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서랍장책상",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홍삼약탕기",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이책상의자",
+   "kw": "삼지장갑",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등저학년책상",
+   "kw": "초등학생모자",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베이비침대",
+   "kw": "여아플랫슈즈",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이블럭",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임산부용품",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유기농세제",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "젖병세정제추천",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고농축세제",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EM세제",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈책상의자",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아하토이",
+   "kw": "초등신발",
    "vol": 150,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "키즈모션데스크",
-   "vol": 150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "초등학생높이조절책상",
-   "vol": 150,
+   "kw": "주니어구두",
+   "vol": 145,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무선포트기",
-   "vol": 150,
+   "kw": "키즈플리스장갑",
+   "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스테인레스전기포트",
-   "vol": 150,
+   "kw": "주니어스키장갑",
+   "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무선티포트",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친환경어린이침대",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가블리트가블러즈",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "침대저상형프레임",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아책상세트",
+   "kw": "주니어모자",
    "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "어린이책상추천",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "범퍼침대텐트",
+   "kw": "주니어목폴라",
    "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마이리틀타이거블록",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아용품점",
-   "vol": 140,
+   "kw": "초등구두",
+   "vol": 135,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "비건섬유유연제",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아체어",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "슈퍼라이노",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어린이모션데스크",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "책장형책상",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2층침대사다리",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "꽈배기쿠션",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "속옷빨래세제",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대용량커피포트",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기포트스텐",
-   "vol": 140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "주전자포트",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고등책상",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "과외책상",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등의자추천",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아세제추천",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아저상형침대",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장난감테이블",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아가침대",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "면생리대세탁",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "높이조절어린이책상",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "식기세제",
-   "vol": 130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "분유제조기추천",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1L전기포트",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등책상의자세트",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중학생책상세트",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈수납침대",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈침대프레임",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "OLLY전기포트",
-   "vol": 130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "좌식공부책상",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미피블럭",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "천연아기세제",
-   "vol": 125,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등책상세트",
+   "kw": "아동겨울패딩",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "휴대용범퍼침대",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "순한세탁세제",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목신생아침대",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "4개월아기침대",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블록종류",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이들침대",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장난감블럭",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이스툴",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "높이각도조절책상",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이층침대DIY",
-   "vol": 120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "초등학교1학년책상",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고학년책상",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "짐월드",
-   "vol": 120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "비건세탁세제",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남아침대",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목어린이책상",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기쇼파테이블",
+   "kw": "주니어목티",
    "vol": 115,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "생리혈세탁",
-   "vol": 115,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기용세제",
+   "kw": "키즈방수장갑",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유리분유포트",
+   "kw": "여아베레모",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유치원프로그램",
+   "kw": "여아단화",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "공부방테이블",
-   "vol": 110,
+   "kw": "어린이캡모자",
+   "vol": 105,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "EM주방세제",
-   "vol": 110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "영유아의자",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쿠션스툴",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자아이침대",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "속옷세탁세제",
-   "vol": 110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아블록",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블랙프라이데이침대",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "붙박이장책상",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "WMF티포트",
+   "kw": "스키속장갑",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아토피세제",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "액상세탁세제",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주방용세제",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "높이조절아기책상",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원블럭",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "구슬놀이",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "구슬블럭",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "티팟추천",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "헥시아몬드",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "생리혈세제",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아스툴",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동용침대",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1리터전기포트",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "대용량티포트",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기좌식책상",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선전기포트추천",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기원목침대대여",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선주전자추천",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이가구브랜드",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "향좋은세제",
-   "vol": 95,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "할리갈리링엘딩",
-   "vol": 95,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목아기침대대여",
-   "vol": 95,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5살침대",
-   "vol": 95,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이세제",
+   "kw": "초등여아장갑",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "세제브랜드",
+   "kw": "아동방한모자",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퍼퓸세제",
+   "kw": "스키벙어리장갑",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "8살책상",
+   "kw": "아이비니",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애기원목침대",
+   "kw": "스노보드장갑",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "브리스틀블럭",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용쇼파",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형블록",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집블럭",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등여아책상",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오더리삼각형",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아가드침대",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이층침대매트리스",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등높이조절책상",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "온도조절티포트",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기무선주전자",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피포트1L",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "학습준비물",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아원목침대대여",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "티전기포트",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상책꽂이세트",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주니어의자",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서재책상추천",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유준이침대",
-   "vol": 85,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "원목가드침대",
+   "kw": "유아벙거지모자",
    "vol": 85,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원목유아책상",
-   "vol": 85,
+   "kw": "유아페이크폴라",
+   "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에어맘",
+   "kw": "3살장갑",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기벙어리장갑",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아바라클라바",
    "vol": 80,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유아용세제",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동분유포트",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "르주르아기세제",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친환경청소세제",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이책상침대세트",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기용침대",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목유아침대",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동책상의자",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용커피포트",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올스텐전기주전자",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "안전가드침대",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기포트올스텐",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학교저학년책상",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디자인하우스스톡홀름",
-   "vol": 80,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "약탕기추천",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "침대모션베드",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "4살침대",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "휴대용유아침대",
+   "kw": "유아썬캡",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영유아책상",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "6살침대",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집테이블",
+   "kw": "아동털모자",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이세제",
+   "kw": "아동폴라티",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기범퍼매트",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "세탁세제브랜드",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아침대추천",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "육아아이템",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기수납침대",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용소파",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등입학책상",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교구사이트",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기포트보온",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "설겆이바",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아침대렌탈",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아침대대여",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기용토퍼",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학생가구브랜드",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "중고등학생책상추천",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마이리틀타이거블럭테이블",
+   "kw": "아동워머",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홀리에홀리다",
-   "vol": 65,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "유아2인책상",
+   "kw": "주니어슬리퍼",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "EM세탁세제",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동책상의자세트",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기높이조절책상",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한샘보나침대",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "팬티세제",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유리티메이커",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다둥이침대",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블록놀이테이블",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아놀이테이블",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아동용책상",
+   "kw": "아동방한장갑",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "분유포트기추천",
+   "kw": "여성스키장갑",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "국민분유포트",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "고급큐브",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이세탁세제",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5개월아기침대",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "르주르중성세제",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "범퍼침대브랜드",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교구책상",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아수납침대",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "7세교구",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대학생침대",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이각도조절책상",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이테이블",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "초등학교입학책상",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생각도조절책상",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이책상의자세트",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이침대추천",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "국산약탕기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "12면체",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "온도전기포트",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2층침대제작",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학생책상추천",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보온전기주전자",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스테인리스커피포트",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아매트리스추천",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "하이퍼스페이스",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "매듭쿠션",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "초등생의자",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기숙사책상",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "내열유리약탕기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이침대추천",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플책상",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베이비세제",
-   "vol": 55,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기옷세탁세제",
+   "kw": "주니어머플러",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베이비섬유유연제",
+   "kw": "아동귀달이모자",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기원목침대가드",
+   "kw": "주니어캡모자",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아원형테이블",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "롤릿",
+   "kw": "주니어폴라티",
    "vol": 55,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "도모아기침대",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EDTOY",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈높이조절책상",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "허밍베베분유제조기",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "국산전기주전자",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈원목침대",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "예쁜전기주전자",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목아기책상",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유리전기포트추천",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기유리주전자",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용세탁세제",
+   "kw": "삼지스키장갑",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베이비세탁세제",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목좌식책상",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "올포레",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영아책상",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산모용품",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셈셈눈썰매장",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아가구",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이블록",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아모션데스크",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이책상1000",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형포트",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아이책상추천",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피포트브랜드",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이층침대사다리",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학생책상의자세트",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생책상1000",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1400책상세트",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이싱글침대",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이원목책상",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "레트로전기포트",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피포트대용량",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "앉은책상",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중학생가구",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무라이보드게임",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임호텝보드게임",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "7세침대",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기용주방세제",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용책상의자",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타이거블럭",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "777큐브",
+   "kw": "키즈벙거지모자",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퍼퓸세탁세제",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기범퍼침대특대형",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아범퍼가드",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기원목테이블",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아놀이책상",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보드책상",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈책상의자세트",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아데이베드",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유리포트추천",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "싱글이층침대",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등아이책상",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "속옷전용비누",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이가드침대",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용라텍스",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이원목침대",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "깡총깡총아기토끼",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니무선주전자",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여학생책상",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유리주전자인덕션",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한약약탕기",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주사위세트",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이미술책상",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중학생2층침대",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈책상세트",
+   "kw": "스키삼지장갑",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기분유제조기",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "큐블로리틀몬스터",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소마큐브워크북",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기용섬유유연제",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이슬라이딩침대",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이비침대",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "6점도미노",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "이동식애기침대",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5살아이책상",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "멀티티포트",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아동침대",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1종세척제",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생책상의자추천",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기포트브랜드",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대용량전기주전자",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈침대추천",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형책꽂이",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이방인테리어소품",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "타이거블록",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원책상의자",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마그넷블록스",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용책상의자",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소마블럭",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "WMF포트",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용섬유유연제",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "하로월드범퍼침대",
-   "vol": 35,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "프리미엄세탁세제",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아원형책상",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "클레이책상",
-   "vol": 35,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "반달책상",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥포머스브레인",
+   "kw": "초등여아머리핀",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "소형범퍼침대",
+   "kw": "아동베레모",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아용침대",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기원목침대추천",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "저상형어린이침대",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "6세남자아이선물",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "완구백화점",
+   "kw": "아동캡모자",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "패브릭데이베드",
+   "kw": "남아캡모자",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "주니어책상세트",
+   "kw": "여아스키장갑",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "프리미엄주방세제",
+   "kw": "벙어리스키장갑",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "과수원까마귀",
+   "kw": "스노우보드벙어리장갑",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이책상브랜드",
+   "kw": "여아플랫",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이모션데스크",
+   "kw": "유아여름모자",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유치원생의자",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이컴퓨터책상",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "계단형2층침대",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "놀이쿠션",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주방세제브랜드",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1L커피포트",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "1인전기포트",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "분리형전기포트",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "레몬에이드세제",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아침대렌탈",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동쇼파",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이침대매트리스",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이토퍼",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주니어싱글침대",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학교책상세트",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "천연설거지비누",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등가구",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "플라잉팬케이크",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "템퍼모션베드헤드",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인덕션약탕기",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "인덕션용유리주전자",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남아책상",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올리커피포트",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주니어수납침대",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목학생책상",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "프리미엄세제",
+   "kw": "스키장갑브랜드",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "갓난아기침대",
+   "kw": "스키장장갑",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수납형어린이침대",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공룡은보석을좋아해",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친환경주방용품",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교실환경구성",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1인용커피포트",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "종이큐브",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파랑새교구장",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "이층침대제작",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "내열유리차주전자",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "더존쿡",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "감성책상",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원테이블",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이스터디책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대용량분유포트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인천송도베이비페어",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "3X3X3큐브",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잔츠큐브",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "르주르유아세제",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아침대브랜드",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중성세제사용법",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조이매스소마큐브",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고급세제",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "착한세제",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "싱글침대범퍼가드",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "계면활성제없는세제",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아원목가구",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기침대매트",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아책걸상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아동책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "논슬립폴더매트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아범퍼",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아낮은책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "꼬모토들러침대",
+   "kw": "여아방수장갑",
    "vol": 25,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "유아원목테이블",
+   "kw": "아동방한복",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "포비든데저트",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "키즈수납형침대",
+   "kw": "애기장갑",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈슬라이딩침대",
+   "kw": "가죽스키장갑",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "학생침대추천",
+   "kw": "어린이버킷햇",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "6살여자아이장난감",
+   "kw": "키즈썬캡",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인성교육자료",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "창의력장난감",
+   "kw": "남성스키장갑",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "높이조절학생책상",
+   "kw": "3지장갑",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이동식유아침대",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈데이베드",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동소파",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "각도높이조절책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이책상800",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집낮은책상",
+   "kw": "돌아기멜빵바지",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "각도조절책상세트",
+   "kw": "초등여아샌들",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이높낮이조절책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "안전한주방세제",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신학기책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "분유자동제조기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블럭쿠션",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화이트전기포트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생책상브랜드",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자녀방침대",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "기하판",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가벼운전기포트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형전기주전자",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "분유티포트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스테인레스포트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스텐전기포트추천",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이쁜전기포트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기무선포트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기포트기추천",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기포트분유",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여고생책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생공부책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생컴퓨터책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자아이책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기라텍스",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이책상세트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "티메이커추천",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "튼튼한2층침대",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동침대프레임",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미술용책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조노돔시스템",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈저상형침대",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "레오보드게임",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "몰타의관문보드게임",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "밸런스빈즈",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "쌤쌤보드게임",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "토끼와거북이보드게임",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인덕션유리포트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차유리주전자",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생원목책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "4세침대",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "OLLY커피포트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선드립포트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학생공부책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "개인책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맞춤형책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "하바게임",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "교구구매",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "양말짝맞추기",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이공부책상",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블럭추천",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보드게임사무라이",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "플라잉팬케이크보드게임",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아용가구",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자책상",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원책걸상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기세제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집책상의자",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치부책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기세제선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AIRMOM",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "큐브쇼핑몰",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동출수포트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소마큐브카드",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블랑101세탁세제무향",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아전용세제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소마큐브보드게임",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기섬유유연제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세탁세제선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소마큐브자석",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세제공장",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목소마큐브",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이책걸상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집좌식책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기테이블",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집좌식테이블",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라이프인네이처",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어린이학원책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기침대범퍼",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쌓기나무교재",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소마큐브만들기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목아기침대추천",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈책상추천",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "저상형아이침대",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "저상형키즈침대",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교육완구",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중고아기침대",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용원목의자",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "꼬마큐브",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보드게임서펜티나",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2인용학원책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형약탕기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원좌식책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "창의력교구",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등컴퓨터책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "4D랜드",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "2층침대원목",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편백나무2층침대",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목공부책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자녀방책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "지오픽스정다면체",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1800원목책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모양조각",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "르주르속옷세제",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디지털전기포트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "멀티주전자",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이낮은책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여중생책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중학생공부책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "레몬에이드세정제",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "친환경주방비누",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기포트1.5L",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "문산가구",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니전기티포트",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1인용학생책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남학생책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생용책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자작나무책꽂이",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책꽂이주문제작",
+   "kw": "유아동장갑",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자아이책상",
+   "kw": "아동페이크폴라",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "학생원목책상",
+   "kw": "키즈벙거지",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홍삼달임기",
+   "kw": "보드벙어리장갑",
    "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "졸리앤로저",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "아동싱글침대",
-   "vol": 15,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈침대브랜드",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라반데리나",
-   "vol": 15,
-   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "여학생의자",
+   "kw": "스키용장갑",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이집원목책상",
+   "kw": "어린이보드장갑",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "거실책장책상",
+   "kw": "아동벙거지모자",
    "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영어유치원책상",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유치원책상세트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자석장난감만들기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아가세제",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기세제르주르",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이용테이블",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세제용품",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "안심세제",
-   "vol": 10,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아범퍼",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쌓기교구",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올포레세제",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아가전",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영아용책상",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "지역아동센터책상",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "중고원목책상",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벽면교구",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동완구",
-   "vol": 10,
-   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유아용좌식테이블",
+   "kw": "여자아이샌들",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "기숙사수납장",
+   "kw": "어린이여름모자",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보드게임슈퍼라이노",
+   "kw": "키즈밀짚모자",
    "vol": 10,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파리채보드게임",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "해적들의징검다리",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "헥서스디럭스",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친환경1종주방세제",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "각도조절책상추천",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "포디블록",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동책상세트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "포디큐브",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아블록놀이",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니지오픽스",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "새학기책상",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1600원목책상",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자석패턴블럭",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "패턴블록스티커",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편백2층침대",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오더리사각형",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제로웨이스트답례품",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교실환경미화",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신학기가구",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "다각형책상",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이방싱글침대",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아원목",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원가구제작",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "슈퍼포디프레임",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신학기이벤트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조노돔하이퍼스페이스",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "헥사플렉스",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "베이비가구",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원카페트",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "DESIGNHOUSESTOCKHOLM",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스트링아트시계",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보드게임레오",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "암호놀이",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "좌식용책상",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원원목책상",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수학교재교구",
-   "vol": 10,
-   "comp": "낮음",
    "hint": false
   }
  ]
