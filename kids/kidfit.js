@@ -1535,7 +1535,8 @@
         h += "<a class='dkx-c' href='/product/coffee.html'><div class='dkx-ph' style='background:linear-gradient(135deg,#f3ecff,#ffe3f1);display:flex;align-items:center;justify-content:center;font-size:64px'>☕<span class='dkx-d'>매달 진행</span></div><div class='dkx-cb'><div class='dkx-b'>다꾸키즈</div><div class='dkx-t'>인스타 코디 체험단 · 커피 기프티콘</div><div class='dkx-n'><b>매달 선착순 30명</b></div></div></a>";
         h += "</div></div>";
         var w = done(h);
-        items.forEach(function(x, i){ api(x.q, x.no).then(function(p){ if (!p) return; var im = w.querySelector("img[data-i='" + i + "']"); if (im) im.src = p.detail_image || p.list_image; var be = w.querySelector("[data-b='" + i + "']"), te = w.querySelector("[data-t='" + i + "']"); if (be && !x.brand) be.textContent = pbrand(p); if (te) te.textContent = title(x, p); }); });
+        var cache = {};
+        items.forEach(function(x, i){ setTimeout(function(){ var key = x.no || x.q; (cache[key] = cache[key] || api(x.q, x.no)).then(function(p){ if (!p) return; var im = w.querySelector("img[data-i='" + i + "']"); if (im) im.src = p.detail_image || p.list_image; var be = w.querySelector("[data-b='" + i + "']"), te = w.querySelector("[data-t='" + i + "']"); if (be && !x.brand) be.textContent = pbrand(p); if (te) te.textContent = title(x, p); }); }, i * 350); });
         return;
       }
       var x = items.filter(function(it){ return it.id === id; })[0];
