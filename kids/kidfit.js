@@ -1507,7 +1507,7 @@
     function state(x){ if (!x.end) return "on"; if (x.start && Date.now() < kd(x.start).getTime()) return "soon"; return dleft(x.end) < 0 ? "end" : "on"; }
     function badge(x){ if (!x.end) return "상시 모집"; var s = state(x), d = dleft(x.end); return s === "end" ? "모집 마감" : s === "soon" ? md(x.start) + " 오픈" : (d === 0 ? "D-DAY" : "D-" + d); }
     function pbrand(p){ return String(p.product_name || "").split(" ")[0].replace(/[(].*$/, "").replace(/con$/i, ""); }
-    function api(q){ return fetch("https://dagguu.cafe24api.com/api/v2/products?product_name=" + encodeURIComponent(q) + "&selling=T&display=T&limit=5&fields=product_no,product_name,detail_image,list_image,price", { headers: { "X-Cafe24-Client-Id": "JzTmuiBPItGvZ6KG8g3aPC" } }).then(function(r){ return r.json(); }).then(function(j){ return (j.products || [])[0] || null; }).catch(function(){ return null; }); }
+    function api(q, no){ return fetch("https://dagguu.cafe24api.com/api/v2/products?" + (no ? "product_no=" + no : "product_name=" + encodeURIComponent(q) + "&selling=T&display=T") + "&limit=5&fields=product_no,product_name,detail_image,list_image,price", { headers: { "X-Cafe24-Client-Id": "JzTmuiBPItGvZ6KG8g3aPC" } }).then(function(r){ return r.json(); }).then(function(j){ return (j.products || [])[0] || null; }).catch(function(){ return null; }); }
     function title(x, p){ var bn = x.brand || (p ? pbrand(p) : ""); return (bn && x.title.indexOf(bn) < 0 ? bn + " " : "") + x.title; }
     var logged = !!document.querySelector("a[href*='logout']");
     var loginUrl = "/member/login.html?returnUrl=" + encodeURIComponent(location.pathname + location.search);
@@ -1535,7 +1535,7 @@
         h += "<a class='dkx-c' href='/product/coffee.html'><div class='dkx-ph' style='background:linear-gradient(135deg,#f3ecff,#ffe3f1);display:flex;align-items:center;justify-content:center;font-size:64px'>☕<span class='dkx-d'>매달 진행</span></div><div class='dkx-cb'><div class='dkx-b'>다꾸키즈</div><div class='dkx-t'>인스타 코디 체험단 · 커피 기프티콘</div><div class='dkx-n'><b>매달 선착순 30명</b></div></div></a>";
         h += "</div></div>";
         var w = done(h);
-        items.forEach(function(x, i){ api(x.q).then(function(p){ if (!p) return; var im = w.querySelector("img[data-i='" + i + "']"); if (im) im.src = p.detail_image || p.list_image; var be = w.querySelector("[data-b='" + i + "']"), te = w.querySelector("[data-t='" + i + "']"); if (be && !x.brand) be.textContent = pbrand(p); if (te) te.textContent = title(x, p); }); });
+        items.forEach(function(x, i){ api(x.q, x.no).then(function(p){ if (!p) return; var im = w.querySelector("img[data-i='" + i + "']"); if (im) im.src = p.detail_image || p.list_image; var be = w.querySelector("[data-b='" + i + "']"), te = w.querySelector("[data-t='" + i + "']"); if (be && !x.brand) be.textContent = pbrand(p); if (te) te.textContent = title(x, p); }); });
         return;
       }
       var x = items.filter(function(it){ return it.id === id; })[0];
@@ -1562,7 +1562,7 @@
           "<label class='dkx-ck' style='margin-left:30px;color:#666;font-size:13.5px'><input type='checkbox' class='ck-one'>체험단 유의사항 동의(필수)</label>" +
           "<button class='dkx-btn' id='dkx-send' style='margin-top:18px'>신청완료</button></div></div>";
         var w = done(h);
-        api(x.q).then(function(p){ if (!p) return; document.getElementById("dkx-pim").src = p.list_image || p.detail_image; if (!x.brand) document.getElementById("dkx-pb").textContent = pbrand(p); document.getElementById("dkx-pt").textContent = title(x, p); });
+        api(x.q, x.no).then(function(p){ if (!p) return; document.getElementById("dkx-pim").src = p.list_image || p.detail_image; if (!x.brand) document.getElementById("dkx-pb").textContent = pbrand(p); document.getElementById("dkx-pt").textContent = title(x, p); });
         document.getElementById("f-zipb").onclick = function(){
           function open(){ new daum.Postcode({ oncomplete: function(r){ document.getElementById("f-zip").value = r.zonecode; document.getElementById("f-a1").value = r.roadAddress || r.jibunAddress; document.getElementById("f-a2").focus(); } }).open(); }
           if (window.daum && daum.Postcode) open(); else { var sc = document.createElement("script"); sc.src = "https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"; sc.onload = open; document.head.appendChild(sc); }
@@ -1606,7 +1606,7 @@
         "<div class='dkx-s'><ul><li>인스타그램 피드 1개 (사진 3장 이상)</li><li>글 첫 줄 맨 앞에 <b>#광고</b></li><li><b>@dagguu.kids</b> 태그</li><li>품절 시 비슷한 상품으로 바뀔 수 있어요.</li></ul></div>" +
         "<div class='dkx-fix'>" + (s !== "on" ? "<span class='dkx-btn dkx-off'>" + (s === "end" ? "모집 마감" : md(x.start) + " 오픈") + "</span>" : "<a class='dkx-btn' href='" + (logged ? applyUrl : "/member/login.html?returnUrl=" + encodeURIComponent(applyUrl)) + "'>체험단 신청하기</a>") + "</div></div>";
       done(h);
-      api(x.q).then(function(p){ if (!p) return; document.getElementById("dkx-img").src = p.detail_image || p.list_image; var g = document.getElementById("dkx-go"); g.href = "/product/detail.html?product_no=" + p.product_no; g.style.display = "inline-block"; if (!x.brand) document.getElementById("dkx-br").textContent = pbrand(p); document.getElementById("dkx-h").textContent = title(x, p); });
+      api(x.q, x.no).then(function(p){ if (!p) return; document.getElementById("dkx-img").src = p.detail_image || p.list_image; var g = document.getElementById("dkx-go"); g.href = "/product/detail.html?product_no=" + p.product_no; g.style.display = "inline-block"; if (!x.brand) document.getElementById("dkx-br").textContent = pbrand(p); document.getElementById("dkx-h").textContent = title(x, p); });
     }).catch(function(){ cf.style.visibility = ""; });
     return true;
   }
