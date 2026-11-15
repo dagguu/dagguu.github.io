@@ -136,6 +136,10 @@
     var nameEl = ben.querySelector(".txtEm1"), grpEl = ben.querySelector(".user__data span");
     var nm = nameEl ? nameEl.textContent.replace(/안녕하세요\.?\s*/, "").replace(/\s*님!?\s*$/, "").trim() : "";
     var grp = grpEl ? grpEl.textContent.trim() : "";
+    // 2026-11-15: 카페24 혜택 칸은 늦게 채워짐(처음엔 이름 *****·숫자 빈칸) → 채워질 때까지 최대 8초 기다림
+    var notReady = !nm || /^[*＊\s]+$/.test(nm) || !grp || [].some.call(ben.querySelectorAll("li .data"), function(d){ return !d.textContent.trim(); });
+    if (notReady && (myTop.n = (myTop.n || 0) + 1) < 20) { setTimeout(myTop, 400); return; }
+    if (/^[*＊\s]+$/.test(nm)) { try { nm = (JSON.parse(sessionStorage.getItem("dk_me") || "{}").n) || "회원"; } catch(e){ nm = ""; } }
     if (!nm && !grp) return;
     var lis = ben.querySelectorAll("li"), mil = "0", cp = "0", ord = "0원";
     for (var i = 0; i < lis.length; i++) {
