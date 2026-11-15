@@ -1513,14 +1513,15 @@
       ".dkx-tb{width:100%;border-collapse:collapse;margin:14px 0 0;font-size:14px}.dkx-tb th{width:96px;text-align:left;color:#888;font-weight:500;padding:9px 0;vertical-align:top}.dkx-tb td{padding:9px 0;line-height:1.5}" +
       ".dkx-s{padding:18px}.dkx-s h2{font-size:17px;margin:0 0 10px;font-weight:800}.dkx-s ul{margin:0;padding-left:18px;font-size:14px;line-height:1.75;color:#333}.dkx-hr{height:10px;background:#f4f4f6}" +
       ".dkx-in{display:block;width:100%;height:46px;border:1px solid #ddd;border-radius:10px;padding:0 12px;font-size:16px;margin:6px 0 10px}.dkx-btn{display:block;width:100%;height:54px;border:0;border-radius:14px;background:" + P + ";color:#fff;font-size:17px;font-weight:800;cursor:pointer;text-align:center;line-height:54px;text-decoration:none}" +
-      ".dkx-fix{position:fixed;left:0;right:0;bottom:0;z-index:900;background:#fff;border-top:1px solid #eee;padding:10px 14px calc(10px + env(safe-area-inset-bottom))}.dkx-fix .dkx-btn{max-width:692px;margin:0 auto}.dkx-off{background:#bbb!important}</style>";
+      ".dkx-fix{position:fixed;left:0;right:0;bottom:0;z-index:900;background:#fff;border-top:1px solid #eee;padding:10px 14px calc(10px + env(safe-area-inset-bottom))}.dkx-fix .dkx-btn{max-width:692px;margin:0 auto}.dkx-off{background:#bbb!important}@media(min-width:1025px){.dkx.dkx-l{max-width:1100px}.dkx-l .dkx-g{grid-template-columns:repeat(4,1fr);gap:22px 16px}}</style>";
     function done(html){ var w = document.createElement("div"); w.className = "cf"; w.innerHTML = css + html; cf.parentNode.replaceChild(w, cf); window.scrollTo(0, 0); return w; }
     fetch("https://www.dagguu.com/kids/exp.json?v=" + Math.floor(Date.now() / 600000)).then(function(r){ return r.json(); }).then(function(data){
       var items = data.items || [];
       if (!id) {
         document.title = "다꾸키즈 체험단";
-        var h = "<div class='dkx'><div class='dkx-hd'><h1>함께해요!<br>다꾸키즈 체험단</h1><p>좋아하는 브랜드 제품을 먼저 써 보고 인스타그램에 소개해 주세요.<br>선정되신 분께는 제품을 보내 드려요.</p></div>" +
-          "<div style='padding:14px 16px 0;font-size:14px;color:#555'>체험단 <b>" + items.length + "</b>개</div><div class='dkx-g'>";
+        var h = "<div class='dkx dkx-l'><div class='dkx-hd'><h1>함께해요!<br>다꾸키즈 체험단</h1><p>좋아하는 브랜드 제품을 먼저 써 보고 인스타그램에 소개해 주세요.<br>선정되신 분께는 제품을 보내 드려요.</p></div>" +
+          "<div style='padding:14px 16px 0;font-size:14px;color:#555'>체험단 <b>" + (items.length + 1) + "</b>개</div><div class='dkx-g'>" +
+          "<a class='dkx-c' href='/product/coffee.html'><div class='dkx-ph' style='background:linear-gradient(135deg,#f3ecff,#ffe3f1);display:flex;align-items:center;justify-content:center;font-size:64px'>☕<span class='dkx-d'>매달 진행</span></div><div class='dkx-b'>다꾸키즈</div><div class='dkx-t'>인스타 코디 체험단 · 커피 기프티콘</div><div class='dkx-n'>매달 선착순 30명</div></a>";
         items.forEach(function(x, i){ h += "<a class='dkx-c' href='/product/coffee.html?t=exp&id=" + x.id + "'><div class='dkx-ph'><img data-i='" + i + "' alt=''><span class='dkx-d'>" + badge(x) + "</span></div><div class='dkx-b' data-b='" + i + "'>" + esc(x.brand) + "</div><div class='dkx-t' data-t='" + i + "'>" + esc(x.title) + "</div><div class='dkx-n'>" + x.n + "명 모집</div></a>"; });
         h += "</div><div style='padding:0 16px;font-size:12.5px;color:#999;line-height:1.6'>· 다꾸키즈 회원이면 누구나 신청할 수 있어요.<br>· 선정 결과는 카카오톡 채널로 한 분씩 알려 드려요.</div></div>";
         var w = done(h);
@@ -1575,7 +1576,7 @@
     h.parentNode.insertBefore(a, h.nextSibling);
   }
   // 상단 메뉴(2026-11-14 시온님): 신상품 → ⏰타임특가, 1+1 다음에 0원체험단·기획상품(상품명에 "기획")
-  var MENU_ADD = [["0원체험단", "/product/coffee.html", "#e0457b"], ["기획상품", "/product/search.html?keyword=%EA%B8%B0%ED%9A%8D", ""], ["🚚무료배송", "/product/list.html?cate_no=56", "#1f7a4d"]];
+  var MENU_ADD = [["0원체험단", "/product/coffee.html?t=exp", "#e0457b"], ["기획상품", "/product/search.html?keyword=%EA%B8%B0%ED%9A%8D", ""], ["🚚무료배송", "/product/list.html?cate_no=56", "#1f7a4d"]];
   /* 적립금 사용 조건 3만원(2026-11-15): 스킨에 박힌 '5만원 이상 구매 시 사용' 글자를 화면에서 바꿈 */
   function mileFix(){ var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n; while ((n = w.nextNode())) { var t = n.nodeValue; if (t && t.indexOf("5만원 이상") >= 0 && /사용|쓸 수/.test(t) && t.indexOf("무료배송") < 0) n.nodeValue = t.split("5만원 이상").join("3만원 이상"); } jcFix(); setTimeout(jcFix, 1800); setTimeout(jcFix, 3500); }
   function jcFix(){ var li = document.getElementById("dk-joincp"); if (!li || li.getAttribute("data-dkm")) return; li.setAttribute("data-dkm", "1"); var t = li.querySelector(".title"), pd = li.querySelector(".period"); if (t) t.textContent = "[수신동의] 가입 적립금"; if (pd) pd.textContent = "쇼핑정보 수신 동의하고 가입하면 바로 지급 · 3만원 이상 구매 시 사용"; }
