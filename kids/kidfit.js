@@ -1489,87 +1489,124 @@
       f.insertBefore(bx, f.firstChild);
     }
   }
-  /* ⑳ 다꾸키즈 체험단 (2026-11-15 시온님: 바닐라버니 장갑·목도리 4종 각 10명, 11/16~22, 인스타 피드).
-     /product/coffee.html?t=exp = 목록, &id= = 상세. 내용은 다꾸 저장소 kids/exp.json, 상품 사진·링크는 카페24 공개 상품 API(q 검색).
-     신청자 수는 실제 기록이 없어 보여 주지 않는다. 신청은 카톡 채널로 복사해 보내기(커피 이벤트와 같은 방식). */
+  /* ⑳ 다꾸키즈 체험단 (2026-11-15 시온님: 바닐라버니 장갑·목도리 등 각 10명, 상시 모집, 인스타 피드, 커피 이벤트와 별개).
+     바잇미 체험단처럼: 목록(2열 카드) → 상세(사진·상품 보러가기·브랜드·표·미션) → 체험단 신청하기 → 신청서(배송정보·인스타 주소·동의) → 신청완료.
+     /product/coffee.html?t=exp = 목록, &id= 상세, &id=&step=apply 신청서. 내용 = 다꾸 kids/exp.json, 상품 사진·링크 = 카페24 공개 상품 API(q 검색).
+     신청은 Supabase exp_apply(supabase/exp_apps.sql) 에 저장 → 다꾸파트너스 #/padmin 에서 확인. 신청자 수는 보여 주지 않는다(부풀리지 않음). */
   var EXP_DONE = 0;
   function expPage(){
     if (location.pathname.indexOf("/product/coffee.html") !== 0 || !/[?&]t=exp/.test(location.search)) return false;
     if (EXP_DONE) return true;
     var cf = document.querySelector(".cf"); if (!cf) return true;
     EXP_DONE = 1; cf.style.visibility = "hidden";
-    var id = (location.search.match(/[?&]id=([a-z0-9-]+)/) || [])[1] || "";
-    var P = "#6a3fc8", KAKAO = "https://pf.kakao.com/_xhihNX/chat";
+    var Q = location.search, id = (Q.match(/[?&]id=([a-z0-9-]+)/) || [])[1] || "", step = (Q.match(/[?&]step=([a-z]+)/) || [])[1] || "";
+    var P = "#6a3fc8", SBU = "https://nytoxoupvaozgjpnmmdh.supabase.co", SBK = "sb_publishable_i57GJzzp-hE1tNUaLGmMqA_Lw0jSJvD";
     function kd(s){ return new Date(s + "T00:00:00+09:00"); }
     function md(s){ var d = kd(s); return (d.getMonth() + 1) + "." + d.getDate() + "(" + "일월화수목금토".charAt(d.getDay()) + ")"; }
     function dleft(e){ var end = new Date(e + "T23:59:59+09:00").getTime(), now = Date.now(); if (now > end) return -1; return Math.floor((end - now) / 86400000); }
-    function state(x){ if (!x.end) return "on"; var now = Date.now(); if (now < kd(x.start).getTime()) return "soon"; return dleft(x.end) < 0 ? "end" : "on"; }
+    function state(x){ if (!x.end) return "on"; if (x.start && Date.now() < kd(x.start).getTime()) return "soon"; return dleft(x.end) < 0 ? "end" : "on"; }
     function badge(x){ if (!x.end) return "상시 모집"; var s = state(x), d = dleft(x.end); return s === "end" ? "모집 마감" : s === "soon" ? md(x.start) + " 오픈" : (d === 0 ? "D-DAY" : "D-" + d); }
     function pbrand(p){ return String(p.product_name || "").split(" ")[0].replace(/[(].*$/, "").replace(/con$/i, ""); }
     function api(q){ return fetch("https://dagguu.cafe24api.com/api/v2/products?product_name=" + encodeURIComponent(q) + "&selling=T&display=T&limit=5&fields=product_no,product_name,detail_image,list_image,price", { headers: { "X-Cafe24-Client-Id": "JzTmuiBPItGvZ6KG8g3aPC" } }).then(function(r){ return r.json(); }).then(function(j){ return (j.products || [])[0] || null; }).catch(function(){ return null; }); }
-    var css = "<style id='dk-exp-css'>.dkx{max-width:720px;margin:0 auto;padding:0 0 110px;font-family:inherit;color:#222;box-sizing:border-box}.dkx *{box-sizing:border-box}" +
-      ".dkx-hd{background:#f4f4f6;padding:26px 18px 20px}.dkx-hd h1{margin:0;font-size:24px;font-weight:800;line-height:1.35}.dkx-hd p{margin:8px 0 0;font-size:13.5px;color:#666;line-height:1.6}" +
-      ".dkx-g{display:grid;grid-template-columns:1fr 1fr;gap:14px 10px;padding:16px 14px}.dkx-c{display:block;color:#222;text-decoration:none}.dkx-ph{position:relative;aspect-ratio:1/1;border-radius:12px;overflow:hidden;background:#f1eef8}.dkx-ph img{width:100%;height:100%;object-fit:cover;display:block}" +
-      ".dkx-d{position:absolute;left:8px;bottom:8px;background:#111;color:#fff;font-size:12px;font-weight:700;border-radius:6px;padding:4px 7px}.dkx-b{margin-top:8px;font-size:12px;color:#888}.dkx-t{margin-top:2px;font-size:14.5px;font-weight:700;line-height:1.4}.dkx-n{margin-top:4px;font-size:13px;color:#ff6a00;font-weight:700}" +
-      ".dkx-tb{width:100%;border-collapse:collapse;margin:14px 0 0;font-size:14px}.dkx-tb th{width:96px;text-align:left;color:#888;font-weight:500;padding:9px 0;vertical-align:top}.dkx-tb td{padding:9px 0;line-height:1.5}" +
-      ".dkx-s{padding:18px}.dkx-s h2{font-size:17px;margin:0 0 10px;font-weight:800}.dkx-s ul{margin:0;padding-left:18px;font-size:14px;line-height:1.75;color:#333}.dkx-hr{height:10px;background:#f4f4f6}" +
-      ".dkx-in{display:block;width:100%;height:46px;border:1px solid #ddd;border-radius:10px;padding:0 12px;font-size:16px;margin:6px 0 10px}.dkx-btn{display:block;width:100%;height:54px;border:0;border-radius:14px;background:" + P + ";color:#fff;font-size:17px;font-weight:800;cursor:pointer;text-align:center;line-height:54px;text-decoration:none}" +
-      ".dkx-fix{position:fixed;left:0;right:0;bottom:0;z-index:900;background:#fff;border-top:1px solid #eee;padding:10px 14px calc(10px + env(safe-area-inset-bottom))}.dkx-fix .dkx-btn{max-width:692px;margin:0 auto}.dkx-off{background:#bbb!important}@media(min-width:1025px){.dkx.dkx-l{max-width:1100px}.dkx-l .dkx-g{grid-template-columns:repeat(4,1fr);gap:22px 16px}}</style>";
-    function done(html){ var w = document.createElement("div"); w.className = "cf"; w.innerHTML = css + html; cf.parentNode.replaceChild(w, cf); window.scrollTo(0, 0); return w; }
+    function title(x, p){ var bn = x.brand || (p ? pbrand(p) : ""); return (bn && x.title.indexOf(bn) < 0 ? bn + " " : "") + x.title; }
+    var logged = !!document.querySelector("a[href*='logout']");
+    var loginUrl = "/member/login.html?returnUrl=" + encodeURIComponent(location.pathname + location.search);
+    var css = "<style id='dk-exp-css'>.dkx{max-width:720px;margin:0 auto;padding:0 0 110px;font-family:inherit;color:#222;box-sizing:border-box;background:#fff}.dkx *{box-sizing:border-box}.dkx-l{background:#f2f2f4}" +
+      ".dkx-hd{display:flex;justify-content:space-between;align-items:flex-start;padding:26px 18px 6px}.dkx-hd small{display:block;font-size:15px;color:#333}.dkx-hd h1{margin:2px 0 0;font-size:26px;font-weight:800}.dkx-my{border:1px solid #bbb;border-radius:8px;padding:7px 12px;font-size:13px;color:#555;text-decoration:none;background:#fff;white-space:nowrap}" +
+      ".dkx-ds{padding:10px 18px 0;font-size:14px;color:#777;line-height:1.6}.dkx-cnt{padding:18px 18px 0;text-align:right;font-size:14px;color:#777}.dkx-cnt b{color:" + P + "}" +
+      ".dkx-g{display:grid;grid-template-columns:1fr 1fr;gap:14px 12px;padding:14px 14px 24px}.dkx-c{display:block;color:#222;text-decoration:none;background:#fff;border:1px solid #e6e6e8;border-radius:10px;overflow:hidden}.dkx-ph{position:relative;aspect-ratio:1/1;overflow:hidden;background:#f1eef8}.dkx-ph img{width:100%;height:100%;object-fit:cover;display:block}" +
+      ".dkx-d{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.75);color:#fff;font-size:12px;font-weight:700;border-radius:4px;padding:4px 8px}.dkx-cb{padding:12px 12px 14px}.dkx-b{font-size:13px;color:#666}.dkx-t{margin-top:6px;font-size:15px;line-height:1.45;min-height:43px}.dkx-n{margin-top:8px;font-size:13px;color:#777}.dkx-n b{color:" + P + ";font-weight:600}" +
+      ".dkx-tb{width:100%;border-collapse:collapse;font-size:14.5px}.dkx-tb th{width:92px;text-align:left;color:#888;font-weight:400;padding:9px 0;vertical-align:top}.dkx-tb td{padding:9px 0;line-height:1.5}" +
+      ".dkx-s{padding:20px 18px}.dkx-s h2{font-size:18px;margin:0 0 12px;font-weight:700}.dkx-s ul{margin:0;padding-left:18px;font-size:14.5px;line-height:1.8;color:#333}.dkx-hr{height:10px;background:#f2f2f4}" +
+      ".dkx-row{display:flex;gap:10px;align-items:flex-start;margin:0 0 12px}.dkx-row>span{flex:0 0 82px;font-size:14.5px;font-weight:700;padding-top:13px}.dkx-row>span i{color:" + P + ";font-style:normal}.dkx-row>div{flex:1;min-width:0}" +
+      ".dkx-in{display:block;width:100%;height:46px;border:1px solid #ddd;border-radius:0;padding:0 12px;font-size:16px;margin:0 0 8px;background:#fff}textarea.dkx-in{height:70px;padding:10px 12px}" +
+      ".dkx-btn{display:block;width:100%;height:54px;border:0;border-radius:27px;background:" + P + ";color:#fff;font-size:17px;font-weight:700;cursor:pointer;text-align:center;line-height:54px;text-decoration:none}.dkx-zip{flex:0 0 auto;height:46px;border:1px solid " + P + ";color:" + P + ";background:#fff;border-radius:23px;padding:0 16px;font-size:15px;cursor:pointer}" +
+      ".dkx-fix{position:fixed;left:0;right:0;bottom:0;z-index:900;background:#fff;border-top:1px solid #eee;padding:10px 14px calc(10px + env(safe-area-inset-bottom))}.dkx-fix .dkx-btn{max-width:692px;margin:0 auto}.dkx-off{background:#bbb!important}" +
+      ".dkx-ck{display:flex;gap:10px;align-items:center;margin:0 0 12px;font-size:14.5px;cursor:pointer}.dkx-ck input{width:22px;height:22px;flex:0 0 22px;accent-color:" + P + "}" +
+      "@media(min-width:1025px){.dkx.dkx-l{max-width:1100px}.dkx-l .dkx-g{grid-template-columns:repeat(4,1fr);gap:22px 16px}}</style>";
+    function done(html){ var w = document.createElement("div"); w.className = "cf dkx-wrap"; w.innerHTML = css + html; cf.parentNode.replaceChild(w, cf); window.scrollTo(0, 0); return w; }
     fetch("https://www.dagguu.com/kids/exp.json?v=" + Math.floor(Date.now() / 600000)).then(function(r){ return r.json(); }).then(function(data){
       var items = data.items || [];
       if (!id) {
         document.title = "다꾸키즈 체험단";
-        var h = "<div class='dkx dkx-l'><div class='dkx-hd'><h1>함께해요!<br>다꾸키즈 체험단</h1><p>제품을 받고 인스타그램에 소개해 주세요.</p></div>" +
-          "<div style='padding:14px 16px 0;font-size:14px;color:#555'>체험단 <b>" + (items.length + 1) + "</b>개</div><div class='dkx-g'>" +
-          "<a class='dkx-c' href='/product/coffee.html'><div class='dkx-ph' style='background:linear-gradient(135deg,#f3ecff,#ffe3f1);display:flex;align-items:center;justify-content:center;font-size:64px'>☕<span class='dkx-d'>매달 진행</span></div><div class='dkx-b'>다꾸키즈</div><div class='dkx-t'>인스타 코디 체험단 · 커피 기프티콘</div><div class='dkx-n'>매달 선착순 30명</div></a>";
-        items.forEach(function(x, i){ h += "<a class='dkx-c' href='/product/coffee.html?t=exp&id=" + x.id + "'><div class='dkx-ph'><img data-i='" + i + "' alt=''><span class='dkx-d'>" + badge(x) + "</span></div><div class='dkx-b' data-b='" + i + "'>" + esc(x.brand) + "</div><div class='dkx-t' data-t='" + i + "'>" + esc(x.title) + "</div><div class='dkx-n'>" + x.n + "명 모집</div></a>"; });
+        var h = "<div class='dkx dkx-l'><div class='dkx-hd'><div><small>함께해요!</small><h1>다꾸키즈 체험단</h1></div><a class='dkx-my' href='https://pf.kakao.com/_xhihNX/chat'>체험단 문의</a></div>" +
+          "<div class='dkx-ds'>좋아하는 브랜드의 체험단에 무료로 참여해 보세요!<br>새로운 체험단이 계속 올라와요.</div><div class='dkx-cnt'>상품 <b>" + (items.length + 1) + "</b>개</div><div class='dkx-g'>";
+        items.forEach(function(x, i){ h += "<a class='dkx-c' href='/product/coffee.html?t=exp&id=" + x.id + "'><div class='dkx-ph'><img data-i='" + i + "' alt=''><span class='dkx-d'>" + badge(x) + "</span></div><div class='dkx-cb'><div class='dkx-b' data-b='" + i + "'>" + esc(x.brand) + "</div><div class='dkx-t' data-t='" + i + "'>" + esc(x.title) + "</div><div class='dkx-n'><b>" + x.n + "명 모집중</b></div></div></a>"; });
+        h += "<a class='dkx-c' href='/product/coffee.html'><div class='dkx-ph' style='background:linear-gradient(135deg,#f3ecff,#ffe3f1);display:flex;align-items:center;justify-content:center;font-size:64px'>☕<span class='dkx-d'>매달 진행</span></div><div class='dkx-cb'><div class='dkx-b'>다꾸키즈</div><div class='dkx-t'>인스타 코디 체험단 · 커피 기프티콘</div><div class='dkx-n'><b>매달 선착순 30명</b></div></div></a>";
         h += "</div></div>";
         var w = done(h);
-        items.forEach(function(x, i){ api(x.q).then(function(p){ var im = w.querySelector("img[data-i='" + i + "']"); if (im && p) im.src = p.detail_image || p.list_image; if (p && !x.brand) { var bn = pbrand(p), be = w.querySelector("[data-b='" + i + "']"), te = w.querySelector("[data-t='" + i + "']"); if (be) be.textContent = bn; if (te && bn && x.title.indexOf(bn) < 0) te.textContent = bn + " " + x.title; } }); });
+        items.forEach(function(x, i){ api(x.q).then(function(p){ if (!p) return; var im = w.querySelector("img[data-i='" + i + "']"); if (im) im.src = p.detail_image || p.list_image; var be = w.querySelector("[data-b='" + i + "']"), te = w.querySelector("[data-t='" + i + "']"); if (be && !x.brand) be.textContent = pbrand(p); if (te) te.textContent = title(x, p); }); });
         return;
       }
       var x = items.filter(function(it){ return it.id === id; })[0];
       if (!x) { location.replace("/product/coffee.html?t=exp"); return; }
+      var s = state(x), always = !x.end, d = always ? 0 : dleft(x.end);
+      if (step === "apply") {
+        if (!logged) { location.replace(loginUrl); return; }
+        if (s !== "on") { location.replace("/product/coffee.html?t=exp&id=" + x.id); return; }
+        document.title = "체험단 신청 - 다꾸키즈";
+        var me = ""; try { me = (JSON.parse(sessionStorage.getItem("dk_me") || "{}").n) || ""; } catch(e){}
+        var row = function(lb, req, inner){ return "<div class='dkx-row'><span>" + (req ? "<i>■</i> " : "") + lb + "</span><div>" + inner + "</div></div>"; };
+        var h = "<div class='dkx'><div style='background:#f2f2f4;padding:16px 18px;font-size:17px;font-weight:700'>배송정보</div><div class='dkx-s' id='dkx-f'>" +
+          row("이름", 1, "<input class='dkx-in' id='f-name' value='" + esc(me) + "' placeholder='이름을 입력해 주세요.'>") +
+          row("주소", 1, "<div style='display:flex;gap:8px'><input class='dkx-in' id='f-zip' readonly placeholder='우편번호'><button type='button' class='dkx-zip' id='f-zipb'>우편번호</button></div><input class='dkx-in' id='f-a1' readonly placeholder='기본 주소'><input class='dkx-in' id='f-a2' placeholder='상세 주소'>") +
+          row("휴대폰번호", 1, "<input class='dkx-in' id='f-ph' inputmode='numeric' placeholder=\"'-' 제외한 숫자만 입력해 주세요.\">") +
+          row("이메일", 0, "<input class='dkx-in' id='f-em' inputmode='email' placeholder='이메일 (선택)'>") +
+          row("인스타그램", 1, "<input class='dkx-in' id='f-ig' placeholder='인스타그램 주소 또는 @아이디'>") +
+          row("배송메모", 0, "<textarea class='dkx-in' id='f-memo' placeholder='배송일 지정은 어려워요'></textarea>") + "</div><div class='dkx-hr'></div>" +
+          "<div class='dkx-s'><div style='display:flex;gap:14px;align-items:center'><img id='dkx-pim' alt='' style='width:96px;height:96px;object-fit:cover;background:#f1eef8;flex:0 0 96px'><div><div style='font-size:13px;color:#777' id='dkx-pb'>" + esc(x.brand) + "</div><div style='font-size:15.5px;margin-top:4px;line-height:1.45' id='dkx-pt'>" + esc(x.title) + "</div><div style='font-size:13px;color:#999;margin-top:6px'>수량 : 1개</div></div></div></div><div class='dkx-hr'></div>" +
+          "<div class='dkx-s'><h2>유의사항</h2><ul><li>선정되신 분께 카카오톡으로 연락드려요.</li><li>재고에 따라 신청한 상품과 다른 상품 또는 옵션(색상)으로 바뀔 수 있어요.</li><li>제품을 받으면 인스타그램 피드에 #광고 표시와 @dagguu.kids 태그를 넣어 올려 주세요.</li></ul></div><div class='dkx-hr'></div>" +
+          "<div class='dkx-s'><label class='dkx-ck'><input type='checkbox' id='ck-all'><b>유의사항을 확인했으며, 아래 내용에 모두 동의합니다.</b></label>" +
+          "<label class='dkx-ck' style='margin-left:30px;color:#666;font-size:13.5px'><input type='checkbox' class='ck-one'>개인정보 수집·이용 동의(필수) <a href='#' id='ck-more' style='margin-left:auto;color:#888'>자세히</a></label>" +
+          "<div id='ck-txt' style='display:none;margin:-4px 0 12px 30px;font-size:12.5px;color:#777;line-height:1.6;background:#f7f7f9;padding:10px 12px'>수집 항목: 이름, 주소, 휴대폰 번호, 이메일, 인스타그램 주소<br>목적: 체험단 선정 연락·제품 발송<br>보관: 체험단 진행이 끝나면 파기 (최대 8개월)<br>동의하지 않으면 체험단에 신청할 수 없어요.</div>" +
+          "<label class='dkx-ck' style='margin-left:30px;color:#666;font-size:13.5px'><input type='checkbox' class='ck-one'>체험단 유의사항 동의(필수)</label>" +
+          "<button class='dkx-btn' id='dkx-send' style='margin-top:18px'>신청완료</button></div></div>";
+        var w = done(h);
+        api(x.q).then(function(p){ if (!p) return; document.getElementById("dkx-pim").src = p.list_image || p.detail_image; if (!x.brand) document.getElementById("dkx-pb").textContent = pbrand(p); document.getElementById("dkx-pt").textContent = title(x, p); });
+        document.getElementById("f-zipb").onclick = function(){
+          function open(){ new daum.Postcode({ oncomplete: function(r){ document.getElementById("f-zip").value = r.zonecode; document.getElementById("f-a1").value = r.roadAddress || r.jibunAddress; document.getElementById("f-a2").focus(); } }).open(); }
+          if (window.daum && daum.Postcode) open(); else { var sc = document.createElement("script"); sc.src = "https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"; sc.onload = open; document.head.appendChild(sc); }
+        };
+        document.getElementById("f-a1").onclick = function(){ document.getElementById("f-zipb").click(); };
+        document.getElementById("ck-more").onclick = function(e){ e.preventDefault(); var t = document.getElementById("ck-txt"); t.style.display = t.style.display === "none" ? "block" : "none"; };
+        var all = document.getElementById("ck-all"), ones = w.querySelectorAll(".ck-one");
+        all.onchange = function(){ for (var k = 0; k < ones.length; k++) ones[k].checked = all.checked; };
+        for (var k = 0; k < ones.length; k++) ones[k].onchange = function(){ var ev = true; for (var j = 0; j < ones.length; j++) if (!ones[j].checked) ev = false; all.checked = ev; };
+        var sb = document.getElementById("dkx-send");
+        sb.onclick = function(){
+          function v(k){ var e = document.getElementById(k); return e ? e.value.trim() : ""; }
+          if (!v("f-name")) { alert("이름을 입력해 주세요."); return; }
+          if (!v("f-a1")) { alert("우편번호 찾기로 주소를 입력해 주세요."); return; }
+          if (v("f-ph").replace(/[^0-9]/g, "").length < 10) { alert("휴대폰 번호를 확인해 주세요."); return; }
+          if (v("f-ig").length < 3) { alert("인스타그램 주소를 입력해 주세요."); return; }
+          if (!all.checked) { alert("필수 동의에 체크해 주세요."); return; }
+          var mid = ""; try { mid = sessionStorage.getItem("dk_mid") || ""; } catch(e){}
+          sb.disabled = true; sb.textContent = "신청하는 중…";
+          fetch(SBU + "/rest/v1/rpc/exp_apply", { method: "POST", headers: { apikey: SBK, Authorization: "Bearer " + SBK, "Content-Type": "application/json" },
+            body: JSON.stringify({ p: { exp: x.id, title: document.getElementById("dkx-pt").textContent, name: v("f-name"), zip: v("f-zip"), addr1: v("f-a1"), addr2: v("f-a2"), phone: v("f-ph"), email: v("f-em"), insta: v("f-ig"), memo: v("f-memo"), member: [me, mid].filter(Boolean).join(" / ") } }) })
+            .then(function(r){ return r.json(); }).then(function(res){
+              if (res === "ok" || res === "dup") {
+                try { gtag("event", "exp_apply", { exp: x.id }); } catch(e){}
+                done("<div class='dkx' style='text-align:center;padding:60px 20px 120px'><div style='font-size:54px'>💜</div><h1 style='margin:14px 0 8px;font-size:22px'>" + (res === "dup" ? "이미 신청하셨어요" : "체험단 신청이 완료됐어요!") + "</h1><p style='font-size:14.5px;color:#666;line-height:1.7;margin:0'>선정되시면 카카오톡으로 연락드려요.</p>" +
+                  "<a class='dkx-btn' style='margin:24px auto 0;max-width:420px;background:#fee500;color:#222' href='https://pf.kakao.com/_xhihNX/friend'>카카오톡 채널 추가하기</a><a class='dkx-btn' style='margin:10px auto 0;max-width:420px;background:#fff;color:" + P + ";border:1px solid " + P + "' href='/product/coffee.html?t=exp'>다른 체험단 보기</a></div>");
+              } else { sb.disabled = false; sb.textContent = "신청완료"; alert(res === "bad" ? "입력한 내용을 다시 확인해 주세요." : "잠시 후 다시 시도해 주세요."); }
+            }).catch(function(){ sb.disabled = false; sb.textContent = "신청완료"; alert("신청이 저장되지 않았어요. 잠시 후 다시 시도해 주세요."); });
+        };
+        return;
+      }
       document.title = x.title + " - 다꾸키즈";
-      var s = state(x), always = !x.end, d = always ? 0 : dleft(x.end), tot = always ? 1 : 0, pct = 0; if (!always) { tot = (new Date(x.end + "T23:59:59+09:00") - kd(x.start)) / 86400000; pct = s === "end" ? 100 : s === "soon" ? 0 : Math.min(100, Math.max(4, Math.round((1 - (d + 1) / tot) * 100))); }
-      var logged = !!document.querySelector("a[href*='logout']");
-      var h = "<div class='dkx'><div class='dkx-ph' style='border-radius:0'><img id='dkx-img' alt=''><a id='dkx-go' href='#' style='display:none;position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.72);color:#fff;font-size:13px;font-weight:700;border-radius:20px;padding:8px 14px;text-decoration:none'>상품 보러가기 ›</a></div>" +
-        "<div class='dkx-s' style='padding-bottom:6px'><div style='display:flex;align-items:center;gap:10px'><span style='width:38px;height:38px;border-radius:50%;background:" + P + ";color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center'>D</span><div><b style='font-size:15px' id='dkx-br'>" + esc(x.brand || "다꾸키즈") + "</b></div></div>" +
-        "<h1 id='dkx-h' style='margin:14px 0 0;font-size:21px;font-weight:800;line-height:1.4'>" + esc(x.title) + "</h1>" +
-        (always ? "<div style='margin-top:14px;font-size:13px;color:#666'><b style='color:#ff6a00'>상시 모집 중</b> · " + x.n + "명 모집 (다 차면 마감돼요)</div>" : "<div style='margin-top:14px;display:flex;justify-content:space-between;font-size:13px;color:#666'><span>" + (s === "end" ? "모집이 끝났어요" : s === "soon" ? md(x.start) + "에 신청이 열려요" : "<b style='color:#ff6a00'>" + (d === 0 ? "오늘 마감" : d + "일 남음") + "</b>") + "</span><span>" + x.n + "명 모집</span></div>" +
-        "<div style='margin-top:6px;height:8px;border-radius:4px;background:#eee;overflow:hidden'><div style='height:100%;width:" + pct + "%;background:" + P + "'></div></div>") +
-        "<table class='dkx-tb'><tr><th>모집 인원</th><td>" + x.n + "명</td></tr><tr><th>모집 기간</th><td>" + (always ? "상시 모집 (모집 인원이 차면 마감)" : md(x.start) + " ~ " + md(x.end) + " 23:59") + "</td></tr><tr><th>선정 발표</th><td>" + (always ? "신청 내용 확인 후" : md(x.ann)) + " · 카톡으로 연락드려요</td></tr><tr><th>작성 채널</th><td>" + esc(x.ch) + "</td></tr></table></div><div class='dkx-hr'></div>" +
-        "<div class='dkx-s'><h2>📸 미션</h2><ul><li>인스타그램 피드 1개 (사진 3장 이상)</li><li>글 첫 줄 맨 앞에 <b>#광고</b></li><li><b>@dagguu.kids</b> 태그</li></ul><p style='margin:12px 0 0;font-size:13px;color:#888'>※ 품절 시 비슷한 상품으로 바뀔 수 있어요.</p></div><div class='dkx-hr'></div>" +
-        "<div class='dkx-s' id='dkx-form'><h2>✍️ 신청하기</h2>" + (s !== "on" ? "<p style='font-size:14px;color:#888'>" + (s === "end" ? "모집이 끝났어요. 다음 체험단을 기다려 주세요 💜" : md(x.start) + " 00시부터 신청할 수 있어요.") + "</p>" :
-          (logged ? "<label style='font-size:13px;color:#555'>인스타그램 아이디<input class='dkx-in' id='dkx-ig' placeholder='@아이디'></label><label style='font-size:13px;color:#555'>휴대폰 번호<input class='dkx-in' id='dkx-ph' inputmode='tel' placeholder='010-0000-0000'></label><label style='font-size:13px;color:#555'>아이 나이 (선택)<input class='dkx-in' id='dkx-age' placeholder='예: 3살'></label>" +
-            "<label style='display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#444;line-height:1.5;margin:4px 0 12px'><input type='checkbox' id='dkx-ok' style='width:20px;height:20px;flex:0 0 20px;accent-color:" + P + "'><span>[필수] 개인정보 수집·이용 동의 (인스타 아이디·휴대폰 번호, 체험단 진행 후 파기)</span></label>" +
-            "<button class='dkx-btn' id='dkx-send'>신청하기</button>"
-          : "<p style='font-size:14px;color:#555'>다꾸키즈 회원만 신청할 수 있어요.</p><a class='dkx-btn' href='/member/login.html?returnUrl=" + encodeURIComponent(location.pathname + location.search) + "'>로그인하고 신청하기</a>")) + "</div>" +
-        "<div class='dkx-s' style='padding-top:0'><a href='/product/coffee.html?t=exp' style='font-size:14px;color:" + P + ";text-decoration:none'>‹ 다른 체험단 보기</a></div>" +
-        "<div class='dkx-fix'>" + (s !== "on" ? "<span class='dkx-btn dkx-off'>" + (s === "end" ? "모집 마감" : md(x.start) + " 오픈") + "</span>" : logged ? "<a class='dkx-btn' href='#dkx-form' id='dkx-fixbtn'>신청하기</a>" : "<a class='dkx-btn dkx-off' href='/member/login.html?returnUrl=" + encodeURIComponent(location.pathname + location.search) + "'>회원전용 · 로그인</a>") + "</div></div>";
-      var w = done(h);
-      api(x.q).then(function(p){ if (!p) return; document.getElementById("dkx-img").src = p.detail_image || p.list_image; var g = document.getElementById("dkx-go"); g.href = "/product/detail.html?product_no=" + p.product_no; g.style.display = "inline-block"; if (!x.brand) { var bn = pbrand(p); if (bn) { document.getElementById("dkx-br").textContent = bn; if (x.title.indexOf(bn) < 0) document.getElementById("dkx-h").textContent = bn + " " + x.title; } } });
-      var fb = document.getElementById("dkx-fixbtn"); if (fb) fb.onclick = function(e){ e.preventDefault(); document.getElementById("dkx-form").scrollIntoView({ behavior: "smooth" }); };
-      var sb = document.getElementById("dkx-send");
-      if (sb) sb.onclick = function(){
-        function v(k){ var e = document.getElementById(k); return e ? e.value.trim() : ""; }
-        if (!v("dkx-ig") || !v("dkx-ph")) { alert("인스타그램 아이디와 휴대폰 번호를 적어 주세요."); return; }
-        if (!document.getElementById("dkx-ok").checked) { alert("필수 동의에 체크해 주세요."); return; }
-        var me = "", mid = ""; try { me = (JSON.parse(sessionStorage.getItem("dk_me") || "{}").n) || ""; mid = sessionStorage.getItem("dk_mid") || ""; } catch(e){}
-        sb.disabled = true; sb.textContent = "신청하는 중…";
-        fetch("https://nytoxoupvaozgjpnmmdh.supabase.co/rest/v1/rpc/exp_apply", { method: "POST", headers: { apikey: "sb_publishable_i57GJzzp-hE1tNUaLGmMqA_Lw0jSJvD", Authorization: "Bearer sb_publishable_i57GJzzp-hE1tNUaLGmMqA_Lw0jSJvD", "Content-Type": "application/json" },
-          body: JSON.stringify({ p_exp: x.id, p_title: x.title, p_ig: v("dkx-ig"), p_phone: v("dkx-ph"), p_age: v("dkx-age"), p_member: [me, mid].filter(Boolean).join(" / ") }) })
-          .then(function(r){ return r.json(); }).then(function(res){
-            if (res === "ok" || res === "dup") {
-              try { gtag("event", "exp_apply", { exp: x.id }); } catch(e){}
-              var f = document.getElementById("dkx-form");
-              f.innerHTML = "<div style='text-align:center;padding:26px 6px'><div style='font-size:46px'>💜</div><h2 style='margin:10px 0 6px;font-size:20px'>" + (res === "dup" ? "이미 신청하셨어요" : "신청이 완료됐어요!") + "</h2><p style='font-size:14px;color:#666;line-height:1.6;margin:0'>선정되시면 카카오톡 채널로 연락드려요.<br>다꾸키즈 카카오톡 채널을 추가해 두시면 소식을 놓치지 않아요.</p><a class='dkx-btn' style='margin-top:16px;background:#fee500;color:#222' href='https://pf.kakao.com/_xhihNX/friend'>카카오톡 채널 추가하기</a></div>";
-              var fx = document.getElementById("dkx-fixbtn"); if (fx) { fx.textContent = "신청 완료"; fx.className = "dkx-btn dkx-off"; fx.onclick = function(e){ e.preventDefault(); }; }
-              f.scrollIntoView({ behavior: "smooth", block: "center" });
-            } else { sb.disabled = false; sb.textContent = "신청하기"; alert(res === "bad" ? "인스타그램 아이디와 휴대폰 번호를 다시 확인해 주세요." : "잠시 후 다시 시도해 주세요."); }
-          }).catch(function(){ sb.disabled = false; sb.textContent = "신청하기"; alert("신청이 저장되지 않았어요. 잠시 후 다시 시도해 주세요."); });
-      };
+      var pct = 0; if (!always) { var tot = (new Date(x.end + "T23:59:59+09:00") - kd(x.start)) / 86400000; pct = s === "end" ? 100 : s === "soon" ? 0 : Math.min(100, Math.max(4, Math.round((1 - (d + 1) / tot) * 100))); }
+      var applyUrl = "/product/coffee.html?t=exp&id=" + x.id + "&step=apply";
+      var h = "<div class='dkx'><div class='dkx-ph'><img id='dkx-img' alt=''><a id='dkx-go' href='#' style='display:none;position:absolute;left:14px;bottom:14px;background:rgba(80,80,80,.85);color:#fff;font-size:14px;border-radius:4px;padding:8px 12px;text-decoration:none'>상품 보러가기</a></div>" +
+        "<div class='dkx-s' style='display:flex;align-items:center;gap:12px;border-bottom:1px solid #eee'><span style='width:52px;height:52px;border-radius:50%;background:" + P + ";color:#fff;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;flex:0 0 52px'>D</span><div><b style='font-size:16px' id='dkx-br'>" + esc(x.brand || "다꾸키즈") + "</b><div style='font-size:13px;color:#888;margin-top:2px'>다꾸키즈</div></div></div>" +
+        "<div class='dkx-s'><h1 id='dkx-h' style='margin:0;font-size:20px;font-weight:600;line-height:1.45'>" + esc(x.title) + "</h1>" +
+        "<div style='margin-top:18px;height:8px;border-radius:4px;background:#eee;overflow:hidden'><div style='height:100%;width:" + (always ? 100 : pct) + "%;background:" + P + "'></div></div>" +
+        "<div style='margin-top:10px;font-size:14px;color:#777'>" + (always ? "상시 모집 중 · 인원이 차면 마감돼요" : s === "end" ? "모집이 끝났어요" : "모집 종료까지 D-" + d + " 남음") + "</div></div><div class='dkx-hr'></div>" +
+        "<div class='dkx-s'><table class='dkx-tb'><tr><th>모집 현황</th><td><b style='color:" + P + "'>" + x.n + "명 모집</b></td></tr><tr><th>모집기간</th><td>" + (always ? "상시 모집" : md(x.start) + " ~ " + md(x.end)) + "</td></tr><tr><th>선정 안내</th><td>카카오톡으로 개별 연락</td></tr><tr><th>작성 채널</th><td>" + esc(x.ch) + "</td></tr></table></div><div class='dkx-hr'></div>" +
+        "<div class='dkx-s'><ul><li>인스타그램 피드 1개 (사진 3장 이상)</li><li>글 첫 줄 맨 앞에 <b>#광고</b></li><li><b>@dagguu.kids</b> 태그</li><li>품절 시 비슷한 상품으로 바뀔 수 있어요.</li></ul></div>" +
+        "<div class='dkx-fix'>" + (s !== "on" ? "<span class='dkx-btn dkx-off'>" + (s === "end" ? "모집 마감" : md(x.start) + " 오픈") + "</span>" : "<a class='dkx-btn' href='" + (logged ? applyUrl : "/member/login.html?returnUrl=" + encodeURIComponent(applyUrl)) + "'>체험단 신청하기</a>") + "</div></div>";
+      done(h);
+      api(x.q).then(function(p){ if (!p) return; document.getElementById("dkx-img").src = p.detail_image || p.list_image; var g = document.getElementById("dkx-go"); g.href = "/product/detail.html?product_no=" + p.product_no; g.style.display = "inline-block"; if (!x.brand) document.getElementById("dkx-br").textContent = pbrand(p); document.getElementById("dkx-h").textContent = title(x, p); });
     }).catch(function(){ cf.style.visibility = ""; });
     return true;
   }

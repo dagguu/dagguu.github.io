@@ -9,28 +9,34 @@ create table if not exists public.exp_apps (
   phone text not null,
   age text,
   member text,
+  name text, zip text, addr1 text, addr2 text, tel text, email text, memo text, insta text,
   status text not null default 'applied',  -- applied / selected / rejected / posted
   note text,
   created_at timestamptz not null default now(),
   unique (exp_id, phone)
 );
+alter table public.exp_apps add column if not exists name text, add column if not exists zip text, add column if not exists addr1 text, add column if not exists addr2 text, add column if not exists tel text, add column if not exists email text, add column if not exists memo text, add column if not exists insta text;
 alter table public.exp_apps enable row level security;  -- 정책 없음: 함수로만 읽고 씀
 
-create or replace function public.exp_apply(p_exp text, p_title text, p_ig text, p_phone text, p_age text, p_member text)
+drop function if exists public.exp_apply(text,text,text,text,text,text);
+-- 바잇미처럼 신청할 때 배송정보까지 받음(2026-11-15 시온님) + 인스타그램 주소
+create or replace function public.exp_apply(p jsonb)
 returns text language plpgsql security definer set search_path = public as $$
-declare ph text := regexp_replace(coalesce(p_phone,''), '[^0-9]', '', 'g'); n int;
+declare ph text := regexp_replace(coalesce(p->>'phone',''), '[^0-9]', '', 'g'); n int; ex text := p->>'exp';
 begin
-  if p_exp !~ '^[a-z0-9-]{2,40}$' then return 'bad'; end if;
-  if length(ph) < 10 or length(ph) > 11 or length(coalesce(trim(p_ig),'')) < 2 or length(p_ig) > 60 then return 'bad'; end if;
+  if ex !~ '^[a-z0-9-]{2,40}$' then return 'bad'; end if;
+  if length(ph) < 10 or length(ph) > 11 then return 'bad'; end if;
+  if length(coalesce(trim(p->>'name'),'')) < 1 or length(coalesce(trim(p->>'addr1'),'')) < 4 or length(coalesce(trim(p->>'insta'),'')) < 3 then return 'bad'; end if;
   select count(*) into n from public.exp_apps where created_at > now() - interval '1 hour';
   if n > 300 then return 'busy'; end if;
-  insert into public.exp_apps(exp_id, exp_title, ig, phone, age, member)
-    values (p_exp, left(p_title, 80), left(trim(p_ig), 60), ph, left(p_age, 20), left(p_member, 60))
+  insert into public.exp_apps(exp_id, exp_title, ig, phone, member, name, zip, addr1, addr2, tel, email, memo, insta)
+    values (ex, left(p->>'title', 80), left(trim(p->>'insta'), 120), ph, left(p->>'member', 60), left(trim(p->>'name'), 30), left(p->>'zip', 10),
+            left(trim(p->>'addr1'), 150), left(trim(p->>'addr2'), 100), left(p->>'tel', 20), left(trim(p->>'email'), 100), left(p->>'memo', 200), left(trim(p->>'insta'), 200))
     on conflict (exp_id, phone) do nothing;
   if not found then return 'dup'; end if;
   return 'ok';
 end $$;
-grant execute on function public.exp_apply(text,text,text,text,text,text) to anon, authenticated;
+grant execute on function public.exp_apply(jsonb) to anon, authenticated;
 
 create or replace function public.exp_admin_list() returns setof public.exp_apps
 language sql stable security definer set search_path = public as $$
