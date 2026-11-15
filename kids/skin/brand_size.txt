@@ -119,7 +119,15 @@
     });
     empty.style.display = shown ? "none" : "block";
   }
-  fetch("https://www.dagguu.com/kids/brand_size.json?d=" + new Date().toISOString().slice(0, 10)).then(function (r) { return r.json(); }).then(function (j) {
+  var DAY = new Date().toISOString().slice(0, 10);
+  function getJ(u) { return fetch(u + "?d=" + DAY).then(function (r) { return r.json(); }).catch(function () { return {}; }); }
+  Promise.all([getJ("https://www.dagguu.com/kids/brand_size.json"), getJ("https://www.dagguu.com/kids/brand_size_tbl.json")]).then(function (a) {
+    var j = a[0] || {}, tb = a[1] || {};
+    Object.keys(tb).forEach(function (n) {
+      if (DATA[n]) return;
+      var x = tb[n];
+      DATA[n] = { season: x.s || "", tables: (x.t || []).map(function (t) { return { cap: t[0], cols: t[1], rows: t[2] }; }), memo: x.m || [] };
+    });
     var bs = j.brands || [];
     bs.sort(function (a, b) {
       var ra = (DATA[a.n] || (a.img && a.img.length)) ? 1 : 0, rb = (DATA[b.n] || (b.img && b.img.length)) ? 1 : 0;
