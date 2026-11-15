@@ -789,7 +789,7 @@
           if (d > 0 && rw.scrollLeft >= max) rw.scrollTo({ left: 0, behavior: "smooth" }); else if (d < 0 && rw.scrollLeft <= 4) rw.scrollTo({ left: max + 4, behavior: "smooth" }); else rw.scrollBy({ left: d * w, behavior: "smooth" }); }
         bl.onclick = function(){ step(-1); }; br.onclick = function(){ step(1); };
         var hov = false; wr.addEventListener("mouseenter", function(){ hov = true; }); wr.addEventListener("mouseleave", function(){ hov = false; });
-        setInterval(function(){ var ff = document.getElementById("dk-hvf"); if (!hov && !document.hidden && !(ff && ff.style.display === "block")) step(1); }, 4000);
+        setInterval(function(){ var ff = document.getElementById("dk-hvf"); if (!hov && !document.hidden && !dkBusy() && !(ff && ff.style.display === "block")) step(1); }, 4000);
       }
       var row = sec.querySelector(".hvr"), cards = sec.querySelectorAll(".hvc"), cur = -1, vis = false;
       var PC = window.matchMedia && matchMedia("(min-width:1025px)").matches;
@@ -1053,6 +1053,7 @@
   function bmTick(){
     if (window.dkBmT) return;
     window.dkBmT = setInterval(function(){
+      if (dkBusy()) return;
       [].forEach.call(document.querySelectorAll("#dk-bm [data-end]"), function(e){
         var s = Math.floor((+e.getAttribute("data-end") - Date.now()) / 1000);
         if (s <= 0) { var c = e.closest(".di"); if (c) c.parentNode.removeChild(c); return; }
@@ -1107,7 +1108,7 @@
     r.addEventListener("scroll", function(){ cnt.textContent = (cur() + 1) + " / " + n; }, { passive: true });
     var hold = false; r.addEventListener("touchstart", function(){ hold = true; }, { passive: true }); r.addEventListener("touchend", function(){ setTimeout(function(){ hold = false; }, 3000); });
     r.addEventListener("mouseenter", function(){ hold = true; }); r.addEventListener("mouseleave", function(){ hold = false; });
-    setInterval(function(){ if (hold || document.hidden) return; var i = (cur() + 1) % n; r.scrollTo({ left: i * r.clientWidth, behavior: "smooth" }); }, 4000);
+    setInterval(function(){ if (hold || document.hidden || dkBusy()) return; var i = (cur() + 1) % n; r.scrollTo({ left: i * r.clientWidth, behavior: "smooth" }); }, 4000);
     var dk = sec.querySelector("a[href='#dk-deal']"); if (dk) dk.onclick = function(e){ e.preventDefault(); var t = document.getElementById("dk-deal"); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" }); };
     bmDeals(sec.querySelector("#dk-deal"));
   }
@@ -1216,7 +1217,7 @@
       function cur(){ return Math.round(tr.scrollLeft / Math.max(1, tr.clientWidth)); }
       tr.addEventListener("scroll", function(){ pc.textContent = (cur() + 1) + " / " + n; }, { passive: true });
       tr.addEventListener("touchstart", function(){ hold = true; }, { passive: true });
-      tm = setInterval(function(){ if (hold || !p.parentNode) return; tr.scrollTo({ left: ((cur() + 1) % n) * tr.clientWidth, behavior: "smooth" }); }, 3500);
+      tm = setInterval(function(){ if (hold || !p.parentNode || dkBusy()) return; tr.scrollTo({ left: ((cur() + 1) % n) * tr.clientWidth, behavior: "smooth" }); }, 3500);
       function close(){ clearInterval(tm); if (p.parentNode) p.parentNode.removeChild(p); }
       p.querySelector(".c").onclick = function(e){ e.preventDefault(); close(); };
       p.querySelector(".h").onclick = function(e){ e.preventDefault(); try { localStorage.setItem("dk_pop_hide", day); } catch(x){} close(); };
@@ -1623,7 +1624,30 @@
       }).catch(function(){});
     })();
   }
-  function run(){ try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  // 2026-11-15 갤럭시 흔들림: 화면을 넘기는 동안(손가락 닿음·관성 스크롤 + 0.8초)에는 타이머 글자 바꾸기·자동 넘김을 멈춤
+  var dkSt = 0, dkTouch = false;
+  window.addEventListener("scroll", function(){ dkSt = Date.now(); }, { passive: true });
+  window.addEventListener("touchstart", function(){ dkTouch = true; dkSt = Date.now(); }, { passive: true });
+  window.addEventListener("touchend", function(){ dkTouch = false; dkSt = Date.now(); }, { passive: true });
+  function dkBusy(){ return dkTouch || Date.now() - dkSt < 800; }
+  // 신상할인 타이머(스킨 listcard 의 data-dkend)를 넘겨받아 화면에 보이는 것만, 스크롤 멈췄을 때만 바꿈
+  function nsTimer(){
+    if (window.dkNsT) return;
+    function two(n){ return (n < 10 ? "0" : "") + n; }
+    function upd(){
+      if (document.hidden || dkBusy()) return;
+      [].forEach.call(document.querySelectorAll("[data-dkend]"), function(e){ e.setAttribute("data-dkend2", e.getAttribute("data-dkend")); e.removeAttribute("data-dkend"); });
+      var vh = window.innerHeight, now = Date.now();
+      [].forEach.call(document.querySelectorAll("[data-dkend2]"), function(e){
+        var b = e.getBoundingClientRect(); if (b.bottom < -50 || b.top > vh + 50) return;
+        var r = Math.max(0, Math.floor((+e.getAttribute("data-dkend2") - now) / 1000)), dd = Math.floor(r / 86400);
+        var t = (dd ? dd + "일 " : "") + two(Math.floor(r % 86400 / 3600)) + ":" + two(Math.floor(r % 3600 / 60)) + ":" + two(r % 60);
+        if (e.textContent !== t) e.textContent = t;
+      });
+    }
+    window.dkNsT = setInterval(upd, 1000); upd();
+  }
+  function run(){ try { nsTimer(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
