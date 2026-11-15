@@ -151,6 +151,8 @@
     }
     var g = msOf(grp);
     var t = document.querySelector("#contents .titleArea"); if (t) t.style.display = "none";
+    /* 2026-11-15: 위에 남던 뒤로가기 ‹ 버튼이 초대 카드와 겹쳐서 숨김 */
+    [].forEach.call(document.querySelectorAll("#contents .titleArea, #contents [onclick*='history'], #contents a[href*='history.'], #contents .btnBack, #contents .btn_back"), function(e){ if (!ben.contains(e)) e.style.display = "none"; });
     ben.style.display = "none";
     var ic = function(p){ return "<svg width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='#222' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'>" + p + "</svg>"; };
     var row = function(t, u){ return "<a href='" + u + "' style='display:flex;align-items:center;justify-content:space-between;padding:18px 18px;border-bottom:1px solid #eee;color:#222;text-decoration:none;font-size:16px'>" + t + "<span style='color:#aaa;font-size:20px'>›</span></a>"; };
