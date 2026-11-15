@@ -1,41 +1,41 @@
 {
- "at": "2026-11-12T11:00:50.370735",
- "name": "goseong-072stay",
+ "at": "2026-11-15T11:02:35.581417",
+ "name": "muan-amotion",
  "jobs": [
   {
    "img": "ai:1",
-   "taskId": "6a60904abd6522636693acc4842746aa",
+   "taskId": "4073dbc044bd113bf6bb23547d0cd459",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-12/goseong-072stay/clip_ai1.mp4"
+   "file": "video/2026-11-15/muan-amotion/clip_ai1.mp4"
   },
   {
    "img": "ai:2",
-   "taskId": "f9b543dd9261eb7d5ee62fcd8c6969a3",
+   "taskId": "42fd75aaa822a3fb436f743ecacdf53e",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-12/goseong-072stay/clip_ai2.mp4"
-  },
-  {
-   "img": "ai:3",
-   "taskId": "dbfc69063739846e98ddc37ae3b29e77",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-12/goseong-072stay/clip_ai3.mp4"
+   "file": "video/2026-11-15/muan-amotion/clip_ai2.mp4"
   },
   {
    "img": "ai:4",
-   "taskId": "c1c83e6a548b3b5c0b81e7862dc92e8c",
+   "taskId": "df47b3e1eaf13867f75373038b52998a",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-12/goseong-072stay/clip_ai4.mp4"
+   "file": "video/2026-11-15/muan-amotion/clip_ai4.mp4"
   },
   {
    "img": "ai:5",
-   "taskId": "a2577e8bebc44c84f13d211af6e9e24c",
+   "taskId": "c860b8250a12b646cc2292a1e5964380",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-12/goseong-072stay/clip_ai5.mp4"
+   "file": "video/2026-11-15/muan-amotion/clip_ai5.mp4"
+  },
+  {
+   "img": "ai:3",
+   "taskId": "9d0e1129f51cddd5f26ba5adc0d0c45e",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-15/muan-amotion/clip_ai3.mp4"
   }
  ],
  "credits_total": 175.0
