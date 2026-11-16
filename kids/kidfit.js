@@ -950,18 +950,21 @@
     var last = secs[secs.length - 1], cls = (last.querySelector("ul.prdList").className || "prdList grid4");
     var ag = ageGet(), cate = ag ? AGE[ag][1] : 54;
     var sec = document.createElement("section"); sec.className = "dk-sec"; sec.id = "dk-all";
-    sec.innerHTML = ag ? "<h2>" + AGE[ag][2] + " " + AGE[ag][0] + " <em>신상품</em></h2><p>" + AGE[ag][3] + " 아이옷만 모아 봤어요 · 내리면 계속 나와요</p><div class='ec-base-product'><ul class='" + cls + "'></ul></div>"
-      : "<h2>🛍️ 다꾸키즈 <em>전체 상품</em></h2><p>내리면 상품이 계속 나와요</p><div class='ec-base-product'><ul class='" + cls + "'></ul></div>";
+    sec.innerHTML = ag ? "<h2>" + AGE[ag][2] + " " + AGE[ag][0] + " <em>신상품</em></h2><p>" + AGE[ag][3] + " 아이옷만 모아 봤어요</p><div class='ec-base-product'><ul class='" + cls + "'></ul></div>"
+      : "<h2>🛍️ 다꾸키즈 <em>전체 상품</em></h2><p>다꾸키즈의 모든 상품을 모아 봤어요</p><div class='ec-base-product'><ul class='" + cls + "'></ul></div>";
     if (ag) { secs[0].parentNode.insertBefore(sec, secs[0]); secs.forEach(function(x){ x.style.display = "none"; }); }
     else last.parentNode.insertBefore(sec, last.nextSibling);
     var ul = sec.querySelector("ul");
     var sen = document.createElement("div"); sen.style.cssText = "padding:24px 0 40px;text-align:center;font-size:13px;color:#999"; sen.textContent = "상품을 더 불러오는 중…";
     sec.appendChild(sen);
-    var page = 1, busy = false, done = false, seen = {};
+    /* 2026-11-16 네이버 검색광고 "메인페이지에 사업자정보 없음" 반려: 끝없이 불러오면 아래 사업자 정보(footer)에 닿을 수 없어서
+       자동으로는 2쪽까지만, 그다음은 "상품 더 보기" 버튼으로 */
+    var page = 1, busy = false, done = false, seen = {}, AUTO = 2, held = false;
+    function more(){ held = true; sen.innerHTML = "<button type='button' style='padding:13px 28px;border:1px solid #ddd;border-radius:24px;background:#fff;font-size:14px;font-weight:600;color:#333;cursor:pointer'>상품 더 보기 ⌄</button>"; sen.querySelector("button").onclick = function(){ held = false; AUTO = page + 1; sen.textContent = "상품을 더 불러오는 중…"; load(); }; }
     function idOf(li){ var m = String(li.id || "").match(/([0-9]+)$/); if (m) return m[1]; var a = li.querySelector("a[href*='product_no='],a[href*='/product/']"); var h = a ? a.getAttribute("href") : ""; m = h.match(/product_no=([0-9]+)/) || h.match(/[/]([0-9]+)[/]category[/]/); return m ? m[1] : ""; }
     if (!ag) [].forEach.call(document.querySelectorAll(".dk-sec ul.prdList > li"), function(li){ var k = idOf(li); if (k) seen[k] = 1; });
     function load(){
-      if (busy || done) return; busy = true;
+      if (busy || done || held) return; busy = true;
       fetch("/product/list.html?cate_no=" + cate + "&page=" + page, { credentials: "include" }).then(function(r){ return r.text(); }).then(function(h){
         var d = new DOMParser().parseFromString(h, "text/html");
         var lis = d.querySelectorAll(".xans-product-normalpackage ul.prdList > li");
@@ -970,6 +973,7 @@
         page++; busy = false;
         if (!lis.length || page > 60) { done = true; sen.textContent = "모든 상품을 다 봤어요 💜"; return; }
         try { cpList(); } catch(e){}
+        if (page > AUTO) { more(); return; }
         if (sen.getBoundingClientRect().top < innerHeight + 1200) load();
       }).catch(function(){ busy = false; done = true; sen.innerHTML = "<a href='/product/list.html?cate_no=54' style='color:#6a3fc8'>전체 상품 보러가기 ›</a>"; });
     }
