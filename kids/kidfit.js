@@ -496,6 +496,44 @@
   /* ---------- ⑧ 쿠폰: 예상 최저가(목록·상세)·장바구니 쿠폰 혜택·내 쿠폰함 (2026-11-12 시온님, 1초쿠폰 참고·직접 만듦) ----------
      내 쿠폰 = /myshop/coupon/coupon.html 표를 읽음(로그인). 받을 수 있는 쿠폰 = 상품 상세의 쿠폰 다운로드 칸을 읽음.
      주문당 쿠폰 1장 → 가장 큰 1장만 계산. 신상 할인 중인 상품은 쿠폰을 같이 못 써서(혜택 '모든 쿠폰 사용제한') 쿠폰가를 붙이지 않음. */
+
+  /* 인기상품(분류 55)에 BEST 딱지(2026-11-16 시온님): 목록 사진 왼쪽 위(NEW 동그라미가 있으면 그 옆), 상품 상세 큰 사진에도. 분류 상품 번호는 공개 API, 30분 기억 */
+  var BEST_SET = null, BEST_ASK = 0;
+  function bestLoad(cb){
+    if (BEST_SET) return cb();
+    try { var c = JSON.parse(sessionStorage.getItem("dk_best") || "null"); if (c && Date.now() - c.t < 1800000) { BEST_SET = {}; c.n.forEach(function(n){ BEST_SET[n] = 1; }); return cb(); } } catch(e){}
+    if (BEST_ASK) return; BEST_ASK = 1;
+    var all = [], H = { "X-Cafe24-Client-Id": "JzTmuiBPItGvZ6KG8g3aPC" };
+    (function pg(off){
+      fetch("https://dagguu.cafe24api.com/api/v2/products?category=55&display=T&selling=T&limit=100&offset=" + off + "&fields=product_no", { headers: H }).then(function(r){ return r.json(); }).then(function(j){
+        var ps = (j && j.products) || []; ps.forEach(function(p){ all.push(p.product_no); });
+        if (ps.length === 100 && off < 400) return pg(off + 100);
+        BEST_SET = {}; all.forEach(function(n){ BEST_SET[n] = 1; });
+        try { sessionStorage.setItem("dk_best", JSON.stringify({ t: Date.now(), n: all })); } catch(e){}
+        cb();
+      }).catch(function(){ BEST_ASK = 0; });
+    })(0);
+  }
+  function bestBadge(){
+    bestLoad(function(){
+      if (!document.getElementById("dk-best-css")) { var st = document.createElement("style"); st.id = "dk-best-css";
+        st.textContent = ".dk-best{position:absolute;left:8px;top:8px;z-index:3;width:38px;height:38px;border-radius:50%;background:#ff5a36;color:#fff;font-size:10.5px;font-weight:900;letter-spacing:.3px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.18);pointer-events:none}.dk-best.nx{left:50px}.dk-best.big{width:52px;height:52px;font-size:13px;left:12px;top:12px}";
+        document.head.appendChild(st); }
+      [].forEach.call(document.querySelectorAll("ul.prdList > li, .dk-hdbox li, #dk-all li"), function(li){
+        if (li.querySelector(".dk-best")) return;
+        var m = (li.id || "").match(/(\d+)$/), n = m && m[1];
+        if (!n) { var a = li.querySelector("a[href*='product_no='], a[href*='/product/']"); var h = a && a.getAttribute("href") || ""; m = h.match(/product_no=(\d+)/) || h.match(/\/(\d+)\/category\//) || h.match(/\/product\/[^\/]+\/(\d+)/); n = m && m[1]; }
+        if (!n || !BEST_SET[n]) return;
+        var th = li.querySelector(".thumbnail") || li.querySelector(".prdImg") || li; if (getComputedStyle(th).position === "static") th.style.position = "relative";
+        var b = document.createElement("span"); b.className = "dk-best" + (th.querySelector(".dk-newdot") ? " nx" : ""); b.textContent = "BEST"; th.appendChild(b);
+      });
+      var pn = (window.iProductNo || (location.search.match(/product_no=(\d+)/) || [])[1] || (location.pathname.match(/\/product\/[^\/]+\/(\d+)/) || [])[1]);
+      if (pn && BEST_SET[pn] && !document.querySelector(".dk-best.big")) {
+        var k = document.querySelector(".keyImg, .xans-product-image .thumbnail, .xans-product-image"); if (k) { if (getComputedStyle(k).position === "static") k.style.position = "relative"; var b2 = document.createElement("span"); b2.className = "dk-best big"; b2.textContent = "BEST"; k.appendChild(b2); }
+      }
+    });
+  }
+  (function(){ var tm4; try { new MutationObserver(function(){ clearTimeout(tm4); tm4 = setTimeout(function(){ try { bestBadge(); } catch(e){} }, 300); }).observe(document.documentElement, { childList: true, subtree: true }); } catch(e){} })();
   function dkHome(){ var p = location.pathname; return p === "/" || p === "/index.html"; }
   /* 2026-11-16 시온님 "홈페이지가 정신없어 정리": 떠 있는 것 줄이기 — 로그인 인사 토스트 숨김, 휴대폰 카톡 버튼은 상품 상세에서만 */
   function tidy(){
@@ -1896,7 +1934,7 @@
     if (tab && getComputedStyle(tab).display !== "none") { var a = document.createElement("a"); a.id = "dk-j10tip"; a.href = JOIN10; a.innerHTML = "1초 가입 시 1만원 쿠폰!"; document.body.appendChild(a); document.body.classList.add("dk-j10"); }
     /* PC 알약은 메뉴 줄과 겹쳐서 뺌(2026-11-16) */
   }
-  function run(){ try { tidy(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  function run(){ try { tidy(); } catch(e){} try { bestBadge(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
