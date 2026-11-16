@@ -1102,8 +1102,8 @@
     var sec = document.createElement("section"); sec.id = "dk-bm";
     var logged = isLogged();
     var bc = logged
-      ? "<a class='bc' href='/myshop/index.html#dk-invite'><i>💌</i><span style='min-width:0'><b>친구 초대하고 1,000원 적립</b><span>친구가 내 초대 링크로 가입하면 둘 다 적립금 500원</span></span><em>초대하기</em></a>"
-      : "<a class='bc' href='/member/agreement.html'><i>🎁</i><span style='min-width:0'><b>수신 동의하고 가입하면</b><span>적립금 1,000원 + 5% 쿠폰</span></span><em>가입하기</em></a>";
+      ? "<a class='bc' href='/myshop/index.html#dk-invite'><i>💌</i><span style='min-width:0'><b>친구 초대하고 1,000원 적립</b><span>친구가 내 초대 링크로 가입하면 둘 다 적립금 1,000원</span></span><em>초대하기</em></a>"
+      : "<a class='bc' href='/member/login.html?dkkakao=1'><i>🎁</i><span style='min-width:0'><b>1초 가입하면 1만원 쿠폰</b><span>8만원 이상 주문 · 수신 동의 시 적립금 1,000원</span></span><em>가입하기</em></a>";
     var day = new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10), sfx = bmMobile() ? "m" : "";
     var bn = "<div class='bn'><div class='bnr'>" + BM_BAN.map(function(b, i){ return "<a href='" + b[1] + "'><img src='https://www.dagguu.com/kids/banner/B" + b[0] + sfx + ".jpg?d=" + day + "v2' alt='' " + (i ? "loading='lazy'" : "") + "></a>"; }).join("") + "</div><span class='bnc'>1 / " + BM_BAN.length + "</span></div>";
     var ic = "<div class='ic'>" + BM_ICONS.map(function(x){ return "<a href='" + x[2] + "'><span style='background:" + x[3] + "'>" + x[0] + "</span>" + x[1] + "</a>"; }).join("") + "</div>";
@@ -1202,7 +1202,7 @@
       var PH2 = "https://ecimg.cafe24img.com/pg3599b80335735046/dagguu/web/upload/NNEditor/20261111/9b57e1866ba44d2bf1be89f7bb018101.jpg";
       var first = logged
         ? "<a class='ps' href='/product/coffee.html' style='background-image:url(" + PH2 + ")'><i class='s1'>☕ 커피 이벤트</i><i class='s2'>상시 10명</i><span class='tx'><b>@dagguu.kids 태그하고<br>커피 받아가세요</b><small>우리 아이 코디 사진에 태그만 하면 돼요</small></span></a>"
-        : "<a class='ps' href='/member/agreement.html' style='background-image:url(" + PH1 + ")'><i class='s1'>🎁 첫 가입 혜택</i><i class='s2'>바로 지급</i><span class='tx'><b>수신 동의하고 가입하면<br>적립금 1,000원!</b><small>5% 할인 쿠폰도 함께 드려요</small></span></a>";
+        : "<a class='ps' href='/member/agreement.html' style='background-image:url(" + PH1 + ")'><i class='s1'>🎁 첫 가입 혜택</i><i class='s2'>바로 지급</i><span class='tx'><b>1초 가입하면<br>1만원 쿠폰!</b><small>8만원 이상 주문 시 · 수신 동의하면 적립금 1,000원도</small></span></a>";
       var dd = new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10).replace(/-/g, "");
       var bans = BM_BAN.map(function(x){ return "<a class='ps' href='" + x[1] + "' style='background-image:url(https://www.dagguu.com/kids/banner/B" + x[0] + "m.jpg?d=" + dd + "v2)'></a>"; }).join("");
       var n = 1 + BM_BAN.length;
@@ -1845,7 +1845,20 @@
   function nsRateWatch(){ if (NSR) { nsRate(); return; } NSR = 1; nsRate(); var n = 0, iv = setInterval(function(){ nsRate(); if (++n > 20) clearInterval(iv); }, 1000); var t = 0; try { new MutationObserver(function(){ if (t) return; t = setTimeout(function(){ t = 0; nsRate(); }, 300); }).observe(document.body, { childList: true, subtree: true }); } catch(e){} }
   /* 친구 초대 적립금 1,000원(2026-11-16): 스킨에 박힌 "500원" 초대 문구를 화면에서 바꿈 */
   function inv1000(){ var els = document.querySelectorAll("a.dk-invite, #dk-invite, .myshop_recommender, p, span, b"); for (var i = 0; i < els.length; i++) { var el = els[i]; if (el.children.length > 3) continue; var t = el.innerHTML; if (t.indexOf("500원") < 0) continue; if (!/친구|초대|추천/.test(el.textContent + (el.parentNode ? el.parentNode.textContent : ""))) continue; var n = t.replace(/(^|[^0-9,])500원/g, function(m, a){ return a + "1,000원"; }); if (n !== t) el.innerHTML = n; } }
-  function run(){ try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  /* 1초 가입 1만원 쿠폰 안내(2026-11-16 시온님, 젝시믹스 참고): 비회원에게 휴대폰 MY 탭 위 노란 말풍선 + PC 머리글 빨간 알약. 누르면 카카오 1초 가입. 쿠폰은 8만원 이상 주문에 사용 */
+  var JOIN10 = "/member/login.html?dkkakao=1";
+  function join10(){
+    if (isLogged() || document.getElementById("dk-j10css")) return;
+    var st = document.createElement("style"); st.id = "dk-j10css";
+    st.textContent = "#dk-j10tip{position:fixed;z-index:1001;bottom:calc(64px + env(safe-area-inset-bottom));right:6px;background:#fff35c;color:#222;font-size:13px;font-weight:800;letter-spacing:-.3px;padding:7px 12px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.15);text-decoration:none;white-space:nowrap;animation:dkj10 1.6s ease-in-out infinite}#dk-j10tip:after{content:'';position:absolute;bottom:-6px;right:24px;border:6px solid transparent;border-bottom:0;border-top-color:#fff35c}#dk-j10tip small{font-size:10.5px;font-weight:600;color:#666;margin-left:4px}@keyframes dkj10{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}" +
+      "#dk-j10pill{display:none;margin-left:12px;background:#ef5a3c;color:#fff!important;font-size:13px;font-weight:700;padding:6px 14px;border-radius:999px;text-decoration:none;white-space:nowrap;vertical-align:middle}@media(min-width:1025px){#dk-j10pill{display:inline-block}}";
+    document.head.appendChild(st);
+    var tab = document.getElementById("dk-tab");
+    if (tab && getComputedStyle(tab).display !== "none") { var a = document.createElement("a"); a.id = "dk-j10tip"; a.href = JOIN10; a.innerHTML = "1초 가입 시 1만원 쿠폰!<small>8만원↑</small>"; document.body.appendChild(a); }
+    var lg = document.querySelector(".top_logo");
+    if (lg && !document.getElementById("dk-j10pill")) { var p = document.createElement("a"); p.id = "dk-j10pill"; p.href = JOIN10; p.textContent = "가입하고 1만원 쿠폰 받기"; lg.appendChild(p); }
+  }
+  function run(){ try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
