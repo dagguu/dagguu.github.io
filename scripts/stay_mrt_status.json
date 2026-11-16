@@ -1,7 +1,54 @@
 {
- "at": "2026-11-16 10:26",
+ "at": "2026-11-16 19:55",
  "checkIn": "2026-11-21",
  "stays": {
+  "boryeong-lava-poolvilla": {
+   "name": "라바풀빌라",
+   "city": "보령",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "보령",
+     "region": "보령",
+     "type": "CITY",
+     "pages": 10,
+     "n": 426,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 449
+    },
+    {
+     "kw": "충남",
+     "region": "논산",
+     "type": "CITY",
+     "pages": 4,
+     "n": 105,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 107
+    },
+    {
+     "kw": "충남",
+     "region": "청양",
+     "type": "CITY",
+     "pages": 2,
+     "n": 41,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 42
+    }
+   ]
+  },
   "busan-matie-harbor": {
    "name": "마티에 부산하버시티",
    "city": "부산",
