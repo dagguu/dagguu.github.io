@@ -748,7 +748,9 @@ function recScore(it){ if(it._r!==undefined) return it._r; var s=0, p=payOf(it);
   var ap=it.ap&&it.ap[0]; if(ap) s+=Math.min(6,Math.log(ap+1)/Math.LN10*2);
   if(isPick(it)) s+=2; if(valOf(it)>=100000) s+=1;
   return it._r=s; }
-function sorter(){
+/* 2026-11-16 시온님 "다꾸키즈 체험단이 맨 위에": own(직접 모집) 체험단은 어떤 정렬이든 먼저 */
+function sorter(){ var f=sorter0(); return function(a,b){ var x=a.own?1:0, y=b.own?1:0; return (y-x)||f(a,b); }; }
+function sorter0(){
   var o=state.sort;
   if(o==="rec") return function(a,b){ return recScore(b)-recScore(a) || valOf(b)-valOf(a) || daysLeft(a)-daysLeft(b); };
   if(o==="deadline") return function(a,b){ return daysLeft(a)-daysLeft(b) || valOf(b)-valOf(a); };
