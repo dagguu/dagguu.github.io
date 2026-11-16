@@ -36,7 +36,7 @@ def brand_of(name):
 def main():
     prods, off = [], 0
     while True:
-        j = get(f"/products?limit=100&offset={off}&fields=product_no,product_name,created_date")
+        j = get(f"/products?limit=100&offset={off}&fields=product_no,product_name,created_date,detail_image,list_image")
         ps = j.get("products") or []
         prods += ps
         if len(ps) < 100:
@@ -58,6 +58,8 @@ def main():
     for b, ps in groups.items():
         ps.sort(key=lambda x: -int(x["product_no"]))
         item = {"n": b, "cnt": len(ps), "cate": cats.get(b), "img": [], "pno": None, "pname": ""}
+        # 브랜드 모아보기 카드 사진(2026-11-16): 최근 상품 대표 사진(모델 사진으로 골라 올림) 4장
+        item["cover"] = [p.get("detail_image") or p.get("list_image") for p in ps[:4] if (p.get("detail_image") or p.get("list_image"))]
         for p in ps[:SAMPLE]:
             d = (get(f"/products/{p['product_no']}?fields=description").get("product") or {}).get("description") or ""
             time.sleep(0.35)

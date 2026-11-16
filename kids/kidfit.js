@@ -1615,7 +1615,41 @@
     }).catch(function(){ cf.style.visibility = ""; });
     return true;
   }
-  function coffeeFix(){ if (expPage()) return; if (location.pathname.indexOf("/myshop") === 0) { try { recoFix(); } catch (e) {} } try { reviewPage(); } catch (e) {} if (location.pathname.indexOf("/product/coffee.html") !== 0 || location.search.indexOf("t=buy") >= 0) return; var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n, t; while ((n = w.nextNode())) { t = n.nodeValue; if (!t || t.length < 3) continue; for (var k = 0; k < CF_P.length; k++) if (t.indexOf(CF_P[k][0]) >= 0) t = t.split(CF_P[k][0]).join(CF_P[k][1]); if (t !== n.nodeValue) n.nodeValue = t; } try { var dd = document.getElementById("cfDd"); if (dd && dd.textContent.indexOf("상시") < 0) dd.textContent = "상시 모집 중 · 인원이 차면 마감돼요"; var dds = document.querySelectorAll(".cf dd, .cf td"); for (var z = 0; z < dds.length; z++) if (/^20[0-9]{2}[.][0-9]{2}[.][0-9]{2}.*~/.test(dds[z].textContent.trim())) dds[z].textContent = "상시 모집"; } catch (e) {} try { cfConsent(); } catch (e) {} if (!document.getElementById("dk-rvlink")) { var pl = null, hs = document.querySelectorAll(".cf h2"); for (var q = 0; q < hs.length; q++) if (hs[q].textContent.indexOf("PLUS") >= 0) pl = hs[q]; if (pl) { var a = document.createElement("a"); a.id = "dk-rvlink"; a.href = "/product/coffee.html?t=buy"; a.style.cssText = "display:block;margin:22px 0 0;background:#fff7e6;border:1px solid #ffe2a8;border-radius:14px;padding:14px 16px;color:#5a3d00;text-decoration:none;font-size:14px"; a.innerHTML = "<b style='font-size:15px'>🎁 다꾸키즈에서 옷을 사셨나요?</b><br>배송 받은 옷 입은 사진을 올리면 <b>적립금 5,000원</b>을 드려요 ›"; pl.parentNode.insertBefore(a, pl); } } }
+  /* ㉑ 브랜드 모아보기(2026-11-16 시온님, 링크 모음 페이지 3열 브랜드 카드 참고): /product/coffee.html?t=brands
+     자료 = 다꾸 kids/brand_size.json(매일 12:23 kids-brandsize.yml, 브랜드마다 최근 상품 대표 사진 cover) */
+  var BR_TOP = ["보니토","콘","블랙빈","디그린","비비드아이","데일리베베","라라랜드","고유","아오스타","피피","소이빈","제니베이직","미니로브","아워","테테코","더고구마","오오오","칸투치스튜디오","칩","멜멜","아토메메","니니벨로","소예","바나나제이"];
+  var BR_DONE = 0;
+  function brandsPage(){
+    if (location.pathname.indexOf("/product/coffee.html") !== 0 || !/[?&]t=brands/.test(location.search)) return false;
+    if (BR_DONE) return true;
+    var cf = document.querySelector(".cf"); if (!cf) return true;
+    BR_DONE = 1; cf.style.visibility = "hidden"; document.title = "브랜드 모아보기 - 다꾸키즈";
+    var esc = function(v){ return String(v == null ? "" : v).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); };
+    var css = "<style id='dk-br-css'>.dkb{max-width:760px;margin:0 auto;padding:22px 14px 120px;color:#222;background:#fff;box-sizing:border-box}.dkb *{box-sizing:border-box}" +
+      ".dkb h1{margin:0;text-align:center;font-size:21px;font-weight:800;letter-spacing:-.02em}.dkb .sub{margin:6px 0 16px;text-align:center;font-size:13.5px;color:#888}" +
+      ".dkb .sch{display:block;width:100%;height:44px;border:1px solid #e3e0ea;border-radius:22px;padding:0 18px;font-size:16px;margin:0 0 18px;background:#faf9fc;outline:none}.dkb .sch:focus{border-color:#6a3fc8;background:#fff}" +
+      ".dkb .g{display:grid;grid-template-columns:repeat(3,1fr);gap:12px 10px}.dkb a.c{display:block;color:#222;text-decoration:none;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.08)}" +
+      ".dkb .ph{aspect-ratio:1/1;background:#f3f0f8;overflow:hidden}.dkb .ph img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}" +
+      ".dkb .nm{padding:11px 6px 12px;text-align:center;font-size:15.5px;font-weight:700;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.dkb .nm small{display:block;margin-top:3px;font-size:11.5px;font-weight:400;color:#999}" +
+      ".dkb .none{padding:40px 0;text-align:center;color:#999;font-size:14px}@media(min-width:1025px){.dkb{max-width:1000px}.dkb .g{grid-template-columns:repeat(5,1fr);gap:18px 14px}}</style>";
+    fetch("https://www.dagguu.com/kids/brand_size.json?v=" + Math.floor(Date.now() / 600000)).then(function(r){ return r.json(); }).then(function(d){
+      var list = (d.brands || []).filter(function(b){ return b.cnt >= 2 && (b.cover && b.cover.length || (b.img && b.img.length)); });
+      list.sort(function(a, b){ var ia = BR_TOP.indexOf(a.n), ib = BR_TOP.indexOf(b.n); ia = ia < 0 ? 999 : ia; ib = ib < 0 ? 999 : ib; return ia - ib || b.cnt - a.cnt; });
+      var h = "<div class='dkb'><h1>• 브랜드별로 모아보기 •</h1><div class='sub'>다꾸키즈에 있는 브랜드 " + list.length + "곳을 한눈에 봐요</div><input class='sch' type='search' placeholder='브랜드 이름으로 찾기' aria-label='브랜드 찾기'><div class='g'>";
+      list.forEach(function(b){
+        var href = b.cate ? "/product/list.html?cate_no=" + b.cate : "/product/search.html?keyword=" + encodeURIComponent(b.n);
+        var img = (b.cover && b.cover[0]) || b.img[0];
+        h += "<a class='c' data-n='" + esc(b.n.toLowerCase()) + "' href='" + href + "'><div class='ph'><img loading='lazy' alt='" + esc(b.n) + "' src='" + esc(img) + "'></div><div class='nm'>" + esc(b.n) + "<small>상품 " + b.cnt + "개</small></div></a>";
+      });
+      h += "</div><div class='none' style='display:none'>찾는 브랜드가 없어요. 카톡 채널로 물어봐 주세요!</div></div>";
+      var w = document.createElement("div"); w.className = "cf"; w.innerHTML = css + h; cf.parentNode.replaceChild(w, cf); window.scrollTo(0, 0);
+      var inp = w.querySelector(".sch"), cs = w.querySelectorAll("a.c"), none = w.querySelector(".none");
+      inp.addEventListener("input", function(){ var q = inp.value.trim().toLowerCase(), k = 0; for (var i = 0; i < cs.length; i++) { var on = !q || cs[i].getAttribute("data-n").indexOf(q) >= 0; cs[i].style.display = on ? "" : "none"; if (on) k++; } none.style.display = k ? "none" : ""; });
+      try { if (window.gtag) gtag("event", "brands_view"); } catch(e){}
+    }).catch(function(){ cf.style.visibility = ""; });
+    return true;
+  }
+  function coffeeFix(){ if (brandsPage()) return; if (expPage()) return; if (location.pathname.indexOf("/myshop") === 0) { try { recoFix(); } catch (e) {} } try { reviewPage(); } catch (e) {} if (location.pathname.indexOf("/product/coffee.html") !== 0 || location.search.indexOf("t=buy") >= 0) return; var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n, t; while ((n = w.nextNode())) { t = n.nodeValue; if (!t || t.length < 3) continue; for (var k = 0; k < CF_P.length; k++) if (t.indexOf(CF_P[k][0]) >= 0) t = t.split(CF_P[k][0]).join(CF_P[k][1]); if (t !== n.nodeValue) n.nodeValue = t; } try { var dd = document.getElementById("cfDd"); if (dd && dd.textContent.indexOf("상시") < 0) dd.textContent = "상시 모집 중 · 인원이 차면 마감돼요"; var dds = document.querySelectorAll(".cf dd, .cf td"); for (var z = 0; z < dds.length; z++) if (/^20[0-9]{2}[.][0-9]{2}[.][0-9]{2}.*~/.test(dds[z].textContent.trim())) dds[z].textContent = "상시 모집"; } catch (e) {} try { cfConsent(); } catch (e) {} if (!document.getElementById("dk-rvlink")) { var pl = null, hs = document.querySelectorAll(".cf h2"); for (var q = 0; q < hs.length; q++) if (hs[q].textContent.indexOf("PLUS") >= 0) pl = hs[q]; if (pl) { var a = document.createElement("a"); a.id = "dk-rvlink"; a.href = "/product/coffee.html?t=buy"; a.style.cssText = "display:block;margin:22px 0 0;background:#fff7e6;border:1px solid #ffe2a8;border-radius:14px;padding:14px 16px;color:#5a3d00;text-decoration:none;font-size:14px"; a.innerHTML = "<b style='font-size:15px'>🎁 다꾸키즈에서 옷을 사셨나요?</b><br>배송 받은 옷 입은 사진을 올리면 <b>적립금 5,000원</b>을 드려요 ›"; pl.parentNode.insertBefore(a, pl); } } }
   // 리뷰 적립 배지(2026-11-14 시온님): 상품명 아래 "리뷰 쓰고 최대 1,000P 적립" → 누르면 상품후기 칸
   function reviewBadge(){
     var h = document.querySelector(".infoArea .headingArea h1, .infoArea .headingArea h2"); if (!h || document.getElementById("dk-rvb")) return;
@@ -1732,8 +1766,15 @@
     hd.appendChild(nav);
     if (cur) setTimeout(function(){ try { nav.scrollLeft = Math.max(0, cur.offsetLeft - 40); } catch(e){} }, 300);
   }
+  function brLinks(){
+    var nav = document.querySelector(".dk-mnav");
+    if (nav && !nav.querySelector("a[href*='t=brands']")) { var mom = nav.querySelector("a[href*='cate_no=23']"); var a = document.createElement("a"); a.href = "/product/coffee.html?t=brands"; a.textContent = "🏷️브랜드"; a.style.color = "#6a3fc8"; if (location.search.indexOf("t=brands") >= 0) a.classList.add("dk-n"); if (mom && mom.nextSibling) nav.insertBefore(a, mom.nextSibling); else nav.appendChild(a); }
+    var bx = document.getElementById("dk-brands");
+    if (bx && !document.getElementById("dk-brall")) { var hh = bx.querySelector("h2, h3, .dk-tit, strong"); var l = document.createElement("a"); l.id = "dk-brall"; l.href = "/product/coffee.html?t=brands"; l.textContent = "전체 브랜드 보기 ›"; l.style.cssText = "display:block;margin:12px auto 0;max-width:360px;text-align:center;border:1px solid #d9d0ee;border-radius:22px;padding:10px 0;font-size:14px;font-weight:600;color:#6a3fc8;text-decoration:none;background:#faf8ff"; bx.appendChild(l); }
+  }
   function mnavMerge(){
     try { mnavBuild(); } catch(e){}
+    try { brLinks(); } catch(e){}
     var nav = document.querySelector("nav.dk-mnav, .dk-mnav"), hd = document.getElementById("header");
     if (!nav || !hd || hd.contains(nav) || window.innerWidth > 1024) return;
     nav.style.setProperty("position", "static", "important");
