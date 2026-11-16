@@ -1834,7 +1834,16 @@
     }
     window.dkNsT = setInterval(upd, 1000); upd();
   }
-  function run(){ try { nsTimer(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  // 2026-11-16 시온님 "신상할인 10%로": 스킨 목록카드 스크립트가 할인율을 "5%"로 적어 두어서, 줄그은 가격·할인가로 실제 할인율을 다시 계산해 바꿈(스킨 header 를 고치면 필요 없음)
+  function nsNum(t){ return parseInt(String(t || "").replace(/[^0-9]/g, ""), 10) || 0; }
+  function nsRate(){
+    var fix = function(box, orig){ var sp = box.querySelectorAll("span"); if (sp.length < 2) return; var sale = nsNum(sp[1].textContent); if (!orig || !sale || sale >= orig) return; var r = Math.round((orig - sale) * 100 / orig) + "%"; if (sp[0].textContent !== r && /%$/.test(sp[0].textContent.trim())) sp[0].textContent = r; };
+    [].forEach.call(document.querySelectorAll("li.dk-ns"), function(li){ var pv = li.previousElementSibling, o = 0; if (pv) [].forEach.call(pv.querySelectorAll("span"), function(x){ if (!o && /line-through/.test(x.getAttribute("style") || "")) o = nsNum(x.textContent); }); fix(li, o); });
+    var d = document.querySelector(".dk-nsd"), pt = document.getElementById("span_product_price_text"); if (d && pt) fix(d, nsNum(pt.textContent));
+  }
+  var NSR = 0;
+  function nsRateWatch(){ if (NSR) { nsRate(); return; } NSR = 1; nsRate(); var n = 0, iv = setInterval(function(){ nsRate(); if (++n > 20) clearInterval(iv); }, 1000); var t = 0; try { new MutationObserver(function(){ if (t) return; t = setTimeout(function(){ t = 0; nsRate(); }, 300); }).observe(document.body, { childList: true, subtree: true }); } catch(e){} }
+  function run(){ try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
