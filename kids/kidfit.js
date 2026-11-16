@@ -155,28 +155,28 @@
     [].forEach.call(document.querySelectorAll("#contents .titleArea, #contents [onclick*='history'], #contents a[href*='history.'], #contents .btnBack, #contents .btn_back"), function(e){ if (!ben.contains(e)) e.style.display = "none"; });
     ben.style.display = "none";
     var ic = function(p){ return "<svg width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='#222' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'>" + p + "</svg>"; };
-    var row = function(t, u){ return "<a href='" + u + "' style='display:flex;align-items:center;justify-content:space-between;padding:18px 18px;border-bottom:1px solid #eee;color:#222;text-decoration:none;font-size:16px'>" + t + "<span style='color:#aaa;font-size:20px'>›</span></a>"; };
-    var stat = function(t, v, u){ return "<a href='" + u + "' style='flex:1;text-align:center;padding:18px 0;color:#333;text-decoration:none;border-right:1px solid #eee'><div style='font-size:14px;color:#555'>" + t + "</div><div style='margin-top:6px;font-size:22px;font-weight:800;color:#6a3fc8'>" + esc(v) + "</div></a>"; };
+    var row = function(t, u){ return "<a href='" + u + "' style='display:flex;align-items:center;justify-content:space-between;padding:18px 18px;border-bottom:1px solid #eee;color:#222;text-decoration:none;font-size:14px'>" + t + "<span style='color:#aaa;font-size:17px'>›</span></a>"; };
+    var stat = function(t, v, u){ return "<a href='" + u + "' style='flex:1;text-align:center;padding:18px 0;color:#333;text-decoration:none;border-right:1px solid #eee'><div style='font-size:12.5px;color:#555'>" + t + "</div><div style='margin-top:6px;font-size:18px;font-weight:800;color:#6a3fc8'>" + esc(v) + "</div></a>"; };
     var w = document.createElement("div"); w.id = "dk-my";
     w.style.cssText = "max-width:720px;margin:0 auto 10px;font-family:inherit;box-sizing:border-box";
     w.innerHTML =
       "<div style='display:flex;align-items:center;gap:14px;padding:16px 18px 20px'>" + msBadge(g, 64) +
-        "<div style='flex:1;min-width:0'><div style='font-size:20px;font-weight:800;color:#222'>" + esc(nm || "회원") + "</div>" +
-        "<a href='#membership' id='dk-my-ms' style='display:inline-block;margin-top:4px;font-size:15px;color:#6a3fc8;font-weight:700;text-decoration:none'>" + esc(grp) + " <span style='color:#888;font-weight:500'>등급혜택보기 ›</span></a>" +
-        (g && g.priv ? "<div style='margin-top:4px;font-size:13px;color:#555'>수익 링크 <b style='color:#6a3fc8'>" + g.link + "%</b> 적립 · 결제 시 " + g.save + "% 적립</div>" : "") + "</div>" +
+        "<div style='flex:1;min-width:0'><div style='font-size:17px;font-weight:800;color:#222'>" + esc(nm || "회원") + "</div>" +
+        "<a href='#membership' id='dk-my-ms' style='display:inline-block;margin-top:4px;font-size:13px;color:#6a3fc8;font-weight:700;text-decoration:none'>" + esc(grp) + " <span style='color:#888;font-weight:500'>등급혜택보기 ›</span></a>" +
+        (g && g.priv ? "<div style='margin-top:4px;font-size:12px;color:#555'>수익 링크 <b style='color:#6a3fc8'>" + g.link + "%</b> 적립 · 결제 시 " + g.save + "% 적립</div>" : "") + "</div>" +
         "<a href='/member/modify.html' aria-label='회원정보 수정' style='flex:0 0 auto;color:#888;text-decoration:none'><svg width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='#888' stroke-width='1.5'><circle cx='12' cy='12' r='3'/><path d='M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z'/></svg></a></div>" +
       "<div style='display:flex;border-bottom:10px solid #f4f4f6'>" + stat("보유쿠폰", cp, "/myshop/coupon/coupon.html") + stat("적립금", mil, "/myshop/mileage/historyList.html") + stat("총주문", ord, "/myshop/order/list.html").replace("border-right:1px solid #eee", "") + "</div>" +
       "<div style='display:flex;border-bottom:10px solid #f4f4f6'>" +
-        "<a href='/myshop/order/list.html' style='flex:1;text-align:center;padding:22px 0;color:#222;text-decoration:none;border-right:1px solid #eee'>" + ic("<path d='M1 7h13v9H1zM14 10h4l3 3v3h-7'/><circle cx='5.5' cy='17.5' r='1.8'/><circle cx='17.5' cy='17.5' r='1.8'/>") + "<div style='margin-top:8px;font-size:15px'>주문/배송</div></a>" +
-        "<a href='https://partners.dagguu.com/#/dp' style='flex:1;text-align:center;padding:22px 0;color:#222;text-decoration:none;border-right:1px solid #eee'>" + ic("<circle cx='12' cy='9' r='6'/><path d='M12 6l1 2.2 2.3.3-1.7 1.6.4 2.3-2-1.1-2 1.1.4-2.3-1.7-1.6 2.3-.3zM8 14l-2 7 4-2 2 3 1-6M16 14l2 7-4-2'/>") + "<div style='margin-top:8px;font-size:15px'>수익 링크</div></a>" +
-        "<a href='/myshop/board_list.html' style='flex:1;text-align:center;padding:22px 0;color:#222;text-decoration:none'>" + ic("<path d='M4 4h16v12H9l-5 4z'/><path d='M8 8h8M8 12h5'/>") + "<div style='margin-top:8px;font-size:15px'>리뷰</div></a></div>" +
+        "<a href='/myshop/order/list.html' style='flex:1;text-align:center;padding:16px 0;color:#222;text-decoration:none;border-right:1px solid #eee'>" + ic("<path d='M1 7h13v9H1zM14 10h4l3 3v3h-7'/><circle cx='5.5' cy='17.5' r='1.8'/><circle cx='17.5' cy='17.5' r='1.8'/>") + "<div style='margin-top:8px;font-size:13px'>주문/배송</div></a>" +
+        "<a href='https://partners.dagguu.com/#/dp' style='flex:1;text-align:center;padding:16px 0;color:#222;text-decoration:none;border-right:1px solid #eee'>" + ic("<circle cx='12' cy='9' r='6'/><path d='M12 6l1 2.2 2.3.3-1.7 1.6.4 2.3-2-1.1-2 1.1.4-2.3-1.7-1.6 2.3-.3zM8 14l-2 7 4-2 2 3 1-6M16 14l2 7-4-2'/>") + "<div style='margin-top:8px;font-size:13px'>수익 링크</div></a>" +
+        "<a href='/myshop/board_list.html' style='flex:1;text-align:center;padding:16px 0;color:#222;text-decoration:none'>" + ic("<path d='M4 4h16v12H9l-5 4z'/><path d='M8 8h8M8 12h5'/>") + "<div style='margin-top:8px;font-size:13px'>리뷰</div></a></div>" +
       "<a href='/product/coffee.html' style='display:block;position:relative;overflow:hidden;background:linear-gradient(90deg,#f3ecff,#ffe3f1);padding:14px 18px;text-decoration:none'>" +
-        "<div style='font-size:12px;font-weight:700;color:#c2408a'>@dagguu.kids 태그하면</div><div style='margin-top:4px;font-size:17px;font-weight:800;color:#6a3fc8'>0원체험단 커피 받기! ›</div>" +
-        "<span style='position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:34px'>☕</span></a>" +
+        "<div style='font-size:12px;font-weight:700;color:#c2408a'>@dagguu.kids 태그하면</div><div style='margin-top:4px;font-size:15px;font-weight:800;color:#6a3fc8'>0원체험단 커피 받기! ›</div>" +
+        "<span style='position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:28px'>☕</span></a>" +
       "<a href='#dk-invite' id='dk-my-inv' style='display:flex;align-items:center;gap:12px;margin:14px;padding:14px;border:1px solid #e6dbff;border-radius:14px;background:#f7f2ff;text-decoration:none;color:#222'>" +
-        "<span style='flex:0 0 44px;height:44px;border-radius:10px;background:#6a3fc8;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px'>🎁</span>" +
-        "<span style='flex:1;min-width:0'><b style='display:block;font-size:15px'>친구 초대하고 1,000원 적립</b><span style='font-size:12px;color:#777'>친구도 나도 적립금 1,000원씩 받아요!</span></span>" +
-        "<span style='flex:0 0 auto;background:#6a3fc8;color:#fff;font-size:13px;font-weight:700;border-radius:8px;padding:8px 12px'>초대하기</span></a>" +
+        "<span style='flex:0 0 44px;height:44px;border-radius:10px;background:#6a3fc8;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px'>🎁</span>" +
+        "<span style='flex:1;min-width:0'><b style='display:block;font-size:13px'>친구 초대하고 1,000원 적립</b><span style='font-size:12px;color:#777'>친구도 나도 적립금 1,000원씩 받아요!</span></span>" +
+        "<span style='flex:0 0 auto;background:#6a3fc8;color:#fff;font-size:12px;font-weight:700;border-radius:8px;padding:8px 12px'>초대하기</span></a>" +
       row("관심상품", "/myshop/wish_list.html") + row("쿠폰내역", "/myshop/coupon/coupon.html") + row("적립금 내역", "/myshop/mileage/historyList.html") + row("배송 주소록", "/myshop/addr/list.html") +
       "<div style='height:10px;background:#f4f4f6'></div>";
     ben.parentNode.insertBefore(w, ben);
@@ -898,13 +898,13 @@
       "#dk-invite .ivtop{display:flex;align-items:center;gap:10px;padding:14px 14px 14px 16px;border:1px solid #ebe4ff;border-radius:16px;text-align:left;box-shadow:0 2px 10px rgba(80,40,160,.06)}" +
       "#dk-invite .ivtop b{flex:1;font-size:15px;font-weight:700;color:#222;line-height:1.4}" +
       "#dk-invite .ivtop a{flex:0 0 auto;background:#6a3fc8;color:#fff;font-size:14px;font-weight:700;border-radius:999px;padding:9px 16px;text-decoration:none}" +
-      "#dk-invite .ivico{font-size:40px;margin:18px 0 4px}" +
-      "#dk-invite h3{font-size:21px;font-weight:800;margin:0 0 6px;color:#222}" +
-      "#dk-invite .ivsub{font-size:14px;color:#777;margin:0 0 16px}" +
-      "#dk-invite .ivbtn{display:flex;align-items:center;gap:14px;width:100%;box-sizing:border-box;border:0;border-radius:18px;padding:16px 18px;margin:0 0 10px;text-align:left;cursor:pointer;text-decoration:none;font-family:inherit}" +
-      "#dk-invite .ivbtn i{font-style:normal;font-size:30px;flex:0 0 auto}" +
-      "#dk-invite .ivbtn b{display:block;font-size:17px;font-weight:800}" +
-      "#dk-invite .ivbtn small{display:block;font-size:13px;margin-top:2px}" +
+      "#dk-invite .ivico{font-size:30px;margin:4px 0 2px}" +
+      "#dk-invite h3{font-size:17px;font-weight:800;margin:0 0 6px;color:#222}" +
+      "#dk-invite .ivsub{font-size:12.5px;color:#777;margin:0 0 16px}" +
+      "#dk-invite .ivbtn{display:flex;align-items:center;gap:14px;width:100%;box-sizing:border-box;border:0;border-radius:18px;padding:12px 14px;margin:0 0 8px;text-align:left;cursor:pointer;text-decoration:none;font-family:inherit}" +
+      "#dk-invite .ivbtn i{font-style:normal;font-size:24px;flex:0 0 auto}" +
+      "#dk-invite .ivbtn b{display:block;font-size:14.5px;font-weight:800}" +
+      "#dk-invite .ivbtn small{display:block;font-size:12px;margin-top:2px}" +
       "#dk-invite .ivg{background:#f3f3f5;color:#222}#dk-invite .ivg small{color:#777}" +
       "#dk-invite .ivp{background:#6a3fc8;color:#fff}#dk-invite .ivp small{color:#e6dcff}" +
       "#dk-invite .ivnote{font-size:12px;color:#999;line-height:1.6;margin:6px 0 0}";
@@ -912,8 +912,7 @@
     iv.id = "dk-invite";
     var code = ""; try { code = localStorage.getItem("dk_dpme") || ""; } catch (e) {}
     var w = document.createElement("div"); w.className = "dkiv";
-    w.innerHTML = "<div class='ivtop'><b>링크 공유하고, 최대 10% 포인트 받기</b><a href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'>자세히 보기</a></div>" +
-      "<div class='ivico'>💌</div><h3>친구 초대하고 함께 적립받기</h3><p class='ivsub'>친구가 내 링크로 가입하면 친구도 나도 1,000원</p>" +
+    w.innerHTML = "<div class='ivico'>💌</div><h3>친구 초대하고 함께 적립받기</h3><p class='ivsub'>친구가 내 링크로 가입하면 친구도 나도 1,000원</p>" +
       "<button type='button' class='ivbtn ivg' data-iv='share'><i>💬</i><span><b>친구 초대하기</b><small>카톡·문자로 초대 링크를 바로 보내요</small></span></button>" +
       (code ? "<button type='button' class='ivbtn ivp' data-iv='copy'><i>🎁</i><span><b>공유하고 최대 10% 적립받기</b><small>내 링크(" + code + ")를 복사해요</small></span></button>"
             : "<a class='ivbtn ivp' href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'><i>🎁</i><span><b>공유하고 최대 10% 적립받기</b><small>1분 가입하고 내 수익 링크 만들기</small></span></a>") +
