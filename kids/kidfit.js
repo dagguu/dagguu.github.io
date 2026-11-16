@@ -1257,7 +1257,7 @@
       try { if (localStorage.getItem("dk_tb_hide") === day) tb.style.setProperty("display", "none", "important"); } catch(e){}
       if (!document.getElementById("dk-tbx")) { var b = document.createElement("button"); b.id = "dk-tbx"; b.type = "button"; b.setAttribute("aria-label", "오늘 하루 닫기"); b.textContent = "✕"; b.onclick = function(){ tb.style.setProperty("display", "none", "important"); try { localStorage.setItem("dk_tb_hide", day); } catch(e){} setTimeout(function(){ window.dispatchEvent(new Event("resize")); }, 50); }; tb.appendChild(b); }
     }
-    var mn = document.querySelector(".dk-mnav"); if (mn && !mn.querySelector(".dk-n")) { var f = mn.querySelector("a"); if (f) f.classList.add("dk-n"); }
+    var mn = document.querySelector(".dk-mnav"); if (mn && !mn.hasAttribute("data-built") && !mn.querySelector(".dk-n")) { var f = mn.querySelector("a"); if (f) f.classList.add("dk-n"); }
     bmNames();
   }
   function bmNames(){
@@ -1719,7 +1719,21 @@
   }
 
   // 홈 휴대폰 글자 메뉴(.dk-mnav)를 머리글(#header) 안으로 옮겨 고정 칸을 하나로(2026-11-15 갤럭시 네이버 앱에서 스크롤 끝날 때마다 화면이 40px쯤 위아래로 튐 — 고정 칸 두 개가 겹친 안드로이드 문제로 봄)
+  // 2026-11-16 시온님 "상단메뉴바 항상 고정": 홈에만 있던 휴대폰 글자 메뉴를 모든 페이지 머리글에 만듦(홈 스킨 index.html 목록과 같게)
+  var MNAV = [["💜신상품💜","/product/list.html?cate_no=54"],["인기상품","/product/list.html?cate_no=55"],["1+1","/product/search.html?keyword=1%2B1","#e0245e"],["🎄크리스마스","/product/search.html?keyword=%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4","#1a7f37"],["BABY","/product/list.html?cate_no=52"],["KIDS","/product/list.html?cate_no=53"],["여아","/product/list.html?cate_no=50"],["남아","/product/list.html?cate_no=51"],["아우터","/product/list.html?cate_no=24"],["상의","/product/list.html?cate_no=25"],["원피스","/product/list.html?cate_no=26"],["하의","/product/list.html?cate_no=27"],["잡화","/product/list.html?cate_no=28"],["양말","/product/search.html?keyword=%EC%96%91%EB%A7%90"],["실내복","/product/search.html?keyword=%EC%8B%A4%EB%82%B4%EB%B3%B5"],["MOM","/product/list.html?cate_no=23"],["사이즈표","/product/brand_size.html"],["공지사항","/board/free/list.html?board_no=1"]];
+  function mnavBuild(){
+    if (document.querySelector(".dk-mnav") || window.innerWidth > 1024) return;
+    var hd = document.getElementById("header"); if (!hd) return;
+    if (location.pathname.indexOf("/order/orderform") === 0 || location.pathname.indexOf("/order/order_result") === 0) return;
+    if (!document.getElementById("dk-mnav-css")) { var st = document.createElement("style"); st.id = "dk-mnav-css"; st.textContent = "@media(max-width:1024px){.dk-mnav{display:flex;gap:0;overflow-x:auto;padding:6px 8px 0;scrollbar-width:none;background:#fff}.dk-mnav::-webkit-scrollbar{display:none}.dk-mnav a{flex:0 0 auto;margin:0 7px;text-decoration:none;white-space:nowrap}}@media(min-width:1025px){.dk-mnav{display:none}}"; document.head.appendChild(st); }
+    var nav = document.createElement("nav"); nav.className = "dk-mnav"; nav.setAttribute("data-built", "1");
+    var here = location.pathname + location.search, cur = null;
+    MNAV.forEach(function(m){ var a = document.createElement("a"); a.href = m[1]; a.textContent = m[0]; if (m[2]) a.style.color = m[2]; var q = m[1].split("?")[1]; if (!cur && (q ? here.indexOf(q) >= 0 && location.pathname === m[1].split("?")[0] : location.pathname === m[1])) { cur = a; a.classList.add("dk-n"); } nav.appendChild(a); });
+    hd.appendChild(nav);
+    if (cur) setTimeout(function(){ try { nav.scrollLeft = Math.max(0, cur.offsetLeft - 40); } catch(e){} }, 300);
+  }
   function mnavMerge(){
+    try { mnavBuild(); } catch(e){}
     var nav = document.querySelector("nav.dk-mnav, .dk-mnav"), hd = document.getElementById("header");
     if (!nav || !hd || hd.contains(nav) || window.innerWidth > 1024) return;
     nav.style.setProperty("position", "static", "important");
