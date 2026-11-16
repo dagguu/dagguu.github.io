@@ -160,23 +160,23 @@
     var w = document.createElement("div"); w.id = "dk-my";
     w.style.cssText = "max-width:720px;margin:0 auto 10px;font-family:inherit;box-sizing:border-box";
     w.innerHTML =
-      "<a href='#dk-invite' id='dk-my-inv' style='display:flex;align-items:center;gap:12px;margin:12px 14px;padding:14px;border:1px solid #e6dbff;border-radius:14px;background:#f7f2ff;text-decoration:none;color:#222'>" +
-        "<span style='flex:0 0 44px;height:44px;border-radius:10px;background:#6a3fc8;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px'>🎁</span>" +
-        "<span style='flex:1;min-width:0'><b style='display:block;font-size:15px'>친구 초대하고 1,000원 적립</b><span style='font-size:12px;color:#777'>친구도 나도 적립금 1,000원씩 받아요!</span></span>" +
-        "<span style='flex:0 0 auto;background:#6a3fc8;color:#fff;font-size:13px;font-weight:700;border-radius:8px;padding:8px 12px'>초대하기</span></a>" +
       "<div style='display:flex;align-items:center;gap:14px;padding:16px 18px 20px'>" + msBadge(g, 64) +
         "<div style='flex:1;min-width:0'><div style='font-size:20px;font-weight:800;color:#222'>" + esc(nm || "회원") + "</div>" +
         "<a href='#membership' id='dk-my-ms' style='display:inline-block;margin-top:4px;font-size:15px;color:#6a3fc8;font-weight:700;text-decoration:none'>" + esc(grp) + " <span style='color:#888;font-weight:500'>등급혜택보기 ›</span></a>" +
         (g && g.priv ? "<div style='margin-top:4px;font-size:13px;color:#555'>수익 링크 <b style='color:#6a3fc8'>" + g.link + "%</b> 적립 · 결제 시 " + g.save + "% 적립</div>" : "") + "</div>" +
         "<a href='/member/modify.html' aria-label='회원정보 수정' style='flex:0 0 auto;color:#888;text-decoration:none'><svg width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='#888' stroke-width='1.5'><circle cx='12' cy='12' r='3'/><path d='M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z'/></svg></a></div>" +
-      "<a href='/product/coffee.html' style='display:block;position:relative;overflow:hidden;background:linear-gradient(90deg,#f3ecff,#ffe3f1);padding:20px 18px;text-decoration:none'>" +
-        "<div style='font-size:13px;font-weight:700;color:#c2408a'>@dagguu.kids 태그하면</div><div style='margin-top:4px;font-size:22px;font-weight:800;color:#6a3fc8'>0원체험단 커피 받기! ›</div>" +
-        "<span style='position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:46px'>☕</span></a>" +
       "<div style='display:flex;border-bottom:10px solid #f4f4f6'>" + stat("보유쿠폰", cp, "/myshop/coupon/coupon.html") + stat("적립금", mil, "/myshop/mileage/historyList.html") + stat("총주문", ord, "/myshop/order/list.html").replace("border-right:1px solid #eee", "") + "</div>" +
       "<div style='display:flex;border-bottom:10px solid #f4f4f6'>" +
         "<a href='/myshop/order/list.html' style='flex:1;text-align:center;padding:22px 0;color:#222;text-decoration:none;border-right:1px solid #eee'>" + ic("<path d='M1 7h13v9H1zM14 10h4l3 3v3h-7'/><circle cx='5.5' cy='17.5' r='1.8'/><circle cx='17.5' cy='17.5' r='1.8'/>") + "<div style='margin-top:8px;font-size:15px'>주문/배송</div></a>" +
         "<a href='https://partners.dagguu.com/#/dp' style='flex:1;text-align:center;padding:22px 0;color:#222;text-decoration:none;border-right:1px solid #eee'>" + ic("<circle cx='12' cy='9' r='6'/><path d='M12 6l1 2.2 2.3.3-1.7 1.6.4 2.3-2-1.1-2 1.1.4-2.3-1.7-1.6 2.3-.3zM8 14l-2 7 4-2 2 3 1-6M16 14l2 7-4-2'/>") + "<div style='margin-top:8px;font-size:15px'>수익 링크</div></a>" +
         "<a href='/myshop/board_list.html' style='flex:1;text-align:center;padding:22px 0;color:#222;text-decoration:none'>" + ic("<path d='M4 4h16v12H9l-5 4z'/><path d='M8 8h8M8 12h5'/>") + "<div style='margin-top:8px;font-size:15px'>리뷰</div></a></div>" +
+      "<a href='/product/coffee.html' style='display:block;position:relative;overflow:hidden;background:linear-gradient(90deg,#f3ecff,#ffe3f1);padding:14px 18px;text-decoration:none'>" +
+        "<div style='font-size:12px;font-weight:700;color:#c2408a'>@dagguu.kids 태그하면</div><div style='margin-top:4px;font-size:17px;font-weight:800;color:#6a3fc8'>0원체험단 커피 받기! ›</div>" +
+        "<span style='position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:34px'>☕</span></a>" +
+      "<a href='#dk-invite' id='dk-my-inv' style='display:flex;align-items:center;gap:12px;margin:14px;padding:14px;border:1px solid #e6dbff;border-radius:14px;background:#f7f2ff;text-decoration:none;color:#222'>" +
+        "<span style='flex:0 0 44px;height:44px;border-radius:10px;background:#6a3fc8;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px'>🎁</span>" +
+        "<span style='flex:1;min-width:0'><b style='display:block;font-size:15px'>친구 초대하고 1,000원 적립</b><span style='font-size:12px;color:#777'>친구도 나도 적립금 1,000원씩 받아요!</span></span>" +
+        "<span style='flex:0 0 auto;background:#6a3fc8;color:#fff;font-size:13px;font-weight:700;border-radius:8px;padding:8px 12px'>초대하기</span></a>" +
       row("관심상품", "/myshop/wish_list.html") + row("쿠폰내역", "/myshop/coupon/coupon.html") + row("적립금 내역", "/myshop/mileage/historyList.html") + row("배송 주소록", "/myshop/addr/list.html") +
       "<div style='height:10px;background:#f4f4f6'></div>";
     ben.parentNode.insertBefore(w, ben);
@@ -496,6 +496,14 @@
   /* ---------- ⑧ 쿠폰: 예상 최저가(목록·상세)·장바구니 쿠폰 혜택·내 쿠폰함 (2026-11-12 시온님, 1초쿠폰 참고·직접 만듦) ----------
      내 쿠폰 = /myshop/coupon/coupon.html 표를 읽음(로그인). 받을 수 있는 쿠폰 = 상품 상세의 쿠폰 다운로드 칸을 읽음.
      주문당 쿠폰 1장 → 가장 큰 1장만 계산. 신상 할인 중인 상품은 쿠폰을 같이 못 써서(혜택 '모든 쿠폰 사용제한') 쿠폰가를 붙이지 않음. */
+  function dkHome(){ var p = location.pathname; return p === "/" || p === "/index.html"; }
+  /* 2026-11-16 시온님 "홈페이지가 정신없어 정리": 떠 있는 것 줄이기 — 로그인 인사 토스트 숨김, 휴대폰 카톡 버튼은 상품 상세에서만 */
+  function tidy(){
+    if (document.getElementById("dk-tidy")) return;
+    var st = document.createElement("style"); st.id = "dk-tidy";
+    st.textContent = "#dk-hi{display:none!important}@media(max-width:1024px){#dk-kfab{display:none!important}body.dk-pd #dk-kfab{display:flex!important}}";
+    document.head.appendChild(st);
+  }
   function isLogged(){ var a = document.querySelectorAll("a"); for (var i = 0; i < a.length; i++) { var t = (a[i].textContent || "").trim(); if (t === "로그아웃" || t === "LOGOUT") return true; } return false; }
   function kst(s){ var m = String(s || "").match(/([0-9]{4})-([0-9]{2})-([0-9]{2}) ([0-9]{2}):([0-9]{2})/); return m ? Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4] - 9, +m[5]) : 0; }
   function minOf(t){ t = String(t || "").replace(/\s/g, ""); var m = t.match(/([0-9]+)만원이상/); if (m) return +m[1] * 10000; m = t.match(/([0-9,]+)원이상/); return m ? num(m[1]) : 0; }
@@ -1733,7 +1741,9 @@
 
   // 검색 아이콘 아래 둥둥 말풍선 "🔥인기 검색어"(2026-11-15 시온님, 검색어는 안 적음) — 누르면 검색창이 열리고 거기 인기 검색어 목록(searchkw.js)이 보임
   function hotBubble(){
-    if (document.getElementById("dk-hkb")) return;
+    if (document.getElementById("dk-hkb") || !dkHome()) return;
+    try { if (sessionStorage.getItem("dk_hkb")) return; sessionStorage.setItem("dk_hkb", "1"); } catch(e){}
+    setTimeout(function(){ var b = document.getElementById("dk-hkb"); if (b) b.remove(); }, 6000);
     var ic = document.querySelector("#header a.eSearch");
     var hd = document.getElementById("header");
     if (!ic || !hd || !ic.offsetParent) return;
@@ -1876,7 +1886,7 @@
   /* 1초 가입 1만원 쿠폰 안내(2026-11-16 시온님, 젝시믹스 참고): 비회원에게 휴대폰 MY 탭 위 노란 말풍선 + PC 머리글 빨간 알약. 누르면 카카오 1초 가입. 쿠폰은 8만원 이상 주문에 사용 */
   var JOIN10 = "/member/login.html?dkkakao=1";
   function join10(){
-    if (isLogged() || document.getElementById("dk-j10css")) return;
+    if (isLogged() || !dkHome() || document.getElementById("dk-j10css")) return;
     var st = document.createElement("style"); st.id = "dk-j10css";
     st.textContent = "#dk-j10tip{position:fixed;z-index:1001;bottom:calc(64px + env(safe-area-inset-bottom));right:6px;background:#fff35c;color:#222;font-size:13px;font-weight:800;letter-spacing:-.3px;padding:7px 12px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.15);text-decoration:none;white-space:nowrap;animation:dkj10 1.6s ease-in-out infinite}#dk-j10tip:after{content:'';position:absolute;bottom:-6px;right:24px;border:6px solid transparent;border-bottom:0;border-top-color:#fff35c}#dk-j10tip small{font-size:10.5px;font-weight:600;color:#666;margin-left:4px}@keyframes dkj10{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}" +
       "#dk-j10pill{display:none!important}@media(min-width:1025px){#dk-j10pill{display:inline-flex!important;align-items:center;position:absolute;right:150px;top:50%;transform:translateY(-50%);background:#ef5a3c;color:#fff!important;font-size:13px!important;font-weight:700!important;line-height:1!important;padding:8px 14px!important;border-radius:999px;text-decoration:none;white-space:nowrap;z-index:5}}" +
@@ -1886,7 +1896,7 @@
     if (tab && getComputedStyle(tab).display !== "none") { var a = document.createElement("a"); a.id = "dk-j10tip"; a.href = JOIN10; a.innerHTML = "1초 가입 시 1만원 쿠폰!"; document.body.appendChild(a); document.body.classList.add("dk-j10"); }
     /* PC 알약은 메뉴 줄과 겹쳐서 뺌(2026-11-16) */
   }
-  function run(){ try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  function run(){ try { tidy(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
