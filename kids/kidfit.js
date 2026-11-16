@@ -1660,7 +1660,7 @@
     h.parentNode.insertBefore(a, h.nextSibling);
   }
   // 상단 메뉴(2026-11-14 시온님): 신상품 → ⏰타임특가, 1+1 다음에 0원체험단·기획상품(상품명에 "기획")
-  var MENU_ADD = [["🎁0원체험단", "/product/coffee.html?t=exp", "#e0457b"], ["🎀기획상품", "/product/search.html?keyword=%EA%B8%B0%ED%9A%8D", "#e8792b"], ["🚚무료배송", "/product/list.html?cate_no=56", "#1f7a4d"]];
+  var MENU_ADD = [["🎁0원체험단", "/product/coffee.html?t=exp", ""], ["🎀기획상품", "/product/search.html?keyword=%EA%B8%B0%ED%9A%8D", "#e8792b"], ["🚚무료배송", "/product/list.html?cate_no=56", ""]];
   /* 적립금 사용 조건 3만원(2026-11-15): 스킨에 박힌 '5만원 이상 구매 시 사용' 글자를 화면에서 바꿈 */
   function mileFix(){ var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n; while ((n = w.nextNode())) { var t = n.nodeValue; if (t && t.indexOf("5만원 이상") >= 0 && /사용|쓸 수/.test(t) && t.indexOf("무료배송") < 0) n.nodeValue = t.split("5만원 이상").join("3만원 이상"); } jcFix(); setTimeout(jcFix, 1800); setTimeout(jcFix, 3500); }
   function jcFix(){ var li = document.getElementById("dk-joincp"); if (!li || li.getAttribute("data-dkm")) return; li.setAttribute("data-dkm", "1"); var t = li.querySelector(".title"), pd = li.querySelector(".period"); if (t) t.textContent = "[수신동의] 가입 적립금"; if (pd) pd.textContent = "쇼핑정보 수신 동의하고 가입하면 바로 지급 · 3만원 이상 구매 시 사용"; }
