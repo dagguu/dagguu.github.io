@@ -1,42 +1,14 @@
 {
- "at": "2026-11-16T11:04:32.695793",
+ "at": "2026-11-16T11:20:39.491019",
  "name": "boryeong-lava-poolvilla",
  "jobs": [
   {
-   "img": "ai:1",
-   "taskId": "d1dc3dc33b3b25e5be80ba9ebcca151c",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-16/boryeong-lava-poolvilla/clip_ai1.mp4"
-  },
-  {
-   "img": "ai:2",
-   "taskId": "f468a43dd305df63cdaee9a1d36de52f",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-16/boryeong-lava-poolvilla/clip_ai2.mp4"
-  },
-  {
    "img": "ai:3",
-   "taskId": "9f7bd8b5d5720ba74e0d94a880a8d5c4",
+   "taskId": "5875f689f5988a82f9e3296f008d0d84",
    "state": "success",
    "credits": 35.0,
    "file": "video/2026-11-16/boryeong-lava-poolvilla/clip_ai3.mp4"
-  },
-  {
-   "img": "ai:4",
-   "taskId": "1c959817cac4c0323fed59110d6302ee",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-16/boryeong-lava-poolvilla/clip_ai4.mp4"
-  },
-  {
-   "img": "ai:5",
-   "taskId": "e9bd071bb2ac768d315802b4815a23a2",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-16/boryeong-lava-poolvilla/clip_ai5.mp4"
   }
  ],
- "credits_total": 175.0
+ "credits_total": 35.0
 }
