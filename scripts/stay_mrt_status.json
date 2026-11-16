@@ -1,5 +1,5 @@
 {
- "at": "2026-11-15 10:21",
+ "at": "2026-11-16 10:26",
  "checkIn": "2026-11-21",
  "stays": {
   "busan-matie-harbor": {
@@ -19,7 +19,7 @@
       "page",
       "size"
      ],
-     "total": 1776
+     "total": 1777
     }
    ],
    "hit": "마티에 부산하버시티",
@@ -155,7 +155,7 @@
       "page",
       "size"
      ],
-     "total": 1330
+     "total": 1331
     }
    ],
    "hit": "강릉 다케노모리글램핑&료칸",
@@ -392,13 +392,13 @@
      "region": "강릉",
      "type": "CITY",
      "pages": 27,
-     "n": 1255,
+     "n": 1256,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1276
+     "total": 1277
     },
     {
      "kw": "강원",
@@ -565,6 +565,40 @@
     "starRating"
    ]
   },
+  "muan-amotion": {
+   "name": "애모시옹 오션뷰 풀빌라",
+   "city": "무안",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "무안",
+     "region": "무안",
+     "type": "CITY",
+     "pages": 1,
+     "n": 50,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 86
+    }
+   ],
+   "hit": "무안 애모시옹 오션뷰 풀빌라",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
+  },
   "ongjin-campnomad": {
    "name": "캠프노마드",
    "city": "옹진",
@@ -575,14 +609,14 @@
      "kw": "영흥도",
      "region": "영흥도 해군 기념비",
      "type": "POINT_OF_INTEREST",
-     "pages": 2,
-     "n": 100,
+     "pages": 3,
+     "n": 150,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 947
+     "total": 946
     }
    ],
    "hit": "인천 캠프노마드",
@@ -752,7 +786,7 @@
       "page",
       "size"
      ],
-     "total": 2042
+     "total": 2044
     }
    ],
    "hit": "대부도(선재도) 선재담글램핑&카라반리조트",
