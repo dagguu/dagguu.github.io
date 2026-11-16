@@ -487,7 +487,7 @@ function homeView(){
   h+=hrow('💜 지금 <em>인기 있는</em> 체험단','#/list?cat=all&s=pick',picks);
   var soon=open.filter(function(it){ return daysLeft(it)<=3; }).sort(function(a,b){ return daysLeft(a)-daysLeft(b); });
   h+=hrow('⏰ <em>곧 마감!</em> 지금 신청하세요','#/list?cat=all&s=closing',soon);
-  var baby=open.filter(function(it){ return catOf(it)==="baby"; }).sort(function(a,b){ return (b.createdAt||0)-(a.createdAt||0); });
+  var baby=open.filter(function(it){ return catOf(it)==="baby"; }).sort(function(a,b){ return ((b.own?1:0)-(a.own?1:0)) || (b.createdAt||0)-(a.createdAt||0); });  /* 다꾸키즈 체험단(own) 맨 앞 — 2026-11-16 시온님 */
   h+=hrow('👶 <em>육아</em> 체험단도 있어요','#/list?cat=baby&s=open',baby);
   var tdy=ymd(today()), easy=open.filter(function(it){ return apRatio(it)<=1.5 && it.end!==tdy; }).sort(function(a,b){ return apRatio(a)-apRatio(b) || valOf(b)-valOf(a); });
   h+=hrow('🙌 <em>경쟁률 낮은</em> 체험단','#/list?cat=all&s=open&o=comp',easy);
