@@ -1,7 +1,37 @@
 [
- {"n":1,"time":"day","look":"day","img":"Keep the place exactly as it is (same indoor private pool, same white floor and steel handrail, same tall glass walls, same beach and calm sea horizon outside the glass, same small floating ball on the water). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same white indoor ceiling and below with the same pool water and floor. Never mirror or flip the image. No people.","prompt":"Very slow steady push forward along the indoor pool toward the glass wall and the sea, water rippling softly, a little warm steam rising from the water."},
- {"n":2,"time":"sunset","look":"day","img":"Keep the place exactly as it is (same square whirlpool spa tub by the window, same window frames and railing, same sun setting over the calm sea with small islands). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below with the same room. Never mirror or flip the image. No people.","prompt":"Very slow push forward toward the window as the sun sets over the sea, soft steam rising from the spa water, light shimmering on the water surface."},
- {"n":3,"time":"day","look":"day","people":true,"img":"Keep the place exactly as it is (same white room, same floor-to-ceiling glass wall, same reclining lounge chair and footrest, same beach and blue sea outside). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same white ceiling and below with the same white floor. Never mirror or flip the image. Add one Korean woman standing far away and small near the glass wall, seen only from behind, looking out at the sea, her face and profile completely hidden, not touching the chair or anything.","prompt":"Very slow steady push forward toward the glass wall; the woman stands still looking at the sea and never turns around; her skirt moves slightly; soft daylight, small waves moving on the beach."},
- {"n":4,"time":"day","look":"day","img":"Keep the place exactly as it is (same bright bedroom, same white bed and bedding, same lounge chair, same round ceiling lights, same large windows with beach and sea view). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same white ceiling and below with the same white floor; no snow inside the room. Never mirror or flip the image. No people.","prompt":"Very slow steady push forward toward the bed and the windows, soft daylight on the white bedding, gentle waves outside, everything calm and still."},
- {"n":5,"time":"day","look":"day","img":"Keep the place exactly as it is (same seaside building with blue-tinted glass roof, same pine trees along the beach, same sea and islands in the distance). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged; extend only open sky above and the same pine forest below. One single continuous scene: show the building only once, never duplicate or stack the image. No people.","prompt":"Slow aerial glide forward over the pine trees toward the building and the sea, sunlight glittering on the water."}
+ {
+  "n": 1,
+  "time": "day",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same indoor private pool, same white floor and steel handrail, same tall glass walls, same beach and calm sea horizon outside the glass, same small floating ball on the water). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same white indoor ceiling and below with the same pool water and floor. Never mirror or flip the image. No people.",
+  "prompt": "Very slow steady push forward along the indoor pool toward the glass wall and the sea, water rippling softly, a little warm steam rising from the water."
+ },
+ {
+  "n": 2,
+  "time": "sunset",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same square whirlpool spa tub by the window, same window frames and railing, same sun setting over the calm sea with small islands). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above and below with the same room. Never mirror or flip the image. No people.",
+  "prompt": "Very slow push forward toward the window as the sun sets over the sea, soft steam rising from the spa water, light shimmering on the water surface."
+ },
+ {
+  "n": 3,
+  "time": "day",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same white room, same floor-to-ceiling glass wall, same reclining lounge chair and footrest, same beach and blue sea outside). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same white ceiling and below with the same white floor. Never mirror or flip the image. No people.",
+  "prompt": "Very slow steady push forward toward the glass wall and the sea, small waves moving on the beach, soft daylight, everything calm and still. No people."
+ },
+ {
+  "n": 4,
+  "time": "day",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same bright bedroom, same white bed and bedding, same lounge chair, same round ceiling lights, same large windows with beach and sea view). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same white ceiling and below with the same white floor; no snow inside the room. Never mirror or flip the image. No people.",
+  "prompt": "Very slow steady push forward toward the bed and the windows, soft daylight on the white bedding, gentle waves outside, everything calm and still."
+ },
+ {
+  "n": 5,
+  "time": "day",
+  "look": "day",
+  "img": "Keep the place exactly as it is (same seaside building with blue-tinted glass roof, same pine trees along the beach, same sea and islands in the distance). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Vertical 9:16 frame: keep the original photo area unchanged; extend only open sky above and the same pine forest below. One single continuous scene: show the building only once, never duplicate or stack the image. No people.",
+  "prompt": "Slow aerial glide forward over the pine trees toward the building and the sea, sunlight glittering on the water."
+ }
 ]
