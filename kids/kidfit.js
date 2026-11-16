@@ -1419,6 +1419,30 @@
     d.innerHTML = "<b style='font-size:14px'>🎄 크리스마스 상품 주문 마감 안내 " + (left ? "· D-" + left : "· 오늘 마감") + "</b><br>크리스마스 관련 상품(의류·액세서리·신발 등)은 <b>11월 27일(금)까지만</b> 주문받아요. 크리스마스 전에 배송이 늦어지지 않도록 주문 기간을 정해 두었어요.<br><span style='color:#4b6b52'>남대문 상품이라 재고가 없으면 리오더로 시간이 걸릴 수 있어요. 크리스마스 전 도착이 어려우면 먼저 연락드리고, 원하시면 주문을 취소(전액 환불)해 드려요 · 재고 문의는 <a href='https://pf.kakao.com/_xhihNX/chat' target='_blank' style='color:#1f4d2a;text-decoration:underline'>카톡 채널</a></span>";
     at.parentNode.insertBefore(d, at);
   }
+
+  /* 콘·미니멀 공식몰 입고 안내(2026-11-16 시온님 "콘 홈페이지 리오더·품절·재고 참고"): kids/con_status.json(공식몰 목록의 입고 예정·지연·품절 글)을
+     상품 이름(띄어쓰기·앞 콘con/콘/미니멀 무시)으로 맞춰 구매 버튼 위에 안내. 우리 재고와 다를 수 있어 "공식몰 기준"이라고 밝힘. */
+  function cnNorm(t){ t = (t || "").replace(/\[[^\]]*\]|[^가-힣a-zA-Z0-9]/g, "").toLowerCase(); var o; do { o = t; t = t.replace(/^(콘con|con|콘|미니멀|minimal)/, ""); } while (t !== o && t.length > 3); return t; }
+  function conNote(){
+    if (document.getElementById("dk-con")) return;
+    var h = document.querySelector(".infoArea .headingArea h1, .infoArea .headingArea h2"); if (!h) return;
+    var title = h.textContent.trim(); if (!/^(콘|미니멀)/.test(title)) return;
+    var at = document.querySelector(".infoArea .productAction") || document.getElementById("totalProducts"); if (!at) return;
+    fetch("https://www.dagguu.com/kids/con_status.json?v=" + Math.floor(Date.now() / 600000)).then(function(r){ return r.json(); }).then(function(j){
+      if (document.getElementById("dk-con")) return;
+      var me = cnNorm(title.split(/\s+\d{2}(봄|여름|가을|겨울)/)[0]); if (me.length < 3) return;
+      function hit(n){ var x = cnNorm(n); return x.length >= 3 && (x === me || (x.length >= 4 && (me.indexOf(x) === 0 || x.indexOf(me) === 0))); }
+      var msg = "", k;
+      for (k in j.notes) if (hit(k)) { msg = j.notes[k]; break; }
+      var sold = (j.sold || []).some(hit);
+      if (!msg && !sold) return;
+      var d = document.createElement("div"); d.id = "dk-con";
+      d.style.cssText = "margin:10px 0;padding:11px 14px;border-radius:12px;background:#f6f3ff;border:1px solid #e2dafa;color:#3d2a7a;font-size:13px;line-height:1.6";
+      var md = (j.at || "").slice(5).replace("-", "/");
+      d.innerHTML = "<b style='font-size:14px'>📦 브랜드 입고 안내</b><br>" + (sold ? "브랜드 공식몰에서 <b>품절</b>로 표시된 상품이에요." : "브랜드 공식몰 안내: <b>" + msg + "</b>") + "<br><span style='color:#6b5ca5'>남대문 리오더 상품이라 배송이 늦어질 수 있어요(" + md + " 공식몰 기준, 실제 재고와 다를 수 있어요) · 재고 문의는 <a href='https://pf.kakao.com/_xhihNX/chat' target='_blank' style='color:#3d2a7a;text-decoration:underline'>카톡 채널</a></span>";
+      at.parentNode.insertBefore(d, at);
+    }).catch(function(){});
+  }
   function xmasMenuOff(){ var k = new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10); if (k <= XMAS_END) return; var a = document.querySelectorAll("a[href*='keyword=%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4'], a[href*='keyword=크리스마스']"); for (var i = 0; i < a.length; i++) { var li = a[i].closest("li"); (li || a[i]).style.display = "none"; } }
 
   /* 2026-11-15 시온님 "커피 주는 기자단도 상시로, 10명": 스킨 coffee.html 글자를 화면에서 바꿈 */
@@ -1862,7 +1886,7 @@
     if (tab && getComputedStyle(tab).display !== "none") { var a = document.createElement("a"); a.id = "dk-j10tip"; a.href = JOIN10; a.innerHTML = "1초 가입 시 1만원 쿠폰!"; document.body.appendChild(a); document.body.classList.add("dk-j10"); }
     /* PC 알약은 메뉴 줄과 겹쳐서 뺌(2026-11-16) */
   }
-  function run(){ try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  function run(){ try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
