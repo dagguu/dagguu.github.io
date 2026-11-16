@@ -416,13 +416,13 @@ function featureBanners(){
   out.push({href:"#/list?s=closing",em:"⏰",kicker:"3일 안에 끝나요",title:"마감 임박 체험단 보기 🏃",bg:"#eef8f3",tile:"#1f7a5a",ink:"#14573f",icon:I.flame});
   return out;
 }
-function leftText(it){ var s=statusOf(it); if(s.key==="closed") return "모집 마감"; var d=daysLeft(it); return d<=0?"오늘 마감":d+"일 남음"; }
+function leftText(it){ if(!it.end) return ""; var s=statusOf(it); if(s.key==="closed") return "모집 마감"; var d=daysLeft(it); return d<=0?"오늘 마감":d+"일 남음"; }
 function hcard(it){
   var c=catMeta(catOf(it))||{}, view=safeUrl(it.infUrl||it.viewUrl), d=daysLeft(it);
   var tags='<span class="htags">'+(it.region?'<span class="htg">📍 '+esc(it.region)+'</span>':'')+'<span class="htg">'+esc((c.em||"")+" "+(c.t||""))+'</span></span>';
   var t='<a href="'+itemHref(it)+'">'+esc(it.name)+'</a>';
   return '<article class="hc">'+thumb(it,"hth")+tags+
-    (isTodayEnd(it)?'':'<p class="hl"><b class="'+(d<=1?'hot':'')+'">'+leftText(it)+'</b></p>')+
+    (isTodayEnd(it)||!it.end?'':'<p class="hl"><b class="'+(d<=1?'hot':'')+'">'+leftText(it)+'</b></p>')+
     chBadges(it)+'<h3>'+t+'</h3>'+(it.worth?'<p class="hw">💰 <b>'+esc(it.worth)+'</b> 상당</p>':'<p class="hbn">🎁 '+esc(it.benefit)+'</p>')+apLine(it)+hact(it)+'</article>';
 }
 function bizLine(){ var b=seed.biz; if(!b||!b.name) return ""; var x=[["상호",b.name],["대표",b.ceo],["사업자등록번호",b.regNo],["통신판매업 신고",b.mailOrder],["주소",b.addr],["이메일",b.email],["전화",b.tel]].filter(function(r){ return r[1]; });
