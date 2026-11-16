@@ -8,33 +8,86 @@
   "l2": "따뜻한 실내 수영장 🤍",
   "color": "#ffe14d",
   "stickers": [
-   {"k": "hand", "t": "바다 바로 앞..", "x": 30, "y": 14, "r": -5, "a": "dr"}
+   {
+    "k": "hand",
+    "t": "바다 바로 앞..",
+    "x": 30,
+    "y": 14,
+    "r": -5,
+    "a": "dr"
+   }
   ]
  },
  "scenes": [
-  {"img": "ai:1", "y": 0.5,
-   "vp": "Very slow steady push forward along the indoor pool toward the glass wall and the sea, water rippling softly, a little warm steam rising from the water."},
-  {"img": "ai:2", "y": 0.5,
+  {
+   "img": "ai:1",
+   "y": 0.5,
+   "vp": "Very slow steady push forward along the indoor pool toward the glass wall and the sea, water rippling softly, a little warm steam rising from the water."
+  },
+  {
+   "img": "ai:2",
+   "y": 0.5,
    "cap": "해 질 녘 창가에서\n**바다 보며 스파** ♨️",
    "stickers": [
-    {"k": "cloud", "t": "노을 스파", "x": 66, "y": 13, "r": -3},
-    {"k": "spark", "x": 22, "y": 18}
-   ]},
-  {"img": "ai:3", "y": 0.55,
+    {
+     "k": "cloud",
+     "t": "노을 스파",
+     "x": 66,
+     "y": 13,
+     "r": -3
+    },
+    {
+     "k": "spark",
+     "x": 22,
+     "y": 18
+    }
+   ]
+  },
+  {
+   "img": "ai:3",
+   "y": 0.55,
    "cap": "바다 쪽 통창 앞에서\n**서해를 바라보는 시간** 🌊",
    "stickers": [
-    {"k": "tag", "t": "해변 도보 2분 🐚", "x": 32, "y": 11, "r": -4, "c": "#d9f2c4"}
-   ]},
-  {"img": "ai:4", "y": 0.6,
+    {
+     "k": "tag",
+     "t": "해변 도보 2분 🐚",
+     "x": 32,
+     "y": 11,
+     "r": -4,
+     "c": "#d9f2c4"
+    }
+   ],
+   "vp": "Very slow steady push forward toward the glass wall. Exactly one person in the whole video: the same woman already standing far away by the glass, seen from behind, stays still and never turns around; no other person ever appears or walks into the frame, nobody near the camera. Small waves move on the beach, soft daylight."
+  },
+  {
+   "img": "ai:4",
+   "y": 0.6,
    "cap": "창밖으로 해변이 보이는\n**하얀 침실** ✨",
    "stickers": [
-    {"k": "puffy", "t": "포근", "x": 72, "y": 22, "r": 5}
-   ]},
-  {"img": "ai:5", "y": 0.5,
-   "cap": {"red": "📌 숙소 정보가 궁금하다면", "t": "프로필 링크에서 **[025]**번을\n검색해 주세요!"},
+    {
+     "k": "puffy",
+     "t": "포근",
+     "x": 72,
+     "y": 22,
+     "r": 5
+    }
+   ]
+  },
+  {
+   "img": "ai:5",
+   "y": 0.5,
+   "cap": {
+    "red": "📌 숙소 정보가 궁금하다면",
+    "t": "프로필 링크에서 **[025]**번을\n검색해 주세요!"
+   },
    "stickers": [
-    {"k": "star", "x": 80, "y": 16}
-   ]}
+    {
+     "k": "star",
+     "x": 80,
+     "y": 16
+    }
+   ]
+  }
  ],
  "caption": "찬 바람 부는 날, 겨울 바다를 보며 따뜻한 물에 들어가는 방법이에요.\n\n충남 보령 무창포 바닷가 바로 앞, 모든 객실에서 서해가 보이는 풀빌라예요. 통창으로 둘러싼 실내 수영장에서 바다를 바라볼 수 있고, 해 질 녘엔 창가 스파 너머로 노을이 내려앉아요.\n\n✓ 모든 객실 오션뷰 · 통창 실내 개별 수영장\n✓ 일부 객실 제트스파·히노끼 욕조\n✓ 무창포해수욕장까지 걸어서 2분\n\n겨울 바다 보러 떠나고 싶을 때 저장해두세요.\n\n📌 개별 수영장은 현장 요금을 내면 35~36도로 맞춰 줘요(2일 전 미리 확인), 루프탑 수영장은 5~10월에만 운영해요.\n🔎숙소정보는 프로필링크에서 [025]번 검색해주세요!\n\n#보령풀빌라추천 #보령오션뷰풀빌라 #무창포펜션 #서해실내수영장풀빌라 #충남겨울바다숙소"
 }
