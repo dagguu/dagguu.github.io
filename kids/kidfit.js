@@ -1243,8 +1243,8 @@
       st.textContent =
         ".main_top_banner{background:#fff35c!important}.main_top_banner .top_banner_text a{color:#5b2fc0!important;font-weight:500!important}.main_top_banner{position:relative}" +
         ".main_top_banner .top_banner_close{display:none!important}#dk-tbx{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;background:none;font-size:20px;line-height:28px;color:#333;cursor:pointer;padding:0;z-index:2}" +
-        "@media(max-width:1024px){.dk-wrap{padding-left:14px!important;padding-right:14px!important}#dk-bm{padding-left:0!important;padding-right:0!important}}" + ".dk-mnav{border-bottom:1px solid #eee!important}.dk-mnav a{font-size:15.5px!important;font-weight:400!important;color:#222!important;padding:12px 4px 11px!important;border-bottom:3px solid transparent}.dk-mnav a.dk-n{font-weight:600!important;color:#6a3fc8!important;border-bottom-color:#6a3fc8}" +
-        "@media(min-width:1025px){.top_category>ul>li>a{font-size:15px!important;font-weight:500!important;color:#222}}" +
+        "@media(max-width:1024px){.dk-wrap{padding-left:14px!important;padding-right:14px!important}#dk-bm{padding-left:0!important;padding-right:0!important}}" + ".dk-mnav{border-bottom:1px solid #eee!important}.dk-mnav a{font-size:15.5px!important;font-weight:700!important;padding:12px 4px 11px!important;border-bottom:3px solid transparent}.dk-mnav a:not([style*='color']){color:#222!important}.dk-mnav a.dk-n{font-weight:800!important;color:#6a3fc8!important;border-bottom-color:#6a3fc8}" +
+        "@media(min-width:1025px){.top_category>ul>li>a{font-size:15px!important;font-weight:700!important}.top_category>ul>li>a:not([style*='color']){color:#222}}" +
         "ul.prdList>li .thumbnail{position:relative;overflow:hidden;border-radius:6px;background:#f4f4f4}ul.prdList>li .thumbnail>a{display:block;aspect-ratio:1/1}ul.prdList>li .thumbnail>a img{width:100%!important;height:100%!important;object-fit:cover;object-position:center top}" +
         "ul.prdList>li .description .name{margin-top:9px!important}ul.prdList>li .description .name a span:not(.title){font-size:14px!important;color:#444!important;line-height:1.45!important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}" +
         "ul.prdList>li .description .spec li.dk-ns span{font-size:17px!important}ul.prdList>li .description .spec li>span[style*='font-weight:bold']{font-size:16px!important}ul.prdList>li .description .spec li>span[style*='line-through']{font-size:13px!important}" +
@@ -1626,7 +1626,7 @@
     h.parentNode.insertBefore(a, h.nextSibling);
   }
   // 상단 메뉴(2026-11-14 시온님): 신상품 → ⏰타임특가, 1+1 다음에 0원체험단·기획상품(상품명에 "기획")
-  var MENU_ADD = [["0원체험단", "/product/coffee.html?t=exp", "#e0457b"], ["기획상품", "/product/search.html?keyword=%EA%B8%B0%ED%9A%8D", ""], ["🚚무료배송", "/product/list.html?cate_no=56", "#1f7a4d"]];
+  var MENU_ADD = [["🎁0원체험단", "/product/coffee.html?t=exp", "#e0457b"], ["🎀기획상품", "/product/search.html?keyword=%EA%B8%B0%ED%9A%8D", "#e8792b"], ["🚚무료배송", "/product/list.html?cate_no=56", "#1f7a4d"]];
   /* 적립금 사용 조건 3만원(2026-11-15): 스킨에 박힌 '5만원 이상 구매 시 사용' 글자를 화면에서 바꿈 */
   function mileFix(){ var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n; while ((n = w.nextNode())) { var t = n.nodeValue; if (t && t.indexOf("5만원 이상") >= 0 && /사용|쓸 수/.test(t) && t.indexOf("무료배송") < 0) n.nodeValue = t.split("5만원 이상").join("3만원 이상"); } jcFix(); setTimeout(jcFix, 1800); setTimeout(jcFix, 3500); }
   function jcFix(){ var li = document.getElementById("dk-joincp"); if (!li || li.getAttribute("data-dkm")) return; li.setAttribute("data-dkm", "1"); var t = li.querySelector(".title"), pd = li.querySelector(".period"); if (t) t.textContent = "[수신동의] 가입 적립금"; if (pd) pd.textContent = "쇼핑정보 수신 동의하고 가입하면 바로 지급 · 3만원 이상 구매 시 사용"; }
