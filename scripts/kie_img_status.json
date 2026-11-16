@@ -1,24 +1,48 @@
 {
- "at": "2026-11-15 19:59",
+ "at": "2026-11-16 19:56",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 3,
-   "taskId": "9f0c144e0ae8cbfe69c7894492fd2776",
+   "n": 1,
+   "taskId": "02d6fbc204f1662b42b1b7696ee35bf2",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-15/muan-amotion/3_edit.jpg"
+   "file": "img/2026-11-16/boryeong-lava-poolvilla/1_edit.jpg"
+  },
+  {
+   "n": 2,
+   "taskId": "fa64c4950a494422ca04bf73d21d1506",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-16/boryeong-lava-poolvilla/2_edit.jpg"
+  },
+  {
+   "n": 3,
+   "taskId": "5ae373686229a379d96d0320f38c1953",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-16/boryeong-lava-poolvilla/3_edit.jpg"
+  },
+  {
+   "n": 4,
+   "taskId": "02a288a096a1389ab4030e97c7e154df",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-16/boryeong-lava-poolvilla/4_edit.jpg"
   },
   {
    "n": 5,
-   "taskId": "5798a47161ca851188f2d8445896ea3e",
+   "taskId": "af22cf241699b3fabdc2495c7224c8ab",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-15/muan-amotion/5_edit.jpg"
+   "file": "img/2026-11-16/boryeong-lava-poolvilla/5_edit.jpg"
   }
  ],
- "slug": "muan-amotion"
+ "slug": "boryeong-lava-poolvilla"
 }
