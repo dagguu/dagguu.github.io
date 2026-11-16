@@ -1855,7 +1855,7 @@
       "@media(max-width:1024px){body.dk-j10 #dk-kfab{bottom:132px!important}}";
     document.head.appendChild(st);
     var tab = document.getElementById("dk-tab");
-    if (tab && getComputedStyle(tab).display !== "none") { var a = document.createElement("a"); a.id = "dk-j10tip"; a.href = JOIN10; a.innerHTML = "1초 가입 시 1만원 쿠폰!<small>8만원↑</small>"; document.body.appendChild(a); document.body.classList.add("dk-j10"); }
+    if (tab && getComputedStyle(tab).display !== "none") { var a = document.createElement("a"); a.id = "dk-j10tip"; a.href = JOIN10; a.innerHTML = "1초 가입 시 1만원 쿠폰!"; document.body.appendChild(a); document.body.classList.add("dk-j10"); }
     /* PC 알약은 메뉴 줄과 겹쳐서 뺌(2026-11-16) */
   }
   function run(){ try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
