@@ -2082,6 +2082,29 @@
     if (tab && getComputedStyle(tab).display !== "none") { var a = document.createElement("a"); a.id = "dk-j10tip"; a.href = JOIN10; a.innerHTML = "1초 가입 시 1만원 쿠폰!"; document.body.appendChild(a); document.body.classList.add("dk-j10"); }
     /* PC 알약은 메뉴 줄과 겹쳐서 뺌(2026-11-16) */
   }
+  /* ㉒ 모델 코디 세트(2026-11-18 시온님 "코디 세트로 사면 할인, 한 번에 담기 — 시범으로 고유"): 다꾸 kids/coordi_sets.json
+     {sets:[{id,title,photo,items:[상품번호],set_no:카페24 세트상품 번호,disc}]} — 세트상품(카페24 bundle)이 할인·옵션 고르기·장바구니를 맡음.
+     세트에 든 상품 상세 구매 버튼 위에 "모델 코디 그대로 · N개 한 번에 담기 · 세트로 사면 N% 할인" 카드. */
+  function coordiSet(){
+    var no = pno(); if (!no || document.getElementById("dk-cset")) return;
+    fetch("https://www.dagguu.com/kids/coordi_sets.json?d=" + new Date().toISOString().slice(0, 13)).then(function(r){ return r.json(); }).then(function(J){
+      var S = (J.sets || []).filter(function(s){ return s.set_no && (s.items || []).map(String).indexOf(String(no)) >= 0; });
+      if (!S.length || document.getElementById("dk-cset")) return;
+      var at = document.querySelector(".infoArea .productAction") || document.querySelector("#orderFixArea"); if (!at) return;
+      var e = function(t){ return String(t).replace(/[&<>"']/g, function(c){ return "&#" + c.charCodeAt(0) + ";"; }); };
+      var box = document.createElement("div"); box.id = "dk-cset";
+      box.style.cssText = "margin:14px 0 12px;text-align:left";
+      box.innerHTML = "<div style='font-size:14px;font-weight:700;color:#222;margin:0 0 8px'>👗 모델 코디 그대로 사기</div><div style='display:flex;gap:10px;overflow-x:auto;scrollbar-width:none'>" + S.map(function(s){
+        return "<a href='/product/detail.html?product_no=" + s.set_no + "' data-set='" + e(s.id) + "' style='flex:0 0 " + (S.length > 1 ? "86%" : "100%") + ";display:flex;gap:12px;align-items:center;background:#f6f2ff;border:1px solid #e3d9ff;border-radius:14px;padding:10px;text-decoration:none;color:#222'>" +
+          "<img src='" + e(s.photo) + "' alt='' style='width:78px;height:98px;object-fit:cover;object-position:top;border-radius:10px;flex:0 0 auto;background:#eee'>" +
+          "<span style='display:block;min-width:0'><b style='display:block;font-size:14px;line-height:1.35'>" + e(s.title) + "</b>" +
+          "<span style='display:block;font-size:12.5px;color:#666;margin-top:3px'>사진 속 " + s.items.length + "개 한 번에 담기</span>" +
+          "<span style='display:inline-block;margin-top:7px;background:#6a3fc8;color:#fff;font-size:12.5px;font-weight:600;padding:6px 11px;border-radius:999px'>세트로 사면 " + (s.disc || 5) + "% 할인 ›</span></span></a>";
+      }).join("") + "</div>";
+      at.parentNode.insertBefore(box, at);
+      box.addEventListener("click", function(ev){ var a = ev.target.closest("a[data-set]"); if (a && window.gtag) try { gtag("event", "coordi_set_click", { set: a.getAttribute("data-set") }); } catch(x){} });
+    }).catch(function(){});
+  }
   /* ㉑ 코디 상품 태그(2026-11-17 시온님 "같이 코디하기 좋은 상품, 이미지에 상품 태그 느낌으로"): 다꾸 kids/coordi_tags.json
      {상품번호:[{f:상세 사진 파일 이름, t:[{x,y(%), no:태그 상품번호}]}]} — 사진을 보고 같은 상품이 쇼핑몰에 있을 때만 손으로 정함.
      상세 사진 위에 인스타 태그 같은 말풍선(누르면 그 상품), 사진 아래 "이 사진 속 상품" 카드. 판매·진열 안 하는 상품은 안 보임. */
@@ -2151,7 +2174,7 @@
       var n = v.firstChild; if (n && n.nodeType === 3 && /예정/.test(n.nodeValue)) n.nodeValue = "통신판매업 신고 면제(간이과세자) ";
     });
   }
-  function run(){ try { document.documentElement.classList.add("dk-ok"); } catch(e){} try { tidy(); } catch(e){} try { bestBadge(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { coupleMenu(); } catch(e){} try { boyMenu(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { laFont(); } catch(e){} try { tongFix(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ xmasPage(); }catch(e){} try{ couplePage(); }catch(e){} try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} try { setTimeout(modelSpec, 1500); } catch(e){} try { coordiTags(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  function run(){ try { document.documentElement.classList.add("dk-ok"); } catch(e){} try { tidy(); } catch(e){} try { bestBadge(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { coupleMenu(); } catch(e){} try { boyMenu(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { laFont(); } catch(e){} try { tongFix(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ xmasPage(); }catch(e){} try{ couplePage(); }catch(e){} try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} try { setTimeout(modelSpec, 1500); } catch(e){} try { coordiTags(); } catch(e){} try { coordiSet(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
