@@ -498,38 +498,60 @@
      주문당 쿠폰 1장 → 가장 큰 1장만 계산. 신상 할인 중인 상품은 쿠폰을 같이 못 써서(혜택 '모든 쿠폰 사용제한') 쿠폰가를 붙이지 않음. */
 
   /* 인기상품(분류 55)에 BEST 딱지(2026-11-16 시온님): 목록 사진 왼쪽 위(NEW 동그라미가 있으면 그 옆), 상품 상세 큰 사진에도. 분류 상품 번호는 공개 API, 30분 기억 */
-  var BEST_SET = null, BEST_ASK = 0;
+  var BEST_SET = null, BEST_ASK = 0, MD_SET = {};
+  /* 2026-11-17 시온님 "디그린 좋아하니까 MD 딱지": 이 브랜드 상품엔 보라 MD 딱지 */
+  var MD_BRANDS = ["디그린"];
   function bestLoad(cb){
     if (BEST_SET) return cb();
-    try { var c = JSON.parse(sessionStorage.getItem("dk_best") || "null"); if (c && Date.now() - c.t < 1800000) { BEST_SET = {}; c.n.forEach(function(n){ BEST_SET[n] = 1; }); return cb(); } } catch(e){}
+    try { var c = JSON.parse(sessionStorage.getItem("dk_best2") || "null"); if (c && Date.now() - c.t < 1800000) { BEST_SET = {}; c.n.forEach(function(n){ BEST_SET[n] = 1; }); (c.m || []).forEach(function(n){ MD_SET[n] = 1; }); return cb(); } } catch(e){}
     if (BEST_ASK) return; BEST_ASK = 1;
-    var all = [], H = { "X-Cafe24-Client-Id": "JzTmuiBPItGvZ6KG8g3aPC" };
+    var all = [], md = [], H = { "X-Cafe24-Client-Id": "JzTmuiBPItGvZ6KG8g3aPC" };
+    function fin(){
+      BEST_SET = {}; all.forEach(function(n){ BEST_SET[n] = 1; }); md.forEach(function(n){ MD_SET[n] = 1; });
+      try { sessionStorage.setItem("dk_best2", JSON.stringify({ t: Date.now(), n: all, m: md })); } catch(e){}
+      cb();
+    }
+    function mdPg(bi, off){
+      if (bi >= MD_BRANDS.length) return fin();
+      var b = MD_BRANDS[bi];
+      fetch("https://dagguu.cafe24api.com/api/v2/products?product_name=" + encodeURIComponent(b) + "&display=T&selling=T&limit=100&offset=" + off + "&fields=product_no,product_name", { headers: H }).then(function(r){ return r.json(); }).then(function(j){
+        var ps = (j && j.products) || []; ps.forEach(function(p){ if (String(p.product_name || "").split(" ")[0] === b) md.push(p.product_no); });
+        if (ps.length === 100 && off < 900) return mdPg(bi, off + 100);
+        mdPg(bi + 1, 0);
+      }).catch(function(){ fin(); });
+    }
     (function pg(off){
       fetch("https://dagguu.cafe24api.com/api/v2/products?category=55&display=T&selling=T&limit=100&offset=" + off + "&fields=product_no", { headers: H }).then(function(r){ return r.json(); }).then(function(j){
         var ps = (j && j.products) || []; ps.forEach(function(p){ all.push(p.product_no); });
-        if (ps.length === 100 && off < 400) return pg(off + 100);
-        BEST_SET = {}; all.forEach(function(n){ BEST_SET[n] = 1; });
-        try { sessionStorage.setItem("dk_best", JSON.stringify({ t: Date.now(), n: all })); } catch(e){}
-        cb();
+        if (ps.length === 100 && off < 900) return setTimeout(function(){ pg(off + 100); }, 300);
+        setTimeout(function(){ mdPg(0, 0); }, 300);
       }).catch(function(){ BEST_ASK = 0; });
     })(0);
   }
   function bestBadge(){
     bestLoad(function(){
       if (!document.getElementById("dk-best-css")) { var st = document.createElement("style"); st.id = "dk-best-css";
-        st.textContent = ".dk-best{position:absolute;left:8px;top:8px;z-index:3;width:38px;height:38px;border-radius:50%;background:#ff5a36;color:#fff;font-size:10.5px;font-weight:900;letter-spacing:.3px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.18);pointer-events:none}.dk-best.nx{left:50px}.dk-best.big{width:52px;height:52px;font-size:13px;left:12px;top:12px}";
+        st.textContent = ".dk-best{position:absolute;left:8px;top:8px;z-index:3;width:38px;height:38px;border-radius:50%;background:#ff5a36;color:#fff;font-size:10.5px;font-weight:900;letter-spacing:.3px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.18);pointer-events:none}.dk-best.md{background:#6a3fc8;font-size:12px}.dk-best.big{width:52px;height:52px;font-size:13px;top:12px}.dk-best.big.md{font-size:15px}";
         document.head.appendChild(st); }
+      function put(th, cls, txt, big){
+        if (getComputedStyle(th).position === "static") th.style.position = "relative";
+        var k = th.querySelectorAll(".dk-newdot, .dk-best" + (big ? ".big" : ":not(.big)")).length;
+        var b = document.createElement("span"); b.className = "dk-best " + cls + (big ? " big" : ""); b.textContent = txt;
+        b.style.left = (big ? 12 + k * 58 : 8 + k * 42) + "px"; th.appendChild(b);
+      }
       [].forEach.call(document.querySelectorAll("ul.prdList > li, .dk-hdbox li, #dk-all li"), function(li){
-        if (li.querySelector(".dk-best")) return;
         var m = (li.id || "").match(/(\d+)$/), n = m && m[1];
         if (!n) { var a = li.querySelector("a[href*='product_no='], a[href*='/product/']"); var h = a && a.getAttribute("href") || ""; m = h.match(/product_no=(\d+)/) || h.match(/\/(\d+)\/category\//) || h.match(/\/product\/[^\/]+\/(\d+)/); n = m && m[1]; }
-        if (!n || !BEST_SET[n]) return;
-        var th = li.querySelector(".thumbnail") || li.querySelector(".prdImg") || li; if (getComputedStyle(th).position === "static") th.style.position = "relative";
-        var b = document.createElement("span"); b.className = "dk-best" + (th.querySelector(".dk-newdot") ? " nx" : ""); b.textContent = "BEST"; th.appendChild(b);
+        if (!n) return;
+        var th = li.querySelector(".thumbnail") || li.querySelector(".prdImg") || li;
+        if (BEST_SET[n] && !li.querySelector(".dk-best.bs")) put(th, "bs", "BEST");
+        if (MD_SET[n] && !li.querySelector(".dk-best.md")) put(th, "md", "MD");
       });
       var pn = (window.iProductNo || (location.search.match(/product_no=(\d+)/) || [])[1] || (location.pathname.match(/\/product\/[^\/]+\/(\d+)/) || [])[1]);
-      if (pn && BEST_SET[pn] && !document.querySelector(".dk-best.big")) {
-        var k = document.querySelector(".keyImg, .xans-product-image .thumbnail, .xans-product-image"); if (k) { if (getComputedStyle(k).position === "static") k.style.position = "relative"; var b2 = document.createElement("span"); b2.className = "dk-best big"; b2.textContent = "BEST"; k.appendChild(b2); }
+      var k2 = pn && document.querySelector(".keyImg, .xans-product-image .thumbnail, .xans-product-image");
+      if (k2) {
+        if (BEST_SET[pn] && !document.querySelector(".dk-best.big.bs")) put(k2, "bs", "BEST", 1);
+        if (MD_SET[pn] && !document.querySelector(".dk-best.big.md")) put(k2, "md", "MD", 1);
       }
     });
   }
