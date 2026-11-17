@@ -1049,17 +1049,19 @@
   BM_SVGI.tag = "<svg viewBox='0 0 64 64' width='78%' height='78%'><path d='M10 12h22l22 22-20 20-24-22z' fill='#8f6bf0'/><circle cx='21' cy='23' r='4' fill='#fff'/><text x='35' y='42' text-anchor='middle' font-size='11' font-weight='800' fill='#fff' font-family='sans-serif' transform='rotate(45 35 38)'>BRAND</text></svg>";
   BM_SVGI.truck = "<svg viewBox='0 0 64 64' width='82%' height='82%'><rect x='6' y='20' width='32' height='22' rx='3' fill='#4fb3a5'/><path d='M38 26h10l8 9v7H38z' fill='#7fd1c4'/><circle cx='17' cy='45' r='5' fill='#2f5f59'/><circle cx='47' cy='45' r='5' fill='#2f5f59'/><text x='22' y='35' text-anchor='middle' font-size='10' font-weight='800' fill='#fff' font-family='sans-serif'>FREE</text></svg>";
   /* 홈 아이콘 순서(2026-11-17 시온님) */
+  /* 쿠폰(티켓) 모양 아이콘(2026-11-17 시온님 "1+1·5%신상·BEST 는 쿠폰 아이콘으로") */
+  function bmCp(t, c, fs){ return "<svg viewBox='4 4 56 56' width='96%' height='96%'><g transform='rotate(-8 32 32)'><path d='M8 20h48v8a4 4 0 0 0 0 8v8H8v-8a4 4 0 0 0 0-8z' fill='" + c + "'/><path d='M44 21v22' stroke='#fff' stroke-width='1.6' stroke-dasharray='2.5 2.5' opacity='.8'/><text x='26' y='" + (fs > 15 ? 38 : 37) + "' text-anchor='middle' font-size='" + fs + "' font-weight='900' fill='#fff' font-family='sans-serif'>" + t + "</text><circle cx='50' cy='32' r='2.2' fill='#fff' opacity='.9'/></g></svg>"; }
   var BM_ICONS = [
     [BM_SVGI.gift, "첫 구매 혜택", "/member/login.html?dkkakao=1", "#fff1ea"],
     [BM_SVGI.box, "0원체험단", "/product/coffee.html?t=exp", "#fff5e6"],
-    [bmTx("1+1", 22, "#ff8db5"), "1+1", "/product/search.html?keyword=1%2B1", "#241a4a"],
+    [bmCp("1+1", "#ff5a8a", 17), "1+1", "/product/search.html?keyword=1%2B1", "#ffeef3"],
     [BM_SVGI.ribbon, "기획상품", "/product/search.html?keyword=%EA%B8%B0%ED%9A%8D", "#ffeef4"],
     [BM_SVGI.tag, "브랜드별", "#dk-brand", "#f1ecff"],
     [BM_SVGI.ruler, "사이즈표", "/product/brand_size.html", "#fff8d9"],
     [BM_SVGI.tree, "크리스마스", "/product/search.html?keyword=%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4", "#eaf6ec"],
     [BM_SVGI.truck, "무료배송", "/product/list.html?cate_no=56", "#e8f7f4"],
-    [bmTx("5%", 22, "#ffd84d"), "신상5%", "/product/list.html?cate_no=54", "#241a4a"],
-    [bmTx("BEST", 17), "인기상품", "/product/list.html?cate_no=55", "#241a4a"]
+    [bmCp("5%", "#7a4fe0", 18), "신상5%", "/product/list.html?cate_no=54", "#f1ecff"],
+    [bmCp("BEST", "#ff7a2f", 13), "인기상품", "/product/list.html?cate_no=55", "#fff1e6"]
   ];
   var BM_BAN = [["1", "/product/list.html?cate_no=55"], ["2", "/product/list.html?cate_no=44"], ["3", "/product/list.html?cate_no=49"], ["4", "/product/list.html?cate_no=47"]];
   var BM_CATS = [
