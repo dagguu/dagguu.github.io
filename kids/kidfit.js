@@ -2094,12 +2094,13 @@
       var e = function(t){ return String(t).replace(/[&<>"']/g, function(c){ return "&#" + c.charCodeAt(0) + ";"; }); };
       var box = document.createElement("div"); box.id = "dk-cset";
       box.style.cssText = "margin:14px 0 12px;text-align:left";
-      box.innerHTML = "<div style='font-size:14px;font-weight:700;color:#222;margin:0 0 8px'>👗 모델 코디 그대로 사기</div><div style='display:flex;gap:10px;overflow-x:auto;scrollbar-width:none'>" + S.map(function(s){
-        return "<a href='/product/detail.html?product_no=" + s.set_no + "' data-set='" + e(s.id) + "' style='flex:0 0 " + (S.length > 1 ? "86%" : "100%") + ";display:flex;gap:12px;align-items:center;background:#f6f2ff;border:1px solid #e3d9ff;border-radius:14px;padding:10px;text-decoration:none;color:#222'>" +
+      var pc = window.innerWidth >= 768;  // PC 는 옆으로 넘기기 대신 위아래로 쌓기(2026-11-18 시온님 "PC 에서 옆으로 안 넘어가")
+      box.innerHTML = "<div style='font-size:14px;font-weight:700;color:#222;margin:0 0 8px'>👗 모델 코디 그대로 사기" + (!pc && S.length > 1 ? " <span style='font-weight:400;font-size:12px;color:#888'>옆으로 넘겨 보세요 ›</span>" : "") + "</div><div style='display:flex;gap:10px;" + (pc ? "flex-direction:column" : "overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch") + "'>" + S.map(function(s){
+        return "<a href='/product/detail.html?product_no=" + s.set_no + "' data-set='" + e(s.id) + "' style='scroll-snap-align:start;flex:0 0 " + (!pc && S.length > 1 ? "86%" : "auto") + ";display:flex;gap:12px;align-items:center;background:#f6f2ff;border:1px solid #e3d9ff;border-radius:14px;padding:10px;text-decoration:none;color:#222'>" +
           "<img src='" + e(s.photo) + "' alt='' style='width:78px;height:98px;object-fit:cover;object-position:top;border-radius:10px;flex:0 0 auto;background:#eee'>" +
           "<span style='display:block;min-width:0'><b style='display:block;font-size:14px;line-height:1.35'>" + e(s.title) + "</b>" +
           "<span style='display:block;font-size:12.5px;color:#666;margin-top:3px'>사진 속 " + s.items.length + "개 한 번에 담기</span>" +
-          "<span style='display:inline-block;margin-top:7px;background:#6a3fc8;color:#fff;font-size:12.5px;font-weight:600;padding:6px 11px;border-radius:999px'>세트로 사면 " + (s.disc || 5) + "% 할인 ›</span></span></a>";
+          "<span style='display:inline-block;margin-top:7px;background:#6a3fc8;color:#fff;font-size:12.5px;font-weight:600;padding:6px 11px;border-radius:999px'>세트로 사면 " + (s.disc || 5) + "% 더 할인 ›</span></span></a>";
       }).join("") + "</div>";
       at.parentNode.insertBefore(box, at);
       box.addEventListener("click", function(ev){ var a = ev.target.closest("a[data-set]"); if (a && window.gtag) try { gtag("event", "coordi_set_click", { set: a.getAttribute("data-set") }); } catch(x){} });
