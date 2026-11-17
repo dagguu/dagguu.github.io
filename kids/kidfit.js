@@ -546,7 +546,7 @@
         var th = li.querySelector(".thumbnail") || li.querySelector(".prdImg") || li;
         if (BEST_SET[n] && !li.querySelector(".dk-best.bs")) put(th, "bs", "BEST");
         /* 2026-11-17 19:42 시온님 "MD 스티커는 노란색으로, 아무 딱지도 안 붙은 데에만": NEW·BEST 가 없는 상품에만 노란 MD */
-        var other = li.querySelector(".dk-best.bs, .dk-newdot, .badge"), md = li.querySelector(".dk-best.md");
+        var other = [].some.call(li.querySelectorAll(".dk-best.bs, .dk-newdot, .badge"), function(e){ return (e.textContent || "").trim(); }), md = li.querySelector(".dk-best.md");
         if (other && md) md.parentNode.removeChild(md);
         else if (!other && !md) put(th, "md", "MD");
       });
@@ -554,7 +554,7 @@
       var k2 = pn && document.querySelector(".keyImg, .xans-product-image .thumbnail, .xans-product-image");
       if (k2) {
         if (BEST_SET[pn] && !document.querySelector(".dk-best.big.bs")) put(k2, "bs", "BEST", 1);
-        var o2 = k2.querySelector(".dk-best.big.bs, .dk-newdot, .badge"), m2 = document.querySelector(".dk-best.big.md");
+        var o2 = [].some.call(k2.querySelectorAll(".dk-best.big.bs, .dk-newdot, .badge"), function(e){ return (e.textContent || "").trim(); }), m2 = document.querySelector(".dk-best.big.md");
         if (o2 && m2) m2.parentNode.removeChild(m2); else if (!o2 && !m2) put(k2, "md", "MD", 1);
       }
     });
