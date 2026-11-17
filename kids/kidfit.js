@@ -253,7 +253,51 @@
     return bi;
   }
   function sizeOf(t){ var m = t.split(" (")[0].split("-"); return m[m.length - 1].trim(); }
+  /* 2026-11-18 시온님: 브랜드 사이즈표(키·몸무게)와 모델 착용(model_specs)으로 고르기.
+     ① 모델과 키 3cm·몸무게 1.5kg 안이면 그 모델 사이즈 ② 키 사이즈와 몸무게 사이즈가 같으면 그것
+     ③ 몸무게가 더 크면 큰 쪽 ④ 몸무게가 더 작으면 키가 그 구간 아래쪽 절반일 때만 작은 쪽(크리스 102cm 16kg = S, 나율이 98cm 14kg = S) */
+  var BT = null, MS = null, recWhy = "", recUp = "";
+  function brandName(){
+    var nm = ((document.querySelector('meta[property="og:title"]') || {}).content || document.title || "").split(" - ")[0].replace(/^다꾸키즈 [|] /, "");
+    return (nm.split(" ")[0] || "").replace(/con$/i, "");
+  }
+  function loadBT(){
+    if (BT) return; BT = {}; MS = {};
+    var d = new Date().toISOString().slice(0, 10);
+    fetch("https://www.dagguu.com/kids/brand_size_tbl.json?d=" + d).then(function(r){ return r.json(); }).then(function(j){ BT = j || {}; try { recLine(); } catch(e){} }).catch(function(){});
+    fetch("https://www.dagguu.com/kids/model_specs.json?d=" + d).then(function(r){ return r.json(); }).then(function(j){ MS = (j && j.b) || {}; try { recLine(); } catch(e){} }).catch(function(){});
+  }
+  function rng(t){ var m = String(t || "").match(/[0-9.]+/g); if (!m) return null; return [parseFloat(m[0]), parseFloat(m[m.length - 1])]; }
+  function pickBrand(k, opts){
+    recWhy = ""; recUp = "";
+    var b = brandName(); if (!b) return null;
+    var ms = (MS || {})[b];
+    if (ms && ms.r && k.h && k.w) {
+      for (var i = 0; i < ms.r.length; i++) {
+        var r = ms.r[i], mh = parseFloat(r[0]), mw = parseFloat(r[1]);
+        if (mh && mw && Math.abs(mh - k.h) <= 3 && Math.abs(mw - k.w) <= 1.5 && opts.indexOf(r[3]) >= 0) { recWhy = "모델" + (r[4] ? " " + r[4] : "") + "(" + r[0] + "·" + r[1] + ")이 " + r[3] + " 착용"; return r[3]; }
+      }
+    }
+    var tb = (BT || {})[b]; if (!tb || !tb.t || !(k.h || k.w)) return null;
+    var rows = null;
+    for (var a = 0; a < tb.t.length; a++) { var hd = (tb.t[a][1] || []).join(","); if (hd.indexOf("키") >= 0 && hd.indexOf("몸무게") >= 0) { rows = tb.t[a]; break; } }
+    if (!rows) return null;
+    var hc = rows[1].indexOf("키"), wc = rows[1].indexOf("몸무게"), L = [];
+    rows[2].forEach(function(x){ if (opts.indexOf(x[0]) >= 0) L.push({ s: x[0], h: rng(x[hc]), w: rng(x[wc]) }); });
+    if (!L.length) return null;
+    function idxBy(v, key){ if (!v) return -1; for (var q = 0; q < L.length; q++) if (L[q][key] && v <= L[q][key][1]) return q; return L.length - 1; }
+    var hi = idxBy(k.h, "h"), wi = idxBy(k.w, "w"), bi;
+    if (hi < 0) bi = wi; else if (wi < 0 || wi === hi) bi = hi;
+    else if (wi > hi) bi = wi;
+    else { var hr = L[hi].h; bi = (hr && k.h < (hr[0] + hr[1]) / 2) ? hi - 1 : hi; }
+    if (bi < 0) return null;
+    recWhy = b + " 사이즈표 기준";
+    if (bi + 1 < L.length && /패딩|점퍼|아노락|자켓|재킷|코트|집업|플리스|후리스|조끼|베스트/.test(document.title)) recUp = L[bi + 1].s;
+    return L[bi].s;
+  }
   function pick(k, opts){
+    loadBT();
+    var pb = pickBrand(k, opts); if (pb) return pb;
     var T = brandT();
     if (T && k.w) {
       var best = null, bk = 999;
@@ -289,6 +333,7 @@
     }
     var who = esc(k.name || "우리 아이") + " (" + [k.h ? k.h + "cm" : "", k.w ? k.w + "kg" : "", months(k) ? ageTxt(months(k)) : ""].filter(Boolean).join(" · ") + ")";
     line.innerHTML = chips + "👶 " + who + " 추천 사이즈 " + (rec ? "<b style='color:#6a3fc8;font-size:15px'>" + rec + "</b>" : (opts.length ? "<b>맞는 사이즈 없음</b> · 사이즈표를 확인해 주세요" : "<span style='color:#888'>· 색상을 고르면 알려 드려요</span>")) +
+      (rec && recWhy ? "<div style='font-size:12px;color:#888'>" + esc(recWhy) + (recUp ? " · 겨울 아우터를 오래 입히려면 " + esc(recUp) : "") + "</div>" : "") +
       " <a href='/myshop/index.html#dk-kid' style='margin-left:6px;font-size:12px;color:#999;text-decoration:underline'>바꾸기</a>";
     var cs = line.querySelectorAll("a[data-dkk]");
     for (var z = 0; z < cs.length; z++) cs[z].onclick = function(e){ e.preventDefault(); try { localStorage.setItem("dk_kid_i", this.getAttribute("data-dkk")); } catch(x){} recLine(); };
