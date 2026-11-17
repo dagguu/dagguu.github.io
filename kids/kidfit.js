@@ -955,6 +955,40 @@
     kb.parentNode.insertBefore(iv, kb);
     if (location.hash === "#dk-invite") setTimeout(function(){ window.scrollTo({ top: iv.getBoundingClientRect().top + window.pageYOffset - 140, behavior: "smooth" }); }, 300);
   }
+  /* 2026-11-17 시온님 "크리스마스 상품 기준이 뭐야? 느낌이 안 나": 카페24 검색은 예전 '크리스마스룩' 검색어가 붙은 도트리본·트리플 상품까지 보여 줘서,
+     🎄크리스마스 메뉴 화면은 상품 이름에 크리스마스·산타·루돌프·눈사람 등이 실제로 들어간 상품만 직접 모아 보여 줌 */
+  var XMAS_WORDS = ["크리스마스", "산타", "루돌프", "눈사람", "홀리데이", "캐롤", "노엘", "썰매", "진저", "트리베어"];
+  function xmasPage(){
+    if (location.pathname.indexOf("/product/search.html") !== 0) return;
+    var q = ""; try { q = (new URLSearchParams(location.search).get("keyword") || "").trim(); } catch(e){}
+    if (q !== "크리스마스" || document.getElementById("dk-xmas-list")) return;
+    var box = document.createElement("div"); box.id = "dk-xmas-list";
+    box.innerHTML = "<p style='text-align:center;color:#888;padding:40px 0'>크리스마스 상품을 모으는 중이에요…</p>";
+    var anchor = document.querySelector(".xans-search-result, ul.prdList");
+    var host = anchor ? (anchor.closest(".xans-search-result") || anchor.parentNode) : document.querySelector("#contents");
+    if (!host) return;
+    host.parentNode.insertBefore(box, host);
+    var st = document.createElement("style"); st.textContent = ".xans-search-result,.xans-search-paging,.xans-product-normalpaging,ul.prdList{display:none!important}#dk-xmas-list .g{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 12px;padding:6px 14px 40px;max-width:1240px;margin:0 auto}@media(min-width:1025px){#dk-xmas-list .g{grid-template-columns:repeat(4,1fr);gap:28px 20px}}#dk-xmas-list a{color:#222;text-decoration:none}#dk-xmas-list .pc{aspect-ratio:4/5}#dk-xmas-list .nm{font-size:13px;margin-top:8px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}#dk-xmas-list .pr{font-size:14px;font-weight:700;margin-top:4px}"; document.head.appendChild(st);
+    var got = {}, list = [], i = 0;
+    function next(){
+      if (i >= XMAS_WORDS.length) return draw();
+      var w = XMAS_WORDS[i++];
+      fetch("https://dagguu.cafe24api.com/api/v2/products?display=T&selling=T&limit=100&product_name=" + encodeURIComponent(w) + "&fields=product_no,product_name,price,list_image,sold_out", { headers: { "X-Cafe24-Client-Id": CID } })
+        .then(function(r){ return r.json(); }).then(function(j){
+          (j.products || []).forEach(function(x){ if (!got[x.product_no] && x.sold_out !== "T") { got[x.product_no] = 1; list.push(x); } });
+        }).catch(function(){}).then(function(){ setTimeout(next, 350); });
+    }
+    function draw(){
+      list.sort(function(a, b){ return b.product_no - a.product_no; });
+      if (!list.length) { box.innerHTML = "<p style='text-align:center;color:#888;padding:40px 0'>지금은 크리스마스 상품이 없어요</p>"; return; }
+      var h = "<p style='text-align:center;font-size:13px;color:#1a7f37;margin:4px 0 14px'>🎄 크리스마스 상품 " + list.length + "개 · 11월 27일(금)까지 주문받아요</p><div class='g'>";
+      list.forEach(function(x){
+        h += "<a href='/product/detail.html?product_no=" + x.product_no + "'><span class='dk-pc pc'><img src='" + (x.list_image || "") + "' alt='' loading='lazy'></span><div class='nm'>" + x.product_name + "</div><div class='pr'>" + Math.round(parseFloat(x.price) || 0).toLocaleString() + "원</div></a>";
+      });
+      box.innerHTML = h + "</div>";
+    }
+    next();
+  }
   var MENU_KW = ["양말", "실내복", "1+1", "크리스마스", "기획"];
   function kwAlways(){
     if (!document.getElementById("dk-kw2-css")) { var st = document.createElement("style"); st.id = "dk-kw2-css"; st.textContent = ".dk-kw{display:none!important}.xans-layout-searchheader{background:#fff!important;height:auto!important;max-height:100vh;overflow-y:auto;padding-bottom:40px!important;box-shadow:0 8px 20px rgba(0,0,0,.08)}"; document.head.appendChild(st); }
@@ -2038,7 +2072,7 @@
       var n = v.firstChild; if (n && n.nodeType === 3 && /예정/.test(n.nodeValue)) n.nodeValue = "통신판매업 신고 면제(간이과세자) ";
     });
   }
-  function run(){ try { document.documentElement.classList.add("dk-ok"); } catch(e){} try { tidy(); } catch(e){} try { bestBadge(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { laFont(); } catch(e){} try { tongFix(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} try { coordiTags(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  function run(){ try { document.documentElement.classList.add("dk-ok"); } catch(e){} try { tidy(); } catch(e){} try { bestBadge(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { laFont(); } catch(e){} try { tongFix(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ xmasPage(); }catch(e){} try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} try { coordiTags(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
