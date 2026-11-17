@@ -1043,17 +1043,23 @@
     ruler: "<svg viewBox='0 0 64 64' width='80%' height='80%'><g transform='rotate(-35 32 32)'><rect x='6' y='23' width='52' height='18' rx='3' fill='#ffd84d' stroke='#e0b52a' stroke-width='2'/><g stroke='#8a6d1a' stroke-width='2' stroke-linecap='round'><path d='M13 23v7M20 23v5M27 23v7M34 23v5M41 23v7M48 23v5'/></g></g></svg>",
     cup: "<svg viewBox='0 0 64 64' width='80%' height='80%'><path d='M24 8q-3 4 0 8t0 8M33 8q-3 4 0 8t0 8' fill='none' stroke='#c9a98a' stroke-width='2.5' stroke-linecap='round'/><path d='M12 28h34v8a15 15 0 0 1-15 15h-4a15 15 0 0 1-15-15z' fill='#a8754d'/><path d='M46 31h4a6 6 0 0 1 0 12h-5' fill='none' stroke='#a8754d' stroke-width='4'/><rect x='8' y='52' width='42' height='5' rx='2.5' fill='#e3d2c2'/><path d='M23 36q4.5-5 9 0-4.5 6-9 0z' fill='#fff' opacity='.85'/></svg>"
   };
+  BM_SVGI.gift = "<svg viewBox='0 0 64 64' width='80%' height='80%'><rect x='12' y='28' width='40' height='26' rx='3' fill='#ff7a59'/><rect x='9' y='20' width='46' height='10' rx='3' fill='#ff9a7e'/><rect x='29' y='20' width='6' height='34' fill='#ffd84d'/><path d='M32 20c-4-10-14-10-14-4s10 4 14 4zM32 20c4-10 14-10 14-4s-10 4-14 4z' fill='#ffd84d'/></svg>";
+  BM_SVGI.box = "<svg viewBox='0 0 64 64' width='82%' height='82%'><path d='M10 24 32 14l22 10v24L32 58 10 48z' fill='#f5b26b'/><path d='M10 24l22 10 22-10M32 34v24' fill='none' stroke='#d98c3e' stroke-width='2.5'/><text x='32' y='51' text-anchor='middle' font-size='13' font-weight='800' fill='#fff' font-family='sans-serif'>0원</text><circle cx='22' cy='9' r='2' fill='#ffd84d'/><circle cx='44' cy='8' r='1.6' fill='#ffd84d'/></svg>";
+  BM_SVGI.ribbon = "<svg viewBox='0 0 64 64' width='80%' height='80%'><path d='M32 30 12 18v24zM32 30l20-12v24z' fill='#ff8db5'/><path d='M28 34l-8 22 7-4 4 7 4-22zM36 34l8 22-7-4-4 7-4-22z' fill='#f06a9b'/><circle cx='32' cy='30' r='6' fill='#e2507f'/></svg>";
+  BM_SVGI.tag = "<svg viewBox='0 0 64 64' width='78%' height='78%'><path d='M10 12h22l22 22-20 20-24-22z' fill='#8f6bf0'/><circle cx='21' cy='23' r='4' fill='#fff'/><text x='35' y='42' text-anchor='middle' font-size='11' font-weight='800' fill='#fff' font-family='sans-serif' transform='rotate(45 35 38)'>BRAND</text></svg>";
+  BM_SVGI.truck = "<svg viewBox='0 0 64 64' width='82%' height='82%'><rect x='6' y='20' width='32' height='22' rx='3' fill='#4fb3a5'/><path d='M38 26h10l8 9v7H38z' fill='#7fd1c4'/><circle cx='17' cy='45' r='5' fill='#2f5f59'/><circle cx='47' cy='45' r='5' fill='#2f5f59'/><text x='22' y='35' text-anchor='middle' font-size='10' font-weight='800' fill='#fff' font-family='sans-serif'>FREE</text></svg>";
+  /* 홈 아이콘 순서(2026-11-17 시온님) */
   var BM_ICONS = [
-    [bmTx("NEW", 19), "타임특가", "/product/list.html?cate_no=54", "#241a4a"],
-    [bmTx("BEST", 17), "인기상품", "/product/list.html?cate_no=55", "#241a4a"],
+    [BM_SVGI.gift, "첫 구매 혜택", "/member/login.html?dkkakao=1", "#fff1ea"],
+    [BM_SVGI.box, "0원체험단", "/product/coffee.html?t=exp", "#fff5e6"],
     [bmTx("1+1", 22, "#ff8db5"), "1+1", "/product/search.html?keyword=1%2B1", "#241a4a"],
-    [bmTx("SALE", 17, "#ffd84d"), "신상할인", "#dk-deal", "#241a4a"],
-    [BM_SVGI.tree, "크리스마스", "/product/search.html?keyword=%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4", "#eaf6ec"],
-    [BM_SVGI.bottle, "BABY", "/product/list.html?cate_no=52", "#eaf2ff"],
-    [BM_SVGI.tee, "KIDS", "/product/list.html?cate_no=53", "#fff2df"],
-    [BM_SVGI.dress, "MOM", "/product/list.html?cate_no=23", "#ffeaf2"],
+    [BM_SVGI.ribbon, "기획상품", "/product/search.html?keyword=%EA%B8%B0%ED%9A%8D", "#ffeef4"],
+    [BM_SVGI.tag, "브랜드별", "#dk-brand", "#f1ecff"],
     [BM_SVGI.ruler, "사이즈표", "/product/brand_size.html", "#fff8d9"],
-    [BM_SVGI.cup, "이벤트", "/product/coffee.html", "#f5ede5"]
+    [BM_SVGI.tree, "크리스마스", "/product/search.html?keyword=%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4", "#eaf6ec"],
+    [BM_SVGI.truck, "무료배송", "/product/list.html?cate_no=56", "#e8f7f4"],
+    [bmTx("5%", 22, "#ffd84d"), "신상5%", "/product/list.html?cate_no=54", "#241a4a"],
+    [bmTx("BEST", 17), "인기상품", "/product/list.html?cate_no=55", "#241a4a"]
   ];
   var BM_BAN = [["1", "/product/list.html?cate_no=55"], ["2", "/product/list.html?cate_no=44"], ["3", "/product/list.html?cate_no=49"], ["4", "/product/list.html?cate_no=47"]];
   var BM_CATS = [
@@ -1164,6 +1170,8 @@
     var hold = false; r.addEventListener("touchstart", function(){ hold = true; }, { passive: true }); r.addEventListener("touchend", function(){ setTimeout(function(){ hold = false; }, 3000); });
     r.addEventListener("mouseenter", function(){ hold = true; }); r.addEventListener("mouseleave", function(){ hold = false; });
     setInterval(function(){ if (hold || document.hidden || dkBusy()) return; var i = (cur() + 1) % n; r.scrollTo({ left: i * r.clientWidth, behavior: "smooth" }); }, 4000);
+    if (logged) { var fb = sec.querySelector(".ic a[href*='dkkakao']"); if (fb) fb.href = "/myshop/coupon/coupon.html"; }
+    var br = sec.querySelector(".ic a[href='#dk-brand']"); if (br) br.onclick = function(e){ e.preventDefault(); bmCat(); var t = document.querySelector("#dk-cat [data-t='b']"); if (t) t.click(); };
     var dk = sec.querySelector("a[href='#dk-deal']"); if (dk) dk.onclick = function(e){ e.preventDefault(); var t = document.getElementById("dk-deal"); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" }); };
     bmDeals(sec.querySelector("#dk-deal"));
   }
