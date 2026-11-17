@@ -1928,6 +1928,26 @@
   }
 
   // 2026-11-15: 상품 상세 '브랜드 실측표 준비 중' 칸을 브랜드 추천 사이즈표(kids/brand_size_tbl.json)로 바꿈
+  /* 2026-11-18 시온님 "브랜드마다 모델 사이즈 써 있으면 상세페이지에 모델 스펙": kids/model_specs.json(도매처 모델 착용 정보에서 숫자만) → 상세 설명의 사이즈 찾기 칸 위에 MODEL SPEC 상자 */
+  function modelSpec(){
+    if (document.getElementById("dk-mspec")) return;
+    var h = document.querySelector(".infoArea .headingArea h1, .infoArea .headingArea h2");
+    var br = (((h || {}).textContent || "").trim().split(/\s+/)[0] || "").replace(/con$/i, "");
+    if (!br) return;
+    fetch("https://www.dagguu.com/kids/model_specs.json?d=" + new Date().toISOString().slice(0, 10)).then(function(r){ return r.json(); }).then(function(j){
+      var x = (j.b || {})[br]; if (!x || !x.r || !x.r.length || document.getElementById("dk-mspec")) return;
+      var e = function(v){ return String(v).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); };
+      var rows = x.r.map(function(r){ return "<tr><td style='padding:8px 6px;border-bottom:1px solid #eee'>" + e(r[0]) + "</td><td style='padding:8px 6px;border-bottom:1px solid #eee'>" + e(r[1] || "-") + "</td><td style='padding:8px 6px;border-bottom:1px solid #eee;color:#888'>" + e(r[2] || "-") + "</td><td style='padding:8px 6px;border-bottom:1px solid #eee;font-weight:700'>" + e(r[3]) + "</td></tr>"; }).join("");
+      var d = document.createElement("div"); d.id = "dk-mspec";
+      d.style.cssText = "max-width:640px;margin:0 auto;padding:22px 12px 6px;text-align:left;font-size:13px;line-height:1.5;color:#222";
+      d.innerHTML = "<div style='font-size:11px;letter-spacing:2px;color:#999;font-weight:700'>MODEL SPEC</div><div style='font-size:16px;font-weight:800;margin:4px 0 10px'>👶 " + e(br) + " 모델 착용 사이즈 <span style='font-size:12px;font-weight:500;color:#999'>(" + e(x.s || "") + ")</span></div>" +
+        "<table style='width:100%;border-collapse:collapse;text-align:center;font-size:13px'><thead><tr style='background:#f6f6f6;color:#555'><th style='padding:8px 6px;font-weight:600'>키</th><th style='padding:8px 6px;font-weight:600'>몸무게</th><th style='padding:8px 6px;font-weight:600'>나이</th><th style='padding:8px 6px;font-weight:600'>착용 사이즈</th></tr></thead><tbody>" + rows + "</tbody></table>" +
+        "<p style='font-size:12px;color:#999;margin:8px 0 0'>브랜드가 알려 준 모델 착용 정보예요. 상품·핏에 따라 다를 수 있어요.</p>";
+      var anchor = document.getElementById("dk-btbl") || document.getElementById("dk-sizecalc");
+      if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(d, anchor);
+      else { var pd = document.getElementById("prdDetail"); if (!pd) return; var c = pd.querySelector(".cont") || pd; c.insertBefore(d, c.firstChild); }
+    }).catch(function(){});
+  }
   function sizeTbl(){
     var tries = 0;
     (function go(){
@@ -2072,7 +2092,7 @@
       var n = v.firstChild; if (n && n.nodeType === 3 && /예정/.test(n.nodeValue)) n.nodeValue = "통신판매업 신고 면제(간이과세자) ";
     });
   }
-  function run(){ try { document.documentElement.classList.add("dk-ok"); } catch(e){} try { tidy(); } catch(e){} try { bestBadge(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { laFont(); } catch(e){} try { tongFix(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ xmasPage(); }catch(e){} try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} try { coordiTags(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  function run(){ try { document.documentElement.classList.add("dk-ok"); } catch(e){} try { tidy(); } catch(e){} try { bestBadge(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { laFont(); } catch(e){} try { tongFix(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ xmasPage(); }catch(e){} try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} try { setTimeout(modelSpec, 1500); } catch(e){} try { coordiTags(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
