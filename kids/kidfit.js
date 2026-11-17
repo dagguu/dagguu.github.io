@@ -1961,38 +1961,35 @@
       return fetch("https://dagguu.cafe24api.com/api/v2/products?product_no=" + Object.keys(ids).join(",") + "&display=T&selling=T&limit=100&fields=product_no,product_name,price,list_image", { headers: { "X-Cafe24-Client-Id": CID } }).then(function(r){ return r.json(); }).then(function(j){
         var P = {}; (j.products || []).forEach(function(p){ P[p.product_no] = p; });
         function nm(p){ return String(p.product_name).replace(/^콘con /, "콘 ").replace(/\s+\d{2}(겨울|봄|여름|가을)\s.*$/, ""); }
-        var tries = 0;
+        var tries = 0, M = {};
+        L.forEach(function(e){ var tg = e.t.filter(function(t){ return P[t.no]; }); if (tg.length) M[e.f] = tg; });
+        function tagsOf(img){ var s = (img.getAttribute("ec-data-src") || "") + " " + (img.getAttribute("src") || ""); for (var f in M) if (s.indexOf(f) >= 0) return M[f]; return null; }
+        function tagEl(t, p){ var a = document.createElement("a"); a.className = "dk-ct"; a.href = "/product/detail.html?product_no=" + t.no; a.style.left = t.x + "%"; a.style.top = t.y + "%"; a.innerHTML = "<span></span>›"; a.firstChild.textContent = nm(p); a.onclick = function(ev){ ev.stopPropagation(); try { gtag("event", "coordi_tag_click", { from: no, to: t.no }); } catch(x){} }; return a; }
+        /* 맨 위 대표 사진들(PC 큰 사진·휴대폰 사진 줄): 사진 위 같은 크기 겹침 칸, PC 큰 사진은 작은 사진을 눌러 바뀌면 태그도 바뀜 */
+        function mainImg(img){
+          if (img.getAttribute("data-dkct")) return; img.setAttribute("data-dkct", "1");
+          var box = img.parentNode; if (getComputedStyle(box).position === "static") box.style.position = "relative";
+          var ov = document.createElement("div"); ov.className = "dk-ctov"; box.appendChild(ov);
+          function fit(){ ov.style.left = img.offsetLeft + "px"; ov.style.top = img.offsetTop + "px"; ov.style.width = img.offsetWidth + "px"; ov.style.height = img.offsetHeight + "px"; }
+          function paint(){ ov.innerHTML = ""; var tg = tagsOf(img); if (tg) tg.forEach(function(t){ ov.appendChild(tagEl(t, P[t.no])); }); fit(); }
+          paint(); img.addEventListener("load", fit);
+          try { new ResizeObserver(fit).observe(img); } catch(x){ addEventListener("resize", fit); }
+          try { new MutationObserver(paint).observe(img, { attributes: true, attributeFilter: ["src"] }); } catch(x){}
+        }
         (function go(){
-          var imgs = document.querySelectorAll("#prdDetail img, img.BigImage, .xans-product-mobileimage img"), done = 0;
-          function tagEl(t, p){ var a = document.createElement("a"); a.className = "dk-ct"; a.href = "/product/detail.html?product_no=" + t.no; a.style.left = t.x + "%"; a.style.top = t.y + "%"; a.innerHTML = "<span></span>›"; a.firstChild.textContent = nm(p); a.onclick = function(ev){ ev.stopPropagation(); try { gtag("event", "coordi_tag_click", { from: no, to: t.no }); } catch(x){} }; return a; }
-          L.forEach(function(e){
-            var tags = e.t.filter(function(t){ return P[t.no]; }); if (!tags.length) { done++; return; }
-            var hit = 0;
-            for (var i = 0; i < imgs.length; i++) {
-              var img = imgs[i], s = (img.getAttribute("ec-data-src") || "") + " " + (img.getAttribute("src") || "");
-              if (s.indexOf(e.f) < 0) continue; hit = 1;
-              if (img.getAttribute("data-dkct")) continue; img.setAttribute("data-dkct", "1");
-              if (img.closest("#prdDetail")) {
-                var w = document.createElement("span"); w.className = "dk-ctw"; img.parentNode.insertBefore(w, img); w.appendChild(img);
-                tags.forEach(function(t){ w.appendChild(tagEl(t, P[t.no])); });
-                var b = document.createElement("div"); b.className = "dk-ctb";
-                b.innerHTML = "<p>이 사진 속 상품</p>" + tags.map(function(t){ var p = P[t.no]; return "<a href='/product/detail.html?product_no=" + t.no + "'><img src='" + p.list_image + "' alt='' loading='lazy'><span></span><b>" + Number(p.price).toLocaleString() + "원</b></a>"; }).join("");
-                [].forEach.call(b.querySelectorAll("a span"), function(sp, k){ sp.textContent = nm(P[tags[k].no]); });
-                w.parentNode.insertBefore(b, w.nextSibling);
-              } else {
-                /* 맨 위 대표 사진(PC BigImage·휴대폰 사진 줄): 감싸지 않고 사진 위에 같은 크기 겹침 칸 */
-                (function(img){
-                  var box = img.parentNode; if (getComputedStyle(box).position === "static") box.style.position = "relative";
-                  var ov = document.createElement("div"); ov.className = "dk-ctov"; box.appendChild(ov);
-                  tags.forEach(function(t){ ov.appendChild(tagEl(t, P[t.no])); });
-                  function fit(){ ov.style.left = img.offsetLeft + "px"; ov.style.top = img.offsetTop + "px"; ov.style.width = img.offsetWidth + "px"; ov.style.height = img.offsetHeight + "px"; }
-                  fit(); img.addEventListener("load", fit); try { new ResizeObserver(fit).observe(img); } catch(x){ addEventListener("resize", fit); }
-                })(img);
-              }
-            }
-            if (hit) done++;
+          [].forEach.call(document.querySelectorAll("img.BigImage, .xans-product-mobileimage img"), function(img){
+            if (/\/big\//.test(img.getAttribute("src") || "") && (img.classList.contains("BigImage") || tagsOf(img))) mainImg(img);
           });
-          if (done < L.length && ++tries < 8) setTimeout(go, 800);
+          [].forEach.call(document.querySelectorAll("#prdDetail img"), function(img){
+            if (img.getAttribute("data-dkct")) return; var tags = tagsOf(img); if (!tags) return; img.setAttribute("data-dkct", "1");
+            var w = document.createElement("span"); w.className = "dk-ctw"; img.parentNode.insertBefore(w, img); w.appendChild(img);
+            tags.forEach(function(t){ w.appendChild(tagEl(t, P[t.no])); });
+            var b = document.createElement("div"); b.className = "dk-ctb";
+            b.innerHTML = "<p>이 사진 속 상품</p>" + tags.map(function(t){ var p = P[t.no]; return "<a href='/product/detail.html?product_no=" + t.no + "'><img src='" + p.list_image + "' alt='' loading='lazy'><span></span><b>" + Number(p.price).toLocaleString() + "원</b></a>"; }).join("");
+            [].forEach.call(b.querySelectorAll("a span"), function(sp, k){ sp.textContent = nm(P[tags[k].no]); });
+            w.parentNode.insertBefore(b, w.nextSibling);
+          });
+          if (++tries < 8) setTimeout(go, 800);
         })();
       });
     }).catch(function(){});
