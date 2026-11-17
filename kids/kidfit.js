@@ -1943,7 +1943,45 @@
     if (tab && getComputedStyle(tab).display !== "none") { var a = document.createElement("a"); a.id = "dk-j10tip"; a.href = JOIN10; a.innerHTML = "1초 가입 시 1만원 쿠폰!"; document.body.appendChild(a); document.body.classList.add("dk-j10"); }
     /* PC 알약은 메뉴 줄과 겹쳐서 뺌(2026-11-16) */
   }
-  function run(){ try { document.documentElement.classList.add("dk-ok"); } catch(e){} try { tidy(); } catch(e){} try { bestBadge(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  /* ㉑ 코디 상품 태그(2026-11-17 시온님 "같이 코디하기 좋은 상품, 이미지에 상품 태그 느낌으로"): 다꾸 kids/coordi_tags.json
+     {상품번호:[{f:상세 사진 파일 이름, t:[{x,y(%), no:태그 상품번호}]}]} — 사진을 보고 같은 상품이 쇼핑몰에 있을 때만 손으로 정함.
+     상세 사진 위에 인스타 태그 같은 말풍선(누르면 그 상품), 사진 아래 "이 사진 속 상품" 카드. 판매·진열 안 하는 상품은 안 보임. */
+  function coordiTags(){
+    var no = pno(); if (!no || document.getElementById("dk-ct-css")) return;
+    var st = document.createElement("style"); st.id = "dk-ct-css";
+    st.textContent = ".dk-ctw{position:relative;display:block;width:fit-content;max-width:100%;margin:0 auto}.dk-ctw>img{display:block;max-width:100%}" +
+      ".dk-ct{position:absolute;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:4px;background:rgba(30,20,20,.72);color:#fff!important;font-size:12.5px;font-weight:500;line-height:1;padding:8px 10px 8px 12px;border-radius:999px;text-decoration:none!important;white-space:nowrap;max-width:70%;box-shadow:0 2px 8px rgba(0,0,0,.18);z-index:2}" +
+      ".dk-ct span{overflow:hidden;text-overflow:ellipsis}.dk-ct:before{content:'';position:absolute;left:50%;top:-5px;margin-left:-5px;border:5px solid transparent;border-top:0;border-bottom-color:rgba(30,20,20,.72)}" +
+      ".dk-ctb{display:flex;gap:10px;overflow-x:auto;padding:10px 2px 18px;text-align:left;scrollbar-width:none}.dk-ctb::-webkit-scrollbar{display:none}.dk-ctb p{flex:0 0 100%;margin:0 0 2px;font-size:13px;font-weight:600;color:#222}" +
+      ".dk-ctb a{flex:0 0 112px;text-decoration:none;color:#222}.dk-ctb a img{width:112px;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:6px;display:block;background:#f2f2f2}.dk-ctb a span{display:block;font-size:12px;line-height:1.35;margin-top:5px;height:32px;overflow:hidden}.dk-ctb a b{display:block;font-size:13px;margin-top:2px}";
+    document.head.appendChild(st);
+    fetch("https://www.dagguu.com/kids/coordi_tags.json?d=" + new Date().toISOString().slice(0, 13)).then(function(r){ return r.json(); }).then(function(J){
+      var L = J[no]; if (!L || !L.length) return;
+      var ids = {}; L.forEach(function(e){ e.t.forEach(function(t){ ids[t.no] = 1; }); });
+      return fetch("https://dagguu.cafe24api.com/api/v2/products?product_no=" + Object.keys(ids).join(",") + "&display=T&selling=T&limit=100&fields=product_no,product_name,price,list_image", { headers: { "X-Cafe24-Client-Id": CID } }).then(function(r){ return r.json(); }).then(function(j){
+        var P = {}; (j.products || []).forEach(function(p){ P[p.product_no] = p; });
+        function nm(p){ return String(p.product_name).replace(/^콘con /, "콘 ").replace(/\s+\d{2}(겨울|봄|여름|가을)\s.*$/, ""); }
+        var tries = 0;
+        (function go(){
+          var imgs = document.querySelectorAll("#prdDetail img"), done = 0;
+          L.forEach(function(e){
+            var tags = e.t.filter(function(t){ return P[t.no]; }); if (!tags.length) { done++; return; }
+            var img = null; for (var i = 0; i < imgs.length; i++) { var s = (imgs[i].getAttribute("ec-data-src") || "") + " " + (imgs[i].getAttribute("src") || ""); if (s.indexOf(e.f) >= 0) { img = imgs[i]; break; } }
+            if (!img) return; done++;
+            if (img.parentNode.classList && img.parentNode.classList.contains("dk-ctw")) return;
+            var w = document.createElement("span"); w.className = "dk-ctw"; img.parentNode.insertBefore(w, img); w.appendChild(img);
+            tags.forEach(function(t){ var p = P[t.no], a = document.createElement("a"); a.className = "dk-ct"; a.href = "/product/detail.html?product_no=" + t.no; a.style.left = t.x + "%"; a.style.top = t.y + "%"; a.innerHTML = "<span></span>›"; a.firstChild.textContent = nm(p); a.onclick = function(){ try { gtag("event", "coordi_tag_click", { from: no, to: t.no }); } catch(x){} }; w.appendChild(a); });
+            var b = document.createElement("div"); b.className = "dk-ctb";
+            b.innerHTML = "<p>이 사진 속 상품</p>" + tags.map(function(t){ var p = P[t.no]; return "<a href='/product/detail.html?product_no=" + t.no + "'><img src='" + p.list_image + "' alt='' loading='lazy'><span></span><b>" + Number(p.price).toLocaleString() + "원</b></a>"; }).join("");
+            [].forEach.call(b.querySelectorAll("a span"), function(sp, k){ sp.textContent = nm(P[tags[k].no]); });
+            w.parentNode.insertBefore(b, w.nextSibling);
+          });
+          if (done < L.length && ++tries < 8) setTimeout(go, 800);
+        })();
+      });
+    }).catch(function(){});
+  }
+  function run(){ try { document.documentElement.classList.add("dk-ok"); } catch(e){} try { tidy(); } catch(e){} try { bestBadge(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} try { coordiTags(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
