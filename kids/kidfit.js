@@ -531,7 +531,7 @@
   function bestBadge(){
     bestLoad(function(){
       if (!document.getElementById("dk-best-css")) { var st = document.createElement("style"); st.id = "dk-best-css";
-        st.textContent = ".dk-best{position:absolute;left:8px;top:8px;z-index:3;width:38px;height:38px;border-radius:50%;background:#ff5a36;color:#fff;font-size:10.5px;font-weight:900;letter-spacing:.3px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.18);pointer-events:none}.dk-best.md{background:#6a3fc8;font-size:12px}.dk-best.big{width:52px;height:52px;font-size:13px;top:12px}.dk-best.big.md{font-size:15px}";
+        st.textContent = ".dk-best{position:absolute;left:8px;top:8px;z-index:3;width:38px;height:38px;border-radius:50%;background:#ff5a36;color:#fff;font-size:10.5px;font-weight:900;letter-spacing:.3px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.18);pointer-events:none}.dk-best.md{background:#ffd43b;color:#3a2a00;font-size:12px}.dk-best.big{width:52px;height:52px;font-size:13px;top:12px}.dk-best.big.md{font-size:15px}";
         document.head.appendChild(st); }
       function put(th, cls, txt, big){
         if (getComputedStyle(th).position === "static") th.style.position = "relative";
@@ -545,13 +545,17 @@
         if (!n) return;
         var th = li.querySelector(".thumbnail") || li.querySelector(".prdImg") || li;
         if (BEST_SET[n] && !li.querySelector(".dk-best.bs")) put(th, "bs", "BEST");
-        if (MD_SET[n] && !li.querySelector(".dk-best.md")) put(th, "md", "MD");
+        /* 2026-11-17 19:42 시온님 "MD 스티커는 노란색으로, 아무 딱지도 안 붙은 데에만": NEW·BEST 가 없는 상품에만 노란 MD */
+        var other = li.querySelector(".dk-best.bs, .dk-newdot, .badge"), md = li.querySelector(".dk-best.md");
+        if (other && md) md.parentNode.removeChild(md);
+        else if (!other && !md) put(th, "md", "MD");
       });
       var pn = (window.iProductNo || (location.search.match(/product_no=(\d+)/) || [])[1] || (location.pathname.match(/\/product\/[^\/]+\/(\d+)/) || [])[1]);
       var k2 = pn && document.querySelector(".keyImg, .xans-product-image .thumbnail, .xans-product-image");
       if (k2) {
         if (BEST_SET[pn] && !document.querySelector(".dk-best.big.bs")) put(k2, "bs", "BEST", 1);
-        if (MD_SET[pn] && !document.querySelector(".dk-best.big.md")) put(k2, "md", "MD", 1);
+        var o2 = k2.querySelector(".dk-best.big.bs, .dk-newdot, .badge"), m2 = document.querySelector(".dk-best.big.md");
+        if (o2 && m2) m2.parentNode.removeChild(m2); else if (!o2 && !m2) put(k2, "md", "MD", 1);
       }
     });
   }
