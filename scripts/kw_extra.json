@@ -1,815 +1,7211 @@
 {
- "updated": "2026-11-16 21:20",
+ "updated": "2026-11-17 16:16",
  "hints": [
-  "키니샴푸",
-  "앤허니",
-  "파이브바이브",
-  "퓨어팟",
-  "큐어유"
+  "유아책상",
+  "유아책상의자",
+  "아기책상",
+  "자석블럭",
+  "역류방지쿠션"
  ],
  "rows": [
   {
-   "kw": "셀라큐어",
-   "vol": 4060,
+   "kw": "어드벤트캘린더",
+   "vol": 63500,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "욕실용품",
-   "vol": 2730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "올리브영샴푸추천",
-   "vol": 2580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어성초샴푸",
-   "vol": 2330,
+   "kw": "아기수면조끼",
+   "vol": 44130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "앙방샴푸",
+   "kw": "옆잠베개",
+   "vol": 26980,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산선물",
+   "vol": 26260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실책상",
+   "vol": 20850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수유쿠션",
+   "vol": 19760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기블랭킷",
+   "vol": 19150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기상어",
+   "vol": 17220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "벽선반",
+   "vol": 16400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "머미쿨쿨",
+   "vol": 16230,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아",
+   "vol": 13800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기이불",
+   "vol": 13320,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기의자",
+   "vol": 13220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "역방쿠",
+   "vol": 12700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아선물",
+   "vol": 12530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "역류방지쿠션",
+   "vol": 12150,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "좌식테이블",
+   "vol": 12140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "초등학생책상",
+   "vol": 11710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고등학생책상",
+   "vol": 11330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "높이조절책상",
+   "vol": 10920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이의자",
+   "vol": 10880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자석블럭",
+   "vol": 10720,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "맥포머스",
+   "vol": 10010,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "모서리보호대",
+   "vol": 9730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이책상",
+   "vol": 9470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "교구장",
+   "vol": 9020,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "학생책상",
+   "vol": 8520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "서재책상",
+   "vol": 8250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아책상",
+   "vol": 8160,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "아기백일선물",
+   "vol": 8160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기미끄럼틀",
+   "vol": 8110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마블런",
+   "vol": 8000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기책상",
+   "vol": 7710,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "어린이집생일선물",
+   "vol": 7600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학생의자",
+   "vol": 7590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기장난감",
+   "vol": 7550,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "식탁의자커버",
+   "vol": 7040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부바디필로우",
+   "vol": 7010,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "책상세트",
+   "vol": 6750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기소파",
+   "vol": 6620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기침대패드",
+   "vol": 6360,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이용책상",
+   "vol": 5790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "피보나치수열",
+   "vol": 5530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "초등책상",
+   "vol": 5360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상추천",
+   "vol": 5270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "책상테이블",
+   "vol": 5040,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기식탁의자",
+   "vol": 4790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기독서대",
+   "vol": 4730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "백일선물",
+   "vol": 4680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학생용책상",
+   "vol": 4650,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥포머스자석블럭",
+   "vol": 4590,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "좌식책상",
+   "vol": 4560,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스와들미",
+   "vol": 4370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "역할놀이",
+   "vol": 4310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈침대",
+   "vol": 4250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장난감가게",
+   "vol": 4200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나노블럭",
+   "vol": 4140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기담요",
+   "vol": 4090,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "플레이테이블",
+   "vol": 4000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친구출산선물",
+   "vol": 3860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "낱말카드",
+   "vol": 3830,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "ㄱ자책상",
+   "vol": 3650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아수면조끼",
+   "vol": 3580,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아이불",
+   "vol": 3570,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기수면잠옷",
+   "vol": 3540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중학생책상",
+   "vol": 3530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기바디필로우",
+   "vol": 3520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기선물",
+   "vol": 3510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모선물",
+   "vol": 3420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실책상",
+   "vol": 3370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이책장",
+   "vol": 3350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아뜰리에슈매장",
+   "vol": 3340,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "신생아블랭킷",
+   "vol": 3310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "침대방수패드",
+   "vol": 3290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체스게임",
+   "vol": 3290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "죽부인",
+   "vol": 3270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "1인독서실책상",
+   "vol": 3240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "구의겉넓이",
+   "vol": 3170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "100일아기선물",
+   "vol": 3110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화이트책상",
+   "vol": 3090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모유수유쿠션",
+   "vol": 3000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "장난감매장",
+   "vol": 2990,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아아기옷",
+   "vol": 2850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "중역책상",
+   "vol": 2780,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아책상의자세트",
+   "vol": 2770,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기겨울이불",
+   "vol": 2760,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "1인용책상",
+   "vol": 2750,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "조카돌선물",
+   "vol": 2690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소마큐브",
+   "vol": 2650,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "양막주머니",
+   "vol": 2640,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "높낮이조절책상",
+   "vol": 2620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레고테이블",
+   "vol": 2600,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산선물추천",
+   "vol": 2590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공부책상",
+   "vol": 2510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아이불",
+   "vol": 2510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "낮잠이불세트",
+   "vol": 2510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아퍼즐",
+   "vol": 2490,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "초등학생의자",
+   "vol": 2440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "칠교",
+   "vol": 2400,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아출산선물",
+   "vol": 2360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뒤집기방지쿠션",
+   "vol": 2350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "교보재",
    "vol": 2240,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "일본샴푸",
-   "vol": 2050,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파이브바이브",
-   "vol": 1290,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "암환자선물",
-   "vol": 1130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "앤허니",
-   "vol": 1100,
-   "comp": "중간",
-   "hint": true
+   "kw": "아기역류방지쿠션",
+   "vol": 2190,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "퓨어팟",
-   "vol": 860,
-   "comp": "중간",
-   "hint": true
+   "kw": "책상책꽂이",
+   "vol": 2190,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "앤허니샴푸",
-   "vol": 790,
+   "kw": "아이책상",
+   "vol": 2170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자이로스코프",
+   "vol": 2030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두돌아기선물",
+   "vol": 1970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마인크래프트자석블럭",
+   "vol": 1890,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "노비드샴푸",
-   "vol": 770,
+   "kw": "아기낱말카드",
+   "vol": 1890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산후선물",
+   "vol": 1890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블럭장난감",
+   "vol": 1830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인책상",
+   "vol": 1830,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "닥터피엘퓨어팟",
+   "kw": "키즈책상",
+   "vol": 1820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수학사랑몰",
+   "vol": 1790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아독서대",
+   "vol": 1740,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아두상베개",
+   "vol": 1730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기겉싸개",
+   "vol": 1700,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기책상의자",
+   "vol": 1640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6개월아기선물",
+   "vol": 1630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유모차담요",
+   "vol": 1610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소프트블럭",
+   "vol": 1600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플래시카드",
+   "vol": 1600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기쿠션",
+   "vol": 1550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이책상의자",
+   "vol": 1530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자석퍼즐",
+   "vol": 1510,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "속싸개싸는법",
+   "vol": 1490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자석블록",
+   "vol": 1470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "높이조절의자",
+   "vol": 1440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스와들업사용시기",
+   "vol": 1410,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자석큐브",
+   "vol": 1400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키네틱아트",
+   "vol": 1390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스터디카페책상",
+   "vol": 1360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두돌아기책상",
+   "vol": 1340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오케타니수유쿠션",
+   "vol": 1310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "정이십면체",
+   "vol": 1310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "18개월아기장난감",
+   "vol": 1300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "H형책상",
+   "vol": 1290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기옆잠베개",
+   "vol": 1290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하바",
+   "vol": 1280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쌓기나무",
+   "vol": 1260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아돌선물",
+   "vol": 1260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아돌선물",
+   "vol": 1260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산축하선물",
+   "vol": 1240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등책상추천",
+   "vol": 1230,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "각도조절책상",
+   "vol": 1200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아아기이불",
+   "vol": 1200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2살아기선물",
+   "vol": 1160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수납가구",
+   "vol": 1160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학교책상",
+   "vol": 1150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기이불세트",
+   "vol": 1150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상의자세트",
+   "vol": 1150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고등학생책상",
+   "vol": 1150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니책꽂이",
+   "vol": 1140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기패드",
+   "vol": 1130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "데스커책상세트",
+   "vol": 1090,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "조카100일선물",
+   "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이옷장",
+   "vol": 1080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사보타지보드게임",
+   "vol": 1080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상높이",
+   "vol": 1070,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "중학생책상추천",
+   "vol": 1060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기테이블",
+   "vol": 1050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아이불세트",
+   "vol": 1030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거즈블랭킷",
+   "vol": 1030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실1인실",
+   "vol": 1030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기책",
+   "vol": 1030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상꾸미기",
+   "vol": 1030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등입학선물",
+   "vol": 1010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기자석블럭",
+   "vol": 1000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조노돔",
+   "vol": 990,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "장난감정리",
+   "vol": 980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애착이불",
+   "vol": 980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기의자",
+   "vol": 980,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "낮은책상",
+   "vol": 970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상책장세트",
+   "vol": 970,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "조카돌잔치선물",
+   "vol": 970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아의자",
+   "vol": 970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책장책상",
+   "vol": 960,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "공부방책상",
+   "vol": 960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도서관책상",
+   "vol": 960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친구돌잔치선물",
+   "vol": 960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아역류방지쿠션",
+   "vol": 930,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아체육교구",
+   "vol": 930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책걸상",
+   "vol": 930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "요패드",
+   "vol": 930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실공부테이블",
+   "vol": 920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상책장",
+   "vol": 910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용의자",
+   "vol": 900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공부상",
+   "vol": 900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출석부",
+   "vol": 900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자석장난감",
+   "vol": 890,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "걸상",
+   "vol": 890,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "모로반사이불",
+   "vol": 880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나무블럭",
+   "vol": 880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아책상의자",
+   "vol": 870,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "아기이유식의자",
+   "vol": 870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아테이블",
+   "vol": 840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기블럭",
+   "vol": 840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이케아초등학생책상",
+   "vol": 830,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아쿠션",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "서펜티나",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니블럭",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1살아기선물",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생책상추천",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아자석블럭",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기전집",
+   "vol": 780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동퍼즐",
+   "vol": 760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등의자",
+   "vol": 750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편수책상",
+   "vol": 750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지오보드",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실칸막이",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한샘교구장",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프랙탈구조",
+   "vol": 710,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "중학생방인테리어",
+   "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1600책상",
+   "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아침대패드",
+   "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마이리틀타이거블럭",
+   "vol": 700,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수납책상",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사이드책상",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "800책상",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기침구",
+   "vol": 690,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아덴아나이스",
+   "vol": 680,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "2인책상",
+   "vol": 680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이케아아이책상",
+   "vol": 670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실벽선반",
+   "vol": 670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "18개월아기언어",
+   "vol": 660,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쌍둥이선물",
+   "vol": 660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "앉은뱅이책상",
    "vol": 650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "8개월아기옷",
+   "vol": 650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실책상인테리어",
+   "vol": 650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학생책상의자",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고등학생책상추천",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "칸막이책상",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "숫자퍼즐",
+   "vol": 630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기애착이불",
+   "vol": 630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원책상",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "땅콩책상",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생책상의자",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자석놀이",
+   "vol": 600,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "항진균샴푸",
+   "kw": "스칸디맘스와들업",
+   "vol": 600,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "두돌아기옷",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상침대일체형",
+   "vol": 600,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "8개월아기선물",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이책상세트",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4D프레임",
+   "vol": 570,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기사의여행",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기요",
+   "vol": 570,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여자아기돌선물",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대학생책상",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "E스마트독서실책상",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이가구",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아밸런스보드",
+   "vol": 550,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아두상교정",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울겉싸개",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원목미끄럼틀",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "200일아기선물",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5세남아선물",
    "vol": 540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "올리브영샴푸순위",
+   "kw": "원목블럭",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학생책상세트",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산선물세트",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스와들블랭킷",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수학시계",
+   "vol": 520,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아이방가구",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집책상",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상모서리보호대",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이용소파",
+   "vol": 505,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아동책상",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈의자",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거즈이불",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "접이식좌식책상",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나노블록",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아블럭",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책장책상세트",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스피로그래프",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인테리어벽선반",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수유쿠션추천",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쿨리베어",
+   "vol": 480,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "선반책상",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종이벽돌",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "철재책상",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자석블럭추천",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플래쉬카드",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용독서실책상",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3살아기선물",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등책상의자",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기거즈블랭킷",
    "vol": 440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "일본탈모샴푸",
+   "kw": "대형주사위",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실공부책상",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흰색책상",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실공부방",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아계단",
+   "vol": 430,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이케아학생책상",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산후산모선물",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "벽선반책장",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지오맥",
+   "vol": 420,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "초등학생입학선물",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아이불세트",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조립장난감",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이케아초등책상",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이책상의자세트",
    "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "탄산샴푸",
-   "vol": 370,
+   "kw": "어린이높이조절책상",
+   "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미용실대용량샴푸",
-   "vol": 370,
+   "kw": "5세책상",
+   "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "암웨이탈모샴푸",
-   "vol": 360,
+   "kw": "수유베개",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상수납",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아패드",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영어게임",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브릭쿨코리아",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파스칼삼각형",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시어핀스키삼각형",
+   "vol": 400,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "올리브영비듬샴푸",
+   "kw": "독서책상",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈소파",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자아기돌선물",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상상판제작",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아바디필로우",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자석소마큐브",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기자석장난감",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빅블럭",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "르파파책상",
+   "vol": 390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아이의자",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기모자브랜드",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상보조테이블",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아침구",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선반시스템",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서대책상",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자작나무테이블",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원의자",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "서울대책상",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자석타일",
+   "vol": 370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "데스크탑책상",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6세책상",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아교구장",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소근육장난감",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아잠옷",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이케아1인책상",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전면책상",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중학생책상의자",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기100일선물",
+   "vol": 350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자석큐브블럭",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "30개월장난감",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매쉬스와들업",
+   "vol": 350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남자아기선물",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "큐볼루션",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "항암샴푸",
+   "kw": "6살책상",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "앤허니트리트먼트",
+   "kw": "소프트블록",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고등책상",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고등학교책상",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비옷브랜드",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아내복바지",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "성인책상",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이테이블",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "7세책상",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미술책상",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상의자브랜드",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어책상",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포디프레임",
+   "vol": 330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아블랭킷",
+   "vol": 330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "알파벳발음",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기낱말카드",
+   "vol": 330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "갓난아기선물",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아컴호러",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아바디필로우",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아싸개",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시에르핀스키삼각형",
+   "vol": 320,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "책상1600",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5살책상",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디필로우임산부",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형젠가",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패턴블록",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기옷쇼핑몰",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "서재책상세트",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헥서스보드게임",
    "vol": 310,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "B7샴푸",
+   "kw": "높은수유쿠션",
+   "vol": 300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수학사랑쇼핑몰",
+   "vol": 300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이생일선물",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5세여아장난감",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모니터책상",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자석블럭교구",
+   "vol": 295,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블록장난감",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영어교구",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소년책상",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일자형책상",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자아이장난감",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스터디카페독서실책상",
+   "vol": 285,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈가구",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원목교구장",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블록놀이",
    "vol": 280,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "샴푸샘플",
+   "kw": "3세여아선물",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "완구점",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기블록",
+   "vol": 280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "정폭도형",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인용독서실책상",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "좁은방책상",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "벽수납",
+   "vol": 280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "L형책상",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아식탁",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아크릴벽선반",
+   "vol": 280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "벽부착선반",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육각테이블",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상사이즈",
+   "vol": 280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "5살생일선물",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈테이블",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "EM샴푸",
+   "kw": "자작나무책장",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "약콩샴푸",
+   "kw": "유아용식탁의자",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자작나무수납장",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패턴블럭",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "H책상",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6살장난감",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수납형책상",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이차곡선",
+   "vol": 270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "넓은책상",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기베개",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "7살책상",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형블럭",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아담요",
    "vol": 260,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "댄드러프샴푸",
+   "kw": "아기수유쿠션",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "7세장난감",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책꽂이책상",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학생가구",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도서실책상",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실책상추천",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "9개월아기선물",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기쇼파",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파이브바이브마스카라",
-   "vol": 230,
+   "kw": "유아좌식책상",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기식탁의자",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5세생일선물",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아침구",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임호텝",
+   "vol": 250,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "프랑스탈모샴푸",
+   "kw": "서랍형책상",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선반형책상",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "18개월아기선물",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "갈톤보드",
+   "vol": 250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여자아기선물",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인용학원책상",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수학체험관",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이방책상",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실공부방인테리어",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1단교구장",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지오픽스",
+   "vol": 240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수학퍼즐",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생의자추천",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스와들디자인",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퍼니처닷컴",
+   "vol": 240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "정사면체전개도",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스터디책상",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자습실책상",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생방꾸미기",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "18개월아기책",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등남아생일선물",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미술학원책상",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "항암탈모",
+   "kw": "유치원생책상",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키니샴푸",
+   "kw": "유아원목책상",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등고학년책상",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실책상칸막이",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동의자",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아모로반사이불",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등장난감",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텐셀원단",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1개월아기옷",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6개월아기내복",
    "vol": 220,
    "comp": "중간",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "이스티프샴푸",
+   "kw": "튼튼한책상",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무용컴퓨터책상",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "8살생일선물",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "저학년책상",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아책상",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아높이조절책상",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생책상세트",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수유용품",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "HABA",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생모션데스크",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모드앤토드",
+   "vol": 210,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "헝겊인형",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프린터책상",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에라토스테네스의체",
    "vol": 210,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "포레스트샴푸",
+   "kw": "프리미엄독서실책상",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가성비책상",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자애기선물",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "서재테이블",
    "vol": 210,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "닥터피엘변기",
+   "kw": "휴대용수유쿠션",
+   "vol": 205,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용책상",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하바보드게임",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등생책상",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집의자",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중등책상",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "좌식노트북책상",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코코자네",
    "vol": 200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "알로에샴푸",
+   "kw": "아기싸개",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "암환자샴푸",
+   "kw": "친구돌선물",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연예인샴푸",
+   "kw": "책상1600800",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "중성샴푸",
+   "kw": "쌍둥이돌선물",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일자책상",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기책상추천",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "앤드허니",
+   "kw": "아기놀이테이블",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "초등학생책상의자세트",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥포머스브레인마스터",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중학교책상",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강화유리책상",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공부용책상",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "큰책상",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원목책상1200",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1살아기옷",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4세남아장난감",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이좌식책상",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블럭테이블",
    "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "애터미탈모샴푸",
+   "kw": "역류방지",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이엠샴푸",
+   "kw": "6세남아장난감",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아로마샴푸",
+   "kw": "7살장난감",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옆잠쿠션",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "공부테이블",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜책상",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "붙박이책상",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20개월아기선물",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등저학년책상",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고무나무책상",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아원목의자",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소년의자",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3개월아기선물",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빅블록",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블럭쌓기",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아이들책상",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고생책상",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "서랍장책상",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌쟁이선물",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "손주돌선물",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쌍곡포물면",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "벽선반인테리어",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고등학생독서실책상",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "작은방책상",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈책상의자",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홈쇼핑샴푸",
+   "kw": "아기원목책상",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "&HONEY",
+   "kw": "자작나무책상",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "역류쿠션",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이모션데스크",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아하토이",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "초등학생높이조절책상",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고등학생책상세트",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가블리트가블러즈",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "만삭선물",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미피블럭",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BELLEMENT",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "12개월아기선물",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실책상커튼",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "초등학생독서실책상",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이책상추천",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이책상의자",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이블럭",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마이리틀타이거블록",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "코코테일즈",
+   "vol": 150,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "키즈모션데스크",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "해피테일즈쿨리베어",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파닉스카드",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등의자추천",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수험생책상",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "손녀백일선물",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "땅콩테이블",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고독서실책상",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실책상조명",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오가닉아기이불",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자신생아옷",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "목재책상",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중학생독서실책상",
+   "vol": 145,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에르고스와들업",
+   "vol": 145,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아책상세트",
    "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "CELLACURE",
+   "kw": "유아체어",
    "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "복숭아향샴푸",
+   "kw": "슈퍼라이노",
+   "vol": 140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스와들속싸개",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "FIVEVIBE",
+   "kw": "초등책상의자세트",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중학생책상세트",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고등책상",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두살아기선물",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "데스커멀티책상세트",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실가림막",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상1200800",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "심플책상",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스와들업매쉬",
+   "vol": 135,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "서울대독서실책상",
+   "vol": 135,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "높이각도조절책상",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "높이조절어린이책상",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학교1학년책상",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수유방석",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책장형책상",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "과외책상",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "좌식공부책상",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "L책상",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집중력책상",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원뿔곡선",
    "vol": 130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "헤어브랜드",
+   "kw": "와이드책상",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "큐어유",
-   "vol": 120,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "약알칼리성샴푸",
-   "vol": 120,
-   "comp": "중간",
+   "kw": "공간활용책상",
+   "vol": 130,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "탈색샴푸",
+   "kw": "초등책상세트",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "더마샴푸",
+   "kw": "장난감테이블",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집신발장",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "높이낮은책상",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블록종류",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원프로그램",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장난감블럭",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이스툴",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고학년책상",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "짐월드",
    "vol": 120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "올리브영단백질샴푸",
+   "kw": "신생아100일선물",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원목어린이책상",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아생일선물",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하트퍼즐",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대리석책상",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기겉싸개",
+   "vol": 115,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영유아의자",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카미유샴푸",
+   "kw": "사다리꼴책상",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쿠션스툴",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아블록",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "붙박이장책상",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일룸이타카네오독서실책상",
    "vol": 110,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "컬샴푸",
+   "kw": "님게임",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산용품선물",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실형책상",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "좁은공간책상",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수학포스터",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "13개월아기옷",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이방가구세트",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학생방가구배치",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "서재용책상",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학생컴퓨터책상",
    "vol": 105,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "화장품키트",
+   "kw": "역류방지쿠션추천",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주니어의자",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "물미역샴푸",
+   "kw": "공부방테이블",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "피부과샴푸",
+   "kw": "초등높이조절책상",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "허니샴푸",
+   "kw": "아기좌식책상",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원블럭",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "구슬놀이",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "구슬블럭",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대형블록",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아스툴",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아태열베개",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원장난감",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이케아책상책꽂이",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학생방가구",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파주가구점",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조립블럭",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일인용책상",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아백일선물",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두돌교구",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아과학교구",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두돌아기교구",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아목베개",
+   "vol": 95,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "통잠이불",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "할리갈리링엘딩",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "RICOTYPE",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용쇼파",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여행소품",
+   "kw": "높이조절아기책상",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여행용샤워용품",
+   "kw": "어린이책상침대세트",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "컨텐트리샴푸",
+   "kw": "8살책상",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "줄기세포샴푸",
+   "kw": "어린이집블럭",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자주샴푸",
+   "kw": "초등여아책상",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헥시아몬드",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오더리삼각형",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학습준비물",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상책꽂이세트",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "17개월아기옷",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "서재책상추천",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자어린이선물",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자신생아옷",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중학생방꾸미기",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원목책상세트",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기베개추천",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등교구",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학생공부의자",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모듈형책상",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원목유아책상",
    "vol": 85,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "코스맥스샴푸",
+   "kw": "사계절블랭킷",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "백일남자아기옷",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5세의자",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집테이블",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "항균샴푸",
+   "kw": "아동책상의자",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등입학책상",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브리스틀블럭",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학교저학년책상",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장난감선물",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대학생책상추천",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한살아기선물",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상만들기",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플렉사곤",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈체어",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수능책상",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생가구",
    "vol": 80,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "스크럽샴푸",
+   "kw": "과학장난감",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "심플한책상",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "한방탈모샴푸",
+   "kw": "시어핀스키피라미드",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수입샴푸",
+   "kw": "자작나무의자",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아2인책상",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "풀빅샴푸",
+   "kw": "영유아책상",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실책상800",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나비잠스와들",
    "vol": 75,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "탈모헤어스프레이",
+   "kw": "고딩책상",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중딩책상",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용소파",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아누카샴푸",
-   "vol": 65,
+   "kw": "초등학교입학책상",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이책상의자세트",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이각도조절책상",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "교구사이트",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학생책상추천",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "교구장바구니",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기숙사책상",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학생가구브랜드",
+   "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "로즈샴푸",
+   "kw": "지오보드고무줄",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2돌선물",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2세여아선물",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프라임넘버",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "책장세트",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트리스켈볼",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "성인용책상",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원장실책상",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인출식책상",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기높이조절책상",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "청담동샴푸",
+   "kw": "마이리틀타이거블럭테이블",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "데니쉬스튜디오",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아옷쇼핑몰",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어장농",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흰책상",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아놀이테이블",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "일본돈키호테샴푸",
-   "vol": 55,
+   "kw": "교구책상",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블록놀이테이블",
+   "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "시트러스샴푸",
+   "kw": "원목좌식책상",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "앉은책상",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등생의자",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아모션데스크",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이책상1000",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1400책상세트",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이원목책상",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "12면체",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비블랭킷",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하이퍼스페이스",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "중고등학생책상추천",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플책상",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하이그로시책상",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이방선반",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조카두돌선물",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "1인공부책상",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순면요매트",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "7세의자",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이유식식탁",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원형롤스티커",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실책상의자",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스틸책상",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학교책상의자세트",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학교책상의자",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동선물",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동책상의자세트",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "포멘트샴푸",
+   "kw": "유아원형테이블",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "777큐브",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급큐브",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원목아기책상",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈책상의자세트",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비뵨실리콘턱받이",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "트릭홀릭",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "롤릿",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "EDTOY",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모유쿠션",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생각도조절책상",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈높이조절책상",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기바디필로우",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꼬꼬잠스와들",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥포머스다이나믹브레인",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "축구공무드등",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스카이캐슬독서실",
    "vol": 55,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "향기좋은탈모샴푸",
+   "kw": "스터디까페책상",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "시트러스향샴푸",
+   "kw": "책장겸책상",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6세의자",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "밤부속싸개",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기식탁",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5세블럭",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동용책상",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집가구",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원신발장",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시내그린",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자작나무교구장",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영아책상",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소마큐브워크북",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이책상추천",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예비초등학생책상",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "셈셈눈썰매장",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "7세교구",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이블록",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이테이블",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "학생책상의자세트",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생책상1000",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중학생가구",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무라이보드게임",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임호텝보드게임",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주사위세트",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용책상의자",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스트링포켓",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "축구공만들기",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원목독서실책상",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상DIY",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실책상세트",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "속싸개브랜드",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인가죽의자",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소년책상의자",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중장비자동차장난감",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집중책상",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취책상",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실칸막이책상",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학교책걸상",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "철제프레임책상",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원생의자",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "샴푸사용법",
+   "kw": "어린이미술책상",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어성초탈모샴푸",
+   "kw": "아기원목테이블",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유방암샴푸",
+   "kw": "유아놀이책상",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "타이거블록",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "타이거블럭",
    "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "푸디페아",
+   "kw": "신생아수면쿠션",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소마블럭",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미술교구장",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어책상세트",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등아이책상",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모용품",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거즈면블랭킷",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등가구",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "깡총깡총아기토끼",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스와들업말랑하니",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아옷사이트",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥포머스미라클브레인",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "공시생의자",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6세아이선물",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스터디스타",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오가닉내의",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용독서실책상추천",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5살의자",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기식탁의자추천",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "간편책상",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원룸책상의자",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원가구",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "큐블로리틀몬스터",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생책상의자추천",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형책꽂이",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6점도미노",
    "vol": 40,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "셀라팜",
+   "kw": "모유수유용품",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5살아이책상",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이모션데스크",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유기농몰",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "감성책상",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자녀방가구",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미술학원테이블",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수학사랑교구",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "좌회전금지미로",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "독서실책상사이즈",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "와이드독서실책상",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실용책상",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실책상1200",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창의력수학교구",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이자석블럭",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중학생책상의자추천",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "1인용공부책상",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "24개월놀이",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원책상의자",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용책상의자",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아원형책상",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마그넷블록스",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보드책상",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "클레이책상",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "아동쇼파",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반달책상",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조이매스소마큐브",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥포머스브레인",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "닥터피엘퓨어팟프로",
+   "kw": "6세남자아이선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "과수원까마귀",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이책상800",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이책상브랜드",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "놀이쿠션",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생책상브랜드",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옆눕베개",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자아이책상",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이책상세트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학교책상세트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조노돔시스템",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플라잉팬케이크",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여학생책상",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아책상",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매쉬스와들",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유명한샴푸",
+   "kw": "원목학생책상",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파마전용샴푸",
+   "kw": "이쁜책상",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퍼펙트퓨전샴푸",
+   "kw": "다섯살선물",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등생샴푸",
+   "kw": "나무책상의자",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "거품없는샴푸",
+   "kw": "1인책상세트",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "끌리샴푸",
+   "kw": "저학년책상의자",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육각형테이블",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "와이드테이블",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어서랍장",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "앙방탈모샴푸",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "식물성계면활성제",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "식약처인증탈모샴푸",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아누카탈모샴푸",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "300ML샴푸",
+   "kw": "키즈책상세트",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "악성곱슬샴푸",
+   "kw": "특수학급책상",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "큐어유셀라팜",
+   "kw": "파랑새교구장",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "모둠책상",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마름모책상",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공룡은보석을좋아해",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "양말짝맞추기",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "교실환경구성",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오더리탱글",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소년가구",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "미술학원의자",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실1인책상",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실책상가격",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서용책상",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "H형책상세트",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수학실험",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "작업실책상",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "토킹버튼",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원테이블",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "셀라솔루션",
+   "kw": "아이스터디책상",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "닥터피엘변기세정제",
+   "kw": "아동소파",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아동책상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3X3X3큐브",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잔츠큐브",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아원목테이블",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집좌식책상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아책걸상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아낮은책상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포비든데저트",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "미용실용샴푸",
+   "kw": "6살여자아이장난감",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "쑥샴푸",
+   "kw": "완구백화점",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "인성교육자료",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "창의력장난감",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "높이조절학생책상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신용품",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꼬마큐브",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "각도높이조절책상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "각도조절책상세트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이높낮이조절책상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이컴퓨터책상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창의력교구",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신학기책상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자아기100일선물",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자아기100일선물",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블럭쿠션",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기하판",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여고생책상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여중생책상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생공부책상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생컴퓨터책상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기옆으로자는베개",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파주가구단지추천",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미술용책상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레오보드게임",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "몰타의관문보드게임",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "밸런스빈즈",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쌤쌤보드게임",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "토끼와거북이보드게임",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생원목책상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학생공부책상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "100일아가옷",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1세옷",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스와드림",
    "vol": 25,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "미용실샴푸린스",
+   "kw": "신생아여자옷",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "승무원샴푸",
+   "kw": "신생아우주복선물",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퍼퓸탈모샴푸",
+   "kw": "유트러스속싸개",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "10대샴푸",
+   "kw": "거실책장책상",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "안티에이징샴푸",
+   "kw": "맞춤형책상",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "향샴푸",
+   "kw": "초등학생테이블",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "샴푸회사",
+   "kw": "두살선물",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "샴푸키트",
+   "kw": "어린이체어",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아소비책상",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "160책상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전면책상1000",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "크롬책상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집중형책상",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학교교구",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오가닉신생아",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이방가구",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "철제책상1000",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "착착자석블럭",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경장난감",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식탁의자매장",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아원목교구",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이도서관의자",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "&허니",
+   "kw": "사다리꼴테이블",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하바게임",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "교구구매",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이공부책상",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블럭추천",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "종이큐브",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "보드게임사무라이",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플라잉팬케이크보드게임",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뱀부스와들업",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자책상",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "교육키트",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "클라인병만들기",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "타원당구대",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "트리스켈",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "독서실책상900",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고등학교책상",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실책상제작",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원목책상주문제작",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도서관책상의자",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학생방책상",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원목책상제작",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책상화이트",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키높이조절책상",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "철제프레임테이블",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공부방가구",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공부방책걸상",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이도서관책상",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원책걸상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집책상의자",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이학원책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치부책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집좌식테이블",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌봄교실책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기테이블",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아가선물",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "피톤치드샴푸",
+   "kw": "어린이책걸상",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "화학성분없는샴푸",
+   "kw": "소마큐브카드",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유해성분없는샴푸",
+   "kw": "문산가구",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자연주의샴푸",
+   "kw": "유아원목가구",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용원목의자",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소마큐브보드게임",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈책상추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집낮은책상",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "2인용학원책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원좌식책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소마큐브자석",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이낮은책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자작나무책꽂이",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "책꽂이주문제작",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그룹책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원원목의자",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다각형테이블",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등2인책상",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "헤어살롱샴푸",
+   "kw": "유치원수납장",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수입탈모샴푸",
+   "kw": "원목소마큐브",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "식물성계면활성제샴푸",
+   "kw": "쌓기나무교재",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "편백수샴푸",
+   "kw": "소마큐브만들기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바디콕발톱솔루션",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "푸디페아셀라솔루션",
-   "vol": 10,
+   "kw": "교육완구",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바디콕큐어유",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "퓨어팟프로",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "아미노산계샴푸",
-   "vol": 10,
+   "kw": "보드게임서펜티나",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홈쇼핑천연샴푸",
-   "vol": 10,
+   "kw": "국민수유쿠션",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미르엔탈모샴푸",
-   "vol": 10,
+   "kw": "헥서스디럭스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등컴퓨터책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4D랜드",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "원목공부책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자녀방책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지오픽스정다면체",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1800원목책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모양조각",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중학생공부책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인용학생책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남학생책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생용책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자아이책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학생원목책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "졸리앤로저",
+   "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "바루랩샴푸",
-   "vol": 10,
+   "kw": "여학생의자",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1살옷",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스와들메쉬",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스칸디맘스와들슈프림",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엘라바좁쌀",
+   "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "아브아샴푸",
+   "kw": "오가닉유아복",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오가닉의류",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집원목책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개인책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자아이방가구",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아나무의자",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모둠테이블",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집비품",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3세아이선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고3책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "글벗독서실책상",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "이타카네오독서실책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대수타일",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "데카르트핏",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "목재주령구",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스피어랜드",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "지오메트릭돔",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피타고라스마카롱",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고등학생가구",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스카이캐슬예서책상",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수학교구쇼핑몰",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1200독서실책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인칸막이책상",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "각도조절독서실책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실책상와이드",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음악실책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학교교실책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학생용가구",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "650책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생책걸상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고3의자",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "안보이는펜",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이조립",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "오리슬라이드",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "수학전시",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "우레탄책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2세옷",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마름모테이블",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발달교구",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이자석장난감",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쥬니어가구",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "철제책상세트",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "앉은뱅이컴퓨터책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인체공학책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "측판형책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등원목책상",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "F1데스크",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "영어유치원책상",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "의약외품샴푸",
+   "kw": "어린이용테이블",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "라베나샴푸",
+   "kw": "유치원책상세트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원원목책상",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "교구세상",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "자연성분샴푸",
+   "kw": "자석장난감만들기",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전문가샴푸",
+   "kw": "큐브쇼핑몰",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "EWG샴푸",
+   "kw": "영아용책상",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미용실트린트먼트",
+   "kw": "지역아동센터책상",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아원목",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고원목책상",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용좌식테이블",
    "vol": 10,
    "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "기숙사수납장",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쌓기교구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다각형책상",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "좌식용책상",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원가구제작",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육각책상",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌봄교실책걸상",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "토론테이블",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "벽면교구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동완구",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "보드게임슈퍼라이노",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파리채보드게임",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "해적들의징검다리",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "애기이불",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "각도조절책상추천",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포디블록",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동책상세트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포디큐브",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아블록놀이",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니지오픽스",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "새학기책상",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1600원목책상",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자석패턴블럭",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패턴블록스티커",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오더리사각형",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "교실환경미화",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신학기가구",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "슈퍼포디프레임",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신학기이벤트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조노돔하이퍼스페이스",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헥사플렉스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유치원카페트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스트링아트시계",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보드게임레오",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "암호놀이",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "6개월애기옷",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "알잠슈트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "수학교재교구",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "키즈룸가구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학습용책상",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영아용의자",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "영아생일선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "교실용책상",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거울퍼즐",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매쓰매직",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사장교만들기",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수학상자",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스트링매스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "스피리콘",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "아르키메데스캔들",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "원기둥거울",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원주각실험기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자와컴퍼스로배우는수학",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "착시전개도",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등교구수학",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "토러스링",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "토러스슬라이스폼",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "폴딩스퀘어",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하트퍼즐포켓",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "황금분할기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "황금분할자",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "공부방책상의자",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고학생책상",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "미술실테이블",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "독서실책상조립",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고하이팩의자",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생용의자",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생의자높이",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "벌집책상",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학교가구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원목완구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜벽선반",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "경사조절책상",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "군포수학체험관",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플로우매쓰",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "교구도매",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오가닉신생아옷",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "학교용가구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리코타입나비잠",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "영유아가구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌봄책상",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아배게",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "놀이교구대여",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이놀이세트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "어린이장난감브랜드",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1200사무실책상",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "작업실테이블",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학원용테이블",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부피들이",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "철제책상800",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미술실책상",
+   "vol": 10,
+   "comp": "높음",
    "hint": false
   }
  ]
