@@ -975,7 +975,7 @@
       var w = XMAS_WORDS[i++];
       fetch("https://dagguu.cafe24api.com/api/v2/products?display=T&selling=T&limit=100&product_name=" + encodeURIComponent(w) + "&fields=product_no,product_name,price,list_image,sold_out", { headers: { "X-Cafe24-Client-Id": CID } })
         .then(function(r){ return r.json(); }).then(function(j){
-          (j.products || []).forEach(function(x){ if (!got[x.product_no] && x.sold_out !== "T") { got[x.product_no] = 1; list.push(x); } });
+          (j.products || []).forEach(function(x){ if (!got[x.product_no] && x.sold_out !== "T" && !/산타바바라/.test(x.product_name)) { got[x.product_no] = 1; list.push(x); } });
         }).catch(function(){}).then(function(){ setTimeout(next, 350); });
     }
     function draw(){
