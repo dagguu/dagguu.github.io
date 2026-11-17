@@ -1949,7 +1949,7 @@
   function coordiTags(){
     var no = pno(); if (!no || document.getElementById("dk-ct-css")) return;
     var st = document.createElement("style"); st.id = "dk-ct-css";
-    st.textContent = ".dk-ctw{position:relative;display:block;width:fit-content;max-width:100%;margin:0 auto}.dk-ctw>img{display:block;max-width:100%}" +
+    st.textContent = ".dk-ctw{position:relative;display:block;width:fit-content;max-width:100%;margin:0 auto}.dk-ctw>img{display:block;max-width:100%}.dk-ctov{position:absolute;pointer-events:none;z-index:3}.dk-ctov .dk-ct{pointer-events:auto}" +
       ".dk-ct{position:absolute;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:4px;background:rgba(30,20,20,.72);color:#fff!important;font-size:12.5px;font-weight:500;line-height:1;padding:8px 10px 8px 12px;border-radius:999px;text-decoration:none!important;white-space:nowrap;max-width:70%;box-shadow:0 2px 8px rgba(0,0,0,.18);z-index:2}" +
       ".dk-ct span{overflow:hidden;text-overflow:ellipsis}.dk-ct:before{content:'';position:absolute;left:50%;top:-5px;margin-left:-5px;border:5px solid transparent;border-top:0;border-bottom-color:rgba(30,20,20,.72)}" +
       ".dk-ctb{display:flex;gap:10px;overflow-x:auto;padding:10px 2px 18px;text-align:left;scrollbar-width:none}.dk-ctb::-webkit-scrollbar{display:none}.dk-ctb p{flex:0 0 100%;margin:0 0 2px;font-size:13px;font-weight:600;color:#222}" +
@@ -1963,18 +1963,34 @@
         function nm(p){ return String(p.product_name).replace(/^콘con /, "콘 ").replace(/\s+\d{2}(겨울|봄|여름|가을)\s.*$/, ""); }
         var tries = 0;
         (function go(){
-          var imgs = document.querySelectorAll("#prdDetail img"), done = 0;
+          var imgs = document.querySelectorAll("#prdDetail img, img.BigImage, .xans-product-mobileimage img"), done = 0;
+          function tagEl(t, p){ var a = document.createElement("a"); a.className = "dk-ct"; a.href = "/product/detail.html?product_no=" + t.no; a.style.left = t.x + "%"; a.style.top = t.y + "%"; a.innerHTML = "<span></span>›"; a.firstChild.textContent = nm(p); a.onclick = function(ev){ ev.stopPropagation(); try { gtag("event", "coordi_tag_click", { from: no, to: t.no }); } catch(x){} }; return a; }
           L.forEach(function(e){
             var tags = e.t.filter(function(t){ return P[t.no]; }); if (!tags.length) { done++; return; }
-            var img = null; for (var i = 0; i < imgs.length; i++) { var s = (imgs[i].getAttribute("ec-data-src") || "") + " " + (imgs[i].getAttribute("src") || ""); if (s.indexOf(e.f) >= 0) { img = imgs[i]; break; } }
-            if (!img) return; done++;
-            if (img.parentNode.classList && img.parentNode.classList.contains("dk-ctw")) return;
-            var w = document.createElement("span"); w.className = "dk-ctw"; img.parentNode.insertBefore(w, img); w.appendChild(img);
-            tags.forEach(function(t){ var p = P[t.no], a = document.createElement("a"); a.className = "dk-ct"; a.href = "/product/detail.html?product_no=" + t.no; a.style.left = t.x + "%"; a.style.top = t.y + "%"; a.innerHTML = "<span></span>›"; a.firstChild.textContent = nm(p); a.onclick = function(){ try { gtag("event", "coordi_tag_click", { from: no, to: t.no }); } catch(x){} }; w.appendChild(a); });
-            var b = document.createElement("div"); b.className = "dk-ctb";
-            b.innerHTML = "<p>이 사진 속 상품</p>" + tags.map(function(t){ var p = P[t.no]; return "<a href='/product/detail.html?product_no=" + t.no + "'><img src='" + p.list_image + "' alt='' loading='lazy'><span></span><b>" + Number(p.price).toLocaleString() + "원</b></a>"; }).join("");
-            [].forEach.call(b.querySelectorAll("a span"), function(sp, k){ sp.textContent = nm(P[tags[k].no]); });
-            w.parentNode.insertBefore(b, w.nextSibling);
+            var hit = 0;
+            for (var i = 0; i < imgs.length; i++) {
+              var img = imgs[i], s = (img.getAttribute("ec-data-src") || "") + " " + (img.getAttribute("src") || "");
+              if (s.indexOf(e.f) < 0) continue; hit = 1;
+              if (img.getAttribute("data-dkct")) continue; img.setAttribute("data-dkct", "1");
+              if (img.closest("#prdDetail")) {
+                var w = document.createElement("span"); w.className = "dk-ctw"; img.parentNode.insertBefore(w, img); w.appendChild(img);
+                tags.forEach(function(t){ w.appendChild(tagEl(t, P[t.no])); });
+                var b = document.createElement("div"); b.className = "dk-ctb";
+                b.innerHTML = "<p>이 사진 속 상품</p>" + tags.map(function(t){ var p = P[t.no]; return "<a href='/product/detail.html?product_no=" + t.no + "'><img src='" + p.list_image + "' alt='' loading='lazy'><span></span><b>" + Number(p.price).toLocaleString() + "원</b></a>"; }).join("");
+                [].forEach.call(b.querySelectorAll("a span"), function(sp, k){ sp.textContent = nm(P[tags[k].no]); });
+                w.parentNode.insertBefore(b, w.nextSibling);
+              } else {
+                /* 맨 위 대표 사진(PC BigImage·휴대폰 사진 줄): 감싸지 않고 사진 위에 같은 크기 겹침 칸 */
+                (function(img){
+                  var box = img.parentNode; if (getComputedStyle(box).position === "static") box.style.position = "relative";
+                  var ov = document.createElement("div"); ov.className = "dk-ctov"; box.appendChild(ov);
+                  tags.forEach(function(t){ ov.appendChild(tagEl(t, P[t.no])); });
+                  function fit(){ ov.style.left = img.offsetLeft + "px"; ov.style.top = img.offsetTop + "px"; ov.style.width = img.offsetWidth + "px"; ov.style.height = img.offsetHeight + "px"; }
+                  fit(); img.addEventListener("load", fit); try { new ResizeObserver(fit).observe(img); } catch(x){ addEventListener("resize", fit); }
+                })(img);
+              }
+            }
+            if (hit) done++;
           });
           if (done < L.length && ++tries < 8) setTimeout(go, 800);
         })();
