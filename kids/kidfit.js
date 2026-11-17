@@ -989,7 +989,35 @@
     }
     next();
   }
-  var MENU_KW = ["양말", "실내복", "1+1", "크리스마스", "기획"];
+  /* 2026-11-18 시온님 "커플룩 메뉴, 같은 옷 엄마·아이 같이 입는 패밀리룩 모아줘": kids/couple.json(한 상품에 아이·어른 사이즈 / 엄마·아이 같은 디자인 두 상품) → search.html?keyword=커플룩 화면을 직접 그림 */
+  function couplePage(){
+    if (location.pathname.indexOf("/product/search.html") !== 0) return;
+    var q = ""; try { q = (new URLSearchParams(location.search).get("keyword") || "").trim(); } catch(e){}
+    if (q !== "커플룩" || document.getElementById("dk-couple")) return;
+    var box = document.createElement("div"); box.id = "dk-couple";
+    box.innerHTML = "<p style='text-align:center;color:#888;padding:40px 0'>커플룩 상품을 모으는 중이에요…</p>";
+    var anchor = document.querySelector(".xans-search-result, ul.prdList");
+    var host = anchor ? (anchor.closest(".xans-search-result") || anchor.parentNode) : document.querySelector("#contents");
+    if (!host) return;
+    host.parentNode.insertBefore(box, host);
+    var st = document.createElement("style"); st.textContent = ".xans-search-result,.xans-search-paging,.xans-product-normalpaging,ul.prdList,.xans-search-noresult,p.noData{display:none!important}#dk-couple{max-width:1240px;margin:0 auto;padding:6px 14px 40px}#dk-couple .cg{display:grid;grid-template-columns:1fr;gap:16px}@media(min-width:1025px){#dk-couple .cg{grid-template-columns:1fr 1fr}}#dk-couple .grp{border:1px solid #f0e3ea;border-radius:16px;padding:12px;background:#fffafc}#dk-couple .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}#dk-couple a{color:#222;text-decoration:none}#dk-couple .pc{aspect-ratio:4/5}#dk-couple .lb{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:#c2185b;border-radius:10px;padding:2px 8px;margin-top:8px}#dk-couple .lb.k{background:#6a3fc8}#dk-couple .nm{font-size:13px;margin-top:5px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}#dk-couple .pr{font-size:14px;font-weight:700;margin-top:3px}#dk-couple .one{display:grid;grid-template-columns:44% 1fr;gap:12px;align-items:center}"; document.head.appendChild(st);
+    fetch("https://www.dagguu.com/kids/couple.json?d=" + new Date().toISOString().slice(0, 10)).then(function(r){ return r.json(); }).then(function(j){
+      var g = j.g || [], nos = [];
+      g.forEach(function(x){ [x.one, x.mom, x.kid].forEach(function(n){ if (n) nos.push(n); }); });
+      return fetch("https://dagguu.cafe24api.com/api/v2/products?display=T&selling=T&limit=100&product_no=" + nos.join(",") + "&fields=product_no,product_name,price,list_image,sold_out", { headers: { "X-Cafe24-Client-Id": CID } }).then(function(r){ return r.json(); }).then(function(pj){
+        var P = {}; (pj.products || []).forEach(function(p){ if (p.sold_out !== "T") P[p.product_no] = p; });
+        var e = function(v){ return String(v).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); };
+        var card = function(p, lb, k){ return "<a href='/product/detail.html?product_no=" + p.product_no + "'><span class='dk-pc pc'><img src='" + e(p.list_image || "") + "' alt='' loading='lazy'></span><span class='lb" + (k ? " k" : "") + "'>" + lb + "</span><div class='nm'>" + e(p.product_name) + "</div><div class='pr'>" + Math.round(parseFloat(p.price) || 0).toLocaleString() + "원</div></a>"; };
+        var h = "", cnt = 0;
+        g.forEach(function(x){
+          if (x.one && P[x.one]) { cnt++; h += "<div class='grp'><div class='one'>" + card(P[x.one], "엄마·아이 함께", 0) + "<div style='font-size:13px;color:#555;line-height:1.6'>👩‍👧 한 상품에 <b>아이와 어른 사이즈</b>가 같이 있어요<br><span style='color:#c2185b;font-weight:700'>" + e(x.n || "") + "</span><br><span style='font-size:12px;color:#999'>옵션에서 사이즈를 골라 함께 담아 주세요</span></div></div></div>"; }
+          else if (x.mom && x.kid && P[x.mom] && P[x.kid]) { cnt++; h += "<div class='grp'><div class='row'>" + card(P[x.mom], "엄마", 0) + card(P[x.kid], "아이", 1) + "</div></div>"; }
+        });
+        box.innerHTML = cnt ? "<p style='text-align:center;font-size:13px;color:#c2185b;margin:4px 0 14px'>👩‍👧 엄마와 아이가 같은 옷으로 맞춰 입는 커플룩 · " + cnt + "가지</p><div class='cg'>" + h + "</div>" : "<p style='text-align:center;color:#888;padding:40px 0'>지금은 커플룩 상품이 없어요</p>";
+      });
+    }).catch(function(){ box.innerHTML = "<p style='text-align:center;color:#888;padding:40px 0'>잠시 후 다시 시도해 주세요</p>"; });
+  }
+  var MENU_KW = ["양말", "실내복", "1+1", "크리스마스", "기획", "커플룩"];
   function kwAlways(){
     if (!document.getElementById("dk-kw2-css")) { var st = document.createElement("style"); st.id = "dk-kw2-css"; st.textContent = ".dk-kw{display:none!important}.xans-layout-searchheader{background:#fff!important;height:auto!important;max-height:100vh;overflow-y:auto;padding-bottom:40px!important;box-shadow:0 8px 20px rgba(0,0,0,.08)}"; document.head.appendChild(st); }
     /* 2026-11-12 시온님: 상단 메뉴(양말·실내복)로 들어온 검색 결과 화면에는 '상품검색' 칸을 숨김 */
@@ -1803,10 +1831,24 @@
     h.parentNode.insertBefore(a, h.nextSibling);
   }
   // 상단 메뉴(2026-11-14 시온님): 신상품 → ⏰타임특가, 1+1 다음에 0원체험단·기획상품(상품명에 "기획")
-  var MENU_ADD = [["🎁0원체험단", "/product/coffee.html?t=exp", ""], ["🎀기획상품", "/product/search.html?keyword=%EA%B8%B0%ED%9A%8D", "#e8792b"], ["🚚무료배송", "/product/list.html?cate_no=56", ""]];
+  var MENU_ADD = [["👩‍👧커플룩", "/product/search.html?keyword=%EC%BB%A4%ED%94%8C%EB%A3%A9", "#c2185b"], ["🎁0원체험단", "/product/coffee.html?t=exp", ""], ["🎀기획상품", "/product/search.html?keyword=%EA%B8%B0%ED%9A%8D", "#e8792b"], ["🚚무료배송", "/product/list.html?cate_no=56", ""]];
   /* 적립금 사용 조건 3만원(2026-11-15): 스킨에 박힌 '5만원 이상 구매 시 사용' 글자를 화면에서 바꿈 */
   function mileFix(){ var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n; while ((n = w.nextNode())) { var t = n.nodeValue; if (t && t.indexOf("5만원 이상") >= 0 && /사용|쓸 수/.test(t) && t.indexOf("무료배송") < 0) n.nodeValue = t.split("5만원 이상").join("3만원 이상"); } jcFix(); setTimeout(jcFix, 1800); setTimeout(jcFix, 3500); }
   function jcFix(){ var li = document.getElementById("dk-joincp"); if (!li || li.getAttribute("data-dkm")) return; li.setAttribute("data-dkm", "1"); var t = li.querySelector(".title"), pd = li.querySelector(".period"); if (t) t.textContent = "[수신동의] 가입 적립금"; if (pd) pd.textContent = "쇼핑정보 수신 동의하고 가입하면 바로 지급 · 3만원 이상 구매 시 사용"; }
+  function coupleMenu(){
+    var K = "keyword=%EC%BB%A4%ED%94%8C%EB%A3%A9";
+    var ones = document.querySelectorAll("a[href*='keyword=1%2B1'], a[href*='keyword=1+1']");
+    for (var i = 0; i < ones.length; i++) {
+      var o = ones[i]; if (o.closest("#dk-bm, #dk-cat, .dk-sug, .xans-product-listnormal, .prdList")) continue;
+      var li = o.parentNode && o.parentNode.tagName === "LI" ? o.parentNode : o, box = li.parentNode;
+      if (!box || box.querySelector("a[href*='" + K + "']")) continue;
+      var c = li.cloneNode(true); c.removeAttribute("data-dkm"); c.setAttribute("data-dkm-add", "1");
+      var ca = c.tagName === "A" ? c : c.querySelector("a"); if (!ca) continue;
+      ca.href = "/product/search.html?" + K; ca.textContent = "👩‍👧커플룩"; ca.style.color = "#c2185b";
+      var sub = c.querySelectorAll("ul, .sub, .depth2"); for (var q = 0; q < sub.length; q++) sub[q].remove();
+      li.parentNode.insertBefore(c, li.nextSibling);
+    }
+  }
   function menuFix(){
     var a = document.querySelectorAll("#header a[href*='cate_no=54'], .dk-mnav a[href*='cate_no=54'], [data-ez-module^='menu-side'] a[href*='cate_no=54'], #aside a[href*='cate_no=54']"), i, w, n;
     for (i = 0; i < a.length; i++) { w = document.createTreeWalker(a[i], NodeFilter.SHOW_TEXT, null); while ((n = w.nextNode())) { if (n.nodeValue.indexOf("신상품") >= 0) n.nodeValue = n.nodeValue.replace(/💜?신상품💜?/, "⏰타임특가"); } }
@@ -1899,7 +1941,7 @@
 
   // 홈 휴대폰 글자 메뉴(.dk-mnav)를 머리글(#header) 안으로 옮겨 고정 칸을 하나로(2026-11-15 갤럭시 네이버 앱에서 스크롤 끝날 때마다 화면이 40px쯤 위아래로 튐 — 고정 칸 두 개가 겹친 안드로이드 문제로 봄)
   // 2026-11-16 시온님 "상단메뉴바 항상 고정": 홈에만 있던 휴대폰 글자 메뉴를 모든 페이지 머리글에 만듦(홈 스킨 index.html 목록과 같게)
-  var MNAV = [["💜신상품💜","/product/list.html?cate_no=54"],["인기상품","/product/list.html?cate_no=55"],["1+1","/product/search.html?keyword=1%2B1","#e0245e"],["🎄크리스마스","/product/search.html?keyword=%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4","#1a7f37"],["BABY","/product/list.html?cate_no=52"],["KIDS","/product/list.html?cate_no=53"],["여아","/product/list.html?cate_no=50"],["남아","/product/list.html?cate_no=51"],["아우터","/product/list.html?cate_no=24"],["상의","/product/list.html?cate_no=25"],["원피스","/product/list.html?cate_no=26"],["하의","/product/list.html?cate_no=27"],["잡화","/product/list.html?cate_no=28"],["양말","/product/search.html?keyword=%EC%96%91%EB%A7%90"],["실내복","/product/search.html?keyword=%EC%8B%A4%EB%82%B4%EB%B3%B5"],["MOM","/product/list.html?cate_no=23"],["사이즈표","/product/brand_size.html"],["공지사항","/board/free/list.html?board_no=1"]];
+  var MNAV = [["💜신상품💜","/product/list.html?cate_no=54"],["인기상품","/product/list.html?cate_no=55"],["1+1","/product/search.html?keyword=1%2B1","#e0245e"],["🎄크리스마스","/product/search.html?keyword=%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4","#1a7f37"],["👩‍👧커플룩","/product/search.html?keyword=%EC%BB%A4%ED%94%8C%EB%A3%A9","#c2185b"],["BABY","/product/list.html?cate_no=52"],["KIDS","/product/list.html?cate_no=53"],["여아","/product/list.html?cate_no=50"],["남아","/product/list.html?cate_no=51"],["아우터","/product/list.html?cate_no=24"],["상의","/product/list.html?cate_no=25"],["원피스","/product/list.html?cate_no=26"],["하의","/product/list.html?cate_no=27"],["잡화","/product/list.html?cate_no=28"],["양말","/product/search.html?keyword=%EC%96%91%EB%A7%90"],["실내복","/product/search.html?keyword=%EC%8B%A4%EB%82%B4%EB%B3%B5"],["MOM","/product/list.html?cate_no=23"],["사이즈표","/product/brand_size.html"],["공지사항","/board/free/list.html?board_no=1"]];
   function mnavBuild(){
     if (document.querySelector(".dk-mnav") || window.innerWidth > 1024) return;
     var hd = document.getElementById("header"); if (!hd) return;
@@ -2092,7 +2134,7 @@
       var n = v.firstChild; if (n && n.nodeType === 3 && /예정/.test(n.nodeValue)) n.nodeValue = "통신판매업 신고 면제(간이과세자) ";
     });
   }
-  function run(){ try { document.documentElement.classList.add("dk-ok"); } catch(e){} try { tidy(); } catch(e){} try { bestBadge(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { laFont(); } catch(e){} try { tongFix(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ xmasPage(); }catch(e){} try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} try { setTimeout(modelSpec, 1500); } catch(e){} try { coordiTags(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  function run(){ try { document.documentElement.classList.add("dk-ok"); } catch(e){} try { tidy(); } catch(e){} try { bestBadge(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { coupleMenu(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { laFont(); } catch(e){} try { tongFix(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ xmasPage(); }catch(e){} try{ couplePage(); }catch(e){} try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} try { setTimeout(modelSpec, 1500); } catch(e){} try { coordiTags(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
