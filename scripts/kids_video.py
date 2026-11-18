@@ -280,6 +280,11 @@ def make_brand(brand, ps, k=8):
     """브랜드 영상(2026-11-12 시온님): 그 브랜드 상품 여러 개를 한 장씩 → 1초마다 넘김. 영상 위에 영상 속 상품 여러 개 + 브랜드 바로가기."""
     import numpy as np
     mine = [p for p in ps if p["product_name"].split(" ")[0] == brand]
+    if len(mine) < 3:  # 전체 목록에 안 잡히면 이름 검색(2026-11-18 고유)
+        r = requests.get(f"{API}/products", params={"product_name": brand, "display": "T", "selling": "T", "limit": 100,
+                         "fields": "product_no,product_name,price,detail_image,list_image,sold_out,created_date"},
+                         headers={"X-Cafe24-Client-Id": CID}, timeout=30)
+        mine = [p for p in r.json().get("products", []) if p.get("sold_out") != "T" and p["product_name"].split(" ")[0] == brand]
     mine.sort(key=lambda p: (p.get("created_date") or "", p["product_no"]), reverse=True)
     items, covers = [], []
     model = os.environ.get("MODEL", "") == "y"
