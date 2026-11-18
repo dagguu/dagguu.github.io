@@ -104,7 +104,7 @@
         "<div style='display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px'>" +
           "<div style='" + box + "'>결제 시 <b>" + x.save + "%</b> 적립</div>" +
           "<div style='" + box + "'>수익 링크 <b>" + x.link + "%</b> 적립</div>" +
-          "<div style='" + box + ";grid-column:1/3'>5만원 이상 구매 시 무료배송</div>" +
+          "<div style='" + box + ";grid-column:1/3'>4만원 이상 구매 시 무료배송</div>" +
         "</div></div>";
     }
     var w = document.createElement("div"); w.id = "dk-ms";
@@ -416,7 +416,7 @@
   }
 
   /* ---------- ⑤ 무료배송까지 남은 금액 + 비슷한 상품 (2026-11-12 시온님, 알파업셀 참고·직접 만듦, "AI" 라고 부르지 않음) ---------- */
-  var FREE = 50000, CID = "JzTmuiBPItGvZ6KG8g3aPC";
+  var FREE = 40000, CID = "JzTmuiBPItGvZ6KG8g3aPC";
   function num(t){ return parseInt(String(t || "").replace(/[^0-9]/g, ""), 10) || 0; }
   function myNo(){ var m = location.search.match(/product_no=([0-9]+)/) || location.pathname.match(/\/([0-9]+)\/(category|display|$)/); return m ? m[1] : ""; }
   function shipBar(){
@@ -1539,7 +1539,7 @@
       (logged
         ? "<a class='pb p1' href='/myshop/index.html#dk-invite'><span class='t'>친구에게 다꾸키즈 알려주고<br><b>친구도 나도 적립금 1,000원</b></span><span class='r'><span class='c1'>친구 초대<em>500원</em></span><span class='c2'>나도<em>500원</em></span></span></a>"
         : "<a class='pb p1' href='/member/agreement.html'><span class='t'>아직 <b>회원가입</b> 안 했다면?<br>수신 동의하면 <b>적립금 1,000원</b> 바로 지급</span><span class='r'><span class='c1'>수신 동의<em>1,000원</em></span><span class='c2'>수신 동의<em>5% 쿠폰</em></span></span></a>") +
-      "<a class='pb p2' href='/product/list.html?cate_no=54'><span class='t'>남대문 아동복을 집에서 편하게<br><b>5만원 이상 무료배송</b></span><span class='r'>5만원 이상<em>무료배송</em></span></a>" +
+      "<a class='pb p2' href='/product/list.html?cate_no=54'><span class='t'>남대문 아동복을 집에서 편하게<br><b>4만원 이상 무료배송</b></span><span class='r'>4만원 이상<em>무료배송</em></span></a>" +
       "<a class='pb p3' href='https://partners.dagguu.com/#/dp' target='_blank' rel='noopener'><span class='t'><small>친구가 내 링크로 사면</small>포인트 최대 10% 쏙쏙 받기 ›</span><span class='r'><i>P</i><i>P</i><i>P</i></span></a>" +
       "<a class='pb p4' href='https://pf.kakao.com/_xhihNX' target='_blank' rel='noopener'><span class='t'>카카오톡 채널 친구 추가하고<br><b>신상·할인 소식 먼저 받기</b></span><span class='r'><i>💬</i></span></a>" +
       "<a class='pb p5' href='/product/coffee.html'><span class='t'><small>상시 모집 · 10명</small><b>@dagguu.kids 태그하고<br>커피 받아가세요 ›</b></span><span class='r'>☕</span></a><a class='pb p5' href='/product/coffee.html?t=buy' style='background:#fff7e6'><span class='t'><small>구매 인증 기자단</small><b>산 옷 입은 사진 올리고<br>적립금 5,000원 받기 ›</b></span><span class='r'>🎁</span></a></div>";
@@ -1919,7 +1919,7 @@
   // 상단 메뉴(2026-11-14 시온님): 신상품 → ⏰타임특가, 1+1 다음에 0원체험단·기획상품(상품명에 "기획")
   var MENU_ADD = [["👩‍👧커플룩", "/product/search.html?keyword=%EC%BB%A4%ED%94%8C%EB%A3%A9", "#c2185b"], ["🎁0원체험단", "/product/coffee.html?t=exp", ""], ["🎀기획상품", "/product/search.html?keyword=%EA%B8%B0%ED%9A%8D", "#e8792b"], ["🚚무료배송", "/product/list.html?cate_no=56", ""]];
   /* 적립금 사용 조건 3만원(2026-11-15): 스킨에 박힌 '5만원 이상 구매 시 사용' 글자를 화면에서 바꿈 */
-  function mileFix(){ var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n; while ((n = w.nextNode())) { var t = n.nodeValue; if (t && t.indexOf("5만원 이상") >= 0 && /사용|쓸 수/.test(t) && t.indexOf("무료배송") < 0) n.nodeValue = t.split("5만원 이상").join("3만원 이상"); } jcFix(); setTimeout(jcFix, 1800); setTimeout(jcFix, 3500); }
+  function mileFix(){ var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n; while ((n = w.nextNode())) { var t = n.nodeValue; /* 무료배송 4만원(2026-11-18 시온님): 스킨·상품 안내에 박힌 5만원 무료배송 글자 */ if (t && t.indexOf("무료배송") >= 0 && /5만원|50,000원/.test(t)) { t = t.replace(/5만원/g, "4만원").replace(/50,000원/g, "40,000원"); n.nodeValue = t; } if (t && t.indexOf("5만원 이상") >= 0 && /사용|쓸 수/.test(t) && t.indexOf("무료배송") < 0) n.nodeValue = t.split("5만원 이상").join("3만원 이상"); } jcFix(); setTimeout(jcFix, 1800); setTimeout(jcFix, 3500); }
   function jcFix(){ var li = document.getElementById("dk-joincp"); if (!li || li.getAttribute("data-dkm")) return; li.setAttribute("data-dkm", "1"); var t = li.querySelector(".title"), pd = li.querySelector(".period"); if (t) t.textContent = "[수신동의] 가입 적립금"; if (pd) pd.textContent = "쇼핑정보 수신 동의하고 가입하면 바로 지급 · 3만원 이상 구매 시 사용"; }
   // 남아 메뉴 브랜드 더하기(2026-11-18 시온님 "남아에 보니토·고유·디그린") — 스킨 header·sidebar 의 손으로 적은 목록에 화면에서 붙임
   var BOY_ADD = [["보니토", "%EB%B3%B4%EB%8B%88%ED%86%A0"], ["고유", "%EA%B3%A0%EC%9C%A0"], ["디그린", "%EB%94%94%EA%B7%B8%EB%A6%B0"]];

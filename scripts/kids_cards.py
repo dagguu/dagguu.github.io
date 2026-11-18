@@ -137,12 +137,12 @@ def e(s):
 #  (B형은 2026-11-11 23:39 시온님 요청으로 안 씀) B형 = 연두/흰 글자 칸 꼬리표 + 둥근 흰 손글씨 느낌 큰 글씨 + 오른쪽 위 작은 연두 스티커
 # 2026-11-13 시온님이 바잇미 홈 슬라이드 배너 보여주며 "이런 느낌으로, 인기 브랜드 상품 사진으로":
 #  인기 브랜드 모델 사진 꽉 채움(PC 3장·모바일 2장 나란히) + 가운데 큰 흰 글씨 2줄(그림자) + 작은 설명 + 둥근 스티커 2개(위 왼쪽·글씨 오른쪽 위).
-#  그림·문구는 다꾸키즈 것(바잇미 그림·글 안 씀). 스티커는 사실만(NEW = 최근 등록순 상품, 무료배송 = 5만원 이상).
+#  그림·문구는 다꾸키즈 것(바잇미 그림·글 안 씀). 스티커는 사실만(NEW = 최근 등록순 상품, 무료배송 = 4만원 이상).
 # (키, 분류, 스티커1, 스티커2, 윗줄, 아랫줄, 설명)
 BAN = [
-    ("B1", 55, "BEST", "5만원↑ 무료배송", "콘 · 보니토 · 피피", "인기 브랜드 모아보기", "다꾸키즈 인기상품 BEST"),
+    ("B1", 55, "BEST", "4만원↑ 무료배송", "콘 · 보니토 · 피피", "인기 브랜드 모아보기", "다꾸키즈 인기상품 BEST"),
     ("B2", 44, "BABY", "NEW", "피피 겨울 신상", "우리 아기 데일리룩", "피피 아기옷 모아보기"),
-    ("B3", 49, "5만원↑ 무료배송", "NEW", "제니베이직 겨울 신상", "포근한 패딩 데일리룩", "제니베이직 아동복 모아보기"),
+    ("B3", 49, "4만원↑ 무료배송", "NEW", "제니베이직 겨울 신상", "포근한 패딩 데일리룩", "제니베이직 아동복 모아보기"),
     ("B4", 47, "무료배송", "NEW", "아오스타 겨울 신상", "포근한 니트 코디 모음", "아오스타 아동복 모아보기"),
 ]
 # 2026-11-13 시온님 "모델 사진으로": 자동 얼굴 찾기는 사이즈표·어른 셀카를 잡아서, 사진은 Claude 가 상세 사진을 직접 보고 고른
@@ -211,7 +211,7 @@ def last_html():
     body = ("<div style='position:relative;width:1080px;height:1350px;background:#6a3fc8;color:#fff;padding:110px 80px'>"
             "<div style='font-size:120px'>🛍️</div>"
             "<div style='margin-top:30px;font-size:80px;font-weight:900;line-height:1.2;letter-spacing:-2px'>더 많은 신상은<br>다꾸키즈에서 💜</div>"
-            "<div style='margin-top:50px;font-size:38px;line-height:1.7;font-weight:600'>🚚 5만원 이상 무료배송<br>🎁 신규가입 쿠폰 바로 지급<br>📦 평일 오후 3시 전 주문 당일 발주</div>"
+            "<div style='margin-top:50px;font-size:38px;line-height:1.7;font-weight:600'>🚚 4만원 이상 무료배송<br>🎁 신규가입 쿠폰 바로 지급<br>📦 평일 오후 3시 전 주문 당일 발주</div>"
             "<span class='pill' style='margin-top:70px;padding:22px 40px;background:#fff;color:#6a3fc8;font-size:40px'>프로필 링크 → dagguukids.com</span>"
             "<div class='handle' style='left:80px;bottom:60px;font-size:30px;color:#e7dcff'>@dagguu.kids</div></div>")
     return page(1080, 1350, body)
@@ -221,7 +221,7 @@ def caption(ps):
     lines = [f"오늘 다꾸키즈에 들어온 아이옷 {len(ps)}가지 🧸✨", ""]
     for i, p in enumerate(ps, 1):
         lines.append(f"{i}. {p['name']} · {won(p['price'])}")
-    lines += ["", "🚚 5만원 이상 무료배송", "🎁 신규가입 쿠폰 바로 지급", "", "👉 프로필 링크(dagguukids.com)에서 바로 볼 수 있어요",
+    lines += ["", "🚚 4만원 이상 무료배송", "🎁 신규가입 쿠폰 바로 지급", "", "👉 프로필 링크(dagguukids.com)에서 바로 볼 수 있어요",
               "저장해두고 꺼내보세요 💜 @dagguu.kids", "",
               "#아동복 #유아복 #아기옷 #남대문아동복 #키즈룩 #" + " #".join(sorted({p['brand'] for p in ps}))[:200]]
     return "\n".join(lines)
