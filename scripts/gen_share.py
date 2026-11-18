@@ -177,7 +177,7 @@ def shell_app(title, desc, canon, body, img="", robots="index,follow", ld=None, 
 <header class="appbar"><span class="abl"><a class="backbtn" href="/" aria-label="홈으로">{BACK}</a><a class="logo" href="/"><img src="/icons/icon-192.png" alt="" width="30" height="30" style="border-radius:8px"><b class="wm">다꾸체험단</b></a></span><span class="hbtns"><a class="iconbtn" href="/#/list" aria-label="체험단 검색">{SRCH}</a></span></header>
 <main class="view">{body}
 <p class="sfoot">다꾸체험단은 여러 체험단 사이트의 모집 정보를 모아 보여 주는 서비스로, 각 체험단 사이트와 무관해요. 신청·선정·진행은 해당 사이트에서 이뤄져요.<br>다꾸체험단 (www.dagguu.com) · 운영 플랜비 · 대표 김정은 · 사업자등록번호 381-53-01054 · <a href="/ad-notice.html">광고 및 콘텐츠 표시 안내</a></p></main>
-</div>{APPJS}</body></html>
+</div>{APPJS}<script src="/apgo.js?v=1" defer></script></body></html>
 '''
 
 def crumbs(parts):
@@ -289,7 +289,7 @@ for it in items:
     else: body += f'<div class="dclosed"><b>모집이 끝난 체험단이에요</b><span>같은 {"숙소" if cat == "stay" else "제품"}가 다시 모집하면 다꾸 앱에서 알림으로 알려드려요.</span></div>'
     body += f'<div class="dbar"><a class="fv dbfav" href="/#/item?id={e(iid)}" aria-label="다꾸 앱에서 찜하기">{HEART}</a>'
     if view: body += f'<a class="dbl" href="{e(view)}" target="_blank" rel="sponsored nofollow noopener">{plab}</a>'
-    if op and apply_: body += f'<a class="b pri dbp" href="{e(apply_)}" target="_blank" rel="nofollow noopener">신청하기</a>'
+    if op and apply_: body += f'<a class="b pri dbp" href="{e(apply_)}" target="_blank" rel="nofollow noopener" data-ap="1" data-id="{e(iid)}" data-src="{e(src)}" data-cat="{e(cat)}" data-view="{e(view or "")}" data-img="{e(img or "")}" data-pb="{"1" if "payback" in pay else "0"}">신청하기</a>'
     elif not op: body += f'<a class="b pri dbp" href="/#/item?id={e(iid)}">🔔 재모집 알림받기</a>'
     body += '</div>'
     sim = [x for x in open_items if x["id"] != iid and (x.get("cat") or "stay") == cat and (cat != "stay" or (sg and sigun(x) == sg) or x.get("region") == it.get("region"))]
