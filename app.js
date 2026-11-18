@@ -2548,7 +2548,9 @@ function applyBtns(it,url,src){
 }
 /* 신청 팝업의 숙소·제품 바로가기(2026-11-18 시온님). 잠금·강제 이동 없이 버튼만 둔다(쿠팡 운영정책 4.1-2 무효클릭) */
 function apGoBtn(it){ var u=priceUrl(it); if(!u) return ''; var c=catOf(it), nm=c==="stay"?"숙소":(c==="etc"?"입장권":"제품");
-  return '<a class="b wide apgo" data-m="cp" '+ext(u)+'>'+nm+' 바로가기 ↗</a>'; }
+  var img=safeUrl(it.image), t=c==="stay"?"객실 사진 더 보기":(c==="etc"?"입장권 정보 더 보기":"제품 사진 더 보기"), sub=c==="stay"?"객실·위치·편의시설 정보":(c==="etc"?"이용 안내·가격 정보":"상세 사진·구성 정보");
+  return '<a class="b wide apgo'+(img?' apph':'')+'" data-m="cp" '+ext(u)+'>'+(img?'<span class="apst"><i></i><i></i><img src="'+esc(img)+'" alt="" referrerpolicy="no-referrer"></span>':'')+
+    '<span class="aptx"><b>'+t+' ↗</b><small>'+nm+' 바로가기 · '+sub+'</small></span></a>'; }
 /* 모집 사이트로 넘어가기 전 2.5초 "이동 중" 화면 + 다꾸키즈 신상(2026-11-18 시온님).
    쿠팡 광고는 넣지 않는다(커버형 배너·오클릭 유도 = 쿠팡 운영정책 4.1-8·4.1-2). 다꾸키즈는 시온님 쇼핑몰 */
 function goWait(url,src,it){

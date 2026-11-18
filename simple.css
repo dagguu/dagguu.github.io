@@ -1327,3 +1327,16 @@ input,select,textarea{font-size:16px!important}
 .goint .gikr em{display:block;font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:4px}
 .goint .gikr b{display:block;font-size:13px}
 .goint .gikm{display:block;text-align:center;margin-top:10px;color:#6a3fc8;font-size:13px;font-weight:700;text-decoration:none}
+
+/* 신청 팝업 바로가기: 사진 미리보기(2026-11-18) */
+.applym .b.apgo{display:flex;align-items:center;justify-content:center;gap:12px;height:auto;min-height:50px;padding:10px 14px}
+.applym .b.apgo.apph{justify-content:flex-start;text-align:left}
+.applym .apst{position:relative;flex:0 0 auto;width:62px;height:52px}
+.applym .apst img,.applym .apst i{position:absolute;width:48px;height:48px;border-radius:10px;top:2px}
+.applym .apst i{background:#d9cff7;border:2px solid #fff}
+.applym .apst i:nth-child(1){left:14px;transform:rotate(8deg);opacity:.7}
+.applym .apst i:nth-child(2){left:7px;transform:rotate(4deg)}
+.applym .apst img{left:0;object-fit:cover;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.applym .aptx{display:flex;flex-direction:column;min-width:0}
+.applym .aptx b{font-size:15px}
+.applym .aptx small{font-size:12px;font-weight:500;color:#7a68c9;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
