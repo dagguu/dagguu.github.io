@@ -1743,7 +1743,9 @@
       "@media(max-width:1024px){body:has(.dkx-fix) #dk-tab{display:none!important}body:has(.dkx-fix) #dk-kfab{bottom:96px!important}}@media(min-width:1025px){.dkx.dkx-l{max-width:1100px}.dkx-l .dkx-g{grid-template-columns:repeat(4,1fr);gap:22px 16px}}</style>";
     function done(html){ var w = document.createElement("div"); w.className = "cf dkx-wrap"; w.innerHTML = css + html; cf.parentNode.replaceChild(w, cf); cf = w; window.scrollTo(0, 0); return w; }
     /* 2026-11-18 시온님: 내가 신청한 체험단 표시 — 이 기기에 신청한 체험단 id 를 기억(서버 저장 아님) */
-    var APK = "dk_exp_applied"; function apGet(){ try { return JSON.parse(localStorage.getItem(APK) || "{}") || {}; } catch(e){ return {}; } } function apSet(eid){ try { var o = apGet(); o[eid] = Date.now(); localStorage.setItem(APK, JSON.stringify(o)); } catch(e){} } var APL = apGet();  /* 2026-11-18: 두 번째 화면 바꿈(신청완료)에서 예전 cf 가 이미 빠져 있어 오류 → 저장은 됐는데 "저장되지 않았어요"가 뜨던 것 고침 */
+    var APK = "dk_exp_applied"; function apGet(){ try { return JSON.parse(localStorage.getItem(APK) || "{}") || {}; } catch(e){ return {}; } } function apSet(eid){ try { var o = apGet(); o[eid] = Date.now(); localStorage.setItem(APK, JSON.stringify(o)); } catch(e){} } var APL = apGet(); var TKK = "dk_exp_tok"; function tkGet(){ try { return JSON.parse(localStorage.getItem(TKK) || "{}") || {}; } catch(e){ return {}; } } function tkSet(eid, t){ try { var o = tkGet(); o[eid] = t; localStorage.setItem(TKK, JSON.stringify(o)); } catch(e){} } var TOK = tkGet();
+    /* 2026-11-18 시온님: 선정 결과 보기 — 신청할 때 받은 열쇠로 내 상태만 읽음(supabase/exp_status.sql exp_mine) */
+    function mine(cb){ var ts = Object.keys(TOK).map(function(k){ return TOK[k]; }).filter(function(t){ return /^[0-9a-f]{32}$/.test(t); }); if (!ts.length) return; fetch(SBU + "/rest/v1/rpc/exp_mine", { method: "POST", headers: { apikey: SBK, Authorization: "Bearer " + SBK, "Content-Type": "application/json" }, body: JSON.stringify({ p_toks: ts }) }).then(function(r){ return r.ok ? r.json() : []; }).then(function(L){ var m = {}; (L || []).forEach(function(z){ m[z.exp_id] = z; }); cb(m); }).catch(function(){}); }  /* 2026-11-18: 두 번째 화면 바꿈(신청완료)에서 예전 cf 가 이미 빠져 있어 오류 → 저장은 됐는데 "저장되지 않았어요"가 뜨던 것 고침 */
     fetch("https://www.dagguu.com/kids/exp.json?v=" + Math.floor(Date.now() / 600000)).then(function(r){ return r.json(); }).then(function(data){
       var items = data.items || [];
       if (!id) {
@@ -1754,6 +1756,7 @@
         h += "<a class='dkx-c' href='/product/coffee.html'><div class='dkx-ph' style='background:linear-gradient(135deg,#f3ecff,#ffe3f1);display:flex;align-items:center;justify-content:center;font-size:64px'>☕<span class='dkx-d'>상시 모집</span></div><div class='dkx-cb'><div class='dkx-b'>다꾸키즈</div><div class='dkx-t'>인스타 코디 체험단 · 커피 기프티콘</div><div class='dkx-n'><b>10명 모집중</b></div></div></a>";
         h += "</div></div>";
         var w = done(h);
+        mine(function(m){ Object.keys(m).forEach(function(k){ var st = m[k].status; if (st !== "selected" && st !== "posted") return; var c = w.querySelector("a.dkx-c[href$='id=" + k + "'] .dkx-ph"); if (!c) return; var old = c.querySelectorAll(".dkx-d")[1]; if (old) old.remove(); var b = document.createElement("span"); b.className = "dkx-d"; b.style.cssText = "left:auto;right:10px;background:#e8456b"; b.textContent = "🎉 선정됨"; c.appendChild(b); }); });
         var cache = {};
         items.forEach(function(x, i){ if (x.img) { var im0 = w.querySelector("img[data-i='" + i + "']"); if (im0) im0.src = x.img; } }); var miss = items.filter(function(x){ return x.no && !x.img; }).map(function(x){ return x.no; }); if (miss.length) fetch("https://dagguu.cafe24api.com/api/v2/products?product_no=" + miss.join(",") + "&limit=50&fields=product_no,detail_image,list_image", { headers: { "X-Cafe24-Client-Id": "JzTmuiBPItGvZ6KG8g3aPC" } }).then(function(r){ return r.json(); }).then(function(j){ (j.products || []).forEach(function(p){ items.forEach(function(x, i){ if (x.no == p.product_no && !x.img) { var im = w.querySelector("img[data-i='" + i + "']"); if (im) im.src = p.detail_image || p.list_image; } }); }); }).catch(function(){}); items.forEach(function(x, i){ if (x.no) return; setTimeout(function(){ var key = x.no || x.q; (cache[key] = cache[key] || api(x.q, x.no)).then(function(p){ if (!p) return; var im = w.querySelector("img[data-i='" + i + "']"); if (im) im.src = p.detail_image || p.list_image; var be = w.querySelector("[data-b='" + i + "']"), te = w.querySelector("[data-t='" + i + "']"); if (be && !x.brand) be.textContent = pbrand(p); if (te) te.textContent = title(x, p); }); }, i * 350); });
         return;
@@ -1763,7 +1766,7 @@
       var s = state(x), always = !x.end, d = always ? 0 : dleft(x.end);
       if (step === "apply") {
         if (!logged) { location.replace(loginUrl); return; }
-        if (s !== "on") { location.replace("/product/coffee.html?t=exp&id=" + x.id); return; } if (APL[x.id]) { location.replace("/product/coffee.html?t=exp&id=" + x.id); return; }
+        if (s !== "on") { location.replace("/product/coffee.html?t=exp&id=" + x.id); return; } if (APL[x.id] && TOK[x.id]) { location.replace("/product/coffee.html?t=exp&id=" + x.id); return; }
         document.title = "체험단 신청 - 다꾸키즈";
         var me = ""; try { me = (JSON.parse(sessionStorage.getItem("dk_me") || "{}").n) || ""; } catch(e){}
         var row = function(lb, req, inner){ return "<div class='dkx-row'><span>" + (req ? "<i>■</i> " : "") + lb + "</span><div>" + inner + "</div></div>"; };
@@ -1805,12 +1808,12 @@
           try { if (document.getElementById("f-save").checked) localStorage.setItem(SHIPK, JSON.stringify({ name: v("f-name"), zip: v("f-zip"), addr1: v("f-a1"), addr2: v("f-a2"), phone: v("f-ph"), email: v("f-em"), insta: v("f-ig"), memo: v("f-memo") })); else localStorage.removeItem(SHIPK); } catch(e){}
           sb.disabled = true; sb.textContent = "신청하는 중…";
           fetch(SBU + "/rest/v1/rpc/exp_apply", { method: "POST", headers: { apikey: SBK, Authorization: "Bearer " + SBK, "Content-Type": "application/json" },
-            body: JSON.stringify({ p: { exp: x.id, title: document.getElementById("dkx-pt").textContent, name: v("f-name"), zip: v("f-zip"), addr1: v("f-a1"), addr2: v("f-a2"), phone: v("f-ph"), email: v("f-em"), insta: v("f-ig"), memo: v("f-memo"), member: [me, mid].filter(Boolean).join(" / ") } }) })
+            body: JSON.stringify({ p: { exp: x.id, title: document.getElementById("dkx-pt").textContent, name: v("f-name"), zip: v("f-zip"), addr1: v("f-a1"), addr2: v("f-a2"), phone: v("f-ph"), email: v("f-em"), insta: v("f-ig"), memo: v("f-memo"), member: [me, mid].filter(Boolean).join(" / "), v: "2" } }) })
             .then(function(r){ return r.json(); }).then(function(res){
-              if (res === "ok" || res === "dup") { apSet(x.id);
+              var mm = /^(ok|dup)(?::([0-9a-f]{32}))?$/.exec(String(res)); if (mm) { res = mm[1]; apSet(x.id); if (mm[2]) tkSet(x.id, mm[2]);
                 try { gtag("event", "exp_apply", { exp: x.id }); } catch(e){}
                 done("<div class='dkx' style='text-align:center;padding:60px 20px 120px'><div style='font-size:54px'>💜</div><h1 style='margin:14px 0 8px;font-size:22px'>" + (res === "dup" ? "이미 신청하셨어요" : "체험단 신청이 완료됐어요!") + "</h1><p style='font-size:14.5px;color:#666;line-height:1.7;margin:0'>선정되시면 카카오톡으로 연락드려요.</p>" +
-                  "<a class='dkx-btn' style='margin:24px auto 0;max-width:420px;background:#fee500;color:#222' href='https://pf.kakao.com/_xhihNX/friend'>카카오톡 채널 추가하기</a><a class='dkx-btn' style='margin:10px auto 0;max-width:420px;background:#fff;color:" + P + ";border:1px solid " + P + "' href='/product/coffee.html?t=exp'>다른 체험단 보기</a></div>");
+                  "<a class='dkx-btn' style='margin:24px auto 0;max-width:420px;background:#fee500;color:#222' href='https://pf.kakao.com/_xhihNX/friend'>카카오톡 채널 추가하기</a><a class='dkx-btn' style='margin:10px auto 0;max-width:420px;background:#fff;color:" + P + ";border:1px solid " + P + "' href='/product/coffee.html?t=exp'>다른 체험단 보기</a><a class='dkx-btn' style='margin:10px auto 0;max-width:420px;background:#fff;color:#666;border:1px solid #ccc' href='/product/coffee.html?t=exp&id=" + x.id + "'>내 신청 보기 (선정 결과)</a></div>");
               } else { sb.disabled = false; sb.textContent = "신청완료"; alert(res === "bad" ? "입력한 내용을 다시 확인해 주세요." : "잠시 후 다시 시도해 주세요."); }
             }).catch(function(){ sb.disabled = false; sb.textContent = "신청완료"; alert("신청이 저장되지 않았어요. 잠시 후 다시 시도해 주세요."); });
         };
@@ -1826,8 +1829,26 @@
         "<div style='margin-top:10px;font-size:14px;color:#777'>" + (always ? "상시 모집 중 · 신청자 중에서 선정해요" : s === "end" ? "모집이 끝났어요" : "모집 종료까지 D-" + d + " 남음") + "</div></div><div class='dkx-hr'></div>" +
         "<div class='dkx-s'><table class='dkx-tb'><tr><th>모집 현황</th><td><b style='color:" + P + "'>" + x.n + "명 모집</b></td></tr><tr><th>모집기간</th><td>" + (always ? "상시 모집" : md(x.start) + " ~ " + md(x.end)) + "</td></tr><tr><th>선정 안내</th><td>카카오톡으로 개별 연락</td></tr><tr><th>작성 채널</th><td>" + esc(x.ch) + "</td></tr></table></div><div class='dkx-hr'></div>" +
         "<div class='dkx-s'><ul><li>인스타그램 피드 1개 (사진 3장 이상)</li><li>글 첫 줄 맨 앞에 <b>#광고</b></li><li><b>@dagguu.kids</b> 태그</li><li>해시태그 <b>#다꾸키즈 #다꾸체험단 #다꾸파트너스</b><span id='dkx-bt'>" + (x.brand ? " <b>#" + esc(x.brand) + "</b>" : "") + "</span></li><li>품절 시 비슷한 상품으로 바뀔 수 있어요.</li></ul></div>" +
-        "<div class='dkx-fix'>" + (s !== "on" ? "<span class='dkx-btn dkx-off'>" + (s === "end" ? "모집 마감" : md(x.start) + " 오픈") + "</span>" : APL[x.id] ? "<span class='dkx-btn dkx-off'>✓ 신청완료 · 선정되면 카카오톡으로 연락드려요</span>" : "<a class='dkx-btn' href='" + (logged ? applyUrl : "/member/login.html?returnUrl=" + encodeURIComponent(applyUrl)) + "'>체험단 신청하기</a>") + "</div></div>";
+        "<div id='dkx-st'></div><div class='dkx-fix' id='dkx-fx'>" + (TOK[x.id] && APL[x.id] ? "<span class='dkx-btn dkx-off'>✓ 신청완료 · 선정되면 카카오톡으로 연락드려요</span>" : s !== "on" ? "<span class='dkx-btn dkx-off'>" + (s === "end" ? "모집 마감" : md(x.start) + " 오픈") + "</span>" : APL[x.id] ? "<a class='dkx-btn' style='background:#fff;color:" + P + ";border:1px solid " + P + "' href='" + applyUrl + "'>✓ 신청완료 · 선정 결과 확인하기 ›</a>" : "<a class='dkx-btn' href='" + (logged ? applyUrl : "/member/login.html?returnUrl=" + encodeURIComponent(applyUrl)) + "'>체험단 신청하기</a>") + "</div></div>";
       done(h);
+      if (TOK[x.id]) mine(function(m){ var z = m[x.id]; if (!z) return; var fx = document.getElementById("dkx-fx"), st = document.getElementById("dkx-st"); if (!fx || !st) return;
+        if (z.status === "rejected") { fx.innerHTML = "<span class='dkx-btn dkx-off'>아쉽게도 이번에는 선정되지 않았어요</span>"; return; }
+        if (z.status !== "selected" && z.status !== "posted") return;
+        fx.innerHTML = "<span class='dkx-btn' style='background:#e8456b'>🎉 축하합니다 선정되셨습니다!</span>";
+        var sub = !!z.post_url;
+        st.innerHTML = "<div class='dkx-hr'></div><div class='dkx-s'><h2>📷 인스타그램 게시물 제출하기</h2><p style='font-size:14px;color:#666;line-height:1.6;margin:0 0 12px'>제품을 받고 인스타그램 피드에 올린 뒤, 게시물 주소를 붙여 넣어 주세요.<br>게시물 ⋯ → 링크 복사 (예: https://www.instagram.com/p/…)</p>" +
+          "<input class='dkx-in' id='dkx-url' inputmode='url' placeholder='https://www.instagram.com/p/...' value='" + esc(z.post_url || "") + "'><button class='dkx-btn' id='dkx-sub'>" + (sub ? "다시 제출하기" : "제출하기") + "</button>" +
+          "<p id='dkx-sm' style='font-size:13.5px;color:#6a3fc8;margin:10px 0 0;text-align:center'>" + (z.status === "posted" ? "✓ 게시물 확인이 끝났어요. 감사합니다!" : sub ? "✓ 제출했어요. 확인 후 카카오톡으로 연락드려요." : "") + "</p></div>";
+        document.getElementById("dkx-sub").onclick = function(){ var b = this, u = document.getElementById("dkx-url").value.trim();
+          if (!/^https?:\/\/(www\.)?instagram\.com\/(p|reel|reels)\/[A-Za-z0-9_-]+/i.test(u)) { alert("인스타그램 게시물 주소를 붙여 넣어 주세요. (https://www.instagram.com/p/… 모양)"); return; }
+          b.disabled = true; b.textContent = "제출하는 중…";
+          fetch(SBU + "/rest/v1/rpc/exp_submit", { method: "POST", headers: { apikey: SBK, Authorization: "Bearer " + SBK, "Content-Type": "application/json" }, body: JSON.stringify({ p_tok: TOK[x.id], p_url: u }) }).then(function(r){ return r.json(); }).then(function(res){
+            b.disabled = false; b.textContent = "다시 제출하기";
+            if (res === "ok") { document.getElementById("dkx-sm").textContent = "✓ 제출했어요. 확인 후 카카오톡으로 연락드려요."; try { gtag("event", "exp_post_submit", { exp: x.id }); } catch(e){} }
+            else alert(res === "url" ? "인스타그램 게시물 주소를 다시 확인해 주세요." : res === "notsel" ? "선정된 체험단만 제출할 수 있어요." : "잠시 후 다시 시도해 주세요.");
+          }).catch(function(){ b.disabled = false; b.textContent = "제출하기"; alert("제출하지 못했어요. 잠시 후 다시 시도해 주세요."); });
+        };
+      });
       if (x.img) document.getElementById("dkx-img").src = x.img;
       api(x.q, x.no).then(function(p){ if (!p) return; if (!x.img) document.getElementById("dkx-img").src = p.detail_image || p.list_image; var g = document.getElementById("dkx-go"); g.href = "/product/detail.html?product_no=" + p.product_no; g.style.display = "inline-block"; if (!x.brand) { document.getElementById("dkx-br").textContent = pbrand(p); var bt = document.getElementById("dkx-bt"); if (bt && pbrand(p)) bt.innerHTML = " <b>#" + esc(pbrand(p)) + "</b>"; } document.getElementById("dkx-h").textContent = title(x, p); });
     }).catch(function(){ cf.style.visibility = ""; });
