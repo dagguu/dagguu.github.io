@@ -48,3 +48,5 @@
   }
   if(document.readyState!=="loading") go(); else document.addEventListener("DOMContentLoaded",go);
 })();
+/* 감성숙소 글 '객실·가격 보기'(쿠팡)도 이동 중 다꾸키즈 화면(2026-11-18 시온님) */
+(function(){ function L(){ if(document.querySelector('a#go[href*="link.coupang.com"]')&&!document.querySelector('script[src*="apgo.js"]')){ var s=document.createElement('script'); s.src='/apgo.js?v=10'; document.body.appendChild(s); } } if(document.readyState!=='loading') L(); else document.addEventListener('DOMContentLoaded',L); })();

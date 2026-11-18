@@ -1,6 +1,7 @@
 /* 공유 페이지(s/)의 신청 팝업 + 이동 중 다꾸키즈 화면 (2026-11-18 시온님 "s/ 에서도 동일하게").
    앱(app.js applyPopup·apGoBtn·goWait)과 같은 모양. 쿠팡 버튼은 잠금·강제 이동 없이 두기만 한다(운영정책 4.1-2·4.1-8). */
 (function(){
+  if(!document.querySelector('link[href*="simple.css"]')){ var st=document.createElement('style'); st.textContent='.goint{position:fixed;inset:0;z-index:3000;background:rgba(20,16,40,.55);display:flex;align-items:center;justify-content:center;padding:16px}\n.goint .gis{background:#fff;border-radius:22px;width:min(100%,380px);padding:22px 18px 18px;box-sizing:border-box;text-align:center}\n.goint .gil b{display:block;font-size:18px;margin-top:10px}\n.goint .gil small{display:block;color:#888;font-size:13px;margin-top:4px}\n.goint .gisp{display:inline-block;width:28px;height:28px;border:3px solid #e6defb;border-top-color:#6a3fc8;border-radius:50%;animation:gisp .8s linear infinite}\n@keyframes gisp{to{transform:rotate(360deg)}}\n.goint .gibar{height:4px;background:#eee;border-radius:4px;margin:14px 0 4px;overflow:hidden}\n.goint .gibar i{display:block;height:100%;width:0;background:#6a3fc8;animation:gibar 5s linear forwards}\n@keyframes gibar{to{width:100%}}\n.goint .gik{margin:14px 0 12px;text-align:left}\n.goint .gikh b{font-size:15px}.goint .gikh small{display:block;color:#999;font-size:12px}\n.goint .gikr{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}\n.goint .gikr a{text-decoration:none;color:#222;font-size:12px;min-width:0}\n.goint .gikr span{display:block;aspect-ratio:4/5;border-radius:10px;overflow:hidden;background:#f4f4f4}\n.goint .gikr img{width:100%;height:100%;object-fit:cover;object-position:top}\n.goint .gikr em{display:block;font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:4px}\n.goint .gikr b{display:block;font-size:13px}\n.goint .gikm{display:block;text-align:center;margin-top:10px;color:#6a3fc8;font-size:13px;font-weight:700;text-decoration:none}\n.goint .gicd{display:inline-block;min-width:1.2em;opacity:.75}\n.goint .gskip:disabled{background:#c9bdf0;opacity:1;cursor:default}\n.goint .gikr span{position:relative}\n.goint .kt{position:absolute;left:4px;top:4px;z-index:1;font-style:normal;font-size:10px;font-weight:800;padding:2px 6px;border-radius:6px;color:#fff;line-height:1.4}\n.goint .kt.ks{background:#ff3b5c}.goint .kt.kb{background:#ff8a00}.goint .kt.kn{background:#6a3fc8}\n.goint .gikr s{display:block;color:#aaa;font-size:11px;margin-top:2px}\n.goint .gikr b em{font-style:normal;color:#ff3b5c;margin-right:3px}\n.goint .gikr small{display:block;color:#999;font-size:10px}\n.goint .gikr{transition:opacity .25s}.goint .gikr.gfade{opacity:0}\n.goint .gis{position:relative}\n.goint .gix{position:absolute;right:10px;top:10px;width:32px;height:32px;border:0;background:transparent;color:#999;font-size:18px;display:flex;align-items:center;justify-content:center;cursor:pointer}\n.goint .gix svg{width:20px;height:20px}\n.goint *{box-sizing:border-box;font-family:inherit}.goint .gis{font-family:Pretendard,system-ui,sans-serif;color:#222}'+'.goint .b.pri.wide{display:block;width:100%;height:50px;border:0;border-radius:14px;background:#6a3fc8;color:#fff;font-size:16px;font-weight:700;margin-top:8px}'; document.head.appendChild(st); }
   var KU="https://dagguukids.com", KIDS=null;
   function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
   function ga(n,p){ try{ if(window.gtag) gtag("event",n,p||{}); }catch(e){} }
@@ -36,8 +37,8 @@
         L.map(kCard).join("")+
         '</div><a class="gikm" data-gk href="'+esc(kgo("/"))+'" target="_blank" rel="noopener">다꾸키즈 구경가기 ›</a></div>';
     }
-    w.innerHTML='<div class="gis">'+(cp?'':'<button class="gix" data-gx aria-label="닫기">✕</button>')+'<div class="gil"><span class="gisp"></span><b>'+(cp?'쿠팡으로 이동 중이에요':esc(src)+' 사이트로 이동 중이에요')+'</b><small>잠시 후 건너뛰기를 누르면 '+(cp?'상품 페이지가':'신청 페이지가')+' 열려요</small></div>'+
-      '<div class="gibar"><i></i></div><div class="gikw">'+kids()+'</div><button class="b pri wide gskip" data-gnow disabled><span class="gicd">5</span>초 후 건너뛸 수 있어요</button></div>';
+    w.innerHTML='<div class="gis">'+(cp?'':'<button class="gix" data-gx aria-label="닫기">✕</button>')+'<div class="gil"><span class="gisp"></span><b>'+(cp?'쿠팡으로 이동 중이에요':esc(src)+' 사이트로 이동 중이에요')+'</b><small>'+(cp?'5초 뒤 상품 페이지가 열려요':'잠시 후 건너뛰기를 누르면 신청 페이지가 열려요')+'</small></div>'+
+      '<div class="gibar"><i></i></div><div class="gikw">'+kids()+'</div>'+(cp?'':'<button class="b pri wide gskip" data-gnow disabled><span class="gicd">5</span>초 후 건너뛸 수 있어요</button>')+'</div>';
     w.addEventListener("click",function(e){
       if(e.target.closest("[data-gx]")){ done=true; clearInterval(cd); w.remove(); ga("apply_wait_close",{item_id:id,page:"share"}); return; }
       var sk=e.target.closest("[data-gnow]"); if(sk){ if(sk.disabled) return; ga(cp?"coupang_go":"apply_go",{item_id:id,how:"skip",page:"share"}); return go(); }
@@ -50,6 +51,7 @@
     var left=5; cd=setInterval(function(){ left--; var el=w.querySelector(".gicd"), bt=w.querySelector(".gskip"); if(el) el.textContent=left;
       if(left<=0){ clearInterval(cd); if(bt){ bt.disabled=false; bt.innerHTML="건너뛰기 ›"; } } },1000);
     ga(cp?"coupang_wait":"apply_wait",{item_id:id,source:src,page:"share"});
+    if(cp) tm=setTimeout(go,5000);
   }
   function popup(a){
     var d=a.dataset, url=a.getAttribute("href"), src=d.src||"체험단", cat=d.cat||"stay";
@@ -73,7 +75,7 @@
     loadKids(function(){});
   }
   document.addEventListener("click",function(e){
-    var c=e.target.closest(".dbar a.dbl"); if(c&&!e.ctrlKey&&!e.metaKey){ var ap=document.querySelector("a[data-ap]"); e.preventDefault(); ga("coupang_click",{place:"detail_share"}); goWait(c.getAttribute("href"),"쿠팡",ap?ap.dataset.id:"",true); return; }
+    var c=e.target.closest('.dbar a.dbl, a#go[href*="link.coupang.com"]'); if(c&&!e.ctrlKey&&!e.metaKey){ var ap=document.querySelector("a[data-ap]"); e.preventDefault(); ga("coupang_click",{place:"detail_share"}); goWait(c.getAttribute("href"),"쿠팡",ap?ap.dataset.id:"",true); return; }
   },true);
   document.addEventListener("click",function(e){
     var a=e.target.closest("a[data-ap]"); if(!a) return;
