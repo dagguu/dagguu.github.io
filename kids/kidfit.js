@@ -1741,7 +1741,7 @@
       ".dkx-fix{position:fixed;left:0;right:0;bottom:0;z-index:900;background:#fff;border-top:1px solid #eee;padding:10px 14px calc(10px + env(safe-area-inset-bottom))}.dkx-fix .dkx-btn{max-width:692px;margin:0 auto}.dkx-off{background:#bbb!important}" +
       ".dkx-ck{display:flex;gap:10px;align-items:center;margin:0 0 12px;font-size:14.5px;cursor:pointer}.dkx-ck input{width:22px;height:22px;flex:0 0 22px;accent-color:" + P + "}" +
       "@media(max-width:1024px){body:has(.dkx-fix) #dk-tab{display:none!important}body:has(.dkx-fix) #dk-kfab{bottom:96px!important}}@media(min-width:1025px){.dkx.dkx-l{max-width:1100px}.dkx-l .dkx-g{grid-template-columns:repeat(4,1fr);gap:22px 16px}}</style>";
-    function done(html){ var w = document.createElement("div"); w.className = "cf dkx-wrap"; w.innerHTML = css + html; cf.parentNode.replaceChild(w, cf); window.scrollTo(0, 0); return w; }
+    function done(html){ var w = document.createElement("div"); w.className = "cf dkx-wrap"; w.innerHTML = css + html; cf.parentNode.replaceChild(w, cf); cf = w; window.scrollTo(0, 0); return w; }  /* 2026-11-18: 두 번째 화면 바꿈(신청완료)에서 예전 cf 가 이미 빠져 있어 오류 → 저장은 됐는데 "저장되지 않았어요"가 뜨던 것 고침 */
     fetch("https://www.dagguu.com/kids/exp.json?v=" + Math.floor(Date.now() / 600000)).then(function(r){ return r.json(); }).then(function(data){
       var items = data.items || [];
       if (!id) {
