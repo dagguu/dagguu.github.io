@@ -237,14 +237,54 @@ def one_image(p):
         return None
 
 
+def model_score(im):
+    """모델(사람) 착용컷 점수(2026-11-18 시온님 "모델영상으로"): 얼굴·사람 몸 +, 흰 바탕 누끼 −."""
+    import numpy as np, cv2
+    a = np.asarray(im.resize((480, int(480 * im.height / im.width))))
+    g = cv2.cvtColor(a, cv2.COLOR_RGB2GRAY)
+    sc = 0
+    fc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+    pc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_profileface.xml")
+    if len(fc.detectMultiScale(g, 1.1, 5, minSize=(30, 30))) or len(pc.detectMultiScale(g, 1.1, 5, minSize=(30, 30))):
+        sc += 4
+    hog = cv2.HOGDescriptor(); hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
+    r, _ = hog.detectMultiScale(g, winStride=(8, 8))
+    if len(r):
+        sc += 2
+    b = np.concatenate([g[:8].ravel(), g[-8:].ravel(), g[:, :8].ravel(), g[:, -8:].ravel()])
+    if (b > 235).mean() > 0.85:
+        sc -= 3
+    if im.height > im.width * 1.05:
+        sc += 1
+    return sc
+
+
+def model_image(p):
+    best, bs = None, 2
+    for u in desc_images(p["product_no"])[:12]:
+        try:
+            im = load(u)
+        except Exception:
+            continue
+        if im.width < 500 or im.width / im.height > 1.25 or im.height / im.width > 1.9:
+            continue
+        s = model_score(im)
+        if s > bs:
+            best, bs = im, s
+        if bs >= 7:
+            break
+    return best
+
+
 def make_brand(brand, ps, k=8):
     """브랜드 영상(2026-11-12 시온님): 그 브랜드 상품 여러 개를 한 장씩 → 1초마다 넘김. 영상 위에 영상 속 상품 여러 개 + 브랜드 바로가기."""
     import numpy as np
     mine = [p for p in ps if p["product_name"].split(" ")[0] == brand]
     mine.sort(key=lambda p: (p.get("created_date") or "", p["product_no"]), reverse=True)
     items, covers = [], []
+    model = os.environ.get("MODEL", "") == "y"
     for p in mine:
-        im = one_image(p)
+        im = model_image(p) if model else one_image(p)
         if not im:
             continue
         covers.append(cover(im))
@@ -256,12 +296,12 @@ def make_brand(brand, ps, k=8):
     if len(items) < 3:
         print("브랜드 사진 부족", brand, len(items))
         return None
-    key = "b" + str(BRAND_CAT.get(brand, int(hashlib.md5(brand.encode()).hexdigest()[:8], 16) % 100000))  # 실행마다 같은 번호(2026-11-12)
+    key = ("m" if model else "b") + str(BRAND_CAT.get(brand, int(hashlib.md5(brand.encode()).hexdigest()[:8], 16) % 100000))  # 실행마다 같은 번호(2026-11-12)
     covers[0].save(f"{OUT}/{key}.jpg", quality=86)
     arrs = [np.asarray(c, dtype=np.uint8) for c in covers]
     render(frames_cut(arrs), f"{OUT}/{key}.mp4")
     cat = BRAND_CAT.get(brand)
-    return {"no": key, "type": "brand", "brand": brand, "name": f"{brand} 신상 {len(items)}종", "price": min(i["price"] for i in items),
+    return {"no": key, "type": "brand", "brand": brand, "name": f"{brand} {'모델 착용' if model else '신상'} {len(items)}종", "price": min(i["price"] for i in items),
             "img": items[0]["img"], "items": items, "seg": HOLD,
             "video": f"https://www.dagguu.com/{OUT}/{key}.mp4",             "poster": f"https://www.dagguu.com/{OUT}/{key}.jpg",
             "url": f"{SHOP}/product/list.html?cate_no={cat}" if cat else f"{SHOP}/product/search.html?keyword={brand}"}
