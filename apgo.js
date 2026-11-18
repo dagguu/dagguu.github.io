@@ -43,9 +43,7 @@
     var cp=d.view?'<a class="b wide apgo'+(d.img?' apph':'')+'" data-m="cp" href="'+esc(d.view)+'" target="_blank" rel="sponsored nofollow noopener">'+(d.img?'<span class="apst"><i></i><i></i><img src="'+esc(d.img)+'" alt="" referrerpolicy="no-referrer"></span>':'')+'<span class="aptx"><b>'+t+' ↗</b><small>'+nm+' 바로가기 · '+sub+'</small></span></a>':'';
     var w=document.createElement("div"); w.className="modal applym"; w.setAttribute("role","dialog"); w.setAttribute("aria-modal","true");
     w.innerHTML='<div class="sheet"><button class="mx" data-m="x" aria-label="닫기">✕</button><div class="mlogo">'+LOGO+'</div>'+
-      '<h2>['+esc(src)+'] 홈페이지로<br>이동해요👀</h2><p>한번만 로그인 해두면<br>편하게 신청 가능해져요.</p>'+
-      (d.pb==="1"?'<div class="paynote"><b>💳 선정 후 구매하는 페이백 상품이에요</b><span>['+esc(src)+']에서 당첨 후 안내에 따라 진행하세요. 선정 전에 먼저 구매하면 페이백을 받지 못할 수 있어요.</span></div>':'')+
-      '<p class="apnote">✅ 신청하신 체험단은<br><a href="/#/my">다꾸체험단 마이페이지</a>에서 확인하실 수 있어요.</p>'+
+      '<h2>['+esc(src)+'] 홈페이지로<br>이동해요👀</h2>'+
       cp+'<a class="b pri wide" data-m="go" href="'+esc(url)+'">'+esc(src)+'에서 신청하기 ↗</a>'+
       '<button class="b sec wide" data-m="x" style="margin-top:8px">닫기</button></div>';
     function close(){ w.remove(); }
