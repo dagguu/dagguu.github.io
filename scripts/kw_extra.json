@@ -1,40 +1,52 @@
 {
- "updated": "2026-11-17 16:16",
+ "updated": "2026-11-18 16:16",
  "hints": [
-  "유아책상",
-  "유아책상의자",
-  "아기책상",
   "자석블럭",
-  "역류방지쿠션"
+  "역류방지쿠션",
+  "침구청소기",
+  "아기욕조",
+  "키즈장갑"
  ],
  "rows": [
   {
    "kw": "어드벤트캘린더",
-   "vol": 63500,
+   "vol": 67400,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "아기수면조끼",
-   "vol": 44130,
+   "vol": 44420,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "옆잠베개",
-   "vol": 26980,
+   "vol": 26920,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "출산선물",
-   "vol": 26260,
+   "vol": 26730,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "독서실책상",
-   "vol": 20850,
+   "kw": "아기양말",
+   "vol": 22370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "침구청소기",
+   "vol": 21540,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "욕조",
+   "vol": 20390,
    "comp": "높음",
    "hint": false
   },
@@ -46,278 +58,218 @@
   },
   {
    "kw": "아기블랭킷",
-   "vol": 19150,
+   "vol": 19240,
    "comp": "중간",
    "hint": false
   },
   {
+   "kw": "아기욕조",
+   "vol": 18180,
+   "comp": "중간",
+   "hint": true
+  },
+  {
    "kw": "아기상어",
-   "vol": 17220,
+   "vol": 17180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "벽선반",
-   "vol": 16400,
-   "comp": "높음",
+   "kw": "접이식욕조",
+   "vol": 16960,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유선청소기",
+   "vol": 16740,
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "머미쿨쿨",
-   "vol": 16230,
+   "vol": 16400,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "신생아",
-   "vol": 13800,
+   "vol": 13810,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "아기이불",
-   "vol": 13320,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기의자",
-   "vol": 13220,
+   "vol": 13400,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "역방쿠",
-   "vol": 12700,
+   "vol": 12740,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "신생아선물",
-   "vol": 12530,
+   "vol": 12710,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "역류방지쿠션",
-   "vol": 12150,
+   "vol": 12290,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "좌식테이블",
-   "vol": 12140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "초등학생책상",
-   "vol": 11710,
+   "kw": "유아내복",
+   "vol": 12230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고등학생책상",
-   "vol": 11330,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "높이조절책상",
-   "vol": 10920,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이의자",
-   "vol": 10880,
+   "kw": "습식청소기",
+   "vol": 12190,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "자석블럭",
-   "vol": 10720,
+   "vol": 10820,
    "comp": "중간",
    "hint": true
   },
   {
    "kw": "맥포머스",
-   "vol": 10010,
+   "vol": 10090,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "모서리보호대",
-   "vol": 9730,
+   "kw": "반신욕기",
+   "vol": 9430,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이책상",
-   "vol": 9470,
+   "kw": "반신욕",
+   "vol": 9180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "교구장",
-   "vol": 9020,
+   "kw": "이동식욕조",
+   "vol": 8790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아양말",
+   "vol": 8470,
    "comp": "중간",
    "hint": false
-  },
-  {
-   "kw": "학생책상",
-   "vol": 8520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서재책상",
-   "vol": 8250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아책상",
-   "vol": 8160,
-   "comp": "높음",
-   "hint": true
   },
   {
    "kw": "아기백일선물",
-   "vol": 8160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기미끄럼틀",
-   "vol": 8110,
+   "vol": 8220,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "마블런",
-   "vol": 8000,
+   "vol": 7780,
    "comp": "중간",
    "hint": false
-  },
-  {
-   "kw": "아기책상",
-   "vol": 7710,
-   "comp": "높음",
-   "hint": true
   },
   {
    "kw": "어린이집생일선물",
-   "vol": 7600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학생의자",
-   "vol": 7590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌아기장난감",
-   "vol": 7550,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "식탁의자커버",
-   "vol": 7040,
+   "vol": 7610,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "임산부바디필로우",
-   "vol": 7010,
+   "vol": 6980,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "책상세트",
-   "vol": 6750,
+   "kw": "반신욕조",
+   "vol": 6360,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기소파",
-   "vol": 6620,
-   "comp": "중간",
    "hint": false
   },
   {
    "kw": "아기침대패드",
-   "vol": 6360,
+   "vol": 6320,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "어린이용책상",
-   "vol": 5790,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "피보나치수열",
-   "vol": 5530,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "초등책상",
-   "vol": 5360,
+   "kw": "전문가용스팀청소기",
+   "vol": 6120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "책상추천",
-   "vol": 5270,
+   "kw": "테리빕",
+   "vol": 5740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피보나치수열",
+   "vol": 5490,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "책상테이블",
-   "vol": 5040,
+   "kw": "간이욕조",
+   "vol": 5430,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기식탁의자",
-   "vol": 4790,
+   "kw": "아동양말",
+   "vol": 5420,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기독서대",
-   "vol": 4730,
+   "kw": "신생아욕조",
+   "vol": 5080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비쎌습식청소기",
+   "vol": 4990,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "백일선물",
-   "vol": 4680,
+   "vol": 4760,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "학생용책상",
-   "vol": 4650,
-   "comp": "중간",
-   "hint": false
-  },
-  {
    "kw": "맥포머스자석블럭",
-   "vol": 4590,
+   "vol": 4610,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "좌식책상",
-   "vol": 4560,
+   "kw": "아이클레이",
+   "vol": 4530,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "집먼지진드기",
+   "vol": 4400,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -328,56 +280,104 @@
   },
   {
    "kw": "역할놀이",
-   "vol": 4310,
+   "vol": 4340,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "키즈침대",
-   "vol": 4250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장난감가게",
-   "vol": 4200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "나노블럭",
-   "vol": 4140,
+   "vol": 4240,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "아기담요",
-   "vol": 4090,
+   "vol": 4130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "플레이테이블",
-   "vol": 4000,
+   "kw": "매트리스청소",
+   "vol": 4090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장난감가게",
+   "vol": 4090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무선침구청소기",
+   "vol": 4030,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아베개",
+   "vol": 4030,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "습식청소기대여",
+   "vol": 3980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소기가격",
+   "vol": 3980,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카페트세탁",
+   "vol": 3970,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "친구출산선물",
-   "vol": 3860,
+   "vol": 3920,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "낱말카드",
-   "vol": 3830,
+   "kw": "패브릭소파청소",
+   "vol": 3880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주니어양말",
+   "vol": 3740,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "ㄱ자책상",
-   "vol": 3650,
+   "kw": "클렌하임",
+   "vol": 3690,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "원룸물걸레청소기",
+   "vol": 3660,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기바디필로우",
+   "vol": 3600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아이불",
+   "vol": 3580,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -387,153 +387,153 @@
    "hint": false
   },
   {
-   "kw": "신생아이불",
+   "kw": "발도르프",
+   "vol": 3580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기수면잠옷",
+   "vol": 3570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아잠옷",
    "vol": 3570,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기수면잠옷",
-   "vol": 3540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중학생책상",
-   "vol": 3530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기바디필로우",
-   "vol": 3520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "아기선물",
-   "vol": 3510,
+   "vol": 3550,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "산모선물",
-   "vol": 3420,
+   "vol": 3510,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "거실책상",
-   "vol": 3370,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어린이책장",
-   "vol": 3350,
+   "kw": "가정용청소기",
+   "vol": 3450,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아뜰리에슈매장",
-   "vol": 3340,
-   "comp": "낮음",
    "hint": false
   },
   {
    "kw": "신생아블랭킷",
-   "vol": 3310,
+   "vol": 3350,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "침대방수패드",
-   "vol": 3290,
-   "comp": "높음",
+   "kw": "아뜰리에슈매장",
+   "vol": 3300,
+   "comp": "낮음",
    "hint": false
   },
   {
    "kw": "체스게임",
-   "vol": 3290,
+   "vol": 3300,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "죽부인",
-   "vol": 3270,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "1인독서실책상",
-   "vol": 3240,
+   "vol": 3230,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "구의겉넓이",
-   "vol": 3170,
+   "vol": 3220,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "침대방수패드",
+   "vol": 3220,
+   "comp": "높음",
    "hint": false
   },
   {
    "kw": "100일아기선물",
-   "vol": 3110,
+   "vol": 3140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "화이트책상",
-   "vol": 3090,
+   "kw": "키즈양말",
+   "vol": 3080,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아양말",
+   "vol": 3060,
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "모유수유쿠션",
-   "vol": 3000,
+   "vol": 3010,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "장난감매장",
-   "vol": 2990,
-   "comp": "높음",
    "hint": false
   },
   {
    "kw": "신생아아기옷",
-   "vol": 2850,
+   "vol": 2950,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "중역책상",
-   "vol": 2780,
-   "comp": "중간",
+   "kw": "반신욕욕조",
+   "vol": 2910,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아책상의자세트",
-   "vol": 2770,
+   "kw": "장난감매장",
+   "vol": 2860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "컬비청소기",
+   "vol": 2750,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "아기겨울이불",
-   "vol": 2760,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "1인용책상",
    "vol": 2750,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "조카돌선물",
-   "vol": 2690,
+   "vol": 2720,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니욕조",
+   "vol": 2710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기세면대",
+   "vol": 2710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "양막주머니",
+   "vol": 2660,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -543,175 +543,277 @@
    "hint": false
   },
   {
-   "kw": "양막주머니",
-   "vol": 2640,
-   "comp": "중간",
+   "kw": "어린이양말",
+   "vol": 2650,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "높낮이조절책상",
+   "kw": "어린이지갑",
+   "vol": 2630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산선물추천",
    "vol": 2620,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "레고테이블",
-   "vol": 2600,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "출산선물추천",
+   "kw": "낮잠이불세트",
    "vol": 2590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "공부책상",
-   "vol": 2510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "유아이불",
-   "vol": 2510,
+   "vol": 2560,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "낮잠이불세트",
-   "vol": 2510,
+   "kw": "홈앤아트스팀청소기",
+   "vol": 2550,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "슈퍼싱글메트리스",
+   "vol": 2540,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "정다면체",
+   "vol": 2530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "침대청소기",
+   "vol": 2470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2살선물",
+   "vol": 2470,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "유아퍼즐",
-   "vol": 2490,
+   "vol": 2460,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "초등학생의자",
-   "vol": 2440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "칠교",
-   "vol": 2400,
+   "vol": 2430,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "신생아출산선물",
+   "vol": 2390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페트청소",
+   "vol": 2380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카처청소기",
    "vol": 2360,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "뒤집기방지쿠션",
-   "vol": 2350,
+   "vol": 2310,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "교보재",
-   "vol": 2240,
+   "vol": 2280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "욕조교체",
+   "vol": 2270,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "아기역류방지쿠션",
-   "vol": 2190,
+   "vol": 2210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "책상책꽂이",
-   "vol": 2190,
+   "kw": "패밀리침대프레임",
+   "vol": 2140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이책상",
-   "vol": 2170,
+   "kw": "집먼지진드기퇴치",
+   "vol": 2090,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "자이로스코프",
-   "vol": 2030,
+   "vol": 2090,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "두돌아기선물",
-   "vol": 1970,
+   "vol": 2030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "러그세탁",
+   "vol": 2000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "킹사이즈매트리스",
+   "vol": 2000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산후선물",
+   "vol": 1920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "단단한매트리스",
+   "vol": 1920,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "마인크래프트자석블럭",
-   "vol": 1890,
+   "vol": 1900,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기낱말카드",
-   "vol": 1890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "출산후선물",
-   "vol": 1890,
-   "comp": "높음",
    "hint": false
   },
   {
    "kw": "블럭장난감",
-   "vol": 1830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1인책상",
-   "vol": 1830,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "키즈책상",
-   "vol": 1820,
+   "vol": 1860,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "수학사랑몰",
-   "vol": 1790,
+   "vol": 1850,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유아독서대",
-   "vol": 1740,
+   "kw": "키즈장갑",
+   "vol": 1830,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "버블클렌저",
+   "vol": 1820,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신생아두상베개",
-   "vol": 1730,
+   "kw": "겨울수면잠옷",
+   "vol": 1810,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기겉싸개",
-   "vol": 1700,
+   "kw": "건습식청소기",
+   "vol": 1790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인욕조",
+   "vol": 1780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물청소기",
+   "vol": 1780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "족욕통",
+   "vol": 1770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3개월아기장난감",
+   "vol": 1740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "접이식반신욕조",
+   "vol": 1720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아두상베개",
+   "vol": 1720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오염",
+   "vol": 1710,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기책상의자",
+   "kw": "아기겉싸개",
+   "vol": 1710,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유선청소기추천",
+   "vol": 1670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패브릭쇼파청소",
+   "vol": 1660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인덕션청소",
+   "vol": 1650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쇼파청소",
    "vol": 1640,
    "comp": "높음",
    "hint": false
@@ -723,63 +825,99 @@
    "hint": false
   },
   {
+   "kw": "애기선물",
+   "vol": 1630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소프트블럭",
+   "vol": 1610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "유모차담요",
    "vol": 1610,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소프트블럭",
-   "vol": 1600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "플래시카드",
-   "vol": 1600,
+   "kw": "예쁜욕조",
+   "vol": 1590,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "아기쿠션",
-   "vol": 1550,
+   "vol": 1570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이책상의자",
-   "vol": 1530,
-   "comp": "중간",
+   "kw": "아이방꾸미기",
+   "vol": 1570,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자석퍼즐",
-   "vol": 1510,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "속싸개싸는법",
-   "vol": 1490,
+   "kw": "건식반신욕기",
+   "vol": 1560,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "자석블록",
+   "vol": 1490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침구청소기추천",
+   "vol": 1490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쇼파청소기",
+   "vol": 1490,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "속싸개싸는법",
+   "vol": 1480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비셀습식청소기",
+   "vol": 1480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자석퍼즐",
+   "vol": 1480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "4살여아선물",
    "vol": 1470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "높이조절의자",
-   "vol": 1440,
+   "kw": "키즈목도리",
+   "vol": 1450,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스와들업사용시기",
-   "vol": 1410,
-   "comp": "중간",
+   "kw": "고양이털제거기",
+   "vol": 1440,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -789,20 +927,44 @@
    "hint": false
   },
   {
+   "kw": "카페트청소기",
+   "vol": 1400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "키네틱아트",
-   "vol": 1390,
+   "vol": 1400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스터디카페책상",
+   "kw": "스와들업사용시기",
+   "vol": 1400,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소파청소",
+   "vol": 1370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "정이십면체",
    "vol": 1360,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "두돌아기책상",
-   "vol": 1340,
+   "kw": "영어스펠링",
+   "vol": 1350,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "아기출산선물",
+   "vol": 1330,
    "comp": "높음",
    "hint": false
   },
@@ -813,68 +975,80 @@
    "hint": false
   },
   {
-   "kw": "정이십면체",
-   "vol": 1310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "18개월아기장난감",
+   "kw": "하바",
    "vol": 1300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "H형책상",
-   "vol": 1290,
+   "kw": "남아돌선물",
+   "vol": 1300,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원목책꽂이",
+   "vol": 1300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매트리스청소기",
+   "vol": 1280,
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "아기옆잠베개",
-   "vol": 1290,
+   "vol": 1280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "하바",
+   "kw": "여아돌선물",
    "vol": 1280,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "쌓기나무",
-   "vol": 1260,
+   "vol": 1270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여아돌선물",
-   "vol": 1260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남아돌선물",
+   "kw": "어린이목도리",
    "vol": 1260,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "출산축하선물",
-   "vol": 1240,
+   "vol": 1260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등책상추천",
+   "kw": "발도르프교구",
+   "vol": 1260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "패브릭청소기",
    "vol": 1230,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "각도조절책상",
-   "vol": 1200,
+   "kw": "욕조가격",
+   "vol": 1210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비쎌스팟클린",
+   "vol": 1210,
    "comp": "높음",
    "hint": false
   },
@@ -886,19 +1060,25 @@
   },
   {
    "kw": "2살아기선물",
-   "vol": 1160,
+   "vol": 1190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수납가구",
-   "vol": 1160,
+   "kw": "수학교구",
+   "vol": 1190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등학교책상",
-   "vol": 1150,
+   "kw": "3살여아선물",
+   "vol": 1190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쇼파청소업체",
+   "vol": 1160,
    "comp": "높음",
    "hint": false
   },
@@ -909,74 +1089,74 @@
    "hint": false
   },
   {
-   "kw": "책상의자세트",
-   "vol": 1150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중고등학생책상",
-   "vol": 1150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니책꽂이",
-   "vol": 1140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "아기패드",
    "vol": 1130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "데스커책상세트",
-   "vol": 1090,
-   "comp": "중간",
+   "kw": "원목교구",
+   "vol": 1130,
+   "comp": "높음",
    "hint": false
   },
   {
    "kw": "조카100일선물",
-   "vol": 1090,
+   "vol": 1120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이옷장",
+   "kw": "스텝2주방놀이",
+   "vol": 1120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "렌지",
+   "vol": 1120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6살여아선물",
    "vol": 1080,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사보타지보드게임",
-   "vol": 1080,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상높이",
+   "kw": "아기목욕",
    "vol": 1070,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "중학생책상추천",
+   "kw": "사보타지보드게임",
+   "vol": 1070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등양말",
    "vol": 1060,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기테이블",
+   "kw": "발도르프인형",
    "vol": 1050,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "휴대용욕조",
+   "vol": 1040,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아이불세트",
-   "vol": 1030,
+   "kw": "가정용무선청소기",
+   "vol": 1040,
    "comp": "높음",
    "hint": false
   },
@@ -987,175 +1167,175 @@
    "hint": false
   },
   {
-   "kw": "독서실1인실",
-   "vol": 1030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌아기책",
-   "vol": 1030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상꾸미기",
-   "vol": 1030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등입학선물",
-   "vol": 1010,
+   "kw": "매트리스청소업체",
+   "vol": 1020,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "아기자석블럭",
+   "vol": 1020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아이불세트",
+   "vol": 1010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편백나무반신욕기",
+   "vol": 1010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신일물걸레청소기",
+   "vol": 1010,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기목욕통",
    "vol": 1000,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "조노돔",
+   "vol": 1000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "접이식아기욕조",
    "vol": 990,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장난감정리",
+   "kw": "유아체육교구",
    "vol": 980,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애착이불",
+   "kw": "집먼지진드기알레르기",
    "vol": 980,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기의자",
-   "vol": 980,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "낮은책상",
-   "vol": 970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상책장세트",
-   "vol": 970,
-   "comp": "중간",
    "hint": false
   },
   {
    "kw": "조카돌잔치선물",
-   "vol": 970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아의자",
-   "vol": 970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책장책상",
-   "vol": 960,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "공부방책상",
-   "vol": 960,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "도서관책상",
-   "vol": 960,
+   "vol": 980,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "친구돌잔치선물",
+   "vol": 980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "백일아기선물",
+   "vol": 980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생양말",
+   "vol": 970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매트리스케어",
    "vol": 960,
    "comp": "높음",
    "hint": false
   },
   {
+   "kw": "애착이불",
+   "vol": 960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "메모리폼매트",
+   "vol": 960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카펫청소기",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라텍스침대",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "신생아역류방지쿠션",
-   "vol": 930,
+   "vol": 940,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유아체육교구",
+   "kw": "유선진공청소기",
+   "vol": 940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생지갑",
    "vol": 930,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "책걸상",
+   "kw": "반식욕조",
    "vol": 930,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "요패드",
-   "vol": 930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "거실공부테이블",
+   "kw": "반신욕효과",
    "vol": 920,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "책상책장",
-   "vol": 910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용의자",
-   "vol": 900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공부상",
-   "vol": 900,
+   "kw": "하페",
+   "vol": 920,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "출석부",
-   "vol": 900,
+   "vol": 910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "요패드",
+   "vol": 890,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "자석장난감",
-   "vol": 890,
+   "vol": 880,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "걸상",
-   "vol": 890,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "모로반사이불",
+   "kw": "땀",
    "vol": 880,
    "comp": "높음",
    "hint": false
@@ -1167,43 +1347,67 @@
    "hint": false
   },
   {
-   "kw": "유아책상의자",
-   "vol": 870,
-   "comp": "중간",
-   "hint": true
+   "kw": "아기내복브랜드",
+   "vol": 880,
+   "comp": "높음",
+   "hint": false
   },
   {
-   "kw": "아기이유식의자",
+   "kw": "모로반사이불",
    "vol": 870,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아테이블",
-   "vol": 840,
+   "kw": "아기욕조추천",
+   "vol": 860,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "아기블럭",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형러그세탁",
+   "vol": 850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이진드기",
+   "vol": 850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아버블클렌저",
    "vol": 840,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이케아초등학생책상",
+   "kw": "유아욕조",
+   "vol": 830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용물걸레청소기",
+   "vol": 830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "네오플램스팀청소기",
    "vol": 830,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신생아쿠션",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서펜티나",
+   "kw": "유아용욕조",
    "vol": 820,
    "comp": "높음",
    "hint": false
@@ -1215,13 +1419,49 @@
    "hint": false
   },
   {
-   "kw": "1살아기선물",
+   "kw": "머리카락청소기",
    "vol": 820,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등학생책상추천",
+   "kw": "신생아쿠션",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에싸소파클리닝",
+   "vol": 810,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "서펜티나",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1살아기선물",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카처SC4",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전문가용매트리스청소기",
+   "vol": 805,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아선물추천",
    "vol": 800,
    "comp": "높음",
    "hint": false
@@ -1233,8 +1473,38 @@
    "hint": false
   },
   {
-   "kw": "돌아기전집",
+   "kw": "소파청소기",
+   "vol": 790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기욕조",
    "vol": 780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아짱구베개",
+   "vol": 780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이털",
+   "vol": 770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침대벌레",
+   "vol": 760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이동욕조",
+   "vol": 760,
    "comp": "높음",
    "hint": false
   },
@@ -1245,81 +1515,99 @@
    "hint": false
   },
   {
-   "kw": "초등의자",
-   "vol": 750,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편수책상",
-   "vol": 750,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "지오보드",
-   "vol": 740,
+   "vol": 750,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "독서실칸막이",
-   "vol": 740,
+   "kw": "무선습식청소기",
+   "vol": 750,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "한샘교구장",
+   "kw": "대구매트리스청소",
    "vol": 730,
    "comp": "높음",
    "hint": false
   },
   {
+   "kw": "무선청소기가성비",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "진드기제거",
+   "vol": 720,
+   "comp": "중간",
+   "hint": false
+  },
+  {
    "kw": "프랙탈구조",
-   "vol": 710,
+   "vol": 720,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "중학생방인테리어",
-   "vol": 710,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1600책상",
-   "vol": 710,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "신생아침대패드",
+   "vol": 720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빈대퇴치",
    "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패브릭소파청소기",
+   "vol": 710,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "바닥청소기",
+   "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5세여아선물",
+   "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈머플러",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침대청소",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패브릭습식청소기",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기원목장난감",
+   "vol": 700,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "마이리틀타이거블럭",
-   "vol": 700,
+   "vol": 690,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "수납책상",
-   "vol": 700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사이드책상",
-   "vol": 700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "800책상",
-   "vol": 700,
-   "comp": "높음",
    "hint": false
   },
   {
@@ -1329,115 +1617,145 @@
    "hint": false
   },
   {
-   "kw": "아덴아나이스",
-   "vol": 680,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "2인책상",
+   "kw": "이불청소기",
    "vol": 680,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이케아아이책상",
-   "vol": 670,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "거실벽선반",
-   "vol": 670,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "18개월아기언어",
-   "vol": 660,
+   "kw": "거품입욕제",
+   "vol": 680,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "쌍둥이선물",
+   "vol": 680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아덴아나이스",
+   "vol": 670,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가죽쇼파청소",
    "vol": 660,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "앉은뱅이책상",
+   "kw": "흡입력좋은청소기",
+   "vol": 660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "24개월장난감",
+   "vol": 660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "목욕통",
    "vol": 650,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "8개월아기옷",
+   "kw": "부산매트리스청소",
    "vol": 650,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "거실책상인테리어",
+   "kw": "업소용스팀청소기",
    "vol": 650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학생책상의자",
-   "vol": 640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고등학생책상추천",
-   "vol": 640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "칸막이책상",
-   "vol": 640,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "숫자퍼즐",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지셀프미용",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "습식청소기세제",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용욕조",
    "vol": 630,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침대매트리스청소",
+   "vol": 630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "8개월아기옷",
+   "vol": 630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이욕조",
+   "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패브릭소파클리너",
+   "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스칸디맘스와들업",
+   "vol": 620,
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "아기애착이불",
-   "vol": 630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원책상",
    "vol": 610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "땅콩책상",
-   "vol": 610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생책상의자",
-   "vol": 600,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "자석놀이",
-   "vol": 600,
+   "vol": 610,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "스칸디맘스와들업",
+   "kw": "기사의여행",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소업체창업",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "목욕장난감",
    "vol": 600,
    "comp": "중간",
    "hint": false
@@ -1449,99 +1767,93 @@
    "hint": false
   },
   {
-   "kw": "책상침대일체형",
+   "kw": "신생아조끼",
    "vol": 600,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "8개월아기선물",
-   "vol": 580,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이책상세트",
-   "vol": 570,
+   "kw": "여자아기돌선물",
+   "vol": 590,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "4D프레임",
-   "vol": 570,
+   "vol": 580,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "기사의여행",
-   "vol": 570,
-   "comp": "높음",
    "hint": false
   },
   {
    "kw": "아기요",
-   "vol": 570,
+   "vol": 580,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "여자아기돌선물",
+   "kw": "5개월아기선물",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이불진드기",
    "vol": 570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대학생책상",
+   "kw": "8개월아기선물",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패브릭쇼파세탁",
    "vol": 560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "E스마트독서실책상",
-   "vol": 560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이가구",
-   "vol": 560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아밸런스보드",
-   "vol": 550,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아두상교정",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울겉싸개",
-   "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "원목미끄럼틀",
-   "vol": 550,
+   "vol": 560,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "200일아기선물",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카처SC3",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "펫용품",
+   "vol": 550,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "5세남아선물",
    "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "5세남아선물",
-   "vol": 540,
+   "kw": "강아지털청소기",
+   "vol": 550,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소기헤드",
+   "vol": 550,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -1551,13 +1863,61 @@
    "hint": false
   },
   {
-   "kw": "학생책상세트",
+   "kw": "신생아두상교정",
    "vol": 540,
    "comp": "높음",
    "hint": false
   },
   {
+   "kw": "겨울겉싸개",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아수면잠옷",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이동식반신욕조",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아쿠아텍스쇼파청소",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패브릭소파세탁",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "출산선물세트",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스팀진공청소기",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌지난아기선물",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나노블록",
    "vol": 520,
    "comp": "높음",
    "hint": false
@@ -1575,37 +1935,19 @@
    "hint": false
   },
   {
-   "kw": "아이방가구",
+   "kw": "장난감기차",
    "vol": 520,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이집책상",
+   "kw": "쇼파스팀청소기",
    "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상모서리보호대",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이용소파",
-   "vol": 505,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아동책상",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈의자",
+   "kw": "메트리스청소",
    "vol": 500,
    "comp": "높음",
    "hint": false
@@ -1617,27 +1959,39 @@
    "hint": false
   },
   {
-   "kw": "접이식좌식책상",
+   "kw": "유아블럭",
    "vol": 500,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "나노블록",
+   "kw": "인덕션전기세",
+   "vol": 500,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "종이벽돌",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이털청소기",
    "vol": 490,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아블럭",
+   "kw": "유아입욕제",
    "vol": 490,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "책장책상세트",
+   "kw": "쿨리베어",
    "vol": 490,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
@@ -1647,8 +2001,8 @@
    "hint": false
   },
   {
-   "kw": "인테리어벽선반",
-   "vol": 490,
+   "kw": "패브릭쇼파청소기",
+   "vol": 480,
    "comp": "높음",
    "hint": false
   },
@@ -1659,27 +2013,33 @@
    "hint": false
   },
   {
-   "kw": "쿨리베어",
-   "vol": 480,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "선반책상",
-   "vol": 480,
+   "kw": "침구류청소기",
+   "vol": 470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "종이벽돌",
-   "vol": 480,
+   "kw": "스탠딩욕조",
+   "vol": 470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "철재책상",
-   "vol": 480,
+   "kw": "플라스틱욕조",
+   "vol": 470,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이소변실수",
+   "vol": 470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "목욕놀이",
+   "vol": 470,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -1689,13 +2049,7 @@
    "hint": false
   },
   {
-   "kw": "플래쉬카드",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용독서실책상",
+   "kw": "1인용욕조",
    "vol": 460,
    "comp": "높음",
    "hint": false
@@ -1707,8 +2061,26 @@
    "hint": false
   },
   {
-   "kw": "초등책상의자",
+   "kw": "4세여아선물",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매트리스오줌청소",
    "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "100일아기외출복",
+   "vol": 450,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "청소창업",
+   "vol": 440,
    "comp": "높음",
    "hint": false
   },
@@ -1725,31 +2097,37 @@
    "hint": false
   },
   {
-   "kw": "거실공부책상",
+   "kw": "비쎌스팀",
    "vol": 440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "흰색책상",
+   "kw": "원룸청소기추천",
    "vol": 440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "거실공부방",
+   "kw": "유아양말세트",
    "vol": 430,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아계단",
+   "kw": "화장실스팀청소기",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거품목욕",
    "vol": 430,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "이케아학생책상",
+   "kw": "쇼파습식청소기",
    "vol": 430,
    "comp": "높음",
    "hint": false
@@ -1761,7 +2139,7 @@
    "hint": false
   },
   {
-   "kw": "벽선반책장",
+   "kw": "원목퍼즐",
    "vol": 430,
    "comp": "높음",
    "hint": false
@@ -1773,55 +2151,25 @@
    "hint": false
   },
   {
-   "kw": "초등학생입학선물",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "유아이불세트",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "조립장난감",
+   "kw": "광주매트리스청소",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이케아초등책상",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이책상의자세트",
+   "kw": "러그카페트세탁",
    "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이높이조절책상",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5세책상",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수유베개",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상수납",
+   "kw": "카페트습식청소기",
    "vol": 410,
    "comp": "높음",
    "hint": false
@@ -1833,13 +2181,61 @@
    "hint": false
   },
   {
-   "kw": "영어게임",
+   "kw": "남자아기돌선물",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아바디필로우",
    "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "브릭쿨코리아",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거품목욕제",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기거품목욕",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쇼파클리닝",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소파청소업체",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수유베개",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조립장난감",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창틀청소기",
    "vol": 400,
    "comp": "높음",
    "hint": false
@@ -1857,44 +2253,14 @@
    "hint": false
   },
   {
-   "kw": "독서책상",
+   "kw": "영어게임",
    "vol": 400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈소파",
+   "kw": "입체도형전개도",
    "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자아기돌선물",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상상판제작",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아바디필로우",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자석소마큐브",
-   "vol": 390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기자석장난감",
-   "vol": 390,
    "comp": "높음",
    "hint": false
   },
@@ -1905,13 +2271,19 @@
    "hint": false
   },
   {
-   "kw": "르파파책상",
+   "kw": "페브릭청소기",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기100일선물",
    "vol": 390,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아이의자",
+   "kw": "미니진공청소기",
    "vol": 390,
    "comp": "높음",
    "hint": false
@@ -1923,8 +2295,14 @@
    "hint": false
   },
   {
-   "kw": "책상보조테이블",
-   "vol": 390,
+   "kw": "자석소마큐브",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기자석장난감",
+   "vol": 380,
    "comp": "높음",
    "hint": false
   },
@@ -1935,31 +2313,43 @@
    "hint": false
   },
   {
-   "kw": "선반시스템",
+   "kw": "소형욕조",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "독서대책상",
+   "kw": "침구스팀청소기",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자작나무테이블",
+   "kw": "매쉬스와들업",
    "vol": 380,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유치원의자",
+   "kw": "패브릭쇼파클리너",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서울대책상",
+   "kw": "침대매트리스세탁",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등여아양말",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유선물걸레청소기",
    "vol": 370,
    "comp": "높음",
    "hint": false
@@ -1971,25 +2361,7 @@
    "hint": false
   },
   {
-   "kw": "데스크탑책상",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "6세책상",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아교구장",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소근육장난감",
+   "kw": "대형카페트세탁",
    "vol": 360,
    "comp": "높음",
    "hint": false
@@ -2001,31 +2373,73 @@
    "hint": false
   },
   {
-   "kw": "이케아1인책상",
+   "kw": "자석블럭교구",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전면책상",
+   "kw": "물흡입청소기",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "중학생책상의자",
+   "kw": "영유아장난감",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애기100일선물",
+   "kw": "러그청소기",
    "vol": 350,
-   "comp": "중간",
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침구청소",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매트리스오줌",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인천매트리스청소",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가죽소파청소",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소프트블록",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소근육장난감",
+   "vol": 350,
+   "comp": "높음",
    "hint": false
   },
   {
    "kw": "자석큐브블럭",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비옷브랜드",
    "vol": 350,
    "comp": "높음",
    "hint": false
@@ -2037,49 +2451,31 @@
    "hint": false
   },
   {
-   "kw": "매쉬스와들업",
-   "vol": 350,
-   "comp": "중간",
-   "hint": false
-  },
-  {
    "kw": "남자아기선물",
    "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
+   "kw": "무선청소기배터리",
+   "vol": 350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "작은욕조",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "좌식욕조",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "큐볼루션",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "6살책상",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소프트블록",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중고등책상",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고등학교책상",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베이비옷브랜드",
    "vol": 340,
    "comp": "높음",
    "hint": false
@@ -2091,37 +2487,49 @@
    "hint": false
   },
   {
-   "kw": "성인책상",
+   "kw": "무선청소기흡입력",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이테이블",
+   "kw": "먼지청소기",
+   "vol": 340,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "화재대피요령",
+   "vol": 340,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이동식욕조추천",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "7세책상",
+   "kw": "패브릭의자청소",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미술책상",
+   "kw": "홈쇼핑청소기",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "책상의자브랜드",
+   "kw": "페브릭쇼파청소",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "주니어책상",
+   "kw": "쇼파세탁",
    "vol": 330,
    "comp": "높음",
    "hint": false
@@ -2139,15 +2547,15 @@
    "hint": false
   },
   {
-   "kw": "알파벳발음",
+   "kw": "베쓰밤",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌아기낱말카드",
+   "kw": "알파벳발음",
    "vol": 330,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
@@ -2157,13 +2565,19 @@
    "hint": false
   },
   {
-   "kw": "아컴호러",
-   "vol": 330,
+   "kw": "신생아바디필로우",
+   "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아바디필로우",
+   "kw": "수학사랑쇼핑몰",
+   "vol": 320,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가정용반신욕기",
    "vol": 320,
    "comp": "높음",
    "hint": false
@@ -2181,14 +2595,14 @@
    "hint": false
   },
   {
-   "kw": "책상1600",
+   "kw": "아컴호러",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "5살책상",
-   "vol": 310,
+   "kw": "남자아이장난감",
+   "vol": 320,
    "comp": "높음",
    "hint": false
   },
@@ -2199,7 +2613,25 @@
    "hint": false
   },
   {
-   "kw": "대형젠가",
+   "kw": "러그청소",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패브릭소파청소비용",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기버블클렌저",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페트세탁업체",
    "vol": 310,
    "comp": "높음",
    "hint": false
@@ -2211,21 +2643,45 @@
    "hint": false
   },
   {
-   "kw": "애기옷쇼핑몰",
+   "kw": "어린이생일선물",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서재책상세트",
+   "kw": "5세여아장난감",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "헥서스보드게임",
+   "kw": "습건식청소기",
    "vol": 310,
-   "comp": "중간",
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "진공무선청소기",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블록장난감",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형젠가",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매트리스소독",
+   "vol": 300,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -2235,80 +2691,80 @@
    "hint": false
   },
   {
-   "kw": "수학사랑쇼핑몰",
+   "kw": "카페트청소업체",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등남아양말",
    "vol": 300,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "어린이생일선물",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5세여아장난감",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모니터책상",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자석블럭교구",
-   "vol": 295,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블록장난감",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "영어교구",
-   "vol": 290,
+   "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "청소년책상",
-   "vol": 290,
+   "kw": "애기옷쇼핑몰",
+   "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "일자형책상",
-   "vol": 290,
-   "comp": "높음",
+   "kw": "헥서스보드게임",
+   "vol": 300,
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "여자아이장난감",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비몬테소리교구",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용청소기추천",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패브릭청소",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스터디카페독서실책상",
-   "vol": 285,
+   "kw": "비쎌스팟클린프로히트",
+   "vol": 290,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가정용습식청소기",
+   "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈가구",
-   "vol": 280,
+   "kw": "리틀몬테소리",
+   "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원목교구장",
-   "vol": 280,
+   "kw": "신생아실내우주복",
+   "vol": 290,
    "comp": "높음",
    "hint": false
   },
@@ -2325,15 +2781,15 @@
    "hint": false
   },
   {
-   "kw": "완구점",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "아기블록",
    "vol": 280,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "흡입력좋은무선청소기",
+   "vol": 280,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -2343,57 +2799,9 @@
    "hint": false
   },
   {
-   "kw": "1인용독서실책상",
+   "kw": "고양이털공기청정기",
    "vol": 280,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "좁은방책상",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벽수납",
-   "vol": 280,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "L형책상",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아식탁",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아크릴벽선반",
-   "vol": 280,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "벽부착선반",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "육각테이블",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상사이즈",
-   "vol": 280,
-   "comp": "중간",
    "hint": false
   },
   {
@@ -2403,25 +2811,25 @@
    "hint": false
   },
   {
-   "kw": "키즈테이블",
+   "kw": "힙시트아기띠추천",
+   "vol": 280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "집진드기퇴치",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자작나무책장",
+   "kw": "완구점",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아용식탁의자",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자작나무수납장",
+   "kw": "소파세탁",
    "vol": 270,
    "comp": "높음",
    "hint": false
@@ -2433,19 +2841,7 @@
    "hint": false
   },
   {
-   "kw": "H책상",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "6살장난감",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수납형책상",
    "vol": 270,
    "comp": "높음",
    "hint": false
@@ -2457,25 +2853,31 @@
    "hint": false
   },
   {
-   "kw": "넓은책상",
+   "kw": "돌애기선물",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애기베개",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "7살책상",
+   "kw": "진드기청소기",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대형블럭",
+   "kw": "청소기흡입력",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "5세생일선물",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무점포소자본창업",
    "vol": 260,
    "comp": "높음",
    "hint": false
@@ -2487,9 +2889,15 @@
    "hint": false
   },
   {
-   "kw": "아기수유쿠션",
+   "kw": "패브릭소파청소업체",
    "vol": 260,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지오픽스",
+   "vol": 260,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -2499,25 +2907,25 @@
    "hint": false
   },
   {
-   "kw": "책꽂이책상",
+   "kw": "청소기배터리",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "학생가구",
+   "kw": "갈톤보드",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "정사면체전개도",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "도서실책상",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "독서실책상추천",
+   "kw": "여자아기선물",
    "vol": 260,
    "comp": "높음",
    "hint": false
@@ -2529,31 +2937,49 @@
    "hint": false
   },
   {
-   "kw": "애기쇼파",
+   "kw": "애기베개",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아수면조끼",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형블럭",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아좌식책상",
+   "kw": "침대매트리스청소업체",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애기식탁의자",
+   "kw": "아기수유쿠션",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "5세생일선물",
+   "kw": "펫홈클리닝",
    "vol": 250,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "신생아침구",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수학퍼즐",
    "vol": 250,
    "comp": "높음",
    "hint": false
@@ -2565,37 +2991,25 @@
    "hint": false
   },
   {
-   "kw": "서랍형책상",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "선반형책상",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "18개월아기선물",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "갈톤보드",
-   "vol": 250,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "여자아기선물",
+   "kw": "진공청소기가격비교",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "1인용학원책상",
+   "kw": "청소기브랜드",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등남아생일선물",
    "vol": 250,
    "comp": "높음",
    "hint": false
@@ -2607,121 +3021,133 @@
    "hint": false
   },
   {
-   "kw": "아이방책상",
+   "kw": "신생아수트",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침대청소업체",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "거실공부방인테리어",
+   "kw": "매트리스세척",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "1단교구장",
+   "kw": "소파클리닝",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "지오픽스",
+   "kw": "손청소기",
    "vol": 240,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "수학퍼즐",
+   "kw": "유선스틱청소기",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등학생의자추천",
+   "kw": "바쎌",
    "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "24개월아기선물",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조카생일선물",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "진드기퇴치",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주방스팀청소기",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이털제거",
+   "vol": 230,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "텐셀원단",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수입주방용품",
+   "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "스와들디자인",
-   "vol": 240,
+   "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퍼니처닷컴",
-   "vol": 240,
+   "kw": "침구살균청소기",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형유선청소기",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "만2세장난감",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "태열배게",
+   "vol": 230,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "정사면체전개도",
-   "vol": 240,
+   "kw": "집먼지진드기청소기",
+   "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스터디책상",
-   "vol": 240,
+   "kw": "튜브욕조",
+   "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자습실책상",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생방꾸미기",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "18개월아기책",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등남아생일선물",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미술학원책상",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원생책상",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아원목책상",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등고학년책상",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "독서실책상칸막이",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동의자",
+   "kw": "카페트청소방법",
    "vol": 220,
    "comp": "높음",
    "hint": false
@@ -2733,13 +3159,37 @@
    "hint": false
   },
   {
+   "kw": "하바보드게임",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "초등장난감",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "텐셀원단",
+   "kw": "HABA",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쇼파세척",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "습식바닥청소기",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형청소기추천",
    "vol": 220,
    "comp": "높음",
    "hint": false
@@ -2751,49 +3201,19 @@
    "hint": false
   },
   {
-   "kw": "6개월아기내복",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "튼튼한책상",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무용컴퓨터책상",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "8살생일선물",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "저학년책상",
+   "kw": "이동식욕조가격",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여아책상",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아높이조절책상",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생책상세트",
+   "kw": "소파세척",
    "vol": 210,
    "comp": "높음",
    "hint": false
@@ -2805,15 +3225,9 @@
    "hint": false
   },
   {
-   "kw": "HABA",
+   "kw": "6개월아기내복",
    "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생모션데스크",
-   "vol": 210,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
@@ -2829,7 +3243,7 @@
    "hint": false
   },
   {
-   "kw": "프린터책상",
+   "kw": "아기싸개",
    "vol": 210,
    "comp": "높음",
    "hint": false
@@ -2841,25 +3255,13 @@
    "hint": false
   },
   {
-   "kw": "프리미엄독서실책상",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가성비책상",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "여자애기선물",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서재테이블",
+   "kw": "에코백스T30",
    "vol": 210,
    "comp": "중간",
    "hint": false
@@ -2871,49 +3273,7 @@
    "hint": false
   },
   {
-   "kw": "유아용책상",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "하바보드게임",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등생책상",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집의자",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중등책상",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "좌식노트북책상",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "코코자네",
-   "vol": 200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기싸개",
+   "kw": "어린이입욕제",
    "vol": 200,
    "comp": "높음",
    "hint": false
@@ -2925,9 +3285,15 @@
    "hint": false
   },
   {
-   "kw": "책상1600800",
+   "kw": "1살아기옷",
    "vol": 200,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4세남아장난감",
+   "vol": 200,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -2937,25 +3303,19 @@
    "hint": false
   },
   {
-   "kw": "일자책상",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기책상추천",
+   "kw": "침대매트리스청소기",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기놀이테이블",
+   "kw": "침대소독",
    "vol": 190,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등학생책상의자세트",
+   "kw": "아기거품놀이",
    "vol": 190,
    "comp": "높음",
    "hint": false
@@ -2967,61 +3327,73 @@
    "hint": false
   },
   {
-   "kw": "중학교책상",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강화유리책상",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공부용책상",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "큰책상",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목책상1200",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1살아기옷",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "4세남아장난감",
+   "kw": "코코자네",
    "vol": 190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "어린이좌식책상",
-   "vol": 180,
+   "kw": "진공스팀청소기",
+   "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "블럭테이블",
-   "vol": 180,
-   "comp": "중간",
+   "kw": "원목소꿉놀이",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4살여자아이선물",
+   "vol": 190,
+   "comp": "높음",
    "hint": false
   },
   {
    "kw": "역류방지",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침대세탁",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침구진드기",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "청소일자리",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이청소기",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이동형욕조",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오피스텔청소",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침대진드기제거",
    "vol": 180,
    "comp": "높음",
    "hint": false
@@ -3033,9 +3405,21 @@
    "hint": false
   },
   {
+   "kw": "블럭쌓기",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
    "kw": "7살장난감",
    "vol": 180,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "물청소",
+   "vol": 180,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -3045,19 +3429,7 @@
    "hint": false
   },
   {
-   "kw": "공부테이블",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "예쁜책상",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "붙박이책상",
+   "kw": "전동청소기",
    "vol": 180,
    "comp": "높음",
    "hint": false
@@ -3069,25 +3441,37 @@
    "hint": false
   },
   {
-   "kw": "초등저학년책상",
+   "kw": "흡입청소기",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원목소품",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하바교구",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아패딩장갑",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고무나무책상",
+   "kw": "블럭테이블",
    "vol": 170,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유아원목의자",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청소년의자",
+   "kw": "침구소독",
    "vol": 170,
    "comp": "높음",
    "hint": false
@@ -3099,31 +3483,49 @@
    "hint": false
   },
   {
+   "kw": "패브릭의자세탁",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반신욕용품",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "털포집기",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "빅블록",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "블럭쌓기",
+   "kw": "반려동물청소기",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BELLEMENT",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동양말세트",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아이들책상",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중고생책상",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서랍장책상",
+   "kw": "12개월아기선물",
    "vol": 170,
    "comp": "높음",
    "hint": false
@@ -3141,43 +3543,31 @@
    "hint": false
   },
   {
-   "kw": "쌍곡포물면",
-   "vol": 170,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "벽선반인테리어",
+   "kw": "4살생일선물",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고등학생독서실책상",
+   "kw": "독일스팀청소기",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "작은방책상",
+   "kw": "새알한자",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈책상의자",
-   "vol": 160,
+   "kw": "컬러스틱",
+   "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기원목책상",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자작나무책상",
+   "kw": "어린이블럭",
    "vol": 160,
    "comp": "높음",
    "hint": false
@@ -3189,7 +3579,31 @@
    "hint": false
   },
   {
-   "kw": "어린이모션데스크",
+   "kw": "개털청소기",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이털청소",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매트리스얼룩제거",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매트리스곰팡이제거",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거품놀이",
    "vol": 160,
    "comp": "중간",
    "hint": false
@@ -3201,13 +3615,19 @@
    "hint": false
   },
   {
-   "kw": "초등학생높이조절책상",
+   "kw": "패브릭쇼파청소업체",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고등학생책상세트",
+   "kw": "소파얼룩제거",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파닉스카드",
    "vol": 160,
    "comp": "높음",
    "hint": false
@@ -3219,55 +3639,49 @@
    "hint": false
   },
   {
-   "kw": "만삭선물",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "미피블럭",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "BELLEMENT",
+   "kw": "손녀백일선물",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "12개월아기선물",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "독서실책상커튼",
+   "kw": "쌍곡포물면",
    "vol": 160,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "초등학생독서실책상",
+   "kw": "무소음청소기",
    "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어린이책상추천",
-   "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이책상의자",
-   "vol": 150,
+   "kw": "무점포1인창업",
+   "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이블럭",
+   "kw": "충전식청소기",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6세수면조끼",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "침구살균기",
    "vol": 150,
    "comp": "높음",
    "hint": false
@@ -3279,15 +3693,39 @@
    "hint": false
   },
   {
+   "kw": "카페트얼룩제거",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "타일청소기",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
    "kw": "코코테일즈",
    "vol": 150,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "키즈모션데스크",
+   "kw": "습식청소장비",
    "vol": 150,
-   "comp": "중간",
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소업",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "울산매트리스청소",
+   "vol": 150,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -3297,49 +3735,19 @@
    "hint": false
   },
   {
-   "kw": "파닉스카드",
+   "kw": "스와들속싸개",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등의자추천",
+   "kw": "만삭선물",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수험생책상",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "손녀백일선물",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "땅콩테이블",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중고독서실책상",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "독서실책상조명",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오가닉아기이불",
+   "kw": "가정용진공청소기",
    "vol": 150,
    "comp": "높음",
    "hint": false
@@ -3351,14 +3759,14 @@
    "hint": false
   },
   {
-   "kw": "목재책상",
+   "kw": "여자아기장난감",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "중학생독서실책상",
-   "vol": 145,
+   "kw": "신생아바디수트세트",
+   "vol": 150,
    "comp": "높음",
    "hint": false
   },
@@ -3369,15 +3777,21 @@
    "hint": false
   },
   {
-   "kw": "유아책상세트",
+   "kw": "이불진드기제거",
    "vol": 140,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아체어",
+   "kw": "매트리스청소창업",
    "vol": 140,
-   "comp": "중간",
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "간이목욕탕",
+   "vol": 140,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -3387,55 +3801,25 @@
    "hint": false
   },
   {
-   "kw": "스와들속싸개",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등책상의자세트",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중학생책상세트",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고등책상",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "두살아기선물",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "데스커멀티책상세트",
+   "kw": "원뿔곡선",
+   "vol": 140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "홈쇼핑물걸레청소기",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "독서실가림막",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상1200800",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "심플책상",
+   "kw": "오가닉아기이불",
    "vol": 140,
    "comp": "높음",
    "hint": false
@@ -3447,25 +3831,31 @@
    "hint": false
   },
   {
-   "kw": "서울대독서실책상",
-   "vol": 135,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "높이각도조절책상",
+   "kw": "층간소음매트청소",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "높이조절어린이책상",
+   "kw": "싸이클론청소기",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "습식청소기추천",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등학교1학년책상",
+   "kw": "매트리스살균",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블록종류",
    "vol": 130,
    "comp": "높음",
    "hint": false
@@ -3477,85 +3867,67 @@
    "hint": false
   },
   {
-   "kw": "책장형책상",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "과외책상",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "좌식공부책상",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "L책상",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "집중력책상",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원뿔곡선",
+   "kw": "컬비청소기렌탈",
    "vol": 130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "와이드책상",
+   "kw": "매트리스클리닝",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "공간활용책상",
+   "kw": "짐월드",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아100일선물",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등책상세트",
+   "kw": "유아생일선물",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이놀이",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "LOVETODREAM",
+   "vol": 125,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "러그세탁업체",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장난감테이블",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집신발장",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "높이낮은책상",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블록종류",
+   "kw": "천쇼파얼룩제거",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "유치원프로그램",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패브릭소파클리닝",
    "vol": 120,
    "comp": "높음",
    "hint": false
@@ -3573,31 +3945,7 @@
    "hint": false
   },
   {
-   "kw": "고학년책상",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "짐월드",
-   "vol": 120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아100일선물",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목어린이책상",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아생일선물",
+   "kw": "가벼운유선청소기",
    "vol": 120,
    "comp": "높음",
    "hint": false
@@ -3609,25 +3957,61 @@
    "hint": false
   },
   {
-   "kw": "대리석책상",
+   "kw": "출산용품선물",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애기겉싸개",
+   "kw": "수학포스터",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이니삭스",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디스크환자매트리스",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매트리스소변",
    "vol": 115,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영유아의자",
+   "kw": "쇼파청소비용",
+   "vol": 115,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사이잘룩러그세탁",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사다리꼴책상",
+   "kw": "카펫청소기대여",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패브릭소파청소방법",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유치원블럭",
    "vol": 110,
    "comp": "높음",
    "hint": false
@@ -3639,49 +4023,31 @@
    "hint": false
   },
   {
+   "kw": "학습준비물",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "유아블록",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "붙박이장책상",
+   "kw": "유치원장난감",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "일룸이타카네오독서실책상",
-   "vol": 110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "님게임",
+   "kw": "괴물청소기",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "출산용품선물",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "독서실형책상",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "좁은공간책상",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수학포스터",
+   "kw": "아동니삭스",
    "vol": 110,
    "comp": "높음",
    "hint": false
@@ -3693,26 +4059,56 @@
    "hint": false
   },
   {
-   "kw": "아이방가구세트",
+   "kw": "두돌교구",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "두돌아기교구",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이집교구만들기",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "학생방가구배치",
+   "kw": "원목자동차",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서재용책상",
+   "kw": "요시모토큐브",
    "vol": 110,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "학생컴퓨터책상",
+   "kw": "다팬다침구청소기",
    "vol": 105,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "애기겉싸개",
+   "vol": 105,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기반팔바디수트",
+   "vol": 105,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아접이식욕조",
+   "vol": 100,
    "comp": "높음",
    "hint": false
   },
@@ -3723,31 +4119,31 @@
    "hint": false
   },
   {
-   "kw": "주니어의자",
+   "kw": "침구용청소기",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "공부방테이블",
+   "kw": "스팀살균청소기",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등높이조절책상",
+   "kw": "흡입력강한청소기",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기좌식책상",
+   "kw": "습식청소",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유치원블럭",
+   "kw": "펫청소기",
    "vol": 100,
    "comp": "높음",
    "hint": false
@@ -3765,7 +4161,31 @@
    "hint": false
   },
   {
-   "kw": "대형블록",
+   "kw": "고양이털관리",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강력청소기",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집블럭",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쇼파스팀청소",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지오줌청소기",
    "vol": 100,
    "comp": "높음",
    "hint": false
@@ -3777,31 +4197,25 @@
    "hint": false
   },
   {
+   "kw": "부천매트리스청소",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창원매트리스청소",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "신생아태열베개",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유치원장난감",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이케아책상책꽂이",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학생방가구",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파주가구점",
+   "kw": "님게임",
    "vol": 100,
    "comp": "높음",
    "hint": false
@@ -3813,7 +4227,19 @@
    "hint": false
   },
   {
-   "kw": "일인용책상",
+   "kw": "아기베개추천",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일반청소기",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등교구",
    "vol": 100,
    "comp": "높음",
    "hint": false
@@ -3825,33 +4251,15 @@
    "hint": false
   },
   {
-   "kw": "두돌교구",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
    "kw": "유아과학교구",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "두돌아기교구",
+   "kw": "26개월장난감",
    "vol": 100,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아목베개",
-   "vol": 95,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "통잠이불",
-   "vol": 95,
-   "comp": "높음",
    "hint": false
   },
   {
@@ -3867,43 +4275,55 @@
    "hint": false
   },
   {
-   "kw": "유아용쇼파",
+   "kw": "오카리나가방",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사계절수면조끼",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카펫습식청소기",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "높이조절아기책상",
+   "kw": "침대진드기청소",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이책상침대세트",
+   "kw": "반신욕기추천",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "8살책상",
+   "kw": "강아지털청소",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이집블럭",
+   "kw": "천소파청소",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등여아책상",
+   "kw": "대형블록",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "헥시아몬드",
+   "kw": "컬비렌탈",
    "vol": 90,
    "comp": "중간",
    "hint": false
@@ -3915,13 +4335,7 @@
    "hint": false
   },
   {
-   "kw": "학습준비물",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상책꽂이세트",
+   "kw": "전주매트리스청소",
    "vol": 90,
    "comp": "높음",
    "hint": false
@@ -3933,9 +4347,9 @@
    "hint": false
   },
   {
-   "kw": "서재책상추천",
+   "kw": "비쎌스팟클린하이드로",
    "vol": 90,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
@@ -3951,43 +4365,31 @@
    "hint": false
   },
   {
-   "kw": "중학생방꾸미기",
+   "kw": "사무용청소기",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원목책상세트",
+   "kw": "남자애기선물",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기베개추천",
+   "kw": "사무실진공청소기",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등교구",
-   "vol": 90,
-   "comp": "높음",
+   "kw": "신생아목베개",
+   "vol": 85,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "학생공부의자",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모듈형책상",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목유아책상",
+   "kw": "통잠이불",
    "vol": 85,
    "comp": "높음",
    "hint": false
@@ -4005,25 +4407,37 @@
    "hint": false
   },
   {
-   "kw": "5세의자",
+   "kw": "3세양말",
    "vol": 85,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이집테이블",
+   "kw": "카펫트청소기",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아동책상의자",
+   "kw": "카페트세탁방법",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등입학책상",
+   "kw": "비쎌습식",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소사업",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반신욕사우나",
    "vol": 80,
    "comp": "높음",
    "hint": false
@@ -4035,7 +4449,55 @@
    "hint": false
   },
   {
-   "kw": "초등학교저학년책상",
+   "kw": "매트리스습식청소",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지로봇청소기",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쇼파얼룩제거",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가죽쇼파청소업체",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지청소기",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "교구사이트",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헥시아몬드",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "사무실청소기추천",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유무선청소기",
    "vol": 80,
    "comp": "높음",
    "hint": false
@@ -4047,7 +4509,7 @@
    "hint": false
   },
   {
-   "kw": "대학생책상추천",
+   "kw": "2세여아선물",
    "vol": 80,
    "comp": "높음",
    "hint": false
@@ -4059,33 +4521,9 @@
    "hint": false
   },
   {
-   "kw": "책상만들기",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "플렉사곤",
    "vol": 80,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈체어",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수능책상",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생가구",
-   "vol": 80,
-   "comp": "중간",
    "hint": false
   },
   {
@@ -4095,38 +4533,20 @@
    "hint": false
   },
   {
-   "kw": "심플한책상",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "시어핀스키피라미드",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자작나무의자",
+   "kw": "가족놀이",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아2인책상",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영유아책상",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "독서실책상800",
-   "vol": 75,
+   "kw": "여름블랭킷",
+   "vol": 80,
    "comp": "높음",
    "hint": false
   },
@@ -4137,69 +4557,63 @@
    "hint": false
   },
   {
-   "kw": "고딩책상",
+   "kw": "4세양말",
+   "vol": 75,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "비쎌무선청소기",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "중딩책상",
+   "kw": "19개월아기옷",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아용소파",
+   "kw": "마루스팀청소",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등학교입학책상",
+   "kw": "초강력무선청소기",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이책상의자세트",
+   "kw": "홈클리닝",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이각도조절책상",
+   "kw": "천의자세탁",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "교구사이트",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학생책상추천",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교구장바구니",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기숙사책상",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학생가구브랜드",
+   "kw": "패브릭소파얼룩",
    "vol": 70,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "강아지털제거",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자아이양말",
+   "vol": 70,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -4215,21 +4629,9 @@
    "hint": false
   },
   {
-   "kw": "2세여아선물",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "프라임넘버",
    "vol": 70,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "책장세트",
-   "vol": 70,
-   "comp": "높음",
    "hint": false
   },
   {
@@ -4239,32 +4641,20 @@
    "hint": false
   },
   {
-   "kw": "성인용책상",
+   "kw": "4세교구",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원장실책상",
+   "kw": "커리어코드",
    "vol": 70,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "인출식책상",
+   "kw": "힙시트캐리어",
    "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기높이조절책상",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마이리틀타이거블럭테이블",
-   "vol": 65,
    "comp": "높음",
    "hint": false
   },
@@ -4275,31 +4665,61 @@
    "hint": false
   },
   {
+   "kw": "개털제거",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천쇼파청소",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쇼파케어",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가죽소파냄새제거",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈양말세트",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자아이양말",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아골지양말",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "신생아옷쇼핑몰",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "주니어장농",
+   "kw": "아기수면가운",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "흰책상",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아놀이테이블",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "교구책상",
+   "kw": "마이리틀타이거블럭테이블",
    "vol": 60,
    "comp": "높음",
    "hint": false
@@ -4311,43 +4731,55 @@
    "hint": false
   },
   {
-   "kw": "원목좌식책상",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "앉은책상",
+   "kw": "카펫세척기",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등생의자",
+   "kw": "카페트청소기렌탈",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아모션데스크",
+   "kw": "타일바닥청소기",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이책상1000",
+   "kw": "고시원청소",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "1400책상세트",
+   "kw": "강력한청소기",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이원목책상",
+   "kw": "가정용반신욕",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무선청소기흡입력순위",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매트리스스팀청소",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소파스팀청소",
    "vol": 60,
    "comp": "높음",
    "hint": false
@@ -4371,25 +4803,7 @@
    "hint": false
   },
   {
-   "kw": "중고등학생책상추천",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플책상",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "하이그로시책상",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이방선반",
+   "kw": "창문틀청소기",
    "vol": 60,
    "comp": "높음",
    "hint": false
@@ -4401,7 +4815,7 @@
    "hint": false
   },
   {
-   "kw": "1인공부책상",
+   "kw": "축구공만들기",
    "vol": 60,
    "comp": "높음",
    "hint": false
@@ -4413,43 +4827,7 @@
    "hint": false
   },
   {
-   "kw": "7세의자",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "이유식식탁",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "원형롤스티커",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "독서실책상의자",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스틸책상",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학교책상의자세트",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학교책상의자",
    "vol": 60,
    "comp": "높음",
    "hint": false
@@ -4461,20 +4839,20 @@
    "hint": false
   },
   {
-   "kw": "아동책상의자세트",
-   "vol": 55,
+   "kw": "5세블럭",
+   "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아원형테이블",
-   "vol": 55,
+   "kw": "화장실스팀청소",
+   "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "777큐브",
-   "vol": 55,
+   "kw": "10만원대청소기",
+   "vol": 60,
    "comp": "높음",
    "hint": false
   },
@@ -4485,13 +4863,7 @@
    "hint": false
   },
   {
-   "kw": "원목아기책상",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈책상의자세트",
+   "kw": "거실카페트청소",
    "vol": 55,
    "comp": "높음",
    "hint": false
@@ -4515,7 +4887,7 @@
    "hint": false
   },
   {
-   "kw": "EDTOY",
+   "kw": "반신욕조기",
    "vol": 55,
    "comp": "높음",
    "hint": false
@@ -4527,19 +4899,31 @@
    "hint": false
   },
   {
-   "kw": "초등학생각도조절책상",
+   "kw": "매트리스강아지오줌",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈높이조절책상",
+   "kw": "침대매트청소",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지소변청소기",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "애기바디필로우",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마크곤잘레스양말",
    "vol": 55,
    "comp": "높음",
    "hint": false
@@ -4557,33 +4941,15 @@
    "hint": false
   },
   {
+   "kw": "학원청소기",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "축구공무드등",
    "vol": 55,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스카이캐슬독서실",
-   "vol": 55,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "스터디까페책상",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책장겸책상",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "6세의자",
-   "vol": 55,
-   "comp": "중간",
    "hint": false
   },
   {
@@ -4593,50 +4959,14 @@
    "hint": false
   },
   {
-   "kw": "애기식탁",
+   "kw": "홈쇼핑무선물걸레청소기",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "5세블럭",
+   "kw": "남자어린이선물",
    "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동용책상",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집가구",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원신발장",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "시내그린",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자작나무교구장",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영아책상",
-   "vol": 50,
    "comp": "높음",
    "hint": false
   },
@@ -4647,13 +4977,43 @@
    "hint": false
   },
   {
-   "kw": "아이책상추천",
+   "kw": "카페트청소기대여",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "예비초등학생책상",
+   "kw": "침구청소업체",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집먼지진드기청소",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "러그청소업체",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1인청소창업",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시코2000",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "청소업체청소기",
    "vol": 50,
    "comp": "높음",
    "hint": false
@@ -4665,7 +5025,37 @@
    "hint": false
   },
   {
+   "kw": "의자시트청소",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "페브릭청소",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "7세교구",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6점도미노",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "진공청소기흡입력",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "메트리스케어",
    "vol": 50,
    "comp": "높음",
    "hint": false
@@ -4677,27 +5067,9 @@
    "hint": false
   },
   {
-   "kw": "아이테이블",
+   "kw": "미세먼지진공청소기",
    "vol": 50,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "학생책상의자세트",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생책상1000",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중학생가구",
-   "vol": 50,
-   "comp": "높음",
    "hint": false
   },
   {
@@ -4719,37 +5091,7 @@
    "hint": false
   },
   {
-   "kw": "가정용책상의자",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "스트링포켓",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "축구공만들기",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목독서실책상",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상DIY",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "독서실책상세트",
    "vol": 50,
    "comp": "높음",
    "hint": false
@@ -4761,74 +5103,14 @@
    "hint": false
   },
   {
-   "kw": "1인가죽의자",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청소년책상의자",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "중장비자동차장난감",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "집중책상",
+   "kw": "물걸레청소기비교",
    "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자취책상",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "독서실칸막이책상",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학교책걸상",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "철제프레임책상",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원생의자",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이미술책상",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기원목테이블",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아놀이책상",
-   "vol": 45,
    "comp": "높음",
    "hint": false
   },
@@ -4839,9 +5121,9 @@
    "hint": false
   },
   {
-   "kw": "타이거블럭",
+   "kw": "아기튜브욕조",
    "vol": 45,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
@@ -4851,25 +5133,43 @@
    "hint": false
   },
   {
-   "kw": "소마블럭",
+   "kw": "777큐브",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미술교구장",
+   "kw": "흡입력좋은무선청소기추천",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "주니어책상세트",
+   "kw": "패브릭세탁",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "EDTOY",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등아이책상",
+   "kw": "강아지오줌청소",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지매트청소",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "강릉매트리스청소",
    "vol": 45,
    "comp": "높음",
    "hint": false
@@ -4887,19 +5187,7 @@
    "hint": false
   },
   {
-   "kw": "초등가구",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "깡총깡총아기토끼",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스와들업말랑하니",
    "vol": 45,
    "comp": "높음",
    "hint": false
@@ -4911,15 +5199,21 @@
    "hint": false
   },
   {
-   "kw": "맥포머스미라클브레인",
+   "kw": "잉크얼룩",
    "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "공시생의자",
+   "kw": "쇼파물청소기",
    "vol": 45,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥포머스미라클브레인",
+   "vol": 45,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -4929,9 +5223,9 @@
    "hint": false
   },
   {
-   "kw": "스터디스타",
+   "kw": "미니습식청소기",
    "vol": 45,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
@@ -4941,38 +5235,26 @@
    "hint": false
   },
   {
-   "kw": "가정용독서실책상추천",
+   "kw": "조용한청소기",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "5살의자",
+   "kw": "4살양말",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "원목악기세트",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기식탁의자추천",
+   "kw": "사물스티커",
    "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "간편책상",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원룸책상의자",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원가구",
-   "vol": 40,
    "comp": "높음",
    "hint": false
   },
@@ -4983,21 +5265,21 @@
    "hint": false
   },
   {
-   "kw": "초등학생책상의자추천",
+   "kw": "이불청소",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대형책꽂이",
+   "kw": "침대스팀청소",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "6점도미노",
+   "kw": "반려견청소기",
    "vol": 40,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
@@ -5007,13 +5289,13 @@
    "hint": false
   },
   {
-   "kw": "5살아이책상",
+   "kw": "컬비어벨리어2",
    "vol": 40,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "아이모션데스크",
+   "kw": "소형습식청소기",
    "vol": 40,
    "comp": "높음",
    "hint": false
@@ -5025,19 +5307,13 @@
    "hint": false
   },
   {
-   "kw": "감성책상",
+   "kw": "강아지털공기청정기",
    "vol": 40,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "자녀방가구",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미술학원테이블",
+   "kw": "핸디진공청소기",
    "vol": 40,
    "comp": "높음",
    "hint": false
@@ -5055,25 +5331,7 @@
    "hint": false
   },
   {
-   "kw": "독서실책상사이즈",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "와이드독서실책상",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "독서실용책상",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "독서실책상1200",
+   "kw": "충전용청소기",
    "vol": 40,
    "comp": "높음",
    "hint": false
@@ -5085,19 +5343,13 @@
    "hint": false
   },
   {
-   "kw": "어린이자석블럭",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중학생책상의자추천",
+   "kw": "무선청소기브랜드",
    "vol": 40,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "1인용공부책상",
+   "kw": "어린이자석블럭",
    "vol": 40,
    "comp": "높음",
    "hint": false
@@ -5109,21 +5361,33 @@
    "hint": false
   },
   {
-   "kw": "유치원책상의자",
-   "vol": 35,
+   "kw": "유아교구제작",
+   "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아용책상의자",
-   "vol": 35,
+   "kw": "금색비즈",
+   "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아원형책상",
-   "vol": 35,
+   "kw": "숲체험모자",
+   "vol": 40,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "숲체험활동",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "타이거블럭",
+   "vol": 35,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -5133,31 +5397,31 @@
    "hint": false
   },
   {
-   "kw": "보드책상",
+   "kw": "초등학생니삭스",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소마블럭",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "클레이책상",
+   "kw": "러그습식청소기",
    "vol": 35,
-   "comp": "낮음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아동쇼파",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "반달책상",
+   "kw": "빈대제거",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "조이매스소마큐브",
+   "kw": "진드기케어",
    "vol": 35,
    "comp": "높음",
    "hint": false
@@ -5169,7 +5433,67 @@
    "hint": false
   },
   {
+   "kw": "코웨이닥터",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아쿠아쇼파청소",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패브릭세척",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "6세남자아이선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동물털청소기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고양이털세탁",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패브릭쇼파세척",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패브릭쇼파얼룩",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "버블놀이",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이물놀이",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아거품목욕",
    "vol": 35,
    "comp": "높음",
    "hint": false
@@ -5181,13 +5505,19 @@
    "hint": false
   },
   {
-   "kw": "어린이책상800",
+   "kw": "소파습식청소",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이책상브랜드",
+   "kw": "쇼파강아지오줌",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형스팀청소기",
    "vol": 35,
    "comp": "높음",
    "hint": false
@@ -5199,31 +5529,7 @@
    "hint": false
   },
   {
-   "kw": "초등학생책상브랜드",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "옆눕베개",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자아이책상",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이책상세트",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학교책상세트",
    "vol": 35,
    "comp": "높음",
    "hint": false
@@ -5241,13 +5547,7 @@
    "hint": false
   },
   {
-   "kw": "여학생책상",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남아책상",
+   "kw": "어린이양말브랜드",
    "vol": 35,
    "comp": "높음",
    "hint": false
@@ -5259,13 +5559,37 @@
    "hint": false
   },
   {
-   "kw": "원목학생책상",
+   "kw": "스와들업말랑하니",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이쁜책상",
+   "kw": "신생아여자옷",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강아지미용기기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형견바리깡",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아양말세트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아동양말",
    "vol": 35,
    "comp": "높음",
    "hint": false
@@ -5277,75 +5601,45 @@
    "hint": false
   },
   {
-   "kw": "나무책상의자",
+   "kw": "오가닉신생아",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "1인책상세트",
+   "kw": "유아원목교구",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "저학년책상의자",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "육각형테이블",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "와이드테이블",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주니어서랍장",
+   "kw": "우표놀이",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "키즈책상세트",
+   "kw": "초등학교독서기록장",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페트용청소기",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "특수학급책상",
+   "kw": "교구구매",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파랑새교구장",
+   "kw": "광명매트리스청소",
    "vol": 30,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "모둠책상",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마름모책상",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공룡은보석을좋아해",
-   "vol": 30,
-   "comp": "높음",
    "hint": false
   },
   {
@@ -5367,37 +5661,7 @@
    "hint": false
   },
   {
-   "kw": "청소년가구",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미술학원의자",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "독서실1인책상",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "독서실책상가격",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "독서용책상",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "H형책상세트",
+   "kw": "휴대용습식청소기",
    "vol": 30,
    "comp": "높음",
    "hint": false
@@ -5409,9 +5673,9 @@
    "hint": false
   },
   {
-   "kw": "작업실책상",
+   "kw": "2세옷",
    "vol": 30,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
@@ -5421,26 +5685,26 @@
    "hint": false
   },
   {
-   "kw": "유치원테이블",
-   "vol": 25,
+   "kw": "유아놀이교구",
+   "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이스터디책상",
-   "vol": 25,
+   "kw": "카처고압스팀청소기",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "숲모자",
+   "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아동소파",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아동책상",
-   "vol": 25,
+   "kw": "햄스터로봇코딩",
+   "vol": 30,
    "comp": "높음",
    "hint": false
   },
@@ -5457,33 +5721,57 @@
    "hint": false
   },
   {
-   "kw": "유아원목테이블",
+   "kw": "바닥매트청소",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이집좌식책상",
+   "kw": "카페트물세탁",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아책걸상",
+   "kw": "조이매스소마큐브",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아낮은책상",
+   "kw": "침대클리닝",
    "vol": 25,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소부업",
+   "vol": 25,
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "포비든데저트",
    "vol": 25,
    "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소파물청소",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식탁의자세탁",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차매트청소기",
+   "vol": 25,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -5511,13 +5799,13 @@
    "hint": false
   },
   {
-   "kw": "높이조절학생책상",
+   "kw": "매트리스오염제거",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "임신용품",
+   "kw": "템퍼매트리스청소",
    "vol": 25,
    "comp": "높음",
    "hint": false
@@ -5529,39 +5817,33 @@
    "hint": false
   },
   {
-   "kw": "각도높이조절책상",
+   "kw": "국민수유쿠션",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "각도조절책상세트",
+   "kw": "개털로봇청소기",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "쇼파습식청소",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이높낮이조절책상",
+   "kw": "스웨이드쇼파청소",
    "vol": 25,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "어린이컴퓨터책상",
+   "kw": "소변청소기",
    "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "창의력교구",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신학기책상",
-   "vol": 25,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
@@ -5583,49 +5865,19 @@
    "hint": false
   },
   {
+   "kw": "고양이청소",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "기하판",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여고생책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여중생책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생공부책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생컴퓨터책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "아기옆으로자는베개",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파주가구단지추천",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미술용책상",
    "vol": 25,
    "comp": "높음",
    "hint": false
@@ -5661,13 +5913,7 @@
    "hint": false
   },
   {
-   "kw": "초등학생원목책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학생공부책상",
+   "kw": "초등학생양말세트",
    "vol": 25,
    "comp": "높음",
    "hint": false
@@ -5691,37 +5937,25 @@
    "hint": false
   },
   {
-   "kw": "신생아여자옷",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "신생아우주복선물",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유트러스속싸개",
+   "kw": "백앤스팀",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "아동골지양말",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "거실책장책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맞춤형책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생테이블",
+   "kw": "충전식무선청소기",
    "vol": 25,
    "comp": "높음",
    "hint": false
@@ -5733,61 +5967,13 @@
    "hint": false
   },
   {
-   "kw": "어린이체어",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아소비책상",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "160책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전면책상1000",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "크롬책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "집중형책상",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "초등학교교구",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오가닉신생아",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이방가구",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "철제책상1000",
+   "kw": "싸이클론유선청소기",
    "vol": 25,
    "comp": "높음",
    "hint": false
@@ -5805,26 +5991,38 @@
    "hint": false
   },
   {
-   "kw": "식탁의자매장",
+   "kw": "차이슨스팀청소기",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아원목교구",
+   "kw": "홈마블스팀청소기",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "수업용품",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이도서관의자",
-   "vol": 20,
+   "kw": "이것좀봐",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "5세아기장난감",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사다리꼴테이블",
-   "vol": 20,
+   "kw": "수입청소기",
+   "vol": 25,
    "comp": "높음",
    "hint": false
   },
@@ -5835,13 +6033,19 @@
    "hint": false
   },
   {
-   "kw": "교구구매",
+   "kw": "고양이털로봇청소기",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이공부책상",
+   "kw": "공룡은보석을좋아해",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지오픽스정다면체",
    "vol": 20,
    "comp": "높음",
    "hint": false
@@ -5877,12 +6081,6 @@
    "hint": false
   },
   {
-   "kw": "여자책상",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "교육키트",
    "vol": 20,
    "comp": "높음",
@@ -5907,122 +6105,38 @@
    "hint": false
   },
   {
-   "kw": "독서실책상900",
+   "kw": "비쎌패브릭청소기",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아동교구",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "중고등학교책상",
+   "kw": "아이들교구",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "독서실책상제작",
+   "kw": "장난감제작",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원목책상주문제작",
+   "kw": "OK도장",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "도서관책상의자",
+   "kw": "유아소꿉놀이",
    "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학생방책상",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목책상제작",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상화이트",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키높이조절책상",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "철제프레임테이블",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공부방가구",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공부방책걸상",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이도서관책상",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원책걸상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집책상의자",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이학원책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치부책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집좌식테이블",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌봄교실책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기테이블",
-   "vol": 15,
    "comp": "높음",
    "hint": false
   },
@@ -6033,7 +6147,7 @@
    "hint": false
   },
   {
-   "kw": "어린이책걸상",
+   "kw": "욕실스팀청소",
    "vol": 15,
    "comp": "높음",
    "hint": false
@@ -6045,49 +6159,13 @@
    "hint": false
   },
   {
-   "kw": "문산가구",
+   "kw": "고성능청소기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아원목가구",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용원목의자",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소마큐브보드게임",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈책상추천",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집낮은책상",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "2인용학원책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원좌식책상",
+   "kw": "대형카페트청소",
    "vol": 15,
    "comp": "높음",
    "hint": false
@@ -6099,49 +6177,13 @@
    "hint": false
   },
   {
-   "kw": "어린이낮은책상",
+   "kw": "침구스팀청소",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자작나무책꽂이",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책꽂이주문제작",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "그룹책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원원목의자",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "다각형테이블",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등2인책상",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "유치원수납장",
+   "kw": "카펫전용청소기",
    "vol": 15,
    "comp": "높음",
    "hint": false
@@ -6153,13 +6195,115 @@
    "hint": false
   },
   {
+   "kw": "홈케어업체",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집먼지진드기케어",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매트리스청소사업",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "매트리스청소장비",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소파청소창업",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "습식쇼파청소기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소업무",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "쌓기나무교재",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소마큐브만들기",
+   "kw": "펜션청소기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쇼파세척기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천소파세탁",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "천쇼파청소기",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "천의자청소",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패브릭소파청소법",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "패브릭의자세척",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "페브릭의자청소",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페트스팀청소",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무선카페트청소기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카시트청소기",
    "vol": 15,
    "comp": "높음",
    "hint": false
@@ -6171,13 +6315,25 @@
    "hint": false
   },
   {
-   "kw": "보드게임서펜티나",
+   "kw": "임신용품",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "국민수유쿠션",
+   "kw": "아이거품목욕",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "어린이버블클렌저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보드게임서펜티나",
    "vol": 15,
    "comp": "높음",
    "hint": false
@@ -6189,9 +6345,57 @@
    "hint": false
   },
   {
-   "kw": "초등컴퓨터책상",
+   "kw": "펫가전",
    "vol": 15,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애견청소기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "창의력교구",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페트클리닝",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케이씨제너레이션",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "얼룩청소기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고압물청소",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "습식청소기중고",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "워터청소기",
+   "vol": 15,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -6201,67 +6405,7 @@
    "hint": false
   },
   {
-   "kw": "원목공부책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자녀방책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "지오픽스정다면체",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1800원목책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "모양조각",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중학생공부책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1인용학생책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남학생책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생용책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자아이책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학생원목책상",
    "vol": 15,
    "comp": "높음",
    "hint": false
@@ -6273,7 +6417,7 @@
    "hint": false
   },
   {
-   "kw": "여학생의자",
+   "kw": "매트리스청소기렌탈",
    "vol": 15,
    "comp": "높음",
    "hint": false
@@ -6315,61 +6459,25 @@
    "hint": false
   },
   {
-   "kw": "어린이집원목책상",
+   "kw": "유트러스속싸개",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "개인책상",
+   "kw": "얼룩제거기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자아이방가구",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아나무의자",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모둠테이블",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집비품",
+   "kw": "흡입력강한유선청소기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "3세아이선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고3책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "글벗독서실책상",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "이타카네오독서실책상",
    "vol": 15,
    "comp": "높음",
    "hint": false
@@ -6393,12 +6501,6 @@
    "hint": false
   },
   {
-   "kw": "스피어랜드",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
    "kw": "지오메트릭돔",
    "vol": 15,
    "comp": "높음",
@@ -6411,85 +6513,7 @@
    "hint": false
   },
   {
-   "kw": "고등학생가구",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스카이캐슬예서책상",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
    "kw": "수학교구쇼핑몰",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1200독서실책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1인칸막이책상",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "각도조절독서실책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "독서실책상와이드",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "음악실책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학교교실책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친환경책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학생용가구",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "650책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생책걸상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고3의자",
    "vol": 15,
    "comp": "높음",
    "hint": false
@@ -6519,19 +6543,7 @@
    "hint": false
   },
   {
-   "kw": "우레탄책상",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2세옷",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마름모테이블",
+   "kw": "아동양말브랜드",
    "vol": 15,
    "comp": "높음",
    "hint": false
@@ -6549,79 +6561,61 @@
    "hint": false
   },
   {
-   "kw": "쥬니어가구",
+   "kw": "비쎌소파청소기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "철제책상세트",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "앉은뱅이컴퓨터책상",
+   "kw": "FSMH1621",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인체공학책상",
+   "kw": "발자국도장",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "측판형책상",
+   "kw": "차트걸이",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등원목책상",
+   "kw": "퍼즐램프",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "F1데스크",
+   "kw": "영업아이템",
    "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "영어유치원책상",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어린이용테이블",
-   "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유치원책상세트",
-   "vol": 10,
+   "kw": "장난감도소매",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유치원원목책상",
-   "vol": 10,
+   "kw": "두돌아이장난감",
+   "vol": 15,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교구세상",
-   "vol": 10,
-   "comp": "중간",
    "hint": false
   },
   {
    "kw": "자석장난감만들기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이욕조",
    "vol": 10,
    "comp": "높음",
    "hint": false
@@ -6633,37 +6627,13 @@
    "hint": false
   },
   {
-   "kw": "영아용책상",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "지역아동센터책상",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아원목",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중고원목책상",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아용좌식테이블",
+   "kw": "카펫트세탁",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "기숙사수납장",
+   "kw": "소마큐브보드게임",
    "vol": 10,
    "comp": "높음",
    "hint": false
@@ -6675,39 +6645,75 @@
    "hint": false
   },
   {
-   "kw": "다각형책상",
+   "kw": "바닥타일청소기",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "좌식용책상",
+   "kw": "가정용카페트청소기",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유치원가구제작",
+   "kw": "빈대방제",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "육각책상",
+   "kw": "오줌제거",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌봄교실책걸상",
+   "kw": "전문가용습식청소기",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "토론테이블",
+   "kw": "대구청소창업",
    "vol": 10,
-   "comp": "중간",
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부산청소창업",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쇼파청소창업",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "청소창업비용",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈케어사업",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소마큐브만들기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패브릭소파케어",
+   "vol": 10,
+   "comp": "높음",
    "hint": false
   },
   {
@@ -6717,7 +6723,37 @@
    "hint": false
   },
   {
+   "kw": "무선카펫청소기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
    "kw": "아동완구",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "애완동물털청소기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매트리스습식",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "매트리스크리닝",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "앱스터",
    "vol": 10,
    "comp": "중간",
    "hint": false
@@ -6747,19 +6783,25 @@
    "hint": false
   },
   {
-   "kw": "각도조절책상추천",
+   "kw": "카페트습식청소",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카펫스팀청소",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반려묘청소기",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "포디블록",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아동책상세트",
    "vol": 10,
    "comp": "높음",
    "hint": false
@@ -6778,18 +6820,6 @@
   },
   {
    "kw": "미니지오픽스",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "새학기책상",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1600원목책상",
    "vol": 10,
    "comp": "높음",
    "hint": false
@@ -6819,19 +6849,25 @@
    "hint": false
   },
   {
-   "kw": "신학기가구",
+   "kw": "남아여름양말",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "슈퍼포디프레임",
+   "kw": "아동여름양말",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신학기이벤트",
+   "kw": "키즈여름양말",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "슈퍼포디프레임",
    "vol": 10,
    "comp": "높음",
    "hint": false
@@ -6891,33 +6927,15 @@
    "hint": false
   },
   {
-   "kw": "키즈룸가구",
+   "kw": "JONR무선물걸레청소기",
    "vol": 10,
    "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학습용책상",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영아용의자",
-   "vol": 10,
-   "comp": "낮음",
    "hint": false
   },
   {
    "kw": "영아생일선물",
    "vol": 10,
    "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "교실용책상",
-   "vol": 10,
-   "comp": "높음",
    "hint": false
   },
   {
@@ -6954,6 +6972,12 @@
    "kw": "스피리콘",
    "vol": 10,
    "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "스피어랜드",
+   "vol": 10,
+   "comp": "중간",
    "hint": false
   },
   {
@@ -7029,73 +7053,7 @@
    "hint": false
   },
   {
-   "kw": "공부방책상의자",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중고학생책상",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "미술실테이블",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "독서실책상조립",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중고하이팩의자",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생용의자",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학생의자높이",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "벌집책상",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초등학교가구",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "원목완구",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "예쁜벽선반",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "경사조절책상",
    "vol": 10,
    "comp": "높음",
    "hint": false
@@ -7125,27 +7083,9 @@
    "hint": false
   },
   {
-   "kw": "학교용가구",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "리코타입나비잠",
    "vol": 10,
    "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "영유아가구",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌봄책상",
-   "vol": 10,
-   "comp": "중간",
    "hint": false
   },
   {
@@ -7173,37 +7113,97 @@
    "hint": false
   },
   {
-   "kw": "1200사무실책상",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "작업실테이블",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학원용테이블",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "부피들이",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "철제책상800",
+   "kw": "로아스스팀청소기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "골디블락스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "내맘대로스케치",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "숫자탐정",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미술실책상",
+   "kw": "스택시스",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "오케이톡톡",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "추상전략보드게임",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코딩펫코코",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈프리학습지",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포디블럭",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학교스탬프",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한글만다라",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "협력글자쓰기",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "렌탈홈페이지",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기조끼",
    "vol": 10,
    "comp": "높음",
    "hint": false
