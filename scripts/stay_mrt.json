@@ -1,9 +1,9 @@
 {
  "busan-matie-harbor": {
   "mname": "마티에 부산하버시티",
-  "price": 207903,
-  "orig": 297803,
-  "rate": 30,
+  "price": 229680,
+  "orig": 319000,
+  "rate": 28,
   "u": "https://myrealt.rip/z9cw2a",
   "checkIn": "2026-11-28",
   "at": "2026-11-18",
@@ -121,9 +121,9 @@
  },
  "gurye-dohwa-onsen": {
   "mname": "구례 도화풀빌라",
-  "price": 399000,
-  "orig": 700000,
-  "rate": 43,
+  "price": 0,
+  "orig": 0,
+  "rate": 0,
   "u": "https://myrealt.rip/ziXIef",
   "checkIn": "2026-11-28",
   "at": "2026-11-18",
@@ -157,8 +157,8 @@
  },
  "gyeongju-tomonoya": {
   "mname": "토모노야 호텔&료칸 경주",
-  "price": 204262,
-  "orig": 204262,
+  "price": 254621,
+  "orig": 254621,
   "rate": 0,
   "u": "https://myrealt.rip/100ew3c",
   "checkIn": "2026-11-28",
@@ -190,6 +190,18 @@
   "score": "0.0",
   "reviews": 0,
   "pu": "https://accommodation.myrealtrip.com/union/products/4742525?checkIn=2026-11-28&checkOut=2026-11-29&adultCount=2&childCount=0&childAges="
+ },
+ "pohang-bythesea-poolvilla": {
+  "mname": "포항 바이더씨풀빌라",
+  "price": 470000,
+  "orig": 990000,
+  "rate": 53,
+  "u": "https://myrealt.rip/12UTg63",
+  "checkIn": "2026-11-28",
+  "at": "2026-11-18",
+  "score": "0.0",
+  "reviews": 0,
+  "pu": "https://accommodation.myrealtrip.com/union/products/6224177?checkIn=2026-11-28&checkOut=2026-11-29&adultCount=2&childCount=0&childAges="
  },
  "pohang-daytona": {
   "mname": "데이토나 풀 빌라",

@@ -1,5 +1,5 @@
 {
- "at": "2026-11-18 12:10",
+ "at": "2026-11-18 19:50",
  "checkIn": "2026-11-28",
  "stays": {
   "boryeong-lava-poolvilla": {
@@ -667,6 +667,40 @@
     }
    ],
    "hit": "인천 캠프노마드",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
+  },
+  "pohang-bythesea-poolvilla": {
+   "name": "포항 바이더씨풀빌라",
+   "city": "포항",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "포항",
+     "region": "포항",
+     "type": "CITY",
+     "pages": 12,
+     "n": 583,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 826
+    }
+   ],
+   "hit": "포항 바이더씨풀빌라",
    "hitKeys": [
     "deepLink",
     "imageUrl",
