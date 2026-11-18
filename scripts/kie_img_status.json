@@ -1,47 +1,23 @@
 {
- "at": "2026-11-18 19:50",
+ "at": "2026-11-18 19:56",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 1,
-   "taskId": "af927384d5eee0301cb7b8eb4fa6bfb2",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-18/pohang-bythesea-poolvilla/1_edit.jpg"
-  },
-  {
    "n": 2,
-   "taskId": "9c9c9fc3ca02f6b50a9f24fc954ba263",
+   "taskId": "e13aaacf6b88b92f50905553622dff08",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
    "file": "img/2026-11-18/pohang-bythesea-poolvilla/2_edit.jpg"
   },
   {
-   "n": 3,
-   "taskId": "4efbecb82b56909bdfa9129e3301435a",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-18/pohang-bythesea-poolvilla/3_edit.jpg"
-  },
-  {
    "n": 4,
-   "taskId": "7558a9cf1cfb0b9521b410b5a317cb20",
+   "taskId": "74a33b46054910be593348424e7af447",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
    "file": "img/2026-11-18/pohang-bythesea-poolvilla/4_edit.jpg"
-  },
-  {
-   "n": 5,
-   "taskId": "07bede7d5dc9742ff3786ac425c6acca",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-18/pohang-bythesea-poolvilla/5_edit.jpg"
   }
  ],
  "slug": "pohang-bythesea-poolvilla"
