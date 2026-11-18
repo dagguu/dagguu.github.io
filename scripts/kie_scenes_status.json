@@ -1,14 +1,42 @@
 {
- "at": "2026-11-16T11:35:46.713380",
- "name": "boryeong-lava-poolvilla",
+ "at": "2026-11-18T11:00:58.732163",
+ "name": "pohang-bythesea-poolvilla",
  "jobs": [
   {
-   "img": "ai:3",
-   "taskId": "ad2b84ddcf7fb903ba1e9c2b9e21c89d",
+   "img": "ai:1",
+   "taskId": "3244233ec410330c7bd3775bdb431aa7",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-16/boryeong-lava-poolvilla/clip_ai3.mp4"
+   "file": "video/2026-11-18/pohang-bythesea-poolvilla/clip_ai1.mp4"
+  },
+  {
+   "img": "ai:2",
+   "taskId": "262c003b5cf983dc61c67f1436c1e49c",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-18/pohang-bythesea-poolvilla/clip_ai2.mp4"
+  },
+  {
+   "img": "ai:3",
+   "taskId": "3159dcdab65db5a782c8080fdd42a73a",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-18/pohang-bythesea-poolvilla/clip_ai3.mp4"
+  },
+  {
+   "img": "ai:4",
+   "taskId": "a6adb9763bd315c3fed847ff994a1232",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-18/pohang-bythesea-poolvilla/clip_ai4.mp4"
+  },
+  {
+   "img": "ai:5",
+   "taskId": "d48e64b8db72d993359ac07a005253fb",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-18/pohang-bythesea-poolvilla/clip_ai5.mp4"
   }
  ],
- "credits_total": 35.0
+ "credits_total": 175.0
 }
