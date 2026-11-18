@@ -365,7 +365,7 @@ function kidsGo(path){ return KIDS_URL+(path||"/")+((path||"/").indexOf("?")>=0?
 function kidsHot(){ setTimeout(kidsLoad,0); return '<div data-kids>'+(KIDS?kidsHtml(KIDS):'')+'</div>'; }
 function kidsHtml(L){
   if(!L||L.length<2) return "";
-  return '<section class="hdl kdl"><div class="hdh"><span class="hdk">👕 다꾸키즈</span><b>매일 신상 아동복</b><small>다꾸체험단이 운영하는 아동복 쇼핑몰 · 2만원 이상 무료배송</small></div>'+
+  return '<section class="hdl kdl"><div class="hdh"><span class="hdk">👕 다꾸키즈</span><b>매일 신상 아동복</b><small>다꾸체험단이 운영하는 아동복 쇼핑몰 · 5만원 이상 무료배송</small></div>'+
     '<div class="hdr">'+L.map(function(x){ return '<a class="hdi" data-gsec="kids" href="'+esc(kidsGo("/product/detail.html?product_no="+x.no))+'" target="_blank" rel="noopener"><span class="hdm"><img src="'+esc(x.img)+'" alt="" loading="lazy" referrerpolicy="no-referrer"></span><span class="hdn">'+esc(x.name)+'</span><span class="hdp"><b>'+esc(x.price)+'</b></span></a>'; }).join("")+
     '<a class="hdi kmore" href="'+esc(kidsGo("/"))+'" target="_blank" rel="noopener"><span class="hdm kmm">👕<br>전체 보기</span><span class="hdn">다꾸키즈 구경가기 ›</span></a></div></section>';
 }
@@ -2548,7 +2548,35 @@ function applyBtns(it,url,src){
 }
 /* 신청 팝업의 숙소·제품 바로가기(2026-11-18 시온님). 잠금·강제 이동 없이 버튼만 둔다(쿠팡 운영정책 4.1-2 무효클릭) */
 function apGoBtn(it){ var u=priceUrl(it); if(!u) return ''; var c=catOf(it), nm=c==="stay"?"숙소":(c==="etc"?"입장권":"제품");
-  return '<a class="b sec wide apgo" data-m="cp" '+ext(u)+' style="margin-bottom:8px">'+nm+' 바로가기 ↗</a>'; }
+  return '<a class="b wide apgo" data-m="cp" '+ext(u)+'>'+nm+' 바로가기 ↗</a>'; }
+/* 모집 사이트로 넘어가기 전 2.5초 "이동 중" 화면 + 다꾸키즈 신상(2026-11-18 시온님).
+   쿠팡 광고는 넣지 않는다(커버형 배너·오클릭 유도 = 쿠팡 운영정책 4.1-8·4.1-2). 다꾸키즈는 시온님 쇼핑몰 */
+function goWait(url,src,it){
+  url=safeUrl(url); if(!url) return;
+  var old=document.querySelector(".goint"); if(old) old.remove();
+  var w=document.createElement("div"); w.className="goint"; w.setAttribute("role","dialog"); w.setAttribute("aria-label",src+"(으)로 이동 중");
+  var done=false, tm;
+  function go(){ if(done) return; done=true; clearTimeout(tm); w.remove(); location.href=url; }
+  function kids(){
+    var L=(KIDS||[]).slice(); if(L.length<3) return "";
+    var o=(new Date().getMinutes())%L.length; L=L.slice(o).concat(L.slice(0,o)).slice(0,3);
+    return '<div class="gik"><div class="gikh"><b>👕 다꾸키즈 오늘의 신상</b><small>다꾸체험단이 운영하는 아동복 쇼핑몰</small></div><div class="gikr">'+
+      L.map(function(x){ return '<a data-gk href="'+esc(kidsGo("/product/detail.html?product_no="+x.no))+'" target="_blank" rel="noopener"><span><img src="'+esc(x.img)+'" alt="" referrerpolicy="no-referrer"></span><em>'+esc(x.name)+'</em><b>'+esc(x.price)+'</b></a>'; }).join("")+
+      '</div><a class="gikm" data-gk href="'+esc(kidsGo("/"))+'" target="_blank" rel="noopener">다꾸키즈 구경가기 ›</a></div>';
+  }
+  function paint(){ var k=w.querySelector(".gikw"); if(k) k.innerHTML=kids(); }
+  w.innerHTML='<div class="gis"><div class="gil"><span class="gisp"></span><b>'+esc(src)+'(으)로 이동 중이에요</b><small>잠시 후 신청 페이지가 열려요</small></div>'+
+    '<div class="gibar"><i></i></div><div class="gikw">'+kids()+'</div>'+
+    '<button class="b pri wide" data-gnow>바로 이동하기 ›</button></div>';
+  w.addEventListener("click",function(e){
+    if(e.target.closest("[data-gnow]")){ ga("apply_go",{item_id:it.id,how:"now"}); return go(); }
+    if(e.target.closest("[data-gk]")){ clearTimeout(tm); ga("kids_click",{place:"apply_wait",item_id:it.id}); setTimeout(go,600); }
+  });
+  document.body.appendChild(w);
+  if(!KIDS){ kidsLoad(); var n=0, iv=setInterval(function(){ n++; if(KIDS||n>10||done){ clearInterval(iv); paint(); } },200); }
+  ga("apply_wait",{item_id:it.id,source:src});
+  tm=setTimeout(go,2500);
+}
 function applyPopup(it){
   var url=safeUrl(it.refUrl||it.applyUrl); if(!url) return;
   var old=document.querySelector(".modal.applym"); if(old) old.remove();
@@ -2565,7 +2593,7 @@ function applyPopup(it){
   wrap.addEventListener("click",function(e){
     if(e.target===wrap) return close();
     var b=e.target.closest("[data-m]"); if(!b) return;
-    if(b.dataset.m==="go"){ markApplied(it.id); setTimeout(close,300); return; }
+    if(b.dataset.m==="go"){ markApplied(it.id); e.preventDefault(); close(); goWait(b.getAttribute("href"),src,it); return; }
     if(b.dataset.m==="cp"){ ga("coupang_click",{place:"apply_popup",item_id:it.id}); return; }
     if(b.dataset.m==="srch"){ ga("apply_search",{item_id:it.id,source:it.source||""}); return; }
     if(b.dataset.m==="x") close();
