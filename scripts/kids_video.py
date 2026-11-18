@@ -266,7 +266,7 @@ def model_score(im):
     fc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
     pc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_profileface.xml")
     if len(fc.detectMultiScale(g, 1.1, 5, minSize=(30, 30))) or len(pc.detectMultiScale(g, 1.1, 5, minSize=(30, 30))):
-        sc += 10  # 얼굴 있어야 모델컷(2026-11-18)
+        sc += 4
     hog = cv2.HOGDescriptor(); hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
     r, _ = hog.detectMultiScale(g, winStride=(8, 8))
     if len(r):
@@ -280,7 +280,7 @@ def model_score(im):
 
 
 def model_image(p):
-    best, bs = None, 9
+    best, bs = None, 4
     for u in desc_images(p["product_no"])[:12]:
         try:
             im = load(u)
@@ -291,7 +291,7 @@ def model_image(p):
         s = model_score(im)
         if s > bs:
             best, bs = im, s
-        if bs >= 14:
+        if bs >= 7:
             break
     return best
 
