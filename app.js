@@ -2546,6 +2546,9 @@ function applyBtns(it,url,src){
     h='<a class="b pri wide" data-m="go" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(src)+'에서 신청하기 ↗</a>'; }
   return h;
 }
+/* 신청 팝업의 숙소·제품 바로가기(2026-11-18 시온님). 잠금·강제 이동 없이 버튼만 둔다(쿠팡 운영정책 4.1-2 무효클릭) */
+function apGoBtn(it){ var u=priceUrl(it); if(!u) return ''; var c=catOf(it), nm=c==="stay"?"숙소":(c==="etc"?"입장권":"제품");
+  return '<a class="b sec wide apgo" data-m="cp" '+ext(u)+' style="margin-bottom:8px">'+nm+' 바로가기 ↗</a>'; }
 function applyPopup(it){
   var url=safeUrl(it.refUrl||it.applyUrl); if(!url) return;
   var old=document.querySelector(".modal.applym"); if(old) old.remove();
@@ -2555,7 +2558,7 @@ function applyPopup(it){
     '<h2>['+esc(src)+'] 홈페이지로<br>이동해요👀</h2><p>한번만 로그인 해두면<br>편하게 신청 가능해져요.</p>'+
     (payOf(it).indexOf("payback")>=0?'<div class="paynote"><b>💳 선정 후 구매하는 페이백 상품이에요</b><span>['+esc(src)+']에서 당첨 후 안내에 따라 진행하세요. 선정 전에 먼저 구매하면 페이백을 받지 못할 수 있어요.</span></div>':'')+
     '<p class="apnote">✅ 신청하신 체험단은<br><a href="#/my" data-m="x" data-jump="applied">다꾸체험단 마이페이지</a>에서 확인하실 수 있어요.</p>'+
-    applyBtns(it,url,src)+
+    apGoBtn(it)+applyBtns(it,url,src)+
     '<button class="b sec wide" data-m="x" style="margin-top:8px">닫기</button></div>';
   function close(){ wrap.remove(); document.removeEventListener("keydown",esck); }
   function esck(e){ if(e.key==="Escape") close(); }
@@ -2563,6 +2566,7 @@ function applyPopup(it){
     if(e.target===wrap) return close();
     var b=e.target.closest("[data-m]"); if(!b) return;
     if(b.dataset.m==="go"){ markApplied(it.id); setTimeout(close,300); return; }
+    if(b.dataset.m==="cp"){ ga("coupang_click",{place:"apply_popup",item_id:it.id}); return; }
     if(b.dataset.m==="srch"){ ga("apply_search",{item_id:it.id,source:it.source||""}); return; }
     if(b.dataset.m==="x") close();
   });
