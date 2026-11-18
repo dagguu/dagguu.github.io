@@ -239,10 +239,30 @@ def one_image(p):
 
 def model_score(im):
     """모델(사람) 착용컷 점수(2026-11-18 시온님 "모델영상으로"): 얼굴·사람 몸 +, 흰 바탕 누끼 −."""
-    import numpy as np, cv2
+    import numpy as np
     a = np.asarray(im.resize((480, int(480 * im.height / im.width))))
-    g = cv2.cvtColor(a, cv2.COLOR_RGB2GRAY)
+    g = np.asarray(im.convert("L").resize((480, a.shape[0])))
     sc = 0
+    ycc = np.asarray(im.convert("YCbCr").resize((480, a.shape[0]))).astype(int)
+    cb, cr = ycc[..., 1], ycc[..., 2]
+    skin = ((cr >= 138) & (cr <= 173) & (cb >= 77) & (cb <= 127)).mean()
+    if skin > 0.02:
+        sc += 2
+    if skin > 0.05:
+        sc += 1
+    try:
+        import cv2
+        cv2.CascadeClassifier
+    except Exception as e:
+        print("cv2 없음", e)
+        cv2 = None
+    if cv2 is None:
+        b = np.concatenate([g[:8].ravel(), g[-8:].ravel(), g[:, :8].ravel(), g[:, -8:].ravel()])
+        if (b > 235).mean() > 0.85:
+            sc -= 3
+        if im.height > im.width * 1.05:
+            sc += 1
+        return sc
     fc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
     pc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_profileface.xml")
     if len(fc.detectMultiScale(g, 1.1, 5, minSize=(30, 30))) or len(pc.detectMultiScale(g, 1.1, 5, minSize=(30, 30))):
