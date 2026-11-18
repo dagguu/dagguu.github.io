@@ -30,7 +30,8 @@
     function kids(){
       var L=(KIDS||[]).slice(); if(L.length<3) return "";
       var o=(new Date().getMinutes())%L.length; L=L.slice(o).concat(L.slice(0,o));
-      L=L.filter(kSale).concat(L.filter(function(x){ return !kSale(x); })).slice(0,3);
+      L=L.filter(kSale).concat(L.filter(function(x){ return !kSale(x); }));
+      var n=Math.floor(L.length/3)||1; var pg=(KPG||0)%n; L=L.slice(pg*3,pg*3+3);  /* 3초마다 다음 3개(2026-11-18 시온님) */
       return '<div class="gik"><div class="gikh"><b>👕 다꾸키즈 오늘의 신상</b><small>다꾸체험단이 운영하는 아동복 쇼핑몰</small></div><div class="gikr">'+
         L.map(kCard).join("")+
         '</div><a class="gikm" data-gk href="'+esc(kgo("/"))+'" target="_blank" rel="noopener">다꾸키즈 구경가기 ›</a></div>';
@@ -43,6 +44,8 @@
     });
     document.body.appendChild(w);
     loadKids(function(){ var k=w.querySelector(".gikw"); if(k&&!done) k.innerHTML=kids(); });
+    var KPG=0, rot=setInterval(function(){ if(done||!w.isConnected){ clearInterval(rot); return; } if(!KIDS||KIDS.length<6) return;
+      KPG++; var r=w.querySelector(".gikr"); if(r){ r.classList.add("gfade"); setTimeout(function(){ var k=w.querySelector(".gikw"); if(k) k.innerHTML=kids(); var r2=w.querySelector(".gikr"); if(r2){ r2.classList.add("gfade"); requestAnimationFrame(function(){ requestAnimationFrame(function(){ r2.classList.remove("gfade"); }); }); } },250); } },3000);
     var left=5; cd=setInterval(function(){ left--; var el=w.querySelector(".gicd"), bt=w.querySelector(".gskip"); if(el) el.textContent=left;
       if(left<=0){ clearInterval(cd); if(bt){ bt.disabled=false; bt.innerHTML="건너뛰기 ›"; } } },1000);
     ga("apply_wait",{item_id:id,source:src,page:"share"});
