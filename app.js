@@ -2554,7 +2554,7 @@ function apGoBtn(it){ var u=priceUrl(it); if(!u) return ''; var c=catOf(it), nm=
 function goWait(url,src,it){
   url=safeUrl(url); if(!url) return;
   var old=document.querySelector(".goint"); if(old) old.remove();
-  var w=document.createElement("div"); w.className="goint"; w.setAttribute("role","dialog"); w.setAttribute("aria-label",src+"(으)로 이동 중");
+  var w=document.createElement("div"); w.className="goint"; w.setAttribute("role","dialog"); w.setAttribute("aria-label",src+" 사이트로 이동 중");
   var done=false, tm;
   function go(){ if(done) return; done=true; clearTimeout(tm); w.remove(); location.href=url; }
   function kids(){
@@ -2565,7 +2565,7 @@ function goWait(url,src,it){
       '</div><a class="gikm" data-gk href="'+esc(kidsGo("/"))+'" target="_blank" rel="noopener">다꾸키즈 구경가기 ›</a></div>';
   }
   function paint(){ var k=w.querySelector(".gikw"); if(k) k.innerHTML=kids(); }
-  w.innerHTML='<div class="gis"><div class="gil"><span class="gisp"></span><b>'+esc(src)+'(으)로 이동 중이에요</b><small>잠시 후 신청 페이지가 열려요</small></div>'+
+  w.innerHTML='<div class="gis"><div class="gil"><span class="gisp"></span><b>'+esc(src)+' 사이트로 이동 중이에요</b><small>잠시 후 신청 페이지가 열려요</small></div>'+
     '<div class="gibar"><i></i></div><div class="gikw">'+kids()+'</div>'+
     '<button class="b pri wide" data-gnow>바로 이동하기 ›</button></div>';
   w.addEventListener("click",function(e){
