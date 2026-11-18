@@ -1,6 +1,6 @@
 {
- "at": "2026-11-17 13:12",
- "checkIn": "2026-11-21",
+ "at": "2026-11-18 12:10",
+ "checkIn": "2026-11-28",
  "stays": {
   "boryeong-lava-poolvilla": {
    "name": "라바풀빌라",
@@ -66,7 +66,7 @@
       "page",
       "size"
      ],
-     "total": 1778
+     "total": 1814
     }
    ],
    "hit": "마티에 부산하버시티",
@@ -134,7 +134,7 @@
       "page",
       "size"
      ],
-     "total": 425
+     "total": 428
     }
    ],
    "hit": "대전 유천 스테이 패스포트 키노사키 료칸 by 아늑",
@@ -202,7 +202,7 @@
       "page",
       "size"
      ],
-     "total": 1332
+     "total": 1331
     }
    ],
    "hit": "강릉 다케노모리글램핑&료칸",
@@ -385,7 +385,7 @@
       "page",
       "size"
      ],
-     "total": 360
+     "total": 361
     }
    ],
    "hit": "고성 072스테이",
@@ -413,52 +413,52 @@
      "region": "고성",
      "type": "CITY",
      "pages": 9,
-     "n": 351,
+     "n": 352,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 360
+     "total": 361
     },
     {
      "kw": "고성",
      "region": "고성",
      "type": "CITY",
      "pages": 3,
-     "n": 90,
+     "n": 91,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 93
+     "total": 94
+    },
+    {
+     "kw": "강원",
+     "region": "속초",
+     "type": "CITY",
+     "pages": 9,
+     "n": 355,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 363
     },
     {
      "kw": "강원",
      "region": "강릉",
      "type": "CITY",
      "pages": 27,
-     "n": 1257,
+     "n": 1256,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1278
-    },
-    {
-     "kw": "강원",
-     "region": "평창",
-     "type": "CITY",
-     "pages": 9,
-     "n": 386,
-     "keys": [
-      "totalCount",
-      "page",
-      "size"
-     ],
-     "total": 399
+     "total": 1277
     }
    ]
   },
@@ -506,40 +506,40 @@
      "kw": "경주",
      "region": "경주",
      "type": "CITY",
-     "pages": 34,
-     "n": 1627,
+     "pages": 35,
+     "n": 1632,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1650
+     "total": 1655
     },
     {
      "kw": "경북",
      "region": "경주",
      "type": "CITY",
-     "pages": 34,
-     "n": 1627,
+     "pages": 35,
+     "n": 1632,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1650
+     "total": 1655
     },
     {
      "kw": "경북",
      "region": "포항",
      "type": "CITY",
      "pages": 18,
-     "n": 802,
+     "n": 805,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 823
+     "total": 826
     }
    ],
    "kept": true
@@ -561,7 +561,7 @@
       "page",
       "size"
      ],
-     "total": 1650
+     "total": 1655
     }
    ],
    "hit": "경주 에스앤비풀빌라",
@@ -595,7 +595,7 @@
       "page",
       "size"
      ],
-     "total": 1650
+     "total": 1655
     }
    ],
    "hit": "토모노야 호텔&료칸 경주",
@@ -663,7 +663,7 @@
       "page",
       "size"
      ],
-     "total": 949
+     "total": 950
     }
    ],
    "hit": "인천 캠프노마드",
@@ -697,7 +697,7 @@
       "page",
       "size"
      ],
-     "total": 823
+     "total": 826
     }
    ],
    "hit": "데이토나 풀 빌라",
@@ -799,7 +799,7 @@
       "page",
       "size"
      ],
-     "total": 1359
+     "total": 1361
     }
    ],
    "hit": "담앤루리조트",
@@ -833,7 +833,7 @@
       "page",
       "size"
      ],
-     "total": 2045
+     "total": 2056
     }
    ],
    "hit": "대부도(선재도) 선재담글램핑&카라반리조트",
@@ -861,39 +861,39 @@
      "region": "완주",
      "type": "CITY",
      "pages": 5,
-     "n": 158,
+     "n": 159,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 162
+     "total": 163
     },
     {
      "kw": "전북",
      "region": "전주",
      "type": "CITY",
      "pages": 15,
-     "n": 660,
+     "n": 668,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 667
+     "total": 675
     },
     {
      "kw": "전북",
      "region": "군산",
      "type": "CITY",
      "pages": 6,
-     "n": 228,
+     "n": 227,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 230
+     "total": 229
     }
    ]
   },
