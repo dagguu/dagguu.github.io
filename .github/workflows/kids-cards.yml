@@ -5,7 +5,7 @@ on:
     - cron: "41 0 * * *"
   workflow_dispatch:
     inputs:
-      mail: { description: "메일 보내기 (y/n)", default: "y" }
+      mail: { description: "메일 보내기 (y/n)", default: "n" }
 permissions: { contents: write }
 concurrency: kids-cards
 jobs:
@@ -38,7 +38,7 @@ jobs:
           git add -A "kids/$D" && git commit -qm "다꾸키즈 카드뉴스 $D" || true
           for i in 1 2 3; do git push -q origin insta && break; git pull -q --rebase origin insta; done
           echo "D=$D" >> $GITHUB_ENV
-      - if: ${{ github.event_name == 'schedule' || github.event.inputs.mail != 'n' }}
+      - if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.mail == 'y' }}  # 2026-11-18 시온님: 카드뉴스 메일 끔(배너 만들기는 계속)
         run: python /tmp/mail_kids.py "/tmp/kids_out/$D"
         env:
           NAVER_MAIL_ID: ${{ secrets.NAVER_MAIL_ID }}
