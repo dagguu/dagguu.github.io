@@ -23,7 +23,7 @@
     return '<a data-gk href="'+esc(kgo("/product/detail.html?product_no="+x.no))+'" target="_blank" rel="noopener"><span>'+tag+'<img src="'+esc(x.img)+'" alt="" referrerpolicy="no-referrer"></span><em>'+esc(x.name)+'</em>'+pr+'</a>';
   }
   var LOGO='<svg width="40" height="40" viewBox="0 0 100 100" aria-hidden="true"><rect x="0.5" y="0.5" width="99" height="99" rx="23" fill="#6a3fc8"></rect><path fill="#ffffff" fill-rule="evenodd" d="M26 22H52C70 22 77 31.5 77 49.5C77 67.5 70 77 52 77H26Z M43 36H51.5C56 36 58 38 58 42.5V56.5C58 61 56 63 51.5 63H43Z"></path></svg>';
-  function goWait(url,src,id){
+  function goWait(url,src,id,cp){
     var w=document.createElement("div"); w.className="goint"; w.setAttribute("role","dialog");
     var done=false, tm, cd;
     function go(){ if(done) return; done=true; clearTimeout(tm); clearInterval(cd); w.remove(); location.href=url; }
@@ -36,10 +36,11 @@
         L.map(kCard).join("")+
         '</div><a class="gikm" data-gk href="'+esc(kgo("/"))+'" target="_blank" rel="noopener">다꾸키즈 구경가기 ›</a></div>';
     }
-    w.innerHTML='<div class="gis"><div class="gil"><span class="gisp"></span><b>'+esc(src)+' 사이트로 이동 중이에요</b><small>잠시 후 건너뛰기를 누르면 신청 페이지가 열려요</small></div>'+
+    w.innerHTML='<div class="gis">'+(cp?'':'<button class="gix" data-gx aria-label="닫기">✕</button>')+'<div class="gil"><span class="gisp"></span><b>'+(cp?'쿠팡으로 이동 중이에요':esc(src)+' 사이트로 이동 중이에요')+'</b><small>잠시 후 건너뛰기를 누르면 '+(cp?'상품 페이지가':'신청 페이지가')+' 열려요</small></div>'+
       '<div class="gibar"><i></i></div><div class="gikw">'+kids()+'</div><button class="b pri wide gskip" data-gnow disabled><span class="gicd">5</span>초 후 건너뛸 수 있어요</button></div>';
     w.addEventListener("click",function(e){
-      var sk=e.target.closest("[data-gnow]"); if(sk){ if(sk.disabled) return; ga("apply_go",{item_id:id,how:"skip",page:"share"}); return go(); }
+      if(e.target.closest("[data-gx]")){ done=true; clearInterval(cd); w.remove(); ga("apply_wait_close",{item_id:id,page:"share"}); return; }
+      var sk=e.target.closest("[data-gnow]"); if(sk){ if(sk.disabled) return; ga(cp?"coupang_go":"apply_go",{item_id:id,how:"skip",page:"share"}); return go(); }
       if(e.target.closest("[data-gk]")) ga("kids_click",{place:"apply_wait_share",item_id:id});
     });
     document.body.appendChild(w);
@@ -48,7 +49,7 @@
       KPG++; var r=w.querySelector(".gikr"); if(r){ r.classList.add("gfade"); setTimeout(function(){ var k=w.querySelector(".gikw"); if(k) k.innerHTML=kids(); var r2=w.querySelector(".gikr"); if(r2){ r2.classList.add("gfade"); requestAnimationFrame(function(){ requestAnimationFrame(function(){ r2.classList.remove("gfade"); }); }); } },250); } },3000);
     var left=5; cd=setInterval(function(){ left--; var el=w.querySelector(".gicd"), bt=w.querySelector(".gskip"); if(el) el.textContent=left;
       if(left<=0){ clearInterval(cd); if(bt){ bt.disabled=false; bt.innerHTML="건너뛰기 ›"; } } },1000);
-    ga("apply_wait",{item_id:id,source:src,page:"share"});
+    ga(cp?"coupang_wait":"apply_wait",{item_id:id,source:src,page:"share"});
   }
   function popup(a){
     var d=a.dataset, url=a.getAttribute("href"), src=d.src||"체험단", cat=d.cat||"stay";
@@ -63,7 +64,7 @@
     w.addEventListener("click",function(e){
       if(e.target===w) return close();
       var b=e.target.closest("[data-m]"); if(!b) return;
-      if(b.dataset.m==="cp"){ ga("coupang_click",{place:"apply_popup_share",item_id:d.id}); return; }
+      if(b.dataset.m==="cp"){ ga("coupang_click",{place:"apply_popup_share",item_id:d.id}); e.preventDefault(); close(); goWait(b.getAttribute("href"),"쿠팡",d.id,true); return; }
       if(b.dataset.m==="go"){ e.preventDefault(); try{ var A=JSON.parse(localStorage.getItem("dakku-applied")||"[]"); A=A.filter(function(x){ return x!==d.id; }); A.unshift(d.id); localStorage.setItem("dakku-applied",JSON.stringify(A.slice(0,50))); }catch(_){}
         close(); goWait(url,src,d.id); return; }
       if(b.dataset.m==="x") close();
@@ -71,6 +72,9 @@
     document.body.appendChild(w);
     loadKids(function(){});
   }
+  document.addEventListener("click",function(e){
+    var c=e.target.closest(".dbar a.dbl"); if(c&&!e.ctrlKey&&!e.metaKey){ var ap=document.querySelector("a[data-ap]"); e.preventDefault(); ga("coupang_click",{place:"detail_share"}); goWait(c.getAttribute("href"),"쿠팡",ap?ap.dataset.id:"",true); return; }
+  },true);
   document.addEventListener("click",function(e){
     var a=e.target.closest("a[data-ap]"); if(!a) return;
     e.preventDefault(); ga("apply_open",{item_id:a.dataset.id,page:"share"}); popup(a);

@@ -2565,10 +2565,10 @@ function apGoBtn(it){ var u=priceUrl(it); if(!u) return ''; var c=catOf(it);
     '<a class="b wide apgo" data-m="cp" '+ext(u)+'>'+t+' ↗</a>'; }  /* 팝업이 화면 맨 위 대가성 줄을 가려서 팝업 안에 AD·대가성 문구(2026-11-18) */
 /* 모집 사이트로 넘어가기 전 5초 기다린 뒤 건너뛰기를 눌러야 이동(2026-11-18 시온님) "이동 중" 화면 + 다꾸키즈 신상(2026-11-18 시온님).
    쿠팡 광고는 넣지 않는다(커버형 배너·오클릭 유도 = 쿠팡 운영정책 4.1-8·4.1-2). 다꾸키즈는 시온님 쇼핑몰 */
-function goWait(url,src,it){
+function goWait(url,src,it,cp){  /* cp=true: 쿠팡 상품 페이지로 이동(제목 '쿠팡으로 이동 중', X 없음, 2026-11-18 시온님) */
   url=safeUrl(url); if(!url) return;
   var old=document.querySelector(".goint"); if(old) old.remove();
-  var w=document.createElement("div"); w.className="goint"; w.setAttribute("role","dialog"); w.setAttribute("aria-label",src+" 사이트로 이동 중");
+  var w=document.createElement("div"); w.className="goint"; w.setAttribute("role","dialog"); w.setAttribute("aria-label",cp?"쿠팡으로 이동 중":src+" 사이트로 이동 중");
   var done=false, tm;
   function go(){ if(done) return; done=true; clearTimeout(tm); w.remove(); location.href=url; }
   function kids(){
@@ -2583,19 +2583,26 @@ function goWait(url,src,it){
   function paint(){ var k=w.querySelector(".gikw"); if(k) k.innerHTML=kids(); }
   var KPG=0, rot=setInterval(function(){ if(done||!w.isConnected){ clearInterval(rot); return; } if(!KIDS||KIDS.length<6) return;
     KPG++; var r=w.querySelector(".gikr"); if(r){ r.classList.add("gfade"); setTimeout(function(){ paint(); var r2=w.querySelector(".gikr"); if(r2){ r2.classList.add("gfade"); requestAnimationFrame(function(){ r2.classList.remove("gfade"); }); } },250); } },3000);
-  w.innerHTML='<div class="gis"><div class="gil"><span class="gisp"></span><b>'+esc(src)+' 사이트로 이동 중이에요</b><small>잠시 후 건너뛰기를 누르면 신청 페이지가 열려요</small></div>'+
+  w.innerHTML='<div class="gis">'+(cp?'':'<button class="gix" data-gx aria-label="닫기">'+ico(I.x)+'</button>')+'<div class="gil"><span class="gisp"></span><b>'+(cp?'쿠팡으로 이동 중이에요':esc(src)+' 사이트로 이동 중이에요')+'</b><small>잠시 후 건너뛰기를 누르면 '+(cp?'상품 페이지가':'신청 페이지가')+' 열려요</small></div>'+
     '<div class="gibar"><i></i></div><div class="gikw">'+kids()+'</div>'+
     '<button class="b pri wide gskip" data-gnow disabled><span class="gicd">5</span>초 후 건너뛸 수 있어요</button></div>';
   w.addEventListener("click",function(e){
-    var sk=e.target.closest("[data-gnow]"); if(sk){ if(sk.disabled) return; ga("apply_go",{item_id:it.id,how:"skip"}); return go(); }
+    if(e.target.closest("[data-gx]")){ done=true; w.remove(); ga("apply_wait_close",{item_id:it.id}); return; }
+    var sk=e.target.closest("[data-gnow]"); if(sk){ if(sk.disabled) return; ga(cp?"coupang_go":"apply_go",{item_id:it.id,how:"skip"}); return go(); }
     if(e.target.closest("[data-gk]")) ga("kids_click",{place:"apply_wait",item_id:it.id});
   });
   document.body.appendChild(w);
   if(!KIDS) kidsLoad(); kidsBest(); var n=0, iv=setInterval(function(){ n++; if((KIDS&&KBEST)||n>15||done){ clearInterval(iv); paint(); } },200);
-  ga("apply_wait",{item_id:it.id,source:src});
+  ga(cp?"coupang_wait":"apply_wait",{item_id:it.id,source:src});
   var left=5, cd=setInterval(function(){ left--; var el=w.querySelector(".gicd"), bt=w.querySelector(".gskip"); if(el) el.textContent=left;
     if(left<=0){ clearInterval(cd); if(bt){ bt.disabled=false; bt.innerHTML="건너뛰기 ›"; } } },1000);
 }
+/* 상세 페이지 아래 "제품 상세 보기/숙소 사진 보기" 버튼도 쿠팡으로 가기 전 다꾸키즈 화면(2026-11-18 시온님) */
+document.addEventListener("click",function(e){
+  var a=e.target.closest(".dbar a.dbl"); if(!a||e.ctrlKey||e.metaKey) return;
+  var it=(seed.items||[]).filter(function(x){ return x.id===state.itemId; })[0]; if(!it) return;
+  e.preventDefault(); goWait(a.getAttribute("href"),"쿠팡",it,true);
+},true);
 function applyPopup(it){
   var url=safeUrl(it.refUrl||it.applyUrl); if(!url) return;
   var old=document.querySelector(".modal.applym"); if(old) old.remove();
@@ -2610,7 +2617,7 @@ function applyPopup(it){
     if(e.target===wrap) return close();
     var b=e.target.closest("[data-m]"); if(!b) return;
     if(b.dataset.m==="go"){ markApplied(it.id); e.preventDefault(); close(); goWait(b.getAttribute("href"),src,it); return; }
-    if(b.dataset.m==="cp"){ ga("coupang_click",{place:"apply_popup",item_id:it.id}); return; }
+    if(b.dataset.m==="cp"){ ga("coupang_click",{place:"apply_popup",item_id:it.id}); e.preventDefault(); close(); goWait(b.getAttribute("href"),"쿠팡",it,true); return; }
     if(b.dataset.m==="srch"){ ga("apply_search",{item_id:it.id,source:it.source||""}); return; }
     if(b.dataset.m==="x") close();
   });
