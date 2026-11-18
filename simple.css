@@ -1380,3 +1380,5 @@ input,select,textarea{font-size:16px!important}
 /* 2026-11-18 시온님: 상세 아래 버튼 순서 — 신청하기 왼쪽, 제품 상세 보기 오른쪽 */
 .dbar .dbl{order:3}
 .dbar .b.dbp,.dbar a.b.pri{order:2}
+/* 2026-11-18 시온님: 신청 버튼(연보라) → 흰 바탕 + 보라 테두리 */
+.applym .b.pri,.dbar .b.dbp,.dbar a.b.pri{background:#fff!important;color:#5b3fd6!important;border:1.5px solid #5b3fd6!important;box-shadow:none!important}
