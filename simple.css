@@ -1382,3 +1382,6 @@ input,select,textarea{font-size:16px!important}
 .dbar .b.dbp,.dbar a.b.pri{order:2}
 /* 2026-11-18 시온님: 신청 버튼(연보라) → 흰 바탕 + 보라 테두리 */
 .applym .b.pri,.dbar .b.dbp,.dbar a.b.pri{background:#fff!important;color:#5b3fd6!important;border:1.5px solid #5b3fd6!important;box-shadow:none!important}
+/* 2026-11-18 시온님: 신청 팝업이 열릴 때 버튼에 생기는 하늘색 포커스 줄 지움 */
+.applym a:focus,.applym button:focus,.applym a:focus-visible,.applym button:focus-visible{outline:none!important;box-shadow:none!important}
+.applym a,.applym button{-webkit-tap-highlight-color:transparent}
