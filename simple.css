@@ -1377,3 +1377,6 @@ input,select,textarea{font-size:16px!important}
 /* 2026-11-18 시온님: 상세 아래 버튼도 색 바꿈 — 제품 상세 보기 진하게, 신청하기 연하게 */
 .dbar .dbl{background:#5b3fd6!important;color:#fff!important}
 .dbar .b.dbp,.dbar a.b.pri{background:#efeafd!important;color:#5b3fd6!important;border:0!important;box-shadow:none!important}
+/* 2026-11-18 시온님: 상세 아래 버튼 순서 — 신청하기 왼쪽, 제품 상세 보기 오른쪽 */
+.dbar .dbl{order:3}
+.dbar .b.dbp,.dbar a.b.pri{order:2}
