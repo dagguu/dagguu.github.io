@@ -1362,3 +1362,6 @@ input,select,textarea{font-size:16px!important}
 .applym .apcp b{font-size:22px;font-weight:800}
 .applym .apcp small{display:block;font-size:11px;color:#999;margin-top:2px}
 .applym .b.apgo{justify-content:center}
+.applym .apci{position:relative}
+.applym .apad{position:absolute;right:8px;top:8px;font-style:normal;font-size:10px;font-weight:700;color:#fff;background:rgba(0,0,0,.45);padding:2px 6px;border-radius:5px}
+.applym .apdis{font-size:11px;color:#999;margin:2px 0 10px;text-align:center}
