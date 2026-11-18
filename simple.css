@@ -1316,7 +1316,7 @@ input,select,textarea{font-size:16px!important}
 .goint .gisp{display:inline-block;width:28px;height:28px;border:3px solid #e6defb;border-top-color:#6a3fc8;border-radius:50%;animation:gisp .8s linear infinite}
 @keyframes gisp{to{transform:rotate(360deg)}}
 .goint .gibar{height:4px;background:#eee;border-radius:4px;margin:14px 0 4px;overflow:hidden}
-.goint .gibar i{display:block;height:100%;width:0;background:#6a3fc8;animation:gibar 2.5s linear forwards}
+.goint .gibar i{display:block;height:100%;width:0;background:#6a3fc8;animation:gibar 3s linear forwards}
 @keyframes gibar{to{width:100%}}
 .goint .gik{margin:14px 0 12px;text-align:left}
 .goint .gikh b{font-size:15px}.goint .gikh small{display:block;color:#999;font-size:12px}
@@ -1343,3 +1343,4 @@ input,select,textarea{font-size:16px!important}
 
 /* 신청 팝업 안내 회색 바탕(2026-11-18) */
 .sheet .apnote{background:#f2f2f4;color:#555}
+.goint .gicd{display:inline-block;min-width:1.2em;opacity:.75}

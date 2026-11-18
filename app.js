@@ -2551,7 +2551,7 @@ function apGoBtn(it){ var u=priceUrl(it); if(!u) return ''; var c=catOf(it), nm=
   var img=safeUrl(it.image), t=c==="stay"?"객실 사진 더 보기":(c==="etc"?"입장권 정보 더 보기":"제품 사진 더 보기"), sub=c==="stay"?"객실·위치·편의시설 정보":(c==="etc"?"이용 안내·가격 정보":"상세 사진·구성 정보");
   return '<a class="b wide apgo'+(img?' apph':'')+'" data-m="cp" '+ext(u)+'>'+(img?'<span class="apst"><i></i><i></i><img src="'+esc(img)+'" alt="" referrerpolicy="no-referrer"></span>':'')+
     '<span class="aptx"><b>'+t+' ↗</b><small>'+nm+' 바로가기 · '+sub+'</small></span></a>'; }
-/* 모집 사이트로 넘어가기 전 2.5초 "이동 중" 화면 + 다꾸키즈 신상(2026-11-18 시온님).
+/* 모집 사이트로 넘어가기 전 3초(2026-11-18 시온님 "3초, 건너뛰기") "이동 중" 화면 + 다꾸키즈 신상(2026-11-18 시온님).
    쿠팡 광고는 넣지 않는다(커버형 배너·오클릭 유도 = 쿠팡 운영정책 4.1-8·4.1-2). 다꾸키즈는 시온님 쇼핑몰 */
 function goWait(url,src,it){
   url=safeUrl(url); if(!url) return;
@@ -2569,7 +2569,7 @@ function goWait(url,src,it){
   function paint(){ var k=w.querySelector(".gikw"); if(k) k.innerHTML=kids(); }
   w.innerHTML='<div class="gis"><div class="gil"><span class="gisp"></span><b>'+esc(src)+' 사이트로 이동 중이에요</b><small>잠시 후 신청 페이지가 열려요</small></div>'+
     '<div class="gibar"><i></i></div><div class="gikw">'+kids()+'</div>'+
-    '<button class="b pri wide" data-gnow>바로 이동하기 ›</button></div>';
+    '<button class="b pri wide" data-gnow>건너뛰기 <span class="gicd">3</span></button></div>';
   w.addEventListener("click",function(e){
     if(e.target.closest("[data-gnow]")){ ga("apply_go",{item_id:it.id,how:"now"}); return go(); }
     if(e.target.closest("[data-gk]")){ clearTimeout(tm); ga("kids_click",{place:"apply_wait",item_id:it.id}); setTimeout(go,600); }
@@ -2577,7 +2577,8 @@ function goWait(url,src,it){
   document.body.appendChild(w);
   if(!KIDS){ kidsLoad(); var n=0, iv=setInterval(function(){ n++; if(KIDS||n>10||done){ clearInterval(iv); paint(); } },200); }
   ga("apply_wait",{item_id:it.id,source:src});
-  tm=setTimeout(go,2500);
+  var left=3, cd=setInterval(function(){ left--; var el=w.querySelector(".gicd"); if(el) el.textContent=left>0?left:""; if(left<=0||done) clearInterval(cd); },1000);
+  tm=setTimeout(go,3000);
 }
 function applyPopup(it){
   var url=safeUrl(it.refUrl||it.applyUrl); if(!url) return;
