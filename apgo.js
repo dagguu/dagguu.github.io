@@ -49,11 +49,11 @@
   }
   function popup(a){
     var d=a.dataset, url=a.getAttribute("href"), src=d.src||"체험단", cat=d.cat||"stay";
-    var nm=cat==="stay"?"숙소":(cat==="etc"?"입장권":"제품"), t=cat==="stay"?"객실 사진 더 보기":(cat==="etc"?"입장권 정보 더 보기":"제품 사진 더 보기"), sub=cat==="stay"?"객실·위치·편의시설 정보":(cat==="etc"?"이용 안내·가격 정보":"상세 사진·구성 정보");
-    var cp=d.view?'<a class="b wide apgo'+(d.img?' apph':'')+'" data-m="cp" href="'+esc(d.view)+'" target="_blank" rel="sponsored nofollow noopener">'+(d.img?'<span class="apst"><i></i><i></i><img src="'+esc(d.img)+'" alt="" referrerpolicy="no-referrer"></span>':'')+'<span class="aptx"><b>'+t+' ↗</b><small>'+nm+' 바로가기 · '+sub+'</small></span></a>':'';
+    var t=cat==="stay"?"객실 사진 더 보기":(cat==="etc"?"입장권 가격 보기":"제품 상세 보기"), pr=+d.price||0, R=' href="'+esc(d.view)+'" target="_blank" rel="sponsored nofollow noopener"';
+    var cp=d.view?'<a class="apcard" data-m="cp"'+R+'>'+(d.img?'<span class="apci"><img src="'+esc(d.img)+'" alt="" referrerpolicy="no-referrer"></span>':'')+'<span class="apcn">'+esc(d.name||"")+'</span>'+(pr?'<span class="apcp"><b>'+pr.toLocaleString("ko-KR")+'원</b><small>쿠팡 판매가 · 등록할 때 가격이라 지금은 다를 수 있어요</small></span>':'')+'</a><a class="b wide apgo" data-m="cp"'+R+'>'+t+' ↗</a>':'';
     var w=document.createElement("div"); w.className="modal applym"; w.setAttribute("role","dialog"); w.setAttribute("aria-modal","true");
-    w.innerHTML='<div class="sheet"><button class="mx" data-m="x" aria-label="닫기">✕</button><div class="mlogo">'+LOGO+'</div>'+
-      '<h2>['+esc(src)+'] 홈페이지로<br>이동해요👀</h2>'+
+    w.innerHTML='<div class="sheet apsheet"><button class="mx" data-m="x" aria-label="닫기">✕</button>'+
+
       cp+'<a class="b pri wide" data-m="go" href="'+esc(url)+'">'+esc(src)+'에서 신청하기 ↗</a>'+
       '<button class="b sec wide" data-m="x" style="margin-top:8px">닫기</button></div>';
     function close(){ w.remove(); }

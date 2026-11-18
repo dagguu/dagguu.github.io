@@ -1351,3 +1351,14 @@ input,select,textarea{font-size:16px!important}
 .goint .gikr s{display:block;color:#aaa;font-size:11px;margin-top:2px}
 .goint .gikr b em{font-style:normal;color:#ff3b5c;margin-right:3px}
 .goint .gikr small{display:block;color:#999;font-size:10px}
+
+/* 신청 팝업 상품 카드(2026-11-18) */
+.applym .apsheet{padding-top:14px}
+.applym .apcard{display:block;text-decoration:none;color:#222;text-align:left;margin:22px 0 10px}
+.applym .apci{display:block;border-radius:16px;overflow:hidden;background:#f4f4f6;aspect-ratio:1/1}
+.applym .apci img{width:100%;height:100%;object-fit:cover}
+.applym .apcn{display:block;font-size:16px;font-weight:700;margin-top:12px;line-height:1.4}
+.applym .apcp{display:block;margin-top:6px}
+.applym .apcp b{font-size:22px;font-weight:800}
+.applym .apcp small{display:block;font-size:11px;color:#999;margin-top:2px}
+.applym .b.apgo{justify-content:center}

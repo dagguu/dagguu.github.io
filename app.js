@@ -2557,10 +2557,12 @@ function applyBtns(it,url,src){
   return h;
 }
 /* 신청 팝업의 숙소·제품 바로가기(2026-11-18 시온님). 잠금·강제 이동 없이 버튼만 둔다(쿠팡 운영정책 4.1-2 무효클릭) */
-function apGoBtn(it){ var u=priceUrl(it); if(!u) return ''; var c=catOf(it), nm=c==="stay"?"숙소":(c==="etc"?"입장권":"제품");
-  var img=safeUrl(it.image), t=c==="stay"?"객실 사진 더 보기":(c==="etc"?"입장권 정보 더 보기":"제품 사진 더 보기"), sub=c==="stay"?"객실·위치·편의시설 정보":(c==="etc"?"이용 안내·가격 정보":"상세 사진·구성 정보");
-  return '<a class="b wide apgo'+(img?' apph':'')+'" data-m="cp" '+ext(u)+'>'+(img?'<span class="apst"><i></i><i></i><img src="'+esc(img)+'" alt="" referrerpolicy="no-referrer"></span>':'')+
-    '<span class="aptx"><b>'+t+' ↗</b><small>'+nm+' 바로가기 · '+sub+'</small></span></a>'; }
+function apGoBtn(it){ var u=priceUrl(it); if(!u) return ''; var c=catOf(it);
+  /* 2026-11-18 시온님 "이 화면 넣어줘"(쿠팡 상품 화면 캡처): 쿠팡 화면을 흉내 내지 않고 다꾸 모양 상품 카드로. 리뷰 수·구매자 수는 데이터가 없어 쓰지 않는다 */
+  var img=safeUrl(it.image), t=c==="stay"?"객실 사진 더 보기":(c==="etc"?"입장권 가격 보기":"제품 상세 보기"), pr=+it.cpPrice||0;
+  return '<a class="apcard" data-m="cp" '+ext(u)+'>'+(img?'<span class="apci"><img src="'+esc(img)+'" alt="" referrerpolicy="no-referrer"></span>':'')+
+    '<span class="apcn">'+esc(it.name||"")+'</span>'+(pr?'<span class="apcp"><b>'+pr.toLocaleString("ko-KR")+'원</b><small>쿠팡 판매가 · 등록할 때 가격이라 지금은 다를 수 있어요</small></span>':'')+'</a>'+
+    '<a class="b wide apgo" data-m="cp" '+ext(u)+'>'+t+' ↗</a>'; }
 /* 모집 사이트로 넘어가기 전 5초 기다린 뒤 건너뛰기를 눌러야 이동(2026-11-18 시온님) "이동 중" 화면 + 다꾸키즈 신상(2026-11-18 시온님).
    쿠팡 광고는 넣지 않는다(커버형 배너·오클릭 유도 = 쿠팡 운영정책 4.1-8·4.1-2). 다꾸키즈는 시온님 쇼핑몰 */
 function goWait(url,src,it){
@@ -2596,8 +2598,7 @@ function applyPopup(it){
   var old=document.querySelector(".modal.applym"); if(old) old.remove();
   var src=it.source||"체험단";
   var wrap=document.createElement("div"); wrap.className="modal applym"; wrap.setAttribute("role","dialog"); wrap.setAttribute("aria-modal","true"); wrap.setAttribute("aria-label",src+" 홈페이지로 이동");
-  wrap.innerHTML='<div class="sheet"><button class="mx" data-m="x" aria-label="닫기">'+ico(I.x)+'</button><div class="mlogo">'+logoSvg(40)+'</div>'+
-    '<h2>['+esc(src)+'] 홈페이지로<br>이동해요👀</h2>'+  /* 안내 문구(로그인·페이백·마이페이지) 2026-11-18 시온님 요청으로 뺌 */
+  wrap.innerHTML='<div class="sheet apsheet"><button class="mx" data-m="x" aria-label="닫기">'+ico(I.x)+'</button>'+  /* 다꾸 로고·"홈페이지로 이동해요"·안내 문구 2026-11-18 시온님 요청으로 뺌 */
     apGoBtn(it)+applyBtns(it,url,src)+
     '<button class="b sec wide" data-m="x" style="margin-top:8px">닫기</button></div>';
   function close(){ wrap.remove(); document.removeEventListener("keydown",esck); }
