@@ -2562,7 +2562,7 @@ function apGoBtn(it){ var u=priceUrl(it); if(!u) return ''; var c=catOf(it);
   var img=safeUrl(it.image), t=c==="stay"?"객실 사진 더 보기":(c==="etc"?"입장권 가격 보기":"제품 상세 보기"), pr=+it.cpPrice||0;
   return '<a class="apcard" data-m="cp" '+ext(u)+'>'+(img?'<span class="apci"><i class="apad">AD</i><img src="'+esc(img)+'" alt="" referrerpolicy="no-referrer"></span>':'')+
     '<span class="apcn">'+esc(it.name||"")+'</span>'+(pr?'<span class="apcp"><b>'+pr.toLocaleString("ko-KR")+'원</b>'+(it.rocket?'<i class="aprk">로켓배송</i>':'')+'<small>쿠팡 판매가 · 등록할 때 가격이라 지금은 다를 수 있어요</small></span>':'')+'</a>'+
-    '<a class="b wide apgo" data-m="cp" '+ext(u)+'>'+t+' ↗</a><p class="apdis">이 링크는 쿠팡 파트너스 활동으로 일정액의 수수료를 받을 수 있어요</p>'; }  /* 팝업이 화면 맨 위 대가성 줄을 가려서 팝업 안에 AD·대가성 문구(2026-11-18) */
+    '<a class="b wide apgo" data-m="cp" '+ext(u)+'>'+t+' ↗</a>'; }  /* 팝업이 화면 맨 위 대가성 줄을 가려서 팝업 안에 AD·대가성 문구(2026-11-18) */
 /* 모집 사이트로 넘어가기 전 5초 기다린 뒤 건너뛰기를 눌러야 이동(2026-11-18 시온님) "이동 중" 화면 + 다꾸키즈 신상(2026-11-18 시온님).
    쿠팡 광고는 넣지 않는다(커버형 배너·오클릭 유도 = 쿠팡 운영정책 4.1-8·4.1-2). 다꾸키즈는 시온님 쇼핑몰 */
 function goWait(url,src,it){

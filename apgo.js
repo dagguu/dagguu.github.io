@@ -50,7 +50,7 @@
   function popup(a){
     var d=a.dataset, url=a.getAttribute("href"), src=d.src||"체험단", cat=d.cat||"stay";
     var t=cat==="stay"?"객실 사진 더 보기":(cat==="etc"?"입장권 가격 보기":"제품 상세 보기"), pr=+d.price||0, R=' href="'+esc(d.view)+'" target="_blank" rel="sponsored nofollow noopener"';
-    var cp=d.view?'<a class="apcard" data-m="cp"'+R+'>'+(d.img?'<span class="apci"><i class="apad">AD</i><img src="'+esc(d.img)+'" alt="" referrerpolicy="no-referrer"></span>':'')+'<span class="apcn">'+esc(d.name||"")+'</span>'+(pr?'<span class="apcp"><b>'+pr.toLocaleString("ko-KR")+'원</b>'+(d.rocket==="1"?'<i class="aprk">로켓배송</i>':'')+'<small>쿠팡 판매가 · 등록할 때 가격이라 지금은 다를 수 있어요</small></span>':'')+'</a><a class="b wide apgo" data-m="cp"'+R+'>'+t+' ↗</a><p class="apdis">이 링크는 쿠팡 파트너스 활동으로 일정액의 수수료를 받을 수 있어요</p>':'';
+    var cp=d.view?'<a class="apcard" data-m="cp"'+R+'>'+(d.img?'<span class="apci"><i class="apad">AD</i><img src="'+esc(d.img)+'" alt="" referrerpolicy="no-referrer"></span>':'')+'<span class="apcn">'+esc(d.name||"")+'</span>'+(pr?'<span class="apcp"><b>'+pr.toLocaleString("ko-KR")+'원</b>'+(d.rocket==="1"?'<i class="aprk">로켓배송</i>':'')+'<small>쿠팡 판매가 · 등록할 때 가격이라 지금은 다를 수 있어요</small></span>':'')+'</a><a class="b wide apgo" data-m="cp"'+R+'>'+t+' ↗</a>':'';
     var w=document.createElement("div"); w.className="modal applym"; w.setAttribute("role","dialog"); w.setAttribute("aria-modal","true");
     w.innerHTML='<div class="sheet apsheet"><button class="mx" data-m="x" aria-label="닫기">✕</button>'+
 
