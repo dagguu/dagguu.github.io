@@ -7,6 +7,7 @@ on:
       nos: { description: "상품번호 직접 (쉼표, 비우면 자동)", default: "" }
       brands: { description: "브랜드 영상 (쉼표, 예: 아오스타,피피)", default: "" }
       model: { description: "y = 모델 착용컷만", default: "n" }
+      skip: { description: "브랜드 영상에서 뺄 상품번호(쉼표)", default: "" }
 permissions: { contents: write }
 concurrency: kids-video
 jobs:
@@ -32,6 +33,7 @@ jobs:
           NOS: ${{ github.event.inputs.nos }}
           BRANDS: ${{ github.event.inputs.brands }}
           MODEL: ${{ github.event.inputs.model }}
+          SKIP: ${{ github.event.inputs.skip }}
       - run: |
           git config user.name "dagguu"; git config user.email "dagguu@users.noreply.github.com"
           git add kids/v

@@ -308,7 +308,10 @@ def make_brand(brand, ps, k=8):
     mine.sort(key=lambda p: (p.get("created_date") or "", p["product_no"]), reverse=True)
     items, covers = [], []
     model = os.environ.get("MODEL", "") == "y"
+    skip = {int(x) for x in re.findall(r"[0-9]+", os.environ.get("SKIP", ""))}
     for p in mine:
+        if p["product_no"] in skip:
+            continue
         im = model_image(p) if model else one_image(p)
         if not im:
             continue
