@@ -1365,3 +1365,5 @@ input,select,textarea{font-size:16px!important}
 .applym .apci{position:relative}
 .applym .apad{position:absolute;right:8px;top:8px;font-style:normal;font-size:10px;font-weight:700;color:#fff;background:rgba(0,0,0,.45);padding:2px 6px;border-radius:5px}
 .applym .apdis{font-size:11px;color:#999;margin:2px 0 10px;text-align:center}
+/* 로켓배송 글자 딱지(쿠팡 API rocket=true 일 때만, 로고 X) 2026-11-18 */
+.applym .aprk{display:inline-block;vertical-align:4px;margin-left:8px;font-style:normal;font-size:11px;font-weight:800;color:#2f6fe4;background:#eef4ff;border-radius:5px;padding:2px 6px}
