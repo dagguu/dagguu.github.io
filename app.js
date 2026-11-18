@@ -369,12 +369,22 @@ function kidsHtml(L){
     '<div class="hdr">'+L.map(function(x){ return '<a class="hdi" data-gsec="kids" href="'+esc(kidsGo("/product/detail.html?product_no="+x.no))+'" target="_blank" rel="noopener"><span class="hdm"><img src="'+esc(x.img)+'" alt="" loading="lazy" referrerpolicy="no-referrer"></span><span class="hdn">'+esc(x.name)+'</span><span class="hdp"><b>'+esc(x.price)+'</b></span></a>'; }).join("")+
     '<a class="hdi kmore" href="'+esc(kidsGo("/"))+'" target="_blank" rel="noopener"><span class="hdm kmm">👕<br>전체 보기</span><span class="hdn">다꾸키즈 구경가기 ›</span></a></div></section>';
 }
+/* 다꾸키즈 상품 딱지·할인가(2026-11-18 시온님): 사진 주소의 등록 날짜(/YYYYMMDD/)로 신상 3일 회원 10% 할인(카페24 혜택 "신상 3일 10% 할인", 1원 단위 내림, 비회원 5%)을 계산.
+   BEST = 다꾸키즈 인기상품 분류 55. 할인율·기간을 바꾸면 KSALE 와 apgo.js 를 같이 고친다 */
+var KSALE={rate:10,days:3}, KBEST=null;
+function kidsBest(cb){ if(KBEST) return cb&&cb(); fetch("https://dagguu.cafe24api.com/api/v2/categories/55/products?display_group=1&limit=100",{headers:{"X-Cafe24-Client-Id":"JzTmuiBPItGvZ6KG8g3aPC"}}).then(function(r){ return r.json(); }).then(function(j){ KBEST={}; (j.products||[]).forEach(function(p){ KBEST[p.product_no]=1; }); cb&&cb(); }).catch(function(){ KBEST={}; }); }
+function kSale(x){ if(!x||!x.d) return false; var t=today(), d=new Date(+x.d.slice(0,4),+x.d.slice(4,6)-1,+x.d.slice(6,8)); return (t-d)/864e5 < KSALE.days-0.01 && (t-d)>=0; }
+function kCard(x){
+  var sale=kSale(x), best=KBEST&&KBEST[x.no], tag=sale?'<i class="kt ks">신상 '+KSALE.rate+'%</i>':(best?'<i class="kt kb">BEST</i>':(x.nw?'<i class="kt kn">NEW</i>':''));
+  var pr=sale?'<s>'+esc(x.price)+'</s><b><em>'+KSALE.rate+'%</em>'+Math.floor(x.p*(100-KSALE.rate)/100).toLocaleString("ko-KR")+'원</b><small>가입 회원가</small>':'<b>'+esc(x.price)+'</b>';
+  return '<a data-gk href="'+esc(kidsGo("/product/detail.html?product_no="+x.no))+'" target="_blank" rel="noopener"><span>'+tag+'<img src="'+esc(x.img)+'" alt="" referrerpolicy="no-referrer"></span><em>'+esc(x.name)+'</em>'+pr+'</a>';
+}
 function kidsLoad(){
   var paint=function(){ [].forEach.call(document.querySelectorAll("[data-kids]"),function(el){ el.innerHTML=kidsHtml(KIDS); }); };
   if(KIDS){ paint(); return; } if(kidsLoad.busy) return; kidsLoad.busy=1;
-  fetch("https://dagguu.cafe24api.com/api/v2/products?display=T&selling=T&limit=12&sort=created_date&order=desc&fields=product_no,product_name,price,list_image",{headers:{"X-Cafe24-Client-Id":"JzTmuiBPItGvZ6KG8g3aPC"}})
+  fetch("https://dagguu.cafe24api.com/api/v2/products?display=T&selling=T&limit=12&sort=created_date&order=desc&fields=product_no,product_name,price,list_image,list_icon",{headers:{"X-Cafe24-Client-Id":"JzTmuiBPItGvZ6KG8g3aPC"}})
     .then(function(r){ return r.json(); }).then(function(j){
-      KIDS=(j.products||[]).filter(function(p){ return p.list_image&&+p.price>0; }).map(function(p){ return {no:p.product_no,name:p.product_name,img:safeUrl(p.list_image),price:(+p.price).toLocaleString("ko-KR")+"원"}; });
+      KIDS=(j.products||[]).filter(function(p){ return p.list_image&&+p.price>0; }).map(function(p){ var m=String(p.list_image).match(/\/(20\d{6})\//); return {no:p.product_no,name:p.product_name,img:safeUrl(p.list_image),price:(+p.price).toLocaleString("ko-KR")+"원",p:+p.price,d:m?m[1]:"",nw:!!(p.list_icon&&p.list_icon.new_icon)}; });
       paint();
     }).catch(function(){});
 }
@@ -2551,7 +2561,7 @@ function apGoBtn(it){ var u=priceUrl(it); if(!u) return ''; var c=catOf(it), nm=
   var img=safeUrl(it.image), t=c==="stay"?"객실 사진 더 보기":(c==="etc"?"입장권 정보 더 보기":"제품 사진 더 보기"), sub=c==="stay"?"객실·위치·편의시설 정보":(c==="etc"?"이용 안내·가격 정보":"상세 사진·구성 정보");
   return '<a class="b wide apgo'+(img?' apph':'')+'" data-m="cp" '+ext(u)+'>'+(img?'<span class="apst"><i></i><i></i><img src="'+esc(img)+'" alt="" referrerpolicy="no-referrer"></span>':'')+
     '<span class="aptx"><b>'+t+' ↗</b><small>'+nm+' 바로가기 · '+sub+'</small></span></a>'; }
-/* 모집 사이트로 넘어가기 전 3초(2026-11-18 시온님 "3초, 건너뛰기") "이동 중" 화면 + 다꾸키즈 신상(2026-11-18 시온님).
+/* 모집 사이트로 넘어가기 전 5초 기다린 뒤 건너뛰기를 눌러야 이동(2026-11-18 시온님) "이동 중" 화면 + 다꾸키즈 신상(2026-11-18 시온님).
    쿠팡 광고는 넣지 않는다(커버형 배너·오클릭 유도 = 쿠팡 운영정책 4.1-8·4.1-2). 다꾸키즈는 시온님 쇼핑몰 */
 function goWait(url,src,it){
   url=safeUrl(url); if(!url) return;
@@ -2561,24 +2571,25 @@ function goWait(url,src,it){
   function go(){ if(done) return; done=true; clearTimeout(tm); w.remove(); location.href=url; }
   function kids(){
     var L=(KIDS||[]).slice(); if(L.length<3) return "";
-    var o=(new Date().getMinutes())%L.length; L=L.slice(o).concat(L.slice(0,o)).slice(0,3);
+    var o=(new Date().getMinutes())%L.length; L=L.slice(o).concat(L.slice(0,o));
+    L=L.filter(kSale).concat(L.filter(function(x){ return !kSale(x); })).slice(0,3);
     return '<div class="gik"><div class="gikh"><b>👕 다꾸키즈 오늘의 신상</b><small>다꾸체험단이 운영하는 아동복 쇼핑몰</small></div><div class="gikr">'+
-      L.map(function(x){ return '<a data-gk href="'+esc(kidsGo("/product/detail.html?product_no="+x.no))+'" target="_blank" rel="noopener"><span><img src="'+esc(x.img)+'" alt="" referrerpolicy="no-referrer"></span><em>'+esc(x.name)+'</em><b>'+esc(x.price)+'</b></a>'; }).join("")+
+      L.map(kCard).join("")+
       '</div><a class="gikm" data-gk href="'+esc(kidsGo("/"))+'" target="_blank" rel="noopener">다꾸키즈 구경가기 ›</a></div>';
   }
   function paint(){ var k=w.querySelector(".gikw"); if(k) k.innerHTML=kids(); }
-  w.innerHTML='<div class="gis"><div class="gil"><span class="gisp"></span><b>'+esc(src)+' 사이트로 이동 중이에요</b><small>잠시 후 신청 페이지가 열려요</small></div>'+
+  w.innerHTML='<div class="gis"><div class="gil"><span class="gisp"></span><b>'+esc(src)+' 사이트로 이동 중이에요</b><small>잠시 후 건너뛰기를 누르면 신청 페이지가 열려요</small></div>'+
     '<div class="gibar"><i></i></div><div class="gikw">'+kids()+'</div>'+
-    '<button class="b pri wide" data-gnow>건너뛰기 <span class="gicd">3</span></button></div>';
+    '<button class="b pri wide gskip" data-gnow disabled><span class="gicd">5</span>초 후 건너뛸 수 있어요</button></div>';
   w.addEventListener("click",function(e){
-    if(e.target.closest("[data-gnow]")){ ga("apply_go",{item_id:it.id,how:"now"}); return go(); }
-    if(e.target.closest("[data-gk]")){ clearTimeout(tm); ga("kids_click",{place:"apply_wait",item_id:it.id}); setTimeout(go,600); }
+    var sk=e.target.closest("[data-gnow]"); if(sk){ if(sk.disabled) return; ga("apply_go",{item_id:it.id,how:"skip"}); return go(); }
+    if(e.target.closest("[data-gk]")) ga("kids_click",{place:"apply_wait",item_id:it.id});
   });
   document.body.appendChild(w);
-  if(!KIDS){ kidsLoad(); var n=0, iv=setInterval(function(){ n++; if(KIDS||n>10||done){ clearInterval(iv); paint(); } },200); }
+  if(!KIDS) kidsLoad(); kidsBest(); var n=0, iv=setInterval(function(){ n++; if((KIDS&&KBEST)||n>15||done){ clearInterval(iv); paint(); } },200);
   ga("apply_wait",{item_id:it.id,source:src});
-  var left=3, cd=setInterval(function(){ left--; var el=w.querySelector(".gicd"); if(el) el.textContent=left>0?left:""; if(left<=0||done) clearInterval(cd); },1000);
-  tm=setTimeout(go,3000);
+  var left=5, cd=setInterval(function(){ left--; var el=w.querySelector(".gicd"), bt=w.querySelector(".gskip"); if(el) el.textContent=left;
+    if(left<=0){ clearInterval(cd); if(bt){ bt.disabled=false; bt.innerHTML="건너뛰기 ›"; } } },1000);
 }
 function applyPopup(it){
   var url=safeUrl(it.refUrl||it.applyUrl); if(!url) return;
