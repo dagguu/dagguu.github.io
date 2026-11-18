@@ -1340,3 +1340,6 @@ input,select,textarea{font-size:16px!important}
 .applym .aptx{display:flex;flex-direction:column;min-width:0}
 .applym .aptx b{font-size:15px}
 .applym .aptx small{font-size:12px;font-weight:500;color:#7a68c9;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* 신청 팝업 안내 회색 바탕(2026-11-18) */
+.sheet .apnote{background:#f2f2f4;color:#555}
