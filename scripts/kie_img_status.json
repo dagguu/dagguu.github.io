@@ -1,24 +1,48 @@
 {
- "at": "2026-11-18 19:56",
+ "at": "2026-11-19 19:50",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 2,
-   "taskId": "e13aaacf6b88b92f50905553622dff08",
+   "n": 1,
+   "taskId": "2362260a203f6618dc4c3ccc72fea950",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-18/pohang-bythesea-poolvilla/2_edit.jpg"
+   "file": "img/2026-11-19/ganghwa-white-gallery/1_edit.jpg"
+  },
+  {
+   "n": 2,
+   "taskId": "f584d5693e8aee55ae7be9588795351b",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-19/ganghwa-white-gallery/2_edit.jpg"
+  },
+  {
+   "n": 3,
+   "taskId": "1642e1e81bf364504cb9f781aa3e4630",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-19/ganghwa-white-gallery/3_edit.jpg"
   },
   {
    "n": 4,
-   "taskId": "74a33b46054910be593348424e7af447",
+   "taskId": "9260a05e0086ce239b32f7c9929b462a",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-18/pohang-bythesea-poolvilla/4_edit.jpg"
+   "file": "img/2026-11-19/ganghwa-white-gallery/4_edit.jpg"
+  },
+  {
+   "n": 5,
+   "taskId": "407a73e53a82cbebc09fb0976eda2c7a",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-19/ganghwa-white-gallery/5_edit.jpg"
   }
  ],
- "slug": "pohang-bythesea-poolvilla"
+ "slug": "ganghwa-white-gallery"
 }
