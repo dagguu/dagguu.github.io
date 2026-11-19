@@ -276,22 +276,22 @@
   /* 2026-11-18 시온님: 브랜드 사이즈표(키·몸무게)와 모델 착용(model_specs)으로 고르기.
      ① 모델과 키 3cm·몸무게 1.5kg 안이면 그 모델 사이즈 ② 키 사이즈와 몸무게 사이즈가 같으면 그것
      ③ 몸무게가 더 크면 큰 쪽 ④ 몸무게가 더 작으면 키가 그 구간 아래쪽 절반일 때만 작은 쪽(크리스 102cm 16kg = S, 나율이 98cm 14kg = S) */
-  var BT = null, MS = null, recWhy = "", recUp = "";
+  var BT = null, MSP = null, recWhy = "", recUp = "";
   function brandName(){
     var nm = ((document.querySelector('meta[property="og:title"]') || {}).content || document.title || "").split(" - ")[0].replace(/^다꾸키즈 [|] /, "");
     return (nm.split(" ")[0] || "").replace(/con$/i, "");
   }
   function loadBT(){
-    if (BT) return; BT = {}; MS = {};
+    if (BT) return; BT = {}; MSP = {};
     var d = new Date().toISOString().slice(0, 10);
     fetch("https://www.dagguu.com/kids/brand_size_tbl.json?d=" + d).then(function(r){ return r.json(); }).then(function(j){ BT = j || {}; try { recLine(); } catch(e){} }).catch(function(){});
-    fetch("https://www.dagguu.com/kids/model_specs.json?d=" + d).then(function(r){ return r.json(); }).then(function(j){ MS = (j && j.b) || {}; try { recLine(); } catch(e){} }).catch(function(){});
+    fetch("https://www.dagguu.com/kids/model_specs.json?d=" + d).then(function(r){ return r.json(); }).then(function(j){ MSP = (j && j.b) || {}; try { recLine(); } catch(e){} }).catch(function(){});
   }
   function rng(t){ var m = String(t || "").match(/[0-9.]+/g); if (!m) return null; return [parseFloat(m[0]), parseFloat(m[m.length - 1])]; }
   function pickBrand(k, opts){
     recWhy = ""; recUp = "";
     var b = brandName(); if (!b) return null;
-    var ms = (MS || {})[b];
+    var ms = (MSP || {})[b];
     if (ms && ms.r && k.h && k.w) {
       for (var i = 0; i < ms.r.length; i++) {
         var r = ms.r[i], mh = parseFloat(r[0]), mw = parseFloat(r[1]);
