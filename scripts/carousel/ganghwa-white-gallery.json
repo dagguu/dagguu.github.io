@@ -21,7 +21,7 @@
  "scenes": [
   {
    "img": "ai:1",
-   "y": 0.6,
+   "y": 0.45,
    "vp": "Slow aerial glide gently rising in front of the white buildings at sunset, warm lights glowing in the windows, the sea and sky softly glowing behind, calm and still."
   },
   {
@@ -41,11 +41,12 @@
      "x": 20,
      "y": 18
     }
-   ]
+   ],
+   "vp": "Very slow steady push forward toward the sea and the setting sun, sunlight shimmering on the water, everything calm."
   },
   {
    "img": "ai:3",
-   "y": 0.55,
+   "y": 0.6,
    "cap": "테라스에 서서\n**해 질 녘 하늘 바라보기** 🧡",
    "stickers": [
     {
@@ -56,7 +57,9 @@
      "r": -4,
      "c": "#ffe0c2"
     }
-   ]
+   ],
+   "vp": "Very slow steady push forward toward the terrace edge and the sunset sky, the woman standing still, birds far away in the sky.",
+   "people": true
   },
   {
    "img": "ai:4",
@@ -70,11 +73,12 @@
      "y": 20,
      "r": 5
     }
-   ]
+   ],
+   "vp": "Very slow steady push forward into the bright living room toward the glass door, soft daylight, everything calm and still."
   },
   {
    "img": "ai:5",
-   "y": 0.55,
+   "y": 0.25,
    "cap": {
     "red": "📌 숙소 정보가 궁금하다면",
     "t": "프로필 링크에서 **[027]**번을\n검색해 주세요!"
@@ -85,7 +89,8 @@
      "x": 80,
      "y": 16
     }
-   ]
+   ],
+   "vp": "Slow aerial glide gently rising in front of the white buildings at dusk, warm lights glowing in the windows, calm and still."
   }
  ],
  "caption": "추운 날엔 노을 보고 들어와 실내에서 노는 여행도 좋아요.\n\n인천 강화 화도면, 앞으로는 마니산이 보이고 뒤로는 바다가 펼쳐진 자리에 선 하얀 갤러리 모양 독채 펜션이에요. 해 질 녘이면 건물 너머로 서해 노을이 번지고, 해가 지면 독채 안 스크린골프와 노래방에서 시간을 보낼 수 있어요.\n\n✓ 앞은 마니산, 뒤는 바다가 보이는 자리\n✓ 독채마다 개별 스크린골프·노래방·바비큐장\n✓ 자작나무로 만든 아이 놀이터 · 주차 가능\n\n겨울 서해 노을 보러 가고 싶을 때 저장해두세요.\n\n📌 입실 15시·퇴실 11시(연장 없음), 겨울철 수영장 운영은 예약 전에 숙소에 꼭 확인해 주세요.\n🔎숙소정보는 프로필링크에서 [027]번 검색해주세요!\n\n#강화도펜션추천 #강화독채펜션 #강화노을펜션 #마니산펜션 #강화스크린골프펜션"
