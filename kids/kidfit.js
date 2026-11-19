@@ -184,9 +184,27 @@
     document.getElementById("dk-my-inv").onclick = function(e){ var iv = document.getElementById("dk-invite") || document.querySelector(".myshop_recommender"); if (iv) { e.preventDefault(); iv.scrollIntoView({ behavior: "smooth", block: "center" }); } };
     if (location.hash === "#membership") msSheet(grp);
   }
-  function mypage(){
-    if (!/myshop.index/.test(location.pathname) || document.getElementById("dk-kidbox")) return;
-    var host = document.querySelector(".section.benefit") || document.querySelector("#contents");
+  /* 2026-11-19 시온님 "저장하러 가기 누르면 안 떠": 마이페이지는 로그인해야 열려서 손님은 로그인 화면으로 갔음 → 상품 화면에서 바로 아래 창으로 입력(이 기기에만 저장) */
+  function kidSheet(){
+    var old = document.getElementById("dk-kidsheet"); if (old) old.remove();
+    var kb = document.getElementById("dk-kidbox"); if (kb) kb.remove();
+    var w = document.createElement("div"); w.id = "dk-kidsheet";
+    w.style.cssText = "position:fixed;inset:0;z-index:100000;background:rgba(0,0,0,.45);display:flex;align-items:flex-end;justify-content:center";
+    w.innerHTML = "<div style='position:relative;width:100%;max-width:720px;max-height:88vh;overflow:auto;background:#fff;border-radius:20px 20px 0 0;-webkit-overflow-scrolling:touch'><button type='button' id='dk-ks-x' aria-label='닫기' style='position:absolute;top:10px;right:12px;z-index:2;width:36px;height:36px;border:0;background:none;font-size:22px;color:#888;cursor:pointer'>✕</button><div id='dk-ks-in'></div></div>";
+    document.body.appendChild(w);
+    var ov = document.body.style.overflow; document.body.style.overflow = "hidden";
+    function close(){ w.remove(); document.body.style.overflow = ov; try { recLine(); } catch(e){} }
+    document.getElementById("dk-ks-x").onclick = close;
+    w.onclick = function(e){ if (e.target === w) close(); };
+    mypage(document.getElementById("dk-ks-in"), close);
+  }
+  document.addEventListener("click", function(e){
+    var a = e.target.closest && e.target.closest("a[href*='#dk-kid']"); if (!a || /myshop.index/.test(location.pathname)) return;
+    e.preventDefault(); kidSheet();
+  }, true);
+  function mypage(sheet, onSaved){
+    if (!sheet && (!/myshop.index/.test(location.pathname) || document.getElementById("dk-kidbox"))) return;
+    var host = sheet || document.querySelector(".section.benefit") || document.querySelector("#contents");
     if (!host) return;
     if (!document.getElementById("dk-kb-css")) { var kst = document.createElement("style"); kst.id = "dk-kb-css";  /* 2026-11-14 시온님 "네모칸이 삐뚤빼뚤": 카페24 기본 label·input 여백 무시, 2칸 격자 고정 */
       kst.textContent = "#dk-kidbox .dkk-g{display:grid!important;grid-template-columns:1fr 1fr!important;gap:12px 10px!important}" +
@@ -197,7 +215,7 @@
       document.head.appendChild(kst); }
     var d = document.createElement("div"); d.id = "dk-kidbox";
     d.style.cssText = "max-width:720px;margin:20px auto;padding:20px;border:1px solid #eee;border-radius:16px;background:#faf8ff;font-family:inherit;box-sizing:border-box";
-    host.parentNode.insertBefore(d, host.nextSibling);
+    if (sheet) { d.style.margin = "0"; d.style.border = "0"; d.style.borderRadius = "20px 20px 0 0"; sheet.appendChild(d); } else host.parentNode.insertBefore(d, host.nextSibling);
     function draw(list){
       var h = "<div style='font-size:16px;font-weight:800;color:#222'>👶 우리 아이 · 엄마 사이즈</div>" +
         "<div style='margin-top:4px;font-size:12px;color:#888;line-height:1.5'>저장해 두면 상품마다 추천 사이즈를 알려 드리고 사이즈 옵션을 미리 골라 드려요. (이 기기에만 저장돼요)</div><div class='dkk-list'>";
@@ -221,7 +239,9 @@
         var mo = { h: parseFloat(document.getElementById("dkm-h").value) || 0, w: parseFloat(document.getElementById("dkm-w").value) || 0, top: document.getElementById("dkm-t").value };
         try { if (mo.h || mo.w || mo.top) localStorage.setItem("dk_mom", JSON.stringify(mo)); else localStorage.removeItem("dk_mom"); } catch(e){}
         try { localStorage.setItem("dk_kids", JSON.stringify(c)); localStorage.removeItem("dk_kid"); if (idx() >= c.length) localStorage.setItem("dk_kid_i", "0"); } catch(e){}
-        document.getElementById("dkk-msg").textContent = (c.length || mo.h || mo.w || mo.top) ? "저장했어요 💜 상품 화면에서 추천 사이즈가 보여요" : "키·몸무게·태어난 달 중 하나는 넣어 주세요";
+        var ok = c.length || mo.h || mo.w || mo.top;
+        document.getElementById("dkk-msg").textContent = ok ? (onSaved ? "저장했어요 💜" : "저장했어요 💜 상품 화면에서 추천 사이즈가 보여요") : "키·몸무게·태어난 달 중 하나는 넣어 주세요";
+        if (ok && onSaved) setTimeout(onSaved, 600);
       };
     }
     function read(){
@@ -234,7 +254,7 @@
     }
     var start = kids(); if (!start.length) start = [{}];
     draw(start);
-    if (location.hash === "#dk-kid") d.scrollIntoView({ block: "center" });
+    if (!sheet && location.hash === "#dk-kid") d.scrollIntoView({ block: "center" });
   }
 
   /* ---------- ② 추천 사이즈 ---------- */
