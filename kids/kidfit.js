@@ -712,7 +712,7 @@
         var bp = basePrice(p), b = bestCp(bp, L); if (!b) return;
         d.setAttribute("data-dkcp2", "1");
         var li = document.createElement("li"); li.className = "dk-cp2";
-        li.innerHTML = '<span style="display:inline-block;margin-top:3px;font-size:12px;font-weight:800;color:#e8312f">🎟 예상 최저가 ' + won(bp - b.off) + '</span>';
+        li.innerHTML = '<span style="display:inline-block;margin-top:3px;font-size:12px;font-weight:800;color:#e8312f">' + (grp() === 4 ? "🎟 쿠폰할인가 " : "🎟 예상 최저가 ") + won(bp - b.off) + '</span>';  /* 2026-11-20 시온님: 다꾸회원은 "쿠폰할인가" */
         var after = d.querySelector("li.dk-gp") || priceLi; after.parentNode.insertBefore(li, after.nextSibling);
       });
     });
