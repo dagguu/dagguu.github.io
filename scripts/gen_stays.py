@@ -51,7 +51,7 @@ header .app{font-size:13px;font-weight:700;color:#6a3fc8;border:1px solid #e3dbf
 footer{margin-top:40px;font-size:12px;color:#8a8994;line-height:1.7;text-align:center}footer a{color:#6a3fc8;font-weight:700}
 .lst{display:flex;flex-direction:column;gap:12px;margin-top:18px}.lc{display:flex;gap:12px;align-items:center;border:1px solid #ececf2;border-radius:16px;padding:10px}.lc img{width:84px;height:84px;border-radius:12px;object-fit:cover;flex:none;background:#f4f4f7}.lc b{display:block;font-size:15px;line-height:1.4;margin-bottom:4px}.lc small{font-size:12.5px;color:#6b6a7a;line-height:1.5}.lc em{display:inline-block;font-style:normal;font-size:11px;font-weight:800;color:#6a3fc8;background:#f4f0ff;border-radius:6px;padding:2px 6px;margin-bottom:5px}
 .srch{position:sticky;top:var(--dh,0px);z-index:5;display:flex;align-items:center;gap:8px;margin:14px -16px 0;padding:10px 16px;background:#fff}.srch span{position:absolute;left:30px;font-size:15px}.srch input{width:100%;height:48px;border:1.5px solid #6a3fc8;border-radius:999px;padding:0 16px 0 42px;font-size:16px;outline:none;background:#faf8ff}
-.lc{position:relative}.lc[hidden]{display:none}.lc .no{position:absolute;left:4px;top:4px;z-index:1;min-width:26px;height:22px;padding:0 6px;border-radius:8px;background:#16151c;color:#fff;font-style:normal;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.lc{position:relative}.lc[hidden]{display:none}.lc .lgo{display:block;margin-top:4px;font-size:12px;font-weight:800;color:#6a3fc8}.lc .no{position:absolute;left:4px;top:4px;z-index:1;min-width:26px;height:22px;padding:0 6px;border-radius:8px;background:#16151c;color:#fff;font-style:normal;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
 .nores{text-align:center;color:#8a8994;font-size:14px;padding:30px 0}
 h1.ix{font-size:26px;margin:18px 0 6px;letter-spacing:-.03em}
 """
@@ -353,7 +353,12 @@ if __name__ == "__main__":
         reels.append(r)
     reels.sort(key=lambda r: -int(r.get("no") or 0))
     json.dump(reels, open(os.path.join(ROOT, "m", "reels.json"), "w", encoding="utf-8"), ensure_ascii=False)
-    lis = "".join(f'<a class="lc" href="/m/{e(x["slug"])}.html" data-no="{e(x["no"])}" data-q="{e((x.get("q","")+" "+x["area"]+" "+x["t"]).lower())}"><i class="no">{e(x["no"])}</i><span class="lim"><img src="{e(x["img"])}" alt="" loading="lazy" referrerpolicy="no-referrer">{rbadge(x.get("campEnd",""), "rb sm")}</span><span><em>{e(THEME.get(x["theme"], "감성숙소 추천"))} · {e(x["area"])}</em><b>{e(x["t"])}</b><em class="mvc" data-mv="m:{e(x["slug"])}" hidden></em></span></a>' for x in done)
+    # 2026-11-19 시온님 "이 화면에서 바로 쿠팡 파트너스 링크로 연결": 목록 카드는 수익 링크(link_of)로 바로 감, 링크 없는 숙소만 글로
+    def _lk(x):
+        P = next((Q for Q in allP if Q["slug"] == x["slug"]), {})
+        u = link_of(P) if P else ""
+        return (e(u), ' target="_blank" rel="noopener noreferrer sponsored"', '<small class="lgo">객실·가격 보기 ↗</small>') if u else ("/m/" + e(x["slug"]) + ".html", "", "")
+    lis = "".join(f'<a class="lc" href="{_lk(x)[0]}"{_lk(x)[1]} data-no="{e(x["no"])}" data-q="{e((x.get("q","")+" "+x["area"]+" "+x["t"]).lower())}"><i class="no">{e(x["no"])}</i><span class="lim"><img src="{e(x["img"])}" alt="" loading="lazy" referrerpolicy="no-referrer">{rbadge(x.get("campEnd",""), "rb sm")}</span><span><em>{e(THEME.get(x["theme"], "감성숙소 추천"))} · {e(x["area"])}</em><b>{e(x["t"])}</b><em class="mvc" data-mv="m:{e(x["slug"])}" hidden></em>{_lk(x)[2]}</span></a>' for x in done)
     idx = head("국내 감성숙소 추천 · 매일 한 곳씩 | 다꾸체험단", "요즘 인기 있는 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 사진과 함께 소개해요.", SITE + "/m/", done[0]["img"] if done else SITE + "/images/og.png") + \
         f'</head><body><div class="w">{TOP.replace("감성숙소 추천 더 보기 ›", "다꾸 매거진 ›").replace("/m/", "/#/mag?t=s", 1)}<h1 class="ix">국내 감성숙소 추천</h1><p class="lead" style="margin-top:6px">요즘 인기 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 소개해요. 번호나 숙소 이름·지역으로 찾아보세요.</p>{SEARCH}<div class="lst" id="lst">{lis or "<p>곧 첫 글이 올라와요</p>"}</div><p class="nores" id="nores" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p><footer><a href="/">다꾸체험단 홈</a></footer></div>{SEARCH_JS}{DDJS}</body></html>'
     open(os.path.join(ROOT, "m", "index.html"), "w", encoding="utf-8").write(idx)
