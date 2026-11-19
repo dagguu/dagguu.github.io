@@ -5,7 +5,7 @@ on:
     inputs:
       pubkey: { description: "base64 공개 키(PEM)", required: true }
       days: { description: "최근 며칠", required: false, default: "30" }
-permissions: { contents: read }
+permissions: { contents: write }
 jobs:
   r:
     runs-on: ubuntu-latest
@@ -26,5 +26,9 @@ jobs:
           openssl enc -aes-256-cbc -pbkdf2 -salt -in /tmp/rep.txt -out out/rep.enc -pass file:/tmp/k
           openssl pkeyutl -encrypt -pubin -inkey /tmp/pub.pem -in /tmp/k -out out/key.enc
           rm -f /tmp/rep.txt /tmp/k
-      - uses: actions/upload-artifact@v4
-        with: { name: rep, path: out, retention-days: 1 }
+      - name: 암호문만 enc 브랜치에 (열쇠 없이는 못 읽음)
+        run: |
+          cd out; git init -q; git checkout -q -b enc
+          git config user.name dagguu; git config user.email eun901002@gmail.com
+          git add . ; git commit -qm enc
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" enc
