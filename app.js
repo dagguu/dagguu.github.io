@@ -2065,6 +2065,26 @@ function expAdmin(v){
     box.onclick=function(e){ var t=e.target.closest("[data-expset]"); if(!t) return; SB.rpc("exp_admin_set",{p_id:+t.dataset.expset,p_status:t.dataset.st,p_note:null}).then(function(x){ if(x.error){ toast("처리하지 못했어요"); return; } toast("✅ "+ST[t.dataset.st]); expAdmin(v); }); };
   });
 }
+/* 2026-11-20 시온님 "다꾸키즈 선물하기 만들어줘": 선물 주문 목록(supabase/gifts.sql) — 받는 분 주소가 들어오면 카페24 주문 배송지를 바꾸고 발송 */
+function giftAdmin(v){
+  var box=document.getElementById("giftadm"); if(!box){ box=document.createElement("div"); box.id="giftadm"; box.className="pg padm"; v.parentNode.insertBefore(box,v); }
+  SB.rpc("gift_purge").then(function(){});
+  SB.rpc("gift_admin_list").then(function(r){
+    if(r.error){ box.innerHTML='<section class="pane"><h2>🎁 다꾸키즈 선물 주문</h2><div class="empty">supabase/gifts.sql 을 SQL Editor 에서 먼저 실행해 주세요</div></section>'; return; }
+    var L=r.data||[], ST={wait:"주소 대기",filled:"주소 받음",sent:"발송 완료",canceled:"취소"};
+    var od=function(a){ return Math.floor((Date.now()-new Date(a.created_at).getTime())/86400000); };
+    var h='<h1>🎁 다꾸키즈 선물 주문 <small style="font-size:14px;color:#888">주소 받음 '+L.filter(function(a){ return a.status==="filled"; }).length+' · 대기 '+L.filter(function(a){ return a.status==="wait"; }).length+'</small></h1>';
+    if(!L.length) h+='<div class="empty">아직 선물 주문이 없어요</div>';
+    h+='<section class="pane">'+L.map(function(a){
+      var ph=String(a.r_tel||"").replace(/^(\d{3})(\d{3,4})(\d{4})$/,"$1-$2-$3"), late=a.status==="wait"&&od(a)>=7;
+      return '<div class="pawd" style="flex-wrap:wrap;gap:6px'+(a.status==="filled"?';background:#eefbf1':late?';background:#fff4e5':'')+'"><span style="flex:1 1 260px"><b>주문 '+esc(a.order_id)+'</b> · '+esc(a.pname||"")+'<br><small style="color:#888">보낸 분 '+esc(a.sender||"-")+' · '+new Date(a.created_at).toLocaleDateString("ko-KR")+' · <b>'+ST[a.status]+'</b>'+(late?' · 7일 지남(보낸 분께 연락)':'')+'</small>'+
+        (a.r_name?'<br>받는 분 <b>'+esc(a.r_name)+'</b> '+esc(ph)+'<br>['+esc(a.r_zip||"")+'] '+esc(a.r_addr1||"")+' '+esc(a.r_addr2||"")+(a.r_memo?'<br><small>메모: '+esc(a.r_memo)+'</small>':''):'')+'</span>'+
+        ['sent','canceled','wait'].map(function(st){ return '<button class="b sm'+(a.status===st?' pri':'')+'" data-giftset="'+a.id+'" data-st="'+st+'">'+ST[st]+'</button>'; }).join('')+'</div>'; }).join('')+'</section>';
+    h+='<p style="font-size:12.5px;color:#888;padding:0 4px">주소 받음 → 카페24 주문 관리에서 그 주문의 배송지를 받는 분 정보로 바꾼 뒤 발송하고 "발송 완료"를 눌러 주세요. 받는 분 정보는 3개월 뒤 지워져요.</p>';
+    box.innerHTML=h;
+    box.onclick=function(e){ var t=e.target.closest("[data-giftset]"); if(!t) return; SB.rpc("gift_admin_set",{p_id:+t.dataset.giftset,p_status:t.dataset.st,p_note:null}).then(function(x){ if(x.error){ toast("처리하지 못했어요"); return; } toast("✅ "+ST[t.dataset.st]); giftAdmin(v); }); };
+  });
+}
 /* 관리자 #/padmin (press_admins 에 있는 계정만) */
 function padminView(){ return '<div class="pg padm" id="padm"><h1>기자단 관리</h1><div class="empty">불러오는 중…</div></div>'; }
 function padminInit(){
@@ -2074,6 +2094,7 @@ function padminInit(){
     SB.rpc("is_press_admin").then(function(r){
       if(r.data) SB.rpc("press_purge").then(function(){});
       if(!r.data){ v.innerHTML='<h1>기자단 관리</h1><div class="empty">관리자만 볼 수 있어요</div>'; return; }
+      try{ giftAdmin(v); }catch(e){}
       try{ expAdmin(v); }catch(e){}
       Promise.all([SB.from("press_jobs").select("*").order("created_at",{ascending:false}).limit(50), SB.from("press_apps").select("*").order("created_at",{ascending:false}).limit(500), SB.from("press_withdrawals").select("*").eq("status","requested").order("created_at"), SB.from("press_files").select("*")]).then(function(R){
         var jobs=R[0].data||[], apps=R[1].data||[], wds=R[2].data||[], files={}; (R[3].data||[]).forEach(function(f){ files[f.job_id]=f; });

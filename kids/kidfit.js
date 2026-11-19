@@ -1932,7 +1932,7 @@
     }).catch(function(){ cf.style.visibility = ""; });
     return true;
   }
-  function coffeeFix(){ if (brandsPage()) return; if (expPage()) return; if (location.pathname.indexOf("/myshop") === 0) { try { recoFix(); } catch (e) {} } try { reviewPage(); } catch (e) {} if (location.pathname.indexOf("/product/coffee.html") !== 0 || location.search.indexOf("t=buy") >= 0) return; var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n, t; while ((n = w.nextNode())) { t = n.nodeValue; if (!t || t.length < 3) continue; for (var k = 0; k < CF_P.length; k++) if (t.indexOf(CF_P[k][0]) >= 0) t = t.split(CF_P[k][0]).join(CF_P[k][1]); if (t !== n.nodeValue) n.nodeValue = t; } try { var dd = document.getElementById("cfDd"); if (dd && dd.textContent.indexOf("상시") < 0) dd.textContent = "상시 모집 중 · 인원이 차면 마감돼요"; var dds = document.querySelectorAll(".cf dd, .cf td"); for (var z = 0; z < dds.length; z++) if (/^20[0-9]{2}[.][0-9]{2}[.][0-9]{2}.*~/.test(dds[z].textContent.trim())) dds[z].textContent = "상시 모집"; } catch (e) {} try { cfConsent(); } catch (e) {} try { cfSelFirst(); } catch (e) {} if (!document.getElementById("dk-rvlink")) { var pl = null, hs = document.querySelectorAll(".cf h2"); for (var q = 0; q < hs.length; q++) if (hs[q].textContent.indexOf("PLUS") >= 0) pl = hs[q]; if (pl) { var a = document.createElement("a"); a.id = "dk-rvlink"; a.href = "/product/coffee.html?t=buy"; a.style.cssText = "display:block;margin:22px 0 0;background:#fff7e6;border:1px solid #ffe2a8;border-radius:14px;padding:14px 16px;color:#5a3d00;text-decoration:none;font-size:14px"; a.innerHTML = "<b style='font-size:15px'>🎁 다꾸키즈에서 옷을 사셨나요?</b><br>배송 받은 옷 입은 사진을 올리면 <b>적립금 5,000원</b>을 드려요 ›"; pl.parentNode.insertBefore(a, pl); } } }
+  function coffeeFix(){ if (brandsPage()) return; if (giftPage()) return; if (expPage()) return; if (location.pathname.indexOf("/myshop") === 0) { try { recoFix(); } catch (e) {} } try { reviewPage(); } catch (e) {} if (location.pathname.indexOf("/product/coffee.html") !== 0 || location.search.indexOf("t=buy") >= 0) return; var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n, t; while ((n = w.nextNode())) { t = n.nodeValue; if (!t || t.length < 3) continue; for (var k = 0; k < CF_P.length; k++) if (t.indexOf(CF_P[k][0]) >= 0) t = t.split(CF_P[k][0]).join(CF_P[k][1]); if (t !== n.nodeValue) n.nodeValue = t; } try { var dd = document.getElementById("cfDd"); if (dd && dd.textContent.indexOf("상시") < 0) dd.textContent = "상시 모집 중 · 인원이 차면 마감돼요"; var dds = document.querySelectorAll(".cf dd, .cf td"); for (var z = 0; z < dds.length; z++) if (/^20[0-9]{2}[.][0-9]{2}[.][0-9]{2}.*~/.test(dds[z].textContent.trim())) dds[z].textContent = "상시 모집"; } catch (e) {} try { cfConsent(); } catch (e) {} try { cfSelFirst(); } catch (e) {} if (!document.getElementById("dk-rvlink")) { var pl = null, hs = document.querySelectorAll(".cf h2"); for (var q = 0; q < hs.length; q++) if (hs[q].textContent.indexOf("PLUS") >= 0) pl = hs[q]; if (pl) { var a = document.createElement("a"); a.id = "dk-rvlink"; a.href = "/product/coffee.html?t=buy"; a.style.cssText = "display:block;margin:22px 0 0;background:#fff7e6;border:1px solid #ffe2a8;border-radius:14px;padding:14px 16px;color:#5a3d00;text-decoration:none;font-size:14px"; a.innerHTML = "<b style='font-size:15px'>🎁 다꾸키즈에서 옷을 사셨나요?</b><br>배송 받은 옷 입은 사진을 올리면 <b>적립금 5,000원</b>을 드려요 ›"; pl.parentNode.insertBefore(a, pl); } } }
   // 리뷰 적립 배지(2026-11-14 시온님): 상품명 아래 "리뷰 쓰고 최대 1,000P 적립" → 누르면 상품후기 칸
   function reviewBadge(){
     var h = document.querySelector(".infoArea .headingArea h1, .infoArea .headingArea h2"); if (!h || document.getElementById("dk-rvb")) return;
@@ -2300,7 +2300,159 @@
       var n = v.firstChild; if (n && n.nodeType === 3 && /예정/.test(n.nodeValue)) n.nodeValue = "통신판매업 신고 면제(간이과세자) ";
     });
   }
-  function run(){ try { document.documentElement.classList.add("dk-ok"); } catch(e){} try { tidy(); } catch(e){} try { bestBadge(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { coupleMenu(); } catch(e){} try { boyMenu(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { laFont(); } catch(e){} try { tongFix(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ xmasPage(); }catch(e){} try{ couplePage(); }catch(e){} try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} try { setTimeout(modelSpec, 1500); } catch(e){} try { coordiTags(); } catch(e){} try { coordiSet(); } catch(e){} try { addPrdLabel(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  /* ---------- ㉒ 선물하기 (2026-11-20 시온님 "다꾸키즈 선물하기 넣을 수 있어? → 너가 만들어 줘 → 진행해") ----------
+     상품 상세 🎁 선물하기 → (보내는 분·메시지) → 바로 구매 → 주문서 맨 위 안내 + 배송메시지 "[선물] …" 자동 → 주문 완료·주문 상세에서 선물 링크(gift_create)
+     → 주는 사람이 카톡으로 보냄 → 받는 사람 /product/coffee.html?t=gift&k=열쇠 에서 이름·연락처·주소(gift_fill) → 다꾸파트너스 #/padmin 에서 배송지 바꿔 발송.
+     DB = 다꾸 저장소 supabase/gifts.sql. 7일 안에 주소가 안 오면 보낸 분께 연락·원하면 취소(전액 환불). */
+  var GF_SBU = "https://nytoxoupvaozgjpnmmdh.supabase.co", GF_SBK = "sb_publishable_i57GJzzp-hE1tNUaLGmMqA_Lw0jSJvD", GF_P = "#6a3fc8";
+  function gfRpc(fn, body){ return fetch(GF_SBU + "/rest/v1/rpc/" + fn, { method: "POST", headers: { apikey: GF_SBK, Authorization: "Bearer " + GF_SBK, "Content-Type": "application/json" }, body: JSON.stringify(body) }).then(function(r){ return r.ok ? r.json() : null; }); }
+  function gfGet(){ try { var g = JSON.parse(sessionStorage.getItem("dk_gift") || "null"); if (g && Date.now() - g.t < 3 * 3600000) return g; } catch(e){} return null; }
+  function gfEsc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  var GF_MEMO = "[선물] 받는 분 주소 대기 · 선물 링크로 받은 주소로 보내 주세요";
+  function giftBtn(){
+    if (document.getElementById("dk-giftbtn")) return;
+    var buy = null; [].forEach.call(document.querySelectorAll(".infoArea .productAction a, .infoArea .productAction button, #orderFixArea a, #orderFixArea button"), function(a){ if (!buy && /바로\s*구매|BUY IT NOW/i.test(a.textContent || "") && a.offsetParent) buy = a; });
+    if (!buy) return;
+    var box = buy.closest(".productAction") || buy.parentNode;
+    var b = document.createElement("a"); b.id = "dk-giftbtn"; b.href = "#none";
+    b.style.cssText = "display:flex;align-items:center;justify-content:center;gap:6px;margin:10px 0 0;height:50px;border:1.5px solid " + GF_P + ";border-radius:10px;background:#fff;color:" + GF_P + ";font-size:16px;font-weight:700;text-decoration:none";
+    b.innerHTML = "🎁 선물하기 <small style='font-weight:500;font-size:12.5px;color:#8a6fd0'>주소 몰라도 OK</small>";
+    box.parentNode.insertBefore(b, box.nextSibling);
+    b.onclick = function(e){ e.preventDefault(); giftSheet(buy); };
+  }
+  function giftSheet(buy){
+    var old = document.getElementById("dk-giftsh"); if (old) old.parentNode.removeChild(old);
+    var me = ""; try { me = (JSON.parse(sessionStorage.getItem("dk_me") || "null") || {}).name || ""; } catch(e){}
+    var pno = window.iProductNo || (location.search.match(/product_no=([0-9]+)/) || [])[1] || (location.pathname.match(/\/product\/[^\/]+\/([0-9]+)/) || [])[1] || "";
+    var pname = ((document.querySelector(".infoArea .headingArea h2, .infoArea h2, .infoArea h3") || {}).textContent || document.title.replace(/ - 다꾸키즈.*$/, "")).trim().slice(0, 100);
+    var w = document.createElement("div"); w.id = "dk-giftsh";
+    w.style.cssText = "position:fixed;inset:0;z-index:100000;background:rgba(0,0,0,.45);display:flex;align-items:flex-end;justify-content:center";
+    w.innerHTML = "<div style='width:100%;max-width:520px;background:#fff;border-radius:18px 18px 0 0;padding:22px 20px calc(18px + env(safe-area-inset-bottom));max-height:88vh;overflow:auto;font-size:14.5px;color:#222'>" +
+      "<div style='display:flex;justify-content:space-between;align-items:center'><b style='font-size:19px'>🎁 선물하기</b><a href='#none' id='gf-x' style='font-size:24px;color:#999;text-decoration:none'>✕</a></div>" +
+      "<p style='margin:8px 0 14px;color:#666;line-height:1.6'>받는 분 주소를 몰라도 괜찮아요. 결제 뒤 <b>선물 링크</b>를 카톡으로 보내면, 받는 분이 주소를 직접 넣어요.</p>" +
+      "<label style='display:block;font-weight:700;margin:0 0 6px'>보내는 분 이름 <span style='color:" + GF_P + "'>*</span></label><input id='gf-sn' maxlength='20' value='" + gfEsc(me) + "' placeholder='받는 분께 보일 이름' style='width:100%;height:46px;border:1px solid #ddd;border-radius:8px;padding:0 12px;font-size:16px;box-sizing:border-box'>" +
+      "<label style='display:block;font-weight:700;margin:14px 0 6px'>선물 메시지 <span style='color:#999;font-weight:400'>(선택)</span></label><textarea id='gf-msg' maxlength='200' placeholder='예) 우리 OO 겨울 잘 보내라고 보내요 💜' style='width:100%;height:76px;border:1px solid #ddd;border-radius:8px;padding:10px 12px;font-size:16px;box-sizing:border-box'></textarea>" +
+      "<ul style='margin:14px 0 0;padding:12px 14px 12px 30px;background:#f7f4fd;border-radius:10px;color:#555;font-size:13px;line-height:1.75'><li>옵션(색상·사이즈)을 고른 뒤 주문해 주세요.</li><li>주문서 배송지에는 <b>내 주소</b>를 넣어 주세요. 받는 분 주소가 들어오면 그 주소로 바꿔서 보내 드려요.</li><li>결제를 마치면 나오는 <b>선물 링크</b>를 받는 분께 보내 주세요. (마이쇼핑 주문 상세에서도 다시 볼 수 있어요)</li><li>7일 안에 받는 분 주소가 들어오지 않으면 연락드리고, 원하시면 주문을 취소하고 전액 환불해 드려요.</li></ul>" +
+      "<a href='#none' id='gf-go' style='display:block;margin:16px 0 0;height:52px;line-height:52px;border-radius:26px;background:" + GF_P + ";color:#fff;text-align:center;font-size:17px;font-weight:700;text-decoration:none'>선물 주문하기</a></div>";
+    document.body.appendChild(w);
+    function close(){ if (w.parentNode) w.parentNode.removeChild(w); }
+    w.onclick = function(e){ if (e.target === w) close(); };
+    document.getElementById("gf-x").onclick = function(e){ e.preventDefault(); close(); };
+    document.getElementById("gf-go").onclick = function(e){
+      e.preventDefault();
+      var sn = document.getElementById("gf-sn").value.trim(); if (!sn) { alert("보내는 분 이름을 입력해 주세요."); return; }
+      try { sessionStorage.setItem("dk_gift", JSON.stringify({ pno: pno, pname: pname, sender: sn, msg: document.getElementById("gf-msg").value.trim(), t: Date.now() })); } catch(e2){}
+      try { gtag("event", "gift_start", { pno: pno }); } catch(e3){}
+      close(); buy.click();
+    };
+  }
+  function giftOrderForm(){
+    if (location.pathname.indexOf("/order/orderform") !== 0) return;
+    var g = gfGet(); if (!g) return;
+    if (!document.getElementById("dk-giftof")) {
+      var top = document.querySelector("#contents") || document.body;
+      var d = document.createElement("div"); d.id = "dk-giftof";
+      d.style.cssText = "margin:10px 12px;padding:14px 16px;border-radius:12px;background:#f7f4fd;border:1px solid #e3d8fa;font-size:13.5px;line-height:1.7;color:#333";
+      d.innerHTML = "<b style='font-size:15px;color:" + GF_P + "'>🎁 선물 주문이에요</b><br>배송지에는 <b>내 주소</b>를 넣어 주세요. 결제 뒤 나오는 <b>선물 링크</b>를 받는 분께 보내면, 받는 분이 넣은 주소로 바꿔서 보내 드려요.<br><small style='color:#888'>보내는 분: " + gfEsc(g.sender) + " · 7일 안에 주소가 안 들어오면 연락드려요 · <a href='#none' id='gf-no' style='color:#888'>선물 아니에요</a></small>";
+      top.insertBefore(d, top.firstChild);
+      document.getElementById("gf-no").onclick = function(e){ e.preventDefault(); try { sessionStorage.removeItem("dk_gift"); } catch(e2){} d.parentNode.removeChild(d); [].forEach.call(document.querySelectorAll("textarea, input[type=text]"), function(t){ if (t.value.indexOf("[선물]") === 0) t.value = ""; }); };
+    }
+    var m = document.querySelector("#omessage, textarea[name='omessage'], textarea[id^='omessage']");
+    if (!m) { var cand = [].filter.call(document.querySelectorAll("textarea"), function(t){ return /메시지|메세지|요청/.test((t.getAttribute("placeholder") || "") + ((t.closest("tr, li, div") || {}).textContent || "")); }); m = cand[0]; }
+    if (m && m.value.indexOf("[선물]") < 0) { m.value = GF_MEMO + (m.value ? " / " + m.value : ""); try { m.dispatchEvent(new Event("input", { bubbles: true })); m.dispatchEvent(new Event("change", { bubbles: true })); } catch(e){} }
+  }
+  function giftLinkBox(orderId, anchor, g){
+    if (!orderId || document.getElementById("dk-giftlink")) return;
+    var d = document.createElement("div"); d.id = "dk-giftlink";
+    d.style.cssText = "margin:14px 12px;padding:18px 16px;border-radius:14px;background:#f7f4fd;border:1.5px solid " + GF_P + ";font-size:14px;line-height:1.7;color:#333;text-align:center";
+    d.innerHTML = "<b style='font-size:17px'>🎁 선물 링크를 만드는 중…</b>";
+    anchor.parentNode.insertBefore(d, anchor);
+    gfRpc("gift_create", { p: { order: orderId, pno: g && g.pno || "", pname: g && g.pname || "", sender: g && g.sender || "", msg: g && g.msg || "" } }).then(function(res){
+      var m = /^ok:([0-9a-f]{16})$/.exec(String(res || ""));
+      if (!m) { d.innerHTML = "<b>선물 링크를 만들지 못했어요.</b><br>카카오톡 채널로 주문번호를 알려 주시면 바로 만들어 드릴게요. <a href='https://pf.kakao.com/_xhihNX/chat' style='color:" + GF_P + "'>문의하기 ›</a>"; return; }
+      try { sessionStorage.removeItem("dk_gift"); var L = JSON.parse(localStorage.getItem("dk_gifts") || "{}") || {}; L[orderId] = m[1]; localStorage.setItem("dk_gifts", JSON.stringify(L)); } catch(e){}
+      var url = "https://dagguukids.com/product/coffee.html?t=gift&k=" + m[1];
+      var who = (g && g.sender) ? g.sender + "님이" : "";
+      var txt = (who ? who + " " : "") + "다꾸키즈 선물을 보냈어요 🎁\n받을 주소를 알려 주세요 👉 " + url;
+      d.innerHTML = "<b style='font-size:17px'>🎁 이제 선물 링크를 보내 주세요</b><br><span style='color:#666'>받는 분이 링크에서 주소를 넣으면 그 주소로 보내 드려요.</span>" +
+        "<div style='margin:12px 0;padding:10px;background:#fff;border:1px solid #e3d8fa;border-radius:8px;font-size:13px;word-break:break-all;color:#555'>" + gfEsc(url) + "</div>" +
+        "<a href='#none' id='gf-share' style='display:block;height:50px;line-height:50px;border-radius:25px;background:#fee500;color:#222;font-weight:700;font-size:16px;text-decoration:none'>💬 카카오톡으로 보내기</a>" +
+        "<a href='#none' id='gf-copy' style='display:block;margin-top:8px;height:46px;line-height:46px;border-radius:23px;background:#fff;border:1px solid " + GF_P + ";color:" + GF_P + ";font-weight:700;font-size:15px;text-decoration:none'>링크 복사하기</a>" +
+        "<small style='display:block;margin-top:10px;color:#999'>7일 안에 주소가 안 들어오면 연락드려요. 이 링크는 마이쇼핑 › 주문 상세에서도 다시 볼 수 있어요.</small>";
+      function copy(){ try { navigator.clipboard.writeText(txt).then(function(){ alert("링크를 복사했어요. 카톡 대화창에 붙여 넣어 보내 주세요."); }); } catch(e){ prompt("아래 내용을 복사해 주세요", txt); } }
+      document.getElementById("gf-share").onclick = function(e){ e.preventDefault(); try { gtag("event", "gift_share"); } catch(e2){} if (navigator.share) navigator.share({ title: "다꾸키즈 선물", text: txt }).catch(function(){}); else copy(); };
+      document.getElementById("gf-copy").onclick = function(e){ e.preventDefault(); copy(); };
+    }).catch(function(){ d.innerHTML = "<b>선물 링크를 만들지 못했어요.</b> 잠시 뒤 새로고침해 주세요."; });
+  }
+  function giftAfter(){
+    var p = location.pathname;
+    if (p.indexOf("/order/order_result") === 0) {
+      var g = gfGet(); if (!g) return;
+      var o = (document.getElementById("dkpt-order") || {}).getAttribute ? document.getElementById("dkpt-order").getAttribute("data-o") : "";
+      if (!o) { var mm = (document.body.innerText || "").match(/주문번호\s*:?\s*([0-9]{8}-[0-9]{7})/); o = mm && mm[1]; }
+      var an = document.querySelector(".xans-order-result, #contents > *") || document.body.firstChild;
+      if (o && an) giftLinkBox(o, an, g);
+    } else if (p.indexOf("/myshop/order/detail") === 0) {
+      var t = document.body.innerText || ""; if (t.indexOf("[선물]") < 0) return;
+      var o2 = (location.search.match(/order_id=([0-9A-Za-z-]+)/) || [])[1] || ((t.match(/주문번호\s*:?\s*([0-9]{8}-[0-9]{7})/) || [])[1]);
+      var an2 = document.querySelector(".xans-myshop-orderhistorydetail, #contents > *"); if (o2 && an2) giftLinkBox(o2, an2, gfGet());
+    }
+  }
+  var GF_DONE = 0;
+  function giftPage(){
+    if (location.pathname.indexOf("/product/coffee.html") !== 0 || !/[?&]t=gift/.test(location.search)) return false;
+    if (GF_DONE) return true;
+    var cf = document.querySelector(".cf"); if (!cf) return true;
+    GF_DONE = 1; document.title = "다꾸키즈 선물이 도착했어요";
+    var k = (location.search.match(/[?&]k=([0-9a-f]{16})/) || [])[1] || "";
+    var w = document.createElement("div"); w.className = "cf";
+    w.style.cssText = "max-width:560px;margin:0 auto;padding:24px 18px 120px;font-size:14.5px;color:#222;box-sizing:border-box";
+    w.innerHTML = "<div style='text-align:center;padding:40px 0;color:#888'>선물을 불러오는 중…</div>";
+    cf.parentNode.replaceChild(w, cf); window.scrollTo(0, 0);
+    if (!k) { w.innerHTML = "<div style='text-align:center;padding:40px 0'>선물 링크가 올바르지 않아요.<br>받은 링크를 다시 눌러 주세요.</div>"; return true; }
+    gfRpc("gift_get", { p_k: k }).then(function(g){
+      if (!g) { w.innerHTML = "<div style='text-align:center;padding:40px 0'>선물을 찾지 못했어요.<br>링크가 오래됐거나 잘못된 링크예요.<br><a href='https://pf.kakao.com/_xhihNX/chat' style='color:" + GF_P + "'>카카오톡으로 문의하기 ›</a></div>"; return; }
+      var inp = "width:100%;height:48px;border:1px solid #ddd;border-radius:8px;padding:0 12px;font-size:16px;box-sizing:border-box;margin:0 0 10px;background:#fff";
+      var h = "<div style='text-align:center'><div style='font-size:52px'>🎁</div><h1 style='margin:8px 0 4px;font-size:23px'>" + (g.sender ? gfEsc(g.sender) + "님이 보낸 " : "") + "선물이 도착했어요</h1><p style='margin:0;color:#888'>다꾸키즈 · 남대문 아동복</p></div>" +
+        "<div style='display:flex;gap:14px;align-items:center;margin:20px 0;padding:14px;background:#faf8ff;border:1px solid #ece4fb;border-radius:14px'><img id='gf-pim' alt='' style='width:86px;height:86px;flex:0 0 86px;object-fit:cover;border-radius:10px;background:#f1eef8'><div><div style='font-size:15.5px;font-weight:700;line-height:1.45' id='gf-pn'>" + gfEsc(g.pname || "다꾸키즈 선물") + "</div>" + (g.msg ? "<div style='margin-top:8px;font-size:14px;color:#555;line-height:1.6'>💌 " + gfEsc(g.msg) + "</div>" : "") + "</div></div>";
+      if (g.status === "sent") { w.innerHTML = h + "<div style='text-align:center;padding:16px;background:#eefbf1;border-radius:12px'>🚚 선물이 출발했어요! 곧 받아 보실 수 있어요.</div>"; }
+      else if (g.status === "canceled") { w.innerHTML = h + "<div style='text-align:center;padding:16px;background:#f5f5f5;border-radius:12px'>취소된 선물이에요.</div>"; }
+      else {
+        h += (g.filled ? "<div style='padding:12px 14px;background:#eefbf1;border-radius:10px;margin:0 0 14px;font-size:13.5px'>✅ 주소를 이미 받았어요. 바꾸려면 다시 입력해 주세요.</div>" : "") +
+          "<h2 style='font-size:17px;margin:0 0 12px'>선물 받을 주소를 알려 주세요</h2>" +
+          "<input id='gf-n' placeholder='받는 분 이름' maxlength='30' style='" + inp + "'>" +
+          "<input id='gf-t' placeholder=\"휴대폰 번호 ('-' 없이)\" inputmode='numeric' maxlength='13' style='" + inp + "'>" +
+          "<div style='display:flex;gap:8px'><input id='gf-z' placeholder='우편번호' readonly style='" + inp + "flex:1'><a href='#none' id='gf-zb' style='flex:0 0 auto;height:48px;line-height:46px;padding:0 16px;border:1px solid " + GF_P + ";color:" + GF_P + ";border-radius:24px;text-decoration:none;box-sizing:border-box'>우편번호 찾기</a></div>" +
+          "<input id='gf-a1' placeholder='주소' readonly style='" + inp + "'><input id='gf-a2' placeholder='상세 주소' maxlength='100' style='" + inp + "'>" +
+          "<input id='gf-m' placeholder='배송 메모 (선택)' maxlength='200' style='" + inp + "'>" +
+          "<label style='display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#555;margin:6px 0 0;line-height:1.6'><input type='checkbox' id='gf-ok' style='width:20px;height:20px;flex:0 0 20px;accent-color:" + GF_P + "'><span>[필수] 선물 배송을 위해 이름·휴대폰 번호·주소를 수집·이용하는 데 동의해요. <small style='color:#999'>(보관: 주문일부터 3개월 뒤 파기, 배송 목적 외 사용 안 함)</small></span></label>" +
+          "<a href='#none' id='gf-send' style='display:block;margin:18px 0 0;height:54px;line-height:54px;border-radius:27px;background:" + GF_P + ";color:#fff;text-align:center;font-size:17px;font-weight:700;text-decoration:none'>주소 보내기</a>" +
+          "<p style='margin:12px 0 0;font-size:12.5px;color:#999;text-align:center'>상품은 남대문 도매처에서 준비해 보내 드려요 (보통 3일~2주, 리오더 상품은 더 걸릴 수 있어요)</p>";
+        w.innerHTML = h;
+        document.getElementById("gf-zb").onclick = function(e){ e.preventDefault();
+          function open(){ new daum.Postcode({ oncomplete: function(r){ document.getElementById("gf-z").value = r.zonecode; document.getElementById("gf-a1").value = r.roadAddress || r.jibunAddress; document.getElementById("gf-a2").focus(); } }).open(); }
+          if (window.daum && daum.Postcode) open(); else { var sc = document.createElement("script"); sc.src = "https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"; sc.onload = open; document.head.appendChild(sc); } };
+        document.getElementById("gf-a1").onclick = function(){ document.getElementById("gf-zb").click(); };
+        var sb = document.getElementById("gf-send");
+        sb.onclick = function(e){ e.preventDefault();
+          function v(id){ return document.getElementById(id).value.trim(); }
+          if (!v("gf-n")) { alert("받는 분 이름을 입력해 주세요."); return; }
+          if (v("gf-t").replace(/[^0-9]/g, "").length < 10) { alert("휴대폰 번호를 확인해 주세요."); return; }
+          if (!v("gf-a1")) { alert("우편번호 찾기로 주소를 입력해 주세요."); return; }
+          if (!document.getElementById("gf-ok").checked) { alert("개인정보 수집·이용에 동의해 주세요."); return; }
+          sb.textContent = "보내는 중…";
+          gfRpc("gift_fill", { p: { k: k, name: v("gf-n"), tel: v("gf-t"), zip: v("gf-z"), addr1: v("gf-a1"), addr2: v("gf-a2"), memo: v("gf-m") } }).then(function(res){
+            if (res === "ok") { try { gtag("event", "gift_fill"); } catch(e2){} w.innerHTML = "<div style='text-align:center;padding:50px 10px'><div style='font-size:54px'>💜</div><h1 style='font-size:22px;margin:12px 0 8px'>주소를 받았어요!</h1><p style='color:#666;line-height:1.7;margin:0'>" + (g.sender ? gfEsc(g.sender) + "님의 " : "") + "선물을 이 주소로 보내 드릴게요.<br>주소를 바꾸려면 링크를 다시 열어 주세요.</p><a href='/' style='display:block;max-width:360px;margin:24px auto 0;height:50px;line-height:50px;border-radius:25px;background:" + GF_P + ";color:#fff;text-decoration:none;font-weight:700'>다꾸키즈 구경하기</a></div>"; window.scrollTo(0, 0); }
+            else { sb.textContent = "주소 보내기"; alert(res === "closed" ? "이미 출발했거나 취소된 선물이에요." : "입력한 내용을 확인해 주세요."); }
+          }).catch(function(){ sb.textContent = "주소 보내기"; alert("잠시 뒤 다시 시도해 주세요."); });
+        };
+      }
+      if (g.pno) fetch("https://dagguu.cafe24api.com/api/v2/products?product_no=" + g.pno + "&fields=product_no,product_name,list_image,detail_image", { headers: { "X-Cafe24-Client-Id": "JzTmuiBPItGvZ6KG8g3aPC" } }).then(function(r){ return r.json(); }).then(function(j){ var pr = (j.products || [])[0]; if (!pr) return; var im = document.getElementById("gf-pim"); if (im) im.src = pr.detail_image || pr.list_image; var pn = document.getElementById("gf-pn"); if (pn && !g.pname) pn.textContent = pr.product_name; }).catch(function(){});
+    }).catch(function(){ w.innerHTML = "<div style='text-align:center;padding:40px 0'>잠시 뒤 다시 열어 주세요.</div>"; });
+    return true;
+  }
+  function giftKit(){ try { if (document.getElementById("orderFixArea")) giftBtn(); } catch(e){} try { giftOrderForm(); } catch(e){} try { giftAfter(); } catch(e){} }
+  function run(){ try { document.documentElement.classList.add("dk-ok"); } catch(e){} try { tidy(); } catch(e){} try { bestBadge(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { coupleMenu(); } catch(e){} try { boyMenu(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { giftKit(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { laFont(); } catch(e){} try { tongFix(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ xmasPage(); }catch(e){} try{ couplePage(); }catch(e){} try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} try { setTimeout(modelSpec, 1500); } catch(e){} try { coordiTags(); } catch(e){} try { coordiSet(); } catch(e){} try { addPrdLabel(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
