@@ -1,5 +1,5 @@
 {
- "at": "2026-11-19 11:51",
+ "at": "2026-11-19 19:50",
  "checkIn": "2026-11-28",
  "stays": {
   "boryeong-lava-poolvilla": {
@@ -128,13 +128,13 @@
      "region": "대전",
      "type": "CITY",
      "pages": 3,
-     "n": 148,
+     "n": 147,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 429
+     "total": 434
     }
    ],
    "hit": "대전 유천 스테이 패스포트 키노사키 료칸 by 아늑",
@@ -172,6 +172,40 @@
     }
    ],
    "hit": "니지모리 스튜디오 료칸",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
+  },
+  "ganghwa-white-gallery": {
+   "name": "강화도 화이트갤러리펜션 A",
+   "city": "강화",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "강화",
+     "region": "강화",
+     "type": "CITY",
+     "pages": 11,
+     "n": 550,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 732
+    }
+   ],
+   "hit": "강화도펜션AND",
    "hitKeys": [
     "deepLink",
     "imageUrl",
