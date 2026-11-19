@@ -596,7 +596,7 @@
   function bestBadge(){
     bestLoad(function(){
       if (!document.getElementById("dk-best-css")) { var st = document.createElement("style"); st.id = "dk-best-css";
-        st.textContent = ".dk-best{position:absolute;left:8px;top:8px;z-index:3;width:38px;height:38px;border-radius:50%;background:#ff5a36;color:#fff;font-size:10.5px;font-weight:900;letter-spacing:.3px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.18);pointer-events:none}.dk-best.md{background:#ffd43b;color:#3a2a00;font-size:12px}.dk-best.big{width:52px;height:52px;font-size:13px;top:12px}.dk-best.big.md{font-size:15px}";
+        st.textContent = ".dk-best{position:absolute;left:8px;top:8px;z-index:3;width:38px;height:38px;border-radius:50%;background:#ff5a36;color:#fff;font-size:10.5px;font-weight:900;letter-spacing:.3px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.18);pointer-events:none}.dk-best.md{background:#ffd43b;color:#3a2a00;font-size:12px}.dk-best.big{width:52px;height:52px;font-size:13px;top:12px}.dk-best.big.md{font-size:15px}.dk-gtag{position:absolute;right:8px;top:8px;z-index:3;padding:4px 8px;border-radius:6px;background:#e8344e;color:#fff;font-size:11.5px;font-weight:900;line-height:1.2;box-shadow:0 2px 6px rgba(0,0,0,.18);pointer-events:none}.dk-gtag.sv{background:#6a3fc8}.dk-gtag.big{right:12px;top:12px;padding:6px 11px;font-size:14px}";
         document.head.appendChild(st); }
       function put(th, cls, txt, big){
         if (getComputedStyle(th).position === "static") th.style.position = "relative";
@@ -604,12 +604,17 @@
         var b = document.createElement("span"); b.className = "dk-best " + cls + (big ? " big" : ""); b.textContent = txt;
         b.style.left = (big ? 12 + k * 58 : 8 + k * 42) + "px"; th.appendChild(b);
       }
+      /* 2026-11-20 시온님 "다꾸회원·VIP·VVIP·지인·가족은 % 딱지도": 가족·지인 = 회원가 할인율, 다꾸·VIP·VVIP = 할인이 없어서 적립률 딱지 */
+      var GT = { 5: ["가족 " + Math.floor((1 - GP[5]) * 100) + "% 할인", ""], 6: ["지인 " + Math.floor((1 - GP[6]) * 100) + "% 할인", ""], 4: ["다꾸 2% 적립", "sv"], 2: ["VIP 3% 적립", "sv"], 3: ["VVIP 5% 적립", "sv"] }[grp()];
+      function gtag(th, big){ if (!GT || th.querySelector(".dk-gtag")) return; if (getComputedStyle(th).position === "static") th.style.position = "relative";
+        var b = document.createElement("span"); b.className = "dk-gtag " + GT[1] + (big ? " big" : ""); b.textContent = GT[0]; th.appendChild(b); }
       [].forEach.call(document.querySelectorAll("ul.prdList > li, .dk-hdbox li, #dk-all li"), function(li){
         var m = (li.id || "").match(/(\d+)$/), n = m && m[1];
         if (!n) { var a = li.querySelector("a[href*='product_no='], a[href*='/product/']"); var h = a && a.getAttribute("href") || ""; m = h.match(/product_no=(\d+)/) || h.match(/\/(\d+)\/category\//) || h.match(/\/product\/[^\/]+\/(\d+)/); n = m && m[1]; }
         if (!n) return;
         var th = li.querySelector(".thumbnail") || li.querySelector(".prdImg") || li;
         if (BEST_SET[n] && !li.querySelector(".dk-best.bs")) put(th, "bs", "BEST");
+        gtag(th);
         /* 2026-11-17 19:42 시온님 "MD 스티커는 노란색으로, 아무 딱지도 안 붙은 데에만": NEW·BEST 가 없는 상품에만 노란 MD */
         var other = [].some.call(li.querySelectorAll(".dk-best.bs, .dk-newdot, .badge"), function(e){ return (e.textContent || "").trim(); }), md = li.querySelector(".dk-best.md");
         if (other && md) md.parentNode.removeChild(md);
@@ -619,6 +624,7 @@
       var k2 = pn && document.querySelector(".keyImg, .xans-product-image .thumbnail, .xans-product-image");
       if (k2) {
         if (BEST_SET[pn] && !document.querySelector(".dk-best.big.bs")) put(k2, "bs", "BEST", 1);
+        gtag(k2, 1);
         var o2 = [].some.call(k2.querySelectorAll(".dk-best.big.bs, .dk-newdot, .badge"), function(e){ return (e.textContent || "").trim(); }), m2 = document.querySelector(".dk-best.big.md");
         if (o2 && m2) m2.parentNode.removeChild(m2); else if (!o2 && !m2) put(k2, "md", "MD", 1);
       }
