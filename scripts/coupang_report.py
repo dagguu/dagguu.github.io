@@ -76,7 +76,13 @@ lines += ["", "■ 많이 산 분류"] + [f"- {c}: {n}건" for c, n in cat.most_
 lines += ["", "■ 많이 산 상품"] + [f"- {p}: {n}건" for p, n in prod.most_common(15)]
 if comm:
     lines += ["", "■ 일별 수익(최근 7일)"] + [f"- {g(r,'date')}: {w(num(g(r,'commission','commissionAmount')))}원" for r in comm[-7:]]
+day_sub = collections.defaultdict(lambda: collections.Counter())
+for r in clicks:
+    day_sub[str(g(r, "date", "clickDate"))][g(r, "subId") or "(없음)"] += num(g(r, "click", "clicks", "clickCount"))
+lines += ["", "■ 날짜별 클릭 (경로별)"] + [f"- {d}: " + ", ".join(f"{k} {int(v)}" for k, v in c.most_common()) for d, c in sorted(day_sub.items())]
 body = "\n".join(l for l in lines if l is not None)
+if os.environ.get("OUT_FILE"):  # 암호화용: 파일로만 쓰고 메일은 안 보냄
+    open(os.environ["OUT_FILE"], "w", encoding="utf-8").write(body); print("파일로 씀"); sys.exit(0)
 
 uid, pw = os.environ.get("NAVER_MAIL_ID", "").strip(), os.environ.get("NAVER_MAIL_PW", "").strip()
 if not uid or not pw:

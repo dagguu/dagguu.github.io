@@ -1,0 +1,30 @@
+name: 쿠팡 경로별 클릭 (암호화)
+# Claude 가 준 공개 키로 리포트를 암호화해 artifact 로만 올린다. 로그·저장소에는 숫자가 남지 않는다.
+on:
+  workflow_dispatch:
+    inputs:
+      pubkey: { description: "base64 공개 키(PEM)", required: true }
+      days: { description: "최근 며칠", required: false, default: "30" }
+permissions: { contents: read }
+jobs:
+  r:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 리포트 → 암호화
+        env:
+          COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
+          COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
+          REPORT_DAYS: ${{ inputs.days }}
+          OUT_FILE: /tmp/rep.txt
+          PUB: ${{ inputs.pubkey }}
+        run: |
+          python3 scripts/coupang_report.py
+          git checkout -- scripts/buy_trends.json || true
+          mkdir -p out; echo "$PUB" | base64 -d > /tmp/pub.pem
+          openssl rand -hex 32 > /tmp/k
+          openssl enc -aes-256-cbc -pbkdf2 -salt -in /tmp/rep.txt -out out/rep.enc -pass file:/tmp/k
+          openssl pkeyutl -encrypt -pubin -inkey /tmp/pub.pem -in /tmp/k -out out/key.enc
+          rm -f /tmp/rep.txt /tmp/k
+      - uses: actions/upload-artifact@v4
+        with: { name: rep, path: out, retention-days: 1 }
