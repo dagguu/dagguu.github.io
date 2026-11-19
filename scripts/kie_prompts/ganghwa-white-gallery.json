@@ -1,0 +1,43 @@
+[
+ {
+  "n": 1,
+  "time": "sunset",
+  "look": "day",
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/A00935655/79dfb51a-c3b5-4762-9175-bd6cd64de80a.jpg",
+  "img": "Keep the place exactly as it is (same two white box-shaped gallery buildings with warm lights on, same wooden stairs and courtyard, same wide sea and tidal flat behind under a pink and orange sunset sky). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same sunset sky and below with the same ground and courtyard. Show the buildings only once, never duplicate or stack the image. No people.",
+  "prompt": "Slow aerial glide gently rising in front of the white buildings at sunset, warm lights glowing in the windows, the sea and sky softly glowing behind, calm and still."
+ },
+ {
+  "n": 2,
+  "time": "sunset",
+  "look": "day",
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/A00935655/e0eb9ede-a26c-4b93-b459-7c9ba3c2b788.jpg",
+  "img": "Keep the place exactly as it is (same wide calm sea with the sun setting on the horizon, same flat fields and small houses in front, same white buildings at the bottom). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same warm sunset sky and below with the same fields. No people.",
+  "prompt": "Very slow steady push forward toward the sea and the setting sun, sunlight shimmering on the water, everything calm."
+ },
+ {
+  "n": 3,
+  "time": "sunset",
+  "look": "day",
+  "people": true,
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/A00935655/fc35a3f6-e929-4ea3-b244-d234d99cf383.jpg",
+  "img": "Keep the place exactly as it is (same white building wall on the right, same terrace edge, same distant sea horizon, same sunset sky fading from orange to blue). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same sky and below with the same terrace floor. One Korean woman standing far away at the terrace edge, seen from behind, small in the frame, looking at the sunset over the sea.",
+  "prompt": "Very slow steady push forward toward the terrace edge and the sunset sky, the woman standing still, birds far away in the sky."
+ },
+ {
+  "n": 4,
+  "time": "day",
+  "look": "day",
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/A00935655/d7eacedc-d74a-4fec-8ece-dc3533487f64.jpg",
+  "img": "Keep the place exactly as it is (same white living room, same grey sofa, same karaoke machine and TV, same rattan chairs in the foreground, same glass door with daylight). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. This is an indoor room: above the room there is only the same flat white indoor ceiling with lights, never outdoor sky above the ceiling. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally upward with the same white ceiling and downward with the same wooden floor. No people.",
+  "prompt": "Very slow steady push forward into the bright living room toward the glass door, soft daylight, everything calm and still."
+ },
+ {
+  "n": 5,
+  "time": "night",
+  "look": "day",
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/A00935655/43c0d3d5-498a-466f-87ce-4b7a1ee7d74d.jpg",
+  "img": "Keep the place exactly as it is (same white modern buildings with glass railings and warm lights inside, same wide stone stairs and courtyard, same dusk sky). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same dusk sky and below with the same courtyard floor. Show the buildings only once. No people.",
+  "prompt": "Slow aerial glide gently rising in front of the white buildings at dusk, warm lights glowing in the windows, calm and still."
+ }
+]
