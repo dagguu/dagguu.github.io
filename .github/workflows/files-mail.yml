@@ -1,0 +1,15 @@
+name: 파일 메일로 보내기
+on:
+  workflow_dispatch:
+    inputs:
+      pattern: { description: "파일 패턴", required: true, default: "kids/v/*.mp4" }
+      title: { description: "메일 제목", required: false, default: "파일" }
+jobs:
+  m:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - env:
+          NAVER_MAIL_ID: ${{ secrets.NAVER_MAIL_ID }}
+          NAVER_MAIL_PW: ${{ secrets.NAVER_MAIL_PW }}
+        run: python3 scripts/mail_files.py "${{ inputs.pattern }}" "${{ inputs.title }}"
