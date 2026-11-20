@@ -2483,7 +2483,7 @@
   function giftLinkBox(orderId, anchor, g){
     if (!orderId || document.getElementById("dk-giftlink")) return;
     var d = document.createElement("div"); d.id = "dk-giftlink";
-    d.style.cssText = "margin:14px 12px;padding:18px 16px;border-radius:14px;background:#f7f4fd;border:1.5px solid " + GF_P + ";font-size:14px;line-height:1.7;color:#333;text-align:center";
+    d.style.cssText = "margin:14px auto;width:calc(100% - 24px);max-width:520px;box-sizing:border-box;padding:18px 16px;border-radius:14px;background:#f7f4fd;border:1.5px solid " + GF_P + ";font-size:14px;line-height:1.7;color:#333;text-align:center";
     d.innerHTML = "<b style='font-size:17px'>🎁 선물 링크를 만드는 중…</b>";
     anchor.parentNode.insertBefore(d, anchor);
     gfRpc("gift_create", { p: { order: orderId, pno: g && g.pno || "", pname: g && g.pname || "", sender: g && g.sender || "", msg: g && g.msg || "" } }).then(function(res){
@@ -2513,10 +2513,10 @@
       if (!o) { var mm = (document.body.innerText || "").match(/주문번호\s*:?\s*([0-9]{8}-[0-9]{7})/); o = mm && mm[1]; }
       var an = document.querySelector(".xans-order-result, #contents > *") || document.body.firstChild;
       if (o && an && g.self) { if (!document.getElementById("dk-giftlink")) { var ds = document.createElement("div"); ds.id = "dk-giftlink"; var cc = gfCard(g.card);
-          ds.style.cssText = "margin:14px 12px;border-radius:16px;overflow:hidden;background:" + cc[2] + ";text-align:center;max-width:460px";
+          ds.style.cssText = "margin:14px auto;width:calc(100% - 24px);max-width:460px;border-radius:16px;overflow:hidden;background:" + cc[2] + ";text-align:center";
           ds.innerHTML = "<img src='" + GF_IMG + cc[0] + ".png' alt='' style='display:block;width:100%'>" + (g.msg ? "<div style='margin:0 16px;padding:14px;background:rgba(255,255,255,.75);border-radius:12px;font-size:17px;font-weight:700;color:#333;line-height:1.6;white-space:pre-line'>" + gfEsc(g.msg) + "</div>" : "") + "<div style='padding:14px 16px 18px;font-size:14px;color:#555'>💝 나에게 주는 선물이 주문됐어요. 내 배송지로 보내 드릴게요.</div>";
           an.parentNode.insertBefore(ds, an); try { gtag("event", "gift_self_done"); } catch(e){} } try { sessionStorage.removeItem("dk_gift"); } catch(e){} }
-      else if (o && an && g.direct) { if (!document.getElementById("dk-giftlink")) { var dn = document.createElement("div"); dn.id = "dk-giftlink"; dn.style.cssText = "margin:14px 12px;padding:16px;border-radius:14px;background:#f7f4fd;border:1.5px solid " + GF_P + ";font-size:14px;line-height:1.7;text-align:center"; dn.innerHTML = "<b style='font-size:16px'>🎁 선물 주문이 완료됐어요</b><br><span style='color:#666'>입력하신 받는 분 주소로 바로 보내 드려요.</span>"; an.parentNode.insertBefore(dn, an); } try { sessionStorage.removeItem("dk_gift"); } catch(e){} }
+      else if (o && an && g.direct) { if (!document.getElementById("dk-giftlink")) { var dn = document.createElement("div"); dn.id = "dk-giftlink"; dn.style.cssText = "margin:14px auto;width:calc(100% - 24px);max-width:520px;box-sizing:border-box;padding:16px;border-radius:14px;background:#f7f4fd;border:1.5px solid " + GF_P + ";font-size:14px;line-height:1.7;text-align:center"; dn.innerHTML = "<b style='font-size:16px'>🎁 선물 주문이 완료됐어요</b><br><span style='color:#666'>입력하신 받는 분 주소로 바로 보내 드려요.</span>"; an.parentNode.insertBefore(dn, an); } try { sessionStorage.removeItem("dk_gift"); } catch(e){} }
       else if (o && an) giftLinkBox(o, an, g);
     } else if (p.indexOf("/myshop/order/detail") === 0) {
       var t = document.body.innerText || ""; if (t.indexOf("[선물] 받는 분 주소 대기") < 0) return;
