@@ -630,7 +630,24 @@
       }
     });
   }
-  (function(){ var tm4; try { new MutationObserver(function(){ clearTimeout(tm4); tm4 = setTimeout(function(){ try { bestBadge(); } catch(e){} }, 300); }).observe(document.documentElement, { childList: true, subtree: true }); } catch(e){} })();
+  /* 2026-11-20 시온님 "인기상품에 번호 붙여줘"(바잇미 순위 목록 참고): 인기상품(55) 목록 사진 왼쪽 위 네모 번호(1~3 보라, 그 뒤 진한 회색).
+     카페24 사용자지정 진열 순서(best_refresh 가 맞춤) 그대로, 쪽마다 20개씩 이어지는 번호. 정렬을 바꾼 화면(sort_method)에는 안 붙임. 이 화면에선 BEST·MD 동그라미는 숨김(번호와 겹침). */
+  function rankNo(){
+    if (!/\/product\/list\.html/.test(location.pathname) || !/[?&]cate_no=55(&|$)/.test(location.search) || /sort_method=/.test(location.search)) return;
+    var ul = document.querySelector(".xans-product-listnormal ul.prdList"); if (!ul) return;
+    if (!document.getElementById("dk-rank-css")) { var st = document.createElement("style"); st.id = "dk-rank-css";
+      st.textContent = "body.dk-rankpg .xans-product-listnormal .dk-best{display:none!important}body.dk-rankpg .xans-product-listnormal .dk-newdot{top:44px!important}.dk-rank{position:absolute;left:0;top:0;z-index:4;min-width:34px;height:34px;padding:0 6px;box-sizing:border-box;background:#4a4a4a;color:#fff;font-size:17px;font-weight:800;display:flex;align-items:center;justify-content:center;pointer-events:none;font-family:inherit}.dk-rank.top{background:#6a3fc8}@media(max-width:1024px){.dk-rank{min-width:30px;height:30px;font-size:15px}}";
+      document.head.appendChild(st); }
+    document.body.classList.add("dk-rankpg");
+    var pg = +((location.search.match(/[?&]page=(\d+)/) || [])[1] || 1), per = 20;
+    [].forEach.call(ul.children, function(li, i){
+      var th = li.querySelector(".thumbnail") || li; if (th.querySelector(".dk-rank")) return;
+      if (getComputedStyle(th).position === "static") th.style.position = "relative";
+      var r = (pg - 1) * per + i + 1, b = document.createElement("span");
+      b.className = "dk-rank" + (r <= 3 ? " top" : ""); b.textContent = r; th.appendChild(b);
+    });
+  }
+  (function(){ var tm4; try { new MutationObserver(function(){ clearTimeout(tm4); tm4 = setTimeout(function(){ try { bestBadge(); } catch(e){} try { rankNo(); } catch(e){} }, 300); }).observe(document.documentElement, { childList: true, subtree: true }); } catch(e){} })();
   function dkHome(){ var p = location.pathname; return p === "/" || p === "/index.html"; }
   /* 2026-11-16 시온님 "홈페이지가 정신없어 정리": 떠 있는 것 줄이기 — 로그인 인사 토스트 숨김, 휴대폰 카톡 버튼은 상품 상세에서만 */
   function tidy(){
@@ -2452,7 +2469,7 @@
     return true;
   }
   function giftKit(){ try { if (document.getElementById("orderFixArea")) giftBtn(); } catch(e){} try { giftOrderForm(); } catch(e){} try { giftAfter(); } catch(e){} }
-  function run(){ if (window.DK_GIFT_ONLY) { try { giftKit(); } catch(e){} return; } try { document.documentElement.classList.add("dk-ok"); } catch(e){} try { tidy(); } catch(e){} try { bestBadge(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { coupleMenu(); } catch(e){} try { boyMenu(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { giftKit(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { laFont(); } catch(e){} try { tongFix(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ xmasPage(); }catch(e){} try{ couplePage(); }catch(e){} try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} try { setTimeout(modelSpec, 1500); } catch(e){} try { coordiTags(); } catch(e){} try { coordiSet(); } catch(e){} try { addPrdLabel(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  function run(){ if (window.DK_GIFT_ONLY) { try { giftKit(); } catch(e){} return; } try { document.documentElement.classList.add("dk-ok"); } catch(e){} try { tidy(); } catch(e){} try { bestBadge(); } catch(e){} try { rankNo(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { coupleMenu(); } catch(e){} try { boyMenu(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { giftKit(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { laFont(); } catch(e){} try { tongFix(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ xmasPage(); }catch(e){} try{ couplePage(); }catch(e){} try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} try { setTimeout(modelSpec, 1500); } catch(e){} try { coordiTags(); } catch(e){} try { coordiSet(); } catch(e){} try { addPrdLabel(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
