@@ -2492,6 +2492,8 @@
       if (!m) { d.innerHTML = "<b>선물 링크를 만들지 못했어요.</b><br>카카오톡 채널로 주문번호를 알려 주시면 바로 만들어 드릴게요. <a href='https://pf.kakao.com/_xhihNX/chat' style='color:" + GF_P + "'>문의하기 ›</a>"; return; }
       try { sessionStorage.removeItem("dk_gift"); var L = JSON.parse(localStorage.getItem("dk_gifts") || "{}") || {}; L[orderId] = m[1]; localStorage.setItem("dk_gifts", JSON.stringify(L)); } catch(e){}
       var due = gfDue(), url = "https://www.dagguu.com/kids/g/" + ((g && g.card) || "basic") + ".html?k=" + m[1] + "&d=" + due, img = GF_IMG + ((g && g.card) || "basic") + ".png", pimg = "";
+      /* 카톡 카드 버튼은 카카오 앱에 등록된 도메인(dagguukids.com)만 열림 — 받는 화면으로 바로 */
+      var kurl = "https://dagguukids.com/product/coffee.html?t=gift&k=" + m[1] + "&d=" + due + "&c=" + ((g && g.card) || "basic");
       gfImg(g && g.pno).then(function(u){ pimg = u; });
       var who = (g && g.sender) ? g.sender + "님이" : "";
       var txt = (who ? who + " " : "") + "다꾸키즈 선물을 보냈어요 🎁\n받을 주소를 알려 주세요 👉 " + url;
@@ -2502,7 +2504,7 @@
         "<small style='display:block;margin-top:10px;color:#999'>받는 분은 " + gfDueTxt(due) + "까지 주소를 넣으면 돼요. 안 들어오면 연락드려요. 이 링크는 마이쇼핑 › 주문 상세에서도 다시 볼 수 있어요.</small>";
       function copy(){ try { navigator.clipboard.writeText(txt).then(function(){ alert("링크를 복사했어요. 카톡 대화창에 붙여 넣어 보내 주세요."); }); } catch(e){ prompt("아래 내용을 복사해 주세요", txt); } }
       document.getElementById("gf-share").onclick = function(e){ e.preventDefault(); try { gtag("event", "gift_share"); } catch(e2){} function fb(){ if (navigator.share) navigator.share({ title: "다꾸키즈 선물", text: txt }).catch(function(){}); else copy(); }
-        gfKakao({ title: (who ? who + " " : "") + "선물을 보냈어요. 🎁", desc: gfDueTxt(due) + "까지 배송지를 입력해 주세요.\n입력하지 않으면 선물이 취소될 수 있어요.", img: img, url: url, pname: (g && g.pname) || "다꾸키즈 선물", pimg: pimg }, fb); };
+        gfKakao({ title: (who ? who + " " : "") + "선물을 보냈어요. 🎁", desc: gfDueTxt(due) + "까지 배송지를 입력해 주세요.\n입력하지 않으면 선물이 취소될 수 있어요.", img: img, url: kurl, pname: (g && g.pname) || "다꾸키즈 선물", pimg: pimg }, fb); };
       document.getElementById("gf-copy").onclick = function(e){ e.preventDefault(); copy(); };
     }).catch(function(){ d.innerHTML = "<b>선물 링크를 만들지 못했어요.</b> 잠시 뒤 새로고침해 주세요."; });
   }
