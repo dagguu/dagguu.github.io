@@ -2505,7 +2505,9 @@
           if (!document.getElementById("gf-ok").checked) { alert("개인정보 수집·이용에 동의해 주세요."); return; }
           sb.textContent = "보내는 중…";
           gfRpc("gift_fill", { p: { k: k, name: v("gf-n"), tel: v("gf-t"), zip: v("gf-z"), addr1: v("gf-a1"), addr2: v("gf-a2"), memo: v("gf-m") } }).then(function(res){
-            if (res === "ok") { try { gtag("event", "gift_fill"); } catch(e2){} w.innerHTML = "<div style='text-align:center;padding:50px 10px'><div style='font-size:54px'>💜</div><h1 style='font-size:22px;margin:12px 0 8px'>주소를 받았어요!</h1><p style='color:#666;line-height:1.7;margin:0'>" + (g.sender ? gfEsc(g.sender) + "님의 " : "") + "선물을 이 주소로 보내 드릴게요.<br>주소를 바꾸려면 링크를 다시 열어 주세요.</p><a href='/' style='display:block;max-width:360px;margin:24px auto 0;height:50px;line-height:50px;border-radius:25px;background:" + GF_P + ";color:#fff;text-decoration:none;font-weight:700'>다꾸키즈 구경하기</a></div>"; window.scrollTo(0, 0); }
+            if (res === "ok") { try { gtag("event", "gift_fill"); } catch(e2){}
+              /* 2026-11-20 시온님 "카페24에 바로 주소 들어오게": 받은 주소로 카페24 주문 배송지 자동 변경(Edge Function cafe24-oauth, 실패해도 다꾸파트너스 관리자 화면에 남음) */
+              try { fetch(GF_SBU + "/functions/v1/cafe24-oauth", { method: "POST", headers: { "Content-Type": "application/json", apikey: GF_SBK }, body: JSON.stringify({ gift: k }) }).catch(function(){}); } catch(e3){} w.innerHTML = "<div style='text-align:center;padding:50px 10px'><div style='font-size:54px'>💜</div><h1 style='font-size:22px;margin:12px 0 8px'>주소를 받았어요!</h1><p style='color:#666;line-height:1.7;margin:0'>" + (g.sender ? gfEsc(g.sender) + "님의 " : "") + "선물을 이 주소로 보내 드릴게요.<br>주소를 바꾸려면 링크를 다시 열어 주세요.</p><a href='/' style='display:block;max-width:360px;margin:24px auto 0;height:50px;line-height:50px;border-radius:25px;background:" + GF_P + ";color:#fff;text-decoration:none;font-weight:700'>다꾸키즈 구경하기</a></div>"; window.scrollTo(0, 0); }
             else { sb.textContent = "주소 보내기"; alert(res === "closed" ? "이미 출발했거나 취소된 선물이에요." : "입력한 내용을 확인해 주세요."); }
           }).catch(function(){ sb.textContent = "주소 보내기"; alert("잠시 뒤 다시 시도해 주세요."); });
         };
