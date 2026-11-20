@@ -1386,6 +1386,20 @@
     t.querySelector("[data-cat]").onclick = function(e){ e.preventDefault(); bmCat(); };
     function cnt(){ var c = document.querySelector(".xans-layout-orderbasketcount .count, .EC-Layout-Basket-count, #xans_myshop_basket_cnt"); var n = c ? num(c.textContent) : 0; var i = t.querySelector("i"); i.textContent = n; i.style.display = n ? "block" : "none"; }
     cnt(); setTimeout(cnt, 1500);
+    /* 2026-11-20 시온님 "하단바가 이상한데": 아이폰 사파리에서 주소창·키보드가 사라진 뒤 화면 기준(레이아웃 뷰포트)이 늦게 바뀌면 아래 탭이 화면 중간에 떠 있음 → 실제 보이는 화면(visualViewport) 바닥에 맞춰 내림, 글자 입력 중엔 숨김 */
+    (function(){
+      var vv = window.visualViewport; if (!vv) return;
+      function fix(){
+        var a = document.activeElement, typing = a && /^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName);
+        var gap = Math.round(vv.height + vv.offsetTop - window.innerHeight);
+        t.style.visibility = typing ? "hidden" : "";
+        t.style.transform = (!typing && Math.abs(gap) > 2 && vv.scale < 1.05) ? "translateY(" + gap + "px)" : "";
+      }
+      vv.addEventListener("resize", fix); vv.addEventListener("scroll", fix);
+      window.addEventListener("scroll", fix, { passive: true }); window.addEventListener("orientationchange", function(){ setTimeout(fix, 400); });
+      document.addEventListener("focusin", fix); document.addEventListener("focusout", function(){ setTimeout(fix, 300); setTimeout(fix, 900); });
+      fix();
+    })();
     /* 휴대폰 위 ☰ 도 같은 카테고리 창으로 (PC 는 원래 전체메뉴) */
     document.addEventListener("click", function(e){ var b = e.target.closest && e.target.closest(".eNavFold"); if (b && bmMobile()) { e.preventDefault(); e.stopPropagation(); bmCat(); } }, true);
   }
