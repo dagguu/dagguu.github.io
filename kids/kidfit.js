@@ -1493,7 +1493,34 @@
       p.onclick = function(e){ if (e.target === p) close(); };
     }, 1500);
   }
-  function homeBM(){ try { bmBuild(); } catch(e){} try { bmTab(); } catch(e){} try { bmPop(); } catch(e){} }
+  /* 체험단 당첨자 발표 팝업(2026-11-20 시온님 "11월 당첨자 윤** 님 010-****-5678 이런 식으로 축하드립니다"): Supabase exp_winners(이름 첫 글자·번호 뒤 4자리만) — 이번 달 당첨자가 있으면 홈에서 먼저 띄우고, 없으면 원래 홈 팝업 */
+  function winPop(done){
+    if (!bmHome()) return done(false);
+    var now = new Date(Date.now() + 9 * 3600000), day = now.toISOString().slice(0, 10), mon = day.slice(0, 7), mn = +day.slice(5, 7);
+    try { if (localStorage.getItem("dk_win_hide") === day || sessionStorage.getItem("dk_win_seen")) return done(false); } catch(e){}
+    gfRpc("exp_winners", { p_month: mon }).then(function(L){
+      if (!L || !L.length) return done(false);
+      try { sessionStorage.setItem("dk_win_seen", "1"); } catch(e){}
+      var rows = L.map(function(x){ return "<li style='display:flex;justify-content:space-between;gap:8px;padding:9px 2px;border-bottom:1px dashed #eadff9;font-size:14.5px'><span><b>" + gfEsc(x.nm) + "</b> 님 <span style='color:#888'>" + gfEsc(x.ph) + "</span></span><span style='color:#6a3fc8;font-size:12.5px;text-align:right;max-width:48%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap'>" + gfEsc((x.title || "").replace(/ ?체험단$/, "")) + "</span></li>"; }).join("");
+      var w = document.createElement("div"); w.id = "dk-win";
+      w.style.cssText = "position:fixed;inset:0;z-index:100001;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box";
+      w.innerHTML = "<div style='background:#fff;border-radius:18px;width:100%;max-width:380px;max-height:82vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.25)'>" +
+        "<div style='background:linear-gradient(135deg,#7b4fe0,#b18cff);color:#fff;text-align:center;padding:22px 16px 18px'><div style='font-size:34px'>🎉</div><div style='font-size:13px;opacity:.9;margin-top:4px'>다꾸키즈 체험단</div><div style='font-size:21px;font-weight:800;margin-top:2px'>" + mn + "월 당첨자 발표</div></div>" +
+        "<ul style='list-style:none;margin:0;padding:6px 18px;overflow-y:auto'>" + rows + "</ul>" +
+        "<div style='padding:12px 18px 4px;text-align:center;font-size:15px;font-weight:700;color:#333'>당첨을 축하드립니다! 💜</div>" +
+        "<div style='padding:0 18px 14px;text-align:center;font-size:12px;color:#888;line-height:1.6'>당첨되신 분께는 따로 연락드려요.<br>다음 체험단도 많이 신청해 주세요.</div>" +
+        "<a href='/product/coffee.html?t=exp' style='display:block;margin:0 18px 12px;height:46px;line-height:46px;border-radius:23px;background:#6a3fc8;color:#fff;text-align:center;font-weight:700;text-decoration:none'>모집 중인 체험단 보기 ›</a>" +
+        "<div style='display:flex;border-top:1px solid #eee'><a href='#none' class='h' style='flex:1;text-align:center;padding:13px 0;font-size:13px;color:#888;text-decoration:none'>오늘 하루 보지 않기</a><a href='#none' class='x' style='flex:1;text-align:center;padding:13px 0;font-size:13px;color:#333;font-weight:700;text-decoration:none;border-left:1px solid #eee'>닫기</a></div></div>";
+      document.body.appendChild(w);
+      function close(){ w.remove(); }
+      w.querySelector(".x").onclick = function(e){ e.preventDefault(); close(); };
+      w.querySelector(".h").onclick = function(e){ e.preventDefault(); try { localStorage.setItem("dk_win_hide", day); } catch(x){} close(); };
+      w.onclick = function(e){ if (e.target === w) close(); };
+      try { gtag("event", "win_popup_view", { n: L.length }); } catch(e){}
+      done(true);
+    }).catch(function(){ done(false); });
+  }
+  function homeBM(){ try { bmBuild(); } catch(e){} try { bmTab(); } catch(e){} try { winPop(function(shown){ if (!shown) { try { bmPop(); } catch(e){} } }); } catch(e){ try { bmPop(); } catch(e2){} } }
 
   /* 로그인 화면 PC: 위로 옮긴 카카오 로그인 칸이 왼쪽에 붙던 것(2026-11-13 시온님) → 아이디 칸과 같은 폭으로 가운데 */
   function loginFix(){ var s = document.querySelector(".xans-member-login .login__sns.dk-top"); if (!s) return; ["max-width:400px", "margin-left:auto", "margin-right:auto"].forEach(function(x){ var k = x.split(":"); s.style.setProperty(k[0], k[1], "important"); }); }
