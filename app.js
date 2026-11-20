@@ -2085,6 +2085,21 @@ function giftAdmin(v){
     box.onclick=function(e){ var t=e.target.closest("[data-giftset]"); if(!t) return; SB.rpc("gift_admin_set",{p_id:+t.dataset.giftset,p_status:t.dataset.st,p_note:null}).then(function(x){ if(x.error){ toast("처리하지 못했어요"); return; } toast("✅ "+ST[t.dataset.st]); giftAdmin(v); }); };
   });
 }
+/* 2026-11-20 시온님 "선물주문이랑 체험단신청 따로": 관리자 화면 위 탭(선물 주문 · 체험단 신청 · 기자단·수익 링크), 고른 탭은 이 기기에 기억 */
+function padTabs(v){
+  var T=[["gift","🎁 선물 주문","giftadm"],["exp","📦 체험단 신청","expadm"],["press","✍️ 기자단·수익 링크","padm"]];
+  var cur=(/[?&]t=(gift|exp|press)/.exec(location.hash)||[])[1]; if(!cur){ try{ cur=localStorage.getItem("dk-padtab")||"gift"; }catch(e){ cur="gift"; } }
+  var bar=document.getElementById("padtabs");
+  if(!bar){ bar=document.createElement("div"); bar.id="padtabs"; bar.style.cssText="position:sticky;top:0;z-index:5;display:flex;gap:6px;padding:10px 16px;background:var(--bg,#fff);border-bottom:1px solid #eee;overflow-x:auto";
+    var first=document.getElementById("giftadm")||document.getElementById("expadm")||v; first.parentNode.insertBefore(bar,first); }
+  function show(k){ cur=k; try{ localStorage.setItem("dk-padtab",k); }catch(e){}
+    bar.innerHTML=T.map(function(t){ var on=t[0]===k; return '<button type="button" data-padtab="'+t[0]+'" style="flex:0 0 auto;padding:9px 14px;border-radius:20px;border:1px solid '+(on?'#6a3fc8':'#ddd')+';background:'+(on?'#6a3fc8':'#fff')+';color:'+(on?'#fff':'#333')+';font-weight:700;font-size:14px;cursor:pointer">'+t[1]+'</button>'; }).join("");
+    T.forEach(function(t){ var el=document.getElementById(t[2]); if(el) el.style.display=t[0]===k?"":"none"; }); }
+  bar.onclick=function(e){ var b=e.target.closest("[data-padtab]"); if(b){ show(b.dataset.padtab); window.scrollTo(0,0); } };
+  show(cur);
+  /* 늦게 그려지는 칸도 고른 탭에 맞춤 */
+  setTimeout(function(){ show(cur); },1500);
+}
 /* 관리자 #/padmin (press_admins 에 있는 계정만) */
 function padminView(){ return '<div class="pg padm" id="padm"><h1>기자단 관리</h1><div class="empty">불러오는 중…</div></div>'; }
 function padminInit(){
@@ -2096,6 +2111,7 @@ function padminInit(){
       if(!r.data){ v.innerHTML='<h1>기자단 관리</h1><div class="empty">관리자만 볼 수 있어요</div>'; return; }
       try{ giftAdmin(v); }catch(e){}
       try{ expAdmin(v); }catch(e){}
+      padTabs(v);
       Promise.all([SB.from("press_jobs").select("*").order("created_at",{ascending:false}).limit(50), SB.from("press_apps").select("*").order("created_at",{ascending:false}).limit(500), SB.from("press_withdrawals").select("*").eq("status","requested").order("created_at"), SB.from("press_files").select("*")]).then(function(R){
         var jobs=R[0].data||[], apps=R[1].data||[], wds=R[2].data||[], files={}; (R[3].data||[]).forEach(function(f){ files[f.job_id]=f; });
         var ids=apps.map(function(a){ return a.user_id; }).concat(wds.map(function(w){ return w.user_id; }));
