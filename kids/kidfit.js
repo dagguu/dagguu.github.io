@@ -2336,7 +2336,10 @@
   function gfDueTxt(s){ var m = /^(\d{4})(\d{2})(\d{2})$/.exec(s || ""); return m ? (+m[2]) + "월 " + (+m[3]) + "일" : ""; }
   function gfKakao(o, fb){
     function go(){ try { var K = window.Kakao; if (!K.isInitialized()) K.init(GF_KJS); var S = K.Share || K.Link;
-        S.sendDefault({ objectType: "feed", content: { title: o.title, description: o.desc, imageUrl: o.img, imageWidth: 800, imageHeight: 800, link: { mobileWebUrl: o.url, webUrl: o.url } }, buttons: [{ title: "선물 받기", link: { mobileWebUrl: o.url, webUrl: o.url } }] });
+        var tpl = { objectType: "feed", content: { title: o.title, description: o.desc, imageUrl: o.img, imageWidth: 800, imageHeight: 800, link: { mobileWebUrl: o.url, webUrl: o.url } }, buttons: [{ title: "선물 받기", link: { mobileWebUrl: o.url, webUrl: o.url } }] };
+        /* 카톡 선물하기처럼 상품 줄(이름 + 오른쪽 작은 사진) */
+        if (o.pname) tpl.itemContent = { titleImageText: String(o.pname).slice(0, 40), titleImageCategory: "다꾸키즈", titleImageUrl: o.pimg || o.img };
+        S.sendDefault(tpl);
       } catch(e){ fb(); } }
     if (window.Kakao && (Kakao.Share || Kakao.Link)) return go();
     var sc = document.createElement("script"); sc.src = "https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"; sc.crossOrigin = "anonymous";
@@ -2487,7 +2490,8 @@
       var m = /^ok:([0-9a-f]{16})$/.exec(String(res || ""));
       if (!m) { d.innerHTML = "<b>선물 링크를 만들지 못했어요.</b><br>카카오톡 채널로 주문번호를 알려 주시면 바로 만들어 드릴게요. <a href='https://pf.kakao.com/_xhihNX/chat' style='color:" + GF_P + "'>문의하기 ›</a>"; return; }
       try { sessionStorage.removeItem("dk_gift"); var L = JSON.parse(localStorage.getItem("dk_gifts") || "{}") || {}; L[orderId] = m[1]; localStorage.setItem("dk_gifts", JSON.stringify(L)); } catch(e){}
-      var due = gfDue(), url = "https://www.dagguu.com/kids/g/" + ((g && g.card) || "basic") + ".html?k=" + m[1] + "&d=" + due, img = GF_IMG + ((g && g.card) || "basic") + ".png";
+      var due = gfDue(), url = "https://www.dagguu.com/kids/g/" + ((g && g.card) || "basic") + ".html?k=" + m[1] + "&d=" + due, img = GF_IMG + ((g && g.card) || "basic") + ".png", pimg = "";
+      gfImg(g && g.pno).then(function(u){ pimg = u; });
       var who = (g && g.sender) ? g.sender + "님이" : "";
       var txt = (who ? who + " " : "") + "다꾸키즈 선물을 보냈어요 🎁\n받을 주소를 알려 주세요 👉 " + url;
       d.innerHTML = "<b style='font-size:17px'>🎁 이제 선물 링크를 보내 주세요</b><br><span style='color:#666'>받는 분이 링크에서 주소를 넣으면 그 주소로 보내 드려요.</span>" +
@@ -2497,7 +2501,7 @@
         "<small style='display:block;margin-top:10px;color:#999'>받는 분은 " + gfDueTxt(due) + "까지 주소를 넣으면 돼요. 안 들어오면 연락드려요. 이 링크는 마이쇼핑 › 주문 상세에서도 다시 볼 수 있어요.</small>";
       function copy(){ try { navigator.clipboard.writeText(txt).then(function(){ alert("링크를 복사했어요. 카톡 대화창에 붙여 넣어 보내 주세요."); }); } catch(e){ prompt("아래 내용을 복사해 주세요", txt); } }
       document.getElementById("gf-share").onclick = function(e){ e.preventDefault(); try { gtag("event", "gift_share"); } catch(e2){} function fb(){ if (navigator.share) navigator.share({ title: "다꾸키즈 선물", text: txt }).catch(function(){}); else copy(); }
-        gfKakao({ title: (who ? who + " " : "") + "선물을 보냈어요 🎁", desc: ((g && g.pname) ? g.pname + "\n" : "") + gfDueTxt(due) + "까지 배송지를 입력해 주세요.", img: img, url: url }, fb); };
+        gfKakao({ title: (who ? who + " " : "") + "선물을 보냈어요. 🎁", desc: gfDueTxt(due) + "까지 배송지를 입력해 주세요.\n입력하지 않으면 선물이 취소될 수 있어요.", img: img, url: url, pname: (g && g.pname) || "다꾸키즈 선물", pimg: pimg }, fb); };
       document.getElementById("gf-copy").onclick = function(e){ e.preventDefault(); copy(); };
     }).catch(function(){ d.innerHTML = "<b>선물 링크를 만들지 못했어요.</b> 잠시 뒤 새로고침해 주세요."; });
   }
