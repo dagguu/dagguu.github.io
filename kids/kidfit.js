@@ -1889,6 +1889,7 @@
     var APK = "dk_exp_applied"; function apGet(){ try { return JSON.parse(localStorage.getItem(APK) || "{}") || {}; } catch(e){ return {}; } } function apSet(eid){ try { var o = apGet(); o[eid] = Date.now(); localStorage.setItem(APK, JSON.stringify(o)); } catch(e){} } var APL = apGet(); var TKK = "dk_exp_tok"; function tkGet(){ try { return JSON.parse(localStorage.getItem(TKK) || "{}") || {}; } catch(e){ return {}; } } function tkSet(eid, t){ try { var o = tkGet(); o[eid] = t; localStorage.setItem(TKK, JSON.stringify(o)); } catch(e){} } var TOK = tkGet();
     /* 2026-11-18 시온님: 선정 결과 보기 — 신청할 때 받은 열쇠로 내 상태만 읽음(supabase/exp_status.sql exp_mine) */
     function mine(cb){ var ts = Object.keys(TOK).map(function(k){ return TOK[k]; }).filter(function(t){ return /^[0-9a-f]{32}$/.test(t); }); if (!ts.length) return; fetch(SBU + "/rest/v1/rpc/exp_mine", { method: "POST", headers: { apikey: SBK, Authorization: "Bearer " + SBK, "Content-Type": "application/json" }, body: JSON.stringify({ p_toks: ts }) }).then(function(r){ return r.ok ? r.json() : []; }).then(function(L){ var m = {}; (L || []).forEach(function(z){ m[z.exp_id] = z; }); cb(m); }).catch(function(){}); }  /* 2026-11-18: 두 번째 화면 바꿈(신청완료)에서 예전 cf 가 이미 빠져 있어 오류 → 저장은 됐는데 "저장되지 않았어요"가 뜨던 것 고침 */
+    expSync(function(){ APL = apGet(); TOK = tkGet();
     fetch("https://www.dagguu.com/kids/exp.json?v=" + Math.floor(Date.now() / 600000)).then(function(r){ return r.json(); }).then(function(data){
       var items = data.items || [];
       if (!id) {
@@ -1993,7 +1994,7 @@
       });
       if (x.img) document.getElementById("dkx-img").src = x.img;
       if (!CFX(x)) api(x.q, x.no).then(function(p){ if (!p) return; if (!x.img) document.getElementById("dkx-img").src = p.detail_image || p.list_image; var g = document.getElementById("dkx-go"); g.href = "/product/detail.html?product_no=" + p.product_no; g.style.display = "inline-block"; if (!x.brand) { document.getElementById("dkx-br").textContent = pbrand(p); var bt = document.getElementById("dkx-bt"); if (bt && pbrand(p)) bt.innerHTML = " <b>#" + esc(pbrand(p)) + "</b>"; } document.getElementById("dkx-h").textContent = title(x, p); });
-    }).catch(function(){ cf.style.visibility = ""; });
+    }).catch(function(){ cf.style.visibility = ""; }); });
     return true;
   }
   /* ㉑ 브랜드 모아보기(2026-11-16 시온님, 링크 모음 페이지 3열 브랜드 카드 참고): /product/coffee.html?t=brands
@@ -2403,6 +2404,53 @@
      → 주는 사람이 카톡으로 보냄 → 받는 사람 /product/coffee.html?t=gift&k=열쇠 에서 이름·연락처·주소(gift_fill) → 다꾸파트너스 #/padmin 에서 배송지 바꿔 발송.
      DB = 다꾸 저장소 supabase/gifts.sql. 7일 안에 주소가 안 오면 보낸 분께 연락·원하면 취소(전액 환불). */
   var GF_SBU = "https://nytoxoupvaozgjpnmmdh.supabase.co", GF_SBK = "sb_publishable_i57GJzzp-hE1tNUaLGmMqA_Lw0jSJvD", GF_P = "#6a3fc8";
+  /* 2026-11-20 시온님 "로그인하면 내가 지원했던 체험단 확인": 카페24 암호화 회원 ID(JWT, getEncryptedMemberId) → Supabase 함수 cafe24-oauth {mine}
+     이 Service Key 로 검증한 뒤 그 회원 신청만 돌려줌 → 이 기기 열쇠(dk_exp_tok)에 합쳐서 어느 기기에서든 선정 결과·게시물 제출이 보임 */
+  var EXS_CID = "JzTmuiBPItGvZ6KG8g3aPC";
+  function expSync(cb){
+    var fired = 0; function fin(L){ if (fired) return; fired = 1; try { cb(L || null); } catch(e){} }
+    if (!document.querySelector("a[href*='logout']")) return fin(null);
+    try { var c = JSON.parse(sessionStorage.getItem("dk_expsync") || "null"); if (c && Date.now() - c.t < 300000) return fin(c.l); } catch(e){}
+    setTimeout(function(){ fin(null); }, 3500);
+    function no(){ try { sessionStorage.setItem("dk_expsync", JSON.stringify({ t: Date.now(), l: null })); } catch(e){} fin(null); }
+    var api = null; try { api = window.CAFE24API && CAFE24API.init({ client_id: EXS_CID }); } catch(e){}
+    var fn = api && api.getEncryptedMemberId ? api : (window.CAFE24API && CAFE24API.getEncryptedMemberId ? CAFE24API : null);
+    if (!fn) return fin(null);
+    try {
+      fn.getEncryptedMemberId(EXS_CID, function(err, res){
+        var jwt = ""; (function pick(o){ if (jwt || !o) return; if (typeof o === "string") { if (/^[\w-]+\.[\w-]+\.[\w-]+$/.test(o)) jwt = o; return; } if (typeof o === "object") for (var k in o) pick(o[k]); })(res);
+        if (err || !jwt) return no();
+        fetch("https://nytoxoupvaozgjpnmmdh.supabase.co/functions/v1/cafe24-oauth", { method: "POST", headers: { "Content-Type": "application/json", apikey: "sb_publishable_i57GJzzp-hE1tNUaLGmMqA_Lw0jSJvD" }, body: JSON.stringify({ mine: jwt }) })
+          .then(function(r){ return r.json(); }).then(function(j){
+            if (!j || !j.ok) return no();
+            var L = j.list || [];
+            try { var tk = JSON.parse(localStorage.getItem("dk_exp_tok") || "{}") || {}, ap = JSON.parse(localStorage.getItem("dk_exp_applied") || "{}") || {};
+              L.forEach(function(x){ if (x.exp_id && x.tok) { tk[x.exp_id] = x.tok; if (!ap[x.exp_id]) ap[x.exp_id] = Date.parse(x.at) || Date.now(); } });
+              localStorage.setItem("dk_exp_tok", JSON.stringify(tk)); localStorage.setItem("dk_exp_applied", JSON.stringify(ap)); } catch(e){}
+            try { sessionStorage.setItem("dk_expsync", JSON.stringify({ t: Date.now(), l: L })); } catch(e){}
+            fin(L);
+          }).catch(function(){ fin(null); });
+      });
+    } catch(e){ fin(null); }
+  }
+  function myExp(){
+    if (!/myshop.index/.test(location.pathname) || document.getElementById("dk-myexp")) return;
+    var my = document.getElementById("dk-my"); if (!my) { if ((myExp.n = (myExp.n || 0) + 1) < 30) setTimeout(myExp, 500); return; }
+    var w = document.createElement("div"); w.id = "dk-myexp"; w.style.cssText = "max-width:720px;margin:0 auto 10px;font-family:inherit;box-sizing:border-box;border-bottom:10px solid #f4f4f6";
+    w.innerHTML = "<div style='display:flex;justify-content:space-between;align-items:center;padding:18px 18px 8px'><b style='font-size:16px'>📋 내 체험단 활동</b><a href='/product/coffee.html?t=exp' style='font-size:13px;color:#888;text-decoration:none'>체험단 보러가기 ›</a></div><div id='dk-myexp-l' style='padding:4px 18px 16px;font-size:13.5px;color:#999'>불러오는 중…</div>";
+    my.parentNode.insertBefore(w, my.nextSibling);
+    var ST = { applied: ["신청완료", "#f1f1f3", "#666"], selected: ["🎉 선정", "#ffe8ee", "#e8456b"], rejected: ["미선정", "#f1f1f3", "#999"], posted: ["✅ 게시 완료", "#e9f8ef", "#1f9d55"] };
+    expSync(function(L){
+      var box = document.getElementById("dk-myexp-l"); if (!box) return;
+      if (!L) { box.innerHTML = "체험단 신청 내역을 불러오지 못했어요. 신청한 기기에서는 체험단 화면에 결과가 보여요."; return; }
+      if (!L.length) { box.innerHTML = "아직 신청한 체험단이 없어요."; return; }
+      box.style.color = "#222";
+      box.innerHTML = L.map(function(x){ var s = ST[x.status] || ST.applied, d = x.at ? new Date(x.at) : null;
+        return "<a href='/product/coffee.html?t=exp&id=" + encodeURIComponent(x.exp_id) + "' style='display:flex;align-items:center;gap:10px;padding:12px 0;border-top:1px solid #f0f0f0;color:#222;text-decoration:none'>" +
+          "<div style='flex:1;min-width:0'><div style='font-size:14px;line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap'>" + esc(x.title || x.exp_id) + "</div><div style='margin-top:3px;font-size:12px;color:#999'>" + (d ? (d.getMonth() + 1) + "." + d.getDate() + " 신청" : "") + (x.status === "selected" && !x.post_url ? " · <b style='color:#e8456b'>게시물 제출하기 ›</b>" : "") + "</div></div>" +
+          "<span style='flex:0 0 auto;font-size:12px;font-weight:700;border-radius:20px;padding:5px 10px;background:" + s[1] + ";color:" + s[2] + "'>" + s[0] + "</span></a>"; }).join("");
+    });
+  }
   function gfRpc(fn, body){ return fetch(GF_SBU + "/rest/v1/rpc/" + fn, { method: "POST", headers: { apikey: GF_SBK, Authorization: "Bearer " + GF_SBK, "Content-Type": "application/json" }, body: JSON.stringify(body) }).then(function(r){ return r.ok ? r.json() : null; }); }
   function gfGet(){ try { var g = JSON.parse(sessionStorage.getItem("dk_gift") || "null"); if (g && Date.now() - g.t < 3 * 3600000) return g; } catch(e){} return null; }
   function gfEsc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
@@ -2700,7 +2748,7 @@
     return true;
   }
   function giftKit(){ try { if (document.getElementById("orderFixArea")) giftBtn(); } catch(e){} try { giftOrderForm(); } catch(e){} try { giftAfter(); } catch(e){} }
-  function run(){ if (window.DK_GIFT_ONLY) { try { giftKit(); } catch(e){} return; } try { document.documentElement.classList.add("dk-ok"); } catch(e){} try { tidy(); } catch(e){} try { bestBadge(); } catch(e){} try { rankNo(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { coupleMenu(); } catch(e){} try { boyMenu(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { giftKit(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { laFont(); } catch(e){} try { tongFix(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ xmasPage(); }catch(e){} try{ couplePage(); }catch(e){} try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} try { setTimeout(modelSpec, 1500); } catch(e){} try { coordiTags(); } catch(e){} try { coordiSet(); } catch(e){} try { addPrdLabel(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  function run(){ if (window.DK_GIFT_ONLY) { try { giftKit(); } catch(e){} return; } try { document.documentElement.classList.add("dk-ok"); } catch(e){} try { tidy(); } catch(e){} try { bestBadge(); } catch(e){} try { rankNo(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { coupleMenu(); } catch(e){} try { boyMenu(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { giftKit(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { laFont(); } catch(e){} try { tongFix(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ xmasPage(); }catch(e){} try{ couplePage(); }catch(e){} try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ myExp(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} try { setTimeout(modelSpec, 1500); } catch(e){} try { coordiTags(); } catch(e){} try { coordiSet(); } catch(e){} try { addPrdLabel(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
