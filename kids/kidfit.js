@@ -2325,6 +2325,20 @@
   function gfRpc(fn, body){ return fetch(GF_SBU + "/rest/v1/rpc/" + fn, { method: "POST", headers: { apikey: GF_SBK, Authorization: "Bearer " + GF_SBK, "Content-Type": "application/json" }, body: JSON.stringify(body) }).then(function(r){ return r.ok ? r.json() : null; }); }
   function gfGet(){ try { var g = JSON.parse(sessionStorage.getItem("dk_gift") || "null"); if (g && Date.now() - g.t < 3 * 3600000) return g; } catch(e){} return null; }
   function gfEsc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  /* 2026-11-20 시온님이 카카오톡 선물하기 메시지 보여줌 → 선물 링크를 카톡 카드(사진·"OO님이 선물을 보냈어요"·M월 D일까지 배송지 입력·선물 받기 버튼)로 보냄.
+     카카오 JS 키 = 카페24 카카오싱크 로그인 버튼에 들어 있는 공개 키(앱 다꾸 체험단). 안 되면 휴대폰 공유 창. */
+  var GF_KJS = "5774de363afe361d50d802a13daf2960";
+  function gfDue(){ var d = new Date(Date.now() + 9 * 3600e3 + 7 * 864e5); return String(d.getUTCFullYear()) + ("0" + (d.getUTCMonth() + 1)).slice(-2) + ("0" + d.getUTCDate()).slice(-2); }
+  function gfDueTxt(s){ var m = /^(\d{4})(\d{2})(\d{2})$/.exec(s || ""); return m ? (+m[2]) + "월 " + (+m[3]) + "일" : ""; }
+  function gfKakao(o, fb){
+    function go(){ try { var K = window.Kakao; if (!K.isInitialized()) K.init(GF_KJS); var S = K.Share || K.Link;
+        S.sendDefault({ objectType: "feed", content: { title: o.title, description: o.desc, imageUrl: o.img, imageWidth: 800, imageHeight: 800, link: { mobileWebUrl: o.url, webUrl: o.url } }, buttons: [{ title: "선물 받기", link: { mobileWebUrl: o.url, webUrl: o.url } }] });
+      } catch(e){ fb(); } }
+    if (window.Kakao && (Kakao.Share || Kakao.Link)) return go();
+    var sc = document.createElement("script"); sc.src = "https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"; sc.crossOrigin = "anonymous";
+    sc.onload = go; sc.onerror = fb; document.head.appendChild(sc);
+  }
+  function gfImg(pno){ if (!pno) return Promise.resolve(""); return fetch("https://dagguu.cafe24api.com/api/v2/products?product_no=" + pno + "&fields=product_no,product_name,list_image,detail_image", { headers: { "X-Cafe24-Client-Id": "JzTmuiBPItGvZ6KG8g3aPC" } }).then(function(r){ return r.json(); }).then(function(j){ var pr = (j.products || [])[0] || {}; return pr.detail_image || pr.list_image || ""; }).catch(function(){ return ""; }); }
   var GF_MEMO = "[선물] 받는 분 주소 대기 · 선물 링크로 받은 주소로 보내 주세요";
   function giftBtn(){
     if (document.getElementById("dk-giftbtn")) return;
@@ -2433,16 +2447,18 @@
       var m = /^ok:([0-9a-f]{16})$/.exec(String(res || ""));
       if (!m) { d.innerHTML = "<b>선물 링크를 만들지 못했어요.</b><br>카카오톡 채널로 주문번호를 알려 주시면 바로 만들어 드릴게요. <a href='https://pf.kakao.com/_xhihNX/chat' style='color:" + GF_P + "'>문의하기 ›</a>"; return; }
       try { sessionStorage.removeItem("dk_gift"); var L = JSON.parse(localStorage.getItem("dk_gifts") || "{}") || {}; L[orderId] = m[1]; localStorage.setItem("dk_gifts", JSON.stringify(L)); } catch(e){}
-      var url = "https://dagguukids.com/product/coffee.html?t=gift&k=" + m[1];
+      var due = gfDue(), url = "https://dagguukids.com/product/coffee.html?t=gift&k=" + m[1] + "&d=" + due, img = "";
+      gfImg(g && g.pno).then(function(u){ img = u; });
       var who = (g && g.sender) ? g.sender + "님이" : "";
       var txt = (who ? who + " " : "") + "다꾸키즈 선물을 보냈어요 🎁\n받을 주소를 알려 주세요 👉 " + url;
       d.innerHTML = "<b style='font-size:17px'>🎁 이제 선물 링크를 보내 주세요</b><br><span style='color:#666'>받는 분이 링크에서 주소를 넣으면 그 주소로 보내 드려요.</span>" +
         "<div style='margin:12px 0;padding:10px;background:#fff;border:1px solid #e3d8fa;border-radius:8px;font-size:13px;word-break:break-all;color:#555'>" + gfEsc(url) + "</div>" +
         "<a href='#none' id='gf-share' style='display:block;height:50px;line-height:50px;border-radius:25px;background:#fee500;color:#222;font-weight:700;font-size:16px;text-decoration:none'>💬 카카오톡으로 보내기</a>" +
         "<a href='#none' id='gf-copy' style='display:block;margin-top:8px;height:46px;line-height:46px;border-radius:23px;background:#fff;border:1px solid " + GF_P + ";color:" + GF_P + ";font-weight:700;font-size:15px;text-decoration:none'>링크 복사하기</a>" +
-        "<small style='display:block;margin-top:10px;color:#999'>7일 안에 주소가 안 들어오면 연락드려요. 이 링크는 마이쇼핑 › 주문 상세에서도 다시 볼 수 있어요.</small>";
+        "<small style='display:block;margin-top:10px;color:#999'>받는 분은 " + gfDueTxt(due) + "까지 주소를 넣으면 돼요. 안 들어오면 연락드려요. 이 링크는 마이쇼핑 › 주문 상세에서도 다시 볼 수 있어요.</small>";
       function copy(){ try { navigator.clipboard.writeText(txt).then(function(){ alert("링크를 복사했어요. 카톡 대화창에 붙여 넣어 보내 주세요."); }); } catch(e){ prompt("아래 내용을 복사해 주세요", txt); } }
-      document.getElementById("gf-share").onclick = function(e){ e.preventDefault(); try { gtag("event", "gift_share"); } catch(e2){} if (navigator.share) navigator.share({ title: "다꾸키즈 선물", text: txt }).catch(function(){}); else copy(); };
+      document.getElementById("gf-share").onclick = function(e){ e.preventDefault(); try { gtag("event", "gift_share"); } catch(e2){} function fb(){ if (navigator.share) navigator.share({ title: "다꾸키즈 선물", text: txt }).catch(function(){}); else copy(); }
+        gfKakao({ title: (who ? who + " " : "") + "선물을 보냈어요 🎁", desc: ((g && g.pname) ? g.pname + "\n" : "") + gfDueTxt(due) + "까지 배송지를 입력해 주세요.", img: img || "https://dagguukids.com/favicon.ico", url: url }, fb); };
       document.getElementById("gf-copy").onclick = function(e){ e.preventDefault(); copy(); };
     }).catch(function(){ d.innerHTML = "<b>선물 링크를 만들지 못했어요.</b> 잠시 뒤 새로고침해 주세요."; });
   }
@@ -2476,8 +2492,14 @@
     gfRpc("gift_get", { p_k: k }).then(function(g){
       if (!g) { w.innerHTML = "<div style='text-align:center;padding:40px 0'>선물을 찾지 못했어요.<br>링크가 오래됐거나 잘못된 링크예요.<br><a href='https://pf.kakao.com/_xhihNX/chat' style='color:" + GF_P + "'>카카오톡으로 문의하기 ›</a></div>"; return; }
       var inp = "width:100%;height:48px;border:1px solid #ddd;border-radius:8px;padding:0 12px;font-size:16px;box-sizing:border-box;margin:0 0 10px;background:#fff";
-      var h = "<div style='text-align:center'><div style='font-size:52px'>🎁</div><h1 style='margin:8px 0 4px;font-size:23px'>" + (g.sender ? gfEsc(g.sender) + "님이 보낸 " : "") + "선물이 도착했어요</h1><p style='margin:0;color:#888'>다꾸키즈 · 남대문 아동복</p></div>" +
-        "<div style='display:flex;gap:14px;align-items:center;margin:20px 0;padding:14px;background:#faf8ff;border:1px solid #ece4fb;border-radius:14px'><img id='gf-pim' alt='' style='width:86px;height:86px;flex:0 0 86px;object-fit:cover;border-radius:10px;background:#f1eef8'><div><div style='font-size:15.5px;font-weight:700;line-height:1.45' id='gf-pn'>" + gfEsc(g.pname || "다꾸키즈 선물") + "</div>" + (g.msg ? "<div style='margin-top:8px;font-size:14px;color:#555;line-height:1.6'>💌 " + gfEsc(g.msg) + "</div>" : "") + "</div></div>";
+      var due = (location.search.match(/[?&]d=([0-9]{8})/) || [])[1] || "";
+      /* 카카오톡 선물 카드처럼: 분홍 메시지 칸 → "OO님이 선물을 보냈어요" → 상품(오른쪽 사진) → 배송지 입력 기한 */
+      var h = "<div style='border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 2px 14px rgba(0,0,0,.08);border:1px solid #f0e9fb'>" +
+        "<div style='background:#f3cfe2;padding:34px 22px 30px;text-align:center'><div style='font-size:22px;font-weight:800;color:#fff;line-height:1.5;text-shadow:0 1px 3px rgba(150,60,110,.35);word-break:keep-all'>" + (g.msg ? gfEsc(g.msg) : "선물이 도착했어요 💝") + "</div><div style='font-size:64px;margin-top:14px'>🎁</div></div>" +
+        "<div style='padding:18px 18px 16px'><div style='font-size:16px;padding-bottom:14px;border-bottom:1px solid #eee'>" + (g.sender ? gfEsc(g.sender) + "님이 " : "") + "선물을 보냈어요.</div>" +
+        "<div style='display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid #eee'><div style='flex:1;min-width:0'><div style='font-size:16px;font-weight:600;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden' id='gf-pn'>" + gfEsc(g.pname || "다꾸키즈 선물") + "</div><div style='margin-top:4px;color:#888;font-size:13.5px'>다꾸키즈</div></div><img id='gf-pim' alt='' style='width:78px;height:78px;flex:0 0 78px;object-fit:cover;border-radius:8px;background:#f1eef8'></div>" +
+        (g.status === "sent" || g.status === "canceled" ? "" : "<div style='padding:14px 0 2px;font-size:15px;line-height:1.65'>" + (due ? gfDueTxt(due) + "까지 " : "") + "배송지를 입력해 주세요.<br>입력하지 않으면 선물이 취소될 수 있어요.</div>") +
+        "</div></div><div style='height:22px'></div>";
       if (g.status === "sent") { w.innerHTML = h + "<div style='text-align:center;padding:16px;background:#eefbf1;border-radius:12px'>🚚 선물이 출발했어요! 곧 받아 보실 수 있어요.</div>"; }
       else if (g.status === "canceled") { w.innerHTML = h + "<div style='text-align:center;padding:16px;background:#f5f5f5;border-radius:12px'>취소된 선물이에요.</div>"; }
       else {
