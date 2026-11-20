@@ -2453,15 +2453,39 @@
     function save(){ try { sessionStorage.setItem("dk_gift", JSON.stringify(g)); } catch(e){} }
     function tab(t){ var x = [].filter.call(document.querySelectorAll("a, li, button, label"), function(e){ return e.textContent.trim() === t; })[0]; if (x) { try { x.click(); } catch(e){} } }
     var hasRecent = [].some.call(document.querySelectorAll("a, li, button, label"), function(e){ return e.textContent.trim() === "최근 배송지" && e.offsetParent; });
+    var GF_TMP = { z: "16108", a1: "경기 의왕시 광진말로 54 스마트시티퀀텀", a2: "(선물 받는 분 주소 대기)" };
+    function gfTmpAddr(on){
+      var $ = function(i){ return document.getElementById(i); };
+      function setv(e, v){ if (!e) return; e.value = v; try { e.dispatchEvent(new Event("input", { bubbles: true })); e.dispatchEvent(new Event("change", { bubbles: true })); } catch(x){} }
+      var rn = $("rname"), rz = $("rzipcode1"), r1 = $("raddr1"), r2 = $("raddr2"), rp = $("rphone2_");
+      if (on) {
+        var on2 = $("oname"), op = $("ophone2_");
+        if (rn && !rn.value) { setv(rn, (on2 && on2.value) || "선물 받는 분"); rn.dataset.dkt = 1; }
+        if (rz && !rz.value) { setv(rz, GF_TMP.z); setv(r1, GF_TMP.a1); setv(r2, GF_TMP.a2); rz.dataset.dkt = 1; }
+        if (rp && !rp.value && op && op.value) { setv(rp, op.value); rp.dataset.dkt = 1; }
+        /* 주문자 이름·연락처는 결제하기 직전에 다시 복사(나중에 적는 경우) */
+        if (!gfTmpAddr.b) { gfTmpAddr.b = 1; document.addEventListener("click", function(e){
+          if (!document.documentElement.classList.contains("dk-gwait") || hasRecent) return;
+          var b = e.target.closest && e.target.closest("button, a, input[type=button], input[type=submit]"); if (!b || !/결제하기/.test(b.textContent || b.value || "")) return;
+          var on3 = $("oname"), op3 = $("ophone2_");
+          if (rn && rn.dataset.dkt && on3 && on3.value) setv(rn, on3.value);
+          if (rp && (rp.dataset.dkt || !rp.value) && op3 && op3.value) { setv(rp, op3.value); rp.dataset.dkt = 1; }
+          if (rz && !rz.value) { setv(rz, GF_TMP.z); setv(r1, GF_TMP.a1); setv(r2, GF_TMP.a2); rz.dataset.dkt = 1; }
+        }, true); }
+      } else {
+        [rn, rp].forEach(function(e){ if (e && e.dataset.dkt) { setv(e, ""); delete e.dataset.dkt; } });
+        if (rz && rz.dataset.dkt) { setv(rz, ""); setv(r1, ""); setv(r2, ""); delete rz.dataset.dkt; }
+      }
+    }
     function pick(direct){
       document.getElementById("gf-r1").className = "gr" + (direct ? "" : " on");
       document.getElementById("gf-r2").className = "gr" + (direct ? " on" : "");
       document.getElementById("gf-c2").style.display = direct ? "flex" : "none";
-      if (direct) { g.direct = 1; gfSetMemo(GF_MEMO2); if (sec) sec.style.display = ""; tab("직접입력");
+      if (direct) { g.direct = 1; gfSetMemo(GF_MEMO2); gfTmpAddr(0); if (sec) sec.style.display = ""; tab("직접입력");
         document.getElementById("gf-msg").innerHTML = "아래 <b>배송지 · 직접입력</b>에 받는 분 이름·연락처·주소를 넣어 주세요. 그 주소로 바로 보내 드려요."; }
-      else if (!hasRecent) { delete g.direct; gfSetMemo(GF_MEMO); if (sec) sec.style.display = "";
-        /* 비회원·처음 주문은 최근 배송지가 없어서 배송지 칸을 숨기면 결제가 안 됨(2026-11-20 테스트 주문에서 발견) */
-        document.getElementById("gf-msg").innerHTML = "결제를 위해 아래 <b>배송지</b>에는 <b>내 주소</b>를 임시로 넣어 주세요. 받는 분이 선물 링크에서 주소를 넣으면 그 주소로 바꿔서 보내 드려요. 7일 안에 주소가 안 들어오면 연락드려요."; }
+      else if (!hasRecent) { delete g.direct; gfSetMemo(GF_MEMO); gfTmpAddr(1); if (sec) sec.style.display = "none";
+        /* 비회원·처음 주문은 최근 배송지가 없음 → 2026-11-20 시온님 "주소 남기는 창 없애줘": 배송지 칸을 숨기고, 결제가 되도록 주문자 이름·연락처 + 다꾸키즈 사업장 주소를 임시로 넣음(받는 분이 주소를 넣으면 그 주소로 바꿔 보냄) */
+        document.getElementById("gf-msg").innerHTML = "배송지는 따로 안 넣으셔도 돼요. 결제 뒤 나오는 선물 링크를 보내면 받는 분이 직접 주소를 넣고, 그 주소로 보내 드려요. 7일 안에 주소가 안 들어오면 연락드려요."; }
       else { delete g.direct; gfSetMemo(GF_MEMO); tab("최근 배송지"); if (sec) sec.style.display = "none";
         document.getElementById("gf-msg").innerHTML = "주문서의 배송지 칸은 결제를 위해 <b>내 최근 배송지</b>로 임시로 두고, 받는 분이 주소를 넣으면 그 주소로 바꿔서 보내 드려요. 7일 안에 주소가 안 들어오면 연락드려요. <a href='#none' id='gf-show' style='color:" + GF_P + "'>임시 배송지 보기</a>";
         var sh = document.getElementById("gf-show"); if (sh) sh.onclick = function(e){ e.preventDefault(); if (sec) { sec.style.display = ""; try { sec.scrollIntoView({ behavior: "smooth", block: "start" }); } catch(e2){} } }; }
@@ -2471,7 +2495,7 @@
     document.getElementById("gf-r1").onclick = function(){ pick(0); };
     document.getElementById("gf-r2").onclick = function(){ pick(1); };
     document.getElementById("gf-pv").onclick = function(e){ e.preventDefault(); var t = document.getElementById("gf-pvt"); t.style.display = t.style.display === "block" ? "none" : "block"; };
-    document.getElementById("gf-no").onclick = function(e){ e.preventDefault(); try { sessionStorage.removeItem("dk_gift"); } catch(e2){} if (sec) sec.style.display = ""; try { document.documentElement.classList.remove("dk-gwait"); } catch(e3){} d.parentNode.removeChild(d); gfSetMemo(""); };
+    document.getElementById("gf-no").onclick = function(e){ e.preventDefault(); try { sessionStorage.removeItem("dk_gift"); } catch(e2){} gfTmpAddr(0); if (sec) sec.style.display = ""; try { document.documentElement.classList.remove("dk-gwait"); } catch(e3){} d.parentNode.removeChild(d); gfSetMemo(""); };
     /* 대신 입력인데 동의 안 했으면 결제 막기 */
     document.addEventListener("click", function(e){
       if (!document.getElementById("dk-giftof") || !g.direct) return;
