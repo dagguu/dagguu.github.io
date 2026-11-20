@@ -2336,7 +2336,7 @@
   function gfDueTxt(s){ var m = /^(\d{4})(\d{2})(\d{2})$/.exec(s || ""); return m ? (+m[2]) + "월 " + (+m[3]) + "일" : ""; }
   function gfKakao(o, fb){
     function go(){ try { var K = window.Kakao; if (!K.isInitialized()) K.init(GF_KJS); var S = K.Share || K.Link;
-        var tpl = { objectType: "feed", content: { title: o.title, description: o.desc, imageUrl: o.img, imageWidth: 800, imageHeight: 800, link: { mobileWebUrl: o.url, webUrl: o.url } }, buttons: [{ title: "선물 받기", link: { mobileWebUrl: o.url, webUrl: o.url } }] };
+        var tpl = { objectType: "feed", content: { title: o.title, description: o.desc, imageUrl: o.img, imageWidth: 800, imageHeight: 800, link: { mobileWebUrl: o.url, webUrl: o.url } }, buttons: [{ title: o.btn || "선물 받기", link: { mobileWebUrl: o.url, webUrl: o.url } }] };
         /* 카톡 선물하기처럼 상품 줄(이름 + 오른쪽 작은 사진) */
         if (o.pname) tpl.itemContent = { titleImageText: String(o.pname).slice(0, 40), titleImageCategory: "다꾸키즈", titleImageUrl: o.pimg || o.img };
         S.sendDefault(tpl);
@@ -2514,8 +2514,14 @@
       var an = document.querySelector(".xans-order-result, #contents > *") || document.body.firstChild;
       if (o && an && g.self) { if (!document.getElementById("dk-giftlink")) { var ds = document.createElement("div"); ds.id = "dk-giftlink"; var cc = gfCard(g.card);
           ds.style.cssText = "margin:14px auto;width:calc(100% - 24px);max-width:460px;border-radius:16px;overflow:hidden;background:" + cc[2] + ";text-align:center";
-          ds.innerHTML = "<img src='" + GF_IMG + cc[0] + ".png' alt='' style='display:block;width:100%'>" + (g.msg ? "<div style='margin:0 16px;padding:14px;background:rgba(255,255,255,.75);border-radius:12px;font-size:17px;font-weight:700;color:#333;line-height:1.6;white-space:pre-line'>" + gfEsc(g.msg) + "</div>" : "") + "<div style='padding:14px 16px 18px;font-size:14px;color:#555'>💝 나에게 주는 선물이 주문됐어요. 내 배송지로 보내 드릴게요.</div>";
-          an.parentNode.insertBefore(ds, an); try { gtag("event", "gift_self_done"); } catch(e){} } try { sessionStorage.removeItem("dk_gift"); } catch(e){} }
+          ds.innerHTML = "<img src='" + GF_IMG + cc[0] + ".png' alt='' style='display:block;width:100%'>" + (g.msg ? "<div style='margin:0 16px;padding:14px;background:rgba(255,255,255,.75);border-radius:12px;font-size:17px;font-weight:700;color:#333;line-height:1.6;white-space:pre-line'>" + gfEsc(g.msg) + "</div>" : "") + "<div style='padding:14px 16px 6px;font-size:14px;color:#555'>💝 나에게 주는 선물이 주문됐어요. 내 배송지로 보내 드릴게요.</div>" +
+            "<a href='#none' id='gf-selfk' style='display:block;margin:6px 16px 18px;height:48px;line-height:48px;border-radius:24px;background:#fee500;color:#222;font-weight:700;font-size:15px;text-decoration:none'>💬 나에게 카톡으로 보내기</a>";
+          an.parentNode.insertBefore(ds, an);
+          /* 2026-11-20 시온님 "나에게 선물은 카톡 보내기가 없어서 확인을 못했어" → 카톡 카드로 '나와의 채팅'에 보관 */
+          (function(gg, oid){ var u = "https://dagguukids.com/myshop/order/list.html";
+            document.getElementById("gf-selfk").onclick = function(e){ e.preventDefault(); try { gtag("event", "gift_self_share"); } catch(e2){}
+              gfKakao({ title: "나에게 주는 선물 💝", desc: (gg.msg ? gg.msg.slice(0, 60) + "\n" : "") + "주문번호 " + oid, img: GF_IMG + (gg.card || "basic") + ".png", url: u, pname: gg.pname || "다꾸키즈 선물", pimg: "", btn: "주문 확인하기" },
+                function(){ if (navigator.share) navigator.share({ title: "나에게 주는 선물", text: (gg.msg || "나에게 주는 선물") + " " + u }).catch(function(){}); }); }; })(g, o); try { gtag("event", "gift_self_done"); } catch(e){} } try { sessionStorage.removeItem("dk_gift"); } catch(e){} }
       else if (o && an && g.direct) { if (!document.getElementById("dk-giftlink")) { var dn = document.createElement("div"); dn.id = "dk-giftlink"; dn.style.cssText = "margin:14px auto;width:calc(100% - 24px);max-width:520px;box-sizing:border-box;padding:16px;border-radius:14px;background:#f7f4fd;border:1.5px solid " + GF_P + ";font-size:14px;line-height:1.7;text-align:center"; dn.innerHTML = "<b style='font-size:16px'>🎁 선물 주문이 완료됐어요</b><br><span style='color:#666'>입력하신 받는 분 주소로 바로 보내 드려요.</span>"; an.parentNode.insertBefore(dn, an); } try { sessionStorage.removeItem("dk_gift"); } catch(e){} }
       else if (o && an) giftLinkBox(o, an, g);
     } else if (p.indexOf("/myshop/order/detail") === 0) {
