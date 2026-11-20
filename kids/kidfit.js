@@ -1503,7 +1503,7 @@
     var a0 = box.querySelector("a"); if (!a0) return;
     box.setAttribute("data-dkroll", "1");
     if (!document.getElementById("dk-tbr-css")) { var st = document.createElement("style"); st.id = "dk-tbr-css";
-      st.textContent = ".dk-tbr{position:relative;height:1.6em;overflow:hidden}.dk-tbr>div{transition:transform .45s ease}.dk-tbr a{display:block;height:1.6em;line-height:1.6em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.dk-tbr a b{font-weight:700}";
+      st.textContent = ".dk-tbr{position:relative;height:1.6em;overflow:hidden}.dk-tbr>div{transition:transform .45s ease}.dk-tbr a{display:block;text-align:center;height:1.6em;line-height:1.6em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.dk-tbr a b{font-weight:700}";
       document.head.appendChild(st); }
     var dl = "/exec/front/newcoupon/IssueDownload?coupon_no=" + GIFT_CP + "&opener_url=" + encodeURIComponent("/product/list.html?cate_no=66");
     var w = document.createElement("div"); w.className = "dk-tbr"; var inner = document.createElement("div");
