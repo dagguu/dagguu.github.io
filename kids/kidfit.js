@@ -2487,7 +2487,7 @@
       var m = /^ok:([0-9a-f]{16})$/.exec(String(res || ""));
       if (!m) { d.innerHTML = "<b>선물 링크를 만들지 못했어요.</b><br>카카오톡 채널로 주문번호를 알려 주시면 바로 만들어 드릴게요. <a href='https://pf.kakao.com/_xhihNX/chat' style='color:" + GF_P + "'>문의하기 ›</a>"; return; }
       try { sessionStorage.removeItem("dk_gift"); var L = JSON.parse(localStorage.getItem("dk_gifts") || "{}") || {}; L[orderId] = m[1]; localStorage.setItem("dk_gifts", JSON.stringify(L)); } catch(e){}
-      var due = gfDue(), url = "https://dagguukids.com/product/coffee.html?t=gift&k=" + m[1] + "&d=" + due + "&c=" + ((g && g.card) || "basic"), img = GF_IMG + ((g && g.card) || "basic") + ".png";
+      var due = gfDue(), url = "https://www.dagguu.com/kids/g/" + ((g && g.card) || "basic") + ".html?k=" + m[1] + "&d=" + due, img = GF_IMG + ((g && g.card) || "basic") + ".png";
       var who = (g && g.sender) ? g.sender + "님이" : "";
       var txt = (who ? who + " " : "") + "다꾸키즈 선물을 보냈어요 🎁\n받을 주소를 알려 주세요 👉 " + url;
       d.innerHTML = "<b style='font-size:17px'>🎁 이제 선물 링크를 보내 주세요</b><br><span style='color:#666'>받는 분이 링크에서 주소를 넣으면 그 주소로 보내 드려요.</span>" +
