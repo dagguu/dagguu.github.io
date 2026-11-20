@@ -2372,7 +2372,7 @@
         GF_CARDS.map(function(c, i){ return "<a href='#none' data-c='" + c[0] + "' style='flex:0 0 84px;text-align:center;text-decoration:none;color:#444;font-size:12.5px'><img src='" + GF_IMG + c[0] + ".svg' alt='' style='display:block;width:84px;height:84px;border-radius:12px;box-sizing:border-box;border:3px solid " + (i ? "transparent" : GF_P) + "'><span style='display:block;margin-top:4px;font-weight:" + (i ? 500 : 800) + "'>" + c[1] + "</span></a>"; }).join("") + "</div>" +
       "<label style='display:block;font-weight:700;margin:14px 0 6px'>선물 메시지 <span style='color:#999;font-weight:400'>(선택 · 200자)</span></label><textarea id='gf-msg' maxlength='200' placeholder='" + GF_CARDS[0][3] + "' style='width:100%;height:84px;border:1px solid #ddd;border-radius:8px;padding:10px 12px;font-size:16px;box-sizing:border-box'></textarea>" +
       "<div style='text-align:right;font-size:12px;color:#999;margin-top:2px'><a href='#none' id='gf-ex' style='color:" + GF_P + "'>예시 문구 넣기</a> · <span id='gf-cnt'>0</span>/200</div>" +
-      "<ul id='gf-info' style='margin:14px 0 0;padding:12px 14px 12px 30px;background:#f7f4fd;border-radius:10px;color:#555;font-size:13px;line-height:1.75'><li>옵션(색상·사이즈)을 고른 뒤 주문해 주세요.</li><li>주문서 배송지에는 <b>내 주소</b>를 넣어 주세요. 받는 분 주소가 들어오면 그 주소로 바꿔서 보내 드려요.</li><li>결제를 마치면 나오는 <b>선물 링크</b>를 받는 분께 보내 주세요. (마이쇼핑 주문 상세에서도 다시 볼 수 있어요)</li><li>7일 안에 받는 분 주소가 들어오지 않으면 연락드리고, 원하시면 주문을 취소하고 전액 환불해 드려요.</li></ul>" +
+      "<ul id='gf-info' style='margin:14px 0 0;padding:12px 14px 12px 30px;background:#f7f4fd;border-radius:10px;color:#555;font-size:13px;line-height:1.75'><li>옵션(색상·사이즈)을 고른 뒤 주문해 주세요.</li><li>주문서에서 <b>받는 분이 입력</b> 또는 <b>내가 대신 입력</b>을 고를 수 있어요.</li><li>결제를 마치면 나오는 <b>선물 링크</b>를 받는 분께 보내 주세요. (마이쇼핑 주문 상세에서도 다시 볼 수 있어요)</li><li>7일 안에 받는 분 주소가 들어오지 않으면 연락드리고, 원하시면 주문을 취소하고 전액 환불해 드려요.</li></ul>" +
       "<a href='#none' id='gf-go' style='display:block;margin:16px 0 0;height:52px;line-height:52px;border-radius:26px;background:" + GF_P + ";color:#fff;text-align:center;font-size:17px;font-weight:700;text-decoration:none'>선물 주문하기</a></div>";
     document.body.appendChild(w);
     function close(){ if (w.parentNode) w.parentNode.removeChild(w); }
@@ -2449,12 +2449,16 @@
     if (host && host.parentNode) host.parentNode.insertBefore(d, host); else document.body.insertBefore(d, document.body.firstChild);
     function save(){ try { sessionStorage.setItem("dk_gift", JSON.stringify(g)); } catch(e){} }
     function tab(t){ var x = [].filter.call(document.querySelectorAll("a, li, button, label"), function(e){ return e.textContent.trim() === t; })[0]; if (x) { try { x.click(); } catch(e){} } }
+    var hasRecent = [].some.call(document.querySelectorAll("a, li, button, label"), function(e){ return e.textContent.trim() === "최근 배송지" && e.offsetParent; });
     function pick(direct){
       document.getElementById("gf-r1").className = "gr" + (direct ? "" : " on");
       document.getElementById("gf-r2").className = "gr" + (direct ? " on" : "");
       document.getElementById("gf-c2").style.display = direct ? "flex" : "none";
       if (direct) { g.direct = 1; gfSetMemo(GF_MEMO2); if (sec) sec.style.display = ""; tab("직접입력");
         document.getElementById("gf-msg").innerHTML = "아래 <b>배송지 · 직접입력</b>에 받는 분 이름·연락처·주소를 넣어 주세요. 그 주소로 바로 보내 드려요."; }
+      else if (!hasRecent) { delete g.direct; gfSetMemo(GF_MEMO); if (sec) sec.style.display = "";
+        /* 비회원·처음 주문은 최근 배송지가 없어서 배송지 칸을 숨기면 결제가 안 됨(2026-11-20 테스트 주문에서 발견) */
+        document.getElementById("gf-msg").innerHTML = "결제를 위해 아래 <b>배송지</b>에는 <b>내 주소</b>를 임시로 넣어 주세요. 받는 분이 선물 링크에서 주소를 넣으면 그 주소로 바꿔서 보내 드려요. 7일 안에 주소가 안 들어오면 연락드려요."; }
       else { delete g.direct; gfSetMemo(GF_MEMO); tab("최근 배송지"); if (sec) sec.style.display = "none";
         document.getElementById("gf-msg").innerHTML = "주문서의 배송지 칸은 결제를 위해 <b>내 최근 배송지</b>로 임시로 두고, 받는 분이 주소를 넣으면 그 주소로 바꿔서 보내 드려요. 7일 안에 주소가 안 들어오면 연락드려요. <a href='#none' id='gf-show' style='color:" + GF_P + "'>임시 배송지 보기</a>";
         var sh = document.getElementById("gf-show"); if (sh) sh.onclick = function(e){ e.preventDefault(); if (sec) { sec.style.display = ""; try { sec.scrollIntoView({ behavior: "smooth", block: "start" }); } catch(e2){} } }; }
