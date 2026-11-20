@@ -99,6 +99,7 @@
     var cards = "";
     for (var i = 0; i < MS_G.length; i++) {
       var x = MS_G[i], me = g && g.k === x.k;
+      if (x.k === "basic") continue; /* 2026-11-20 시온님 "등급별혜택 기본회원은 못보게" */
       cards += "<div style='border:" + (me ? "2px solid #6a3fc8" : "1px solid #e5e5e5") + ";border-radius:14px;padding:18px 16px;margin:0 0 14px;background:#fff'>" +
         "<div style='display:flex;align-items:center;gap:14px'>" + msBadge(x, 48) + "<div style='min-width:0'><div style='font-size:18px;font-weight:800;color:#222'>" + x.n + (me ? " <span style='font-size:11px;font-weight:700;color:#fff;background:#6a3fc8;border-radius:20px;padding:2px 8px;vertical-align:3px'>지금 내 등급</span>" : "") + "</div><div style='margin-top:3px;font-size:13px;color:#666'>" + x.cond + "</div></div></div>" +
         "<div style='display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px'>" +
@@ -655,6 +656,19 @@
     var st = document.createElement("style"); st.id = "dk-tidy";
     st.textContent = "#dk-hi{display:none!important}@media(max-width:1024px){#dk-kfab{display:none!important}body.dk-pd #dk-kfab{display:flex!important}}";
     document.head.appendChild(st);
+  }
+  /* 2026-11-20 시온님 "로그인하면 회원님은 [기본회원]입니다. 최상단에 표기": 맨 위 얇은 줄, 누르면 멤버십 창 */
+  var GNM = { 1: "기본회원", 4: "다꾸회원", 2: "VIP", 3: "VVIP", 5: "가족", 6: "지인" };
+  function gradeBar(n){
+    n = n || 0;
+    if (document.getElementById("dk-gbar") || /\/order\/order(form|_result)/.test(location.pathname)) return;
+    if (!isLogged()) return;
+    var g = GNM[grp()];
+    if (!g) { if (n < 10) setTimeout(function(){ gradeBar(n + 1); }, 700); return; }
+    var b = document.createElement("a"); b.id = "dk-gbar"; b.href = "/myshop/index.html#membership";
+    b.style.cssText = "display:block;padding:6px 12px;background:#f3eefd;color:#5b2fc0;font-size:12.5px;text-align:center;text-decoration:none;line-height:1.5;position:relative;z-index:1001";
+    b.innerHTML = "회원님은 <b>[" + g + "]</b>입니다.";
+    document.body.insertBefore(b, document.body.firstChild);
   }
   function isLogged(){ var a = document.querySelectorAll("a"); for (var i = 0; i < a.length; i++) { var t = (a[i].textContent || "").trim(); if (t === "로그아웃" || t === "LOGOUT") return true; } return false; }
   function kst(s){ var m = String(s || "").match(/([0-9]{4})-([0-9]{2})-([0-9]{2}) ([0-9]{2}):([0-9]{2})/); return m ? Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4] - 9, +m[5]) : 0; }
@@ -2645,7 +2659,7 @@
     return true;
   }
   function giftKit(){ try { if (document.getElementById("orderFixArea")) giftBtn(); } catch(e){} try { giftOrderForm(); } catch(e){} try { giftAfter(); } catch(e){} }
-  function run(){ if (window.DK_GIFT_ONLY) { try { giftKit(); } catch(e){} return; } try { document.documentElement.classList.add("dk-ok"); } catch(e){} try { tidy(); } catch(e){} try { bestBadge(); } catch(e){} try { rankNo(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { coupleMenu(); } catch(e){} try { boyMenu(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { giftKit(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { laFont(); } catch(e){} try { tongFix(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ xmasPage(); }catch(e){} try{ couplePage(); }catch(e){} try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} try { setTimeout(modelSpec, 1500); } catch(e){} try { coordiTags(); } catch(e){} try { coordiSet(); } catch(e){} try { addPrdLabel(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
+  function run(){ if (window.DK_GIFT_ONLY) { try { giftKit(); } catch(e){} return; } try { document.documentElement.classList.add("dk-ok"); } catch(e){} try { tidy(); } catch(e){} try { gradeBar(); } catch(e){} try { bestBadge(); } catch(e){} try { rankNo(); } catch(e){} try { nsTimer(); } catch(e){} try { nsRateWatch(); } catch(e){} try { mnavMerge(); } catch(e){} try { kakaoFab(); } catch(e){} try { if (document.getElementById("orderFixArea")) shipFix(); } catch(e){} try { hotBubble(); } catch(e){} try { menuFix(); } catch(e){} try { coupleMenu(); } catch(e){} try { boyMenu(); } catch(e){} try { mileFix(); } catch(e){} try { inv1000(); } catch(e){} try { coffeeFix(); } catch(e){} try { giftKit(); } catch(e){} try { xmasMenuOff(); } catch(e){} try { bmStyle(); } catch(e){} try { laFont(); } catch(e){} try { tongFix(); } catch(e){} try { ageSel(); } catch(e){} loginFix(); homeBM(); try{ join10(); }catch(e){} kwAlways(); try{ xmasPage(); }catch(e){} try{ couplePage(); }catch(e){} try{ inviteTop(); }catch(e){} infList(); homeVideos(); homeInf(); searchSug(); consentNote(); cpPage(); cpList(); pcCss(); mypage(); try{ myTop(); }catch(e){} try{ inviteTop(); }catch(e){} cartBox(); cpCart(); if (document.getElementById("orderFixArea")) { try { xmasNote(); } catch(e){} try { conNote(); } catch(e){} try { reviewBadge(); } catch(e){} try { sizeTbl(); } catch(e){} try { setTimeout(modelSpec, 1500); } catch(e){} try { coordiTags(); } catch(e){} try { coordiSet(); } catch(e){} try { addPrdLabel(); } catch(e){} lowest(); cpDetail(); recLine(); bubble(); shipBar(); if (momSet !== null) similar(); } }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
   setTimeout(run, 1200); setTimeout(run, 3000);
   document.addEventListener("change", function(e){ if (e.target && e.target.tagName === "SELECT") { setTimeout(recLine, 700); setTimeout(recLine, 1800); } }, true);
