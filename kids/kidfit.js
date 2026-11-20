@@ -1241,7 +1241,7 @@
   ];
   var BM_BAN = [["1", "/product/list.html?cate_no=55"], ["2", "/product/list.html?cate_no=44"], ["3", "/product/list.html?cate_no=49"], ["4", "/product/list.html?cate_no=47"]];
   var BM_CATS = [
-    ["⏰타임특가", 54], ["인기상품", 55], ["1+1", "q:1+1"], ["🚚무료배송", 56], ["🎄크리스마스", "q:크리스마스"], ["BABY", 52], ["KIDS", 53], ["여아", 50], ["남아", 51], ["MOM", 23],
+    ["⏰타임특가", 54], ["인기상품", 55], ["🎁선물하기", 66], ["1+1", "q:1+1"], ["🚚무료배송", 56], ["🎄크리스마스", "q:크리스마스"], ["BABY", 52], ["KIDS", 53], ["여아", 50], ["남아", 51], ["MOM", 23],
     ["아우터", 24], ["상의", 25], ["원피스", 26], ["하의", 27], ["잡화", 28], ["양말", "q:양말"], ["실내복", "q:실내복"]
   ];
   var BM_QBRANDS = ["콘", "보니토", "비비드아이", "비다이어리", "소이빈", "고유", "라라랜드", "미니로브", "아토메메", "디그린", "니니벨로", "테테코", "바코드", "몽베베", "오뜨베베", "소예"];
@@ -1492,8 +1492,34 @@
       try { if (localStorage.getItem("dk_tb_hide") === day) tb.style.setProperty("display", "none", "important"); } catch(e){}
       if (!document.getElementById("dk-tbx")) { var b = document.createElement("button"); b.id = "dk-tbx"; b.type = "button"; b.setAttribute("aria-label", "오늘 하루 닫기"); b.textContent = "✕"; b.onclick = function(){ tb.style.setProperty("display", "none", "important"); try { localStorage.setItem("dk_tb_hide", day); } catch(e){} setTimeout(function(){ window.dispatchEvent(new Event("resize")); }, 50); }; tb.appendChild(b); }
     }
+    if (tb) tbRoll(tb);
     var mn = document.querySelector(".dk-mnav"); if (mn && !mn.hasAttribute("data-built") && !mn.querySelector(".dk-n")) { var f = mn.querySelector("a"); if (f) f.classList.add("dk-n"); }
     bmNames();
+  }
+  /* 상단 띠배너 롤링(2026-11-20 시온님 "상단롤링배너에 친구에게 선물해보세요! 선물하기 쿠폰받기> 선물하기시 추가할인!"): 원래 문구 + 선물하기 두 줄을 3초마다 위로 넘김 */
+  var GIFT_CP = "6086824593700007032";
+  function tbRoll(tb){
+    var box = tb.querySelector(".top_banner_text"); if (!box || box.getAttribute("data-dkroll")) return;
+    var a0 = box.querySelector("a"); if (!a0) return;
+    box.setAttribute("data-dkroll", "1");
+    if (!document.getElementById("dk-tbr-css")) { var st = document.createElement("style"); st.id = "dk-tbr-css";
+      st.textContent = ".dk-tbr{position:relative;height:1.6em;overflow:hidden}.dk-tbr>div{transition:transform .45s ease}.dk-tbr a{display:block;height:1.6em;line-height:1.6em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.dk-tbr a b{font-weight:700}";
+      document.head.appendChild(st); }
+    var dl = "/exec/front/newcoupon/IssueDownload?coupon_no=" + GIFT_CP + "&opener_url=" + encodeURIComponent("/product/list.html?cate_no=66");
+    var w = document.createElement("div"); w.className = "dk-tbr"; var inner = document.createElement("div");
+    var c0 = a0.cloneNode(true);
+    var c1 = document.createElement("a"); c1.href = dl; c1.innerHTML = "🎁 친구에게 선물해보세요! <b>선물하기 쿠폰받기 ›</b>";
+    var c2 = document.createElement("a"); c2.href = "/product/list.html?cate_no=66"; c2.innerHTML = "💜 선물하기 시 추가할인! <b>3만원 이상 3,000원 ›</b>";
+    var c3 = c0.cloneNode(true); /* 끝에서 처음으로 자연스럽게 */
+    [c0, c1, c2, c3].forEach(function(x){ inner.appendChild(x); });
+    [c1, c2].forEach(function(x){ x.onclick = function(){ try { gtag("event", "gift_banner_click", { to: x === c1 ? "coupon" : "category" }); } catch(e){} }; });
+    w.appendChild(inner); a0.style.display = "none"; box.appendChild(w);
+    var i = 0, n = 3;
+    setInterval(function(){
+      if (document.hidden) return;
+      i++; inner.style.transition = "transform .45s ease"; inner.style.transform = "translateY(-" + (i * 1.6) + "em)";
+      if (i === n) setTimeout(function(){ inner.style.transition = "none"; inner.style.transform = "translateY(0)"; i = 0; }, 500);
+    }, 3200);
   }
   function bmNames(){
     [].forEach.call(document.querySelectorAll("ul.prdList>li .description .name a span:not(.title), #dk-cat .cg span, .infoArea .headingArea h1, .infoArea .headingArea h2"), function(sp){
@@ -1960,7 +1986,7 @@
     h.parentNode.insertBefore(a, h.nextSibling);
   }
   // 상단 메뉴(2026-11-14 시온님): 신상품 → ⏰타임특가, 1+1 다음에 0원체험단·기획상품(상품명에 "기획")
-  var MENU_ADD = [["👩‍👧커플룩", "/product/search.html?keyword=%EC%BB%A4%ED%94%8C%EB%A3%A9", "#c2185b"], ["🎁0원체험단", "/product/coffee.html?t=exp", ""], ["🎀기획상품", "/product/search.html?keyword=%EA%B8%B0%ED%9A%8D", "#e8792b"], ["🚚무료배송", "/product/list.html?cate_no=56", ""]];
+  var MENU_ADD = [["🎁선물하기", "/product/list.html?cate_no=66", "#6a3fc8"], ["👩‍👧커플룩", "/product/search.html?keyword=%EC%BB%A4%ED%94%8C%EB%A3%A9", "#c2185b"], ["🎁0원체험단", "/product/coffee.html?t=exp", ""], ["🎀기획상품", "/product/search.html?keyword=%EA%B8%B0%ED%9A%8D", "#e8792b"], ["🚚무료배송", "/product/list.html?cate_no=56", ""]];
   /* 적립금 사용 조건 3만원(2026-11-15): 스킨에 박힌 '5만원 이상 구매 시 사용' 글자를 화면에서 바꿈 */
   function mileFix(){ var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null), n; while ((n = w.nextNode())) { var t = n.nodeValue; /* 무료배송 4만원(2026-11-18 시온님): 스킨·상품 안내에 박힌 5만원 무료배송 글자 */ if (t && t.indexOf("무료") >= 0 && /5만원|50,000원/.test(t)) { t = t.replace(/5만원/g, "4만원").replace(/50,000원/g, "40,000원"); n.nodeValue = t; } if (t && t.indexOf("5만원 이상") >= 0 && /사용|쓸 수/.test(t) && t.indexOf("무료배송") < 0) n.nodeValue = t.split("5만원 이상").join("3만원 이상"); } jcFix(); setTimeout(jcFix, 1800); setTimeout(jcFix, 3500); }
   function jcFix(){ var li = document.getElementById("dk-joincp"); if (!li || li.getAttribute("data-dkm")) return; li.setAttribute("data-dkm", "1"); var t = li.querySelector(".title"), pd = li.querySelector(".period"); if (t) t.textContent = "[수신동의] 가입 적립금"; if (pd) pd.textContent = "쇼핑정보 수신 동의하고 가입하면 바로 지급 · 3만원 이상 구매 시 사용"; }
@@ -2087,7 +2113,7 @@
 
   // 홈 휴대폰 글자 메뉴(.dk-mnav)를 머리글(#header) 안으로 옮겨 고정 칸을 하나로(2026-11-15 갤럭시 네이버 앱에서 스크롤 끝날 때마다 화면이 40px쯤 위아래로 튐 — 고정 칸 두 개가 겹친 안드로이드 문제로 봄)
   // 2026-11-16 시온님 "상단메뉴바 항상 고정": 홈에만 있던 휴대폰 글자 메뉴를 모든 페이지 머리글에 만듦(홈 스킨 index.html 목록과 같게)
-  var MNAV = [["💜신상품💜","/product/list.html?cate_no=54"],["인기상품","/product/list.html?cate_no=55"],["1+1","/product/search.html?keyword=1%2B1","#e0245e"],["🎄크리스마스","/product/search.html?keyword=%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4","#1a7f37"],["👩‍👧커플룩","/product/search.html?keyword=%EC%BB%A4%ED%94%8C%EB%A3%A9","#c2185b"],["BABY","/product/list.html?cate_no=52"],["KIDS","/product/list.html?cate_no=53"],["여아","/product/list.html?cate_no=50"],["남아","/product/list.html?cate_no=51"],["아우터","/product/list.html?cate_no=24"],["상의","/product/list.html?cate_no=25"],["원피스","/product/list.html?cate_no=26"],["하의","/product/list.html?cate_no=27"],["잡화","/product/list.html?cate_no=28"],["양말","/product/search.html?keyword=%EC%96%91%EB%A7%90"],["실내복","/product/search.html?keyword=%EC%8B%A4%EB%82%B4%EB%B3%B5"],["MOM","/product/list.html?cate_no=23"],["사이즈표","/product/brand_size.html"],["공지사항","/board/free/list.html?board_no=1"]];
+  var MNAV = [["💜신상품💜","/product/list.html?cate_no=54"],["인기상품","/product/list.html?cate_no=55"],["1+1","/product/search.html?keyword=1%2B1","#e0245e"],["🎄크리스마스","/product/search.html?keyword=%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4","#1a7f37"],["👩‍👧커플룩","/product/search.html?keyword=%EC%BB%A4%ED%94%8C%EB%A3%A9","#c2185b"],["🎁선물하기","/product/list.html?cate_no=66","#6a3fc8"],["BABY","/product/list.html?cate_no=52"],["KIDS","/product/list.html?cate_no=53"],["여아","/product/list.html?cate_no=50"],["남아","/product/list.html?cate_no=51"],["아우터","/product/list.html?cate_no=24"],["상의","/product/list.html?cate_no=25"],["원피스","/product/list.html?cate_no=26"],["하의","/product/list.html?cate_no=27"],["잡화","/product/list.html?cate_no=28"],["양말","/product/search.html?keyword=%EC%96%91%EB%A7%90"],["실내복","/product/search.html?keyword=%EC%8B%A4%EB%82%B4%EB%B3%B5"],["MOM","/product/list.html?cate_no=23"],["사이즈표","/product/brand_size.html"],["공지사항","/board/free/list.html?board_no=1"]];
   function mnavBuild(){
     if (document.querySelector(".dk-mnav") || window.innerWidth > 1024) return;
     var hd = document.getElementById("header"); if (!hd) return;
