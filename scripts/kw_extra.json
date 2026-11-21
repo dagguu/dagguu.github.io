@@ -1,845 +1,7211 @@
 {
- "updated": "2026-11-20 21:14",
+ "updated": "2026-11-21 16:16",
  "hints": [
-  "편강율",
-  "키즈텐",
-  "마더스베이비",
-  "유아바스",
-  "보이보이"
+  "백일선물",
+  "집들이선물",
+  "전기주전자",
+  "가족잠옷",
+  "커플잠옷"
  ],
  "rows": [
   {
-   "kw": "바디로션",
-   "vol": 81100,
+   "kw": "음식물처리기",
+   "vol": 151600,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기로션",
-   "vol": 13210,
+   "kw": "잠옷",
+   "vol": 90900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제습기",
+   "vol": 79500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차량용방향제",
+   "vol": 78500,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "키즈텐",
-   "vol": 7620,
+   "kw": "소고기",
+   "vol": 66500,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "전기포트",
+   "vol": 59100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수면잠옷",
+   "vol": 51030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한우",
+   "vol": 47300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물",
+   "vol": 47000,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "디퓨저",
+   "vol": 46200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "담요",
+   "vol": 43400,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "화분",
+   "vol": 41300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이폰케이스",
+   "vol": 40290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼식답례품",
+   "vol": 39500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소진액",
+   "vol": 38110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "분유포트",
+   "vol": 37320,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "개업화분",
+   "vol": 36850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울잠옷",
+   "vol": 31480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌잔치답례품",
+   "vol": 31070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "상견례선물",
+   "vol": 30980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑용품",
+   "vol": 30720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥주",
+   "vol": 28000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물추천",
+   "vol": 27410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산선물",
+   "vol": 26930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미아방지목걸이",
+   "vol": 24880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "크리스마스선물",
+   "vol": 22890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플잠옷",
+   "vol": 22020,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "흑염소",
+   "vol": 21470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "무릎담요",
+   "vol": 20930,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "결혼기념일선물",
+   "vol": 19050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "튼살크림",
+   "vol": 18700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소효능",
+   "vol": 17600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디드라이어",
+   "vol": 16920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌답례품",
+   "vol": 16830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소엑기스",
+   "vol": 16590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "낙산균",
+   "vol": 16540,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "생일선물",
+   "vol": 16450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "염소탕",
+   "vol": 16440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캔들",
+   "vol": 16200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼답례품",
+   "vol": 15490,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남자잠옷",
+   "vol": 15420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기유산균",
+   "vol": 15280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "흑염소진액효능",
+   "vol": 14950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사담요",
+   "vol": 14610,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여성잠옷",
+   "vol": 14450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돗자리",
+   "vol": 14210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "도라지정과",
+   "vol": 14200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한우선물세트",
+   "vol": 13900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "굿즈제작",
+   "vol": 13300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소즙",
+   "vol": 12840,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아선물",
+   "vol": 12570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향초",
+   "vol": 12380,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "홈웨어",
+   "vol": 11810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기주전자",
+   "vol": 11660,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "연세",
+   "kw": "밍크담요",
+   "vol": 11600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성잠옷",
+   "vol": 11390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부선물",
+   "vol": 10560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "티포트",
+   "vol": 9740,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "고무나무",
+   "vol": 9630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무용품",
+   "vol": 9540,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "선물세트",
+   "vol": 9530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기모트레이닝세트",
+   "vol": 9420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "과일선물세트",
+   "vol": 9230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠옷바지",
+   "vol": 9220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌선물",
+   "vol": 9070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "은팔찌",
+   "vol": 8790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자잠옷",
+   "vol": 8730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "추석선물",
+   "vol": 8620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원피스잠옷",
+   "vol": 8580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기선물",
+   "vol": 8410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전통주",
+   "vol": 8310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기백일선물",
+   "vol": 8200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니제습기",
+   "vol": 8050,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기돌선물",
+   "vol": 7940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빅사이즈잠옷",
+   "vol": 7740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기장난감",
+   "vol": 7640,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "연말선물",
+   "vol": 7630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집생일선물",
+   "vol": 7600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기비타민D",
+   "vol": 7600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼선물",
+   "vol": 7530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퇴사선물",
+   "vol": 7490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실화분",
+   "vol": 7290,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "마장동축산시장",
+   "vol": 7210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비비안잠옷",
+   "vol": 7030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아유산균",
+   "vol": 6990,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "양초",
+   "vol": 6960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "추석선물세트",
+   "vol": 6860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소탕",
+   "vol": 6660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이사선물",
+   "vol": 6420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형화분",
+   "vol": 6420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내복",
+   "vol": 6340,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아빠생일선물",
+   "vol": 6240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생선물",
+   "vol": 6230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님선물",
+   "vol": 6220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "면잠옷",
+   "vol": 6180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디드라이기",
+   "vol": 6100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "100일선물",
+   "vol": 6100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼부부선물",
+   "vol": 6080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생일선물추천",
+   "vol": 6070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠옷브랜드",
+   "vol": 6000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미아방지팔찌",
+   "vol": 5940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "축하화분",
+   "vol": 5890,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엄마생일선물",
+   "vol": 5820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날",
+   "vol": 5750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자친구선물",
    "vol": 5660,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아로션",
-   "vol": 4830,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마더스베이비",
+   "kw": "임산부샴푸",
+   "vol": 5650,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "개업축하화분",
+   "vol": 5550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빔프로젝터스크린",
+   "vol": 5530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "칠순선물",
+   "vol": 5470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SCENT",
+   "vol": 5460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의류관리기",
+   "vol": 5390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌잔치선물",
+   "vol": 5380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순면잠옷",
+   "vol": 5300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실크잠옷",
+   "vol": 5260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키티잠옷",
+   "vol": 5250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "백일선물",
+   "vol": 5210,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "신생아비타민D",
+   "vol": 5040,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "병문안선물",
+   "vol": 5020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님생신선물",
+   "vol": 4860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "판촉물제작",
    "vol": 4800,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "아기엉덩이클렌저",
-   "vol": 4680,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "베이비오일",
-   "vol": 4210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "마더스베이비수유쿠션",
-   "vol": 4090,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "편강율",
-   "vol": 3400,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "베이비로션",
-   "vol": 3360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기크림",
+   "kw": "남자잠옷세트",
+   "vol": 4790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신선물",
+   "vol": 4640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "판촉",
+   "vol": 4640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가운",
+   "vol": 4600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무지잠옷",
+   "vol": 4590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그림액자",
+   "vol": 4590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자양강장제",
+   "vol": 4500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠옷세트",
+   "vol": 4390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성실내복",
+   "vol": 4350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소형제습기",
+   "vol": 4350,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "성년의날",
+   "vol": 4340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성잠옷세트",
+   "vol": 4310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선생님선물",
+   "vol": 4260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보양식",
+   "vol": 4200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑이불",
+   "vol": 4140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피포트추천",
+   "vol": 4130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "모달잠옷",
+   "vol": 4080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빔스크린",
+   "vol": 4060,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "차주전자",
+   "vol": 4060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름잠옷",
+   "vol": 4020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자디퓨저",
+   "vol": 4010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드립커피세트",
+   "vol": 4000,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "친구결혼선물",
+   "vol": 4000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기100일선물",
+   "vol": 3980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차탕기",
+   "vol": 3880,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피선물세트",
+   "vol": 3860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친구출산선물",
+   "vol": 3830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친구선물",
+   "vol": 3830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자실내복",
+   "vol": 3820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퇴직선물",
+   "vol": 3790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "40대생일선물",
+   "vol": 3640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소고기선물세트",
+   "vol": 3630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수동커피그라인더",
+   "vol": 3620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "고급선물세트",
+   "vol": 3590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기선물",
+   "vol": 3550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기념품제작",
+   "vol": 3540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "60대여성선물",
+   "vol": 3540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드립포트",
+   "vol": 3530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라운지웨어",
+   "vol": 3430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날선물",
+   "vol": 3420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피저울",
+   "vol": 3410,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "전기티포트",
+   "vol": 3410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자실내복",
+   "vol": 3390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "드시모네베이비스텝2",
+   "vol": 3330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오브제화환",
+   "vol": 3330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시부모님선물",
+   "vol": 3330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "액상유산균",
+   "vol": 3230,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여름실내복",
+   "vol": 3210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "설날선물",
+   "vol": 3200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파자마파티",
+   "vol": 3200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "헬로키티잠옷",
+   "vol": 3190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성홈웨어",
+   "vol": 3190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "30대여자선물",
+   "vol": 3190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홍보물품",
+   "vol": 3160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향수쇼핑몰",
+   "vol": 3150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "각인",
+   "vol": 3140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남자수면바지",
+   "vol": 3110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "입맛없을때음식",
+   "vol": 3100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "100일아기선물",
+   "vol": 3080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편백수",
+   "vol": 3030,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "할머니생신선물",
+   "vol": 3020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기포트추천",
+   "vol": 3010,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "2살선물",
+   "vol": 3000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "합격기원선물",
+   "vol": 2960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "타임모어",
+   "vol": 2950,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "밍크이불",
+   "vol": 2950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대여자선물",
+   "vol": 2930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화분쇼핑몰",
+   "vol": 2900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사은품",
+   "vol": 2860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부부의날",
+   "vol": 2860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핸드드립주전자",
+   "vol": 2850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남자파자마",
+   "vol": 2830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한우세트",
+   "vol": 2800,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "시어머니생신선물",
+   "vol": 2790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "단체선물",
+   "vol": 2780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기독교굿즈",
+   "vol": 2770,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "소량인쇄",
+   "vol": 2760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아내결혼기념일선물",
+   "vol": 2760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수유잠옷",
+   "vol": 2740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아용품",
+   "vol": 2720,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조카돌선물",
+   "vol": 2690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌잡이",
+   "vol": 2680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파자마바지",
    "vol": 2670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기모파자마",
+   "vol": 2670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "면파자마",
+   "vol": 2650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자친구100일선물",
+   "vol": 2590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼부부커플잠옷",
+   "vol": 2580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "본식부케",
+   "vol": 2580,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기수딩젤",
+   "kw": "출산선물추천",
+   "vol": 2560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차박용품",
+   "vol": 2520,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커플수면잠옷",
    "vol": 2490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성잠옷바지",
+   "vol": 2470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "염소즙",
+   "vol": 2440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌잔치수건",
+   "vol": 2430,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "세브란스케어",
+   "kw": "돌답례품수건",
+   "vol": 2420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개업식화분",
+   "vol": 2410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "화분배달",
+   "vol": 2390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기영양제",
+   "vol": 2390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼축하선물",
+   "vol": 2390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "30대여자친구생일선물",
+   "vol": 2360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기념품샵",
+   "vol": 2360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기업판촉물",
+   "vol": 2340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캠핑러그",
+   "vol": 2330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "무선주전자",
+   "vol": 2300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남성잠옷세트",
+   "vol": 2300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아유산균",
+   "vol": 2280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "홍보물",
+   "vol": 2240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20대남자생일선물",
+   "vol": 2240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플잠옷세트",
+   "vol": 2220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "타임모어저울",
+   "vol": 2220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "레이저각인",
+   "vol": 2220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "양털담요",
+   "vol": 2220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니의류관리기",
    "vol": 2210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈텐042",
-   "vol": 2000,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아로션",
-   "vol": 1830,
+   "kw": "주문제작",
+   "vol": 2210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기오일",
+   "kw": "타임모어그라인더",
+   "vol": 2140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남자잠옷바지",
+   "vol": 2120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니스타일러",
+   "vol": 2100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "50대엄마생신선물",
+   "vol": 2090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼부부집들이선물",
+   "vol": 2040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두돌아기선물",
+   "vol": 2040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기목걸이",
+   "vol": 2030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이집선생님선물",
+   "vol": 2030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두돌선물",
+   "vol": 2020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디스트리뷰터",
+   "vol": 2020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성잠옷바지",
+   "vol": 2010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃화분",
+   "vol": 1970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대아빠생일선물",
+   "vol": 1950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아유산균비타민D",
+   "vol": 1940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "개업축하선물",
+   "vol": 1910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플파자마",
+   "vol": 1880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "온도조절전기포트",
+   "vol": 1850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남자로브",
+   "vol": 1850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자홈웨어",
+   "vol": 1840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "팔순답례품",
+   "vol": 1820,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "각인선물",
+   "vol": 1810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페개업선물",
+   "vol": 1810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "담요제작",
+   "vol": 1790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자잠옷세트",
+   "vol": 1790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성면잠옷",
+   "vol": 1760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수면파자마",
+   "vol": 1740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기유산균비타민D",
+   "vol": 1740,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "거즈잠옷",
+   "vol": 1730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠옷추천",
+   "vol": 1710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유니클로파자마",
+   "vol": 1690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내식물",
    "vol": 1680,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "향초캔들",
+   "vol": 1670,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "6개월아기선물",
+   "vol": 1640,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기로션추천",
+   "kw": "파자마세트",
+   "vol": 1630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마장동한우선물세트",
+   "vol": 1620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친구집들이선물",
+   "vol": 1620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무선전기주전자",
+   "vol": 1610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피서버",
+   "vol": 1600,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어르신선물",
+   "vol": 1590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가족잠옷",
+   "vol": 1580,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "아기미아방지목걸이",
+   "vol": 1580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울커플잠옷",
+   "vol": 1580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집업후드",
+   "vol": 1580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "블랑켓",
+   "vol": 1570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키티수면잠옷",
+   "vol": 1570,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "흑염소농장",
+   "vol": 1560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대남자생일선물",
+   "vol": 1560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성수면바지",
+   "vol": 1560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "요루면잠옷",
+   "vol": 1560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성파자마",
+   "vol": 1530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스승의날선물",
+   "vol": 1500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4살여아선물",
+   "vol": 1500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공주잠옷",
+   "vol": 1500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "특가",
+   "vol": 1500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어머니생신선물",
+   "vol": 1500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소이캔들",
    "vol": 1490,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아수딩젤",
-   "vol": 1480,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "키즈텐유산균",
-   "vol": 1430,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "키즈로션",
-   "vol": 1300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "루테인플러스",
+   "kw": "전동스크린",
+   "vol": 1440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20만원대선물",
+   "vol": 1440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파자마브랜드",
+   "vol": 1430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자실크잠옷",
+   "vol": 1410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패밀리잠옷",
+   "vol": 1400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소즙효능",
+   "vol": 1400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼집집들이선물",
+   "vol": 1400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대여성선물",
+   "vol": 1390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아비타민D유산균",
+   "vol": 1350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차포트",
+   "vol": 1340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌수건",
+   "vol": 1340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가족잠옷세트",
+   "vol": 1320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남아돌선물",
+   "vol": 1320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기유산균",
+   "vol": 1310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "1주년선물",
+   "vol": 1290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌잔치답례품수건",
+   "vol": 1280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방향제추천",
+   "vol": 1280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여아돌선물",
    "vol": 1270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이로션",
+   "kw": "신혼선물",
+   "vol": 1260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성수면잠옷",
+   "vol": 1260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성순면잠옷",
+   "vol": 1250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성수면잠옷",
    "vol": 1240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쇼파블랭킷",
+   "vol": 1230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "30만원대선물",
+   "vol": 1230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성파자마",
+   "vol": 1230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체크잠옷",
+   "vol": 1230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장모님생신선물",
+   "vol": 1220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가족시밀러룩",
+   "vol": 1220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플겨울잠옷",
+   "vol": 1220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3살여아선물",
+   "vol": 1210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산리오잠옷",
+   "vol": 1210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포스터액자",
+   "vol": 1210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2살아기선물",
+   "vol": 1200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핸드밀그라인더",
+   "vol": 1190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "키즈텐칼슘업",
+   "kw": "화분선물",
+   "vol": 1160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조카100일선물",
    "vol": 1140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장인정신에브리데이",
-   "vol": 1080,
+   "kw": "아카이아저울",
+   "vol": 1140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신생아오일",
+   "kw": "마니또선물",
+   "vol": 1130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실개업선물",
+   "vol": 1130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집방향제",
+   "vol": 1130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아이유산균",
+   "vol": 1120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "첫돌선물",
+   "vol": 1100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한우선물",
+   "vol": 1100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실크파자마",
+   "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소파덮개",
+   "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "센스있는집들이선물",
+   "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드시모네유산균베이비",
+   "vol": 1090,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자연방목흑염소진액",
+   "vol": 1070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나무화분",
+   "vol": 1060,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "섬세이에어샤워",
+   "vol": 1060,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "여성모달잠옷",
    "vol": 1060,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아로션추천",
+   "kw": "아기팔찌",
+   "vol": 1050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영사기",
+   "vol": 1050,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이목걸이",
+   "vol": 1040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순금선물",
+   "vol": 1030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이디어상품",
+   "vol": 1030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기책",
+   "vol": 1020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자파자마세트",
+   "vol": 1020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순면파자마",
+   "vol": 1010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친구돌잔치선물",
+   "vol": 1010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모애샴푸",
+   "vol": 1010,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기돌목걸이",
+   "vol": 1010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어머님생신선물",
+   "vol": 1010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈웨어바지",
+   "vol": 1000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼집들이선물",
+   "vol": 1000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아목걸이",
+   "vol": 990,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "백일아기선물",
+   "vol": 990,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자잠옷하의",
+   "vol": 980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "타임모어드립포트",
+   "vol": 970,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "개업선물추천",
+   "vol": 970,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기커피포트",
+   "vol": 960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조카돌잔치선물",
+   "vol": 960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디건조기",
+   "vol": 960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중학생잠옷",
+   "vol": 960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼집선물",
+   "vol": 960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜잠옷",
+   "vol": 960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기모트레이닝복세트",
+   "vol": 960,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈웨어세트",
+   "vol": 950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "타임모어C3",
+   "vol": 940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파세코바디드라이어",
+   "vol": 940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남성실크잠옷",
+   "vol": 940,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흙염소진액",
+   "vol": 930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무선포트",
+   "vol": 930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모즈스웨덴전기포트",
+   "vol": 930,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "외국인친구선물",
+   "vol": 920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "교수님선물",
+   "vol": 920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성홈웨어",
+   "vol": 920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드시모네베이비",
    "vol": 910,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기비누",
-   "vol": 860,
+   "kw": "2주년선물",
+   "vol": 910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3만원선물",
+   "vol": 910,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기은목걸이",
+   "vol": 900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "센스있는선물",
+   "vol": 900,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "은퇴선물",
+   "vol": 880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기프트몰",
+   "vol": 880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차도구",
+   "vol": 880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공항룩",
+   "vol": 880,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비건샴푸",
+   "vol": 870,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "어린이키크는영양제",
+   "kw": "귀여운잠옷",
+   "vol": 870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "환갑꽃다발",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미아방지은목걸이",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소고기세트",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명절선물세트",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자수면잠옷",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "면잠옷바지",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성파자마세트",
+   "vol": 860,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반팔잠옷",
+   "vol": 850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미아방지",
+   "vol": 840,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "횡성한우선물세트",
+   "vol": 840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아템",
+   "vol": 840,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기저귀크림",
+   "vol": 830,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "1살아기선물",
+   "vol": 830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레오파드잠옷",
+   "vol": 830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성파자마바지",
+   "vol": 830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성실내복",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "진액",
    "vol": 810,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세샵",
-   "vol": 660,
+   "kw": "시흥꽃집",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소고기선물",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠옷상의",
+   "vol": 790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한살림흑염소",
+   "vol": 790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대여자생일선물",
+   "vol": 790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "승진축하선물",
+   "vol": 790,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1000일선물",
+   "vol": 780,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기전집",
+   "vol": 770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프로포즈꽃",
+   "vol": 770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃무늬잠옷",
+   "vol": 770,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "성인잠옷",
+   "vol": 760,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "섬세이바디드라이어",
+   "vol": 750,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "보이보이",
-   "vol": 610,
+   "kw": "거실그림액자",
+   "vol": 750,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "키즈텐종합비타민",
+   "kw": "부모님선물세트",
+   "vol": 750,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플수면바지",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌아기책추천",
+   "vol": 740,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두돌아기책",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유니클로홈웨어",
+   "vol": 730,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "300일선물",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "요루잠옷",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "진급선물",
+   "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기포트기",
+   "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "티주전자",
+   "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "40대엄마생일선물",
+   "vol": 700,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20만원선물",
+   "vol": 690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "염소가격",
+   "vol": 690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스텐전기포트",
+   "vol": 690,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쌍둥이선물",
+   "vol": 680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기유산균추천",
+   "vol": 680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님인사선물",
+   "vol": 680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무지파자마",
+   "vol": 680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스트라이프잠옷",
+   "vol": 680,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "부모님선물추천",
+   "vol": 680,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "5세여아선물",
+   "vol": 670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "60대남자생일선물",
+   "vol": 670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "곰돌이잠옷",
+   "vol": 660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "크리스마스커플잠옷",
+   "vol": 660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고기선물세트",
+   "vol": 650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "찻주전자",
+   "vol": 650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고빔프로젝터",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선물세트추천",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이사선물추천",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신축하꽃",
+   "vol": 630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아선물",
+   "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자파자마",
+   "vol": 620,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성홈웨어세트",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시어머니선물",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "40대와이프생일선물",
    "vol": 600,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아크림",
+   "kw": "남성로브",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자면잠옷",
+   "vol": 600,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "축영전",
+   "vol": 590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가족파자마",
    "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산산모선물",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플실크잠옷",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두피간지러움",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자아기돌선물",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형사무실인테리어",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "60대여자선물",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자파자마팬츠",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자잠옷바지",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자극세사잠옷세트",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체크파자마",
+   "vol": 580,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼부부잠옷",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠옷쇼핑몰",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "첫월급선물",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인테리어선물",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플홈웨어",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부들이잠옷",
+   "vol": 570,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유아크림",
+   "kw": "임산부잠옷원피스",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "60대엄마생신선물",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기주전자추천",
+   "vol": 570,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "14K미아방지목걸이",
    "vol": 560,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아화장품",
+   "kw": "남자순면잠옷",
+   "vol": 560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이팔찌",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두돌여아선물",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기념선물",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이사집선물",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼선물추천",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인견잠옷",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방향제리필",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모즈전기포트",
+   "vol": 550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자실크잠옷",
    "vol": 540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "베이비크림",
+   "kw": "돌지난아기선물",
    "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "200일아기선물",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플잠옷브랜드",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물세트",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈패션",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산선물세트",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건강즙",
+   "vol": 530,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "연세몰",
+   "kw": "옷장냄새",
+   "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향수사이트",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실버미아방지목걸이",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자잠옷상의",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "칠순잔치선물",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성실내복세트",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어르신선물추천",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "군인선물",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사돈선물",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시험응원선물",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피포트기",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디드라이",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "FED유산균",
    "vol": 490,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "연세키즈",
-   "vol": 440,
+   "kw": "고급선물",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성츄리닝",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "행사사은품",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원선생님선물",
+   "vol": 490,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디드라이어추천",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캔들선물",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4세여아선물",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "텐셀잠옷",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실선물",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성홈웨어세트",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성파자마바지",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비유산균",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취생선물",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3살아기선물",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기은팔찌",
+   "vol": 460,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기100일선물",
+   "vol": 450,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "BD사이언스",
+   "kw": "파자마잠옷",
    "vol": 440,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키클레오",
+   "kw": "병문안꽃",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포항이동꽃집",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴대용스타일러",
    "vol": 430,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세키즈텐",
+   "kw": "스판잠옷",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내원피스",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "좋은치약",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플파자마세트",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "푸마홈웨어",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소진액추천",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "정년퇴직선물추천",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈웨어추천",
+   "vol": 420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "몸말리는기계",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "푸마언더웨어",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성모달잠옷",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사커플잠옷",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빅사이즈남성잠옷",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠옷할인",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨져추천",
+   "vol": 410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈목걸이",
    "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의미있는선물",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자파자마바지",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편한잠옷",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠옷브랜드추천",
+   "vol": 400,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자아기돌선물",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "노인영양제",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠옷여성",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향수직구",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌잡이책",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "염소액기스",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "졸업식꽃",
+   "vol": 380,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "점프업하이정",
+   "kw": "전신건조기",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "성인실내복",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취선물",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날선물순위",
+   "vol": 375,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패밀리파자마",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성파자마세트",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "감성액자",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "70대할머니선물",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실용적인선물",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자잠옷브랜드",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기티포트추천",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임신축하",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자아기선물",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠옷선물",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스트라이프파자마",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쓰리피스잠옷",
+   "vol": 360,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "백화점잠옷",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파자마팬츠",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자실내복세트",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃다발케이크",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아미아방지목걸이",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "면홈웨어",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파자마로브",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플잠옷추천",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캐릭터파자마",
+   "vol": 340,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "체크잠옷바지",
+   "vol": 340,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "선물용디퓨저",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기미아방지팔찌",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디즈니파자마",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어른들선물",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실이전선물",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전신드라이기",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "ATEMPO",
+   "vol": 320,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "고양이선물",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃액자",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플잠옷바지",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성홈웨어원피스",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저선물세트",
+   "vol": 310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자파자마세트",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "거실액자그림",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "70대선물",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성잠옷브랜드",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "더치커피선물세트",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "목사님선물",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임산부파자마",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마약잠옷",
+   "vol": 290,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스텐커피포트",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3세여아선물",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초등학생목걸이",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "졸업꽃",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이디퓨저",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자반팔잠옷",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "답례품디퓨저",
+   "vol": 280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순면잠옷세트",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체크무늬잠옷",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자모달잠옷",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "배샵",
    "vol": 270,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "콜레스테롤유산균",
+   "kw": "발건조기",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강남꽃도매상가",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2살여아선물",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파자마추천",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성순면잠옷",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "할머니생일선물",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엄마아기커플잠옷",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자잠옷브랜드",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "30대여자선물추천",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈웨어브랜드",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모임선물",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레이온잠옷",
+   "vol": 260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌잡이전집",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈텐멀티비타민",
+   "kw": "레이저인쇄",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "감성캠핑용품",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자아기선물",
+   "vol": 250,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성면잠옷",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아비누",
+   "kw": "아동목걸이",
+   "vol": 240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "미아방지은팔찌",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기억에남는선물",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어머님선물",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선물셋트",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "우정잠옷",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기업선물",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그림선물",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "온가족샴푸",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장제습기",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "특별한생일선물",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤워건조기",
    "vol": 230,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "연세나토키나제",
+   "kw": "영양제선물세트",
    "vol": 230,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "히든키",
+   "kw": "잠옷사이트",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜전기포트",
+   "vol": 230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "학원빔프로젝터",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아비누",
+   "kw": "단초점프로젝터",
+   "vol": 220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "백화점한우선물세트",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국내산잠옷",
+   "vol": 220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남자면파자마",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "며느리생일선물",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자면잠옷",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이쁜잠옷",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오픈선물",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SOLO잠옷",
+   "vol": 215,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커플로브",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님잠옷",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "푸마반바지",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파나소닉빔프로젝터",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인터넷꽃시장",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "각인서비스",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어르신생신선물",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부들부들잠옷",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플극세사잠옷",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냉감잠옷",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남성라운지웨어",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "행사기념품추천",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "첫출근선물",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "설선물",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이그로우업",
+   "kw": "가족선물",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세산양유단백질",
+   "kw": "솔로잠옷",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대아버지생신선물",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "귀여운커플잠옷",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건강선물",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자파자마하의",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "홈웨어상의",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브랜드잠옷",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모달홈웨어",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수면잠옷남자",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃무늬파자마",
+   "vol": 195,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가족커플잠옷",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자잠옷추천",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고사무용품",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "설선물세트",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "몸건조기",
    "vol": 190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "연세루테인플러스",
+   "kw": "돌전집",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생일파티답례품",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "말놀이",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼잠옷",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세헬스케어",
+   "kw": "커플쇼핑몰",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "추모꽃다발",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아보리덤",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "효도선물",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷장곰팡이제거",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체크파자마바지",
+   "vol": 175,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신축성좋은잠옷",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실크커플잠옷",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "관엽화분",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "임원승진선물",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "칠순화분",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "교사선물",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사진선물",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여아목걸이",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "우정선물",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠옷긴바지",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "키즈텐몰",
-   "vol": 150,
+   "kw": "도트잠옷",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라운드잠옷",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "룸웨어",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "풍수지리액자",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물디퓨저",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성잠옷상의",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마켓더치",
+   "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "연세유산균",
+   "kw": "남녀공용잠옷",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "전기차포트",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스텐전기주전자",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜커피포트",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스트라이프커플잠옷",
+   "vol": 165,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "테디베어잠옷",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "EB-X51",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "옷걸이스타일러",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "축구굿즈",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파나소닉프로젝터",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소효과",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기팔찌",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이색선물",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디드라이기추천",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자원피스잠옷",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남자홈웨어세트",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순면파자마세트",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성잠옷상의",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼부부잠옷브랜드",
+   "vol": 160,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "땡땡이잠옷",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부부잠옷",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성이지웨어",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소추천",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소형의류관리기",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핸드드립용품",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성용잠옷",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "액자선물",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영전선물",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모달잠옷바지",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성면잠옷세트",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠옷여자",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "극세사남성잠옷",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "간절기잠옷",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세로하스",
+   "kw": "순면홈웨어",
    "vol": 140,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세단백질",
+   "kw": "70대생일선물",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캐릭터커플잠옷",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "은사님선물",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠옷파자마",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자홈웨어세트",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자반바지잠옷",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스테인레스전기포트",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향수디퓨저",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주전자포트",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠옷커플",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남녀잠옷",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중학생파자마",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플누빔잠옷",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아생일선물",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "700일선물",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사장님선물",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공주파자마",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "셔츠잠옷",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성잠옷추천",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모임선물추천",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시어서커잠옷",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "풍기인견잠옷",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체크무늬파자마",
+   "vol": 125,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수면옷",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "폴리에스테르잠옷",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서장훈영양제",
+   "kw": "신생아100일선물",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대량생산",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님커플잠옷",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "귀여운파자마",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개업선물액자",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼여행잠옷",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플기모잠옷",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "성인파자마",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "새틴파자마",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플잠옷원피스",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "와이프생일선물추천",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지지미잠옷",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자이지웨어",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자가을잠옷",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자순면잠옷",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인견원피스",
+   "vol": 115,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플면잠옷",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "연예인선물",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로고각인",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빔프로젝터중고",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수면잠옷커플",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실크잠옷바지",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈웨어잠옷",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보들보들잠옷",
    "vol": 110,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "키즈텐칼슘",
+   "kw": "파자마브랜드추천",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈텐비타민",
+   "kw": "순면커플잠옷",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아바스",
-   "vol": 100,
+   "kw": "고급선물추천",
+   "vol": 110,
    "comp": "높음",
-   "hint": true
+   "hint": false
   },
   {
-   "kw": "키즈텐아연",
+   "kw": "무선전기포트추천",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집안방향제",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급파자마",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이키즈업",
+   "kw": "퓨마운동복",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세루테인",
+   "kw": "승진축하메세지",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수면커플잠옷",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜홈웨어",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실이사선물",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이액자선물",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실크잠옷세트",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "면파자마세트",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜파자마",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름커플잠옷",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "성인남자잠옷",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자잠옷추천",
    "vol": 100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "연세키즈텐칼슘업",
-   "vol": 80,
+   "kw": "HEM인센스스틱",
+   "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "헬씨드",
-   "vol": 80,
+   "kw": "신혼부부잠옷추천",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편백샴푸",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그래놀라선물세트",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향수구매",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "3살조카선물",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내잠옷",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모녀잠옷",
+   "vol": 90,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "볼라디효모균",
+   "kw": "크리스마스커플파자마",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모달잠옷세트",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이액자",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순면여성잠옷",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플잠옷빅사이즈",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내복세트",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "와인병디퓨저",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기포트보온",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "당뇨흑염소진액",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자잠옷반팔",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼부부잠옷세트",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아수딩젤",
+   "kw": "커플잠옷선물",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고프로젝터",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "축하오브제",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "핸드메이드선물",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고속터미널꽃바구니",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전시회화환문구",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자애기선물",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건강선물세트",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아빠잠옷",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오즈윈드바디드라이어",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이오맘바디드라이어",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코슬리바디드라이어",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청소년파자마",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플파자마바지",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼식답례선물",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자파자마반바지",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "얇은잠옷",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엄마홈웨어",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저향추천",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남녀커플잠옷",
+   "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캐릭터잠옷세트",
+   "vol": 75,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아포트로닉스",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서장훈키성장",
+   "kw": "집들이그림",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고모선물",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조거파자마",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "우정파자마",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급스러운선물",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고체치약만들기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "9부잠옷",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "셔츠형잠옷",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "60대여자생일선물",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모달커플잠옷",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자겨울잠옷상의",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자잠옷가운",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저선물추천",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성잠옷브랜드",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자스판잠옷",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성면파자마",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레이온파자마",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보온전기주전자",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨져대용량",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼부부잠옷선물",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜실내복",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파자마하의",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체크잠옷세트",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고등학생잠옷",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반팔잠옷원피스",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모달남자잠옷",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반팔커플잠옷",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "면커플잠옷",
    "vol": 65,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "연세키즈텐042",
-   "vol": 60,
+   "kw": "신혼부부커플잠옷브랜드",
+   "vol": 65,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "연세비타민",
+   "kw": "모달여성잠옷",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프릴파자마",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성7부잠옷",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생화꽃목걸이",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장미선물",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "APPOTRONICS",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2돌선물",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물액자",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실크홈웨어",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠옷메이커",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "귀여운액자",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "설선물추천",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플파자마브랜드",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성반팔잠옷",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성잠옷쇼핑몰",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순면남자잠옷",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자7부잠옷",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파자마선물",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스테인리스커피포트",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈웨어파자마",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편안한잠옷",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨져선물",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국산커플잠옷",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈텐042가격",
+   "kw": "신축성잠옷",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플잠옷실크",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자연유래샴푸",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미산성샴푸",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흙염소진액효능",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비건샴푸추천",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "특별한집들이선물",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "10대여자잠옷",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바지잠옷",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대잠옷",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플잠옷반팔",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플실내복",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인견파자마",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "러블리잠옷",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성스러운잠옷",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자실크파자마",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어르신생일선물",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "굿즈도매",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사진기념품",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인테리어소품선물",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "장건강효소",
+   "kw": "파자마쇼핑몰",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디드라이어비교",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오즈윈드",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "독특한선물",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플잠옷브랜드추천",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로브파자마",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "긴팔커플잠옷",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원피스커플잠옷",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성면파자마",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "답례커피",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피포트브랜드",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하늘색잠옷",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈텐영양제",
+   "kw": "부드러운파자마",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠옷하의",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "프리미엄흑염소진액",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아줌마잠옷",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초록색잠옷",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세트잠옷",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빈티지잠옷",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커플반팔잠옷",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남편잠옷",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성면잠옷바지",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜잠옷브랜드",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자면파자마",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모달반팔잠옷",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자7부파자마",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자순면파자마",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜여자잠옷",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급커플잠옷",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울커플파자마",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "허니문잠옷",
    "vol": 40,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "서장훈키즈텐",
+   "kw": "집들이선물그림",
    "vol": 40,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세대학교연세생활건강",
+   "kw": "소리펜",
    "vol": 40,
-   "comp": "낮음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "키즈텐가격",
+   "kw": "전시회꽃선물",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사진액자선물",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "나이트웨어",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자홈웨어바지",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인스타잠옷",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남녀공용파자마",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어르신홈웨어",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남성잠옷추천",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실크남자잠옷",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "한글전집",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가족홈웨어",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키성장마사지기",
+   "kw": "카라잠옷",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세산양유",
+   "kw": "커플파자마추천",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남녀잠옷세트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파자마커플",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜여성잠옷",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이그림선물",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니그림액자",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스승의날선물추천",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라헨느바디드라이어",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "키성장약추천",
+   "kw": "무지커플잠옷",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "단백질초유",
+   "kw": "꽃사진액자",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈텐042효과",
+   "kw": "해바라기사진액자",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼부부파자마",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성잠옷가운",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "체크커플잠옷",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브랜드커플잠옷",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "백화점커플잠옷",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플순면잠옷",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실크남성잠옷",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플모달잠옷",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자파자마브랜드",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자파자마잠옷",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "성인홈웨어",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플여름잠옷",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "냉장고바지잠옷",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈웨어쇼핑몰",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨져답례품",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남성순면파자마",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파자마룩",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기업선물세트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저고급",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "꽃향기디퓨저",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "답례품더치커피",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜전기주전자",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼커플잠옷",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "반도케어몰",
+   "kw": "기념품포장",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2살조카선물",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장인어른생일선물",
    "vol": 30,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "연세대키즈텐",
+   "kw": "웨딩촬영잠옷",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자고급잠옷",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "소액선물",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자방디퓨저",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기포트브랜드",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자귀여운잠옷",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세생활건강유산균",
+   "kw": "잠옷상하세트",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "칼슘업",
+   "kw": "찰랑잠옷",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세영양제",
+   "kw": "커플체크잠옷",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서장훈유산균",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "서장훈비타민",
-   "vol": 25,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "연세대유산균",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "연세산양유단백질플러스",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "비피더스100%",
+   "kw": "곰돌이커플잠옷",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "레파젠",
+   "kw": "편한파자마",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "저렴한잠옷",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼파자마",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신기한선물",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개업선물그림",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성체크잠옷",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "초상화선물",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플집들이선물",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실크잠옷추천",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바디건조기추천",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "회사선배선물",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기숙사잠옷",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어르신파자마",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자체크잠옷",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엄마파자마",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정의달선물",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실크파자마세트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "네이비잠옷",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "40대잠옷",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가을커플잠옷",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "결혼선물잠옷",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오니에르",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "연세해독주스",
+   "kw": "커플잠옷사이트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤워드라이",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순면잠옷브랜드",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인견잠옷세트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌잡이바나펜",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "키즈텐후기",
+   "kw": "답례품콜드브루",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "면잠옷추천",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름냉감잠옷",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자모달잠옷",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지속력좋은디퓨저",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향기좋은디퓨져",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "패밀리홈웨어",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "회장님선물",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전시회축하화환문구",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌잡이맘",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내용디퓨저",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플원피스잠옷",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈텐효과",
+   "kw": "남녀파자마",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세대학교영양제",
+   "kw": "커플실크파자마",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈텐100억유산균",
+   "kw": "신혼여행커플잠옷",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지지미파자마",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "간절기파자마",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님파자마",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신혼부부실크잠옷",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "편백수샴푸",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소고형분",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "발령화분",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개업그림",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "변엔장",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "비오팜유산균",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "비피더스균B3",
+   "kw": "돌꽃바구니",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스킨프로바이오틱스",
+   "kw": "노인생일선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "흑염소함량",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그림액자선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이사선물그림",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "특이한개업선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "발드라이어",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "오스틴제약유산균",
+   "kw": "발판드라이기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전신드라이",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "연세점프업",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "연세대루테인",
+   "kw": "풋드라이어",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "운동유산균",
+   "kw": "입택선물",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "산양유분리유청단백질",
+   "kw": "셔츠파자마",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초유단백",
+   "kw": "77잠옷",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이엔지네이처",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "아이클타임키즈텐",
-   "vol": 10,
+   "kw": "돈들어오는선물",
+   "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세키성장",
+   "kw": "인테리어용액자",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20대여자잠옷",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "요루면커플잠옷",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드레스룸탈취",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에어락의류관리기",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "설날이벤트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플빅사이즈잠옷",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에블린커플잠옷",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "커플잠옷쇼핑몰",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자친구잠옷",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자체크파자마",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "인견여름잠옷",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순면잠옷추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자잠옷쇼핑몰",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름인견잠옷",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌잡이스마트박스",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모달여름잠옷",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "풍기인견파자마",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커플잠옷여름",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쿨링잠옷",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "50대홈웨어",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시댁명절선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전기포트1.5L",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건강답례품",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "꽃집디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디퓨저판매",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예쁜디퓨져",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유치원스승의날선물",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "허브향디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "향좋은디퓨져",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "꽃향디퓨저",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "양재동꽃시장디퓨져",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비누꽃카네이션",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2WE",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "키즈텐042후기",
+   "kw": "이쁜파자마",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈텐아이클타임",
+   "kw": "신혼부부홈웨어",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "키즈텐플러스",
+   "kw": "강남빔프로젝터대여",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세생활건강키즈텐",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "연세키즈텐칼슘",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "연세대영양제",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "연세대학교건강식품",
+   "kw": "파나소닉총판",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "연세건강기능식품",
+   "kw": "기업용빔프로젝터",
    "vol": 10,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세생활",
+   "kw": "기프트7",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여성의날선물",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "연세건강식품",
+   "kw": "흙염소",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날금선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "용산빔프로젝터",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명화선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미술선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "색다른선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "선물용그림",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "해바라기그림선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "20대잠옷",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "VOVO바디드라이어",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤오미바디드라이어",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의미있는선물추천",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "공주홈웨어",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "연세대건강식품",
+   "kw": "숙면잠옷",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "친환경잠옷",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "연세헬씨드",
+   "kw": "커플여름파자마",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세키즈텐멀티비타민",
+   "kw": "개업그림선물",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세대학교루테인",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보장유산균",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "센트룸프로바이오100",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "유당유산균",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유산균HAC01",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "저포드맵프로바이오틱스",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "지큐랩프로엔프리팜",
+   "kw": "샤틴잠옷",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "질유산균다이어트",
+   "kw": "감성파자마",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "청인골드에스",
+   "kw": "밥솥선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부모님설선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "설날할인",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "설이벤트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "예비시댁선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "추석부모님선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "봄커플잠옷",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "남자민소매잠옷",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자파자마파티",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자봄잠옷",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "40대홈웨어",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "콜마비앤에이치유산균",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유산균필름",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "연세대점프업하이정",
+   "kw": "신혼부부여름잠옷",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "연세점프업하이정",
+   "kw": "여름커플파자마",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "WCS키즈멀티비타민",
+   "kw": "남성봄잠옷",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "보울라디효모",
+   "kw": "여자파자마추천",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "냉감여름잠옷",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "시어서커여름잠옷",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여름모달잠옷",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여름반바지잠옷",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연세대학교해독주스",
+   "kw": "여름잠옷소재",
    "vol": 10,
    "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "지지미여름잠옷",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여름잠옷커플",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "시댁어버이날선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집들이선물틔운",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "브랜드홈웨어",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름커플잠옷세트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여자인견잠옷",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인견실내복",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인견커플잠옷",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "풍기인견홈웨어",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여성인견잠옷",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "인견홈웨어",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "특별한선물세트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인견파자마세트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "레이온홈웨어",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인견여성잠옷",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잠옷판매",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여름용파자마",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여름시원한잠옷",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "반바지홈웨어",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "시원한홈웨어",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "쿨링파자마",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "냉감소재잠옷",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "여자잠옷선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필우드편백",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "교수님스승의날선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "독도디퓨저",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매장디퓨져",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명품디퓨져",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "방디퓨져",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "백화점디퓨져",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "부부의날선물",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "생화향기디퓨저",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수국디퓨저",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "스승의날단체선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날엄마선물",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "천연디퓨져추천",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "카네이션디퓨저",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "어버이날디퓨저",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "생화향방향제",
+   "vol": 10,
+   "comp": "높음",
    "hint": false
   }
  ]
