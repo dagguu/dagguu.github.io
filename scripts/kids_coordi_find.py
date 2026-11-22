@@ -132,11 +132,21 @@ def main():
         if len(nos) < 2:
             continue
         H = [(n, f, int(h, 16)) for n in nos for f, h in cache.get(n, [])]
+        # 브랜드 공통 안내·배너 사진은 여러 상품에 똑같이 들어가서 모든 상품이 짝이 됨(2026-11-22 첫 전체 실행에서 48개가 서로 짝)
+        # → 같은 사진이 6개 넘는 상품에 있으면 코디 사진이 아니라고 보고 뺀다
+        near = [set() for _ in H]
+        for i in range(len(H)):
+            for j in range(i + 1, len(H)):
+                if (H[i][2] ^ H[j][2]).bit_count() <= 12:
+                    near[i].add(H[j][0]); near[j].add(H[i][0])
+        gen = {i for i in range(len(H)) if len(near[i] | {H[i][0]}) > 6}
         for i in range(len(H)):
             a = H[i]
+            if i in gen:
+                continue
             for j in range(i + 1, len(H)):
                 c = H[j]
-                if a[0] == c[0] or (a[2] ^ c[2]).bit_count() > 12:
+                if j in gen or a[0] == c[0] or (a[2] ^ c[2]).bit_count() > 12:
                     continue
                 pa, pb = (a, c) if int(a[0]) < int(c[0]) else (c, a)
                 pairs.setdefault(f"{pa[0]}-{pb[0]}", []).append([pa[1], pb[1]])
