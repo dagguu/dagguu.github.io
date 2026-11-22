@@ -141,6 +141,8 @@ def main():
         if L is not None and (got.get(k) or not L):
             cache[k] = got.get(k, [])
     live = {str(p["product_no"]) for p in ps}
+    print("상세 페이지 못 읽음", sum(1 for L in lists if L is None), "/ 사진 지문 있는 상품", sum(1 for k in live if cache.get(k)), "/ 아직 못 본 상품", sum(1 for k in live if k not in cache))
+    partial = sum(1 for k in live if k not in cache) > 0.03 * len(live)
     if brand == "all":
         cache = {k: v for k, v in cache.items() if k in live}
     os.makedirs(os.path.dirname(CACHE), exist_ok=True)
@@ -241,7 +243,7 @@ def main():
     auto = set(json.load(open(P("scripts", "kids_coordi_auto.json")))) if os.path.exists(P("scripts", "kids_coordi_auto.json")) else set()
     ct = json.load(open(P("kids", "coordi_tags.json")))
     manual = {k for k in ct if k not in auto}
-    if brand == "all":
+    if brand == "all" and not partial:
         for k in list(ct):
             if k in auto and k not in T:
                 del ct[k]
@@ -255,7 +257,7 @@ def main():
         newauto.add(k)
     open(P("kids", "coordi_tags.json"), "w").write(json.dumps(ct, ensure_ascii=False, separators=(",", ":")))
     json.dump(sorted(newauto, key=int), open(P("scripts", "kids_coordi_auto.json"), "w"))
-    if brand != "all" and os.path.exists(P("scripts", "kids_coordi_add.json")):
+    if (brand != "all" or partial) and os.path.exists(P("scripts", "kids_coordi_add.json")):
         old = json.load(open(P("scripts", "kids_coordi_add.json")))
         old.update({k: v for k, v in A.items()})
         A = old
