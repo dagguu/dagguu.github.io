@@ -67,11 +67,25 @@ def imgs(no):
     return urls[:24]
 
 
-def dhash(u):
+def mainimgs(no):
+    """대표·추가 사진(카페24 product/big·extra/big) 주소 — 2026-11-22 시온님 "대표이미지에는 태그 안 되어 있어"."""
+    try:
+        h = get(f"{SHOP}/product/detail.html?product_no={no}").decode("utf-8", "ignore")
+    except Exception:
+        return None
+    urls = []
+    for u in re.findall(r'((?:https:)?//[^"\'\s]+/web/product/(?:big|extra/big)/[^"\'\s?]+\.(?:jpe?g|png|gif|webp))', h):
+        u = ("https:" + u) if u.startswith("//") else u
+        if u not in urls:
+            urls.append(u)
+    return urls[:12]
+
+
+def dhash(u, main=False):
     try:
         im = Image.open(io.BytesIO(get(u))).convert("L")
         w, h = im.size
-        if w / h > 1.3 or w < 300:  # 가로로 긴 사이즈표·작은 그림 뺌
+        if not main and (w / h > 1.3 or w < 300):  # 가로로 긴 사이즈표·작은 그림 뺌
             return None
         im = im.resize((17, 16))
         px = list(im.getdata())
@@ -122,6 +136,26 @@ def main():
         cache = {k: v for k, v in cache.items() if k in live}
     os.makedirs(os.path.dirname(CACHE), exist_ok=True)
     json.dump(cache, open(CACHE, "w"))
+    # 대표·추가 사진 지문(따로 저장, 새 상품만)
+    MC = os.path.join(ROOT, ".coordi_cache", "main.json")
+    mcache = json.load(open(MC)) if os.path.exists(MC) else {}
+    mtodo = [p for p in ps if str(p["product_no"]) not in mcache]
+    print("대표 사진 볼 상품", len(mtodo))
+    with ThreadPoolExecutor(12) as ex:
+        mlists = list(ex.map(lambda p: mainimgs(p["product_no"]), mtodo))
+    mjobs = [(p["product_no"], u) for p, L in zip(mtodo, mlists) if L is not None for u in L]
+    with ThreadPoolExecutor(24) as ex:
+        mhs = list(ex.map(lambda j: dhash(j[1], True), mjobs))
+    mgot = {}
+    for (n, u), h in zip(mjobs, mhs):
+        if h is not None:
+            mgot.setdefault(str(n), []).append([u.split("/")[-1], format(h, "064x")])
+    for p, L in zip(mtodo, mlists):
+        if L is not None:
+            mcache[str(p["product_no"])] = mgot.get(str(p["product_no"]), [])
+    if brand == "all":
+        mcache = {k: v for k, v in mcache.items() if k in live}
+    json.dump(mcache, open(MC, "w"))
 
     names = {str(p["product_no"]): p["product_name"].strip() for p in ps}
     groups = {}
@@ -176,6 +210,17 @@ def main():
                 out.append({"f": f, "t": t})
         if out:
             T[x] = out
+    # 대표·추가 사진이 태그 단 상세 사진과 같으면 같은 태그를 대표 사진에도
+    for x, out in T.items():
+        dh = {f: int(h, 16) for f, h in cache.get(x, [])}
+        extra = []
+        for mf, mh in mcache.get(x, []):
+            mh = int(mh, 16)
+            for it in out:
+                if it["f"] in dh and (dh[it["f"]] ^ mh).bit_count() <= 12:
+                    extra.append({"f": mf, "t": it["t"]})
+                    break
+        out.extend(extra)
     # 손으로 넣은 태그는 두고, 자동 태그만 새로
     auto = set(json.load(open(P("scripts", "kids_coordi_auto.json")))) if os.path.exists(P("scripts", "kids_coordi_auto.json")) else set()
     ct = json.load(open(P("kids", "coordi_tags.json")))
