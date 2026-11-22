@@ -1,22 +1,36 @@
 name: 다꾸키즈 같이 코디한 상품 찾기
-# 2026-11-22 시온님 "보니토 코디 태그·추가상품": 같은 코디 사진을 함께 쓴 상품 쌍 → scripts/kids_coordi_pairs.json
+# 2026-11-22 시온님 "보니토 코디 태그·추가상품" → "다른 브랜드도 다 해주고 업로드 할 때 다 해줘":
+# 매일 13:23 KST(쇼핑몰 10:37 신상 등록 뒤) 전 브랜드 → kids/coordi_tags.json(자동 태그)·scripts/kids_coordi_add.json(추가구성, 쇼핑몰 14:23 coordi 가 넣음)
 on:
+  schedule:
+    - cron: "23 4 * * *"
   workflow_dispatch:
     inputs:
-      brand: { description: "브랜드", default: "보니토" }
+      brand: { description: "브랜드 (all = 전부)", default: "all" }
 permissions: { contents: write }
+concurrency: kids-coordi
 jobs:
   find:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -q pillow
-      - run: python scripts/kids_coordi_find.py "${{ inputs.brand }}"
+      - uses: actions/cache/restore@v4
+        with:
+          path: .coordi_cache
+          key: coordi-${{ github.run_id }}
+          restore-keys: coordi-
+      - run: python scripts/kids_coordi_find.py "${{ inputs.brand || 'all' }}"
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: .coordi_cache
+          key: coordi-${{ github.run_id }}
       - run: |
           git config user.name "dagguu"; git config user.email "dagguu@users.noreply.github.com"
-          git add scripts/kids_coordi_pairs.json
-          git commit -qm "같이 코디한 상품 찾기 ${{ inputs.brand }}" || true
+          git add kids/coordi_tags.json scripts/kids_coordi_add.json scripts/kids_coordi_auto.json scripts/kids_coordi_pairs.json
+          git commit -qm "같이 코디한 상품 ${{ inputs.brand || 'all' }}" || true
           for i in 1 2 3; do git push -q origin HEAD:main && break; git pull -q --rebase origin main; done
