@@ -2090,6 +2090,7 @@
       if (li.getAttribute("data-dkm")) continue; li.setAttribute("data-dkm", "1");
       var after = li;
       for (var k = 0; k < MENU_ADD.length; k++) {
+        if (li.parentNode.querySelector("a[href='" + MENU_ADD[k][1] + "']")) continue;  /* 2026-11-22 휴대폰 글자 메뉴(MNAV)에 이미 있는 칸은 또 안 넣음(커플룩·선물하기 두 번 보이던 것) */
         var c = li.cloneNode(true); c.removeAttribute("data-dkm"); c.setAttribute("data-dkm-add", "1");
         var ca = c.tagName === "A" ? c : c.querySelector("a"); if (!ca) continue;
         ca.href = MENU_ADD[k][1]; ca.textContent = MENU_ADD[k][0]; ca.style.color = MENU_ADD[k][2] || "";
