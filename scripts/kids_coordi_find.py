@@ -17,7 +17,7 @@ CID = "JzTmuiBPItGvZ6KG8g3aPC"
 SHOP = "https://dagguukids.com"
 UA = {"User-Agent": "Mozilla/5.0"}
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CACHE = os.path.join(ROOT, ".coordi_cache", "hash.json")
+CACHE = os.path.join(ROOT, ".coordi_cache", "hash2.json")  # 2 = 사진 받기 실패한 상품은 저장 안 함(2026-11-22)
 P = lambda *a: os.path.join(ROOT, *a)
 
 
@@ -26,8 +26,15 @@ def get(url, h=None, t=40):
     for k in range(6):
         try:
             return urllib.request.urlopen(urllib.request.Request(url, headers=h or UA), timeout=t).read()
+        except (TimeoutError, ConnectionError, urllib.error.URLError) as e:
+            if isinstance(e, urllib.error.HTTPError) and e.code not in (429, 500, 502, 503):
+                raise
+            if k == 5:
+                raise
+            time.sleep(2 + 3 * k)
+            continue
         except urllib.error.HTTPError as e:
-            if e.code != 429 or k == 5:
+            if e.code not in (429, 500, 502, 503) or k == 5:
                 raise
             time.sleep(2 + 3 * k)
 
@@ -119,40 +126,43 @@ def main():
     cache = json.load(open(CACHE)) if os.path.exists(CACHE) else {}
     todo = [p for p in ps if str(p["product_no"]) not in cache]
     print("새로 볼 상품", len(todo))
-    with ThreadPoolExecutor(12) as ex:
+    with ThreadPoolExecutor(6) as ex:
         lists = list(ex.map(lambda p: imgs(p["product_no"]), todo))
     jobs = [(p["product_no"], u) for p, L in zip(todo, lists) if L is not None for u in L]
-    with ThreadPoolExecutor(24) as ex:
+    with ThreadPoolExecutor(10) as ex:
         hs = list(ex.map(lambda j: dhash(j[1]), jobs))
     got = {}
     for (n, u), h in zip(jobs, hs):
         if h is not None:
             got.setdefault(str(n), []).append([u.split("/")[-1], format(h, "064x")])
     for p, L in zip(todo, lists):
-        if L is not None:
-            cache[str(p["product_no"])] = got.get(str(p["product_no"]), [])
+        k = str(p["product_no"])
+        # 사진을 하나도 못 받았으면(429·끊김) 저장하지 않고 다음에 다시 봄
+        if L is not None and (got.get(k) or not L):
+            cache[k] = got.get(k, [])
     live = {str(p["product_no"]) for p in ps}
     if brand == "all":
         cache = {k: v for k, v in cache.items() if k in live}
     os.makedirs(os.path.dirname(CACHE), exist_ok=True)
     json.dump(cache, open(CACHE, "w"))
     # 대표·추가 사진 지문(따로 저장, 새 상품만)
-    MC = os.path.join(ROOT, ".coordi_cache", "main.json")
+    MC = os.path.join(ROOT, ".coordi_cache", "main2.json")
     mcache = json.load(open(MC)) if os.path.exists(MC) else {}
     mtodo = [p for p in ps if str(p["product_no"]) not in mcache]
     print("대표 사진 볼 상품", len(mtodo))
-    with ThreadPoolExecutor(12) as ex:
+    with ThreadPoolExecutor(6) as ex:
         mlists = list(ex.map(lambda p: mainimgs(p["product_no"]), mtodo))
     mjobs = [(p["product_no"], u) for p, L in zip(mtodo, mlists) if L is not None for u in L]
-    with ThreadPoolExecutor(24) as ex:
+    with ThreadPoolExecutor(10) as ex:
         mhs = list(ex.map(lambda j: dhash(j[1], True), mjobs))
     mgot = {}
     for (n, u), h in zip(mjobs, mhs):
         if h is not None:
             mgot.setdefault(str(n), []).append([u.split("/")[-1], format(h, "064x")])
     for p, L in zip(mtodo, mlists):
-        if L is not None:
-            mcache[str(p["product_no"])] = mgot.get(str(p["product_no"]), [])
+        k = str(p["product_no"])
+        if L is not None and (mgot.get(k) or not L):
+            mcache[k] = mgot.get(k, [])
     if brand == "all":
         mcache = {k: v for k, v in mcache.items() if k in live}
     json.dump(mcache, open(MC, "w"))
