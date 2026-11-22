@@ -1,23 +1,15 @@
 {
- "at": "2026-11-22 19:55",
+ "at": "2026-11-22 20:03",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 3,
-   "taskId": "2348a8068f8869afa5b9c95250e04b15",
+   "n": 6,
+   "taskId": "73ce8e9861dbc84c8ec460578725e055",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-22/pohang-modille-poolvilla/3_edit.jpg"
-  },
-  {
-   "n": 5,
-   "taskId": "83da7afdacf9112d50ce1181444c244f",
-   "state": "success",
-   "credits": 4.0,
-   "src_url_is_input": false,
-   "file": "img/2026-11-22/pohang-modille-poolvilla/5_edit.jpg"
+   "file": "img/2026-11-22/pohang-modille-poolvilla/6_edit.jpg"
   }
  ],
  "slug": "pohang-modille-poolvilla"
