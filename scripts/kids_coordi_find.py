@@ -22,7 +22,14 @@ P = lambda *a: os.path.join(ROOT, *a)
 
 
 def get(url, h=None, t=40):
-    return urllib.request.urlopen(urllib.request.Request(url, headers=h or UA), timeout=t).read()
+    import time, urllib.error
+    for k in range(6):
+        try:
+            return urllib.request.urlopen(urllib.request.Request(url, headers=h or UA), timeout=t).read()
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or k == 5:
+                raise
+            time.sleep(2 + 3 * k)
 
 
 def products(brand):
@@ -35,6 +42,7 @@ def products(brand):
         out += got
         if len(got) < 100:
             break
+        __import__("time").sleep(0.8)  # 공개 API 는 짧게 여러 번 부르면 429
     return out
 
 
