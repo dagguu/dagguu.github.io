@@ -1,5 +1,5 @@
 {
- "at": "2026-11-21 11:52",
+ "at": "2026-11-22 10:42",
  "checkIn": "2026-11-28",
  "stays": {
   "boryeong-lava-poolvilla": {
@@ -23,6 +23,19 @@
     },
     {
      "kw": "충남",
+     "region": "천안",
+     "type": "CITY",
+     "pages": 8,
+     "n": 301,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 304
+    },
+    {
+     "kw": "충남",
      "region": "논산",
      "type": "CITY",
      "pages": 4,
@@ -33,19 +46,6 @@
       "size"
      ],
      "total": 108
-    },
-    {
-     "kw": "충남",
-     "region": "청양",
-     "type": "CITY",
-     "pages": 2,
-     "n": 41,
-     "keys": [
-      "totalCount",
-      "page",
-      "size"
-     ],
-     "total": 42
     }
    ]
   },
@@ -60,13 +60,13 @@
      "region": "부산",
      "type": "CITY",
      "pages": 2,
-     "n": 98,
+     "n": 99,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1827
+     "total": 1829
     }
    ],
    "hit": "마티에 부산하버시티",
@@ -202,7 +202,7 @@
       "page",
       "size"
      ],
-     "total": 737
+     "total": 738
     }
    ],
    "hit": "강화도펜션AND",
@@ -540,8 +540,8 @@
      "kw": "경주",
      "region": "경주",
      "type": "CITY",
-     "pages": 33,
-     "n": 1628,
+     "pages": 34,
+     "n": 1639,
      "keys": [
       "totalCount",
       "page",
@@ -683,7 +683,7 @@
       "page",
       "size"
      ],
-     "total": 951
+     "total": 950
     }
    ],
    "hit": "인천 캠프노마드",
@@ -717,7 +717,7 @@
       "page",
       "size"
      ],
-     "total": 832
+     "total": 833
     }
    ],
    "hit": "포항 바이 더 씨 풀빌라",
@@ -751,7 +751,7 @@
       "page",
       "size"
      ],
-     "total": 832
+     "total": 833
     }
    ],
    "hit": "데이토나 풀 빌라",
@@ -853,7 +853,7 @@
       "page",
       "size"
      ],
-     "total": 1365
+     "total": 1364
     }
    ],
    "hit": "담앤루리조트",
@@ -887,7 +887,7 @@
       "page",
       "size"
      ],
-     "total": 2065
+     "total": 2068
     }
    ],
    "hit": "대부도(선재도) 선재담글램핑&카라반리조트",
