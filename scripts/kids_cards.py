@@ -149,6 +149,31 @@ BAN = [
 # scripts/kids_banner_pick.json {B1:[{no,img}]} 을 먼저 쓴다(상품이 판매 중일 때만). 없거나 상품이 내려가면 아래 자동 찾기.
 PICK_P = os.path.join(ROOT, "scripts", "kids_banner_pick.json")
 FONT_LINK = ""
+# 2026-11-22 시온님 "슬라이드 이미지 크리스마스 분위기로": 12/25까지 눈송이·빨강/초록 스티커·MERRY CHRISTMAS 띠.
+#  크리스마스 상품은 11/27까지만 팔아서(쇼핑몰 seasonoff) 크리스마스룩 배너(XMAS_BAN, 사진 kids_banner_xmas.json)는 11/27까지,
+#  11/28~12/25 는 원래 BAN 에 장식만. 링크는 kids/kidfit.js BM_BAN 이 같은 날짜로 바꿈.
+XMAS_DECOR_END = "2026-12-25"
+XMAS_SHOP_END = "2026-11-27"
+XMAS_BAN = [
+    ("B1", "q:크리스마스", "🎄 11/27까지 주문", "4만원↑ 무료배송", "우리 아이", "크리스마스룩 준비해요", "산타·루돌프·트리 코디 모아보기"),
+    ("B2", "q:크리스마스", "BABY", "🎅 첫 크리스마스", "우리 아기", "첫 크리스마스 코디", "아기 크리스마스룩 모아보기"),
+    ("B3", 66, "🎁 선물하기", "4만원↑ 무료배송", "연말 선물 고민 끝", "크리스마스 선물하기", "3만원대 · 4만원대 · 5만원대 아이옷"),
+    ("B4", 55, "BEST", "NEW", "콘 · 보니토 · 피피", "포근한 연말 데일리룩", "다꾸키즈 인기상품 BEST"),
+]
+XMAS_P = os.path.join(ROOT, "scripts", "kids_banner_xmas.json")
+
+
+def xmas_decor(W, H):
+    """눈송이(흰 점) + 위 가운데 빨간 리본 띠 'MERRY CHRISTMAS'. 그림은 직접 그린 도형만."""
+    random.seed(W)
+    dots = "".join(f"<div style='position:absolute;left:{random.random()*W:.0f}px;top:{random.random()*H:.0f}px;width:{s}px;height:{s}px;border-radius:50%;background:#fff;opacity:{random.uniform(.55,.95):.2f};box-shadow:0 0 {s}px rgba(255,255,255,.7)'></div>"
+                   for s in [random.choice([4, 5, 6, 8, 10, 12]) * W // 1600 + 3 for _ in range(70)])
+    k = W / 1600
+    rib = (f"<div style='position:absolute;left:50%;top:{round(H*.07)}px;transform:translateX(-50%);padding:{round(12*k)}px {round(38*k)}px;"
+           f"background:#c8102e;color:#fff;border-radius:999px;font-size:{round(30*k)}px;font-weight:900;letter-spacing:{round(5*k)}px;"
+           f"box-shadow:0 6px 20px rgba(0,0,0,.25);border:{max(2,round(3*k))}px solid #fff;white-space:nowrap'>❄ MERRY CHRISTMAS ❄</div>")
+    tint = "<div style='position:absolute;inset:0;background:linear-gradient(180deg,rgba(150,0,20,.22) 0%,rgba(0,0,0,0) 28%)'></div>"
+    return tint + dots + rib
 
 
 def banner_html(theme, ps, W=1600, H=900):
@@ -165,7 +190,12 @@ def banner_html(theme, ps, W=1600, H=900):
     def st(t, bg, fg, css):
         return (f"<div style='position:absolute;{css};padding:{round(pill*.32)}px {round(pill*.7)}px;border-radius:999px;background:{bg};color:{fg};"
                 f"font-size:{pill}px;font-weight:900;letter-spacing:-.5px;box-shadow:0 6px 18px rgba(0,0,0,.18)'>{e(t)}</div>")
-    stick = st(s1, "#6a3fc8", "#fff", f"left:{round(W*.17)}px;top:{round(H*.47)}px") + st(s2, "#ffe94d", "#2a1b55", f"right:{round(W*.17)}px;top:{round(H*.46)}px")
+    xm = TODAY <= XMAS_DECOR_END
+    c1 = ("#c8102e", "#fff") if xm else ("#6a3fc8", "#fff")
+    c2 = ("#1f7a4d", "#fff") if xm else ("#ffe94d", "#2a1b55")
+    stick = st(s1, c1[0], c1[1], f"left:{round(W*.17)}px;top:{round(H*.47)}px") + st(s2, c2[0], c2[1], f"right:{round(W*.17)}px;top:{round(H*.46)}px")
+    if xm:
+        shade += xmas_decor(W, H)
     sh = "0 2px 4px rgba(0,0,0,.35),0 6px 24px rgba(0,0,0,.45)"
     txt = (f"<div style='position:absolute;left:0;right:0;top:{round(H*.60)}px;text-align:center;color:#fff;font-weight:900;letter-spacing:-2px;text-shadow:{sh}'>"
            f"<div style='font-size:{fs}px;line-height:1.18'>{e(l1)}</div>"
@@ -248,10 +278,21 @@ def main():
     allp = products(None, 400)
     # 배너
     bp = {}
-    for th in BAN:
-        pool = products(th[1], 200) or allp
-        fixed = (json.load(open(PICK_P)) if os.path.exists(PICK_P) else {}).get(th[0]) or []
+    xshop = TODAY <= XMAS_SHOP_END
+    for th in (XMAS_BAN if xshop else BAN):
+        pool = (products(th[1], 200) if isinstance(th[1], int) else []) or allp
+        fixed = (json.load(open(XMAS_P if xshop else PICK_P)) if os.path.exists(XMAS_P if xshop else PICK_P) else {}).get(th[0]) or []
+        if xshop and th[0] == "B4":
+            fixed = (json.load(open(PICK_P)) if os.path.exists(PICK_P) else {}).get("B1") or []
         alive = {q["no"]: q for q in allp + pool}
+        miss = [str(f["no"]) for f in fixed if f["no"] not in alive]
+        if miss:  # 오래된 상품(최근 400개 밖)도 판매 중인지 번호로 확인
+            try:
+                for p in get(f"{F}&product_no={','.join(miss)}&limit=100"):
+                    nm = p["product_name"].strip()
+                    alive[p["product_no"]] = {"no": p["product_no"], "name": nm, "brand": nm.split()[0], "price": int(float(p.get("price") or 0)), "img": p.get("detail_image") or "", "colors": ""}
+            except Exception as ex:
+                print("배너 상품 확인 실패:", ex)
         fx = [dict(alive[f["no"]], img=f["img"]) for f in fixed if f["no"] in alive]
         if len(fx) >= 2:
             ps = fx

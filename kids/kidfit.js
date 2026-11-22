@@ -1256,6 +1256,9 @@
     [bmCp("BEST", "#ff7a2f", 13), "인기상품", "/product/list.html?cate_no=55", "#fff1e6"]
   ];
   var BM_BAN = [["1", "/product/list.html?cate_no=55"], ["2", "/product/list.html?cate_no=44"], ["3", "/product/list.html?cate_no=49"], ["4", "/product/list.html?cate_no=47"]];
+  // 2026-11-22 크리스마스 배너(scripts/kids_cards.py XMAS_BAN)는 11/27까지 — 링크도 같은 날짜로
+  (function(){ var t = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10);
+    if (t <= "2026-11-27") BM_BAN = [["1", "/product/search.html?keyword=" + encodeURIComponent("크리스마스")], ["2", "/product/search.html?keyword=" + encodeURIComponent("크리스마스")], ["3", "/product/list.html?cate_no=66"], ["4", "/product/list.html?cate_no=55"]]; })();
   var BM_CATS = [
     ["⏰타임특가", 54], ["인기상품", 55], ["🎁선물하기", 66], ["1+1", "q:1+1"], ["🚚무료배송", 56], ["🎄크리스마스", "q:크리스마스"], ["BABY", 52], ["KIDS", 53], ["여아", 50], ["남아", 51], ["MOM", 23],
     ["아우터", 24], ["상의", 25], ["원피스", 26], ["하의", 27], ["잡화", 28], ["양말", "q:양말"], ["실내복", "q:실내복"]
