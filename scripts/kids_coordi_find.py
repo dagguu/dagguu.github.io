@@ -17,7 +17,7 @@ CID = "JzTmuiBPItGvZ6KG8g3aPC"
 SHOP = "https://dagguukids.com"
 UA = {"User-Agent": "Mozilla/5.0"}
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CACHE = os.path.join(ROOT, ".coordi_cache", "hash2.json")  # 2 = 사진 받기 실패한 상품은 저장 안 함(2026-11-22)
+CACHE = os.path.join(ROOT, ".coordi_cache", "hash3.json")  # 2 = 사진 받기 실패한 상품은 저장 안 함(2026-11-22)
 P = lambda *a: os.path.join(ROOT, *a)
 
 
@@ -66,7 +66,9 @@ def imgs(no):
     except Exception:
         return None
     i = h.find('id="prdDetail"')
-    h = h[i:] if i >= 0 else h
+    if i < 0:  # 쇼핑몰이 많이 부르면 상품 페이지 대신 다른 화면을 줌(2026-11-22 보니토가 전부 빈 목록) → 다음에 다시
+        return None
+    h = h[i:]
     urls = []
     for u in re.findall(r'ec-data-src="(https://ecimg\.cafe24img\.com/[^"]+/web/upload/NNEditor/[^"]+)"', h):
         if u not in urls:
@@ -79,6 +81,8 @@ def mainimgs(no):
     try:
         h = get(f"{SHOP}/product/detail.html?product_no={no}").decode("utf-8", "ignore")
     except Exception:
+        return None
+    if "/web/product/big/" not in h:
         return None
     urls = []
     for u in re.findall(r'((?:https:)?//[^"\'\s]+/web/product/(?:big|extra/big)/[^"\'\s?]+\.(?:jpe?g|png|gif|webp))', h):
@@ -126,7 +130,7 @@ def main():
     cache = json.load(open(CACHE)) if os.path.exists(CACHE) else {}
     todo = [p for p in ps if str(p["product_no"]) not in cache]
     print("새로 볼 상품", len(todo))
-    with ThreadPoolExecutor(6) as ex:
+    with ThreadPoolExecutor(3) as ex:
         lists = list(ex.map(lambda p: imgs(p["product_no"]), todo))
     jobs = [(p["product_no"], u) for p, L in zip(todo, lists) if L is not None for u in L]
     with ThreadPoolExecutor(10) as ex:
@@ -148,11 +152,11 @@ def main():
     os.makedirs(os.path.dirname(CACHE), exist_ok=True)
     json.dump(cache, open(CACHE, "w"))
     # 대표·추가 사진 지문(따로 저장, 새 상품만)
-    MC = os.path.join(ROOT, ".coordi_cache", "main2.json")
+    MC = os.path.join(ROOT, ".coordi_cache", "main3.json")
     mcache = json.load(open(MC)) if os.path.exists(MC) else {}
     mtodo = [p for p in ps if str(p["product_no"]) not in mcache]
     print("대표 사진 볼 상품", len(mtodo))
-    with ThreadPoolExecutor(6) as ex:
+    with ThreadPoolExecutor(3) as ex:
         mlists = list(ex.map(lambda p: mainimgs(p["product_no"]), mtodo))
     mjobs = [(p["product_no"], u) for p, L in zip(mtodo, mlists) if L is not None for u in L]
     with ThreadPoolExecutor(10) as ex:
