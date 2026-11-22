@@ -66,7 +66,7 @@
     w.addEventListener("click",function(e){
       if(e.target===w) return close();
       var b=e.target.closest("[data-m]"); if(!b) return;
-      if(b.dataset.m==="cp"){ ga("coupang_click",{place:"apply_popup_share",item_id:d.id}); e.preventDefault(); close(); goWait(b.getAttribute("href"),"쿠팡",d.id,true); return; }
+      if(b.dataset.m==="cp"){ ga("coupang_click",{place:"apply_popup_share",item_id:d.id}); close(); return; }
       if(b.dataset.m==="go"){ e.preventDefault(); try{ var A=JSON.parse(localStorage.getItem("dakku-applied")||"[]"); A=A.filter(function(x){ return x!==d.id; }); A.unshift(d.id); localStorage.setItem("dakku-applied",JSON.stringify(A.slice(0,50))); }catch(_){}
         close(); goWait(url,src,d.id); return; }
       if(b.dataset.m==="x") close();
@@ -75,7 +75,7 @@
     loadKids(function(){});
   }
   document.addEventListener("click",function(e){
-    var c=e.target.closest('.dbar a.dbl, a#go[href*="link.coupang.com"]'); if(c&&!e.ctrlKey&&!e.metaKey){ var ap=document.querySelector("a[data-ap]"); e.preventDefault(); ga("coupang_click",{place:"detail_share"}); goWait(c.getAttribute("href"),"쿠팡",ap?ap.dataset.id:"",true); return; }
+    var c=e.target.closest('.dbar a.dbl, a#go[href*="link.coupang.com"]'); if(c&&!e.ctrlKey&&!e.metaKey){ ga("coupang_click",{place:"detail_share"}); return; }  /* 쿠팡은 대기 화면 없이 바로(2026-11-23) */
   },true);
   document.addEventListener("click",function(e){
     var a=e.target.closest("a[data-ap]"); if(!a) return;

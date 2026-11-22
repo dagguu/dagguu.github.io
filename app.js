@@ -2642,11 +2642,7 @@ function goWait(url,src,it,cp){  /* cp=true: 쿠팡 상품 페이지로 이동(�
   if(cp) tm=setTimeout(go,3000);  /* 쿠팡은 건너뛰기 없이 5초 뒤 바로 이동(2026-11-18 시온님) */
 }
 /* 상세 페이지 아래 "제품 상세 보기/숙소 사진 보기" 버튼도 쿠팡으로 가기 전 다꾸키즈 화면(2026-11-18 시온님) */
-document.addEventListener("click",function(e){
-  var a=e.target.closest(".dbar a.dbl"); if(!a||e.ctrlKey||e.metaKey) return;
-  var it=(seed.items||[]).filter(function(x){ return x.id===state.itemId; })[0]; if(!it) return;
-  e.preventDefault(); goWait(a.getAttribute("href"),"쿠팡",it,true);
-},true);
+/* 2026-11-23 시온님 "쿠팡으로 이동 중이에요 안 뜨게": 쿠팡 링크는 대기 화면 없이 바로 연다(위 상세 버튼 가로채기 뺌) */
 function applyPopup(it){
   var url=safeUrl(it.refUrl||it.applyUrl); if(!url) return;
   var old=document.querySelector(".modal.applym"); if(old) old.remove();
@@ -2661,7 +2657,7 @@ function applyPopup(it){
     if(e.target===wrap) return close();
     var b=e.target.closest("[data-m]"); if(!b) return;
     if(b.dataset.m==="go"){ markApplied(it.id); e.preventDefault(); close(); goWait(b.getAttribute("href"),src,it); return; }
-    if(b.dataset.m==="cp"){ ga("coupang_click",{place:"apply_popup",item_id:it.id}); e.preventDefault(); close(); goWait(b.getAttribute("href"),"쿠팡",it,true); return; }
+    if(b.dataset.m==="cp"){ ga("coupang_click",{place:"apply_popup",item_id:it.id}); close(); return; }  /* 바로 쿠팡(2026-11-23) */
     if(b.dataset.m==="srch"){ ga("apply_search",{item_id:it.id,source:it.source||""}); return; }
     if(b.dataset.m==="x") close();
   });

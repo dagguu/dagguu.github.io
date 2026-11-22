@@ -460,3 +460,4 @@
 문의 : @다꾸키즈
 ```
 - 내 체험단 활동(2026-11-20 시온님 "로그인하면 내가 지원했던 체험단 확인"): 다꾸키즈 로그인 회원은 kidfit.js expSync 가 CAFE24API.getEncryptedMemberId(카페24 암호화 회원 ID, JWT) → Supabase 함수 cafe24-oauth {mine}(shop 저장소 supabase/cafe24-oauth.ts expMine: Service Key 로 JWT 검증 → 그 회원 아이디가 exp_apps.member 에 있거나 카페24 휴대폰 번호(customersprivacy)가 같은 신청만) → 받은 열쇠를 이 기기 dk_exp_tok·dk_exp_applied 에 합침(세션 5분 캐시) → 어느 기기에서든 체험단 목록·상세에 신청완료·선정·게시물 제출이 보임. 마이페이지 "📋 내 체험단 활동"(myExp, #dk-my 아래: 체험단 이름·신청일·상태 딱지·선정이면 게시물 제출하기). 켜려면 시온님이 ① 카페24 개발자센터 앱 권한에 고객(Customer) 읽기·개인정보(Privacy) 읽기 추가 ② Supabase Secrets 에 CAFE24_SERVICE_KEY(앱 > 인증 정보 > Service Key) ③ 함수 코드 붙여 넣고 Deploy ④ 테스트 실행으로 다시 동의. 그 전엔 예전처럼 신청한 기기에서만 보임(마이페이지 칸은 "불러오지 못했어요").
+- 쿠팡 이동 대기 화면 뺌(2026-11-23 시온님 "쿠팡으로 이동중이에요 안 뜨게"): 신청 팝업 상품 카드·상세 아래 가격 보기 버튼(앱 app.js·공유 페이지 apgo.js)은 다꾸키즈 대기 화면 없이 바로 쿠팡을 연다. 모집 사이트로 가는 신청하기 대기 화면(건너뛰기)은 그대로.
