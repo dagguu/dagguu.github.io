@@ -1,42 +1,42 @@
 {
- "at": "2026-11-19T11:02:14.668198",
- "name": "ganghwa-white-gallery",
+ "at": "2026-11-22T10:57:22.424379",
+ "name": "pohang-modille-poolvilla",
  "jobs": [
   {
    "img": "ai:1",
-   "taskId": "a440c7df042b7a15b5532495dc665045",
+   "taskId": "cfa46ca7cac11fb5b3b668a77256cd7a",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-19/ganghwa-white-gallery/clip_ai1.mp4"
+   "file": "video/2026-11-22/pohang-modille-poolvilla/clip_ai1.mp4"
   },
   {
    "img": "ai:2",
-   "taskId": "6ba429bc77f221dca7d02aebae233fcb",
+   "taskId": "009274f46b9a8cb90b87ed741eb0f8eb",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-19/ganghwa-white-gallery/clip_ai2.mp4"
+   "file": "video/2026-11-22/pohang-modille-poolvilla/clip_ai2.mp4"
   },
   {
    "img": "ai:3",
-   "taskId": "c09cc77b5a659b12ca10aff86c6580fe",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-19/ganghwa-white-gallery/clip_ai3.mp4"
+   "taskId": "793cd8b107710c801841e58d3462ad61",
+   "state": "fail",
+   "credits": 0.0,
+   "msg": "Request blocked: The input content was flagged for containing a prominent public figure."
   },
   {
    "img": "ai:4",
-   "taskId": "b9bf9ce94fd0e5bdc0cb595692835319",
+   "taskId": "697ea528f380603f8b8a578f2a6d57fd",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-19/ganghwa-white-gallery/clip_ai4.mp4"
+   "file": "video/2026-11-22/pohang-modille-poolvilla/clip_ai4.mp4"
   },
   {
    "img": "ai:5",
-   "taskId": "a57a7e56bec374d4c8cc5940d3bb680e",
+   "taskId": "103e98f3fabb5481efb700763dc41860",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-19/ganghwa-white-gallery/clip_ai5.mp4"
+   "file": "video/2026-11-22/pohang-modille-poolvilla/clip_ai5.mp4"
   }
  ],
- "credits_total": 175.0
+ "credits_total": 140.0
 }
