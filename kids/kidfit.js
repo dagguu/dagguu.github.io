@@ -1012,7 +1012,8 @@
   }
 
   /* ---------- ⑪ 검색창 인기 검색어 바로 보이기 (2026-11-12 시온님 "서치에서 바로 확인할 수 있게") ---------- */
-  var KW2 = ["아오스타", "피피", "제니베이직", "데일리베베", "가디건", "원피스", "기모", "후리스", "바지", "실내복"];
+  /* 2026-11-22 시온님 "검색어 1~10 인기상품 브랜드명으로" (셀러퀸즈 판매 순·인기상품 브랜드) */
+  var KW2 = ["콘", "보니토", "블랙빈", "디그린", "피피", "비비드아이", "데일리베베", "라라랜드", "고유", "아오스타"];
   /* 2026-11-12 시온님: 홈 친구 초대 배너 → 마이페이지 맨 위(우리 아이 정보 위)에 초대 칸 */
   function inviteTop(){
     if (location.pathname.indexOf("/myshop/index.html") !== 0 && location.pathname !== "/myshop/") return;
@@ -1127,6 +1128,7 @@
       var q = ""; try { q = new URLSearchParams(location.search).get("keyword") || ""; } catch(e){}
       if (MENU_KW.indexOf(q.trim()) >= 0 && !document.documentElement.getAttribute("data-dkmenu")) { document.documentElement.setAttribute("data-dkmenu", "1"); var sf = document.querySelector("form.searchField"); if (sf) sf.style.display = "none"; var h2 = document.querySelector(".titleArea h2"); if (h2) h2.textContent = q.trim(); }
     }
+    [].forEach.call(document.querySelectorAll(".dk-kw a[data-k]"), function(a, i){ var k = KW2[i % 10]; if (a.getAttribute("data-k") === k) return; a.setAttribute("data-k", k); var b = a.querySelector("b"); a.textContent = ""; if (b) a.appendChild(b); a.appendChild(document.createTextNode(k)); });
     [].forEach.call(document.querySelectorAll(".dk-kw2"), function(d){ if (!d.closest(".xans-layout-searchheader")) d.parentNode.removeChild(d); });
     var lay = document.querySelector(".xans-layout-searchheader"); if (!lay) return;
     var inp = lay.querySelector("input[name=keyword]"); if (!inp || lay.querySelector(".dk-kw2")) return;
