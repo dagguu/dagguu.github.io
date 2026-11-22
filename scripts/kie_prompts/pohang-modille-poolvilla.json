@@ -1,0 +1,43 @@
+[
+ {
+  "n": 1,
+  "time": "day",
+  "look": "day",
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/A00935655/45f9c729-26a1-4484-897e-c85a895cd32d.jpg",
+  "img": "Keep the place exactly as it is (same white living room with the long white sofa, same very long floor-to-ceiling glass windows showing the blue sea, same red wall panel on the left, same white glossy floor). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. This is a fully enclosed indoor room with a roof. The whole upper part of the image must be the same flat white indoor ceiling with linear LED lights; absolutely no sky above the room. The sea is only visible through the tall glass windows. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally upward with the same white ceiling and downward with the same white glossy floor. No people.",
+  "prompt": "Very slow steady push forward into the bright white living room toward the long glass windows and the sea, gentle waves moving far outside, everything calm and still."
+ },
+ {
+  "n": 2,
+  "time": "day",
+  "look": "day",
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/A00935655/bd9943ee-415b-465f-9125-6dfcd87fe299.jpg",
+  "img": "Keep the place exactly as it is (same seaside village, same calm blue bay with the stone breakwater, same white modern buildings on the left, same coastline and green hills). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same blue sky and sea and below with the same village ground. Make ONE single continuous aerial photo; the buildings appear exactly once. No people.",
+  "prompt": "Slow aerial glide gently rising over the seaside village toward the calm blue bay, small waves moving on the water, calm and still."
+ },
+ {
+  "n": 3,
+  "time": "sunset",
+  "look": "day",
+  "people": true,
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/A00935655/a4cfb02e-225b-4849-83db-34e0db6530a6.jpg",
+  "img": "Keep the place exactly as it is (same rooftop terrace with grey gravel, same black table and benches, same glass railing, same wide blue sea and coastline beyond). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same sky and below with the same gravel terrace floor. One Korean woman standing far away at the glass railing, seen from behind, small in the frame, looking at the sea; she does not touch the table or benches.",
+  "prompt": "Very slow steady push forward toward the terrace railing and the sea, the woman standing still, soft waves far away, calm."
+ },
+ {
+  "n": 4,
+  "time": "day",
+  "look": "day",
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/A00935655/f79056ed-137f-4282-b797-54ec02598d6a.jpg",
+  "img": "Keep the place exactly as it is (same white sofa with orange and pink cushions, same tall glass windows with beige curtains, same blue sea and terrace outside, same glass round table). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. This is a fully enclosed indoor room with a roof. The whole upper part of the image must be the same flat white indoor ceiling with linear LED lights; absolutely no sky above the room. The sea is only visible through the tall glass windows. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally upward with the same white ceiling and downward with the same white floor. No people.",
+  "prompt": "Very slow steady push forward past the white sofa toward the tall windows and the blue sea, curtains still, calm."
+ },
+ {
+  "n": 5,
+  "time": "sunset",
+  "look": "day",
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/A00935655/ceb96644-6cab-4149-983d-2033faa4e470.jpg",
+  "img": "Keep the place exactly as it is (same modern building with dark brick and large glass windows, same orange and pink sunset sky with clouds, same hills on the right). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same sunset sky and below with the same building wall and ground. Show the building only once. No people.",
+  "prompt": "Slow gentle rise along the building wall toward the glowing sunset sky, clouds drifting slowly, calm and still."
+ }
+]
