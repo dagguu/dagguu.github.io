@@ -17,12 +17,12 @@
  },
  {
   "n": 3,
-  "time": "sunset",
+  "time": "day",
   "look": "day",
   "people": true,
   "src": "https://image.coupangcdn.com/image/travelConnect/hotel/A00935655/a4cfb02e-225b-4849-83db-34e0db6530a6.jpg",
   "img": "Keep the place exactly as it is (same rooftop terrace with grey gravel, same black table and benches, same glass railing, same wide blue sea and coastline beyond). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same sky and below with the same gravel terrace floor. One Korean woman standing far away at the glass railing, seen from behind, small in the frame, looking at the sea; she does not touch the table or benches. There is no hot water here: absolutely no steam, smoke, mist or vapor anywhere in the image.",
-  "prompt": "Very slow steady push forward toward the terrace railing and the sea, the woman standing still, soft waves far away, calm, no steam or smoke."
+  "prompt": "Very slow steady push forward toward the terrace railing and the blue sea, the woman standing still, soft waves far away, calm, no steam or smoke."
  },
  {
   "n": 4,
@@ -34,10 +34,10 @@
  },
  {
   "n": 5,
-  "time": "sunset",
+  "time": "day",
   "look": "day",
   "src": "https://image.coupangcdn.com/image/travelConnect/hotel/A00935655/ceb96644-6cab-4149-983d-2033faa4e470.jpg",
-  "img": "Keep the place exactly as it is (same modern building with dark brick and large glass windows, same orange and pink sunset sky with clouds, same hills on the right). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same sunset sky and below with the same building wall and ground. Show the building only once. No people. There is no hot water here: absolutely no steam, smoke, mist or vapor anywhere in the image.",
-  "prompt": "Slow gentle rise along the building wall toward the glowing sunset sky, clouds drifting slowly, calm, no steam or smoke and still."
+  "img": "Keep the place exactly as it is (same modern building with dark brick and large glass windows, same sky with clouds, same hills on the right). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same sky and below with the same building wall and ground. Show the building only once. No people. There is no hot water here: absolutely no steam, smoke, mist or vapor anywhere in the image. Do not add any pool, bath or water at the bottom; the ground in front of the building is only plain snowy ground.",
+  "prompt": "Slow gentle rise along the glass and brick building wall toward the bright winter sky, clouds drifting slowly, calm and still, no steam or smoke."
  }
 ]
