@@ -250,17 +250,32 @@ def main():
                 out.append({"f": f, "t": t})
         if out:
             T[x] = out
-    # 대표·추가 사진이 태그 단 상세 사진과 같으면 같은 태그를 대표 사진에도
-    for x, out in T.items():
-        dh = {f: int(h, 16) for f, h in cache.get(x, [])}
-        extra = []
+    # 대표·추가 사진: 상세 사진 중 가장 비슷한 것(거리 ≤ 30, 대표 사진은 줄이거나 자른 사본이라 넉넉히)을 찾아
+    # 그 사진을 같이 쓴 짝 상품을 태그로(2026-11-22 시온님 "대표이미지에는 태그 안 되어 있어")
+    shared = {}
+    for k, v in pairs.items():
+        a, b = k.split("-")
+        for fa, fb in v:
+            shared.setdefault(a, {}).setdefault(fa, set()).add(b)
+            shared.setdefault(b, {}).setdefault(fb, set()).add(a)
+    for x in list(A):
+        dh = [(f, int(h, 16)) for f, h in cache.get(x, [])]
+        out = T.setdefault(x, [])
         for mf, mh in mcache.get(x, []):
             mh = int(mh, 16)
-            for it in out:
-                if it["f"] in dh and (dh[it["f"]] ^ mh).bit_count() <= 12:
-                    extra.append({"f": mf, "t": it["t"]})
-                    break
-        out.extend(extra)
+            best = min(dh, key=lambda d: (d[1] ^ mh).bit_count(), default=None)
+            if not best or (best[1] ^ mh).bit_count() > 30:
+                continue
+            ys = [y for y in A[x] if str(y) in shared.get(x, {}).get(best[0], set())]
+            if not ys:
+                continue
+            t = []
+            for y in ys:
+                px, py = POS[ty(names[str(y)])]
+                t.append({"x": px, "y": py + 8 * len(t), "no": int(y)})
+            out.append({"f": mf, "t": t})
+        if not out:
+            del T[x]
     # 손으로 넣은 태그는 두고, 자동 태그만 새로
     auto = set(json.load(open(P("scripts", "kids_coordi_auto.json")))) if os.path.exists(P("scripts", "kids_coordi_auto.json")) else set()
     ct = json.load(open(P("kids", "coordi_tags.json")))
