@@ -1,951 +1,375 @@
 {
- "updated": "2026-11-21 16:16",
+ "updated": "2026-11-22 16:16",
  "hints": [
-  "백일선물",
-  "집들이선물",
-  "전기주전자",
-  "가족잠옷",
-  "커플잠옷"
+  "역류방지쿠션",
+  "수유쿠션",
+  "패딩세제",
+  "커피머신",
+  "캡슐커피머신"
  ],
  "rows": [
   {
-   "kw": "음식물처리기",
-   "vol": 151600,
+   "kw": "커피머신",
+   "vol": 79900,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "잠옷",
-   "vol": 90900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제습기",
-   "vol": 79500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차량용방향제",
-   "vol": 78500,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "소고기",
-   "vol": 66500,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전기포트",
-   "vol": 59100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "수면잠옷",
-   "vol": 51030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한우",
-   "vol": 47300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "집들이선물",
-   "vol": 47000,
-   "comp": "높음",
    "hint": true
   },
   {
-   "kw": "디퓨저",
-   "vol": 46200,
+   "kw": "세탁세제",
+   "vol": 64100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "담요",
-   "vol": 43400,
+   "kw": "일리커피캡슐",
+   "vol": 44830,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "화분",
-   "vol": 41300,
+   "kw": "24시카페",
+   "vol": 30360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이폰케이스",
-   "vol": 40290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "결혼식답례품",
-   "vol": 39500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흑염소진액",
-   "vol": 38110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "분유포트",
-   "vol": 37320,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "개업화분",
-   "vol": 36850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울잠옷",
-   "vol": 31480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치답례품",
-   "vol": 31070,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "상견례선물",
-   "vol": 30980,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캠핑용품",
-   "vol": 30720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥주",
-   "vol": 28000,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "집들이선물추천",
-   "vol": 27410,
+   "kw": "커피원두",
+   "vol": 27270,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "출산선물",
-   "vol": 26930,
+   "vol": 26630,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미아방지목걸이",
-   "vol": 24880,
+   "kw": "필립스커피머신",
+   "vol": 25820,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스선물",
-   "vol": 22890,
-   "comp": "높음",
+   "kw": "일리커피머신",
+   "vol": 23140,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커플잠옷",
-   "vol": 22020,
+   "kw": "돌체구스토",
+   "vol": 21720,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수유쿠션",
+   "vol": 20060,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "흑염소",
-   "vol": 21470,
+   "kw": "건조기시트",
+   "vol": 19640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캡슐커피머신",
+   "vol": 18900,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "원두커피",
+   "vol": 18080,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "무릎담요",
-   "vol": 20930,
+   "kw": "머미쿨쿨",
+   "vol": 16470,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "결혼기념일선물",
-   "vol": 19050,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "튼살크림",
-   "vol": 18700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흑염소효능",
-   "vol": 17600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바디드라이어",
-   "vol": 16920,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌답례품",
-   "vol": 16830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흑염소엑기스",
-   "vol": 16590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "낙산균",
-   "vol": 16540,
+   "kw": "향기부스터",
+   "vol": 14930,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "생일선물",
-   "vol": 16450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "염소탕",
-   "vol": 16440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캔들",
-   "vol": 16200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "결혼답례품",
-   "vol": 15490,
+   "kw": "신생아",
+   "vol": 13500,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남자잠옷",
-   "vol": 15420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기유산균",
-   "vol": 15280,
+   "kw": "일리캡슐",
+   "vol": 13340,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "흑염소진액효능",
-   "vol": 14950,
+   "kw": "드라이클리닝",
+   "vol": 12960,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "극세사담요",
-   "vol": 14610,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "여성잠옷",
-   "vol": 14450,
+   "kw": "역류방지쿠션",
+   "vol": 12630,
    "comp": "높음",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "돗자리",
-   "vol": 14210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "도라지정과",
-   "vol": 14200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한우선물세트",
-   "vol": 13900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "굿즈제작",
-   "vol": 13300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흑염소즙",
-   "vol": 12840,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아선물",
+   "kw": "역방쿠",
    "vol": 12570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "향초",
-   "vol": 12380,
+   "kw": "신생아선물",
+   "vol": 12500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에스프레소머신",
+   "vol": 12200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "홈웨어",
-   "vol": 11810,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기주전자",
-   "vol": 11660,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "밍크담요",
-   "vol": 11600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남성잠옷",
-   "vol": 11390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임산부선물",
-   "vol": 10560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "티포트",
-   "vol": 9740,
+   "kw": "커피메이커",
+   "vol": 12010,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "고무나무",
-   "vol": 9630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무용품",
-   "vol": 9540,
+   "kw": "가정용커피머신",
+   "vol": 11240,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "선물세트",
-   "vol": 9530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기모트레이닝세트",
-   "vol": 9420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "과일선물세트",
-   "vol": 9230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잠옷바지",
-   "vol": 9220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌선물",
-   "vol": 9070,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "은팔찌",
-   "vol": 8790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자잠옷",
-   "vol": 8730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "추석선물",
-   "vol": 8620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원피스잠옷",
-   "vol": 8580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌아기선물",
-   "vol": 8410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전통주",
-   "vol": 8310,
+   "kw": "울샴푸",
+   "vol": 11110,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기백일선물",
-   "vol": 8200,
+   "kw": "전자동커피머신",
+   "vol": 9930,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "중성세제종류",
+   "vol": 9760,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미니제습기",
+   "kw": "스타벅스커피",
+   "vol": 9690,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라떼",
+   "vol": 8100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "네스카페돌체구스토",
    "vol": 8050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유라커피머신",
+   "vol": 8020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실간식",
+   "vol": 7230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피캡슐",
+   "vol": 6800,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기돌선물",
-   "vol": 7940,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "빅사이즈잠옷",
-   "vol": 7740,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌아기장난감",
-   "vol": 7640,
+   "kw": "이염방지시트",
+   "vol": 6720,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "연말선물",
-   "vol": 7630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집생일선물",
-   "vol": 7600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기비타민D",
-   "vol": 7600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "결혼선물",
-   "vol": 7530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "퇴사선물",
-   "vol": 7490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "거실화분",
-   "vol": 7290,
+   "kw": "임산부바디필로우",
+   "vol": 6600,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마장동축산시장",
-   "vol": 7210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비비안잠옷",
-   "vol": 7030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아유산균",
-   "vol": 6990,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "양초",
-   "vol": 6960,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "추석선물세트",
-   "vol": 6860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흑염소탕",
-   "vol": 6660,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이사선물",
-   "vol": 6420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대형화분",
-   "vol": 6420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실내복",
+   "kw": "패딩세탁",
    "vol": 6340,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아빠생일선물",
-   "vol": 6240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등학생선물",
-   "vol": 6230,
+   "kw": "커피머신기",
+   "vol": 6320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "부모님선물",
-   "vol": 6220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "면잠옷",
-   "vol": 6180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바디드라이기",
+   "kw": "자판기",
    "vol": 6100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "100일선물",
-   "vol": 6100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신혼부부선물",
-   "vol": 6080,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "생일선물추천",
-   "vol": 6070,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잠옷브랜드",
-   "vol": 6000,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미아방지팔찌",
-   "vol": 5940,
+   "kw": "커피자판기",
+   "vol": 5930,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "축하화분",
-   "vol": 5890,
+   "kw": "돌체구스토커피머신",
+   "vol": 5730,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "엄마생일선물",
-   "vol": 5820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어버이날",
-   "vol": 5750,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자친구선물",
-   "vol": 5660,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임산부샴푸",
-   "vol": 5650,
+   "kw": "홈드라이세제",
+   "vol": 5720,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "개업축하화분",
+   "kw": "원두커피머신",
+   "vol": 5710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드라이클리닝가격",
+   "vol": 5610,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동커피머신",
+   "vol": 5560,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피종류",
    "vol": 5550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "빔프로젝터스크린",
-   "vol": 5530,
+   "kw": "세탁세제추천",
+   "vol": 5410,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "칠순선물",
-   "vol": 5470,
+   "kw": "24시무인카페",
+   "vol": 5180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "SCENT",
-   "vol": 5460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "의류관리기",
-   "vol": 5390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치선물",
-   "vol": 5380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "순면잠옷",
-   "vol": 5300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실크잠옷",
-   "vol": 5260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키티잠옷",
-   "vol": 5250,
+   "kw": "드립커피머신",
+   "vol": 5090,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "백일선물",
-   "vol": 5210,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "신생아비타민D",
-   "vol": 5040,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "병문안선물",
-   "vol": 5020,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부모님생신선물",
-   "vol": 4860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "판촉물제작",
-   "vol": 4800,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자잠옷세트",
-   "vol": 4790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임신선물",
-   "vol": 4640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "판촉",
-   "vol": 4640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가운",
-   "vol": 4600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무지잠옷",
+   "kw": "니트세탁",
    "vol": 4590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "그림액자",
+   "kw": "돌체구스토지니오S",
    "vol": 4590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자양강장제",
-   "vol": 4500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잠옷세트",
-   "vol": 4390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성실내복",
-   "vol": 4350,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "소형제습기",
-   "vol": 4350,
+   "kw": "커피머신렌탈",
+   "vol": 4440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반자동커피머신",
+   "vol": 4290,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "성년의날",
-   "vol": 4340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성잠옷세트",
-   "vol": 4310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "선생님선물",
-   "vol": 4260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보양식",
-   "vol": 4200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캠핑이불",
-   "vol": 4140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피포트추천",
+   "kw": "네스카페커피머신",
    "vol": 4130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "모달잠옷",
-   "vol": 4080,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "빔스크린",
-   "vol": 4060,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "차주전자",
-   "vol": 4060,
+   "kw": "빨래쉰내제거",
+   "vol": 3990,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여름잠옷",
-   "vol": 4020,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전자디퓨저",
-   "vol": 4010,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "드립커피세트",
-   "vol": 4000,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "친구결혼선물",
-   "vol": 4000,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기100일선물",
+   "kw": "사무실커피머신",
    "vol": 3980,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "차탕기",
-   "vol": 3880,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피선물세트",
-   "vol": 3860,
+   "kw": "ILLYSTORE",
+   "vol": 3900,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "친구출산선물",
-   "vol": 3830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친구선물",
-   "vol": 3830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자실내복",
+   "kw": "미니커피머신",
    "vol": 3820,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퇴직선물",
-   "vol": 3790,
+   "kw": "친구출산선물",
+   "vol": 3750,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "40대생일선물",
+   "kw": "오리털패딩세탁",
    "vol": 3640,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소고기선물세트",
-   "vol": 3630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수동커피그라인더",
-   "vol": 3620,
+   "kw": "신생아이불",
+   "vol": 3540,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "고급선물세트",
-   "vol": 3590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
    "kw": "아기선물",
-   "vol": 3550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기념품제작",
-   "vol": 3540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "60대여성선물",
    "vol": 3540,
    "comp": "높음",
    "hint": false
@@ -957,6253 +381,6829 @@
    "hint": false
   },
   {
-   "kw": "라운지웨어",
-   "vol": 3430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어버이날선물",
-   "vol": 3420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피저울",
-   "vol": 3410,
+   "kw": "신생아아기옷",
+   "vol": 3480,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "전기티포트",
-   "vol": 3410,
+   "kw": "카페창업",
+   "vol": 3360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자실내복",
-   "vol": 3390,
+   "kw": "아뜰리에슈매장",
+   "vol": 3180,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "소형커피머신",
+   "vol": 3170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "드시모네베이비스텝2",
-   "vol": 3330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오브제화환",
-   "vol": 3330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "시부모님선물",
-   "vol": 3330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "액상유산균",
-   "vol": 3230,
+   "kw": "커피필터",
+   "vol": 3070,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "여름실내복",
-   "vol": 3210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "설날선물",
-   "vol": 3200,
+   "kw": "대형커피머신",
+   "vol": 3060,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파자마파티",
-   "vol": 3200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "헬로키티잠옷",
-   "vol": 3190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성홈웨어",
-   "vol": 3190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "30대여자선물",
-   "vol": 3190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홍보물품",
-   "vol": 3160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "향수쇼핑몰",
-   "vol": 3150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "각인",
-   "vol": 3140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "남자수면바지",
-   "vol": 3110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "입맛없을때음식",
-   "vol": 3100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "100일아기선물",
-   "vol": 3080,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편백수",
-   "vol": 3030,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "할머니생신선물",
-   "vol": 3020,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기포트추천",
-   "vol": 3010,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "2살선물",
+   "kw": "죽부인",
    "vol": 3000,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "합격기원선물",
-   "vol": 2960,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타임모어",
-   "vol": 2950,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "밍크이불",
-   "vol": 2950,
+   "kw": "모유수유쿠션",
+   "vol": 2990,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카페라떼만들기",
+   "vol": 2920,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "50대여자선물",
-   "vol": 2930,
-   "comp": "높음",
+   "kw": "울세제",
+   "vol": 2880,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "화분쇼핑몰",
-   "vol": 2900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사은품",
-   "vol": 2860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부부의날",
-   "vol": 2860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "핸드드립주전자",
+   "kw": "가정용에스프레소머신",
    "vol": 2850,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남자파자마",
-   "vol": 2830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한우세트",
-   "vol": 2800,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "시어머니생신선물",
+   "kw": "패딩세제",
    "vol": 2790,
    "comp": "높음",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "단체선물",
-   "vol": 2780,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기독교굿즈",
-   "vol": 2770,
+   "kw": "커피머신추천",
+   "vol": 2700,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "소량인쇄",
-   "vol": 2760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아내결혼기념일선물",
-   "vol": 2760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수유잠옷",
-   "vol": 2740,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아용품",
-   "vol": 2720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조카돌선물",
-   "vol": 2690,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잡이",
+   "kw": "구스이불세탁",
    "vol": 2680,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파자마바지",
-   "vol": 2670,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기모파자마",
-   "vol": 2670,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "면파자마",
-   "vol": 2650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자친구100일선물",
+   "kw": "COFFEEMACHINE",
    "vol": 2590,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신혼부부커플잠옷",
-   "vol": 2580,
-   "comp": "높음",
+   "kw": "양막주머니",
+   "vol": 2570,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "본식부케",
-   "vol": 2580,
+   "kw": "일리캡슐커피",
+   "vol": 2540,
    "comp": "중간",
    "hint": false
   },
   {
    "kw": "출산선물추천",
-   "vol": 2560,
+   "vol": 2540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "차박용품",
-   "vol": 2520,
+   "kw": "업소용커피머신",
+   "vol": 2390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수동커피머신",
+   "vol": 2380,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커플수면잠옷",
-   "vol": 2490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성잠옷바지",
-   "vol": 2470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "염소즙",
-   "vol": 2440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치수건",
-   "vol": 2430,
+   "kw": "믹스커피자판기",
+   "vol": 2360,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "돌답례품수건",
-   "vol": 2420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "개업식화분",
-   "vol": 2410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화분배달",
-   "vol": 2390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기영양제",
-   "vol": 2390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "결혼축하선물",
-   "vol": 2390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "30대여자친구생일선물",
-   "vol": 2360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기념품샵",
-   "vol": 2360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기업판촉물",
-   "vol": 2340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캠핑러그",
+   "kw": "신생아출산선물",
    "vol": 2330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동구전자커피머신",
+   "vol": 2230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기역류방지쿠션",
+   "vol": 2160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌체구스토머신",
+   "vol": 2130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "무선주전자",
-   "vol": 2300,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "남성잠옷세트",
-   "vol": 2300,
+   "kw": "믹스커피머신",
+   "vol": 2130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아유산균",
-   "vol": 2280,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "홍보물",
-   "vol": 2240,
+   "kw": "커피자판기렌탈",
+   "vol": 2050,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "20대남자생일선물",
-   "vol": 2240,
+   "kw": "무인창업",
+   "vol": 2050,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플잠옷세트",
-   "vol": 2220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타임모어저울",
-   "vol": 2220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "레이저각인",
-   "vol": 2220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "양털담요",
-   "vol": 2220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니의류관리기",
-   "vol": 2210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주문제작",
-   "vol": 2210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타임모어그라인더",
-   "vol": 2140,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "남자잠옷바지",
-   "vol": 2120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니스타일러",
-   "vol": 2100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "50대엄마생신선물",
-   "vol": 2090,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신혼부부집들이선물",
+   "kw": "아망추",
    "vol": 2040,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "패딩드라이클리닝",
+   "vol": 1980,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "두돌아기선물",
-   "vol": 2040,
+   "kw": "원두커피기계",
+   "vol": 1930,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기목걸이",
-   "vol": 2030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이집선생님선물",
-   "vol": 2030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두돌선물",
-   "vol": 2020,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디스트리뷰터",
-   "vol": 2020,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남성잠옷바지",
-   "vol": 2010,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "꽃화분",
-   "vol": 1970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "50대아빠생일선물",
-   "vol": 1950,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아유산균비타민D",
-   "vol": 1940,
+   "kw": "캡슐커피추천",
+   "vol": 1890,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "개업축하선물",
-   "vol": 1910,
+   "kw": "휴대용커피머신",
+   "vol": 1870,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플파자마",
-   "vol": 1880,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "온도조절전기포트",
-   "vol": 1850,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "남자로브",
-   "vol": 1850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자홈웨어",
+   "kw": "캡슐머신",
    "vol": 1840,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "팔순답례품",
-   "vol": 1820,
+   "kw": "일리스토어",
+   "vol": 1750,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "각인선물",
-   "vol": 1810,
+   "kw": "커피용품",
+   "vol": 1720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카페개업선물",
-   "vol": 1810,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "담요제작",
-   "vol": 1790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자잠옷세트",
-   "vol": 1790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성면잠옷",
-   "vol": 1760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수면파자마",
-   "vol": 1740,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기유산균비타민D",
-   "vol": 1740,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "거즈잠옷",
-   "vol": 1730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잠옷추천",
-   "vol": 1710,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유니클로파자마",
+   "kw": "드라이크리닝",
    "vol": 1690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실내식물",
-   "vol": 1680,
+   "kw": "가정용커피머신추천",
+   "vol": 1590,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "향초캔들",
-   "vol": 1670,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "6개월아기선물",
-   "vol": 1640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파자마세트",
-   "vol": 1630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마장동한우선물세트",
-   "vol": 1620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친구집들이선물",
-   "vol": 1620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선전기주전자",
-   "vol": 1610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피서버",
-   "vol": 1600,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어르신선물",
+   "kw": "커피얼음정수기",
    "vol": 1590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가족잠옷",
-   "vol": 1580,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "아기미아방지목걸이",
-   "vol": 1580,
+   "kw": "자몽에이드",
+   "vol": 1590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "겨울커플잠옷",
+   "kw": "가정용커피머신기",
    "vol": 1580,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "집업후드",
+   "kw": "밀리타커피머신",
    "vol": 1580,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "블랑켓",
-   "vol": 1570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키티수면잠옷",
-   "vol": 1570,
+   "kw": "일리네스프레소캡슐",
+   "vol": 1560,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "흑염소농장",
-   "vol": 1560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "50대남자생일선물",
-   "vol": 1560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남성수면바지",
-   "vol": 1560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "요루면잠옷",
-   "vol": 1560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성파자마",
+   "kw": "커피기계",
    "vol": 1530,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스승의날선물",
-   "vol": 1500,
+   "kw": "캡슐커피머신추천",
+   "vol": 1520,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "4살여아선물",
-   "vol": 1500,
+   "kw": "아기쿠션",
+   "vol": 1510,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "공주잠옷",
-   "vol": 1500,
+   "kw": "가정용원두커피머신",
+   "vol": 1380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "특가",
-   "vol": 1500,
+   "kw": "드라이세제",
+   "vol": 1370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아이스커피",
+   "vol": 1370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어머니생신선물",
-   "vol": 1500,
+   "kw": "수건냄새제거",
+   "vol": 1360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소이캔들",
-   "vol": 1490,
-   "comp": "높음",
+   "kw": "스와들업사용시기",
+   "vol": 1360,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "전동스크린",
-   "vol": 1440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "20만원대선물",
-   "vol": 1440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파자마브랜드",
-   "vol": 1430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자실크잠옷",
-   "vol": 1410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "패밀리잠옷",
-   "vol": 1400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흑염소즙효능",
-   "vol": 1400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신혼집집들이선물",
-   "vol": 1400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "50대여성선물",
-   "vol": 1390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아비타민D유산균",
+   "kw": "휴대용에스프레소머신",
    "vol": 1350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "차포트",
-   "vol": 1340,
-   "comp": "높음",
+   "kw": "KRUPS",
+   "vol": 1350,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "돌수건",
-   "vol": 1340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가족잠옷세트",
+   "kw": "파드커피",
    "vol": 1320,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남아돌선물",
-   "vol": 1320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌아기유산균",
+   "kw": "멀티자판기",
    "vol": 1310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드라이클리닝세제",
+   "vol": 1310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무인카페창업비용",
+   "vol": 1300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오케타니수유쿠션",
+   "vol": 1300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "버츄오호환캡슐",
+   "vol": 1280,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "1주년선물",
-   "vol": 1290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잔치답례품수건",
-   "vol": 1280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "방향제추천",
-   "vol": 1280,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "여아돌선물",
-   "vol": 1270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신혼선물",
-   "vol": 1260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성수면잠옷",
-   "vol": 1260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성순면잠옷",
+   "kw": "일리캡슐머신",
    "vol": 1250,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남성수면잠옷",
-   "vol": 1240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쇼파블랭킷",
-   "vol": 1230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "30만원대선물",
-   "vol": 1230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남성파자마",
-   "vol": 1230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "체크잠옷",
-   "vol": 1230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장모님생신선물",
-   "vol": 1220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가족시밀러룩",
-   "vol": 1220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플겨울잠옷",
-   "vol": 1220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3살여아선물",
+   "kw": "일리커피머신캡슐",
    "vol": 1210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "산리오잠옷",
-   "vol": 1210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "포스터액자",
-   "vol": 1210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2살아기선물",
+   "kw": "커피머신브랜드",
    "vol": 1200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "핸드밀그라인더",
+   "kw": "출산축하선물",
+   "vol": 1200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌체구스토지니오S터치",
    "vol": 1190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "화분선물",
+   "kw": "신생아아기이불",
+   "vol": 1190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "폴바셋커피",
    "vol": 1160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조카100일선물",
-   "vol": 1140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아카이아저울",
-   "vol": 1140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "마니또선물",
+   "kw": "캡슐커피보관함",
+   "vol": 1150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코트세탁",
    "vol": 1130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무실개업선물",
-   "vol": 1130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "집방향제",
-   "vol": 1130,
+   "kw": "홈드라이",
+   "vol": 1100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아이유산균",
-   "vol": 1120,
+   "kw": "지멘스인덕션",
+   "vol": 1080,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "첫돌선물",
-   "vol": 1100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "한우선물",
-   "vol": 1100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실크파자마",
-   "vol": 1090,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소파덮개",
-   "vol": 1090,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "센스있는집들이선물",
-   "vol": 1090,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "드시모네유산균베이비",
-   "vol": 1090,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자연방목흑염소진액",
+   "kw": "스타벅스커피머신",
    "vol": 1070,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "나무화분",
-   "vol": 1060,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "섬세이에어샤워",
-   "vol": 1060,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "여성모달잠옷",
-   "vol": 1060,
+   "kw": "프랜차이즈카페",
+   "vol": 1070,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기팔찌",
-   "vol": 1050,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영사기",
-   "vol": 1050,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어린이목걸이",
-   "vol": 1040,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "순금선물",
+   "kw": "수동에스프레소머신",
    "vol": 1030,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아이디어상품",
-   "vol": 1030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌아기책",
-   "vol": 1020,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자파자마세트",
-   "vol": 1020,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "순면파자마",
+   "kw": "무인커피머신",
    "vol": 1010,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "친구돌잔치선물",
+   "kw": "신생아이불세트",
    "vol": 1010,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "산모애샴푸",
-   "vol": 1010,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기돌목걸이",
-   "vol": 1010,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어머님생신선물",
-   "vol": 1010,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈웨어바지",
+   "kw": "드립커피포트",
    "vol": 1000,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신혼집들이선물",
+   "kw": "시메",
    "vol": 1000,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아목걸이",
-   "vol": 990,
+   "kw": "블렌텍",
+   "vol": 970,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백일아기선물",
-   "vol": 990,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자잠옷하의",
-   "vol": 980,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타임모어드립포트",
+   "kw": "씨메커피머신",
    "vol": 970,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "개업선물추천",
-   "vol": 970,
+   "kw": "중고커피머신",
+   "vol": 940,
    "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아역류방지쿠션",
+   "vol": 940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아웃도어세제",
+   "vol": 940,
+   "comp": "중간",
    "hint": false
   },
   {
    "kw": "전기커피포트",
-   "vol": 960,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조카돌잔치선물",
-   "vol": 960,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바디건조기",
-   "vol": 960,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중학생잠옷",
-   "vol": 960,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신혼집선물",
-   "vol": 960,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "예쁜잠옷",
-   "vol": 960,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기모트레이닝복세트",
-   "vol": 960,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈웨어세트",
-   "vol": 950,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타임모어C3",
-   "vol": 940,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파세코바디드라이어",
-   "vol": 940,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "남성실크잠옷",
    "vol": 940,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "흙염소진액",
-   "vol": 930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선포트",
-   "vol": 930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모즈스웨덴전기포트",
-   "vol": 930,
+   "kw": "커피메이트",
+   "vol": 920,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "외국인친구선물",
-   "vol": 920,
+   "kw": "홈드라이클리닝",
+   "vol": 890,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "교수님선물",
-   "vol": 920,
+   "kw": "WMF커피머신",
+   "vol": 890,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남성홈웨어",
-   "vol": 920,
+   "kw": "카페커피머신",
+   "vol": 880,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "드시모네베이비",
-   "vol": 910,
+   "kw": "모로반사이불",
+   "vol": 880,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "2주년선물",
-   "vol": 910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3만원선물",
-   "vol": 910,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기은목걸이",
-   "vol": 900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "센스있는선물",
-   "vol": 900,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "은퇴선물",
-   "vol": 880,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기프트몰",
-   "vol": 880,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차도구",
-   "vol": 880,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공항룩",
-   "vol": 880,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "비건샴푸",
-   "vol": 870,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "귀여운잠옷",
+   "kw": "무인매장",
    "vol": 870,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "환갑꽃다발",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미아방지은목걸이",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소고기세트",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명절선물세트",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자수면잠옷",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "면잠옷바지",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성파자마세트",
-   "vol": 860,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "반팔잠옷",
+   "kw": "자판기사업",
    "vol": 850,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미아방지",
-   "vol": 840,
+   "kw": "에코두",
+   "vol": 850,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "횡성한우선물세트",
-   "vol": 840,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "육아템",
-   "vol": 840,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기저귀크림",
-   "vol": 830,
+   "kw": "버츄오캡슐호환",
+   "vol": 850,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "1살아기선물",
-   "vol": 830,
+   "kw": "일리인텐소",
+   "vol": 840,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "레오파드잠옷",
-   "vol": 830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남성파자마바지",
-   "vol": 830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남성실내복",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "진액",
+   "kw": "가찌아커피머신",
    "vol": 810,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "시흥꽃집",
-   "vol": 810,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소고기선물",
+   "kw": "신생아쿠션",
    "vol": 800,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "잠옷상의",
+   "kw": "드롱기반자동커피머신",
+   "vol": 800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터커피F11",
    "vol": 790,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "한살림흑염소",
-   "vol": 790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "50대여자생일선물",
-   "vol": 790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "승진축하선물",
-   "vol": 790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1000일선물",
+   "kw": "네스프레소캡슐커피머신",
    "vol": 780,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌아기전집",
+   "kw": "무인커피숍",
    "vol": 770,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "프로포즈꽃",
+   "kw": "라심발리",
    "vol": 770,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "꽃무늬잠옷",
+   "kw": "카페베이커리",
    "vol": 770,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "성인잠옷",
+   "kw": "네스프레소일리캡슐",
    "vol": 760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "섬세이바디드라이어",
-   "vol": 750,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "거실그림액자",
-   "vol": 750,
-   "comp": "높음",
+   "kw": "테팔커피머신",
+   "vol": 740,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "부모님선물세트",
-   "vol": 750,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플수면바지",
+   "kw": "무인까페",
    "vol": 740,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌아기책추천",
-   "vol": 740,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두돌아기책",
+   "kw": "커피캡슐머신",
    "vol": 730,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유니클로홈웨어",
+   "kw": "홈카페머신",
    "vol": 730,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "300일선물",
+   "kw": "커피추출기",
    "vol": 730,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "드립퍼",
+   "vol": 720,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "라심발리커피머신",
+   "vol": 720,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "요루잠옷",
-   "vol": 730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "진급선물",
+   "kw": "사무실커피머신렌탈",
    "vol": 710,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전기포트기",
+   "kw": "가정용자동커피머신",
    "vol": 710,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "티주전자",
+   "kw": "베누스타커피머신",
    "vol": 710,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "40대엄마생일선물",
+   "kw": "에스프레소커피머신",
    "vol": 700,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "20만원선물",
+   "kw": "무인카페창업",
    "vol": 690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "염소가격",
+   "kw": "캡슐커피머신호환",
    "vol": 690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스텐전기포트",
-   "vol": 690,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "쌍둥이선물",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기유산균추천",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부모님인사선물",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무지파자마",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스트라이프잠옷",
-   "vol": 680,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "부모님선물추천",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "5세여아선물",
+   "kw": "업소용커피머신렌탈",
    "vol": 670,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "60대남자생일선물",
-   "vol": 670,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "곰돌이잠옷",
+   "kw": "전자동커피머신추천",
    "vol": 660,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "크리스마스커플잠옷",
+   "kw": "드립커피메이커",
+   "vol": 660,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "큐리그커피머신",
    "vol": 660,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고기선물세트",
+   "kw": "던킨캡슐",
+   "vol": 660,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스칸디맘스와들업",
+   "vol": 660,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "온수디스펜서",
+   "vol": 660,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "미니에스프레소머신",
    "vol": 650,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "찻주전자",
+   "kw": "홈카페꾸미기",
    "vol": 650,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "중고빔프로젝터",
-   "vol": 640,
+   "kw": "업소용커피자판기",
+   "vol": 650,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "선물세트추천",
-   "vol": 640,
+   "kw": "무인점포",
+   "vol": 650,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이사선물추천",
-   "vol": 640,
+   "kw": "에스프레소캡슐",
+   "vol": 650,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "임신축하꽃",
+   "kw": "일리캡슐호환",
+   "vol": 640,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "부산커피머신렌탈",
    "vol": 630,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아선물",
+   "kw": "ILLY",
+   "vol": 630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음료자판기",
    "vol": 620,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자파자마",
+   "kw": "자동드립머신",
    "vol": 620,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성홈웨어세트",
+   "kw": "커피자판기무상임대",
    "vol": 610,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "시어머니선물",
+   "kw": "커피자동머신",
    "vol": 610,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "40대와이프생일선물",
+   "kw": "돌체커피머신",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코스트코커피캡슐",
+   "vol": 610,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "일리네스프레소",
+   "vol": 610,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가정용반자동커피머신",
    "vol": 600,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남성로브",
-   "vol": 600,
-   "comp": "높음",
+   "kw": "무인자판기",
+   "vol": 590,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남자면잠옷",
-   "vol": 600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "축영전",
+   "kw": "손빨래세제",
    "vol": 590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가족파자마",
+   "kw": "자르",
+   "vol": 590,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에버시스커피머신",
+   "vol": 590,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "드립머신",
    "vol": 580,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "출산산모선물",
+   "kw": "일리커피캡슐네스프레소",
    "vol": 580,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플실크잠옷",
+   "kw": "카누캡슐추천",
    "vol": 580,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "두피간지러움",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자아기돌선물",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형사무실인테리어",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "60대여자선물",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자파자마팬츠",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자잠옷바지",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자극세사잠옷세트",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "체크파자마",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신혼부부잠옷",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잠옷쇼핑몰",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "첫월급선물",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인테리어선물",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플홈웨어",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부들이잠옷",
+   "kw": "에소프레소머신",
    "vol": 570,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "임산부잠옷원피스",
+   "kw": "커피내리는기계",
    "vol": 570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "60대엄마생신선물",
+   "kw": "업소용자동커피머신",
    "vol": 570,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전기주전자추천",
+   "kw": "커피머신캡슐",
    "vol": 570,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "14K미아방지목걸이",
+   "kw": "드라이크리닝세제",
+   "vol": 570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일리호환캡슐",
+   "vol": 570,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "원두커피머신렌탈",
    "vol": 560,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자순면잠옷",
+   "kw": "씨메05PID",
    "vol": 560,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이팔찌",
+   "kw": "캠핑커피",
+   "vol": 560,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "드롱기에스프레소머신",
+   "vol": 550,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "두돌아기옷",
    "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "두돌여아선물",
-   "vol": 550,
-   "comp": "높음",
+   "kw": "일리캡슐추천",
+   "vol": 540,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "기념선물",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이사집선물",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "결혼선물추천",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인견잠옷",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "방향제리필",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모즈전기포트",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자실크잠옷",
+   "kw": "8개월아기옷",
    "vol": 540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌지난아기선물",
+   "kw": "밴딩머신",
    "vol": 540,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "200일아기선물",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플잠옷브랜드",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "집들이선물세트",
+   "kw": "업소용에스프레소머신",
    "vol": 530,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홈패션",
+   "kw": "무인커피",
    "vol": 530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "파드커피머신",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "티타임자판기",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일리인텐소캡슐",
+   "vol": 520,
    "comp": "높음",
    "hint": false
   },
   {
    "kw": "출산선물세트",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "건강즙",
-   "vol": 530,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "옷장냄새",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "향수사이트",
    "vol": 520,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실버미아방지목걸이",
-   "vol": 520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자잠옷상의",
-   "vol": 520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "칠순잔치선물",
-   "vol": 520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성실내복세트",
+   "kw": "ILLY커피머신",
    "vol": 510,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어르신선물추천",
+   "kw": "JURA커피머신",
    "vol": 510,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "군인선물",
-   "vol": 500,
+   "kw": "카누커피머신캡슐호환",
+   "vol": 510,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사돈선물",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "시험응원선물",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피포트기",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바디드라이",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "FED유산균",
-   "vol": 490,
+   "kw": "카누호환캡슐",
+   "vol": 510,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "고급선물",
+   "kw": "수유쿠션추천",
+   "vol": 500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신순위",
+   "vol": 500,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스와들블랭킷",
    "vol": 490,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성츄리닝",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "행사사은품",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유치원선생님선물",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바디드라이어추천",
+   "kw": "대용량커피머신",
    "vol": 480,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캔들선물",
+   "kw": "카피탈리캡슐",
    "vol": 480,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "4세여아선물",
+   "kw": "ILLY커피",
    "vol": 480,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "텐셀잠옷",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실선물",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남성홈웨어세트",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성파자마바지",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베이비유산균",
+   "kw": "엘로치오자르",
    "vol": 470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자취생선물",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "3살아기선물",
+   "kw": "운동복세제",
    "vol": 460,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기은팔찌",
+   "kw": "지니오S터치",
    "vol": 460,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "애기100일선물",
+   "kw": "중고자판기",
    "vol": 450,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파자마잠옷",
+   "kw": "동구전자커피자판기",
+   "vol": 450,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신할인",
+   "vol": 445,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에스프레소머신추천",
    "vol": 440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "병문안꽃",
+   "kw": "원두머신",
    "vol": 440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "포항이동꽃집",
+   "kw": "업소용전자동커피머신",
    "vol": 440,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "휴대용스타일러",
+   "kw": "동구커피머신",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신중고",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엘로치오마누스",
+   "vol": 440,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보나파르트",
    "vol": 430,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "스판잠옷",
+   "kw": "카누바리스타어반",
    "vol": 430,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "실내원피스",
+   "kw": "이데아커피",
    "vol": 430,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "좋은치약",
-   "vol": 430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플파자마세트",
+   "kw": "커피구독",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "푸마홈웨어",
+   "kw": "돌체구스토지니오S베이직",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "흑염소진액추천",
+   "kw": "훼마E98UP",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "정년퇴직선물추천",
+   "kw": "유라머신",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홈웨어추천",
+   "kw": "자동핸드드립머신",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "몸말리는기계",
+   "kw": "수유베개",
    "vol": 410,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "푸마언더웨어",
-   "vol": 410,
-   "comp": "높음",
+   "kw": "원두데일리",
+   "vol": 400,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남성모달잠옷",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "극세사커플잠옷",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "빅사이즈남성잠옷",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잠옷할인",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디퓨져추천",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키즈목걸이",
+   "kw": "사무실음료",
    "vol": 400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "의미있는선물",
+   "kw": "유아이불세트",
    "vol": 400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자파자마바지",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편한잠옷",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잠옷브랜드추천",
-   "vol": 400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자아기돌선물",
+   "kw": "커피머신기렌탈",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인영양제",
+   "kw": "캠핑커피머신",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "잠옷여성",
+   "kw": "일리캡슐커피머신",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "향수직구",
-   "vol": 380,
+   "kw": "전자동커피머신업소용",
+   "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잡이책",
-   "vol": 380,
+   "kw": "돌체구스토지니오S플러스",
+   "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "염소액기스",
-   "vol": 380,
+   "kw": "미니자판기",
+   "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "졸업식꽃",
+   "kw": "일리파드",
+   "vol": 390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "일리커피캡슐추천",
+   "vol": 390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산후산모선물",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매쉬스와들업",
+   "vol": 390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아침구",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스타벅스무인카페",
    "vol": 380,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "전신건조기",
+   "kw": "보아르커피머신",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "성인실내복",
+   "kw": "가찌아",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자취선물",
-   "vol": 380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어버이날선물순위",
-   "vol": 375,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "패밀리파자마",
+   "kw": "사내카페",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남성파자마세트",
+   "kw": "일리캡슐종류",
+   "vol": 370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아내복바지",
+   "vol": 370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기모자브랜드",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "감성액자",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "70대할머니선물",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실용적인선물",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자잠옷브랜드",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기티포트추천",
-   "vol": 370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "임신축하",
+   "kw": "커피머신정수기",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자아기선물",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잠옷선물",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스트라이프파자마",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쓰리피스잠옷",
+   "kw": "원두기계",
    "vol": 360,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "백화점잠옷",
+   "kw": "가정용전자동커피머신",
    "vol": 360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파자마팬츠",
+   "kw": "WPS스타벅스",
+   "vol": 360,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "JURA",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일리클라시코",
+   "vol": 360,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피가격",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에스프레소추출기",
    "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자실내복세트",
+   "kw": "커피머신가정용",
    "vol": 350,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "꽃다발케이크",
+   "kw": "필립스에스프레소머신",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신부품",
+   "vol": 350,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신종류",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아미아방지목걸이",
+   "kw": "원두커피자판기",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "면홈웨어",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파자마로브",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플잠옷추천",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캐릭터파자마",
+   "kw": "커피드립머신",
    "vol": 340,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "체크잠옷바지",
-   "vol": 340,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "선물용디퓨저",
+   "kw": "샤오미커피머신",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기미아방지팔찌",
+   "kw": "홈바리스타",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "디즈니파자마",
+   "kw": "신생아바디필로우",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어른들선물",
+   "kw": "개인카페창업",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무실이전선물",
+   "kw": "라바짜커피머신",
+   "vol": 330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베이비옷브랜드",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페커피머신기",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전신드라이기",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ATEMPO",
+   "kw": "고급커피",
    "vol": 320,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "고양이선물",
+   "kw": "네스프레소기업용",
    "vol": 320,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "꽃액자",
+   "kw": "커피머신대여",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플잠옷바지",
+   "kw": "스타터팩",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성홈웨어원피스",
+   "kw": "휴대용에스프레소",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "디퓨저선물세트",
+   "kw": "전자동머신",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피머신필터",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자파자마세트",
+   "kw": "원두커피머신가정용",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피머신일리",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "높은수유쿠션",
+   "vol": 300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "티타임A1",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "거실액자그림",
+   "kw": "자판기렌탈",
+   "vol": 300,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "바디필로우임산부",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "70대선물",
+   "kw": "이탈리아커피머신",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성잠옷브랜드",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더치커피선물세트",
+   "kw": "세코커피머신",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "목사님선물",
+   "kw": "캡슐커피머신사용법",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "임산부파자마",
+   "kw": "24시간무인카페",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "마약잠옷",
+   "kw": "SAECO커피머신",
    "vol": 290,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "스텐커피포트",
+   "kw": "VENUSTA",
    "vol": 290,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3세여아선물",
+   "kw": "동구전자베누스타",
+   "vol": 290,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "일리프란시스",
+   "vol": 290,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "일리천국",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일리파드커피",
+   "vol": 290,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "애기옷쇼핑몰",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "로봇커피",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초등학생목걸이",
+   "kw": "무인샵",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "졸업꽃",
+   "kw": "커피머신업소용",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "집들이디퓨저",
+   "kw": "아르떼커피머신",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자반팔잠옷",
+   "kw": "커피자판기중고",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "답례품디퓨저",
+   "kw": "드립커피기계",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "순면잠옷세트",
+   "kw": "라떼머신",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "체크무늬잠옷",
+   "kw": "반자동에스프레소머신",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자모달잠옷",
+   "kw": "홈커피머신",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "배샵",
+   "kw": "사무실커피",
    "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유라전자동커피머신",
+   "vol": 270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무인카페커피머신",
+   "vol": 260,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "발건조기",
+   "kw": "커피렌탈",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강남꽃도매상가",
+   "kw": "커피머신가격",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "2살여아선물",
+   "kw": "CIME",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파자마추천",
+   "kw": "카페그라인더",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남성순면잠옷",
+   "kw": "업소용커피그라인더",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "할머니생일선물",
+   "kw": "일리공식몰",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "네스프레소호환머신",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "엄마아기커플잠옷",
+   "kw": "드라이세탁",
+   "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피머신매장",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자잠옷브랜드",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "30대여자선물추천",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈웨어브랜드",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모임선물",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "레이온잠옷",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잡이전집",
+   "kw": "무인커피자판기",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "레이저인쇄",
+   "kw": "내려먹는커피",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "감성캠핑용품",
+   "kw": "카피탈리",
+   "vol": 250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파드머신",
    "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자아기선물",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남성면잠옷",
+   "kw": "휴대용캡슐머신",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아동목걸이",
-   "vol": 240,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미아방지은팔찌",
+   "kw": "업소용커피머신기",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기억에남는선물",
+   "kw": "아기수유쿠션",
+   "vol": 240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피머신원두",
+   "vol": 240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "미니커피자판기",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어머님선물",
+   "kw": "커피원두기계",
    "vol": 240,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "선물셋트",
+   "kw": "일리과테말라캡슐",
    "vol": 240,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "우정잠옷",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기업선물",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "그림선물",
+   "kw": "에스프레소기계",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "온가족샴푸",
+   "kw": "라떼커피머신",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "옷장제습기",
+   "kw": "캡슐커피머신청소",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "특별한생일선물",
+   "kw": "와카코",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "샤워건조기",
-   "vol": 230,
+   "kw": "무인카페머신",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광주커피머신",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자동에스프레소머신",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반자동커피머신추천",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "송년회경품",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈카페커피머신",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스타벅스머신",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈드라이크리닝세제",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드롱기캡슐커피머신",
+   "vol": 220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "영양제선물세트",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잠옷사이트",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "예쁜전기포트",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "학원빔프로젝터",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "단초점프로젝터",
+   "kw": "일리에티오피아",
    "vol": 220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "백화점한우선물세트",
+   "kw": "시모넬리",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "국내산잠옷",
+   "kw": "신생아모로반사이불",
    "vol": 220,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남자면파자마",
+   "kw": "1개월아기옷",
    "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "며느리생일선물",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자면잠옷",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이쁜잠옷",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오픈선물",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "SOLO잠옷",
-   "vol": 215,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커플로브",
+   "kw": "모드앤토드",
+   "vol": 220,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "가성비커피머신",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "부모님잠옷",
+   "kw": "캡슐커피머신기",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "푸마반바지",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파나소닉빔프로젝터",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인터넷꽃시장",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "각인서비스",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어르신생신선물",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부들부들잠옷",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플극세사잠옷",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "냉감잠옷",
+   "kw": "유라커피머신렌탈",
    "vol": 210,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남성라운지웨어",
+   "kw": "머신기",
    "vol": 210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "행사기념품추천",
+   "kw": "일리포르테",
    "vol": 210,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "첫출근선물",
+   "kw": "워터클리닝",
+   "vol": 210,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "휴대용수유쿠션",
+   "vol": 205,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "무인카페기계",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신전자동",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신반자동",
    "vol": 200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "설선물",
+   "kw": "홈카페용품",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가족선물",
+   "kw": "라피콜라",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "솔로잠옷",
+   "kw": "수유용품",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "50대아버지생신선물",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "귀여운커플잠옷",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "건강선물",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자파자마하의",
+   "kw": "현대큐밍커피머신",
    "vol": 200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "홈웨어상의",
+   "kw": "버츄오호환",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "6개월아기내복",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스와들디자인",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "브랜드잠옷",
+   "kw": "헝겊인형",
    "vol": 200,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "모달홈웨어",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수면잠옷남자",
-   "vol": 200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "꽃무늬파자마",
-   "vol": 195,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가족커플잠옷",
+   "kw": "전자동커피머신렌탈",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자잠옷추천",
+   "kw": "커피머신기추천",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "중고사무용품",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "설선물세트",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "몸건조기",
+   "kw": "까사카페",
    "vol": 190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "돌전집",
+   "kw": "프랑케커피머신",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "생일파티답례품",
+   "kw": "손세탁세제",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "말놀이",
+   "kw": "이태리커피머신",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신혼잠옷",
+   "kw": "편의점커피머신",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실음료수",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "네스프레소캡슐할인",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일리캡슐100",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "일리캡슐인텐소",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "네스프레소일리",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "홈드라이클리닝세제",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피드롱기",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플쇼핑몰",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "추모꽃다발",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아보리덤",
+   "kw": "커피전자동머신",
    "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "효도선물",
+   "kw": "가정용원두커피기계",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "옷장곰팡이제거",
+   "kw": "커피메이커추천",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "사무실용커피머신",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "체크파자마바지",
-   "vol": 175,
+   "kw": "1구커피머신",
+   "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신축성좋은잠옷",
+   "kw": "커피캡슐추천",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기업복지",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스프링온워드",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자판기대여",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "써모플랜커피머신",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피재료",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "BELLEMENT",
+   "vol": 180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에스프레소캡슐머신",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실크커플잠옷",
+   "kw": "캡슐커피머신비교",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "관엽화분",
+   "kw": "자동커피머신기",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "임원승진선물",
+   "kw": "카페머신",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "칠순화분",
+   "kw": "무인커피머신렌탈",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "교사선물",
+   "kw": "동구커피",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사진선물",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여아목걸이",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "우정선물",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "잠옷긴바지",
+   "kw": "역류방지",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "도트잠옷",
+   "kw": "커피기계렌탈",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "라운드잠옷",
+   "kw": "가정용커피머신렌탈",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "룸웨어",
+   "kw": "3개월아기선물",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "풍수지리액자",
+   "kw": "하이엔드커피머신",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "집들이선물디퓨저",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남성잠옷상의",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "마켓더치",
+   "kw": "커피믹스자판기",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남녀공용잠옷",
+   "kw": "카페스타717",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "전기차포트",
+   "kw": "네스프레소호환캡슐추천",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "코코자네",
+   "vol": 170,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "간식자판기",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스텐전기주전자",
+   "kw": "커피홀릭스",
    "vol": 170,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "예쁜커피포트",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스트라이프커플잠옷",
-   "vol": 165,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테디베어잠옷",
+   "kw": "캡슐커피머신렌탈",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "EB-X51",
+   "kw": "자동에스프레소머신",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "옷걸이스타일러",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "축구굿즈",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파나소닉프로젝터",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흑염소효과",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기팔찌",
+   "kw": "카페비스포크",
    "vol": 160,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "이색선물",
+   "kw": "원두구독",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바디드라이기추천",
+   "kw": "커피팩토리오피스",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자원피스잠옷",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "남자홈웨어세트",
+   "kw": "모닝커피머신",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "순면파자마세트",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성잠옷상의",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신혼부부잠옷브랜드",
+   "kw": "QUMING",
    "vol": 160,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "땡땡이잠옷",
+   "kw": "RISTRETTO",
    "vol": 160,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "부부잠옷",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남성이지웨어",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흑염소추천",
+   "kw": "회사커피머신",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소형의류관리기",
+   "kw": "국산커피머신",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "핸드드립용품",
+   "kw": "가정용캡슐커피머신",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성용잠옷",
+   "kw": "역류쿠션",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "회사커피머신렌탈",
+   "vol": 150,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카페창업컨설팅",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "액자선물",
+   "kw": "KIMBO",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "영전선물",
+   "kw": "카누바리스타캡슐커피머신",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "모달잠옷바지",
+   "kw": "소형가전선물",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성면잠옷세트",
+   "kw": "세버린",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "잠옷여자",
-   "vol": 150,
+   "kw": "오가닉아기이불",
+   "vol": 145,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "극세사남성잠옷",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "간절기잠옷",
+   "kw": "커피머신기계",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "순면홈웨어",
+   "kw": "가정커피머신",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "70대생일선물",
+   "kw": "캡슐머신추천",
+   "vol": 140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동커피머신추천",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캐릭터커플잠옷",
+   "kw": "커피머신라떼",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "은사님선물",
+   "kw": "캡슐커피기계",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "잠옷파자마",
+   "kw": "가정용에스프레소머신추천",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자홈웨어세트",
+   "kw": "카페컨설팅",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자반바지잠옷",
+   "kw": "만삭선물",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스테인레스전기포트",
+   "kw": "셀프드라이클리닝",
+   "vol": 140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "식당커피자판기",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "향수디퓨저",
+   "kw": "창원커피머신렌탈",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "주전자포트",
+   "kw": "김해커피머신렌탈",
+   "vol": 140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "드롱기디나미카플러스",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "잠옷커플",
+   "kw": "일리클라시코캡슐",
+   "vol": 140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "남자신생아옷",
+   "vol": 140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "코코테일즈",
+   "vol": 140,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "스와들업매쉬",
+   "vol": 135,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "원두커피머신추천",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남녀잠옷",
+   "kw": "커피머신자동",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "중학생파자마",
+   "kw": "카페창업패키지",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플누빔잠옷",
+   "kw": "대전커피머신렌탈",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이디야커피머신",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아생일선물",
+   "kw": "커피로봇",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "700일선물",
+   "kw": "대구커피머신",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사장님선물",
+   "kw": "산레모커피머신",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "공주파자마",
+   "kw": "베이커리카페창업",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "셔츠잠옷",
+   "kw": "빵굽는오븐",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성잠옷추천",
+   "kw": "일리에티오피아캡슐",
    "vol": 130,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "모임선물추천",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "시어서커잠옷",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "풍기인견잠옷",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "체크무늬파자마",
+   "kw": "에르고스와들업",
    "vol": 125,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "수면옷",
+   "kw": "수유방석",
    "vol": 120,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "폴리에스테르잠옷",
+   "kw": "글로리제빙기",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아100일선물",
+   "kw": "맛있는원두커피",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대량생산",
+   "kw": "업소용머신",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "부모님커플잠옷",
+   "kw": "마르코온수기",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "귀여운파자마",
+   "kw": "커피전문점창업",
    "vol": 120,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "개업선물액자",
+   "kw": "커피캡슐호환",
    "vol": 120,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신혼여행잠옷",
+   "kw": "SAECO",
    "vol": 120,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커플기모잠옷",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성인파자마",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "새틴파자마",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플잠옷원피스",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "와이프생일선물추천",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "지지미잠옷",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자이지웨어",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자가을잠옷",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자순면잠옷",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인견원피스",
-   "vol": 115,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플면잠옷",
+   "kw": "광주커피머신렌탈",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "연예인선물",
+   "kw": "무인카페자판기",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "로고각인",
+   "kw": "1인용커피머신",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "빔프로젝터중고",
+   "kw": "가정용커피메이커",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수면잠옷커플",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실크잠옷바지",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈웨어잠옷",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보들보들잠옷",
+   "kw": "커피캡슐기계",
    "vol": 110,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "파자마브랜드추천",
+   "kw": "원두커피메이커",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "순면커플잠옷",
+   "kw": "무인창업박람회",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "프랑케",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고급선물추천",
+   "kw": "영업용커피머신",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무선전기포트추천",
+   "kw": "사무실원두",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "집안방향제",
+   "kw": "네스프레소커피머신기",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고급파자마",
+   "kw": "사무실탕비실",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "회사휴게실",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "큐리그",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "정수기커피머신",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드립포트추천",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "일리아메리카노캡슐",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "리스트레토아덴자",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아이카필라스",
+   "vol": 110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가정용커피머신기추천",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "퓨마운동복",
+   "kw": "바리스타커피머신",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "승진축하메세지",
+   "kw": "원두커피머신기",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수면커플잠옷",
+   "kw": "자동원두커피머신",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "예쁜홈웨어",
+   "kw": "업소커피머신",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무실이사선물",
+   "kw": "사무실커피머신추천",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "집들이액자선물",
+   "kw": "커피머신임대",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실크잠옷세트",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "면파자마세트",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "예쁜파자마",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여름커플잠옷",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성인남자잠옷",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자잠옷추천",
+   "kw": "역류방지쿠션추천",
    "vol": 100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "HEM인센스스틱",
+   "kw": "스타벅스자판기",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신혼부부잠옷추천",
+   "kw": "카페용커피머신",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "FRANKE",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오븐렌탈",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "탕비실커피",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "서울커피머신렌탈",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대용량커피메이커",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피팩토리커피머신",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "식당커피머신",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "저가커피창업",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피암마커피머신",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에버시스E4S",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일리캡슐100개",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일리전용캡슐",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "일리캡슐과테말라",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "일리캡슐네스프레소",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이탈리안커피캡슐",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일리룽고",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "투썸플레이스캡슐커피",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "멀티자판기렌탈",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지브로홈드라이",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "통잠이불",
+   "vol": 95,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "무인커피기계",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "편백샴푸",
+   "kw": "커피머신비교",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "그래놀라선물세트",
+   "kw": "휴대용캡슐커피머신",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "향수구매",
+   "kw": "대전커피머신",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "3살조카선물",
+   "kw": "캡슐자판기",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실내잠옷",
+   "kw": "무인카페프랜차이즈",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "모녀잠옷",
+   "kw": "베누스타HQ",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전동커피머신",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "집에서드라이클리닝",
    "vol": 90,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크리스마스커플파자마",
+   "kw": "상업용커피머신",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "모달잠옷세트",
+   "kw": "사무실커피원두",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "집들이액자",
+   "kw": "미용실커피머신",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "순면여성잠옷",
+   "kw": "테팔에스프레소머신",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플잠옷빅사이즈",
+   "kw": "동구커피자판기",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실내복세트",
+   "kw": "카누네스프레소머신",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "와인병디퓨저",
+   "kw": "일리플로우팩",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쉘몬",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "13개월아기옷",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전기포트보온",
+   "kw": "자판기임대",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "당뇨흑염소진액",
+   "kw": "신생아목베개",
+   "vol": 85,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "서구커피",
    "vol": 85,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자잠옷반팔",
+   "kw": "신생아옷쇼핑몰",
    "vol": 85,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신혼부부잠옷세트",
+   "kw": "커피자판기임대",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플잠옷선물",
+   "kw": "얼음커피정수기",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "중고프로젝터",
+   "kw": "커피캡슐머신추천",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에스프레소머신렌탈",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "축하오브제",
+   "kw": "반자동커피머신렌탈",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "핸드메이드선물",
+   "kw": "캡슐커피자판기",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고속터미널꽃바구니",
+   "kw": "대구커피머신렌탈",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전시회화환문구",
+   "kw": "커피자판기부품",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자애기선물",
+   "kw": "커피그라인더중고",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "건강선물세트",
+   "kw": "일리캡슐개별포장",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "일리머신캡슐",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이탈리안커피",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아빠잠옷",
+   "kw": "카누머신기",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동핸드드립",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오즈윈드바디드라이어",
+   "kw": "17개월아기옷",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이오맘바디드라이어",
+   "kw": "여자신생아옷",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "코슬리바디드라이어",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청소년파자마",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플파자마바지",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "결혼식답례선물",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자파자마반바지",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "얇은잠옷",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엄마홈웨어",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디퓨저향추천",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남녀커플잠옷",
+   "kw": "카페커피기계",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캐릭터잠옷세트",
+   "kw": "백일남자아기옷",
    "vol": 75,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자동커피머신기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캡슐머신기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청주커피머신수리",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오피스커피머신",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페장비",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "FRANKE커피머신",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원두정기구독",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원두자판기",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "인천커피머신렌탈",
+   "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아포트로닉스",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "집들이그림",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고모선물",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조거파자마",
+   "kw": "더카페큐밍블랙",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "우정파자마",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고급스러운선물",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고체치약만들기",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "9부잠옷",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셔츠형잠옷",
+   "kw": "커피머신단기렌탈",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "60대여자생일선물",
+   "kw": "HQCB300B0B",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "믹스커피자판기렌탈",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "모달커플잠옷",
+   "kw": "샤오미캡슐머신",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "치보카피시모",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피전시회",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자겨울잠옷상의",
+   "kw": "소형자판기",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자잠옷가운",
+   "kw": "네스프레소호환커피캡슐",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "디퓨저선물추천",
+   "kw": "캡슐호환",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남성잠옷브랜드",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자스판잠옷",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남성면파자마",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "레이온파자마",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보온전기주전자",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디퓨져대용량",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신혼부부잠옷선물",
+   "kw": "겨울옷세탁",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "예쁜실내복",
-   "vol": 65,
+   "kw": "원두커피렌탈",
+   "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파자마하의",
-   "vol": 65,
+   "kw": "가정용커피기계",
+   "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "체크잠옷세트",
-   "vol": 65,
+   "kw": "스팀커피머신",
+   "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고등학생잠옷",
-   "vol": 65,
+   "kw": "아메리카노머신",
+   "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "반팔잠옷원피스",
-   "vol": 65,
+   "kw": "저렴한커피머신",
+   "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "모달남자잠옷",
-   "vol": 65,
+   "kw": "캡슐커피머신종류",
+   "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "반팔커플잠옷",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "면커플잠옷",
-   "vol": 65,
+   "kw": "행사경품",
+   "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신혼부부커플잠옷브랜드",
-   "vol": 65,
+   "kw": "홈커피머신추천",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신호환",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "고급커피머신",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자동원두커피머신",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아메리카노커피머신",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아메리카노기계",
+   "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "모달여성잠옷",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "프릴파자마",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성7부잠옷",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "생화꽃목걸이",
+   "kw": "사무실원두커피머신렌탈",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장미선물",
+   "kw": "자동커피머신렌탈",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "APPOTRONICS",
+   "kw": "무인커피머신가격",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "2돌선물",
+   "kw": "카페운영",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "회사커피",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "동구전자자판기",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "집들이선물액자",
+   "kw": "전주커피머신",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실크홈웨어",
+   "kw": "카페머신기",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "잠옷메이커",
+   "kw": "동구전자커피머신렌탈",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "귀여운액자",
+   "kw": "제주커피머신렌탈",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "설선물추천",
+   "kw": "SANREMO",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플파자마브랜드",
+   "kw": "웰스커피머신",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남성반팔잠옷",
+   "kw": "원두자동커피머신",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에스프레소머신기",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성잠옷쇼핑몰",
+   "kw": "울산커피머신렌탈",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "순면남자잠옷",
+   "kw": "네스프레소캡슐카페인",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "드롱기커피머신렌탈",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카피시모",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자7부잠옷",
+   "kw": "커피머신기중고",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파자마선물",
+   "kw": "EVERSYS",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스테인리스커피포트",
+   "kw": "커피장비",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홈웨어파자마",
+   "kw": "드립커피머신추천",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "편안한잠옷",
+   "kw": "무인자판기창업",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "디퓨져선물",
+   "kw": "음료자판기가격",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "국산커플잠옷",
+   "kw": "스낵자판기",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트릭홀릭",
+   "vol": 60,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "홈카페에스프레소머신",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용머신기",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신축성잠옷",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플잠옷실크",
+   "kw": "SHOTT시럽",
    "vol": 55,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "자연유래샴푸",
+   "kw": "모유쿠션",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미산성샴푸",
+   "kw": "홈드라이크리닝",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "흙염소진액효능",
+   "kw": "패딩점퍼세탁",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카페커피머신브랜드",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "비건샴푸추천",
+   "kw": "나비잠스와들",
    "vol": 55,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "특별한집들이선물",
+   "kw": "데니쉬스튜디오",
    "vol": 55,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "10대여자잠옷",
+   "kw": "베이비뵨실리콘턱받이",
    "vol": 55,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "바지잠옷",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "50대잠옷",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플잠옷반팔",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플실내복",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인견파자마",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "러블리잠옷",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성스러운잠옷",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자실크파자마",
+   "kw": "가정용반자동커피머신추천",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어르신생일선물",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "굿즈도매",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사진기념품",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인테리어소품선물",
+   "kw": "가정용캡슐커피머신추천",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "파자마쇼핑몰",
+   "kw": "캡슐커피머신라떼",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바디드라이어비교",
+   "kw": "캡슐커피메이커",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오즈윈드",
+   "kw": "캡슐커피머신기추천",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실전자동커피머신",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실원두커피머신",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "더치커피머신",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "독특한선물",
+   "kw": "원두커피자판기렌탈",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플잠옷브랜드추천",
+   "kw": "전자동커피머신비교",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "사무실커피자판기",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "로브파자마",
+   "kw": "동구티타임",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "긴팔커플잠옷",
+   "kw": "카페에스프레소머신",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원피스커플잠옷",
+   "kw": "스위스커피머신",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성면파자마",
+   "kw": "업소용반자동커피머신",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "답례커피",
+   "kw": "업소용커피머신브랜드",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피포트브랜드",
+   "kw": "업소용원두커피기계",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "하늘색잠옷",
+   "kw": "카페커피머신렌탈",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신판매",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "훼마X30",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자동커피메이커",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무인카페머신렌탈",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "SCISHARE",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신2구",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일리커피머신Y3.3캡슐",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일리코스타리카캡슐",
+   "vol": 50,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "룽고인텐소",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "드롱기캡슐",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "이디아캡슐",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피에반하다무인",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "세코아우리카",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피기계종류",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "부드러운파자마",
+   "kw": "커피머신세트",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "잠옷하의",
+   "kw": "미니캡슐커피머신",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "프리미엄흑염소진액",
+   "kw": "신생아수면쿠션",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아줌마잠옷",
+   "kw": "커피머신카페",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초록색잠옷",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세트잠옷",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "빈티지잠옷",
+   "kw": "카페줄루",
    "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커플반팔잠옷",
+   "kw": "이디야캡슐머신",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남편잠옷",
+   "kw": "치보커피머신",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남성면잠옷바지",
+   "kw": "일리싱글플로우팩",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "CAFFITALY",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "꼬꼬잠스와들",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아옷사이트",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "예쁜잠옷브랜드",
+   "kw": "오가닉내의",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자면파자마",
+   "kw": "커피머신기브랜드",
    "vol": 45,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "모달반팔잠옷",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자7부파자마",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자순면파자마",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "예쁜여자잠옷",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고급커플잠옷",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "겨울커플파자마",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "허니문잠옷",
+   "kw": "스마트밴딩머신",
    "vol": 40,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "집들이선물그림",
+   "kw": "신혼집커피머신",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소리펜",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전시회꽃선물",
+   "kw": "사무용커피머신",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사진액자선물",
+   "kw": "천안커피머신렌탈",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "나이트웨어",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자홈웨어바지",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인스타잠옷",
+   "kw": "홈카페머신추천",
    "vol": 40,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남녀공용파자마",
+   "kw": "2구커피머신",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어르신홈웨어",
+   "kw": "산모용품",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매장커피머신",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아메리카노자판기",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "매장용커피머신",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용원두커피머신",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용드라이세제",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "청주커피머신",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페커피머신추천",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "FRANKEA600",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피자판기대여",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동양앤커피",
+   "vol": 40,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "업소용드립커피머신",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피원두판매",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피숍커피머신",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수원커피머신렌탈",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유라WE8",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세코그랑이데아",
    "vol": 40,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "남성잠옷추천",
+   "kw": "믹스커피머신렌탈",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실크남자잠옷",
+   "kw": "유라X6",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "한글전집",
+   "kw": "무인카페렌탈",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "올카페캡슐",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가족홈웨어",
+   "kw": "치보캡슐",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "얼음커피머신",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페쇼핑몰",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "네스프레소캡슐커피호환",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유기농몰",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "무인카페매출",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에스프레소머신업소용",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용에스프레소커피머신",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카라잠옷",
+   "kw": "소형에스프레소머신",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플파자마추천",
+   "kw": "소형커피메이커",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남녀잠옷세트",
+   "kw": "집에서커피",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파자마커플",
+   "kw": "호환캡슐머신",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "예쁜여성잠옷",
+   "kw": "홈카페커피머신추천",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "집들이그림선물",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니그림액자",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스승의날선물추천",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라헨느바디드라이어",
+   "kw": "가정용전자동커피머신추천",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "무지커플잠옷",
+   "kw": "모유수유용품",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "꽃사진액자",
+   "kw": "업소용커피머신추천",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "해바라기사진액자",
+   "kw": "집에서드라이",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신혼부부파자마",
+   "kw": "커피자동머신기",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여성잠옷가운",
+   "kw": "카페전자동커피머신",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "체크커플잠옷",
+   "kw": "반자동커피머신기",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "브랜드커플잠옷",
+   "kw": "CAFISSIMO",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백화점커플잠옷",
+   "kw": "카페기계",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플순면잠옷",
+   "kw": "일리커피클라시코",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실크남성잠옷",
+   "kw": "드롱기캡슐커피",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플모달잠옷",
+   "kw": "셀프커피",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자파자마브랜드",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자파자마잠옷",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성인홈웨어",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플여름잠옷",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "냉장고바지잠옷",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈웨어쇼핑몰",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "디퓨져답례품",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남성순면파자마",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파자마룩",
+   "kw": "매쉬스와들",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "기업선물세트",
+   "kw": "스와들업말랑하니",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "디퓨저고급",
+   "kw": "신생아여자옷",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "꽃향기디퓨저",
+   "kw": "오가닉신생아",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "답례품더치커피",
+   "kw": "카페커피머신가격",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "예쁜전기주전자",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신혼커플잠옷",
+   "kw": "신혼부부커피머신",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기념품포장",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "2살조카선물",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장인어른생일선물",
+   "kw": "홈카페만들기",
    "vol": 30,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "웨딩촬영잠옷",
+   "kw": "사무실커피머신기",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피머신패키지",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "캡슐형커피머신",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자고급잠옷",
+   "kw": "탕비실커피머신",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소액선물",
+   "kw": "사무실커피메이커",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피머신회사",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자방디퓨저",
+   "kw": "원두머신기",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전기포트브랜드",
+   "kw": "청주커피머신렌탈",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자귀여운잠옷",
+   "kw": "원두커피기계렌탈",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신구매",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신선물",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동구전자티타임A1",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "호텔커피머신",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병원커피머신",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "FRANKEA400",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피머신업체",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뷔페커피머신",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "회사카페",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "탐앤탐스커피머신",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "제주커피머신",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "전주커피머신렌탈",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "네스프레소커피머신렌탈",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "현대커피머신",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "네스프레소머신렌탈",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피자동판매기",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피팩토리머신",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "목포커피머신",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용전자동커피머신기",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샵인샵카페",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무인카페커피머신렌탈",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페장비렌탈",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자동커피머신중고",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드롱기렌탈",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라마르조꼬렌탈",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피사이트",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "로르캡슐",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "2세옷",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피머신기종류",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "잠옷상하세트",
+   "kw": "자취커피머신",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "찰랑잠옷",
+   "kw": "캡슐머신비교",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플체크잠옷",
+   "kw": "호환캡슐커피머신",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "곰돌이커플잠옷",
+   "kw": "캡슐에스프레소머신",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "편한파자마",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "저렴한잠옷",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신혼파자마",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신기한선물",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "개업선물그림",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여성체크잠옷",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초상화선물",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플집들이선물",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실크잠옷추천",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바디건조기추천",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "회사선배선물",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기숙사잠옷",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어르신파자마",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자체크잠옷",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엄마파자마",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정의달선물",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실크파자마세트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네이비잠옷",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "40대잠옷",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가을커플잠옷",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "결혼선물잠옷",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오니에르",
+   "kw": "CASACAFFE",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커플잠옷사이트",
+   "kw": "일리미타카",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "샤워드라이",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "순면잠옷브랜드",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인견잠옷세트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잡이바나펜",
+   "kw": "기업용커피머신",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "답례품콜드브루",
+   "kw": "스텐커피머신",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "면잠옷추천",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여름냉감잠옷",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자모달잠옷",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "지속력좋은디퓨저",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "향기좋은디퓨져",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "패밀리홈웨어",
+   "kw": "커피캡슐머신기",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "회장님선물",
+   "kw": "임신용품",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카페기기",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "빽다방커피머신",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피미니자판기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "셀프커피머신",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용커피자동머신",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신렌트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실커피머신임대",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "파스쿠찌커피머신",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피머신기대여",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현대커피머신렌탈",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피대여",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "원두커피머신대여",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포항커피머신렌탈",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페용커피머신기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식당용커피머신",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피제조기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용커피기계",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필립스커피머신비교",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순천커피머신",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동커피머신업소용",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "강릉커피머신",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라떼아트머신",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가게커피머신",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "네스프레소캡슐구독",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "진주커피머신렌탈",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피암마",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용커피머신가격",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카누워터저그",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쿠조커피머신",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "TORO커피머신",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일리재사용캡슐",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥심캡슐",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "써니데이블렌드",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "이탈리코캡슐",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "타시모",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니빈스",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스타벅스캡슐자판기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1세옷",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스와드림",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "신생아우주복선물",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용드라이크리닝",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자판기위탁",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "무인매점",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카페커피머신종류",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페자동커피머신",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에스프레소캡슐커피머신",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "웨딩프로모션",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "집들이커피머신",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전시회축하화환문구",
+   "kw": "사무실자동커피머신",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "돌잡이맘",
+   "kw": "홈카페재료",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실내용디퓨저",
+   "kw": "커피머신사무실",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플원피스잠옷",
+   "kw": "가정용커피머신브랜드",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페창업커피머신",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원두정기배송",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "렌탈커피머신",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대형카페창업",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "회사용커피머신",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신리스",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "필립스커피머신렌탈",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용전자동커피머신렌탈",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현대렌탈케어커피머신",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현대큐밍커피머신렌탈",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그라인더렌탈",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "테이크아웃전문카페",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용전자동머신",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드롱기캡슐머신",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라바짜머신",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터커피F11플러스",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "무인커피자판기렌탈",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유라X8",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유라커피머신기",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대구커피자판기",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "얼음커피자판기",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뱀부스와들업",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사내편의점",
+   "vol": 20,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피숍머신",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남녀파자마",
+   "kw": "미니원두커피머신",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플실크파자마",
+   "kw": "에스프레소커피머신기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신혼여행커플잠옷",
+   "kw": "작은커피머신",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "지지미파자마",
+   "kw": "캡슐커피머신가격",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "캡슐커피머신브랜드",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이스커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자취생커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용캡슐커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실캡슐커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일리커피머신세트",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "간절기파자마",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부모님파자마",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신혼부부실크잠옷",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "편백수샴푸",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흑염소고형분",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "발령화분",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "개업그림",
+   "kw": "나무사이로캡슐",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "돌꽃바구니",
+   "kw": "가정용자동커피머신기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인생일선물",
+   "kw": "전자동커피머신기추천",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "흑염소함량",
+   "kw": "캡슐커피렌탈",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "그림액자선물",
+   "kw": "국민수유쿠션",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이사선물그림",
+   "kw": "광주커피자판기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "특이한개업선물",
+   "kw": "커피머신렌탈업체",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "발드라이어",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "발판드라이기",
+   "kw": "전자동커피머신브랜드",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전신드라이",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "풋드라이어",
+   "kw": "토로커피머신",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "입택선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "셔츠파자마",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "77잠옷",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돈들어오는선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인테리어용액자",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "20대여자잠옷",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "요루면커플잠옷",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "드레스룸탈취",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에어락의류관리기",
+   "kw": "돌아가선물",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "설날이벤트",
+   "kw": "자동커피기계",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커플빅사이즈잠옷",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에블린커플잠옷",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "커플잠옷쇼핑몰",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자친구잠옷",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "남자체크파자마",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "인견여름잠옷",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "순면잠옷추천",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여자잠옷쇼핑몰",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여름인견잠옷",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "돌잡이스마트박스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "모달여름잠옷",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "풍기인견파자마",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커플잠옷여름",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쿨링잠옷",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "50대홈웨어",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "시댁명절선물",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기포트1.5L",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "건강답례품",
+   "kw": "동구머신",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "꽃집디퓨저",
+   "kw": "병원커피",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "디퓨저판매",
+   "kw": "원주커피머신",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "예쁜디퓨져",
+   "kw": "커피기기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유치원스승의날선물",
+   "kw": "커피머신렌탈비용",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "허브향디퓨저",
+   "kw": "커피임대",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "향좋은디퓨져",
+   "kw": "사무실커피렌탈",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "더조은커피",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피캡슐자판기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "드라이용액",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실캡슐커피",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피기계대여",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥도날드커피머신",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "머신렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "용인커피머신렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실용커피머신렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "FRANKEA300",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동구커피머신렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "YCC50A",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피머신무료렌탈",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피숍기계",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "조용한커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "음식점커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페머신렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동급수커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자판기커피렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피자재",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페창업용품",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "PC방커피",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실자판기",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "사내카페테리아",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "큐밍커피머신",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "꽃향디퓨저",
+   "kw": "업소용자동커피머신렌탈",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "양재동꽃시장디퓨져",
+   "kw": "씨메03커피머신",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "비누꽃카네이션",
+   "kw": "아이스커피자판기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "2WE",
+   "kw": "카페창업머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원두커피머신단기렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현대렌탈커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "평택커피머신렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자동업소용커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유라렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "교원웰스커피머신",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피머신기가격",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "정수기연결커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "상업용전자동커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용커피머신기렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페창업렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동구전자렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병원커피머신렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식당커피머신렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용커피자판기렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원두커피정수기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용캡슐머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "춘천커피머신렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "식당커피기계",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "에버시스머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2그룹커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "까페커피머신",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "웅진커피",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "업소용커피머신종류",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부산커피렌탈",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수입커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라마르조꼬리스",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "업소용전자동에스프레소머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라바짜캡슐머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "샤오미S1301",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에스쿠다마커피머신",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카누네스프레소호환머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SK매직커피머신",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "중고자동커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무인카페커피기계",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용1구커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용자동머신",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "음식점커피자판기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고미니커피자판기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보급형커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "믹스커피렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포드커피",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고업소용커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌체구스토호환캡슐커피",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라떼마키아토",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "일리캡슐아메리카노",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "일리캡슐직구",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쉘몬자몽",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유라에스프레소",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "ECS커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "닥터커피렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "ESE파드머신",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "단기커피머신렌탈",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동서식품캡슐커피",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무인커피점",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "100일아가옷",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "1살옷",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스와들메쉬",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스칸디맘스와들슈프림",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "엘라바좁쌀",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "오가닉유아복",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "오가닉의류",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유트러스속싸개",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "오가닉신생아옷",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "사내매점",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "회사자판기",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "그랑이데아",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에스프레소머신종류",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용자동커피머신추천",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용중고커피머신",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세코로얄",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세코로얄블랙",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세코아우리카케이탑",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "광주제빙기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광주팝콘기계대여",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카페용품사이트",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피머신전시장",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자동에스프레소커피머신",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기업커피머신",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "이쁜파자마",
+   "kw": "업소용캡슐커피",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신혼부부홈웨어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강남빔프로젝터대여",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파나소닉총판",
+   "kw": "사무실용원두커피머신",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "기업용빔프로젝터",
+   "kw": "사무실용캡슐커피머신",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "기프트7",
+   "kw": "사무실용커피머신기",
    "vol": 10,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "여성의날선물",
+   "kw": "사무실용커피머신추천",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "흙염소",
+   "kw": "사무실원두커피기계",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신견적",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신사무실용",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "회사커피머신기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "회사커피머신추천",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사내커피머신",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세코커피",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기업용캡슐커피머신",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용전자동커피머신기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가정용전자동에스프레소머신",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동커피머신기추천",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "어버이날금선물",
+   "kw": "커피머신기임대",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오피스커피머신렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "액상커피머신",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신무료",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "용산빔프로젝터",
+   "kw": "원두렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명화선물",
+   "kw": "목포커피머신렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미술선물",
+   "kw": "커피머신렌탈추천",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전자동에스프레소머신추천",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "개인카페창업컨설팅",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페창업장비",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "색다른선물",
+   "kw": "기업커피머신렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "선물용그림",
+   "kw": "스페셜티캡슐커피",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "오피스커피구독",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "해바라기그림선물",
+   "kw": "사무실에스프레소머신",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "20대잠옷",
+   "kw": "이디야머신",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "VOVO바디드라이어",
+   "kw": "강남커피머신렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "샤오미바디드라이어",
+   "kw": "교회커피머신",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "의미있는선물추천",
+   "kw": "군산커피머신",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "공주홈웨어",
+   "kw": "대구원두커피",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "병원용커피머신",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부산커피머신대여",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "사무실원두커피",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "대구커피머신기렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무인커피머신임대",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원두기계렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피빈머신",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피원두업체",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "양복드라이크리닝",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "사무실커피머신구매",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "숙면잠옷",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "친환경잠옷",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "커플여름파자마",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "개업그림선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "샤틴잠옷",
+   "kw": "커피머신무상임대",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "감성파자마",
+   "kw": "사무용커피머신렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "밥솥선물",
+   "kw": "사무실커피머신기렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "부모님설선물",
+   "kw": "교원커피머신",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "설날할인",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "설이벤트",
+   "kw": "제롬커피머신",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "예비시댁선물",
+   "kw": "커피머신렌탈관리",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "추석부모님선물",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "봄커플잠옷",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "남자민소매잠옷",
+   "kw": "원두자판기렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자파자마파티",
+   "kw": "커피메이커렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남자봄잠옷",
+   "kw": "렌탈커피",
    "vol": 10,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "40대홈웨어",
+   "kw": "원두커피머신기렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세보커피",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신혼부부여름잠옷",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "여름커플파자마",
+   "kw": "세코머신",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "남성봄잠옷",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "여자파자마추천",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "냉감여름잠옷",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "시어서커여름잠옷",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "여름모달잠옷",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "여름반바지잠옷",
+   "kw": "커피머신렌탈가격",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여름잠옷소재",
+   "kw": "제빙기케어",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "지지미여름잠옷",
+   "kw": "업소용커피머신임대",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "여름잠옷커플",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "시댁어버이날선물",
+   "kw": "미니커피자판기렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "집들이선물틔운",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "브랜드홈웨어",
+   "kw": "세코커피머신렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여름커플잠옷세트",
+   "kw": "커피기계임대",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자인견잠옷",
+   "kw": "커피머신무상렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인견실내복",
+   "kw": "사무실커피머신대여",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인견커플잠옷",
+   "kw": "커피기기렌탈",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "사무실커피구독",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "풍기인견홈웨어",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "여성인견잠옷",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "인견홈웨어",
+   "kw": "아산커피머신렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "특별한선물세트",
+   "kw": "기업용커피머신렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인견파자마세트",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "레이온홈웨어",
+   "kw": "미니자판기렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "인견여성잠옷",
+   "kw": "사무실커피기계",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "잠옷판매",
+   "kw": "에스프레소머신대여",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "커피정기배송",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "업소용에스프레소머신렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여름용파자마",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "여름시원한잠옷",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "반바지홈웨어",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "시원한홈웨어",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "쿨링파자마",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "냉감소재잠옷",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "여자잠옷선물",
+   "kw": "네스프레소커피머신대여",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "필우드편백",
+   "kw": "기업용캡슐커피",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "기업용커피캡슐",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "교수님스승의날선물",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "독도디퓨저",
+   "kw": "캡슐머신렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "매장디퓨져",
+   "kw": "큐밍블랙",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "강릉커피머신렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "명품디퓨져",
+   "kw": "탐앤탐스렌탈",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베누스타렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "방디퓨져",
+   "kw": "사내무인카페",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "백화점디퓨져",
+   "kw": "사무실용전자동커피머신",
    "vol": 10,
-   "comp": "낮음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "부부의날선물",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "생화향기디퓨저",
+   "kw": "커피머신원두렌탈",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수국디퓨저",
+   "kw": "커피그라인더렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "MAVAM",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "대형베이커리카페창업",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피머신제빙기렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실용커피자판기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "사무실커피자판기렌탈",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "세코아우리카에보",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "스승의날단체선물",
+   "kw": "아우리카커피머신",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "어버이날엄마선물",
+   "kw": "자동커피머신중고",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피원두정기배송",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "회사캡슐커피머신",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "사무실용커피메이커",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "커피팩토리렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "현대큐밍커피",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "여수커피머신렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원터치커피머신",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "현대큐밍블랙",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "웰스유라커피머신",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "천연디퓨져추천",
+   "kw": "미용실커피머신렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동구전자커피머신기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원두커피자동머신",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신구입",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용드립커피",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "JURA커피머신렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무상렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "원주커피머신렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "익산커피머신렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페창업기계",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순천커피머신렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "구미커피머신렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "PC방커피머신",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레스토랑커피머신",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "카네이션디퓨저",
+   "kw": "WMF전자동",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "군산커피머신렌탈",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "부천커피머신렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "우골리니",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "어버이날디퓨저",
+   "kw": "카페창업기기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부산동구전자",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "제주원두납품",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동원두머신",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신수입",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신창업",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "돌체구스토커피머신지니오",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "저가카페창업",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페용에스프레소머신",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유라X6렌탈",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "생화향방향제",
+   "kw": "업소용오븐렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AULIKA",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에스페르타",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신단기대여",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "ESPP223143BL",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "식당렌탈",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "정수기커피머신렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "GIGAX8G2",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "닥터커피F11렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "업소용자동에스프레소머신",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "업소용자동커피그라인더",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에버시스C2S",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오피스용커피머신",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유라커피머신X6",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이커리컨설팅",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "인스턴트커피머신",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "WMF커피머신렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라심발리렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "훼마렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "광주커피렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "중고원두커피머신",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "머신기렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "씨메CO-11",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "삼성대형공기청정기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디스펜서렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "라피콜라파드",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쉘몬베이스",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "르델캡슐",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥널티캡슐",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "테일러커피캡슐",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "트레베네치아",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쉘몬자몽베이스",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "JURA커피",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레보3000",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "회사커피자판기",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "무인카페머신기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카누스태킹텀블러",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무인캡슐커피자판기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "6개월애기옷",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알잠슈트",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "복지자판기",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "회사간식자판기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "회사매점",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "무인커피머신기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세코그랑이데아커피",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세코리리카플러스",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "세코이데아디럭스",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "세코전자동",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아우리카케이탑",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "사내자판기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스메그오븐렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "우녹스오븐렌탈",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "커피머신기기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "반자동커피머신브랜드",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카페패키지",
    "vol": 10,
    "comp": "높음",
    "hint": false
