@@ -4,6 +4,7 @@ name: 다꾸키즈 같이 코디한 상품 찾기
 on:
   schedule:
     - cron: "23 4 * * *"
+    - cron: "53 */2 * * *"  # 2시간마다 못 본 상품 400개씩(쇼핑몰이 많이 부르면 막음)
   workflow_dispatch:
     inputs:
       brand: { description: "브랜드 (all = 전부)", default: "all" }

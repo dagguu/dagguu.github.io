@@ -60,10 +60,31 @@ def bkey(name):
     return b.lower()
 
 
-def imgs(no):
+PAGES = {}
+
+
+def page(no):
+    """상품 페이지 한 번만 받기. 쇼핑몰이 많이 부르면 막아서(2026-11-22 2,619개 실패) 하나씩·쉬면서."""
+    if no in PAGES:
+        return PAGES[no]
+    import time
+    time.sleep(1.2)
     try:
         h = get(f"{SHOP}/product/detail.html?product_no={no}").decode("utf-8", "ignore")
+        if 'id="prdDetail"' not in h:
+            h = None
     except Exception:
+        h = None
+    PAGES[no] = h
+    return h
+
+
+MAXNEW = 400  # 한 번에 새로 볼 상품 수(나머지는 다음 실행)
+
+
+def imgs(no):
+    h = page(no)
+    if h is None:
         return None
     i = h.find('id="prdDetail"')
     if i < 0:  # 쇼핑몰이 많이 부르면 상품 페이지 대신 다른 화면을 줌(2026-11-22 보니토가 전부 빈 목록) → 다음에 다시
@@ -78,9 +99,8 @@ def imgs(no):
 
 def mainimgs(no):
     """대표·추가 사진(카페24 product/big·extra/big) 주소 — 2026-11-22 시온님 "대표이미지에는 태그 안 되어 있어"."""
-    try:
-        h = get(f"{SHOP}/product/detail.html?product_no={no}").decode("utf-8", "ignore")
-    except Exception:
+    h = page(no)
+    if h is None:
         return None
     if "/web/product/big/" not in h:
         return None
@@ -128,10 +148,9 @@ def main():
     ps = [p for p in ps if p.get("product_name")]
     print(len(ps), "상품")
     cache = json.load(open(CACHE)) if os.path.exists(CACHE) else {}
-    todo = [p for p in ps if str(p["product_no"]) not in cache]
+    todo = [p for p in ps if str(p["product_no"]) not in cache][:MAXNEW]
     print("새로 볼 상품", len(todo))
-    with ThreadPoolExecutor(3) as ex:
-        lists = list(ex.map(lambda p: imgs(p["product_no"]), todo))
+    lists = [imgs(p["product_no"]) for p in todo]
     jobs = [(p["product_no"], u) for p, L in zip(todo, lists) if L is not None for u in L]
     with ThreadPoolExecutor(10) as ex:
         hs = list(ex.map(lambda j: dhash(j[1]), jobs))
@@ -154,10 +173,9 @@ def main():
     # 대표·추가 사진 지문(따로 저장, 새 상품만)
     MC = os.path.join(ROOT, ".coordi_cache", "main3.json")
     mcache = json.load(open(MC)) if os.path.exists(MC) else {}
-    mtodo = [p for p in ps if str(p["product_no"]) not in mcache]
+    mtodo = [p for p in ps if str(p["product_no"]) not in mcache][:MAXNEW]
     print("대표 사진 볼 상품", len(mtodo))
-    with ThreadPoolExecutor(3) as ex:
-        mlists = list(ex.map(lambda p: mainimgs(p["product_no"]), mtodo))
+    mlists = [mainimgs(p["product_no"]) for p in mtodo]
     mjobs = [(p["product_no"], u) for p, L in zip(mtodo, mlists) if L is not None for u in L]
     with ThreadPoolExecutor(10) as ex:
         mhs = list(ex.map(lambda j: dhash(j[1], True), mjobs))
