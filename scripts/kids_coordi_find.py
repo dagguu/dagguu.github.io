@@ -173,7 +173,13 @@ def main():
             for j in range(i + 1, len(H)):
                 if (H[i][2] ^ H[j][2]).bit_count() <= 12:
                     near[i].add(H[j][0]); near[j].add(H[i][0])
-        gen = {i for i in range(len(H)) if len(near[i] | {H[i][0]}) > 6}
+        # 2026-11-22 고침: "6개 넘으면" 은 보니토처럼 같은 플랫레이를 7~10개 상품에 나눠 쓰는 브랜드까지 빼 버림
+        # → 12개 넘거나, 5개 이상이면서 브랜드 상품의 80% 이상에 들어간 사진만 공통 사진으로 봄
+        gen = set()
+        for i in range(len(H)):
+            c = len(near[i] | {H[i][0]})
+            if c > 12 or (c >= 5 and c >= 0.8 * len(nos)):
+                gen.add(i)
         for i in range(len(H)):
             a = H[i]
             if i in gen:
