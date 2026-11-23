@@ -146,7 +146,7 @@ def build(path):
 <script>(function(){{var m=location.hash.match(/f=(\\d+)/),f=document.querySelector(".fc");if(!m||!f)return;var c=document.querySelector('.pc[data-p="'+m[1]+'"]');if(!c)return;f.href=c.href;f.dataset.k=c.dataset.k;f.querySelector(".im").innerHTML=c.querySelector(".im").innerHTML;f.querySelector(".n").textContent=c.querySelector(".n").textContent;f.querySelector(".pr").textContent=c.querySelector(".pr").textContent;scrollTo(0,0);}})();</script>
 <script>document.addEventListener("click",function(ev){{var a=ev.target.closest(".pc,.fc");if(a&&window.gtag)gtag("event","coupang_click",{{place:"picks_{slug}",item_name:a.dataset.k||""}});}});</script>
 <button id="totop" type="button" aria-label="맨 위로" onclick="scrollTo({{top:0,behavior:'smooth'}})">TOP</button><script>addEventListener("scroll",function(){{document.getElementById("totop").classList.toggle("on",scrollY>300)}},{{passive:true}});</script>
-</body></html>
+<script src="/mv.js" defer></script></body></html>
 '''
     os.makedirs(os.path.join(ROOT, "p"), exist_ok=True)
     open(os.path.join(ROOT, "p", slug + ".html"), "w", encoding="utf-8").write(out)
@@ -175,7 +175,7 @@ if __name__ == "__main__":
 <section class="hero"><h1>다꾸 생활꿀템</h1><p class="lead">고민되는 쇼핑을 주제별로 정리했어요. 고르는 기준을 먼저 보고 상품을 둘러보세요.</p></section>
 <div class="lst">{lis}</div>
 <footer><a href="/g/">체험단 가이드 보기</a> · <a href="/">다꾸체험단 홈</a></footer>
-</div><button id="totop" type="button" aria-label="맨 위로" onclick="scrollTo({{top:0,behavior:'smooth'}})">TOP</button><script>addEventListener("scroll",function(){{document.getElementById("totop").classList.toggle("on",scrollY>300)}},{{passive:true}});</script></body></html>
+</div><button id="totop" type="button" aria-label="맨 위로" onclick="scrollTo({{top:0,behavior:'smooth'}})">TOP</button><script>addEventListener("scroll",function(){{document.getElementById("totop").classList.toggle("on",scrollY>300)}},{{passive:true}});</script><script src="/mv.js" defer></script></body></html>
 '''
     open(os.path.join(ROOT, "p", "index.html"), "w", encoding="utf-8").write(idx)
     print("추천 모음 페이지:", ", ".join(x["slug"] for x in done))

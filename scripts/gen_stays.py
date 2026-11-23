@@ -307,7 +307,7 @@ def build(P, allP):
 <footer>다꾸체험단 · 국내 감성숙소 추천 매거진<br><a href="/m/">감성숙소 추천 전체 보기</a> · <a href="/">www.dagguu.com</a></footer>
 </div>{bar}
 <script>document.addEventListener("click",function(ev){{if(!window.gtag)return;var nm={json.dumps(slug, ensure_ascii=False)};if(ev.target.closest("#go,#cpgo"))gtag("event","coupang_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#mrtgo,#mrtcp"))gtag("event","mrt_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#yanoljago"))gtag("event","yanolja_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#yeogigo,#yeogicp"))gtag("event","yeogi_click",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#kakaogo"))gtag("event","kakao_add",{{place:"stay_mag",item_name:nm}});if(ev.target.closest("#campgo"))gtag("event","camp_click",{{place:"stay_mag",item_name:nm}});}});</script>{DDJS}{MAPJS if P.get("geo") else ""}
-</body></html>
+<script src="/mv.js" defer></script></body></html>
 '''
     out = mask(P, out)
     open(os.path.join(ROOT, "m", slug + ".html"), "w", encoding="utf-8").write(out)
@@ -360,7 +360,7 @@ if __name__ == "__main__":
         return (e(u), ' target="_blank" rel="noopener noreferrer sponsored"', '<small class="lgo">객실·가격 보기 ↗</small>') if u else ("/m/" + e(x["slug"]) + ".html", "", "")
     lis = "".join(f'<a class="lc" href="{_lk(x)[0]}"{_lk(x)[1]} data-no="{e(x["no"])}" data-q="{e((x.get("q","")+" "+x["area"]+" "+x["t"]).lower())}"><i class="no">{e(x["no"])}</i><span class="lim"><img src="{e(x["img"])}" alt="" loading="lazy" referrerpolicy="no-referrer">{rbadge(x.get("campEnd",""), "rb sm")}</span><span><em>{e(THEME.get(x["theme"], "감성숙소 추천"))} · {e(x["area"])}</em><b>{e(x["t"])}</b><em class="mvc" data-mv="m:{e(x["slug"])}" hidden></em>{_lk(x)[2]}</span></a>' for x in done)
     idx = head("국내 감성숙소 추천 · 매일 한 곳씩 | 다꾸체험단", "요즘 인기 있는 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 사진과 함께 소개해요.", SITE + "/m/", done[0]["img"] if done else SITE + "/images/og.png") + \
-        f'</head><body><div class="w">{TOP.replace("감성숙소 추천 더 보기 ›", "다꾸 매거진 ›").replace("/m/", "/#/mag?t=s", 1)}<h1 class="ix">국내 감성숙소 추천</h1><p class="lead" style="margin-top:6px">요즘 인기 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 소개해요. 번호나 숙소 이름·지역으로 찾아보세요.</p>{SEARCH}<div class="lst" id="lst">{lis or "<p>곧 첫 글이 올라와요</p>"}</div><p class="nores" id="nores" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p><footer><a href="/">다꾸체험단 홈</a></footer></div>{SEARCH_JS}{DDJS}</body></html>'
+        f'</head><body><div class="w">{TOP.replace("감성숙소 추천 더 보기 ›", "다꾸 매거진 ›").replace("/m/", "/#/mag?t=s", 1)}<h1 class="ix">국내 감성숙소 추천</h1><p class="lead" style="margin-top:6px">요즘 인기 숙소, 신기한 숙소, 감성 숙소를 매일 한 곳씩 소개해요. 번호나 숙소 이름·지역으로 찾아보세요.</p>{SEARCH}<div class="lst" id="lst">{lis or "<p>곧 첫 글이 올라와요</p>"}</div><p class="nores" id="nores" hidden>찾는 숙소가 없어요. 번호를 다시 확인해 주세요.</p><footer><a href="/">다꾸체험단 홈</a></footer></div>{SEARCH_JS}{DDJS}<script src="/mv.js" defer></script></body></html>'
     open(os.path.join(ROOT, "m", "index.html"), "w", encoding="utf-8").write(idx)
     # 사이트맵에 m/ 주소 더하기 (gen_share.py 가 먼저 sitemap.xml 을 새로 쓴 뒤 불림)
     sm = os.path.join(ROOT, "sitemap.xml")
