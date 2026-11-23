@@ -1,81 +1,132 @@
 {
- "date": "2026-11-22",
- "text": "(훅 후보) 🏨 통영 호텔 1박 12만원, 86%↓ / 오늘 신규 체험단 23곳 OPEN! 🎉\n\n🏨 통영 호텔 1박 12만원, 86%↓\n오늘 신규 체험단 23곳 OPEN! 🎉\n\n🏨 숙박 특가 (11/28 토 1박 2인)\n통영 한산 호텔 120,000원(86%↓)\n가평 더베이리조트 98,100원(80%↓)\n\n🏡 [숙박] 리베라호텔 영종 · 10만원 상당 · ~11/25\n🔥 [숙박] 선재담 글램핑&카라반 · 그릴·불멍 · ~11/25\n👶 [육아] 군 슈페리어 기저귀 · ~11/29\n\n🔥 오늘의 특가 (내일 7시까지)\n👶 아띠래빗 방한 유모차 장갑 19,900원\n🧺 코멧 팬트리 정리함 12,480원\n\n버튼1: 숙소 특가 보기 | https://www.dagguu.com/d/\n버튼2: 오늘 오픈 보기 | https://www.dagguu.com/#/list?cat=all&s=todayOpen\n",
+ "date": "2026-11-23",
+ "text": "",
  "cards": [
   {
-   "title": "[숙박특가🏨] 통영 호텔 12만원대",
+   "title": "[숙박특가🏨] 전주 호텔 10만원대",
    "h": [
     "숙소 특가 소식!",
-    "통영·제주·여수·강릉",
-    "1박 12만원대부터"
+    "여수·제주·부산·전주",
+    "1박 10만원대부터"
    ],
    "sub": "11/28(토) 1박 2인 기준 4곳",
-   "desc": "다음 주말 여행 숙소 골라 봐요🧳\n통영 한산 호텔 120,000원(86%↓)·제주 호텔 시리우스 120,360원(64%↓)·더 홍씨호텔 강릉 151,000원(50%↓)·여수 라마다 프라자 155,000원(59%↓)💸\n✅조회 : 11/28(토) 1박 2인 기준",
+   "desc": "다음 주말 숙소 미리 골라 봐요🧳\n해미리온 풀빌라&리조트(여수) 165,000원(76%↓)·에코랜드 호텔(제주) 167,300원(72%↓)·신라스테이 서부산 159,236원(68%↓)·재즈 어라운드 호텔(전주) 109,000원(72%↓)💸\n✅조회 : 11/28(토) 1박 2인 기준",
    "btn": "특가 보러가기",
    "url": "https://www.dagguu.com/d/",
+   "bgimg": "https://dry7pvlp22cox.cloudfront.net/mrt-images-prod/2023/11/22/jAZR/cHBx0TSzWX.jpg?width=1600",
    "style": "v4",
-   "fit": "cover",
-   "bgimg": "https://dry7pvlp22cox.cloudfront.net/mrt-images-prod/2026/11/09/RGTM/EbqOQtdogd.jpg"
+   "fit": "cover"
   },
   {
-   "title": "[오늘오픈🎉] 숙소 18곳 열렸어요",
+   "title": "[오늘종료⏰] 남해 독채 오늘까지",
    "h": [
-    "숙박 체험단 모집!",
-    "오늘 18곳 오픈",
-    "가평·여수·제주·포항"
+    "체험단 오늘 마감!",
+    "남해 27만원 독채",
+    "가평 키즈풀빌라도"
    ],
-   "sub": "~11/25~11/29 마감",
-   "desc": "주말 여행 숙소 오늘 새로 왔어요🏡\n리베라호텔 영종(10만원 상당)·선재담 글램핑&카라반(인천, 그릴·불멍)·모딜레풀빌라(포항, 바베큐그릴)·이디오라게펜션(제주, 와인세트)🔥\n✅기간 : ~11/25~11/29",
-   "btn": "체험단 보러가기",
-   "url": "https://www.dagguu.com/#/list?cat=stay&s=open",
+   "sub": "오늘 밤 12시 마감 4곳",
+   "desc": "망설였다면 오늘이 마지막이에요⏰\n풀빌라 뷰티 남해(27만원 상당 독채)·엠포레키즈풀빌라(가평)·스테이더문(청도, 햇님 객실)·빕스 쪽쪽이👶\n✅기간 : ~11/23 오늘까지!",
+   "btn": "오늘마감 보기",
+   "url": "https://www.dagguu.com/#/list?cat=all&s=todayClose",
+   "bgimg": "https://image.coupangcdn.com/image/travel_reactor/static/booking/image/pension/ddnayo/1d6d18c9-ce97-486c-a5b0-855d8a19123f.jpg",
    "style": "v4",
-   "fit": "cover",
-   "bgimg": "https://image.coupangcdn.com/image/travel_reactor/travelConnect/hotel/A00935655/ea12d86a-8754-4902-a4fe-6943a6908ca3.jpg"
+   "fit": "cover"
   },
   {
-   "title": "[오늘오픈🎉] 기저귀·칫솔 써볼 기회",
-   "h": [
-    "체험단 모집!",
-    "군 기저귀·코도모 칫솔",
-    "나인위시스 크림까지"
-   ],
-   "sub": "오늘 오픈 제품 5개",
-   "desc": "아이 기저귀 바꿔 볼까 고민이라면👶\n군 슈페리어 밴드형·팬티형 기저귀·코도모 안심젤리 칫솔(3~5세)·나인위시스 톤업 크림·수분 앰플 세트🍼\n✅기간 : ~11/24~11/29",
-   "btn": "오늘오픈 보기",
-   "url": "https://www.dagguu.com/#/list?cat=all&s=todayOpen",
-   "style": "v4",
-   "fit": "cover",
-   "bgimg": "https://cdn.stylec.co.kr/data/editors/1776840319962.jpg"
-  },
-  {
-   "title": "[내일종료⏰] 남해 27만원 풀빌라",
+   "title": "[내일종료⏰] 통영 42만원 숙소",
    "h": [
     "체험단 내일 마감!",
-    "남해 27만원 독채",
-    "경주 글램핑까지"
+    "통영 42만원 숙소",
+    "완주 한옥 독채도"
    ],
-   "sub": "~11/23 내일까지 4곳",
-   "desc": "주말 전에 신청해 둘 숙소예요⏰\n풀빌라 뷰티 남해(27만원 상당 독채)·풀빌라 소랑(제주)·경주 글램핑플레이스씨(카페 음료 2잔)·무안 오베르망 애견풀빌라🐶\n✅기간 : ~11/23 내일까지!",
+   "sub": "내일 마감 숙소·육아템",
+   "desc": "주말 전에 신청해 둘 체험단이에요🗓️\n자연인관광펜션(통영, 42만 5천원 상당)·초록의소양(완주, 33만원 상당 독채한옥)·조이제이 유아용 공기청정기·에디슨+ 베이비 무선 헤어드라이어🏡\n✅기간 : ~11/24 내일까지!",
    "btn": "마감임박 보기",
-   "url": "https://www.dagguu.com/#/list?cat=stay&s=closing",
+   "url": "https://www.dagguu.com/#/list?cat=all&s=closing",
+   "bgimg": "https://image.coupangcdn.com/image/travel_reactor/travelConnect/hotel/A00935655/b81d5687-64cd-47cc-a795-9a12e0b59fe9.jpg",
    "style": "v4",
-   "fit": "cover",
-   "bgimg": "https://image.coupangcdn.com/image/travel_reactor/travelConnect/hotel/A00935655/3d9d8e02-70f9-4714-a16b-218b09b589b1.jpg"
+   "fit": "cover"
   },
   {
-   "title": "[나들이🎡] 부산·서울 입장권 왔어요",
+   "title": "[NEW✨] 스파 있는 가평 풀빌라",
+   "h": [
+    "숙박권 소식!",
+    "가평·횡성·산청",
+    "스파·장작 글램핑"
+   ],
+   "sub": "어제 새로 열린 숙소 4곳",
+   "desc": "어제 새로 열린 숙소 골라 봤어요🏡\n플로팅웨일 가평 풀빌라 스파 리조트(젠스파하우스)·클럽프리모 글램핑펜션(횡성, 숯그릴+장작)·편한키즈풀빌라(가평, 3인 기준)·산청오스테이 글램핑&펜션🔥\n✅기간 : ~11/26~11/29",
+   "btn": "체험단 보러가기",
+   "url": "https://www.dagguu.com/#/list?cat=stay&s=open",
+   "bgimg": "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/5b829ff6-0420-4562-9b5c-c1dd4b34b9a5.jpg",
+   "style": "v4",
+   "fit": "cover"
+  },
+  {
+   "title": "[나들이🎡] 대구·제주 입장권 왔어요",
    "h": [
     "입장권 체험단 모집!",
-    "부산·서울·시흥",
-    "아쿠아리움 특가도"
+    "대구·제주 2곳",
+    "아이스링크 특가도"
    ],
-   "sub": "입장권 체험단 3곳 + 입장권 특가",
-   "desc": "아이랑 주말 나들이 어때요🐠\n다이나믹메이즈 부산점·월리를찾아라 체험관 홍대본점(최대 4인)·더베이54 키즈 아쿠아리움(시흥, 입장권 3장)·아쿠아리움 1일 입장권(주중 소인) 21,500원🎟️\n✅기간 : 체험단 ~11/22~11/29",
+   "sub": "입장권 체험단 2곳 + 입장권 특가",
+   "desc": "아이랑 주말 나들이 어때요🐠\n대구아쿠아리움·K-아일랜드 제주(최대 4명)·롯데월드 아이스링크 입장&대여 세트권(주중) 19,000원·아쿠아리움 1일 입장권(대인/비수기) 24,500원🎟️\n✅기간 : 체험단 ~11/23·~11/24",
    "btn": "티켓 보러가기",
    "url": "https://www.dagguu.com/#/tix",
+   "bgimg": "https://ads-partners.coupang.com/image1/8e46iejMFtWr3wzm8VbFBTMQQao43k1Ztqp8b-fNPdAL_GU-JB1zkdPDVg0rJvnLcaZZ4jlkqBB1c45QABaD1B6Cd8PBjrGFJ9ZRrMDsQyGGba2j4Q6kQqmcghetMKtRmEARJSAhYRheLo35LJ5aKyuGOh8U_f9HbU-xmP1kaEjzBN2OTVTzEmQsc6nQyULv0ViSBM2kRkWPpzmkOqdz7AOpmRywOfwGoJs2S6DIxq2AiAul0Y0HpydDd0kNM6FLrnx-R_LadiKh9mQ4ww8HxKRAmCycR0NaN78Br4D5T3qFOYScKQ6O1935c1rCnWDRilg4VIfe24d_jKxENZHPSsHH6zaJOTYZXr4wQrotudVg8XdJAkB6lYLV9NKi2vnvrnJ-qjGlu_WyHljcyE18UNRRIOExc0m9gF4LHLMTiQ0deHjL7VffQuSJzIVB_83bKMx5ZP1bQDVtT6UNpG1wwSI_4ZcK2rvMEHiRNUHmPFy2Vf4h3_NfBZwOCZG-4BbSIr5FYy-PBJOuE9oDOZBBzlEqYdnS-uAULH55EixVYoTHB9cTRLD4Tg==",
    "style": "v4",
-   "fit": "cover",
-   "bgimg": "https://ads-partners.coupang.com/image1/Z2eAEYae--ymJX0IZ6quUWQ922AX5iZRali0ZSZEW6h5E9dUuBESS_DrUFU7vP-ZsZztikUW7E64ZC9nmRgfW_oShzMOC8ZeI7NKdkRXLxQz_S5-jj0pJHgQlsYPbYBB8f3JNtPmwHzva4A_hsTA8t08h9xENanNmEd_iKqugbBSyvkf_6Zy8jNEh7YmibLMm9WfEjIahk9tt4kWt7l-tY8RORr8KXGGsSYholwuMoN7K11PAUOPiXd0_ByIgFpYsy5omHZcpfCpUZwsKEsp7tmRlfHFPf2Nu0WH9jSqCjtX6BfPH0Uo0wpXVZoi8xcIuyYGMF-1sIKtFYwJYbF9de6fArkff4yU3-uIdQrltItmdMufYcyZ88oNuReM5c_VNWHtZohzrQf0jRyI8YbE4x_rrUtkdLL9fi78JW2HTjl37N-exUYorlZ-6-RcNUq3TLAp9uLFjLqsjjvboJAp5XmMMiOxL9GFFmVkqljs4PlGJ0dd7UTrDigoYFYZ_NLWCKBF5WjC4dPnPjaSyu7pXHH4_EPLwrEFll8GsM0KlxqzZshvBE07Hg=="
+   "fit": "cover"
+  },
+  {
+   "title": "[핫딜🔥] 화장지·섬유유연제 특가",
+   "h": [
+    "골드박스 특가!",
+    "화장지·섬유유연제",
+    "아토 로션까지"
+   ],
+   "sub": "내일 오전 7시까지",
+   "desc": "떨어질 때쯤 채워 두는 생활템🧺\n일리윤 세라마이드 아토 로션 무향 14,870원·크리넥스 데코 앤 소프트 화장지 3겹 26,100원·피죤 강력탈취 섬유유연제 17,480원·매일두유 99.9 플레인 14,040원🛒\n⏰내일 오전 7시까지",
+   "btn": "핫딜 보러가기",
+   "url": "https://www.dagguu.com/#/deals",
+   "bgimg": "https://img5c.coupangcdn.com/image/retail/images/98145334917948-8aef7415-788b-4929-b171-588caee5b279.jpg",
+   "style": "v4",
+   "fit": "cover"
   }
+ ],
+ "scout": [
+  "https://image.coupangcdn.com/image/travel_reactor/travelConnect/hotel/C00924717/eded1213-b1db-40d6-ab80-5c16bf225c74.jpg",
+  "https://image.coupangcdn.com/image/static/booking/image/pension/ddnayo/5b829ff6-0420-4562-9b5c-c1dd4b34b9a5.jpg",
+  "https://image.coupangcdn.com/image/travel_reactor/travelConnect/hotel/A00935655/e487341f-72ec-4fe4-bbae-9aae192be753.jpg",
+  "https://image.coupangcdn.com/image/travel_reactor/travelConnect/hotel/A00935655/99baa5fc-0773-416e-ad32-2db8f353d2c6.jpg",
+  "https://image.coupangcdn.com/image/travel_reactor/travelConnect/hotel/A00935655/d5303945-f01e-408e-90ab-28f3582dae15.png",
+  "https://image.coupangcdn.com/image/travel_reactor/travelConnect/hotel/A00935655/ea12d86a-8754-4902-a4fe-6943a6908ca3.jpg",
+  "https://image.coupangcdn.com/image/travel_reactor/travelConnect/hotel/A00935655/f89619fe-fe34-4c57-b5dd-daff4f197ed8.jpg",
+  "https://image.coupangcdn.com/image/travel_reactor/travelConnect/hotel/C00924717/f127b974-2524-49e4-8962-4476129cd2d8.jpeg",
+  "https://image.coupangcdn.com/image/travel_reactor/travelConnect/hotel/A00935655/572f9f8d-9deb-469c-a7c7-fa4e3c8430ab.jpg",
+  "https://image.coupangcdn.com/image/travel_reactor/travelConnect/hotel/A00935655/3d9d8e02-70f9-4714-a16b-218b09b589b1.jpg",
+  "https://image.coupangcdn.com/image/travel_reactor/static/booking/image/pension/ddnayo/1d6d18c9-ce97-486c-a5b0-855d8a19123f.jpg",
+  "https://image.coupangcdn.com/image/travel_reactor/travelConnect/hotel/A00935655/f5310777-48a7-4e4c-a098-f36fc6dd3969.jpg",
+  "https://image.coupangcdn.com/image/travel_reactor/travelConnect/hotel/A00935655/b81d5687-64cd-47cc-a795-9a12e0b59fe9.jpg",
+  "https://image.coupangcdn.com/image/travel_reactor/travelConnect/hotel/A00935655/29cb34d8-295d-4483-9723-f4fbc85cdc5b.jpg",
+  "https://image.coupangcdn.com/image/travelConnect/hotel/A00935655/886b4c54-a5da-4ced-b88d-11956448de7d.jpg",
+  "https://ads-partners.coupang.com/image1/8e46iejMFtWr3wzm8VbFBTMQQao43k1Ztqp8b-fNPdAL_GU-JB1zkdPDVg0rJvnLcaZZ4jlkqBB1c45QABaD1B6Cd8PBjrGFJ9ZRrMDsQyGGba2j4Q6kQqmcghetMKtRmEARJSAhYRheLo35LJ5aKyuGOh8U_f9HbU-xmP1kaEjzBN2OTVTzEmQsc6nQyULv0ViSBM2kRkWPpzmkOqdz7AOpmRywOfwGoJs2S6DIxq2AiAul0Y0HpydDd0kNM6FLrnx-R_LadiKh9mQ4ww8HxKRAmCycR0NaN78Br4D5T3qFOYScKQ6O1935c1rCnWDRilg4VIfe24d_jKxENZHPSsHH6zaJOTYZXr4wQrotudVg8XdJAkB6lYLV9NKi2vnvrnJ-qjGlu_WyHljcyE18UNRRIOExc0m9gF4LHLMTiQ0deHjL7VffQuSJzIVB_83bKMx5ZP1bQDVtT6UNpG1wwSI_4ZcK2rvMEHiRNUHmPFy2Vf4h3_NfBZwOCZG-4BbSIr5FYy-PBJOuE9oDOZBBzlEqYdnS-uAULH55EixVYoTHB9cTRLD4Tg==",
+  "https://ads-partners.coupang.com/image1/DPGN-3OSr3DCueEgDKL-e-aagOdGWUULzAzzjLVNVboNy0HyVJDUnFaMc2eXOKdROe61GUT_UHwRJ_98g3uXIZFLxz3gaQ9unEBuvByw52OI81kLOjjV-7buzFJnrbEjK_zxmiZNqPb89fl0IvAgRq8OCXxdBK_zpJD7GotReimCT8cMzTpB5LGhzLMahxqFuFsCDy3GP-XX-YgzkD98Gx6I23MQl-71ROPxdMZzuzTZHCwzOfRzXaXV2GJ6F-VG2-CPFFq_jAYF7h7d5Xb9kLemXinofOodlL-FPld4QLiHRbgU9ugwD80KT8L6UfhFPTPx7KWpsItcc9yrOSD2HfWqNILBxBCyPeMfApSdLwLeOb6anwXpcsMsHXYUjOnrpM8kTrFAmH3qgOO28A_hqgoCe_XICZpe2x0hDFEwQa5Piw6gZ2wxuobe81qnDGFOffSBVTaRbUxEddCdu_oSIGXcr_EXHbERZ65LbeB5kxvsEtJ6NlbT33hmzG2mktaVDDdhT3hPV9PfzQUqoRPh8yI96ZdofhG7aoLPBrxmRFwF0cUDmQ9gs0AM",
+  "https://ads-partners.coupang.com/image1/Msc2JjXpqQ1VG8e3MpmaUnqD6C6jtKGWGqkCOAoESUsAmWEm_ctpeV9DqTgwwg_ZPnTVzTqhv72Vwlk7qvw9DrP8tjYE2PDTy-KhsaeOokB0bbMBJwtaaQzCG93-ya30EU6ZhA3ab6swpqQYOwI_zKTwgHcSBviyabgP72mo3fPVRO9LDJlbt46WO1fL8vjNN4lPnwmd2zLS_88K0PhVfsIBhPrUesyJAGPg7JwQqSm5QLokrFSSH4hpp9jSXosS86OtREvkONiwI63tWADF8Gud6BPxBmQk--3jBfgi5idHx8nruBC8z0z8HrmY4ju9uos-GrlMtII5OAQyjxHkSFE-2K6f1ZqzgZLZJE_ZtGfqYEKcbSGHXJD2Puub7GNtokPInfS-ZMcZOs3V1RpKV95MQ-yX70SnfWN9bfwwTE2D8SEyEA-PdkEUpI2uLr859DJxEBGzQKoaXKpjrMVIuEdnX1S-SyihqojZWps67oOaSUKq6dOdeZHyORvathWOoCiHFqRJ0JfXny5YQvYcz99lHxcCjZKhvH9BagrnVtkUzEpC9hxwdQnlyDkq3sOWSfoUvvrEQsU5XLE9AgXQjKXo0wCmyiK4",
+  "https://files.weble.net/campaign/data/1440626/content_43484e8de90c0a9958b3a65e012be41b.jpg",
+  "https://dry7pvlp22cox.cloudfront.net/mrt-images-prod/2026/09/15/eIhW/nvmLPl7xtb.jpg?width=1600",
+  "https://dry7pvlp22cox.cloudfront.net/mrt-images-prod/2023/11/22/jAZR/cHBx0TSzWX.jpg?width=1600",
+  "https://dry7pvlp22cox.cloudfront.net/mrt-images-prod/2026/11/09/Eawh/mbphLaYkHz.jpg?width=1600",
+  "https://dry7pvlp22cox.cloudfront.net/mrt-images-prod/2026/09/19/XIpz/uM7aI6MMgm.jpg?width=1600",
+  "https://img5c.coupangcdn.com/image/retail/images/98145334917948-8aef7415-788b-4929-b171-588caee5b279.jpg",
+  "https://image7.coupangcdn.com/image/retail/images/349121684142854-936d432c-0e7a-4bb3-b935-4459f66df859.jpg",
+  "https://image14.coupangcdn.com/image/retail/images/76383476284976-beeac87e-878a-434d-9b87-acc1ecbc6961.jpg",
+  "https://image4.coupangcdn.com/image/retail/images/534761818801708-1cc9467c-b924-4012-95fb-917b49a57fee.jpg",
+  "https://static.coupangcdn.com/image/retail/images/139627710988148-dd5d246c-120d-451a-9d79-6e8926882a1e.png",
+  "https://ads-partners.coupang.com/image1/Vgii-9kuvyWZpu99VpDQSSnKZbLNEAeOHLCNiRZlcwgeTqw1zKyrHp2Cqprek5ME2L8vIr_Z47Wp5PYOy8ZG3dTWmgl_YEE0pjNd-1sRpGE67N3Zjs1DQS6mC98gD6gctrgAS7bKDix8jGJAyhQPe-bYIxWMI6jaGELptpMCPgDKAtnRJ4wRgaXSEjA5rBAddwq59Fmoz7Ckez7jaxWFfLFF7G2-EAU69c7xsOx3pRX7WDcDcvNcUGlhkkoGQMk75-28I0PWu8FK9sGE6tdNAl4Z5IJEA3xWFIokvdLd0t0ZoslO8QbLjccemQFOu6epGHmsi9IXr1XeGmNxL6zIv2l6bBeeWWpeJcInNSPNlq809E-dsr-1ARGjReJkH0vh87XnDB-aVp0vMDELrXnd_wHL3AOmO7xb1pyPdd4QFABzVt4FdalpxxxBAyr5je4a4yhU3RZVr03tg9sGnL9wqHedjJ9oIWeL-MeCXIOWPL1Wmqjfu3tTIB8PBtUQTKV9La8GPQtXLt05HNdEKVZSd16F5ypMephMDJhtqw4vbAA9jCziECC5yZ8=",
+  "https://ads-partners.coupang.com/image1/YuNLT1OC73xCLtVQYtSH4RLpd2MsJy3YBokMSs9n-NSnyp_pug0gsdsT0JUIUwIRJzfvzgdUA8HokqQzns5hT1S5QAYJsHDJN6ipeTqXw8LZKmTb7dEcsv0G7t06P6Oh2enDKNPBwRWxbP0R0wVgX-2GjK4XLW6WxYQ-Y-orOuVat3mRuL_3wZJTSFSmrGJVqezgsgkANJug0MH5AiO8SZ1z6u9qGQMHIosqn1YxsLxzOVUHjv64BdYxlHeD1B9s8OPYLR2Lg5ENqwBctaYZOIcwJwoshfGiMMTYbtroRW0pUYqJEQle5JvsD9yfTYBKhm1yG4gDscHcKvdtU11LwUrDzOF2bKD1uPqi7aK-LmjHAswyl_DfknSr-TdLWtcRwtkegilIMfMKD9g8XqhiZZ_P_YriZwl_1kiP_c4M17cOuvBGenBFNRhv1gHQOaTmTiWG5363HcJ19nHvONQkmXoNqWjVrGxVOee6vR24gC80zc2MWyLMIGK2-TCh3jEby3r5PAUxmCmhrlDESkagU1CMNXr_NxgNTIxhfxqXpvaCJYgDoAJ5QZKK",
+  "https://ads-partners.coupang.com/image1/VgDQE3bLKWtMMjhGVtMOadqi7BXQS420sU64KUbqSkDoicCBOTRDPaWYR1BCmaOdP2rivwtq9cjGJioLui3je9Z3LjMlmvVyG_0-09bSnx3moQOkXPc987WGRGtj0omYeL50eD_VBAxH_smVCzJ8Nj2T1sxazqgPCJqVgX8SLGTVG1lUz9_rC_ueDo-dzr-oyguGf_XG-p96va0hoAHo9D6qBNfnFkHDRMbdfdhD2xz27bT20MUZLgW3lPI4FNC-5YEJm0VAOGB2goCif7zZxnH1nAxXzP8moOTNvsv08Afl24yjaNSxIPU2kv1bsASHt2U-vUCmT9zRvn88A46tfB-V_Jv7JUmQpkIeXiFz7fU2KCfwFfsNIWxUPhKCH3psPO416zi4Jkn8KdzALJGjrur1cViPVX1W1LlKP1samt4E1YeQwXsx_w2xSiwGCX9WrLx26xzfVE-u8cvzSH0YTKFtEs81T79AWP-7ZxTXFBYky25QH67iGwuR9zlbcrKkAMkQDBaZzln0JI_TTYhqOX9fLyhveZVmEOttXdkORUTTbDhmCvJewow=",
+  "https://ads-partners.coupang.com/image1/_EDJkdlSSuPCa0jQ_LiV6vkN50C-1OeQZhxxgUlITl58_ZktgOSKCF3os6M3Wlty7Ri-38QIgA3U2vWqvpdOp7KTjNVixA21JWMmuhepTTYPmYOtBZ3t1Fb4JXEpEJQnVgj6NiOFXIwDtV7feW5JdGyxevSUklk3t18I9Zl9hycTyV9nl_VCyD7TR9c9EmWhp7SDMHRo-KXlJsdWmYvGxgTz4WSfxefhIzP-Qk_Vgm4v2vwunXq1EnJebOWu_J7Y-Igb0dGf9hi3xj0g5yEMAbGvm560GgR9uPRgmLmE3zqfHfM4SXTkko-RbKA1p6lMHANI6Fe13Edezbo5WsFGyYoVWYiQnktLOkrIfzR_ffuiQ40u8L19ISbYrV3i79L1uLiLPP6RqUVeG-NV2_V2jHw8DbUnFVVmfyKDB4DPp1sOzl3L_1uYeyEp4paE4N3YkksebpPXWleycSwxO6jzvU4K3n5Hl8MAk06mJsH40iW4Cg8_idWvGpV5-k8elqnvvVV9LWqP8HCKFvMFX_03DZlN5rdMhEPlB0yMkxh750orLffi5QR_Xauj",
+  "https://ads-partners.coupang.com/image1/YI8hsYv8_RIpIbYWYA0vppVykjCOHZQ_xsPpdub4uXoDbMpUBHmEhTPZ97CBisuHw-KXLbgqXhJeG1mfZ2LjI_IVojPLJmwoDQ50u2gsZEtA2b6T-5kNugu5ZINNd4PBIW2UyHhiBNfPlKSgACyremTvAGfw_NIMbN1IdWw2imaVCmbFMEQzc1WqwLJ3mKSY1BAVQkAcnfIKI97Rxfkc3-rLjSlDlOhXa84GirdnPBgqr87mqATQpMrlfkksUqMano_VrkeN5LCIHsAu5FJqxww0Zo6HIw5Xz5Houh-YOJI8FmgPyynFWGdFL2mFr_rgwcAVRht14N26zOYtgLLxfceTJm88xrQ1ySzvqsWjMFBV8YVe2YK4jn3R9uuj0u4BaXNe7xqobsmzcoO2S_N0t16js_UmH4Gxbw8oBJMXklEzr4P5DabeBPRoisL5kekg5UozMH4F5odI3zzzUQJHGtwIJktjyXXJEyLTEpeOwsFpapUA2FqvOSaEoBzQYoV5RkzIlJJ020cyIvvnHlVcLQ6KkWxQGXNTelr8Z_WUz8Xh9vzNI-jHKg==",
+  "https://ads-partners.coupang.com/image1/9fAstbkZw-NbzWFK9dRG-hSobWjNXYmTkTej1-2d4Tt_8Qhk-Q96c4KrRIKfUq5pMVwkJGdQyHLe9QJxF3d49g7_j7n_Yt9ta9CajUIhlY2iwxqckyVMobwsMNGICoOYLiuGf9OtGLMOwSghRpTP1DqsCEo75WGhtCnV2TlUBvYzZ4NuLIxwkJ9L9OkNJ2X-iT4_cbdcyaG8WqZLhJ6HnZh-XWEeUS9lPuP3Pu4yQTWETuB1uMghVZv5ZB0sKAd82otxRO597DBK_30doyxazzk06bRNbFoVQK5ne18d7DJYu4SkxKaM_EJklAR8kGkNYqNsEoG4oTih3NmtSCPb9_e4P8vjhkyBOt6KcoAlWMXdL3QTVIr9PfgfBhC7Nd20w6hGjXGQ3p8lrQD6tnkzcOQc9tLHlEBxkhjFkT-7LcNxmKWL6zknF1YsWItviGWZkYSYWbR_sWS_RhFmpdFcThs9--e916qGdMoJ8uHM4acpFoMwy7dG6DQ2_tWHhu9ZtmtWlvDOpl5uBjNzeV4XL4IjfeqM3FyXNNngWsJRyx54-OsttbYcr54="
  ]
 }
