@@ -1,5 +1,5 @@
 {
- "at": "2026-11-22 19:50",
+ "at": "2026-11-23 11:01",
  "checkIn": "2026-11-28",
  "stays": {
   "boryeong-lava-poolvilla": {
@@ -60,7 +60,7 @@
      "region": "부산",
      "type": "CITY",
      "pages": 2,
-     "n": 99,
+     "n": 98,
      "keys": [
       "totalCount",
       "page",
@@ -307,7 +307,7 @@
      "total": 1679
     }
    ],
-   "hit": "가평 하녹타케 펜션",
+   "hit": "가평 하녹타케",
    "hitKeys": [
     "deepLink",
     "imageUrl",
@@ -540,8 +540,8 @@
      "kw": "경주",
      "region": "경주",
      "type": "CITY",
-     "pages": 34,
-     "n": 1639,
+     "pages": 32,
+     "n": 1580,
      "keys": [
       "totalCount",
       "page",
@@ -887,7 +887,7 @@
       "page",
       "size"
      ],
-     "total": 1364
+     "total": 1366
     }
    ],
    "hit": "담앤루리조트",
