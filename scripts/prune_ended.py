@@ -8,7 +8,9 @@ P = os.path.join(ROOT, "data.json"); EP = os.path.join(ROOT, "scripts", "ended_p
 today = datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%d")
 raw = open(P, encoding="utf-8").read(); d = json.loads(raw)
 items = d.get("items") or []
-gone = [x for x in items if x.get("closed") or (x.get("end") and x["end"] < today)]
+# 레뷰 프리미어(프리미어 인플루언서 전용) 캠페인도 뺀다(2026-11-24 시온님)
+prem = lambda x: "premier" in (x.get("pay") or []) or "프리미어" in (x.get("name", "") + x.get("benefit", ""))
+gone = [x for x in items if x.get("closed") or (x.get("end") and x["end"] < today) or prem(x)]
 if gone:
     ep = set(json.load(open(EP, encoding="utf-8"))) if os.path.exists(EP) else set()
     ep |= {str(x["coupangPid"]) for x in gone if x.get("cat") == "stay" and x.get("coupangPid")}
