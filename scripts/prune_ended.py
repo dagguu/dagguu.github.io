@@ -17,6 +17,28 @@ if gone:
     json.dump(sorted(ep), open(EP, "w", encoding="utf-8"), ensure_ascii=False)
     d["items"] = [x for x in items if x not in gone]
     open(P, "w", encoding="utf-8").write(json.dumps(d, ensure_ascii=False, separators=(",", ":")))
+# 같은 사이트·같은 숙소/제품을 매체별로 따로 등록했으면 하나로 합친다(2026-11-24 시온님 "매체별로 나뉘는 거는 버튼 두 개로")
+import re as _re
+def _nk(x): return (x.get("source") or "", _re.sub(r"\s*\([^)]*\)|\s", "", x.get("name") or ""))
+_seen, _keep, merged = {}, [], 0
+for x in d["items"]:
+    k = _nk(x)
+    if x.get("own") or not k[1] or k not in _seen: _seen.setdefault(k, x); _keep.append(x); continue
+    m = _seen[k]
+    if m.get("applyUrl") == x.get("applyUrl"): continue
+    def _ap(y): return [dict(a) for a in (y.get("applies") or [])] or [{"ch": list(y.get("ch") or []), "url": y.get("applyUrl"), "end": y.get("end", ""), **({"ap": y["ap"]} if y.get("ap") else {})}]
+    L = _ap(m)
+    for a in _ap(x):
+        if a.get("url") and all(b.get("url") != a["url"] for b in L): L.append(a)
+    m["applies"] = L
+    for c in x.get("ch") or []:
+        if c not in (m.get("ch") or []): m.setdefault("ch", []).append(c)
+    if x.get("end") and (m.get("end") or "") and x["end"] > m["end"]: m["end"] = x["end"]
+    merged += 1
+if merged:
+    d["items"] = _keep
+    open(P, "w", encoding="utf-8").write(json.dumps(d, ensure_ascii=False, separators=(",", ":")))
+    print(f"매체별로 나뉜 체험단 합침 {merged}개")
 # 매체별 캠페인(applies) 중 마감된 것은 빼고, 신청 주소·매체를 남은 캠페인으로 맞춘다(2026-11-24)
 fix = 0
 for x in d["items"]:
