@@ -1,0 +1,43 @@
+[
+ {
+  "n": 1,
+  "time": "day",
+  "look": "day",
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/C00924717/a788e03a-3ad1-4649-9c4d-c8768c856c5e.jpeg",
+  "img": "Keep the place exactly as it is (same rooftop wooden deck with the square wooden hot tub, same white walls, same glass canopy roof frame above, same small plants, same blue sea with islands beyond). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same glass canopy and sky and below with the same wooden deck. The hot tub water is warm: only a very light thin steam. No people.",
+  "prompt": "Very slow steady push forward over the wooden deck toward the wooden hot tub and the sea with islands, a light thin steam rising from the water, calm and still."
+ },
+ {
+  "n": 2,
+  "time": "day",
+  "look": "day",
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/C00924717/4a0664b3-0698-4411-9e2b-6ef347412e7a.jpeg",
+  "img": "Keep the place exactly as it is (same white freestanding bathtub by the large glass window, same terrace with small table and chairs outside, same blue sea and green islands beyond, same white walls). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. This is a fully enclosed indoor room with a roof. The whole upper part of the image must be the same flat white indoor ceiling; absolutely no sky above the room. The sea is only visible through the windows. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally upward with the same white ceiling and downward with the same floor. No people.",
+  "prompt": "Very slow steady push forward past the white bathtub toward the glass window and the calm blue sea, soft small waves far outside, everything calm and still."
+ },
+ {
+  "n": 3,
+  "time": "day",
+  "look": "day",
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/C00924717/3e378c22-656a-4d85-a221-ba4a8289c3bd.jpeg",
+  "img": "Keep the place exactly as it is (same white bedroom with the white bed, same white bathtub on the left, same large windows with grey curtains, same blue sea and islands outside). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. This is a fully enclosed indoor room with a roof. The whole upper part of the image must be the same flat white indoor ceiling; absolutely no sky above the room. The sea is only visible through the windows. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally upward with the same white ceiling and downward with the same wooden floor. No people.",
+  "prompt": "Very slow steady push forward through the bright white bedroom toward the windows and the sea, curtains still, calm."
+ },
+ {
+  "n": 4,
+  "time": "day",
+  "look": "day",
+  "people": true,
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/C00924717/0a95c759-da72-4e69-8576-993b327c3984.jpeg",
+  "img": "Keep the place exactly as it is (same living room with the light wood wall, same grey sofa and white dining table, same large glass doors with white curtains, same terrace and sea outside). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. This is a fully enclosed indoor room with a roof. The whole upper part of the image must be the same flat white indoor ceiling; absolutely no sky above the room. The sea is only visible through the windows. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally upward with the same white ceiling and downward with the same floor. One Korean woman standing far away at the glass doors, seen from behind, small in the frame, looking at the sea; she does not touch any furniture. No steam or smoke.",
+  "prompt": "Very slow steady push forward through the living room toward the glass doors and the sea, the woman standing still, calm, no steam or smoke."
+ },
+ {
+  "n": 5,
+  "time": "day",
+  "look": "day",
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/C00924717/5492b71d-985e-4688-b2d7-5d3a4618826b.jpeg",
+  "img": "Keep the place exactly as it is (same wide blue bay with the small green island, same green hills and coastline, same white buildings at the bottom left). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same sky and below with the same green hillside. Make ONE single continuous aerial photo; the buildings appear exactly once. No people. No steam or smoke.",
+  "prompt": "Slow aerial glide gently rising over the hillside toward the blue bay and the small island, small waves moving on the water, calm and still."
+ }
+]
