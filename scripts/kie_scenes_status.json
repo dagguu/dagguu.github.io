@@ -1,20 +1,13 @@
 {
- "at": "2026-11-24T11:01:25.748542",
+ "at": "2026-11-24T11:04:44.957481",
  "name": "geoje-casadelmundo",
  "jobs": [
   {
    "img": "ai:1",
-   "taskId": "b5a8cb90906c129f2eaa66b2409ae13c",
-   "state": "fail",
-   "credits": 0.0,
-   "msg": "Internal Error, Please try again later."
-  },
-  {
-   "img": "ai:2",
-   "taskId": "0c2fa2f32003596a6b1cf4b580748eb2",
+   "taskId": "5f3b172adb1b3e9fe3bfc62e59adacc2",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-24/geoje-casadelmundo/clip_ai2.mp4"
+   "file": "video/2026-11-24/geoje-casadelmundo/clip_ai1.mp4"
   }
  ],
  "credits_total": 35.0
