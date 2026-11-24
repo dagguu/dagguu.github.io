@@ -1,5 +1,5 @@
 {
- "at": "2026-11-24 14:37",
+ "at": "2026-11-24 19:51",
  "checkIn": "2026-11-28",
  "stays": {
   "boryeong-lava-poolvilla": {
@@ -134,7 +134,7 @@
       "page",
       "size"
      ],
-     "total": 426
+     "total": 427
     }
    ],
    "hit": "대전 유천 스테이 패스포트 키노사키 료칸 by 아늑",
@@ -389,6 +389,40 @@
     }
    ],
    "hit": "거창 에이치(H)풀빌라",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
+  },
+  "geoje-casadelmundo": {
+   "name": "까사델문도",
+   "city": "거제",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "거제",
+     "region": "거제",
+     "type": "CITY",
+     "pages": 3,
+     "n": 141,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 909
+    }
+   ],
+   "hit": "거제도 까사델문도펜션",
    "hitKeys": [
     "deepLink",
     "imageUrl",
