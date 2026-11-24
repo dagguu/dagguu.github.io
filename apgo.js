@@ -60,7 +60,7 @@
     var w=document.createElement("div"); w.className="modal applym"; w.setAttribute("role","dialog"); w.setAttribute("aria-modal","true");
     w.innerHTML='<div class="sheet apsheet"><button class="mx" data-m="x" aria-label="닫기">✕</button>'+
 
-      cp+'<a class="b pri wide" data-m="go" href="'+esc(url)+'">'+esc(src)+'에서 신청하기 ↗</a>'+
+      cp+(d.apl?d.apl.split(";;").map(function(x){ var p=x.split("|"); return '<a class="b pri wide apch" data-m="go" href="'+esc(p.slice(1).join("|"))+'">'+esc(p[0])+' 체험단 신청 ↗</a>'; }).join(""):'<a class="b pri wide" data-m="go" href="'+esc(url)+'">'+esc(src)+'에서 신청하기 ↗</a>')+
       '<button class="b sec wide" data-m="x" style="margin-top:8px">닫기</button></div>';
     function close(){ w.remove(); }
     w.addEventListener("click",function(e){
@@ -68,7 +68,7 @@
       var b=e.target.closest("[data-m]"); if(!b) return;
       if(b.dataset.m==="cp"){ ga("coupang_click",{place:"apply_popup_share",item_id:d.id}); close(); return; }
       if(b.dataset.m==="go"){ e.preventDefault(); try{ var A=JSON.parse(localStorage.getItem("dakku-applied")||"[]"); A=A.filter(function(x){ return x!==d.id; }); A.unshift(d.id); localStorage.setItem("dakku-applied",JSON.stringify(A.slice(0,50))); }catch(_){}
-        close(); goWait(url,src,d.id); return; }
+        close(); goWait(b.getAttribute("href")||url,src,d.id); return; }
       if(b.dataset.m==="x") close();
     });
     document.body.appendChild(w);
