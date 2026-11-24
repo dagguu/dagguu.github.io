@@ -37,11 +37,11 @@
         L.map(kCard).join("")+
         '</div><a class="gikm" data-gk href="'+esc(kgo("/"))+'" target="_blank" rel="noopener">다꾸키즈 구경가기 ›</a></div>';
     }
-    w.innerHTML='<div class="gis">'+(cp?'':'<button class="gix" data-gx aria-label="닫기">✕</button>')+'<div class="gil"><span class="gisp"></span><b>'+(cp?'쿠팡으로 이동 중이에요':esc(src)+' 사이트로 이동 중이에요')+'</b><small>'+(cp?'3초 뒤 상품 페이지가 열려요':'잠시 후 건너뛰기를 누르면 신청 페이지가 열려요')+'</small></div>'+
-      '<div class="gibar"><i></i></div><div class="gikw">'+kids()+'</div>'+(cp?'':'<button class="b pri wide gskip" data-gnow disabled><span class="gicd">3</span>초 후 건너뛸 수 있어요</button>')+'</div>';
+    w.innerHTML='<div class="gis">'+(cp?'':'<button class="gix" data-gx aria-label="닫기">✕</button>')+'<div class="gil"><span class="gisp"></span><b>'+(cp?'쿠팡으로 이동 중이에요':esc(src)+' 사이트로 이동 중이에요')+'</b><small>'+(cp?'3초 뒤 상품 페이지가 열려요':'3초 뒤 신청 페이지가 자동으로 열려요')+'</small></div>'+
+      '<div class="gibar"><i></i></div><div class="gikw">'+kids()+'</div>'+(cp?'':'<button class="b pri wide gskip" data-gnow><span class="gicd">3</span>초 후 이동 · 바로 가기 ›</button>')+'</div>';
     w.addEventListener("click",function(e){
       if(e.target.closest("[data-gx]")){ done=true; clearInterval(cd); w.remove(); ga("apply_wait_close",{item_id:id,page:"share"}); return; }
-      var sk=e.target.closest("[data-gnow]"); if(sk){ if(sk.disabled) return; ga(cp?"coupang_go":"apply_go",{item_id:id,how:"skip",page:"share"}); return go(); }
+      var sk=e.target.closest("[data-gnow]"); if(sk){ if(sk.disabled) return; ga(cp?"coupang_go":"apply_go",{item_id:id,how:"now",page:"share"}); return go(); }
       if(e.target.closest("[data-gk]")) ga("kids_click",{place:"apply_wait_share",item_id:id});
     });
     document.body.appendChild(w);
@@ -49,9 +49,9 @@
     var KPG=0, rot=setInterval(function(){ if(done||!w.isConnected){ clearInterval(rot); return; } if(!KIDS||KIDS.length<6) return;
       KPG++; var r=w.querySelector(".gikr"); if(r){ r.classList.add("gfade"); setTimeout(function(){ var k=w.querySelector(".gikw"); if(k) k.innerHTML=kids(); var r2=w.querySelector(".gikr"); if(r2){ r2.classList.add("gfade"); requestAnimationFrame(function(){ requestAnimationFrame(function(){ r2.classList.remove("gfade"); }); }); } },250); } },3000);
     var left=3; cd=setInterval(function(){ left--; var el=w.querySelector(".gicd"), bt=w.querySelector(".gskip"); if(el) el.textContent=left;
-      if(left<=0){ clearInterval(cd); if(bt){ bt.disabled=false; bt.innerHTML="건너뛰기 ›"; } } },1000);
+      if(left<=0){ clearInterval(cd); if(bt) bt.innerHTML="이동 중…"; } },1000);
     ga(cp?"coupang_wait":"apply_wait",{item_id:id,source:src,page:"share"});
-    if(cp) tm=setTimeout(go,3000);
+    tm=setTimeout(function(){ if(!done) ga(cp?"coupang_go":"apply_go",{item_id:id,how:"auto"}); go(); },3000);  /* 2026-11-24 시온님 "3초 후 바로 타사이트로": 신청도 3초 뒤 자동 이동(X 로 취소, 버튼은 바로 가기) */
   }
   function popup(a){
     var d=a.dataset, url=a.getAttribute("href"), src=d.src||"체험단", cat=d.cat||"stay";

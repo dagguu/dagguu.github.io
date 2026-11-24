@@ -177,7 +177,7 @@ def shell_app(title, desc, canon, body, img="", robots="index,follow", ld=None, 
 <header class="appbar"><span class="abl"><a class="backbtn" href="/" aria-label="홈으로">{BACK}</a><a class="logo" href="/"><img src="/icons/icon-192.png" alt="" width="30" height="30" style="border-radius:8px"><b class="wm">다꾸체험단</b></a></span><span class="hbtns"><a class="iconbtn" href="/#/list" aria-label="체험단 검색">{SRCH}</a></span></header>
 <main class="view">{body}
 <p class="sfoot">다꾸체험단은 여러 체험단 사이트의 모집 정보를 모아 보여 주는 서비스로, 각 체험단 사이트와 무관해요. 신청·선정·진행은 해당 사이트에서 이뤄져요.<br>다꾸체험단 (www.dagguu.com) · 운영 플랜비 · 대표 김정은 · 사업자등록번호 381-53-01054 · <a href="/ad-notice.html">광고 및 콘텐츠 표시 안내</a></p></main>
-</div>{APPJS}<script src="/apgo.js?v=11" defer></script></body></html>
+</div>{APPJS}<script src="/apgo.js?v=12" defer></script></body></html>
 '''
 
 def crumbs(parts):

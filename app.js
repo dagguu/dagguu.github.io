@@ -2626,20 +2626,20 @@ function goWait(url,src,it,cp){  /* cp=true: 쿠팡 상품 페이지로 이동(�
   function paint(){ var k=w.querySelector(".gikw"); if(k) k.innerHTML=kids(); }
   var KPG=0, rot=setInterval(function(){ if(done||!w.isConnected){ clearInterval(rot); return; } if(!KIDS||KIDS.length<6) return;
     KPG++; var r=w.querySelector(".gikr"); if(r){ r.classList.add("gfade"); setTimeout(function(){ paint(); var r2=w.querySelector(".gikr"); if(r2){ r2.classList.add("gfade"); requestAnimationFrame(function(){ r2.classList.remove("gfade"); }); } },250); } },3000);
-  w.innerHTML='<div class="gis">'+(cp?'':'<button class="gix" data-gx aria-label="닫기">'+ico(I.x)+'</button>')+'<div class="gil"><span class="gisp"></span><b>'+(cp?'쿠팡으로 이동 중이에요':esc(src)+' 사이트로 이동 중이에요')+'</b><small>'+(cp?'3초 뒤 상품 페이지가 열려요':'잠시 후 건너뛰기를 누르면 신청 페이지가 열려요')+'</small></div>'+
+  w.innerHTML='<div class="gis">'+(cp?'':'<button class="gix" data-gx aria-label="닫기">'+ico(I.x)+'</button>')+'<div class="gil"><span class="gisp"></span><b>'+(cp?'쿠팡으로 이동 중이에요':esc(src)+' 사이트로 이동 중이에요')+'</b><small>'+(cp?'3초 뒤 상품 페이지가 열려요':'3초 뒤 신청 페이지가 자동으로 열려요')+'</small></div>'+
     '<div class="gibar"><i></i></div><div class="gikw">'+kids()+'</div>'+
-    (cp?'':'<button class="b pri wide gskip" data-gnow disabled><span class="gicd">3</span>초 후 건너뛸 수 있어요</button>')+'</div>';
+    (cp?'':'<button class="b pri wide gskip" data-gnow><span class="gicd">3</span>초 후 이동 · 바로 가기 ›</button>')+'</div>';
   w.addEventListener("click",function(e){
     if(e.target.closest("[data-gx]")){ done=true; w.remove(); ga("apply_wait_close",{item_id:it.id}); return; }
-    var sk=e.target.closest("[data-gnow]"); if(sk){ if(sk.disabled) return; ga(cp?"coupang_go":"apply_go",{item_id:it.id,how:"skip"}); return go(); }
+    var sk=e.target.closest("[data-gnow]"); if(sk){ if(sk.disabled) return; ga(cp?"coupang_go":"apply_go",{item_id:it.id,how:"now"}); return go(); }
     if(e.target.closest("[data-gk]")) ga("kids_click",{place:"apply_wait",item_id:it.id});
   });
   document.body.appendChild(w);
   if(!KIDS) kidsLoad(); kidsBest(); var n=0, iv=setInterval(function(){ n++; if((KIDS&&KBEST)||n>15||done){ clearInterval(iv); paint(); } },200);
   ga(cp?"coupang_wait":"apply_wait",{item_id:it.id,source:src});
   var left=3, cd=setInterval(function(){ left--; var el=w.querySelector(".gicd"), bt=w.querySelector(".gskip"); if(el) el.textContent=left;
-    if(left<=0){ clearInterval(cd); if(bt){ bt.disabled=false; bt.innerHTML="건너뛰기 ›"; } } },1000);
-  if(cp) tm=setTimeout(go,3000);  /* 쿠팡은 건너뛰기 없이 5초 뒤 바로 이동(2026-11-18 시온님) */
+    if(left<=0){ clearInterval(cd); if(bt) bt.innerHTML="이동 중…"; } },1000);
+  tm=setTimeout(function(){ if(!done) ga(cp?"coupang_go":"apply_go",{item_id:it.id,how:"auto"}); go(); },3000);  /* 2026-11-24 시온님 "3초 후 바로 타사이트로": 신청도 3초 뒤 자동 이동(X 로 취소, 버튼은 바로 가기) */  /* 쿠팡은 건너뛰기 없이 5초 뒤 바로 이동(2026-11-18 시온님) */
 }
 /* 상세 페이지 아래 "제품 상세 보기/숙소 사진 보기" 버튼도 쿠팡으로 가기 전 다꾸키즈 화면(2026-11-18 시온님) */
 /* 2026-11-23 시온님 "쿠팡으로 이동 중이에요 안 뜨게": 쿠팡 링크는 대기 화면 없이 바로 연다(위 상세 버튼 가로채기 뺌) */
