@@ -1,42 +1,21 @@
 {
- "at": "2026-11-24T10:57:19.797698",
+ "at": "2026-11-24T11:01:25.748542",
  "name": "geoje-casadelmundo",
  "jobs": [
   {
    "img": "ai:1",
-   "taskId": "d1cd07af9bdd4a119e1cc56ed1a395cf",
+   "taskId": "b5a8cb90906c129f2eaa66b2409ae13c",
    "state": "fail",
    "credits": 0.0,
    "msg": "Internal Error, Please try again later."
   },
   {
    "img": "ai:2",
-   "taskId": "fadc7871bc011c5432e8680a0a7bede3",
-   "state": "fail",
-   "credits": 0.0,
-   "msg": "Internal Error, Please try again later."
-  },
-  {
-   "img": "ai:3",
-   "taskId": "76527833c95465221079dc0d1885e8f9",
+   "taskId": "0c2fa2f32003596a6b1cf4b580748eb2",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-24/geoje-casadelmundo/clip_ai3.mp4"
-  },
-  {
-   "img": "ai:4",
-   "taskId": "32cd1d8411434a94a9fb471e0f17b4b9",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-24/geoje-casadelmundo/clip_ai4.mp4"
-  },
-  {
-   "img": "ai:5",
-   "taskId": "ed4360476396e674888ca0f6356ae97c",
-   "state": "success",
-   "credits": 35.0,
-   "file": "video/2026-11-24/geoje-casadelmundo/clip_ai5.mp4"
+   "file": "video/2026-11-24/geoje-casadelmundo/clip_ai2.mp4"
   }
  ],
- "credits_total": 105.0
+ "credits_total": 35.0
 }
