@@ -17,4 +17,21 @@ if gone:
     json.dump(sorted(ep), open(EP, "w", encoding="utf-8"), ensure_ascii=False)
     d["items"] = [x for x in items if x not in gone]
     open(P, "w", encoding="utf-8").write(json.dumps(d, ensure_ascii=False, separators=(",", ":")))
+# 매체별 캠페인(applies) 중 마감된 것은 빼고, 신청 주소·매체를 남은 캠페인으로 맞춘다(2026-11-24)
+fix = 0
+for x in d["items"]:
+    ap = x.get("applies") or []
+    live = [a for a in ap if not (a.get("end") and a["end"] < today)]
+    if ap and live and len(live) < len(ap):
+        x["applies"] = live; x["applyUrl"] = live[0]["url"]
+        chs = []
+        for a in live:
+            for c in a.get("ch") or []:
+                if c not in chs: chs.append(c)
+        if chs: x["ch"] = chs
+        if live[0].get("ap"): x["ap"] = live[0]["ap"]
+        fix += 1
+if fix:
+    open(P, "w", encoding="utf-8").write(json.dumps(d, ensure_ascii=False, separators=(",", ":")))
+    print(f"마감된 매체 캠페인 정리 {fix}개")
 print(f"마감 체험단 {len(gone)}개 삭제 · 남은 {len(items) - len(gone)}개")
