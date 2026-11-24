@@ -1,16 +1,48 @@
 {
- "at": "2026-11-22 20:11",
+ "at": "2026-11-24 19:51",
  "model": "google/nano-banana-edit",
  "res": "2K",
  "images": [
   {
-   "n": 7,
-   "taskId": "12dee403c3c851c30324ec8c97103cf4",
+   "n": 1,
+   "taskId": "1885e3ed092aea02430c4afa4943d702",
    "state": "success",
    "credits": 4.0,
    "src_url_is_input": false,
-   "file": "img/2026-11-22/pohang-modille-poolvilla/7_edit.jpg"
+   "file": "img/2026-11-24/geoje-casadelmundo/1_edit.jpg"
+  },
+  {
+   "n": 2,
+   "taskId": "33cd0eb6aa35db3aa75569a784fcafed",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-24/geoje-casadelmundo/2_edit.jpg"
+  },
+  {
+   "n": 3,
+   "taskId": "2721a1739804f88ad6fe70ea06ceba26",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-24/geoje-casadelmundo/3_edit.jpg"
+  },
+  {
+   "n": 4,
+   "taskId": "5cbf5df40b8411bb7ffe79c0db224087",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-24/geoje-casadelmundo/4_edit.jpg"
+  },
+  {
+   "n": 5,
+   "taskId": "2d98fc3daec8bc23a62b9fbbe753b7fa",
+   "state": "success",
+   "credits": 4.0,
+   "src_url_is_input": false,
+   "file": "img/2026-11-24/geoje-casadelmundo/5_edit.jpg"
   }
  ],
- "slug": "pohang-modille-poolvilla"
+ "slug": "geoje-casadelmundo"
 }
