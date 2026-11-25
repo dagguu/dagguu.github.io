@@ -38,6 +38,12 @@ def imgs_of(p):
         u.append(a.get("big") or a.get("medium") or a.get("small"))
     return [x if not x or x.startswith("http") else "https:" + x for x in u if x]
 
+def T_(x):
+    # transformers 새 버전은 get_*_features 가 출력 묶음을 돌려줌
+    if not torch.is_tensor(x):
+        x = getattr(x, 'pooler_output', None) if getattr(x, 'pooler_output', None) is not None else x[0]
+    return x
+
 def main():
     old = json.load(open(OUT)) if os.path.exists(OUT) else {}
     ps = products()
@@ -51,7 +57,7 @@ def main():
     grp = [g for g, v in T.items() for _ in v]
     with torch.no_grad():
         ti = proc(text=texts, return_tensors="pt", padding=True)
-        tf = model.get_text_features(**ti); tf = tf / tf.norm(dim=-1, keepdim=True)
+        tf = T_(model.get_text_features(**ti)); tf = tf / tf.norm(dim=-1, keepdim=True)
     new = {}
     done = 0
     for p in ps:
@@ -68,7 +74,7 @@ def main():
                 continue
             with torch.no_grad():
                 ii = proc(images=im, return_tensors="pt")
-                f = model.get_image_features(**ii); f = f / f.norm(dim=-1, keepdim=True)
+                f = T_(model.get_image_features(**ii)); f = f / f.norm(dim=-1, keepdim=True)
                 pr = (100 * f @ tf.T).softmax(-1)[0].tolist()
             s = {"boy": 0, "girl": 0, "none": 0}
             for g, v in zip(grp, pr): s[g] += v
