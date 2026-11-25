@@ -55,9 +55,7 @@ def main():
          "none": ["a product photo of clothes with no person", "clothing laid flat on a plain background", "a mannequin wearing clothes", "a close-up of fabric"]}
     texts = sum(T.values(), [])
     grp = [g for g, v in T.items() for _ in v]
-    with torch.no_grad():
-        ti = proc(text=texts, return_tensors="pt", padding=True)
-        tf = T_(model.get_text_features(**ti)); tf = tf / tf.norm(dim=-1, keepdim=True)
+    ti = proc(text=texts, return_tensors="pt", padding=True)
     new = {}
     done = 0
     for p in ps:
@@ -74,8 +72,8 @@ def main():
                 continue
             with torch.no_grad():
                 ii = proc(images=im, return_tensors="pt")
-                f = T_(model.get_image_features(**ii)); f = f / f.norm(dim=-1, keepdim=True)
-                pr = (100 * f @ tf.T).softmax(-1)[0].tolist()
+                o = model(input_ids=ti["input_ids"], attention_mask=ti["attention_mask"], pixel_values=ii["pixel_values"])
+                pr = o.logits_per_image.softmax(-1)[0].tolist()
             s = {"boy": 0, "girl": 0, "none": 0}
             for g, v in zip(grp, pr): s[g] += v
             per = s["boy"] + s["girl"]
