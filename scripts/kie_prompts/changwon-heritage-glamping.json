@@ -1,0 +1,43 @@
+[
+ {
+  "n": 1,
+  "time": "day",
+  "look": "day",
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/A00935655/a51789e6-12f7-44b5-8d7b-1626b47b63cd.jpg",
+  "img": "Keep the place exactly as it is (same white bed with white pillows, same panoramic glass windows wrapping the corner of the caravan, same white ceiling with the square ceiling light, same teal awning outside, same calm blue sea and distant islands beyond). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. This is a fully enclosed caravan room with a roof. The whole upper part of the image must be the same white indoor ceiling; absolutely no sky above the room. The sea is only visible through the windows. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally upward with the same white ceiling and downward with the same white bed and floor. No people.",
+  "prompt": "Very slow steady push forward over the white bed toward the panoramic window and the calm blue sea with distant islands, soft small waves far away, calm and still."
+ },
+ {
+  "n": 2,
+  "time": "day",
+  "look": "day",
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/A00935655/696ffe6b-c306-4466-9440-a86e051ecccd.jpg",
+  "img": "Keep the place exactly as it is (same private pool with the clear glass wall at the edge, same teal awning above, same white railing fence, same calm blue sea and green hills beyond). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same awning and sky and below with the same pool water. The pool water is warm: only a very light thin steam. No people.",
+  "prompt": "Very slow steady push forward along the glass-walled pool toward the blue sea and the hills, gentle ripples on the pool water and a very light thin steam, calm and still."
+ },
+ {
+  "n": 3,
+  "time": "day",
+  "look": "day",
+  "people": true,
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/A00935655/ff1be877-2dd7-4a0a-8a05-b7bc599e3b1b.jpg",
+  "img": "Keep the place exactly as it is (same caravan on the left, same teal awning, same stone deck, same private pool in front, same white railing and the blue sea with islands beyond). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same awning and sky and below with the same pool water. One Korean woman standing far away at the white railing beyond the pool, seen from behind, small in the frame, looking at the sea; she does not touch anything. The pool water is warm: only a very light thin steam.",
+  "prompt": "Very slow steady push forward across the pool toward the railing and the sea, the woman standing still far away, gentle ripples on the water, calm."
+ },
+ {
+  "n": 4,
+  "time": "sunset",
+  "look": "day",
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/A00935655/966925bd-9799-4f0c-b562-50c561a34cc1.jpg",
+  "img": "Keep the place exactly as it is (same window seat with the small vintage radio, same glass window with raindrops, same sunset sea and islands outside, same dark frame). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. This is a fully enclosed caravan room with a roof. The whole upper part of the image must be the same white indoor ceiling; absolutely no sky above the room. The sea is only visible through the windows. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally upward with the same ceiling and downward with the same window seat. Never add any text or brand name on the radio. No people.",
+  "prompt": "Very slow steady push forward toward the window and the glowing sunset over the sea, raindrops on the glass staying still, calm and quiet."
+ },
+ {
+  "n": 5,
+  "time": "sunset",
+  "look": "day",
+  "src": "https://image.coupangcdn.com/image/travelConnect/hotel/A00935655/a6e855e7-3d3f-48a3-9e26-2dfa3697f0a8.jpg",
+  "img": "Keep the place exactly as it is (same orange sunset sky, same sun low over the sea, same dark island on the left, same golden reflection on the water, same dark stone wall on the right). Keep the place exactly as it is; do not add new buildings, furniture, signs, text or logos. Photorealistic. Never mirror or flip the image. Vertical 9:16 frame: keep the original photo area unchanged and only extend naturally above with the same sky and below with the same sea. No people.",
+  "prompt": "Very slow steady push forward toward the setting sun over the sea, the golden reflection gently shimmering on small waves, calm and still."
+ }
+]
