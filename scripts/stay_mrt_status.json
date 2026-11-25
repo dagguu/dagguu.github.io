@@ -1,5 +1,5 @@
 {
- "at": "2026-11-25 13:37",
+ "at": "2026-11-25 19:50",
  "checkIn": "2026-12-05",
  "stays": {
   "boryeong-lava-poolvilla": {
@@ -66,10 +66,44 @@
       "page",
       "size"
      ],
-     "total": 1832
+     "total": 1833
     }
    ],
    "hit": "마티에 부산하버시티",
+   "hitKeys": [
+    "deepLink",
+    "imageUrl",
+    "itemId",
+    "itemName",
+    "originalPrice",
+    "productUrl",
+    "reviewCount",
+    "reviewScore",
+    "salePrice",
+    "starRating"
+   ]
+  },
+  "changwon-heritage-glamping": {
+   "name": "헤리티지글램핑",
+   "city": "창원",
+   "auto": [],
+   "pages": 0,
+   "tried": [
+    {
+     "kw": "창원",
+     "region": "창원",
+     "type": "CITY",
+     "pages": 2,
+     "n": 99,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 475
+    }
+   ],
+   "hit": "창원 상남동 헤리티지 호텔",
    "hitKeys": [
     "deepLink",
     "imageUrl",
