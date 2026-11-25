@@ -376,7 +376,7 @@ if Q.get('scout'):
         try: d = data_uri(u)
         except Exception as ex: continue
         w, h = SIZES.get(u, (0, 0))
-        if min(w, h) >= 1000: good.append((pu, u, w, h, d))
+        if min(w, h) >= Q.get('scoutMin', 1000): good.append((pu, u, w, h, d))
     with open(os.path.join(out, 'scout.txt'), 'w') as f:
         for i, (pu, u, w, h, d) in enumerate(good, 1): f.write(f"S{i}\t{w}x{h}\t{pu}\t{u}\n")
     per = 24
