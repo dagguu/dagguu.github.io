@@ -1,14 +1,42 @@
 {
- "at": "2026-11-24T11:04:44.957481",
- "name": "geoje-casadelmundo",
+ "at": "2026-11-25T10:59:56.833073",
+ "name": "changwon-heritage-glamping",
  "jobs": [
   {
    "img": "ai:1",
-   "taskId": "5f3b172adb1b3e9fe3bfc62e59adacc2",
+   "taskId": "ca8ea00653ebe46e1de4ca3497f11790",
+   "state": "fail",
+   "credits": 0.0,
+   "msg": "Internal Error, Please try again later."
+  },
+  {
+   "img": "ai:2",
+   "taskId": "728856962763ca2ba78bfe42cb4e82e8",
    "state": "success",
    "credits": 35.0,
-   "file": "video/2026-11-24/geoje-casadelmundo/clip_ai1.mp4"
+   "file": "video/2026-11-25/changwon-heritage-glamping/clip_ai2.mp4"
+  },
+  {
+   "img": "ai:3",
+   "taskId": "845567035c1326f427fe8f8077d68df9",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-25/changwon-heritage-glamping/clip_ai3.mp4"
+  },
+  {
+   "img": "ai:4",
+   "taskId": "766cf130130bc1367391bf600912c654",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-25/changwon-heritage-glamping/clip_ai4.mp4"
+  },
+  {
+   "img": "ai:5",
+   "taskId": "093918d053c3956111e4a938cbe03e4e",
+   "state": "success",
+   "credits": 35.0,
+   "file": "video/2026-11-25/changwon-heritage-glamping/clip_ai5.mp4"
   }
  ],
- "credits_total": 35.0
+ "credits_total": 140.0
 }
