@@ -1,0 +1,28 @@
+name: 다꾸키즈 모델 성별 판별
+on:
+  schedule:
+    - cron: "53 3 * * *"   # 매일 12:53 KST (쇼핑몰 10:37 신상 등록 뒤)
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: kids-gender
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q transformers pillow requests
+      - run: python3 scripts/kids_gender.py
+      - if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add kids/gender.json
+          git diff --cached --quiet && exit 0
+          git commit -m "다꾸키즈 모델 성별 판별"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
