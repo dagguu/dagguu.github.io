@@ -1,6 +1,6 @@
 {
  "date": "2026-11-25",
- "text": "",
+ "text": "(훅 후보) 오늘 신규 체험단 129곳 OPEN! 🎉 / 오늘 오픈! 55만원 상당 경주 독채 💸\n\n🏨 통영 호텔 1박 9만원, 90% 할인!\n오늘 신규 체험단도 129곳 열렸어요 🎉\n\n🏨 숙박 특가 (12/5 토 1박 2인)\n통영 한산 호텔 90,000원(90%↓)·가평 더베이리조트 98,100원(80%↓)\n\n🏡 [숙박] 하유저택(경주) 최대 55만원 상당 독채 · ~12/1\n👶 [육아] 맥시코시 카시트+유모차 트래블시스템 · ~11/30\n⏰ [마감] 강화도 화이트갤러리펜션 55만원 상당 · 오늘까지\n\n🔥 오늘의 특가 (내일 7시까지)\n홈럭스 필터 샤워기 세트 13,480원\n네파 세이프티 패딩 넥워머 11,450원\n\n버튼1: 오늘 오픈 보기 | https://www.dagguu.com/#/list?cat=all&s=todayOpen\n버튼2: 숙소 특가 보기 | https://www.dagguu.com/d/",
  "cards": [
   {
    "title": "[숙박특가🏨] 통영 호텔 1박 9만원",
@@ -18,17 +18,32 @@
    "fit": "cover"
   },
   {
-   "title": "[NEW✨] 제주 성산 숙소 열렸어요",
+   "title": "[오늘오픈🎉] 55만원 독채가 떴어요",
    "h": [
     "숙박 체험단 모집!",
-    "제주·남원·거제·울주",
-    "새로 열린 4곳"
+    "경주 55만원 독채",
+    "오늘 새로 열렸어요"
    ],
-   "sub": "어제 새로 올라온 숙박 체험단",
-   "desc": "이번 주에 신청해 둘 숙소예요🏡\n성산 동백소랑(서귀포)·그린홀(남원, 독채)·까사델문도(거제)·보스케토삼동(울주) 모두 2인 기준🌊\n✅기간 : ~11/29",
-   "btn": "체험단 보러가기",
-   "url": "https://www.dagguu.com/#/list?cat=stay&s=open",
-   "bgimg": "https://image.coupangcdn.com/image/travelConnect/hotel/C00924717/a788e03a-3ad1-4649-9c4d-c8768c856c5e.jpeg",
+   "sub": "오늘 오픈한 숙박 체험단 4곳",
+   "desc": "오늘 새로 열린 고가 숙소예요🏡\n하유저택 경주독채펜션(최대 55만원 상당)·모우네 독채 풀빌라(화순, 40만원 상당)·헤리티지 글램핑(창원, 25~40만원 상당)·담쟁이 치유 농장(여수, 30만원 상당)🌿\n✅기간 : ~11/30·~12/1·~12/8",
+   "btn": "오늘오픈 보기",
+   "url": "https://www.dagguu.com/#/list?cat=all&s=todayOpen",
+   "bgimg": "https://gangnam-review.net/data/file/cmp/2026/11/24/cmp_2369618-c83b53e251d91d422ab8255d56a5c045ca2c9876.jpg",
+   "style": "v4",
+   "fit": "cover"
+  },
+  {
+   "title": "[오늘오픈🎉] 카시트 세트 왔어요",
+   "h": [
+    "육아 체험단 모집!",
+    "카시트·유모차 세트",
+    "오늘 새로 열렸어요"
+   ],
+   "sub": "오늘 오픈한 육아 체험단 4곳",
+   "desc": "우리 아이 겨울 준비템이에요👶\n맥시코시 코랄+페임캐빈 트래블시스템·베베랑 낮잠이불 세트(115,000원 페이백+구매평)·편강율 키즈앤베이비 페이스로션·말랑하니 논슬립 방수패드🍼\n✅기간 : ~11/29·~11/30",
+   "btn": "육아 보러가기",
+   "url": "https://www.dagguu.com/#/list?cat=baby&s=todayOpen",
+   "bgimg": "https://chehumy.io/data/campaign/1981916227_IkMhOUai_EC8AA4ED81ACEBA6B0EC83B7_2026-10-19_151626.png",
    "style": "v4",
    "fit": "cover"
   },
@@ -77,5 +92,15 @@
    "style": "v4",
    "fit": "cover"
   }
+ ],
+ "probe": [
+  "https://s.whogiup.com/admin_upload/RQg5bHvP5EmJqHXG9D97fxpeN4tTvh02T2aiu5Lq.jpg",
+  "https://gangnam-review.net/data/file/cmp/2026/11/23/cmp_2368647-c339195949481b9c1e527858c1d72fdb1d812c5b.jpg",
+  "https://gangnam-review.net/data/file/cmp/2026/11/23/cmp_2367935-60d16ae2d2541c3ab6e41db4567cc2dfb9f88d87.jpg",
+  "https://gangnam-review.net/data/file/cmp/2026/11/24/cmp_2369246-5044ee4444c8d3d3f2440d9c3b55789ba274f300.jpg",
+  "https://s.whogiup.com/admin_upload/RQg5bHvP5EmJqHXG9D97fxpeN4tTvh02T2aiu5Lq.jpg",
+  "https://files.weble.net/campaign/data/1442148/b8289329968f4c693207ddef54ac9fbe.jpg",
+  "https://files.weble.net/campaign/data/1442750/99f66729e188776082e917bd258a9f39.jpg",
+  "https://chehumy.io/data/campaign/1981916227_IkMhOUai_EC8AA4ED81ACEBA6B0EC83B7_2026-10-19_151626.png"
  ]
 }
