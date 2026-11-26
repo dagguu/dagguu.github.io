@@ -1,5 +1,5 @@
 {
- "at": "2026-11-25 19:50",
+ "at": "2026-11-26 12:48",
  "checkIn": "2026-12-05",
  "stays": {
   "boryeong-lava-poolvilla": {
@@ -26,26 +26,26 @@
      "region": "태안",
      "type": "CITY",
      "pages": 27,
-     "n": 1229,
+     "n": 1228,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1267
+     "total": 1266
     },
     {
      "kw": "충남",
      "region": "천안",
      "type": "CITY",
      "pages": 8,
-     "n": 301,
+     "n": 302,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 304
+     "total": 305
     }
    ]
   },
@@ -60,13 +60,13 @@
      "region": "부산",
      "type": "CITY",
      "pages": 2,
-     "n": 98,
+     "n": 99,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1833
+     "total": 1834
     }
    ],
    "hit": "마티에 부산하버시티",
@@ -168,7 +168,7 @@
       "page",
       "size"
      ],
-     "total": 431
+     "total": 436
     }
    ],
    "hit": "대전 유천 스테이 패스포트 키노사키 료칸 by 아늑",
@@ -236,7 +236,7 @@
       "page",
       "size"
      ],
-     "total": 737
+     "total": 738
     }
    ],
    "hit": "강화도펜션AND",
@@ -270,7 +270,7 @@
       "page",
       "size"
      ],
-     "total": 1344
+     "total": 1347
     }
    ],
    "hit": "강릉 다케노모리글램핑&료칸",
@@ -304,7 +304,7 @@
       "page",
       "size"
      ],
-     "total": 1681
+     "total": 1683
     }
    ],
    "hit": "가평 글램하바나",
@@ -338,7 +338,7 @@
       "page",
       "size"
      ],
-     "total": 1681
+     "total": 1683
     }
    ],
    "hit": "가평 하녹타케",
@@ -385,7 +385,7 @@
       "page",
       "size"
      ],
-     "total": 1681
+     "total": 1683
     }
    ],
    "hit": "가평 슈가풀빌라&스파글램핑",
@@ -453,7 +453,7 @@
       "page",
       "size"
      ],
-     "total": 909
+     "total": 910
     }
    ],
    "hit": "거제도 까사델문도펜션",
@@ -487,7 +487,7 @@
       "page",
       "size"
      ],
-     "total": 363
+     "total": 364
     }
    ],
    "hit": "고성 072스테이",
@@ -515,13 +515,13 @@
      "region": "고성",
      "type": "CITY",
      "pages": 9,
-     "n": 354,
+     "n": 355,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 363
+     "total": 364
     },
     {
      "kw": "고성",
@@ -541,26 +541,26 @@
      "region": "강릉",
      "type": "CITY",
      "pages": 27,
-     "n": 1259,
+     "n": 1264,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1280
+     "total": 1285
     },
     {
      "kw": "강원",
      "region": "평창",
      "type": "CITY",
-     "pages": 9,
-     "n": 385,
+     "pages": 10,
+     "n": 388,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 398
+     "total": 401
     }
    ]
   },
@@ -615,7 +615,7 @@
       "page",
       "size"
      ],
-     "total": 1662
+     "total": 1664
     }
    ],
    "hit": "경주 늘해랑 풀빌라",
@@ -649,7 +649,7 @@
       "page",
       "size"
      ],
-     "total": 1662
+     "total": 1664
     }
    ],
    "hit": "경주 에스앤비풀빌라",
@@ -683,7 +683,7 @@
       "page",
       "size"
      ],
-     "total": 1662
+     "total": 1664
     }
    ],
    "hit": "토모노야 호텔&료칸 경주",
@@ -751,7 +751,7 @@
       "page",
       "size"
      ],
-     "total": 953
+     "total": 952
     }
    ],
    "hit": "인천 캠프노마드",
@@ -779,13 +779,39 @@
      "region": "포항",
      "type": "CITY",
      "pages": 11,
+     "n": 483,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 838
+    },
+    {
+     "kw": "경북",
+     "region": "경주",
+     "type": "CITY",
+     "pages": 35,
+     "n": 1640,
+     "keys": [
+      "totalCount",
+      "page",
+      "size"
+     ],
+     "total": 1664
+    },
+    {
+     "kw": "경북",
+     "region": "포항",
+     "type": "CITY",
+     "pages": 11,
      "n": 532,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 837
+     "total": 838
     }
    ],
    "hit": "포항 바이 더 씨 풀빌라",
@@ -819,7 +845,7 @@
       "page",
       "size"
      ],
-     "total": 837
+     "total": 838
     }
    ],
    "hit": "데이토나 풀 빌라",
@@ -853,7 +879,7 @@
       "page",
       "size"
      ],
-     "total": 837
+     "total": 838
     }
    ],
    "hit": "포항 모딜레풀빌라",
@@ -955,7 +981,7 @@
       "page",
       "size"
      ],
-     "total": 1366
+     "total": 1365
     }
    ],
    "hit": "담앤루리조트",
@@ -989,7 +1015,7 @@
       "page",
       "size"
      ],
-     "total": 2070
+     "total": 2074
     }
    ],
    "hit": "대부도(선재도) 선재담글램핑&카라반리조트",
@@ -1030,13 +1056,13 @@
      "region": "전주",
      "type": "CITY",
      "pages": 15,
-     "n": 671,
+     "n": 673,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 678
+     "total": 680
     },
     {
      "kw": "전북",
@@ -1070,7 +1096,7 @@
       "page",
       "size"
      ],
-     "total": 250
+     "total": 252
     }
    ],
    "hit": "영덕 풀문 영덕 풀빌라",
