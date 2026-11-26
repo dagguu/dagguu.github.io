@@ -1,7209 +1,2919 @@
 {
- "updated": "2026-11-25 16:16",
+ "updated": "2026-11-26 16:17",
  "hints": [
-  "무선청소기",
-  "커피머신",
-  "어드벤트캘린더",
-  "캡슐커피머신",
-  "무선청소기추천"
+  "쏘서",
+  "점퍼루",
+  "아기체육관",
+  "바운서",
+  "보행기"
  ],
  "rows": [
   {
-   "kw": "무선청소기",
-   "vol": 112100,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "로봇청소기",
-   "vol": 110800,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어드벤트캘린더",
-   "vol": 90700,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "커피머신",
-   "vol": 83700,
+   "kw": "아기체육관",
+   "vol": 27200,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "청소기",
-   "vol": 81100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물걸레청소기",
-   "vol": 31410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차량용청소기",
-   "vol": 30200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전동드릴",
-   "vol": 29500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캠핑용품",
-   "vol": 29000,
+   "kw": "졸리점퍼",
+   "vol": 11830,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "샤크청소기",
-   "vol": 28230,
+   "kw": "노인보행기",
+   "vol": 10850,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커피원두",
-   "vol": 27930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "필립스커피머신",
-   "vol": 26140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일리커피머신",
-   "vol": 23260,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어드밴트캘린더",
-   "vol": 23230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선송풍기",
-   "vol": 21080,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캡슐커피머신",
-   "vol": 20140,
-   "comp": "높음",
-   "hint": true
-  },
-  {
-   "kw": "원두커피",
-   "vol": 18910,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "공구",
-   "vol": 17760,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유선청소기",
-   "vol": 17510,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "그라인더",
-   "vol": 15680,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "업소용청소기",
-   "vol": 13940,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피메이커",
-   "vol": 12540,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "에스프레소머신",
-   "vol": 12480,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "무선청소기추천",
-   "vol": 11810,
+   "kw": "보행기",
+   "vol": 10780,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "소형청소기",
-   "vol": 11480,
+   "kw": "점퍼루",
+   "vol": 9260,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "걸음마보조기",
+   "vol": 8340,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "가정용커피머신",
-   "vol": 10970,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "핸디청소기",
-   "vol": 10580,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전자동커피머신",
-   "vol": 9910,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "스타벅스커피",
-   "vol": 9680,
+   "kw": "아기바운서",
+   "vol": 8050,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원룸청소기",
-   "vol": 9090,
-   "comp": "중간",
-   "hint": false
+   "kw": "쏘서",
+   "vol": 7940,
+   "comp": "높음",
+   "hint": true
   },
   {
-   "kw": "로봇청소기추천",
-   "vol": 8920,
+   "kw": "바운서",
+   "vol": 7190,
    "comp": "중간",
-   "hint": false
+   "hint": true
   },
   {
-   "kw": "크리스마스캘린더",
-   "vol": 8850,
+   "kw": "보행보조기",
+   "vol": 6610,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미니청소기",
-   "vol": 8660,
+   "kw": "복지용구",
+   "vol": 6300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무선에어건",
-   "vol": 8520,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "진공청소기",
-   "vol": 8490,
+   "kw": "노인보행보조기",
+   "vol": 6200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "일렉트로룩스무선청소기",
-   "vol": 8030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유라커피머신",
-   "vol": 7990,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청소기추천",
-   "vol": 7470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실간식",
-   "vol": 7400,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선물걸레청소기",
-   "vol": 6910,
+   "kw": "피셔프라이스아기체육관",
+   "vol": 6040,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커피캡슐",
-   "vol": 6900,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피머신기",
-   "vol": 6400,
+   "kw": "웨어러블로봇",
+   "vol": 5460,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피자판기",
-   "vol": 6020,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자판기",
-   "vol": 6000,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "친구생일선물",
-   "vol": 5970,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차이슨무선청소기",
-   "vol": 5960,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원두커피머신",
-   "vol": 5730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선핸디청소기",
-   "vol": 5730,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "청소기순위",
-   "vol": 5680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동커피머신",
-   "vol": 5610,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "저렴한청소기",
-   "vol": 5560,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "휴대용청소기",
-   "vol": 5090,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "청소기비교",
-   "vol": 5040,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "드립커피머신",
+   "kw": "아마존쏘서",
    "vol": 5020,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "쇼핑백제작",
-   "vol": 5020,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "24시무인카페",
-   "vol": 4980,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청소기가격",
-   "vol": 4940,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "테팔무선청소기",
+   "kw": "육아",
    "vol": 4890,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피머신렌탈",
+   "kw": "6개월아기장난감",
    "vol": 4650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실청소기",
-   "vol": 4630,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "반자동커피머신",
-   "vol": 4370,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전동공구",
-   "vol": 4330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈리아",
-   "vol": 4320,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가성비청소기",
-   "vol": 4300,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "사무실커피머신",
-   "vol": 4280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용청소기",
-   "vol": 4280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일무선청소기",
-   "vol": 4260,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자취필수템",
-   "vol": 4220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니핸디청소기",
+   "kw": "피셔프라이스",
    "vol": 4140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미니커피머신",
-   "vol": 4070,
+   "kw": "장난감대여",
+   "vol": 4050,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미니무선청소기",
-   "vol": 3950,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "차량용에어건",
-   "vol": 3950,
+   "kw": "어르신보행기",
+   "vol": 3940,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "차량청소기",
-   "vol": 3900,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "타카총",
+   "kw": "노인",
    "vol": 3790,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "차이슨",
-   "vol": 3630,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "저소음청소기",
-   "vol": 3570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형커피머신",
-   "vol": 3470,
+   "kw": "타이니모빌대여",
+   "vol": 3730,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "물걸레로봇청소기",
-   "vol": 3390,
+   "kw": "뉴나바운서",
+   "vol": 3510,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "카페창업",
+   "kw": "졸리점퍼대여",
    "vol": 3380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대형커피머신",
-   "vol": 3350,
+   "kw": "8개월아기장난감",
+   "vol": 3220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무선진공청소기",
-   "vol": 3040,
+   "kw": "7개월아기장난감",
+   "vol": 3220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무선청소기순위",
-   "vol": 3020,
+   "kw": "국민문짝",
+   "vol": 3050,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "타일공구",
-   "vol": 2990,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차량용청소기추천",
-   "vol": 2940,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "SWING",
-   "vol": 2920,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차량용무선청소기",
-   "vol": 2870,
+   "kw": "쏘서대여",
+   "vol": 2630,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "COFFEEMACHINE",
-   "vol": 2860,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가정용에스프레소머신",
-   "vol": 2850,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "무선미니청소기",
-   "vol": 2850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일리캡슐커피",
-   "vol": 2800,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "스팀물걸레청소기",
-   "vol": 2790,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피머신추천",
-   "vol": 2770,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "차량용핸디청소기",
-   "vol": 2710,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "샤오미청소기",
-   "vol": 2600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신일청소기",
+   "kw": "점퍼루대여",
    "vol": 2590,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실버카",
+   "vol": 2570,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "미니차량용청소기",
-   "vol": 2590,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "수공구",
+   "kw": "5개월아기장난감",
    "vol": 2480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "10개월아기장난감",
+   "vol": 2380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바운서대여",
+   "vol": 2170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보행보조로봇",
+   "vol": 2130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "차이슨청소기",
-   "vol": 2450,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "결혼축하선물",
-   "vol": 2420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니송풍기",
-   "vol": 2390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업소용커피머신",
-   "vol": 2370,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수동커피머신",
-   "vol": 2360,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "동구전자커피머신",
-   "vol": 2270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공구상",
-   "vol": 2220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동차청소기",
-   "vol": 2210,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "테팔청소기",
+   "kw": "성인용보행기",
    "vol": 2060,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커피자판기렌탈",
-   "vol": 2050,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키보드청소",
+   "kw": "고관절운동",
    "vol": 2030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "두돌아기장난감",
+   "vol": 2020,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "무인창업",
-   "vol": 2000,
+   "kw": "어린이동화책",
+   "vol": 1890,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캡슐커피추천",
-   "vol": 1920,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가벼운무선청소기",
-   "vol": 1880,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "원두커피기계",
-   "vol": 1870,
+   "kw": "유아교구",
+   "vol": 1740,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캡슐머신",
-   "vol": 1850,
+   "kw": "아기점퍼루",
+   "vol": 1700,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "물청소기",
-   "vol": 1850,
+   "kw": "웨어러블슈트",
+   "vol": 1700,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무선차량청소기",
-   "vol": 1820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "휴대용커피머신",
-   "vol": 1790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피용품",
-   "vol": 1730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선핸드청소기",
-   "vol": 1650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에어타카",
-   "vol": 1640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기공구",
-   "vol": 1640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "공구하자",
-   "vol": 1640,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자동먼지비움청소기",
-   "vol": 1630,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유선청소기추천",
-   "vol": 1620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용커피머신추천",
-   "vol": 1600,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "무선소형청소기",
-   "vol": 1600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "새차선물",
-   "vol": 1600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용커피머신기",
+   "kw": "아기장난감대여",
    "vol": 1590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "공구종류",
-   "vol": 1580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "밀리타커피머신",
-   "vol": 1560,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캡슐커피머신추천",
-   "vol": 1530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "핸드청소기",
-   "vol": 1530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "20만원대선물",
-   "vol": 1530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물걸레청소기추천",
-   "vol": 1510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고양이털제거기",
-   "vol": 1510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피기계",
-   "vol": 1480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신혼집집들이선물",
-   "vol": 1470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "못주머니",
+   "kw": "유아영어",
    "vol": 1450,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "BLDC무선청소기",
-   "vol": 1440,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "핸디형청소기",
+   "kw": "미키코리아",
    "vol": 1410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어르신보행보조기",
+   "vol": 1400,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "가정용원두커피머신",
-   "vol": 1380,
+   "kw": "입는로봇",
+   "vol": 1360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피얼음정수기",
-   "vol": 1370,
+   "kw": "보행기대여",
+   "vol": 1210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캠핑에어건",
-   "vol": 1350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "샤오미차량용청소기",
-   "vol": 1350,
+   "kw": "졸리점퍼슈퍼스탠드",
+   "vol": 1200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "렌치세트",
-   "vol": 1340,
+   "kw": "할머니유모차",
+   "vol": 1200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "멀티자판기",
-   "vol": 1330,
+   "kw": "아기사운드북",
+   "vol": 1200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무인카페창업비용",
-   "vol": 1310,
+   "kw": "ROBOT",
+   "vol": 1140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스팀로봇청소기",
-   "vol": 1310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "패키지디자인",
-   "vol": 1290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "휴대용에스프레소머신",
-   "vol": 1270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일리캡슐머신",
-   "vol": 1260,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미니콤프레샤",
-   "vol": 1260,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피머신브랜드",
-   "vol": 1230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신혼선물",
-   "vol": 1220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LG코드제로청소기",
-   "vol": 1190,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "원룸무선청소기",
-   "vol": 1180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원룸청소",
-   "vol": 1180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캡슐커피보관함",
-   "vol": 1170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가벼운청소기",
-   "vol": 1160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "로봇물걸레청소기",
-   "vol": 1160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자동물걸레청소기",
+   "kw": "복지용구몰",
    "vol": 1130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "휴대용에어건",
-   "vol": 1130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스타벅스커피머신",
-   "vol": 1100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선청소기비교",
-   "vol": 1090,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "소형무선청소기",
-   "vol": 1090,
+   "kw": "아기체육관대여",
+   "vol": 1110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미니에어건",
-   "vol": 1090,
+   "kw": "어르신유모차",
+   "vol": 1070,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "한경희청소기",
-   "vol": 1080,
+   "kw": "노인유모차",
+   "vol": 1050,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "건강보조식품",
+   "vol": 1040,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아마존쏘서대여",
+   "vol": 970,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "센스있는집들이선물",
-   "vol": 1080,
+   "kw": "롤레이터",
+   "vol": 940,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "인기완구",
+   "vol": 915,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "지멘스인덕션",
-   "vol": 1060,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가성비무선청소기",
-   "vol": 1030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "수동에스프레소머신",
-   "vol": 1030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무인커피머신",
-   "vol": 1020,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈쇼핑무선청소기",
-   "vol": 1020,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차량용진공청소기",
-   "vol": 1020,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "블렌텍",
-   "vol": 1000,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "패키지제작",
-   "vol": 1000,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용무선청소기",
-   "vol": 990,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "중고커피머신",
-   "vol": 950,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "진공물걸레청소기",
-   "vol": 930,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페커피머신",
+   "kw": "어라운드위고대여",
    "vol": 900,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "무인매장",
+   "kw": "아기흔들의자",
    "vol": 890,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피메이트",
+   "kw": "변기안전바",
    "vol": 890,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자판기사업",
-   "vol": 880,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "디베아청소기",
-   "vol": 880,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유선진공청소기",
-   "vol": 880,
+   "kw": "아기쏘서",
+   "vol": 810,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가성비로봇청소기",
-   "vol": 850,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용물걸레청소기",
-   "vol": 830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차량용품선물",
-   "vol": 830,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청소기렌탈",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네스프레소캡슐커피머신",
-   "vol": 820,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일렉트로룩스에르고라피도",
+   "kw": "로봇다리",
    "vol": 810,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "세차에어건",
+   "kw": "보조기",
+   "vol": 810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미끄럼틀대여",
    "vol": 800,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "휴대용송풍기",
-   "vol": 800,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "머리카락청소기",
-   "vol": 790,
+   "kw": "워커보행기",
+   "vol": 780,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "ZB3511DB",
-   "vol": 790,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "에어청소기",
-   "vol": 790,
+   "kw": "애기장난감",
+   "vol": 780,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이털",
-   "vol": 790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테팔커피머신",
-   "vol": 770,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "홈카페머신",
-   "vol": 750,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "무선청소기가격비교",
-   "vol": 750,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물걸레청소",
-   "vol": 740,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무인커피숍",
-   "vol": 740,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실커피머신렌탈",
-   "vol": 730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피캡슐머신",
-   "vol": 730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피추출기",
-   "vol": 730,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "베누스타커피머신",
-   "vol": 730,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캡슐커피머신호환",
-   "vol": 720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선걸레청소기",
-   "vol": 720,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "차량용미니청소기",
-   "vol": 720,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용자동커피머신",
-   "vol": 710,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아파트청소",
-   "vol": 710,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "진공청소기추천",
+   "kw": "보행보조기구",
    "vol": 700,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자동청소기",
-   "vol": 700,
+   "kw": "장애인보조기기",
+   "vol": 690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "업소용커피머신렌탈",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흡입력좋은청소기",
-   "vol": 680,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에어건추천",
-   "vol": 680,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "에스프레소커피머신",
-   "vol": 670,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형진공청소기",
-   "vol": 670,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에어건청소기",
-   "vol": 670,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상청소기",
+   "kw": "애슬론",
    "vol": 670,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "업소용커피자판기",
+   "kw": "유아전집",
    "vol": 670,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "드립커피메이커",
-   "vol": 670,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미니에스프레소머신",
-   "vol": 660,
+   "kw": "20개월아기장난감",
+   "vol": 630,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "차량무선청소기",
-   "vol": 660,
-   "comp": "높음",
+   "kw": "상상력",
+   "vol": 600,
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "차량용송풍기",
-   "vol": 660,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈카페꾸미기",
-   "vol": 650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "핸디무선청소기",
-   "vol": 650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "핸디형무선청소기",
-   "vol": 650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "걸레청소기",
-   "vol": 650,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무인카페창업",
-   "vol": 640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전자동커피머신추천",
-   "vol": 640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "음료자판기",
-   "vol": 640,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피자판기무상임대",
-   "vol": 620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선청소기가성비",
-   "vol": 620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "저소음무선청소기",
-   "vol": 620,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피자동머신",
-   "vol": 610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청소기필터",
-   "vol": 610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에어타카총",
-   "vol": 610,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LG진공청소기",
+   "kw": "국민육아템",
    "vol": 600,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "청소로봇",
-   "vol": 600,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어드벤트캘린더추천",
-   "vol": 600,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피내리는기계",
-   "vol": 590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용반자동커피머신",
-   "vol": 590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일리호환캡슐",
-   "vol": 590,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "업소용자동커피머신",
+   "kw": "성인보행기",
    "vol": 580,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피머신캡슐",
-   "vol": 580,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "C40WGY",
+   "kw": "아기바운서대여",
    "vol": 580,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "초강력에어건",
+   "kw": "걷기운동기구",
    "vol": 580,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원두커피머신렌탈",
-   "vol": 570,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에소프레소머신",
-   "vol": 570,
+   "kw": "근력보조슈트",
+   "vol": 580,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "무인자판기",
-   "vol": 570,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "베라공구",
-   "vol": 560,
+   "kw": "18개월장난감",
+   "vol": 580,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이사집선물",
-   "vol": 560,
+   "kw": "휠체어방석",
+   "vol": 580,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "집들이선물세트",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강아지털청소기",
-   "vol": 550,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "드롱기에스프레소머신",
+   "kw": "어르신노인보행기",
    "vol": 550,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "업소용에스프레소머신",
-   "vol": 540,
+   "kw": "걸음보조기",
+   "vol": 530,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "청소기헤드",
-   "vol": 540,
+   "kw": "14개월장난감",
+   "vol": 510,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "티타임자판기",
-   "vol": 540,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고양이털청소기",
-   "vol": 540,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파드커피머신",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바람청소기",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "JURA커피머신",
-   "vol": 530,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ILLY커피머신",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스팀진공청소기",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차량에어건",
-   "vol": 510,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "WQ61-1OGG",
+   "kw": "걷기보조기구",
    "vol": 500,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대용량커피머신",
-   "vol": 490,
+   "kw": "11개월아기장난감",
+   "vol": 500,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무실무선청소기",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무인커피",
-   "vol": 490,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동차에어건",
-   "vol": 490,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "카피탈리캡슐",
+   "kw": "아기보행기대여",
    "vol": 480,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "중고자판기",
+   "kw": "노인워커",
    "vol": 480,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피머신순위",
-   "vol": 480,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "타카건",
-   "vol": 480,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어드벤트캘린더화장품",
+   "kw": "육아필수템",
    "vol": 480,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "물걸레청소기로봇",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "핸디청소기추천",
+   "kw": "신생아육아템",
    "vol": 470,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "차량용에어건청소기",
+   "kw": "보행로봇",
    "vol": 470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "올인원로봇청소기",
-   "vol": 470,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "차량청소기추천",
+   "kw": "직업병",
    "vol": 470,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "틴도우",
+   "kw": "걸음마보조기대여",
+   "vol": 470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "보행차",
    "vol": 460,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "업소용전자동커피머신",
-   "vol": 460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "삼성청소기청소",
-   "vol": 460,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자취생선물",
-   "vol": 460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동구커피머신",
-   "vol": 450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "조립장난감",
-   "vol": 450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선청소기할인",
-   "vol": 450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신할인",
-   "vol": 445,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에스프레소머신추천",
-   "vol": 440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원두머신",
-   "vol": 440,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선물걸레",
-   "vol": 440,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "테팔청소기AS",
-   "vol": 430,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자취방청소기",
-   "vol": 430,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "세차송풍기",
+   "kw": "환자용워커",
    "vol": 430,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "걸레로봇청소기",
-   "vol": 430,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일리캡슐커피머신",
+   "kw": "보행워커",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피구독",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보나파르트",
-   "vol": 420,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "국산로봇청소기",
-   "vol": 420,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스틱청소기",
+   "kw": "ROBOTICS",
    "vol": 410,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "스타벅스무인카페",
-   "vol": 410,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "원두데일리",
-   "vol": 410,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "사무실음료",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차청소기",
-   "vol": 410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "틈새청소기",
+   "kw": "15개월장난감",
    "vol": 400,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에르고라피도",
-   "vol": 400,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "코드제로청소기",
-   "vol": 400,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "사내카페",
+   "kw": "여자아이방꾸미기",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무선청소기물걸레",
+   "kw": "아기돌장난감",
    "vol": 390,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피머신기렌탈",
-   "vol": 380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캠핑커피머신",
-   "vol": 380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용전자동커피머신",
-   "vol": 380,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "먼지비움청소기",
-   "vol": 380,
+   "kw": "흡인기",
+   "vol": 390,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "미니진공청소기",
+   "kw": "노인걸음보조기",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "헤파필터청소기",
+   "kw": "고관절보조기",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피머신정수기",
+   "kw": "의료용워커",
    "vol": 370,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피머신종류",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가성비무선청소기추천",
-   "vol": 360,
+   "kw": "모빌대여",
+   "vol": 370,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유선물걸레청소기",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목공끌",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더스트백제작",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "창틀청소기",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차량용유선청소기",
-   "vol": 360,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "먼지청소기",
-   "vol": 350,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "원두커피자판기",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "WPS스타벅스",
-   "vol": 350,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "휴대용무선청소기",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전자동커피머신업소용",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기청소기",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "개인카페창업",
-   "vol": 350,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원두기계",
+   "kw": "어르신워커",
    "vol": 340,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "에스프레소추출기",
+   "kw": "훨체어",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무선청소기흡입력",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차량청소용품",
-   "vol": 340,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스윙청소기",
-   "vol": 340,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피머신대여",
+   "kw": "어른보행기",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스타터팩",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신가정용",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페커피머신기",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선청소기배터리",
-   "vol": 330,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자동차무선청소기",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키보드청소기",
-   "vol": 330,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피드립머신",
-   "vol": 330,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "홈쇼핑청소기",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "필립스에스프레소머신",
-   "vol": 330,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈바리스타",
+   "kw": "보행보조기워커",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "테팔에어포스360",
+   "kw": "할머니보행기",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가정용청소기추천",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "티타임A1",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자판기렌탈",
+   "kw": "간이휠체어",
    "vol": 320,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커피머신필터",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흡입력좋은무선청소기",
+   "kw": "보조보행기",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원룸청소기추천",
+   "kw": "어른유모차",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자동차실내청소기",
+   "kw": "유아게임",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "습건식청소기",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "핸디형진공청소기",
-   "vol": 310,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "캠핑송풍기",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물걸레진공청소기",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물걸레겸용청소기",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이탈리아커피머신",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차량진공청소기",
-   "vol": 310,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선진공청소기추천",
+   "kw": "욕창베개",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "필립스청소기",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "SAECO커피머신",
-   "vol": 300,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "VENUSTA",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니핸드청소기",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청소기물걸레",
-   "vol": 300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "휴대용에스프레소",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세코커피머신",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동구전자베누스타",
-   "vol": 290,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "로봇커피",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로보청소기",
-   "vol": 290,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피렌탈",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라떼머신",
-   "vol": 280,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전자동머신",
+   "kw": "졸리점퍼루",
    "vol": 280,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "청소기배터리",
+   "kw": "노인용보행기",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캡슐커피머신사용법",
+   "kw": "고관절운동기구",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무실커피",
+   "kw": "24개월아기장난감",
    "vol": 280,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "반자동에스프레소머신",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고압청소기",
+   "kw": "워커보조기",
    "vol": 270,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "테팔무선청소기배터리",
-   "vol": 270,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "올인원청소기",
+   "kw": "워커대여",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "차량용무선청소기추천",
-   "vol": 270,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파드머신",
+   "kw": "노인용품",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "24시간무인카페",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일렉트로닉스무선청소기",
-   "vol": 270,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "무인샵",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신업소용",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신가격",
+   "kw": "노인실내보행기",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "홈커피머신",
+   "kw": "세비앙안전손잡이",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "내려먹는커피",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "진공무선청소기",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유라커피머신렌탈",
-   "vol": 260,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "컴퓨터청소기",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보드게임제작",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "VC33M4151L4",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로보트청소기",
-   "vol": 260,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무인커피자판기",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "송년회경품",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업소용커피머신기",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "테팔청소기배터리",
-   "vol": 250,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "진공청소기가격비교",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청소기브랜드",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카피탈리",
-   "vol": 250,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피머신원두",
-   "vol": 250,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어드벤트캘린더제작",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "컴퓨터에어건",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "명품어드벤트캘린더",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청소기흡입력",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쿠쿠핸디청소기",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니커피자판기",
-   "vol": 250,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무인카페커피머신",
+   "kw": "보행보조차",
    "vol": 240,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "무인카페머신",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "라떼커피머신",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "국산무선청소기",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "손청소기",
+   "kw": "타이니러브모빌대여",
    "vol": 240,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "소형유선청소기",
+   "kw": "보행보조웨어러블",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "물걸레무선청소기",
+   "kw": "환자용지팡이",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자동차진공청소기",
+   "kw": "재활로봇",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "반자동커피머신추천",
-   "vol": 230,
+   "kw": "노인근력운동",
+   "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "휴대용캡슐머신",
-   "vol": 230,
+   "kw": "천안장난감대여",
+   "vol": 240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "허리보호",
+   "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캡슐커피머신기",
-   "vol": 230,
-   "comp": "높음",
+   "kw": "아기쏘서대여",
+   "vol": 235,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "홈카페용품",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유선스틱청소기",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "VS20C954AQB",
+   "kw": "신생아체육관",
    "vol": 230,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "캡슐커피머신청소",
+   "kw": "워커기",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "LG무선청소기추천",
-   "vol": 230,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "WELLQ6",
+   "kw": "근력보조로봇",
    "vol": 230,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "차량송풍기",
+   "kw": "로봇공학",
    "vol": 230,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "고양이털제거",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "에스프레소기계",
+   "kw": "휠체어가방",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전자동에스프레소머신",
+   "kw": "19개월아기장난감",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "CATCHWELL",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "청소기무선",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스타벅스머신",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선청소기일렉트로룩스",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스텐리",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "방바닥청소",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형청소기추천",
-   "vol": 220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업소용물걸레청소기",
-   "vol": 220,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "광주커피머신",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가성비커피머신",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈카페커피머신",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "머신기",
-   "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "현대큐밍커피머신",
+   "kw": "워커바",
    "vol": 210,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "고양이청소기",
+   "kw": "코지워커P02",
    "vol": 210,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피전자동머신",
-   "vol": 200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커피머신반자동",
-   "vol": 200,
-   "comp": "중간",
+   "kw": "EXOSKELETON",
+   "vol": 210,
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "전동청소기",
+   "kw": "환자보행기",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "물걸레없는로봇청소기",
-   "vol": 200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자석싸바리박스",
+   "kw": "라이프패킹",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "일렉트로룩스WELLQ7",
+   "kw": "클린사업장",
    "vol": 200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "기업복지",
-   "vol": 200,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "편의점커피머신",
+   "kw": "휠체어수리",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무인카페기계",
+   "kw": "복지용구보행기",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전자동커피머신렌탈",
+   "kw": "의료보행기",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피머신기추천",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신전자동",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피메이커추천",
+   "kw": "필리티보행보조기",
    "vol": 190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "까사카페",
+   "kw": "성인유모차",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "외골격로봇",
    "vol": 190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "라피콜라",
+   "kw": "2세장난감",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피캡슐추천",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "A9청소기",
-   "vol": 190,
+   "kw": "국민장난감대여",
+   "vol": 185,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "프랑케커피머신",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이태리커피머신",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "충전청소기",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "머리카락청소",
-   "vol": 190,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "사무실음료수",
-   "vol": 190,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피드롱기",
+   "kw": "보행기워커",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캡슐커피머신비교",
+   "kw": "실내보행기",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무실용커피머신",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "진공스팀청소기",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동차용청소기",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자취청소기",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일렉트로룩스Q7",
+   "kw": "복지용구워커",
    "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "일렉트로룩스핸디청소기",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "반려동물청소기",
+   "kw": "어르신지팡이추천",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무선진공물걸레청소기",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용커피머신렌탈",
-   "vol": 180,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "회전걸레",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "스프링온워드",
-   "vol": 180,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가정용원두커피기계",
+   "kw": "환자워커",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "AX9604WE",
+   "kw": "전동바운서대여",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "카페머신",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자취생청소기",
+   "kw": "김해장난감대여",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "무인커피머신렌탈",
+   "kw": "무료장난감대여",
    "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용진공청소기",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무소음청소기",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형가전선물",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1구커피머신",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "개털청소기",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선청소기흡입력비교",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "산레모커피머신",
-   "vol": 170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캡슐커피머신렌탈",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동에스프레소머신",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에스프레소캡슐머신",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용캡슐커피머신",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동커피머신기",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "LG청소기물걸레",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가벼운무선청소기추천",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페비스포크",
-   "vol": 160,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "충전식청소기",
+   "kw": "의료용보행기",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원두구독",
+   "kw": "의료기워커",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피기계렌탈",
+   "kw": "재활워커",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "핸드무선청소기",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "일렉트로룩스무선청소기필터",
+   "kw": "의료보조기",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "차량용청소기에어건",
+   "kw": "무릎보행기",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고양이털청소",
+   "kw": "로봇슈트",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "차량청소",
-   "vol": 160,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피팩토리오피스",
+   "kw": "로봇재활",
    "vol": 160,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "국산커피머신",
+   "kw": "재활기구",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어깨보행차",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캡슐머신추천",
+   "kw": "노인보조보행기",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케어라인전동휠체어",
    "vol": 150,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커피머신라떼",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캡슐커피기계",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동구커피",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고양이모래청소기",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자취방무선청소기",
-   "vol": 150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "회사커피머신렌탈",
-   "vol": 150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "캠핑청소기",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈쇼핑물걸레청소기",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "WELLQ7",
-   "vol": 150,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "흡입청소기",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "패키지상자",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스윙물걸레청소기",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "회전물걸레",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "회사커피머신",
+   "kw": "의료기기워커",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피머신기계",
+   "kw": "실버보행기",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원두커피머신추천",
+   "kw": "성인용유모차",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자동커피머신추천",
+   "kw": "노인보조기구",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무선청소기가격",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용에스프레소머신추천",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페컨설팅",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이디야커피머신",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일렉트로무선청소기",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일렉무선청소기",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피로봇",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선스팀물걸레청소기",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "삼성무선청소기물걸레",
+   "kw": "보행보조기대여",
    "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "차량실내청소기",
+   "kw": "엑소스켈레톤",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "광주커피머신렌탈",
+   "kw": "노인용워커",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가정용커피메이커",
+   "kw": "장애인워커",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가정커피머신",
+   "kw": "환자용보행기",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카페창업패키지",
+   "kw": "실내보행보조기",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대전커피머신렌탈",
+   "kw": "착용형로봇",
    "vol": 130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "INIC청소기",
+   "kw": "돌아이장난감",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가벼운유선청소기",
-   "vol": 130,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "글로리제빙기",
-   "vol": 130,
+   "kw": "아기졸리점퍼",
+   "vol": 125,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "거실바닥청소",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대구커피머신",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형핸디청소기",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "작은청소기",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실탕비실",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신자동",
+   "kw": "유아놀이기구",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피캡슐기계",
-   "vol": 120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자동차청소기추천",
+   "kw": "유아장난감대여",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "차량내부청소기",
+   "kw": "신생아바운서대여",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카페청소기",
+   "kw": "이지워커",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "프랑케",
+   "kw": "로봇기술",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "펫청소기",
-   "vol": 120,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "회사휴게실",
-   "vol": 120,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "무인카페자판기",
+   "kw": "어깨보행기",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원두커피메이커",
+   "kw": "아기범퍼침대대여",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "AS9202WD",
+   "kw": "삼주실버카",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "슬림무선청소기",
-   "vol": 110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가성비좋은청소기",
+   "kw": "유아독서",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "저렴한무선청소기",
+   "kw": "워커의료기",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "괴물청소기",
+   "kw": "세면대안전바",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "지팡이파는곳",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SKB101W",
    "vol": 110,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커피머신임대",
+   "kw": "대형견휠체어",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "WQ71-2BSWF",
-   "vol": 110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "무인창업박람회",
+   "kw": "WIROBOTICS",
    "vol": 110,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "어드벤트캘린더뷰티",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맛있는원두커피",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "책상용청소기",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "영업용커피머신",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선물청소기",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전동물걸레청소기",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실원두",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네스프레소커피머신기",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고양이털관리",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대구커피머신렌탈",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서울커피머신렌탈",
-   "vol": 110,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "강력청소기",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1인용커피머신",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원두커피머신기",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신비교",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가성비좋은무선청소기",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "먼지비움무선청소기",
+   "kw": "레인포레스트점퍼루",
    "vol": 100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "LG청소기추천",
+   "kw": "국민아기체육관",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "재활보행기",
    "vol": 100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "사무실청소기추천",
+   "kw": "노인용유모차",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유무선청소기",
+   "kw": "장애인유모차",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스타벅스자판기",
+   "kw": "윔보행운동센터",
    "vol": 100,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "일반청소기",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무용청소기",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전동커피머신",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일렉트로룩스Q9",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "FRANKE",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초소형청소기",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "브러쉬청소기",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동물걸레",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탕비실커피",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피팩토리커피머신",
-   "vol": 100,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "테팔에스프레소머신",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업소용머신",
+   "kw": "아기모빌대여",
    "vol": 95,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무인커피기계",
+   "kw": "걷는보조기구",
+   "vol": 95,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바퀴워커",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가정용커피머신기추천",
+   "kw": "보조워커",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "업소커피머신",
+   "kw": "성인용워커",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무실커피머신추천",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대전커피머신",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가벼운청소기추천",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캡슐자판기",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캡슐커피자판기",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청소기세일",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "베누스타HQ",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "WQ81-3OMBF",
+   "kw": "실내용보행기",
    "vol": 90,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "에르고라피도청소기",
+   "kw": "노인보조기",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "WQ71-2OIB",
+   "kw": "신생아장난감대여",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카페용커피머신",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니청소기추천",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "건설공구",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "화장품패키지디자인",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카펫트청소기",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흡입력강한청소기",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "상업용커피머신",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실진공청소기",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강아지로봇청소기",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오븐렌탈",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물걸레청소기걸레",
+   "kw": "포맘스바운서대여",
    "vol": 90,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "미용실커피머신",
+   "kw": "유아미끄럼틀대여",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "성동구장난감대여",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "차량무선청소기추천",
+   "kw": "환자이동벨트",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "엔젤렉스",
+   "vol": 90,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "보행보조벨트",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "인공근육",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대용량커피메이커",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "식당커피머신",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로봇걸레청소기",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "CUCKOO청소기",
-   "vol": 85,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "자동물걸레로봇청소기",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "개털제거",
-   "vol": 85,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피자판기임대",
+   "kw": "어린이장난감대여",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "얼음커피정수기",
+   "kw": "노인실버카",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바리스타커피머신",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동원두커피머신",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "휴대용캡슐커피머신",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AX9884WE",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에스프레소머신렌탈",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "반자동커피머신렌탈",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EFS71425WH",
+   "kw": "접이식워커",
    "vol": 80,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "WQ61-10GG",
+   "kw": "보행재활로봇",
    "vol": 80,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "패키징박스",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선핸디청소기추천",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강아지청소기",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제주커피머신렌탈",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "서구커피",
-   "vol": 80,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "인천커피머신렌탈",
+   "kw": "중대재해예방",
    "vol": 80,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "HQCB300B0B",
+   "kw": "애슬론보행기",
    "vol": 80,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "미니에어건청소기",
+   "kw": "사랑으로휠체어",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기체육관모빌",
+   "vol": 75,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "재활보조기구",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전자동커피머신기",
-   "vol": 70,
+   "kw": "거상휠체어대여",
+   "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피캡슐머신추천",
+   "kw": "와이업플라잉점퍼",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "고급커피머신",
+   "kw": "실내워커",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캡슐머신기",
+   "kw": "실버유모차",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무선청소기흡입력순위",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청주커피머신수리",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오피스커피머신",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AI스팀",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로봇물청소기",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무인커피머신가격",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페장비",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페운영",
+   "kw": "어르신실버카",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "EFP71522",
+   "kw": "노인보행기대여",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "일렉트로룩스무선청소기추천",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강력무선청소기",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강아지털제거",
+   "kw": "노인카트",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "원두정기구독",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원두자판기",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "SANREMO",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "오브제청소기",
-   "vol": 70,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더카페큐밍블랙",
+   "kw": "주행보조기",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "울산커피머신렌탈",
+   "kw": "육아아이템",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피머신단기렌탈",
+   "kw": "노인재활",
+   "vol": 70,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "근력슈트",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "카페커피기계",
+   "kw": "AWT-501",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "BYACRE",
+   "vol": 70,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "장난감렌탈",
    "vol": 65,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원두커피렌탈",
+   "kw": "아기발차기",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기체육관장난감",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "워커가격",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "워커재활",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어르신보행기추천",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "로봇보행기",
+   "vol": 65,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장애인보행기",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가정용머신기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용커피기계",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스팀커피머신",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아메리카노머신",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캡슐커피머신종류",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "행사경품",
+   "kw": "U자형보행기",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "홈커피머신추천",
+   "kw": "어른용유모차",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피머신호환",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전자동원두커피머신",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아메리카노커피머신",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실원두커피머신",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아메리카노기계",
+   "kw": "장애인보행보조기",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "사무실원두커피머신렌탈",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실내청소기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리퍼청소기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "10만원대청소기",
+   "kw": "가정용워커",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "자동커피머신렌탈",
+   "kw": "노인보행기추천",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "물걸레자동청소기",
+   "kw": "어린이오디오북",
    "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무인카페프랜차이즈",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강력한청소기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미세먼지진공청소기",
+   "kw": "리프트체어",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "회사커피",
+   "kw": "복지용구품목",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "일렉트로룩스무선청소기비교",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EFS71436",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈쇼핑무선물걸레청소기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원형롤스티커",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강력무선에어건",
+   "kw": "파워슈트",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "보냉백인쇄",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페머신기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초강력무선청소기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "FRANKE커피머신",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차실내청소기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동구전자커피머신렌탈",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쿠쿠미니청소기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업소용커피머신브랜드",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "웰스커피머신",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동차내부청소기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원두자동커피머신",
+   "kw": "어르신보행기대여",
    "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "물걸레로봇",
+   "kw": "트라이버",
    "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에스프레소머신기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "SHOTT시럽",
-   "vol": 55,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "학원청소기",
+   "kw": "작업용허리보호대",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "케어라인전동스쿠터",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "국민아기장난감",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "WELLQ8",
+   "kw": "걷기보조기",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소형청소기무선",
+   "kw": "고령자용보행차",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "쿠쿠파워클론미니",
+   "kw": "어른용보행기",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카페커피머신브랜드",
+   "kw": "바운서렌탈",
    "vol": 55,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "저렴한커피머신",
+   "kw": "원목침대대여",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "주방놀이대여",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "노인보행차",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캡슐커피메이커",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캡슐커피머신기추천",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차이슨무선청소기추천",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AX9884TE",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타워청소기",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "10만원대무선청소기",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈카페머신추천",
+   "kw": "이동식워커",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "더치커피머신",
+   "kw": "할머니구르마",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "창문틀청소기",
+   "kw": "전방보행차",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "진공청소기흡입력",
+   "kw": "보행의자",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "원두커피자판기렌탈",
+   "kw": "4살교구",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전자동커피머신비교",
+   "kw": "재활도구",
    "vol": 50,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "조용한청소기",
+   "kw": "로봇제작",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "동구전자자판기",
+   "kw": "착용로봇",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "머슬슈트",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무실커피자판기",
+   "kw": "노인의료기기",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전주커피머신",
+   "kw": "동탄휠체어대여",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "놀이교구",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "물걸레추천",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선청소기렌탈",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EFS71423",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "매장용커피머신",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청주커피머신",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동구티타임",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키트박스",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페에스프레소머신",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스위스커피머신",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물걸레전용청소기",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업소용반자동커피머신",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물걸레청소기비교",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선휴대용청소기",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용물걸레",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동차미니청소기",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업소용원두커피기계",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페커피머신렌탈",
-   "vol": 50,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피기계종류",
+   "kw": "병원보행기",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피머신세트",
+   "kw": "실버워커",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "엘지청소기추천",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AX9674WE",
+   "kw": "TACAOF",
    "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "삼성진공청소기배터리",
+   "kw": "니워커",
    "vol": 45,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "중장비자동차장난감",
-   "vol": 45,
+   "kw": "보조기워커",
+   "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "흡입력좋은무선청소기추천",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "물걸레청소기홈쇼핑",
-   "vol": 45,
+   "kw": "노약자보행기",
+   "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "소형핸드청소기",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "고양이털세탁",
-   "vol": 45,
+   "kw": "아이장난감대여",
+   "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피머신카페",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강아지매트청소",
-   "vol": 45,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스마트밴딩머신",
+   "kw": "의료워커",
    "vol": 40,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "가정용반자동커피머신추천",
+   "kw": "복지용구성인용보행기",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가정용캡슐커피머신추천",
+   "kw": "나드리스쿠터",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보행재활",
    "vol": 40,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "신혼집커피머신",
+   "kw": "로봇개발",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "캡슐커피머신라떼",
+   "kw": "목발구매",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무실전자동커피머신",
+   "kw": "재활훈련",
    "vol": 40,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무용커피머신",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신회사",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엘지무선청소기추천",
+   "kw": "웨어러블장비",
    "vol": 40,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "AX9984WE",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원두커피기계렌탈",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선청소기브랜드",
+   "kw": "AWT501",
    "vol": 40,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "2구커피머신",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니캡슐커피머신",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "TY6831KO",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형무선청소기추천",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "매장커피머신",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아메리카노자판기",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "반려견청소기",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업소용원두커피머신",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업소용커피머신추천",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페커피머신추천",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "병원커피머신",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "FRANKEA600",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가성비차량용청소기",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "간이청소기",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "방청소기",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차량용청소기비교",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초강력핸디청소기",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피자판기대여",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동양앤커피",
+   "kw": "LET'SFLY",
    "vol": 40,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "업소용드립커피머신",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전주커피머신렌탈",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동물털청소기",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피원두판매",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "최신청소기",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네스프레소커피머신렌탈",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "현대커피머신",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피자동판매기",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형에스프레소머신",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형커피메이커",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "집에서커피",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호환캡슐머신",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈카페커피머신추천",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신패키지",
+   "kw": "유아점퍼루",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "충전용청소기",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "BESPOKE제트220W",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에르고라피도무선청소기",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선자동청소기",
+   "kw": "뉴액티비티가든",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커피자동머신기",
+   "kw": "보행기렌탈",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "침대용청소기",
+   "kw": "노인보행보조기구",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피머신렌트",
+   "kw": "성인용보행보조기",
+   "vol": 35,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "어르신보행차",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "스윙물걸레청소포",
+   "kw": "유아용카시트대여",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "국산물걸레청소기",
-   "vol": 35,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "사무실커피원두",
+   "kw": "실버카추천",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "차무선청소기",
+   "kw": "노인보행",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "핸드미니청소기",
+   "kw": "어른들유모차",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "침구브러쉬",
+   "kw": "복지용구실버카",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카페전자동커피머신",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "승용차청소기",
+   "kw": "성인용보행기대여",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "카페용커피머신기",
+   "kw": "성인보행기대여",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카페줄루",
+   "kw": "장기요양용품",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "COZYWALKER",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "홈카페만들기",
+   "kw": "일본보행기",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동작구장난감대여",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "용산장난감대여",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "성인용보행기워커",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전방지지워커",
    "vol": 30,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "사무실커피머신기",
+   "kw": "건강보조기구",
    "vol": 30,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "캡슐형커피머신",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탕비실커피머신",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실커피메이커",
+   "kw": "건강보험공단휠체어",
    "vol": 30,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "원두머신기",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "홈카페재료",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "천안커피머신렌탈",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청주커피머신렌탈",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "20만원대청소기",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용커피머신브랜드",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "핸디진공청소기",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신구매",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신선물",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AX927BWE",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일렉트로룩스얼티밋홈700무선청소기",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "렌탈커피머신",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쇼핑백맞춤제작",
+   "kw": "엔젤렉스M20",
    "vol": 30,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "동구전자티타임A1",
+   "kw": "엔젤로보틱스채용",
    "vol": 30,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "FRANKEA400",
+   "kw": "미라지휠체어",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "네비게이터보행기",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장애인보장구휠체어",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "복지용구사이트",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "환자슬라이딩보드",
    "vol": 30,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "사무실커피머신임대",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "필립스커피머신렌탈",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "(주)스윙",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가정청소기",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "강력한차량용청소기",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신업체",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주식회사스윙",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "뷔페커피머신",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "회사카페",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업소용전자동커피머신렌탈",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "탐앤탐스커피머신",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "제주커피머신",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미세먼지청소기",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "포항커피머신렌탈",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네스프레소머신렌탈",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동차실내세차용품",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "초강력차량청소기",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피제조기",
-   "vol": 30,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피팩토리머신",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가정용에스프레소커피머신",
+   "kw": "JOLLYJUMPER",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신혼부부커피머신",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자취커피머신",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "작은커피머신",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캡슐머신비교",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "호환캡슐커피머신",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이스커피머신",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캡슐에스프레소머신",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "CASACAFFE",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "일리미타카",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AS9272WD",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펫전용청소기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스텐커피머신",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용전자동커피머신추천",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "20만원대로봇청소기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피캡슐머신기",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "싸이클론유선청소기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페기기",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "수입청소기",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "애견청소기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "빽다방커피머신",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원주커피머신",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피기기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피미니자판기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EFP91813",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ZB3323BO",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ZB3424BL",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일렉트로룩스무선청소기부품",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EFP91825",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "셀프커피머신",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "더조은커피",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "안보이는펜",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "목공공구세트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업소용커피자동머신",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선듀얼물걸레진공청소기",
+   "kw": "플라잉점퍼",
    "vol": 25,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "무선물걸레겸용청소기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파워스윙청소기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가벼운핸디청소기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고양이털로봇청소기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "솔러스에어청소기",
+   "kw": "고령자보행기",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커피대여",
+   "kw": "병원용워커",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "식당용커피머신",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업소용커피기계",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교원웰스커피머신",
+   "kw": "보행용워커",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "고양이청소",
+   "kw": "보행카",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "에스프레소캡슐커피머신",
+   "kw": "의료기기보행기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "재활용워커",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "팔걸이보행기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "할머니워커",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기장난감대여",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "그네대여",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "노인구루마",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아용품렌탈",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장난감렌트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실외보행기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장기요양보행기",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "의료용보조기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "살졸보행기",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "할머니수레",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "보행기종류",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "보조유모차",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장애인용지팡이",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "걷기보조",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "노인보행보조",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "2H휠체어",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아이체어프로",
+   "vol": 25,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "로봇수트",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "노인요양물품",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "재활보조기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "근력보조",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "나래휠체어",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수입지팡이",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실버지팡이",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보조로봇",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "작업슈트",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "노인보조기기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "복지용구설치",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "요양원워커",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카본보행기",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "금천구장난감대여",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "복지용구전동휠체어",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "복지용구도매",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "복지용품점",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "해미워커",
    "vol": 20,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "웨딩프로모션",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "집들이커피머신",
+   "kw": "U자워커",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "AX9988WE",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실캡슐커피머신",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신사무실",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흡입력강한유선청소기",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캡슐커피렌탈",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페창업커피머신",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AU937CWD",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "VS30D973HRG",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원두정기배송",
+   "kw": "님보후방지지워커",
    "vol": 20,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "타이벡파우치제작",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고급패키지",
+   "kw": "육아사이트",
    "vol": 20,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "가방더스트백제작",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "호텔커피머신",
+   "kw": "보행보조기기",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "대형카페창업",
+   "kw": "경량수동휠체어",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "회사용커피머신",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흡입건",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전기물걸레청소기",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "현대렌탈케어커피머신",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "현대커피머신렌탈",
+   "kw": "WEARABLEROBOT",
    "vol": 20,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "현대큐밍커피머신렌탈",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실자판기",
+   "kw": "DS-4000",
    "vol": 20,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "그라인더렌탈",
+   "kw": "KCS-501N",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "테이크아웃전문카페",
+   "kw": "PHW-07",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "평택커피머신렌탈",
+   "kw": "노인전동보행기",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "상업용전자동커피머신",
+   "kw": "토탈실버",
    "vol": 20,
-   "comp": "높음",
+   "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "동구전자렌탈",
+   "kw": "보장구휠체어",
    "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신기종류",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피숍머신",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니원두커피머신",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에스프레소커피머신기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전자동에스프레소커피머신",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캡슐커피머신가격",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캡슐커피머신브랜드",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자취생커피머신",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업소용캡슐커피머신",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실자동커피머신",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AX9674TE",
-   "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "일리커피머신세트",
+   "kw": "의료기기지원",
+   "vol": 20,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아이체육관",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의료용유모차",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "팔걸이워커",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "노인보행보조차",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포맘스대여",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "LG청소기종류",
+   "kw": "성인용보행기복지용구",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "노인용보행보조기",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "보행카트",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "투룸청소기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "파워클론",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타워무선청소기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타워형무선청소기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "나무사이로캡슐",
+   "kw": "DH-403",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "기업용커피머신",
+   "kw": "성인워커",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실버차",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "가정용자동커피머신기",
+   "kw": "슈마보행기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "가정용전자동커피머신기",
+   "kw": "워커의료기기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전자동커피머신기추천",
+   "kw": "어르신끌차",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "언어발달교구",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "충전식무선청소기",
+   "kw": "해피웰리스",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "청소기출시",
+   "kw": "장애보조기기",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "노바워커",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "광주커피자판기",
+   "kw": "실외보행보조기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피머신렌탈업체",
+   "kw": "케어라인휠체어",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전자동커피머신브랜드",
+   "kw": "안전손잡이기둥형",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "토로커피머신",
+   "kw": "웨어러블수트",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자동커피기계",
+   "kw": "요양복지용구",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "1인가구청소기추천",
+   "kw": "엔젤렉스M",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "아파트청소가격",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "펜션청소기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "렌탈청소기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동구머신",
+   "kw": "워크온슈트",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "병원커피",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신렌탈비용",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피임대",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "WQ81-3BSWF",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "WQ71-2OIBF",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ZB6214IGM",
+   "kw": "휴먼스텝산아2",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "사무실커피렌탈",
+   "kw": "다리재활운동기구",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장애인복지용품",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "환자이송벨트",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "무인커피머신임대",
+   "kw": "엑소수트",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "원두기계렌탈",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이조립",
+   "kw": "엔젤X",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "오리슬라이드",
+   "kw": "네발워커",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "노인이동의자",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리햅케어",
    "vol": 15,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "커피캡슐자판기",
+   "kw": "살졸",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "쿨러백제작",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실캡슐커피",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "맥도날드커피머신",
+   "kw": "요양원복지용구",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "머신렌탈",
+   "kw": "재가급여복지용구",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "용인커피머신렌탈",
+   "kw": "카본울트라라이트",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피머신렌탈관리",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실용커피머신렌탈",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "FRANKEA300",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동구커피머신렌탈",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스윙무선청소기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "SWING청소기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "렌탈커피",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신리스",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선듀얼물걸레청소기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스윙물걸레",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "YCC50A",
+   "kw": "복지용구지원",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "세코머신",
+   "kw": "노인의료기",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "파스쿠찌커피머신",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "건타입청소기",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "기숙사청소기",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피머신무료렌탈",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "간편청소기",
+   "kw": "복지용구자세변환",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "강력소형청소기",
+   "kw": "노인장기요양등급복지용구",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "무선손청소기",
+   "kw": "노인의료용품",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "자동차휴대용청소기",
+   "kw": "길이조절지팡이",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "차량휴대용청소기",
+   "kw": "노인장기요양물품",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무실커피머신대여",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "개털로봇청소기",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "조용한커피머신",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "음식점커피머신",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신기대여",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선청소기브러쉬",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "코드리스청소기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페머신렌탈",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동급수커피머신",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "걸레로봇",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "강릉커피머신렌탈",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로봇청소기AI",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AU9882WD",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자판기커피렌탈",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피자재",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페창업용품",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "PC방커피",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사내카페테리아",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "원두커피머신대여",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "큐밍커피머신",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "업소용자동커피머신렌탈",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "씨메03커피머신",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세코아우리카에보",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "아이스커피자판기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페창업머신",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원두커피머신단기렌탈",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "현대렌탈커피머신",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전자동업소용커피머신",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유라렌탈",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신기가격",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "1인가구로봇청소기",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "정수기연결커피머신",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "업소용커피머신기렌탈",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페창업렌탈",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물걸래청소기",
+   "kw": "노인의료보조기",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "기업커피머신",
+   "kw": "롤링워커",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장애인용유모차",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "살졸카본",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "어르신밀차",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이교육교구",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "업소용캡슐커피",
+   "kw": "성인용보행기추천",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "육아쇼핑몰",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무실용원두커피머신",
+   "kw": "노인상품",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "리빙픽미",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "소아용워커",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "산아2",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아브랜드",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동력보행보조기",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "뇌병변보행기",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "사무실용캡슐커피머신",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실용커피머신기",
+   "kw": "장애자리프트",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "사무실용커피머신추천",
+   "kw": "장애아동보조기구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장애아동보조기기",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "장애인기구",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "노인보장구",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "근력보조웨어러블로봇",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "사무실원두커피기계",
+   "kw": "보행재활기구",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피머신견적",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신사무실용",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "회사커피머신기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "회사커피머신추천",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AO57W-MOWT",
+   "kw": "노인제품",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "AT9100SA",
+   "kw": "노인건강용품",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "노인장기요양복지용품",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "AU9202WD",
+   "kw": "ANGELX",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "SUITX",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "AX9804WE",
+   "kw": "어시스트슈트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "엔젤기어",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "AX9884GE",
+   "kw": "이지파워슈트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "인공근육슈트",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "AX9888WE",
+   "kw": "파워드슈트",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "AX988W-MOW",
+   "kw": "현대로템웨어러블",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "AX9984GE",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "AU9272WD",
+   "kw": "BH-90",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "AU9472WD",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "AX9874WE",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "AX9974WE",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "AU9572WD",
+   "kw": "CK-06",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "AU9402WD",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사내커피머신",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세코커피",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기업용캡슐커피머신",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "가정용전자동에스프레소머신",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "자동커피머신기추천",
+   "kw": "SPACE-S",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "30만원대로봇청소기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신기임대",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "쿨에어무선청소기",
+   "kw": "TOPROTROJA5G",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "오피스커피머신렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "액상커피머신",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신무료",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "VS20B956D2CE",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "원두렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "차이슨비브르",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "목포커피머신렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신렌탈추천",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "전자동에스프레소머신추천",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "개인카페창업컨설팅",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "카페창업장비",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "기업커피머신렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "스페셜티캡슐커피",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "청소기특가",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "TY1132KO",
+   "kw": "까미노보행기",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "JONR무선물걸레청소기",
+   "kw": "노인성인용보행기",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "오피스커피구독",
+   "kw": "노인손수레",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "사무실에스프레소머신",
+   "kw": "뉴라이트스텝",
    "vol": 10,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "이디야머신",
+   "kw": "살존카본롤레이터",
    "vol": 10,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "강남커피머신렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교회커피머신",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "군산커피머신",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "대구원두커피",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "병원용커피머신",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "부산커피머신대여",
+   "kw": "엘리트트래블워커",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "사무실원두커피",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "VS25C970D2CS",
+   "kw": "이스케이프보행기",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "대구커피머신기렌탈",
+   "kw": "장수SK-120",
    "vol": 10,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "EFP91824BU",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "EFP91835",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "PQ92-3OBF",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선청소기일렉트로",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "일렉트로룩스무선청소기노즐",
+   "kw": "토카롤레이터",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "어드벤트캘린더2024",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "2024어드벤트캘린더",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "타이백파우치제작",
+   "kw": "스틸휠체어",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피빈머신",
+   "kw": "웨어러블로봇WIM",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "커피원두업체",
+   "kw": "실버의료기기",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "서랍형박스제작",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "키트박스제작",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "지관통주문제작",
+   "kw": "웨어러블로봇윔",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "크라프트봉투주문제작",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "VS30D973HRK",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실커피머신구매",
+   "kw": "벽교구",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "커피머신무상임대",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피기계대여",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "차이슨물걸레",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무용커피머신렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "VS20B956D2CG",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "VS25C970D2CH",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "사무실커피머신기렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "교원커피머신",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제롬커피머신",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원두자판기렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피메이커렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아현전자",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "원두커피머신기렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세보커피",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피머신렌탈가격",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "제빙기케어",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "업소용커피머신임대",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "미니커피자판기렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세코커피머신렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피기계임대",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "소형먼지청소기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피머신무상렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이오랩무선청소기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "아이오랩청소기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "아이오랩클린라이너",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "클린라이너",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "클린라이너무선청소기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "커피숍기계",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피기기렌탈",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "사무실커피구독",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "아산커피머신렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "청소기로봇청소기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기업용커피머신렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미니자판기렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실커피기계",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "에스프레소머신대여",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "커피정기배송",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "업소용에스프레소머신렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "네스프레소커피머신대여",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무선청소기특가",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "기업용캡슐커피",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "기업용커피캡슐",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "물청소로봇",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "캡슐머신렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "큐밍블랙",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "탐앤탐스렌탈",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "물걸레로봇청소기자동세척",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애완동물털청소기",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "베누스타렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로봇청소기물걸레자동세척",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사내무인카페",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실용전자동커피머신",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피머신원두렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피그라인더렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "MAVAM",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "대형베이커리카페창업",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피머신제빙기렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실용커피자판기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "사무실커피자판기렌탈",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아우리카커피머신",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "자동커피머신중고",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "커피원두정기배송",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "회사캡슐커피머신",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "사무실용커피메이커",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "커피팩토리렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "현대큐밍커피",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "여수커피머신렌탈",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원터치커피머신",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "현대큐밍블랙",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "웰스유라커피머신",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "병원커피머신렌탈",
+   "kw": "휠체어제작",
    "vol": 10,
    "comp": "높음",
    "hint": false
