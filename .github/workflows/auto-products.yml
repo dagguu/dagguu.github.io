@@ -1,0 +1,15 @@
+name: 제품 체험단 등록 (사진 채우기)
+on:
+  workflow_dispatch: {}
+permissions: { contents: write }
+concurrency: { group: auto-stays, cancel-in-progress: false }
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/auto_products.py
+      - run: |
+          git config user.name "dagguu"; git config user.email "eun901002@gmail.com"
+          git add data.json scripts/auto_products_last.json scripts/auto_products_in.json && git commit -qm "제품 체험단 등록 $(TZ=Asia/Seoul date +%F)" || exit 0
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
