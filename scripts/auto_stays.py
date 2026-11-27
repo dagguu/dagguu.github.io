@@ -116,7 +116,7 @@ def image_of(u):
         m = re.search(pat, h, re.I)
         if m:
             im = html.unescape(m.group(1)).strip()
-            if im and not re.search(r'logo|default|noimg|og_image|og-image|og_img|og-revu|share', im, re.I):
+            if im and not re.search(r'logo|default|noimg|og_image|og-image|og_img|og-revu|share|/file/banner/', im, re.I):
                 return urllib.parse.urljoin(u, 'https://' + im.split('https://')[-1] if im.count('https://') > 1 else im)
     for pat in (r'(https?://[^"\'\s]*gangnam-review\.net/data/file/cmp/[^"\'\s]+)', r'(/data/file/cmp/[^"\'\s]+\.(?:jpg|jpeg|png|webp))',
                 r'(https?://files\.weble\.net/campaign/data/\d+/[^"\'\s]+)', r'(https?://[^"\'\s]+/data/(?:file|item)/[^"\'\s]+\.(?:jpg|jpeg|png|webp))',
