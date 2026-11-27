@@ -1,5 +1,5 @@
 {
- "at": "2026-11-26 12:48",
+ "at": "2026-11-27 12:50",
  "checkIn": "2026-12-05",
  "stays": {
   "boryeong-lava-poolvilla": {
@@ -26,7 +26,7 @@
      "region": "태안",
      "type": "CITY",
      "pages": 27,
-     "n": 1228,
+     "n": 1227,
      "keys": [
       "totalCount",
       "page",
@@ -60,7 +60,7 @@
      "region": "부산",
      "type": "CITY",
      "pages": 2,
-     "n": 99,
+     "n": 98,
      "keys": [
       "totalCount",
       "page",
@@ -100,7 +100,7 @@
       "page",
       "size"
      ],
-     "total": 475
+     "total": 476
     }
    ],
    "hit": "창원 상남동 헤리티지 호텔",
@@ -168,7 +168,7 @@
       "page",
       "size"
      ],
-     "total": 436
+     "total": 434
     }
    ],
    "hit": "대전 유천 스테이 패스포트 키노사키 료칸 by 아늑",
@@ -304,7 +304,7 @@
       "page",
       "size"
      ],
-     "total": 1683
+     "total": 1685
     }
    ],
    "hit": "가평 글램하바나",
@@ -338,10 +338,10 @@
       "page",
       "size"
      ],
-     "total": 1683
+     "total": 1685
     }
    ],
-   "hit": "가평 하녹타케",
+   "hit": "가평 하녹타케 펜션",
    "hitKeys": [
     "deepLink",
     "imageUrl",
@@ -385,7 +385,7 @@
       "page",
       "size"
      ],
-     "total": 1683
+     "total": 1685
     }
    ],
    "hit": "가평 슈가풀빌라&스파글램핑",
@@ -453,7 +453,7 @@
       "page",
       "size"
      ],
-     "total": 910
+     "total": 912
     }
    ],
    "hit": "거제도 까사델문도펜션",
@@ -487,7 +487,7 @@
       "page",
       "size"
      ],
-     "total": 364
+     "total": 363
     }
    ],
    "hit": "고성 072스테이",
@@ -515,26 +515,26 @@
      "region": "고성",
      "type": "CITY",
      "pages": 9,
-     "n": 355,
+     "n": 354,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 364
+     "total": 363
     },
     {
      "kw": "고성",
      "region": "고성",
      "type": "CITY",
      "pages": 3,
-     "n": 93,
+     "n": 94,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 96
+     "total": 97
     },
     {
      "kw": "강원",
@@ -609,13 +609,13 @@
      "region": "경주",
      "type": "CITY",
      "pages": 32,
-     "n": 1579,
+     "n": 1578,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1664
+     "total": 1662
     }
    ],
    "hit": "경주 늘해랑 풀빌라",
@@ -643,13 +643,13 @@
      "region": "경주",
      "type": "CITY",
      "pages": 15,
-     "n": 736,
+     "n": 735,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 1664
+     "total": 1662
     }
    ],
    "hit": "경주 에스앤비풀빌라",
@@ -683,10 +683,10 @@
       "page",
       "size"
      ],
-     "total": 1664
+     "total": 1662
     }
    ],
-   "hit": "토모노야 호텔&료칸 경주",
+   "hit": "토모노야 호텔 & 료칸 경주",
    "hitKeys": [
     "deepLink",
     "imageUrl",
@@ -779,39 +779,13 @@
      "region": "포항",
      "type": "CITY",
      "pages": 11,
-     "n": 483,
+     "n": 533,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 838
-    },
-    {
-     "kw": "경북",
-     "region": "경주",
-     "type": "CITY",
-     "pages": 35,
-     "n": 1640,
-     "keys": [
-      "totalCount",
-      "page",
-      "size"
-     ],
-     "total": 1664
-    },
-    {
-     "kw": "경북",
-     "region": "포항",
-     "type": "CITY",
-     "pages": 11,
-     "n": 532,
-     "keys": [
-      "totalCount",
-      "page",
-      "size"
-     ],
-     "total": 838
+     "total": 841
     }
    ],
    "hit": "포항 바이 더 씨 풀빌라",
@@ -845,7 +819,7 @@
       "page",
       "size"
      ],
-     "total": 838
+     "total": 841
     }
    ],
    "hit": "데이토나 풀 빌라",
@@ -879,7 +853,7 @@
       "page",
       "size"
      ],
-     "total": 838
+     "total": 841
     }
    ],
    "hit": "포항 모딜레풀빌라",
@@ -981,7 +955,7 @@
       "page",
       "size"
      ],
-     "total": 1365
+     "total": 1366
     }
    ],
    "hit": "담앤루리조트",
@@ -1015,7 +989,7 @@
       "page",
       "size"
      ],
-     "total": 2074
+     "total": 2077
     }
    ],
    "hit": "대부도(선재도) 선재담글램핑&카라반리조트",
@@ -1056,13 +1030,13 @@
      "region": "전주",
      "type": "CITY",
      "pages": 15,
-     "n": 673,
+     "n": 674,
      "keys": [
       "totalCount",
       "page",
       "size"
      ],
-     "total": 680
+     "total": 681
     },
     {
      "kw": "전북",
@@ -1096,7 +1070,7 @@
       "page",
       "size"
      ],
-     "total": 252
+     "total": 253
     }
    ],
    "hit": "영덕 풀문 영덕 풀빌라",
