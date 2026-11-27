@@ -1,1853 +1,3185 @@
 {
- "updated": "2026-11-26 16:17",
+ "updated": "2026-11-27 16:17",
  "hints": [
-  "쏘서",
-  "점퍼루",
-  "아기체육관",
-  "바운서",
-  "보행기"
+  "카시트",
+  "카시트추천",
+  "신생아카시트",
+  "주니어카시트",
+  "유모차방한커버"
  ],
  "rows": [
   {
-   "kw": "아기체육관",
-   "vol": 27200,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "졸리점퍼",
-   "vol": 11830,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "노인보행기",
-   "vol": 10850,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "보행기",
-   "vol": 10780,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "점퍼루",
-   "vol": 9260,
-   "comp": "중간",
-   "hint": true
-  },
-  {
-   "kw": "걸음마보조기",
-   "vol": 8340,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기바운서",
-   "vol": 8050,
+   "kw": "베이비페어",
+   "vol": 73400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "쏘서",
-   "vol": 7940,
+   "kw": "트립트랩",
+   "vol": 52100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카시트",
+   "vol": 38100,
    "comp": "높음",
    "hint": true
   },
   {
-   "kw": "바운서",
-   "vol": 7190,
+   "kw": "유팡젖병소독기",
+   "vol": 29510,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유팡",
+   "vol": 27650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포그내아기띠",
+   "vol": 25920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브라이텍스카시트",
+   "vol": 24410,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "웨건",
+   "vol": 21570,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리안드림콧",
+   "vol": 20200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주니어카시트",
+   "vol": 19070,
    "comp": "중간",
    "hint": true
   },
   {
-   "kw": "보행보조기",
-   "vol": 6610,
+   "kw": "싸이벡스카시트",
+   "vol": 18940,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "복지용구",
-   "vol": 6300,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노인보행보조기",
-   "vol": 6200,
+   "kw": "부가부드래곤플라이",
+   "vol": 16580,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "피셔프라이스아기체육관",
-   "vol": 6040,
+   "kw": "바구니카시트",
+   "vol": 16500,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "웨어러블로봇",
-   "vol": 5460,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아마존쏘서",
-   "vol": 5020,
+   "kw": "분유쉐이커",
+   "vol": 14100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "육아",
-   "vol": 4890,
+   "kw": "브라이텍스",
+   "vol": 13550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "6개월아기장난감",
-   "vol": 4650,
+   "kw": "헤겐젖병",
+   "vol": 13360,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "피셔프라이스",
-   "vol": 4140,
+   "kw": "휴대용카시트",
+   "vol": 12620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스쿳앤라이드",
+   "vol": 12610,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장난감대여",
-   "vol": 4050,
+   "kw": "조이카시트",
+   "vol": 11860,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어르신보행기",
+   "kw": "조이아이스핀360",
+   "vol": 11800,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이치카시트",
+   "vol": 11530,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유모차방한커버",
+   "vol": 10450,
+   "comp": "높음",
+   "hint": true
+  },
+  {
+   "kw": "순성카시트",
+   "vol": 10130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "싸이벡스제로나T",
+   "vol": 10110,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아카시트",
+   "vol": 9940,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "다이치원픽스360",
+   "vol": 8630,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에그유모차",
+   "vol": 8480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유모차라이너",
+   "vol": 8470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "싸이벡스유모차",
+   "vol": 8090,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "수원베이비페어",
+   "vol": 7900,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "싸이벡스레모",
+   "vol": 7830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "토들러카시트",
+   "vol": 7340,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "시크카시트",
+   "vol": 6990,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "광주베이비페어",
+   "vol": 6810,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "부스터카시트",
+   "vol": 6750,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "싸이벡스주니어카시트",
+   "vol": 6640,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "브라이텍스듀얼픽스",
+   "vol": 6420,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아카시트",
+   "vol": 6330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "리안유모차",
+   "vol": 6120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "영통베이비하우스",
+   "vol": 5970,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차시트커버",
+   "vol": 5900,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뉴나카시트",
+   "vol": 5880,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "안전벨트커버",
+   "vol": 5870,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "줄즈",
+   "vol": 5620,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "부가부비6",
+   "vol": 5510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥시코시카시트",
+   "vol": 5320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뉴나",
+   "vol": 5000,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실버크로스",
+   "vol": 4980,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "폼포라웨건",
+   "vol": 4930,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "와이업",
+   "vol": 4920,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "시트커버",
+   "vol": 4860,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베이비뵨하모니",
+   "vol": 4830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기용품",
+   "vol": 4820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥시코시",
+   "vol": 4600,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "다이치리우아기침대",
+   "vol": 4530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "브라이텍스듀얼픽스프로",
+   "vol": 4330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "포그네아기띠",
+   "vol": 4330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "오이스터3",
+   "vol": 4320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "레이시트커버",
+   "vol": 4310,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카시트보호매트",
+   "vol": 4270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산준비물리스트",
+   "vol": 4080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "회전형카시트",
+   "vol": 4030,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "폴레드카시트",
+   "vol": 4030,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유팡소독기",
+   "vol": 4020,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "순성바구니카시트",
    "vol": 3940,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "싼타페시트커버",
+   "vol": 3910,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "투싼시트커버",
+   "vol": 3910,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스포티지시트커버",
+   "vol": 3910,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인",
+   "kw": "브라이텍스듀얼픽스아이사이즈",
+   "vol": 3890,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "모델Y시트커버",
+   "vol": 3830,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아반떼시트커버",
    "vol": 3790,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "타이니모빌대여",
-   "vol": 3730,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "뉴나바운서",
-   "vol": 3510,
+   "kw": "그랜저시트커버",
+   "vol": 3720,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "졸리점퍼대여",
-   "vol": 3380,
+   "kw": "부가부폭스5",
+   "vol": 3710,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "8개월아기장난감",
-   "vol": 3220,
+   "kw": "자동차시트",
+   "vol": 3690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "7개월아기장난감",
-   "vol": 3220,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "국민문짝",
-   "vol": 3050,
+   "kw": "쏘나타시트커버",
+   "vol": 3690,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "쏘서대여",
+   "kw": "K5시트커버",
+   "vol": 3630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잉글레시나일렉타",
+   "vol": 3560,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리안솔로",
+   "vol": 3500,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싸이벡스클라우드T",
+   "vol": 3460,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기옷쇼핑몰",
+   "vol": 3420,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "비세이프카시트",
+   "vol": 3070,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기카시트",
+   "vol": 3060,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카니발하이리무진7인승",
+   "vol": 2950,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "킨즈웨건",
+   "vol": 2920,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "잉글레시나앱티카",
+   "vol": 2920,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차커버",
+   "vol": 2810,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아용품",
+   "vol": 2740,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아용품",
+   "vol": 2650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하이리무진",
+   "vol": 2630,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비세이프이지턴B",
    "vol": 2630,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "점퍼루대여",
+   "kw": "카시트추천",
+   "vol": 2610,
+   "comp": "중간",
+   "hint": true
+  },
+  {
+   "kw": "마이크로트라이크",
    "vol": 2590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실버카",
-   "vol": 2570,
+   "kw": "출산준비물",
+   "vol": 2550,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카시트커버",
+   "vol": 2530,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "5개월아기장난감",
-   "vol": 2480,
+   "kw": "아이소픽스",
+   "vol": 2520,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "10개월아기장난감",
-   "vol": 2380,
+   "kw": "자동차시트교체",
+   "vol": 2450,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "바운서대여",
-   "vol": 2170,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보행보조로봇",
-   "vol": 2130,
+   "kw": "타보유모차",
+   "vol": 2450,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "성인용보행기",
+   "kw": "멕시코시카시트",
+   "vol": 2440,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "폴레드픽셀",
+   "vol": 2420,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베이비하우스영통",
+   "vol": 2420,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아출산선물",
+   "vol": 2420,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싸이벡스솔루션T",
+   "vol": 2410,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스토케익스플로리",
+   "vol": 2410,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뉴나피파넥스트",
+   "vol": 2270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "다이치주니어카시트",
+   "vol": 2240,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "타보트라이크",
+   "vol": 2200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "브라이텍스듀얼픽스2",
+   "vol": 2200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "요요유모차",
+   "vol": 2200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "광주베이비하우스",
+   "vol": 2180,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산용품리스트",
+   "vol": 2120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아바구니카시트",
+   "vol": 2080,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "줄즈유모차",
    "vol": 2060,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "고관절운동",
+   "kw": "신생아바운서",
    "vol": 2030,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "두돌아기장난감",
-   "vol": 2020,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "어린이동화책",
-   "vol": 1890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아교구",
-   "vol": 1740,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기점퍼루",
-   "vol": 1700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "웨어러블슈트",
-   "vol": 1700,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기장난감대여",
-   "vol": 1590,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아영어",
-   "vol": 1450,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "미키코리아",
-   "vol": 1410,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어르신보행보조기",
-   "vol": 1400,
+   "kw": "리안휴대용유모차",
+   "vol": 1980,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "입는로봇",
+   "kw": "쥬니어카시트",
+   "vol": 1910,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베네피아몰",
+   "vol": 1880,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "출산후선물",
+   "vol": 1870,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기자전거",
+   "vol": 1790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "악스키드카시트",
+   "vol": 1720,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "실버크로스듄",
+   "vol": 1710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "용인베이비하우스",
+   "vol": 1680,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "잉글레시나유모차",
+   "vol": 1680,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "시크제로맥스360",
+   "vol": 1670,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차열선시트",
+   "vol": 1650,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브라이텍스어드밴스픽스",
+   "vol": 1640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미마자리유모차",
+   "vol": 1560,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "차량시트커버",
+   "vol": 1540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뉴나토들넥스트",
+   "vol": 1510,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유모차시트",
+   "vol": 1500,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "줄즈데이5",
+   "vol": 1490,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스토케노미",
+   "vol": 1480,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유모차이너시트",
+   "vol": 1470,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "멕시코시",
+   "vol": 1390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "줄즈에어",
+   "vol": 1390,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "안전벨트인형",
    "vol": 1360,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보행기대여",
+   "kw": "싸이벡스코야",
+   "vol": 1330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "포그내맥스플로우",
+   "vol": 1290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "남자아기옷",
+   "vol": 1280,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산축하선물",
+   "vol": 1270,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기용품점",
+   "vol": 1260,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유모차가격",
+   "vol": 1230,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브라이텍스듀얼픽스플러스",
+   "vol": 1220,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아카시트추천",
    "vol": 1210,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "졸리점퍼슈퍼스탠드",
-   "vol": 1200,
+   "kw": "실버크로스유모차",
+   "vol": 1170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "할머니유모차",
-   "vol": 1200,
-   "comp": "높음",
+   "kw": "포그내슬링",
+   "vol": 1160,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기사운드북",
-   "vol": 1200,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ROBOT",
-   "vol": 1140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "복지용구몰",
+   "kw": "어린이카시트",
    "vol": 1130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기체육관대여",
+   "kw": "천안베이비페어",
    "vol": 1110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어르신유모차",
-   "vol": 1070,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "노인유모차",
-   "vol": 1050,
+   "kw": "타보웨건",
+   "vol": 1080,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차시트복원",
+   "vol": 1080,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "건강보조식품",
+   "kw": "유아용카시트",
+   "vol": 1070,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싸이벡스멜리오카본",
    "vol": 1040,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아마존쏘서대여",
+   "kw": "출산용품",
+   "vol": 1030,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기카시트추천",
+   "vol": 1020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카시트브랜드",
+   "vol": 1020,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수원베이비하우스",
+   "vol": 1020,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "차량커버",
+   "vol": 1010,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유모차절충형",
+   "vol": 1010,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "리무진시트",
+   "vol": 980,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "와이업지니제로3",
+   "vol": 980,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "악스키드",
    "vol": 970,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "롤레이터",
-   "vol": 940,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "인기완구",
-   "vol": 915,
+   "kw": "미마자리디럭스",
+   "vol": 960,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어라운드위고대여",
-   "vol": 900,
+   "kw": "절충형유모차추천",
+   "vol": 950,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기흔들의자",
+   "kw": "유모차순위",
+   "vol": 930,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "애기용품",
+   "vol": 920,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥시코시바구니카시트",
    "vol": 890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "변기안전바",
-   "vol": 890,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기쏘서",
-   "vol": 810,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로봇다리",
-   "vol": 810,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "보조기",
-   "vol": 810,
+   "kw": "순성빌리프로",
+   "vol": 890,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이안전벨트",
+   "vol": 880,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차킥매트",
+   "vol": 880,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "미끄럼틀대여",
+   "kw": "카시트부스터",
+   "vol": 870,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베이비하우스광주",
+   "vol": 860,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "주니어카시트추천",
+   "vol": 850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "와이업지니에스",
+   "vol": 850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "차시트커버",
+   "vol": 850,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "오르빗유모차",
+   "vol": 850,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "도어커버",
+   "vol": 830,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브라이텍스듀얼픽스프로럭스",
+   "vol": 830,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "잉글레시나트윈스케치",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아템",
+   "vol": 820,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이치이지캐리2",
    "vol": 800,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "워커보행기",
+   "kw": "ISOFIX",
+   "vol": 790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "비세이프이지플렉스",
+   "vol": 790,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "초등학생카시트",
    "vol": 780,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애기장난감",
+   "kw": "베이비젠요요2",
+   "vol": 780,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아기띠브랜드",
    "vol": 780,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보행보조기구",
-   "vol": 700,
+   "kw": "시트개조",
+   "vol": 750,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장애인보조기기",
+   "kw": "킥매트",
+   "vol": 730,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스완두마리5",
+   "vol": 710,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "버킷시트",
    "vol": 690,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애슬론",
-   "vol": 670,
+   "kw": "카시트종류",
+   "vol": 680,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "유아전집",
-   "vol": 670,
+   "kw": "카시트매트",
+   "vol": 680,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "20개월아기장난감",
+   "kw": "아기유모차추천",
+   "vol": 660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스완두",
+   "vol": 660,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차시트교체비용",
+   "vol": 640,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포그내맥스올인원",
+   "vol": 640,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "출산준비",
    "vol": 630,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "상상력",
+   "kw": "다이치원픽스360시즌2",
+   "vol": 610,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차량용시트커버",
    "vol": 600,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "국민육아템",
-   "vol": 600,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "성인보행기",
-   "vol": 580,
+   "kw": "차량시트교체",
+   "vol": 590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기바운서대여",
-   "vol": 580,
+   "kw": "차량시트",
+   "vol": 590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "걷기운동기구",
-   "vol": 580,
+   "kw": "둘째출산선물",
+   "vol": 590,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "근력보조슈트",
+   "kw": "베이비하우스대전",
    "vol": 580,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "18개월장난감",
+   "kw": "STOKKE",
    "vol": 580,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아안전벨트",
+   "vol": 570,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자전거유모차",
+   "vol": 570,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "폼포라N2",
+   "vol": 570,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에그Z",
+   "vol": 550,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "휠체어방석",
-   "vol": 580,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어르신노인보행기",
+   "kw": "BABYBJORN",
    "vol": 550,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "걸음보조기",
+   "kw": "카시트할인",
+   "vol": 540,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "타보플렉스탭3",
+   "vol": 530,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유모차통풍시트",
    "vol": 530,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "14개월장난감",
+   "kw": "임산부의날",
+   "vol": 520,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "김포베이비하우스",
+   "vol": 520,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차시트방석",
+   "vol": 520,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "싸이벡스제로나플러스",
+   "vol": 510,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "젖병브랜드",
    "vol": 510,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "걷기보조기구",
+   "kw": "도어트림",
    "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "11개월아기장난감",
-   "vol": 500,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기보행기대여",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노인워커",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "육아필수템",
-   "vol": 480,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "신생아육아템",
-   "vol": 470,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "보행로봇",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "직업병",
-   "vol": 470,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "걸음마보조기대여",
-   "vol": 470,
+   "kw": "컨버터블카시트",
+   "vol": 480,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "보행차",
+   "kw": "자동차의자커버",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "요요휴대용유모차",
+   "vol": 480,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이치올인원360",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차시트",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "POLED",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미마자리맥스",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "겨울유모차라이너",
+   "vol": 470,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비하우스수원",
    "vol": 460,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "환자용워커",
+   "kw": "전주베이비키즈페어",
+   "vol": 460,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "에그2",
    "vol": 430,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보행워커",
+   "kw": "베이비하우스광명",
+   "vol": 430,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차시트수리",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차카시트커버",
+   "vol": 430,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비하우스뚝섬",
+   "vol": 420,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유모차할인",
+   "vol": 420,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카시트보호커버",
    "vol": 420,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "ROBOTICS",
+   "kw": "어린이안전벨트가드",
    "vol": 410,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "15개월장난감",
+   "kw": "카시트비교",
+   "vol": 400,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "키즈카시트",
    "vol": 400,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "여자아이방꾸미기",
-   "vol": 390,
-   "comp": "높음",
+   "kw": "루미카시트",
+   "vol": 400,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아기돌장난감",
-   "vol": 390,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "흡인기",
+   "kw": "휴대용유모차방한커버",
    "vol": 390,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "노인걸음보조기",
+   "kw": "자동차몰딩",
+   "vol": 390,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "영유아카시트",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고관절보조기",
+   "kw": "간이카시트",
    "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "의료용워커",
-   "vol": 370,
+   "kw": "차시트교체",
+   "vol": 380,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "모빌대여",
+   "kw": "폼포라디럭스",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "전동시트",
+   "vol": 380,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아안전벨트커버",
    "vol": 370,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "어르신워커",
+   "kw": "자동차가죽시트",
+   "vol": 370,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비하우스동래",
+   "vol": 370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베이비하우스명지",
+   "vol": 370,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베이비카시트",
+   "vol": 360,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쥴즈",
+   "vol": 360,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "애기카시트",
    "vol": 340,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "훨체어",
+   "kw": "자동차시트카바",
    "vol": 340,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어른보행기",
+   "kw": "뷔어웨건",
+   "vol": 340,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "베이비조거",
+   "vol": 340,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "차커버",
+   "vol": 340,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴대용유모차순위",
+   "vol": 340,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "5세카시트",
+   "vol": 330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "맥시코시카브리오픽스",
+   "vol": 330,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "시흥베이비하우스",
+   "vol": 330,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "자동차시트개조",
    "vol": 330,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보행보조기워커",
+   "kw": "코나시트커버",
+   "vol": 330,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순성카시트신생아",
    "vol": 320,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "할머니보행기",
-   "vol": 320,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "간이휠체어",
+   "kw": "광교베이비페어",
    "vol": 320,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "보조보행기",
+   "kw": "베이비하우스전주",
+   "vol": 320,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "포터2시트커버",
+   "vol": 320,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유모차쿨시트",
+   "vol": 310,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "싸이벡스아노리스",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어른유모차",
+   "kw": "유아용품할인매장",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아게임",
+   "kw": "셀토스시트커버",
    "vol": 310,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "욕창베개",
+   "kw": "타보방풍커버",
+   "vol": 305,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "가죽시트",
    "vol": 300,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "졸리점퍼루",
+   "kw": "베이비하우스트립트랩",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차량용커버",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "비닐매트",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "갓난아기선물",
+   "vol": 300,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차량용시트",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "허그파파다이얼핏프로",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가죽커버",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "통풍시트시공",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이유모차",
+   "vol": 290,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "멕시코시바구니카시트",
    "vol": 280,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "노인용보행기",
+   "kw": "카시트통풍시트",
    "vol": 280,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "고관절운동기구",
+   "kw": "시트백커버",
    "vol": 280,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "24개월아기장난감",
+   "kw": "베이비하우스하남",
    "vol": 280,
-   "comp": "높음",
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "워커보조기",
+   "kw": "자동차도어몰딩",
+   "vol": 280,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "6세카시트",
    "vol": 270,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "워커대여",
+   "kw": "베이비하우스김해",
+   "vol": 270,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "모닝시트커버",
    "vol": 270,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인용품",
-   "vol": 270,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노인실내보행기",
+   "kw": "7세카시트",
    "vol": 260,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "세비앙안전손잡이",
+   "kw": "싼타페MX5시트커버",
    "vol": 260,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "5점식안전벨트",
+   "vol": 250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스타리아시트커버",
+   "vol": 250,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보행보조차",
+   "kw": "제니븐시트커버",
+   "vol": 250,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아카시트추천",
+   "vol": 240,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴대용주니어카시트",
    "vol": 240,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "타이니러브모빌대여",
-   "vol": 240,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "보행보조웨어러블",
+   "kw": "아기안전벨트",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "환자용지팡이",
+   "kw": "시크맥스아이진",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "재활로봇",
+   "kw": "올뉴카니발시트커버",
    "vol": 240,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인근력운동",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "천안장난감대여",
-   "vol": 240,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "허리보호",
-   "vol": 240,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기쏘서대여",
-   "vol": 235,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "신생아체육관",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "워커기",
+   "kw": "벤츠시트커버",
    "vol": 230,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "근력보조로봇",
-   "vol": 230,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "로봇공학",
-   "vol": 230,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "휠체어가방",
+   "kw": "차량시트교체비용",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "19개월아기장난감",
+   "kw": "봉고3시트커버",
    "vol": 220,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "워커바",
+   "kw": "자동차시트쿠션",
+   "vol": 220,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차카시트",
+   "vol": 210,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아용품매장",
    "vol": 210,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "코지워커P02",
+   "kw": "비닐시트",
    "vol": 210,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "EXOSKELETON",
+   "kw": "아이오닉5시트커버",
    "vol": 210,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "환자보행기",
-   "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "라이프패킹",
-   "vol": 200,
-   "comp": "높음",
+   "kw": "BMW시트커버",
+   "vol": 210,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "클린사업장",
+   "kw": "국산카시트",
    "vol": 200,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "휠체어수리",
+   "kw": "순성제나주니어카시트",
    "vol": 200,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "복지용구보행기",
+   "kw": "폴레드레이서",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "뉴나트래블",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "운전석시트",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "알칸타라원단",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차시트커버교체",
+   "vol": 200,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "포터2시트",
+   "vol": 200,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4살카시트",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "의료보행기",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "필리티보행보조기",
+   "kw": "3세카시트",
    "vol": 190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "성인유모차",
-   "vol": 190,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "외골격로봇",
+   "kw": "의정부베네피아",
    "vol": 190,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "2세장난감",
+   "kw": "자동차도어커버",
    "vol": 190,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "국민장난감대여",
+   "kw": "자동차가죽시트교체",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥시코시미카프로",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "범프라이더커넥트3",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "BRITAX",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아웨건추천",
+   "vol": 190,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차인테리어",
+   "vol": 190,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "시크롤리팝2",
    "vol": 185,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보행기워커",
+   "kw": "7살카시트",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실내보행기",
+   "kw": "바구니형카시트",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "복지용구워커",
+   "kw": "라파엘산후조리원",
+   "vol": 180,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "베이비하우스서울",
+   "vol": 180,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "스완두찰리",
    "vol": 180,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "어르신지팡이추천",
+   "kw": "자동차실내꾸미기",
    "vol": 180,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "환자워커",
+   "kw": "올뉴모닝시트커버",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포터시트커버",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스파크시트커버",
+   "vol": 180,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용품매장",
    "vol": 170,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전동바운서대여",
+   "kw": "뉴나째즈",
+   "vol": 170,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차안마시트",
    "vol": 170,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "김해장난감대여",
-   "vol": 170,
+   "kw": "아기용품매장",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에그2유모차",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "국산유모차",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비하우스카시트",
+   "vol": 160,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "무료장난감대여",
-   "vol": 170,
+   "kw": "줄즈디럭스유모차",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뉴나데미그로우",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "브라이텍스카시트종류",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카인테리어",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "키즈웨건",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그랜저GN7시트커버",
+   "vol": 160,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빼그빼레고북포투",
+   "vol": 155,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "의료용보행기",
-   "vol": 160,
-   "comp": "높음",
+   "kw": "오이스터3플러스",
+   "vol": 155,
+   "comp": "중간",
    "hint": false
   },
   {
-   "kw": "의료기워커",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "재활워커",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "의료보조기",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "무릎보행기",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로봇슈트",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "로봇재활",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "재활기구",
-   "vol": 160,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어깨보행차",
+   "kw": "4세카시트",
    "vol": 150,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인보조보행기",
-   "vol": 150,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케어라인전동휠체어",
+   "kw": "베이비하우스노시부",
    "vol": 150,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "의료기기워커",
+   "kw": "도어스텝",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차보호커버",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "출산용품선물",
+   "vol": 150,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스토케유모차라이너",
+   "vol": 145,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "360카시트",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실버보행기",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성인용유모차",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노인보조기구",
-   "vol": 140,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보행보조기대여",
+   "kw": "신생아용카시트",
    "vol": 140,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "엑소스켈레톤",
+   "kw": "어린이안전벨트클립",
    "vol": 140,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인용워커",
+   "kw": "유아안전벨트가드",
+   "vol": 140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유모차매장",
+   "vol": 140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아용품점",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "퀴드2",
+   "vol": 140,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "휴대형유모차",
+   "vol": 140,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "육아용품점",
+   "vol": 135,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아용안전벨트",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장애인워커",
+   "kw": "싸이벡스제트픽스플러스",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "환자용보행기",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실내보행보조기",
-   "vol": 130,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "착용형로봇",
+   "kw": "모지예삐",
    "vol": 130,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "돌아이장난감",
+   "kw": "현대카시트",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "풀커버",
    "vol": 130,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기졸리점퍼",
+   "kw": "카시트보호",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기아시트",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스타렉스시트커버",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "차내부꾸미기",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차실내튜닝",
+   "vol": 130,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "모델3시트커버",
+   "vol": 130,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "신생아유모차시트",
    "vol": 125,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아놀이기구",
+   "kw": "유아휴대용카시트",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "유아장난감대여",
+   "kw": "카시트매장",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아바운서대여",
+   "kw": "맥시코시아이오라",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이지워커",
+   "kw": "실버크로스클릭",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "차량도어커버",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "로봇기술",
+   "kw": "폼포라N",
    "vol": 120,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어깨보행기",
+   "kw": "카시트쿨시트",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "조이파르셀",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "종이매트",
+   "vol": 120,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이오닉5시트",
+   "vol": 120,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "애기용품점",
+   "vol": 115,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의전용시트",
+   "vol": 115,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "영아카시트",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "아기범퍼침대대여",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "삼주실버카",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "유아독서",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "워커의료기",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "세면대안전바",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "지팡이파는곳",
-   "vol": 110,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "SKB101W",
+   "kw": "유아카시트커버",
    "vol": 110,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "대형견휠체어",
+   "kw": "차량킥매트",
    "vol": 110,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "WIROBOTICS",
+   "kw": "카시트복원",
    "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리무진시트가격",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차리무진시트",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차시트전문점",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차량인테리어용품",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "EV6시트커버",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "정비공구",
+   "vol": 110,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빼그빼레고쌍둥이유모차",
+   "vol": 105,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "레인포레스트점퍼루",
-   "vol": 100,
+   "kw": "BABYHAUS",
+   "vol": 105,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "국민아기체육관",
+   "kw": "리안뮤즈",
+   "vol": 105,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이안전벨트커버",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "재활보행기",
+   "kw": "콩코드카시트",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순천베이비페어",
    "vol": 100,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "노인용유모차",
+   "kw": "카오스클랩",
    "vol": 100,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장애인유모차",
-   "vol": 100,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "윔보행운동센터",
+   "kw": "아산베이비페어",
    "vol": 100,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "아기모빌대여",
+   "kw": "브라이텍스키드픽스3",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베이비하우스유모차",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "디럭스유모차순위",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "콘솔커버",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "가죽시트커버",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "타보베프",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카니발하이리무진시트개조",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차량몰딩",
+   "vol": 100,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "시트방석",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차시트풀커버",
+   "vol": 100,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "수원아기용품",
+   "vol": 95,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "실버크로스파이오니어",
+   "vol": 95,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유아용품점",
    "vol": 95,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "걷는보조기구",
-   "vol": 95,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바퀴워커",
+   "kw": "아기휴대용카시트",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보조워커",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성인용워커",
-   "vol": 90,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실내용보행기",
+   "kw": "접이식카시트",
    "vol": 90,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "노인보조기",
+   "kw": "브라이텍스키드픽스아이사이즈",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "신생아장난감대여",
+   "kw": "자동차시트가죽교체",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "휀다커버",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "포맘스바운서대여",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "유아미끄럼틀대여",
-   "vol": 90,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "성동구장난감대여",
+   "kw": "인조가죽시트",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "환자이동벨트",
+   "kw": "제네시스시트커버",
    "vol": 90,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "엔젤렉스",
-   "vol": 90,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "보행보조벨트",
+   "kw": "EV6시트",
    "vol": 90,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "인공근육",
+   "kw": "더뉴그랜저IG시트커버",
+   "vol": 90,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아반떼CN7시트커버",
    "vol": 90,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어린이장난감대여",
+   "kw": "아반떼시트",
+   "vol": 90,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "멕시코시카브리오픽스",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다이치바구니",
+   "vol": 85,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아동카시트",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인실버카",
+   "kw": "맥시코시스톤아이사이즈",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "유모차라이너추천",
+   "vol": 80,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카시트교체",
    "vol": 80,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "접이식워커",
+   "kw": "카시트시트커버",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기목욕놀이장난감",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스파크시트",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아반떼HD시트커버",
    "vol": 80,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "보행재활로봇",
+   "kw": "아이오닉6시트커버",
+   "vol": 80,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "15인승쏠라티",
    "vol": 80,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "중대재해예방",
-   "vol": 80,
-   "comp": "중간",
+   "kw": "휴대용유아카시트",
+   "vol": 75,
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "애슬론보행기",
-   "vol": 80,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "사랑으로휠체어",
-   "vol": 80,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기체육관모빌",
+   "kw": "순성빌리프로카시트",
    "vol": 75,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "재활보조기구",
+   "kw": "주니어카시트대여",
    "vol": 75,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "거상휠체어대여",
-   "vol": 75,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "와이업플라잉점퍼",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "실내워커",
+   "kw": "아기안전벨트커버",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실버유모차",
+   "kw": "국민젖병소독기",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어르신실버카",
+   "kw": "카니발7인승시트",
    "vol": 70,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "노인보행기대여",
+   "kw": "쏘렌토카시트보호매트",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아반떼MD시트커버",
+   "vol": 70,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차가죽시트커버",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인카트",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "주행보조기",
-   "vol": 70,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "육아아이템",
+   "kw": "아반떼AD시트커버",
    "vol": 70,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인재활",
-   "vol": 70,
+   "kw": "의정부아기용품",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "광주베이비",
+   "vol": 65,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아동용카시트",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "빌리프로",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "싸이벡스솔루션티",
+   "vol": 60,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "근력슈트",
-   "vol": 70,
+   "kw": "IOM도어커버",
+   "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "AWT-501",
-   "vol": 70,
+   "kw": "버켓시트",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차량카시트",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차개조",
+   "vol": 60,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "BYACRE",
-   "vol": 70,
+   "kw": "조이피니티",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "싼타페카시트보호매트",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "그랜드스타렉스시트커버",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차의자시트",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코란도스포츠시트커버",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그랜저IG시트커버",
+   "vol": 60,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "테슬라도어커버",
+   "vol": 60,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "듀클바구니카시트",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기용품할인매장",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "차량가죽시트",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카시트겸용유모차",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "AXKID",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차전동시트",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차시트천갈이",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의전시트",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "차량용리무진시트",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "QM3시트",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "티볼리시트커버",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스토케익스플로리엑스",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "차인테리어",
+   "vol": 55,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "토레스시트커버",
+   "vol": 55,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이용카시트",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아안전벨트클립",
+   "vol": 50,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "천안아산베이비페어",
+   "vol": 50,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "장난감렌탈",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아기발차기",
-   "vol": 65,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아기체육관장난감",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "워커가격",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "워커재활",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어르신보행기추천",
-   "vol": 65,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "로봇보행기",
-   "vol": 65,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장애인보행기",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "U자형보행기",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어른용유모차",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장애인보행보조기",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "가정용워커",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "노인보행기추천",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이오디오북",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "리프트체어",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "복지용구품목",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "파워슈트",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "어르신보행기대여",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "트라이버",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "작업용허리보호대",
-   "vol": 60,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "케어라인전동스쿠터",
-   "vol": 60,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "국민아기장난감",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "걷기보조기",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "고령자용보행차",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어른용보행기",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "바운서렌탈",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "원목침대대여",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "주방놀이대여",
-   "vol": 55,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노인보행차",
+   "kw": "슬림카시트",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "이동식워커",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "할머니구르마",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "전방보행차",
+   "kw": "유모차선물",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "보행의자",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "4살교구",
+   "kw": "가죽시트교체",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "재활도구",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "로봇제작",
+   "kw": "자동차시트튜닝",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "착용로봇",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "머슬슈트",
+   "kw": "자동차뒷자석시트",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인의료기기",
+   "kw": "차량시트커버교체",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "동탄휠체어대여",
-   "vol": 50,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "놀이교구",
+   "kw": "시트교체",
    "vol": 50,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "병원보행기",
+   "kw": "볼보시트커버",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SM3시트커버",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "부산리무진시트",
+   "vol": 50,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "12개월카시트",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실버워커",
+   "kw": "해밀턴X1플러스",
    "vol": 45,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "TACAOF",
+   "kw": "유아전동차매장",
    "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "니워커",
-   "vol": 45,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "보조기워커",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노약자보행기",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "아이장난감대여",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "의료워커",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "복지용구성인용보행기",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "나드리스쿠터",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보행재활",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "로봇개발",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "목발구매",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "재활훈련",
-   "vol": 40,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "웨어러블장비",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "AWT501",
-   "vol": 40,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "LET'SFLY",
-   "vol": 40,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "유아점퍼루",
+   "kw": "레카로살리아",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베이비하우스군포",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "하남베이비플러스",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "K3시트커버",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "그랜저HG시트커버",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "싼타페DM시트커버",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올란도시트커버",
+   "vol": 45,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "모하비시트커버",
+   "vol": 45,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "빌리카시트",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비하우스울산점",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베이비하우스하남미사점",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차시트백커버",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "도어스크래치방지",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥시코시타이탄프로아이사이즈",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리무진시트개조",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차량실내튜닝",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차시트제작",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "산모용품",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "디올뉴코나시트커버",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쏠라티리무진시트",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SM6시트커버",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스포티지NQ5시트커버",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "G80킥매트",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올뉴쏘렌토시트커버",
+   "vol": 40,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "아반떼MD시트",
+   "vol": 40,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "피파어반",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "뉴액티비티가든",
+   "kw": "어린이시트",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카시트핫딜",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "해님스마트플렉스",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비페어베이비하우스",
    "vol": 35,
    "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "보행기렌탈",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노인보행보조기구",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성인용보행보조기",
-   "vol": 35,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "어르신보행차",
-   "vol": 35,
-   "comp": "높음",
    "hint": false
   },
   {
@@ -1857,1063 +3189,1525 @@
    "hint": false
   },
   {
-   "kw": "실버카추천",
+   "kw": "카시트카바",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인보행",
+   "kw": "시트카바",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "어른들유모차",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "복지용구실버카",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "성인용보행기대여",
+   "kw": "컨투어스유모차",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "성인보행기대여",
+   "kw": "차도어커버",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장기요양용품",
-   "vol": 35,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "COZYWALKER",
+   "kw": "차량도어",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "일본보행기",
+   "kw": "시트튜닝",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "동작구장난감대여",
+   "kw": "차개조",
    "vol": 35,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "용산장난감대여",
+   "kw": "신생아출산용품",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "EV9시트커버",
    "vol": 35,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "성인용보행기워커",
+   "kw": "MX5시트커버",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "QM3시트커버",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "QM6시트커버",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "경차시트커버",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "니로시트커버",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "렉스턴스포츠시트커버",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "마이티시트커버",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "미니시트커버",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베뉴시트커버",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "벤츠E클래스시트커버",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차엠보싱",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쏘렌토리무진시트",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차스크래치방지",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "제네시스G80시트커버",
+   "vol": 35,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "더뉴카니발시트커버",
+   "vol": 35,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비하우스전주점",
+   "vol": 30,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스크래치방지",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "전방지지워커",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "건강보조기구",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "건강보험공단휠체어",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "엔젤렉스M20",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "엔젤로보틱스채용",
-   "vol": 30,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "미라지휠체어",
+   "kw": "스크래치방지커버",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "네비게이터보행기",
+   "kw": "현대모비스시트",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장애인보장구휠체어",
+   "kw": "운전석전동시트",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "복지용구사이트",
+   "kw": "승용차시트커버",
    "vol": 30,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "환자슬라이딩보드",
+   "kw": "나파가죽코팅",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차정비용품",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "GN7시트커버",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스포티지R시트",
    "vol": 30,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "JOLLYJUMPER",
+   "kw": "싼타페TM시트커버",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "15인승리무진버스",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아기젖병브랜드",
+   "vol": 30,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카시트ISOFIX",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "플라잉점퍼",
+   "kw": "천안유모차",
    "vol": 25,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "고령자보행기",
+   "kw": "서울육아용품",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비플러스부평",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "병원용워커",
+   "kw": "듀얼픽스플러스아이사이즈",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "동탄유모차",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "승용차시트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차시트커버추천",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제네시스킥매트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "용인유모차",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어드밴스픽스아이사이즈",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥시코시네스타",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "신생아캐리어",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "제로나ZI",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "보행용워커",
+   "kw": "에스컬레이드의전시트",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "보행카",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "의료기기보행기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "재활용워커",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "팔걸이보행기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "할머니워커",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "애기장난감대여",
+   "kw": "카니발2열리무진시트",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "그네대여",
+   "kw": "카니발2열전동시트",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인구루마",
+   "kw": "카니발4세대리무진시트",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "육아용품렌탈",
+   "kw": "리무진카시트",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장난감렌트",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실외보행기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장기요양보행기",
+   "kw": "자동차실내시트",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "의료용보조기",
+   "kw": "전동시트개조",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "살졸보행기",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "할머니수레",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "보행기종류",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "보조유모차",
+   "kw": "리무진시트교체",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장애인용지팡이",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "걷기보조",
+   "kw": "하남육아용품",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "노인보행보조",
+   "kw": "BABYJOGGER",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "2H휠체어",
+   "kw": "차량용가죽시트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "시에나리무진시트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "X5도어커버",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "G90시트커버",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "GV60시트커버",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SM3시트",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "아이체어프로",
+   "kw": "SM5시트커버",
    "vol": 25,
-   "comp": "낮음",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "로봇수트",
+   "kw": "X7시트커버",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "노인요양물품",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "재활보조기",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "근력보조",
+   "kw": "뉴모닝시트커버",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "나래휠체어",
+   "kw": "닛산큐브시트커버",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "수입지팡이",
+   "kw": "더뉴그랜저시트커버",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실버지팡이",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보조로봇",
-   "vol": 25,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "작업슈트",
+   "kw": "렉서스시트커버",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "노인보조기기",
+   "kw": "산타페MX5시트커버",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "복지용구설치",
+   "kw": "스포티지QL시트커버",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "요양원워커",
-   "vol": 25,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "카본보행기",
+   "kw": "쏘렌토R시트커버",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "금천구장난감대여",
+   "kw": "올뉴K7시트커버",
    "vol": 25,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "복지용구전동휠체어",
+   "kw": "올뉴말리부시트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차량시트풀커버",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "복지용구도매",
+   "kw": "카운티시트커버",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "코란도C시트커버",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "복지용품점",
+   "kw": "트랙스시트커버",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트럭시트커버",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차량내부튜닝",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "그랜드카니발시트커버",
    "vol": 25,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "해미워커",
+   "kw": "자동차내부튜닝",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "투싼NX4시트",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "투싼NX4시트커버",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "X5시트커버",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "K7시트커버",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "올란도시트",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "카니발4세대시트커버",
+   "vol": 25,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쏠라티튜닝",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "명품젖병",
+   "vol": 25,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "의정부카시트",
    "vol": 20,
-   "comp": "중간",
+   "comp": "높음",
    "hint": false
   },
   {
-   "kw": "U자워커",
+   "kw": "가죽도어커버",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "님보후방지지워커",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "육아사이트",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "보행보조기기",
+   "kw": "에스컬레이드개조",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "경량수동휠체어",
+   "kw": "스포티지R시트커버",
    "vol": 20,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "WEARABLEROBOT",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "DS-4000",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "KCS-501N",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "PHW-07",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노인전동보행기",
-   "vol": 20,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "토탈실버",
-   "vol": 20,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "보장구휠체어",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "의료기기지원",
-   "vol": 20,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "아이체육관",
+   "kw": "회전형카시트추천",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "의료용유모차",
+   "kw": "카시트특가",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "팔걸이워커",
+   "kw": "맥시코시타이탄",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인보행보조차",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "포맘스대여",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "성인용보행기복지용구",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노인용보행보조기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "보행카트",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "DH-403",
+   "kw": "카시트안전성",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "성인워커",
+   "kw": "MAXI-COSI",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실버차",
+   "kw": "맥시코시코어프로",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "보조안전벨트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "어린이차량안전벨트",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "슈마보행기",
+   "kw": "아이소픽스휴대용카시트",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "워커의료기기",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어르신끌차",
+   "kw": "빌리휴대용카시트",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "언어발달교구",
+   "kw": "서울유아용품",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "해피웰리스",
+   "kw": "유모차할인매장",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "장애보조기기",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "노바워커",
+   "kw": "컨투어스",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "실외보행보조기",
+   "kw": "악스키드에어셀",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "케어라인휠체어",
+   "kw": "유럽유모차",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "안전손잡이기둥형",
+   "kw": "아기용품전문점",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "웨어러블수트",
+   "kw": "오르빗G5블랙라벨",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "요양복지용구",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "엔젤렉스M",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "워크온슈트",
+   "kw": "하남카시트",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "휴먼스텝산아2",
+   "kw": "유모차핫딜",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "바운서시트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "김포카시트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "EGGSTROLLER",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "순정시트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카시트제작",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도어스크래치커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도어스크래치",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베이비세븐강북",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "스크래치커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차도어보호",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차내부인테리어",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "4세대카니발리무진시트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "버스리무진시트",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "다리재활운동기구",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장애인복지용품",
-   "vol": 15,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "환자이송벨트",
+   "kw": "카니발2열시트개조",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "엑소수트",
+   "kw": "카니발7인승시트개조",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "엔젤X",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "네발워커",
+   "kw": "에스컬레이드시트개조",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인이동의자",
+   "kw": "리무진시트시공",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "리햅케어",
-   "vol": 15,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "살졸",
+   "kw": "자동차시트가격",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "요양원복지용구",
-   "vol": 15,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "재가급여복지용구",
+   "kw": "자동차시트시공",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "카본울트라라이트",
+   "kw": "차량리무진시트",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "복지용구지원",
+   "kw": "차량시트개조",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아용품사이트",
    "vol": 15,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "노인의료기",
+   "kw": "볼보도어커버",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "복지용구자세변환",
+   "kw": "자동차비닐매트",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차종이매트",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "자동차시트교환",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "인천육아용품",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "렉서스도어커버",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인장기요양등급복지용구",
+   "kw": "에스컬레이드시트",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인의료용품",
+   "kw": "차가죽시트",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "자동차가죽커버",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "길이조절지팡이",
+   "kw": "KA4리무진시트",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인장기요양물품",
+   "kw": "BMWX1시트",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "BMW가죽시트",
    "vol": 15,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인의료보조기",
+   "kw": "I30시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "K7프리미어시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "K9시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "LF쏘나타시트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "XC40시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "넥쏘시트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "넥쏘시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뉴모닝시트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뉴카렌스시트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "다마스시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "더뉴셀토스시트커버",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "렉스턴시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "말리부시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "맥스크루즈시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "베라크루즈시트교체",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "베라크루즈시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "볼보XC40시트커버",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "쏘울시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아우디시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에쿠스시트커버",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "제네시스DH시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "카시트풀커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트레일블레이저시트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "폭스바겐골프시트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "스팅어시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "더넥스트스파크시트커버",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "CN7시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "DN8시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SM5시트",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "KA4시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "NQ5시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "더뉴쏘렌토시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차시트전문",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "티구안시트커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "액티언시트커버",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "투싼NX4커버",
+   "vol": 15,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아반떼킥매트",
+   "vol": 15,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "쏠라티구조변경",
+   "vol": 15,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "어린이보조카시트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뉴퀴드2",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "롤링워커",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장애인용유모차",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "살졸카본",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "어르신밀차",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어린이교육교구",
+   "kw": "베네피아의정부점",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "성인용보행기추천",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "육아쇼핑몰",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노인상품",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "리빙픽미",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "소아용워커",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "산아2",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "육아브랜드",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "동력보행보조기",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "뇌병변보행기",
+   "kw": "부평베이비플러스",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "장애자리프트",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "장애아동보조기구",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장애아동보조기기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "장애인기구",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "노인보장구",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "근력보조웨어러블로봇",
+   "kw": "레카로마코엘리트",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "보행재활기구",
+   "kw": "베이비플러스일산덕이",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "유모차쿨라이너",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "자동차보호시트",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "노인제품",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "노인건강용품",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "노인장기요양복지용품",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "ANGELX",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "SUITX",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "어시스트슈트",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "엔젤기어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "이지파워슈트",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "인공근육슈트",
+   "kw": "레카로마코엘리트2",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "파워드슈트",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "현대로템웨어러블",
-   "vol": 10,
-   "comp": "낮음",
-   "hint": false
-  },
-  {
-   "kw": "BH-90",
+   "kw": "출산용품할인매장",
    "vol": 10,
    "comp": "높음",
    "hint": false
   },
   {
-   "kw": "CK-06",
+   "kw": "치코룰라비집",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "SPACE-S",
+   "kw": "모비스시트커버",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "TOPROTROJA5G",
+   "kw": "순정가죽시트",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "까미노보행기",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "노인성인용보행기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "노인손수레",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "뉴라이트스텝",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "살존카본롤레이터",
-   "vol": 10,
-   "comp": "중간",
-   "hint": false
-  },
-  {
-   "kw": "엘리트트래블워커",
+   "kw": "자동차시트추천",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "이스케이프보행기",
+   "kw": "배곧베이비플러스",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "장수SK-120",
+   "kw": "샤무드도어커버",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "도어가죽커버",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차량스크래치커버",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차시트작업",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아이오엠도어커버",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "토카롤레이터",
+   "kw": "CLE도어커버",
    "vol": 10,
    "comp": "낮음",
    "hint": false
   },
   {
-   "kw": "스틸휠체어",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "웨어러블로봇WIM",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "실버의료기기",
-   "vol": 10,
-   "comp": "높음",
-   "hint": false
-  },
-  {
-   "kw": "웨어러블로봇윔",
+   "kw": "마이바흐시트",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "벽교구",
+   "kw": "스프린터시트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "카니발리무진시트개조",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "실내알칸타라",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차내부시트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차의자개조",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "하남유아용품",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "자동차비닐시트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "리무진개조",
    "vol": 10,
    "comp": "중간",
    "hint": false
   },
   {
-   "kw": "휠체어제작",
+   "kw": "가죽시트가격",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "자동차천연가죽시트",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "차량용도어커버",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "렉서스도어가드",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "유아용품전문점",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "플렉스탭",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "쏠라티시트개조",
+   "vol": 10,
+   "comp": "중간",
+   "hint": false
+  },
+  {
+   "kw": "스프린터개조",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "LF쏘나타시트커버",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "SM7뉴아트시트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "XM3시트커버",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "뉴카렌스시트커버",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "더뉴K7시트커버",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "더뉴스파크시트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "델루나몰시트커버",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "디올뉴싼타페시트커버",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "벤츠C클래스시트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "싼타페CM시트커버",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "아우디A6시트커버",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "올뉴말리부시트커버",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "올뉴투싼시트커버",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "카니발R시트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "크루즈시트커버",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트레일블레이저시트커버",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "포르테시트커버",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "에스컬레이드리무진시트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "시에나커튼",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "트레일블레이저도어커버",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "K3도어커버",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "육아용품쇼핑몰",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "더뉴싼타페시트커버",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "차량여름시트",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "송파구디팡",
+   "vol": 10,
+   "comp": "낮음",
+   "hint": false
+  },
+  {
+   "kw": "시에나시트",
+   "vol": 10,
+   "comp": "높음",
+   "hint": false
+  },
+  {
+   "kw": "기업출산선물",
    "vol": 10,
    "comp": "높음",
    "hint": false
