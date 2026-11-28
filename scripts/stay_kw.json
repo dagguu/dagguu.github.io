@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27 13:06",
+ "updated": "2026-11-28 12:52",
  "note": "vol=네이버 검색광고 월간 검색 수(최근 30일, PC+모바일) · jump=데이터랩 최근 7일 평균 ÷ 그전 28일(어제까지)",
  "stays": [
   {
@@ -7,8 +7,8 @@
    "area": "",
    "slug": "",
    "kw": "소노캄경주",
-   "vol": 85700,
-   "jump": 0.93,
+   "vol": 85400,
+   "jump": 0.92,
    "done": false
   },
   {
@@ -16,8 +16,8 @@
    "area": "",
    "slug": "",
    "kw": "소노벨청송",
-   "vol": 50230,
-   "jump": 1.08,
+   "vol": 49870,
+   "jump": 1.06,
    "done": false
   },
   {
@@ -25,8 +25,8 @@
    "area": "충북 제천시",
    "slug": "",
    "kw": "포레스트리솜",
-   "vol": 40300,
-   "jump": 1.0,
+   "vol": 40200,
+   "jump": 0.99,
    "done": false
   },
   {
@@ -34,8 +34,8 @@
    "area": "경북 문경",
    "slug": "",
    "kw": "문경STX리조트",
-   "vol": 30760,
-   "jump": 1.2,
+   "vol": 31060,
+   "jump": 1.19,
    "done": false
   },
   {
@@ -43,8 +43,8 @@
    "area": "경북 경주시",
    "slug": "",
    "kw": "라한셀렉트경주",
-   "vol": 30710,
-   "jump": 1.09,
+   "vol": 30770,
+   "jump": 1.1,
    "done": false
   },
   {
@@ -52,8 +52,8 @@
    "area": "충북 단양",
    "slug": "",
    "kw": "소노벨단양",
-   "vol": 28980,
-   "jump": 0.78,
+   "vol": 28530,
+   "jump": 0.75,
    "done": false
   },
   {
@@ -61,8 +61,8 @@
    "area": "",
    "slug": "",
    "kw": "쏠비치남해",
-   "vol": 26350,
-   "jump": 0.91,
+   "vol": 26160,
+   "jump": 0.89,
    "done": false
   },
   {
@@ -70,8 +70,8 @@
    "area": "",
    "slug": "",
    "kw": "메이필드호텔서울",
-   "vol": 25230,
-   "jump": 1.02,
+   "vol": 25220,
+   "jump": 1.04,
    "done": false
   },
   {
@@ -79,8 +79,8 @@
    "area": "",
    "slug": "",
    "kw": "파크하얏트부산",
-   "vol": 23550,
-   "jump": 1.07,
+   "vol": 23650,
+   "jump": 1.09,
    "done": false
   },
   {
@@ -88,8 +88,8 @@
    "area": "부산 해운대",
    "slug": "",
    "kw": "한화리조트해운대",
-   "vol": 18350,
-   "jump": 1.01,
+   "vol": 18530,
+   "jump": 1.02,
    "done": false
   },
   {
@@ -97,7 +97,7 @@
    "area": "",
    "slug": "",
    "kw": "안토",
-   "vol": 18040,
+   "vol": 18010,
    "jump": 1.08,
    "done": false
   },
@@ -106,8 +106,8 @@
    "area": "",
    "slug": "",
    "kw": "세인트더스위트양양",
-   "vol": 17040,
-   "jump": 0.75,
+   "vol": 17130,
+   "jump": 0.77,
    "done": true
   },
   {
@@ -115,8 +115,8 @@
    "area": "",
    "slug": "",
    "kw": "유니아일랜드더스파빌",
-   "vol": 16000,
-   "jump": 0.63,
+   "vol": 14560,
+   "jump": 0.62,
    "done": false
   },
   {
@@ -124,8 +124,8 @@
    "area": "",
    "slug": "",
    "kw": "그랜드하얏트제주",
-   "vol": 13560,
-   "jump": 1.15,
+   "vol": 13680,
+   "jump": 1.09,
    "done": false
   },
   {
@@ -133,8 +133,8 @@
    "area": "",
    "slug": "",
    "kw": "한화리조트경주",
-   "vol": 12670,
-   "jump": 1.0,
+   "vol": 12590,
+   "jump": 0.99,
    "done": false
   },
   {
@@ -142,7 +142,7 @@
    "area": "",
    "slug": "",
    "kw": "에코랜드호텔",
-   "vol": 10800,
+   "vol": 10810,
    "jump": 0.93,
    "done": true
   },
@@ -151,8 +151,8 @@
    "area": "경기 가평",
    "slug": "gapyeong-hanoktake",
    "kw": "가평하녹타케",
-   "vol": 10710,
-   "jump": 1.06,
+   "vol": 10670,
+   "jump": 0.95,
    "done": true
   },
   {
@@ -160,8 +160,8 @@
    "area": "강원 양양",
    "slug": "",
    "kw": "오색그린야드호텔",
-   "vol": 10660,
-   "jump": 1.02,
+   "vol": 10650,
+   "jump": 1.05,
    "done": false
   },
   {
@@ -169,8 +169,8 @@
    "area": "",
    "slug": "",
    "kw": "비스타워커힐서울",
-   "vol": 9220,
-   "jump": 1.1,
+   "vol": 9290,
+   "jump": 1.14,
    "done": false
   },
   {
@@ -178,8 +178,8 @@
    "area": "",
    "slug": "",
    "kw": "이제남해",
-   "vol": 8890,
-   "jump": 0.97,
+   "vol": 8920,
+   "jump": 1.03,
    "done": false
   },
   {
@@ -187,8 +187,8 @@
    "area": "",
    "slug": "",
    "kw": "더앤리조트",
-   "vol": 8610,
-   "jump": 1.3,
+   "vol": 8680,
+   "jump": 1.31,
    "done": false
   },
   {
@@ -197,7 +197,7 @@
    "slug": "",
    "kw": "도미인서울강남",
    "vol": 7970,
-   "jump": 1.12,
+   "jump": 1.08,
    "done": false
   },
   {
@@ -205,8 +205,8 @@
    "area": "",
    "slug": "",
    "kw": "가평메종드글램",
-   "vol": 7540,
-   "jump": 0.72,
+   "vol": 7550,
+   "jump": 0.71,
    "done": false
   },
   {
@@ -214,8 +214,8 @@
    "area": "",
    "slug": "",
    "kw": "평창시작",
-   "vol": 7280,
-   "jump": 0.66,
+   "vol": 7350,
+   "jump": 0.67,
    "done": false
   },
   {
@@ -223,8 +223,8 @@
    "area": "",
    "slug": "",
    "kw": "호텔수성",
-   "vol": 7270,
-   "jump": 1.0,
+   "vol": 7250,
+   "jump": 0.96,
    "done": true
   },
   {
@@ -233,7 +233,7 @@
    "slug": "",
    "kw": "이제경주",
    "vol": 6450,
-   "jump": 1.04,
+   "jump": 0.99,
    "done": false
   },
   {
@@ -241,8 +241,8 @@
    "area": "경기 가평",
    "slug": "",
    "kw": "카이프리미엄글램핑",
-   "vol": 5850,
-   "jump": 0.26,
+   "vol": 5720,
+   "jump": 0.27,
    "done": false
   },
   {
@@ -250,8 +250,17 @@
    "area": "",
    "slug": "",
    "kw": "소노벨경주감포",
-   "vol": 5440,
+   "vol": 5330,
    "jump": 0.74,
+   "done": false
+  },
+  {
+   "name": "이제 부산",
+   "area": "",
+   "slug": "",
+   "kw": "이제부산",
+   "vol": 5190,
+   "jump": 1.01,
    "done": false
   },
   {
@@ -259,26 +268,17 @@
    "area": "충북 청주시",
    "slug": "",
    "kw": "엔포드호텔",
-   "vol": 5280,
-   "jump": 1.01,
+   "vol": 5160,
+   "jump": 1.0,
    "done": true
-  },
-  {
-   "name": "이제 부산",
-   "area": "",
-   "slug": "",
-   "kw": "이제부산",
-   "vol": 5230,
-   "jump": 1.07,
-   "done": false
   },
   {
    "name": "마티에 부산하버시티",
    "area": "",
    "slug": "busan-matie-harbor",
    "kw": "마티에부산하버시티",
-   "vol": 5000,
-   "jump": 1.29,
+   "vol": 5010,
+   "jump": 1.27,
    "done": true
   },
   {
@@ -286,8 +286,8 @@
    "area": "인천 영종구",
    "slug": "",
    "kw": "제이앤파크호텔",
-   "vol": 4890,
-   "jump": 1.01,
+   "vol": 4950,
+   "jump": 1.03,
    "done": true
   },
   {
@@ -295,17 +295,8 @@
    "area": "",
    "slug": "",
    "kw": "일랑일랑",
-   "vol": 4540,
-   "jump": 1.04,
-   "done": false
-  },
-  {
-   "name": "플라트 더 각 양양",
-   "area": "강원 양양군",
-   "slug": "",
-   "kw": "플라트더각양양",
-   "vol": 4350,
-   "jump": 1.05,
+   "vol": 4580,
+   "jump": 1.03,
    "done": false
   },
   {
@@ -313,8 +304,17 @@
    "area": "강원 고성",
    "slug": "",
    "kw": "옥수온천캠핑랜드",
-   "vol": 4320,
-   "jump": 2.58,
+   "vol": 4390,
+   "jump": 2.1,
+   "done": false
+  },
+  {
+   "name": "플라트 더 각 양양",
+   "area": "강원 양양군",
+   "slug": "",
+   "kw": "플라트더각양양",
+   "vol": 4360,
+   "jump": 1.11,
    "done": false
   },
   {
@@ -323,7 +323,16 @@
    "slug": "",
    "kw": "아난티앳강남",
    "vol": 4250,
-   "jump": 1.21,
+   "jump": 1.25,
+   "done": false
+  },
+  {
+   "name": "스타스케이프 풀빌라",
+   "area": "",
+   "slug": "",
+   "kw": "스타스케이프풀빌라",
+   "vol": 3470,
+   "jump": 45.0,
    "done": false
   },
   {
@@ -331,8 +340,8 @@
    "area": "",
    "slug": "",
    "kw": "광안리호텔1",
-   "vol": 3480,
-   "jump": 0.93,
+   "vol": 3440,
+   "jump": 0.89,
    "done": true
   },
   {
@@ -340,17 +349,8 @@
    "area": "",
    "slug": "",
    "kw": "제주부영호텔리조트",
-   "vol": 3450,
+   "vol": 3430,
    "jump": 0.95,
-   "done": false
-  },
-  {
-   "name": "윈덤 강원 고성",
-   "area": "",
-   "slug": "",
-   "kw": "윈덤강원고성",
-   "vol": 3400,
-   "jump": 0.69,
    "done": false
   },
   {
@@ -358,8 +358,8 @@
    "area": "",
    "slug": "",
    "kw": "가평기억의사원",
-   "vol": 3390,
-   "jump": 0.44,
+   "vol": 3380,
+   "jump": 0.42,
    "done": false
   },
   {
@@ -368,16 +368,16 @@
    "slug": "",
    "kw": "니지모리스튜디오료칸",
    "vol": 3320,
-   "jump": 0.97,
+   "jump": 0.94,
    "done": false
   },
   {
-   "name": "스타스케이프 풀빌라",
+   "name": "윈덤 강원 고성",
    "area": "",
    "slug": "",
-   "kw": "스타스케이프풀빌라",
-   "vol": 3190,
-   "jump": 43.07,
+   "kw": "윈덤강원고성",
+   "vol": 3310,
+   "jump": 0.65,
    "done": false
   },
   {
@@ -385,8 +385,8 @@
    "area": "서울 강남",
    "slug": "",
    "kw": "구도컬렉티브강남",
-   "vol": 3140,
-   "jump": 0.79,
+   "vol": 3170,
+   "jump": 0.83,
    "done": false
   },
   {
@@ -395,7 +395,7 @@
    "slug": "",
    "kw": "전주솔호텔",
    "vol": 3030,
-   "jump": 1.07,
+   "jump": 1.06,
    "done": true
   },
   {
@@ -403,8 +403,8 @@
    "area": "",
    "slug": "",
    "kw": "플럼바고양양",
-   "vol": 2730,
-   "jump": 0.94,
+   "vol": 2760,
+   "jump": 0.99,
    "done": false
   },
   {
@@ -417,39 +417,30 @@
    "done": false
   },
   {
-   "name": "파르나스 호텔 제주",
-   "area": "",
-   "slug": "",
-   "kw": "파르나스호텔제주",
-   "vol": 2510,
-   "jump": 1.07,
-   "done": false
-  },
-  {
    "name": "아르띠에 도고",
    "area": "충남 아산시",
    "slug": "",
    "kw": "아르띠에도고",
-   "vol": 2510,
-   "jump": 1.19,
+   "vol": 2560,
+   "jump": 1.28,
    "done": true
+  },
+  {
+   "name": "파르나스 호텔 제주",
+   "area": "",
+   "slug": "",
+   "kw": "파르나스호텔제주",
+   "vol": 2500,
+   "jump": 1.07,
+   "done": false
   },
   {
    "name": "파나크 영덕 바이 소노벨",
    "area": "",
    "slug": "",
    "kw": "파나크영덕바이소노벨",
-   "vol": 2170,
-   "jump": 0.9,
-   "done": false
-  },
-  {
-   "name": "소담채",
-   "area": "경남 합천군",
-   "slug": "",
-   "kw": "소담채",
-   "vol": 2130,
-   "jump": 0.81,
+   "vol": 2160,
+   "jump": 0.87,
    "done": false
   },
   {
@@ -457,17 +448,17 @@
    "area": "",
    "slug": "",
    "kw": "젠하이드어웨이제주",
-   "vol": 2090,
+   "vol": 2110,
    "jump": 1.04,
    "done": false
   },
   {
-   "name": "스테이살랑",
-   "area": "",
+   "name": "소담채",
+   "area": "경남 합천군",
    "slug": "",
-   "kw": "스테이살랑",
-   "vol": 2010,
-   "jump": 0.25,
+   "kw": "소담채",
+   "vol": 2110,
+   "jump": 0.82,
    "done": false
   },
   {
@@ -475,8 +466,8 @@
    "area": "경남 창원",
    "slug": "changwon-heritage-glamping",
    "kw": "창원헤리티지글램핑",
-   "vol": 2010,
-   "jump": 1.5,
+   "vol": 2060,
+   "jump": 1.69,
    "done": true
   },
   {
@@ -484,17 +475,17 @@
    "area": "",
    "slug": "",
    "kw": "동해신비호텔",
-   "vol": 2000,
-   "jump": 1.04,
+   "vol": 2030,
+   "jump": 1.09,
    "done": true
   },
   {
-   "name": "하이바이풀빌라",
+   "name": "스테이살랑",
    "area": "",
    "slug": "",
-   "kw": "하이바이풀빌라",
-   "vol": 1940,
-   "jump": 0.74,
+   "kw": "스테이살랑",
+   "vol": 1990,
+   "jump": 0.26,
    "done": false
   },
   {
@@ -502,26 +493,17 @@
    "area": "강원 춘천",
    "slug": "",
    "kw": "크라크라낚시펜션",
-   "vol": 1910,
-   "jump": 0.6,
+   "vol": 1940,
+   "jump": 0.54,
    "done": false
   },
   {
-   "name": "보령 엘리스테이",
+   "name": "하이바이풀빌라",
    "area": "",
    "slug": "",
-   "kw": "보령엘리스테이",
-   "vol": 1910,
+   "kw": "하이바이풀빌라",
+   "vol": 1940,
    "jump": 0.77,
-   "done": false
-  },
-  {
-   "name": "경주 데메테르풀빌라",
-   "area": "경북 경주시",
-   "slug": "",
-   "kw": "경주데메테르풀빌라",
-   "vol": 1870,
-   "jump": 1.68,
    "done": false
   },
   {
@@ -529,8 +511,26 @@
    "area": "경남 창원시",
    "slug": "",
    "kw": "헤리티지글램핑",
-   "vol": 1830,
-   "jump": 1.52,
+   "vol": 1930,
+   "jump": 1.75,
+   "done": false
+  },
+  {
+   "name": "보령 엘리스테이",
+   "area": "",
+   "slug": "",
+   "kw": "보령엘리스테이",
+   "vol": 1920,
+   "jump": 0.79,
+   "done": false
+  },
+  {
+   "name": "경주 데메테르풀빌라",
+   "area": "경북 경주시",
+   "slug": "",
+   "kw": "경주데메테르풀빌라",
+   "vol": 1910,
+   "jump": 1.6,
    "done": false
   },
   {
@@ -538,8 +538,8 @@
    "area": "강원 정선",
    "slug": "",
    "kw": "정선모모의숲",
-   "vol": 1830,
-   "jump": 1.38,
+   "vol": 1850,
+   "jump": 0.93,
    "done": false
   },
   {
@@ -547,8 +547,8 @@
    "area": "",
    "slug": "pohang-daytona",
    "kw": "포항데이토나풀빌라",
-   "vol": 1820,
-   "jump": 0.76,
+   "vol": 1790,
+   "jump": 0.72,
    "done": true
   },
   {
@@ -556,8 +556,8 @@
    "area": "강원 춘천시",
    "slug": "",
    "kw": "월하담",
-   "vol": 1700,
-   "jump": 1.03,
+   "vol": 1710,
+   "jump": 1.14,
    "done": false
   },
   {
@@ -566,25 +566,7 @@
    "slug": "",
    "kw": "포항더리브풀빌라",
    "vol": 1680,
-   "jump": 1.18,
-   "done": false
-  },
-  {
-   "name": "스페이스 영덕",
-   "area": "경북 영덕군",
-   "slug": "",
-   "kw": "스페이스영덕",
-   "vol": 1680,
-   "jump": 0.89,
-   "done": false
-  },
-  {
-   "name": "태안(안면도) 지중해아침펜션",
-   "area": "",
-   "slug": "",
-   "kw": "태안지중해아침펜션",
-   "vol": 1670,
-   "jump": 0.68,
+   "jump": 0.84,
    "done": false
   },
   {
@@ -592,8 +574,17 @@
    "area": "서울 중구",
    "slug": "",
    "kw": "프레이저플레이스센트럴서울",
-   "vol": 1670,
-   "jump": 1.04,
+   "vol": 1680,
+   "jump": 1.06,
+   "done": false
+  },
+  {
+   "name": "스페이스 영덕",
+   "area": "경북 영덕군",
+   "slug": "",
+   "kw": "스페이스영덕",
+   "vol": 1650,
+   "jump": 0.92,
    "done": false
   },
   {
@@ -601,8 +592,17 @@
    "area": "",
    "slug": "",
    "kw": "남해여여담",
-   "vol": 1660,
-   "jump": 0.63,
+   "vol": 1640,
+   "jump": 0.79,
+   "done": false
+  },
+  {
+   "name": "태안(안면도) 지중해아침펜션",
+   "area": "",
+   "slug": "",
+   "kw": "태안지중해아침펜션",
+   "vol": 1640,
+   "jump": 0.62,
    "done": false
   },
   {
@@ -610,26 +610,8 @@
    "area": "",
    "slug": "",
    "kw": "소노펠리체빌리지델피노",
-   "vol": 1620,
-   "jump": 1.08,
-   "done": false
-  },
-  {
-   "name": "L7 해운대 바이 롯데호텔",
-   "area": "",
-   "slug": "",
-   "kw": "L7해운대바이롯데호텔",
-   "vol": 1530,
-   "jump": 1.21,
-   "done": false
-  },
-  {
-   "name": "파크로쉬 리조트 앤 웰니스",
-   "area": "",
-   "slug": "",
-   "kw": "파크로쉬리조트앤웰니스",
-   "vol": 1490,
-   "jump": 0.75,
+   "vol": 1640,
+   "jump": 1.13,
    "done": false
   },
   {
@@ -637,8 +619,26 @@
    "area": "",
    "slug": "",
    "kw": "호텔센트럴베이광안리",
-   "vol": 1480,
-   "jump": 0.98,
+   "vol": 1520,
+   "jump": 1.05,
+   "done": false
+  },
+  {
+   "name": "파크로쉬 리조트 앤 웰니스",
+   "area": "",
+   "slug": "",
+   "kw": "파크로쉬리조트앤웰니스",
+   "vol": 1500,
+   "jump": 0.79,
+   "done": false
+  },
+  {
+   "name": "L7 해운대 바이 롯데호텔",
+   "area": "",
+   "slug": "",
+   "kw": "L7해운대바이롯데호텔",
+   "vol": 1500,
+   "jump": 1.15,
    "done": false
   },
   {
@@ -646,7 +646,7 @@
    "area": "",
    "slug": "",
    "kw": "발레리조트",
-   "vol": 1440,
+   "vol": 1430,
    "jump": 0.45,
    "done": false
   },
@@ -656,7 +656,7 @@
    "slug": "",
    "kw": "아름다운산골",
    "vol": 1360,
-   "jump": 1.2,
+   "jump": 1.25,
    "done": false
   },
   {
@@ -664,8 +664,8 @@
    "area": "",
    "slug": "",
    "kw": "UH컨티넨탈센터포인트",
-   "vol": 1310,
-   "jump": 1.1,
+   "vol": 1320,
+   "jump": 1.15,
    "done": true
   },
   {
@@ -673,8 +673,8 @@
    "area": "",
    "slug": "",
    "kw": "경주천북빌리지",
-   "vol": 1290,
-   "jump": 0.3,
+   "vol": 1280,
+   "jump": 0.27,
    "done": false
   },
   {
@@ -682,8 +682,8 @@
    "area": "",
    "slug": "",
    "kw": "포항코랄트리풀빌라",
-   "vol": 1260,
-   "jump": 1.52,
+   "vol": 1270,
+   "jump": 1.45,
    "done": false
   },
   {
@@ -691,17 +691,8 @@
    "area": "인천 강화군",
    "slug": "",
    "kw": "리세스",
-   "vol": 1250,
-   "jump": 0.96,
-   "done": false
-  },
-  {
-   "name": "동해 다온스테이",
-   "area": "",
-   "slug": "",
-   "kw": "동해다온스테이",
-   "vol": 1150,
-   "jump": 0.81,
+   "vol": 1220,
+   "jump": 1.0,
    "done": false
   },
   {
@@ -709,8 +700,8 @@
    "area": "",
    "slug": "",
    "kw": "부산온유지스테이",
-   "vol": 1150,
-   "jump": 1.58,
+   "vol": 1200,
+   "jump": 1.8,
    "done": false
   },
   {
@@ -718,8 +709,17 @@
    "area": "경기 가평군",
    "slug": "",
    "kw": "레이키푸이스토풀빌라",
-   "vol": 1120,
-   "jump": 1.68,
+   "vol": 1150,
+   "jump": 1.6,
+   "done": false
+  },
+  {
+   "name": "동해 다온스테이",
+   "area": "",
+   "slug": "",
+   "kw": "동해다온스테이",
+   "vol": 1140,
+   "jump": 0.79,
    "done": false
   },
   {
@@ -727,8 +727,8 @@
    "area": "경기 가평군",
    "slug": "",
    "kw": "음악의숲",
-   "vol": 1110,
-   "jump": 0.65,
+   "vol": 1070,
+   "jump": 0.63,
    "done": false
   },
   {
@@ -736,18 +736,9 @@
    "area": "강원 속초시",
    "slug": "",
    "kw": "플라트더원속초자이엘라더비치",
-   "vol": 1040,
-   "jump": 1.26,
+   "vol": 1050,
+   "jump": 1.24,
    "done": false
-  },
-  {
-   "name": "포항 모딜레풀빌라",
-   "area": "경북 포항",
-   "slug": "pohang-modille-poolvilla",
-   "kw": "포항모딜레풀빌라",
-   "vol": 1040,
-   "jump": 1.14,
-   "done": true
   },
   {
    "name": "포항 슬로우오션풀빌라",
@@ -755,25 +746,25 @@
    "slug": "",
    "kw": "포항슬로우오션풀빌라",
    "vol": 1030,
-   "jump": 1.37,
+   "jump": 1.29,
    "done": false
+  },
+  {
+   "name": "포항 모딜레풀빌라",
+   "area": "경북 포항",
+   "slug": "pohang-modille-poolvilla",
+   "kw": "포항모딜레풀빌라",
+   "vol": 1010,
+   "jump": 1.03,
+   "done": true
   },
   {
    "name": "태안 비비체풀빌라",
    "area": "",
    "slug": "",
    "kw": "태안비비체풀빌라",
-   "vol": 1010,
-   "jump": 0.96,
-   "done": false
-  },
-  {
-   "name": "청도굿스파키즈풀빌라",
-   "area": "경북 청도군",
-   "slug": "",
-   "kw": "청도굿스파키즈풀빌라",
-   "vol": 990,
-   "jump": 1.41,
+   "vol": 1000,
+   "jump": 0.94,
    "done": false
   },
   {
@@ -781,17 +772,26 @@
    "area": "경기 가평군",
    "slug": "",
    "kw": "포레브",
-   "vol": 980,
-   "jump": 0.72,
+   "vol": 990,
+   "jump": 0.79,
    "done": false
   },
   {
-   "name": "라온 풀빌라",
-   "area": "충북 청주시",
+   "name": "청도굿스파키즈풀빌라",
+   "area": "경북 청도군",
    "slug": "",
-   "kw": "라온풀빌라",
-   "vol": 950,
-   "jump": 1.02,
+   "kw": "청도굿스파키즈풀빌라",
+   "vol": 980,
+   "jump": 1.27,
+   "done": false
+  },
+  {
+   "name": "켄싱턴리조트 지리산하동",
+   "area": "",
+   "slug": "",
+   "kw": "켄싱턴리조트지리산하동",
+   "vol": 970,
+   "jump": 0.92,
    "done": false
   },
   {
@@ -800,7 +800,7 @@
    "slug": "",
    "kw": "연화도감",
    "vol": 950,
-   "jump": 1.25,
+   "jump": 1.27,
    "done": false
   },
   {
@@ -809,16 +809,16 @@
    "slug": "",
    "kw": "흘로부산",
    "vol": 940,
-   "jump": 1.01,
+   "jump": 0.96,
    "done": false
   },
   {
-   "name": "켄싱턴리조트 지리산하동",
-   "area": "",
+   "name": "라온 풀빌라",
+   "area": "충북 청주시",
    "slug": "",
-   "kw": "켄싱턴리조트지리산하동",
-   "vol": 940,
-   "jump": 0.67,
+   "kw": "라온풀빌라",
+   "vol": 930,
+   "jump": 0.92,
    "done": false
   },
   {
@@ -826,8 +826,8 @@
    "area": "제주 서귀포시",
    "slug": "",
    "kw": "스테이느릇",
-   "vol": 910,
-   "jump": 0.9,
+   "vol": 920,
+   "jump": 0.91,
    "done": false
   },
   {
@@ -836,25 +836,7 @@
    "slug": "",
    "kw": "강릉머뭄풀빌라",
    "vol": 880,
-   "jump": 0.97,
-   "done": false
-  },
-  {
-   "name": "경주오루한옥스테이",
-   "area": "경북 경주시",
-   "slug": "",
-   "kw": "경주오루한옥스테이",
-   "vol": 880,
-   "jump": 1.4,
-   "done": false
-  },
-  {
-   "name": "춘천 인터스텔라 풀빌라",
-   "area": "",
-   "slug": "",
-   "kw": "춘천인터스텔라풀빌라",
-   "vol": 870,
-   "jump": 0.73,
+   "jump": 1.0,
    "done": false
   },
   {
@@ -862,8 +844,8 @@
    "area": "경기 가평군",
    "slug": "",
    "kw": "엠포레키즈풀빌라",
-   "vol": 870,
-   "jump": 1.42,
+   "vol": 880,
+   "jump": 1.52,
    "done": false
   },
   {
@@ -871,8 +853,26 @@
    "area": "",
    "slug": "",
    "kw": "남해이안풀빌라",
+   "vol": 880,
+   "jump": 1.31,
+   "done": false
+  },
+  {
+   "name": "경주오루한옥스테이",
+   "area": "경북 경주시",
+   "slug": "",
+   "kw": "경주오루한옥스테이",
    "vol": 870,
-   "jump": 1.47,
+   "jump": 1.34,
+   "done": false
+  },
+  {
+   "name": "춘천 인터스텔라 풀빌라",
+   "area": "",
+   "slug": "",
+   "kw": "춘천인터스텔라풀빌라",
+   "vol": 850,
+   "jump": 0.66,
    "done": false
   },
   {
@@ -880,8 +880,8 @@
    "area": "부산 중구",
    "slug": "",
    "kw": "매그넘남포호텔",
-   "vol": 830,
-   "jump": 0.76,
+   "vol": 820,
+   "jump": 0.94,
    "done": true
   },
   {
@@ -889,8 +889,8 @@
    "area": "경기 가평군",
    "slug": "",
    "kw": "가평자작나무글램핑",
-   "vol": 810,
-   "jump": 0.64,
+   "vol": 800,
+   "jump": 0.54,
    "done": false
   },
   {
@@ -898,26 +898,17 @@
    "area": "강원 속초시",
    "slug": "",
    "kw": "르컬렉티브속초해변",
-   "vol": 810,
-   "jump": 0.89,
+   "vol": 800,
+   "jump": 0.75,
    "done": false
-  },
-  {
-   "name": "담앤루리조트",
-   "area": "제주 서귀포",
-   "slug": "seogwipo-damnroo",
-   "kw": "담앤루리조트",
-   "vol": 810,
-   "jump": 0.71,
-   "done": true
   },
   {
    "name": "하운드호텔 부산역",
    "area": "",
    "slug": "",
    "kw": "하운드호텔부산역",
-   "vol": 800,
-   "jump": 0.87,
+   "vol": 790,
+   "jump": 0.76,
    "done": true
   },
   {
@@ -925,44 +916,8 @@
    "area": "",
    "slug": "",
    "kw": "애월더선셋리조트",
-   "vol": 800,
-   "jump": 1.19,
-   "done": false
-  },
-  {
-   "name": "쉐르빌 온천관광호텔",
-   "area": "",
-   "slug": "",
-   "kw": "쉐르빌온천관광호텔",
-   "vol": 780,
-   "jump": 1.46,
-   "done": false
-  },
-  {
-   "name": "영흥도 메리글램핑",
-   "area": "",
-   "slug": "",
-   "kw": "영흥도메리글램핑",
-   "vol": 770,
-   "jump": 0.54,
-   "done": false
-  },
-  {
-   "name": "경주잇다스테이",
-   "area": "",
-   "slug": "",
-   "kw": "경주잇다스테이",
-   "vol": 760,
-   "jump": 1.21,
-   "done": false
-  },
-  {
-   "name": "어반스테이 부산송도해변",
-   "area": "부산 서구",
-   "slug": "",
-   "kw": "어반스테이부산송도해변",
-   "vol": 750,
-   "jump": 1.18,
+   "vol": 790,
+   "jump": 1.14,
    "done": false
   },
   {
@@ -970,8 +925,35 @@
    "area": "강원 춘천",
    "slug": "",
    "kw": "춘천크라크라낚시펜션",
-   "vol": 750,
-   "jump": 0.58,
+   "vol": 790,
+   "jump": 0.91,
+   "done": false
+  },
+  {
+   "name": "쉐르빌 온천관광호텔",
+   "area": "",
+   "slug": "",
+   "kw": "쉐르빌온천관광호텔",
+   "vol": 790,
+   "jump": 1.39,
+   "done": false
+  },
+  {
+   "name": "담앤루리조트",
+   "area": "제주 서귀포",
+   "slug": "seogwipo-damnroo",
+   "kw": "담앤루리조트",
+   "vol": 790,
+   "jump": 0.77,
+   "done": true
+  },
+  {
+   "name": "영흥도 메리글램핑",
+   "area": "",
+   "slug": "",
+   "kw": "영흥도메리글램핑",
+   "vol": 760,
+   "jump": 0.55,
    "done": false
   },
   {
@@ -979,8 +961,26 @@
    "area": "경기 가평군",
    "slug": "",
    "kw": "디에펠",
+   "vol": 750,
+   "jump": 0.97,
+   "done": false
+  },
+  {
+   "name": "경주잇다스테이",
+   "area": "",
+   "slug": "",
+   "kw": "경주잇다스테이",
    "vol": 740,
-   "jump": 0.91,
+   "jump": 1.08,
+   "done": false
+  },
+  {
+   "name": "어반스테이 부산송도해변",
+   "area": "부산 서구",
+   "slug": "",
+   "kw": "어반스테이부산송도해변",
+   "vol": 730,
+   "jump": 1.2,
    "done": false
   },
   {
@@ -988,8 +988,17 @@
    "area": "",
    "slug": "",
    "kw": "료칸하치스노이토",
-   "vol": 740,
-   "jump": 1.79,
+   "vol": 730,
+   "jump": 2.01,
+   "done": false
+  },
+  {
+   "name": "시나브로경주",
+   "area": "경북 경주시",
+   "slug": "",
+   "kw": "시나브로경주",
+   "vol": 710,
+   "jump": 4.23,
    "done": false
   },
   {
@@ -998,7 +1007,7 @@
    "slug": "",
    "kw": "모리엔스테이",
    "vol": 680,
-   "jump": 1.03,
+   "jump": 0.87,
    "done": false
   },
   {
@@ -1006,26 +1015,26 @@
    "area": "",
    "slug": "gapyeong-glamhavana",
    "kw": "가평글램하바나",
-   "vol": 630,
-   "jump": 0.69,
+   "vol": 640,
+   "jump": 0.68,
    "done": true
-  },
-  {
-   "name": "청도477풀빌라",
-   "area": "경북 청도군",
-   "slug": "",
-   "kw": "청도477풀빌라",
-   "vol": 610,
-   "jump": 1.55,
-   "done": false
   },
   {
    "name": "유달리한옥",
    "area": "",
    "slug": "",
    "kw": "유달리한옥",
-   "vol": 600,
-   "jump": 1.47,
+   "vol": 620,
+   "jump": 1.59,
+   "done": false
+  },
+  {
+   "name": "청도477풀빌라",
+   "area": "경북 청도군",
+   "slug": "",
+   "kw": "청도477풀빌라",
+   "vol": 620,
+   "jump": 1.52,
    "done": false
   },
   {
@@ -1033,17 +1042,8 @@
    "area": "경북 경주시",
    "slug": "gyeongju-snb-poolvilla",
    "kw": "경주에스앤비풀빌라",
-   "vol": 600,
-   "jump": 0.76,
-   "done": true
-  },
-  {
-   "name": "하얏트 플레이스 부산 연산",
-   "area": "",
-   "slug": "",
-   "kw": "하얏트플레이스부산연산",
-   "vol": 580,
-   "jump": 0.91,
+   "vol": 610,
+   "jump": 0.69,
    "done": true
   },
   {
@@ -1051,17 +1051,26 @@
    "area": "",
    "slug": "",
    "kw": "음영스테이",
-   "vol": 570,
-   "jump": 1.15,
+   "vol": 580,
+   "jump": 1.24,
    "done": false
+  },
+  {
+   "name": "하얏트 플레이스 부산 연산",
+   "area": "",
+   "slug": "",
+   "kw": "하얏트플레이스부산연산",
+   "vol": 560,
+   "jump": 0.86,
+   "done": true
   },
   {
    "name": "보스케토삼동",
    "area": "울산 울주군",
    "slug": "",
    "kw": "보스케토삼동",
-   "vol": 570,
-   "jump": 1.37,
+   "vol": 560,
+   "jump": 1.24,
    "done": false
   },
   {
@@ -1069,26 +1078,8 @@
    "area": "충북 보은군",
    "slug": "",
    "kw": "일상화글램핑",
-   "vol": 570,
-   "jump": 0.7,
-   "done": false
-  },
-  {
-   "name": "펄베이풀빌라",
-   "area": "",
-   "slug": "",
-   "kw": "펄베이풀빌라",
    "vol": 560,
-   "jump": 0.78,
-   "done": false
-  },
-  {
-   "name": "스테이선광",
-   "area": "",
-   "slug": "",
-   "kw": "스테이선광",
-   "vol": 550,
-   "jump": 0.87,
+   "jump": 0.68,
    "done": false
   },
   {
@@ -1097,7 +1088,25 @@
    "slug": "",
    "kw": "글램트리리조트",
    "vol": 550,
-   "jump": 0.98,
+   "jump": 0.95,
+   "done": false
+  },
+  {
+   "name": "펄베이풀빌라",
+   "area": "",
+   "slug": "",
+   "kw": "펄베이풀빌라",
+   "vol": 550,
+   "jump": 0.8,
+   "done": false
+  },
+  {
+   "name": "스테이선광",
+   "area": "",
+   "slug": "",
+   "kw": "스테이선광",
+   "vol": 530,
+   "jump": 0.84,
    "done": false
   },
   {
@@ -1105,8 +1114,17 @@
    "area": "경기 가평군",
    "slug": "",
    "kw": "코튼글램핑",
-   "vol": 550,
-   "jump": 0.73,
+   "vol": 530,
+   "jump": 0.67,
+   "done": false
+  },
+  {
+   "name": "금빛채 풀빌라",
+   "area": "경북 경주시",
+   "slug": "",
+   "kw": "금빛채풀빌라",
+   "vol": 530,
+   "jump": 1.42,
    "done": false
   },
   {
@@ -1115,16 +1133,16 @@
    "slug": "",
    "kw": "유온스테이",
    "vol": 530,
-   "jump": 0.83,
+   "jump": 0.86,
    "done": false
   },
   {
-   "name": "금빛채 풀빌라",
-   "area": "경북 경주시",
+   "name": "광안리 잔울림",
+   "area": "",
    "slug": "",
-   "kw": "금빛채풀빌라",
+   "kw": "광안리잔울림",
    "vol": 520,
-   "jump": 1.66,
+   "jump": 0.83,
    "done": false
   },
   {
@@ -1133,17 +1151,8 @@
    "slug": "",
    "kw": "풀빌라소랑",
    "vol": 510,
-   "jump": 1.08,
+   "jump": 1.07,
    "done": true
-  },
-  {
-   "name": "광안리 잔울림",
-   "area": "",
-   "slug": "",
-   "kw": "광안리잔울림",
-   "vol": 510,
-   "jump": 0.74,
-   "done": false
   },
   {
    "name": "라바풀빌라",
@@ -1151,7 +1160,7 @@
    "slug": "boryeong-lava-poolvilla",
    "kw": "라바풀빌라",
    "vol": 490,
-   "jump": 1.39,
+   "jump": 1.34,
    "done": true
   },
   {
@@ -1159,8 +1168,8 @@
    "area": "경기 양평군",
    "slug": "",
    "kw": "소소유유",
-   "vol": 470,
-   "jump": 1.62,
+   "vol": 480,
+   "jump": 1.74,
    "done": false
   },
   {
@@ -1168,26 +1177,8 @@
    "area": "",
    "slug": "",
    "kw": "UH스위트더명동",
-   "vol": 460,
+   "vol": 470,
    "jump": 0.97,
-   "done": true
-  },
-  {
-   "name": "경주 지은정스테이",
-   "area": "",
-   "slug": "",
-   "kw": "경주지은정스테이",
-   "vol": 450,
-   "jump": 1.01,
-   "done": false
-  },
-  {
-   "name": "부산 광안리 애프터챕터 (After Chapter Hotel)",
-   "area": "",
-   "slug": "",
-   "kw": "부산광안리애프터챕터",
-   "vol": 450,
-   "jump": 0.65,
    "done": true
   },
   {
@@ -1195,8 +1186,17 @@
    "area": "제주 서귀포시",
    "slug": "",
    "kw": "유앤아이제주",
-   "vol": 450,
-   "jump": 0.98,
+   "vol": 470,
+   "jump": 1.17,
+   "done": false
+  },
+  {
+   "name": "경주 지은정스테이",
+   "area": "",
+   "slug": "",
+   "kw": "경주지은정스테이",
+   "vol": 440,
+   "jump": 0.89,
    "done": false
   },
   {
@@ -1205,16 +1205,7 @@
    "slug": "",
    "kw": "휴먼그라운드풀빌라",
    "vol": 440,
-   "jump": 0.52,
-   "done": false
-  },
-  {
-   "name": "시나브로경주",
-   "area": "경북 경주시",
-   "slug": "",
-   "kw": "시나브로경주",
-   "vol": 420,
-   "jump": 1.04,
+   "jump": 0.37,
    "done": false
   },
   {
@@ -1222,17 +1213,17 @@
    "area": "강원 춘천시",
    "slug": "",
    "kw": "덕두글램핑",
-   "vol": 420,
-   "jump": 1.01,
+   "vol": 430,
+   "jump": 1.15,
    "done": false
   },
   {
-   "name": "경주 세이워터코히",
-   "area": "",
+   "name": "반월풀빌라",
+   "area": "부산 해운대구",
    "slug": "",
-   "kw": "경주세이워터코히",
+   "kw": "반월풀빌라",
    "vol": 400,
-   "jump": 0.96,
+   "jump": 1.71,
    "done": false
   },
   {
@@ -1241,26 +1232,26 @@
    "slug": "",
    "kw": "하랑한옥",
    "vol": 400,
-   "jump": 0.94,
+   "jump": 0.98,
    "done": false
   },
   {
-   "name": "반월풀빌라",
-   "area": "부산 해운대구",
-   "slug": "",
-   "kw": "반월풀빌라",
-   "vol": 390,
-   "jump": 1.72,
-   "done": false
-  },
-  {
-   "name": "경주 포에티스풀빌라",
+   "name": "경주 세이워터코히",
    "area": "",
    "slug": "",
-   "kw": "경주포에티스풀빌라",
-   "vol": 380,
-   "jump": 0.46,
+   "kw": "경주세이워터코히",
+   "vol": 390,
+   "jump": 0.86,
    "done": false
+  },
+  {
+   "name": "부산 광안리 애프터챕터 (After Chapter Hotel)",
+   "area": "",
+   "slug": "",
+   "kw": "부산광안리애프터챕터",
+   "vol": 390,
+   "jump": 0.67,
+   "done": true
   },
   {
    "name": "공주 모들(modeul)",
@@ -1268,7 +1259,16 @@
    "slug": "",
    "kw": "공주모들",
    "vol": 380,
-   "jump": 0.83,
+   "jump": 0.79,
+   "done": false
+  },
+  {
+   "name": "제주 스테이휘움",
+   "area": "",
+   "slug": "",
+   "kw": "제주스테이휘움",
+   "vol": 380,
+   "jump": 1.23,
    "done": false
   },
   {
@@ -1277,7 +1277,7 @@
    "slug": "",
    "kw": "강릉별별별장",
    "vol": 370,
-   "jump": 0.88,
+   "jump": 0.89,
    "done": false
   },
   {
@@ -1286,16 +1286,25 @@
    "slug": "",
    "kw": "울산미므미므풀빌라",
    "vol": 370,
-   "jump": 1.31,
+   "jump": 1.16,
    "done": false
   },
   {
-   "name": "제주 스테이휘움",
+   "name": "페어필드 바이 메리어트 부산 송도 비치",
    "area": "",
    "slug": "",
-   "kw": "제주스테이휘움",
+   "kw": "페어필드바이메리어트부산송도비치",
    "vol": 370,
    "jump": 1.19,
+   "done": false
+  },
+  {
+   "name": "산가원 글램핑",
+   "area": "경남 산청군",
+   "slug": "",
+   "kw": "산가원글램핑",
+   "vol": 370,
+   "jump": 0.91,
    "done": false
   },
   {
@@ -1304,25 +1313,7 @@
    "slug": "",
    "kw": "스테이화가",
    "vol": 370,
-   "jump": 1.1,
-   "done": false
-  },
-  {
-   "name": "페어필드 바이 메리어트 부산 송도 비치",
-   "area": "",
-   "slug": "",
-   "kw": "페어필드바이메리어트부산송도비치",
-   "vol": 360,
-   "jump": 1.18,
-   "done": false
-  },
-  {
-   "name": "산가원 글램핑",
-   "area": "경남 산청군",
-   "slug": "",
-   "kw": "산가원글램핑",
-   "vol": 360,
-   "jump": 0.78,
+   "jump": 1.0,
    "done": false
   },
   {
@@ -1331,16 +1322,7 @@
    "slug": "",
    "kw": "잠깨고키즈풀빌라",
    "vol": 350,
-   "jump": 0.75,
-   "done": false
-  },
-  {
-   "name": "남해 다온해 풀빌라",
-   "area": "경남 남해군",
-   "slug": "",
-   "kw": "남해다온해풀빌라",
-   "vol": 340,
-   "jump": 0.49,
+   "jump": 0.81,
    "done": false
   },
   {
@@ -1348,8 +1330,35 @@
    "area": "",
    "slug": "",
    "kw": "가평케이팝풀빌라",
+   "vol": 340,
+   "jump": 1.47,
+   "done": false
+  },
+  {
+   "name": "경주 포에티스풀빌라",
+   "area": "",
+   "slug": "",
+   "kw": "경주포에티스풀빌라",
+   "vol": 340,
+   "jump": 0.41,
+   "done": false
+  },
+  {
+   "name": "남해 다온해 풀빌라",
+   "area": "경남 남해군",
+   "slug": "",
+   "kw": "남해다온해풀빌라",
    "vol": 330,
-   "jump": 1.49,
+   "jump": 0.59,
+   "done": false
+  },
+  {
+   "name": "엠버 퓨어힐 호텔 앤 리조트 제주",
+   "area": "",
+   "slug": "",
+   "kw": "엠버퓨어힐호텔앤리조트제주",
+   "vol": 320,
+   "jump": null,
    "done": false
   },
   {
@@ -1357,18 +1366,9 @@
    "area": "경기 안성시",
    "slug": "",
    "kw": "노마드호텔",
-   "vol": 330,
+   "vol": 320,
    "jump": null,
    "done": true
-  },
-  {
-   "name": "웰파크호텔 고창",
-   "area": "",
-   "slug": "",
-   "kw": "웰파크호텔고창",
-   "vol": 330,
-   "jump": null,
-   "done": false
   },
   {
    "name": "까사텔 전주한옥마을점",
@@ -1380,22 +1380,40 @@
    "done": false
   },
   {
-   "name": "까사델문도",
-   "area": "경남 거제",
-   "slug": "geoje-casadelmundo",
-   "kw": "까사델문도",
-   "vol": 320,
+   "name": "설리와카라반",
+   "area": "경남 남해군",
+   "slug": "",
+   "kw": "설리와카라반",
+   "vol": 310,
    "jump": null,
    "done": true
   },
   {
-   "name": "엠버 퓨어힐 호텔 앤 리조트 제주",
+   "name": "스테이지풀빌라",
+   "area": "강원 고성군",
+   "slug": "goseong-stage-poolvilla",
+   "kw": "스테이지풀빌라",
+   "vol": 310,
+   "jump": null,
+   "done": true
+  },
+  {
+   "name": "웰파크호텔 고창",
    "area": "",
    "slug": "",
-   "kw": "엠버퓨어힐호텔앤리조트제주",
+   "kw": "웰파크호텔고창",
    "vol": 310,
    "jump": null,
    "done": false
+  },
+  {
+   "name": "까사델문도",
+   "area": "경남 거제",
+   "slug": "geoje-casadelmundo",
+   "kw": "까사델문도",
+   "vol": 310,
+   "jump": null,
+   "done": true
   },
   {
    "name": "당신의안목펜션",
@@ -1407,24 +1425,6 @@
    "done": false
   },
   {
-   "name": "스테이지풀빌라",
-   "area": "강원 고성군",
-   "slug": "goseong-stage-poolvilla",
-   "kw": "스테이지풀빌라",
-   "vol": 300,
-   "jump": null,
-   "done": true
-  },
-  {
-   "name": "오로시에 호텔",
-   "area": "서울 송파구",
-   "slug": "",
-   "kw": "오로시에호텔",
-   "vol": 300,
-   "jump": null,
-   "done": true
-  },
-  {
    "name": "스테이서린",
    "area": "",
    "slug": "",
@@ -1434,38 +1434,11 @@
    "done": false
   },
   {
-   "name": "빌라드우",
-   "area": "",
-   "slug": "",
-   "kw": "빌라드우",
-   "vol": 290,
-   "jump": null,
-   "done": false
-  },
-  {
-   "name": "설리와카라반",
-   "area": "경남 남해군",
-   "slug": "",
-   "kw": "설리와카라반",
-   "vol": 290,
-   "jump": null,
-   "done": true
-  },
-  {
-   "name": "스텔라달마레",
-   "area": "충남 태안군",
-   "slug": "",
-   "kw": "스텔라달마레",
-   "vol": 290,
-   "jump": null,
-   "done": true
-  },
-  {
    "name": "홍천 올라운드원벨라펜션",
    "area": "",
    "slug": "",
    "kw": "홍천올라운드원벨라펜션",
-   "vol": 280,
+   "vol": 290,
    "jump": null,
    "done": false
   },
@@ -1474,6 +1447,33 @@
    "area": "경북 영덕군",
    "slug": "yeongdeok-poolmoon",
    "kw": "풀문영덕풀빌라",
+   "vol": 290,
+   "jump": null,
+   "done": true
+  },
+  {
+   "name": "빌라드우",
+   "area": "",
+   "slug": "",
+   "kw": "빌라드우",
+   "vol": 280,
+   "jump": null,
+   "done": false
+  },
+  {
+   "name": "오로시에 호텔",
+   "area": "서울 송파구",
+   "slug": "",
+   "kw": "오로시에호텔",
+   "vol": 280,
+   "jump": null,
+   "done": true
+  },
+  {
+   "name": "스텔라달마레",
+   "area": "충남 태안군",
+   "slug": "",
+   "kw": "스텔라달마레",
    "vol": 280,
    "jump": null,
    "done": true
@@ -1483,18 +1483,18 @@
    "area": "경북 경주",
    "slug": "",
    "kw": "라궁호텔",
-   "vol": 260,
+   "vol": 270,
    "jump": null,
    "done": false
   },
   {
-   "name": "072스테이",
-   "area": "강원 고성군",
+   "name": "웨일로 서울김포공항점",
+   "area": "서울 강서구",
    "slug": "",
-   "kw": "072스테이",
+   "kw": "웨일로서울김포공항점",
    "vol": 260,
    "jump": null,
-   "done": false
+   "done": true
   },
   {
    "name": "울진 올덴리조트카라반(울진점)",
@@ -1506,20 +1506,11 @@
    "done": false
   },
   {
-   "name": "웨일로 서울김포공항점",
-   "area": "서울 강서구",
+   "name": "072스테이",
+   "area": "강원 고성군",
    "slug": "",
-   "kw": "웨일로서울김포공항점",
+   "kw": "072스테이",
    "vol": 250,
-   "jump": null,
-   "done": true
-  },
-  {
-   "name": "태안 풀빌라아마레",
-   "area": "",
-   "slug": "",
-   "kw": "태안풀빌라아마레",
-   "vol": 240,
    "jump": null,
    "done": false
   },
@@ -1537,7 +1528,7 @@
    "area": "",
    "slug": "",
    "kw": "아담한옥",
-   "vol": 230,
+   "vol": 240,
    "jump": null,
    "done": false
   },
@@ -1546,6 +1537,15 @@
    "area": "부산 기장군",
    "slug": "",
    "kw": "스테이하늘연달",
+   "vol": 240,
+   "jump": null,
+   "done": false
+  },
+  {
+   "name": "태안 풀빌라아마레",
+   "area": "",
+   "slug": "",
+   "kw": "태안풀빌라아마레",
    "vol": 230,
    "jump": null,
    "done": false
@@ -1558,6 +1558,24 @@
    "vol": 220,
    "jump": null,
    "done": true
+  },
+  {
+   "name": "윤슬재",
+   "area": "강원 춘천시",
+   "slug": "",
+   "kw": "윤슬재",
+   "vol": 220,
+   "jump": null,
+   "done": false
+  },
+  {
+   "name": "메타버스풀빌라",
+   "area": "",
+   "slug": "",
+   "kw": "메타버스풀빌라",
+   "vol": 210,
+   "jump": null,
+   "done": false
   },
   {
    "name": "파크오브드림글램핑",
@@ -1578,19 +1596,28 @@
    "done": false
   },
   {
-   "name": "윤슬재",
-   "area": "강원 춘천시",
-   "slug": "",
-   "kw": "윤슬재",
+   "name": "구례 도화온천풀빌라",
+   "area": "전남 구례",
+   "slug": "gurye-dohwa-onsen",
+   "kw": "구례도화온천풀빌라",
    "vol": 210,
    "jump": null,
-   "done": false
+   "done": true
   },
   {
    "name": "거제도 비커밍펜션",
    "area": "",
    "slug": "",
    "kw": "거제도비커밍펜션",
+   "vol": 200,
+   "jump": null,
+   "done": false
+  },
+  {
+   "name": "1979 풀빌라",
+   "area": "경북 경주시",
+   "slug": "",
+   "kw": "1979풀빌라",
    "vol": 200,
    "jump": null,
    "done": false
@@ -1605,10 +1632,28 @@
    "done": false
   },
   {
-   "name": "메타버스풀빌라",
+   "name": "아늑 료칸 호텔 송탄점",
+   "area": "경기 평택",
+   "slug": "",
+   "kw": "아늑료칸호텔송탄점",
+   "vol": 200,
+   "jump": null,
+   "done": false
+  },
+  {
+   "name": "학산댁",
+   "area": "경북 경주(외동읍)",
+   "slug": "",
+   "kw": "학산댁",
+   "vol": 200,
+   "jump": null,
+   "done": false
+  },
+  {
+   "name": "대부도 메이드유펜션",
    "area": "",
    "slug": "",
-   "kw": "메타버스풀빌라",
+   "kw": "대부도메이드유펜션",
    "vol": 190,
    "jump": null,
    "done": false
@@ -1623,28 +1668,10 @@
    "done": false
   },
   {
-   "name": "1979 풀빌라",
-   "area": "경북 경주시",
-   "slug": "",
-   "kw": "1979풀빌라",
-   "vol": 190,
-   "jump": null,
-   "done": false
-  },
-  {
    "name": "빌라 드 히멜",
    "area": "부산 기장군",
    "slug": "",
    "kw": "빌라드히멜",
-   "vol": 190,
-   "jump": null,
-   "done": false
-  },
-  {
-   "name": "월함지한옥",
-   "area": "충남 부여군",
-   "slug": "",
-   "kw": "월함지한옥",
    "vol": 190,
    "jump": null,
    "done": false
@@ -1668,33 +1695,6 @@
    "done": false
   },
   {
-   "name": "아늑 료칸 호텔 송탄점",
-   "area": "경기 평택",
-   "slug": "",
-   "kw": "아늑료칸호텔송탄점",
-   "vol": 190,
-   "jump": null,
-   "done": false
-  },
-  {
-   "name": "구례 도화온천풀빌라",
-   "area": "전남 구례",
-   "slug": "gurye-dohwa-onsen",
-   "kw": "구례도화온천풀빌라",
-   "vol": 190,
-   "jump": null,
-   "done": true
-  },
-  {
-   "name": "학산댁",
-   "area": "경북 경주(외동읍)",
-   "slug": "",
-   "kw": "학산댁",
-   "vol": 190,
-   "jump": null,
-   "done": false
-  },
-  {
    "name": "부산 광안어썸",
    "area": "",
    "slug": "",
@@ -1713,15 +1713,6 @@
    "done": false
   },
   {
-   "name": "대부도 메이드유펜션",
-   "area": "",
-   "slug": "",
-   "kw": "대부도메이드유펜션",
-   "vol": 180,
-   "jump": null,
-   "done": false
-  },
-  {
    "name": "경주 글램핑 플레이스씨",
    "area": "경북 경주시",
    "slug": "",
@@ -1735,6 +1726,15 @@
    "area": "강원 강릉시",
    "slug": "",
    "kw": "873스테이",
+   "vol": 180,
+   "jump": null,
+   "done": false
+  },
+  {
+   "name": "월함지한옥",
+   "area": "충남 부여군",
+   "slug": "",
+   "kw": "월함지한옥",
    "vol": 180,
    "jump": null,
    "done": false
@@ -1776,6 +1776,15 @@
    "done": false
   },
   {
+   "name": "이안 풀빌라",
+   "area": "경남 남해군",
+   "slug": "",
+   "kw": "이안풀빌라",
+   "vol": 160,
+   "jump": null,
+   "done": false
+  },
+  {
    "name": "미로미로풀빌라",
    "area": "경북 경주시",
    "slug": "",
@@ -1785,19 +1794,19 @@
    "done": false
   },
   {
-   "name": "피카푸피크닉앤글램핑 서울YMCA도봉산점",
-   "area": "경기 의정부",
+   "name": "물결카라반캠핑장",
+   "area": "충남 태안",
    "slug": "",
-   "kw": "피카푸피크닉앤글램핑서울YMCA도봉산점",
+   "kw": "물결카라반캠핑장",
    "vol": 150,
    "jump": null,
    "done": false
   },
   {
-   "name": "스테이마리타임",
-   "area": "제주",
+   "name": "피카푸피크닉앤글램핑 서울YMCA도봉산점",
+   "area": "경기 의정부",
    "slug": "",
-   "kw": "스테이마리타임",
+   "kw": "피카푸피크닉앤글램핑서울YMCA도봉산점",
    "vol": 150,
    "jump": null,
    "done": false
@@ -1812,19 +1821,19 @@
    "done": true
   },
   {
-   "name": "이안 풀빌라",
-   "area": "경남 남해군",
+   "name": "풀빌라 태안히",
+   "area": "충남 태안군",
    "slug": "",
-   "kw": "이안풀빌라",
+   "kw": "풀빌라태안히",
    "vol": 150,
    "jump": null,
    "done": false
   },
   {
-   "name": "물결카라반캠핑장",
-   "area": "충남 태안",
+   "name": "스테이마리타임",
+   "area": "제주",
    "slug": "",
-   "kw": "물결카라반캠핑장",
+   "kw": "스테이마리타임",
    "vol": 140,
    "jump": null,
    "done": false
@@ -1866,15 +1875,6 @@
    "done": false
   },
   {
-   "name": "풀빌라 태안히",
-   "area": "충남 태안군",
-   "slug": "",
-   "kw": "풀빌라태안히",
-   "vol": 140,
-   "jump": null,
-   "done": false
-  },
-  {
    "name": "한옥풀빌라 가평재",
    "area": "",
    "slug": "",
@@ -1902,15 +1902,6 @@
    "done": false
   },
   {
-   "name": "테라시아 펜션",
-   "area": "부산 기장군",
-   "slug": "",
-   "kw": "테라시아펜션",
-   "vol": 130,
-   "jump": null,
-   "done": false
-  },
-  {
    "name": "풀앤문한옥스테이",
    "area": "",
    "slug": "",
@@ -1929,6 +1920,15 @@
    "done": false
   },
   {
+   "name": "어나더원풀빌라",
+   "area": "경북 경주시",
+   "slug": "",
+   "kw": "어나더원풀빌라",
+   "vol": 120,
+   "jump": null,
+   "done": false
+  },
+  {
    "name": "덕스테이",
    "area": "강원 강릉시",
    "slug": "",
@@ -1938,28 +1938,19 @@
    "done": false
   },
   {
-   "name": "호텔 솔",
-   "area": "",
+   "name": "테라시아 펜션",
+   "area": "부산 기장군",
    "slug": "",
-   "kw": "호텔솔",
-   "vol": 110,
+   "kw": "테라시아펜션",
+   "vol": 120,
    "jump": null,
-   "done": true
+   "done": false
   },
   {
    "name": "마이꾸따풀빌라",
    "area": "경남 거제시",
    "slug": "",
    "kw": "마이꾸따풀빌라",
-   "vol": 110,
-   "jump": null,
-   "done": false
-  },
-  {
-   "name": "어나더원풀빌라",
-   "area": "경북 경주시",
-   "slug": "",
-   "kw": "어나더원풀빌라",
    "vol": 110,
    "jump": null,
    "done": false
@@ -1983,6 +1974,15 @@
    "done": true
   },
   {
+   "name": "가평 서락나인펜션",
+   "area": "",
+   "slug": "",
+   "kw": "가평서락나인펜션",
+   "vol": 100,
+   "jump": null,
+   "done": false
+  },
+  {
    "name": "쁘띠포레풀빌라",
    "area": "",
    "slug": "",
@@ -1990,6 +1990,15 @@
    "vol": 100,
    "jump": null,
    "done": false
+  },
+  {
+   "name": "호텔 솔",
+   "area": "",
+   "slug": "",
+   "kw": "호텔솔",
+   "vol": 100,
+   "jump": null,
+   "done": true
   },
   {
    "name": "사천 아빌라 더 오아시스",
@@ -2028,24 +2037,6 @@
    "done": false
   },
   {
-   "name": "가평 서락나인펜션",
-   "area": "",
-   "slug": "",
-   "kw": "가평서락나인펜션",
-   "vol": 90,
-   "jump": null,
-   "done": false
-  },
-  {
-   "name": "탑스텐 동강 시스타 리조트",
-   "area": "",
-   "slug": "",
-   "kw": "탑스텐동강시스타리조트",
-   "vol": 90,
-   "jump": null,
-   "done": false
-  },
-  {
    "name": "경주 그레이선셋 풀빌라",
    "area": "경북 경주시",
    "slug": "",
@@ -2055,10 +2046,10 @@
    "done": false
   },
   {
-   "name": "웨일집 더블루테라 오션 스테이",
-   "area": "강원 속초시",
+   "name": "동명일박",
+   "area": "경북 칠곡군",
    "slug": "",
-   "kw": "웨일집더블루테라오션스테이",
+   "kw": "동명일박",
    "vol": 90,
    "jump": null,
    "done": false
@@ -2073,11 +2064,11 @@
    "done": false
   },
   {
-   "name": "동명일박",
-   "area": "경북 칠곡군",
+   "name": "탑스텐 동강 시스타 리조트",
+   "area": "",
    "slug": "",
-   "kw": "동명일박",
-   "vol": 85,
+   "kw": "탑스텐동강시스타리조트",
+   "vol": 80,
    "jump": null,
    "done": false
   },
@@ -2086,6 +2077,24 @@
    "area": "",
    "slug": "",
    "kw": "속초플로팅웨일설악도적폭포스테이",
+   "vol": 80,
+   "jump": null,
+   "done": false
+  },
+  {
+   "name": "달토 풀빌라 글램핑",
+   "area": "경북 영덕군",
+   "slug": "",
+   "kw": "달토풀빌라글램핑",
+   "vol": 80,
+   "jump": null,
+   "done": false
+  },
+  {
+   "name": "웨일집 더블루테라 오션 스테이",
+   "area": "강원 속초시",
+   "slug": "",
+   "kw": "웨일집더블루테라오션스테이",
    "vol": 80,
    "jump": null,
    "done": false
@@ -2136,22 +2145,13 @@
    "done": false
   },
   {
-   "name": "달토 풀빌라 글램핑",
-   "area": "경북 영덕군",
+   "name": "위고고 제천점",
+   "area": "충북 제천시",
    "slug": "",
-   "kw": "달토풀빌라글램핑",
+   "kw": "위고고제천점",
    "vol": 70,
    "jump": null,
-   "done": false
-  },
-  {
-   "name": "드레피인펜션",
-   "area": "경남 통영시",
-   "slug": "",
-   "kw": "드레피인펜션",
-   "vol": 70,
-   "jump": null,
-   "done": false
+   "done": true
   },
   {
    "name": "인누드",
@@ -2159,15 +2159,6 @@
    "slug": "",
    "kw": "인누드",
    "vol": 65,
-   "jump": null,
-   "done": false
-  },
-  {
-   "name": "너에게감동해펜션",
-   "area": "강원 동해",
-   "slug": "",
-   "kw": "너에게감동해펜션",
-   "vol": 60,
    "jump": null,
    "done": false
   },
@@ -2226,19 +2217,55 @@
    "done": false
   },
   {
-   "name": "위고고 제천점",
-   "area": "충북 제천시",
+   "name": "화이트래빗풀빌라",
+   "area": "경남 남해군",
    "slug": "",
-   "kw": "위고고제천점",
+   "kw": "화이트래빗풀빌라",
    "vol": 60,
    "jump": null,
-   "done": true
+   "done": false
+  },
+  {
+   "name": "드레피인펜션",
+   "area": "경남 통영시",
+   "slug": "",
+   "kw": "드레피인펜션",
+   "vol": 60,
+   "jump": null,
+   "done": false
+  },
+  {
+   "name": "까미노데플로레스타 독채풀빌라",
+   "area": "강원 홍천",
+   "slug": "",
+   "kw": "까미노데플로레스타독채풀빌라",
+   "vol": 55,
+   "jump": null,
+   "done": false
+  },
+  {
+   "name": "너에게감동해펜션",
+   "area": "강원 동해",
+   "slug": "",
+   "kw": "너에게감동해펜션",
+   "vol": 55,
+   "jump": null,
+   "done": false
   },
   {
    "name": "안녕제주풀빌라",
    "area": "",
    "slug": "",
    "kw": "안녕제주풀빌라",
+   "vol": 55,
+   "jump": null,
+   "done": false
+  },
+  {
+   "name": "강릉 더그레이펜션",
+   "area": "",
+   "slug": "",
+   "kw": "강릉더그레이펜션",
    "vol": 55,
    "jump": null,
    "done": false
@@ -2307,10 +2334,10 @@
    "done": false
   },
   {
-   "name": "화이트래빗풀빌라",
-   "area": "경남 남해군",
+   "name": "비브릿지풀빌라리조트",
+   "area": "강원 영월군",
    "slug": "",
-   "kw": "화이트래빗풀빌라",
+   "kw": "비브릿지풀빌라리조트",
    "vol": 50,
    "jump": null,
    "done": false
@@ -2325,64 +2352,10 @@
    "done": false
   },
   {
-   "name": "까미노데플로레스타 독채풀빌라",
-   "area": "강원 홍천",
-   "slug": "",
-   "kw": "까미노데플로레스타독채풀빌라",
-   "vol": 45,
-   "jump": null,
-   "done": false
-  },
-  {
-   "name": "강릉 더그레이펜션",
-   "area": "",
-   "slug": "",
-   "kw": "강릉더그레이펜션",
-   "vol": 45,
-   "jump": null,
-   "done": false
-  },
-  {
-   "name": "제주인포항풀빌라 펜션",
-   "area": "",
-   "slug": "",
-   "kw": "제주인포항풀빌라펜션",
-   "vol": 40,
-   "jump": null,
-   "done": false
-  },
-  {
-   "name": "비브릿지풀빌라리조트",
-   "area": "강원 영월군",
-   "slug": "",
-   "kw": "비브릿지풀빌라리조트",
-   "vol": 40,
-   "jump": null,
-   "done": false
-  },
-  {
-   "name": "거제펜션 어나더데이",
-   "area": "경남 거제시",
-   "slug": "",
-   "kw": "거제펜션어나더데이",
-   "vol": 40,
-   "jump": null,
-   "done": false
-  },
-  {
    "name": "한옥펜션고운재",
    "area": "",
    "slug": "",
    "kw": "한옥펜션고운재",
-   "vol": 35,
-   "jump": null,
-   "done": false
-  },
-  {
-   "name": "윤슬한옥펜션",
-   "area": "전남 함평",
-   "slug": "",
-   "kw": "윤슬한옥펜션",
    "vol": 35,
    "jump": null,
    "done": false
@@ -2433,22 +2406,13 @@
    "done": true
   },
   {
-   "name": "정읍 엘리스테이풀빌라",
+   "name": "제주인포항풀빌라 펜션",
    "area": "",
    "slug": "",
-   "kw": "정읍엘리스테이풀빌라",
+   "kw": "제주인포항풀빌라펜션",
    "vol": 30,
    "jump": null,
    "done": false
-  },
-  {
-   "name": "아늑 리조트 앤 스파 부산 해운대점",
-   "area": "",
-   "slug": "",
-   "kw": "아늑리조트앤스파부산해운대점",
-   "vol": 30,
-   "jump": null,
-   "done": true
   },
   {
    "name": "헤이빌 풀빌라",
@@ -2478,10 +2442,55 @@
    "done": false
   },
   {
+   "name": "거제펜션 어나더데이",
+   "area": "경남 거제시",
+   "slug": "",
+   "kw": "거제펜션어나더데이",
+   "vol": 30,
+   "jump": null,
+   "done": false
+  },
+  {
+   "name": "해원카라반&바다낚시터",
+   "area": "경북 포항",
+   "slug": "",
+   "kw": "해원카라반바다낚시터",
+   "vol": 25,
+   "jump": null,
+   "done": false
+  },
+  {
+   "name": "윤슬한옥펜션",
+   "area": "전남 함평",
+   "slug": "",
+   "kw": "윤슬한옥펜션",
+   "vol": 25,
+   "jump": null,
+   "done": false
+  },
+  {
    "name": "양양 산180풀빌라",
    "area": "",
    "slug": "",
    "kw": "양양산180풀빌라",
+   "vol": 25,
+   "jump": null,
+   "done": false
+  },
+  {
+   "name": "춘천 엔더스뷰카라반",
+   "area": "",
+   "slug": "",
+   "kw": "춘천엔더스뷰카라반",
+   "vol": 25,
+   "jump": null,
+   "done": false
+  },
+  {
+   "name": "정읍 엘리스테이풀빌라",
+   "area": "",
+   "slug": "",
+   "kw": "정읍엘리스테이풀빌라",
    "vol": 25,
    "jump": null,
    "done": false
@@ -2494,6 +2503,15 @@
    "vol": 25,
    "jump": null,
    "done": false
+  },
+  {
+   "name": "아늑 리조트 앤 스파 부산 해운대점",
+   "area": "",
+   "slug": "",
+   "kw": "아늑리조트앤스파부산해운대점",
+   "vol": 25,
+   "jump": null,
+   "done": true
   },
   {
    "name": "호수창이예쁜가 키즈풀빌라",
@@ -2559,15 +2577,6 @@
    "done": false
   },
   {
-   "name": "해원카라반&바다낚시터",
-   "area": "경북 포항",
-   "slug": "",
-   "kw": "해원카라반바다낚시터",
-   "vol": 15,
-   "jump": null,
-   "done": false
-  },
-  {
    "name": "코하루 료칸 호텔 바이 아늑 수원 인계점",
    "area": "경기 수원",
    "slug": "",
@@ -2577,19 +2586,10 @@
    "done": true
   },
   {
-   "name": "춘천 엔더스뷰카라반",
+   "name": "영덕 하벳 풀빌라&리조트",
    "area": "",
    "slug": "",
-   "kw": "춘천엔더스뷰카라반",
-   "vol": 15,
-   "jump": null,
-   "done": false
-  },
-  {
-   "name": "제주 랑카위협재",
-   "area": "",
-   "slug": "",
-   "kw": "제주랑카위협재",
+   "kw": "영덕하벳풀빌라리조트",
    "vol": 15,
    "jump": null,
    "done": false
@@ -2599,6 +2599,15 @@
    "area": "",
    "slug": "",
    "kw": "대부도브릿지스테이",
+   "vol": 15,
+   "jump": null,
+   "done": false
+  },
+  {
+   "name": "조선 팰리스 서울 강남, 럭셔리 컬렉션 호텔",
+   "area": "",
+   "slug": "",
+   "kw": "조선팰리스서울강남럭셔리컬렉션호텔",
    "vol": 15,
    "jump": null,
    "done": false
@@ -2626,15 +2635,6 @@
    "area": "제주 제주시",
    "slug": "",
    "kw": "누에베풀빌라리조트",
-   "vol": 15,
-   "jump": null,
-   "done": false
-  },
-  {
-   "name": "이담한옥펜션",
-   "area": "강원 홍천군",
-   "slug": "",
-   "kw": "이담한옥펜션",
    "vol": 15,
    "jump": null,
    "done": false
@@ -2721,15 +2721,6 @@
    "done": false
   },
   {
-   "name": "영덕 하벳 풀빌라&리조트",
-   "area": "",
-   "slug": "",
-   "kw": "영덕하벳풀빌라리조트",
-   "vol": 10,
-   "jump": null,
-   "done": false
-  },
-  {
    "name": "가평 디온풀빌라펜션",
    "area": "",
    "slug": "",
@@ -2788,6 +2779,15 @@
    "area": "",
    "slug": "",
    "kw": "부산스테이어반에그펜션",
+   "vol": 10,
+   "jump": null,
+   "done": false
+  },
+  {
+   "name": "제주 랑카위협재",
+   "area": "",
+   "slug": "",
+   "kw": "제주랑카위협재",
    "vol": 10,
    "jump": null,
    "done": false
@@ -2856,15 +2856,6 @@
    "done": false
   },
   {
-   "name": "조선 팰리스 서울 강남, 럭셔리 컬렉션 호텔",
-   "area": "",
-   "slug": "",
-   "kw": "조선팰리스서울강남럭셔리컬렉션호텔",
-   "vol": 10,
-   "jump": null,
-   "done": false
-  },
-  {
    "name": "부산 더무빙카라반캠핑",
    "area": "",
    "slug": "",
@@ -2890,6 +2881,15 @@
    "vol": 10,
    "jump": null,
    "done": true
+  },
+  {
+   "name": "이담한옥펜션",
+   "area": "강원 홍천군",
+   "slug": "",
+   "kw": "이담한옥펜션",
+   "vol": 10,
+   "jump": null,
+   "done": false
   },
   {
    "name": "스테이봄날&바로",
@@ -3057,78 +3057,88 @@
  "trend": [
   {
    "kw": "제주독채",
-   "vol": 660,
-   "jump": 1.48
-  },
-  {
-   "kw": "스파펜션",
-   "vol": 3300,
-   "jump": 1.42
+   "vol": 670,
+   "jump": 1.61
   },
   {
    "kw": "온천호텔",
-   "vol": 14650,
-   "jump": 1.37
+   "vol": 14860,
+   "jump": 1.34
+  },
+  {
+   "kw": "스파펜션",
+   "vol": 3320,
+   "jump": 1.31
   },
   {
    "kw": "강릉풀빌라",
-   "vol": 5010,
-   "jump": 1.19
+   "vol": 5040,
+   "jump": 1.21
   },
   {
-   "kw": "여수풀빌라",
-   "vol": 9350,
-   "jump": 1.16
+   "kw": "포항풀빌라",
+   "vol": 9680,
+   "jump": 1.2
+  },
+  {
+   "kw": "양양풀빌라",
+   "vol": 640,
+   "jump": 1.19
   },
   {
    "kw": "홍천펜션",
    "vol": 3800,
-   "jump": 1.16
-  },
-  {
-   "kw": "풀빌라",
-   "vol": 21200,
-   "jump": 1.14
+   "jump": 1.19
   },
   {
    "kw": "히노끼숙소",
-   "vol": 410,
-   "jump": 1.14
+   "vol": 420,
+   "jump": 1.17
+  },
+  {
+   "kw": "여수풀빌라",
+   "vol": 9380,
+   "jump": 1.15
   },
   {
    "kw": "부산호텔",
-   "vol": 58800,
+   "vol": 59000,
    "jump": 1.14
   },
   {
-   "kw": "포항풀빌라",
-   "vol": 9500,
-   "jump": 1.14
+   "kw": "풀빌라",
+   "vol": 21300,
+   "jump": 1.13
   },
   {
-   "kw": "포천풀빌라",
-   "vol": 1760,
+   "kw": "서울호캉스",
+   "vol": 9620,
    "jump": 1.13
   },
   {
    "kw": "료칸",
-   "vol": 15580,
+   "vol": 15550,
    "jump": 1.12
   },
   {
    "kw": "경주풀빌라",
-   "vol": 19620,
-   "jump": 1.12
-  },
-  {
-   "kw": "서울호캉스",
-   "vol": 9600,
+   "vol": 19710,
    "jump": 1.12
   },
   {
    "kw": "키즈풀빌라",
-   "vol": 22970,
+   "vol": 23140,
    "jump": 1.1
+  },
+  {
+   "kw": "제주풀빌라",
+   "vol": 3800,
+   "jump": 1.07
+  },
+  {
+   "kw": "포천풀빌라",
+   "vol": 1780,
+   "jump": 1.05
   },
   {
    "kw": "거제풀빌라",
@@ -3137,88 +3147,78 @@
   },
   {
    "kw": "인천호텔",
-   "vol": 15930,
+   "vol": 16020,
    "jump": 1.05
   },
   {
    "kw": "독채펜션",
-   "vol": 7520,
-   "jump": 1.04
-  },
-  {
-   "kw": "제주풀빌라",
-   "vol": 3830,
-   "jump": 1.04
-  },
-  {
-   "kw": "양양풀빌라",
-   "vol": 630,
-   "jump": 1.03
+   "vol": 7480,
+   "jump": 1.02
   },
   {
    "kw": "속초호텔",
-   "vol": 42920,
-   "jump": 1.0
+   "vol": 42910,
+   "jump": 1.01
   },
   {
    "kw": "애견동반펜션",
    "vol": 12270,
-   "jump": 0.99
+   "jump": 1.0
   },
   {
    "kw": "강릉호텔",
-   "vol": 47730,
-   "jump": 0.98
+   "vol": 47710,
+   "jump": 1.0
   },
   {
    "kw": "대부도펜션",
-   "vol": 38660,
-   "jump": 0.98
+   "vol": 38450,
+   "jump": 0.99
   },
   {
    "kw": "가평풀빌라",
-   "vol": 10280,
-   "jump": 0.95
-  },
-  {
-   "kw": "양평펜션",
-   "vol": 10050,
-   "jump": 0.95
-  },
-  {
-   "kw": "글램핑",
-   "vol": 114900,
-   "jump": 0.93
-  },
-  {
-   "kw": "가평펜션",
-   "vol": 24020,
-   "jump": 0.93
+   "vol": 10240,
+   "jump": 0.98
   },
   {
    "kw": "남해펜션",
-   "vol": 11190,
-   "jump": 0.92
+   "vol": 11210,
+   "jump": 0.97
+  },
+  {
+   "kw": "양평펜션",
+   "vol": 9990,
+   "jump": 0.96
+  },
+  {
+   "kw": "글램핑",
+   "vol": 114400,
+   "jump": 0.94
   },
   {
    "kw": "오션뷰호텔",
-   "vol": 500,
-   "jump": 0.91
+   "vol": 510,
+   "jump": 0.94
+  },
+  {
+   "kw": "가평펜션",
+   "vol": 23750,
+   "jump": 0.94
   },
   {
    "kw": "한옥스테이",
-   "vol": 3470,
-   "jump": 0.9
-  },
-  {
-   "kw": "노천탕숙소",
-   "vol": 2080,
-   "jump": 0.89
+   "vol": 3480,
+   "jump": 0.93
   },
   {
    "kw": "태안펜션",
-   "vol": 16820,
-   "jump": 0.89
+   "vol": 16760,
+   "jump": 0.93
+  },
+  {
+   "kw": "노천탕숙소",
+   "vol": 2010,
+   "jump": 0.86
   },
   {
    "kw": "경주한옥",
@@ -3229,265 +3229,257 @@
  "related": [
   {
    "kw": "덕구온천",
-   "vol": 107600,
+   "vol": 109300,
    "pc": 18000,
-   "mo": 89600,
+   "mo": 91300,
    "comp": "높음",
    "clk": 1390.9
   },
   {
    "kw": "국내온천여행",
-   "vol": 78300,
-   "pc": 16000,
-   "mo": 62300,
+   "vol": 79100,
+   "pc": 16100,
+   "mo": 63000,
    "comp": "높음",
    "clk": 1618.1
   },
   {
    "kw": "수안보온천",
-   "vol": 66300,
-   "pc": 12300,
-   "mo": 54000,
+   "vol": 67800,
+   "pc": 12600,
+   "mo": 55200,
    "comp": "높음",
    "clk": 1707.8
   },
   {
    "kw": "호텔",
-   "vol": 65500,
+   "vol": 65600,
    "pc": 15000,
-   "mo": 50500,
+   "mo": 50600,
    "comp": "높음",
    "clk": 772.3
   },
   {
    "kw": "부산파라다이스호텔",
-   "vol": 57180,
+   "vol": 57380,
    "pc": 8680,
-   "mo": 48500,
+   "mo": 48700,
    "comp": "높음",
    "clk": 380.3
   },
   {
    "kw": "인스파이어",
-   "vol": 56100,
-   "pc": 14500,
-   "mo": 41600,
+   "vol": 57000,
+   "pc": 14700,
+   "mo": 42300,
    "comp": "높음",
    "clk": 377.4
   },
   {
    "kw": "경주숙소",
-   "vol": 54800,
-   "pc": 13900,
-   "mo": 40900,
+   "vol": 54200,
+   "pc": 13800,
+   "mo": 40400,
    "comp": "높음",
    "clk": 1220.1
   },
   {
    "kw": "온천",
-   "vol": 48590,
-   "pc": 6490,
-   "mo": 42100,
+   "vol": 49270,
+   "pc": 6570,
+   "mo": 42700,
    "comp": "높음",
    "clk": 459.3
   },
   {
    "kw": "강릉호텔",
-   "vol": 47730,
-   "pc": 9430,
+   "vol": 47710,
+   "pc": 9410,
    "mo": 38300,
    "comp": "높음",
    "clk": 628.4
   },
   {
+   "kw": "강릉숙소",
+   "vol": 46210,
+   "pc": 9410,
+   "mo": 36800,
+   "comp": "높음",
+   "clk": 1024.3
+  },
+  {
    "kw": "펜션",
    "vol": 46180,
-   "pc": 9880,
-   "mo": 36300,
+   "pc": 9780,
+   "mo": 36400,
    "comp": "높음",
    "clk": 340.5
   },
   {
    "kw": "스테이폴리오",
-   "vol": 46100,
-   "pc": 16200,
+   "vol": 46000,
+   "pc": 16100,
    "mo": 29900,
    "comp": "낮음",
    "clk": 20643.5
   },
   {
-   "kw": "강릉숙소",
-   "vol": 45910,
-   "pc": 9410,
-   "mo": 36500,
-   "comp": "높음",
-   "clk": 1024.3
-  },
-  {
    "kw": "인스파이어리조트",
-   "vol": 45400,
-   "pc": 11700,
-   "mo": 33700,
+   "vol": 45800,
+   "pc": 11900,
+   "mo": 33900,
    "comp": "중간",
    "clk": 456.9
   },
   {
    "kw": "캠핑카",
-   "vol": 45360,
-   "pc": 9260,
-   "mo": 36100,
+   "vol": 45270,
+   "pc": 9270,
+   "mo": 36000,
    "comp": "높음",
    "clk": 1272.3
   },
   {
    "kw": "부산숙소",
-   "vol": 44500,
-   "pc": 10200,
-   "mo": 34300,
+   "vol": 44600,
+   "pc": 10100,
+   "mo": 34500,
    "comp": "높음",
    "clk": 961.6
   },
   {
    "kw": "강릉세인트존스호텔",
-   "vol": 44090,
-   "pc": 8290,
-   "mo": 35800,
+   "vol": 44070,
+   "pc": 8170,
+   "mo": 35900,
    "comp": "높음",
    "clk": 836.6
   },
   {
    "kw": "속초호텔",
-   "vol": 42920,
-   "pc": 7620,
+   "vol": 42910,
+   "pc": 7610,
    "mo": 35300,
    "comp": "높음",
    "clk": 1022.3
   },
   {
    "kw": "호텔예약",
-   "vol": 42400,
-   "pc": 14800,
-   "mo": 27600,
+   "vol": 42100,
+   "pc": 14600,
+   "mo": 27500,
    "comp": "높음",
    "clk": 1873.4
   },
   {
    "kw": "켄싱턴리조트",
-   "vol": 37200,
-   "pc": 10000,
-   "mo": 27200,
+   "vol": 37170,
+   "pc": 9870,
+   "mo": 27300,
    "comp": "높음",
    "clk": 163.7
   },
   {
    "kw": "울진덕구온천",
-   "vol": 35980,
-   "pc": 5280,
-   "mo": 30700,
+   "vol": 36530,
+   "pc": 5330,
+   "mo": 31200,
    "comp": "높음",
    "clk": 791.0
   },
   {
    "kw": "경주호텔",
-   "vol": 35510,
-   "pc": 7310,
-   "mo": 28200,
+   "vol": 35180,
+   "pc": 7180,
+   "mo": 28000,
    "comp": "높음",
    "clk": 693.4
   },
   {
-   "kw": "속초숙소",
-   "vol": 32300,
-   "pc": 6700,
-   "mo": 25600,
-   "comp": "높음",
-   "clk": 782.6
-  },
-  {
    "kw": "제주도숙소",
-   "vol": 32200,
-   "pc": 12500,
+   "vol": 32300,
+   "pc": 12600,
    "mo": 19700,
    "comp": "높음",
    "clk": 596.3
   },
   {
+   "kw": "속초숙소",
+   "vol": 32190,
+   "pc": 6690,
+   "mo": 25500,
+   "comp": "높음",
+   "clk": 782.6
+  },
+  {
    "kw": "문경STX리조트",
-   "vol": 30760,
+   "vol": 31060,
    "pc": 4160,
-   "mo": 26600,
+   "mo": 26900,
    "comp": "높음",
    "clk": 362.1
   },
   {
    "kw": "조선호텔아리아",
-   "vol": 30750,
-   "pc": 4650,
-   "mo": 26100,
+   "vol": 30980,
+   "pc": 4680,
+   "mo": 26300,
    "comp": "중간",
    "clk": 18.1
   },
   {
-   "kw": "캠핑",
-   "vol": 29650,
-   "pc": 6550,
-   "mo": 23100,
-   "comp": "중간",
-   "clk": 172.7
-  },
-  {
    "kw": "수안보온천호텔",
-   "vol": 29540,
-   "pc": 3940,
-   "mo": 25600,
+   "vol": 29830,
+   "pc": 3930,
+   "mo": 25900,
    "comp": "높음",
    "clk": 675.1
   },
   {
    "kw": "일본온천여행",
-   "vol": 29500,
-   "pc": 8100,
+   "vol": 29570,
+   "pc": 8170,
    "mo": 21400,
    "comp": "높음",
    "clk": 814.2
   },
   {
+   "kw": "캠핑",
+   "vol": 29080,
+   "pc": 6380,
+   "mo": 22700,
+   "comp": "중간",
+   "clk": 172.7
+  },
+  {
    "kw": "유후인료칸",
-   "vol": 28490,
-   "pc": 6890,
+   "vol": 28370,
+   "pc": 6770,
    "mo": 21600,
    "comp": "높음",
    "clk": 537.4
   },
   {
    "kw": "여수숙소",
-   "vol": 28150,
-   "pc": 7650,
+   "vol": 28250,
+   "pc": 7750,
    "mo": 20500,
    "comp": "높음",
    "clk": 713.8
   },
   {
    "kw": "속초롯데리조트",
-   "vol": 28120,
-   "pc": 5220,
-   "mo": 22900,
+   "vol": 28010,
+   "pc": 5210,
+   "mo": 22800,
    "comp": "중간",
    "clk": 291.8
   },
   {
-   "kw": "캠핑용품",
-   "vol": 27710,
-   "pc": 9410,
-   "mo": 18300,
-   "comp": "중간",
-   "clk": 597.6
-  },
-  {
    "kw": "대구인터불고호텔",
-   "vol": 27580,
-   "pc": 4180,
-   "mo": 23400,
+   "vol": 27640,
+   "pc": 4140,
+   "mo": 23500,
    "comp": "높음",
    "clk": 232.2
   },
@@ -3500,370 +3492,378 @@
    "clk": 326.6
   },
   {
+   "kw": "캠핑용품",
+   "vol": 27370,
+   "pc": 9370,
+   "mo": 18000,
+   "comp": "중간",
+   "clk": 597.6
+  },
+  {
+   "kw": "여수라테라스리조트",
+   "vol": 25970,
+   "pc": 3470,
+   "mo": 22500,
+   "comp": "높음",
+   "clk": 309.5
+  },
+  {
    "kw": "제주호텔",
-   "vol": 25690,
-   "pc": 6290,
+   "vol": 25640,
+   "pc": 6240,
    "mo": 19400,
    "comp": "높음",
    "clk": 395.4
   },
   {
    "kw": "대전호텔",
-   "vol": 25690,
-   "pc": 5590,
-   "mo": 20100,
+   "vol": 25530,
+   "pc": 5530,
+   "mo": 20000,
    "comp": "높음",
    "clk": 340.4
   },
   {
+   "kw": "서울파르나스호텔",
+   "vol": 25490,
+   "pc": 3490,
+   "mo": 22000,
+   "comp": "중간",
+   "clk": 111.4
+  },
+  {
    "kw": "경주펜션",
-   "vol": 25600,
-   "pc": 5800,
-   "mo": 19800,
+   "vol": 25400,
+   "pc": 5700,
+   "mo": 19700,
    "comp": "높음",
    "clk": 316.6
   },
   {
-   "kw": "여수라테라스리조트",
-   "vol": 25280,
-   "pc": 3380,
-   "mo": 21900,
+   "kw": "메이필드호텔서울",
+   "vol": 25220,
+   "pc": 4120,
+   "mo": 21100,
    "comp": "높음",
-   "clk": 309.5
+   "clk": 193.0
+  },
+  {
+   "kw": "덕구온천호텔",
+   "vol": 25210,
+   "pc": 3910,
+   "mo": 21300,
+   "comp": "높음",
+   "clk": 689.7
   },
   {
    "kw": "라마다호텔",
-   "vol": 25250,
-   "pc": 3550,
+   "vol": 25210,
+   "pc": 3510,
    "mo": 21700,
    "comp": "높음",
    "clk": 190.9
   },
   {
-   "kw": "메이필드호텔서울",
-   "vol": 25230,
-   "pc": 4230,
-   "mo": 21000,
-   "comp": "높음",
-   "clk": 193.0
-  },
-  {
-   "kw": "서울파르나스호텔",
-   "vol": 25200,
-   "pc": 3500,
-   "mo": 21700,
-   "comp": "중간",
-   "clk": 111.4
-  },
-  {
-   "kw": "덕구온천호텔",
-   "vol": 25020,
-   "pc": 3920,
-   "mo": 21100,
-   "comp": "높음",
-   "clk": 689.7
-  },
-  {
    "kw": "서울숙소",
-   "vol": 24710,
-   "pc": 5710,
-   "mo": 19000,
+   "vol": 24570,
+   "pc": 5670,
+   "mo": 18900,
    "comp": "높음",
    "clk": 624.2
   },
   {
    "kw": "키즈펜션",
-   "vol": 24210,
-   "pc": 3410,
-   "mo": 20800,
+   "vol": 24480,
+   "pc": 3480,
+   "mo": 21000,
    "comp": "높음",
    "clk": 734.0
   },
   {
-   "kw": "가평펜션",
-   "vol": 24020,
-   "pc": 4820,
-   "mo": 19200,
-   "comp": "높음",
-   "clk": 571.8
-  },
-  {
    "kw": "경주힐튼호텔",
-   "vol": 23910,
-   "pc": 3510,
+   "vol": 23920,
+   "pc": 3520,
    "mo": 20400,
    "comp": "중간",
    "clk": 297.9
   },
   {
+   "kw": "가평펜션",
+   "vol": 23750,
+   "pc": 4750,
+   "mo": 19000,
+   "comp": "높음",
+   "clk": 571.8
+  },
+  {
    "kw": "제주숙소",
-   "vol": 23610,
-   "pc": 8010,
+   "vol": 23690,
+   "pc": 8090,
    "mo": 15600,
    "comp": "높음",
    "clk": 530.5
   },
   {
-   "kw": "여수호텔",
-   "vol": 23580,
-   "pc": 4980,
-   "mo": 18600,
-   "comp": "높음",
-   "clk": 489.8
-  },
-  {
    "kw": "덕산리솜리조트",
-   "vol": 23530,
-   "pc": 3530,
-   "mo": 20000,
+   "vol": 23640,
+   "pc": 3540,
+   "mo": 20100,
    "comp": "높음",
    "clk": 279.1
   },
   {
+   "kw": "여수호텔",
+   "vol": 23410,
+   "pc": 4910,
+   "mo": 18500,
+   "comp": "높음",
+   "clk": 489.8
+  },
+  {
    "kw": "글램핑장",
-   "vol": 23380,
-   "pc": 3680,
-   "mo": 19700,
+   "vol": 23210,
+   "pc": 3610,
+   "mo": 19600,
    "comp": "높음",
    "clk": 493.7
   },
   {
    "kw": "키즈풀빌라",
-   "vol": 22970,
-   "pc": 3170,
-   "mo": 19800,
+   "vol": 23140,
+   "pc": 3140,
+   "mo": 20000,
    "comp": "높음",
    "clk": 836.5
   },
   {
    "kw": "네이버숙소예약",
-   "vol": 22800,
-   "pc": 5600,
-   "mo": 17200,
+   "vol": 22620,
+   "pc": 5520,
+   "mo": 17100,
    "comp": "중간",
    "clk": 701.9
   },
   {
    "kw": "전주숙소",
-   "vol": 22420,
-   "pc": 4320,
-   "mo": 18100,
+   "vol": 22130,
+   "pc": 4230,
+   "mo": 17900,
    "comp": "높음",
    "clk": 627.6
   },
   {
    "kw": "숙소",
-   "vol": 22050,
-   "pc": 5650,
-   "mo": 16400,
+   "vol": 22120,
+   "pc": 5620,
+   "mo": 16500,
    "comp": "높음",
    "clk": 556.5
   },
   {
    "kw": "국내료칸숙소",
-   "vol": 21610,
-   "pc": 5310,
-   "mo": 16300,
+   "vol": 21860,
+   "pc": 5460,
+   "mo": 16400,
    "comp": "높음",
    "clk": 452.2
   },
   {
    "kw": "풀빌라",
-   "vol": 21200,
+   "vol": 21300,
    "pc": 3400,
-   "mo": 17800,
+   "mo": 17900,
    "comp": "높음",
    "clk": 481.4
   },
   {
    "kw": "해운대호텔",
-   "vol": 21140,
-   "pc": 4240,
+   "vol": 21100,
+   "pc": 4200,
    "mo": 16900,
    "comp": "높음",
    "clk": 359.9
   },
   {
    "kw": "강화도펜션",
-   "vol": 20750,
-   "pc": 4650,
+   "vol": 20690,
+   "pc": 4590,
    "mo": 16100,
    "comp": "높음",
    "clk": 641.2
   },
   {
    "kw": "대구호텔",
-   "vol": 20650,
-   "pc": 4450,
-   "mo": 16200,
+   "vol": 20490,
+   "pc": 4390,
+   "mo": 16100,
    "comp": "높음",
    "clk": 226.7
   },
   {
    "kw": "제주도펜션",
-   "vol": 19740,
-   "pc": 5040,
+   "vol": 19730,
+   "pc": 5030,
    "mo": 14700,
    "comp": "높음",
    "clk": 474.3
   },
   {
    "kw": "경주풀빌라",
-   "vol": 19620,
-   "pc": 3220,
-   "mo": 16400,
+   "vol": 19710,
+   "pc": 3210,
+   "mo": 16500,
    "comp": "높음",
    "clk": 399.9
   },
   {
    "kw": "광안리숙소",
-   "vol": 19030,
-   "pc": 3530,
+   "vol": 19020,
+   "pc": 3520,
    "mo": 15500,
    "comp": "높음",
    "clk": 535.1
   },
   {
+   "kw": "화성롤링힐스호텔",
+   "vol": 18730,
+   "pc": 3230,
+   "mo": 15500,
+   "comp": "높음",
+   "clk": 157.8
+  },
+  {
    "kw": "제주롯데호텔",
-   "vol": 18650,
-   "pc": 3550,
+   "vol": 18680,
+   "pc": 3580,
    "mo": 15100,
    "comp": "높음",
    "clk": 137.9
   },
   {
-   "kw": "화성롤링힐스호텔",
-   "vol": 18530,
-   "pc": 3230,
-   "mo": 15300,
-   "comp": "높음",
-   "clk": 157.8
-  },
-  {
-   "kw": "평화누리캠핑장",
-   "vol": 18040,
-   "pc": 3240,
-   "mo": 14800,
-   "comp": "중간",
-   "clk": 114.8
-  },
-  {
    "kw": "메리어트호텔",
-   "vol": 17980,
-   "pc": 4380,
-   "mo": 13600,
+   "vol": 18060,
+   "pc": 4360,
+   "mo": 13700,
    "comp": "높음",
    "clk": 75.0
   },
   {
+   "kw": "무주티롤호텔",
+   "vol": 17850,
+   "pc": 1750,
+   "mo": 16100,
+   "comp": "높음",
+   "clk": 645.2
+  },
+  {
+   "kw": "평화누리캠핑장",
+   "vol": 17810,
+   "pc": 3210,
+   "mo": 14600,
+   "comp": "중간",
+   "clk": 114.8
+  },
+  {
    "kw": "후쿠오카온천",
-   "vol": 17510,
-   "pc": 4210,
+   "vol": 17490,
+   "pc": 4190,
    "mo": 13300,
    "comp": "높음",
    "clk": 77.6
   },
   {
    "kw": "영종도호텔",
-   "vol": 16850,
-   "pc": 3350,
+   "vol": 16860,
+   "pc": 3360,
    "mo": 13500,
    "comp": "높음",
    "clk": 191.3
   },
   {
-   "kw": "무주티롤호텔",
-   "vol": 16840,
-   "pc": 1640,
-   "mo": 15200,
-   "comp": "높음",
-   "clk": 645.2
-  },
-  {
    "kw": "태안펜션",
-   "vol": 16820,
-   "pc": 3020,
+   "vol": 16760,
+   "pc": 2960,
    "mo": 13800,
    "comp": "높음",
    "clk": 402.6
   },
   {
    "kw": "광안리호텔",
-   "vol": 16300,
-   "pc": 5300,
+   "vol": 16440,
+   "pc": 5440,
    "mo": 11000,
    "comp": "높음",
    "clk": 225.3
   },
   {
    "kw": "포항숙소",
-   "vol": 16060,
-   "pc": 3360,
-   "mo": 12700,
+   "vol": 16150,
+   "pc": 3350,
+   "mo": 12800,
    "comp": "높음",
    "clk": 374.2
   },
   {
    "kw": "인천호텔",
-   "vol": 15930,
-   "pc": 3330,
-   "mo": 12600,
+   "vol": 16020,
+   "pc": 3320,
+   "mo": 12700,
    "comp": "높음",
    "clk": 96.7
   },
   {
-   "kw": "거제카나리아풀빌라",
-   "vol": 15830,
-   "pc": 730,
-   "mo": 15100,
-   "comp": "중간",
-   "clk": 452.1
-  },
-  {
    "kw": "STX문경리조트",
-   "vol": 15750,
-   "pc": 1950,
-   "mo": 13800,
+   "vol": 15960,
+   "pc": 1960,
+   "mo": 14000,
    "comp": "높음",
    "clk": 178.1
   },
   {
    "kw": "수안보수호텔",
-   "vol": 15640,
-   "pc": 2540,
-   "mo": 13100,
+   "vol": 15880,
+   "pc": 2580,
+   "mo": 13300,
    "comp": "높음",
    "clk": 328.4
   },
   {
+   "kw": "거제카나리아풀빌라",
+   "vol": 15720,
+   "pc": 720,
+   "mo": 15000,
+   "comp": "중간",
+   "clk": 452.1
+  },
+  {
    "kw": "포항펜션",
-   "vol": 15560,
-   "pc": 3060,
+   "vol": 15550,
+   "pc": 3050,
    "mo": 12500,
    "comp": "높음",
    "clk": 415.1
   },
   {
    "kw": "켄싱턴호텔",
-   "vol": 15420,
-   "pc": 2920,
-   "mo": 12500,
+   "vol": 15530,
+   "pc": 2930,
+   "mo": 12600,
    "comp": "높음",
    "clk": 88.9
   },
   {
    "kw": "더앤리조트양양",
-   "vol": 15290,
-   "pc": 1890,
-   "mo": 13400,
+   "vol": 15500,
+   "pc": 1900,
+   "mo": 13600,
    "comp": "높음",
    "clk": 249.9
   },
   {
    "kw": "리조트",
-   "vol": 14780,
-   "pc": 5430,
-   "mo": 9350,
+   "vol": 14950,
+   "pc": 5560,
+   "mo": 9390,
    "comp": "높음",
    "clk": 62.7
   }
